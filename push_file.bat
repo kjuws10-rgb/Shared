@@ -1,0 +1,26 @@
+@echo off
+setlocal
+
+set REPO_URL=https://github.com/kjuws10-rgb/Shared.git
+set BRANCH=main
+set COMMIT_MSG=auto commit
+
+echo ==============================
+echo GitHub Push Start
+echo REPO: %REPO_URL%
+echo ==============================
+
+git init
+git add .
+git commit -m "%COMMIT_MSG%"
+git branch -M %BRANCH%
+
+git remote remove origin 2>nul
+git remote add origin %REPO_URL%
+
+git push -u origin %BRANCH%
+
+echo ==============================
+echo Push Complete
+echo ==============================
+pause
