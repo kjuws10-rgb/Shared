@@ -11,12 +11,17 @@ echo REPO: %REPO_URL%
 echo ==============================
 
 git init
-git add .
-git commit -m "%COMMIT_MSG%"
 git branch -M %BRANCH%
 
 git remote remove origin 2>nul
 git remote add origin %REPO_URL%
+
+git fetch origin
+
+git add .
+git commit -m "%COMMIT_MSG%" 2>nul
+
+git pull origin %BRANCH% --rebase
 
 git push -u origin %BRANCH%
 
