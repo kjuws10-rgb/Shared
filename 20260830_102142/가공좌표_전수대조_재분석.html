@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>가공좌표 개수 재분석 — 16,742개 전수 대조</title>
+  <title>가공좌표 Ground Truth 검증 — 16,742개 전수 대조</title>
   <style>
     :root {
       --ink: #162033;
@@ -169,14 +169,15 @@
 <body>
   <article class="page">
     <header class="hero">
-      <p class="eyebrow">A3 LASER DRILLER · ROW-BY-ROW COORDINATE AUDIT</p>
-      <h1>가공좌표 개수 재분석<br>16,742개 전수 1:1 대조</h1>
+      <p class="eyebrow">A3 LASER DRILLER · GROUND-TRUTH ROW-BY-ROW AUDIT</p>
+      <h1>가공좌표 Ground Truth 검증<br>16,742개 전수 1:1 대조</h1>
       <p>
-        첨부 Excel의 8개 Head 좌표쌍을 한 행씩 추출하고, 레시피 기반 생성 모델로 같은 순서의 좌표를 다시 만든 뒤
-        GY/GX·순번·Lane 시작 반복까지 비교한 교정 보고서입니다.
+        첨부 Excel의 <b>‘가공 좌표’ 탭을 최종 정답(Ground Truth)</b>으로 두고 8개 Head 좌표쌍을 한 행씩 추출한 뒤,
+        레시피 기반 설명 모델이 같은 순서와 값을 재현하는지 GY/GX·순번·Lane 시작 반복까지 비교한 검증 보고서입니다.
       </p>
       <div class="hero-meta">
         <span class="pill">검증일 2026-08-30 KST</span>
+        <span class="pill">Ground Truth: ‘가공 좌표’ 탭</span>
         <span class="pill">Excel 원본 수정 없음</span>
         <span class="pill">수치 허용오차 1×10⁻⁹ mm</span>
         <span class="pill">Raw 순서 불일치 0</span>
@@ -185,17 +186,17 @@
 
     <main>
       <div class="conclusion">
-        <strong>결론:</strong> 좌표값이나 Head 분배가 틀린 것은 아닙니다.
-        기존 보고서의 <b>15,750</b>은 반복을 제거한 고유 가공 중심 수이고,
-        Excel에 실제 기록된 Head별 좌표쌍을 모두 합한 값은 <b>16,742</b>입니다.
-        두 값의 차이 <b>992</b>는 각 Head의 Lane 시작점이 연속으로 한 번 더 기록된 횟수입니다.
+        <strong>검증 기준과 결론:</strong> 정답은 Excel <b>‘가공 좌표’ 탭의 Raw 좌표쌍 16,742개</b>입니다.
+        레시피/역산 모델은 Excel을 수정하거나 정답 수를 줄이는 기준이 아니라, 이 16,742개를 설명·재현하기 위한 모델입니다.
+        전행 대조 결과는 <b>불일치 0개</b>입니다. <b>15,750</b>은 공간적으로 같은 좌표를 한 번만 센 분석용 고유값이며
+        생성 SW의 정답 출력 개수를 대체하지 않습니다. 차이 <b>992</b>도 Ground Truth에 포함된 출력 패턴이므로 임의 삭제하면 안 됩니다.
       </div>
 
       <div class="metric-grid">
         <div class="metric raw"><span class="label">Excel Raw 좌표쌍 레코드</span><span class="value">16,742</span><span class="note">8개 Head 열쌍의 실제 nonblank 기록 합계</span></div>
-        <div class="metric unique"><span class="label">Head-tagged 고유 가공 중심</span><span class="value">15,750</span><span class="note">4자리 정규화 후 정확 중복 제거</span></div>
+        <div class="metric unique"><span class="label">Head-tagged 공간 고유 중심</span><span class="value">15,750</span><span class="note">분석 참고값 · 정답 출력 개수 아님</span></div>
         <div class="metric repeat"><span class="label">연속 완전 반복 발생분</span><span class="value">992</span><span class="note">124개/Head × 8 Head</span></div>
-        <div class="metric match"><span class="label">16,742행 좌표 불일치</span><span class="value">0</span><span class="note">GY·GX·순번·길이 모두 일치</span></div>
+        <div class="metric match"><span class="label">16,742개 레코드 불일치</span><span class="value">0</span><span class="note">GY·GX·순번·길이 모두 일치</span></div>
       </div>
 
       <nav aria-label="목차">
@@ -235,16 +236,16 @@
             <thead><tr><th>명칭</th><th class="num">개수</th><th>정확한 의미</th><th>주의사항</th></tr></thead>
             <tbody>
               <tr><td><b>Worksheet 최대 데이터 행</b></td><td class="num">2,999</td><td>가장 긴 H4의 G5:H3003</td><td>8개 Head가 가로 병렬이므로 전체 좌표 합계가 아님</td></tr>
-              <tr><td><b>Excel Raw 좌표쌍 레코드</b></td><td class="num"><b>16,742</b></td><td>Head 1~8의 실제 nonblank (GY,GX) 레코드 합계</td><td>파일에서 “좌표 개수”를 세면 기본적으로 이 값</td></tr>
-              <tr><td><b>고유 가공 중심</b></td><td class="num"><b>15,750</b></td><td>(HeadId, GY, GX) 기준 정확 중복 제거 결과</td><td>Raw보다 992개 적음</td></tr>
-              <tr><td><b>반복 발생분</b></td><td class="num">992</td><td>같은 Head의 같은 좌표가 바로 다음 행에 한 번 더 기록</td><td>별도 위치가 아니라 동일 위치의 두 번째 레코드</td></tr>
+              <tr><td><b>Excel Raw 좌표쌍 레코드</b></td><td class="num"><b>16,742</b></td><td>Head 1~8의 실제 nonblank (GY,GX) 레코드 합계</td><td><b>생성 SW 수용 기준이 되는 정답 출력</b></td></tr>
+              <tr><td><b>공간 고유 중심</b></td><td class="num"><b>15,750</b></td><td>(HeadId, GY, GX) 기준으로 같은 공간점을 한 번만 센 결과</td><td>분석 참고값이며 16,742개 정답 출력을 대체하지 않음</td></tr>
+              <tr><td><b>Ground Truth 반복 발생분</b></td><td class="num">992</td><td>같은 Head의 같은 좌표가 바로 다음 행에 한 번 더 기록</td><td>별도 위치는 아니지만 정답 Raw 출력에 포함</td></tr>
               <tr><td><b>명목 DOE Hole 발생수</b></td><td class="num">252,000 / 267,872</td><td>15,750×16 또는 16,742×16</td><td>Branch 절대좌표가 없어 “고유 Hole 좌표”로 검증된 값은 아님</td></tr>
             </tbody>
           </table>
         </div>
         <div class="callout info">
-          앞으로 보고서에서 <b>“가공좌표 개수”를 단독으로 쓰지 않고</b>,
-          <b>Raw 좌표쌍</b>과 <b>고유 가공 중심</b>을 반드시 구분해야 합니다.
+          앞으로 보고서에서 <b>“가공좌표 개수”는 Ground Truth Raw 16,742개</b>를 뜻합니다.
+          15,750개를 함께 쓸 때는 반드시 <b>분석용 공간 고유 중심</b>이라고 표시해야 합니다.
         </div>
       </section>
 
@@ -297,7 +298,7 @@
           <li>Cell Y row: 0 → 200 → 400 → 600 → 800</li>
           <li>각 Cell row의 <code>iy</code>: 0 → 24</li>
           <li>각 Head가 소유한 Cell X와 <code>ix</code>를 작은 값부터 기록</li>
-          <li>전체 첫 Lane을 제외한 각 Lane 시작 좌표를 한 번 더 삽입</li>
+          <li>전체 첫 Lane을 제외한 각 Lane 시작 좌표를 한 번 더 삽입 — Ground Truth Raw 출력에 포함</li>
         </ol>
         <div class="callout good">
           위 순서로 만든 16,742개 예상 레코드와 Excel Raw를 Head별 같은 순번으로 비교한 결과,
@@ -310,12 +311,17 @@
       </section>
 
       <section id="duplicates">
-        <h2>5. 992개 반복 레코드의 정확한 위치</h2>
+        <h2>5. Ground Truth에 포함된 992개 반복 레코드</h2>
         <p class="lead">
           각 Head에는 <code>5 Cell row × 25 iy = 125 Lane</code>이 있습니다.
           첫 Lane을 제외한 124개 Lane에서 첫 좌표가 바로 다음 행에 한 번 더 기록되어
           <code>124 × 8 = 992</code>가 됩니다.
         </p>
+        <div class="callout good">
+          이 992개는 전수 대조로 확인된 <b>정답 좌표표의 구조적 출력 패턴</b>입니다.
+          따라서 생성 SW는 16,742개 Raw 레코드와 그 순서를 그대로 재현해야 하며, 992개를 자동 제거해서는 안 됩니다.
+          여기서 “Lane 시작”은 위치·순서를 설명하는 분석상 분류이며, 실제 장비의 가공/이동 명령 의미는 별도 사양입니다.
+        </div>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Head</th><th>첫 반복</th><th>마지막 반복</th><th>Lane 시작 위치</th></tr></thead>
@@ -353,7 +359,7 @@
           <table>
             <thead><tr><th>기존 표현</th><th>교정 표현</th><th>이유</th></tr></thead>
             <tbody>
-              <tr class="warn"><td>“가공좌표 15,750개”</td><td><b>Excel Raw 16,742개 / 고유 중심 15,750개</b></td><td>일반적인 좌표 개수와 dedup 결과를 혼용</td></tr>
+              <tr class="warn"><td>“가공좌표 15,750개”</td><td><b>정답 출력은 Excel Raw 16,742개 / 15,750개는 공간 고유 분석값</b></td><td>정답 출력 개수와 공간 고유값을 혼용</td></tr>
               <tr><td>“15,750개를 100% 재현”</td><td><b>16,742개 Raw를 순서 포함 100% 재현</b></td><td>기존 보고서에는 전행·순서 비교 증빙이 없었음</td></tr>
               <tr><td>“Raw 행”</td><td><b>Head별 Raw 좌표쌍 레코드</b></td><td>물리 Worksheet 행 2,999개와 혼동 방지</td></tr>
               <tr><td>“DOE 고유 Hole 252,000”</td><td><b>고유 중심 기준 명목 Hole 발생수 252,000</b></td><td>Branch 절대좌표가 없어 Hole 좌표 고유성은 미검증</td></tr>
@@ -368,22 +374,27 @@
       </section>
 
       <section id="decision">
-        <h2>7. 실제 가공 횟수는 파일만으로 확정할 수 없음</h2>
+        <h2>7. 정답 좌표 출력과 실제 Laser 동작의 분리 판정</h2>
+        <div class="callout good">
+          장비의 Laser 동작 방식과 관계없이 <b>좌표 생성 결과의 수용 기준은 16,742개</b>입니다.
+          15,750개는 공간 고유 위치를 설명하는 보조 통계일 뿐이며, 정답 좌표 파일을 대체하거나 992개를 삭제하는 근거가 아닙니다.
+        </div>
         <div class="grid-2">
           <div class="card">
-            <h3>992개가 이동·Lead-in이고 Laser-Off라면</h3>
-            <p><b>실제 가공 중심 후보: 15,750개</b></p>
+            <h3>실행 시 992개가 Laser-Off라면</h3>
+            <p><b>공간 가공 중심 후보: 15,750개</b></p>
             <p>DOE 16분기 명목 발생수: 252,000</p>
           </div>
           <div class="card">
-            <h3>Excel Raw의 모든 행이 Laser-On이라면</h3>
-            <p><b>가공 명령: 16,742개</b></p>
+            <h3>실행 시 Raw 전행이 Laser-On이라면</h3>
+            <p><b>Laser-On 레코드: 16,742개</b></p>
             <p>DOE 16분기 명목 발생수: 267,872</p>
           </div>
         </div>
         <div class="callout danger">
           Excel에는 <code>LaserGate</code>, <code>CommandType</code>, <code>Jump/Mark</code>가 없고 좌표 셀의 스타일도 동일합니다.
-          따라서 992개를 자동 삭제해서도, 실제 이중 가공이라고 단정해서도 안 됩니다.
+          따라서 파일만으로 992개가 실제로 Laser를 두 번 발진시키는지는 확정할 수 없습니다.
+          그러나 <b>Ground Truth 좌표 출력에서는 992개를 반드시 보존</b>해야 합니다.
           좌표 생성 SW에는 최소한 <b>LaneId, PointRole, LaserGate</b>를 추가해야 합니다.
         </div>
         <h3>추가 사양 확인: 마지막 Pixel 포함 정책</h3>
@@ -395,7 +406,7 @@
       </section>
 
       <section id="evidence">
-        <h2>8. 16,742행 전체 비교 증빙</h2>
+        <h2>8. 16,742개 레코드 전체 비교 증빙</h2>
         <p>
           아래 CSV에는 모든 좌표 레코드에 대해 Head, Queue 순번, Excel 행, 실제 GY/GX, 예상 GY/GX,
           ΔGY/ΔGX, MATCH 판정, 연속 반복 여부, CellId, ix/iy, LaneNo를 기록했습니다.
