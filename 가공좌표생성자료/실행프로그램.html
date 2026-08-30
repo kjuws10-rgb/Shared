@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A3 LD 레시피 조건으로 Head별 가공 중심 좌표를 생성하고 16,742건 Ground Truth를 검증하는 테스트 프로그램"
+    />
+    <title>A3 LD 좌표 생성 테스트 프로그램</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">본문으로 건너뛰기</a>
+
+    <header class="app-header">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <p class="eyebrow">A3 LD · COORDINATE QA</p>
+          <h1>좌표 생성 테스트 프로그램</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span id="baselineBadge" class="status-badge status-neutral">계산 준비</span>
+        <button id="exportCsvButton" class="button button-secondary" type="button" disabled>
+          생성 CSV 저장
+        </button>
+      </div>
+    </header>
+
+    <main id="workspace" class="workspace">
+      <aside class="control-panel" aria-labelledby="recipeTitle">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">INPUT</p>
+            <h2 id="recipeTitle">레시피 조건</h2>
+          </div>
+          <button id="resetButton" class="text-button" type="button">기준값 복원</button>
+        </div>
+
+        <form id="recipeForm" novalidate>
+          <fieldset>
+            <legend>중심 격자</legend>
+            <div class="input-grid">
+              <label class="field">
+                <span>픽셀 크기 <small>mm/px</small></span>
+                <input data-recipe-field="pixelSizeMmPerPx" type="number" step="0.001" required />
+              </label>
+              <label class="field">
+                <span>가공 중심 Pitch <small>px</small></span>
+                <input data-recipe-field="commandPitchPx" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>X방향 픽셀 수 <small>px</small></span>
+                <input data-recipe-field="designPixelCountX" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>Y방향 픽셀 수 <small>px</small></span>
+                <input data-recipe-field="designPixelCountY" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>DOE 분기 수 <small>축당</small></span>
+                <input data-recipe-field="doeBranchCountPerAxis" type="number" step="1" required />
+              </label>
+            </div>
+            <p class="field-note">
+              Pitch는 DOE 내부 Hole 간격이 아니라 현재 중심 명령에서 다음 중심 명령까지의 원본 Pixel 수입니다.
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Cell 배치</legend>
+            <div class="input-grid">
+              <label class="field">
+                <span>Cell X열 <small>개</small></span>
+                <input data-recipe-field="cellColumnCount" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>Cell Y행 <small>개</small></span>
+                <input data-recipe-field="cellRowCount" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>Cell X 간격 <small>mm</small></span>
+                <input data-recipe-field="cellPitchXmm" type="number" step="0.1" required />
+              </label>
+              <label class="field">
+                <span>Cell Y 간격 <small>mm</small></span>
+                <input data-recipe-field="cellPitchYmm" type="number" step="0.1" required />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>기준거리 · Head</legend>
+            <div class="input-grid">
+              <label class="field">
+                <span>ESC Edge → Glass Edge <small>mm</small></span>
+                <input data-recipe-field="escEdgeToGlassEdgeMm" type="number" step="0.0001" required />
+              </label>
+              <label class="field">
+                <span>Glass Edge → Align Key <small>mm</small></span>
+                <input data-recipe-field="glassEdgeToAlignKeyMm" type="number" step="0.0001" required />
+              </label>
+              <label class="field">
+                <span>Glass 중심 ↔ Scanner 중심 <small>mm</small></span>
+                <input data-recipe-field="glassCenterToScannerCenterMm" type="number" step="0.0001" required />
+              </label>
+              <label class="field field-warning">
+                <span>의미 미정 입력값 C26 <small>mm</small></span>
+                <input data-recipe-field="sharedOriginOffsetMm" type="number" step="0.0001" required />
+              </label>
+              <label class="field">
+                <span>Scan Field 폭 <small>mm</small></span>
+                <input data-recipe-field="scanFieldWidthMm" type="number" step="0.1" required />
+              </label>
+              <label class="field">
+                <span>Head 수 <small>개</small></span>
+                <input data-recipe-field="headCount" type="number" step="1" required />
+              </label>
+              <label class="field">
+                <span>MOF Buffer Offset <small>mm</small></span>
+                <input data-recipe-field="mofBufferOffsetMm" type="number" step="0.1" required />
+              </label>
+              <label class="field">
+                <span>홀수 Head 추가거리 <small>mm</small></span>
+                <input data-recipe-field="oddHeadDistanceMm" type="number" step="0.1" required />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>보정 시나리오</legend>
+            <div class="input-grid">
+              <label class="field">
+                <span>전역 X 보정 <small>mm</small></span>
+                <input data-recipe-field="globalCorrectionXmm" type="number" step="0.0001" required />
+              </label>
+              <label class="field">
+                <span>전역 Y 보정 <small>mm</small></span>
+                <input data-recipe-field="globalCorrectionYmm" type="number" step="0.0001" required />
+              </label>
+            </div>
+            <details class="safety-details">
+              <summary>최종 Footprint 안전여유 입력</summary>
+              <p>네 항목을 모두 입력한 경우에만 최종 FieldValid를 판정합니다.</p>
+              <div class="input-grid">
+                <label class="field">
+                  <span>보정 이동량 예산 <small>mm</small></span>
+                  <input data-recipe-field="correctionBudgetGyMm" type="number" min="0" step="0.0001" placeholder="미입력" />
+                </label>
+                <label class="field">
+                  <span>DOE 최대 GY Offset <small>mm</small></span>
+                  <input data-recipe-field="doeMaxGyOffsetMm" type="number" min="0" step="0.0001" placeholder="미입력" />
+                </label>
+                <label class="field">
+                  <span>빔 반경 <small>mm</small></span>
+                  <input data-recipe-field="beamRadiusMm" type="number" min="0" step="0.0001" placeholder="미입력" />
+                </label>
+                <label class="field">
+                  <span>매핑 오차 <small>mm</small></span>
+                  <input data-recipe-field="mappingErrorMm" type="number" min="0" step="0.0001" placeholder="미입력" />
+                </label>
+              </div>
+            </details>
+          </fieldset>
+
+          <label class="toggle-row">
+            <input data-recipe-field="duplicateLaneStart" type="checkbox" />
+            <span>
+              <b>Ground Truth Lane 시작 반복 보존</b>
+              <small>첫 Lane을 제외한 Head별 124개 Lane의 첫 좌표를 한 번 더 기록</small>
+            </span>
+          </label>
+
+          <div id="formError" class="form-error" role="alert" hidden></div>
+          <button class="button button-primary generate-button" type="submit">
+            좌표 생성 · 검증 실행
+          </button>
+        </form>
+      </aside>
+
+      <section class="results" aria-live="polite">
+        <section class="result-hero" aria-labelledby="resultTitle">
+          <div>
+            <p class="section-kicker">OUTPUT</p>
+            <h2 id="resultTitle">생성 결과</h2>
+            <p id="resultSubtitle">기준 레시피를 계산하고 있습니다.</p>
+          </div>
+          <div class="formula-strip" aria-label="가공 중심 간격 계산식">
+            <span id="formulaPixel">0.09 mm/px</span>
+            <b>×</b>
+            <span id="formulaPitch">10 px</span>
+            <b>=</b>
+            <strong id="formulaSpacing">0.9 mm</strong>
+          </div>
+        </section>
+
+        <section class="metric-grid" aria-label="핵심 생성 결과">
+          <article class="metric-card metric-primary">
+            <span>Raw 좌표 레코드</span>
+            <strong id="metricRaw">—</strong>
+            <small>Head별 Queue 합계</small>
+          </article>
+          <article class="metric-card">
+            <span>공간 고유 중심</span>
+            <strong id="metricUnique">—</strong>
+            <small id="metricGrid">—</small>
+          </article>
+          <article class="metric-card metric-warning">
+            <span>Lane 시작 반복</span>
+            <strong id="metricDuplicates">—</strong>
+            <small id="metricDuplicateRisk">—</small>
+          </article>
+          <article class="metric-card">
+            <span>명목 Hole</span>
+            <strong id="metricHoles">—</strong>
+            <small id="metricDoe">—</small>
+          </article>
+          <article class="metric-card">
+            <span>최소 중심 Field 여유</span>
+            <strong id="metricMargin">—</strong>
+            <small id="metricField">—</small>
+          </article>
+          <article class="metric-card">
+            <span>최종 Footprint</span>
+            <strong id="metricFootprint">—</strong>
+            <small id="metricFootprintStatus">안전 입력값 미입력</small>
+          </article>
+        </section>
+
+        <section class="visual-card" aria-labelledby="mapTitle">
+          <div class="card-heading">
+            <div>
+              <p class="section-kicker">FIELD MAP</p>
+              <h3 id="mapTitle">8 Head 전역 X 분포</h3>
+            </div>
+            <div class="legend">
+              <span><i class="legend-dot"></i>명령 중심</span>
+              <span><i class="legend-boundary"></i>Head 경계</span>
+            </div>
+          </div>
+          <canvas id="fieldCanvas" height="260" aria-label="Head Field와 생성 좌표 분포 차트"></canvas>
+          <p class="chart-caption">
+            가로축은 전역 X, 세로축은 5개 Cell row와 각 row 내부 Y 격자입니다. DOE 16개 Hole이 아닌 중심 명령을 표시합니다.
+          </p>
+        </section>
+
+        <div class="two-column-results">
+          <section class="data-card" aria-labelledby="headSummaryTitle">
+            <div class="card-heading">
+              <div>
+                <p class="section-kicker">DISTRIBUTION</p>
+                <h3 id="headSummaryTitle">Head별 분배</h3>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Head</th>
+                    <th class="numeric">Raw</th>
+                    <th class="numeric">고유</th>
+                    <th class="numeric">반복</th>
+                    <th class="numeric">GY 범위</th>
+                    <th class="numeric">최소 여유</th>
+                  </tr>
+                </thead>
+                <tbody id="headSummaryBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="data-card" aria-labelledby="validationTitle">
+            <div class="card-heading">
+              <div>
+                <p class="section-kicker">GOLDEN CHECK</p>
+                <h3 id="validationTitle">기준값 자동 검증</h3>
+              </div>
+              <span id="checkCount" class="mini-badge">—</span>
+            </div>
+            <div id="validationList" class="validation-list"></div>
+          </section>
+        </div>
+
+        <section class="data-card coordinate-card" aria-labelledby="coordinateTitle">
+          <div class="card-heading coordinate-heading">
+            <div>
+              <p class="section-kicker">RAW QUEUE</p>
+              <h3 id="coordinateTitle">생성 좌표 조회</h3>
+            </div>
+            <div class="table-controls">
+              <label>
+                <span class="sr-only">Head 필터</span>
+                <select id="headFilter" aria-label="Head 필터">
+                  <option value="all">전체 Head</option>
+                </select>
+              </label>
+              <label>
+                <span class="sr-only">레코드 역할 필터</span>
+                <select id="roleFilter" aria-label="레코드 역할 필터">
+                  <option value="all">전체 역할</option>
+                  <option value="machining_center">가공 중심</option>
+                  <option value="repeated_lane_start">Lane 시작 반복</option>
+                </select>
+              </label>
+              <label>
+                <span class="sr-only">Sequence 또는 Cell 검색</span>
+                <input id="coordinateSearch" type="search" placeholder="예: H4:1, CELL04" />
+              </label>
+            </div>
+          </div>
+          <div class="table-scroll coordinate-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Head</th>
+                  <th class="numeric">Seq</th>
+                  <th>역할</th>
+                  <th class="numeric">GY <small>mm</small></th>
+                  <th class="numeric">GX(Stage) <small>mm</small></th>
+                  <th>Cell</th>
+                  <th class="numeric">ix / iy</th>
+                  <th class="numeric">Global X <small>mm</small></th>
+                  <th class="numeric">Field 여유 <small>mm</small></th>
+                </tr>
+              </thead>
+              <tbody id="coordinateBody"></tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span id="tableCount">—</span>
+            <div>
+              <button id="previousPageButton" class="icon-button" type="button" aria-label="이전 페이지">←</button>
+              <span id="pageIndicator">—</span>
+              <button id="nextPageButton" class="icon-button" type="button" aria-label="다음 페이지">→</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="data-card compare-card" aria-labelledby="compareTitle">
+          <div class="card-heading">
+            <div>
+              <p class="section-kicker">FULL CSV AUDIT</p>
+              <h3 id="compareTitle">16,742건 전수 대조</h3>
+            </div>
+          </div>
+          <p>
+            저장소의 전수 검증 CSV 또는 같은 열 구조의 파일을 불러오면 Head·순번·GY·GX와 주요 Metadata를 모두 대조합니다.
+          </p>
+          <div class="compare-actions">
+            <button id="compareBundledButton" class="button button-secondary" type="button">
+              저장소 기준 CSV 자동 대조
+            </button>
+            <label class="file-button">
+              CSV 직접 선택
+              <input id="groundTruthFile" type="file" accept=".csv,text/csv" />
+            </label>
+            <a
+              class="text-link"
+              href="../20260830_105429/가공좌표_스캔필드110mm_검증_16742건.csv"
+              target="_blank"
+              rel="noreferrer"
+            >기준 CSV 보기</a>
+          </div>
+          <div id="comparisonResult" class="comparison-result" hidden></div>
+        </section>
+
+        <section class="notice-card" aria-labelledby="scopeTitle">
+          <div>
+            <span class="notice-icon" aria-hidden="true">!</span>
+          </div>
+          <div>
+            <h3 id="scopeTitle">검증 범위</h3>
+            <p>
+              이 프로그램은 현재 Excel의 중심 명령좌표를 재현합니다. C26의 물리적 의미, DOE B01~B16 실제 Offset,
+              장비 실축 부호, Head 설치 오차·수차보정 Map은 원본 자료만으로 확정되지 않았습니다. Lane 시작 반복의
+              CommandType과 LaserGate도 추측하지 않고 <code>UNRESOLVED</code>로 내보냅니다.
+            </p>
+            <a class="text-link" href="../20260830_113543/가공좌표생성_최종분석보고서.html" target="_blank" rel="noreferrer">
+              최종 분석보고서 열기
+            </a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>A3 LD Coordinate QA</span>
+      <span>기준 레시피: Pitch 10 px · Scan Field 110 mm · Raw 16,742</span>
+    </footer>
+
+    <script src="./src/coordinate-engine.js"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
