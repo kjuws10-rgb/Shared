@@ -506,24 +506,28 @@
       <p>
         첨부 Excel의 <b>레시피 조건</b>과 <b>가공 좌표</b> 두 탭을 전수 분석하고,
         8개 Head의 <b>Raw 좌표쌍 16,742개</b>를 순번까지 재현한 결과입니다.
-        이 중 반복을 제거한 고유 가공 중심은 15,750개입니다.
+        <b>정답은 ‘가공 좌표’ 탭의 16,742개</b>이며, 15,750개는 같은 공간점을 한 번만 센 분석 참고값입니다.
         DOE 4×4 중심 명령좌표와 실제 16개 Hole을 분리해 해석했습니다.
       </p>
       <div class="hero-meta">
         <span class="pill">분석 기준일 2026-08-30</span>
+        <span class="pill">Ground Truth: ‘가공 좌표’ 탭</span>
         <span class="pill">원본 Excel 수정 없음</span>
-        <span class="pill">Raw 16,742행 전수 대조 · 불일치 0</span>
+        <span class="pill">Raw 좌표쌍 16,742건 전수 대조 · 불일치 0</span>
       </div>
     </header>
 
     <div class="summary-banner">
       <div class="icon">✓</div>
       <div>
-        <strong>가장 중요한 결론:</strong>
+        <strong>검증 기준과 가장 중요한 결론:</strong>
+        첨부 Excel의 <b>‘가공 좌표’ 탭이 최종 정답(Ground Truth)</b>이며, 생성 SW의 수용 기준은
+        값·순서·반복 패턴을 포함한 <b>Raw 좌표쌍 16,742개</b>입니다.
+        레시피/역산 모델은 Excel을 수정하는 기준이 아니라 정답 좌표를 설명·재현하는 모델입니다.
         이 파일의 가공 중심 간격은 <b>0.09 mm/px × 10 px = 0.9 mm</b>이며,
         DOE 축당 분기수 4를 추가로 곱하지 않습니다. 즉 <b>3.6 mm 해석은 잘못</b>입니다.
-        Excel에 기록된 좌표쌍은 <b>16,742개</b>, 반복을 제거한 고유 중심은 <b>15,750개</b>입니다.
-        992개 반복 레코드의 Laser-On 여부와 끝점 생성 정책은 별도 확인이 필요합니다.
+        공간 고유 중심 <b>15,750개</b>는 분석 참고값이며 정답 출력 개수를 대체하지 않습니다.
+        Ground Truth에 포함된 992개 반복 레코드의 Laser-On 여부와 끝점 생성 정책은 별도 확인이 필요합니다.
       </div>
     </div>
 
@@ -546,7 +550,7 @@
       <div class="metric">
         <span class="label">45 Cell 고유 중심</span>
         <span class="value">15,750</span>
-        <span class="note">Raw에서 반복 992개 제외</span>
+        <span class="note">공간 고유 집계값 · 정답 Raw에는 992건 보존</span>
       </div>
       <div class="metric">
         <span class="label">명목 Hole 발생수</span>
@@ -556,7 +560,7 @@
       <div class="metric">
         <span class="label">반복 좌표 레코드</span>
         <span class="value" style="color:#b42318">992</span>
-        <span class="note">Head당 124개 연속 중복</span>
+        <span class="note">Head당 124개 연속 반복 발생분</span>
       </div>
     </div>
 
@@ -717,7 +721,7 @@
       <h2>3. 가공 좌표 Raw 16,742개를 전행 재현한 역산 모델</h2>
       <p class="lead">
         아래 모델로 8개 Head의 <b>Raw 좌표쌍 16,742개를 순번 포함 불일치 0개</b>로 재현했습니다.
-        반복 992개를 제거한 고유 좌표는 15,750개입니다.
+        정답 출력은 16,742개이며, 같은 공간점을 한 번만 센 15,750개는 분석 참고값입니다.
         단, Head pitch 110 mm와 Field ±55 mm는 명명된 Recipe가 아니라 결과값에서 역산된 값입니다.
       </p>
 
@@ -826,9 +830,9 @@
     </section>
 
     <section id="risks">
-      <h2>5. 파일에서 확인된 결함 후보와 미정 사양</h2>
+      <h2>5. Ground Truth 출력 패턴과 실행 의미 확인사항</h2>
 
-      <h3>5.1 <span class="priority p0">P0</span> 992개 연속 반복 좌표 레코드</h3>
+      <h3>5.1 <span class="tag fixed">Ground Truth</span> 992개 연속 반복 좌표 레코드</h3>
       <p>
         각 Head는 <b>125개 Stage Lane</b>(5 Cell rows × 25 Y index)을 갖습니다.
         첫 Lane을 제외한 124개 Lane에서 첫 좌표가 정확히 두 번 연속 기록됩니다.
@@ -844,10 +848,12 @@
         </table>
       </div>
       <div class="callout danger">
-        모든 행을 Laser-On 가공점으로 처리하면 992개 중심이 이중 가공됩니다.
+        <b>좌표 생성 SW는 정답 탭의 992개 반복을 제거하지 않고 16,742개 Raw 레코드를 그대로 출력해야 합니다.</b>
+        다만 모든 행을 Laser-On 가공점으로 처리하면 992개 중심이 이중 가공됩니다.
         DOE 16개 기준으로는 <b>15,872회의 추가 Hole 노광</b>, 총 <b>267,872 Hole 노광</b> 위험입니다
-        (고유 결과 252,000 Hole 대비).
-        Lane 시작 Jump/Lead-in 좌표라면 <code>CommandType</code>과 <code>LaserGate</code>를 반드시 명시해야 합니다.
+        (공간 고유 중심 기준 명목 252,000 Hole 대비).
+        이 반복이 실행 시 Jump/Lead-in 역할이라면 <code>CommandType</code>과 <code>LaserGate</code>를 반드시 명시해야 합니다.
+        “Lane 시작”은 위치·순서를 설명하는 분석상 분류이며, 실제 장비 명령 의미는 파일만으로 확정할 수 없습니다.
       </div>
 
       <h3>5.2 <span class="priority p0">P0</span> 끝점 생성 정책</h3>
@@ -856,7 +862,7 @@
           <h3>현재 파일: 정수 나눗셈 횟수</h3>
           <div class="equation">NX=floor(144/10)=14 → 0…130 px</div>
           <div class="equation">NY=floor(256/10)=25 → 0…240 px</div>
-          <p>Cell당 350, 전체 15,750 중심입니다.</p>
+          <p>Cell당 350, 전체 15,750개 <b>공간 고유 중심</b>입니다. 정답 Raw 출력은 반복 패턴을 포함한 16,742개입니다.</p>
         </div>
         <div class="card status-good">
           <h3>유효 Index &lt; PixelNum 정책</h3>
@@ -867,7 +873,8 @@
       </div>
       <p>
         두 정책의 차이는 <b>1,800개 중심, DOE 기준 28,800개 Hole</b>입니다.
-        잔여 Pixel 구간을 의도적으로 폐기하는지, 범위 안 마지막 좌표까지 포함하는지 사양으로 확정해야 합니다.
+        현재 Ground Truth는 14×25 정책으로 확정되어 있습니다. 15×26은 향후 사양 변경 시 새 정답 좌표 파일을
+        생성·승인해야 적용할 수 있는 비교안입니다.
       </p>
 
       <h3>5.3 <span class="priority p0">P0</span> 무라벨 C26과 DOE 숨은 결합 가능성</h3>
@@ -902,8 +909,11 @@
     </section>
 
     <section id="calculator">
-      <h2>6. Pitch·개수 검증 계산기</h2>
-      <p class="lead">입력값을 바꾸면 현재 floor 정책과 범위내 마지막점 포함 정책을 즉시 비교합니다.</p>
+      <h2>6. Pitch·공간 고유 중심 비교 계산기</h2>
+      <p class="lead">
+        입력값을 바꾸면 floor 정책과 범위 내 마지막점 포함 정책의 <b>공간 고유 중심</b>을 비교합니다.
+        현재 파일의 Ground Truth Raw 출력은 <b>16,742개</b>이며, 아래 계산값으로 대체되지 않습니다.
+      </p>
       <div class="calculator">
         <div class="card">
           <div class="input-grid">
@@ -918,10 +928,10 @@
         <div class="calc-results">
           <div class="calc-result"><span>가공 중심 간격</span><strong id="deltaOut">0.9 mm</strong></div>
           <div class="calc-result"><span>DOE Hole / 중심</span><strong id="holesPerCenterOut">16</strong></div>
-          <div class="calc-result"><span>현재 floor 중심</span><strong id="floorOut">15,750</strong></div>
-          <div class="calc-result"><span>현재 floor Hole</span><strong id="floorHoleOut">252,000</strong></div>
-          <div class="calc-result"><span>범위내 마지막점 포함 중심</span><strong id="inclusiveOut">17,550</strong></div>
-          <div class="calc-result"><span>범위내 마지막점 포함 Hole</span><strong id="inclusiveHoleOut">280,800</strong></div>
+          <div class="calc-result"><span>floor 공간 고유 중심<br><small>정답 Raw 아님</small></span><strong id="floorOut">15,750</strong></div>
+          <div class="calc-result"><span>floor 명목 Hole<br><small>공간 고유 중심 기준</small></span><strong id="floorHoleOut">252,000</strong></div>
+          <div class="calc-result"><span>마지막점 포함 공간 고유 중심<br><small>향후 비교안</small></span><strong id="inclusiveOut">17,550</strong></div>
+          <div class="calc-result"><span>마지막점 포함 명목 Hole<br><small>향후 비교안</small></span><strong id="inclusiveHoleOut">280,800</strong></div>
         </div>
       </div>
     </section>
@@ -979,8 +989,8 @@ reviewTarget = localCenter + doePattern[reviewBranchId].OffsetXY;</pre>
         <table>
           <thead><tr><th>우선순위</th><th>결정·검증 항목</th><th>완료 조건</th></tr></thead>
           <tbody>
-            <tr><td><span class="priority p0">P0</span></td><td>끝점 포함 정책</td><td>14×25 또는 15×26 중 요구사항 승인</td></tr>
-            <tr><td><span class="priority p0">P0</span></td><td>992개 중복의 의도</td><td>중복 제거 또는 Jump/Mark Gate 명시</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>끝점 포함 정책 변경관리</td><td>현재 정답은 14×25; 15×26 전환 시 새 Ground Truth 파일 생성·승인</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>Ground Truth 반복 992개의 실행 의미</td><td>출력은 보존하고 PointRole·Jump/Mark·LaserGate 의미 명시</td></tr>
             <tr><td><span class="priority p0">P0</span></td><td>C26=0.3375 근거</td><td>DOE와 무관한 값인지, DOE Offset인지 명명·수식화</td></tr>
             <tr><td><span class="priority p1">P1</span></td><td>DOE B01~B16 Calibration</td><td>Branch별 X/Y Offset, 회전, Review Branch 승인</td></tr>
             <tr><td><span class="priority p1">P1</span></td><td>Head별 Default Offset</td><td>8 Head X/Y/θ 파라미터와 적용 순서 확정</td></tr>
