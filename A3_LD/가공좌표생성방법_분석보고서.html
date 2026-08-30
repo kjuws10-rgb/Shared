@@ -393,6 +393,16 @@
 
     .doe-figure svg { display: block; width: 100%; height: auto; }
 
+    .board-figure {
+      margin: 18px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .board-figure img { display: block; width: 100%; height: auto; }
+    .board-figure figcaption { margin: 10px 6px 2px; color: var(--muted); font-size: 13px; }
+
     .calculator {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -492,16 +502,17 @@
   <main class="page">
     <header class="hero">
       <p class="eyebrow">A3 Laser Driller · Coordinate Generation Verification</p>
-      <h1>가공좌표 생성 방식 분석<br>Pitch 개념 정정 반영</h1>
+      <h1>가공좌표 생성 방식 분석<br>Pitch·좌표 개수 교정 반영</h1>
       <p>
         첨부 Excel의 <b>레시피 조건</b>과 <b>가공 좌표</b> 두 탭을 전수 분석하고,
-        8개 Head의 15,750개 고유 좌표를 역산식으로 재현한 결과입니다.
+        8개 Head의 <b>Raw 좌표쌍 16,742개</b>를 순번까지 재현한 결과입니다.
+        이 중 반복을 제거한 고유 가공 중심은 15,750개입니다.
         DOE 4×4 중심 명령좌표와 실제 16개 Hole을 분리해 해석했습니다.
       </p>
       <div class="hero-meta">
         <span class="pill">분석 기준일 2026-08-30</span>
         <span class="pill">원본 Excel 수정 없음</span>
-        <span class="pill">고유 좌표 재현 누락 0 · 예외 0</span>
+        <span class="pill">Raw 16,742행 전수 대조 · 불일치 0</span>
       </div>
     </header>
 
@@ -511,7 +522,8 @@
         <strong>가장 중요한 결론:</strong>
         이 파일의 가공 중심 간격은 <b>0.09 mm/px × 10 px = 0.9 mm</b>이며,
         DOE 축당 분기수 4를 추가로 곱하지 않습니다. 즉 <b>3.6 mm 해석은 잘못</b>입니다.
-        다만 무라벨 <code>C26=0.3375 mm</code>, 끝점 생성 정책, 992개 중복 행은 별도 확인이 필요합니다.
+        Excel에 기록된 좌표쌍은 <b>16,742개</b>, 반복을 제거한 고유 중심은 <b>15,750개</b>입니다.
+        992개 반복 레코드의 Laser-On 여부와 끝점 생성 정책은 별도 확인이 필요합니다.
       </div>
     </div>
 
@@ -522,6 +534,11 @@
         <span class="note">10 px × 0.09 mm/px</span>
       </div>
       <div class="metric">
+        <span class="label">Excel Raw 좌표쌍</span>
+        <span class="value">16,742</span>
+        <span class="note">8 Head 실제 기록 합계</span>
+      </div>
+      <div class="metric">
         <span class="label">Cell당 고유 중심</span>
         <span class="value">350</span>
         <span class="note">현재 파일: 14 × 25</span>
@@ -529,21 +546,22 @@
       <div class="metric">
         <span class="label">45 Cell 고유 중심</span>
         <span class="value">15,750</span>
-        <span class="note">역산 모델과 100% 일치</span>
+        <span class="note">Raw에서 반복 992개 제외</span>
       </div>
       <div class="metric">
-        <span class="label">DOE 16분기 기준 Hole</span>
+        <span class="label">명목 Hole 발생수</span>
         <span class="value">252,000</span>
-        <span class="note">15,750 × 16, 중복 제외</span>
+        <span class="note">15,750 × 16, Branch 좌표 미검증</span>
       </div>
       <div class="metric">
-        <span class="label">좌표표 중복 행</span>
+        <span class="label">반복 좌표 레코드</span>
         <span class="value" style="color:#b42318">992</span>
         <span class="note">Head당 124개 연속 중복</span>
       </div>
     </div>
 
     <nav class="toc" aria-label="목차">
+      <a href="#overview-map">전체 기판 맵</a>
       <a href="#pitch">1. Pitch 정정</a>
       <a href="#workbook">2. 파일 구조</a>
       <a href="#model">3. 좌표 생성식</a>
@@ -552,6 +570,27 @@
       <a href="#calculator">6. 검증 계산기</a>
       <a href="#recommendations">7. SW 반영안</a>
     </nav>
+
+    <section id="overview-map">
+      <h2>전체 기판 가공좌표 한눈에 보기</h2>
+      <p class="lead">
+        45개 Cell의 14×25 고유 명령 중심을 Head별 색상으로 표시했습니다.
+        이중 원은 동일 위치가 Excel Raw에 연속 두 번 기록된 Lane 시작점이며,
+        Cell 4·13·22·31·40은 H3 5열 / H4 9열로 분할됩니다.
+      </p>
+      <figure class="board-figure">
+        <img src="../20260830_102142/기판_전체_가공좌표_개요.svg" alt="45개 Cell과 8개 Head의 전체 가공 중심 및 반복 좌표 위치">
+        <figcaption>
+          각 점은 DOE 개별 Hole이 아니라 DOE 중심 명령좌표입니다. Cell 내부 격자는 가독성을 위해 확대했으며,
+          외곽선은 실제 Glass 치수나 장비 방향을 확정하는 도면이 아닙니다.
+        </figcaption>
+      </figure>
+      <div class="callout info">
+        <b>교정된 전수대조 결과:</b>
+        <a href="../20260830_102142/가공좌표_전수대조_재분석.html">16,742개 좌표 1:1 재분석 보고서</a>와
+        <a href="../20260830_102142/가공좌표_전수대조_16742건.csv">전체 비교 CSV</a>에서 모든 순번을 확인할 수 있습니다.
+      </div>
+    </section>
 
     <section id="pitch">
       <h2>1. Pitch 개념 — 무엇이 바뀌었는가</h2>
@@ -623,7 +662,7 @@
             <tr><th>구분</th><th>레시피 조건</th><th>가공 좌표</th><th>해석</th></tr>
           </thead>
           <tbody>
-            <tr><td>Excel 선언 범위</td><td>A1:O92<br><small>실제 비어있지 않은 값: B1:G92</small></td><td>A1:P3003</td><td>2개 탭</td></tr>
+            <tr><td>Excel XML 선언 범위</td><td>B1:O92<br><small>실제 비어있지 않은 값: B1:G92</small></td><td>A1:P3003</td><td>2개 탭</td></tr>
             <tr><td>비어있지 않은 셀</td><td class="num">234</td><td class="num">33,510</td><td>가공 좌표는 8 Head × 2열 구조</td></tr>
             <tr><td>수식 셀</td><td class="num">3</td><td class="num">0</td><td><b>가공 좌표는 모두 정적 값</b></td></tr>
             <tr><td>병합</td><td>없음</td><td>Head 제목 8개</td><td>A3:B3 … O3:P3</td></tr>
@@ -675,9 +714,10 @@
     </section>
 
     <section id="model">
-      <h2>3. 가공 좌표 탭을 100% 재현한 역산 모델</h2>
+      <h2>3. 가공 좌표 Raw 16,742개를 전행 재현한 역산 모델</h2>
       <p class="lead">
-        아래 모델로 8개 Head의 <b>15,750개 고유 좌표를 누락 0개·추가 0개</b>로 재현했습니다.
+        아래 모델로 8개 Head의 <b>Raw 좌표쌍 16,742개를 순번 포함 불일치 0개</b>로 재현했습니다.
+        반복 992개를 제거한 고유 좌표는 15,750개입니다.
         단, Head pitch 110 mm와 Field ±55 mm는 명명된 Recipe가 아니라 결과값에서 역산된 값입니다.
       </p>
 
@@ -759,11 +799,11 @@
         H4는 <code>ix=5…13</code> 9개를 처리합니다.
       </p>
 
-      <h3>4.2 Head별 Raw 행과 고유 가공 중심</h3>
+      <h3>4.2 Head별 Raw 좌표쌍 레코드와 고유 가공 중심</h3>
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Head</th><th class="num">Raw 행</th><th class="num">고유 중심</th><th class="num">중복</th><th class="num">DOE 고유 Hole</th><th>담당 영역</th></tr>
+            <tr><th>Head</th><th class="num">Raw 좌표쌍</th><th class="num">고유 중심</th><th class="num">반복 발생분</th><th class="num">명목 Hole<br><small>고유 중심×16</small></th><th>담당 영역</th></tr>
           </thead>
           <tbody>
             <tr><td>H1</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=0</td></tr>
@@ -779,6 +819,7 @@
         </table>
       </div>
       <div class="callout info">
+        합계 16,742는 물리 Worksheet 행 수가 아니라 8개 Head 열쌍의 Raw 레코드 합계입니다.
         Head별 Raw 길이가 서로 다르므로 Excel의 같은 행 번호를 8개 Head의 동기 가공점으로 해석하면 안 됩니다.
         Head별 독립 Queue 또는 Stage 위치 기준 Trigger로 동작해야 합니다.
       </div>
@@ -787,10 +828,11 @@
     <section id="risks">
       <h2>5. 파일에서 확인된 결함 후보와 미정 사양</h2>
 
-      <h3>5.1 <span class="priority p0">P0</span> 992개 연속 중복 좌표</h3>
+      <h3>5.1 <span class="priority p0">P0</span> 992개 연속 반복 좌표 레코드</h3>
       <p>
         각 Head는 <b>125개 Stage Lane</b>(5 Cell rows × 25 Y index)을 갖습니다.
         첫 Lane을 제외한 124개 Lane에서 첫 좌표가 정확히 두 번 연속 기록됩니다.
+        이는 서로 다른 두 공간점이 아니라 같은 (GY,GX)의 두 번째 Raw 레코드입니다.
       </p>
       <div class="table-wrap">
         <table>
