@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A3 LD 가공좌표 생성 최종 분석보고서</title>
+  <style>
+    :root {
+      --navy-950: #071426;
+      --navy-900: #0c1d35;
+      --navy-800: #15345d;
+      --blue-700: #155fa8;
+      --blue-600: #1d73c9;
+      --blue-100: #e9f3ff;
+      --cyan-100: #e9f9fb;
+      --green-700: #13715f;
+      --green-100: #e9f7f2;
+      --amber-800: #8a4b00;
+      --amber-100: #fff4d8;
+      --red-700: #b42318;
+      --red-100: #fff0ee;
+      --slate-900: #1d2939;
+      --slate-700: #344054;
+      --slate-600: #475467;
+      --slate-500: #667085;
+      --slate-300: #d0d5dd;
+      --slate-200: #e4e7ec;
+      --slate-100: #f2f4f7;
+      --white: #ffffff;
+      --shadow: 0 12px 32px rgba(16, 43, 76, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--slate-900);
+      background: #f5f7fa;
+      font-family: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", Arial, sans-serif;
+      line-height: 1.62;
+      word-break: keep-all;
+    }
+
+    a { color: var(--blue-700); }
+
+    .page {
+      width: min(1240px, calc(100% - 32px));
+      margin: 28px auto 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 46px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(91, 179, 255, 0.28), transparent 28%),
+        linear-gradient(135deg, var(--navy-950), var(--navy-800));
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -120px;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+      box-shadow: 0 0 0 38px rgba(255,255,255,0.04), 0 0 0 82px rgba(255,255,255,0.03);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #9bd3ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.22;
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 18px 0 0;
+      color: #d9eaff;
+      font-size: 16px;
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #eaf5ff;
+      font-size: 12px;
+    }
+
+    .summary-banner {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      margin-top: 20px;
+      padding: 20px 22px;
+      border: 1px solid #9dd7c8;
+      border-left: 6px solid var(--green-700);
+      border-radius: 14px;
+      background: var(--green-100);
+    }
+
+    .summary-banner .icon {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--green-700);
+      font-weight: 800;
+    }
+
+    .summary-banner strong { color: #075f4f; }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 18px;
+      border: 1px solid var(--slate-200);
+      border-radius: 15px;
+      background: var(--white);
+      box-shadow: 0 7px 18px rgba(16, 43, 76, 0.045);
+    }
+
+    .metric .label {
+      color: var(--slate-600);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .metric .value {
+      display: block;
+      margin-top: 5px;
+      color: var(--navy-800);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .metric .note {
+      display: block;
+      margin-top: 5px;
+      color: var(--slate-500);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+      padding: 14px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .toc a {
+      padding: 7px 10px;
+      border-radius: 9px;
+      color: var(--slate-700);
+      background: var(--slate-100);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    section {
+      margin-top: 20px;
+      padding: 30px;
+      border: 1px solid var(--slate-200);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 7px 22px rgba(16, 43, 76, 0.04);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy-900);
+      font-size: 25px;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 28px 0 12px;
+      color: var(--navy-800);
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    h4 {
+      margin: 22px 0 8px;
+      color: var(--slate-900);
+      font-size: 15px;
+    }
+
+    p { margin: 9px 0; }
+
+    .lead { color: var(--slate-700); font-size: 16px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      padding: 19px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: #fbfcfe;
+    }
+
+    .card h3, .card h4 { margin-top: 0; }
+
+    .status-good { border-top: 4px solid var(--green-700); }
+    .status-bad { border-top: 4px solid var(--red-700); }
+    .status-warn { border-top: 4px solid #e39a18; }
+
+    .callout {
+      margin: 16px 0;
+      padding: 17px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .callout.good { border-left: 5px solid var(--green-700); background: var(--green-100); }
+    .callout.warn { border-left: 5px solid #d88700; background: var(--amber-100); }
+    .callout.danger { border-left: 5px solid var(--red-700); background: var(--red-100); }
+    .callout.info { border-left: 5px solid var(--blue-600); background: var(--blue-100); }
+
+    .equation {
+      overflow-x: auto;
+      margin: 12px 0;
+      padding: 15px 17px;
+      border: 1px solid #cfe0f1;
+      border-radius: 11px;
+      color: #123d68;
+      background: #f4f9ff;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1.2fr 28px 1.2fr 28px 1.2fr 28px 1.2fr;
+      align-items: stretch;
+      gap: 7px;
+      margin: 18px 0;
+    }
+
+    .flow-step {
+      padding: 16px 14px;
+      border: 1px solid #cfe0f1;
+      border-radius: 12px;
+      background: #f8fbff;
+      text-align: center;
+    }
+
+    .flow-step b { display: block; color: var(--navy-800); }
+    .flow-step span { display: block; margin-top: 4px; color: var(--slate-500); font-size: 11px; }
+    .flow-arrow { display: grid; place-items: center; color: var(--blue-600); font-size: 22px; font-weight: 900; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 14px 0;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--slate-200);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--navy-800);
+      background: #edf4fb;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.total td { color: var(--navy-900); background: #f3f7fb; font-weight: 800; }
+    tr.risk td { background: #fff8f7; }
+
+    code {
+      padding: 1px 5px;
+      border-radius: 5px;
+      color: #174a7a;
+      background: #edf4fb;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.94em;
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 14px 0;
+      padding: 18px;
+      border-radius: 12px;
+      color: #d6e7f8;
+      background: #0c2038;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre;
+    }
+
+    ul, ol { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 6px 0; }
+
+    .tag {
+      display: inline-block;
+      margin-right: 4px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .tag.fixed { color: #0f6959; background: #dff4ed; }
+    .tag.inferred { color: #875200; background: #ffefc2; }
+    .tag.missing { color: #a22117; background: #ffe1dd; }
+
+    .doe-figure {
+      margin-top: 15px;
+      padding: 14px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+
+    .doe-figure svg { display: block; width: 100%; height: auto; }
+
+    .board-figure {
+      margin: 18px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .board-figure img { display: block; width: 100%; height: auto; }
+    .board-figure figcaption { margin: 10px 6px 2px; color: var(--muted); font-size: 13px; }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    label {
+      display: block;
+      color: var(--slate-600);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      margin-top: 4px;
+      padding: 10px 11px;
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      color: var(--slate-900);
+      background: var(--white);
+      font: inherit;
+    }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .calc-result {
+      padding: 14px;
+      border: 1px solid #cfe0f1;
+      border-radius: 11px;
+      background: #f6faff;
+    }
+
+    .calc-result span { display: block; color: var(--slate-500); font-size: 10px; }
+    .calc-result strong { display: block; margin-top: 3px; color: var(--navy-800); font-size: 20px; }
+
+    .priority {
+      display: inline-grid;
+      place-items: center;
+      min-width: 34px;
+      height: 24px;
+      border-radius: 6px;
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .p0 { background: var(--red-700); }
+    .p1 { background: #d88700; }
+    .p2 { background: var(--blue-600); }
+
+    .footer {
+      margin-top: 18px;
+      padding: 18px 4px;
+      color: var(--slate-500);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow-arrow { transform: rotate(90deg); }
+      .calculator { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .page { width: min(100% - 18px, 1240px); margin-top: 9px; }
+      .hero { padding: 30px 24px; border-radius: 16px; }
+      section { padding: 22px 17px; }
+      .metric-grid, .grid-2, .input-grid, .calc-results { grid-template-columns: 1fr; }
+      body { word-break: normal; }
+    }
+
+    @media print {
+      body { background: var(--white); }
+      .page { width: 100%; margin: 0; }
+      .hero, section, .metric { box-shadow: none; }
+      .toc, .calculator { break-inside: avoid; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">A3 Laser Driller · Coordinate Generation Verification</p>
+      <h1>가공좌표 생성 최종 분석보고서<br>Pitch 10 px · Scan Field 110 mm · Raw 16,742개</h1>
+      <p>
+        첨부 Excel의 <b>레시피 조건</b>과 <b>가공 좌표</b> 두 탭을 전수 분석하고,
+        8개 Head의 <b>Raw 좌표쌍 16,742개</b>를 순번까지 재현한 결과입니다.
+        <b>정답은 ‘가공 좌표’ 탭의 16,742개</b>이며, 15,750개는 같은 공간점을 한 번만 센 분석 참고값입니다.
+        사용자 확정 사양 <b>Scan Field Width=110 mm</b>를 적용해 <b>GY(Review)축 명령 중심의 보정 전 명목 Field 수용성</b>을 검증했습니다.
+        DOE 4×4 중심 명령좌표와 실제 16개 Hole을 분리해 해석했습니다.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">분석 기준일 2026-08-30</span>
+        <span class="pill">Ground Truth: ‘가공 좌표’ 탭</span>
+        <span class="pill">사용자 확정 Scan Field: 110 mm</span>
+        <span class="pill">원본 Excel 수정 없음</span>
+        <span class="pill">Raw 좌표쌍 16,742건 전수 대조 · 불일치 0</span>
+      </div>
+    </header>
+
+    <div class="summary-banner">
+      <div class="icon">✓</div>
+      <div>
+        <strong>검증 기준과 가장 중요한 결론:</strong>
+        첨부 Excel의 <b>‘가공 좌표’ 탭이 최종 정답(Ground Truth)</b>이며, 생성 SW의 수용 기준은
+        값·순서·반복 패턴을 포함한 <b>Raw 좌표쌍 16,742개</b>입니다.
+        이 파일의 가공 중심 간격은 <b>0.09 mm/px × 10 px = 0.9 mm</b>이며,
+        DOE 4×4는 각 중심 명령좌표에서 생성되는 16개 Hole Pattern으로 별도 관리합니다.
+        공간 고유 중심 <b>15,750개</b>는 분석 참고값이며 정답 출력 개수를 대체하지 않습니다.
+        Scan Field 110 mm의 중심 원점 기준 명목범위 <b>−55≤GY&lt;+55 mm</b>에서 16,742개 전부 이탈 0개지만,
+        최소 중심 경계 여유는 H4의 <b>0.3375 mm</b>뿐입니다.
+        Ground Truth에 포함된 992개 반복 레코드의 Laser-On 여부와 끝점 생성 정책은 별도 확인이 필요합니다.
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <span class="label">가공 중심 Pitch</span>
+        <span class="value">0.9 mm</span>
+        <span class="note">10 px × 0.09 mm/px</span>
+      </div>
+      <div class="metric">
+        <span class="label">Excel Raw 좌표쌍</span>
+        <span class="value">16,742</span>
+        <span class="note">8 Head 실제 기록 합계</span>
+      </div>
+      <div class="metric">
+        <span class="label">Cell당 고유 중심</span>
+        <span class="value">350</span>
+        <span class="note">현재 파일: 14 × 25</span>
+      </div>
+      <div class="metric">
+        <span class="label">45 Cell 고유 중심</span>
+        <span class="value">15,750</span>
+        <span class="note">공간 고유 집계값 · 정답 Raw에는 992건 보존</span>
+      </div>
+      <div class="metric">
+        <span class="label">명목 Hole 발생수</span>
+        <span class="value">252,000</span>
+        <span class="note">15,750 × 16, Branch 좌표 미검증</span>
+      </div>
+      <div class="metric">
+        <span class="label">반복 좌표 레코드</span>
+        <span class="value" style="color:#b42318">992</span>
+        <span class="note">Head당 124개 연속 반복 발생분</span>
+      </div>
+      <div class="metric">
+        <span class="label">확정 Scan Field</span>
+        <span class="value">110 mm</span>
+        <span class="note">중심 원점 기준 nominal ±55 mm</span>
+      </div>
+      <div class="metric">
+        <span class="label">GY Field 이탈</span>
+        <span class="value" style="color:#13715f">0</span>
+        <span class="note">Raw 16,742개 전수</span>
+      </div>
+      <div class="metric">
+        <span class="label">최소 중심 경계 여유</span>
+        <span class="value" style="color:#8a4b00">0.3375 mm</span>
+        <span class="note">H4 · GY=−54.6625 mm</span>
+      </div>
+      <div class="metric">
+        <span class="label">110 mm 기준 Head 불일치</span>
+        <span class="value" style="color:#13715f">0</span>
+        <span class="note">CellCol·ix 독립 재계산과 Excel Head 전수 일치</span>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="목차">
+      <a href="#overview-map">전체 기판 맵</a>
+      <a href="#pitch">1. Pitch 정의</a>
+      <a href="#workbook">2. 파일 구조</a>
+      <a href="#model">3. 좌표 생성식</a>
+      <a href="#distribution">4. Head 분배</a>
+      <a href="#risks">5. Field·실행 확인사항</a>
+      <a href="#recommendations">6. SW 반영안</a>
+    </nav>
+
+    <section id="overview-map">
+      <h2>전체 기판 가공좌표 한눈에 보기</h2>
+      <p class="lead">
+        상단 정척 Band에는 Global X=0…880 mm를 110 mm씩 나눈 8개 명목 Scan Field와 실제 X 명령열을 표시했습니다.
+        하단 확대도에는 45개 Cell의 14×25 고유 명령 중심을 Head별 색상으로 표시했습니다.
+        이중 원은 동일 위치가 Excel Raw에 연속 두 번 기록된 Lane 시작점이며,
+        Cell 4·13·22·31·40은 Global X=330 mm 경계에서 H3 5열 / H4 9열로 분할됩니다.
+      </p>
+      <figure class="board-figure">
+        <img src="../20260830_105429/기판_전체_스캔필드110mm_가공좌표_개요.svg" alt="확정 110 mm Scan Field 8개와 45개 Cell의 전체 가공 중심 및 반복 좌표 위치">
+        <figcaption>
+          상단 Field Band만 mm 정척이며, 하단 Cell 내부 격자는 가독성을 위한 확대도입니다.
+          각 점은 DOE 개별 Hole이 아니라 DOE 중심 명령좌표이고 외곽선은 실제 Glass 치수나 장비 방향을 확정하는 도면이 아닙니다.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="pitch">
+      <h2>1. 가공 중심 Pitch 정의</h2>
+      <p class="lead">
+        <b>Pitch는 현재 DOE 중심 명령좌표에서 다음 DOE 중심 명령좌표까지 이동하는 원본 Pixel 개수</b>입니다.
+        DOE가 한 번의 출사로 만드는 16개 Hole 사이의 내부 간격이 아닙니다.
+      </p>
+
+      <div class="grid-2">
+        <div class="card status-good">
+          <h3>가공 중심 간격</h3>
+          <div class="equation">가공 중심 간격 [mm] = 픽셀 크기 [mm/px] × 피치 [px]</div>
+          <div class="equation">0.09 mm/px × 10 px = 0.9 mm</div>
+          <p>현재 중심에서 다음 중심까지의 Scanner 명령좌표 간격은 0.9 mm입니다.</p>
+        </div>
+        <div class="card status-good">
+          <h3>DOE 4×4 가공홀</h3>
+          <div class="equation">중심 1개당 명목 가공홀 수 [개] = 가로 분기 수 [개] × 세로 분기 수 [개] = 4 × 4 = 16</div>
+          <p>16개 Hole의 실제 위치는 DOE Branch별 X/Y Offset 및 회전 Calibration 값으로 계산합니다.</p>
+        </div>
+      </div>
+
+      <div class="doe-figure">
+        <svg viewBox="0 0 980 300" role="img" aria-label="두 DOE 중심 명령좌표와 4x4 Branch 패턴의 관계">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d73c9"/>
+            </marker>
+          </defs>
+          <rect x="18" y="18" width="944" height="264" rx="18" fill="#f7fbff" stroke="#cfe0f1"/>
+          <text x="50" y="52" font-size="16" font-weight="700" fill="#15345d">DOE 4×4 내부 Pattern</text>
+          <g fill="#2d78b7">
+            <circle cx="110" cy="95" r="7"/><circle cx="138" cy="95" r="7"/><circle cx="166" cy="95" r="7"/><circle cx="194" cy="95" r="7"/>
+            <circle cx="110" cy="123" r="7"/><circle cx="138" cy="123" r="7"/><circle cx="166" cy="123" r="7"/><circle cx="194" cy="123" r="7"/>
+            <circle cx="110" cy="151" r="7"/><circle cx="138" cy="151" r="7"/><circle cx="166" cy="151" r="7"/><circle cx="194" cy="151" r="7"/>
+            <circle cx="110" cy="179" r="7"/><circle cx="138" cy="179" r="7"/><circle cx="166" cy="179" r="7"/><circle cx="194" cy="179" r="7"/>
+          </g>
+          <g fill="#57a659">
+            <circle cx="692" cy="95" r="7"/><circle cx="720" cy="95" r="7"/><circle cx="748" cy="95" r="7"/><circle cx="776" cy="95" r="7"/>
+            <circle cx="692" cy="123" r="7"/><circle cx="720" cy="123" r="7"/><circle cx="748" cy="123" r="7"/><circle cx="776" cy="123" r="7"/>
+            <circle cx="692" cy="151" r="7"/><circle cx="720" cy="151" r="7"/><circle cx="748" cy="151" r="7"/><circle cx="776" cy="151" r="7"/>
+            <circle cx="692" cy="179" r="7"/><circle cx="720" cy="179" r="7"/><circle cx="748" cy="179" r="7"/><circle cx="776" cy="179" r="7"/>
+          </g>
+          <g stroke="#b42318" stroke-width="2">
+            <line x1="152" y1="122" x2="152" y2="152"/><line x1="137" y1="137" x2="167" y2="137"/>
+            <line x1="734" y1="122" x2="734" y2="152"/><line x1="719" y1="137" x2="749" y2="137"/>
+          </g>
+          <line x1="168" y1="226" x2="718" y2="226" stroke="#1d73c9" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="443" y="217" text-anchor="middle" font-size="17" font-weight="800" fill="#155fa8">0.9 mm</text>
+          <text x="443" y="245" text-anchor="middle" font-size="13" fill="#475467">가공 중심 Cₖ → 다음 중심 Cₖ₊₁</text>
+          <text x="152" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">Scanner 명령 중심</text>
+          <text x="734" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">Scanner 명령 중심</text>
+          <text x="875" y="118" text-anchor="middle" font-size="12" fill="#475467">Branch 간격 dDOE</text>
+          <text x="875" y="139" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">별도 광학 파라미터</text>
+        </svg>
+      </div>
+
+      <div class="equation">실제 가공홀 좌표(중심 번호, 분기 번호) = DOE 중심 명령좌표(중심 번호) + DOE 분기 오프셋(분기 번호)</div>
+      <div class="equation">분기 번호 = B01 … B16</div>
+      <div class="callout info">
+        첨부 DOE 그림도 “가공좌표는 DOE의 중심 위치”라고 명시합니다. Review는 중심이 아니라 B06 또는 B11 같은 지정 Branch를 볼 수 있으므로,
+        측정값을 가공 중심 오차로 환산할 때는 해당 Branch Offset을 제거해야 합니다.
+      </div>
+    </section>
+
+    <section id="workbook">
+      <h2>2. 첨부 Excel 구조와 입력조건</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>구분</th><th>레시피 조건</th><th>가공 좌표</th><th>해석</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Excel XML 선언 범위</td><td>B1:O92<br><small>실제 비어있지 않은 값: B1:G92</small></td><td>A1:P3003</td><td>2개 탭</td></tr>
+            <tr><td>비어있지 않은 셀</td><td class="num">234</td><td class="num">33,510</td><td>가공 좌표는 8 Head × 2열 구조</td></tr>
+            <tr><td>수식 셀</td><td class="num">3</td><td class="num">0</td><td><b>가공 좌표는 모두 정적 값</b></td></tr>
+            <tr><td>병합</td><td>없음</td><td>Head 제목 8개</td><td>A3:B3 … O3:P3</td></tr>
+            <tr><td>도형·차트·그림</td><td>없음</td><td>없음</td><td>분석은 셀 값과 첨부 설명 이미지 기준</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warn">
+        <b>중요:</b> 가공 좌표 탭은 Recipe 셀을 참조하는 계산 Sheet가 아닙니다. Recipe가 변경되어도 Excel 안에서 좌표가 갱신되지 않으며,
+        외부 좌표 생성 프로그램이 결과를 다시 생성해야 합니다.
+      </div>
+
+      <h3>2.1 좌표 생성에 사용된 주요 Recipe</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>셀</th><th>항목</th><th class="num">값</th><th>좌표 생성에서 확인된 역할</th><th>상태</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>C3</td><td>픽셀 크기</td><td class="num">0.09 mm/px</td><td>피치 [px]를 거리 [mm]로 변환</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C4</td><td>X방향 픽셀 수</td><td class="num">144 px</td><td>현재 14개 X방향 명령 격자 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C5</td><td>Y방향 픽셀 수</td><td class="num">256 px</td><td>현재 25개 Y방향 명령 격자 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C6</td><td>분기빔 개수</td><td class="num">4 /축</td><td>DOE 4×4 = 중심당 16 Hole</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C7</td><td>가공 중심 피치</td><td class="num">10 px</td><td>다음 중심까지의 픽셀 간격</td><td><span class="tag fixed">확정</span></td></tr>
+            <tr><td>C9:C11</td><td>Cell 배치</td><td class="num">9 × 5 = 45</td><td>45개 Cell Origin 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C13:C14</td><td>Cell 기준점 간격</td><td class="num">X 100 / Y 200 mm</td><td>Cell X=0…800 mm, Y=0…800 mm</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C16:C18</td><td>X 기준거리 구성값</td><td class="num">5 + 15.5 + 5 mm</td><td>ESC Edge→Glass Edge + Glass Edge→Align Key + Glass 중심↔Scanner 중심 Offset</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C19</td><td>Default Offset</td><td class="num">0 mm</td><td>X/Y 구분이 없는 공통 단일값, 비영(非0) 동작은 역산 불가</td><td><span class="tag missing">구조 부족</span></td></tr>
+            <tr><td>C20</td><td>홀수·짝수열 거리</td><td class="num">380 mm</td><td>홀수 Head GX에 추가</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C21</td><td>MOF Buffer Offset</td><td class="num">120 mm</td><td>모든 Head GX에 반영</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr class="risk"><td>C26</td><td>라벨 없음</td><td class="num">0.3375 mm</td><td>전역 X·Y 좌표 산식에 더해지는 값</td><td><span class="tag inferred">의미 확인 필요</span></td></tr>
+            <tr class="risk"><td>C27</td><td>라벨 없음</td><td class="num">−55 mm</td><td>확정 Scan Field 110 mm의 중심 원점 기준 하한(−110/2)</td><td><span class="tag fixed">사양 연계 확인</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.2 Recipe 탭의 실제 수식 3개</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>셀</th><th>한글 계산식</th><th>Excel 수식</th><th class="num">결과</th></tr></thead>
+          <tbody>
+            <tr><td>C9</td><td>전체 Cell 수 = X방향 Cell 수 × Y방향 Cell 수</td><td><code>=C10*C11</code></td><td class="num">45 Cell</td></tr>
+            <tr><td>C25</td><td>X 기준거리 합계 = ESC Edge부터 Glass Edge까지 거리 + Glass Edge부터 Align Key까지 거리 + Glass 중심과 Scanner 중심 Offset 차이</td><td><code>=C18+C17+C16</code></td><td class="num">25.5 mm</td></tr>
+            <tr><td>C28</td><td>Excel 보조 합산값 = X 기준거리 합계(C25) + 의미 미정 입력값(C26) + 스캔필드 하한값(C27)</td><td><code>=SUM(C25:C27)</code></td><td class="num">−29.1625 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>3. 확정 Scan Field 110 mm를 반영한 좌표 재현 모델</h2>
+      <p class="lead">
+        아래 모델로 8개 Head의 <b>Raw 좌표쌍 16,742개를 순번 포함 불일치 0개</b>로 재현했습니다.
+        정답 출력은 16,742개이며, 같은 공간점을 한 번만 센 15,750개는 분석 참고값입니다.
+        <b>Scan Field Width 110 mm는 사용자 확정 사양</b>이며, 중심 원점 기준 명목 Local 범위는 [−55,+55) mm입니다.
+        110 mm 간격의 논리 Field tile 배치는 Ground Truth와 일치하지만 실제 기계 Head 중심 간격과 Field overlap/gap은 설치 도면으로 별도 확인합니다.
+      </p>
+
+      <div class="flow">
+        <div class="flow-step"><b>Cell 기준점</b><span>45개 Align→첫 픽셀 기준</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>0.9 mm 중심 격자</b><span>현재 14 × 25 / Cell</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>Head 선택·로컬 변환</b><span>Scan Field 110 mm</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>DOE 16개 Hole</b><span>분기 오프셋은 별도</span></div>
+      </div>
+
+      <h3>3.1 중심 격자</h3>
+      <div class="equation">가공 중심 간격 [mm] = 픽셀 크기 [mm/px] × 가공 중심 피치 [px] = 0.09 × 10 = 0.9 mm</div>
+      <div class="equation">전역 X좌표 [mm] = Cell 기준 X좌표 [mm] + X 기준거리 합계 C25 [mm] + 의미 미정 입력값 C26 [mm] + X방향 격자 번호 × 가공 중심 간격 [mm]</div>
+      <div class="equation">전역 X좌표 [mm] = Cell 기준 X좌표 + 25.8375 + 0.9 × X방향 격자 번호</div>
+      <div class="equation">전역 Y좌표 [mm] = Cell 기준 Y좌표 [mm] + 의미 미정 입력값 C26 [mm] + Y방향 격자 번호 × 가공 중심 간격 [mm]</div>
+      <div class="equation">전역 Y좌표 [mm] = Cell 기준 Y좌표 + 0.3375 + 0.9 × Y방향 격자 번호</div>
+      <p>
+        현재 파일은 X방향 격자 번호 <code>0…13</code>, Y방향 격자 번호 <code>0…24</code>를 사용합니다.
+        설계 X방향 격자가 <code>GY(Review)</code>에, 설계 Y방향 격자가 부호 반전되어 <code>GX(Stage)</code>에 반영됩니다.
+      </p>
+
+      <h3>3.2 Head 선택과 GY 로컬·GX(Stage) 출력좌표</h3>
+      <div class="equation">스캔필드 폭 [mm] = 110 mm · 스캔필드 반폭 [mm] = 55 mm</div>
+      <div class="equation">Head 번호 = 내림(전역 X좌표 [mm] ÷ 스캔필드 폭 [mm]) + 1</div>
+      <div class="equation">Head 스캔필드 중심 X좌표 [mm] = 스캔필드 반폭 [mm] + 스캔필드 폭 [mm] × (Head 번호 − 1)</div>
+      <div class="equation">스캐너 로컬 GY [mm] = 전역 X좌표 [mm] − Head 스캔필드 중심 X좌표 [mm]</div>
+      <div class="equation">명목 GY 범위: −55 mm ≤ 스캐너 로컬 GY &lt; +55 mm</div>
+      <div class="equation">Head별 GX(Stage) 출력좌표 [mm] = −{전역 Y좌표 [mm] + MOF 버퍼 오프셋 120 mm + 홀수 Head이면 380 mm}</div>
+      <p><code>GX(Stage)</code>는 Stage/MOF 절대성분을 포함하므로 Scanner Local GX 범위로 직접 해석하지 않습니다.</p>
+      <p>
+        Head 전수 대조는 Cell 열 번호와 X방향 명령 격자 번호만 사용해
+        <code>전역 X좌표 = 100 × (Cell 열 번호 − 1) + 25.8375 + 0.9 × X방향 격자 번호</code>로 독립 계산했습니다.
+        16,742개 모두 Excel Head와 일치하며, Excel GY로 복원한 전역 X좌표와의 차이도 0 mm입니다.
+      </p>
+
+      <h3>3.3 수식 항목 한글 정의</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>수식 항목</th><th class="num">현재 값·범위</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td>픽셀 크기</td><td class="num">0.09 mm/px</td><td>설계 Pixel 1개가 나타내는 실제 거리</td></tr>
+            <tr><td>가공 중심 피치</td><td class="num">10 px</td><td>현재 DOE 중심 명령에서 다음 중심 명령까지의 Pixel 수</td></tr>
+            <tr><td>가공 중심 간격</td><td class="num">0.9 mm</td><td>픽셀 크기 × 가공 중심 피치로 계산한 실제 이동 거리</td></tr>
+            <tr><td>Cell 기준 X/Y좌표</td><td class="num">X 0…800 / Y 0…800 mm</td><td>각 Cell의 전역 배치 기준점</td></tr>
+            <tr><td>X 기준거리 합계 C25</td><td class="num">25.5 mm</td><td>ESC Edge→Glass Edge, Glass Edge→Align Key, Glass 중심↔Scanner 중심 Offset의 합계</td></tr>
+            <tr><td>의미 미정 입력값 C26</td><td class="num">0.3375 mm</td><td>전역 X/Y 식에 공통 적용되지만 원본에 항목명과 산출식이 없음</td></tr>
+            <tr><td>X/Y방향 격자 번호</td><td class="num">X 0…13 / Y 0…24</td><td>Cell 내부 가공 중심의 0 기준 순번</td></tr>
+            <tr><td>전역 X/Y좌표</td><td class="num">mm</td><td>Cell 배치와 내부 격자를 합산한 기판 기준 가공 중심</td></tr>
+            <tr><td>Head 스캔필드 중심 X좌표</td><td class="num">55 + 110×(Head−1) mm</td><td>각 110 mm Scan Field의 전역 중심</td></tr>
+            <tr><td>스캐너 로컬 GY</td><td class="num">−55≤GY&lt;+55 mm</td><td>전역 X좌표에서 선택 Head의 스캔필드 중심을 뺀 Scanner 명령좌표</td></tr>
+            <tr><td>GX(Stage) 출력좌표</td><td class="num">mm</td><td>전역 Y, MOF 버퍼, 홀수 Head 거리와 부호를 반영한 Stage/MOF 좌표</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.4 Cell 1 첫 좌표 대조</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>① Global X</h4>
+          <div class="equation">0 + 25.5 + 0.3375 = 25.8375</div>
+          <p>110/2로 정의된 H1 명목 Field 중심 55 mm를 빼면 <b>GY1 = −29.1625 mm</b></p>
+        </div>
+        <div class="card">
+          <h4>② Global Y</h4>
+          <div class="equation">0 + 0.3375 = 0.3375</div>
+          <p>홀수 Head이므로 120+380을 더한 후 반전: <b>GX1 = −500.3375 mm</b></p>
+        </div>
+        <div class="card">
+          <h4>③ Excel 일치</h4>
+          <div class="equation">'가공 좌표'!A5:B5</div>
+          <p><b>(−29.1625, −500.3375)</b>로 정확히 일치합니다.</p>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        첨부 스캐너 좌표계 그림에는 “부호, 축이름 확인 필요”라고 적혀 있습니다.
+        따라서 위 식은 <b>현재 Excel을 재현하는 식</b>이지, 장비 실축 부호 검증까지 완료된 확정 사양은 아닙니다.
+      </div>
+    </section>
+
+    <section id="distribution">
+      <h2>4. Cell → Head 분배와 좌표 개수</h2>
+
+      <h3>4.1 한 Cell row에서의 X 분배</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cell X열</th><th class="num">Cell X</th><th>담당 Head</th><th class="num">X 중심 수 / Lane</th><th>설명</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="num">0 mm</td><td>H1</td><td class="num">14</td><td>전부 H1</td></tr>
+            <tr><td>2</td><td class="num">100 mm</td><td>H2</td><td class="num">14</td><td>전부 H2</td></tr>
+            <tr><td>3</td><td class="num">200 mm</td><td>H3</td><td class="num">14</td><td>전부 H3</td></tr>
+            <tr class="risk"><td>4</td><td class="num">300 mm</td><td>H3 + H4</td><td class="num">5 + 9</td><td>Global X=330 mm 경계: H3 [220,330), H4 [330,440)</td></tr>
+            <tr><td>5</td><td class="num">400 mm</td><td>H4</td><td class="num">14</td><td>전부 H4</td></tr>
+            <tr><td>6</td><td class="num">500 mm</td><td>H5</td><td class="num">14</td><td>전부 H5</td></tr>
+            <tr><td>7</td><td class="num">600 mm</td><td>H6</td><td class="num">14</td><td>전부 H6</td></tr>
+            <tr><td>8</td><td class="num">700 mm</td><td>H7</td><td class="num">14</td><td>전부 H7</td></tr>
+            <tr><td>9</td><td class="num">800 mm</td><td>H8</td><td class="num">14</td><td>전부 H8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Cell 4·13·22·31·40은 동일하게 분할됩니다. H3는 <code>ix=0…4</code> 5개,
+        H4는 <code>ix=5…13</code> 9개를 처리합니다.
+      </p>
+
+      <h3>4.2 Head별 Raw 좌표쌍 레코드와 고유 가공 중심</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Head</th><th class="num">Raw 좌표쌍</th><th class="num">고유 중심</th><th class="num">반복 발생분</th><th class="num">명목 Hole<br><small>고유 중심×16</small></th><th>담당 영역</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>H1</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=0</td></tr>
+            <tr><td>H2</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=100</td></tr>
+            <tr><td>H3</td><td class="num">2,499</td><td class="num">2,375</td><td class="num">124</td><td class="num">38,000</td><td>Cell X=200 + X=300 일부</td></tr>
+            <tr><td>H4</td><td class="num">2,999</td><td class="num">2,875</td><td class="num">124</td><td class="num">46,000</td><td>Cell X=300 일부 + X=400</td></tr>
+            <tr><td>H5</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=500</td></tr>
+            <tr><td>H6</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=600</td></tr>
+            <tr><td>H7</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=700</td></tr>
+            <tr><td>H8</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=800</td></tr>
+            <tr class="total"><td>합계</td><td class="num">16,742</td><td class="num">15,750</td><td class="num">992</td><td class="num">252,000</td><td>45 Cell</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout info">
+        합계 16,742는 물리 Worksheet 행 수가 아니라 8개 Head 열쌍의 Raw 레코드 합계입니다.
+        Head별 Raw 길이가 서로 다르므로 Excel의 같은 행 번호를 8개 Head의 동기 가공점으로 해석하면 안 됩니다.
+        Head별 독립 Queue 또는 Stage 위치 기준 Trigger로 동작해야 합니다.
+      </div>
+
+      <h3>4.3 Scan Field 110 mm 전수 수용성</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Head</th><th>명목 Global X Field (mm)</th><th>실제 Local GY min…max envelope (mm)</th><th class="num">−55측 여유</th><th class="num">+55측 여유</th><th class="num">최소 여유</th><th class="num">Field 이탈</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>H1</td><td>[0,110)</td><td>−29.1625…−17.4625</td><td class="num">25.8375</td><td class="num">72.4625</td><td class="num">25.8375</td><td class="num">0</td></tr>
+            <tr><td>H2</td><td>[110,220)</td><td>−39.1625…−27.4625</td><td class="num">15.8375</td><td class="num">82.4625</td><td class="num">15.8375</td><td class="num">0</td></tr>
+            <tr class="risk"><td>H3</td><td>[220,330)</td><td>−49.1625…+54.4375</td><td class="num">5.8375</td><td class="num">0.5625</td><td class="num"><b>0.5625</b></td><td class="num">0</td></tr>
+            <tr class="risk"><td>H4</td><td>[330,440)</td><td>−54.6625…+52.5375</td><td class="num">0.3375</td><td class="num">2.4625</td><td class="num"><b>0.3375</b></td><td class="num">0</td></tr>
+            <tr><td>H5</td><td>[440,550)</td><td>+30.8375…+42.5375</td><td class="num">85.8375</td><td class="num">12.4625</td><td class="num">12.4625</td><td class="num">0</td></tr>
+            <tr><td>H6</td><td>[550,660)</td><td>+20.8375…+32.5375</td><td class="num">75.8375</td><td class="num">22.4625</td><td class="num">22.4625</td><td class="num">0</td></tr>
+            <tr><td>H7</td><td>[660,770)</td><td>+10.8375…+22.5375</td><td class="num">65.8375</td><td class="num">32.4625</td><td class="num">32.4625</td><td class="num">0</td></tr>
+            <tr><td>H8</td><td>[770,880)</td><td>+0.8375…+12.5375</td><td class="num">55.8375</td><td class="num">42.4625</td><td class="num">42.4625</td><td class="num">0</td></tr>
+            <tr class="total"><td>합계</td><td>8개 명목 Field</td><td>Raw 16,742개 전수</td><td class="num">—</td><td class="num">—</td><td class="num">0.3375</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout info">
+        H3/H4 경계는 Global X=330 mm입니다. Cell X=300의 H3 마지막점은
+        <b>X=329.4375 mm, GY3=+54.4375 mm</b>, H4 첫점은
+        <b>X=330.3375 mm, GY4=−54.6625 mm</b>이며 두 중심 간격은 정확히 <b>0.9000 mm</b>입니다.
+        즉 Head가 바뀌어도 command Pitch는 끊기지 않고, 정확히 경계에 놓인 점도 없습니다.
+      </div>
+      <div class="callout warn">
+        <b>명령 중심은 100% nominal Field 내부지만 Guard는 충분하다고 볼 수 없습니다.</b>
+        H4 최소 여유는 0.3375 mm(337.5 µm), H3 최소 여유는 0.5625 mm(562.5 µm)입니다.
+        이 값보다 큰 Align·Default·Process Offset 또는 Mapping 잔차가 경계 방향으로 적용되면 Head 재선택이나 사전 Field 초과 판정이 필요합니다.
+        검증축은 <code>GY(Review)</code>이며, <code>GX(Stage)</code>에는 Stage 절대좌표가 포함되어 ±55 mm를 직접 적용하지 않습니다.
+      </div>
+    </section>
+
+    <section id="risks">
+      <h2>5. Ground Truth 출력 패턴과 실행 의미 확인사항</h2>
+
+      <h3>5.1 <span class="tag fixed">Ground Truth</span> 992개 연속 반복 좌표 레코드</h3>
+      <p>
+        각 Head는 <b>125개 Stage Lane</b>(5 Cell rows × 25 Y index)을 갖습니다.
+        첫 Lane을 제외한 124개 Lane에서 첫 좌표가 정확히 두 번 연속 기록됩니다.
+        이는 서로 다른 두 공간점이 아니라 같은 (GY,GX)의 두 번째 Raw 레코드입니다.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>예시</th><th>GY1</th><th>GX1</th><th>판정</th></tr></thead>
+          <tbody>
+            <tr><td>A19:B19</td><td class="num">−29.1625</td><td class="num">−501.2375</td><td rowspan="2" style="vertical-align:middle;color:#b42318;font-weight:800">완전 동일</td></tr>
+            <tr><td>A20:B20</td><td class="num">−29.1625</td><td class="num">−501.2375</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout danger">
+        <b>좌표 생성 SW는 정답 탭의 992개 반복을 제거하지 않고 16,742개 Raw 레코드를 그대로 출력해야 합니다.</b>
+        다만 모든 행을 Laser-On 가공점으로 처리하면 992개 중심이 이중 가공됩니다.
+        DOE 16개 기준으로는 <b>15,872회의 추가 Hole 노광</b>, 총 <b>267,872 Hole 노광</b> 위험입니다
+        (공간 고유 중심 기준 명목 252,000 Hole 대비).
+        이 반복이 실행 시 Jump/Lead-in 역할이라면 <code>CommandType</code>과 <code>LaserGate</code>를 반드시 명시해야 합니다.
+        “Lane 시작”은 위치·순서를 설명하는 분석상 분류이며, 실제 장비 명령 의미는 파일만으로 확정할 수 없습니다.
+      </div>
+
+      <h3>5.2 <span class="priority p0">P0</span> 보정 후 110 mm Field Guard</h3>
+      <p>
+        현재 좌표 중심만 보면 Field 이탈은 0개지만, H4 첫 중심의 여유가 0.3375 mm뿐이므로
+        보정과 DOE footprint를 합친 최종 좌표를 기준으로 검사해야 합니다.
+      </p>
+      <div class="equation">명목 중심 수용 조건: −55 mm ≤ 보정 전 스캐너 로컬 GY &lt; +55 mm</div>
+      <div class="equation">사전 안전여유 조건: |명목 스캐너 로컬 GY| + 보정 이동량 예산 + 회전 반영 DOE 최대 GY 오프셋 + 빔 반경 + 매핑 오차 &lt; 55 mm</div>
+      <div class="equation">실행 시 수용 조건: |보정 후 스캐너 로컬 GY| + 회전 반영 DOE 최대 GY 오프셋 + 빔 반경 + 매핑 오차 &lt; 55 mm</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>안전여유 수식 항목</th><th>한글 정의</th></tr></thead>
+          <tbody>
+            <tr><td>보정 이동량 예산</td><td>Align·Default·Process 보정이 GY 방향으로 이동시킬 수 있는 최대 합산량 [mm]</td></tr>
+            <tr><td>회전 반영 DOE 최대 GY 오프셋</td><td>DOE 패턴 회전 후 가장 바깥쪽 분기빔이 중심에서 GY 방향으로 떨어진 최대 거리 [mm]</td></tr>
+            <tr><td>빔 반경</td><td>가공홀 중심에서 Laser Beam 외곽까지의 반경 [mm]</td></tr>
+            <tr><td>매핑 오차</td><td>Scanner 좌표 매핑·수차보정 후 남는 최대 위치 잔차 [mm]</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout danger">
+        <b>Head를 먼저 고정하고 보정값을 나중에 더하면 H3/H4 경계에서 Field를 벗어날 수 있습니다.</b>
+        처리 순서는 Global 중심 생성 → Cell Align·Global Process 보정 → 보정된 Global X와 보정된 Head Field map으로 Head 재선택 →
+        Head별 설치/Default 변환과 왜곡 보정 → Local GY 변환 → Field Guard 검사여야 합니다.
+        경계 초과 좌표를 Clamp하면 실제 가공 위치가 바뀌므로 금지해야 합니다.
+      </div>
+
+      <h3>5.3 <span class="priority p0">P0</span> 끝점 생성 정책</h3>
+      <div class="card status-good">
+        <h3>현재 Ground Truth 적용 정책</h3>
+        <div class="equation">Cell당 X방향 중심 수 [개] = 내림(X방향 픽셀 수 [px] ÷ 피치 [px]) = 내림(144 ÷ 10) = 14</div>
+        <div class="equation">Cell당 Y방향 중심 수 [개] = 내림(Y방향 픽셀 수 [px] ÷ 피치 [px]) = 내림(256 ÷ 10) = 25</div>
+        <div class="equation">전체 공간 고유 중심 수 [개] = Cell 수 45 × X방향 중심 수 14 × Y방향 중심 수 25 = 15,750</div>
+        <p>명령 Pixel 위치는 X방향 0…130 px, Y방향 0…240 px이며, Raw 출력은 반복 패턴 992개를 포함한 16,742개입니다.</p>
+      </div>
+      <p>
+        좌표 생성 SW는 위 14×25 정책과 Raw 반복 순서를 그대로 재현해야 합니다.
+        끝점 포함 규칙을 변경할 경우에는 별도의 사양 변경 및 새 Ground Truth 승인이 필요합니다.
+      </p>
+
+      <h3>5.4 <span class="priority p0">P0</span> 미정의 기준값 C26</h3>
+      <p><code>C26=0.3375 mm</code>는 전역 X·Y 좌표 산식에 사용되지만 원본 Excel에 항목명과 생성 수식이 없습니다. 좌표 재현에는 수치만 반영하며 물리적 의미는 정의하지 않습니다.</p>
+      <div class="callout warn">
+        좌표 생성 SW에는 C26의 항목명, 적용 축, 부호, 기준 좌표계와 산출 근거를 명명 파라미터로 정의해야 합니다.
+        DOE 내부 Offset은 가공 중심 Pitch와 분리된 Branch별 X/Y Offset 및 회전 Calibration Table로 관리해야 합니다.
+      </div>
+
+      <h3>5.5 그 밖의 구조적 누락</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>항목</th><th>현재 파일</th><th>필요한 개선</th><th>영향</th></tr></thead>
+          <tbody>
+            <tr><td>Scan Field Width / 경계 규칙</td><td>110 mm 사용자 확정, 중심 원점 nominal ±55 mm</td><td><code>SCAN_FIELD_WIDTH_MM=110</code>, [lower,upper), Guard를 명명 파라미터로 관리</td><td>Magic number 제거·보정 후 Field 초과 방지</td></tr>
+            <tr><td>Usable Field / 설치 Field map</td><td>기계적 Head pitch, overlap/gap, 보정 완료 유효범위 미확인</td><td>설치 도면·수차보정 결과·Head별 Guard Table</td><td>명목 110 mm와 실제 생산 유효 Field 혼동</td></tr>
+            <tr><td>Head별 Default Offset</td><td>전체 공통 scalar 0 mm</td><td>Head별 X/Y/θ</td><td>8 Scanner 설치 오차 보정 불가</td></tr>
+            <tr><td>Cell Rotation</td><td>항목 없음</td><td>Cell별 θ 또는 2D Transform</td><td>기판 자세·왜곡 보정 불가</td></tr>
+            <tr><td>CHESS / Masking</td><td>항목 없음</td><td>명시적 선택·회피 규칙</td><td>현재 파일 근거로 적용 불가</td></tr>
+            <tr><td>DOE Branch 데이터</td><td>4라는 개수만 존재</td><td>B01~B16 X/Y Offset, 회전, Pattern ID</td><td>개별 Hole 절대좌표 재현 불가</td></tr>
+            <tr><td>Review 기준 Branch</td><td>좌표표에 없음</td><td>B06/B11 ID와 center offset</td><td>Review 기준점과 DOE 중심 기준의 혼동 가능</td></tr>
+            <tr><td>좌표 Metadata</td><td>GY/GX 숫자만 존재</td><td>Cell/ix/iy/Lane/Role/LaserGate</td><td>중복·Jump·Trace 추적 불가</td></tr>
+            <tr><td>축/부호 확정</td><td>설계 X→GY, 설계 Y→−GX</td><td>홀짝 Scanner 실기 검증</td><td>반전조립 시 Mirror 위험</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <h2>6. 좌표 생성 SW에 반영할 권장 구조</h2>
+
+      <h3>6.1 계산 계층을 분리해야 합니다</h3>
+      <div class="flow">
+        <div class="flow-step"><b>① 설계 / Cell</b><span>Align, 픽셀 격자, 회전</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>② 명령 중심</b><span>픽셀 크기 × 피치</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>③ Scanner 로컬</b><span>Scan Field 110 mm + 안전여유</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>④ 실제 가공홀</b><span>DOE 분기 Calibration</span></div>
+      </div>
+
+      <pre>// 1) 가공 중심 간격
+가공중심간격_mm = 픽셀크기_mm_per_px × 가공중심피치_px;
+
+// 2) Cell 내부 DOE 중심 명령좌표와 전역 보정
+기본전역중심 = Cell좌표변환 × (AlignKey에서첫픽셀까지거리
+              + [X격자번호 × 가공중심간격_mm, Y격자번호 × 가공중심간격_mm]);
+보정전역중심 = 전역공정보정적용(기본전역중심, 전역보정맵);
+
+// 3) Scan Field 110 mm 기준 Head 선택과 Scanner Local 변환
+스캔필드폭_mm = 110.0;
+스캔필드반폭_mm = 스캔필드폭_mm ÷ 2.0;
+선택Head = 보정Field맵으로Head선택(보정전역중심.X, Head별Field맵);
+로컬중심 = 선택Head.전역좌표를로컬로변환(보정전역중심, Head설치XYθ, 수차보정맵);
+필수조건(−스캔필드반폭_mm ≤ 로컬중심.GY &lt; 스캔필드반폭_mm);
+
+// 4) DOE 전체 footprint를 포함한 Field 안전여유 검사
+회전반영DOE최대GY오프셋_mm = 각 DOE 분기 회전좌표의 |GY| 중 최대값;
+필수조건(|로컬중심.GY| + 회전반영DOE최대GY오프셋_mm
+        + 빔반경_mm + 매핑오차_mm &lt; 스캔필드반폭_mm);
+
+// 5) DOE 실제 가공홀 좌표
+각 DOE 분기에 대해:
+    실제가공홀좌표 = 로컬중심 + 회전적용(DOE회전각, 분기XY오프셋);
+
+// 6) Review 측정 기준점
+Review측정좌표 = 로컬중심 + Review분기XY오프셋;</pre>
+
+      <h3>6.2 좌표 Row에 최소한 추가할 Metadata</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>필드</th><th>예시</th><th>목적</th></tr></thead>
+          <tbody>
+            <tr><td>HeadId / CellId</td><td>H03 / CELL04</td><td>좌표 소유권과 Trace</td></tr>
+            <tr><td>CommandGridIndexX/Y</td><td>4 / 12</td><td>0부터 시작하는 명령 중심 격자 ordinal</td></tr>
+            <tr><td>DesignPixelX/Y</td><td>40 / 120 px</td><td>명령 격자 번호 × 가공 중심 피치 [px]로 원본 Design Pixel 역추적</td></tr>
+            <tr><td>GlobalX / LocalGY</td><td>330.3375 / −54.6625 mm</td><td>110 mm Field 선택·Local 변환 검증</td></tr>
+            <tr><td>CenterNominalMarginMm / CenterInNominalField</td><td>0.3375 / True</td><td>현재 Excel 명령 중심의 보정 전 명목 Field 여유</td></tr>
+            <tr><td>FinalFootprintMarginMm / FieldValid</td><td>UNVERIFIED / UNVERIFIED</td><td>DOE 회전 Offset·Beam radius·보정·Mapping 오차 입력 후 최종 판정</td></tr>
+            <tr><td>LaneId / PointIndex</td><td>Y003 / 005</td><td>라인 시작 중복 검증</td></tr>
+            <tr><td>CommandType</td><td>Jump / Mark / LeadIn</td><td>이동과 가공 구분</td></tr>
+            <tr><td>LaserGate</td><td>Off / On</td><td>중복 노광 방지</td></tr>
+            <tr><td>DOEPatternId</td><td>DOE_4X4_REV03</td><td>Branch 보정 버전 관리</td></tr>
+            <tr><td>ReviewBranchId</td><td>B06</td><td>중심↔Review Offset 보정</td></tr>
+            <tr><td>CorrectionVersion</td><td>MAP_H03_20260830</td><td>수차·Default Offset 재현성</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>6.3 우선 결정해야 할 항목</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>우선순위</th><th>결정·검증 항목</th><th>완료 조건</th></tr></thead>
+          <tbody>
+            <tr><td><span class="priority p0">P0</span></td><td>보정 후 110 mm Field Guard</td><td>보정 Global 좌표로 Head 재선택 후 DOE Offset·Beam radius·Mapping 오차 포함 FieldValid 판정</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>끝점 생성 정책 고정</td><td>현재 14×25 정책 유지; 정책 변경 시 새 Ground Truth 파일 생성·승인</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>Ground Truth 반복 992개의 실행 의미</td><td>출력은 보존하고 PointRole·Jump/Mark·LaserGate 의미 명시</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>C26=0.3375 근거</td><td>항목명·적용 축·부호·기준 좌표계·산출 근거 확정</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>DOE B01~B16 Calibration</td><td>Branch별 X/Y Offset, 회전, Review Branch 승인</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>Head별 Default Offset</td><td>8 Head X/Y/θ 파라미터와 적용 순서 확정</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>Scan Field 110 mm 파라미터화</td><td>확정값을 명명 파라미터로 관리하고 16,742개 이탈 0·Head 불일치 0 단위시험</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>Usable Field·설치 Field map</td><td>기계 Head 중심 간격, overlap/gap, 수차보정 후 Head별 유효범위·Guard 승인</td></tr>
+            <tr><td><span class="priority p2">P2</span></td><td>홀짝 Scanner 축·부호 검증</td><td>실기 +X/+Y 이동 및 Review 측정으로 Sign 승인</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="footer">
+      분석 근거: 첨부 「가공좌표생성방법 및 검증데이터.xlsx」의 두 탭 전체 값·수식, 사용자 확정 Scan Field 110 mm,
+      DOE 중심/Review 기준점, Scanner Default Offset 및 홀짝 좌표계 설명 이미지.
+      Scan Field Width 110 mm는 확정 사양이며, 기계적 Head 중심 간격·Field overlap/gap·수차보정 후 Usable Field·DOE Branch footprint·장비 실축은 별도 검증 대상입니다.
+    </div>
+  </main>
+
+</body>
+</html>
