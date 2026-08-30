@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>가공좌표 개수 재분석 — 16,742개 전수 대조</title>
+  <style>
+    :root {
+      --ink: #162033;
+      --muted: #667085;
+      --line: #d9e2ef;
+      --surface: #f7f9fc;
+      --blue: #1d4ed8;
+      --blue-soft: #eaf1ff;
+      --green: #047857;
+      --green-soft: #e8f8f1;
+      --amber: #b45309;
+      --amber-soft: #fff7e7;
+      --red: #b42318;
+      --red-soft: #fff0ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef2f7;
+      font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--blue); }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .page {
+      width: min(1220px, calc(100% - 28px));
+      margin: 22px auto 52px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(16, 24, 40, .10);
+    }
+    .hero {
+      padding: 48px 52px 38px;
+      color: #fff;
+      background: linear-gradient(130deg, #0b1f4a 0%, #153e75 60%, #0f766e 115%);
+    }
+    .eyebrow { margin: 0 0 10px; opacity: .78; font-weight: 700; letter-spacing: .06em; }
+    h1 { margin: 0; font-size: clamp(31px, 5vw, 56px); line-height: 1.12; letter-spacing: -.035em; }
+    .hero p { max-width: 920px; margin: 18px 0 0; font-size: 17px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .pill {
+      padding: 6px 11px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      font-size: 13px;
+    }
+    main { padding: 38px 52px 54px; }
+    .conclusion {
+      padding: 22px 24px;
+      border-left: 6px solid var(--blue);
+      background: var(--blue-soft);
+      border-radius: 12px;
+      font-size: 17px;
+    }
+    .conclusion strong { color: #123e9c; }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 24px 0 34px;
+    }
+    .metric {
+      min-height: 130px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+    .metric .label { display: block; color: var(--muted); font-size: 13px; font-weight: 700; }
+    .metric .value { display: block; margin: 4px 0; font-size: 34px; line-height: 1.2; font-weight: 850; letter-spacing: -.03em; }
+    .metric .note { color: var(--muted); font-size: 12px; }
+    .metric.raw .value { color: var(--blue); }
+    .metric.unique .value { color: var(--green); }
+    .metric.repeat .value { color: var(--red); }
+    .metric.match .value { color: var(--green); }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    nav a {
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #344054;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    section { margin: 44px 0; scroll-margin-top: 18px; }
+    h2 { margin: 0 0 16px; font-size: 28px; line-height: 1.3; letter-spacing: -.025em; }
+    h3 { margin: 28px 0 10px; font-size: 20px; }
+    .lead { color: #344054; font-size: 17px; }
+    .figure {
+      margin: 18px 0 12px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .figure img { display: block; width: 100%; height: auto; }
+    figcaption { margin: 10px 6px 2px; color: var(--muted); font-size: 13px; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: #344054; background: #f2f5f9; font-size: 13px; text-align: left; }
+    tbody tr:last-child td { border-bottom: 0; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    tr.total td { font-weight: 800; background: #eef6ff; }
+    tr.warn td { background: var(--amber-soft); }
+    .equation {
+      margin: 10px 0;
+      padding: 12px 14px;
+      border: 1px solid #cbd9ee;
+      border-radius: 10px;
+      background: #f5f8fd;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card { padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+    .card h3 { margin-top: 0; }
+    .callout { margin: 18px 0; padding: 17px 19px; border-radius: 12px; }
+    .callout.info { border-left: 5px solid var(--blue); background: var(--blue-soft); }
+    .callout.good { border-left: 5px solid var(--green); background: var(--green-soft); }
+    .callout.warn { border-left: 5px solid var(--amber); background: var(--amber-soft); }
+    .callout.danger { border-left: 5px solid var(--red); background: var(--red-soft); }
+    .download {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 11px 16px;
+      border-radius: 9px;
+      color: #fff;
+      background: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .hash { word-break: break-all; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
+    footer { padding: 20px 52px 28px; color: var(--muted); background: #f5f7fa; font-size: 12px; }
+    @media (max-width: 900px) {
+      .hero, main, footer { padding-left: 24px; padding-right: 24px; }
+      .metric-grid, .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 580px) {
+      .page { width: 100%; margin: 0; border-radius: 0; }
+      .metric-grid, .grid-2 { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      nav { display: none; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="hero">
+      <p class="eyebrow">A3 LASER DRILLER · ROW-BY-ROW COORDINATE AUDIT</p>
+      <h1>가공좌표 개수 재분석<br>16,742개 전수 1:1 대조</h1>
+      <p>
+        첨부 Excel의 8개 Head 좌표쌍을 한 행씩 추출하고, 레시피 기반 생성 모델로 같은 순서의 좌표를 다시 만든 뒤
+        GY/GX·순번·Lane 시작 반복까지 비교한 교정 보고서입니다.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">검증일 2026-08-30 KST</span>
+        <span class="pill">Excel 원본 수정 없음</span>
+        <span class="pill">수치 허용오차 1×10⁻⁹ mm</span>
+        <span class="pill">Raw 순서 불일치 0</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="conclusion">
+        <strong>결론:</strong> 좌표값이나 Head 분배가 틀린 것은 아닙니다.
+        기존 보고서의 <b>15,750</b>은 반복을 제거한 고유 가공 중심 수이고,
+        Excel에 실제 기록된 Head별 좌표쌍을 모두 합한 값은 <b>16,742</b>입니다.
+        두 값의 차이 <b>992</b>는 각 Head의 Lane 시작점이 연속으로 한 번 더 기록된 횟수입니다.
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric raw"><span class="label">Excel Raw 좌표쌍 레코드</span><span class="value">16,742</span><span class="note">8개 Head 열쌍의 실제 nonblank 기록 합계</span></div>
+        <div class="metric unique"><span class="label">Head-tagged 고유 가공 중심</span><span class="value">15,750</span><span class="note">4자리 정규화 후 정확 중복 제거</span></div>
+        <div class="metric repeat"><span class="label">연속 완전 반복 발생분</span><span class="value">992</span><span class="note">124개/Head × 8 Head</span></div>
+        <div class="metric match"><span class="label">16,742행 좌표 불일치</span><span class="value">0</span><span class="note">GY·GX·순번·길이 모두 일치</span></div>
+      </div>
+
+      <nav aria-label="목차">
+        <a href="#map">기판 전체 맵</a>
+        <a href="#definitions">개수 정의</a>
+        <a href="#head-counts">Head별 결과</a>
+        <a href="#method">생성·대조 방법</a>
+        <a href="#duplicates">992개 반복</a>
+        <a href="#corrections">기존 보고서 교정</a>
+        <a href="#decision">가공 의미 판정</a>
+        <a href="#evidence">전체 증빙</a>
+      </nav>
+
+      <section id="map">
+        <h2>1. 기판 전체 가공좌표 개요</h2>
+        <p class="lead">
+          45개 Cell의 14×25 명령 중심을 모두 표시했습니다. 점 색은 Head 소유권이며,
+          이중 원은 같은 공간점이 Excel Raw 좌표표에 연속 두 번 기록된 위치입니다.
+          Cell 4·13·22·31·40에서는 H3가 5열, H4가 9열을 담당합니다.
+        </p>
+        <figure class="figure">
+          <picture>
+            <source srcset="기판_전체_가공좌표_개요.svg" type="image/svg+xml">
+            <img src="기판_전체_가공좌표_개요.png" alt="45개 Cell, 8개 Head, 15,750개 고유 중심과 992개 반복 위치를 표시한 기판 전체 논리 배치도">
+          </picture>
+          <figcaption>
+            Cell 내부 점 격자는 읽기 쉽도록 확대 표시했습니다. 외곽선은 실제 Glass 경계나 치수를 확정한 도면이 아니며,
+            장비 Front/Rear 및 실축 부호는 별도 검증 대상입니다. 각 점은 DOE 개별 Hole이 아니라 DOE 중심 명령좌표입니다.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="definitions">
+        <h2>2. 서로 다르게 보였던 개수의 정의</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>명칭</th><th class="num">개수</th><th>정확한 의미</th><th>주의사항</th></tr></thead>
+            <tbody>
+              <tr><td><b>Worksheet 최대 데이터 행</b></td><td class="num">2,999</td><td>가장 긴 H4의 G5:H3003</td><td>8개 Head가 가로 병렬이므로 전체 좌표 합계가 아님</td></tr>
+              <tr><td><b>Excel Raw 좌표쌍 레코드</b></td><td class="num"><b>16,742</b></td><td>Head 1~8의 실제 nonblank (GY,GX) 레코드 합계</td><td>파일에서 “좌표 개수”를 세면 기본적으로 이 값</td></tr>
+              <tr><td><b>고유 가공 중심</b></td><td class="num"><b>15,750</b></td><td>(HeadId, GY, GX) 기준 정확 중복 제거 결과</td><td>Raw보다 992개 적음</td></tr>
+              <tr><td><b>반복 발생분</b></td><td class="num">992</td><td>같은 Head의 같은 좌표가 바로 다음 행에 한 번 더 기록</td><td>별도 위치가 아니라 동일 위치의 두 번째 레코드</td></tr>
+              <tr><td><b>명목 DOE Hole 발생수</b></td><td class="num">252,000 / 267,872</td><td>15,750×16 또는 16,742×16</td><td>Branch 절대좌표가 없어 “고유 Hole 좌표”로 검증된 값은 아님</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          앞으로 보고서에서 <b>“가공좌표 개수”를 단독으로 쓰지 않고</b>,
+          <b>Raw 좌표쌍</b>과 <b>고유 가공 중심</b>을 반드시 구분해야 합니다.
+        </div>
+      </section>
+
+      <section id="head-counts">
+        <h2>3. Head별 좌표를 하나씩 센 결과</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Head</th><th>Excel 열·실데이터 행</th><th class="num">Raw</th><th class="num">고유</th><th class="num">반복</th><th>첫 좌표 → 마지막 좌표 (GY, GX)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>H1</td><td>A:B · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(−29.1625, −500.3375) → (−17.4625, −1321.9375)</td></tr>
+              <tr><td>H2</td><td>C:D · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(−39.1625, −120.3375) → (−27.4625, −941.9375)</td></tr>
+              <tr><td>H3</td><td>E:F · 5:2503</td><td class="num">2,499</td><td class="num">2,375</td><td class="num">124</td><td>(−49.1625, −500.3375) → (54.4375, −1321.9375)</td></tr>
+              <tr><td>H4</td><td>G:H · 5:3003</td><td class="num">2,999</td><td class="num">2,875</td><td class="num">124</td><td>(−54.6625, −120.3375) → (52.5375, −941.9375)</td></tr>
+              <tr><td>H5</td><td>I:J · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(30.8375, −500.3375) → (42.5375, −1321.9375)</td></tr>
+              <tr><td>H6</td><td>K:L · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(20.8375, −120.3375) → (32.5375, −941.9375)</td></tr>
+              <tr><td>H7</td><td>M:N · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(10.8375, −500.3375) → (22.5375, −1321.9375)</td></tr>
+              <tr><td>H8</td><td>O:P · 5:1878</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td>(0.8375, −120.3375) → (12.5375, −941.9375)</td></tr>
+              <tr class="total"><td>합계</td><td>8개 Head</td><td class="num">16,742</td><td class="num">15,750</td><td class="num">992</td><td>불완전 좌표쌍 0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          H3와 H4가 많은 이유는 Cell X=300인 5개 Cell이 Head 경계에서 분할되기 때문입니다.
+          각 분할 Cell에서 H3가 <code>ix=0…4</code>의 125개, H4가 <code>ix=5…13</code>의 225개 중심을 담당합니다.
+        </p>
+      </section>
+
+      <section id="method">
+        <h2>4. Recipe 기반 재생성과 전행 대조 방법</h2>
+        <h3>4.1 Pitch와 Cell당 중심</h3>
+        <div class="equation">commandStep = PixelSize × Pitch = 0.09 mm/px × 10 px = 0.9 mm</div>
+        <div class="equation">X index = 0…13 (14개), Y index = 0…24 (25개)</div>
+        <div class="equation">45 Cell × 14 × 25 = 15,750 고유 중심</div>
+        <p>
+          Pitch는 현재 명령 중심에서 다음 명령 중심까지의 Pixel 개수이며 DOE 4×4 내부 Branch 간격과 무관합니다.
+          현재 Excel은 <code>floor(144/10)=14</code>, <code>floor(256/10)=25</code> 정책을 사용합니다.
+        </p>
+
+        <h3>4.2 좌표식</h3>
+        <div class="equation">Xglobal = CellAlignX + 25.8375 + 0.9×ix</div>
+        <div class="equation">Yglobal = CellAlignY + 0.3375 + 0.9×iy</div>
+        <div class="equation">Head = floor(Xglobal / 110) + 1</div>
+        <div class="equation">GY = Xglobal − {55 + 110×(Head−1)}</div>
+        <div class="equation">GX = −{Yglobal + 120 + (홀수 Head이면 380, 아니면 0)}</div>
+
+        <h3>4.3 Excel의 실제 Queue 순서</h3>
+        <ol>
+          <li>Cell Y row: 0 → 200 → 400 → 600 → 800</li>
+          <li>각 Cell row의 <code>iy</code>: 0 → 24</li>
+          <li>각 Head가 소유한 Cell X와 <code>ix</code>를 작은 값부터 기록</li>
+          <li>전체 첫 Lane을 제외한 각 Lane 시작 좌표를 한 번 더 삽입</li>
+        </ol>
+        <div class="callout good">
+          위 순서로 만든 16,742개 예상 레코드와 Excel Raw를 Head별 같은 순번으로 비교한 결과,
+          길이·GY·GX·순서의 불일치는 모두 <b>0개</b>였습니다.
+        </div>
+        <div class="callout warn">
+          원시 XML에는 <code>−29.162500000000001</code> 같은 이진 부동소수 문자열이 있으므로 문자열 비교는 부적절합니다.
+          본 검증은 표시 정밀도 4자리로 정규화하고 수치 차이 <code>≤1×10⁻⁹ mm</code>를 일치로 판정했습니다.
+        </div>
+      </section>
+
+      <section id="duplicates">
+        <h2>5. 992개 반복 레코드의 정확한 위치</h2>
+        <p class="lead">
+          각 Head에는 <code>5 Cell row × 25 iy = 125 Lane</code>이 있습니다.
+          첫 Lane을 제외한 124개 Lane에서 첫 좌표가 바로 다음 행에 한 번 더 기록되어
+          <code>124 × 8 = 992</code>가 됩니다.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Head</th><th>첫 반복</th><th>마지막 반복</th><th>Lane 시작 위치</th></tr></thead>
+            <tbody>
+              <tr><td>H1</td><td>A19:B19 = A20:B20</td><td>A1864:B1864 = A1865:B1865</td><td>Cell열 1 · ix=0</td></tr>
+              <tr><td>H2</td><td>C19:D19 = C20:D20</td><td>C1864:D1864 = C1865:D1865</td><td>Cell열 2 · ix=0</td></tr>
+              <tr><td>H3</td><td>E24:F24 = E25:F25</td><td>E2484:F2484 = E2485:F2485</td><td>Cell열 3 · ix=0</td></tr>
+              <tr><td>H4</td><td>G28:H28 = G29:H29</td><td>G2980:H2980 = G2981:H2981</td><td>분할 Cell열 4 · ix=5</td></tr>
+              <tr><td>H5</td><td>I19:J19 = I20:J20</td><td>I1864:J1864 = I1865:J1865</td><td>Cell열 6 · ix=0</td></tr>
+              <tr><td>H6</td><td>K19:L19 = K20:L20</td><td>K1864:L1864 = K1865:L1865</td><td>Cell열 7 · ix=0</td></tr>
+              <tr><td>H7</td><td>M19:N19 = M20:N20</td><td>M1864:N1864 = M1865:N1865</td><td>Cell열 8 · ix=0</td></tr>
+              <tr><td>H8</td><td>O19:P19 = O20:P20</td><td>O1864:P1864 = O1865:P1865</td><td>Cell열 9 · ix=0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>예: H1의 두 연속 행</h3>
+            <div class="equation">A19:B19 = (−29.1625, −501.2375)</div>
+            <div class="equation">A20:B20 = (−29.1625, −501.2375)</div>
+            <p>ΔGY=0, ΔGX=0으로 완전히 동일합니다.</p>
+          </div>
+          <div class="card">
+            <h3>중복이 아닌 경우</h3>
+            <div class="equation">일반 X 이동: ΔGY=+0.9, ΔGX=0</div>
+            <div class="equation">다음 Lane: ΔGX=−0.9</div>
+            <p>0.9 mm 변화는 PixelSize×Pitch와 정확히 일치합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="corrections">
+        <h2>6. 기존 보고서에서 바로잡은 표현</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>기존 표현</th><th>교정 표현</th><th>이유</th></tr></thead>
+            <tbody>
+              <tr class="warn"><td>“가공좌표 15,750개”</td><td><b>Excel Raw 16,742개 / 고유 중심 15,750개</b></td><td>일반적인 좌표 개수와 dedup 결과를 혼용</td></tr>
+              <tr><td>“15,750개를 100% 재현”</td><td><b>16,742개 Raw를 순서 포함 100% 재현</b></td><td>기존 보고서에는 전행·순서 비교 증빙이 없었음</td></tr>
+              <tr><td>“Raw 행”</td><td><b>Head별 Raw 좌표쌍 레코드</b></td><td>물리 Worksheet 행 2,999개와 혼동 방지</td></tr>
+              <tr><td>“DOE 고유 Hole 252,000”</td><td><b>고유 중심 기준 명목 Hole 발생수 252,000</b></td><td>Branch 절대좌표가 없어 Hole 좌표 고유성은 미검증</td></tr>
+              <tr><td>레시피 선언 범위 A1:O92</td><td><b>XML dimension B1:O92</b></td><td>저수준 XML 확인 결과</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          기존 분석의 <b>Pitch=10 px → 0.9 mm</b>, 좌표식, Head 분배, H3/H4 경계 해석은 맞았습니다.
+          수정이 필요한 핵심은 좌표값이 아니라 <b>개수의 명칭과 비교 증빙 수준</b>입니다.
+        </div>
+      </section>
+
+      <section id="decision">
+        <h2>7. 실제 가공 횟수는 파일만으로 확정할 수 없음</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>992개가 이동·Lead-in이고 Laser-Off라면</h3>
+            <p><b>실제 가공 중심 후보: 15,750개</b></p>
+            <p>DOE 16분기 명목 발생수: 252,000</p>
+          </div>
+          <div class="card">
+            <h3>Excel Raw의 모든 행이 Laser-On이라면</h3>
+            <p><b>가공 명령: 16,742개</b></p>
+            <p>DOE 16분기 명목 발생수: 267,872</p>
+          </div>
+        </div>
+        <div class="callout danger">
+          Excel에는 <code>LaserGate</code>, <code>CommandType</code>, <code>Jump/Mark</code>가 없고 좌표 셀의 스타일도 동일합니다.
+          따라서 992개를 자동 삭제해서도, 실제 이중 가공이라고 단정해서도 안 됩니다.
+          좌표 생성 SW에는 최소한 <b>LaneId, PointRole, LaserGate</b>를 추가해야 합니다.
+        </div>
+        <h3>추가 사양 확인: 마지막 Pixel 포함 정책</h3>
+        <p>
+          현재 Excel은 14×25 중심을 사용하지만, 유효 인덱스가 PixelNum보다 작으면 포함하는 정책은 15×26이 됩니다.
+          후자의 경우 <code>45×15×26=17,550</code>으로 현재 고유 중심보다 1,800개 많습니다.
+          이 차이는 이번 992개 반복 문제와 별개의 끝점 정책입니다.
+        </p>
+      </section>
+
+      <section id="evidence">
+        <h2>8. 16,742행 전체 비교 증빙</h2>
+        <p>
+          아래 CSV에는 모든 좌표 레코드에 대해 Head, Queue 순번, Excel 행, 실제 GY/GX, 예상 GY/GX,
+          ΔGY/ΔGX, MATCH 판정, 연속 반복 여부, CellId, ix/iy, LaneNo를 기록했습니다.
+        </p>
+        <a class="download" href="가공좌표_전수대조_16742건.csv" download>전체 전수대조 CSV 열기</a>
+
+        <h3>원본·보고서 식별값</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>대상</th><th>SHA-256</th></tr></thead>
+            <tbody>
+              <tr><td>첨부 Excel</td><td class="hash">6bd2b8a0a67d402f507913765ff3b5c48d16c14554ab9d178d2e4b5f69d1ad70</td></tr>
+              <tr><td>기존 HTML 분석보고서</td><td class="hash">818c8de942b8c6e3f0dd808e5cfb6c81b6d0d0bb4a0e88d1968e5b5ba1b5df20</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      본 문서는 첨부 「가공좌표생성방법 및 검증데이터.xlsx」의 정적 셀 값과 XML을 분석한 결과입니다.
+      장비 실축 방향, Glass 물리 외곽, DOE Branch별 보정좌표 및 Laser Gate 동작 검증을 대체하지 않습니다.
+    </footer>
+  </article>
+</body>
+</html>
