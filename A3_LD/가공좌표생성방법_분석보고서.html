@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A3 LD 가공좌표 생성 방식 분석 — Pitch 개념 정정 반영</title>
+  <style>
+    :root {
+      --navy-950: #071426;
+      --navy-900: #0c1d35;
+      --navy-800: #15345d;
+      --blue-700: #155fa8;
+      --blue-600: #1d73c9;
+      --blue-100: #e9f3ff;
+      --cyan-100: #e9f9fb;
+      --green-700: #13715f;
+      --green-100: #e9f7f2;
+      --amber-800: #8a4b00;
+      --amber-100: #fff4d8;
+      --red-700: #b42318;
+      --red-100: #fff0ee;
+      --slate-900: #1d2939;
+      --slate-700: #344054;
+      --slate-600: #475467;
+      --slate-500: #667085;
+      --slate-300: #d0d5dd;
+      --slate-200: #e4e7ec;
+      --slate-100: #f2f4f7;
+      --white: #ffffff;
+      --shadow: 0 12px 32px rgba(16, 43, 76, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--slate-900);
+      background: #f5f7fa;
+      font-family: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", Arial, sans-serif;
+      line-height: 1.62;
+      word-break: keep-all;
+    }
+
+    a { color: var(--blue-700); }
+
+    .page {
+      width: min(1240px, calc(100% - 32px));
+      margin: 28px auto 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 46px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(91, 179, 255, 0.28), transparent 28%),
+        linear-gradient(135deg, var(--navy-950), var(--navy-800));
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -120px;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+      box-shadow: 0 0 0 38px rgba(255,255,255,0.04), 0 0 0 82px rgba(255,255,255,0.03);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #9bd3ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.22;
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 18px 0 0;
+      color: #d9eaff;
+      font-size: 16px;
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #eaf5ff;
+      font-size: 12px;
+    }
+
+    .summary-banner {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      margin-top: 20px;
+      padding: 20px 22px;
+      border: 1px solid #9dd7c8;
+      border-left: 6px solid var(--green-700);
+      border-radius: 14px;
+      background: var(--green-100);
+    }
+
+    .summary-banner .icon {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--green-700);
+      font-weight: 800;
+    }
+
+    .summary-banner strong { color: #075f4f; }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 18px;
+      border: 1px solid var(--slate-200);
+      border-radius: 15px;
+      background: var(--white);
+      box-shadow: 0 7px 18px rgba(16, 43, 76, 0.045);
+    }
+
+    .metric .label {
+      color: var(--slate-600);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .metric .value {
+      display: block;
+      margin-top: 5px;
+      color: var(--navy-800);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .metric .note {
+      display: block;
+      margin-top: 5px;
+      color: var(--slate-500);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+      padding: 14px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .toc a {
+      padding: 7px 10px;
+      border-radius: 9px;
+      color: var(--slate-700);
+      background: var(--slate-100);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    section {
+      margin-top: 20px;
+      padding: 30px;
+      border: 1px solid var(--slate-200);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 7px 22px rgba(16, 43, 76, 0.04);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy-900);
+      font-size: 25px;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 28px 0 12px;
+      color: var(--navy-800);
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    h4 {
+      margin: 22px 0 8px;
+      color: var(--slate-900);
+      font-size: 15px;
+    }
+
+    p { margin: 9px 0; }
+
+    .lead { color: var(--slate-700); font-size: 16px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      padding: 19px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: #fbfcfe;
+    }
+
+    .card h3, .card h4 { margin-top: 0; }
+
+    .status-good { border-top: 4px solid var(--green-700); }
+    .status-bad { border-top: 4px solid var(--red-700); }
+    .status-warn { border-top: 4px solid #e39a18; }
+
+    .callout {
+      margin: 16px 0;
+      padding: 17px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .callout.good { border-left: 5px solid var(--green-700); background: var(--green-100); }
+    .callout.warn { border-left: 5px solid #d88700; background: var(--amber-100); }
+    .callout.danger { border-left: 5px solid var(--red-700); background: var(--red-100); }
+    .callout.info { border-left: 5px solid var(--blue-600); background: var(--blue-100); }
+
+    .equation {
+      overflow-x: auto;
+      margin: 12px 0;
+      padding: 15px 17px;
+      border: 1px solid #cfe0f1;
+      border-radius: 11px;
+      color: #123d68;
+      background: #f4f9ff;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1.2fr 28px 1.2fr 28px 1.2fr 28px 1.2fr;
+      align-items: stretch;
+      gap: 7px;
+      margin: 18px 0;
+    }
+
+    .flow-step {
+      padding: 16px 14px;
+      border: 1px solid #cfe0f1;
+      border-radius: 12px;
+      background: #f8fbff;
+      text-align: center;
+    }
+
+    .flow-step b { display: block; color: var(--navy-800); }
+    .flow-step span { display: block; margin-top: 4px; color: var(--slate-500); font-size: 11px; }
+    .flow-arrow { display: grid; place-items: center; color: var(--blue-600); font-size: 22px; font-weight: 900; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 14px 0;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--slate-200);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--navy-800);
+      background: #edf4fb;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.total td { color: var(--navy-900); background: #f3f7fb; font-weight: 800; }
+    tr.risk td { background: #fff8f7; }
+
+    code {
+      padding: 1px 5px;
+      border-radius: 5px;
+      color: #174a7a;
+      background: #edf4fb;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.94em;
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 14px 0;
+      padding: 18px;
+      border-radius: 12px;
+      color: #d6e7f8;
+      background: #0c2038;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre;
+    }
+
+    ul, ol { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 6px 0; }
+
+    .tag {
+      display: inline-block;
+      margin-right: 4px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .tag.fixed { color: #0f6959; background: #dff4ed; }
+    .tag.inferred { color: #875200; background: #ffefc2; }
+    .tag.missing { color: #a22117; background: #ffe1dd; }
+
+    .doe-figure {
+      margin-top: 15px;
+      padding: 14px;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+
+    .doe-figure svg { display: block; width: 100%; height: auto; }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    label {
+      display: block;
+      color: var(--slate-600);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      margin-top: 4px;
+      padding: 10px 11px;
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      color: var(--slate-900);
+      background: var(--white);
+      font: inherit;
+    }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .calc-result {
+      padding: 14px;
+      border: 1px solid #cfe0f1;
+      border-radius: 11px;
+      background: #f6faff;
+    }
+
+    .calc-result span { display: block; color: var(--slate-500); font-size: 10px; }
+    .calc-result strong { display: block; margin-top: 3px; color: var(--navy-800); font-size: 20px; }
+
+    .priority {
+      display: inline-grid;
+      place-items: center;
+      min-width: 34px;
+      height: 24px;
+      border-radius: 6px;
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .p0 { background: var(--red-700); }
+    .p1 { background: #d88700; }
+    .p2 { background: var(--blue-600); }
+
+    .footer {
+      margin-top: 18px;
+      padding: 18px 4px;
+      color: var(--slate-500);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow-arrow { transform: rotate(90deg); }
+      .calculator { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .page { width: min(100% - 18px, 1240px); margin-top: 9px; }
+      .hero { padding: 30px 24px; border-radius: 16px; }
+      section { padding: 22px 17px; }
+      .metric-grid, .grid-2, .input-grid, .calc-results { grid-template-columns: 1fr; }
+      body { word-break: normal; }
+    }
+
+    @media print {
+      body { background: var(--white); }
+      .page { width: 100%; margin: 0; }
+      .hero, section, .metric { box-shadow: none; }
+      .toc, .calculator { break-inside: avoid; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">A3 Laser Driller · Coordinate Generation Verification</p>
+      <h1>가공좌표 생성 방식 분석<br>Pitch 개념 정정 반영</h1>
+      <p>
+        첨부 Excel의 <b>레시피 조건</b>과 <b>가공 좌표</b> 두 탭을 전수 분석하고,
+        8개 Head의 15,750개 고유 좌표를 역산식으로 재현한 결과입니다.
+        DOE 4×4 중심 명령좌표와 실제 16개 Hole을 분리해 해석했습니다.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">분석 기준일 2026-08-30</span>
+        <span class="pill">원본 Excel 수정 없음</span>
+        <span class="pill">고유 좌표 재현 누락 0 · 예외 0</span>
+      </div>
+    </header>
+
+    <div class="summary-banner">
+      <div class="icon">✓</div>
+      <div>
+        <strong>가장 중요한 결론:</strong>
+        이 파일의 가공 중심 간격은 <b>0.09 mm/px × 10 px = 0.9 mm</b>이며,
+        DOE 축당 분기수 4를 추가로 곱하지 않습니다. 즉 <b>3.6 mm 해석은 잘못</b>입니다.
+        다만 무라벨 <code>C26=0.3375 mm</code>, 끝점 생성 정책, 992개 중복 행은 별도 확인이 필요합니다.
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <span class="label">가공 중심 Pitch</span>
+        <span class="value">0.9 mm</span>
+        <span class="note">10 px × 0.09 mm/px</span>
+      </div>
+      <div class="metric">
+        <span class="label">Cell당 고유 중심</span>
+        <span class="value">350</span>
+        <span class="note">현재 파일: 14 × 25</span>
+      </div>
+      <div class="metric">
+        <span class="label">45 Cell 고유 중심</span>
+        <span class="value">15,750</span>
+        <span class="note">역산 모델과 100% 일치</span>
+      </div>
+      <div class="metric">
+        <span class="label">DOE 16분기 기준 Hole</span>
+        <span class="value">252,000</span>
+        <span class="note">15,750 × 16, 중복 제외</span>
+      </div>
+      <div class="metric">
+        <span class="label">좌표표 중복 행</span>
+        <span class="value" style="color:#b42318">992</span>
+        <span class="note">Head당 124개 연속 중복</span>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="목차">
+      <a href="#pitch">1. Pitch 정정</a>
+      <a href="#workbook">2. 파일 구조</a>
+      <a href="#model">3. 좌표 생성식</a>
+      <a href="#distribution">4. Head 분배</a>
+      <a href="#risks">5. 결함·확인사항</a>
+      <a href="#calculator">6. 검증 계산기</a>
+      <a href="#recommendations">7. SW 반영안</a>
+    </nav>
+
+    <section id="pitch">
+      <h2>1. Pitch 개념 — 무엇이 바뀌었는가</h2>
+      <p class="lead">
+        <b>Pitch는 현재 DOE 중심 명령좌표에서 다음 DOE 중심 명령좌표까지 건너뛰는 원본 Pixel 개수</b>입니다.
+        DOE가 한 번의 출사로 만드는 16개 Hole 사이의 내부 간격이 아닙니다.
+      </p>
+
+      <div class="grid-2">
+        <div class="card status-bad">
+          <h3>이전의 잘못된 해석</h3>
+          <div class="equation">0.09 mm/px × 10 px × 4 = 3.6 mm</div>
+          <p>DOE 축당 4분기를 명령좌표 간격에 다시 곱하는 방식입니다. 중심 간격과 내부 Branch 배열을 혼합합니다.</p>
+        </div>
+        <div class="card status-good">
+          <h3>정정된 해석</h3>
+          <div class="equation">Δcommand = PixelSize × Pitch = 0.09 × 10 = 0.9 mm</div>
+          <p>DOE 4×4는 각 중심좌표에서 동시에 생성되는 내부 Pattern이며, 별도 Branch Offset으로 관리합니다.</p>
+        </div>
+      </div>
+
+      <div class="doe-figure">
+        <svg viewBox="0 0 980 300" role="img" aria-label="두 DOE 중심 명령좌표와 4x4 Branch 패턴의 관계">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d73c9"/>
+            </marker>
+          </defs>
+          <rect x="18" y="18" width="944" height="264" rx="18" fill="#f7fbff" stroke="#cfe0f1"/>
+          <text x="50" y="52" font-size="16" font-weight="700" fill="#15345d">DOE 4×4 내부 Pattern</text>
+          <g fill="#2d78b7">
+            <circle cx="110" cy="95" r="7"/><circle cx="138" cy="95" r="7"/><circle cx="166" cy="95" r="7"/><circle cx="194" cy="95" r="7"/>
+            <circle cx="110" cy="123" r="7"/><circle cx="138" cy="123" r="7"/><circle cx="166" cy="123" r="7"/><circle cx="194" cy="123" r="7"/>
+            <circle cx="110" cy="151" r="7"/><circle cx="138" cy="151" r="7"/><circle cx="166" cy="151" r="7"/><circle cx="194" cy="151" r="7"/>
+            <circle cx="110" cy="179" r="7"/><circle cx="138" cy="179" r="7"/><circle cx="166" cy="179" r="7"/><circle cx="194" cy="179" r="7"/>
+          </g>
+          <g fill="#57a659">
+            <circle cx="692" cy="95" r="7"/><circle cx="720" cy="95" r="7"/><circle cx="748" cy="95" r="7"/><circle cx="776" cy="95" r="7"/>
+            <circle cx="692" cy="123" r="7"/><circle cx="720" cy="123" r="7"/><circle cx="748" cy="123" r="7"/><circle cx="776" cy="123" r="7"/>
+            <circle cx="692" cy="151" r="7"/><circle cx="720" cy="151" r="7"/><circle cx="748" cy="151" r="7"/><circle cx="776" cy="151" r="7"/>
+            <circle cx="692" cy="179" r="7"/><circle cx="720" cy="179" r="7"/><circle cx="748" cy="179" r="7"/><circle cx="776" cy="179" r="7"/>
+          </g>
+          <g stroke="#b42318" stroke-width="2">
+            <line x1="152" y1="122" x2="152" y2="152"/><line x1="137" y1="137" x2="167" y2="137"/>
+            <line x1="734" y1="122" x2="734" y2="152"/><line x1="719" y1="137" x2="749" y2="137"/>
+          </g>
+          <line x1="168" y1="226" x2="718" y2="226" stroke="#1d73c9" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="443" y="217" text-anchor="middle" font-size="17" font-weight="800" fill="#155fa8">0.9 mm</text>
+          <text x="443" y="245" text-anchor="middle" font-size="13" fill="#475467">가공 중심 Cₖ → 다음 중심 Cₖ₊₁</text>
+          <text x="152" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">Scanner 명령 중심</text>
+          <text x="734" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">Scanner 명령 중심</text>
+          <text x="875" y="118" text-anchor="middle" font-size="12" fill="#475467">Branch 간격 dDOE</text>
+          <text x="875" y="139" text-anchor="middle" font-size="12" font-weight="700" fill="#b42318">별도 광학 파라미터</text>
+        </svg>
+      </div>
+
+      <div class="equation">Hole(k, b) = CommandCenter(k) + DOE_BranchOffset(b), &nbsp; b = B01 … B16</div>
+      <div class="callout info">
+        첨부 DOE 그림도 “가공좌표는 DOE의 중심 위치”라고 명시합니다. Review는 중심이 아니라 B06 또는 B11 같은 지정 Branch를 볼 수 있으므로,
+        측정값을 가공 중심 오차로 환산할 때는 해당 Branch Offset을 제거해야 합니다.
+      </div>
+    </section>
+
+    <section id="workbook">
+      <h2>2. 첨부 Excel 구조와 입력조건</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>구분</th><th>레시피 조건</th><th>가공 좌표</th><th>해석</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Excel 선언 범위</td><td>A1:O92<br><small>실제 비어있지 않은 값: B1:G92</small></td><td>A1:P3003</td><td>2개 탭</td></tr>
+            <tr><td>비어있지 않은 셀</td><td class="num">234</td><td class="num">33,510</td><td>가공 좌표는 8 Head × 2열 구조</td></tr>
+            <tr><td>수식 셀</td><td class="num">3</td><td class="num">0</td><td><b>가공 좌표는 모두 정적 값</b></td></tr>
+            <tr><td>병합</td><td>없음</td><td>Head 제목 8개</td><td>A3:B3 … O3:P3</td></tr>
+            <tr><td>도형·차트·그림</td><td>없음</td><td>없음</td><td>분석은 셀 값과 첨부 설명 이미지 기준</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warn">
+        <b>중요:</b> 가공 좌표 탭은 Recipe 셀을 참조하는 계산 Sheet가 아닙니다. Recipe가 변경되어도 Excel 안에서 좌표가 갱신되지 않으며,
+        외부 좌표 생성 프로그램이 결과를 다시 생성해야 합니다.
+      </div>
+
+      <h3>2.1 좌표 생성에 사용된 주요 Recipe</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>셀</th><th>항목</th><th class="num">값</th><th>좌표 생성에서 확인된 역할</th><th>상태</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>C3</td><td>Pixel Size</td><td class="num">0.09 mm/px</td><td>Pitch를 mm로 변환</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C4</td><td>Pixel Num X</td><td class="num">144 px</td><td>현재 14개 X index 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C5</td><td>Pixel Num Y</td><td class="num">256 px</td><td>현재 25개 Y index 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C6</td><td>분기빔 개수</td><td class="num">4 /축</td><td>DOE 4×4 = 중심당 16 Hole</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C7</td><td>Pitch</td><td class="num">10 px</td><td>다음 중심까지 10 Pixel</td><td><span class="tag fixed">정정 확정</span></td></tr>
+            <tr><td>C9:C11</td><td>Cell 배치</td><td class="num">9 × 5 = 45</td><td>45개 Cell Origin 생성</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C13:C14</td><td>Cell Origin 간격</td><td class="num">X 100 / Y 200 mm</td><td>Cell X=0…800, Y=0…800</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C16:C18</td><td>Edge·Align·중심 Offset</td><td class="num">5 + 15.5 + 5 mm</td><td>C25=25.5 mm</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C19</td><td>Default Offset</td><td class="num">0 mm</td><td>X/Y 구분이 없는 공통 단일값, 비영(非0) 동작은 역산 불가</td><td><span class="tag missing">구조 부족</span></td></tr>
+            <tr><td>C20</td><td>홀수·짝수열 거리</td><td class="num">380 mm</td><td>홀수 Head GX에 추가</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr><td>C21</td><td>MOF Buffer Offset</td><td class="num">120 mm</td><td>모든 Head GX에 반영</td><td><span class="tag fixed">명시</span></td></tr>
+            <tr class="risk"><td>C26</td><td>라벨 없음</td><td class="num">0.3375 mm</td><td>GY와 GX 절대 원점에 모두 반영</td><td><span class="tag inferred">의미 확인 필요</span></td></tr>
+            <tr class="risk"><td>C27</td><td>라벨 없음</td><td class="num">−55 mm</td><td>Head local field 하한으로 역산</td><td><span class="tag inferred">의미 확인 필요</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.2 Recipe 탭의 실제 수식 3개</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>셀</th><th>수식</th><th class="num">결과</th></tr></thead>
+          <tbody>
+            <tr><td>C9</td><td><code>=C10*C11</code></td><td class="num">45 Cell</td></tr>
+            <tr><td>C25</td><td><code>=C18+C17+C16</code></td><td class="num">25.5 mm</td></tr>
+            <tr><td>C28</td><td><code>=SUM(C25:C27)</code></td><td class="num">−29.1625 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>3. 가공 좌표 탭을 100% 재현한 역산 모델</h2>
+      <p class="lead">
+        아래 모델로 8개 Head의 <b>15,750개 고유 좌표를 누락 0개·추가 0개</b>로 재현했습니다.
+        단, Head pitch 110 mm와 Field ±55 mm는 명명된 Recipe가 아니라 결과값에서 역산된 값입니다.
+      </p>
+
+      <div class="flow">
+        <div class="flow-step"><b>Cell Origin</b><span>45개 Align→1st Pixel 기준</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>0.9 mm 중심 격자</b><span>현재 14 × 25 / Cell</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>Head 선택·Local 변환</b><span>110 mm field pitch 역산</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>DOE 16 Hole</b><span>Branch Offset은 별도</span></div>
+      </div>
+
+      <h3>3.1 중심 격자</h3>
+      <div class="equation">Δ = '레시피 조건'!C3 × C7 = 0.09 × 10 = 0.9 mm</div>
+      <div class="equation">Xglobal = CELL_X + C25 + C26 + ix·Δ = CELL_X + 25.8375 + 0.9·ix</div>
+      <div class="equation">Yglobal = CELL_Y + C26 + iy·Δ = CELL_Y + 0.3375 + 0.9·iy</div>
+      <p>
+        현재 파일은 <code>ix=0…13</code>, <code>iy=0…24</code>를 사용합니다.
+        설계 X index가 <code>GY(Review)</code>에, 설계 Y index가 부호 반전되어 <code>GX(Stage)</code>에 반영됩니다.
+      </p>
+
+      <h3>3.2 Head 선택과 Local 좌표</h3>
+      <div class="equation">h = floor(Xglobal / 110) + 1</div>
+      <div class="equation">HeadCenter(h) = 55 + 110·(h−1)</div>
+      <div class="equation">GYh = Xglobal − HeadCenter(h)</div>
+      <div class="equation">GXh = −{Yglobal + 120 + [h가 홀수이면 380, 짝수이면 0]}</div>
+      <p>Excel 셀 참조형으로 직접 쓰면 다음과 같습니다.</p>
+      <div class="equation">GYh = C28 + CELL_X + ix·Δ − 110·(h−1)</div>
+      <div class="equation">GXh = −{C21 + C26 + CELL_Y + iy·Δ + IF(ODD(h), C20, 0)}</div>
+
+      <h3>3.3 Cell 1 첫 좌표 대조</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>① Global X</h4>
+          <div class="equation">0 + 25.5 + 0.3375 = 25.8375</div>
+          <p>Head 1 Center 55 mm를 빼면 <b>GY1 = −29.1625 mm</b></p>
+        </div>
+        <div class="card">
+          <h4>② Global Y</h4>
+          <div class="equation">0 + 0.3375 = 0.3375</div>
+          <p>홀수 Head이므로 120+380을 더한 후 반전: <b>GX1 = −500.3375 mm</b></p>
+        </div>
+        <div class="card">
+          <h4>③ Excel 일치</h4>
+          <div class="equation">'가공 좌표'!A5:B5</div>
+          <p><b>(−29.1625, −500.3375)</b>로 정확히 일치합니다.</p>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        첨부 스캐너 좌표계 그림에는 “부호, 축이름 확인 필요”라고 적혀 있습니다.
+        따라서 위 식은 <b>현재 Excel을 재현하는 식</b>이지, 장비 실축 부호 검증까지 완료된 확정 사양은 아닙니다.
+      </div>
+    </section>
+
+    <section id="distribution">
+      <h2>4. Cell → Head 분배와 좌표 개수</h2>
+
+      <h3>4.1 한 Cell row에서의 X 분배</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cell X열</th><th class="num">Cell X</th><th>담당 Head</th><th class="num">X 중심 수 / Lane</th><th>설명</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="num">0 mm</td><td>H1</td><td class="num">14</td><td>전부 H1</td></tr>
+            <tr><td>2</td><td class="num">100 mm</td><td>H2</td><td class="num">14</td><td>전부 H2</td></tr>
+            <tr><td>3</td><td class="num">200 mm</td><td>H3</td><td class="num">14</td><td>전부 H3</td></tr>
+            <tr class="risk"><td>4</td><td class="num">300 mm</td><td>H3 + H4</td><td class="num">5 + 9</td><td>Field 경계에서 분할</td></tr>
+            <tr><td>5</td><td class="num">400 mm</td><td>H4</td><td class="num">14</td><td>전부 H4</td></tr>
+            <tr><td>6</td><td class="num">500 mm</td><td>H5</td><td class="num">14</td><td>전부 H5</td></tr>
+            <tr><td>7</td><td class="num">600 mm</td><td>H6</td><td class="num">14</td><td>전부 H6</td></tr>
+            <tr><td>8</td><td class="num">700 mm</td><td>H7</td><td class="num">14</td><td>전부 H7</td></tr>
+            <tr><td>9</td><td class="num">800 mm</td><td>H8</td><td class="num">14</td><td>전부 H8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Cell 4·13·22·31·40은 동일하게 분할됩니다. H3는 <code>ix=0…4</code> 5개,
+        H4는 <code>ix=5…13</code> 9개를 처리합니다.
+      </p>
+
+      <h3>4.2 Head별 Raw 행과 고유 가공 중심</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Head</th><th class="num">Raw 행</th><th class="num">고유 중심</th><th class="num">중복</th><th class="num">DOE 고유 Hole</th><th>담당 영역</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>H1</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=0</td></tr>
+            <tr><td>H2</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=100</td></tr>
+            <tr><td>H3</td><td class="num">2,499</td><td class="num">2,375</td><td class="num">124</td><td class="num">38,000</td><td>Cell X=200 + X=300 일부</td></tr>
+            <tr><td>H4</td><td class="num">2,999</td><td class="num">2,875</td><td class="num">124</td><td class="num">46,000</td><td>Cell X=300 일부 + X=400</td></tr>
+            <tr><td>H5</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=500</td></tr>
+            <tr><td>H6</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=600</td></tr>
+            <tr><td>H7</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=700</td></tr>
+            <tr><td>H8</td><td class="num">1,874</td><td class="num">1,750</td><td class="num">124</td><td class="num">28,000</td><td>Cell X=800</td></tr>
+            <tr class="total"><td>합계</td><td class="num">16,742</td><td class="num">15,750</td><td class="num">992</td><td class="num">252,000</td><td>45 Cell</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout info">
+        Head별 Raw 길이가 서로 다르므로 Excel의 같은 행 번호를 8개 Head의 동기 가공점으로 해석하면 안 됩니다.
+        Head별 독립 Queue 또는 Stage 위치 기준 Trigger로 동작해야 합니다.
+      </div>
+    </section>
+
+    <section id="risks">
+      <h2>5. 파일에서 확인된 결함 후보와 미정 사양</h2>
+
+      <h3>5.1 <span class="priority p0">P0</span> 992개 연속 중복 좌표</h3>
+      <p>
+        각 Head는 <b>125개 Stage Lane</b>(5 Cell rows × 25 Y index)을 갖습니다.
+        첫 Lane을 제외한 124개 Lane에서 첫 좌표가 정확히 두 번 연속 기록됩니다.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>예시</th><th>GY1</th><th>GX1</th><th>판정</th></tr></thead>
+          <tbody>
+            <tr><td>A19:B19</td><td class="num">−29.1625</td><td class="num">−501.2375</td><td rowspan="2" style="vertical-align:middle;color:#b42318;font-weight:800">완전 동일</td></tr>
+            <tr><td>A20:B20</td><td class="num">−29.1625</td><td class="num">−501.2375</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout danger">
+        모든 행을 Laser-On 가공점으로 처리하면 992개 중심이 이중 가공됩니다.
+        DOE 16개 기준으로는 <b>15,872회의 추가 Hole 노광</b>, 총 <b>267,872 Hole 노광</b> 위험입니다
+        (고유 결과 252,000 Hole 대비).
+        Lane 시작 Jump/Lead-in 좌표라면 <code>CommandType</code>과 <code>LaserGate</code>를 반드시 명시해야 합니다.
+      </div>
+
+      <h3>5.2 <span class="priority p0">P0</span> 끝점 생성 정책</h3>
+      <div class="grid-2">
+        <div class="card status-warn">
+          <h3>현재 파일: 정수 나눗셈 횟수</h3>
+          <div class="equation">NX=floor(144/10)=14 → 0…130 px</div>
+          <div class="equation">NY=floor(256/10)=25 → 0…240 px</div>
+          <p>Cell당 350, 전체 15,750 중심입니다.</p>
+        </div>
+        <div class="card status-good">
+          <h3>유효 Index &lt; PixelNum 정책</h3>
+          <div class="equation">NX=floor((144−1)/10)+1=15 → 0…140 px</div>
+          <div class="equation">NY=floor((256−1)/10)+1=26 → 0…250 px</div>
+          <p>Cell당 390, 전체 17,550 중심입니다.</p>
+        </div>
+      </div>
+      <p>
+        두 정책의 차이는 <b>1,800개 중심, DOE 기준 28,800개 Hole</b>입니다.
+        잔여 Pixel 구간을 의도적으로 폐기하는지, 범위 안 마지막 좌표까지 포함하는지 사양으로 확정해야 합니다.
+      </p>
+
+      <h3>5.3 <span class="priority p0">P0</span> 무라벨 C26과 DOE 숨은 결합 가능성</h3>
+      <p><code>C26=0.3375 mm</code>는 GY와 GX 원점에 모두 사용되지만 라벨과 수식이 없습니다.</p>
+      <div class="equation">0.3375 = (0.09 × 10 / 4) × (4−1) / 2</div>
+      <p>
+        수치상으로는 “0.9 mm 구간을 4개 Branch로 균등 분할했을 때 중심에서 최외곽 Branch까지의 반폭”과 정확히 같습니다.
+        이 경우 Branch pitch는 0.225 mm, 축 Offset은 −0.3375, −0.1125, +0.1125, +0.3375 mm가 됩니다.
+      </p>
+      <div class="callout warn">
+        그러나 Excel에는 C26 라벨, DOE Branch pitch, 회전, B06/B11 Offset이 없으므로 <b>숫자가 일치한다는 가설일 뿐 확정할 수 없습니다.</b>
+        사용자가 정정한 사양대로라면 DOE 내부 Offset은 Pitch와 분리된 독립 광학/Calibration 데이터여야 합니다.
+        따라서 C26의 생성 근거를 확인하고, DOE 관련값이라면 <code>DOE_CENTER_TO_BRANCH_X/Y</code> 또는 Branch별 Offset Table로 명시해야 합니다.
+      </div>
+
+      <h3>5.4 그 밖의 구조적 누락</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>항목</th><th>현재 파일</th><th>필요한 개선</th><th>영향</th></tr></thead>
+          <tbody>
+            <tr><td>Head field pitch / center</td><td>110 mm / ±55 mm가 결과에서만 역산</td><td>명시 Recipe로 분리</td><td>하드코딩·설비변경 위험</td></tr>
+            <tr><td>Head별 Default Offset</td><td>전체 공통 scalar 0 mm</td><td>Head별 X/Y/θ</td><td>8 Scanner 설치 오차 보정 불가</td></tr>
+            <tr><td>Cell Rotation</td><td>항목 없음</td><td>Cell별 θ 또는 2D Transform</td><td>기판 자세·왜곡 보정 불가</td></tr>
+            <tr><td>CHESS / Masking</td><td>항목 없음</td><td>명시적 선택·회피 규칙</td><td>현재 파일 근거로 적용 불가</td></tr>
+            <tr><td>DOE Branch 데이터</td><td>4라는 개수만 존재</td><td>B01~B16 X/Y Offset, 회전, Pattern ID</td><td>개별 Hole 절대좌표 재현 불가</td></tr>
+            <tr><td>Review 기준 Branch</td><td>좌표표에 없음</td><td>B06/B11 ID와 center offset</td><td>Review 오차가 중심오차로 잘못 해석될 수 있음</td></tr>
+            <tr><td>좌표 Metadata</td><td>GY/GX 숫자만 존재</td><td>Cell/ix/iy/Lane/Role/LaserGate</td><td>중복·Jump·Trace 추적 불가</td></tr>
+            <tr><td>축/부호 확정</td><td>설계 X→GY, 설계 Y→−GX</td><td>홀짝 Scanner 실기 검증</td><td>반전조립 시 Mirror 위험</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="calculator">
+      <h2>6. Pitch·개수 검증 계산기</h2>
+      <p class="lead">입력값을 바꾸면 현재 floor 정책과 범위내 마지막점 포함 정책을 즉시 비교합니다.</p>
+      <div class="calculator">
+        <div class="card">
+          <div class="input-grid">
+            <label>Pixel Size (mm/px)<input id="pixelSize" type="number" step="0.001" value="0.09"></label>
+            <label>Pitch (px)<input id="pitchInput" type="number" step="1" value="10"></label>
+            <label>Pixel Num X (px)<input id="numX" type="number" step="1" value="144"></label>
+            <label>Pixel Num Y (px)<input id="numY" type="number" step="1" value="256"></label>
+            <label>Cell 수<input id="cells" type="number" step="1" value="45"></label>
+            <label>DOE 분기수 / 축<input id="split" type="number" step="1" value="4"></label>
+          </div>
+        </div>
+        <div class="calc-results">
+          <div class="calc-result"><span>가공 중심 간격</span><strong id="deltaOut">0.9 mm</strong></div>
+          <div class="calc-result"><span>DOE Hole / 중심</span><strong id="holesPerCenterOut">16</strong></div>
+          <div class="calc-result"><span>현재 floor 중심</span><strong id="floorOut">15,750</strong></div>
+          <div class="calc-result"><span>현재 floor Hole</span><strong id="floorHoleOut">252,000</strong></div>
+          <div class="calc-result"><span>범위내 마지막점 포함 중심</span><strong id="inclusiveOut">17,550</strong></div>
+          <div class="calc-result"><span>범위내 마지막점 포함 Hole</span><strong id="inclusiveHoleOut">280,800</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <h2>7. 좌표 생성 SW에 반영할 권장 구조</h2>
+
+      <h3>7.1 계산 계층을 분리해야 합니다</h3>
+      <div class="flow">
+        <div class="flow-step"><b>① Design / Cell</b><span>Align, Pixel index, Rotation</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>② Command Center</b><span>PixelSize × Pitch</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>③ Scanner Local</b><span>Head field + Default Offset</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><b>④ Physical Hole</b><span>DOE Branch calibration</span></div>
+      </div>
+
+      <pre>// 1) 가공 중심 간격 — DOE와 무관
+commandStepMm = pixelSizeMmPerPx * pitchPixels;
+
+// 2) Cell 내 DOE 중심 명령좌표
+center = cellTransform * (alignToFirstPixel + [ix * commandStepMm, iy * commandStepMm]);
+
+// 3) Head 선택 및 Scanner Local 변환
+head = SelectHead(center, headFieldMap);
+localCenter = head.GlobalToLocal(center, defaultOffsetXYTheta, distortionMap);
+
+// 4) DOE 실제 Hole — 별도 Calibration 데이터
+for each branch in doePattern.Branches:
+    physicalHole = localCenter + Rotate(doePattern.Angle, branch.OffsetXY);
+
+// 5) Review 기준점
+reviewTarget = localCenter + doePattern[reviewBranchId].OffsetXY;</pre>
+
+      <h3>7.2 좌표 Row에 최소한 추가할 Metadata</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>필드</th><th>예시</th><th>목적</th></tr></thead>
+          <tbody>
+            <tr><td>HeadId / CellId</td><td>H03 / CELL04</td><td>좌표 소유권과 Trace</td></tr>
+            <tr><td>PixelIndexX/Y</td><td>40 / 120 px</td><td>원본 Design 좌표 역추적</td></tr>
+            <tr><td>LaneId / PointIndex</td><td>Y003 / 005</td><td>라인 시작 중복 검증</td></tr>
+            <tr><td>CommandType</td><td>Jump / Mark / LeadIn</td><td>이동과 가공 구분</td></tr>
+            <tr><td>LaserGate</td><td>Off / On</td><td>중복 노광 방지</td></tr>
+            <tr><td>DOEPatternId</td><td>DOE_4X4_REV03</td><td>Branch 보정 버전 관리</td></tr>
+            <tr><td>ReviewBranchId</td><td>B06</td><td>중심↔Review Offset 보정</td></tr>
+            <tr><td>CorrectionVersion</td><td>MAP_H03_20260830</td><td>수차·Default Offset 재현성</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>7.3 우선 결정해야 할 항목</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>우선순위</th><th>결정·검증 항목</th><th>완료 조건</th></tr></thead>
+          <tbody>
+            <tr><td><span class="priority p0">P0</span></td><td>끝점 포함 정책</td><td>14×25 또는 15×26 중 요구사항 승인</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>992개 중복의 의도</td><td>중복 제거 또는 Jump/Mark Gate 명시</td></tr>
+            <tr><td><span class="priority p0">P0</span></td><td>C26=0.3375 근거</td><td>DOE와 무관한 값인지, DOE Offset인지 명명·수식화</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>DOE B01~B16 Calibration</td><td>Branch별 X/Y Offset, 회전, Review Branch 승인</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>Head별 Default Offset</td><td>8 Head X/Y/θ 파라미터와 적용 순서 확정</td></tr>
+            <tr><td><span class="priority p1">P1</span></td><td>Head field 110/±55 Recipe화</td><td>하드코딩 제거 및 경계점 단위시험</td></tr>
+            <tr><td><span class="priority p2">P2</span></td><td>홀짝 Scanner 축·부호 검증</td><td>실기 +X/+Y 이동 및 Review 측정으로 Sign 승인</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="footer">
+      분석 근거: 첨부 「가공좌표생성방법 및 검증데이터.xlsx」의 두 탭 전체 값·수식과 DOE 중심/Review 기준점,
+      Scanner Default Offset, 홀짝 좌표계 설명 이미지. 본 보고서는 현재 파일의 정적 데이터를 역산한 결과이며 장비 실축 검증을 대체하지 않습니다.
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const ids = ["pixelSize", "pitchInput", "numX", "numY", "cells", "split"];
+      const number = (id) => Number(document.getElementById(id).value || 0);
+      const format = (value, digits) => value.toLocaleString("ko-KR", {
+        maximumFractionDigits: digits,
+        minimumFractionDigits: 0
+      });
+
+      function recalc() {
+        const pixelSize = number("pixelSize");
+        const pitch = Math.max(1, Math.floor(number("pitchInput")));
+        const numX = Math.max(0, Math.floor(number("numX")));
+        const numY = Math.max(0, Math.floor(number("numY")));
+        const cells = Math.max(0, Math.floor(number("cells")));
+        const split = Math.max(1, Math.floor(number("split")));
+        const delta = pixelSize * pitch;
+        const floorX = Math.floor(numX / pitch);
+        const floorY = Math.floor(numY / pitch);
+        const inclusiveX = numX > 0 ? Math.floor((numX - 1) / pitch) + 1 : 0;
+        const inclusiveY = numY > 0 ? Math.floor((numY - 1) / pitch) + 1 : 0;
+        const holesPerCenter = split * split;
+        const floorCenters = floorX * floorY * cells;
+        const inclusiveCenters = inclusiveX * inclusiveY * cells;
+
+        document.getElementById("deltaOut").textContent = format(delta, 6) + " mm";
+        document.getElementById("holesPerCenterOut").textContent = format(holesPerCenter, 0);
+        document.getElementById("floorOut").textContent = format(floorCenters, 0);
+        document.getElementById("floorHoleOut").textContent = format(floorCenters * holesPerCenter, 0);
+        document.getElementById("inclusiveOut").textContent = format(inclusiveCenters, 0);
+        document.getElementById("inclusiveHoleOut").textContent = format(inclusiveCenters * holesPerCenter, 0);
+      }
+
+      ids.forEach((id) => document.getElementById(id).addEventListener("input", recalc));
+      recalc();
+    }());
+  </script>
+</body>
+</html>
