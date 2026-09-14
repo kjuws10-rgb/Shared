@@ -1,0 +1,508 @@
+{
+  "pixelSizeMmPerPx": 0.09,
+  "designPixelCountX": 144,
+  "designPixelCountY": 256,
+  "doeBranchCountPerAxis": 4,
+  "commandPitchPx": 10,
+  "cellColumnCount": 9,
+  "cellRowCount": 5,
+  "cellPitchXmm": 100,
+  "cellPitchYmm": 200,
+  "escEdgeToGlassEdgeMm": 5,
+  "glassEdgeToAlignKeyMm": 15.5,
+  "glassCenterToScannerCenterMm": 5,
+  "sharedOriginOffsetMm": 0.3375,
+  "scanFieldWidthMm": 110,
+  "headCount": 8,
+  "mofBufferOffsetMm": 120,
+  "oddHeadDistanceMm": 380,
+  "globalCorrectionXmm": 0,
+  "globalCorrectionYmm": 0,
+  "duplicateLaneStart": true,
+  "correctionBudgetGyMm": null,
+  "doeMaxGyOffsetMm": null,
+  "beamRadiusMm": null,
+  "mappingErrorMm": null,
+  "autoDoeCenterOffset": true,
+  "cellOriginEntryMode": "firstPixel",
+  "cellConfigurations": [
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 500,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 600,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 700,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 800,
+      "alignToFirstPixelYmm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 500,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 600,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 700,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 800,
+      "alignToFirstPixelYmm": 200,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 500,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 600,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 700,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 800,
+      "alignToFirstPixelYmm": 400,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 500,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 600,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 700,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 800,
+      "alignToFirstPixelYmm": 600,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 500,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 600,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 700,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 800,
+      "alignToFirstPixelYmm": 800,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 0,
+      "alignToFirstPixelYmm": 1000,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 100,
+      "alignToFirstPixelYmm": 1000,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 200,
+      "alignToFirstPixelYmm": 1000,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 300,
+      "alignToFirstPixelYmm": 1000,
+      "rotationDeg": 0
+    },
+    {
+      "modelType": 1,
+      "alignToFirstPixelXmm": 400,
+      "alignToFirstPixelYmm": 1000,
+      "rotationDeg": 0
+    }
+  ],
+  "laserPolicy": {
+    "centerGate": "ON",
+    "repeatGate": "OFF"
+  },
+  "masking": {
+    "enabled": true,
+    "CELL_MODEL_TYPE_COUNT": 1,
+    "models": [
+      {
+        "MASKING_HOLE_NUMBER": 1,
+        "MASKING_HOLE1_X": 4.65,
+        "MASKING_HOLE1_Y": 9.6,
+        "MASKING_HOLE2_X": 0,
+        "MASKING_HOLE2_Y": 0,
+        "MASKING_HOLE3_X": 0,
+        "MASKING_HOLE3_Y": 0,
+        "MASKING_HOLE4_X": 0,
+        "MASKING_HOLE4_Y": 0,
+        "MASKING_HOLE5_X": 0,
+        "MASKING_HOLE5_Y": 0,
+        "MASKING_HOLE1_SIZE_X": 2.4,
+        "MASKING_HOLE1_SIZE_Y": 2.4,
+        "MASKING_HOLE2_SIZE_X": 0,
+        "MASKING_HOLE2_SIZE_Y": 0,
+        "MASKING_HOLE3_SIZE_X": 0,
+        "MASKING_HOLE3_SIZE_Y": 0,
+        "MASKING_HOLE4_SIZE_X": 0,
+        "MASKING_HOLE4_SIZE_Y": 0,
+        "MASKING_HOLE5_SIZE_X": 0,
+        "MASKING_HOLE5_SIZE_Y": 0,
+        "CELL_UP_ROUND_RADIUS": 2.5,
+        "CELL_DOWN_ROUND_RADIUS": 2.5,
+        "CELL_UP_LEFT_ROUND_X": -0.45,
+        "CELL_UP_LEFT_ROUND_Y": -0.45,
+        "CELL_UP_RIGHT_ROUND_X": 12.15,
+        "CELL_UP_RIGHT_ROUND_Y": -0.45,
+        "CELL_DOWN_LEFT_ROUND_X": -0.45,
+        "CELL_DOWN_LEFT_ROUND_Y": 22.05,
+        "CELL_DOWN_RIGHT_ROUND_X": 12.15,
+        "CELL_DOWN_RIGHT_ROUND_Y": 22.05
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0,
+        "MASKING_HOLE1_X": 0,
+        "MASKING_HOLE1_Y": 0,
+        "MASKING_HOLE2_X": 0,
+        "MASKING_HOLE2_Y": 0,
+        "MASKING_HOLE3_X": 0,
+        "MASKING_HOLE3_Y": 0,
+        "MASKING_HOLE4_X": 0,
+        "MASKING_HOLE4_Y": 0,
+        "MASKING_HOLE5_X": 0,
+        "MASKING_HOLE5_Y": 0,
+        "MASKING_HOLE1_SIZE_X": 0,
+        "MASKING_HOLE1_SIZE_Y": 0,
+        "MASKING_HOLE2_SIZE_X": 0,
+        "MASKING_HOLE2_SIZE_Y": 0,
+        "MASKING_HOLE3_SIZE_X": 0,
+        "MASKING_HOLE3_SIZE_Y": 0,
+        "MASKING_HOLE4_SIZE_X": 0,
+        "MASKING_HOLE4_SIZE_Y": 0,
+        "MASKING_HOLE5_SIZE_X": 0,
+        "MASKING_HOLE5_SIZE_Y": 0,
+        "CELL_UP_ROUND_RADIUS": 0,
+        "CELL_DOWN_ROUND_RADIUS": 0,
+        "CELL_UP_LEFT_ROUND_X": 0,
+        "CELL_UP_LEFT_ROUND_Y": 0,
+        "CELL_UP_RIGHT_ROUND_X": 0,
+        "CELL_UP_RIGHT_ROUND_Y": 0,
+        "CELL_DOWN_LEFT_ROUND_X": 0,
+        "CELL_DOWN_LEFT_ROUND_Y": 0,
+        "CELL_DOWN_RIGHT_ROUND_X": 0,
+        "CELL_DOWN_RIGHT_ROUND_Y": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0,
+        "MASKING_HOLE1_X": 0,
+        "MASKING_HOLE1_Y": 0,
+        "MASKING_HOLE2_X": 0,
+        "MASKING_HOLE2_Y": 0,
+        "MASKING_HOLE3_X": 0,
+        "MASKING_HOLE3_Y": 0,
+        "MASKING_HOLE4_X": 0,
+        "MASKING_HOLE4_Y": 0,
+        "MASKING_HOLE5_X": 0,
+        "MASKING_HOLE5_Y": 0,
+        "MASKING_HOLE1_SIZE_X": 0,
+        "MASKING_HOLE1_SIZE_Y": 0,
+        "MASKING_HOLE2_SIZE_X": 0,
+        "MASKING_HOLE2_SIZE_Y": 0,
+        "MASKING_HOLE3_SIZE_X": 0,
+        "MASKING_HOLE3_SIZE_Y": 0,
+        "MASKING_HOLE4_SIZE_X": 0,
+        "MASKING_HOLE4_SIZE_Y": 0,
+        "MASKING_HOLE5_SIZE_X": 0,
+        "MASKING_HOLE5_SIZE_Y": 0,
+        "CELL_UP_ROUND_RADIUS": 0,
+        "CELL_DOWN_ROUND_RADIUS": 0,
+        "CELL_UP_LEFT_ROUND_X": 0,
+        "CELL_UP_LEFT_ROUND_Y": 0,
+        "CELL_UP_RIGHT_ROUND_X": 0,
+        "CELL_UP_RIGHT_ROUND_Y": 0,
+        "CELL_DOWN_LEFT_ROUND_X": 0,
+        "CELL_DOWN_LEFT_ROUND_Y": 0,
+        "CELL_DOWN_RIGHT_ROUND_X": 0,
+        "CELL_DOWN_RIGHT_ROUND_Y": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0,
+        "MASKING_HOLE1_X": 0,
+        "MASKING_HOLE1_Y": 0,
+        "MASKING_HOLE2_X": 0,
+        "MASKING_HOLE2_Y": 0,
+        "MASKING_HOLE3_X": 0,
+        "MASKING_HOLE3_Y": 0,
+        "MASKING_HOLE4_X": 0,
+        "MASKING_HOLE4_Y": 0,
+        "MASKING_HOLE5_X": 0,
+        "MASKING_HOLE5_Y": 0,
+        "MASKING_HOLE1_SIZE_X": 0,
+        "MASKING_HOLE1_SIZE_Y": 0,
+        "MASKING_HOLE2_SIZE_X": 0,
+        "MASKING_HOLE2_SIZE_Y": 0,
+        "MASKING_HOLE3_SIZE_X": 0,
+        "MASKING_HOLE3_SIZE_Y": 0,
+        "MASKING_HOLE4_SIZE_X": 0,
+        "MASKING_HOLE4_SIZE_Y": 0,
+        "MASKING_HOLE5_SIZE_X": 0,
+        "MASKING_HOLE5_SIZE_Y": 0,
+        "CELL_UP_ROUND_RADIUS": 0,
+        "CELL_DOWN_ROUND_RADIUS": 0,
+        "CELL_UP_LEFT_ROUND_X": 0,
+        "CELL_UP_LEFT_ROUND_Y": 0,
+        "CELL_UP_RIGHT_ROUND_X": 0,
+        "CELL_UP_RIGHT_ROUND_Y": 0,
+        "CELL_DOWN_LEFT_ROUND_X": 0,
+        "CELL_DOWN_LEFT_ROUND_Y": 0,
+        "CELL_DOWN_RIGHT_ROUND_X": 0,
+        "CELL_DOWN_RIGHT_ROUND_Y": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0,
+        "MASKING_HOLE1_X": 0,
+        "MASKING_HOLE1_Y": 0,
+        "MASKING_HOLE2_X": 0,
+        "MASKING_HOLE2_Y": 0,
+        "MASKING_HOLE3_X": 0,
+        "MASKING_HOLE3_Y": 0,
+        "MASKING_HOLE4_X": 0,
+        "MASKING_HOLE4_Y": 0,
+        "MASKING_HOLE5_X": 0,
+        "MASKING_HOLE5_Y": 0,
+        "MASKING_HOLE1_SIZE_X": 0,
+        "MASKING_HOLE1_SIZE_Y": 0,
+        "MASKING_HOLE2_SIZE_X": 0,
+        "MASKING_HOLE2_SIZE_Y": 0,
+        "MASKING_HOLE3_SIZE_X": 0,
+        "MASKING_HOLE3_SIZE_Y": 0,
+        "MASKING_HOLE4_SIZE_X": 0,
+        "MASKING_HOLE4_SIZE_Y": 0,
+        "MASKING_HOLE5_SIZE_X": 0,
+        "MASKING_HOLE5_SIZE_Y": 0,
+        "CELL_UP_ROUND_RADIUS": 0,
+        "CELL_DOWN_ROUND_RADIUS": 0,
+        "CELL_UP_LEFT_ROUND_X": 0,
+        "CELL_UP_LEFT_ROUND_Y": 0,
+        "CELL_UP_RIGHT_ROUND_X": 0,
+        "CELL_UP_RIGHT_ROUND_Y": 0,
+        "CELL_DOWN_LEFT_ROUND_X": 0,
+        "CELL_DOWN_LEFT_ROUND_Y": 0,
+        "CELL_DOWN_RIGHT_ROUND_X": 0,
+        "CELL_DOWN_RIGHT_ROUND_Y": 0
+      }
+    ],
+    "beamRadiusMm": null,
+    "positionMarginMm": null,
+    "doeRotationDeg": 0
+  }
+}
