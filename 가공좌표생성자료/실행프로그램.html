@@ -176,7 +176,7 @@
             <label class="toggle-row"><input id="mask-enabled" type="checkbox"><span><b>Masking 사용</b><small>좌표는 유지하고 접촉 샷의 레이저를 Off</small></span></label>
             <p class="mask-help">기준점은 <b>각 Cell의 첫 DOE 가공 중심</b>입니다. X는 오른쪽, Y는 아래쪽이 양수이며 모든 거리는 mm입니다. 첫 샷이 Off여도 원점은 같습니다.</p>
             <p class="mask-help">ROUND X/Y는 <b>직선 Edge가 만나는 모서리 기준점</b>입니다. 상우는 좌우 반전, 하좌는 상하 반전, 하우는 두 방향 반전을 적용합니다.</p>
-            <div class="mask-actions"><button id="loadMaskExample" class="text-button" type="button">5종 혼합 예제 불러오기</button><button id="clearMaskInputs" class="text-button" type="button">Masking 입력 초기화</button></div>
+            <div class="mask-actions"><button id="loadMaskExample" class="text-button" type="button">5종 혼합 예제 불러오기</button><button id="loadDiagramExample" class="text-button" type="button">도면 접촉 예제</button><button id="clearMaskInputs" class="text-button" type="button">Masking 입력 초기화</button></div>
             <div class="input-grid"><label class="field"><span>사용 모델 종류 수</span><small>CELL_MODEL_TYPE_COUNT</small><input id="model-count" type="number" min="1" max="5" value="5" step="1"></label><label class="field"><span>형상 편집 모델</span><select id="model-editor"><option value="1">모델 1</option><option value="2">모델 2</option><option value="3">모델 3</option><option value="4">모델 4</option><option value="5">모델 5</option></select></label></div>
             <p class="mask-help">모델은 형상만 선택합니다. 해당 모델을 사용하는 모든 Cell에 각자의 원점으로 적용합니다. 예제 수치는 동작 확인용이며 첨부 PPID에는 실제 레시피 값이 없습니다.</p>
             <details open><summary>라운드 반지름·네 모서리 거리</summary><div id="mask-edge-inputs" class="input-grid"></div></details>
@@ -192,6 +192,7 @@
           </fieldset>
           <fieldset id="cellConfigurations"><legend>Cell별 배치와 모델 선택</legend>
 <p class="mask-help">X/Y는 공통 얼라인 기준에서 해당 Cell의 첫 픽셀(첫 빔)까지의 거리(mm)입니다. 여기서 C26을 회전시켜 더한 첫 샷 중심이 그 Cell의 Masking 원점입니다. 회전은 X 오른쪽·Y 아래쪽에서 시계방향 양수입니다.</p>
+<label class="field"><span>Cell X/Y 입력 기준</span><select id="cellOriginEntryMode"><option value="firstPixel">첫 픽셀(첫 빔)까지 거리 · C26 반영</option><option value="shotCenter">확인된 A(첫 샷 중심)까지 거리 · C26 추가 없음</option></select></label><p id="originEntryHelp" class="mask-help"></p>
 <button type="button" class="text-button" id="resetCellGrid">현재 Cell 간격으로 배치 채우기</button>
 <details><summary>Cell 1~50 입력 (흐린 행은 미사용)</summary><div class="cell-editor-scroll"><table><thead><tr><th>Cell</th><th>첫 픽셀 X</th><th>모델</th><th>첫 픽셀 Y</th><th>회전°</th></tr></thead><tbody id="cell-model-rows"></tbody></table></div></details>
 <button type="button" id="exportPpidParameters" class="text-button">PPID 모델·Cell 입력값 JSON 저장</button><p class="mask-help">저장값은 mm·도 단위 공학값입니다. PLC Factor 인코딩과 Word 주소 전송은 포함하지 않습니다.</p>
@@ -289,8 +290,9 @@
           <div class="card-heading"><div><p class="section-kicker">MASKING / LASER GATE</p><h3 id="maskMapTitle">Cell 모델 배치와 샷별 발진 조건</h3></div><label>표시 범위 <select id="maskViewCell"><option value="all">전체 기판</option></select></label></div>
           <p id="maskSummary" class="mask-summary"></p><p id="maskGateCounts"></p><p id="maskHitCounts" class="chart-caption"></p><p id="maskOrigin" class="chart-caption"></p>
           <div class="table-scroll"><table class="model-count-table"><thead><tr><th>모델</th><th>Cell 수</th><th>Raw 수</th><th>접촉 Off</th><th>On</th><th>Off</th></tr></thead><tbody id="model-summary"></tbody></table></div>
+          <div class="mof-inspector"><h4>MOF 좌표 순서 확인</h4><p class="mask-help">빨간 사각형도 같은 순번으로 지나갑니다. 아래 조작은 레코드 순서 확인용이며 실제 장비 속도 재생은 아닙니다.</p><div class="mof-controls"><label>Head <select id="mofHead"></select></label><button id="mofPrev" type="button">이전 좌표</button><input id="mofSequence" type="range" min="1" max="1" value="1" aria-label="Head 내 MOF 좌표 순번"><button id="mofNext" type="button">다음 좌표</button></div><p id="mofCurrent" aria-live="polite"></p></div>
           <canvas id="maskCanvas" height="460" aria-label="각 Cell의 라운드 Edge와 Hole, Masking 접촉 및 샷별 발진 조건"></canvas>
-          <p class="chart-caption">초록: 기본 가공 On · 빨강: Masking 접촉 Off · 회색: 기본 Off · 흰 십자: 선택 Cell의 원점. 확대 화면의 사각형은 DOE 판정 영역입니다. 반복 레코드 발진은 아래 표에서 확인합니다.</p>
+          <p class="chart-caption">초록 사각형: 실제 발진 On · 빨강 사각형: 레이저 Off로 MOF 통과 · 노랑: 발진 조건 미정 · A 십자: 해당 Cell의 첫 가공 중심. 접촉한 사각형 전체를 Off로 표시합니다.</p>
           <p id="maskScope" class="mask-scope"></p><p id="planStatus" class="chart-caption"></p>
         </section>
 

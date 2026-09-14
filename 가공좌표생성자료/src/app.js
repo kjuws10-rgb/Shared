@@ -636,7 +636,7 @@
       const recipe = JSON.parse(await file.text());
       engine.generateCoordinates(recipe);
       applyRecipeToForm({...engine.BASELINE_RECIPE, ...recipe});
-      maskPanel.apply(recipe.masking, recipe.laserPolicy, recipe.cellConfigurations);
+      maskPanel.apply(recipe.masking, recipe.laserPolicy, recipe.cellConfigurations, recipe.cellOriginEntryMode);
       updateDoeCenterInput();
       generateFromForm();
     } catch (error) { showError(error); }
