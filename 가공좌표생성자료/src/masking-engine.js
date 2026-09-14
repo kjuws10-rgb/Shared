@@ -82,6 +82,33 @@
   function touchesEdge(b,s) {
     return ![[b.left,b.top],[b.right,b.top],[b.left,b.bottom],[b.right,b.bottom]].every(([x,y])=>pointStrictlyInside(x,y,s));
   }
+  function edgeContactReasons(b,s) {
+    const reasons=[];
+    if(b.left<=s.left+EPS || b.right>=s.right-EPS || b.top<=s.top+EPS || b.bottom>=s.bottom-EPS)reasons.push('EDGE');
+    for(const c of s.corners) {
+      if(c.radius<=0)continue;
+      const contact=[[b.left,b.top],[b.right,b.top],[b.left,b.bottom],[b.right,b.bottom]].some(([x,y])=>{
+        const u=(x-c.anchorX)*c.sx,v=(y-c.anchorY)*c.sy;
+        return u<c.radius && v<c.radius && Math.hypot(u-c.radius,v-c.radius)>=c.radius-EPS;
+      });
+      if(contact)reasons.push(`ROUND_${c.id}`);
+    }
+    return reasons;
+  }
+  function gatePresentation(gate) {
+    if(gate==='ON')return {color:'#00b050',action:'가공 · LASER ON',mofAction:'PROCESS_LASER_ON'};
+    if(gate==='OFF')return {color:'#ff453a',action:'MOF 통과 · LASER OFF',mofAction:'PASS_LASER_OFF'};
+    return {color:'#f6bd5c',action:'기존 발진 조건 미정',mofAction:'GATE_UNRESOLVED'};
+  }
+  function centerVector(recipe,rotationDeg) {
+    const c=Number(recipe.pixelSizeMmPerPx??base.BASELINE_RECIPE.pixelSizeMmPerPx)*Number(recipe.commandPitchPx??base.BASELINE_RECIPE.commandPitchPx)/Number(recipe.doeBranchCountPerAxis??base.BASELINE_RECIPE.doeBranchCountPerAxis)*(Number(recipe.doeBranchCountPerAxis??base.BASELINE_RECIPE.doeBranchCountPerAxis)-1)/2;
+    const a=Number(rotationDeg)*Math.PI/180;
+    return {x:base.round(c*(Math.cos(a)-Math.sin(a))),y:base.round(c*(Math.sin(a)+Math.cos(a)))};
+  }
+  function convertCellOriginEntry(config,recipe,toCenter) {
+    const v=centerVector(recipe,config.rotationDeg),sign=toCenter?1:-1;
+    return {...config,alignToFirstPixelXmm:base.round(finite(config.alignToFirstPixelXmm,'Cell X 거리')+sign*v.x),alignToFirstPixelYmm:base.round(finite(config.alignToFirstPixelYmm,'Cell Y 거리')+sign*v.y)};
+  }
   function touchesHole(b,h) {
     return b.right>=h.x-EPS && b.left<=h.x+h.width+EPS && b.bottom>=h.y-EPS && b.top<=h.y+h.height+EPS;
   }
@@ -126,7 +153,7 @@
       const half=base.round(nominalHalf*(Math.abs(Math.cos(angle))+Math.abs(Math.sin(angle)))+mask.beamRadiusMm+mask.positionMarginMm);
       const footprint=envelope(maskXmm,maskYmm,half),reasons=[];
       if(hybrid.enabled) {
-        if(touchesEdge(footprint,mask.shape))reasons.push('EDGE');
+        reasons.push(...edgeContactReasons(footprint,mask.shape));
         for(const h of mask.holes)if(touchesHole(footprint,h))reasons.push(`HOLE_${h.number}`);
       }
       return {cellModelType:modelType,maskOriginXmm:originX,maskOriginYmm:originY,maskXmm,maskYmm,maskFootprintHalfMm:half,maskScope:mask.scope,maskingEnabled:hybrid.enabled,maskHit:reasons.length>0,maskReason:reasons.join('|'),maskLaserGate:reasons.length?'OFF':'ALLOW'};
@@ -142,7 +169,8 @@
       const provided=policy.baseGates?.[`${p.headNumber}:${p.sequenceNo}`];
       const knownBase=p.baseLaserGate??(['ON','OFF'].includes(p.laserGate)?p.laserGate:null);
       const baseLaserGate=provided!==undefined?validateGate(provided,'레코드 발진'):knownBase!==null?validateGate(knownBase,'기존 레코드 발진'):p.isRepeatedLaneStart?policy.repeatGate:policy.centerGate;
-      return {...p,...classification,baseLaserGate,laserGate:classification.maskHit?'OFF':baseLaserGate};
+      const laserGate=classification.maskHit?'OFF':baseLaserGate;
+      return {...p,...classification,baseLaserGate,laserGate,mofAction:gatePresentation(laserGate).mofAction};
     });
     const centerRecords=new Map(records.filter(p=>!p.isRepeatedLaneStart).map(p=>[key(p),p]));
     for(const center of centers) {
@@ -168,7 +196,7 @@
     return applyMasking(base.generateCoordinates(coordinateInput),input.masking||{},input.laserPolicy||{});
   }
   const EXTRA_COLUMNS=Object.freeze([
-    ['CellModelType','cellModelType'],['CellRotationDeg','cellRotationDeg'],['BaseLaserGate','baseLaserGate'],['MaskingEnabled','maskingEnabled'],['MaskXmm','maskXmm'],['MaskYmm','maskYmm'],['MaskOriginXmm','maskOriginXmm'],['MaskOriginYmm','maskOriginYmm'],['MaskFootprintHalfMm','maskFootprintHalfMm'],['MaskFootprintScope','maskScope'],['MaskHit','maskHit'],['MaskReason','maskReason'],['MaskLaserGate','maskLaserGate']
+    ['MofAction','mofAction'],['CellModelType','cellModelType'],['CellRotationDeg','cellRotationDeg'],['BaseLaserGate','baseLaserGate'],['MaskingEnabled','maskingEnabled'],['MaskXmm','maskXmm'],['MaskYmm','maskYmm'],['MaskOriginXmm','maskOriginXmm'],['MaskOriginYmm','maskOriginYmm'],['MaskFootprintHalfMm','maskFootprintHalfMm'],['MaskFootprintScope','maskScope'],['MaskHit','maskHit'],['MaskReason','maskReason'],['MaskLaserGate','maskLaserGate']
   ]);
   function exportRowsToCsv(records) {
     const rows=base.exportRowsToCsv(records).split('\r\n');
@@ -176,7 +204,7 @@
   }
   function exportCommandPlan(records) {
     if(records.some(r=>!['ON','OFF'].includes(r.laserGate))) throw new Error('발진 미정 레코드가 있습니다. 기존 Script에 맞는 Lane 반복 발진 정책을 선택하세요.');
-    const header=['# A3 LD coordinate / laser gate command table (mm)','# Controller-independent data, not native scanner code.','# Each POINT keeps the original position and exposure slot; OFF suppresses exposure.'];
+    const header=['# A3 LD coordinate / laser gate command table (mm)','# Controller-independent data, not native scanner code.','# Each POINT keeps the original position and exposure slot; OFF suppresses exposure.','# OFF points remain on the same MOF path and in the same record sequence.'];
     return header.concat(records.map(r=>`POINT ${r.headId} SEQ=${r.sequenceNo} GY=${r.localGYmm.toFixed(4)} GX_STAGE=${r.gxStageMm.toFixed(4)} LASER=${r.laserGate}`)).join('\r\n');
   }
   function makeExampleMasking() {
@@ -187,6 +215,15 @@
       for(let h=1;h<=5;h++)Object.assign(p,{[`MASKING_HOLE${h}_X`]:1.8+(h-1)*3,[`MASKING_HOLE${h}_Y`]:3.6+i*2,[`MASKING_HOLE${h}_SIZE_X`]:1.5+i*.3,[`MASKING_HOLE${h}_SIZE_Y`]:2.2});
       return p;
     });return hybrid;
+  }
+  function makeDiagramMasking(recipe=base.BASELINE_RECIPE) {
+    const r=base.normalizeRecipe(recipe),d=base.getDerivedRecipe(r),h=defaultHybrid(),step=d.commandSpacingMm;
+    h.enabled=true;
+    h.models=h.models.map(()=>{
+      const p={MASKING_HOLE_NUMBER:1,CELL_UP_ROUND_RADIUS:Math.min(step*3,(d.gridCountX-.6)*step/2,(d.gridCountY-.6)*step/2),CELL_DOWN_ROUND_RADIUS:Math.min(step*3,(d.gridCountX-.6)*step/2,(d.gridCountY-.6)*step/2),MASKING_HOLE1_X:step*4.7,MASKING_HOLE1_Y:step*.22,MASKING_HOLE1_SIZE_X:step*1.2,MASKING_HOLE1_SIZE_Y:step*1.2};
+      for(const c of CORNERS){p[`CELL_${c.id}_ROUND_X`]=c.sx===1?-step*.2:(d.gridCountX-1)*step+step*.2;p[`CELL_${c.id}_ROUND_Y`]=c.sy===1?-step*.2:(d.gridCountY-1)*step+step*.2;}
+      return p;
+    });return h;
   }
   function exportFlatParameters(recipe) {
     const normalized=base.normalizeRecipe(recipe),h=normalizeHybrid(recipe.masking||{},normalized);
@@ -202,5 +239,5 @@
     }
     return {schema:'PPID_CELL_MODELS_V1',units:'geometry=mm; rotation=deg; counts=integer',encoding:'engineering_values_not_PLC_words',parameters:out};
   }
-  return Object.freeze({...base,defaultHybrid,defaultCellConfigurations,normalizeHybrid,exportFlatParameters,CORNERS,PARAMETER_DEFINITIONS,DEFAULT_MASKING,LASER_POLICIES,normalizeMasking,mirrorLocal,pointStrictlyInside,envelope,touchesEdge,touchesHole,applyMasking,generateCoordinates,exportRowsToCsv,exportCommandPlan,makeExampleMasking});
+  return Object.freeze({...base,edgeContactReasons,gatePresentation,centerVector,convertCellOriginEntry,makeDiagramMasking,defaultHybrid,defaultCellConfigurations,normalizeHybrid,exportFlatParameters,CORNERS,PARAMETER_DEFINITIONS,DEFAULT_MASKING,LASER_POLICIES,normalizeMasking,mirrorLocal,pointStrictlyInside,envelope,touchesEdge,touchesHole,applyMasking,generateCoordinates,exportRowsToCsv,exportCommandPlan,makeExampleMasking});
 });

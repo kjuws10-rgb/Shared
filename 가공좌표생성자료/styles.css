@@ -1134,3 +1134,5 @@ input[readonly] {color:var(--cyan);background:var(--panel-soft);}
 
 /* Cell model editor */
 #mask-hole-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cell-editor-scroll{max-height:360px;overflow:auto}.cell-editor-scroll table{min-width:520px}.cell-editor-scroll input{width:100px}.cell-editor-scroll select{width:68px}.unused-cell{opacity:.45}.model-count-table{width:100%;margin:14px 0}.model-count-table td,.model-count-table th{padding:7px 12px;text-align:right}#model-editor{width:100%}.parameter-key{overflow-wrap:anywhere}#cellConfigurations details summary{padding:12px 0}
+
+.mof-inspector{margin:18px 0;padding:16px;border:1px solid var(--border);border-radius:10px}.mof-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.mof-controls input[type=range]{flex:1;min-width:130px}.mof-controls select{width:80px}.mof-controls button{padding:8px 12px}#mofCurrent{font-size:14px;line-height:1.8;font-family:var(--font-sans)}
