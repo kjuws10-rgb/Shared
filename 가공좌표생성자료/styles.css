@@ -1109,3 +1109,25 @@ tbody tr:hover td {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Masking parameters and output. */
+.header-actions {flex-wrap:wrap;gap:10px;}
+.parameter-key {display:block;color:var(--muted);font-size:9px;overflow-wrap:anywhere;font-family:var(--font-mono);}
+.mask-help,.mask-scope {font-size:12px;line-height:1.65;color:var(--muted-strong);}
+.mask-help b {color:var(--text);}
+#maskingInputs details {margin:12px 0;border-top:1px solid var(--line);padding-top:12px;}
+#maskingInputs summary {font-size:13px;font-weight:700;cursor:pointer;margin-bottom:12px;}
+.mask-hole-group h4 {font-size:12px;margin:14px 0 10px;color:var(--cyan);}
+.mask-actions {display:flex;flex-wrap:wrap;gap:14px;}
+.mask-summary {font-weight:700;color:var(--cyan);}
+.mask-scope {border:1px solid var(--line);padding:10px;border-radius:8px;}
+#maskCanvas {display:block;width:100%;border:1px solid var(--line);border-radius:10px;}
+#laserPolicyInputs .field {margin-bottom:12px;}
+.field select {width:100%;padding:10px;color:var(--text);background:var(--panel-soft);border:1px solid var(--line);border-radius:8px;}
+.gate-on {color:var(--green);font-weight:700;}.gate-off {color:var(--red);font-weight:700;}.gate-unresolved {color:var(--amber);}
+.results-stale > section:not(.result-hero), .results-stale > .two-column-results {opacity:.5;}
+input[readonly] {color:var(--cyan);background:var(--panel-soft);}
+.coordinate-scroll table {min-width:1600px;}
+.results {grid-template-columns:minmax(0,1fr);}
+.results > section, .results > .two-column-results, .two-column-results > section {min-width:0;}
+.control-panel legend {font-family:var(--font-sans);letter-spacing:.025em;}

@@ -3,7 +3,7 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
-const engine = require("./src/coordinate-engine");
+const engine = require("./src/masking-engine");
 
 function printHelp() {
   process.stdout.write(`
@@ -86,6 +86,7 @@ function buildSummary(result) {
     finalFootprintViolationCount: result.summary.finalFootprintViolationCount,
     baselineApplicable: result.baseline.applicable,
     baselinePassed: result.baseline.passed,
+    masking: result.masking.summary,
     headCounts: result.summary.headSummaries.map((head) => ({
       headId: head.headId,
       raw: head.rawRecordCount,

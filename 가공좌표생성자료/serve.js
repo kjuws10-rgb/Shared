@@ -20,7 +20,7 @@ const mimeTypes = {
 function resolveRequestPath(requestUrl) {
   const url = new URL(requestUrl, `http://127.0.0.1:${port}`);
   const decodedPath = decodeURIComponent(url.pathname);
-  const relativePath = decodedPath === "/" ? "20260830_123524/index.html" : decodedPath.slice(1);
+  const relativePath = decodedPath === "/" ? "가공좌표생성자료/실행프로그램.html" : decodedPath.slice(1);
   const absolutePath = path.resolve(repositoryRoot, relativePath);
   if (absolutePath !== repositoryRoot && !absolutePath.startsWith(`${repositoryRoot}${path.sep}`)) {
     return null;
@@ -57,5 +57,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, "127.0.0.1", () => {
-  process.stdout.write(`http://127.0.0.1:${port}/20260830_123524/\n`);
+  process.stdout.write(`http://127.0.0.1:${port}/가공좌표생성자료/실행프로그램.html\n`);
 });

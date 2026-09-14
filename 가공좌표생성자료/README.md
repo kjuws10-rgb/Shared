@@ -1,112 +1,61 @@
-# A3 LD 좌표 생성 테스트 프로그램
+# A3 LD 좌표 생성 · Masking 프로그램
 
-레시피 조건으로 8개 Head의 가공 **중심 명령좌표**를 생성하고, 기존 `가공 좌표` Ground Truth의 Raw 16,742건을 순번까지 검증하는 로컬 도구입니다.
+기준 Excel의 Raw 16,742개 가공 중심 좌표를 생성하고, Edge·Hole 접촉에 따라 샷 전체의 Laser Gate를 제한합니다. Masking 전후 Head·좌표·순번·반복 레코드는 동일합니다.
 
-## 바로 실행
+## 실행
 
-Node.js 18 이상에서 이 폴더로 이동한 뒤 실행합니다.
+배포 폴더의 `가공좌표생성_Masking_실행프로그램.html`을 브라우저로 열면 됩니다. CSS·계산 코드·원본에서 추출한 비교 CSV가 포함되어 인터넷 없이 생성·전수 대조·내보내기를 수행합니다.
+
+소스 폴더에서는 Node.js 18 이상으로 다음을 실행합니다. 앱 자체는 외부 패키지를 요구하지 않습니다.
 
 ```bash
 npm run serve
 ```
 
-브라우저에서 `http://127.0.0.1:4173/20260830_123524/`를 엽니다. 별도 패키지 설치는 필요하지 않습니다.
+표시되는 `http://127.0.0.1:4173/가공좌표생성자료/실행프로그램.html` 주소를 엽니다. `npm run build`는 `dist/`에 프로그램과 보고서를 생성합니다. `node build-standalone.js /절대경로/실행파일.html`로 출력 위치를 지정할 수 있습니다.
 
-UI에서 할 수 있는 작업:
+## Masking 기준
 
-- 레시피 조건 변경 후 좌표 재생성
-- 8 Head 분배, Local GY 범위, 최소 Field 여유 확인
-- Raw 16,742건 / 고유 중심 15,750건 / Lane 시작 반복 992건 자동 검증
-- 저장소의 전수 검증 CSV 16,742건과 좌표·순번·Metadata 대조
-- Head·역할·Sequence·Cell별 좌표 조회
-- 생성 결과 CSV 저장
-- 선택 입력값을 이용한 최종 DOE Footprint 안전여유 시나리오 판정
+- 공통 원점: 상단 왼쪽 Align Key로 위치가 정해진 첫 Cell의 첫 DOE 가공 중심.
+- X는 오른쪽, Y는 아래쪽이 양수이며 거리 단위는 mm입니다.
+- `CELL_*_ROUND_X/Y`: 원점에서 라운드 처리 전 직선 Edge가 만나는 각 모서리까지의 거리.
+- 상좌 라운드를 기준으로 상우는 좌우 반전, 하좌는 상하 반전, 하우는 상하·좌우 반전합니다. 상단은 `CELL_UP_ROUND_RADIUS`, 하단은 `CELL_DOWN_ROUND_RADIUS`를 사용합니다.
+- `MASKING_HOLE_NUMBER`: 정수 0~5. 활성 Hole의 X/Y는 중심 거리이고 SIZE X/Y는 전체 폭·높이입니다. Hole 0개여도 Edge는 적용합니다.
+- Hole은 축에 평행한 타원(폭과 높이가 같으면 원), 기판 외곽은 직선과 원호로 이루어진 라운드 사각형입니다.
+- 16개 빔을 포함하는 샷 외곽이 금지영역에 닿거나 겹치면 샷 전체를 Off로 합니다. 접촉 거리 0도 Off입니다.
 
-## 확정 계산 규칙
+기준 레시피에서 중심 간격은 `0.09 × 10 = 0.9 mm`, DOE 분기 간격은 `0.9 ÷ 4 = 0.225 mm`, C26은 `0.225 × 1.5 = 0.3375 mm`입니다. UI와 Masking 엔진은 C26을 자동 계산합니다. 원래 좌표 엔진의 명시적 Offset 입력 API는 그대로 남아 있습니다.
 
-기준 레시피의 핵심값은 다음과 같습니다.
+## 사용 순서
 
-| 항목 | 기준값 |
-| --- | ---: |
-| 픽셀 크기 | 0.09 mm/px |
-| 가공 중심 Pitch | 10 px |
-| 가공 중심 간격 | 0.9 mm |
-| Cell당 중심 격자 | 14 × 25 |
-| Cell 배치 | 9 × 5 = 45 |
-| Scan Field | Head당 110 mm, 중심 원점 기준 `[-55,+55)` |
-| DOE | 4 × 4, 중심당 명목 16 Hole |
+1. 레시피를 입력합니다.
+2. Masking 사용 여부와 31개 파라미터를 입력합니다. `설명용 예제 불러오기`는 생산값과 구분된 예제입니다.
+3. 기존 Script와 일치하는 기본 발진 정책을 선택합니다. 일반 중심은 기본 On, Lane 반복 992개는 기본 미정입니다.
+4. 좌표를 생성하고 전체 기판·Cell 확대도와 발진 상태 표를 확인합니다.
+5. CSV 또는 좌표·Gate 명령표를 저장합니다. 입력은 JSON으로 저장·복원할 수 있습니다.
+
+입력이 바뀌면 이전 결과의 내보내기는 비활성화됩니다. 발진 미정 레코드가 있으면 명령표 저장은 비활성화되고, CSV에는 미정 상태가 유지됩니다. Masking은 기존 Off를 On으로 바꾸지 않습니다.
+
+## 출력
+
+CSV는 기존 열에 `BaseLaserGate`, `MaskingEnabled`, `MaskXmm`, `MaskYmm`, `MaskOriginXmm`, `MaskOriginYmm`, `MaskFootprintHalfMm`, `MaskFootprintScope`, `MaskHit`, `MaskReason`, `MaskLaserGate`를 추가합니다. 기존 `LaserGate` 열은 Masking을 반영한 최종 상태입니다.
+
+명령표는 다음과 같은 제어기 독립 데이터이며 장비 전용 Script 언어가 아닙니다.
 
 ```text
-가공 중심 간격 = 픽셀 크기 × 가공 중심 Pitch
-
-전역 X = Cell 기준 X + X 기준거리 합계 25.5 + C26 0.3375
-          + X 격자 번호 × 가공 중심 간격
-
-전역 Y = Cell 기준 Y + C26 0.3375
-          + Y 격자 번호 × 가공 중심 간격
-
-Head 번호 = floor(전역 X / Scan Field 폭) + 1
-Local GY = 전역 X - [55 + 110 × (Head 번호 - 1)]
-GX(Stage) = -(전역 Y + MOF Buffer 120 + 홀수 Head이면 380)
+POINT H01 SEQ=1 GY=-29.1625 GX_STAGE=-500.3375 LASER=OFF
 ```
 
-Pitch는 DOE 4×4 내부 Hole 간격이 아니라 현재 중심 명령좌표에서 다음 중심 명령좌표까지의 원본 Pixel 수입니다. DOE 실제 Hole 좌표는 Branch별 Calibration Offset이 있어야 별도로 계산할 수 있습니다.
+실제 장비 연동 시 좌표 이동·노광 구간을 유지하면서 Gate를 적용하고, 분기 실측 보정·기판 정렬 변환·MOF 노광 중 이동과 On/Off 응답 지연을 반영해야 합니다. 빔 반경과 위치 여유가 비어 있으면 명목 DOE 외곽 판정으로 표시됩니다. Masking 통과가 Scanner Field나 장비 인터록의 발진 허가를 대체하지 않습니다.
 
-## CLI 사용
-
-기준 레시피 요약:
+## CLI 및 검증
 
 ```bash
-npm run summary
-```
-
-Raw 좌표 CSV 생성:
-
-```bash
-node cli.js --out generated-coordinates.csv
-```
-
-사용자 레시피 적용:
-
-```bash
+node cli.js --summary-only
 node cli.js --recipe baseline-recipe.json --out generated-coordinates.csv
-```
-
-Lane 시작 반복을 제외한 고유 중심만 생성:
-
-```bash
-node cli.js --no-lane-duplicates --out unique-centers.csv
-```
-
-## 자동 테스트
-
-```bash
 npm test
 ```
 
-테스트는 저장소의 `20260830_105429/가공좌표_스캔필드110mm_검증_16742건.csv`를 읽어 Head·SequenceNo·GY·GX·역할·Cell·격자 번호 전부를 대조합니다. 기준 결과는 16,742건 일치, 좌표 최대 차이 0 mm입니다.
+JSON 레시피의 `masking` 객체에 파라미터와 `enabled`를 넣고, `laserPolicy`에 `centerGate`와 `repeatGate`를 지정합니다. 레코드별 기존 Gate를 연결할 때는 `laserPolicy.baseGates`에 `"Head번호:순번"` 키로 `ON`/`OFF`/`UNRESOLVED`를 전달할 수 있습니다.
 
-## 파일 구조
-
-```text
-20260830_123524/
-├── index.html                    # 브라우저 UI
-├── styles.css                    # 반응형 화면 스타일
-├── baseline-recipe.json          # 기준 레시피 예시
-├── cli.js                        # CSV 생성 CLI
-├── serve.js                      # 의존성 없는 로컬 서버
-├── src/
-│   ├── coordinate-engine.js      # 좌표 생성·검증 엔진
-│   └── app.js                    # UI 상태·표·차트·CSV 대조
-└── tests/
-    └── coordinate-engine.test.js # 단위·경계·전수 대조 테스트
-```
-
-## 확인이 필요한 입력
-
-- `C26=0.3375 mm`는 현재 좌표 재현에 사용하지만 원본에 항목명과 산출식이 없습니다.
-- Lane 시작 반복 992건의 장비 실행 의미는 확정되지 않았습니다. 프로그램은 Raw 순서를 보존하지만 `CommandType`과 `LaserGate`를 `UNRESOLVED`로 출력합니다.
-- DOE B01~B16 Offset, Beam 반경, Mapping 오차, Head 설치·수차보정 값이 없으면 최종 Footprint의 Field 안전성은 `UNVERIFIED`입니다.
-- 현재 축과 부호는 Excel을 재현하는 규칙이며 장비 실축 검증을 대신하지 않습니다.
-
-분석 근거는 상위 폴더의 [최종 분석보고서](../20260830_113543/가공좌표생성_최종분석보고서.html)와 [전수 검증 CSV](../20260830_105429/가공좌표_스캔필드110mm_검증_16742건.csv)입니다.
+자동 시험 32개는 원본 CSV 16,742개 전수 비교, 네 모서리 반전·경계 접촉·포함된 Hole·활성 개수·기존 Off 보존·좌표 불변·CSV 및 명령표 출력을 검증합니다. `coordinate-engine.js`는 기준 좌표 생성, `masking-engine.js`는 순수 기하·Gate 판정, `masking-panel.js`는 입력 및 기판 표시를 담당합니다.
