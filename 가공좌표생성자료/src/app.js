@@ -1,7 +1,7 @@
 (function coordinateTesterApp() {
   "use strict";
 
-  const engine = window.CoordinateEngine;
+  const engine = window.MaskingEngine;
   if (!engine) {
     throw new Error("좌표 생성 엔진을 불러오지 못했습니다.");
   }
@@ -51,7 +51,38 @@
     compareBundledButton: document.querySelector("#compareBundledButton"),
     groundTruthFile: document.querySelector("#groundTruthFile"),
     comparisonResult: document.querySelector("#comparisonResult"),
+    gateFilter: document.querySelector("#gateFilter"),
   };
+
+  const maskPanel = window.createMaskingPanel(engine, {
+    onDirty: markInputsChanged,
+    onGenerate: generateFromForm,
+    onError: showError,
+    download: downloadFile,
+  });
+
+  function markInputsChanged() {
+    state.result = null;
+    elements.exportCsvButton.disabled = true;
+    document.querySelector('#exportPlanButton').disabled = true;
+    document.querySelector('.results').classList.add('results-stale');
+    elements.resultSubtitle.textContent = '입력이 변경되었습니다. 좌표 생성 버튼을 눌러 결과를 갱신하세요.';
+    setStatusBadge('neutral', '입력 변경 · 다시 생성');
+  }
+
+  function updateDoeCenterInput() {
+    const field = key => elements.recipeInputs.find(input => input.dataset.recipeField === key);
+    const spacing = Number(field('pixelSizeMmPerPx').value) * Number(field('commandPitchPx').value);
+    const count = Number(field('doeBranchCountPerAxis').value);
+    field('sharedOriginOffsetMm').value = count > 0 ? engine.round(spacing / count * (count - 1) / 2) : '';
+  }
+
+  function downloadFile(filename, text, mimeType) {
+    const url = URL.createObjectURL(new Blob([text], {type:mimeType}));
+    const link = document.createElement('a');link.href=url;link.download=filename;
+    document.body.append(link);link.click();link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
 
   function createElement(tagName, className, textContent) {
     const node = document.createElement(tagName);
@@ -92,7 +123,7 @@
       const fieldName = input.dataset.recipeField;
       recipe[fieldName] = input.type === "checkbox" ? input.checked : input.value;
     }
-    return recipe;
+    return {...recipe, autoDoeCenterOffset:true, ...maskPanel.read()};
   }
 
   function setStatusBadge(kind, text) {
@@ -106,6 +137,7 @@
   }
 
   function showError(error) {
+    markInputsChanged();
     elements.formError.textContent = error instanceof Error ? error.message : String(error);
     elements.formError.hidden = false;
     setStatusBadge("fail", "입력 확인 필요");
@@ -259,6 +291,7 @@
       if (roleValue !== "all" && record.expectedRole !== roleValue) {
         return false;
       }
+      if (elements.gateFilter.value !== 'all' && record.laserGate !== elements.gateFilter.value) return false;
       if (!query) {
         return true;
       }
@@ -269,6 +302,7 @@
         `CELL${String(record.cellId).padStart(2, "0")}`,
         String(record.cellId),
         String(record.sequenceNo),
+        record.maskReason,
       ]
         .join(" ")
         .toUpperCase();
@@ -305,6 +339,11 @@
       row.append(roleCell);
       row.append(createElement("td", "numeric", formatCoordinate(record.localGYmm)));
       row.append(createElement("td", "numeric", formatCoordinate(record.gxStageMm)));
+      row.append(createElement('td', 'numeric', formatCoordinate(record.maskXmm)));
+      row.append(createElement('td', 'numeric', formatCoordinate(record.maskYmm)));
+      row.append(createElement('td', null, record.baseLaserGate));
+      row.append(createElement('td', `gate-${record.laserGate.toLowerCase()}`, record.laserGate));
+      row.append(createElement('td', null, record.maskReason || (record.maskingEnabled ? '통과' : '미사용')));
       row.append(createElement("td", null, `CELL${String(record.cellId).padStart(2, "0")}`));
       row.append(
         createElement(
@@ -459,6 +498,7 @@
   }
 
   function renderResult(result) {
+    document.querySelector('.results').classList.remove('results-stale');
     state.result = result;
     state.page = 1;
     renderSummary(result);
@@ -467,6 +507,7 @@
     populateHeadFilter(result);
     renderCoordinateTable(true);
     drawFieldMap(result);
+    maskPanel.render(result);
     elements.exportCsvButton.disabled = false;
     elements.comparisonResult.hidden = true;
   }
@@ -545,6 +586,10 @@
   }
 
   async function compareBundledGroundTruth() {
+    if(window.A3_GROUND_TRUTH_CSV) {
+      compareCsvText(window.A3_GROUND_TRUTH_CSV, '내장 기준 CSV');
+      return;
+    }
     setComparisonMessage("loading", "저장소 기준 CSV를 읽고 16,742건을 대조하고 있습니다…");
     try {
       const fixtureUrl = new URL(
@@ -572,12 +617,38 @@
 
   elements.resetButton.addEventListener("click", () => {
     applyRecipeToForm(engine.BASELINE_RECIPE);
+    maskPanel.reset();
     generateFromForm();
   });
 
   elements.exportCsvButton.addEventListener("click", downloadGeneratedCsv);
+  document.querySelector('#saveRecipeButton').addEventListener('click', () => {
+    try {
+      const recipe = readRecipeFromForm();
+      engine.generateCoordinates(recipe);
+      downloadFile('A3_LD_레시피_Masking.json', JSON.stringify(recipe, null, 2), 'application/json;charset=utf-8');
+    } catch (error) { showError(error); }
+  });
+  document.querySelector('#loadRecipeFile').addEventListener('change', async event => {
+    const [file] = event.target.files;
+    if (!file) return;
+    try {
+      const recipe = JSON.parse(await file.text());
+      engine.generateCoordinates(recipe);
+      applyRecipeToForm({...engine.BASELINE_RECIPE, ...recipe});
+      maskPanel.apply(recipe.masking, recipe.laserPolicy);
+      updateDoeCenterInput();
+      generateFromForm();
+    } catch (error) { showError(error); }
+    event.target.value = '';
+  });
   elements.headFilter.addEventListener("change", () => renderCoordinateTable(true));
   elements.roleFilter.addEventListener("change", () => renderCoordinateTable(true));
+  elements.gateFilter.addEventListener('change', () => renderCoordinateTable(true));
+  for(const input of elements.recipeInputs) input.addEventListener('input', () => {
+    updateDoeCenterInput();
+    markInputsChanged();
+  });
   elements.coordinateSearch.addEventListener("input", () => renderCoordinateTable(true));
   elements.previousPageButton.addEventListener("click", () => {
     if (state.page > 1) {
@@ -606,6 +677,7 @@
     state.resizeTimer = window.setTimeout(() => {
       if (state.result) {
         drawFieldMap(state.result);
+        maskPanel.draw(state.result);
       }
     }, 140);
   });

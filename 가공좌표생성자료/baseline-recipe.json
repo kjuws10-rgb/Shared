@@ -22,5 +22,14 @@
   "correctionBudgetGyMm": null,
   "doeMaxGyOffsetMm": null,
   "beamRadiusMm": null,
-  "mappingErrorMm": null
+  "mappingErrorMm": null,
+  "autoDoeCenterOffset": true,
+  "masking": {
+    "enabled": false,
+    "MASKING_HOLE_NUMBER": 0
+  },
+  "laserPolicy": {
+    "centerGate": "ON",
+    "repeatGate": "UNRESOLVED"
+  }
 }

@@ -1,13 +1,14 @@
 {
   "name": "a3-ld-coordinate-generator-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "A3 LD 레시피 기반 가공 중심 좌표 생성 및 16,742건 Ground Truth 검증 도구",
   "scripts": {
     "test": "node --test tests/*.test.js",
     "generate": "node cli.js --out generated-coordinates.csv",
     "summary": "node cli.js --summary-only",
-    "serve": "node serve.js"
+    "serve": "node serve.js",
+    "build": "node build-standalone.js"
   },
   "engines": {
     "node": ">=18"
