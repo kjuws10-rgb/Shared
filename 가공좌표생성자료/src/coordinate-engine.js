@@ -139,6 +139,17 @@
       String(duplicateValue).toLowerCase() === "false"
     );
 
+    const activeCellCount=normalized.cellColumnCount*normalized.cellRowCount;
+    if(Array.isArray(input.cellConfigurations)) for(const [i,c] of input.cellConfigurations.slice(0,activeCellCount).entries()) {
+      for(const key of ['alignToFirstPixelXmm','alignToFirstPixelYmm']) if(c[key]===null || c[key]===undefined || String(c[key]).trim()==='') throw new Error(`Cell ${i+1}의 첫 픽셀 ${key.endsWith('Xmm')?'X':'Y'} 거리를 입력하세요.`);
+    }
+    normalized.cellConfigurations = Array.isArray(input.cellConfigurations) ? input.cellConfigurations.map((c,i)=>i>=activeCellCount?{...c}:({
+      modelType: asFiniteNumber(c.modelType ?? 1, `Cell ${i+1} 모델`),
+      alignToFirstPixelXmm: asFiniteNumber(c.alignToFirstPixelXmm, `Cell ${i+1} 첫 픽셀 X`),
+      alignToFirstPixelYmm: asFiniteNumber(c.alignToFirstPixelYmm, `Cell ${i+1} 첫 픽셀 Y`),
+      rotationDeg: asFiniteNumber(c.rotationDeg ?? 0, `Cell ${i+1} 회전각`)
+    })) : [];
+    if(normalized.cellConfigurations.length && normalized.cellConfigurations.length < normalized.cellColumnCount*normalized.cellRowCount) throw new Error('사용 Cell의 배치 정보가 부족합니다.');
     validateRecipe(normalized);
     return normalized;
   }
@@ -207,7 +218,7 @@
       recipe.globalCorrectionXmm;
     const fieldCoverageMax = recipe.scanFieldWidthMm * recipe.headCount;
 
-    if (minGlobalX < 0 || maxGlobalX >= fieldCoverageMax) {
+    if (!recipe.cellConfigurations.length && (minGlobalX < 0 || maxGlobalX >= fieldCoverageMax)) {
       throw new Error(
         `생성 X 범위 ${round(minGlobalX, 4)}…${round(maxGlobalX, 4)} mm가 ` +
           `Head Field 범위 0…${round(fieldCoverageMax, 4)} mm를 벗어납니다.`,
@@ -254,22 +265,20 @@
 
   function makePoint(recipe, derived, cellRow, cellCol, gridIndexY, gridIndexX) {
     const cellId = (cellRow - 1) * recipe.cellColumnCount + cellCol;
-    const cellOriginXmm = (cellCol - 1) * recipe.cellPitchXmm;
-    const cellOriginYmm = (cellRow - 1) * recipe.cellPitchYmm;
-    const nominalGlobalXmm = round(
-      cellOriginXmm +
-        derived.xReferenceDistanceMm +
-        recipe.sharedOriginOffsetMm +
-        gridIndexX * derived.commandSpacingMm,
-    );
-    const nominalGlobalYmm = round(
-      cellOriginYmm +
-        recipe.sharedOriginOffsetMm +
-        gridIndexY * derived.commandSpacingMm,
-    );
+    const conf = recipe.cellConfigurations[cellId-1] || {modelType:1,alignToFirstPixelXmm:(cellCol-1)*recipe.cellPitchXmm,alignToFirstPixelYmm:(cellRow-1)*recipe.cellPitchYmm,rotationDeg:0};
+    const cellOriginXmm = conf.alignToFirstPixelXmm;
+    const cellOriginYmm = conf.alignToFirstPixelYmm;
+    const angle=conf.rotationDeg*Math.PI/180,cos=Math.cos(angle),sin=Math.sin(angle);
+    const qx=recipe.sharedOriginOffsetMm+gridIndexX*derived.commandSpacingMm;
+    const qy=recipe.sharedOriginOffsetMm+gridIndexY*derived.commandSpacingMm;
+    const cellFirstCenterXmm=round(derived.xReferenceDistanceMm+cellOriginXmm+cos*recipe.sharedOriginOffsetMm-sin*recipe.sharedOriginOffsetMm);
+    const cellFirstCenterYmm=round(cellOriginYmm+sin*recipe.sharedOriginOffsetMm+cos*recipe.sharedOriginOffsetMm);
+    const nominalGlobalXmm=round(derived.xReferenceDistanceMm+cellOriginXmm+cos*qx-sin*qy);
+    const nominalGlobalYmm=round(cellOriginYmm+sin*qx+cos*qy);
     const globalXmm = round(nominalGlobalXmm + recipe.globalCorrectionXmm);
     const globalYmm = round(nominalGlobalYmm + recipe.globalCorrectionYmm);
     const headNumber = Math.floor(globalXmm / recipe.scanFieldWidthMm) + 1;
+    if(headNumber<1 || headNumber>recipe.headCount) throw new Error(`Cell ${cellId}의 X=${globalXmm} mm가 Head 범위를 벗어납니다.`);
     const headCenterGlobalXmm = round(
       derived.scanFieldHalfWidthMm + recipe.scanFieldWidthMm * (headNumber - 1),
     );
@@ -304,6 +313,10 @@
       cellRow,
       cellOriginXmm,
       cellOriginYmm,
+      cellModelType:conf.modelType,
+      cellRotationDeg:conf.rotationDeg,
+      cellFirstCenterXmm,
+      cellFirstCenterYmm,
       commandGridIndexX: gridIndexX,
       commandGridIndexY: gridIndexY,
       designPixelXpx: round(gridIndexX * recipe.commandPitchPx),
@@ -518,6 +531,7 @@
   }
 
   function isBaselineRecipe(recipe) {
+    if(recipe.cellConfigurations?.slice(0,recipe.cellColumnCount*recipe.cellRowCount).some((c,i)=>c.rotationDeg!==0 || !nearlyEqual(c.alignToFirstPixelXmm,(i%recipe.cellColumnCount)*recipe.cellPitchXmm) || !nearlyEqual(c.alignToFirstPixelYmm,Math.floor(i/recipe.cellColumnCount)*recipe.cellPitchYmm))) return false;
     const comparedFields = [
       ...NUMERIC_FIELDS,
       "duplicateLaneStart",

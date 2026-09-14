@@ -299,7 +299,7 @@
       const searchable = [
         record.headId,
         `H${record.headNumber}:${record.sequenceNo}`,
-        `CELL${String(record.cellId).padStart(2, "0")}`,
+        `CELL${String(record.cellId).padStart(2, "0")} / M${record.cellModelType}`,
         String(record.cellId),
         String(record.sequenceNo),
         record.maskReason,
@@ -344,7 +344,7 @@
       row.append(createElement('td', null, record.baseLaserGate));
       row.append(createElement('td', `gate-${record.laserGate.toLowerCase()}`, record.laserGate));
       row.append(createElement('td', null, record.maskReason || (record.maskingEnabled ? '통과' : '미사용')));
-      row.append(createElement("td", null, `CELL${String(record.cellId).padStart(2, "0")}`));
+      row.append(createElement("td", null, `CELL${String(record.cellId).padStart(2, "0")} / M${record.cellModelType}`));
       row.append(
         createElement(
           "td",
@@ -636,7 +636,7 @@
       const recipe = JSON.parse(await file.text());
       engine.generateCoordinates(recipe);
       applyRecipeToForm({...engine.BASELINE_RECIPE, ...recipe});
-      maskPanel.apply(recipe.masking, recipe.laserPolicy);
+      maskPanel.apply(recipe.masking, recipe.laserPolicy, recipe.cellConfigurations);
       updateDoeCenterInput();
       generateFromForm();
     } catch (error) { showError(error); }

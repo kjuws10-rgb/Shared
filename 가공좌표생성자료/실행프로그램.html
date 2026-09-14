@@ -7,7 +7,7 @@
       name="description"
       content="A3 LD 레시피 조건으로 Head별 가공 중심 좌표를 생성하고 16,742건 Ground Truth를 검증하는 테스트 프로그램"
     />
-    <title>A3 LD 좌표 생성 · Masking 프로그램</title>
+    <title>A3 LD Cell 모델별 Masking 시뮬레이션</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -20,7 +20,7 @@
         </div>
         <div>
           <p class="eyebrow">A3 LD · COORDINATE QA</p>
-          <h1>좌표 생성 · Masking 프로그램</h1>
+          <h1>Cell 모델별 Masking 시뮬레이션</h1>
         </div>
       </div>
       <div class="header-actions">
@@ -172,23 +172,31 @@
 
 
           <fieldset id="maskingInputs">
-            <legend>Masking · 공통 원점과 Edge</legend>
+            <legend>모델 1~5 · Cell 내부 Masking</legend>
             <label class="toggle-row"><input id="mask-enabled" type="checkbox"><span><b>Masking 사용</b><small>좌표는 유지하고 접촉 샷의 레이저를 Off</small></span></label>
-            <p class="mask-help">기준점은 <b>첫 Cell의 첫 DOE 가공 중심</b>입니다. X는 오른쪽, Y는 아래쪽이 양수이며 모든 거리는 mm입니다. 첫 샷이 Off여도 원점은 같습니다.</p>
+            <p class="mask-help">기준점은 <b>각 Cell의 첫 DOE 가공 중심</b>입니다. X는 오른쪽, Y는 아래쪽이 양수이며 모든 거리는 mm입니다. 첫 샷이 Off여도 원점은 같습니다.</p>
             <p class="mask-help">ROUND X/Y는 <b>직선 Edge가 만나는 모서리 기준점</b>입니다. 상우는 좌우 반전, 하좌는 상하 반전, 하우는 두 방향 반전을 적용합니다.</p>
-            <div class="mask-actions"><button id="loadMaskExample" class="text-button" type="button">설명용 예제 불러오기</button><button id="clearMaskInputs" class="text-button" type="button">Masking 입력 초기화</button></div>
+            <div class="mask-actions"><button id="loadMaskExample" class="text-button" type="button">5종 혼합 예제 불러오기</button><button id="clearMaskInputs" class="text-button" type="button">Masking 입력 초기화</button></div>
+            <div class="input-grid"><label class="field"><span>사용 모델 종류 수</span><small>CELL_MODEL_TYPE_COUNT</small><input id="model-count" type="number" min="1" max="5" value="5" step="1"></label><label class="field"><span>형상 편집 모델</span><select id="model-editor"><option value="1">모델 1</option><option value="2">모델 2</option><option value="3">모델 3</option><option value="4">모델 4</option><option value="5">모델 5</option></select></label></div>
+            <p class="mask-help">모델은 형상만 선택합니다. 해당 모델을 사용하는 모든 Cell에 각자의 원점으로 적용합니다. 예제 수치는 동작 확인용이며 첨부 PPID에는 실제 레시피 값이 없습니다.</p>
             <details open><summary>라운드 반지름·네 모서리 거리</summary><div id="mask-edge-inputs" class="input-grid"></div></details>
-            <details open><summary>기판 Hole · 타원 / 원</summary><p class="mask-help">X/Y는 Hole 중심 거리, SIZE X/Y는 전체 폭·높이입니다. 개수 0이어도 Edge는 적용합니다.</p><div id="mask-count-input"></div><div id="mask-hole-inputs"></div></details>
+            <details open><summary>Cell 내부 Hole · 금지박스</summary><p class="mask-help">X/Y는 금지박스 좌상단 거리, SIZE X/Y는 전체 폭·높이입니다. 개수 0이어도 Edge는 적용합니다.</p><div id="mask-count-input"></div><div id="mask-hole-inputs"></div></details>
             <details><summary>DOE 회전·빔 크기·위치 여유</summary>
               <p class="mask-help">빔 반경·위치 여유를 비우면 명목 DOE 외곽으로 판정합니다. 실제 빔 크기를 포함하려면 두 값을 함께 입력하세요.</p>
               <div class="input-grid">
-                <label class="field"><span>DOE 회전각 (도)</span><input id="mask-doe-rotation" type="number" step="0.01" value="0"></label>
+                <label class="field"><span>DOE의 장비 좌표계 회전각 (도)</span><input id="mask-doe-rotation" type="number" step="0.01" value="0"></label>
                 <label class="field"><span>빔 반경 (mm)</span><input id="mask-beam-radius" type="number" min="0" step="0.0001" placeholder="명목 판정"></label>
                 <label class="field"><span>위치 오차 여유 (mm)</span><input id="mask-position-margin" type="number" min="0" step="0.0001" placeholder="명목 판정"></label>
               </div>
             </details>
           </fieldset>
-          <fieldset id="laserPolicyInputs">
+          <fieldset id="cellConfigurations"><legend>Cell별 배치와 모델 선택</legend>
+<p class="mask-help">X/Y는 공통 얼라인 기준에서 해당 Cell의 첫 픽셀(첫 빔)까지의 거리(mm)입니다. 여기서 C26을 회전시켜 더한 첫 샷 중심이 그 Cell의 Masking 원점입니다. 회전은 X 오른쪽·Y 아래쪽에서 시계방향 양수입니다.</p>
+<button type="button" class="text-button" id="resetCellGrid">현재 Cell 간격으로 배치 채우기</button>
+<details><summary>Cell 1~50 입력 (흐린 행은 미사용)</summary><div class="cell-editor-scroll"><table><thead><tr><th>Cell</th><th>첫 픽셀 X</th><th>모델</th><th>첫 픽셀 Y</th><th>회전°</th></tr></thead><tbody id="cell-model-rows"></tbody></table></div></details>
+<button type="button" id="exportPpidParameters" class="text-button">PPID 모델·Cell 입력값 JSON 저장</button><p class="mask-help">저장값은 mm·도 단위 공학값입니다. PLC Factor 인코딩과 Word 주소 전송은 포함하지 않습니다.</p>
+</fieldset>
+<fieldset id="laserPolicyInputs">
             <legend>기존 Script 발진 정책</legend>
             <p class="mask-help">Masking 적용 전의 발진 정책을 지정합니다. Masking은 On을 추가 허용하지 않고 접촉 샷만 Off로 제한합니다.</p>
             <label class="field"><span>가공 중심 기본 발진</span><select id="base-center-gate"><option value="ON">On · 가공</option><option value="OFF">Off · 비발진</option></select></label>
@@ -278,10 +286,11 @@
 
 
         <section class="visual-card" aria-labelledby="maskMapTitle">
-          <div class="card-heading"><div><p class="section-kicker">MASKING / LASER GATE</p><h3 id="maskMapTitle">전체 기판과 샷별 발진 조건</h3></div><label>표시 범위 <select id="maskViewCell"><option value="all">전체 기판</option></select></label></div>
+          <div class="card-heading"><div><p class="section-kicker">MASKING / LASER GATE</p><h3 id="maskMapTitle">Cell 모델 배치와 샷별 발진 조건</h3></div><label>표시 범위 <select id="maskViewCell"><option value="all">전체 기판</option></select></label></div>
           <p id="maskSummary" class="mask-summary"></p><p id="maskGateCounts"></p><p id="maskHitCounts" class="chart-caption"></p><p id="maskOrigin" class="chart-caption"></p>
-          <canvas id="maskCanvas" height="460" aria-label="전체 기판의 라운드 Edge와 Hole, Masking 접촉 및 샷별 발진 조건"></canvas>
-          <p class="chart-caption">초록: 기본 가공 On · 빨강: Masking 접촉 Off · 회색: 기본 Off · 흰 십자: 고정 원점. 확대 화면의 사각형은 DOE 판정 영역입니다. 반복 레코드 발진은 아래 표에서 확인합니다.</p>
+          <div class="table-scroll"><table class="model-count-table"><thead><tr><th>모델</th><th>Cell 수</th><th>Raw 수</th><th>접촉 Off</th><th>On</th><th>Off</th></tr></thead><tbody id="model-summary"></tbody></table></div>
+          <canvas id="maskCanvas" height="460" aria-label="각 Cell의 라운드 Edge와 Hole, Masking 접촉 및 샷별 발진 조건"></canvas>
+          <p class="chart-caption">초록: 기본 가공 On · 빨강: Masking 접촉 Off · 회색: 기본 Off · 흰 십자: 선택 Cell의 원점. 확대 화면의 사각형은 DOE 판정 영역입니다. 반복 레코드 발진은 아래 표에서 확인합니다.</p>
           <p id="maskScope" class="mask-scope"></p><p id="planStatus" class="chart-caption"></p>
         </section>
 
@@ -417,9 +426,9 @@
               이 프로그램은 기준 Excel의 16,742개 중심 명령좌표를 재현하고, 지정한 기하 형상의 접촉 여부로 발진 조건을 계산합니다.
               C26은 (픽셀 크기 × 피치 ÷ 축당 분기 수) × (분기 수 − 1) ÷ 2로 자동 계산합니다.
               명령표는 좌표와 발진 상태를 담은 제어기 독립 형식이며, 장비 전용 Script 언어로 실행하려면 명령 매핑이 필요합니다.
-              기판 Hole은 X/Y축에 평행한 타원, Edge는 직선과 원호로 된 라운드 사각형입니다.
+              각 Cell 내부 Hole은 PPID의 좌상단·Size(Box) 기준 금지박스입니다. Cell Edge는 직선과 원호로 된 라운드 사각형입니다.
               전역 보정은 공정 이동으로 취급해 고정 Masking 형상에 대한 조사 위치 변화에 포함합니다.
-              실측 DOE 분기 보정·기판 정렬 변환·MOF 노광 중 이동 및 Gate 응답 지연은 장비 연동 단계에서 적용해야 합니다.
+              실측 DOE 분기 보정·장비 정렬 보정·MOF 노광 중 이동 및 Gate 응답 지연은 장비 연동 단계에서 적용해야 합니다.
             </p>
             <a class="text-link" href="./가공좌표생성_최종분석보고서.html" target="_blank" rel="noreferrer">
               최종 분석보고서 열기
@@ -436,7 +445,7 @@
 
     <script src="./src/coordinate-engine.js"></script>
     <script src="./src/masking-engine.js"></script>
-    <script src="./src/masking-panel.js"></script>
+    <script src="./src/hybrid-panel.js"></script>
     <script src="./src/app.js"></script>
   </body>
 </html>

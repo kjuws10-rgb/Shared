@@ -26,7 +26,24 @@
   "autoDoeCenterOffset": true,
   "masking": {
     "enabled": false,
-    "MASKING_HOLE_NUMBER": 0
+    "CELL_MODEL_TYPE_COUNT": 5,
+    "models": [
+      {
+        "MASKING_HOLE_NUMBER": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0
+      },
+      {
+        "MASKING_HOLE_NUMBER": 0
+      }
+    ]
   },
   "laserPolicy": {
     "centerGate": "ON",
