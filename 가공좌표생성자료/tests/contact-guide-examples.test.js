@@ -1,0 +1,10 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const e=require('../src/masking-engine');
+const recipe=JSON.parse(fs.readFileSync(path.join(__dirname,'../../20260915_082716/Cell중앙_카메라홀1개_R2p5_레시피.json'),'utf8'));
+const m=e.normalizeMasking({...recipe.masking.models[0],enabled:true}),h=.3375;
+const holeCases=[{x:4.3,y:10.8,hit:false},{x:4.3125,y:10.8,hit:true},{x:4.4,y:10.8,hit:true},{x:5.85,y:9.1,hit:false},{x:4.3125,y:9.2625,hit:true}];
+test('해설 Hole 예제: 분리·변 접촉·겹침·Y 분리·점 접촉',()=>{for(const p of holeCases)assert.equal(e.touchesHole(e.envelope(p.x,p.y,h),m.holes[0]),p.hit);assert(Math.abs((4.4+h)-m.holes[0].x-.0875)<1e-9);});
+test('해설 직선 Edge 예제: 여유·접촉·이탈',()=>{for(const [x,hit]of [[0,false],[-.1125,true],[-.2,true]])assert.equal(e.touchesEdge(e.envelope(x,10.8,h),m.shape),hit);});
+test('해설 Round 예제: 원호 내부·정확한 원호 접촉·원호 밖',()=>{for(const [x,y,hit]of [[.9,.9,false],[.8875,.3875,true],[.8,.3,true]]){const reasons=e.edgeContactReasons(e.envelope(x,y,h),m.shape);assert.equal(reasons.includes('ROUND_UP_LEFT'),hit);assert(!reasons.includes('EDGE'));}assert(Math.abs(Math.hypot(.55-2.05,.05-2.05)-2.5)<1e-9);});
+test('해설 네 모서리 반전의 동일 접촉',()=>{for(const c of m.shape.corners){const p=e.mirrorLocal(c,1.3375,.8375);assert(e.edgeContactReasons(e.envelope(p.x,p.y,h),m.shape).includes('ROUND_'+c.id));}});
+test('해설 예제 레시피는 16,742개 좌표를 보존하고 1 Cell당 24개 중심을 차단',()=>{const a=e.generateCoordinates(recipe),b=e.generateCoordinates({...recipe,masking:{...recipe.masking,enabled:false}});assert.deepEqual(a.records.map(p=>[p.headNumber,p.sequenceNo,p.localGYmm,p.gxStageMm]),b.records.map(p=>[p.headNumber,p.sequenceNo,p.localGYmm,p.gxStageMm]));assert.equal(a.records.length,16742);assert.equal(a.masking.summary.onCount,14670);assert.equal(a.masking.summary.offCount,2072);assert.equal(a.uniqueCenters.filter(p=>p.cellId===1&&p.laserGate==='OFF').length,24);});
