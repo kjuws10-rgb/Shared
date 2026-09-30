@@ -1,0 +1,61 @@
+{
+  "source_commit": "6b19d7aaf0de81271468ab7dac0fa15493172f38",
+  "cell_count": 45,
+  "cell_grid": [
+    9,
+    5
+  ],
+  "cell_width": 77.76,
+  "cell_height": 46.08,
+  "shot_pitch": 2.7,
+  "beam_pitch": 0.675,
+  "shots_per_cell": 476,
+  "laser_valid_per_cell_before_head": 449,
+  "shots_theoretical": 21420,
+  "shots_assigned": 20740,
+  "shots_unassigned": 680,
+  "valid_before_head": 20205,
+  "valid_all_heads": 19530,
+  "valid_unassigned": 675,
+  "valid_enabled_heads": 2245,
+  "valid_per_head": {
+    "1": 2245,
+    "2": 2245,
+    "3": 2410,
+    "4": 2500,
+    "5": 2535,
+    "6": 2510,
+    "7": 2585,
+    "8": 2500
+  },
+  "cell_head_pairs": 70,
+  "schedule_glasses": 35,
+  "schedule_points": 70,
+  "coverage_minutes": 87.5,
+  "min_review_margin_100": 1.1759899999999992,
+  "max_dx": 110.80000000000007,
+  "scan_span_with_delay": 1723.2,
+  "process_span_first_last": 1223.2,
+  "ideal_scan_time_100": 17.232,
+  "planning_speed_delay_in_30": 57.44,
+  "planning_speed_first_last_30": 40.77333333333333,
+  "status": "DESIGN_PROPOSAL_NOT_EQUIPMENT_CONFIGURATION",
+  "assumptions": {
+    "review_vx_mm_s": 200,
+    "review_acc_mm_s2": 1000,
+    "settling_s": 0.05,
+    "guard_s": 0.02,
+    "camera_effective_hz": 23,
+    "exposure_s": 1e-05,
+    "review_head1_distance_mm": 1467,
+    "tact_s": 150
+  },
+  "current_settings": {
+    "enabled_heads": [
+      1
+    ],
+    "auto_inspection": false,
+    "zero_defence_parameter": 0,
+    "configured_review_head1_distance_mm": 0
+  }
+}
