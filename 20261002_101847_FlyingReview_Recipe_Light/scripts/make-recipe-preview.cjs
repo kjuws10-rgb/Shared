@@ -1,0 +1,14 @@
+/* Capture exact expert-editor SVG states; not a browser screenshot. */
+const fs=require('fs'),path=require('path'),vm=require('vm'),{parseHTML}=require('linkedom');
+const root=path.resolve(__dirname,'..'),out=process.argv[2];if(!out)throw Error('Specify output SVG path');
+const {window:w,document}=parseHTML(fs.readFileSync(path.join(root,'FlyingReview_8Head_Simulator.html'),'utf8'));
+Object.defineProperty(w.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.querySelector('option')?.value||'';},set(v){this.querySelectorAll('option').forEach(o=>o.toggleAttribute('selected',String(o.value)===String(v)));}});
+Object.defineProperty(w.HTMLInputElement.prototype,'checked',{configurable:true,get(){return this.hasAttribute('checked');},set(v){this.toggleAttribute('checked',!!v);}});
+const ctx=vm.createContext({document,console,Blob,URL:{createObjectURL:()=>'',revokeObjectURL(){}},setTimeout:()=>0,requestAnimationFrame:()=>{}});ctx.window=ctx;for(const s of document.querySelectorAll('script'))vm.runInContext(s.textContent,ctx);
+const $=id=>document.getElementById(id);$('recipe-sample').dispatchEvent(new w.Event('click'));
+function extract(id,x,y,width,height){const s=$(id).querySelector('svg').cloneNode(true);for(const [k,v] of Object.entries({x,y,width,height}))s.setAttribute(k,v);return s.outerHTML.replace(/clippath/g,'clipPath');}
+const layout=extract('recipe-layout',25,100,460,760),m1=extract('recipe-mask',520,140,770,440);
+$('recipe-model-select').value=2;$('recipe-model-select').dispatchEvent(new w.Event('change'));
+const m2=extract('recipe-mask',950,620,320,340);
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="1020" viewBox="0 0 1380 1020"><style>text{font-family:'Noto Sans KR',sans-serif}</style><rect width="1380" height="1020" fill="#f2f6f9"/><text x="30" y="40" font-size="28" fill="#173449">전문가 Recipe · Cell 배치와 모델별 Masking 미리보기</text><text x="30" y="75" font-size="19" fill="#526b7b">PPID DRILL_A01 / test0929 · 초안 확인 후 검증·적용 · 운전 입력은 별도 유지</text>${layout}<text x="520" y="122" font-size="22" fill="#173449">Model1: 77.76 × 46.08 mm / 28 × 17 Shot</text>${m1}<text x="530" y="640" font-size="22" fill="#173449">모델 선택에 따라 Hole / Edge를 별도 계산</text><text x="530" y="687" font-size="20" fill="#526b7b">Model2: 12.96 × 23.04 mm / 4 × 8 Shot</text><text x="530" y="730" font-size="19" fill="#a54135">적색 영역: Shot 전체 Laser Skip</text><text x="530" y="773" font-size="19" fill="#087f8c">청록 점: Mask를 통과한 Shot 중심</text><text x="530" y="816" font-size="19" fill="#a46b10">황색 점선: 사각형 Edge 허용 내부</text><text x="530" y="868" font-size="18" fill="#526b7b">Cell의 모델·회전·좌표는 개별 편집 가능</text>${m2}<text x="30" y="991" font-size="16" fill="#526b7b">HTML이 생성한 실제 SVG 계산 상태 · 브라우저 캡처/장비 실측/Vision PASS가 아님</text></svg>`;
+fs.writeFileSync(out,svg);console.log('Saved exact expert SVG preview');
