@@ -1,0 +1,478 @@
+{
+  "camera": {
+    "camera": "Basler a2A2600-20gcBAS",
+    "sensor": "Gpixel GMAX2505",
+    "shutter": "Global Shutter",
+    "pixelUm": 2.5,
+    "mag": 20,
+    "width": 2600,
+    "height": 2128,
+    "fullHeight": 2160,
+    "fps": 18.5,
+    "minExposure": 2,
+    "maxExposure": 10000000,
+    "objective": "Mitutoyo 378-810-3 M Plan Apo SL20X",
+    "na": 0.28,
+    "wd": 30.5,
+    "resolutionUm": 1,
+    "dofUm": 3.5
+  },
+  "inputs": {
+    "exposureUs": 2,
+    "blurPx": 2,
+    "vx": 200,
+    "ax": 1000,
+    "dx": 1000,
+    "vy": 100,
+    "ay": 500,
+    "dy": 500
+  },
+  "parameters": {
+    "glassX": 925,
+    "glassY": 1500,
+    "cellCols": 9,
+    "cellRows": 5,
+    "cellPitchX": 100,
+    "cellPitchY": 200,
+    "akX": 15.5,
+    "akY": 15.5,
+    "pixelSize": 0.09,
+    "pixelsX": 864,
+    "pixelsY": 512,
+    "shotPitchPixels": 30,
+    "split": 4,
+    "referenceOffsetX": 10,
+    "head1AKX": 39.5,
+    "headPitchX": 110,
+    "fieldX": 110,
+    "holes": [
+      [
+        20,
+        5,
+        10,
+        10
+      ],
+      [
+        0,
+        0,
+        0.1,
+        0.1
+      ],
+      [
+        72.9,
+        43.2,
+        0.1,
+        0.1
+      ]
+    ],
+    "models": null,
+    "cellLayout": null,
+    "recipeMeta": null,
+    "ppidRows": [],
+    "chess": 1,
+    "distance": 1467,
+    "evenExtra": 380,
+    "direction": -1,
+    "reviewAKX": 0,
+    "reviewAKY": 0,
+    "vy": 100,
+    "ay": 500,
+    "dy": 500,
+    "leadY": 500,
+    "runoutY": 100,
+    "autoStage": true,
+    "stageStart": 2345.9875,
+    "stageEnd": -1584.5,
+    "stageLimits": false,
+    "stageMin": -2500,
+    "stageMax": 3000,
+    "stageStroke": 3960,
+    "reviewStroke": 1025,
+    "vx": 200,
+    "ax": 1000,
+    "dx": 1000,
+    "parkX": 0,
+    "xMin": 0,
+    "xMax": 1025,
+    "preTime": 2,
+    "settleMs": 50,
+    "guardMs": 20,
+    "fps": 18.5,
+    "cameraMaxFps": 18.5,
+    "exposureUs": 2,
+    "minExposureUs": 2,
+    "readoutMs": 0,
+    "overlapReadout": true,
+    "triggerDelayUs": 14,
+    "jitterUs": 5,
+    "compensate": true,
+    "encoderScale": 16000,
+    "followErrorUm": 0,
+    "maxBlurUm": 0.25,
+    "sensorPixelUm": 2.5,
+    "magnification": 20,
+    "toleranceY": 0.03,
+    "toleranceX": 0.03,
+    "xSettleErrorUm": 0,
+    "imageTail": 1,
+    "otherTime": 60,
+    "tact": 150,
+    "processBudget": 30,
+    "enforceTact": true,
+    "enforceProcess": true,
+    "cruiseOnly": true,
+    "processCruise": true,
+    "processClearanceMs": 1,
+    "rowOneOnly": false,
+    "order": "head",
+    "cyclePolicy": "sequential"
+  },
+  "points": [
+    {
+      "head": 1,
+      "cell": 1,
+      "shot": 2,
+      "x": 19.549999999999997,
+      "y": 16.175,
+      "reviewX": 4.049999999999997,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 23.566625000000002
+    },
+    {
+      "head": 2,
+      "cell": 11,
+      "shot": 2,
+      "x": 119.55000000000001,
+      "y": 216.17499999999998,
+      "reviewX": 104.05000000000001,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 25.566625000000002
+    },
+    {
+      "head": 3,
+      "cell": 21,
+      "shot": 2,
+      "x": 219.55,
+      "y": 416.175,
+      "reviewX": 204.05,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 27.566625000000002
+    },
+    {
+      "head": 4,
+      "cell": 31,
+      "shot": 3,
+      "x": 322.25,
+      "y": 616.1750000000001,
+      "reviewX": 306.75,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 29.566625000000002
+    },
+    {
+      "head": 5,
+      "cell": 5,
+      "shot": 6,
+      "x": 430.34999999999997,
+      "y": 16.175,
+      "reviewX": 414.84999999999997,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 23.566625000000002
+    },
+    {
+      "head": 6,
+      "cell": 15,
+      "shot": 10,
+      "x": 541.15,
+      "y": 216.17499999999998,
+      "reviewX": 525.65,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 25.566625000000002
+    },
+    {
+      "head": 7,
+      "cell": 25,
+      "shot": 14,
+      "x": 651.9499999999999,
+      "y": 416.175,
+      "reviewX": 636.4499999999999,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 27.566625000000002
+    },
+    {
+      "head": 8,
+      "cell": 35,
+      "shot": 18,
+      "x": 762.75,
+      "y": 616.1750000000001,
+      "reviewX": 747.25,
+      "blurPixels": 1.5999999995983671,
+      "phase": "등속",
+      "cross": 29.566625000000002
+    }
+  ],
+  "modes": {
+    "2": {
+      "valid": true,
+      "glass": 4,
+      "groups": [
+        {
+          "heads": [
+            1,
+            2
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 1,
+              "b": 2,
+              "dx": 100.00000000000001,
+              "dy": 199.99999999999997,
+              "distance": 223.60679774997894,
+              "gap": 2,
+              "move": 0.7,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.2299740000000001,
+              "frameSlack": 1.945935945945946,
+              "need": 0.7700259999999999,
+              "minDeltaYCruise": 77.00259999999999,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        },
+        {
+          "heads": [
+            3,
+            4
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 3,
+              "b": 4,
+              "dx": 102.69999999999999,
+              "dy": 200.00000000000006,
+              "distance": 224.82724479030566,
+              "gap": 2,
+              "move": 0.7135,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.216474,
+              "frameSlack": 1.945935945945946,
+              "need": 0.783526,
+              "minDeltaYCruise": 78.3526,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        },
+        {
+          "heads": [
+            5,
+            6
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 5,
+              "b": 6,
+              "dx": 110.80000000000001,
+              "dy": 199.99999999999997,
+              "distance": 228.64085374228287,
+              "gap": 2,
+              "move": 0.754,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.175974,
+              "frameSlack": 1.945935945945946,
+              "need": 0.8240259999999999,
+              "minDeltaYCruise": 82.40259999999999,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        },
+        {
+          "heads": [
+            7,
+            8
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 7,
+              "b": 8,
+              "dx": 110.80000000000007,
+              "dy": 200.00000000000006,
+              "distance": 228.64085374228299,
+              "gap": 2,
+              "move": 0.7540000000000002,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.1759739999999999,
+              "frameSlack": 1.945935945945946,
+              "need": 0.8240260000000001,
+              "minDeltaYCruise": 82.40260000000002,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "slack": 1.1759739999999999
+    },
+    "4": {
+      "valid": true,
+      "glass": 2,
+      "groups": [
+        {
+          "heads": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 1,
+              "b": 2,
+              "dx": 100.00000000000001,
+              "dy": 199.99999999999997,
+              "distance": 223.60679774997894,
+              "gap": 2,
+              "move": 0.7,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.2299740000000001,
+              "frameSlack": 1.945935945945946,
+              "need": 0.7700259999999999,
+              "minDeltaYCruise": 77.00259999999999,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            },
+            {
+              "a": 2,
+              "b": 3,
+              "dx": 100,
+              "dy": 200.00000000000003,
+              "distance": 223.60679774997902,
+              "gap": 2,
+              "move": 0.7,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.2299740000000001,
+              "frameSlack": 1.945935945945946,
+              "need": 0.7700259999999999,
+              "minDeltaYCruise": 77.00259999999999,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            },
+            {
+              "a": 3,
+              "b": 4,
+              "dx": 102.69999999999999,
+              "dy": 200.00000000000006,
+              "distance": 224.82724479030566,
+              "gap": 2,
+              "move": 0.7135,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.216474,
+              "frameSlack": 1.945935945945946,
+              "need": 0.783526,
+              "minDeltaYCruise": 78.3526,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        },
+        {
+          "heads": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "valid": true,
+          "edges": [
+            {
+              "a": 5,
+              "b": 6,
+              "dx": 110.80000000000001,
+              "dy": 199.99999999999997,
+              "distance": 228.64085374228287,
+              "gap": 2,
+              "move": 0.754,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.175974,
+              "frameSlack": 1.945935945945946,
+              "need": 0.8240259999999999,
+              "minDeltaYCruise": 82.40259999999999,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            },
+            {
+              "a": 6,
+              "b": 7,
+              "dx": 110.79999999999995,
+              "dy": 200.00000000000003,
+              "distance": 228.6408537422829,
+              "gap": 2,
+              "move": 0.7539999999999998,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.1759740000000003,
+              "frameSlack": 1.945935945945946,
+              "need": 0.8240259999999997,
+              "minDeltaYCruise": 82.40259999999996,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            },
+            {
+              "a": 7,
+              "b": 8,
+              "dx": 110.80000000000007,
+              "dy": 200.00000000000006,
+              "distance": 228.64085374228299,
+              "gap": 2,
+              "move": 0.7540000000000002,
+              "movePeak": 200,
+              "xAvailable": 1.929974,
+              "xSlack": 1.1759739999999999,
+              "frameSlack": 1.945935945945946,
+              "need": 0.8240260000000001,
+              "minDeltaYCruise": 82.40260000000002,
+              "orderOK": true,
+              "valid": true,
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "slack": 1.1759739999999999
+    }
+  },
+  "process_s": 12.232,
+  "tact_assumption_s": 100.504875,
+  "stageTravel_mm": 3930.4875,
+  "stageTime_s": 39.504875000000006
+}

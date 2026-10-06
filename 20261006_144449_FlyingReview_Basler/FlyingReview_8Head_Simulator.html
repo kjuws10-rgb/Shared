@@ -1,0 +1,582 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>0선 방어 Flying Review · Basler</title><style>:root{--ink:#173449;--muted:#607585;--teal:#087f8c;--green:#157957;--red:#b73f40;--border:#d5e2e9;--bg:#f3f8fb}*{box-sizing:border-box}body{margin:0;font:15px/1.6 'Noto Sans KR','Malgun Gothic',Arial,sans-serif;color:var(--ink);background:var(--bg)}main{max-width:1360px;margin:28px auto;padding:0 22px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}small{color:var(--teal);font-weight:700}h1{font-size:32px;margin:3px 0 8px}h2{font-size:19px;margin:0 0 15px}p{margin:8px 0}a{color:var(--teal)}section,details.points,details.fixed{background:white;border:1px solid var(--border);border-radius:14px;padding:22px;margin:18px 0}.setup{display:grid;grid-template-columns:3fr 1fr;gap:30px}.fields{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.fields label{display:block;font-weight:600;font-size:13px}.fields input{display:block;margin-top:5px;width:100%;padding:9px;border:1px solid #b9ced8;border-radius:7px;font:inherit;font-size:18px;color:var(--ink)}.hint,footer{font-size:13px;color:var(--muted)}button,select{font:inherit;border-radius:7px;border:1px solid #b9ced8;background:white;color:var(--ink);padding:8px 12px;cursor:pointer}button:hover{background:#edf6f7}button.active,#play{background:var(--teal);border-color:var(--teal);color:white}button:disabled{opacity:.4;cursor:not-allowed}.buttons{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.operation button{margin:4px 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);padding:0;background:none;border:none;gap:14px}.metric{padding:16px 20px;border:1px solid var(--border);background:white;border-radius:12px}.metric b{display:block;font-size:27px}.good{color:var(--green)}.bad{color:var(--red)}.visual-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.ledger{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;margin:15px 0}.head{padding:8px 4px;text-align:center;border:1px solid var(--border);border-radius:7px;font-size:13px}.head.done{color:var(--green);background:#e5f5ed;border-color:#82bfa7}.head.current{border-color:var(--teal);background:#edf8fa}#scene{display:block;background:#f7fbfd;border:1px solid var(--border);width:100%;height:auto;border-radius:10px}.scrub{display:flex;gap:15px;align-items:center;margin-top:14px}#seek{flex:1}#clock{min-width:200px;font-size:13px}#narrative{padding:9px 14px;background:#eff7fa;border-left:3px solid var(--teal);min-height:46px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:20px 0}.compare{border-top:3px solid var(--teal);padding-top:10px}.compare b{font-size:23px}summary{cursor:pointer;font-weight:700}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:13px;margin-top:15px}th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}th{background:#edf5f8}#advice button{padding:4px 10px;margin-left:10px;font-size:13px}#error{color:var(--red);border:1px solid #e1afb0;background:#fff3f3;padding:16px;border-radius:8px}footer{text-align:center;margin:25px}svg text{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif}input[type=range]{accent-color:var(--teal)}@media(max-width:850px){main{padding:0 12px}header,.visual-head{display:block}.setup{grid-template-columns:1fr}.fields{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:1fr 1fr}.ledger{grid-template-columns:repeat(4,1fr)}h1{font-size:26px}.comparison{grid-template-columns:1fr}section{padding:16px}}
+</style></head><body><main>
+<header><div><small>A3 · 0선 방어 검토</small><h1>Flying Review, 2점 또는 4점</h1><p>기판은 Y로 계속 이동합니다. 카메라는 X로 먼저 도착해 기다린 후, 등속구간에서 한 장씩 촬영합니다.</p></div><a href="FlyingReview_Formula_Guide.html" target="_blank">쉬운 수식 설명 ↗</a></header>
+<section class="setup"><div><h2>1. 동작 조건</h2><div id="inputs" class="fields"></div><p class="hint">노출은 µs, 속도는 mm/s, 가감속은 mm/s²입니다. 노출 입력을 실효 노출로 가정해 계산합니다.</p></div><div class="operation"><h2>2. 기판당 취득 수</h2><div class="buttons"><button data-cap="2">2점씩 · 4 Glass</button><button data-cap="4" class="active">4점씩 · 2 Glass</button></div><p>H1·2 → H3·4 → H5·6 → H7·8<br>또는 H1~4 → H5~8</p><button id="defaults">기본 조건 복원</button><button id="export">현재 계산 JSON 저장</button></div></section>
+<div id="error" role="alert" hidden></div><section id="summary" class="metrics"></section>
+<section class="visual"><div class="visual-head"><h2>3. 기판 통과와 누적 취득 이력</h2><div class="buttons"><button id="play">▶ 재생</button><button id="restart">새 사이클</button><label>재생 <select id="speed"><option value="1">1×</option><option value="4">4×</option><option value="8" selected>8×</option><option value="16">16×</option></select></label><label><input id="loop" type="checkbox">반복</label></div></div><p id="narrative" aria-live="polite"></p><div id="ledger" class="ledger"></div><svg id="scene" viewBox="0 0 1040 690" role="img" aria-label="Y 이동 기판과 고정 Y의 X 이동 리뷰 카메라, 45 Cell 누적 지도"></svg><div class="scrub"><input id="seek" type="range" min="0" max="1000" value="0"><output id="clock"></output></div><p class="hint">녹색은 ‘계산상 취득 완료’이며 영상 합격을 뜻하지 않습니다. 오른쪽 지도는 여러 Glass에서 얻은 대표점의 누적 이력입니다. 이전 점은 유지하고 새 사이클을 시작할 때만 초기화합니다. 애니메이션은 주행만 재현하고, Tact에 포함한 기타 60초는 화면에서 생략합니다.</p></section>
+<section class="explanation"><h2>4. 현재 조건의 판단과 변경 방법</h2><div id="advice"></div><div class="comparison" id="comparison"></div><details><summary>구간별 시간 비교</summary><div id="timing" class="scroll"></div></details></section>
+<details class="points"><summary>대표점 확인·변경 (서로 다른 Cell만 허용)</summary><p>기본 좌표는 PPID test0929의 실제 가공 Shot에서 선택합니다. 아래에서 Scanner를 선택한 뒤 오른쪽 기판 지도를 클릭하면 가장 가까운 유효점으로 변경합니다. 다른 Scanner가 사용 중인 Cell은 선택 후보에서 제외합니다.</p><label>선택 Scanner <select id="selectedHead"></select></label> <button id="auto">기본 대표점 자동 선정</button><p id="pointMessage" role="status"></p><div id="pointTable" class="scroll"></div></details>
+<details class="fixed"><summary>고정 기준과 검토 범위</summary><p>카메라: Basler a2A2600-20gcBAS, Global Shutter, 2.5 µm pixel, 기본 2600×2128, 계산 주기 18.5 fps (54.05 ms). 상품 표기 20 fps와 다르므로 공식 문서의 기본 설정 값을 사용합니다.</p><p>렌즈: Mitutoyo 378-810-3, 20× SL. 200 mm tube lens 및 중간 배율 1×의 실효 20배를 가정합니다. 물체면 1 pixel = 0.125 µm, 시야 약 0.325×0.266 mm. 이는 광학 분해능 1 µm 또는 실제 검출 정밀도와 다릅니다.</p><p>기판 925×1500 mm, 9×5=45 Cell, Cell 간격 X100/Y200 mm, Model1 864×512×0.09 mm, Mask 3개, 4×4 DOE의 B07. 전체 Cell 검사가 아니라 Scanner당 대표점 1개입니다. Recipe의 0선방어=0/H1만 ON 설정을 실제 장비에 변경하는 프로그램은 아닙니다.</p><p>설계 Stroke Y3960/X1025 mm. Head 간 X110/Y380 mm. Review–홀수 Head 1467, 짝수 Head 1847 mm는 기존 stagger 모델 가정으로 실측 확인이 필요합니다. AK 및 기계 좌표 변환은 기존 분석 기준입니다.</p><p>정착 50 ms, 선도착 여유 20 ms, Trigger 지연 14 µs (10-bit sensor), Jitter ±5 µs, Encoder16000/mm, 위치오차 허용 ±30 µm, 준비 2초. 입력단 추가 지연·실제 정착/Jitter는 교정해야 합니다. 기본 허용 Blur 2 pixel은 예시이며 고객 승인 기준이 아닙니다.</p><p>가공 구간 목표 30초, 전체 Tact150초. 기타 시간60초와 후처리1초는 검토용 가정입니다. 출력 Tact는 생산 보증값이 아닙니다. 영상 밝기·초점·진동·Hole/전극 검출은 실제 촬영 검증이 필요합니다. ExposureAuto Off, hardware position trigger 및 FrameTriggerWait 확인을 권장합니다. 실효 노출은 pylon BslEffectiveExposureTime으로 확인합니다.</p><p>출처: <a href="https://docs.baslerweb.com/a2a2600-20gcbas">Basler 사양</a>, <a href="https://docs.baslerweb.com/exposure-time">노출</a>, <a href="https://docs.baslerweb.com/acquisition-timing-information">Timing</a>, <a href="https://www.mitutoyo.com/wp-content/uploads/2020/12/E14020.pdf">Mitutoyo 카탈로그 p.20·38</a>.</p></details>
+<footer>오프라인 검토용 · 실제 장비 제어 없음 · 2026-10-06</footer></main><script>/* PPID geometry adapter. Preserves non-modelled CSV rows; no equipment I/O. */
+(function(root,factory){const a=factory();if(typeof module==='object'&&module.exports)module.exports=a;else root.FlyingRecipe=a;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  'use strict';
+  const clone=x=>JSON.parse(JSON.stringify(x));
+  const cornerNames=['UP_LEFT','UP_RIGHT','DOWN_LEFT','DOWN_RIGHT'];
+  const geometryKeys={glassX:'GLASS_SIZE_X',glassY:'GLASS_SIZE_Y',akX:'AK_MARGIN_X',akY:'AK_MARGIN_Y',pixelSize:'PIXEL_SIZE',shotPitchPixels:'PITCH',split:'SPLITED_BEAM_COUNT',chess:'CHESS'};
+  const zeros=()=>[[0,0],[0,0],[0,0],[0,0]];
+  function models(p){return p.models?clone(p.models):[{id:1,pixelsX:p.pixelsX,pixelsY:p.pixelsY,holeCount:p.holes.length,holes:clone(p.holes),corners:zeros()}];}
+  function cells(p){return p.cellLayout?clone(p.cellLayout):Array.from({length:p.cellCols*p.cellRows},(_,i)=>({id:i+1,x:i%p.cellCols*p.cellPitchX,y:Math.floor(i/p.cellCols)*p.cellPitchY,model:1,rotation:0}));}
+  function fromParameters(p){return {...Object.fromEntries(Object.keys(geometryKeys).map(k=>[k,k==='chess'?(p.chess||1):p[k]])),name:p.recipeMeta?.name||'test0929',id:p.recipeMeta?.id||'test0929',ppid:p.recipeMeta?.ppid||'DRILL_A01',models:models(p),cells:cells(p),rows:clone(p.ppidRows||[])};}
+  function defaultDraft(p){const d=fromParameters(p);if(!p.models){for(let id=2;id<=5;id++){const i=id-2;d.models.push({id,pixelsX:144,pixelsY:256,holeCount:id===5?0:id===4?1:3,holes:[1.8,4.8,7.8].map(x=>[x,5.6+2*i,1.8+.3*i,2.2]),corners:Array.from({length:4},()=>[.45+.15*i,.45+.15*i])});}}return d;}
+  function rotate(x,y,degrees){const t=degrees*Math.PI/180,c=Math.cos(t),s=Math.sin(t);return {x:x*c-y*s,y:x*s+y*c};}
+  function corners(cell,model,d){return [[0,0],[model.pixelsX*d.pixelSize,0],[model.pixelsX*d.pixelSize,model.pixelsY*d.pixelSize],[0,model.pixelsY*d.pixelSize]].map(([x,y])=>{const q=rotate(x,y,cell.rotation);return {x:d.akX+cell.x+q.x,y:d.akY+cell.y+q.y};});}
+  function validate(d){
+    const errors=[],warnings=[];
+    for(const k of ['glassX','glassY','pixelSize','shotPitchPixels'])if(!Number.isFinite(d[k])||d[k]<=0)errors.push(k+'는 양수여야 합니다.');
+    for(const k of ['akX','akY'])if(!Number.isFinite(d[k]))errors.push(k+' 숫자 오류');
+    if(!Number.isInteger(d.shotPitchPixels))errors.push('PITCH는 양의 정수입니다.');
+    if(![1,4].includes(d.split))errors.push('DOE는 축당 1 또는 4입니다.');
+    if(!Number.isInteger(d.chess)||d.chess<1||d.chess>5)errors.push('CHESS는 1~5입니다.');
+    for(const k of ['name','id','ppid'])if(typeof d[k]!=='string'||!d[k].trim()||d[k].length>160)errors.push(k+'는 1~160자 이름입니다.');
+    if(!Array.isArray(d.models)||d.models.length<1||d.models.length>5)errors.push('모델은 1~5개입니다.');
+    (d.models||[]).forEach((m,i)=>{
+      if(m.id!==i+1)errors.push('모델 ID는 1부터 연속이어야 합니다.');
+      for(const k of ['pixelsX','pixelsY'])if(!Number.isInteger(m[k])||m[k]<1)errors.push('Model'+m.id+' '+k+' 양의 정수 오류');
+      if(!Number.isInteger(m.holeCount)||m.holeCount<0||m.holeCount>3)errors.push('Model'+m.id+' 활성 Hole 개수는 0~3입니다.');
+      if(!Array.isArray(m.holes)||m.holes.length<m.holeCount||m.holes.length>3||m.holes.some(h=>!Array.isArray(h)||h.length!==4||h.some(x=>!Number.isFinite(x))||h[2]<0||h[3]<0))errors.push('Model'+m.id+' Hole X/Y/W/H 오류');
+      if(!Array.isArray(m.corners)||m.corners.length!==4||m.corners.some(c=>!Array.isArray(c)||c.length!==2||c.some(x=>!Number.isFinite(x))))errors.push('Model'+m.id+' Edge X/Y 오류');
+    });
+    if(!Array.isArray(d.cells)||d.cells.length<1||d.cells.length>150)errors.push('Cell은 1~150개입니다.');
+    let shots=0;
+    (d.cells||[]).forEach((c,i)=>{
+      if(c.id!==i+1)errors.push('Cell ID는 1부터 연속이어야 합니다.');
+      if(![c.x,c.y,c.rotation].every(Number.isFinite))errors.push('C'+c.id+' 좌표/회전각 숫자 오류');
+      const m=d.models?.find(m=>m.id===c.model);
+      if(!m){errors.push('C'+c.id+' Model 번호 오류');return;}
+      const nc=Math.floor(m.pixelsX/d.shotPitchPixels),nr=Math.floor(m.pixelsY/d.shotPitchPixels);shots+=nc*nr;
+      if(nc<1||nr<1||nc*nr>10000)errors.push('C'+c.id+' Shot은 1~10,000개 범위입니다.');
+      if(corners(c,m,d).some(q=>!Number.isFinite(q.x)||!Number.isFinite(q.y)||q.x< -1e-8||q.y< -1e-8||q.x>d.glassX+1e-8||q.y>d.glassY+1e-8))errors.push('C'+c.id+' 회전 후 Cell 외곽이 Glass 밖입니다.');
+    });
+    if(shots>500000)errors.push('전체 Shot 그룹은 원본 한도 500,000개 이하입니다.');
+    if((d.rows||[]).some(r=>r[0]==='CELL'&&/RECIPE_OFFSET_[XY]$/.test(r[1])&&Number(r[2])!==0))warnings.push('Cell RECIPE_OFFSET은 보존하지만 좌표 계산에는 적용하지 않습니다. Align/APC/왜곡·Scanner 서비스시간도 별도 검증입니다.');
+    if((d.rows||[]).some(r=>r[0]==='HEAD'&&/DEFAULT_OFFSET_[XY]$/.test(r[1])&&Number(r[2])!==0))warnings.push('Head DEFAULT_OFFSET은 보존하지만 명목 기하 계산에는 적용하지 않습니다.');
+    return {errors:[...new Set(errors)],warnings,shots};
+  }
+  function toParameters(d,p){const v=validate(d);if(v.errors.length)throw new Error(v.errors.join('\n'));return {...clone(p),...Object.fromEntries(Object.keys(geometryKeys).map(k=>[k,d[k]])),pixelsX:d.models[0].pixelsX,pixelsY:d.models[0].pixelsY,holes:clone(d.models[0].holes.slice(0,d.models[0].holeCount)),models:clone(d.models),cellLayout:clone(d.cells),recipeMeta:{name:d.name.trim(),id:d.id.trim(),ppid:d.ppid.trim()},ppidRows:clone(d.rows||[])};}
+  function csvRows(text){
+    text=String(text).replace(/^\uFEFF/,'');if(text.length>1000000)throw new Error('PPID CSV는 1 MB 이하입니다.');
+    const rows=[];let row=[],s='',quoted=false;
+    for(let i=0;i<=text.length;i++){const c=text[i];if(quoted){if(c==='"'&&text[i+1]==='"'){s+='"';i++;}else if(c==='"')quoted=false;else if(c===undefined)throw new Error('CSV 따옴표가 닫히지 않았습니다.');else s+=c;}
+      else if(c==='"'&&s==='')quoted=true;else if(c===','){row.push(s);s='';}else if(c==='\n'||c===undefined){row.push(s.replace(/\r$/,''));if(row.some(x=>x.trim()))rows.push(row.map(x=>x.trim()));row=[];s='';}else s+=c;}
+    return rows;
+  }
+  function parse(text,p){
+    const rows=csvRows(text);if(!rows.length||rows.some(r=>r.length!==3))throw new Error('PPID는 SECTION,NAME,VALUE 3열 CSV입니다. 조건 JSON은 상단의 조건 불러오기를 사용하세요.');
+    const map=new Map();for(const r of rows){const key=r[0]+'|'+r[1];if(map.has(key))throw new Error('중복 PPID 항목: '+key);map.set(key,r[2]);}
+    const read=(section,key,fallback)=>map.has(section+'|'+key)?map.get(section+'|'+key):fallback;
+    const num=(section,key,fallback)=>{const s=read(section,key,fallback);if(s===undefined||s===''||!Number.isFinite(Number(s)))throw new Error('숫자 누락/오류: '+section+'|'+key);return Number(s);};
+    const d=fromParameters(p);d.rows=rows;d.name=read('COMMON','RECIPE_NAME',read('DEFAULT','RECIPE_NAME',d.name));d.id=read('DEFAULT','RECIPE_ID',d.name);d.ppid=read('COMMON','ONLINE_PPID_NAME',d.ppid);
+    for(const [k,key] of Object.entries(geometryKeys))d[k]=num('PROCESS',key,k==='chess'?1:undefined);
+    const mc=num('PROCESS','CELL_MODEL_TYPE_COUNT'),cc=num('COMMON','MAX_CELL_NUMBER');if(!Number.isInteger(mc)||mc<1||mc>5||!Number.isInteger(cc)||cc<1||cc>150)throw new Error('Model 1~5개 / Cell 1~150개 범위 오류');
+    d.models=Array.from({length:mc},(_,i)=>{const id=i+1,pre='MODEL'+id+'_';return {id,pixelsX:num('PROCESS',pre+'NUM_OF_PIXEL_X'),pixelsY:num('PROCESS',pre+'NUM_OF_PIXEL_Y'),holeCount:num('PROCESS',pre+'MASKING_HOLE_NUMBER',0),holes:Array.from({length:3},(_,j)=>['X','Y','SIZE_X','SIZE_Y'].map(a=>num('PROCESS',pre+'MASKING_HOLE'+(j+1)+'_'+a,0))),corners:cornerNames.map(a=>['X','Y'].map(b=>num('PROCESS',pre+'CELL_'+a+'_ROUND_'+b,0)))};});
+    d.cells=Array.from({length:cc},(_,i)=>{const id=i+1,pre='CELL'+id+'_';return {id,x:num('CELL',pre+'ALIGN_TO_1ST_PIXEL_X'),y:num('CELL',pre+'ALIGN_TO_1ST_PIXEL_Y'),model:num('CELL',pre+'MODEL_TYPE'),rotation:num('CELL',pre+'ROTATION',0)};});
+    const v=validate(d);if(v.errors.length)throw new Error(v.errors.join('\n'));return d;
+  }
+  function exportCSV(d){
+    const v=validate(d);if(v.errors.length)throw new Error(v.errors.join('\n'));
+    const changes=new Map(),set=(a,b,c)=>changes.set(a+'|'+b,[a,b,String(c)]);
+    set('DEFAULT','RECIPE_NAME',d.name);set('DEFAULT','RECIPE_ID',d.id);set('COMMON','RECIPE_NAME',d.name);set('COMMON','ONLINE_PPID_NAME',d.ppid);set('COMMON','MAX_CELL_NUMBER',d.cells.length);set('PROCESS','CELL_MODEL_TYPE_COUNT',d.models.length);
+    for(const [k,key] of Object.entries(geometryKeys))set('PROCESS',key,d[k]);
+    for(const m of d.models){const pre='MODEL'+m.id+'_';set('PROCESS',pre+'NUM_OF_PIXEL_X',m.pixelsX);set('PROCESS',pre+'NUM_OF_PIXEL_Y',m.pixelsY);set('PROCESS',pre+'MASKING_HOLE_NUMBER',m.holeCount);for(let j=0;j<3;j++)['X','Y','SIZE_X','SIZE_Y'].forEach((a,k)=>set('PROCESS',pre+'MASKING_HOLE'+(j+1)+'_'+a,(m.holes[j]||[0,0,0,0])[k]));cornerNames.forEach((a,j)=>['X','Y'].forEach((b,k)=>set('PROCESS',pre+'CELL_'+a+'_ROUND_'+b,m.corners[j][k])));}
+    for(const c of d.cells){const pre='CELL'+c.id+'_';for(const [key,k] of [['ALIGN_TO_1ST_PIXEL_X','x'],['ALIGN_TO_1ST_PIXEL_Y','y'],['MODEL_TYPE','model'],['ROTATION','rotation']])set('CELL',pre+key,c[k]);}
+    const rows=[];for(const r of d.rows||[]){const key=r[0]+'|'+r[1],c=changes.get(key);if(c){rows.push(c);changes.delete(key);}else{const cm=r[1].match(/^CELL(\d+)_/),mm=r[1].match(/^MODEL(\d+)_/);if((r[0]==='CELL'&&cm&&Number(cm[1])>d.cells.length)||(r[0]==='PROCESS'&&mm&&Number(mm[1])>d.models.length))continue;rows.push(r);}}
+    rows.push(...changes.values());const quote=x=>/[",\r\n]/.test(x)?'"'+x.replace(/"/g,'""')+'"':x;return '\uFEFF'+rows.map(r=>r.map(quote).join(',')).join('\r\n')+'\r\n';
+  }
+  return {clone,cornerNames,geometryKeys,models,cells,rotate,corners,fromParameters,defaultDraft,validate,toParameters,csvRows,parse,exportCSV};
+});
+
+</script><script>/* Flying Review planning model. No hardware I/O. Nominal geometry follows the
+ * previously analyzed test0929 source commit 6b19d7aaf0de. Units: mm and seconds. */
+(function (root, factory) {
+  const api = factory(typeof module==='object'&&module.exports?require('./recipe.js'):root.FlyingRecipe);
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  else root.FlyingReview = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (R) {
+  'use strict';
+  const EPS = 1e-8;
+  const defaults = {
+    glassX:925, glassY:1500, cellCols:9, cellRows:5, cellPitchX:100, cellPitchY:200,
+    akX:15.5, akY:15.5, pixelSize:.09, pixelsX:864, pixelsY:512, shotPitchPixels:30, split:4,
+    referenceOffsetX:10, head1AKX:39.5, headPitchX:110, fieldX:110,
+    holes:[[20,5,10,10],[0,0,.1,.1],[72.9,43.2,.1,.1]],
+    models:null,cellLayout:null,recipeMeta:null,ppidRows:[],chess:1,
+    distance:1467, evenExtra:380, direction:-1, reviewAKX:0, reviewAKY:0,
+    vy:100, ay:500, dy:500, leadY:500, runoutY:100, autoStage:true,
+    stageStart:2345.9875, stageEnd:-1584.5, stageLimits:false, stageMin:-2500, stageMax:3000, stageStroke:3960, reviewStroke:1025,
+    vx:200, ax:1000, dx:1000, parkX:0, xMin:0, xMax:1025, preTime:2, settleMs:50, guardMs:20,
+    fps:18.5, cameraMaxFps:18.5, exposureUs:2, minExposureUs:2, readoutMs:0, overlapReadout:true,
+    triggerDelayUs:14, jitterUs:5, compensate:true, encoderScale:16000, followErrorUm:0,
+    maxBlurUm:.25, sensorPixelUm:2.5, magnification:20, toleranceY:.03, toleranceX:.03, xSettleErrorUm:0,
+    imageTail:1, otherTime:60, tact:150, processBudget:30, enforceTact:true,
+    enforceProcess:true, cruiseOnly:true, processCruise:true, processClearanceMs:1,
+    rowOneOnly:false, order:'head', cyclePolicy:'sequential'
+  };
+  const copyDefaults=()=>JSON.parse(JSON.stringify(defaults));
+  function validate(p) {
+    const errors=[];
+    const positive=['glassX','glassY','cellPitchX','cellPitchY','pixelSize','shotPitchPixels','headPitchX','fieldX','vy','ay','dy','vx','ax','dx','fps','encoderScale','sensorPixelUm','magnification','tact','processBudget','stageStroke','reviewStroke','cameraMaxFps'];
+    for (const k of positive) if (!Number.isFinite(p[k]) || p[k]<=0) errors.push(k+'는 양수여야 합니다.');
+    for (const k of ['leadY','runoutY','preTime','settleMs','guardMs','minExposureUs','readoutMs','triggerDelayUs','jitterUs','followErrorUm','maxBlurUm','imageTail','otherTime','processClearanceMs','toleranceY','toleranceX','xSettleErrorUm'])
+      if (!Number.isFinite(p[k]) || p[k]<0) errors.push(k+'는 0 이상이어야 합니다.');
+    if (!Number.isFinite(p.exposureUs)||p.exposureUs<=0) errors.push('노출시간은 0보다 커야 합니다.');
+    if(p.exposureUs<p.minExposureUs||p.exposureUs>10000000) errors.push('Basler 노출 범위는 2~10,000,000 µs입니다.');
+    for(const k of ['akX','akY','referenceOffsetX','head1AKX','distance','evenExtra','reviewAKX','reviewAKY','parkX','xMin','xMax','stageStart','stageEnd','stageMin','stageMax'])
+      if(!Number.isFinite(p[k])) errors.push(k+' 값이 유한하지 않습니다.');
+    for (const k of ['cellCols','cellRows','pixelsX','pixelsY','shotPitchPixels']) if(!Number.isInteger(p[k])||p[k]<1) errors.push(k+'는 양의 정수여야 합니다.');
+    if(p.cellCols*p.cellRows>150) errors.push('이 시뮬레이터는 최대 150 Cell을 지원합니다.');
+    if (![1,4].includes(p.split)) errors.push('DOE 축당 분기는 1 또는 4입니다.');
+    if(![-1,1].includes(p.direction)) errors.push('Stage 방향은 −1 또는 +1입니다.');
+    if(!['arrival','head'].includes(p.order))errors.push('촬영 순서 값 오류');
+    if(p.cyclePolicy!==undefined&&!['sequential','optimal'].includes(p.cyclePolicy))errors.push('Glass 그룹 정책 값 오류');
+    if(p.xMax<=p.xMin) errors.push('Review X 최대는 최소보다 커야 합니다.');
+    if(p.stageMax<=p.stageMin) errors.push('Stage stroke 최대는 최소보다 커야 합니다.');
+    if(p.parkX<p.xMin-EPS||p.parkX>p.xMax+EPS) errors.push('X 초기 위치가 설정 Stroke 밖입니다.');
+    if(!Array.isArray(p.holes)||p.holes.some(h=>h.length!==4||h.some(v=>!Number.isFinite(v))||h[2]<0||h[3]<0)) errors.push('Mask는 X,Y,Width,Height 4개 숫자여야 합니다.');
+    const nc=Math.floor(p.pixelsX/p.shotPitchPixels),nr=Math.floor(p.pixelsY/p.shotPitchPixels);
+    if(nc<1||nr<1||nc*nr>10000||nc*nr*p.cellCols*p.cellRows>1000000) errors.push('Shot 수 범위 오류: Cell당 1~10,000, 전체 1,000,000 이하입니다.');
+    errors.push(...R.validate(R.fromParameters(p)).errors);
+    return [...new Set(errors)];
+  }
+  function motion(distance, velocity, accel, decel=accel) {
+    if(![distance,velocity,accel,decel].every(Number.isFinite)||distance<0||velocity<=0||accel<=0||decel<=0) throw new Error('Motion input invalid');
+    const peak=Math.min(velocity,Math.sqrt(2*distance/(1/accel+1/decel)));
+    const d1=peak*peak/(2*accel),d3=peak*peak/(2*decel),d2=Math.max(0,distance-d1-d3);
+    const t1=peak/accel,t2=peak>0?d2/peak:0,t3=peak/decel,total=t1+t2+t3;
+    function state(t) {
+      if(t<0)return {s:0,v:0,phase:'시작 전'};
+      if(t>=total)return {s:distance,v:0,phase:'정지'};
+      if(t<t1-EPS)return {s:.5*accel*t*t,v:accel*t,phase:'가속'};
+      if(t<t1+t2-EPS)return {s:d1+peak*(t-t1),v:peak,phase:'등속'};
+      const u=total-t;return {s:distance-.5*decel*u*u,v:decel*u,phase:'감속'};
+    }
+    function timeAt(s) {
+      if(s < -EPS || s > distance+EPS)return null;
+      s=Math.max(0,Math.min(distance,s));
+      if(s<=d1+EPS)return Math.sqrt(Math.max(0,2*s/accel));
+      if(s<=d1+d2+EPS)return t1+(s-d1)/peak;
+      return total-Math.sqrt(Math.max(0,2*(distance-s)/decel));
+    }
+    return {distance,peak,d1,d2,d3,t1,t2,t3,total,state,timeAt};
+  }
+  function stageProfile(start,end,p) {
+    const distance=(end-start)*p.direction;
+    if(distance<=EPS)throw new Error('Stage 시작/종점이 지정한 이동 방향과 맞지 않습니다.');
+    const m=motion(distance,p.vy,p.ay,p.dy);
+    return {...m,start,end,direction:p.direction,
+      at:t=>{const s=m.state(t);return {...s,q:start+p.direction*s.s};},
+      timeAtQ:q=>m.timeAt((q-start)*p.direction)};
+  }
+  function beamOffset(beam,p) {
+    const pitch=p.pixelSize*p.shotPitchPixels/p.split;
+    const z=beam-1,c=(p.split-1)/2;
+    return {x:(z%p.split-c)*pitch,y:(Math.floor(z/p.split)-c)*pitch};
+  }
+  function maskInfo(col,row,p,model) {
+    const m=model||R.models(p)[0],pitch=p.pixelSize*p.shotPitchPixels,h=pitch/2,x=(col-1)*pitch,y=(row-1)*pitch,reasons=[];
+    if(((col-row)%(p.chess||1)+(p.chess||1))%(p.chess||1)!==0)reasons.push('CHESS');
+    m.holes.slice(0,m.holeCount).forEach((a,i)=>{if(a[2]>0&&a[3]>0&&x-h<=a[0]+a[2]+EPS&&x+h>=a[0]-EPS&&y-h<=a[1]+a[3]+EPS&&y+h>=a[1]-EPS)reasons.push('Hole'+(i+1));});
+    const c=m.corners||[[0,0],[0,0],[0,0],[0,0]],edgeEnabled=c.some(a=>a.some(v=>Math.abs(v)>.001));
+    let edge=null;
+    if(edgeEnabled){const z=c.map(a=>Math.max(...a.map(Math.abs))),lastX=(Math.floor(m.pixelsX/p.shotPitchPixels)-1)*pitch,lastY=(Math.floor(m.pixelsY/p.shotPitchPixels)-1)*pitch;
+      edge={left:Math.max(z[0],z[2]),right:lastX-Math.max(z[1],z[3]),top:Math.max(z[0],z[1]),bottom:lastY-Math.max(z[2],z[3])};
+      if(edge.right-edge.left<=EPS||edge.bottom-edge.top<=EPS||x-h<=edge.left+EPS||x+h>=edge.right-EPS||y-h<=edge.top+EPS||y+h>=edge.bottom-EPS)reasons.push('Edge');}
+    return {skip:reasons.length>0,reasons,x,y,half:h,edge,edgeEnabled};
+  }
+  const masked=(col,row,p,m)=>maskInfo(col,row,p,m).skip;
+  function toGlobal(cell,x,y){const q=R.rotate(x,y,cell.rotation||0);return {x:cell.x+q.x,y:cell.y+q.y};}
+  function toLocal(cell,x,y){return R.rotate(x-cell.x,y-cell.y,-(cell.rotation||0));}
+  function shotCenter(cell,col,row,g){return toGlobal(cell,(col-1)*g.pitch+g.half,(row-1)*g.pitch+g.half);}
+  function owner(centerX,p) {
+    const ref=centerX+p.referenceOffsetX;
+    let best=0,dist=Infinity;
+    for(let h=1;h<=8;h++) {
+      const center=p.akX+p.head1AKX+(h-1)*p.headPitchX,d=Math.abs(ref-center);
+      if(d<=p.fieldX/2+EPS && d<dist-EPS){best=h;dist=d;}
+    }
+    return best;
+  }
+  function makeGeometry(p) {
+    const errors=validate(p);if(errors.length)throw new Error(errors.join('\n'));
+    const cols=Math.floor(p.pixelsX/p.shotPitchPixels),rows=Math.floor(p.pixelsY/p.shotPitchPixels);
+    const pitch=p.pixelSize*p.shotPitchPixels,half=(p.split-1)/2*(pitch/p.split);
+    const cells=[],models=R.models(p),byHead=Object.fromEntries(Array.from({length:8},(_,i)=>[i+1,[]]));
+    let assigned=0,valid=0,unassigned=0,unassignedValid=0,maskedCount=0;
+    const headRanges=Object.fromEntries(Array.from({length:8},(_,i)=>[i+1,{min:Infinity,max:-Infinity}]));
+    for(const def of R.cells(p)) {
+      const {id}=def,cx=def.x,cy=def.y,model=models[def.model-1];
+      const cell={id,x:p.akX+cx,y:p.akY+cy,offsetX:cx,offsetY:cy,width:model.pixelsX*p.pixelSize,height:model.pixelsY*p.pixelSize,model,modelType:def.model,rotation:def.rotation,cols:Math.floor(model.pixelsX/p.shotPitchPixels),rows:Math.floor(model.pixelsY/p.shotPitchPixels),heads:new Set()};
+      cell.corners=[[0,0],[cell.width,0],[cell.width,cell.height],[0,cell.height]].map(([x,y])=>toGlobal(cell,x,y));
+      cells.push(cell);
+      for(let col=1;col<=cell.cols;col++) {
+        for(let row=1;row<=cell.rows;row++) {
+          const {x,y}=shotCenter(cell,col,row,{pitch,half}),h=owner(x,p),isMask=masked(col,row,p,model);
+          if(h)cell.heads.add(h);
+          if(isMask)maskedCount++;
+          if(h)assigned++;else {unassigned++;if(!isMask)unassignedValid++;}
+          if(h&&!isMask) {
+            const rec={head:h,cell:id,col,row,shot:(row-1)*cell.cols+col,centerX:x,centerY:y};
+            byHead[h].push(rec);valid++;
+            headRanges[h].min=Math.min(headRanges[h].min,y-p.akY);headRanges[h].max=Math.max(headRanges[h].max,y-p.akY);
+          }
+        }
+      }
+      cell.heads=[...cell.heads];
+    }
+    return {cells,models,byHead,headRanges,cols,rows,pitch,half,assigned,valid,unassigned,unassignedValid,maskedCount,theoretical:cells.reduce((n,c)=>n+c.cols*c.rows,0)};
+  }
+  function makePoint(def,p,g) {
+    const head=Number(def.head),cell=Number(def.cell),col=Number(def.col),row=Number(def.row),beam=Number(def.beam||7),errors=[];
+    if(!Number.isInteger(head)||head<1||head>8)errors.push('Head 번호 오류');
+    const c=g.cells[cell-1];
+    if(!c)errors.push('Cell 번호 오류');
+    if(!Number.isInteger(col)||col<1||col>(c?.cols||0)||!Number.isInteger(row)||row<1||row>(c?.rows||0))errors.push('Shot 열/행 범위 오류');
+    if(!Number.isInteger(beam)||beam<1||beam>p.split*p.split)errors.push('DOE Branch 번호 오류');
+    if(errors.length)return {...def,head,errors,geometryValid:false};
+    const localBeam=beamOffset(beam,p),b=R.rotate(localBeam.x,localBeam.y,c.rotation),center=shotCenter(c,col,row,g),centerX=center.x,centerY=center.y;
+    const x=centerX+b.x,y=centerY+b.y,h=owner(centerX,p);
+    if(h!==head)errors.push(h?'선택 Shot은 H'+h+' 소유':'Head Field 미배정 Shot');
+    const mask=maskInfo(col,row,p,c.model);if(mask.skip)errors.push('Mask와 교차하여 Shot 전체 Laser Skip ('+mask.reasons.join('/')+')');
+    if(x<0||x>p.glassX||y<0||y>p.glassY)errors.push('Glass 경계 밖의 가공점');
+    if(p.rowOneOnly&&row!==1)errors.push('Cell 첫 Shot Row 제한 위반');
+    const reviewX=p.reviewAKX+x-p.akX,targetQ=p.reviewAKY+p.direction*(y-p.akY);
+    if(reviewX<p.xMin-EPS||reviewX>p.xMax+EPS)errors.push('Review X Stroke 밖');
+    return {head,cell,col,row,beam,enabled:def.enabled!==false,shot:(row-1)*c.cols+col,
+      centerX,centerY,x,y,beamX:b.x,beamY:b.y,beamLocalX:localBeam.x,beamLocalY:localBeam.y,modelType:c.modelType,rotation:c.rotation,mask,reviewX,targetQ,owner:h,
+      nativeKey:'CELL'+String(cell).padStart(3,'0')+'_SHOT'+String((row-1)*c.cols+col).padStart(4,'0'),
+      errors,geometryValid:errors.length===0};
+  }
+  function qBounds(p,g) {
+    const values=[];
+    for(let h=1;h<=8;h++) {
+      const r=g.headRanges[h];if(!Number.isFinite(r.min))continue;
+      const d=p.distance+(h%2===0?p.evenExtra:0);
+      values.push(p.reviewAKY-p.direction*d+p.direction*r.min,p.reviewAKY-p.direction*d+p.direction*r.max);
+    }
+    if(!values.length)values.push(p.reviewAKY-p.direction*p.distance,p.reviewAKY-p.direction*p.distance+p.direction*Math.max(0,p.glassY-p.akY));
+    const first=p.direction<0?Math.max(...values):Math.min(...values),last=p.direction<0?Math.min(...values):Math.max(...values);
+    const autoStart=first-p.direction*p.leadY;
+    const autoEnd=p.reviewAKY+p.direction*(p.glassY-p.akY+p.runoutY);
+    return {first,last,start:p.autoStage?autoStart:p.stageStart,end:p.autoStage?autoEnd:p.stageEnd,autoStart,autoEnd};
+  }
+  function buildState(p,definitions,g) {
+    const bounds=qBounds(p,g),profile=stageProfile(bounds.start,bounds.end,p),globals=[];
+    const firstLaser=profile.timeAtQ(bounds.first),lastLaser=profile.timeAtQ(bounds.last);
+    const processTime=firstLaser===null||lastLaser===null?null:Math.abs(lastLaser-firstLaser);
+    if(firstLaser===null||lastLaser===null)globals.push('Stage 경로가 전체 가공 구간을 커버하지 않습니다.');
+    if(p.stageLimits&&(Math.min(bounds.start,bounds.end)<p.stageMin-EPS||Math.max(bounds.start,bounds.end)>p.stageMax+EPS))globals.push('Stage 이동 Stroke 초과');
+    if(profile.distance>p.stageStroke+EPS)globals.push('Stage 이동거리 '+profile.distance.toFixed(3)+' mm가 설계 Stroke '+p.stageStroke+' mm 초과');
+    if(p.xMax-p.xMin>p.reviewStroke+EPS)globals.push('Review X 설정 범위가 설계 Stroke '+p.reviewStroke+' mm 초과');
+    if(p.fps>p.cameraMaxFps+EPS)globals.push('Camera FPS가 설정 Camera 사양 '+p.cameraMaxFps+' FPS 초과');
+    if(p.enforceProcess&&processTime!==null&&processTime>p.processBudget+EPS)globals.push('기하학적 가공 구간이 '+p.processBudget+'초 예산 초과');
+    if(p.processCruise&&firstLaser!==null&&lastLaser!==null &&
+      (Math.min(firstLaser,lastLaser)<profile.t1-EPS||Math.max(firstLaser,lastLaser)>profile.t1+profile.t2+EPS))globals.push('MOF 가공 구간에 가속/감속 포함');
+    const exposure=p.exposureUs/1e6,delay=p.triggerDelayUs/1e6,jitter=p.jitterUs/1e6;
+    const period=Math.max(1/p.fps,p.overlapReadout?Math.max(exposure,p.readoutMs/1000):exposure+p.readoutMs/1000);
+    if(exposure+EPS<p.minExposureUs/1e6)globals.push('Camera 최소 노출시간보다 짧음');
+    const latestExposure=Math.max(0,...definitions.filter(d=>d.enabled!==false).map(d=>{
+      const point=makePoint(d,p,g),cross=Number.isFinite(point.targetQ)?profile.timeAtQ(point.targetQ):null;
+      return cross===null?0:cross+(p.compensate?exposure/2:delay+exposure)+jitter;
+    }));
+    const readoutWait=Math.max(0,latestExposure+p.readoutMs/1000-profile.total);
+    const tact=profile.total+readoutWait+p.imageTail+p.otherTime;
+    if(p.enforceTact&&tact>p.tact+EPS)globals.push('한 Glass Full Tact 가정값이 '+p.tact+'초 초과');
+    const base={p,g,bounds,profile,firstLaser,lastLaser,processTime,exposure,delay,jitter,period,readoutWait,tact,globals};
+    if(!g.valid)globals.push('유효 Head 가공점이 없습니다. Model/Mask/CHESS/Cell 배치를 수정하세요.');
+    const nodes=definitions.filter(d=>d.enabled!==false).map(def=>nodeFor(makePoint(def,p,g),base));
+    const sorted=nodes.slice().sort((a,b)=>(a.cross??Infinity)-(b.cross??Infinity)||a.head-b.head);
+    return {...base,nodes,sorted};
+  }
+  function exposureBlur(profile,start,end,jitter) {
+    // The integral of a piecewise-linear speed is piecewise quadratic in the
+    // exposure-time shift. Check every phase boundary and derivative zero.
+    const cuts=[-jitter,jitter,0];
+    for(const phase of [0,profile.t1,profile.t1+profile.t2,profile.total])for(const t of [start,end]) {
+      const shift=phase-t;if(shift>=-jitter&&shift<=jitter)cuts.push(shift);
+    }
+    const xs=[...new Set(cuts)].sort((a,b)=>a-b),candidates=[...xs];
+    const derivative=shift=>profile.at(end+shift).v-profile.at(start+shift).v;
+    for(let i=1;i<xs.length;i++) {
+      const a=xs[i-1],b=xs[i],fa=derivative(a),fb=derivative(b);
+      if(fa*fb<0)candidates.push(a+(b-a)*(-fa)/(fb-fa));
+    }
+    return 1000*Math.max(...candidates.map(j=>Math.abs(profile.at(end+j).q-profile.at(start+j).q)));
+  }
+  function nodeFor(point,s) {
+    const {p,profile,exposure,delay,jitter}=s,errors=[...point.errors,...s.globals];
+    const cross=Number.isFinite(point.targetQ)?profile.timeAtQ(point.targetQ):null;
+    if(cross===null){errors.push('Review 지점이 Stage 이동 경로 밖');return {...point,cross:null,errors,valid:false};}
+    const cmd=p.compensate?cross-delay-exposure/2:cross;
+    const expStart=cmd+delay,expEnd=expStart+exposure,mid=(expStart+expEnd)/2;
+    const distance=p.distance+(point.head%2===0?p.evenExtra:0);
+    const laserQ=p.reviewAKY-p.direction*distance+p.direction*(point.centerY-p.akY),laserTime=profile.timeAtQ(laserQ);
+    if(distance+point.beamY<=0)errors.push('가공면이 Review보다 downstream: 가공 후 검사 불가');
+    const earliestExposure=expStart-jitter,latestExposure=expEnd+jitter;
+    if(laserTime===null||laserTime+p.processClearanceMs/1000>earliestExposure+EPS)errors.push('출사 후 대기 조건 미충족 또는 가공점 경로 밖 (Jitter 포함)');
+    if(earliestExposure<0-EPS||latestExposure>profile.total+EPS)errors.push('노출이 Stage 구동시간 밖 (Jitter 포함)');
+    if(p.cruiseOnly&&(earliestExposure<profile.t1-EPS||latestExposure>profile.t1+profile.t2+EPS))errors.push('Review 노출에 가속/감속 구간 포함 (Jitter 포함)');
+    const blur=exposureBlur(profile,expStart,expEnd,jitter);
+    const positionError=1000*Math.max(Math.abs(profile.at(mid-jitter).q-point.targetQ),Math.abs(profile.at(mid+jitter).q-point.targetQ))+
+      500/p.encoderScale+p.followErrorUm;
+    if(blur>p.maxBlurUm+1e-5)errors.push('Y Motion Blur 허용값 초과');
+    if(positionError>p.toleranceY*1000+1e-5)errors.push('Trigger/Encoder/Follow 위치오차 예산 초과');
+    if(p.xSettleErrorUm>p.toleranceX*1000+1e-5)errors.push('X 정착오차 예산 초과');
+    const initialMove=motion(Math.abs(point.reviewX-p.parkX),p.vx,p.ax,p.dx);
+    const initialSlack=cmd-jitter-p.guardMs/1000-(-p.preTime+initialMove.total+p.settleMs/1000);
+    return {...point,cross,cmd,expStart,expEnd,mid,distance,laserQ,laserTime,
+      speed:profile.at(mid).v,phase:profile.at(mid).phase,blur,blurPixels:blur/(p.sensorPixelUm/p.magnification),positionError,
+      leadTime:laserTime===null?null:cross-laserTime,initialMove:initialMove.total,initialSlack,errors,valid:errors.length===0};
+  }
+  function edge(a,b,s) {
+    if(![a.reviewX,b.reviewX,a.y,b.y,a.cmd,b.cmd,a.expEnd,a.cross,b.cross].every(Number.isFinite))
+      return {a:a.head,b:b.head,valid:false,reasons:['좌표/경로 오류를 먼저 수정하세요.'],dx:NaN,dy:NaN,gap:NaN,xSlack:NaN,frameSlack:NaN};
+    const distance=Math.abs(b.reviewX-a.reviewX),dy=Math.abs(b.y-a.y);
+    const move=motion(distance,s.p.vx,s.p.ax,s.p.dx),settle=s.p.settleMs/1000,guard=s.p.guardMs/1000;
+    const xAvailable=b.cmd-s.jitter-guard-a.expEnd-s.jitter-settle;
+    const xSlack=xAvailable-move.total,frameSlack=b.cmd-a.cmd-2*s.jitter-s.period;
+    const orderOK=s.p.order!=='head'||b.head>a.head;
+    const reasons=[];
+    if(xSlack<-EPS)reasons.push('Review X 선도착/정착 시간 부족');
+    if(frameSlack<-EPS)reasons.push('Camera 재Trigger 주기 부족');
+    if(!orderOK)reasons.push('Head 번호 순서와 Y 도착 순서 충돌');
+    const need=move.total+settle+guard+s.delay+s.exposure+2*s.jitter;
+    return {a:a.head,b:b.head,dx:distance,dy,distance:Math.hypot(distance,dy),gap:b.cross-a.cross,
+      move:move.total,movePeak:move.peak,xAvailable,xSlack,frameSlack,need,
+      minDeltaYCruise:s.profile.peak*Math.max(need,s.period+2*s.jitter),orderOK,valid:reasons.length===0,reasons};
+  }
+  function passFor(nodes,s) {
+    const ordered=nodes.slice().sort((a,b)=>(a.cross??Infinity)-(b.cross??Infinity)||a.head-b.head);
+    const edges=ordered.slice(1).map((b,i)=>edge(ordered[i],b,s));
+    const last=ordered[ordered.length-1],returnTime=last&&Number.isFinite(last.reviewX)?motion(Math.abs(last.reviewX-s.p.parkX),s.p.vx,s.p.ax,s.p.dx).total+s.p.settleMs/1000:null;
+    const resetSlack=returnTime===null?null:s.tact-s.p.preTime-last.expEnd-s.jitter-returnTime;
+    const valid=ordered.length>0&&ordered.every(n=>n.valid)&&ordered[0].initialSlack>=-EPS&&edges.every(e=>e.valid)&&resetSlack>=-EPS;
+    const slack=valid?Math.min(ordered[0].initialSlack,resetSlack,...edges.flatMap(e=>[e.xSlack,e.frameSlack])):-Infinity;
+    return {nodes:ordered,edges,valid,slack,returnTime,resetSlack};
+  }
+  function popcount(m){let n=0;for(;m;m&=m-1)n++;return n;}
+  function evaluate(p,definitions,g=makeGeometry(p)) {
+    const errors=validate(p);if(errors.length)throw new Error(errors.join('\n'));
+    const s=buildState(p,definitions,g),n=s.nodes.length;if(n<1)throw new Error('검사 대상 Head를 하나 이상 선택하세요.');
+    if(n>8||new Set(s.nodes.map(p=>p.head)).size!==n)throw new Error('Head당 고정 포인트는 정확히 하나여야 합니다.');
+    const full=(1<<n)-1,feasible=[],byMask=new Map();let best=null;
+    for(let mask=1;mask<=full;mask++) {
+      const pass=passFor(s.nodes.filter((_,i)=>mask&(1<<i)),s);byMask.set(mask,pass);
+      if(pass.valid){feasible.push(mask);if(!best||popcount(mask)>popcount(best.mask)||popcount(mask)===popcount(best.mask)&&pass.slack>best.pass.slack)best={mask,pass};}
+    }
+    function partition(cap) {
+      const memo=new Map([[0,{count:0,groups:[],slack:Infinity}]]);
+      function solve(remaining) {
+        if(memo.has(remaining))return memo.get(remaining);
+        const first=remaining&-remaining;let answer=null;
+        for(const mask of feasible) {
+          if(!(mask&first)||(mask&remaining)!==mask||popcount(mask)>cap)continue;
+          const rest=solve(remaining^mask);if(!rest)continue;
+          const group=byMask.get(mask),candidate={count:rest.count+1,groups:[group,...rest.groups],slack:Math.min(group.slack,rest.slack)};
+          if(!answer||candidate.count<answer.count||candidate.count===answer.count&&candidate.slack>answer.slack)answer=candidate;
+        }
+        memo.set(remaining,answer);return answer;
+      }
+      const result=solve(full);
+      if(result)result.groups.sort((a,b)=>Math.min(...a.nodes.map(n=>n.head))-Math.min(...b.nodes.map(n=>n.head)));
+      return result;
+    }
+    function sequentialPartition(cap) {
+      const indices=s.nodes.map((n,i)=>({head:n.head,index:i})).sort((a,b)=>a.head-b.head),memo=new Map([[n,{count:0,groups:[],slack:Infinity}]]);
+      function solve(start) {
+        if(memo.has(start))return memo.get(start);
+        let answer=null,mask=0;
+        for(let k=1;k<=cap&&start+k<=n;k++) {
+          mask|=1<<indices[start+k-1].index;const group=byMask.get(mask);if(!group.valid)continue;
+          const rest=solve(start+k);if(!rest)continue;
+          const candidate={count:rest.count+1,groups:[group,...rest.groups],slack:Math.min(group.slack,rest.slack)};
+          if(!answer||candidate.count<answer.count||candidate.count===answer.count&&candidate.slack>answer.slack)answer=candidate;
+        }
+        memo.set(start,answer);return answer;
+      }
+      return solve(0);
+    }
+    const plansOptimal=Object.fromEntries([1,2,4,8].map(cap=>[cap,partition(cap)]));
+    const plansSequential=Object.fromEntries([1,2,4,8].map(cap=>[cap,sequentialPartition(cap)]));
+    const plans=p.cyclePolicy==='optimal'?plansOptimal:plansSequential;
+    const all=byMask.get(full);
+    return {...s,best,maxPerPass:best?popcount(best.mask):0,plans,plansOptimal,plansSequential,all,feasibleCount:feasible.length,requested:n,
+      coverageComplete:!!plans[8],blocked:s.nodes.filter(n=>!n.valid),feasible,byMask};
+  }
+  function firstPoint(head,cellRow,p,g) {
+    const levels=[...new Set(g.cells.map(c=>c.offsetY))].sort((a,b)=>a-b),wanted=levels[Math.min(cellRow,levels.length-1)];
+    const candidates=g.byHead[head].filter(r=>g.cells[r.cell-1].offsetY===wanted&&(!p.rowOneOnly||r.row===1));
+    const r=candidates.slice().sort((a,b)=>a.cell-b.cell||a.row-b.row||a.col-b.col)[0];
+    return r?{head,cell:r.cell,col:r.col,row:r.row,beam:Math.min(7,p.split*p.split),enabled:true}:null;
+  }
+  function preset(kind,p,g) {
+    return Array.from({length:8},(_,i)=>{
+      const h=i+1,r=kind==='same'?0:kind==='four'?i%4:h%2===0?1:0;
+      return firstPoint(h,r,p,g)||{head:h,cell:1,col:1,row:1,beam:Math.min(7,p.split*p.split),enabled:true};
+    });
+  }
+  function candidatePool(head,p,g) {
+    const buckets=new Map();
+    for(const r of g.byHead[head]) {
+      const nr=g.cells[r.cell-1].rows,wantedRows=p.rowOneOnly?[1]:[1,Math.max(1,Math.round(nr*.25)),Math.max(1,Math.round(nr*.5)),Math.max(1,Math.round(nr*.75)),nr];
+      if(!wantedRows.includes(r.row))continue;
+      const key=r.cell+':'+r.row;if(!buckets.has(key))buckets.set(key,[]);buckets.get(key).push(r);
+    }
+    const pool=[];
+    for(const list of buckets.values()) {
+      const picks=[list[0],list[Math.floor((list.length-1)/2)],list[list.length-1]];
+      for(const r of picks)if(!pool.some(x=>x.cell===r.cell&&x.col===r.col&&x.row===r.row))pool.push({head,cell:r.cell,col:r.col,row:r.row,beam:Math.min(7,p.split*p.split),enabled:true});
+    }
+    return pool;
+  }
+  function autoSelect(p,g=makeGeometry(p)) {
+    const s=buildState(p,[],g),layers=[];
+    for(let h=1;h<=8;h++)layers.push(candidatePool(h,p,g).map(d=>({def:d,node:nodeFor(makePoint(d,p,g),s)})).filter(c=>c.node.valid));
+    let states=layers[0].filter(c=>c.node.initialSlack>=-EPS).map(c=>({...c,score:c.node.initialSlack,path:[c.def]}));
+    for(let layer=1;layer<8;layer++) {
+      const next=[];
+      for(const c of layers[layer]) {
+        let best=null;
+        for(const prev of states) {
+          if(c.node.cross<=prev.node.cross+EPS)continue;
+          const e=edge(prev.node,c.node,s);if(!e.valid)continue;
+          const score=Math.min(prev.score,e.xSlack,e.frameSlack);
+          if(!best||score>best.score+EPS)best={...c,score,path:[...prev.path,c.def]};
+        }
+        if(best)next.push(best);
+      }
+      states=next;if(!states.length)break;
+    }
+    states.sort((a,b)=>b.score-a.score||a.node.cross-b.node.cross);
+    return states.length&&states[0].path.length===8?{definitions:states[0].path,slack:states[0].score,candidates:layers.reduce((n,l)=>n+l.length,0)}:null;
+  }
+  function minVelocity(distance,time,accel,decel) {
+    if(distance<EPS)return 0;
+    const lower=Math.sqrt(2*distance*(1/accel+1/decel));
+    if(time<lower-EPS)return null;
+    let lo=1e-6,hi=Math.sqrt(2*distance/(1/accel+1/decel));
+    for(let i=0;i<70;i++){const mid=(lo+hi)/2;if(motion(distance,mid,accel,decel).total<=time+EPS)hi=mid;else lo=mid;}
+    return hi;
+  }
+  function accelScale(distance,time,p) {
+    if(distance<EPS)return 1;
+    if(time<=distance/p.vx+EPS)return null;
+    let lo=1,hi=1;
+    while(hi<1e6&&motion(distance,p.vx,p.ax*hi,p.dx*hi).total>time)hi*=2;
+    if(hi>=1e6)return null;
+    for(let i=0;i<60;i++){const mid=(lo+hi)/2;if(motion(distance,p.vx,p.ax*mid,p.dx*mid).total<=time)hi=mid;else lo=mid;}
+    return hi;
+  }
+  function inverse(result,definitions) {
+    const {p,g,all}=result;
+    const messages=[],validPoints=all.nodes.every(n=>n.geometryValid&&n.cross!==null);
+    if(!validPoints)return {messages:['미배정·마스킹·경로 밖 포인트를 먼저 수정하세요. 속도 변경만으로는 이 문제를 해결할 수 없습니다.'],rows:[],speedWindow:null};
+    const rows=all.edges.map(e=>{
+      const a=all.nodes.find(n=>n.head===e.a),b=all.nodes.find(n=>n.head===e.b);
+      const vx=minVelocity(e.dx,e.xAvailable,p.ax,p.dx),scale=accelScale(e.dx,e.xAvailable,p);
+      const minCenterTime=Math.max(a.expEnd+2*result.jitter+e.move+p.settleMs/1000+p.guardMs/1000+result.delay+result.exposure/2,a.cmd+result.period+2*result.jitter+result.delay+result.exposure/2);
+      const targetY=minCenterTime<=result.profile.total?p.akY+p.direction*(result.profile.at(minCenterTime).q-p.reviewAKY):NaN;
+      return {...e,vx,accelScale:scale,minFPS:e.gap>2*result.jitter+EPS?1/(e.gap-2*result.jitter):null,neededY:targetY,minDyExact:Math.max(0,targetY-a.y)};
+    });
+    let speedWindow=null;
+    // Finite single-variable search, then refined transitions; never claim a
+    // hardware-valid value or a globally optimal coordinate configuration.
+    const speeds=[];for(let i=0;i<=180;i++)speeds.push(.5*Math.pow(4000,i/180));speeds.push(p.vy);speeds.sort((a,b)=>a-b);
+    const feasible=v=>{
+      try{const q={...p,vy:v},s=buildState(q,definitions,g);return passFor(s.nodes,s).valid;}catch(_){return false;}
+    };
+    const sampled=speeds.map(v=>({v,ok:feasible(v)})),bands=[];
+    for(let i=0;i<sampled.length;i++)if(sampled[i].ok){const start=i;while(i+1<sampled.length&&sampled[i+1].ok)i++;bands.push([start,i]);}
+    if(bands.length) {
+      const chosen=bands.find(([a,b])=>p.vy>=sampled[a].v&&p.vy<=sampled[b].v)||bands.sort((a,b)=>(sampled[b[1]].v-sampled[b[0]].v)-(sampled[a[1]].v-sampled[a[0]].v))[0];
+      const [first,last]=chosen;let min=sampled[first].v,max=sampled[last].v;
+      if(first>0){let lo=sampled[first-1].v,hi=min;for(let j=0;j<45;j++){const mid=(lo+hi)/2;if(feasible(mid))hi=mid;else lo=mid;}min=hi;}
+      if(last<sampled.length-1){let lo=max,hi=sampled[last+1].v;for(let j=0;j<45;j++){const mid=(lo+hi)/2;if(feasible(mid))lo=mid;else hi=mid;}max=lo;}
+      speedWindow={min,max,bands:bands.length,sampledRange:[.5,2000],verifiedMax:feasible(max),note:'0.5~2000 mm/s 표본 탐색 + 경계 이분법. 연속 표본 구간 한 개를 표시하며, 현재 고정점·가감속·품질·30/150초 제약을 동시 적용합니다.'};
+    }
+    if(all.edges.some(e=>e.dy<EPS&&e.dx>EPS))messages.push('동일 글로벌 Y의 서로 다른 X는 같은 순간에 도착합니다. 유한한 X 속도/FPS 변경만으로 모두 찍을 수 없으므로 Y 좌표를 바꾸거나 Glass를 나누세요.');
+    const requireVX=rows.some(r=>r.vx===null)?null:Math.max(0,...rows.map(r=>r.vx));
+    if(requireVX===null)messages.push('일부 구간은 X 가감속 하한 또는 노출/정착/Guard 때문에 속도만 높여도 해결되지 않습니다. 아래 가감속 배율 또는 Y 간격을 함께 검토하세요.');
+    const worstSpeed=Math.max(0,...all.nodes.map(n=>n.speed||0));
+    const exposureLimit=worstSpeed>0?p.maxBlurUm*1000/worstSpeed:Infinity;
+    if(exposureLimit+EPS<p.minExposureUs)messages.push('허용 블러를 만족하는 노출 상한이 Camera 최소노출보다 짧습니다. Stage 감속, 광학 조건 또는 Camera 사양 변경이 필요합니다.');
+    if(!speedWindow&&!all.valid)messages.push('다른 파라미터 고정 시 탐색 범위에서 전체 요청 포인트를 동시에 만족하는 Y 속도를 찾지 못했습니다. 미성립 원인별로 조건을 함께 바꿔야 합니다.');
+    return {messages,rows,speedWindow,requireVX,exposureLimit,requiredFPS:rows.some(r=>r.minFPS===null)?null:Math.max(0,...rows.map(r=>r.gap>2*result.jitter?1/(r.gap-2*result.jitter):Infinity)),
+      requiredPreTime:all.nodes.length?Math.max(0,all.nodes[0].initialMove+p.settleMs/1000+p.guardMs/1000+result.jitter-all.nodes[0].cmd):0};
+  }
+  function nearestPoint(head,x,y,beam,p,g) {
+    let best=null;
+    for(const r of g.byHead[head]) {
+      if(p.rowOneOnly&&r.row!==1)continue;
+      const definition={head,cell:r.cell,col:r.col,row:r.row,beam,enabled:true},point=makePoint(definition,p,g);if(!point.geometryValid)continue;
+      const d=Math.hypot(point.x-x,point.y-y);
+      if(!best||d<best.distance)best={distance:d,definition:{head,cell:r.cell,col:r.col,row:r.row,beam,enabled:true}};
+    }
+    return best;
+  }
+  function cameraPath(pass,p) {
+    const segments=[];let previousX=p.parkX,from=-p.preTime;
+    for(const n of pass.nodes) {
+      const m=motion(Math.abs(n.reviewX-previousX),p.vx,p.ax,p.dx),sign=n.reviewX>=previousX?1:-1;
+      segments.push({start:from,end:from+m.total,x0:previousX,x1:n.reviewX,m,head:n.head,sign});
+      previousX=n.reviewX;from=n.expEnd+p.jitterUs/1e6;
+    }
+    if(pass.nodes.length){const m=motion(Math.abs(p.parkX-previousX),p.vx,p.ax,p.dx);segments.push({start:from,end:from+m.total,x0:previousX,x1:p.parkX,m,head:null,sign:p.parkX>=previousX?1:-1,returning:true});}
+    function at(t) {
+      let x=p.parkX,v=0,head=null;
+      for(const seg of segments) {
+        if(t<seg.start)break;
+        head=seg.head;
+        if(t<=seg.end){const r=seg.m.state(t-seg.start);return {x:seg.x0+seg.sign*r.s,v:seg.sign*r.v,head,phase:seg.returning?'X Park 복귀':'X 이동'};}
+        x=seg.x1;
+      }
+      return {x,v,head,phase:'X 정착 / 대기'};
+    }
+    return {segments,at};
+  }
+  return {defaults,copyDefaults,validate,motion,stageProfile,beamOffset,maskInfo,masked,toGlobal,toLocal,shotCenter,owner,makeGeometry,makePoint,qBounds,buildState,exposureBlur,nodeFor,edge,passFor,evaluate,preset,firstPoint,candidatePool,autoSelect,minVelocity,accelScale,inverse,nearestPoint,cameraPath,popcount};
+});
+</script><script>(function(root,factory){const api=factory(typeof module==='object'&&module.exports?require('./engine.js'):root.FlyingReview);if(typeof module==='object'&&module.exports)module.exports=api;else root.BaslerReview=api;})(globalThis,function(F){
+'use strict';
+const spec=Object.freeze({camera:'Basler a2A2600-20gcBAS',sensor:'Gpixel GMAX2505',shutter:'Global Shutter',pixelUm:2.5,mag:20,width:2600,height:2128,fullHeight:2160,fps:18.5,minExposure:2,maxExposure:10000000,objective:'Mitutoyo 378-810-3 M Plan Apo SL20X',na:.28,wd:30.5,resolutionUm:1,dofUm:3.5});
+const controls=['exposureUs','blurPx','vx','ax','dx','vy','ay','dy'];
+const defaults={exposureUs:2,blurPx:2,vx:200,ax:1000,dx:1000,vy:100,ay:500,dy:500};
+function parameters(input={}){const a={...defaults,...input};for(const k of controls)if(!Number.isFinite(a[k])||a[k]<=0)throw Error(k+'는 0보다 큰 숫자여야 합니다.');const p=F.copyDefaults();for(const k of controls)if(k!=='blurPx')p[k]=a[k];p.maxBlurUm=a.blurPx*spec.pixelUm/spec.mag;return p;}
+function select(cap,p,g){if(![2,4].includes(cap))throw Error('기판당 2점 또는 4점만 선택합니다.');const used=new Set(),defs=[];for(let h=1;h<=8;h++){const target=((h-1)%cap)*p.cellPitchY;const candidates=g.byHead[h].filter(n=>!used.has(n.cell)).sort((a,b)=>Math.abs(g.cells[a.cell-1].offsetY-target)-Math.abs(g.cells[b.cell-1].offsetY-target)||a.cell-b.cell||a.row-b.row||a.col-b.col);let chosen=null;for(const r of candidates){const d={head:h,cell:r.cell,col:r.col,row:r.row,beam:7,enabled:true};if(F.makePoint(d,p,g).geometryValid){chosen=d;break;}}if(!chosen)throw Error('H'+h+'의 중복되지 않는 유효 Cell을 찾지 못했습니다.');defs.push(chosen);used.add(chosen.cell);}return defs;}
+function analyze(input={},defs=null){const p=parameters(input),g=F.makeGeometry(p),points=defs||select(4,p,g);if(points.length!==8||new Set(points.map(d=>d.head)).size!==8||points.some(d=>d.enabled===false))throw Error('Scanner 1~8에 각각 1점이 필요합니다.');if(new Set(points.map(d=>d.cell)).size!==8)throw Error('서로 다른 Scanner는 반드시 서로 다른 Cell을 선택해야 합니다.');const r=F.buildState(p,points,g),modes={};for(const cap of [2,4]){const groups=[];for(let i=0;i<8;i+=cap)groups.push(F.passFor(r.nodes.slice(i,i+cap),r));modes[cap]={cap,count:8/cap,groups,valid:groups.every(z=>z.valid),minimumSlack:Math.min(...groups.map(z=>z.slack))};}return {input:{...defaults,...input},p,g,defs:points,r,modes,blurPx:p.vy*p.exposureUs/(1000*(spec.pixelUm/spec.mag)),exposureLimitUs:input.blurPx===undefined?defaults.blurPx*125/p.vy:input.blurPx*125/p.vy,vyBlurLimit:(input.blurPx??defaults.blurPx)*125/p.exposureUs};}
+function coverage(a,cap,time,previous=[]){const done=new Set(previous),r=a.r,span=r.profile.total+1;const mode=a.modes[cap],index=Math.min(mode.count-1,Math.max(0,Math.floor(time/span))),local=Math.min(span,time-index*span);for(let i=0;i<=index;i++)if(mode.groups[i].valid)for(const n of mode.groups[i].nodes)if(i<index||local>=n.expEnd+r.jitter)done.add(n.head);return {done:[...done].sort((x,y)=>x-y),index,local,span,total:span*mode.count,complete:done.size===8};}
+function suggestions(a,cap){if(a.modes[cap].valid)return [{text:'선도착·등속·Blur 조건을 계산상 충족합니다. 조명과 실제 영상 판정은 별도 확인합니다.'}];const tips=[];if(a.blurPx>a.input.blurPx+1e-5){const t=Math.floor(a.exposureLimitUs*1000)/1000;if(t>=2)tips.push({text:'노출을 '+t+' µs 이하로 낮추세요. 밝기 부족 여부도 확인하세요.',patch:{exposureUs:t}});else tips.push({text:'필요 노출 '+t+' µs는 최소 2 µs보다 짧습니다. Y 속도를 '+a.vyBlurLimit.toFixed(2)+' mm/s 이하로 낮추세요.',patch:{vy:a.vyBlurLimit}});}if(cap===4&&a.modes[2].valid)tips.push({text:'같은 좌표를 2점씩 나누면 4 Glass로 운영할 수 있습니다.',mode:2});const es=a.modes[cap].groups.flatMap(z=>z.edges);if(es.some(e=>e.xSlack<0)){const values=es.map(e=>F.minVelocity(e.dx,e.xAvailable,a.p.ax,a.p.dx));const found=values.every(Number.isFinite)?Math.max(...values):null;if(Number.isFinite(found))tips.push({text:'구간 X 속도 약 '+found.toFixed(1)+' mm/s 이상이 필요합니다. 적용 후 초기 이동·복귀·전체 조건까지 재계산하세요.',patch:{vx:Math.ceil(found)}});else tips.push({text:'X 속도만 높여도 해결되지 않습니다. X 가감속을 높이거나 대표점 Y 간격을 넓히세요.'});}if(a.r.globals.length)tips.push({text:a.r.globals.join(' / ')+'. Y 감속 시 Tact가 늘고, Y 가감속이 작으면 등속구간이 줄어듭니다.'});if(!tips.length)tips.push({text:'아래 구간 표의 불가 원인을 확인하세요. 같은 Y 점은 다른 기판으로 나누거나 대표점을 다른 행으로 옮겨야 합니다.'});return tips;}
+return {spec,controls,defaults,parameters,select,analyze,coverage,suggestions};
+});
+</script><script>(function(){'use strict';const B=BaslerReview,F=FlyingReview,$=id=>document.getElementById(id);let input={...B.defaults},defs=null,a,cap=4,time=0,done=[],running=false,last=null,cycle=1,selected=1;
+const fmt=(x,n=2)=>Number.isFinite(x)?x.toFixed(n):'—';const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const labels={exposureUs:'노출시간 (µs)',blurPx:'허용 Blur (pixel)',vx:'Review X 속도',ax:'X 가속',dx:'X 감속',vy:'Stage Y 속도',ay:'Y 가속',dy:'Y 감속'};
+$('inputs').innerHTML=B.controls.map(k=>`<label>${labels[k]}<input id="param-${k}" data-param="${k}" type="number" min="${k==='exposureUs'?2:.001}" step="any" value="${input[k]}"></label>`).join('');$('selectedHead').innerHTML=Array.from({length:8},(_,i)=>`<option value="${i+1}">H${i+1}</option>`).join('');
+function reset(){running=false;last=null;time=0;done=[];cycle=1;draw();}
+function calculate(resetCycle=true){try{a=B.analyze(input,defs);defs=a.defs;$('error').hidden=true;$('export').disabled=false;if(resetCycle){time=0;done=[];running=false;cycle=1;}render();draw();return true;}catch(e){running=false;$('error').hidden=false;$('error').textContent=e.message;$('play').disabled=true;$('export').disabled=true;$('narrative').textContent='입력 또는 대표점 오류입니다. 이전 계산 화면은 참고용으로만 유지합니다.';return false;}}
+function table(headers,rows){return `<table><thead><tr>${headers.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table>`;}
+function render(){const m=a.modes[cap],r=a.r;$('play').disabled=!m.valid;document.querySelectorAll('[data-cap]').forEach(b=>b.classList.toggle('active',Number(b.dataset.cap)===cap));$('summary').innerHTML=[['선택 운영',m.valid?`${cap}점 계산상 가능`:'현재 조건 불가',m.valid?'good':'bad'],['이동 Blur',`${fmt(a.blurPx)} / ${fmt(input.blurPx)} px`,a.blurPx<=input.blurPx+1e-5?'good':'bad'],['8 Scanner 대표점 커버',m.valid?`${m.count} Glass / 사이클`:'조건 변경 필요',m.valid?'good':'bad'],['가공 / 예시 Tact',`${fmt(r.processTime,1)} / ${fmt(r.tact,1)} s`,r.globals.length?'bad':'good']].map(([k,v,c])=>`<div class="metric">${k}<b class="${c}">${v}</b></div>`).join('');
+$('comparison').innerHTML=[2,4].map(k=>{const z=a.modes[k];return `<div class="compare"><b>${k}점/Glass · ${z.valid?'가능':'불가'}</b><p>${z.groups.map((g,i)=>'G'+(i+1)+': '+g.nodes.map(n=>'H'+n.head).join('·')).join(' / ')}</p><p>${z.valid?`${z.count} Glass로 8개 대표점을 1회 커버`: '8개 대표점의 전체 커버를 보장하지 못합니다.'}</p></div>`;}).join('');
+const tips=B.suggestions(a,cap);$('advice').innerHTML=tips.map((t,i)=>`<p>${esc(t.text)}${t.patch||t.mode?`<button data-tip="${i}">변경 후 재계산</button>`:''}</p>`).join('');$('advice').querySelectorAll('[data-tip]').forEach(b=>b.onclick=()=>{const t=tips[Number(b.dataset.tip)];if(t.patch){Object.assign(input,t.patch);sync();}if(t.mode)cap=t.mode;calculate();});
+$('timing').innerHTML=table(['Glass / 구간','ΔX / ΔY (mm)','다음 점 도착','X 가감속 이동','준비 필요 / 여유','판단'],m.groups.flatMap((g,i)=>g.edges.map(e=>[`G${i+1} H${e.a}–H${e.b}`,`${fmt(e.dx,1)} / ${fmt(e.dy,1)}`,`${fmt(e.gap,3)} s`,`${fmt(e.move,3)} s`,`${fmt(e.need,6)} / ${fmt(e.xSlack,3)} s`,`<span class="${e.valid?'good':'bad'}">${e.valid?'가능':esc(e.reasons.join(', '))}</span>`])));
+$('pointTable').innerHTML=table(['Scanner','서로 다른 Cell','Shot / DOE','Global X / Y (mm)','Review 시점','개별 조건'],r.nodes.map(n=>['H'+n.head,'C'+n.cell,n.shot+' / B'+n.beam,fmt(n.x,3)+' / '+fmt(n.y,3),fmt(n.cross,3)+' s',n.valid?'충족':esc(n.errors.join(', '))]));}
+function sync(){B.controls.forEach(k=>$('param-'+k).value=input[k]);}
+function draw(){if(!a)return;const c=B.coverage(a,cap,time,done);done=c.done;const r=a.r,group=a.modes[cap].groups[c.index],state=r.profile.at(c.local),cam=F.cameraPath(group,a.p).at(c.local);const active=new Set(group.nodes.map(n=>n.head));const valid=group.valid;const next=group.nodes.find(n=>c.local<n.expEnd+r.jitter);const phase=state.phase;
+$('play').textContent=running?'Ⅱ 일시정지':'▶ 재생';$('clock').textContent=`사이클 ${cycle} · G${c.index+1}/${a.modes[cap].count} · ${fmt(c.local,1)} s`;$('seek').value=Math.min(1000,time/c.total*1000);$('ledger').innerHTML=r.nodes.map(n=>`<div class="head ${done.includes(n.head)?'done':active.has(n.head)?'current':''}">H${n.head} · C${n.cell}<br>${done.includes(n.head)?'취득 유지':active.has(n.head)?'이번 기판':'다음 기판'}</div>`).join('');
+let narration=!valid?'현재 조건은 취득 불가입니다. 조건을 변경하고 재계산하세요.':c.complete?'8개 Scanner 대표점 취득 사이클을 완료했습니다. 완료 표시는 다음 사이클 시작 전까지 유지합니다.':phase==='가속'||phase==='감속'?`Y축 ${phase} 중입니다. 이 구간에서는 촬영하지 않습니다.`:next?`G${c.index+1}: ${cam.phase}. 다음은 H${next.head}, C${next.cell}이며 ${fmt(Math.max(0,next.cross-c.local),2)}초 후 Review 위치를 통과합니다.`:`G${c.index+1} 취득 완료. X축 복귀와 다음 기판 통과를 기다립니다.`;$('narrative').textContent=narration;
+const s=.30,mx=55,reviewY=610,mapX=635,mapY=120,ms=.30;const xx=x=>mx+x*s,yy=y=>reviewY-(state.q+y-a.p.akY)*s;let svg=`<defs><clipPath id="machineClip"><rect x="25" y="25" width="515" height="625"/></clipPath></defs><text x="45" y="27" font-size="18" fill="#173449">실제 거리 기준 이동 장면</text><text x="580" y="27" font-size="18" fill="#173449">45 Cell · 사이클 누적 지도</text><text x="580" y="52" font-size="13" fill="#607585">지도에서 위치를 클릭해 대표점 변경</text><g clip-path="url(#machineClip)">`;
+svg+=`<rect x="${mx}" y="${yy(a.p.glassY)}" width="${a.p.glassX*s}" height="${a.p.glassY*s}" fill="#eaf4fb" stroke="#8fb7d0" stroke-width="2"/>`;
+for(const cell of a.g.cells){svg+=`<rect x="${xx(cell.x)}" y="${yy(cell.y+cell.height)}" width="${cell.width*s}" height="${cell.height*s}" fill="white" stroke="#bed2dc"/><text x="${xx(cell.x)+2}" y="${yy(cell.y+cell.height)+10}" font-size="8" fill="#607585">C${cell.id}</text>`;for(const h of cell.model.holes.slice(0,cell.model.holeCount))if(h[2]>0&&h[3]>0)svg+=`<rect x="${xx(cell.x+h[0]+a.g.half)}" y="${yy(cell.y+h[1]+h[3]+a.g.half)}" width="${h[2]*s}" height="${h[3]*s}" fill="#edc9c3"/>`;}
+for(const n of r.nodes){const color=done.includes(n.head)?'#157957':active.has(n.head)?'#087f8c':'#bac8d0';svg+=`<circle cx="${xx(n.x)}" cy="${yy(n.y)}" r="5" fill="${color}"/><text x="${xx(n.x)+6}" y="${yy(n.y)-7}" font-size="12" fill="${color}">H${n.head}</text>`;}
+for(let h=1;h<=8;h++){const hx=a.p.akX+a.p.head1AKX+(h-1)*110-10,hy=reviewY-(1467+(h%2===0?380:0))*s;svg+=`<rect x="${xx(hx)-12}" y="${hy-10}" width="24" height="20" rx="3" fill="#d5914e"/><text x="${xx(hx)}" y="${hy+4}" text-anchor="middle" font-size="11" fill="white">${h}</text>`;}
+svg+=`<text x="350" y="62" font-size="13" fill="#9d6c39">Scanner 2·4·6·8</text><text x="350" y="174" font-size="13" fill="#9d6c39">Scanner 1·3·5·7</text><path d="M370 285 V380 l-8 -13 m8 13 l8 -13" fill="none" stroke="#8fb7d0" stroke-width="3"/><text x="390" y="315" font-size="13" fill="#607585">Stage −Y</text><text x="390" y="340" font-size="13" fill="#607585">기판 통과</text><line x1="40" x2="400" y1="${reviewY}" y2="${reviewY}" stroke="#087f8c" stroke-width="3"/><rect x="${xx(cam.x+a.p.akX)-13}" y="${reviewY-19}" width="26" height="38" rx="4" fill="#087f8c"/><text x="410" y="${reviewY-12}" font-size="13" fill="#087f8c">ATM Box</text><text x="410" y="${reviewY+7}" font-size="13" fill="#087f8c">Review X</text></g><text x="45" y="675" font-size="13" fill="#607585">Y ${fmt(state.v,1)} mm/s · ${phase} / X ${fmt(Math.abs(cam.v),1)} mm/s</text>`;
+svg+=`<g id="globalMap"><rect x="${mapX}" y="${mapY}" width="${a.p.glassX*ms}" height="${a.p.glassY*ms}" fill="#f3f8fb" stroke="#8fb7d0" stroke-width="2"/>`;
+for(const cell of a.g.cells)svg+=`<rect x="${mapX+cell.x*ms}" y="${mapY+cell.y*ms}" width="${cell.width*ms}" height="${cell.height*ms}" fill="${r.nodes.some(n=>n.cell===cell.id)?'#d8edf0':'white'}" stroke="#b4cbd8"/><text x="${mapX+cell.x*ms+1}" y="${mapY+cell.y*ms+10}" font-size="8" fill="#607585">${cell.id}</text>`;
+for(const n of r.nodes){const color=done.includes(n.head)?'#157957':active.has(n.head)?'#087f8c':'#899ca8';svg+=`<circle cx="${mapX+n.x*ms}" cy="${mapY+n.y*ms}" r="7" fill="${color}" stroke="white"/><text x="${mapX+n.x*ms+9}" y="${mapY+n.y*ms-6}" font-size="14" font-weight="700" fill="${color}">H${n.head}</text>`;}
+svg+=`</g><text x="580" y="625" font-size="14" fill="#157957">녹색: 취득 이력 ${done.length}/8 (실제 영상 PASS 아님)</text><text x="580" y="650" font-size="13" fill="#607585">Global 좌표 mm / 원본 PPID 9열×5행</text>`;
+const xml=new DOMParser().parseFromString('<svg xmlns="http://www.w3.org/2000/svg">'+svg+'</svg>','image/svg+xml');$('scene').replaceChildren(...Array.from(xml.documentElement.childNodes).map(n=>document.importNode(n,true)));
+}
+$('inputs').addEventListener('change',e=>{const k=e.target.dataset.param;if(k){input[k]=Number(e.target.value);calculate();}});document.querySelectorAll('[data-cap]').forEach(b=>b.onclick=()=>{cap=Number(b.dataset.cap);calculate();});$('defaults').onclick=()=>{input={...B.defaults};defs=null;sync();calculate();};$('auto').onclick=()=>{defs=null;calculate();$('pointMessage').textContent='8개 서로 다른 Cell의 기본 대표점을 적용했습니다.';};$('selectedHead').onchange=e=>selected=Number(e.target.value);$('restart').onclick=reset;$('play').onclick=()=>{if(!a.modes[cap].valid)return;if(time>=B.coverage(a,cap,time).total){time=0;done=[];cycle++;}running=!running;last=null;draw();};$('seek').oninput=e=>{running=false;time=Number(e.target.value)/1000*B.coverage(a,cap,0).total;draw();};
+$('scene').addEventListener('click',e=>{const rect=$('scene').getBoundingClientRect(),x=(e.clientX-rect.left)*1040/rect.width,y=(e.clientY-rect.top)*690/rect.height;if(x<635||x>912.5||y<120||y>570)return;const gx=(x-635)/.30,gy=(y-120)/.30;const used=new Set(defs.filter(d=>d.head!==selected).map(d=>d.cell));let best=null;for(const v of a.g.byHead[selected]){if(used.has(v.cell))continue;const def={head:selected,cell:v.cell,col:v.col,row:v.row,beam:7,enabled:true},point=F.makePoint(def,a.p,a.g);if(!point.geometryValid)continue;const distance=Math.hypot(point.x-gx,point.y-gy);if(!best||distance<best.distance)best={def,distance};}if(best){defs=defs.map(d=>d.head===selected?best.def:d);calculate();$('pointMessage').textContent='H'+selected+'을 C'+best.def.cell+'로 변경했습니다. 중복 Cell과 Mask 가공점은 제외했습니다.';}});
+$('export').onclick=()=>{const data={camera:B.spec,inputs:input,fixed:a.p,points:defs,results:{blurPx:a.blurPx,process_s:a.r.processTime,tact_assumption_s:a.r.tact,modes:{2:a.modes[2].valid,4:a.modes[4].valid}},disclaimer:'명목 검토. 실효 배율·노출·조명·영상 판정 실측 필요.'};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='FlyingReview_Basler_conditions.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+function tick(now){if(running&&a){if(last!==null)time+=(now-last)/1000*Number($('speed').value);last=now;const total=B.coverage(a,cap,0).total;if(time>=total){time=total;draw();if($('loop').checked){time=0;done=[];cycle++;last=null;}else running=false;}draw();}else last=null;requestAnimationFrame(tick);}calculate();requestAnimationFrame(tick);window.FlyingReviewApp={getState:()=>({a,cap,time,done:[...done],cycle}),seek:t=>{time=t;draw();},setMode:k=>{cap=k;calculate();},setInput:v=>{Object.assign(input,v);sync();calculate();},setPoints:d=>{defs=d;return calculate();},restart:reset};
+})();
+</script></body></html>
