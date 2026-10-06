@@ -1,0 +1,13 @@
+{
+  "checks": 9,
+  "consoleExceptions": 0,
+  "browserPixelValidation": false,
+  "browserLimitation": "Execution environment prohibits Chromium process singleton socket creation.",
+  "responsiveCSS": true,
+  "numericInputs": 8,
+  "mode2": true,
+  "mode4": true,
+  "animation": true,
+  "uniqueCells": true,
+  "invalidInputsHandled": true
+}

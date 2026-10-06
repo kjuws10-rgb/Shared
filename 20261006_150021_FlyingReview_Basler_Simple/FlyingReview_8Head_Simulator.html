@@ -1,0 +1,139 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flying Review · 8 Head Simulator</title><style>:root{--ink:#10243a;--sub:#5d6e80;--blue:#1269d3;--cyan:#00a1ab;--green:#0f805b;--red:#bc3948;--line:#dce5ed;--bg:#f3f6fa;--orange:#d98c22}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif;font-size:14px;line-height:1.6}header{background:#10243a;color:white;padding:27px max(24px,calc((100vw - 1240px)/2))}header .eyebrow{font-size:11px;letter-spacing:2px;color:#73d6df}h1{font-size:29px;margin:5px 0}header p{margin:5px 0;color:#d4e4f4}main{max-width:1288px;margin:auto;padding:20px 24px 42px}a{color:var(--blue)}header a{color:#aee9ff}h2{font-size:18px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 3px 12px #15354d05;margin-bottom:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.small{font-size:12px;color:var(--sub)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.field{background:#f5f8fb;border-radius:10px;padding:10px}label{display:block;font-size:12px;color:var(--sub);margin-bottom:4px}input{font:inherit;width:100%;border:1px solid #b7c9d9;border-radius:7px;padding:7px 9px;color:var(--ink);background:white}input:focus{outline:2px solid #81bcff}button,select{font:inherit;border:1px solid #b7c9d9;border-radius:8px;padding:8px 14px;background:white;color:var(--ink);cursor:pointer}button.active,.primary{background:var(--blue);color:white;border-color:var(--blue)}button:hover{filter:brightness(.97)}button:disabled{opacity:.4;cursor:default}.mode{display:flex;gap:7px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{border-left:3px solid var(--cyan);padding-left:12px}.kpi b{display:block;font-size:25px;line-height:1.5}.kpi span{font-size:12px;color:var(--sub)}.pill{display:inline-block;padding:3px 11px;border-radius:30px;font-size:12px;font-weight:bold;background:#e8eff7;color:var(--blue)}.ok{background:#e2f4ec;color:var(--green)}.bad{background:#ffe9ec;color:var(--red)}.warn{background:#fff2d9;color:#9a6305}.status{border-left:4px solid var(--green);background:#edf8f3;padding:12px 16px;border-radius:8px}.status.fail{border-color:var(--red);background:#fff0f1}.status p{margin:3px 0}.figure{width:100%;display:block;background:#f7fafc;border-radius:10px}.figcaption{font-size:12px;color:var(--sub);margin:7px 0 0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:13px;border-radius:10px;background:#eef5ff}.step b{display:block;color:var(--blue);font-size:15px}.step span{font-size:12px}.progress{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.progress button{padding:6px 10px}.progress span{font-size:12px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--sub);font-size:12px;background:#f6f9fc}.scroller{overflow:auto}details{border:1px solid var(--line);border-radius:12px;background:white;padding:14px 18px;margin:12px 0}summary{cursor:pointer;font-weight:bold}details p{margin:9px 0}.formula{font-size:23px;font-weight:700;background:#eef5ff;border-radius:10px;padding:16px;margin:10px 0;word-break:keep-all}.callout{padding:12px 16px;background:#eef7f8;border-left:3px solid var(--cyan);border-radius:8px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px}.comparison .option{background:#f7fafc;border-radius:10px;padding:16px}.option strong{font-size:26px}.options p{margin:6px 0}.tag{font-size:11px;border-radius:4px;padding:2px 6px;background:#e9f0f7}.notes{font-size:12px;color:var(--sub)}.notes li{margin:4px 0}.legend{display:flex;gap:16px;font-size:12px;color:var(--sub);flex-wrap:wrap}.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}footer{font-size:11px;color:var(--sub);padding-top:12px;border-top:1px solid var(--line)}.resulthead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.guidegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.guidegrid .card{margin:0}.wide{grid-column:1/-1}.mono{font-family:monospace}.navlinks{display:flex;gap:16px;font-size:12px}.banner{padding:10px 0;color:var(--sub);font-size:12px}.timebar{display:flex;align-items:center;gap:10px;margin-top:12px}.timebar input{padding:0}.sliderlabel{min-width:70px;font-size:12px}.subrow{display:flex;justify-content:space-between;gap:12px;margin:10px 0;flex-wrap:wrap}.error{color:var(--red);font-weight:700}.printonly{display:none}@media(max-width:760px){header{padding:22px 18px}h1{font-size:23px}main{padding:14px 12px}.grid,.guidegrid{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.comparison{grid-template-columns:1fr}.card{padding:16px}.formula{font-size:19px}.kpi b{font-size:22px}.wide{grid-column:auto}}@media print{body{background:white}header{padding:15px}main{padding:10px}.card{break-inside:avoid;box-shadow:none}button,.timebar{display:none}.guidegrid{display:block}.guidegrid .card{margin-bottom:14px}details{display:block}footer{margin-top:20px}}
+</style></head><body>
+<header><div class="eyebrow">A3 LASER DRILLER / ZERO DEFENCE</div><h1>Y는 계속 이동, X는 먼저 도착해 촬영</h1><p>Basler a2a2600-20gcBAS + Mitutoyo 20x SL · 서로 다른 셀에서 헤드당 1점</p><div class="navlinks"><a href="FlyingReview_Formula_Guide.html">쉬운 수식 가이드 ↗</a><span>설계 검토용 · 장비 제어 없음</span></div></header>
+<main>
+<section class="card"><div class="topbar"><h2>입력은 8개만</h2><div class="mode"><button id="mode2" class="active">기판당 2개 스캐너</button><button id="mode4">기판당 4개 스캐너</button><button id="reset">기본값</button></div></div>
+<div class="inputs" id="inputs"></div><p class="small">노출 중 X는 정지합니다. X속도는 다음 점으로 이동할 때만 사용하고, blur는 등속 Y속도로 계산합니다.</p></section>
+<section class="card"><div class="resulthead"><h2>현재 조건의 계산 결과</h2><span id="badge" class="pill"></span></div><div class="kpis" id="kpis"></div><div id="status" style="margin-top:14px" aria-live="polite"></div></section>
+<div class="grid">
+<section class="card"><div class="topbar"><h2>① 셀을 바꾸면서 측정</h2><div class="progress"><button id="prev">이전 기판</button><span id="glassNo"></span><button id="next">다음 기판</button></div></div><svg id="board" class="figure" viewBox="0 0 1010 1020" role="img" aria-label="서로 다른 셀에서 선정한 측정점과 카메라 이동"></svg><div class="legend"><span><i class="dot" style="background:#1269d3"></i>이번 기판의 측정점</span><span><i class="dot" style="background:#00a1ab"></i>Review 카메라</span><span><i class="dot" style="background:#c5d1de"></i>다른 기판의 측정점</span></div><p class="figcaption">9열×5행 셀 배치의 가공 영역 확대. 점 위치는 실제 가공 Branch B07입니다. 카메라 Y는 고정이며, 그림의 선은 기판 위 상대 위치입니다.</p><div class="timebar"><button id="play">재생</button><input id="time" aria-label="측정 진행 시간" type="range" min="0" max="1000" value="0"><span id="timeLabel" class="sliderlabel"></span></div><div id="animText" class="small"></div></section>
+<section class="card"><h2>② 선명함과 도착시간을 따로 확인</h2><svg id="blur" class="figure" viewBox="0 0 610 220" role="img" aria-label="노출 중 이동 blur 설명"></svg><div id="blurText" class="callout" style="margin:12px 0"></div><svg id="timing" class="figure" viewBox="0 0 610 230" role="img" aria-label="다음 촬영 전 X 이동과 정착 시간"></svg><div id="timingText" class="callout" style="margin:12px 0"></div><p class="small">Global Shutter도 노출 중 이동 blur는 생깁니다. 18.5 fps는 재촬영 간격 조건이고, 노출시간은 선명함 조건입니다.</p></section>
+</div>
+<section class="card"><h2>이번 기판의 측정 순서</h2><div class="scroller"><table><thead><tr><th>순서</th><th>스캐너</th><th>서로 다른 Cell</th><th>Review X (mm)</th><th>Stage Y (mm)</th><th>촬영 중심 시각 (s)</th></tr></thead><tbody id="pointRows"></tbody></table></div><p id="pointRule" class="small"></p></section>
+<section class="card"><h2>2개 측정 vs 4개 측정</h2><div class="comparison" id="compare"></div><p class="small">장수는 고정 대표점 8개를 한 번씩 확인하는 사이클입니다. 전체 가공점 전수 검사와 구분합니다. 시간은 계획 Tact 150초/기판을 적용합니다.</p></section>
+<section class="card"><h2>운전 흐름은 네 단계</h2><div class="steps"><div class="step"><b>1. 대표점 선택</b><span>서로 다른 Cell, 헤드당 1점</span></div><div class="step"><b>2. X 선도착</b><span>이동 → 정착 → 대기</span></div><div class="step"><b>3. Y 위치에서 촬영</b><span>Y 등속 + Encoder Trigger</span></div><div class="step"><b>4. 결과 확인</b><span>실제 Frame·측정 결과 확인 후 순환</span></div></div></section>
+<details><summary>고정값·계산 범위 보기</summary><div id="fixed"></div></details>
+<footer id="sources"></footer>
+</main><script>const FIXED={"sourceCommit":"6b19d7aaf0de81271468ab7dac0fa15493172f38","sourceShared":"20261002_101847_FlyingReview_Recipe_Light","camera":"Basler a2a2600-20gcBAS","lens":"Mitutoyo 378-810-3 M Plan Apo SL20x","sensorPixelUm":2.5,"magnification":20,"objectPixelUm":0.125,"widthPx":2600,"heightPx":2128,"fullHeightPx":2160,"fps":18.5,"minExposureUs":2,"maxExposureUs":10000000,"settleS":0.05,"guardS":0.02,"delayS":0.00005,"jitterS":0.000005,"encoderCountsMm":16000,"otherTimeS":60,"imageTailS":1,"tactS":150,"processBudgetS":30,"parkX":0,"preTimeS":2,"stageStroke":3960,"reviewStroke":1025,"bounds":{"first":1845.9875,"last":622.7875,"start":2345.9875,"end":-1584.5,"autoStart":2345.9875,"autoEnd":-1584.5},"glass":{"width":925,"height":1500,"akX":15.5,"akY":15.5,"cols":9,"rows":5,"pitchX":100,"pitchY":200,"cellWidth":77.76,"cellHeight":46.08},"distanceOddMm":1467,"evenExtraMm":380,"points":[{"head":1,"cell":1,"col":2,"row":1,"beam":7,"centerX":19.2125,"centerY":16.5125,"x":19.549999999999997,"y":16.175,"reviewX":4.049999999999997,"targetQ":-0.6750000000000007,"nativeKey":"CELL001_SHOT0002"},{"head":2,"cell":11,"col":2,"row":1,"beam":7,"centerX":119.2125,"centerY":216.5125,"x":119.55000000000001,"y":216.17499999999998,"reviewX":104.05000000000001,"targetQ":-200.67499999999998,"nativeKey":"CELL011_SHOT0002"},{"head":3,"cell":21,"col":2,"row":1,"beam":7,"centerX":219.2125,"centerY":416.5125,"x":219.55,"y":416.175,"reviewX":204.05,"targetQ":-400.675,"nativeKey":"CELL021_SHOT0002"},{"head":4,"cell":32,"col":2,"row":1,"beam":7,"centerX":419.2125,"centerY":616.5125,"x":419.54999999999995,"y":616.1750000000001,"reviewX":404.04999999999995,"targetQ":-600.6750000000001,"nativeKey":"CELL032_SHOT0002"},{"head":5,"cell":5,"col":6,"row":1,"beam":7,"centerX":430.0125,"centerY":16.5125,"x":430.34999999999997,"y":16.175,"reviewX":414.84999999999997,"targetQ":-0.6750000000000007,"nativeKey":"CELL005_SHOT0006"},{"head":6,"cell":15,"col":10,"row":1,"beam":7,"centerX":540.8125,"centerY":216.5125,"x":541.15,"y":216.17499999999998,"reviewX":525.65,"targetQ":-200.67499999999998,"nativeKey":"CELL015_SHOT0010"},{"head":7,"cell":25,"col":14,"row":1,"beam":7,"centerX":651.6125,"centerY":416.5125,"x":651.9499999999999,"y":416.175,"reviewX":636.4499999999999,"targetQ":-400.675,"nativeKey":"CELL025_SHOT0014"},{"head":8,"cell":36,"col":2,"row":1,"beam":7,"centerX":819.2125,"centerY":616.5125,"x":819.55,"y":616.1750000000001,"reviewX":804.05,"targetQ":-600.6750000000001,"nativeKey":"CELL036_SHOT0002"}],"defaults":{"exposureUs":2,"blurPx":2,"vx":200,"ax":1000,"dx":1000,"vy":100,"ay":500,"dy":500}};</script><script>(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.ReviewCalc=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+const EPS=1e-8;
+function motion(d,v,a,b){
+ if(![d,v,a,b].every(Number.isFinite)||d<0||v<=0||a<=0||b<=0)throw Error('속도·가감속은 0보다 커야 합니다.');
+ const peak=Math.min(v,Math.sqrt(2*d/(1/a+1/b))),d1=peak*peak/(2*a),d3=peak*peak/(2*b),d2=Math.max(0,d-d1-d3),t1=peak/a,t2=peak?d2/peak:0,t3=peak/b,total=t1+t2+t3;
+ function timeAt(s){if(s<-EPS||s>d+EPS)return null;s=Math.max(0,Math.min(d,s));if(s<=d1)return Math.sqrt(2*s/a);if(s<=d1+d2)return t1+(s-d1)/peak;return total-Math.sqrt(2*(d-s)/b);}
+ function at(t){if(t<=0)return {s:0,v:0,phase:'가속'};if(t>=total)return {s:d,v:0,phase:'정지'};if(t<t1)return {s:.5*a*t*t,v:a*t,phase:'가속'};if(t<t1+t2)return {s:d1+peak*(t-t1),v:peak,phase:'등속'};const u=total-t;return {s:d-.5*b*u*u,v:b*u,phase:'감속'};}
+ return {d,peak,d1,d2,d3,t1,t2,t3,total,timeAt,at};
+}
+function calculate(c,p){
+ const inputErrors=[];for(const k of Object.keys(c.defaults))if(!Number.isFinite(p[k])||p[k]<=0)inputErrors.push(k+' 값은 0보다 큰 숫자여야 합니다.');
+ if(inputErrors.length)return {inputErrors};
+ const q0=c.bounds.start,qEnd=c.bounds.end,profile=motion(q0-qEnd,p.vy,p.ay,p.dy),exp=p.exposureUs/1e6;
+ const period=Math.max(1/c.fps,exp),blurUm=p.vy*exp*1000,blurPx=blurUm/c.objectPixelUm,expMaxUs=p.blurPx*c.objectPixelUm*1000/p.vy,vyMax=p.blurPx*c.objectPixelUm*1000/p.exposureUs;
+ const firstTime=profile.timeAt(q0-c.bounds.first),lastTime=profile.timeAt(q0-c.bounds.last),processTime=lastTime-firstTime,tactTime=profile.total+c.otherTimeS+c.imageTailS;
+ const cruiseStart=profile.t1,cruiseEnd=profile.t1+profile.t2,globalErrors=[];
+ if(p.exposureUs<c.minExposureUs-EPS||p.exposureUs>c.maxExposureUs+EPS)globalErrors.push('카메라 노출 범위 2~10,000,000 µs를 벗어납니다.');
+ if(blurPx>p.blurPx+EPS)globalErrors.push('이동 blur가 허용 픽셀을 초과합니다.');
+ if(profile.peak<p.vy-EPS||firstTime<cruiseStart-EPS||lastTime>cruiseEnd+EPS)globalErrors.push('가공 구간에 Y 가속 또는 감속이 포함됩니다.');
+ if(processTime>c.processBudgetS+EPS)globalErrors.push('첫~마지막 가공점 통과가 30초를 초과합니다.');
+ if(tactTime>c.tactS+EPS)globalErrors.push('고정 기타시간을 합친 계산 Tact가 150초를 초과합니다.');
+ if(profile.d>c.stageStroke+EPS)globalErrors.push('고정 Stage 이동거리가 설계 Stroke를 초과합니다.');
+ const nodes=c.points.map(pt=>{
+  const cross=profile.timeAt(q0-pt.targetQ),cmd=cross-c.delayS-exp/2,expStart=cross-exp/2,expEnd=cross+exp/2,errors=[];
+  const distance=c.distanceOddMm+(pt.head%2===0?c.evenExtraMm:0),laserQ=distance-(pt.centerY-c.glass.akY),laserTime=profile.timeAt(q0-laserQ);
+  if(expStart-c.jitterS<cruiseStart-EPS||expEnd+c.jitterS>cruiseEnd+EPS)errors.push('노출이 Y 등속 구간 밖');
+  if(laserTime===null||laserTime+.001>expStart-c.jitterS+EPS)errors.push('가공 완료 전 촬영');
+  if(pt.reviewX<0||pt.reviewX>c.reviewStroke)errors.push('Review X Stroke 밖');
+  const initialMove=motion(Math.abs(pt.reviewX-c.parkX),p.vx,p.ax,p.dx),initialSlack=cmd-c.jitterS-c.guardS-(-c.preTimeS+initialMove.total+c.settleS);
+  if(initialSlack<-EPS)errors.push('첫 점 X 선도착 시간 부족');
+  return {...pt,cross,cmd,expStart,expEnd,laserTime,distance,initialMove,initialSlack,errors};
+ });
+ function group(ns){
+  const unique=new Set(ns.map(n=>n.cell)).size===ns.length,edges=[];
+  for(let i=1;i<ns.length;i++){
+   const a=ns[i-1],b=ns[i],d=Math.abs(b.reviewX-a.reviewX),m=motion(d,p.vx,p.ax,p.dx),gap=b.cross-a.cross;
+   const needX=exp+m.total+c.settleS+c.guardS+c.delayS+2*c.jitterS,needCamera=period+2*c.jitterS,need=Math.max(needX,needCamera),slack=gap-need;
+   edges.push({from:a.head,to:b.head,dx:d,dy:Math.abs(b.targetQ-a.targetQ),gap,move:m.total,needX,needCamera,need,slack,valid:slack>=-EPS});
+  }
+  const errors=[...globalErrors,...ns.flatMap(n=>n.errors.map(e=>'H'+n.head+': '+e))];
+  if(!unique)errors.push('동일 Cell 중복');if(edges.some(e=>!e.valid))errors.push('다음 점까지 X 이동 또는 카메라 재취득 시간 부족');
+  const feasible=errors.length===0;
+  return {nodes:ns,edges,unique,errors,feasible,minSlack:edges.length?Math.min(...edges.map(e=>e.slack)):Infinity};
+ }
+ const modes={};for(const cap of [2,4]){const groups=[];for(let i=0;i<8;i+=cap)groups.push(group(nodes.slice(i,i+cap)));const feasible=groups.every(g=>g.feasible);modes[cap]={cap,groups,plannedGlasses:8/cap,feasible,validGlasses:feasible?8/cap:null,cycleS:feasible?8/cap*c.tactS:null,minSlack:Math.min(...groups.map(g=>g.minSlack))};}
+ return {inputErrors:[],p,profile,nodes,modes,blurUm,blurPx,expMaxUs,vyMax,processTime,tactTime,period,globalErrors,cruiseStart,cruiseEnd};
+}
+return {motion,calculate};
+});
+</script><script>'use strict';
+const $=id=>document.getElementById(id),F=(n,k=3)=>Number.isFinite(n)?n.toFixed(k):'—';
+let mode=2,glass=0,result=null,playing=false,raf=0,startWall=0,startPos=0;
+const labels=[['exposureUs','노출시간 (µs)',2,10000000,.1],['blurPx','허용 이동 blur (pixel)',.01,10000,.1],['vx','X 이동속도 (mm/s)',.01,10000,1],['vy','Y 등속속도 (mm/s)',.01,10000,1],['ax','X 가속도 (mm/s²)',.01,1000000,100],['dx','X 감속도 (mm/s²)',.01,1000000,100],['ay','Y 가속도 (mm/s²)',.01,1000000,100],['dy','Y 감속도 (mm/s²)',.01,1000000,100]];
+const inputMarkup=labels.map(([k,l,min,max,step])=>`<div class="field"><label for="${k}">${l}</label><input type="number" id="${k}" value="${FIXED.defaults[k]}" min="${min}" max="${max}" step="${step}" inputmode="decimal"></div>`).join('');$('inputs').innerHTML=inputMarkup;
+function read(){return Object.fromEntries(labels.map(([k])=>[k,Number($(k).value)]));}
+function stext(x,y,t,size=15,fill='#10243a',anchor='start'){return `<text x="${x}" y="${y}" font-size="${size}" fill="${fill}" text-anchor="${anchor}" font-family="Noto Sans CJK KR,Malgun Gothic,Arial,sans-serif">${t}</text>`;}
+function line(x1,y1,x2,y2,color='#c6d4e1',width=2,dash=''){return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" ${dash?`stroke-dasharray="${dash}"`:''}></line>`;}
+function rect(x,y,w,h,fill,rad=5){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rad}" fill="${fill}"></rect>`;}
+function stop(){playing=false;cancelAnimationFrame(raf);$('play').textContent='재생';}
+function update(){
+ stop();result=ReviewCalc.calculate(FIXED,read());$('time').value=0;
+ if(result.inputErrors.length){$('status').innerHTML=`<div class="status fail">입력값을 확인해 주세요. 모든 입력은 0보다 큰 숫자여야 합니다.</div>`;$('badge').className='pill bad';$('badge').textContent='입력 오류';$('kpis').innerHTML='';$('play').disabled=true;$('prev').disabled=true;$('next').disabled=true;for(const id of ['board','blur','timing','compare','pointRows','animText','timingText','blurText','pointRule'])$(id).innerHTML='';return;}
+ glass=Math.min(glass,result.modes[mode].groups.length-1);render();
+}
+function render(){
+ const r=result,m=r.modes[mode],g=m.groups[glass];$('mode2').classList.toggle('active',mode===2);$('mode4').classList.toggle('active',mode===4);
+ $('glassNo').textContent=`${glass+1} / ${m.plannedGlasses} 기판`;$('prev').disabled=glass===0;$('next').disabled=glass===m.groups.length-1;
+ $('badge').className='pill '+(m.feasible?'ok':'bad');$('badge').textContent=m.feasible?'계산상 가능':'현재 조건 불가';
+ $('kpis').innerHTML=[['예상 이동 blur',`${F(r.blurPx,2)} px`,`${F(r.blurUm,3)} µm / 허용 ${F(r.p.blurPx,2)} px`],['X 선도착 최소 여유',`${F(m.minSlack,3)} s`,'전체 기판의 가장 짧은 여유'],['8개 헤드 확인',m.feasible?`${m.plannedGlasses} 기판`:'조건 수정 필요',`계획 ${m.plannedGlasses} 기판 × ${mode}점`],['계획 사이클',m.feasible?`${m.cycleS/60} min`:'—','150초/기판 기준']].map(([a,b,c])=>`<div class="kpi"><span>${a}</span><b>${b}</b><span>${c}</span></div>`).join('');
+ const allErrors=[...new Set(m.groups.flatMap(g=>g.errors))];
+ $('status').innerHTML=`<div class="status ${m.feasible?'':'fail'}"><b>${m.feasible?'Blur · X 선도착 · 카메라 주기 · Y 등속 조건 충족':'조건을 바꾸면 자동으로 다시 계산합니다.'}</b><p>${m.feasible?`실제 검사 가능 여부는 밝기·정착오차·Trigger 보정과 Frame 수신을 장비에서 확인합니다.`:allErrors.join(' / ')}</p><p class="small">기하학적 가공 ${F(r.processTime,3)}초 / 목표 30초 · Y 이동+고정 기타시간 ${F(r.tactTime,3)}초 / 목표 150초</p></div>`;
+ $('pointRows').innerHTML=g.nodes.map((n,i)=>`<tr><td>${i+1}</td><td><b>H${String(n.head).padStart(2,'0')}</b></td><td>Cell ${n.cell}</td><td>${F(n.reviewX,3)}</td><td>${F(n.targetQ,3)}</td><td>${F(n.cross,4)}</td></tr>`).join('');
+ $('pointRule').textContent=`${g.unique?'서로 다른 Cell 확인 완료':'동일 Cell 중복'} · 고정점 8개 전체도 서로 다른 Cell입니다. 좌표는 기존 test0929 가공점 기준, Stage 시작 이후 시각입니다.`;
+ $('compare').innerHTML=[2,4].map(cap=>{const m=r.modes[cap];return `<div class="option"><div class="topbar"><h3>${cap}개 스캐너 / 기판</h3><span class="pill ${m.feasible?'ok':'bad'}">${m.feasible?'계산상 가능':'현재 불가'}</span></div><strong>${m.plannedGlasses} 기판 · ${m.plannedGlasses*2.5}분</strong><p>${m.groups.map((g,i)=>`${i+1}매: ${g.nodes.map(n=>'H'+String(n.head).padStart(2,'0')).join(' → ')}`).join('<br>')}</p><div class="small">최소 시간 여유 ${F(m.minSlack,3)}초${m.feasible?'':' · 위 장수는 계획값이며 유효 완료 장수는 산출 불가'}</div></div>`;}).join('');
+ renderBlur(r);renderTiming(g);$('play').disabled=!g.feasible;renderBoard();
+}
+function renderBlur(r){
+ const b=r.blurPx,scale=16,shift=Math.min(130,b*scale),cy=114;let svg=stext(26,30,'노출 중에 Y가 이동한 길이 = 이동 blur',17);
+ svg+=stext(125,65,'정지한 점',14,'#5d6e80','middle')+stext(395,65,`${F(b,2)} px 이동한 점`,14,'#5d6e80','middle');
+ for(let x=58;x<=570;x+=scale)svg+=line(x,80,x,153,'#e0e9f1',1);svg+=line(55,98,575,98,'#e0e9f1',1)+line(55,114,575,114,'#e0e9f1',1)+line(55,130,575,130,'#e0e9f1',1)+line(55,146,575,146,'#e0e9f1',1);
+ svg+=`<circle cx="125" cy="114" r="14" fill="#1269d3"></circle>`+`<ellipse cx="${355+shift/2}" cy="114" rx="${14+shift/2}" ry="14" fill="#1269d3" opacity=".75"></ellipse>`;
+ svg+=line(355,165,355+Math.max(shift,2),165,'#bc3948',3)+stext(395,195,'1 px = 0.125 µm · 모양은 이해용 도식',12,'#5d6e80','middle');$('blur').innerHTML=svg;
+ $('blurText').innerHTML=`<b>현재 ${F(b,2)} px · ${b<=r.p.blurPx+1e-8?'허용 이내':'허용 초과'}</b><br>현재 Y속도에서 노출 ≤ ${F(r.expMaxUs,3)} µs<br>현재 노출에서 Y속도 ≤ ${F(r.vyMax,3)} mm/s${r.expMaxUs<FIXED.minExposureUs?'<br><span class="error">필요 노출이 카메라 최소 2 µs보다 짧습니다. Y속도를 낮춰야 합니다.</span>':''}`;
+}
+function renderTiming(g){
+ const edge=g.edges.reduce((a,b)=>!a||b.slack<a.slack?b:a,null);if(!edge)return;
+ const max=Math.max(edge.gap,edge.need)*1.06,x=t=>45+t/max*520,y=98,mov=edge.move,exp=result.p.exposureUs/1e6;
+ let svg=stext(24,30,`가장 여유가 작은 이동: H${edge.from} → H${edge.to}`,17)+stext(24,59,`ΔX ${F(edge.dx,1)} mm / ΔY ${F(edge.dy,1)} mm`,12,'#5d6e80');
+ svg+=rect(45,y,Math.max(2,x(exp)-45),34,'#1269d3')+rect(x(exp),y,x(exp+mov)-x(exp),34,'#009fa9')+rect(x(exp+mov),y,x(edge.needX)-x(exp+mov),34,'#efb757');
+ svg+=line(45,155,x(edge.gap),155,'#1269d3',4)+line(x(edge.gap),78,x(edge.gap),174,'#bc3948',2,'5 4')+stext(x(edge.gap),196,`다음 점 도착 ${F(edge.gap,3)} s`,12,'#bc3948','end');
+ svg+=stext(45,86,'촬영 → X 이동 → 정착·여유',12,'#5d6e80')+stext(45,219,`필요 ${F(edge.need,5)} s · 여유 ${F(edge.slack,5)} s`,14,edge.valid?'#0f805b':'#bc3948');$('timing').innerHTML=svg;
+ $('timingText').innerHTML=`<b>Y가 다음 점을 가져오는 시간 ≥ X 준비시간</b><br>${F(edge.gap,3)} s ${edge.valid?'≥':'<'} ${F(edge.need,5)} s → ${edge.valid?'선도착 가능':'X 준비시간 부족'}<br><span class="small">필요시간 = max(X 이동 + 정착 50ms + 여유 20ms + 노출·Trigger 여유, 카메라 재취득 주기 ${F(result.period*1000,3)}ms)</span>`;
+}
+function timeWindow(){const g=result.modes[mode].groups[glass];return {a:g.nodes[0].cross-.8,b:g.nodes[g.nodes.length-1].cross+.4};}
+function animState(t){
+ const g=result.modes[mode].groups[glass],ns=g.nodes;let x=ns[0].reviewX,phase='X 선도착 · 대기';
+ for(let i=1;i<ns.length;i++){const prev=ns[i-1],n=ns[i],start=prev.expEnd+FIXED.jitterS,m=ReviewCalc.motion(Math.abs(n.reviewX-prev.reviewX),result.p.vx,result.p.ax,result.p.dx);
+  if(t<start)break;if(t<start+m.total){const st=m.at(t-start);x=prev.reviewX+Math.sign(n.reviewX-prev.reviewX)*st.s;phase='X 이동';break;}
+  x=n.reviewX;phase=t<start+m.total+FIXED.settleS?'X 정착':'X 선도착 · 대기';
+ }
+ const st=result.profile.at(t),q=FIXED.bounds.start-st.s,y=FIXED.glass.akY-q,done=g.feasible?ns.filter(n=>t>=n.expEnd).length:0;return {x,y,q,phase,done};
+}
+function renderBoard(){
+ if(!result||result.inputErrors.length)return;const g=result.modes[mode].groups[glass],w=timeWindow(),t=w.a+(w.b-w.a)*Number($('time').value)/1000,a=animState(t),xx=x=>40+x,yy=y=>85+y;
+ let s=rect(30,67,945,900,'#eef3f7',10)+stext(40,28,'기판 내 가공 영역 확대 · X →',17)+stext(40,52,'Cell 번호는 좌→우, 위→아래로 증가합니다.',13,'#5d6e80');
+ for(let row=0;row<5;row++)for(let col=0;col<9;col++){const id=row*9+col+1,x=FIXED.glass.akX+col*100,y=FIXED.glass.akY+row*200,sel=g.nodes.some(n=>n.cell===id);s+=`<rect x="${xx(x)}" y="${yy(y)}" width="77.76" height="46.08" rx="4" fill="${sel?'#d7eaff':'white'}" stroke="${sel?'#1269d3':'#cfdae4'}" stroke-width="${sel?2:1}"></rect>`+stext(xx(x)+38,yy(y)+29,'C'+id,13,sel?'#1269d3':'#708395','middle');}
+ const path=g.nodes.map((n,i)=>(i?'L':'M')+xx(n.x)+' '+yy(n.y)).join(' ');s+=`<path d="${path}" fill="none" stroke="#1269d3" stroke-width="2" stroke-dasharray="7 6"></path>`;
+ for(const n of FIXED.points){const active=g.nodes.some(q=>q.head===n.head),done=active&&g.feasible&&t>=n.expEnd,fill=active?(done?'#0f805b':'#1269d3'):'#bdcbd9';s+=`<circle cx="${xx(n.x)}" cy="${yy(n.y)}" r="7" fill="${fill}"></circle>`+stext(xx(n.x)+9,yy(n.y)-10,'H'+String(n.head).padStart(2,'0'),14,fill);}
+ const camY=Math.max(72,Math.min(967,yy(a.y))),camX=xx(FIXED.glass.akX+a.x);s+=line(35,camY,970,camY,'#00a1ab',2,'5 5')+`<circle cx="${camX}" cy="${camY}" r="16" fill="white" stroke="#00a1ab" stroke-width="3"></circle>`+line(camX-23,camY,camX+23,camY,'#00a1ab',2)+line(camX,camY-23,camX,camY+23,'#00a1ab',2);
+ s+=stext(45,996,'기판 전체 925 × 1500 mm · Cell 77.76 × 46.08 mm · Pitch X100 / Y200 mm',13,'#5d6e80');$('board').innerHTML=s;
+ $('timeLabel').textContent=F(t,2)+' s';$('animText').textContent=`${a.phase} · Stage Y ${F(a.q,3)} mm · 모의 촬영 ${a.done}/${g.nodes.length}점`;
+}
+function animate(now){if(!playing)return;const pos=Math.min(1000,startPos+(now-startWall)/8000*1000);$('time').value=pos;renderBoard();if(pos>=1000){stop();return;}raf=requestAnimationFrame(animate);}
+labels.forEach(([k])=>$(k).addEventListener('input',update));
+for(const cap of [2,4])$('mode'+cap).onclick=()=>{mode=cap;glass=0;update();};
+$('reset').onclick=()=>{labels.forEach(([k])=>$(k).value=FIXED.defaults[k]);glass=0;update();};
+$('prev').onclick=()=>{stop();glass--; $('time').value=0;render();};$('next').onclick=()=>{stop();glass++;$('time').value=0;render();};
+$('time').oninput=()=>{stop();renderBoard();};$('play').onclick=()=>{if(playing){stop();return;}if(Number($('time').value)>=1000)$('time').value=0;playing=true;startPos=Number($('time').value);startWall=performance.now();$('play').textContent='일시정지';raf=requestAnimationFrame(animate);};
+$('fixed').innerHTML=`<div class="scroller"><table><tr><th>카메라·광학</th><td>2600×2128 기본 영상 / 2.5 µm pixel / Color·Global Shutter / 18.5 fps / 최소 노출 2 µs<br>총배율 20x 가정: 0.125 µm/px, FOV 0.325×0.266 mm · 튜브렌즈 200 mm·1x Relay 기준</td></tr><tr><th>렌즈</th><td>378-810-3 SL20x · NA 0.28 / WD 30.5 mm / 분해능 약 1.0 µm(λ550nm)<br>픽셀 환산값은 측정 정확도가 아닙니다. Visible 조명 기준입니다.</td></tr><tr><th>기판·점 선정</th><td>test0929 / 925×1500 mm / 9×5 Cell / Cell 77.76×46.08 mm / Shot Pitch 2.7 mm / DOE 4×4<br>유효 Shot·Head 소유권·Mask를 기존 엔진으로 검증 / Branch B07 / 8개 Head 모두 활성 가정</td></tr><tr><th>운동·운전 기준</th><td>Stage 시작 ${F(FIXED.bounds.start,4)} → 끝 ${F(FIXED.bounds.end,4)} mm / Stroke 3960 mm<br>Review X Stroke 1025 mm, Park 0 mm, 선행준비 2초 / 정착 50ms / Guard 20ms<br>Trigger 지연 50µs·Jitter ±5µs / Encoder 16000 counts/mm / 노출 중심 시각으로 지연 보정</td></tr><tr><th>기존 설계 가정</th><td>Review–Scanner 홀수 1467 mm / 짝수 +380 mm(1847 mm): 기존 자료의 명목 배치값<br>기타시간 60초 + 영상처리 여유 1초 / 계획 Tact 150초 / 가공 첫~마지막 통과 목표 30초<br>사다리꼴 속도 모델입니다. 실제 S-Curve·정착·영상처리시간은 장비 검증이 필요합니다.</td></tr></table></div><p class="notes">설계 검토 범위: 명목 좌표·시간·이동 blur. Align/왜곡/실제 Follow Error, 밝기·SNR·검출 성공률, 실제 Scanner/Laser 처리시간은 계산에 포함하지 않습니다. 최종 검사 결과는 실제 Frame과 Vision 측정 결과로 판정합니다. 0선 방어에서는 자동 Offset 적용을 수행하지 않습니다.</p>`;
+$('sources').innerHTML=`사양 확인 2026-10-06 · <a href="https://docs.baslerweb.com/a2a2600-20gcbas" target="_blank" rel="noopener">Basler 카메라 사양</a> · <a href="https://docs.baslerweb.com/exposure-time" target="_blank" rel="noopener">최소 노출</a> · <a href="https://www.mitutoyo.com/webfoo/wp-content/uploads/E4191-378_010611.pdf" target="_blank" rel="noopener">Mitutoyo 카탈로그 p20·29</a> · 기하 소스 ${FIXED.sourceCommit.slice(0,12)}`;
+window.getReviewState=()=>({result,mode,glass});update();
+</script></body></html>
