@@ -1,0 +1,44 @@
+{
+  "engineering": {
+    "checks": 30,
+    "strokeBoundary": true,
+    "accelDecelIncluded": true,
+    "noRoundtripTact": true,
+    "unreachableReviewRejected": true,
+    "decelExposureRejected": true,
+    "allCellsUnique": true
+  },
+  "dom": {
+    "checks": 14,
+    "consoleExceptions": 0,
+    "numericInputs": 9,
+    "mode2": true,
+    "mode4": true,
+    "reverseOnlyAnimation": true,
+    "querySynchronization": true,
+    "liveSynchronization": true,
+    "standaloneGuideSnapshot": true,
+    "returnLinkPreservesValues": true,
+    "invalidStateRejected": true,
+    "independentCheckFlags": true,
+    "XDeadlineScrubbing": true,
+    "nearbyValidPointPlan": true,
+    "physicalOverlapShown": true,
+    "browserPixelValidation": false,
+    "browserLimitation": "Execution environment prohibits Chromium process singleton socket creation."
+  },
+  "currentPointPlan": "nearby-valid-cells-v2",
+  "bothModesFeasible": true,
+  "pptSlides": 3,
+  "pptEditable": true,
+  "pptRendered": true,
+  "svgRendered": [
+    "scanner_field_and_points",
+    "X_preparation",
+    "bounded_physical_overlap",
+    "machine",
+    "cells",
+    "blur"
+  ],
+  "testsTotal": 44
+}

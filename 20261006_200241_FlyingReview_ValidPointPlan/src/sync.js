@@ -1,0 +1,9 @@
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.ReviewSync=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';const KEY='flying-review-nearby-valid-cells-v2';
+function state(c,p,mode,glass){return {version:1,params:Object.fromEntries(Object.keys(c.defaults).map(k=>[k,p[k]])),mode:mode===4?4:2,glass:Math.max(0,Math.min((mode===4?2:4)-1,glass||0))};}
+function query(s){const q=new URLSearchParams();q.set('reviewState','1');for(const [k,v] of Object.entries(s.params))q.set(k,String(v));q.set('mode',s.mode);q.set('glass',s.glass);return '?'+q.toString();}
+function fromQuery(c,search){const q=new URLSearchParams(search||'');if(!q.has('reviewState'))return null;return state(c,Object.fromEntries(Object.keys(c.defaults).map(k=>[k,q.has(k)?Number(q.get(k)):NaN])),Number(q.get('mode')),Number(q.get('glass')));}
+function read(c,saved){const q=fromQuery(c,typeof location!=='undefined'?location.search:'');if(q)return {data:q,source:'시뮬레이터에서 전달된 입력'};if(saved)return {data:state(c,saved.params,saved.mode,saved.glass),source:'저장한 현재 조건'};try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.version===1&&s.params)return {data:state(c,s.params,s.mode,s.glass),source:'시뮬레이터의 최근 입력'};}catch(e){}return {data:state(c,c.inquiryCase||c.defaults,c.inquiryMode||2,0),source:'문의 조건 예시 · 시뮬레이터에서 열면 현재 입력 반영'};}
+function connection(onUpdate){let channel=null;try{channel=new BroadcastChannel(KEY);channel.onmessage=e=>{if(e.data&&e.data.version===1)onUpdate(e.data);};}catch(e){}if(typeof window!=='undefined'&&window.addEventListener)window.addEventListener('storage',e=>{if(e.key===KEY&&e.newValue)try{onUpdate(JSON.parse(e.newValue));}catch(e){}});return {publish(s){try{localStorage.setItem(KEY,JSON.stringify(s));}catch(e){}if(channel)channel.postMessage(s);}};}
+return {state,query,fromQuery,read,connection,KEY};
+});
