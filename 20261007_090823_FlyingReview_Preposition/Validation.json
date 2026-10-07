@@ -1,0 +1,319 @@
+{
+  "engineering": {
+    "checks": 35,
+    "strokeBoundary": true,
+    "accelDecelIncluded": true,
+    "noRoundtripTact": true,
+    "unreachableReviewRejected": true,
+    "decelExposureRejected": true,
+    "allCellsUnique": true
+  },
+  "DOM": {
+    "interboardPreposition": true,
+    "idleWindow180": true,
+    "wrapIncluded": true,
+    "startupOnceOnly": true,
+    "extraTactS": 0,
+    "checks": 16,
+    "consoleExceptions": 0,
+    "numericInputs": 9,
+    "mode2": true,
+    "mode4": true,
+    "reverseOnlyAnimation": true,
+    "querySynchronization": true,
+    "liveSynchronization": true,
+    "standaloneGuideSnapshot": true,
+    "returnLinkPreservesValues": true,
+    "invalidStateRejected": true,
+    "independentCheckFlags": true,
+    "XDeadlineScrubbing": true,
+    "nearbyValidPointPlan": true,
+    "physicalOverlapShown": true,
+    "browserPixelValidation": false,
+    "browserLimitation": "Execution environment prohibits Chromium process singleton socket creation."
+  },
+  "presentation": {
+    "schemaVersion": "presentation-finalization.v1",
+    "finalSha256": "5dc6d989df51d6359685f7aaba4c2fe6be6102dff59dad71e44dbb5da8d5681e",
+    "byteCount": 32305,
+    "packageIntegrity": {
+      "chart_count": 0,
+      "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+      "finding_count": 0,
+      "findings": [],
+      "notes_parts_skipped": 3,
+      "relationship_part_count": 16,
+      "slide_count": 3,
+      "status": "pass",
+      "exitCode": 0,
+      "findingCount": 0,
+      "warnings": []
+    },
+    "presentationLayout": {
+      "finding_count": 0,
+      "findings": [],
+      "font_policy": {
+        "checked_text_script_count": 134,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Noto Sans CJK KR"
+        ],
+        "observed_font_use_counts": {
+          "Noto Sans CJK KR": 134
+        },
+        "passed": true,
+        "performed": true
+      },
+      "slide_count": 3,
+      "slide_size_in": [
+        13.3333,
+        7.5
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "exitCode": 0,
+      "findingCount": 0,
+      "fontPolicy": {
+        "checked_text_script_count": 134,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Noto Sans CJK KR"
+        ],
+        "observed_font_use_counts": {
+          "Noto Sans CJK KR": 134
+        },
+        "passed": true,
+        "performed": true
+      }
+    },
+    "fontSelection": {
+      "basis": "design",
+      "approvedFamilies": [
+        "Noto Sans CJK KR"
+      ],
+      "scriptFonts": {
+        "ea": "Noto Sans CJK KR"
+      },
+      "referenceSha256": null,
+      "referenceFontsVerifiedInEncodedText": false,
+      "checked_text_script_count": 134,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Noto Sans CJK KR"
+      ],
+      "observed_font_use_counts": {
+        "Noto Sans CJK KR": 134
+      },
+      "passed": true,
+      "performed": true
+    },
+    "firstPartyImport": {
+      "performed": true,
+      "passed": true,
+      "slideCount": 3,
+      "sha256": "5dc6d989df51d6359685f7aaba4c2fe6be6102dff59dad71e44dbb5da8d5681e",
+      "runtimeNodeModules": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+      "nodeExecutable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node"
+    },
+    "nativeTableArithmetic": {
+      "performed": true,
+      "checked_column_count": 0,
+      "checks": [],
+      "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+      "eligible_table_count": 0,
+      "finding_count": 0,
+      "findings": [],
+      "native_table_count": 2,
+      "passed": true,
+      "schema_version": "presentation-native-table-arithmetic.v1",
+      "skipped_tables": [
+        {
+          "reason": "no_unambiguous_bottom_total",
+          "slide": 2,
+          "table": 1
+        },
+        {
+          "reason": "no_numeric_amounts",
+          "slide": 3,
+          "table": 1
+        }
+      ],
+      "slide_count": 3,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "nativeChartTitles": {
+      "performed": true,
+      "checks": [],
+      "finding_count": 0,
+      "findings": [],
+      "native_chart_count": 0,
+      "native_powerpoint_verified": false,
+      "passed": true,
+      "presentation_sha256": "5dc6d989df51d6359685f7aaba4c2fe6be6102dff59dad71e44dbb5da8d5681e",
+      "schema_version": "presentation-native-chart-titles.v1",
+      "slide_count": 3,
+      "source_text_emitted": false,
+      "unresolved_linked_title_count": 0
+    },
+    "sourceDerivedPolicyFlags": [
+      "--expected-slide-size-emu",
+      "12191999,6858000",
+      "--validate-bullet-geometry",
+      "--validate-heading-fit",
+      "--require-native-table-slide",
+      "2",
+      "--require-native-table-slide",
+      "3",
+      "--cover-role",
+      "none",
+      "--expected-slide-count",
+      "3",
+      "--approved-font-family",
+      "Noto Sans CJK KR",
+      "--approved-script-font",
+      "ea=Noto Sans CJK KR"
+    ],
+    "nativeChartValidation": {
+      "detectedOwnerSlides": [],
+      "detectedChartCount": 0,
+      "targetApplication": "portable",
+      "sourceChartOwnersExplicitlyDeclared": true,
+      "validatorRan": false,
+      "passed": true
+    }
+  },
+  "interboardWindowS": 180,
+  "preposition2": [
+    {
+      "fromX": 104.05000000000001,
+      "toX": 204.05,
+      "dx": 100,
+      "move": 1.632993161855452,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 1.7029931618554521,
+      "from": 2,
+      "to": 3,
+      "fromGlass": 1,
+      "toGlass": 2,
+      "wrap": false,
+      "window": 180,
+      "slack": 178.29700683814454,
+      "extraTactS": 0,
+      "valid": true
+    },
+    {
+      "fromX": 306.75,
+      "toX": 414.84999999999997,
+      "dx": 108.09999999999997,
+      "move": 1.6978417672641541,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 1.7678417672641542,
+      "from": 4,
+      "to": 5,
+      "fromGlass": 2,
+      "toGlass": 3,
+      "wrap": false,
+      "window": 180,
+      "slack": 178.23215823273586,
+      "extraTactS": 0,
+      "valid": true
+    },
+    {
+      "fromX": 525.65,
+      "toX": 636.4499999999999,
+      "dx": 110.79999999999995,
+      "move": 1.7189143860782206,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 1.7889143860782206,
+      "from": 6,
+      "to": 7,
+      "fromGlass": 3,
+      "toGlass": 4,
+      "wrap": false,
+      "window": 180,
+      "slack": 178.21108561392177,
+      "extraTactS": 0,
+      "valid": true
+    },
+    {
+      "fromX": 747.25,
+      "toX": 4.049999999999997,
+      "dx": 743.2,
+      "move": 5.049333333333333,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 5.119333333333333,
+      "from": 8,
+      "to": 1,
+      "fromGlass": 4,
+      "toGlass": 1,
+      "wrap": true,
+      "window": 180,
+      "slack": 174.88066666666666,
+      "extraTactS": 0,
+      "valid": true
+    }
+  ],
+  "preposition4": [
+    {
+      "fromX": 306.75,
+      "toX": 414.84999999999997,
+      "dx": 108.09999999999997,
+      "move": 1.6978417672641541,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 1.7678417672641542,
+      "from": 4,
+      "to": 5,
+      "fromGlass": 1,
+      "toGlass": 2,
+      "wrap": false,
+      "window": 180,
+      "slack": 178.23215823273586,
+      "extraTactS": 0,
+      "valid": true
+    },
+    {
+      "fromX": 747.25,
+      "toX": 4.049999999999997,
+      "dx": 743.2,
+      "move": 5.049333333333333,
+      "settle": 0.05,
+      "guard": 0.02,
+      "need": 5.119333333333333,
+      "from": 8,
+      "to": 1,
+      "fromGlass": 2,
+      "toGlass": 1,
+      "wrap": true,
+      "window": 180,
+      "slack": 174.88066666666666,
+      "extraTactS": 0,
+      "valid": true
+    }
+  ],
+  "startup": {
+    "fromX": 0,
+    "toX": 4.049999999999997,
+    "dx": 4.049999999999997,
+    "move": 0.3286335345030995,
+    "settle": 0.05,
+    "guard": 0.02,
+    "need": 0.3986335345030995,
+    "firstHead": 1,
+    "requiredOnce": true
+  },
+  "mainClaim": "Default design: same-board review constraints pass, next-board preparation fits the usable180s window; incremental idle delay is0s; equipmentTact is not calculated.",
+  "presentationVisualQA": {
+    "finalSlidesRendered": 3,
+    "eachSlideInspected": true,
+    "koreanFontRenderingVerified": true,
+    "nativeTables": 2,
+    "sourceStylePreserved": "navy header, gray canvas, Noto Sans CJK KR",
+    "sourceFontRepair": "Legacy deck EA font inheritance unresolved; output explicitly sets Noto Sans CJK KR for Latin and EA scripts under an explicit design font policy."
+  }
+}
