@@ -271,10 +271,3 @@ Center Pin 완료만으로 Distortion 완료를 의미하지 않습니다. 또�
 | 예외·복구 | Vision NG 정지 연계, 미수신·Timeout·N=0 정책, 재측정·재시작 시 결과 처리 |
 | 전체 Timing Chart | Glass In / Component In / Pre-Align / Center Pin / Distortion / 가공의 연결 |
 
-## 10. 형식 참고 문서
-
-- [A3 LD · 시작과 전체흐름](https://github.com/kjuws10-rgb/Shared/blob/main/20261003_080704/01_시작과_전체흐름.md)
-- [A3 LD · 가공·리뷰·보정 통합흐름도](https://github.com/kjuws10-rgb/Shared/blob/main/20260920_140857/04_가공_리뷰_보정_통합흐름도.md)
-
-위 문서의 역할별 구조도·실행 흐름도·단계 설명 형식을 참고했습니다. 이번 운영 시나리오의 기준은 2026-10-07 제공된 고객사 제안 방향입니다.
-
