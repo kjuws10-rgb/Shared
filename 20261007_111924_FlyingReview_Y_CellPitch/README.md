@@ -36,7 +36,7 @@ Basler a2a2600-20gcBAS(2.5µm,2600×2128,GlobalShutter,기본18.5fps,최소노�
 
 - `FlyingReview_8Head_Simulator.html`: 2개모드 기본, 입력10개, Y Cell 간격 기반 촬영 간 가용시간, 기판별 선배치 흐름·예산·순환복귀, 기판 내 상세는 접기.
 - `FlyingReview_Formula_Guide.html`: 현재 입력10개·모드·기판번호를 URL/같은출처 채널로 전달, Y Cell 간격과 선배치 수식도 동일 엔진 결과. 시뮬레이터의 ‘현재 조건 가이드 저장’은 조건을 파일에 내장합니다.
-- `0선방어_검토자료.pptx`: 3장, 편집 가능한 도식·표. 기존 navy/gray 색과 Noto Sans CJK KR 폰트를 유지하고 한글 script font를 명시했습니다.
+- `0선방어_검토자료.pptx`: 3장, 편집 가능한 도식·표. 기존 navy/gray 색과 Noto Sans KR 폰트를 적용하고 한글 script font를 명시했습니다.
 - `FlyingReview_X_Timing_Diagnosis.png`: 현재 기판→선배치→XReady→다음 기판 흐름.
 - `Calculation_evidence.json`, `Validation.json`: 전체 계산·검증 근거.
 
