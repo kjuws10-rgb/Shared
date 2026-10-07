@@ -1,0 +1,64 @@
+{
+  "updated": "2026-10-07",
+  "mainClaim": "All ten inputs have live conditional pass-band gauges. When the mode fails, the result lists verified single-parameter values that restore feasibility.",
+  "defaultCase": {
+    "cellPitchYmm": 200,
+    "vyMmPerS": 100,
+    "sameBoardAvailableS": 2,
+    "processTimeS": 27.666666666666664,
+    "blurPx": 8,
+    "minimumSameBoardSlackS": 0.21101561392177848,
+    "interBoardWindowS": 180,
+    "maximumPrepositionNeedS": 5.119333333333333,
+    "extraTactS": 0,
+    "mode2Feasible": true,
+    "mode4Feasible": true
+  },
+  "engineering": {
+    "checks": 40,
+    "passed": true,
+    "yCellPitchUpdatesCoordinates": true,
+    "yCellPitchUpdatesAvailableTime": true,
+    "yCellPitchUpdatesStrokeAndTimingDecision": true,
+    "allCellsUnique": true,
+    "allTenGaugePassBandsCalculated": true,
+    "recoveryValuesRecalculatedAndVerified": true
+  },
+  "recoveryExample": {
+    "inputCellPitchYmm": 230,
+    "inputStrokeMm": 2700,
+    "minimumRequiredStrokeMm": 2706.509333333334,
+    "verifiedAlternatives": [
+      "Stroke 2707 mm",
+      "Y Cell pitch 227 mm",
+      "Y deceleration 190 mm/s^2"
+    ]
+  },
+  "DOM": {
+    "checks": 18,
+    "passed": true,
+    "numericInputs": 10,
+    "rangeGauges": 10,
+    "liveRecoveryApply": true,
+    "queryAndLiveGuideSynchronization": true,
+    "standaloneGuideSnapshot": true,
+    "invalidStateRejected": true,
+    "browserPixelValidation": false,
+    "browserLimitation": "Execution environment prohibits Chromium process singleton socket creation; SVG diagrams were rasterized during DOM validation."
+  },
+  "presentation": {
+    "slides": 3,
+    "packageIntegrity": "pass",
+    "layoutFindings": 0,
+    "firstPartyImport": "pass",
+    "font": "Noto Sans KR",
+    "visualInspection": "pass",
+    "sha256": "df98fa056ba57f79e40f25a0172a283b34c08f579f61a5e57c6b96b1faed1a9a"
+  },
+  "artifacts": {
+    "FlyingReview_8Head_Simulator.html": "798605c68dd2233e7dee18fbc94d5bfbb5217bfeb32555bc4e2667285d7efaeb",
+    "FlyingReview_Formula_Guide.html": "2a781bf3ed256120255a57b3d620b44b854aff53f41db2bc0dfdd59bb9038286",
+    "0선방어_검토자료.pptx": "df98fa056ba57f79e40f25a0172a283b34c08f579f61a5e57c6b96b1faed1a9a",
+    "FlyingReview_X_Timing_Diagnosis.png": "33c048fba2df258e80a98e5149111aeb9df3ac428e4ab8fdeca44cc8a980ef56"
+  }
+}
