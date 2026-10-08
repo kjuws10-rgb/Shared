@@ -1,0 +1,42 @@
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.ReviewAdvisor=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+const baseSpecs={
+ strokeMm:{label:'역방향 Stroke',unit:'mm',min:2300,max:3960,step:1,digits:1},
+ exposureUs:{label:'노출시간',unit:'µs',min:2,max:50,step:.1,digits:2},
+ blurPx:{label:'허용 blur',unit:'px',min:.5,max:16,step:.1,digits:2},
+ cellPitchY:{label:'Y Cell 간격',unit:'mm',min:100,max:499,step:1,digits:1},
+ vx:{label:'X 속도',unit:'mm/s',min:20,max:500,step:1,digits:1},
+ ax:{label:'X 가속도',unit:'mm/s²',min:20,max:1500,step:10,digits:0},
+ dx:{label:'X 감속도',unit:'mm/s²',min:20,max:1500,step:10,digits:0},
+ settleMs:{label:'X 정착시간',unit:'ms',min:0,max:1000,step:1,digits:1},
+ guardMs:{label:'선도착 여유시간',unit:'ms',min:0,max:1000,step:1,digits:1},
+ vy:{label:'Y 등속속도',unit:'mm/s',min:60,max:150,step:1,digits:1},
+ ay:{label:'Y 가속도',unit:'mm/s²',min:20,max:1000,step:10,digits:0},
+ dy:{label:'Y 감속도',unit:'mm/s²',min:20,max:1000,step:10,digits:0}
+};
+for(let h=1;h<=8;h++)for(const axis of ['X','Y'])baseSpecs['point'+axis+h]={label:'H'+String(h).padStart(2,'0')+' 셀 내 '+axis,unit:'mm',min:axis==='X'?1.35:.675,max:axis==='X'?74.25:43.875,step:2.7,digits:3,discrete:true};
+const order=Object.keys(baseSpecs);
+function specs(c,p){const out={};for(const key of order){const s={...baseSpecs[key]},v=Number(p[key]);if(key==='strokeMm')s.max=c.stageStroke;if(s.discrete){const axis=key[5],count=axis==='X'?c.pointGrid.cols:c.pointGrid.rows;s.min=axis==='X'?c.pointGrid.minXmm:c.pointGrid.minYmm;s.step=c.pointGrid.pitchMm;s.max=s.min+(count-1)*s.step;}else{if(Number.isFinite(v)&&v>s.max)s.max=Math.min(key==='strokeMm'?c.stageStroke:v*1.15,v*1.15);if(Number.isFinite(v)&&v<s.min)s.min=Math.max(.001,v*.5);}out[key]=s;}return out;}
+function feasible(c,p,mode,Calc){const r=Calc.calculate(c,p);return !r.inputErrors.length&&!!(r.modes[mode]&&r.modes[mode].feasible);}
+function boundary(c,p,mode,key,a,b,fa,Calc){let lo=a,hi=b;for(let i=0;i<28;i++){const mid=(lo+hi)/2,fm=feasible(c,{...p,[key]:mid},mode,Calc);if(fm===fa)lo=mid;else hi=mid;}return (lo+hi)/2;}
+function scan(c,p,mode,key,s,Calc){
+ if(s.discrete){const intervals=[];let z=null;for(let i=0;i<=Math.round((s.max-s.min)/s.step);i++){const v=Number((s.min+i*s.step).toFixed(9)),pass=feasible(c,{...p,[key]:v},mode,Calc);if(pass){if(!z){z={min:v,max:v};intervals.push(z);}else z.max=v;}else z=null;}return intervals;}
+ const n=40,values=[];for(let i=0;i<=n;i++)values.push(s.min+(s.max-s.min)*i/n);if(p[key]>=s.min&&p[key]<=s.max)values.push(p[key]);values.sort((a,b)=>a-b);const xs=values.filter((x,i)=>!i||Math.abs(x-values[i-1])>1e-10),fs=xs.map(x=>feasible(c,{...p,[key]:x},mode,Calc)),intervals=[];let start=fs[0]?xs[0]:null;for(let i=1;i<xs.length;i++){if(!fs[i-1]&&fs[i])start=boundary(c,p,mode,key,xs[i-1],xs[i],false,Calc);if(fs[i-1]&&!fs[i]){intervals.push({min:start,max:boundary(c,p,mode,key,xs[i-1],xs[i],true,Calc)});start=null;}}if(fs[fs.length-1])intervals.push({min:start,max:xs[xs.length-1]});return intervals;}
+function nearest(intervals,v,s,c,p,mode,key,Calc){let best=null;for(const z of intervals){if(v>=z.min-1e-8&&v<=z.max+1e-8&&feasible(c,p,mode,Calc))return {target:v,delta:0,interval:z};const raw=Math.max(z.min,Math.min(z.max,v)),pad=Math.max((s.max-s.min)*1e-7,s.step*.001);let target=s.discrete?s.min+Math.round((raw-s.min)/s.step)*s.step:v<z.min?Math.ceil((raw+pad)/s.step)*s.step:Math.floor((raw-pad)/s.step)*s.step;target=Number(Math.max(s.min,Math.min(s.max,target)).toFixed(9));if(!feasible(c,{...p,[key]:target},mode,Calc)&&!s.discrete)target=(z.min+z.max)/2;if(!feasible(c,{...p,[key]:target},mode,Calc))continue;const q={target,delta:Math.abs(target-v),interval:z};if(!best||q.delta<best.delta)best=q;}return best;}
+function reason(key,from,to){if(key.startsWith('pointX'))return '셀 내부 X를 바꿔 실제 X 이동거리와 선배치 시간을 재계산';if(key.startsWith('pointY'))return '셀 내부 Y를 바꿔 앞뒤 촬영 간격과 마지막점 Stroke를 재계산';const up=to>from;const t={strokeMm:up?'마지막 노출과 Y 감속거리를 Stroke 안에 확보':'30초 가공시간을 줄임',exposureUs:up?'노출 신호량은 늘지만 blur 여유가 감소':'이동 blur와 노출 종료 여유를 줄임',blurPx:up?'허용 blur 기준을 완화하므로 영상 허용성 검증 필요':'허용 blur 기준을 강화',cellPitchY:up?'다음 촬영까지 Y 이동시간을 늘림. 필요한 Stroke도 증가':'마지막점 위치와 필요 Stroke를 줄임. X 준비시간은 감소',vx:up?'같은 기판의 X 이동시간을 줄임':'X 속도 조건을 낮춤',ax:up?'X 가속구간을 단축':'X 가속 조건을 낮춤',dx:up?'X 감속구간을 단축':'X 감속 조건을 낮춤',settleMs:up?'X 정착 대기를 늘림':'X 정착 대기를 줄임. 실제 위치 안정시간 확인 후 적용',guardMs:up?'촬영 전 선도착 여유를 늘림':'선도착 여유를 줄임. 실제 제어지연 확인 후 적용',vy:up?'30초 내 Stroke 이동시간을 줄임. blur와 감속거리는 증가':'blur와 Y 감속거리를 줄임. 가공시간은 증가',ay:up?'Y 등속 진입을 앞당기고 가속시간을 줄임':'Y 가속 조건을 낮춤',dy:up?'마지막 노출 이후 필요한 Y 감속거리를 줄임':'Y 감속 조건을 낮춤'};return t[key];}
+function blockers(r,mode){const m=r.modes[mode],a=[];if(!r.processTimePass)a.push('30초 초과: Stroke 감소, Y 속도 증가 또는 Y 가감속 증가 검토');if(!r.boardCruiseFits)a.push('기판1500mm 등속 불충족: Stroke 또는 Y 가감속 증가 검토');if(r.blurPx>r.p.blurPx+1e-8)a.push('blur 초과: 노출시간 또는 Y 속도 감소 검토');if(r.globalErrors.some(x=>x.includes('카메라 노출 범위')))a.push('카메라 노출범위 밖: 노출시간 조정');if(m.groups.some(g=>!g.reviewFits))a.push('리뷰점·감속거리 부족: Stroke 또는 Y 감속 증가, Cell 간격 감소 검토');if(m.groups.some(g=>!g.xTimingValid))a.push('X 준비시간 부족: 측정점 X·Y 조정, Cell 간격·X 가감속 증가 또는 정착·선도착 여유 감소 검토');if(!m.prepositionFeasible)a.push('기판 사이 선배치 부족: X 속도·가감속 증가 또는 정착시간·선도착 여유 감소 검토');if(m.groups.some(g=>g.nodes.some(n=>!n.pointValid)))a.push('유효 가공점 불충족: 해당 Head의 셀 내 X·Y를 녹색 격자 위치로 조정');return a;}
+function analyze(c,p,mode,Calc){const current=Calc.calculate(c,p),sp=specs(c,p),controls={};for(const key of order){const intervals=scan(c,p,mode,key,sp[key],Calc),near=nearest(intervals,p[key],sp[key],c,p,mode,key,Calc);controls[key]={...sp[key],key,current:p[key],intervals,nearest:near};}const alternatives=order.map(key=>{const q=controls[key].nearest;if(!q||q.delta<=1e-9)return null;return {key,label:sp[key].label,unit:sp[key].unit,from:p[key],target:q.target,delta:q.delta,score:q.delta/(sp[key].max-sp[key].min),reason:reason(key,p[key],q.target)};}).filter(Boolean).sort((a,b)=>a.score-b.score);return {feasible:!current.inputErrors.length&&current.modes[mode].feasible,controls,alternatives,blockers:blockers(current,mode)};}
+function format(n,s){return Number(n).toFixed(s.digits);}
+function rangeText(c){if(!c.intervals.length)return '이 항목만 바꿔서는 통과 구간 없음';return '통과 '+c.intervals.map(z=>`${format(z.min,c)}${Math.abs(z.max-z.min)>1e-8?'~'+format(z.max,c):''} ${c.unit}`).join(' 또는 ')+(c.discrete?' · 2.7mm 격자':'');}
+function gradient(c){const span=c.max-c.min,stops=['#f3bdc4 0%'],pad=c.discrete?c.step/2:0;for(const z of c.intervals){const a=Math.max(0,Math.min(100,(z.min-pad-c.min)/span*100)),b=Math.max(0,Math.min(100,(z.max+pad-c.min)/span*100));stops.push(`#f3bdc4 ${a}%`,`#8fd3b0 ${a}%`,`#8fd3b0 ${b}%`,`#f3bdc4 ${b}%`);}stops.push('#f3bdc4 100%');return `linear-gradient(to right,${stops.join(',')})`;}
+function summaryHtml(a,limit=4,buttons=true){
+ if(a.feasible)return '<div class="recovery-ok"><b>현재 조건 통과</b><span>각 게이지의 녹색 구간이 다른 값을 고정했을 때의 통과 범위입니다.</span></div>';
+ if(a.alternatives.length){
+  const item=x=>`<div class="recovery-item"><div><b>${x.label} ${x.target>x.from?'증가':'감소'}: ${x.from.toFixed(3)} → ${x.target.toFixed(3)} ${x.unit}</b><span>${x.reason}</span></div>${buttons?`<button type="button" class="apply-advice" data-key="${x.key}" data-target="${x.target}">적용</button>`:''}</div>`;
+  const shown=a.alternatives.slice(0,limit),rest=a.alternatives.slice(limit);
+  return `<div class="recovery-head"><b>한 항목만 조정해 통과 가능한 조건</b><span>${buttons?'버튼을 누르면 해당 값이 즉시 적용됩니다.':'아래 값 중 하나로 조정하면 다른 입력을 유지한 상태에서 통과합니다.'}</span></div><div class="recovery-list">${shown.map(item).join('')}</div>${rest.length?`<details><summary>다른 통과 조정안 ${rest.length}개</summary><div class="recovery-list">${rest.map(item).join('')}</div></details>`:''}`;
+ }
+ return `<div class="recovery-head"><b>한 항목 변경만으로는 통과 조건을 만들 수 없습니다</b><span>${a.blockers.join(' / ')}</span></div>`;
+}
+return {order,baseSpecs,specs,analyze,format,rangeText,gradient,summaryHtml};
+});
