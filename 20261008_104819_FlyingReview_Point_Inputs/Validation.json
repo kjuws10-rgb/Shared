@@ -1,0 +1,122 @@
+{
+  "updated": "2026-10-08",
+  "mainClaim": "Eight individual cell-local X/Y pairs use live pass-band gauges. Signed local Y offsets control adjacent capture intervals, X offsets control actual travel and prepositioning. Invalid B07 Mask/Head ownership points cannot pass.",
+  "defaultCase": {
+    "cellPitchYmm": 200,
+    "vyMmPerS": 100,
+    "sameBoardAvailableS": 2,
+    "processTimeS": 27.666666666666664,
+    "blurPx": 8,
+    "minimumSameBoardSlackS": 0.21101561392177848,
+    "interBoardWindowS": 180,
+    "maximumPrepositionNeedS": 5.119333333333333,
+    "extraTactS": 0,
+    "mode2Feasible": true,
+    "mode4Feasible": true,
+    "settleMs": 50,
+    "guardMs": 20
+  },
+  "engineering": {
+    "checks": 53,
+    "passed": true,
+    "yCellPitchUpdatesCoordinates": true,
+    "yCellPitchUpdatesAvailableTime": true,
+    "yCellPitchUpdatesStrokeAndTimingDecision": true,
+    "allCellsUnique": true,
+    "recoveryValuesRecalculatedAndVerified": true,
+    "allTwelveGaugePassBandsCalculated": true,
+    "msConversionAndZeroInputsVerified": true,
+    "sameBoardIdleStartupUseTimingInputs": true,
+    "allTwentyEightGaugePassBandsCalculated": true,
+    "individualPointOffsetsVerified": true,
+    "signedYOffsetsVerified": true,
+    "recipePointGridExhaustiveCases": 3808,
+    "recipeGridValidityMatchesOriginal": true
+  },
+  "recoveryExample": {
+    "inputCellPitchYmm": 230,
+    "inputStrokeMm": 2700,
+    "minimumRequiredStrokeMm": 2706.509333333334,
+    "verifiedAlternatives": [
+      "Stroke 2707 mm",
+      "Y Cell pitch 227 mm",
+      "Y deceleration 190 mm/s^2"
+    ]
+  },
+  "DOM": {
+    "checks": 28,
+    "passed": true,
+    "numericInputs": 28,
+    "rangeGauges": 28,
+    "liveRecoveryApply": true,
+    "queryAndLiveGuideSynchronization": true,
+    "standaloneGuideSnapshot": true,
+    "invalidStateRejected": true,
+    "browserPixelValidation": false,
+    "browserLimitation": "Full browser pixel and touch validation was not performed; DOM behavior and SVG rasterization were verified.",
+    "timingInputGuideSynchronization": true,
+    "legacyTenInputUrlsUpgradeOnlyNewTimingValues": true,
+    "individualPointGauges": 16,
+    "individualPointGuideSynchronization": true,
+    "legacyTwelveInputUrlsUpgradeOnlyNewPointValues": true
+  },
+  "presentation": {
+    "slides": 3,
+    "packageIntegrity": "pass",
+    "layoutFindings": 0,
+    "firstPartyImport": "pass",
+    "font": "Noto Sans KR",
+    "visualInspection": "pass",
+    "sha256": "2affb5a6f7323ca5ff5e1469ffdffef5838aff710610825b1828642b38d496f2",
+    "sourceStructurePreserved": true,
+    "koreanFontRendering": "Verified with registered official Noto Sans KR font"
+  },
+  "artifacts": {
+    "FlyingReview_8Head_Simulator.html": "6b992aa76882199ba4c8c9433521fdea38e649264795fc5fa7c86295b304ad49",
+    "FlyingReview_Formula_Guide.html": "5aac64990831b87d5adbbd5cc7163e2ac829ce0527db131de412b89b6a412561",
+    "0선방어_검토자료.pptx": "2affb5a6f7323ca5ff5e1469ffdffef5838aff710610825b1828642b38d496f2",
+    "FlyingReview_X_Timing_Diagnosis.png": "8b401cdc9f816f8193172b6b28c72bd01e4b732e5332898f9058f93b4e449eb2"
+  },
+  "timingRecoveryExamples": [
+    {
+      "params": {
+        "settleMs": 400,
+        "guardMs": 20
+      },
+      "adjust": {
+        "settleMs": 261
+      },
+      "verifiedPass": true
+    },
+    {
+      "params": {
+        "settleMs": 50,
+        "guardMs": 400
+      },
+      "adjust": {
+        "guardMs": 231
+      },
+      "verifiedPass": true
+    }
+  ],
+  "pointPositionExamples": [
+    {
+      "change": {
+        "pointY2": 11.475
+      },
+      "cellPitchY": 200,
+      "vy": 100,
+      "H1toH2S": 2.108,
+      "H2toH3S": 1.892
+    },
+    {
+      "failure": {
+        "pointY1": 43.875
+      },
+      "adjust": {
+        "pointY1": 27.675
+      },
+      "verifiedPass": true
+    }
+  ]
+}
