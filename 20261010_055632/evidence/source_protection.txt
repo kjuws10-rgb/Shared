@@ -1,0 +1,10 @@
+Analysis checkout HEAD: 05215afc0621fc38f7e29bcdf4d1b9d2bface72f
+Analysis checkout git status --porcelain: empty
+Analysis origin push URL: DISABLED
+Validation origin push URL: DISABLED
+Validation tracked .cs/.xaml/.csproj/.sln changes excluding bin/obj: empty
+AnalysisHarness and fixture files added only inside separate validation checkout.
+Original source remote: no commit / no push / no file changes by this analysis.
+Source main ls-remote recheck: 05215afc0621fc38f7e29bcdf4d1b9d2bface72f
+Shared initial synchronized main: cf96dd12a71217d7c010ac36f73d3c3939d17764
+Shared publish scope: 20261010_055632 only; no force push.

@@ -1,0 +1,178 @@
+{
+  "sourceCommit": "05215afc0621fc38f7e29bcdf4d1b9d2bface72f",
+  "baselineCommit": "a25ba3cdfd70cff5d78172d13ec957318704b1e1",
+  "checks": [
+    {
+      "name": "zero_new_offsets_preserve_all_coordinate_values",
+      "passed": true,
+      "detail": {
+        "points": 20740
+      }
+    },
+    {
+      "name": "shift_and_first_beam_transform",
+      "passed": true,
+      "detail": {
+        "head": 2,
+        "dx": 3.5,
+        "dy": 2.3999999999999986,
+        "shiftDelta": {
+          "Item1": 3,
+          "Item2": 2
+        },
+        "beamDelta": {
+          "Item1": 0.5,
+          "Item2": 0.4
+        }
+      }
+    },
+    {
+      "name": "shift_y_changes_encoder_wait",
+      "passed": true,
+      "detail": {
+        "before": -121012.5,
+        "after": -118012.5
+      }
+    },
+    {
+      "name": "design_stage_and_head_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shift_only_does_not_change_mask_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oneway_chess_checks_both_row_and_column",
+      "passed": true,
+      "detail": {
+        "before": 10370,
+        "after": 5490
+      }
+    },
+    {
+      "name": "no_offset_file_returns_empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "offset_roundtrip_six_decimals",
+      "passed": true,
+      "detail": {
+        "FileName": "20261010_061035_577_reviewoffset.csv",
+        "Rows": [
+          {
+            "CellId": 1,
+            "ShotId": "A1",
+            "ReviewOffsetX": 0.123457,
+            "ReviewOffsetY": -0.75
+          }
+        ]
+      }
+    },
+    {
+      "name": "legacy_inline_offset_is_removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "latest_selected_by_filename_not_timestamp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "broken_latest_throws_without_fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonfinite_offset_accepted_and_blank_defaults_zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shift_dialog_rejects_large_glass_escape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "offset_save_preserves_unselected_rows",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "baseline": {
+    "total": 20740,
+    "laserOn": 19525,
+    "chessExcluded": 0,
+    "h01Count": 2380,
+    "h01First": {
+      "SequenceNo": 4149,
+      "ShotKey": "CELL001_SHOT0001",
+      "HeadNo": 1,
+      "CellNo": 1,
+      "CellShotNo": 1,
+      "GroupColumn": 0,
+      "GroupRow": 0,
+      "GroupCountX": 28,
+      "GroupCountY": 17,
+      "DesignX": 16.5125,
+      "DesignY": 16.5125,
+      "ScannerGx": -501.0125,
+      "ScannerGy": -28.4875,
+      "StageX": 26.5125,
+      "StageY": -1.0124999999999993,
+      "RecipeOffsetX": 0,
+      "RecipeOffsetY": 0,
+      "HeadDefaultOffsetX": 0,
+      "HeadDefaultOffsetY": 0,
+      "FirstBeamOffsetX": 0,
+      "FirstBeamOffsetY": 0,
+      "ReviewOffsetX": 0,
+      "ReviewOffsetY": 0,
+      "ShiftOffsetX": 0,
+      "ShiftOffsetY": 0,
+      "ShiftScannerOffsetX": 0,
+      "ShiftScannerOffsetY": 0,
+      "FinalScannerOffsetX": 0,
+      "FinalScannerOffsetY": 0,
+      "EncoderWaitPosition": -501012.5
+    },
+    "h01Last": {
+      "SequenceNo": 20646,
+      "ShotKey": "CELL037_SHOT0476",
+      "HeadNo": 1,
+      "CellNo": 37,
+      "CellShotNo": 476,
+      "GroupColumn": 27,
+      "GroupRow": 16,
+      "GroupCountX": 28,
+      "GroupCountY": 17,
+      "DesignX": 89.4125,
+      "DesignY": 859.7125,
+      "ScannerGx": -1344.2125,
+      "ScannerGy": 44.412499999999994,
+      "StageX": 99.4125,
+      "StageY": -844.2125,
+      "RecipeOffsetX": 0,
+      "RecipeOffsetY": 0,
+      "HeadDefaultOffsetX": 0,
+      "HeadDefaultOffsetY": 0,
+      "FirstBeamOffsetX": 0,
+      "FirstBeamOffsetY": 0,
+      "ReviewOffsetX": 0,
+      "ReviewOffsetY": 0,
+      "ShiftOffsetX": 0,
+      "ShiftOffsetY": 0,
+      "ShiftScannerOffsetX": 0,
+      "ShiftScannerOffsetY": 0,
+      "FinalScannerOffsetX": 0,
+      "FinalScannerOffsetY": 0,
+      "EncoderWaitPosition": -1344212.5
+    }
+  },
+  "newOffsetKeysInJhmi": 0,
+  "limitations": "No equipment connections, no laser firing, no GUI click test. Shift guard is tested only as a pure static function."
+}

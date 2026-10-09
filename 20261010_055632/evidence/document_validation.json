@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "markdownFiles": 7,
+  "internalLinks": 18,
+  "pinnedSourceLinks": 143,
+  "uniquePinnedSourceLinks": 122,
+  "sourceFilesAndLineRangesChecked": true,
+  "codeFencePairsChecked": true,
+  "invalidCharacterCheck": true,
+  "mermaidDiagrams": 5,
+  "mermaidNodes": 88,
+  "mermaidValidation": "text structure and node references only; not rendered",
+  "allChangedFiles": 1208,
+  "sourceAndSolutionFiles": 68,
+  "softwareChecks": 14,
+  "sourceCommit": "05215afc0621fc38f7e29bcdf4d1b9d2bface72f",
+  "issues": []
+}
