@@ -1,0 +1,76 @@
+[
+  {
+    "test": "VisionFlip",
+    "bits": 0,
+    "x": 2,
+    "y": 3,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 1,
+    "x": -2,
+    "y": 3,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 2,
+    "x": 2,
+    "y": -3,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 3,
+    "x": -2,
+    "y": -3,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 4,
+    "x": 3,
+    "y": 2,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 5,
+    "x": -3,
+    "y": 2,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 6,
+    "x": 3,
+    "y": -2,
+    "pass": true
+  },
+  {
+    "test": "VisionFlip",
+    "bits": 7,
+    "x": -3,
+    "y": -2,
+    "pass": true
+  },
+  {
+    "test": "Model1Pattern",
+    "count": 476,
+    "x": 28,
+    "y": 17,
+    "pass": true
+  },
+  {
+    "test": "BeamCount16Rejected",
+    "message": "Cell1: DOE Beam Count must be either 1 or 4.",
+    "pass": true
+  },
+  {
+    "test": "NGIncludedInCorrectionProjection",
+    "count": 3,
+    "note": "NG는 보정 투영에서 자동 제외되지 않음. 안전 기준 합의 필요.",
+    "pass": true
+  }
+]
