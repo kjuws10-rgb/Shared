@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-15T12:31:42.897042+00:00",
+  "node": "v24.19.0",
+  "numpy": "2.3.5",
+  "javascript_assertions": 773,
+  "independent_numpy_cases": 25,
+  "maximum_errors": {
+    "svd_reconstruction_relative": 3.1432500083045447e-16,
+    "left_orthogonality": 0.0,
+    "right_orthogonality": 3.1434641350503904e-16,
+    "singular_values_absolute": 3.3306690738754696e-16,
+    "regularization_solution_absolute": 6.661338147750939e-16
+  },
+  "scenarios": [
+    {
+      "count": 2,
+      "scenario": "steady",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.559761970808446,
+      "mean_after": 0.7760378545734259,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 2,
+      "scenario": "noise",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 2.559761970808446,
+      "mean_after": 1.391686038466161,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 2,
+      "scenario": "drift",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.559761970808446,
+      "mean_after": 0.7760378545734259,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 2,
+      "scenario": "local",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 3.7164562309766023,
+      "mean_after": 0.7945788416163985,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 2,
+      "scenario": "blind",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.559761970808446,
+      "mean_after": 0.7760378545734259,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 2,
+      "scenario": "optics",
+      "valid": 24,
+      "auto_promotions": 2,
+      "mean_before": 2.619762098657683,
+      "mean_after": 0.9830621766485356,
+      "last_status": "촬영 조건 변경"
+    },
+    {
+      "count": 2,
+      "scenario": "retry",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "척킹 재확인"
+    },
+    {
+      "count": 2,
+      "scenario": "missing",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "Key·촬영 위치·기판·Attempt 확인 필요"
+    },
+    {
+      "count": 4,
+      "scenario": "steady",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 2.5448411592222553,
+      "mean_after": 0.8593428935699808,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 4,
+      "scenario": "noise",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.5448411592222553,
+      "mean_after": 1.2955574174335716,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 4,
+      "scenario": "drift",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 2.5514560586586317,
+      "mean_after": 0.8593428935699807,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 4,
+      "scenario": "local",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 3.1937169499827385,
+      "mean_after": 1.9740540988043567,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 4,
+      "scenario": "blind",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 5.026259852541208,
+      "mean_after": 4.222924784187319,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 4,
+      "scenario": "optics",
+      "valid": 24,
+      "auto_promotions": 1,
+      "mean_before": 2.607712914198677,
+      "mean_after": 1.0019631414294066,
+      "last_status": "촬영 조건 변경"
+    },
+    {
+      "count": 4,
+      "scenario": "retry",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "척킹 재확인"
+    },
+    {
+      "count": 4,
+      "scenario": "missing",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "Key·촬영 위치·기판·Attempt 확인 필요"
+    },
+    {
+      "count": 6,
+      "scenario": "steady",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.5448411592222553,
+      "mean_after": 0.6934575864022658,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 6,
+      "scenario": "noise",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.5448411592222553,
+      "mean_after": 1.2213071065937138,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 6,
+      "scenario": "drift",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.5514560586586317,
+      "mean_after": 0.6934575864022653,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 6,
+      "scenario": "local",
+      "valid": 60,
+      "auto_promotions": 1,
+      "mean_before": 3.1937169499827385,
+      "mean_after": 0.8096834807102709,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 6,
+      "scenario": "blind",
+      "valid": 60,
+      "auto_promotions": 2,
+      "mean_before": 2.6807124617915643,
+      "mean_after": 0.841864674189937,
+      "last_status": "척킹 관측 정상"
+    },
+    {
+      "count": 6,
+      "scenario": "optics",
+      "valid": 24,
+      "auto_promotions": 1,
+      "mean_before": 2.607712914198677,
+      "mean_after": 0.9801846535035103,
+      "last_status": "촬영 조건 변경"
+    },
+    {
+      "count": 6,
+      "scenario": "retry",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "척킹 재확인"
+    },
+    {
+      "count": 6,
+      "scenario": "missing",
+      "valid": 0,
+      "auto_promotions": 0,
+      "mean_before": 0,
+      "mean_after": 0,
+      "last_status": "Key·촬영 위치·기판·Attempt 확인 필요"
+    }
+  ],
+  "scope": "Four-camera alignment metadata; two independent pixel frames; per-camera 1/2/3-point interpolation and chronological repeated-measurement tuning. Synthetic scenarios only; no global coordinate calibration, machine command, physical shape reconstruction or actual processing accuracy validation.",
+  "metrics": "Per-camera native pixel RMS within observed Y span only; one-key-per-camera mode evaluates that point, not a spatial interval. Independent repeats are the tuning target; synthetic truth is visualization/evaluation only.",
+  "sha256": {
+    "linalg.js": "e4e8873e6f62b0efaac1eb8194635876123a5166a93121185acf9d748299be4c",
+    "engine.js": "91f86ccfd306a55a5aa356487cd2a4e9bfa45dddf7e81aed98544d800007110b",
+    "ui.js": "10486b6b858f44006d3d659fce2fa02eeca22a8522c0745f224c8395d538972c",
+    "A3_LD_Distortion_AutoTune_Studio.html": "c98730e79ebf43b2060ebb5bb6ee56c8f45edad44ebb635ffec8ecc50a38a812"
+  }
+}

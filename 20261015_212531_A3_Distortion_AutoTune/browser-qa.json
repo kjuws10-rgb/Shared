@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-15T12:32:07.474Z",
+  "browser": "Codex In-app Browser",
+  "viewport_observed": {
+    "width": 675,
+    "horizontal_overflow": false
+  },
+  "cases": [
+    {
+      "name": "initial_six_keys",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "12장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "후속 기판 검증 통과"
+    },
+    {
+      "name": "four_keys_linear_only",
+      "capacity": "선형 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "카메라당 두 점 사이만 선형으로 연결합니다. SVD 곡률 억제는 비활성이고 보정 반영량만 조절합니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "데이터 모으는 중"
+    },
+    {
+      "name": "two_keys_no_interval",
+      "capacity": "관측점 추세만",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "카메라당 한 점만 있어 그 Y 위치의 관측과 누적 추세만 표시합니다. 구간 보간·곡률 최적화는 하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "데이터 모으는 중"
+    },
+    {
+      "name": "gentle",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "12장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "안정 우선 · 고정 기준"
+    },
+    {
+      "name": "follow_raw_judgment_unchanged",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "12장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "형상 추종 · 고정 기준"
+    },
+    {
+      "name": "plain_lagrange_auto",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0013",
+      "historyCount": "12장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "후속 기판 검증 통과"
+    },
+    {
+      "name": "accumulation_lot",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0025",
+      "historyCount": "24장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "변화가 작음",
+      "tuneState": "현재 설정 유지"
+    },
+    {
+      "name": "model_b_isolated",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-B-0001",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "데이터 모으는 중"
+    },
+    {
+      "name": "model_b_accumulation",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-B-0013",
+      "historyCount": "12장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "후속 기판 검증 통과"
+    },
+    {
+      "name": "model_a_history_preserved",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0025",
+      "historyCount": "24장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "변화가 작음",
+      "tuneState": "현재 설정 유지"
+    },
+    {
+      "name": "imaging_version_change_blocks",
+      "capacity": "곡률 추정",
+      "chuckState": "촬영 조건 변경",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0049",
+      "historyCount": "24장 누적 · 현재 조건만",
+      "message": "촬영 조건 변경 · 원측정 확인 전에는 보정 후보를 활성화하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "보정 후보 보류",
+      "tuneState": "원측정 확인 대기"
+    },
+    {
+      "name": "missing_key_blocks",
+      "capacity": "곡률 추정",
+      "chuckState": "Key·촬영 위치·기판·Attempt 확인 필요",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0049",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "Key·촬영 위치·기판·Attempt 확인 필요 · 원측정 확인 전에는 보정 후보를 활성화하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "보정 후보 보류",
+      "tuneState": "원측정 확인 대기"
+    },
+    {
+      "name": "raw_chuck_ng",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 재확인",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0049",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "척킹 재확인 · 원측정 확인 전에는 보정 후보를 활성화하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "보정 후보 보류",
+      "tuneState": "원측정 확인 대기"
+    },
+    {
+      "name": "ng_not_hidden_by_gentle",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 재확인",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0049",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "척킹 재확인 · 원측정 확인 전에는 보정 후보를 활성화하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "보정 후보 보류",
+      "tuneState": "안정 우선 · 고정 기준"
+    },
+    {
+      "name": "hidden_between_keys",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0049",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "데이터 모으는 중"
+    },
+    {
+      "name": "new_two_key_recipe_reference_pending",
+      "capacity": "관측점 추세만",
+      "chuckState": "기준 pixel 등록 대기",
+      "currentGlass": "현재 가상 기판 · QA-RECIPE-0001",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "기준 pixel 등록 대기 · 원측정 확인 전에는 보정 후보를 활성화하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "보정 후보 보류",
+      "tuneState": "원측정 확인 대기"
+    },
+    {
+      "name": "reference_confirmed_new_version",
+      "capacity": "관측점 추세만",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · QA-RECIPE-0001",
+      "historyCount": "0장 누적 · 현재 조건만",
+      "message": "카메라당 한 점만 있어 그 Y 위치의 관측과 누적 추세만 표시합니다. 구간 보간·곡률 최적화는 하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "벗어남이 줄어듦",
+      "tuneState": "데이터 모으는 중"
+    },
+    {
+      "name": "manual_without_repeat_tuning_held",
+      "capacity": "관측점 추세만",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "기록한 실측 · QA-MANUAL-001",
+      "historyCount": "1장 누적 · 현재 조건만",
+      "message": "카메라당 한 점만 있어 그 Y 위치의 관측과 누적 추세만 표시합니다. 구간 보간·곡률 최적화는 하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "독립 결과 측정 대기",
+      "tuneState": "검증 촬영 대기"
+    },
+    {
+      "name": "glass_id_resolves_recipe_snapshot",
+      "capacity": "관측점 추세만",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "기록한 실측 · QA-MANUAL-001",
+      "historyCount": "1장 누적 · 현재 조건만",
+      "message": "카메라당 한 점만 있어 그 Y 위치의 관측과 누적 추세만 표시합니다. 구간 보간·곡률 최적화는 하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "독립 결과 측정 대기",
+      "tuneState": "검증 촬영 대기"
+    },
+    {
+      "name": "persisted_manual_history_reopened",
+      "capacity": "관측점 추세만",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "기록한 실측 · QA-MANUAL-001",
+      "historyCount": "1장 누적 · 현재 조건만",
+      "message": "카메라당 한 점만 있어 그 Y 위치의 관측과 누적 추세만 표시합니다. 구간 보간·곡률 최적화는 하지 않습니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "독립 결과 측정 대기",
+      "tuneState": "검증 촬영 대기"
+    },
+    {
+      "name": "final_incremental_batch_sixty_glasses",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0085",
+      "historyCount": "60장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "현재 설정 유지"
+    },
+    {
+      "name": "final_clean_example_sixty_glasses",
+      "capacity": "곡률 추정",
+      "chuckState": "척킹 관측 정상",
+      "currentGlass": "현재 가상 기판 · MODEL-A-0061",
+      "historyCount": "60장 누적 · 현재 조건만",
+      "message": "두 카메라에서 각각 세 점의 Y 방향 변형을 추정합니다. 측정 구간 밖은 회색으로 남깁니다. 실제 장비로 이동량을 전송하지 않는 검토 화면입니다.",
+      "outcome": "목표에 가까워짐",
+      "tuneState": "현재 설정 유지"
+    }
+  ],
+  "checks": {
+    "charts": 6,
+    "numeric_tuning_sliders": 0,
+    "console_errors_or_warnings": 0,
+    "manual_data": "Synthetic pixels entered through manual path for QA, not actual camera data. QA state was isolated from final example storage.",
+    "recipe": "2-key physical recipe, version increment, absent reference blocks, historical Glass ID lookup and persisted manual history reopens",
+    "final_example": "Sixty synthetic boards; same-camera example Align/Distortion X positions coincide for Y-only scan; final recipe and data namespaces isolated from QA.",
+    "batch": "Incremental 12-board addition verified after removing full-history rebuild for each added board."
+  },
+  "scope": "Observed viewport and stated interactions only; no hardware, machine command, physical reconstruction or real processing accuracy test."
+}
