@@ -24,5 +24,5 @@ assert errors['right_orthogonality']<1e-10,errors
 assert errors['left_orthogonality']<1e-10,errors
 assert errors['smooth_solution_absolute']<1e-8,errors
 report={'status':'passed','verified_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'javascript_assertions':data['checks'],'independent_reference_cases':len(data['fixtures']),'node':subprocess.check_output([args.node,'--version'],text=True).strip(),'numpy':np.__version__,'maximum_errors':errors,'metrics_definition':'RMS = sqrt(mean(dx^2+dy^2)) on 17 x 31 synthetic grid, in estimated Fine-aligned common frame; grid is not a full continuous maximum bound.','scenarios':data['scenarios'],'scope':'Numerical prototype only. No measured substrate, machine integration, processing accuracy, optimal lambda/k, or performance benchmark verified.','sha256':{name:hashlib.sha256((base/name).read_bytes()).hexdigest() for name in ['engine.js','ui.js','A3_LD_Distortion_Key_Development_Scenario.html']}}
-(base/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+(base/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
 print(json.dumps({k:v for k,v in report.items() if k not in ['scenarios','sha256']},ensure_ascii=False,indent=2))
