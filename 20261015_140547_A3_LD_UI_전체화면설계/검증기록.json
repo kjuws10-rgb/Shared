@@ -1,0 +1,866 @@
+{
+  "generatedAt": "2026-10-15T05:00:57.792Z",
+  "type": "UI 설계안 / 예시 데이터",
+  "sourceCommit": "0c501c104dec1cebab87bd909de29b1b1395a8b4",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS",
+  "sourceUnchanged": true,
+  "coreScreens": 58,
+  "dialogs": 14,
+  "guides": 2,
+  "pngCount": 74,
+  "requirements": 295,
+  "activeMapped": 294,
+  "deleted": [
+    180
+  ],
+  "missingRequirements": [],
+  "customerReviewNotes": 28,
+  "missingReviewNotes": [],
+  "layoutAudit": [],
+  "images": [
+    {
+      "id": "00",
+      "width": 3840,
+      "height": 2560,
+      "size": 404949
+    },
+    {
+      "id": "00B",
+      "width": 3840,
+      "height": 2560,
+      "size": 352805
+    },
+    {
+      "id": "A01",
+      "width": 3840,
+      "height": 2160,
+      "size": 460782
+    },
+    {
+      "id": "A02",
+      "width": 3840,
+      "height": 2560,
+      "size": 474306
+    },
+    {
+      "id": "A03",
+      "width": 3840,
+      "height": 2560,
+      "size": 461192
+    },
+    {
+      "id": "A04",
+      "width": 3840,
+      "height": 2560,
+      "size": 493922
+    },
+    {
+      "id": "A05",
+      "width": 3840,
+      "height": 2560,
+      "size": 503819
+    },
+    {
+      "id": "A06",
+      "width": 3840,
+      "height": 2560,
+      "size": 473923
+    },
+    {
+      "id": "A07",
+      "width": 3840,
+      "height": 2560,
+      "size": 489584
+    },
+    {
+      "id": "A08",
+      "width": 3840,
+      "height": 2560,
+      "size": 477028
+    },
+    {
+      "id": "M01",
+      "width": 3840,
+      "height": 2560,
+      "size": 516031
+    },
+    {
+      "id": "M02",
+      "width": 3840,
+      "height": 2560,
+      "size": 518562
+    },
+    {
+      "id": "M03",
+      "width": 3840,
+      "height": 2560,
+      "size": 496071
+    },
+    {
+      "id": "M04",
+      "width": 3840,
+      "height": 2560,
+      "size": 505536
+    },
+    {
+      "id": "M05",
+      "width": 3840,
+      "height": 2560,
+      "size": 619338
+    },
+    {
+      "id": "M06",
+      "width": 3840,
+      "height": 2560,
+      "size": 556021
+    },
+    {
+      "id": "M07",
+      "width": 3840,
+      "height": 2560,
+      "size": 555112
+    },
+    {
+      "id": "M08",
+      "width": 3840,
+      "height": 2560,
+      "size": 517806
+    },
+    {
+      "id": "M09",
+      "width": 3840,
+      "height": 2560,
+      "size": 534781
+    },
+    {
+      "id": "M10",
+      "width": 3840,
+      "height": 2560,
+      "size": 532975
+    },
+    {
+      "id": "M11",
+      "width": 3840,
+      "height": 2560,
+      "size": 493470
+    },
+    {
+      "id": "M12",
+      "width": 3840,
+      "height": 2560,
+      "size": 554526
+    },
+    {
+      "id": "R01",
+      "width": 3840,
+      "height": 2560,
+      "size": 547916
+    },
+    {
+      "id": "R02",
+      "width": 3840,
+      "height": 2560,
+      "size": 535764
+    },
+    {
+      "id": "R03",
+      "width": 3840,
+      "height": 2560,
+      "size": 597557
+    },
+    {
+      "id": "R04",
+      "width": 3840,
+      "height": 2560,
+      "size": 555395
+    },
+    {
+      "id": "R05",
+      "width": 3840,
+      "height": 2560,
+      "size": 591109
+    },
+    {
+      "id": "R06",
+      "width": 3840,
+      "height": 2560,
+      "size": 566734
+    },
+    {
+      "id": "R07",
+      "width": 3840,
+      "height": 2560,
+      "size": 574732
+    },
+    {
+      "id": "R08",
+      "width": 3840,
+      "height": 2560,
+      "size": 558956
+    },
+    {
+      "id": "R09",
+      "width": 3840,
+      "height": 2560,
+      "size": 520948
+    },
+    {
+      "id": "R10",
+      "width": 3840,
+      "height": 2560,
+      "size": 580345
+    },
+    {
+      "id": "R11",
+      "width": 3840,
+      "height": 2560,
+      "size": 493669
+    },
+    {
+      "id": "R12",
+      "width": 3840,
+      "height": 2560,
+      "size": 520964
+    },
+    {
+      "id": "R13",
+      "width": 3840,
+      "height": 2560,
+      "size": 530322
+    },
+    {
+      "id": "R14",
+      "width": 3840,
+      "height": 2560,
+      "size": 567106
+    },
+    {
+      "id": "R15",
+      "width": 3840,
+      "height": 2560,
+      "size": 523412
+    },
+    {
+      "id": "R16",
+      "width": 3840,
+      "height": 2560,
+      "size": 621860
+    },
+    {
+      "id": "R17",
+      "width": 3840,
+      "height": 2560,
+      "size": 554835
+    },
+    {
+      "id": "S01",
+      "width": 3840,
+      "height": 2560,
+      "size": 530993
+    },
+    {
+      "id": "S02",
+      "width": 3840,
+      "height": 2560,
+      "size": 504975
+    },
+    {
+      "id": "S03",
+      "width": 3840,
+      "height": 2560,
+      "size": 531993
+    },
+    {
+      "id": "S04",
+      "width": 3840,
+      "height": 2560,
+      "size": 518186
+    },
+    {
+      "id": "S05",
+      "width": 3840,
+      "height": 2560,
+      "size": 528312
+    },
+    {
+      "id": "S06",
+      "width": 3840,
+      "height": 2560,
+      "size": 532465
+    },
+    {
+      "id": "S07",
+      "width": 3840,
+      "height": 2560,
+      "size": 548823
+    },
+    {
+      "id": "S08",
+      "width": 3840,
+      "height": 2560,
+      "size": 535871
+    },
+    {
+      "id": "S09",
+      "width": 3840,
+      "height": 2560,
+      "size": 529216
+    },
+    {
+      "id": "S10",
+      "width": 3840,
+      "height": 2560,
+      "size": 552086
+    },
+    {
+      "id": "S11",
+      "width": 3840,
+      "height": 2560,
+      "size": 560341
+    },
+    {
+      "id": "S12",
+      "width": 3840,
+      "height": 2560,
+      "size": 543133
+    },
+    {
+      "id": "S13",
+      "width": 3840,
+      "height": 2560,
+      "size": 537845
+    },
+    {
+      "id": "N01",
+      "width": 3840,
+      "height": 2560,
+      "size": 530300
+    },
+    {
+      "id": "N02",
+      "width": 3840,
+      "height": 2560,
+      "size": 514059
+    },
+    {
+      "id": "N03",
+      "width": 3840,
+      "height": 2560,
+      "size": 514704
+    },
+    {
+      "id": "N04",
+      "width": 3840,
+      "height": 2560,
+      "size": 523545
+    },
+    {
+      "id": "N05",
+      "width": 3840,
+      "height": 2560,
+      "size": 518828
+    },
+    {
+      "id": "N06",
+      "width": 3840,
+      "height": 2560,
+      "size": 542038
+    },
+    {
+      "id": "N07",
+      "width": 3840,
+      "height": 2560,
+      "size": 506231
+    },
+    {
+      "id": "N08",
+      "width": 3840,
+      "height": 2560,
+      "size": 508927
+    },
+    {
+      "id": "D01",
+      "width": 3840,
+      "height": 2560,
+      "size": 399971
+    },
+    {
+      "id": "D02",
+      "width": 3840,
+      "height": 2560,
+      "size": 363284
+    },
+    {
+      "id": "D03",
+      "width": 3840,
+      "height": 2560,
+      "size": 373816
+    },
+    {
+      "id": "D04",
+      "width": 3840,
+      "height": 2560,
+      "size": 408264
+    },
+    {
+      "id": "D05",
+      "width": 3840,
+      "height": 2560,
+      "size": 432735
+    },
+    {
+      "id": "D06",
+      "width": 3840,
+      "height": 2560,
+      "size": 413080
+    },
+    {
+      "id": "D07",
+      "width": 3840,
+      "height": 2560,
+      "size": 401956
+    },
+    {
+      "id": "D08",
+      "width": 3840,
+      "height": 2560,
+      "size": 415513
+    },
+    {
+      "id": "D09",
+      "width": 3840,
+      "height": 2560,
+      "size": 403980
+    },
+    {
+      "id": "D10",
+      "width": 3840,
+      "height": 2560,
+      "size": 401335
+    },
+    {
+      "id": "D11",
+      "width": 3840,
+      "height": 2560,
+      "size": 410024
+    },
+    {
+      "id": "D12",
+      "width": 3840,
+      "height": 2560,
+      "size": 413166
+    },
+    {
+      "id": "D13",
+      "width": 3840,
+      "height": 2560,
+      "size": 420038
+    },
+    {
+      "id": "D14",
+      "width": 3840,
+      "height": 2560,
+      "size": 425632
+    }
+  ],
+  "reviewRounds": 10,
+  "methods": [
+    "전페이지 자동 검사",
+    "요구사항·고객리뷰 대조",
+    "전체 축소판 시각 검토",
+    "주요 원본 가독성 검토"
+  ],
+  "inlineAutoDetails": 2,
+  "nonAutoConfirmDialogs": 12,
+  "autoSinglePage": true,
+  "nonAutoContinuousWorkspaces": true,
+  "actualFontMeasurement": "Malgun Gothic regular / bold",
+  "sourceVerification": {
+    "head": "0c501c104dec1cebab87bd909de29b1b1395a8b4",
+    "pushUrl": "DISABLED",
+    "porcelain": "",
+    "verifiedAt": "2026-10-15T05:02:31.218Z"
+  },
+  "finalRasterDecode": [
+    {
+      "id": "00",
+      "sha256": "103937eb77126e78821566c3983704fe5419d0be5035ec94a439bd0dc03da3f3",
+      "rasterDecoded": true
+    },
+    {
+      "id": "00B",
+      "sha256": "52537d7bbe38639c6d4e2a67134638e3a9a6385c5b7ebca84e3ebc60db2ff914",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A01",
+      "sha256": "100678a4128933a59f196aa344ffa9f627374cca86d381870ca64c747f49c3c5",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A02",
+      "sha256": "39d152ac16729cc57dc113988644969ce419dab9463cef02f92dac8f9278822d",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A03",
+      "sha256": "dd3f9702c4cad9a4a63c59716fcc04c1c2b178d0699be880a26e1a65a0a2dd04",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A04",
+      "sha256": "ad2f3bbdb25bb38e79834e4ab1054c44cfd8f961fe2eec3aad979012f91dac37",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A05",
+      "sha256": "02d0ec3b5873cc2dfc93e46151f54390a39c72c6bf08933c2daae1c4d2ff6dcd",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A06",
+      "sha256": "ee24ef482d539c456559a7ad02107af98323a1d3ec0e2fabbe09b999a5778bf4",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A07",
+      "sha256": "26fee4da052fb4b06cfc6d4248797911449db9b1f0bf0ecae2d70d3dcaba6cdc",
+      "rasterDecoded": true
+    },
+    {
+      "id": "A08",
+      "sha256": "14cc10a8174af9bc75fc782ac4367c86c8331dbbd972a0b61e86e043dd847090",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M01",
+      "sha256": "5884f6f490dfb6fe3877a37eff5ad756b29559d308f164fb65eefb440cb5c43b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M02",
+      "sha256": "8a3a17e210aa4bdc27930680c411949948adaf65f3e0f1fb6238fdb6197a3fc1",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M03",
+      "sha256": "b76e9eff754bb6cc474459598f0cb871c0852560f14d67fc5c18bb453453eaf7",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M04",
+      "sha256": "a6670bd226d1e6b5b120f2a142dd8128785ad62316a8d17fec04748d1c381eb6",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M05",
+      "sha256": "c96c8d7bfa1dea94ba525bb355c450049b5f2c95ecdf57c47e66898316868774",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M06",
+      "sha256": "41f987d33560258a6d20bcf34cc0c96c84cb16681e8301178a3a5961ac8732d2",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M07",
+      "sha256": "39d5974dc0ebadb32cc0ee324e224813fdc76e6dd3b2d07db5683f7fa31d1146",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M08",
+      "sha256": "53c5809dc0f5e1b06f1daf9d13fb35b6ed3341979a853ba910ecea53b371dd54",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M09",
+      "sha256": "14f391dd0ddd21a3b2bbc03bba06e5a32c136ef22379290d09f4e869afc3649f",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M10",
+      "sha256": "b5f90f827f956d68efe14c2edb43621755208ce003b50b785662d30a86b22d7f",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M11",
+      "sha256": "e4b38b70617fd951164292f3521e2e95edfa5aa1f39f414334a8b409d04d1392",
+      "rasterDecoded": true
+    },
+    {
+      "id": "M12",
+      "sha256": "c7565692f60b21c948182941722eedc6d8d288814e2a3483b3a8aa95a4107cfd",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R01",
+      "sha256": "7fc81bbf2a0c9600c5649d2c72cbfb9d3eb01898a7b9f9ed83c2517b5491db4c",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R02",
+      "sha256": "956e20dd62585771bd157e5db51ad55ae12c2bc370395e62ccebc8a8ef4df870",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R03",
+      "sha256": "15efce5d4bbf56ccc590bb468b0ca02fd6d5630fd6a356c4f6ad4bbe4e4843c6",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R04",
+      "sha256": "e501c056477ac02085c83376928b9b8df12ce1065dbbae588abfdbe31a85a39a",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R05",
+      "sha256": "727d15ea7e3bf2474e2ac55b8ce83ed07a8ca1df23b8e9a7ea58a9a3753060d0",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R06",
+      "sha256": "8c231b3b69b47244a0b61b1cab7854096202ef32a631edc9c56d8629f852a375",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R07",
+      "sha256": "4ca0ff37b30c9b81889fceca097a82d4b0cd685c2cda75d48bec93c390a844c5",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R08",
+      "sha256": "ca718d2a5aff657fa8a3439a29f7c80fbe555d59fe8b12db2e6824d2c0e9aa0c",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R09",
+      "sha256": "25815660e9c7fc9967dc245f612865e44ada3a5ab2010cd2b9656272e626e805",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R10",
+      "sha256": "79f63b3e950a4bc8257600024eca389d10b30c0ce46c6a776ee7364bf2fe67e9",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R11",
+      "sha256": "4b83a4c4ae65aeb69afb1ae190a003c736f782768304097e23bf44910f68ccd1",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R12",
+      "sha256": "cfeb5b49acdd3c22aff89473fc9d061f35f8934f30287944ebded0177883b1ab",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R13",
+      "sha256": "1ee4da1a9f5d8c353413c340a71e9921335963bcb3651ecb47cc90622f23af1b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R14",
+      "sha256": "6848f0f92ae5802bddaa906f4d8983fb1e38b5e4d367c84d251f390468b76a91",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R15",
+      "sha256": "883543c6bef2133b056c98d151feb921b38eaaca7127564dd54768d1aab5229c",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R16",
+      "sha256": "8b3cd6fd530faddc465f9d006cdafb39990bbee6e562f643b9777869fe23bbba",
+      "rasterDecoded": true
+    },
+    {
+      "id": "R17",
+      "sha256": "e3cc779576bacf6441a48b75829f5d1930e78751df2d69a628a51187ef7cbdd7",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S01",
+      "sha256": "2b19cb1d0d5aca621f493e16c6ebe138981e59736a79ba4fba46a4536424fa29",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S02",
+      "sha256": "8e664e0ba3a5f6515a8480065b2420d4b8b28cf5fca8ea9df4d8f82f106c85c8",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S03",
+      "sha256": "e12f058e731303e499da01f3efce041d8d2ddb52d9c005397b5664139acb0a7b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S04",
+      "sha256": "554338c8ed8433c55086690440a26c0c53e8f1b529dbd510b61c650719851b51",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S05",
+      "sha256": "94b8bfdcb551187f58ec0f2e59270048458f714bbdbe7ca3048f3a9cd1976f32",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S06",
+      "sha256": "81258387140ff5a27798cbc577f0e21a31cacc90cb3881f1d804619d03f01c28",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S07",
+      "sha256": "f8c468fd10ad981f420b98b3e76a417103d5403a1c9bbcf68da44c115eb3ebd0",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S08",
+      "sha256": "7233064ede8e198d0a0017d9aa7895145ce56a68ac8cc16fedce1b1d789d8115",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S09",
+      "sha256": "dddc422b9b7516e9698269a1e76becfc3208094bc252f523c47352abe94e3120",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S10",
+      "sha256": "275b6f4cadedba20f6dc667a0b66e4ef14631c638b99f4ae7fd6fa54aff856b5",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S11",
+      "sha256": "24f5bac10b9e7ad3c8748101b18384864ec9cd9677adb23b1cd653c73aaeda1c",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S12",
+      "sha256": "6c030d6c9878981a272e9fb0283c23141d06663622303de74049b1d34bda9cd5",
+      "rasterDecoded": true
+    },
+    {
+      "id": "S13",
+      "sha256": "947066a3ae73051b559d8f0622288f70794cbe5eddd73d52211260292186bb1b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N01",
+      "sha256": "f2198bcb2b427759e56064a1dfd9ecb99a815e960b11a8f2b2b88b0873535059",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N02",
+      "sha256": "fb1aa821bc31fa8e6d1f3816766c67e7fc1fc256c43c96bc249944f4e7ba0a35",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N03",
+      "sha256": "5de07bf982791330d250a282bb68c292a08eb1471980f23bd7678c53d29fb004",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N04",
+      "sha256": "1c764a585cd284416a370069b3cd06214e5debdcfed02539523d185039867824",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N05",
+      "sha256": "e4d1aee9343da9e67cdc9d093036249b8ff013545fe65e70e9adabd320b41990",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N06",
+      "sha256": "e57edaaa6e83bd2fbb8415a561d587b90668eb4146d7d6d048bf580d2c912847",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N07",
+      "sha256": "8ad26a75cf7bbdd2cbc612de436ec37a11a50784e0c17669318fd7523b0d640f",
+      "rasterDecoded": true
+    },
+    {
+      "id": "N08",
+      "sha256": "ba441e1181bf4ae12e089a7533ace41570cce74f9ff6adc40116af76ad57bf2b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D01",
+      "sha256": "de98d052168e668f5a005b2a3065d6984e294ef579516d69bfceb4902f6a03ad",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D02",
+      "sha256": "ea44566d47abbd9b146ee091193e4c79b1a8f3b2f6a80e4135a7e90629456898",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D03",
+      "sha256": "17a371f682f1e5558843f7ceca00567ab5048273d5819a54dce52425a70fc97a",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D04",
+      "sha256": "04f3d59d16c4c512d1f8a337f5e0f4d9d4aab915f89f0469d7556eefb37948fa",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D05",
+      "sha256": "3bf027bc382f52366a26b08292e0fd0b783c06c39f984de81a106ac9b0564007",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D06",
+      "sha256": "9b12154ef5c647a0fb88e47fd4e0a356c9bbe5e1e7e2de37e671132ed69a694b",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D07",
+      "sha256": "fd5b7a02a94e1b02d802eb4a10feda93ba98bbc8f61f7f5c9c4158b703846047",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D08",
+      "sha256": "5872ef4b7897282cf066d6ec0c68001ee3b227d485b82c9a8077cad3ec208e03",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D09",
+      "sha256": "0862b5534d2b15ee438faeacc5842c1edc0c27f5e5404dc6dacad43f23a54882",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D10",
+      "sha256": "854236eaf3d91a0da4377a9a95e40913fdb68e0eac86b2be76179cd017379779",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D11",
+      "sha256": "cc2d3e9fcd5aca959e9a0ce16b7cde0bd574141989ede867a27a937a74150bfa",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D12",
+      "sha256": "9d60589caf80b6c1ee9540a281d04405464418c69c6f699a88e2e0717b78ccb7",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D13",
+      "sha256": "a104f15f6a403d21b1d66394251567dd78710c55e51cf2724e81adeb33f4aecc",
+      "rasterDecoded": true
+    },
+    {
+      "id": "D14",
+      "sha256": "eccb862c2519545d80a33021fc1e8562f9f11432134c5d58a07ec93c1d5d6ee4",
+      "rasterDecoded": true
+    }
+  ],
+  "internalLinks": {
+    "checked": true,
+    "broken": 0,
+    "htmlFiles": 5
+  },
+  "zipValidation": {
+    "crc32Passed": true,
+    "pngCount": 74,
+    "allPngHashesMatch": true
+  }
+}
