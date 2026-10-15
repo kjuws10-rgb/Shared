@@ -1,0 +1,20 @@
+{
+  "javascript_syntax": "passed",
+  "lagrange_nodes_and_midpoints": [
+    0,
+    3,
+    4,
+    3,
+    0
+  ],
+  "curvature_singular_value": [
+    2.449489742783178
+  ],
+  "nullspace_projection": [
+    2.0,
+    2.0,
+    2.0
+  ],
+  "lesson_count": 7,
+  "scope": "education only; no hardware validation"
+}

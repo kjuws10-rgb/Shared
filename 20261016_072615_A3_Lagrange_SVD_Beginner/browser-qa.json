@@ -1,0 +1,16 @@
+{
+  "documentWidth": 675,
+  "prediction": "위쪽과 가운데의 중간 지점은 3 pixel로 추정됩니다. 카메라가 직접 측정한 값은 아닙니다.",
+  "svgHasNaN": false,
+  "viewportWidth": 690,
+  "visibleLesson": "1",
+  "interactionsChecked": [
+    "seven lesson navigation",
+    "interpolation prediction",
+    "alternate truth scenario",
+    "curvature smoothing comparison",
+    "6/4/2 key table",
+    "quiz answer disclosure"
+  ],
+  "consoleWarningsOrErrors": []
+}
