@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-17",
+  "folder": "20261017_084558_A3_DoReady",
+  "scenario": "DoReady only, user eight-step flow",
+  "scenarioSteps": 8,
+  "evaluationItems": 24,
+  "taskRecords": 8,
+  "initialVerdicts": {
+    "미평가": 32
+  },
+  "verification": "Document/workbook/visual verification only. No equipment test.",
+  "zipMembersVerified": 2,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_DoReady_20261017.zip",
+      "bytes": 11439,
+      "sha256": "24b26fe96c7e4462eff8f9c61fc0e0aff2cb227b7619488c9fc56edc4a474a58"
+    },
+    {
+      "name": "A3_DoReady_가공SW_시나리오_평가체크리스트.xlsx",
+      "bytes": 10969,
+      "sha256": "2ff0b8dad6d08f62a581047e8b65631f9fb132686427cc7a73ae248e22d3cac1"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1467,
+      "sha256": "2715bd99a1014b157bb68f355dc09bd0092194bb5df0047677f41710b2269380"
+    }
+  ]
+}
