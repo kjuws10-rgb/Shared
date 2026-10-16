@@ -29,4 +29,4 @@ Excel 보존
 
 파일 확인
 share-manifest.json에 파일별SHA256과 공유구성을 기록했습니다. ZIP에는 본문HTML,Excel,변수CSV,쟁점CSV,검증JSON,안내TXT 6개가 포함됩니다.
-interface-preview.png는 HTML 첫화면입니다.
+interface-preview.jpg는 HTML 첫화면입니다.
