@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-16",
+  "folder": "20261016_151019_A3_Process_Interface",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS",
+  "sourceCommit": "0c501c104dec1cebab87bd909de29b1b1395a8b4",
+  "scope": "가공SW인터페이스문서·Comment복사본·파일/화면검증.실장비검증아님.",
+  "shareMetadataChanges": [
+    "검증JSON report.html을파일명으로변경",
+    "검증JSON workbook.output을파일명으로변경",
+    "검증JSON browserChecks.url을local preview안내로변경",
+    "공유ZIP은위검증JSON으로재패키징;본문HTML/Excel/CSV/안내TXT보존"
+  ],
+  "zipMembersVerified": 6,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 52,
+      "sha256": "50037b9fb6776cd078698909cfea402a2078936c11796eae6058eae6a2541c75"
+    },
+    {
+      "name": "A3_LD_MelsecNetG_Spec_Ver0.04_가공Comment보강.xlsx",
+      "bytes": 3948639,
+      "sha256": "7b93a5c349c01f91322785e5c5215be9d6473d7c6607acd2d632244eb6690657"
+    },
+    {
+      "name": "A3_가공SW_변수별_입력데이터_상세.csv",
+      "bytes": 1760400,
+      "sha256": "f2b1bf86278743a328afa8dab53d07c10d842818e2bdde61e17bd4535c20cfc8"
+    },
+    {
+      "name": "A3_가공SW_인터페이스_상세자료_20261016.zip",
+      "bytes": 3789800,
+      "sha256": "a0ae96a13f171f29be70f63d49d59be1f6ccd53999bc9eabdd798bb060c1a428"
+    },
+    {
+      "name": "A3_가공SW_인터페이스_시나리오_상세서.html",
+      "bytes": 3456383,
+      "sha256": "7185ba9f906f8a7a70b194f0017bfe04339fe2243f621ced5df6af209526e6b9"
+    },
+    {
+      "name": "A3_검증범위와결과.json",
+      "bytes": 5604,
+      "sha256": "ebbfd7a531b4bfcc18ba7b48cf2421bbc85d022554d4925b929a6e49c85e5529"
+    },
+    {
+      "name": "A3_인터페이스_확인필요_쟁점.csv",
+      "bytes": 20867,
+      "sha256": "0a4f8db1aa88557aad169bcf8051859b7344dfca0cbb6f5b3a49bf0382673be1"
+    },
+    {
+      "name": "interface-preview.png",
+      "bytes": 119596,
+      "sha256": "d241e727a56da66e10a23fd4742c6e29fdbbc532f25447cb6460d4b239e65fb3"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2432,
+      "sha256": "dca897d8d1185f9beb0803255075700af4685aeb874355d0b3acd1d9e38409b5"
+    },
+    {
+      "name": "먼저읽어주세요.txt",
+      "bytes": 1871,
+      "sha256": "8fc166af73a2e342007a4d7ae043052af2f5b9f707ec832d27e40ba22dfef718"
+    }
+  ]
+}
