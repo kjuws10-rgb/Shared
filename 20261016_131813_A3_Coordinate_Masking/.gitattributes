@@ -1,0 +1,6 @@
+*.html -text
+*.json -text
+*.txt text eol=lf
+.gitattributes text eol=lf
+*.zip binary
+*.jpg binary
