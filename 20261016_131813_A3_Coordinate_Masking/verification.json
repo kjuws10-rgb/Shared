@@ -1,0 +1,36 @@
+{
+  "source_version": "2026-09-30 assigned-head evaluation",
+  "restored_source_files": 4,
+  "javascript_scripts_syntax_checked": 6,
+  "generated_csv_records": 20740,
+  "compared_fields": [
+    "Head",
+    "SequenceNo",
+    "Cell",
+    "GY",
+    "GX_STAGE",
+    "LaserGate",
+    "MaskReason"
+  ],
+  "all_records_match_archived_result": true,
+  "laser_gate_counts": {
+    "OFF": 1215,
+    "ON": 19525
+  },
+  "masking_off_records_preserved": 1215,
+  "head1_count": 2380,
+  "archived_evaluation": {
+    "generated": 21420,
+    "excludedUnassigned": 680,
+    "output": 20740,
+    "on": 19525,
+    "off": 1215,
+    "head1ExpectedMatches": 71,
+    "head1Count": 2380,
+    "units": "mm",
+    "firstColumn": "GY",
+    "secondColumn": "GX_STAGE",
+    "note": "미배정만 제외. 배정 Head 안의 Masking Off 좌표와 Head별 원순번 유지. 명령표는 제어기 독립 데이터."
+  },
+  "scope": "restoration and simulation reproduction only; no equipment or machining validation"
+}

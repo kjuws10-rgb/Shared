@@ -1,0 +1,30 @@
+{
+  "source_commit": "cdc2c3a7685d325b3f9ff28b8b4465eb7d8a0a39",
+  "source_repository": "https://github.com/kjuws10-rgb/Shared",
+  "files": [
+    {
+      "path": "20260930_200349/Cell모델별_Masking_시뮬레이션.html",
+      "name": "Cell모델별_Masking_시뮬레이션.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "path": "20260930_200349/Cell모델별_Masking_전체최종보고서.html",
+      "name": "Cell모델별_Masking_전체최종보고서.html",
+      "bytes": 202302,
+      "sha256": "0a899ee97515b03a9481792382fa5b68c9f6f1f04405ff8896b277ad012e4291"
+    },
+    {
+      "path": "20260930_200349/평가결과_배정좌표20740건.zip",
+      "name": "평가결과_배정좌표20740건.zip",
+      "bytes": 175792,
+      "sha256": "006710af61772e3e75946fb80931e76836912c78bec81271ce56a66e1d27b604"
+    },
+    {
+      "path": "20260930_200349/평가조건_864x512_Pitch30_레시피.json",
+      "name": "평가조건_864x512_Pitch30_레시피.json",
+      "bytes": 12711,
+      "sha256": "399f9414b170fe125cdbac9e02e89e86f1dd67640557f2c501479afa98e6d15f"
+    }
+  ]
+}
