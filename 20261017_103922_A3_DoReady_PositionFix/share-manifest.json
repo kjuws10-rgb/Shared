@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-17",
+  "folder": "20261017_103922_A3_DoReady_PositionFix",
+  "nativeObjects": 41,
+  "absoluteAnchors": 41,
+  "images": 0,
+  "frozenOrSplitPanes": 0,
+  "worksheets": 2,
+  "allSheetsUnfrozen": true,
+  "zipMembers": 2,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 38,
+      "sha256": "bed8dd5efa4ad06d55f9b77e1e5cac5b9864e6150c5daf927d41a99bcf1def0a"
+    },
+    {
+      "name": "A3_DoReady_PositionFix_20261017.zip",
+      "bytes": 15883,
+      "sha256": "a25145d9cfbaf098a7f1ca150c88b98944c4048a1beb34fca8046b6f25fb8fb3"
+    },
+    {
+      "name": "A3_DoReady_배치수정_틀고정없음.xlsx",
+      "bytes": 16080,
+      "sha256": "67507f9358e8fbee28f2bb06672094265671018b04fb9ff3db0f8f4b764f63ac"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1285,
+      "sha256": "ca0922edcfe983994c4ca51273b597a330a51fddf7e1671dca01c689afa26b7b"
+    }
+  ]
+}
