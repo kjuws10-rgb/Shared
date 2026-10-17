@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-17",
+  "folder": "20261017_100744_A3_DoReady_Flowchart",
+  "scenario": "DoReady only, user eight-step flow",
+  "view": "Timing-based flowchart above preserved detailed scenario",
+  "scenarioSteps": 8,
+  "evaluationItems": 24,
+  "taskRecords": 8,
+  "initialVerdicts": {
+    "미평가": 32
+  },
+  "checklistPreserved": true,
+  "diagramImagesInWorkbook": 1,
+  "verification": "Document/workbook/visual verification only. No equipment test.",
+  "zipMembersVerified": 3,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 52,
+      "sha256": "50037b9fb6776cd078698909cfea402a2078936c11796eae6058eae6a2541c75"
+    },
+    {
+      "name": "A3_DoReady_Flowchart_20261017.zip",
+      "bytes": 445035,
+      "sha256": "142e4fb61e418675fa0320ae5bce6618b0414f52d978f6a89045812d5fec0353"
+    },
+    {
+      "name": "A3_DoReady_시나리오_평가표_흐름도.xlsx",
+      "bytes": 228919,
+      "sha256": "bdd207a6e1ab09e1f93bfc8205092c257723676a8617b404ec202be4932f14d9"
+    },
+    {
+      "name": "DoReady_타이밍흐름도.png",
+      "bytes": 235161,
+      "sha256": "7c1c990390c709b2f4c52ca13dac709b6e4ded590e264807f5cfee93b976b71b"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1796,
+      "sha256": "d0d3f496c7d7d7580a87343b8b0a5146558b4b021e5e7f3706b25a953a3cf398"
+    }
+  ]
+}
