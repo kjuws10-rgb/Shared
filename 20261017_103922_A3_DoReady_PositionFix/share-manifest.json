@@ -29,5 +29,7 @@
       "bytes": 1285,
       "sha256": "ca0922edcfe983994c4ca51273b597a330a51fddf7e1671dca01c689afa26b7b"
     }
-  ]
+  ],
+  "microsoftExcelWebVisualCheck": true,
+  "desktopExcelReopenTest": "not performed"
 }
