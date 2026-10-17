@@ -21,18 +21,18 @@
     },
     {
       "name": "A3_IOF_KeepAlive_ACK_20261017.zip",
-      "bytes": 46270,
-      "sha256": "8a192423a8f92bb7b9f3619c2d87344a5fefb2618c995fc39a1dc70368e34a04"
+      "bytes": 46397,
+      "sha256": "a3f40d9a42d9eef53e5f112a3251e5eaf9e1e4cf676789b9268f67588df4f5e6"
     },
     {
       "name": "A3_Process_IOF_ACK_시나리오_통합평가.xlsx",
-      "bytes": 47573,
-      "sha256": "8f43ab52dfa80c2ef4a735ef277a249ac9a502da443d605edeb8fa8908e86d9b"
+      "bytes": 47743,
+      "sha256": "4057dd9f65dd2f76590c1ea7cd3a000bee1bf68f9f48728d81d9a1f99af2c44e"
     },
     {
       "name": "README.txt",
       "bytes": 2773,
-      "sha256": "6cdde9f899179c6597b8f4b7ed3c38de73c7b8e0a2146e137d7943ebcc6fd4e2"
+      "sha256": "d1b4cfb335179d3b3cdf256167e4e1a94fbb689757b92a6075ce7e7e868b6f94"
     }
   ]
 }
