@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-17",
+  "folder": "20261017_144332_A3_IOF_KeepAlive_ACK",
+  "worksheets": 3,
+  "evaluationTabs": 1,
+  "evaluationItems": 84,
+  "initialUnevaluatedVerdicts": 100,
+  "nativeObjects": 148,
+  "ProcessNativeObjects": 107,
+  "absoluteAnchors": 148,
+  "images": 0,
+  "frozenOrSplitPanes": 0,
+  "messageArrows": "solid, labeled sender/receiver/transport",
+  "normal1900": "N sequences, N checks, one at each start",
+  "zipMembers": 2,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 38,
+      "sha256": "bed8dd5efa4ad06d55f9b77e1e5cac5b9864e6150c5daf927d41a99bcf1def0a"
+    },
+    {
+      "name": "A3_IOF_KeepAlive_ACK_20261017.zip",
+      "bytes": 46270,
+      "sha256": "8a192423a8f92bb7b9f3619c2d87344a5fefb2618c995fc39a1dc70368e34a04"
+    },
+    {
+      "name": "A3_Process_IOF_ACK_시나리오_통합평가.xlsx",
+      "bytes": 47573,
+      "sha256": "8f43ab52dfa80c2ef4a735ef277a249ac9a502da443d605edeb8fa8908e86d9b"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2773,
+      "sha256": "6cdde9f899179c6597b8f4b7ed3c38de73c7b8e0a2146e137d7943ebcc6fd4e2"
+    }
+  ]
+}
