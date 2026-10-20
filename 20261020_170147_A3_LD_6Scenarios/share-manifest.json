@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-20",
+  "worksheets": 7,
+  "protectedSheets": [
+    "DoReady",
+    "Process"
+  ],
+  "scenarioSheets": 6,
+  "checklistTabs": 1,
+  "checklistItems": 36,
+  "nativeObjects": 351,
+  "newNativeObjects": 208,
+  "frozenOrSplitPanes": 0,
+  "images": 0,
+  "zipMembers": 2,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 38,
+      "sha256": "bed8dd5efa4ad06d55f9b77e1e5cac5b9864e6150c5daf927d41a99bcf1def0a"
+    },
+    {
+      "name": "A3_LD_6Scenarios_20261020.zip",
+      "bytes": 63188,
+      "sha256": "82e8060dcfda708902d6491f28d41e6f39ca68eb1964b5aed26c8b3d1ee9a1f6"
+    },
+    {
+      "name": "A3_LD_가공SW_6시나리오_통합평가.xlsx",
+      "bytes": 69302,
+      "sha256": "2c0052a15908bd9768d1d12afb95b8b172c717905ebcc314c2c8fd26beb4f8d6"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2071,
+      "sha256": "f78dbcba943f97bf56483150644d869cbf100a6ac50c3bff2d47a1fc5e53a359"
+    }
+  ]
+}
