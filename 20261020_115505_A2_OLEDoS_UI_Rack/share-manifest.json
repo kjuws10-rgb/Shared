@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-20",
+  "folder": "20261020_115505_A2_OLEDoS_UI_Rack",
+  "slideCount": 5,
+  "changedSlides": [
+    1
+  ],
+  "unchangedSlides": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "allOriginalMediaPreserved": true,
+  "files": [
+    {
+      "name": "261020_A2_OLEDoS_ISE_UI_Rack_검토안_v2_회의내용반영.pptx",
+      "bytes": 3829641,
+      "sha256": "abdcaedea1dfb1fc93a1d3cc5b87a8881fb48e5a89281329ae09cbdf29eaf922"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 647,
+      "sha256": "c397a285e26df3b61f264ce5188037f56b85e1099bf75e17bef47410ed92470d"
+    }
+  ]
+}
