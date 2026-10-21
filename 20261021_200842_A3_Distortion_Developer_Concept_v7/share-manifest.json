@@ -1,0 +1,43 @@
+{
+  "authorizedOn": "2026-10-21T20:08:42+09:00",
+  "publication": "User ★ authorized completed v7 Shared publication",
+  "htmlBytesUnchangedFromReviewedOutput": true,
+  "htmlSha256": "477622e430b83a1e42d78833af5186ff2eca8122ef76b1564afb3a649613d625",
+  "scriptSha256": "0ad9499eb8459bc12213dad23cda45c72ae642f3d5ed084e20e5097783c0d503",
+  "content": "Existing SVD-H + actual exposure pose normalization + benchmark delta + side piecewise-linear field",
+  "syntheticExamplesOnly": true,
+  "actualCalibrationDataTested": false,
+  "equipmentTested": false,
+  "previousV6OrProductionCodeModified": false,
+  "priorVerification": {
+    "coordinateChecks": 27,
+    "numericalTests": 28,
+    "numericalAssertions": 11690,
+    "browserChecks": 27,
+    "browserCombinations": 18,
+    "focusedFinalChecks": 8,
+    "versionScope": "Two final wording clarifications only; numerical JS unchanged; historical reports kept locally"
+  },
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "name": "A3_Distortion_Developer_Concept.html",
+      "bytes": 54100,
+      "sha256": "477622e430b83a1e42d78833af5186ff2eca8122ef76b1564afb3a649613d625"
+    },
+    {
+      "name": "A3_Distortion_Developer_Concept_v7_20261021.zip",
+      "bytes": 21638,
+      "sha256": "9cbb985ac1e650c97881a3cc8fb23017300b6764babe346b67441da6a70eee40"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1787,
+      "sha256": "ac4f10866cd28f91a4a623ef118306abd3125746ae0b97d2695c2742f2c6ade8"
+    }
+  ]
+}
