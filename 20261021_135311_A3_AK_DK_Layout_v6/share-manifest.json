@@ -1,0 +1,72 @@
+{
+  "publication": "User ★ authorized Shared publication",
+  "authorizedOn": "2026-10-21T13:53:11+09:00",
+  "version": 6,
+  "payloadUnchanged": true,
+  "payloadFiles": 9,
+  "zipMembers": 9,
+  "originalPackageManifestNote": "file-manifest.json published=false is the preserved local-build creation record; this share-manifest records the later authorized publication.",
+  "layout": "AK1 TL / AK2 BL / AK3 TR / AK4 BR; DK1-3 left top-to-bottom; DK4-6 right top-to-bottom",
+  "exactKeyOffsetsCommonOriginCameraMapping": "illustrative_unconfirmed",
+  "csvRows": 20740,
+  "csvColumns": 38,
+  "actualBrowserVerified": false,
+  "equipmentTested": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 37,
+      "sha256": "e5186e1b475fc8907de56db1eb62b096720c6c5db96590fb5fa7e2ce046a6ee9"
+    },
+    {
+      "name": "A3_Masking_Distortion_AK_DK_v6_20261021.zip",
+      "bytes": 1843168,
+      "sha256": "fe0c2a6b72b45753ad4bbbb3e49dd3175e05ca9ae6f672ade934763c231fdf9e"
+    },
+    {
+      "name": "A3_Masking_Distortion_Easy_Studio.html",
+      "bytes": 134812,
+      "sha256": "9c0d45619c67eb7b0c0d5012a43dbbe79665be42012d1465fd22f572ce098671"
+    },
+    {
+      "name": "A3_Original_Masking_Editor.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "A3_Real_Pixel_Input_TEMPLATE.json",
+      "bytes": 4704,
+      "sha256": "f333e1049e9e2523eeca59cbea7a6f7115950b169dd391bdb68eb8d533f9c2fb"
+    },
+    {
+      "name": "baseline-recipe.json",
+      "bytes": 15789,
+      "sha256": "c3d6cfeec54955abb095a96a3264522c46171d43a6f26a4ca1e9238c85cb60ea"
+    },
+    {
+      "name": "Cell모델별_Masking_시뮬레이션.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "Cell모델별_Masking_전체최종보고서.html",
+      "bytes": 202302,
+      "sha256": "0a899ee97515b03a9481792382fa5b68c9f6f1f04405ff8896b277ad012e4291"
+    },
+    {
+      "name": "DEMO_Masking_Distortion_GY_GX_STAGE.csv",
+      "bytes": 12101713,
+      "sha256": "6b4a85eb90f94f0189b5700bdc8b852097a74927fefa8442a567089cb6edbaa0"
+    },
+    {
+      "name": "file-manifest.json",
+      "bytes": 1923,
+      "sha256": "e384a7c512eaee0eb810a53f42466ba91c317f50ba0edc2ce6c0d932d19af2ec"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3668,
+      "sha256": "24dcbef3bfb8fc7dfbf40a0210fdf6b0384dbfc8395859d97f3024666fe71a56"
+    }
+  ]
+}

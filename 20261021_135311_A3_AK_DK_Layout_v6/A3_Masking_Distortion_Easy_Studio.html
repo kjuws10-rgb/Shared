@@ -1,0 +1,1430 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A3 · 측정점에서 보정 가공좌표까지</title><style>
+:root{--ink:#17384a;--muted:#607784;--blue:#2472bb;--green:#07806f;--orange:#c5761d;--purple:#8651a8;--line:#dce6ed}*{box-sizing:border-box}body{margin:0;background:#f2f6f8;color:var(--ink);font:15px/1.7 'Malgun Gothic',Arial,sans-serif}button,select,input,textarea{font:inherit;color:inherit}button,select,input,textarea{padding:9px 13px;border:1px solid #b8cbd6;border-radius:8px;background:white}button{cursor:pointer}button:hover{background:#e9f4f8}button:disabled{opacity:.5;cursor:default}.primary{background:#143e51;color:white}.primary:hover{background:#21596d}a{color:var(--blue)}:focus-visible{outline:3px solid #eab24e;outline-offset:2px}main{max-width:1200px;margin:auto;padding:26px 22px 55px}header{padding:15px 0 22px}h1{font-size:32px;line-height:1.45;margin:10px 0}h2{font-size:23px;line-height:1.4;margin:0 0 10px}h3{font-size:17px;margin:6px 0}p{margin:8px 0}.small{font-size:12px;color:var(--muted)}.muted{color:var(--muted)}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:24px;margin:18px 0}.two,.three{display:grid;gap:18px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.two>*{min-width:0}.tabs{display:flex;gap:10px}.tabs button{flex:1;padding:14px}button[aria-selected=true]{background:#143e51;color:white}.hide{display:none!important}.steps{display:flex;gap:9px;margin:15px 0}.steps button{flex:1;text-align:left;font-weight:bold}.steps button[aria-pressed=true]{border-color:var(--blue);background:#e9f4fc;color:#15568e}.plot{display:block;width:100%;background:#fbfdfe;border:1px solid var(--line);border-radius:10px}.plot text{font-family:'Malgun Gothic',Arial,sans-serif}.callout{border-left:4px solid var(--green);padding:14px 16px;background:#edf8f4;margin:12px 0}.note{border-left:4px solid var(--orange);padding:12px 16px;background:#fff6e6;font-size:13px;margin:14px 0}.card{padding:15px;border:1px solid var(--line);background:#f6f9fb;border-radius:9px}.card b{display:block}.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:10px 0}.legend i{display:inline-block;width:12px;height:6px;margin-right:5px;vertical-align:middle}.controls{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:15px;margin:15px 0}.controls label{display:block;font-size:12px;color:var(--muted)}.controls select{width:100%}.pill{padding:4px 11px;border-radius:18px;background:#e5f2f7;font-size:12px}.counts{display:flex;gap:14px;flex-wrap:wrap}.counts>div{padding:13px 20px;background:#f0f6f8;border-radius:8px;flex:1;min-width:140px}.counts b{display:block;font-size:22px}.counts small{color:var(--muted)}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{background:#edf4f8}details{border-top:1px solid var(--line);padding-top:12px;margin-top:20px}summary{font-weight:bold;cursor:pointer}.error{color:#a82f45}.file{display:inline-block;cursor:pointer;border:1px solid #b8cbd6;padding:9px 13px;border-radius:8px}.file input{display:none}.formula{white-space:pre-wrap;font:13px/1.8 Consolas,'Malgun Gothic',monospace;background:#edf3f6;padding:14px;border-radius:8px}textarea{width:100%;font:12px/1.5 Consolas,'Malgun Gothic',monospace}footer{font-size:12px;color:var(--muted);text-align:center;padding:15px}input[type=checkbox]{width:auto}li{margin:6px 0}.lead{font-size:19px;line-height:1.7}.legendbox{border:1px solid var(--line);border-radius:9px;padding:12px}
+@media(max-width:800px){.two,.three{grid-template-columns:1fr}.controls{grid-template-columns:1fr 1fr}.controls>div:last-child{grid-column:1/-1}h1{font-size:27px}main{padding:16px}.panel{padding:18px}.steps{flex-direction:column}}
+@media(max-width:480px){main{padding:10px}.panel{padding:14px}.controls{grid-template-columns:1fr}.controls>div:last-child{grid-column:auto}.tabs{flex-direction:column}h1{font-size:24px}}
+</style></head><body><main><header><div class="small">A3 LASER DRILLER · 쉽게 보는 개발 시뮬레이션 v6 · AK/DK 배치 정정</div><h1>측정한 점은 그대로.<br>안쪽 가공점의 위치를 옮깁니다.</h1><p class="muted">기존 Masking 좌표 생성기에 기판 변형 보정을 연결했습니다. 먼저 그림으로 이해하고, 아래에서 보정 전후 좌표를 직접 저장할 수 있습니다.</p></header>
+<div class="tabs" role="tablist" aria-label="작업 화면"><button id="tabLearn" role="tab" aria-selected="true" aria-controls="learn">① 그림으로 이해하기</button><button id="tabMake" role="tab" aria-selected="false" aria-controls="make">② 가공좌표 만들기</button></div>
+<section id="learn" role="tabpanel" aria-labelledby="tabLearn" class="panel"><h2 id="lessonTitle">1. 측정한 점의 위치를 믿습니다</h2><div class="steps" aria-label="이해 순서"><button data-step="0" aria-pressed="true">1 · 측정점 확인</button><button data-step="1" aria-pressed="false">2 · 안쪽 연결</button><button data-step="2" aria-pressed="false">3 · 가공점 이동</button></div><div class="two"><div><svg id="lessonPlot" class="plot" viewBox="0 0 560 450" role="img" aria-label="네 모서리 AK와 좌우 DK의 실제값으로 내부 가공점을 옮기는 세 단계 그림"></svg><div class="legend"><span><i style="background:#d6a235"></i>AK · Align key</span><span><i style="background:#26a56a"></i>DK · Distortion key</span><span><i style="background:#2472bb"></i>원래 가공점</span><span><i style="background:#07806f"></i>보정한 가공점</span></div></div><div><p id="lessonText" class="lead"></p><div id="lessonTakeaway" class="callout"></div><div class="note"><b>지금 설비에서 실제로 보는 곳</b><p>AK는 Align key, DK는 Distortion key입니다. AK1 좌상 / AK2 좌하 / AK3 우상 / AK4 우하, DK1~3 왼쪽 위·중·아래 / DK4~6 오른쪽 위·중·아래입니다. 오른쪽 DK는 AK보다 안쪽에 놓일 수 있습니다. 정확한 간격은 모델별 설계치로 입력합니다.</p></div><div class="row between"><button id="previous">이전</button><button id="next" class="primary">다음 그림</button></div></div></div>
+<details><summary>지금 개발 방향이 맞는가</summary><p><b>방향은 맞습니다.</b> 정상 측정값을 실제 위치로 받아들이고, 그 위치를 만족하는 변형 지도를 만들어 기존 가공점을 옮기는 순서입니다. 다만 10점이 모든 안쪽 위치를 직접 알려주지는 않습니다.</p><p>앞선 설명은 알고리즘 비교가 너무 앞에 있었습니다. 이번에는 <b>기존 가공점이 어떻게 움직이고, 어떤 좌표로 저장되는가</b>를 먼저 보여줍니다. 측정선 사이를 연결한 곳과 바깥으로 예측을 늘린 곳도 구분합니다.</p><p>라그랑주와 면 연결은 둘 다 측정점을 그대로 통과합니다. 측정하지 않은 곳을 잇는 규칙이 다르며, 실제 기판의 어느 쪽이 더 맞는지는 추가 위치의 측정이나 가공 결과로 확인합니다. AK는 모서리 부근, DK는 좌우 측면 부근의 일부 위치만 측정합니다. 기판 안쪽과 테두리 전체를 연속 측정한 것은 아닙니다.</p></details>
+</section>
+
+<section id="make" role="tabpanel" aria-labelledby="tabMake" class="panel hide"><div class="row between"><h2>Masking → 변형 보정 → GY / GX_STAGE</h2><span id="dataBadge" class="pill">가상 기판 예제</span></div><div class="controls"><div><label for="correction">기판 변형 보정</label><select id="correction"><option value="off">사용 안 함 · 기존 좌표</option><option value="line">기본 연결 · 라그랑주</option><option value="surface" selected>면 연결 · SVD로 계산</option></select></div><div><label for="shape">가상 기판의 모양</label><select id="shape"><option value="stretch">완만하게 늘어남</option><option value="bend" selected>휘어진 기판</option><option value="hidden">내부에 숨은 휨</option></select></div><div><label for="keyCount">양측 Distortion Key</label><select id="keyCount"><option value="6">6개 사용</option><option value="4">4개 사용</option><option value="2">2개 사용</option></select></div></div>
+<div class="row"><button id="generate" class="primary">가공좌표 생성 / 다시 계산</button><label for="viewCell">그림 범위</label><select id="viewCell"><option value="all">전체 좌표 범위</option></select><label><input id="exaggerate" type="checkbox" checked> 변형을 확대해서 보기</label></div><p id="runMessage" class="small" role="status"></p>
+<div class="two"><div><h3>① 원래 좌표 + Masking</h3><svg id="beforePlot" class="plot" viewBox="0 0 560 410" role="img" aria-label="기존 Masking 기준으로 생성한 가공점과 비발진 통과점"></svg></div><div><h3>② 변형을 따라 옮긴 좌표</h3><svg id="afterPlot" class="plot" viewBox="0 0 560 410" role="img" aria-label="같은 Head 순번 Gate를 유지하고 변형만큼 이동한 가공점"></svg></div></div>
+<div class="legend"><span><i style="background:#2472bb"></i>원래 위치 / LASER ON</span><span><i style="background:#07806f"></i>보정 위치 / LASER ON</span><span><i style="background:#b85a5a"></i>Masking OFF · 좌표는 유지</span><span><i style="background:#c5761d"></i>사용점의 주황 고리 · AK 금색 / DK 초록 십자</span><span><i style="background:#9aabb5"></i>기록했지만 계산에서 제외</span><span><i style="background:#dfeff0"></i>측정점 사이 연결</span><span id="truthLegend" class="hide"><i style="background:#8651a8"></i>보라 고리: 내부 숨은 휨 예제의 실제 위치 가정</span></div><p class="small">외곽 사각형은 입력한 Glass 설계 외형입니다. 가공점이 없는 하단 영역도 포함합니다. 초록 음영은 측정점으로 둘러싸인 연결 범위지만 그 안도 직접 측정값이 아닌 추정입니다. 라그랑주 양측 프로파일 밖으로 늘리는 예측은 CSV에 별도 표시합니다. 전체 그림은 대표점으로 표시하고 CSV에는 선택한 전체 좌표를 저장합니다. 화면 확대는 저장 좌표에 적용하지 않습니다.</p>
+<div class="counts"><div><small>배정된 가공 좌표</small><b id="totalCount">—</b></div><div><small>발진 ON / OFF</small><b id="gateCount">—</b></div><div><small>측정점 반영</small><b id="fitStatus">—</b></div></div><div id="resultHint" class="callout"></div>
+<h3 style="margin-top:23px">③ 좌표 미리보기 · 저장 옵션 선택</h3><div class="row"><label><input id="assignedOnly" type="checkbox" checked> 배정된 Head만 저장</label><label><input id="includeCorrection" type="checkbox" checked> 보정 전후 좌표를 함께 저장</label><button id="exportCsv" class="primary" disabled>좌표 CSV 저장</button></div><p class="small">기존 축 이름 GY / GX_STAGE와 부호를 유지합니다. 스캐너 제어기 고유 실행코드가 아닌 개발 검토용 좌표표입니다. OFF도 원래 Head·순번을 유지하며, 보정값이 Head 범위를 벗어나면 확인 항목으로 표시합니다.</p><div class="scroll"><table><thead><tr><th>Head / 순번</th><th>Gate</th><th>기존 GY</th><th>보정 GY</th><th>기존 GX_STAGE</th><th>보정 GX_STAGE</th><th>확인</th></tr></thead><tbody id="previewRows"></tbody></table></div><p id="exportMessage" class="small" role="status"></p>
+<details><summary>AK / DK 설계 배치 확인·수정</summary><p>925 × 1500 mm는 첨부 그림에 표시된 기판 크기입니다. 아래 원점·Key 간격은 배치를 재현한 예시이며, 실제 Model 설계치와 가공 공통 좌표 원점으로 교체합니다. Key 번호와 Camera 번호는 같은 뜻이 아닙니다. 카메라·ScanPose 예시는 기존 연결을 보존했으며 실제 대응은 측정 JSON에 기록합니다.</p><div class="row"><label>원점 X <input id="glass_x0" type="number" step="any" aria-label="기판 공통 원점 X mm"></label><label>원점 Y <input id="glass_y0" type="number" step="any" aria-label="기판 공통 원점 Y mm"></label><label>가로 <input id="glass_width" type="number" step="any" aria-label="기판 가로 mm"></label><label>세로 <input id="glass_height" type="number" step="any" aria-label="기판 세로 mm"></label></div><div class="scroll"><table><thead><tr><th>Key ID</th><th>구분</th><th>설계 X (mm)</th><th>설계 Y (mm)</th></tr></thead><tbody id="layoutRows"></tbody></table></div><button id="applyLayout">설계 배치 적용 / 다시 계산</button><p id="layoutMessage" class="small" role="status"></p></details>
+<details><summary>실제 pixel 측정파일로 계산하기</summary><p>원래 pixel은 그대로 보존합니다. 가공좌표(mm)를 만들려면 <b>같은 촬영 조건의 기준 pixel과 pixel→가공 좌표의 대응</b>이 있어야 합니다. Align 정렬 전 값에는 실제 실행된 정렬 변환도 반영합니다. 설계 크기만으로 이 대응을 임의 생성하지 않습니다. Masking 레시피의 설계 Pixel 크기도 카메라의 pixel→mm 배율을 뜻하지 않습니다.</p><div class="row"><button id="downloadTemplate">실측 입력 양식 JSON 저장</button><label class="file">측정 JSON 불러오기<input id="measurementFile" type="file" accept=".json,application/json"></label><button id="useDemo">가상 예제로 돌아가기</button></div><p id="measurementMessage" class="small" role="status">현재는 실제 측정값을 제공받지 않아 가상 예제로 동작합니다.</p><details><summary>파일 형식과 좌표 기준</summary><p class="small">양식의 nominalMm는 기존 정렬/기본 Global 보정까지 적용된 좌표입니다. referenceCommonMm는 해당 카메라/촬영 위치의 기준 pixel이 나타내는 공통 mm 위치입니다. pixelToCommonMm는 그 촬영 조건에서 확인된2×2 대응 행렬(mm/pixel)입니다. before-align 관측은 referenceCommonMm+J·Δpixel을 계산한 뒤 executedAlignment로 정렬 후 상태로 옮깁니다. 임의의 두 checkbox로 대응을 승인하는 방식은 사용하지 않습니다.</p><p class="small">양식의 설계 위치와 계산 범위는 예제이므로 실제 Model 설계치로 교체합니다. 이미 공통 mm로 변환했다면 format을 common-mm로 바꾸고 각 점에 phase=after-align-common과 deltaMm를 입력할 수 있습니다. 실제10점의 모두 같은 공통 기준과 Model/Glass/촬영·대응 버전을 사용해야 합니다. 생성 CSV는 USER_MEASURED도 생산 승인 전 후보 데이터로 표시합니다.</p></details></details>
+<details><summary>기존 Masking 레시피와 상세 설정</summary><p>기존 좌표 생성·Cell별 모델·Hole·모서리 Masking 계산 엔진을 그대로 사용합니다. 보정이 꺼져 있으면 이전 평가 좌표를 재현합니다. 레시피를 바꾸면 생성 결과를 다시 계산합니다.</p><div class="row"><label class="file">기존 레시피 JSON 불러오기<input id="recipeFile" type="file" accept=".json,application/json"></label><button id="saveRecipe">현재 레시피 JSON 저장</button><a href="A3_Original_Masking_Editor.html" target="_blank" rel="noopener">기존 상세 Masking 편집기 열기(동봉 파일)</a></div><details><summary>레시피 JSON 직접 수정</summary><textarea id="recipeEditor" rows="10" aria-label="Masking 레시피 JSON"></textarea><button id="applyRecipe">수정한 레시피 적용</button></details><p id="recipeMessage" class="small" role="status"></p></details>
+<details><summary>안쪽 보정 규칙 · 필요할 때만 보기</summary><div class="three"><div class="card"><b>기본 연결</b><p>왼쪽 AK/DK와 오른쪽 AK/DK를 각각 Y방향으로 잇습니다. DK가 안쪽이면 설계 X위치도 함께 연결하고, 같은 높이에서 양측 변위를 가로로 연결합니다. 점의 X위치를 같은 선으로 강제 이동하지 않습니다.</p></div><div class="card"><b>면 연결</b><p>모든 측정점은 고정하고, 사이를 덜 굽는 면으로 잇습니다. TPS라는 면 모델을 SVD로 계산합니다.</p></div><div class="card"><b>측정선 바깥</b><p>어느 방식도 직접 측정한 값은 아닙니다. 별도 확인이 필요한 예측 구간으로 남깁니다.</p></div></div><div class="formula">기존 가공점 q → q + 기판 변위 u(q)
+기존 Head를 유지할 때:
+  보정 GY = 기존 GY + 변위 X
+  보정 GX_STAGE = 기존 GX_STAGE − 변위 Y
+120mm / 홀수 Head 거리 / 첫 Pixel→샷 중심 Offset은 원래 엔진에서 한 번만 적용합니다.</div><p class="small">같은 라그랑주 기저를 SVD로 풀기만 하면 유일한 보간 결과는 같습니다. 면 연결의 차이는 TPS라는 연결 규칙에서 나옵니다. 가장 작은 특잇값의 방향을 선택하면 무조건 좋은 보정이 된다는 뜻이 아닙니다.</p></details>
+<details><summary>가공에 적용하기 전 확인할 범위</summary><p class="small">이 버전은 <b>DOE 샷 중심</b>의 좌표를 보정합니다. 한 샷의 여러 빔을 각각 독립적으로 휘게 할 수는 없으므로, 빔 사이에 필요한 보정 차이는 별도 잔류값으로 계산합니다. 원래 Masking OFF는 유지하지만, 변형된 재료 금지영역과 실제 빔 footprint의 접촉을 새로 승인한 결과는 아닙니다.</p><p class="small">보정 후 Head/순번은 재배정·재정렬하지 않습니다. 보정된 중심과 DOE 빔 중심의 Head 범위, 순서 역전 여부를 별도 열로 기록합니다. 실제 빔 크기·위치 여유·기판 높이/광학 변화·MOF 타이밍·다중 Head 동시 동작은 장비 검증이 필요합니다. GX_STAGE 값을 축에 바로 전송하지 않고 기존 장비 좌표 계약과 확인해야 합니다.</p><p class="small">Model별 추가 측정점이나 가공 자국으로 내부·바깥 예측을 검증한 뒤 생산에 적용합니다. 이10점만으로 내부의 숨은 휨을 자동으로 알아냈다고 표시하지 않습니다.</p></details>
+</section>
+<footer>AK / DK 배치 정정 v6 · 단일 HTML 계산 도구 · 가상/실제 입력 출처 구분 · 장비 연결 없이 개발 좌표표 생성<br><a href="https://people.maths.ox.ac.uk/trefethen/barycentric.pdf">라그랑주 원문</a> · <a href="https://www.numdam.org/item/M2AN_1976__10_3_5_0.pdf">최소 굽힘 보간 원문</a> · <a href="https://www.netlib.org/lapack/lug/node32.html">SVD 원리</a></footer>
+</main><script>(function coordinateEngineModule(root, factory) {
+  const api = factory();
+
+  if (typeof module === "object" && module.exports) {
+    module.exports = api;
+  }
+
+  if (root) {
+    root.CoordinateEngine = api;
+  }
+})(typeof globalThis !== "undefined" ? globalThis : this, function createCoordinateEngine() {
+  "use strict";
+
+  const EPSILON = 1e-9;
+
+  const BASELINE_RECIPE = Object.freeze({
+    pixelSizeMmPerPx: 0.09,
+    designPixelCountX: 144,
+    designPixelCountY: 256,
+    doeBranchCountPerAxis: 4,
+    commandPitchPx: 10,
+    cellColumnCount: 9,
+    cellRowCount: 5,
+    cellPitchXmm: 100,
+    cellPitchYmm: 200,
+    escEdgeToGlassEdgeMm: 5,
+    glassEdgeToAlignKeyMm: 15.5,
+    glassCenterToScannerCenterMm: 5,
+    sharedOriginOffsetMm: 0.3375,
+    scanFieldWidthMm: 110,
+    headCount: 8,
+    mofBufferOffsetMm: 120,
+    oddHeadDistanceMm: 380,
+    globalCorrectionXmm: 0,
+    globalCorrectionYmm: 0,
+    duplicateLaneStart: true,
+    correctionBudgetGyMm: null,
+    doeMaxGyOffsetMm: null,
+    beamRadiusMm: null,
+    mappingErrorMm: null,
+  });
+
+  const BASELINE_HEAD_COUNTS = Object.freeze([
+    { headNumber: 1, raw: 1874, unique: 1750, duplicates: 124 },
+    { headNumber: 2, raw: 1874, unique: 1750, duplicates: 124 },
+    { headNumber: 3, raw: 2499, unique: 2375, duplicates: 124 },
+    { headNumber: 4, raw: 2999, unique: 2875, duplicates: 124 },
+    { headNumber: 5, raw: 1874, unique: 1750, duplicates: 124 },
+    { headNumber: 6, raw: 1874, unique: 1750, duplicates: 124 },
+    { headNumber: 7, raw: 1874, unique: 1750, duplicates: 124 },
+    { headNumber: 8, raw: 1874, unique: 1750, duplicates: 124 },
+  ]);
+
+  const NUMERIC_FIELDS = [
+    "pixelSizeMmPerPx",
+    "designPixelCountX",
+    "designPixelCountY",
+    "doeBranchCountPerAxis",
+    "commandPitchPx",
+    "cellColumnCount",
+    "cellRowCount",
+    "cellPitchXmm",
+    "cellPitchYmm",
+    "escEdgeToGlassEdgeMm",
+    "glassEdgeToAlignKeyMm",
+    "glassCenterToScannerCenterMm",
+    "sharedOriginOffsetMm",
+    "scanFieldWidthMm",
+    "headCount",
+    "mofBufferOffsetMm",
+    "oddHeadDistanceMm",
+    "globalCorrectionXmm",
+    "globalCorrectionYmm",
+  ];
+
+  const OPTIONAL_SAFETY_FIELDS = [
+    "correctionBudgetGyMm",
+    "doeMaxGyOffsetMm",
+    "beamRadiusMm",
+    "mappingErrorMm",
+  ];
+
+  function round(value, digits = 10) {
+    if (!Number.isFinite(value)) {
+      return value;
+    }
+
+    const factor = 10 ** digits;
+    return Math.round((value + Number.EPSILON) * factor) / factor;
+  }
+
+  function nearlyEqual(left, right, tolerance = EPSILON) {
+    return Math.abs(Number(left) - Number(right)) <= tolerance;
+  }
+
+  function asFiniteNumber(value, fieldName) {
+    const numberValue = typeof value === "number" ? value : Number(String(value).trim());
+    if (!Number.isFinite(numberValue)) {
+      throw new Error(`${fieldName} 값은 유한한 숫자여야 합니다.`);
+    }
+    return numberValue;
+  }
+
+  function asOptionalNonNegativeNumber(value, fieldName) {
+    if (value === null || value === undefined || String(value).trim() === "") {
+      return null;
+    }
+
+    const numberValue = asFiniteNumber(value, fieldName);
+    if (numberValue < 0) {
+      throw new Error(`${fieldName} 값은 0 이상이어야 합니다.`);
+    }
+    return numberValue;
+  }
+
+  function normalizeRecipe(input = {}) {
+    const normalized = {};
+
+    for (const fieldName of NUMERIC_FIELDS) {
+      const sourceValue = Object.prototype.hasOwnProperty.call(input, fieldName)
+        ? input[fieldName]
+        : BASELINE_RECIPE[fieldName];
+      normalized[fieldName] = asFiniteNumber(sourceValue, fieldName);
+    }
+
+    for (const fieldName of OPTIONAL_SAFETY_FIELDS) {
+      const sourceValue = Object.prototype.hasOwnProperty.call(input, fieldName)
+        ? input[fieldName]
+        : BASELINE_RECIPE[fieldName];
+      normalized[fieldName] = asOptionalNonNegativeNumber(sourceValue, fieldName);
+    }
+
+    const duplicateValue = Object.prototype.hasOwnProperty.call(input, "duplicateLaneStart")
+      ? input.duplicateLaneStart
+      : BASELINE_RECIPE.duplicateLaneStart;
+    normalized.duplicateLaneStart = !(
+      duplicateValue === false ||
+      duplicateValue === 0 ||
+      String(duplicateValue).toLowerCase() === "false"
+    );
+
+    const activeCellCount=normalized.cellColumnCount*normalized.cellRowCount;
+    if(Array.isArray(input.cellConfigurations)) for(const [i,c] of input.cellConfigurations.slice(0,activeCellCount).entries()) {
+      for(const key of ['alignToFirstPixelXmm','alignToFirstPixelYmm']) if(c[key]===null || c[key]===undefined || String(c[key]).trim()==='') throw new Error(`Cell ${i+1}의 첫 픽셀 ${key.endsWith('Xmm')?'X':'Y'} 거리를 입력하세요.`);
+    }
+    normalized.cellConfigurations = Array.isArray(input.cellConfigurations) ? input.cellConfigurations.map((c,i)=>i>=activeCellCount?{...c}:({
+      modelType: asFiniteNumber(c.modelType ?? 1, `Cell ${i+1} 모델`),
+      alignToFirstPixelXmm: asFiniteNumber(c.alignToFirstPixelXmm, `Cell ${i+1} 첫 픽셀 X`),
+      alignToFirstPixelYmm: asFiniteNumber(c.alignToFirstPixelYmm, `Cell ${i+1} 첫 픽셀 Y`),
+      rotationDeg: asFiniteNumber(c.rotationDeg ?? 0, `Cell ${i+1} 회전각`)
+    })) : [];
+    if(normalized.cellConfigurations.length && normalized.cellConfigurations.length < normalized.cellColumnCount*normalized.cellRowCount) throw new Error('사용 Cell의 배치 정보가 부족합니다.');
+    validateRecipe(normalized);
+    return normalized;
+  }
+
+  function validateRecipe(recipe) {
+    const positiveFields = [
+      "pixelSizeMmPerPx",
+      "designPixelCountX",
+      "designPixelCountY",
+      "doeBranchCountPerAxis",
+      "commandPitchPx",
+      "cellColumnCount",
+      "cellRowCount",
+      "cellPitchXmm",
+      "cellPitchYmm",
+      "scanFieldWidthMm",
+      "headCount",
+    ];
+
+    for (const fieldName of positiveFields) {
+      if (recipe[fieldName] <= 0) {
+        throw new Error(`${fieldName} 값은 0보다 커야 합니다.`);
+      }
+    }
+
+    const integerFields = [
+      "designPixelCountX",
+      "designPixelCountY",
+      "doeBranchCountPerAxis",
+      "cellColumnCount",
+      "cellRowCount",
+      "headCount",
+    ];
+
+    for (const fieldName of integerFields) {
+      if (!Number.isInteger(recipe[fieldName])) {
+        throw new Error(`${fieldName} 값은 정수여야 합니다.`);
+      }
+    }
+
+    const gridCountX = Math.floor(recipe.designPixelCountX / recipe.commandPitchPx);
+    const gridCountY = Math.floor(recipe.designPixelCountY / recipe.commandPitchPx);
+    if (gridCountX < 1 || gridCountY < 1) {
+      throw new Error("피치는 X/Y 설계 픽셀 수보다 작아 최소 한 개 이상의 중심을 만들어야 합니다.");
+    }
+
+    const suppliedSafetyValues = OPTIONAL_SAFETY_FIELDS.filter(
+      (fieldName) => recipe[fieldName] !== null,
+    ).length;
+    if (suppliedSafetyValues !== 0 && suppliedSafetyValues !== OPTIONAL_SAFETY_FIELDS.length) {
+      throw new Error("최종 Footprint 판정값 4개는 모두 입력하거나 모두 비워야 합니다.");
+    }
+
+    const commandSpacingMm = recipe.pixelSizeMmPerPx * recipe.commandPitchPx;
+    const xReferenceDistanceMm =
+      recipe.escEdgeToGlassEdgeMm +
+      recipe.glassEdgeToAlignKeyMm +
+      recipe.glassCenterToScannerCenterMm;
+    const minGlobalX =
+      xReferenceDistanceMm + recipe.sharedOriginOffsetMm + recipe.globalCorrectionXmm;
+    const maxGlobalX =
+      (recipe.cellColumnCount - 1) * recipe.cellPitchXmm +
+      xReferenceDistanceMm +
+      recipe.sharedOriginOffsetMm +
+      (gridCountX - 1) * commandSpacingMm +
+      recipe.globalCorrectionXmm;
+    const fieldCoverageMax = recipe.scanFieldWidthMm * recipe.headCount;
+
+    if (!recipe.cellConfigurations.length && minGlobalX < 0) {
+      throw new Error(
+        `생성 X 범위 ${round(minGlobalX, 4)}…${round(maxGlobalX, 4)} mm가 ` +
+          `Head Field 범위 0…${round(fieldCoverageMax, 4)} mm를 벗어납니다.`,
+      );
+    }
+  }
+
+  function getDerivedRecipe(recipe) {
+    const commandSpacingMm = round(recipe.pixelSizeMmPerPx * recipe.commandPitchPx);
+    const gridCountX = Math.floor(recipe.designPixelCountX / recipe.commandPitchPx);
+    const gridCountY = Math.floor(recipe.designPixelCountY / recipe.commandPitchPx);
+    const cellCount = recipe.cellColumnCount * recipe.cellRowCount;
+    const xReferenceDistanceMm = round(
+      recipe.escEdgeToGlassEdgeMm +
+        recipe.glassEdgeToAlignKeyMm +
+        recipe.glassCenterToScannerCenterMm,
+    );
+    const holeCountPerCenter = recipe.doeBranchCountPerAxis ** 2;
+    const scanFieldHalfWidthMm = recipe.scanFieldWidthMm / 2;
+    const safetyValuesSupplied = OPTIONAL_SAFETY_FIELDS.every(
+      (fieldName) => recipe[fieldName] !== null,
+    );
+    const safetyBudgetMm = safetyValuesSupplied
+      ? round(
+          recipe.correctionBudgetGyMm +
+            recipe.doeMaxGyOffsetMm +
+            recipe.beamRadiusMm +
+            recipe.mappingErrorMm,
+        )
+      : null;
+
+    return {
+      commandSpacingMm,
+      gridCountX,
+      gridCountY,
+      cellCount,
+      xReferenceDistanceMm,
+      holeCountPerCenter,
+      scanFieldHalfWidthMm,
+      safetyValuesSupplied,
+      safetyBudgetMm,
+    };
+  }
+
+  function makePoint(recipe, derived, cellRow, cellCol, gridIndexY, gridIndexX) {
+    const cellId = (cellRow - 1) * recipe.cellColumnCount + cellCol;
+    const conf = recipe.cellConfigurations[cellId-1] || {modelType:1,alignToFirstPixelXmm:(cellCol-1)*recipe.cellPitchXmm,alignToFirstPixelYmm:(cellRow-1)*recipe.cellPitchYmm,rotationDeg:0};
+    const cellOriginXmm = conf.alignToFirstPixelXmm;
+    const cellOriginYmm = conf.alignToFirstPixelYmm;
+    const angle=conf.rotationDeg*Math.PI/180,cos=Math.cos(angle),sin=Math.sin(angle);
+    const qx=recipe.sharedOriginOffsetMm+gridIndexX*derived.commandSpacingMm;
+    const qy=recipe.sharedOriginOffsetMm+gridIndexY*derived.commandSpacingMm;
+    const cellFirstCenterXmm=round(derived.xReferenceDistanceMm+cellOriginXmm+cos*recipe.sharedOriginOffsetMm-sin*recipe.sharedOriginOffsetMm);
+    const cellFirstCenterYmm=round(cellOriginYmm+sin*recipe.sharedOriginOffsetMm+cos*recipe.sharedOriginOffsetMm);
+    const nominalGlobalXmm=round(derived.xReferenceDistanceMm+cellOriginXmm+cos*qx-sin*qy);
+    const nominalGlobalYmm=round(cellOriginYmm+sin*qx+cos*qy);
+    const globalXmm = round(nominalGlobalXmm + recipe.globalCorrectionXmm);
+    const globalYmm = round(nominalGlobalYmm + recipe.globalCorrectionYmm);
+    const headNumber = Math.floor(globalXmm / recipe.scanFieldWidthMm) + 1;
+    if(headNumber<1) throw new Error(`Cell ${cellId}의 X=${globalXmm} mm는 첫 Head 구간보다 작습니다. 배치 원점과 Head 기준을 확인하세요.`);
+    const headAssigned = headNumber <= recipe.headCount;
+    const headCenterGlobalXmm = round(
+      derived.scanFieldHalfWidthMm + recipe.scanFieldWidthMm * (headNumber - 1),
+    );
+    const localGYmm = round(globalXmm - headCenterGlobalXmm);
+    const gxStageMm = round(
+      -(
+        globalYmm +
+        recipe.mofBufferOffsetMm +
+        (headNumber % 2 === 1 ? recipe.oddHeadDistanceMm : 0)
+      ),
+    );
+    const centerLeftMarginMm = round(localGYmm + derived.scanFieldHalfWidthMm);
+    const centerRightMarginMm = round(derived.scanFieldHalfWidthMm - localGYmm);
+    const centerNominalMarginMm = round(
+      Math.min(centerLeftMarginMm, centerRightMarginMm),
+    );
+    const centerInNominalField =
+      headAssigned && localGYmm >= -derived.scanFieldHalfWidthMm &&
+      localGYmm < derived.scanFieldHalfWidthMm;
+    const finalFootprintMarginMm = derived.safetyValuesSupplied
+      ? round(derived.scanFieldHalfWidthMm - Math.abs(localGYmm) - derived.safetyBudgetMm)
+      : null;
+    const fieldValid = derived.safetyValuesSupplied
+      ? headAssigned && finalFootprintMarginMm > 0
+      : null;
+
+    return {
+      headNumber,
+      headId: headAssigned ? `H${String(headNumber).padStart(2, "0")}` : `UNASSIGNED_${headNumber}`,
+      headAssigned,
+      cellId,
+      cellCol,
+      cellRow,
+      cellOriginXmm,
+      cellOriginYmm,
+      cellModelType:conf.modelType,
+      cellRotationDeg:conf.rotationDeg,
+      cellFirstCenterXmm,
+      cellFirstCenterYmm,
+      commandGridIndexX: gridIndexX,
+      commandGridIndexY: gridIndexY,
+      designPixelXpx: round(gridIndexX * recipe.commandPitchPx),
+      designPixelYpx: round(gridIndexY * recipe.commandPitchPx),
+      laneNo: (cellRow - 1) * derived.gridCountY + gridIndexY + 1,
+      laneId: `Y${String((cellRow - 1) * derived.gridCountY + gridIndexY + 1).padStart(3, "0")}`,
+      nominalGlobalXmm,
+      nominalGlobalYmm,
+      globalXmm,
+      globalYmm,
+      headCenterGlobalXmm,
+      localGYmm,
+      gxStageMm,
+      centerLeftMarginMm,
+      centerRightMarginMm,
+      centerNominalMarginMm,
+      centerInNominalField,
+      finalFootprintMarginMm,
+      fieldValid,
+    };
+  }
+
+  function sameCoordinate(left, right) {
+    return (
+      left &&
+      right &&
+      nearlyEqual(left.localGYmm, right.localGYmm) &&
+      nearlyEqual(left.gxStageMm, right.gxStageMm)
+    );
+  }
+
+  function makeRawRecord(point, details) {
+    return {
+      ...point,
+      sequenceNo: details.sequenceNo,
+      excelRow: details.sequenceNo + 4,
+      uniqueSequenceNo: details.uniqueSequenceNo,
+      lanePointIndex: details.lanePointIndex,
+      expectedRole: details.isRepeatedLaneStart
+        ? "repeated_lane_start"
+        : "machining_center",
+      isRepeatedLaneStart: details.isRepeatedLaneStart,
+      consecutiveDuplicate: details.consecutiveDuplicate,
+      commandType: details.isRepeatedLaneStart
+        ? "UNRESOLVED_LANE_START"
+        : "MACHINING_CENTER",
+      laserGate: "UNRESOLVED",
+    };
+  }
+
+  function generateCoordinates(inputRecipe = {}) {
+    const recipe = normalizeRecipe(inputRecipe);
+    const derived = getDerivedRecipe(recipe);
+    const lanesByHead = Array.from({ length: recipe.headCount }, () => new Map());
+
+    for (let cellRow = 1; cellRow <= recipe.cellRowCount; cellRow += 1) {
+      for (let gridIndexY = 0; gridIndexY < derived.gridCountY; gridIndexY += 1) {
+        const laneNo = (cellRow - 1) * derived.gridCountY + gridIndexY + 1;
+
+        for (let cellCol = 1; cellCol <= recipe.cellColumnCount; cellCol += 1) {
+          for (let gridIndexX = 0; gridIndexX < derived.gridCountX; gridIndexX += 1) {
+            const point = makePoint(
+              recipe,
+              derived,
+              cellRow,
+              cellCol,
+              gridIndexY,
+              gridIndexX,
+            );
+            while (lanesByHead.length < point.headNumber) lanesByHead.push(new Map());
+            const laneMap = lanesByHead[point.headNumber - 1];
+            if (!laneMap.has(laneNo)) {
+              laneMap.set(laneNo, []);
+            }
+            laneMap.get(laneNo).push(point);
+          }
+        }
+      }
+    }
+
+    const records = [];
+    const uniqueCenters = [];
+    const headSummaries = [];
+
+    for (let headIndex = 0; headIndex < lanesByHead.length; headIndex += 1) {
+      const headNumber = headIndex + 1;
+      const laneEntries = [...lanesByHead[headIndex].entries()].sort(
+        ([leftLaneNo], [rightLaneNo]) => leftLaneNo - rightLaneNo,
+      );
+      let sequenceNo = 0;
+      let uniqueSequenceNo = 0;
+      let repeatedLaneStartCount = 0;
+      let previousRawRecord = null;
+      const headRecords = [];
+      const headUniqueCenters = [];
+
+      for (let activeLaneIndex = 0; activeLaneIndex < laneEntries.length; activeLaneIndex += 1) {
+        const [, lanePoints] = laneEntries[activeLaneIndex];
+
+        for (let lanePointIndex = 0; lanePointIndex < lanePoints.length; lanePointIndex += 1) {
+          const point = lanePoints[lanePointIndex];
+          uniqueSequenceNo += 1;
+          const pointWithSequence = {
+            ...point,
+            uniqueSequenceNo,
+            lanePointIndex: lanePointIndex + 1,
+          };
+          uniqueCenters.push(pointWithSequence);
+          headUniqueCenters.push(pointWithSequence);
+
+          if (
+            recipe.duplicateLaneStart &&
+            activeLaneIndex > 0 &&
+            lanePointIndex === 0
+          ) {
+            sequenceNo += 1;
+            const duplicateRecord = makeRawRecord(point, {
+              sequenceNo,
+              uniqueSequenceNo,
+              lanePointIndex: lanePointIndex + 1,
+              isRepeatedLaneStart: true,
+              consecutiveDuplicate: sameCoordinate(previousRawRecord, point),
+            });
+            records.push(duplicateRecord);
+            headRecords.push(duplicateRecord);
+            previousRawRecord = duplicateRecord;
+            repeatedLaneStartCount += 1;
+          }
+
+          sequenceNo += 1;
+          const centerRecord = makeRawRecord(point, {
+            sequenceNo,
+            uniqueSequenceNo,
+            lanePointIndex: lanePointIndex + 1,
+            isRepeatedLaneStart: false,
+            consecutiveDuplicate: sameCoordinate(previousRawRecord, point),
+          });
+          records.push(centerRecord);
+          headRecords.push(centerRecord);
+          previousRawRecord = centerRecord;
+        }
+      }
+
+      const localValues = headUniqueCenters.map((point) => point.localGYmm);
+      const marginValues = headUniqueCenters.map((point) => point.centerNominalMarginMm);
+      const finalMarginValues = headUniqueCenters
+        .map((point) => point.finalFootprintMarginMm)
+        .filter((value) => value !== null);
+      headSummaries.push({
+        headNumber,
+        headId: headNumber <= recipe.headCount ? `H${String(headNumber).padStart(2, "0")}` : `UNASSIGNED_${headNumber}`,
+        headAssigned: headNumber <= recipe.headCount,
+        laneCount: laneEntries.length,
+        rawRecordCount: headRecords.length,
+        uniqueCenterCount: headUniqueCenters.length,
+        repeatedLaneStartCount,
+        nominalHoleCount: headUniqueCenters.length * derived.holeCountPerCenter,
+        localGYMinMm: localValues.length ? Math.min(...localValues) : null,
+        localGYMaxMm: localValues.length ? Math.max(...localValues) : null,
+        centerNominalMinMarginMm: marginValues.length ? Math.min(...marginValues) : null,
+        centerFieldViolationCount: headUniqueCenters.filter(
+          (point) => !point.centerInNominalField,
+        ).length,
+        finalFootprintMinMarginMm: finalMarginValues.length
+          ? Math.min(...finalMarginValues)
+          : null,
+        finalFootprintViolationCount: derived.safetyValuesSupplied
+          ? headUniqueCenters.filter((point) => point.fieldValid === false).length
+          : null,
+      });
+    }
+
+    const repeatedLaneStartCount = records.filter(
+      (record) => record.isRepeatedLaneStart,
+    ).length;
+    const centerFieldViolationCount = uniqueCenters.filter(
+      (point) => !point.centerInNominalField,
+    ).length;
+    const summary = {
+      rawRecordCount: records.length,
+      uniqueCenterCount: uniqueCenters.length,
+      repeatedLaneStartCount,
+      cellCount: derived.cellCount,
+      configuredHeadCount: recipe.headCount,
+      requiredHeadCount: lanesByHead.length,
+      unassignedCenterCount: uniqueCenters.filter(p => !p.headAssigned).length,
+      unassignedRawCount: records.filter(p => !p.headAssigned).length,
+      assignedRawCount: records.filter(p => p.headAssigned).length,
+      laneCountPerHead: recipe.cellRowCount * derived.gridCountY,
+      nominalHoleCount: uniqueCenters.length * derived.holeCountPerCenter,
+      duplicateExposureRiskHoleCount:
+        repeatedLaneStartCount * derived.holeCountPerCenter,
+      rawExposureHoleCount: records.length * derived.holeCountPerCenter,
+      centerFieldViolationCount,
+      rawCenterFieldViolationCount: records.filter(
+        (record) => !record.centerInNominalField,
+      ).length,
+      centerNominalMinMarginMm: Math.min(
+        ...uniqueCenters.map((point) => point.centerNominalMarginMm),
+      ),
+      finalFootprintMinMarginMm: derived.safetyValuesSupplied
+        ? Math.min(...uniqueCenters.map((point) => point.finalFootprintMarginMm))
+        : null,
+      finalFootprintViolationCount: derived.safetyValuesSupplied
+        ? uniqueCenters.filter((point) => point.fieldValid === false).length
+        : null,
+      headSummaries,
+    };
+
+    const result = {
+      recipe,
+      derived,
+      records,
+      uniqueCenters,
+      summary,
+    };
+    result.baseline = runBaselineChecks(result);
+    return result;
+  }
+
+  function isBaselineRecipe(recipe) {
+    if(recipe.cellConfigurations?.slice(0,recipe.cellColumnCount*recipe.cellRowCount).some((c,i)=>c.rotationDeg!==0 || !nearlyEqual(c.alignToFirstPixelXmm,(i%recipe.cellColumnCount)*recipe.cellPitchXmm) || !nearlyEqual(c.alignToFirstPixelYmm,Math.floor(i/recipe.cellColumnCount)*recipe.cellPitchYmm))) return false;
+    const comparedFields = [
+      ...NUMERIC_FIELDS,
+      "duplicateLaneStart",
+    ];
+    return comparedFields.every((fieldName) => {
+      if (typeof BASELINE_RECIPE[fieldName] === "number") {
+        return nearlyEqual(recipe[fieldName], BASELINE_RECIPE[fieldName]);
+      }
+      return recipe[fieldName] === BASELINE_RECIPE[fieldName];
+    });
+  }
+
+  function makeCheck(id, label, expected, actual, passed) {
+    return { id, label, expected, actual, passed: Boolean(passed) };
+  }
+
+  function runBaselineChecks(result) {
+    const { recipe, derived, records, summary } = result;
+    const applicable = isBaselineRecipe(recipe);
+
+    if (!applicable) {
+      return {
+        applicable: false,
+        passed: null,
+        checks: [],
+        message: "기준 레시피가 변경되어 16,742건 Golden 기준 비교를 건너뜁니다.",
+      };
+    }
+
+    const first = records[0];
+    const h3Boundary = records.find(
+      (record) =>
+        record.headNumber === 3 &&
+        !record.isRepeatedLaneStart &&
+        nearlyEqual(record.globalXmm, 329.4375),
+    );
+    const h4Boundary = records.find(
+      (record) =>
+        record.headNumber === 4 &&
+        !record.isRepeatedLaneStart &&
+        nearlyEqual(record.globalXmm, 330.3375),
+    );
+    const actualHeadCounts = summary.headSummaries
+      .map(
+        (head) =>
+          `${head.headId}:${head.rawRecordCount}/${head.uniqueCenterCount}/${head.repeatedLaneStartCount}`,
+      )
+      .join(", ");
+    const expectedHeadCounts = BASELINE_HEAD_COUNTS
+      .map(
+        (head) =>
+          `H${String(head.headNumber).padStart(2, "0")}:${head.raw}/${head.unique}/${head.duplicates}`,
+      )
+      .join(", ");
+
+    const checks = [
+      makeCheck(
+        "spacing",
+        "가공 중심 간격",
+        "0.9 mm",
+        `${derived.commandSpacingMm} mm`,
+        nearlyEqual(derived.commandSpacingMm, 0.9),
+      ),
+      makeCheck(
+        "grid",
+        "Cell당 중심 격자",
+        "14 × 25",
+        `${derived.gridCountX} × ${derived.gridCountY}`,
+        derived.gridCountX === 14 && derived.gridCountY === 25,
+      ),
+      makeCheck(
+        "unique",
+        "공간 고유 중심",
+        "15,750",
+        summary.uniqueCenterCount.toLocaleString("ko-KR"),
+        summary.uniqueCenterCount === 15750,
+      ),
+      makeCheck(
+        "raw",
+        "Raw 좌표 레코드",
+        "16,742",
+        summary.rawRecordCount.toLocaleString("ko-KR"),
+        summary.rawRecordCount === 16742,
+      ),
+      makeCheck(
+        "duplicates",
+        "Lane 시작 반복",
+        "992",
+        summary.repeatedLaneStartCount.toLocaleString("ko-KR"),
+        summary.repeatedLaneStartCount === 992,
+      ),
+      makeCheck(
+        "head-counts",
+        "Head별 Raw/고유/반복",
+        expectedHeadCounts,
+        actualHeadCounts,
+        summary.headSummaries.every((head, index) => {
+          const expected = BASELINE_HEAD_COUNTS[index];
+          return (
+            head.rawRecordCount === expected.raw &&
+            head.uniqueCenterCount === expected.unique &&
+            head.repeatedLaneStartCount === expected.duplicates
+          );
+        }),
+      ),
+      makeCheck(
+        "first-coordinate",
+        "Cell 1 첫 좌표",
+        "GY −29.1625 / GX −500.3375 mm",
+        first
+          ? `GY ${first.localGYmm} / GX ${first.gxStageMm} mm`
+          : "없음",
+        first &&
+          nearlyEqual(first.localGYmm, -29.1625) &&
+          nearlyEqual(first.gxStageMm, -500.3375),
+      ),
+      makeCheck(
+        "h3-h4-boundary",
+        "H3/H4 경계 Pitch",
+        "0.9 mm 연속",
+        h3Boundary && h4Boundary
+          ? `${round(h4Boundary.globalXmm - h3Boundary.globalXmm, 4)} mm`
+          : "경계점 없음",
+        h3Boundary &&
+          h4Boundary &&
+          nearlyEqual(h4Boundary.globalXmm - h3Boundary.globalXmm, 0.9),
+      ),
+      makeCheck(
+        "field",
+        "명목 110 mm Field 이탈",
+        "0",
+        String(summary.centerFieldViolationCount),
+        summary.centerFieldViolationCount === 0,
+      ),
+      makeCheck(
+        "minimum-margin",
+        "최소 중심 여유",
+        "0.3375 mm",
+        `${summary.centerNominalMinMarginMm} mm`,
+        nearlyEqual(summary.centerNominalMinMarginMm, 0.3375),
+      ),
+    ];
+
+    return {
+      applicable: true,
+      passed: checks.every((check) => check.passed),
+      checks,
+      message: checks.every((check) => check.passed)
+        ? "기준 레시피 핵심 검증을 모두 통과했습니다."
+        : "기준 레시피 검증에서 불일치가 발견됐습니다.",
+    };
+  }
+
+  function parseCsvLine(line) {
+    const cells = [];
+    let current = "";
+    let quoted = false;
+
+    for (let index = 0; index < line.length; index += 1) {
+      const character = line[index];
+      if (character === '"') {
+        if (quoted && line[index + 1] === '"') {
+          current += '"';
+          index += 1;
+        } else {
+          quoted = !quoted;
+        }
+      } else if (character === "," && !quoted) {
+        cells.push(current);
+        current = "";
+      } else {
+        current += character;
+      }
+    }
+    cells.push(current);
+    return cells;
+  }
+
+  function compareGroundTruth(records, csvText, tolerance = EPSILON) {
+    const lines = String(csvText)
+      .replace(/^\uFEFF/, "")
+      .split(/\r?\n/)
+      .filter((line) => line.trim() !== "");
+
+    if (lines.length < 2) {
+      throw new Error("비교 CSV에 헤더와 데이터 행이 필요합니다.");
+    }
+
+    const headers = parseCsvLine(lines[0]);
+    const requiredHeaders = ["Head", "SequenceNo", "ActualGYMm", "ActualGXMm"];
+    for (const requiredHeader of requiredHeaders) {
+      if (!headers.includes(requiredHeader)) {
+        throw new Error(`비교 CSV에 ${requiredHeader} 열이 없습니다.`);
+      }
+    }
+
+    const headerIndex = Object.fromEntries(
+      headers.map((header, index) => [header, index]),
+    );
+    const generatedByKey = new Map(
+      records.map((record) => [`${record.headNumber}:${record.sequenceNo}`, record]),
+    );
+    const numericMetadataColumns = [
+      ["ExcelRow", "excelRow"],
+      ["CellId", "cellId"],
+      ["CellCol", "cellCol"],
+      ["CellRow", "cellRow"],
+      ["CommandGridIndexX", "commandGridIndexX"],
+      ["CommandGridIndexY", "commandGridIndexY"],
+      ["LaneNo", "laneNo"],
+      ["UniqueSequence", "uniqueSequenceNo"],
+      ["DesignPixelXpx", "designPixelXpx"],
+      ["DesignPixelYpx", "designPixelYpx"],
+      ["HeadCenterGlobalXMm", "headCenterGlobalXmm"],
+      ["ReconstructedGlobalReviewXMm", "globalXmm"],
+      ["RecipeGlobalReviewXMm", "nominalGlobalXmm"],
+      ["CenterNominalLeftMarginMm", "centerLeftMarginMm"],
+      ["CenterNominalRightMarginMm", "centerRightMarginMm"],
+      ["CenterNominalMarginMm", "centerNominalMarginMm"],
+      ["HeadBy110mmField", "headNumber"],
+    ];
+    let mismatchCount = 0;
+    let maxDeltaGYmm = 0;
+    let maxDeltaGXmm = 0;
+    const mismatchSamples = [];
+
+    for (let lineIndex = 1; lineIndex < lines.length; lineIndex += 1) {
+      const cells = parseCsvLine(lines[lineIndex]);
+      const headNumber = Number(cells[headerIndex.Head]);
+      const sequenceNo = Number(cells[headerIndex.SequenceNo]);
+      const actualGYmm = Number(cells[headerIndex.ActualGYMm]);
+      const actualGXmm = Number(cells[headerIndex.ActualGXMm]);
+      const key = `${headNumber}:${sequenceNo}`;
+      const generated = generatedByKey.get(key);
+      let reason = null;
+
+      if (!generated) {
+        reason = "생성 레코드 없음";
+      } else {
+        const deltaGYmm = Math.abs(generated.localGYmm - actualGYmm);
+        const deltaGXmm = Math.abs(generated.gxStageMm - actualGXmm);
+        maxDeltaGYmm = Math.max(maxDeltaGYmm, deltaGYmm);
+        maxDeltaGXmm = Math.max(maxDeltaGXmm, deltaGXmm);
+
+        if (deltaGYmm > tolerance || deltaGXmm > tolerance) {
+          reason = `좌표 차이 GY=${deltaGYmm}, GX=${deltaGXmm}`;
+        } else if (
+          headerIndex.ExpectedRole !== undefined &&
+          generated.expectedRole !== cells[headerIndex.ExpectedRole]
+        ) {
+          reason = "ExpectedRole 불일치";
+        } else if (headerIndex.ConsecutiveDuplicate !== undefined) {
+          const generatedFlag = generated.consecutiveDuplicate ? "Y" : "N";
+          if (generatedFlag !== cells[headerIndex.ConsecutiveDuplicate]) {
+            reason = "ConsecutiveDuplicate 불일치";
+          }
+        }
+
+        if (!reason) {
+          for (const [csvColumn, generatedField] of numericMetadataColumns) {
+            if (headerIndex[csvColumn] === undefined) {
+              continue;
+            }
+            const groundTruthValue = Number(cells[headerIndex[csvColumn]]);
+            if (!nearlyEqual(generated[generatedField], groundTruthValue, tolerance)) {
+              reason = `${csvColumn} 불일치`;
+              break;
+            }
+          }
+        }
+      }
+
+      if (reason) {
+        mismatchCount += 1;
+        if (mismatchSamples.length < 20) {
+          mismatchSamples.push({ headNumber, sequenceNo, reason });
+        }
+      }
+      generatedByKey.delete(key);
+    }
+
+    const missingGroundTruthRecordCount = generatedByKey.size;
+    return {
+      passed:
+        mismatchCount === 0 &&
+        missingGroundTruthRecordCount === 0 &&
+        lines.length - 1 === records.length,
+      comparedRecordCount: lines.length - 1,
+      generatedRecordCount: records.length,
+      mismatchCount,
+      missingGroundTruthRecordCount,
+      maxDeltaGYmm: round(maxDeltaGYmm, 12),
+      maxDeltaGXmm: round(maxDeltaGXmm, 12),
+      mismatchSamples,
+    };
+  }
+
+  const CSV_COLUMNS = Object.freeze([
+    ["Head", (record) => record.headNumber],
+    ["SequenceNo", (record) => record.sequenceNo],
+    ["ExcelRow", (record) => record.excelRow],
+    ["GYmm", (record) => record.localGYmm],
+    ["GXStageMm", (record) => record.gxStageMm],
+    ["ExpectedRole", (record) => record.expectedRole],
+    ["ConsecutiveDuplicate", (record) => (record.consecutiveDuplicate ? "Y" : "N")],
+    ["CellId", (record) => record.cellId],
+    ["CellCol", (record) => record.cellCol],
+    ["CellRow", (record) => record.cellRow],
+    ["CommandGridIndexX", (record) => record.commandGridIndexX],
+    ["CommandGridIndexY", (record) => record.commandGridIndexY],
+    ["DesignPixelXpx", (record) => record.designPixelXpx],
+    ["DesignPixelYpx", (record) => record.designPixelYpx],
+    ["LaneNo", (record) => record.laneNo],
+    ["LanePointIndex", (record) => record.lanePointIndex],
+    ["UniqueSequenceNo", (record) => record.uniqueSequenceNo],
+    ["NominalGlobalXmm", (record) => record.nominalGlobalXmm],
+    ["NominalGlobalYmm", (record) => record.nominalGlobalYmm],
+    ["CorrectedGlobalXmm", (record) => record.globalXmm],
+    ["CorrectedGlobalYmm", (record) => record.globalYmm],
+    ["HeadCenterGlobalXmm", (record) => record.headCenterGlobalXmm],
+    ["CenterNominalMarginMm", (record) => record.centerNominalMarginMm],
+    ["HeadAssigned", (record) => record.headAssigned ? "Y" : "N"],
+    ["CenterInNominalField", (record) => (record.centerInNominalField ? "Y" : "N")],
+    [
+      "FinalFootprintMarginMm",
+      (record) =>
+        record.finalFootprintMarginMm === null ? "UNVERIFIED" : record.finalFootprintMarginMm,
+    ],
+    [
+      "FieldValid",
+      (record) =>
+        record.fieldValid === null ? "UNVERIFIED" : record.fieldValid ? "Y" : "N",
+    ],
+    ["CommandType", (record) => record.commandType],
+    ["LaserGate", (record) => record.laserGate],
+  ]);
+
+  function escapeCsvValue(value) {
+    const stringValue = value === null || value === undefined ? "" : String(value);
+    if (/[",\r\n]/.test(stringValue)) {
+      return `"${stringValue.replace(/"/g, '""')}"`;
+    }
+    return stringValue;
+  }
+
+  function exportRowsToCsv(records) {
+    const header = CSV_COLUMNS.map(([columnName]) => escapeCsvValue(columnName)).join(",");
+    const rows = records.map((record) =>
+      CSV_COLUMNS.map(([, selector]) => escapeCsvValue(selector(record))).join(","),
+    );
+    return [header, ...rows].join("\r\n");
+  }
+
+  return Object.freeze({
+    BASELINE_RECIPE,
+    BASELINE_HEAD_COUNTS,
+    normalizeRecipe,
+    getDerivedRecipe,
+    generateCoordinates,
+    runBaselineChecks,
+    compareGroundTruth,
+    exportRowsToCsv,
+    round,
+    nearlyEqual,
+  });
+});
+</script><script>(function (root, factory) {
+  const base = typeof module === 'object' && module.exports ? require('./coordinate-engine') : root.CoordinateEngine;
+  const api = factory(base);
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.MaskingEngine = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (base) {
+  'use strict';
+  const EPS = 1e-9;
+  const EDGE_RULE = 'EDGE_CORNER_INSET_RECT_V1';
+  const EDGE_BOX_RULE = 'EDGE_CORNER_LONG_SIDE_BOX_V1';
+  const EDGE_REFERENCE = 'CORNER_PIXEL_INWARD_MM';
+  const CORNERS = Object.freeze([
+    Object.freeze({id:'UP_LEFT',label:'상좌',sx:1,sy:1}),
+    Object.freeze({id:'UP_RIGHT',label:'상우',sx:-1,sy:1}),
+    Object.freeze({id:'DOWN_LEFT',label:'하좌',sx:1,sy:-1}),
+    Object.freeze({id:'DOWN_RIGHT',label:'하우',sx:-1,sy:-1}),
+  ]);
+  const PARAMETER_DEFINITIONS = [{key:'MASKING_HOLE_NUMBER',label:'마스킹 Hole 개수',unit:'개',group:'hole-count'}];
+  for (let i=1;i<=5;i++) for (const axis of ['X','Y']) PARAMETER_DEFINITIONS.push({key:`MASKING_HOLE${i}_${axis}`,label:`Hole ${i} 좌상단 ${axis}거리`,unit:'mm',group:'hole',hole:i});
+  for (let i=1;i<=5;i++) for (const axis of ['X','Y']) PARAMETER_DEFINITIONS.push({key:`MASKING_HOLE${i}_SIZE_${axis}`,label:`Hole ${i} ${axis==='X'?'전체 폭':'전체 높이'}`,unit:'mm',group:'hole',hole:i});
+  for (const c of CORNERS) for (const axis of ['X','Y']) PARAMETER_DEFINITIONS.push({key:`CELL_${c.id}_ROUND_${axis}`,label:`${c.label} 모서리에서 안쪽 ${axis}길이`,unit:'mm',group:'edge'});
+  PARAMETER_DEFINITIONS.forEach(Object.freeze);Object.freeze(PARAMETER_DEFINITIONS);
+  const DEFAULT_MASKING = Object.freeze({enabled:false,MASKING_HOLE_NUMBER:0,beamRadiusMm:null,positionMarginMm:null,doeRotationDeg:0});
+  const LASER_POLICIES = Object.freeze({centerGate:'ON',repeatGate:'UNRESOLVED'});
+  const label = key => PARAMETER_DEFINITIONS.find(p=>p.key===key)?.label || key;
+  function finite(value,key) {
+    if(value===null || value===undefined || typeof value==='boolean' || String(value).trim()==='') throw new Error(`${label(key)} 값을 입력하세요.`);
+    const n=Number(value);
+    if(!Number.isFinite(n)) throw new Error(`${label(key)} 값은 유한한 숫자여야 합니다.`);
+    return n;
+  }
+  function nonnegative(value,key) {
+    const n=finite(value,key);if(n<0) throw new Error(`${label(key)} 값은 0 이상이어야 합니다.`);return n;
+  }
+  function enabled(value) {return value===true || value===1 || value==='true';}
+  function getCellPixelBounds(recipe=base.BASELINE_RECIPE) {
+    const r=base.normalizeRecipe(recipe),c=r.sharedOriginOffsetMm;
+    const spanXmm=base.round((r.designPixelCountX-1)*r.pixelSizeMmPerPx);
+    const spanYmm=base.round((r.designPixelCountY-1)*r.pixelSizeMmPerPx);
+    return {left:base.round(-c),top:base.round(-c),right:base.round(spanXmm-c),bottom:base.round(spanYmm-c),spanXmm,spanYmm,centerOffsetMm:c,pixelSizeMmPerPx:r.pixelSizeMmPerPx,pixelCountX:r.designPixelCountX,pixelCountY:r.designPixelCountY};
+  }
+  function normalizeMasking(input={},recipe=base.BASELINE_RECIPE) {
+    const source={...DEFAULT_MASKING,...input};
+    const footprintMode=source.footprintMode||'DOE_CENTERS';
+    if(!['DOE_CENTERS','PITCH_TILE'].includes(footprintMode))throw new Error('판정 사각형 기준을 확인하세요.');
+    const result={enabled:enabled(source.enabled),parameters:{},holes:[],shape:null,beamRadiusMm:0,positionMarginMm:0,doeRotationDeg:0,footprintMode,scope:footprintMode==='PITCH_TILE'?'PITCH_TILE_ENVELOPE':'NOMINAL_DOE_ENVELOPE'};
+    if(!result.enabled) return result;
+    const count=finite(source.MASKING_HOLE_NUMBER,'MASKING_HOLE_NUMBER');
+    if(!Number.isInteger(count)||count<0||count>5) throw new Error('마스킹 Hole 개수는 정수 0~5여야 합니다.');
+    result.parameters.MASKING_HOLE_NUMBER=count;
+    for(const p of PARAMETER_DEFINITIONS.filter(p=>p.group==='edge')) result.parameters[p.key]=nonnegative(source[p.key],p.key);
+    for(let i=1;i<=count;i++) {
+      for(const suffix of ['X','Y','SIZE_X','SIZE_Y']) {
+        const key=`MASKING_HOLE${i}_${suffix}`;result.parameters[key]=finite(source[key],key);
+      }
+      const h={number:i,x:result.parameters[`MASKING_HOLE${i}_X`],y:result.parameters[`MASKING_HOLE${i}_Y`],width:result.parameters[`MASKING_HOLE${i}_SIZE_X`],height:result.parameters[`MASKING_HOLE${i}_SIZE_Y`]};
+      if(h.width<=0||h.height<=0) throw new Error(`Hole ${i}의 전체 폭과 높이는 0보다 커야 합니다.`);
+      result.holes.push(h);
+    }
+    const r=result.parameters,outer=getCellPixelBounds(recipe);
+    const insets={left:Math.max(r.CELL_UP_LEFT_ROUND_X,r.CELL_DOWN_LEFT_ROUND_X),right:Math.max(r.CELL_UP_RIGHT_ROUND_X,r.CELL_DOWN_RIGHT_ROUND_X),top:Math.max(r.CELL_UP_LEFT_ROUND_Y,r.CELL_UP_RIGHT_ROUND_Y),bottom:Math.max(r.CELL_DOWN_LEFT_ROUND_Y,r.CELL_DOWN_RIGHT_ROUND_Y)};
+    const s={
+      left:base.round(outer.left+insets.left),
+      right:base.round(outer.right-insets.right),
+      top:base.round(outer.top+insets.top),
+      bottom:base.round(outer.bottom-insets.bottom),
+      outerLeft:outer.left,outerRight:outer.right,outerTop:outer.top,outerBottom:outer.bottom,
+      insets,pixelBounds:outer,rule:EDGE_RULE,inputReference:EDGE_REFERENCE,
+    };
+    const edgeRule=source.edgeRule||EDGE_RULE;
+    if(![EDGE_RULE,EDGE_BOX_RULE].includes(edgeRule))throw new Error('Edge 사각형 종류를 확인하세요.');
+    if(edgeRule===EDGE_RULE && (s.right-s.left<=2*EPS||s.bottom-s.top<=2*EPS)) throw new Error('상·하·좌·우 장변 경계가 교차합니다. 허용 사각형의 폭과 높이는 0보다 커야 합니다.');
+    s.corners=CORNERS.map(c=>{const insetX=r[`CELL_${c.id}_ROUND_X`],insetY=r[`CELL_${c.id}_ROUND_Y`],referenceX=c.sx===1?outer.left:outer.right,referenceY=c.sy===1?outer.top:outer.bottom;return {...c,insetX,insetY,referenceX,referenceY,anchorX:base.round(referenceX+c.sx*insetX),anchorY:base.round(referenceY+c.sy*insetY)};});
+    s.strips=[
+      {id:'TOP',x:s.outerLeft,y:s.outerTop,width:s.outerRight-s.outerLeft,height:s.top-s.outerTop},
+      {id:'BOTTOM',x:s.outerLeft,y:s.bottom,width:s.outerRight-s.outerLeft,height:s.outerBottom-s.bottom},
+      {id:'LEFT',x:s.outerLeft,y:s.outerTop,width:s.left-s.outerLeft,height:s.outerBottom-s.outerTop},
+      {id:'RIGHT',x:s.right,y:s.outerTop,width:s.outerRight-s.right,height:s.outerBottom-s.outerTop},
+    ];
+    if(edgeRule===EDGE_BOX_RULE){
+      s.rule=EDGE_BOX_RULE;
+      s.boxes=s.corners.map(c=>{
+        const side=Math.max(c.insetX,c.insetY);
+        if(side>Math.min(outer.spanXmm,outer.spanYmm)+EPS)throw new Error(`${c.label} 장변 금지박스가 Pixel 기준 폭·높이보다 큽니다.`);
+        return {id:c.id,x:c.sx===1?outer.left:outer.right-side,y:c.sy===1?outer.top:outer.bottom-side,width:side,height:side};
+      });
+      s.left=s.outerLeft;s.right=s.outerRight;s.top=s.outerTop;s.bottom=s.outerBottom;
+      s.strips=[];
+    }
+    result.shape=s;
+    const hasBeam=source.beamRadiusMm!==null&&source.beamRadiusMm!==undefined&&String(source.beamRadiusMm).trim()!=='';
+    const hasMargin=source.positionMarginMm!==null&&source.positionMarginMm!==undefined&&String(source.positionMarginMm).trim()!=='';
+    if(hasBeam!==hasMargin) throw new Error('Masking의 빔 반경과 위치 여유는 둘 다 입력하거나 둘 다 비우세요.');
+    if(hasBeam) {
+      result.beamRadiusMm=nonnegative(source.beamRadiusMm,'Masking 빔 반경');
+      result.positionMarginMm=nonnegative(source.positionMarginMm,'Masking 위치 여유');
+      result.scope=footprintMode==='PITCH_TILE'?'PITCH_TILE_WITH_ENTERED_MARGIN':'DOE_ENVELOPE_WITH_ENTERED_MARGIN';
+    }
+    result.doeRotationDeg=finite(source.doeRotationDeg,'DOE 회전각');
+    return result;
+  }
+  // Signed local displacement inward from the selected corner; origin stays A.
+  function mirrorLocal(corner,u,v) {return {x:corner.anchorX+corner.sx*u,y:corner.anchorY+corner.sy*v};}
+  function pointStrictlyInside(x,y,s) {
+    return x>s.left+EPS&&x<s.right-EPS&&y>s.top+EPS&&y<s.bottom-EPS;
+  }
+  function envelope(x,y,half) {return {left:x-half,right:x+half,top:y-half,bottom:y+half};}
+  function touchesEdge(b,s) {
+    if(s.rule===EDGE_BOX_RULE)return edgeContactReasons(b,s).length>0;
+    return ![[b.left,b.top],[b.right,b.top],[b.left,b.bottom],[b.right,b.bottom]].every(([x,y])=>pointStrictlyInside(x,y,s));
+  }
+  function edgeContactReasons(b,s) {
+    if(s.rule===EDGE_BOX_RULE)return s.boxes.filter(q=>q.width>EPS&&q.height>EPS&&touchesHole(b,q)).map(q=>`EDGE_${q.id}`);
+    const reasons=[];
+    if(b.left<=s.left+EPS)reasons.push('EDGE_LEFT');
+    if(b.right>=s.right-EPS)reasons.push('EDGE_RIGHT');
+    if(b.top<=s.top+EPS)reasons.push('EDGE_TOP');
+    if(b.bottom>=s.bottom-EPS)reasons.push('EDGE_BOTTOM');
+    return reasons;
+  }
+  function gatePresentation(gate) {
+    if(gate==='ON')return {color:'#00b050',action:'가공 · LASER ON',mofAction:'PROCESS_LASER_ON'};
+    if(gate==='OFF')return {color:'#ff453a',action:'MOF 통과 · LASER OFF',mofAction:'PASS_LASER_OFF'};
+    return {color:'#f6bd5c',action:'기존 발진 조건 미정',mofAction:'GATE_UNRESOLVED'};
+  }
+  function centerVector(recipe,rotationDeg) {
+    const c=Number(recipe.pixelSizeMmPerPx??base.BASELINE_RECIPE.pixelSizeMmPerPx)*Number(recipe.commandPitchPx??base.BASELINE_RECIPE.commandPitchPx)/Number(recipe.doeBranchCountPerAxis??base.BASELINE_RECIPE.doeBranchCountPerAxis)*(Number(recipe.doeBranchCountPerAxis??base.BASELINE_RECIPE.doeBranchCountPerAxis)-1)/2;
+    const a=Number(rotationDeg)*Math.PI/180;
+    return {x:base.round(c*(Math.cos(a)-Math.sin(a))),y:base.round(c*(Math.sin(a)+Math.cos(a)))};
+  }
+  function convertCellOriginEntry(config,recipe,toCenter) {
+    const v=centerVector(recipe,config.rotationDeg),sign=toCenter?1:-1;
+    return {...config,alignToFirstPixelXmm:base.round(finite(config.alignToFirstPixelXmm,'Cell X 거리')+sign*v.x),alignToFirstPixelYmm:base.round(finite(config.alignToFirstPixelYmm,'Cell Y 거리')+sign*v.y)};
+  }
+  function touchesHole(b,h) {
+    return b.right>=h.x-EPS && b.left<=h.x+h.width+EPS && b.bottom>=h.y-EPS && b.top<=h.y+h.height+EPS;
+  }
+  function defaultCellConfigurations(recipe=base.BASELINE_RECIPE) {
+    return Array.from({length:50},(_,i)=>({modelType:1,alignToFirstPixelXmm:(i%recipe.cellColumnCount)*recipe.cellPitchXmm,alignToFirstPixelYmm:Math.floor(i/recipe.cellColumnCount)*recipe.cellPitchYmm,rotationDeg:0}));
+  }
+  function defaultHybrid() {return {enabled:false,CELL_MODEL_TYPE_COUNT:5,models:Array.from({length:5},()=>({...DEFAULT_MASKING})),beamRadiusMm:null,positionMarginMm:null,doeRotationDeg:0,edgeRule:EDGE_RULE,edgeInputReference:EDGE_REFERENCE};}
+  function normalizeHybrid(input={},recipe) {
+    const src={...defaultHybrid(),...input},count=finite(src.CELL_MODEL_TYPE_COUNT,'모델 종류 수');
+    if(enabled(src.enabled)&&((src.edgeRule&&![EDGE_RULE,EDGE_BOX_RULE].includes(src.edgeRule))||(src.edgeInputReference&&src.edgeInputReference!==EDGE_REFERENCE)))throw new Error('Edge 입력 기준을 확인하세요. 각 모서리에서 안쪽으로 잰 0 이상 길이(mm)가 필요합니다.');
+    if(!Number.isInteger(count)||count<1||count>5)throw new Error('모델 종류 수는 정수 1~5여야 합니다.');
+    if(enabled(src.enabled)&&!Array.isArray(input.models))throw new Error('Cell 모델별 Masking 형상을 입력하세요. 공통 Masking 형상은 자동 배정하지 않습니다.');
+    if(!Array.isArray(src.models)||src.models.length<count)throw new Error('사용 모델의 형상 슬롯이 부족합니다.');
+    const cellCount=recipe.cellColumnCount*recipe.cellRowCount;
+    if(cellCount>50)throw new Error('PPID는 Cell 1~50을 지원합니다.');
+    const configs=recipe.cellConfigurations.length?recipe.cellConfigurations:defaultCellConfigurations(recipe);
+    for(let i=0;i<cellCount;i++) {
+      if(!Number.isInteger(configs[i].modelType)||configs[i].modelType<1||configs[i].modelType>count)throw new Error(`Cell ${i+1}의 모델 번호는 1~${count}여야 합니다.`);
+      if(configs[i].rotationDeg<0||configs[i].rotationDeg>360)throw new Error(`Cell ${i+1} 회전각은 0~360도여야 합니다.`);
+    }
+    const used=new Set(configs.slice(0,cellCount).map(c=>c.modelType));
+    const models=src.models.slice(0,count).map((m,i)=>{
+      try{return normalizeMasking({...m,enabled:enabled(src.enabled)&&used.has(i+1),edgeRule:src.edgeRule,footprintMode:src.footprintMode||'DOE_CENTERS',beamRadiusMm:src.beamRadiusMm,positionMarginMm:src.positionMarginMm,doeRotationDeg:src.doeRotationDeg},recipe);}
+      catch(e){throw new Error(`모델 ${i+1}: ${e.message}`);}
+    });
+    return {enabled:enabled(src.enabled),count,models,configs,used:[...used]};
+  }
+
+  function validateGate(value,key) {
+    if(!['ON','OFF','UNRESOLVED'].includes(value)) throw new Error(`${key}은 ON, OFF 또는 UNRESOLVED여야 합니다.`);return value;
+  }
+  function applyMasking(result,input={},policyInput={}) {
+    const recipe=result.recipe,hybrid=normalizeHybrid(input,recipe),policy={...LASER_POLICIES,...policyInput};
+    validateGate(policy.centerGate,'가공 중심 발진');validateGate(policy.repeatGate,'Lane 반복 발진');
+    const spacing=result.derived.commandSpacingMm/recipe.doeBranchCountPerAxis;
+    const nominalHalf=spacing*(recipe.doeBranchCountPerAxis-1)/2;
+    function classify(p) {
+      const conf=hybrid.configs[p.cellId-1],modelType=conf.modelType,mask=hybrid.models[modelType-1];
+      const originX=p.cellFirstCenterXmm,originY=p.cellFirstCenterYmm;
+      const theta=conf.rotationDeg*Math.PI/180,dx=p.globalXmm-originX,dy=p.globalYmm-originY;
+      const maskXmm=base.round(Math.cos(theta)*dx+Math.sin(theta)*dy)||0,maskYmm=base.round(-Math.sin(theta)*dx+Math.cos(theta)*dy)||0;
+      const angle=(mask.doeRotationDeg-conf.rotationDeg)*Math.PI/180;
+      const referenceHalf=mask.footprintMode==='PITCH_TILE'?result.derived.commandSpacingMm/2:nominalHalf;
+      const half=base.round(referenceHalf*(Math.abs(Math.cos(angle))+Math.abs(Math.sin(angle)))+mask.beamRadiusMm+mask.positionMarginMm);
+      const footprint=envelope(maskXmm,maskYmm,half),reasons=[];
+      if(hybrid.enabled) {
+        reasons.push(...edgeContactReasons(footprint,mask.shape));
+        for(const h of mask.holes)if(touchesHole(footprint,h))reasons.push(`HOLE_${h.number}`);
+      }
+      return {cellModelType:modelType,maskOriginXmm:originX,maskOriginYmm:originY,maskXmm,maskYmm,maskFootprintHalfMm:half,maskScope:mask.scope,maskingEnabled:hybrid.enabled,maskHit:reasons.length>0,maskReason:reasons.join('|'),maskLaserGate:reasons.length?'OFF':'ALLOW',processBlockReason:p.headAssigned===false?'HEAD_UNASSIGNED':reasons.join('|')};
+    }
+    const geometryByCenter=new Map();
+    const key=p=>`${p.headNumber}:${p.cellId}:${p.commandGridIndexX}:${p.commandGridIndexY}`;
+    const centers=result.uniqueCenters.map(p=>{
+      const classification=classify(p);geometryByCenter.set(key(p),classification);
+      return {...p,...classification,baseLaserGate:policy.centerGate,laserGate:classification.maskHit||p.headAssigned===false?'OFF':policy.centerGate};
+    });
+    const records=result.records.map(p=>{
+      const classification=geometryByCenter.get(key(p))||classify(p);
+      const provided=policy.baseGates?.[`${p.headNumber}:${p.sequenceNo}`];
+      const knownBase=p.baseLaserGate??(['ON','OFF'].includes(p.laserGate)?p.laserGate:null);
+      const baseLaserGate=provided!==undefined?validateGate(provided,'레코드 발진'):knownBase!==null?validateGate(knownBase,'기존 레코드 발진'):p.isRepeatedLaneStart?policy.repeatGate:policy.centerGate;
+      const laserGate=classification.maskHit||p.headAssigned===false?'OFF':baseLaserGate;
+      return {...p,...classification,baseLaserGate,laserGate,mofAction:gatePresentation(laserGate).mofAction};
+    });
+    const centerRecords=new Map(records.filter(p=>!p.isRepeatedLaneStart).map(p=>[key(p),p]));
+    for(const center of centers) {
+      const record=centerRecords.get(key(center));
+      if(record){center.baseLaserGate=record.baseLaserGate;center.laserGate=record.laserGate;}
+    }
+    const count=(field,value)=>records.filter(r=>r[field]===value).length;
+    const perModel=Array.from({length:hybrid.count},(_,i)=>{
+      const rs=records.filter(p=>p.cellModelType===i+1),cs=centers.filter(p=>p.cellModelType===i+1);
+      return {modelType:i+1,cellCount:new Set(cs.map(p=>p.cellId)).size,rawCount:rs.length,uniqueCount:cs.length,maskedRawCount:rs.filter(p=>p.maskHit).length,onCount:rs.filter(p=>p.laserGate==='ON').length,offCount:rs.filter(p=>p.laserGate==='OFF').length};
+    });
+    const summary={enabled:hybrid.enabled,rawCount:records.length,maskedRawCount:count('maskHit',true),maskedUniqueCount:centers.filter(p=>p.maskHit).length,onCount:count('laserGate','ON'),offCount:count('laserGate','OFF'),unresolvedCount:count('laserGate','UNRESOLVED'),nominalHalfMm:base.round(nominalHalf),coordinateChangeCount:0,perModel};
+    if(records.some((p,i)=>p.headNumber!==result.records[i].headNumber||p.sequenceNo!==result.records[i].sequenceNo||p.localGYmm!==result.records[i].localGYmm||p.gxStageMm!==result.records[i].gxStageMm))throw new Error('Masking 적용 중 좌표 불변 조건을 위반했습니다.');
+    return {...result,recipe:{...recipe,masking:{...input},laserPolicy:{...policy}},records,uniqueCenters:centers,masking:{...hybrid,summary,policy},summary:{...result.summary,masking:summary}};
+  }
+
+  function generateCoordinates(input={}) {
+    const coordinateInput={...input};
+    if(input.autoDoeCenterOffset!==false) {
+      const pixel=Number(input.pixelSizeMmPerPx??base.BASELINE_RECIPE.pixelSizeMmPerPx),pitch=Number(input.commandPitchPx??base.BASELINE_RECIPE.commandPitchPx),n=Number(input.doeBranchCountPerAxis??base.BASELINE_RECIPE.doeBranchCountPerAxis);
+      coordinateInput.sharedOriginOffsetMm=base.round(pixel*pitch/n*(n-1)/2);
+    }
+    return applyMasking(base.generateCoordinates(coordinateInput),input.masking||{},input.laserPolicy||{});
+  }
+  const EXTRA_COLUMNS=Object.freeze([
+    ['MofAction','mofAction'],['CellModelType','cellModelType'],['CellRotationDeg','cellRotationDeg'],['BaseLaserGate','baseLaserGate'],['MaskingEnabled','maskingEnabled'],['MaskXmm','maskXmm'],['MaskYmm','maskYmm'],['MaskOriginXmm','maskOriginXmm'],['MaskOriginYmm','maskOriginYmm'],['MaskFootprintHalfMm','maskFootprintHalfMm'],['MaskFootprintScope','maskScope'],['MaskHit','maskHit'],['MaskReason','maskReason'],['MaskLaserGate','maskLaserGate'],['ProcessBlockReason','processBlockReason']
+  ]);
+  function selectOutputRecords(records,options={}) {
+    return options.assignedOnly?records.filter(p=>p.headAssigned!==false):records;
+  }
+  function exportRowsToCsv(records,options={}) {
+    records=selectOutputRecords(records,options);
+    const rows=base.exportRowsToCsv(records).split('\r\n');
+    return rows.map((line,i)=>line+','+(i===0?EXTRA_COLUMNS.map(([name])=>name).join(','):EXTRA_COLUMNS.map(([,key])=>String(records[i-1][key]??'')).join(','))).join('\r\n');
+  }
+  function exportCommandPlan(records,options={}) {
+    const excludedCount=records.length-selectOutputRecords(records,options).length;
+    records=selectOutputRecords(records,options);
+    if(records.some(p=>p.headAssigned===false))throw new Error('미배정 Head 좌표가 있습니다. 실제 Head 수와 Field 배치를 확인한 뒤 명령표를 저장하세요.');
+    if(records.some(r=>!['ON','OFF'].includes(r.laserGate))) throw new Error('발진 미정 레코드가 있습니다. 기존 Script에 맞는 Lane 반복 발진 정책을 선택하세요.');
+    const header=['# A3 LD coordinate / laser gate command table (mm)','# Controller-independent data, not native scanner code.','# Each POINT keeps the original position and exposure slot; OFF suppresses exposure.','# OFF points remain on the same MOF path and in the same record sequence.'];
+    if(options.assignedOnly)header.push(`# Assigned heads only; excluded unassigned records=${excludedCount}; output records=${records.length}.`);
+    return header.concat(records.map(r=>`POINT ${r.headId} SEQ=${r.sequenceNo} GY=${r.localGYmm.toFixed(4)} GX_STAGE=${r.gxStageMm.toFixed(4)} LASER=${r.laserGate}`)).join('\r\n');
+  }
+  function makeExampleMasking() {
+    const hybrid=defaultHybrid();hybrid.enabled=true;
+    hybrid.models=Array.from({length:5},(_,i)=>{
+      const p={...DEFAULT_MASKING,MASKING_HOLE_NUMBER:i===0?0:i%3+1};
+      for(const c of CORNERS){p[`CELL_${c.id}_ROUND_X`]=1+i*.25;p[`CELL_${c.id}_ROUND_Y`]=1+i*.2;}
+      p.CELL_DOWN_LEFT_ROUND_X=1.5+i*.25;p.CELL_DOWN_RIGHT_ROUND_X=1.25+i*.25;
+      p.CELL_UP_RIGHT_ROUND_Y=1.25+i*.2;p.CELL_DOWN_RIGHT_ROUND_Y=1.5+i*.2;
+      for(let h=1;h<=5;h++)Object.assign(p,{[`MASKING_HOLE${h}_X`]:1.8+(h-1)*3,[`MASKING_HOLE${h}_Y`]:3.6+i*2,[`MASKING_HOLE${h}_SIZE_X`]:1.5+i*.3,[`MASKING_HOLE${h}_SIZE_Y`]:2.2});
+      return p;
+    });return hybrid;
+  }
+  function makeDiagramMasking(recipe=base.BASELINE_RECIPE) {
+    const r=base.normalizeRecipe(recipe),d=base.getDerivedRecipe(r),h=defaultHybrid(),step=d.commandSpacingMm;
+    h.enabled=true;
+    h.models=h.models.map(()=>{
+      const p={MASKING_HOLE_NUMBER:1,MASKING_HOLE1_X:step*4.7,MASKING_HOLE1_Y:step*.22,MASKING_HOLE1_SIZE_X:step*1.2,MASKING_HOLE1_SIZE_Y:step*1.2};
+      for(const c of CORNERS){p[`CELL_${c.id}_ROUND_X`]=step*.4;p[`CELL_${c.id}_ROUND_Y`]=step*.4;}
+      p.CELL_UP_RIGHT_ROUND_Y=step*.7;p.CELL_DOWN_LEFT_ROUND_X=step*.6;
+      p.CELL_DOWN_RIGHT_ROUND_X=step*.6;p.CELL_DOWN_RIGHT_ROUND_Y=step*.7;
+      return p;
+    });return h;
+  }
+  function exportFlatParameters(recipe) {
+    const normalized=base.normalizeRecipe(recipe),h=normalizeHybrid(recipe.masking||{},normalized);
+    const out={CELL_MODEL_TYPE_COUNT:h.count};
+    for(let m=1;m<=5;m++)for(const p of PARAMETER_DEFINITIONS)out[`MODEL${m}_${p.key}`]=recipe.masking?.models?.[m-1]?.[p.key]??null;
+    const cells=recipe.cellConfigurations?.length?recipe.cellConfigurations:defaultCellConfigurations(normalized);
+    for(let c=1;c<=50;c++) {
+      const v=cells[c-1];
+      out[`CELL${c}_ALIGN_TO_1ST_PIXEL_X`]=v?.alignToFirstPixelXmm??null;
+      out[`CELL${c}_MODEL_TYPE`]=v?.modelType??1;
+      out[`CELL${c}_ALIGN_TO_1ST_PIXEL_Y`]=v?.alignToFirstPixelYmm??null;
+      out[`CELL${c}_ROTATION`]=v?.rotationDeg??0;
+    }
+    return {schema:'PPID_CELL_MODELS_CORNER_INSET_V1',units:'geometry=mm; rotation=deg; counts=integer',encoding:'engineering_values_not_PLC_words',edgeRule:recipe.masking?.edgeRule||EDGE_RULE,footprintMode:recipe.masking?.footprintMode||'DOE_CENTERS',edgeInputReference:EDGE_REFERENCE,pixelGeometry:{pixelSizeMmPerPx:normalized.pixelSizeMmPerPx,designPixelCountX:normalized.designPixelCountX,designPixelCountY:normalized.designPixelCountY,sharedOriginOffsetMm:normalized.sharedOriginOffsetMm},parameters:out};
+  }
+  return Object.freeze({...base,selectOutputRecords,getCellPixelBounds,EDGE_RULE,EDGE_BOX_RULE,EDGE_REFERENCE,edgeContactReasons,gatePresentation,centerVector,convertCellOriginEntry,makeDiagramMasking,defaultHybrid,defaultCellConfigurations,normalizeHybrid,exportFlatParameters,CORNERS,PARAMETER_DEFINITIONS,DEFAULT_MASKING,LASER_POLICIES,normalizeMasking,mirrorLocal,pointStrictlyInside,envelope,touchesEdge,touchesHole,applyMasking,generateCoordinates,exportRowsToCsv,exportCommandPlan,makeExampleMasking});
+});
+</script><script>(function(root){
+'use strict';
+const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0), norm=a=>Math.sqrt(dot(a,a));
+const eye=n=>Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>+(i===j)));
+const mv=(A,x)=>A.map(r=>dot(r,x));
+const tr=A=>A[0].map((_,j)=>A.map(r=>r[j]));
+const cache=new Map();let builds=0;
+// One-sided Jacobi SVD: directly orthogonalize columns, without A^T A.
+function svd(A){
+ const m=A.length,n=A[0].length,B=A.map(r=>r.slice()),V=eye(n);
+ for(let sweep=0;sweep<160;sweep++){
+  let changed=false;
+  for(let p=0;p<n-1;p++)for(let q=p+1;q<n;q++){
+   let aa=0,bb=0,ab=0;
+   for(let i=0;i<m;i++){aa+=B[i][p]**2;bb+=B[i][q]**2;ab+=B[i][p]*B[i][q];}
+   if(Math.abs(ab)<=2e-15*Math.sqrt(aa*bb)||Math.abs(ab)<1e-30)continue;
+   const tau=(bb-aa)/(2*ab),t=(tau>=0?1:-1)/(Math.abs(tau)+Math.hypot(1,tau));
+   const c=1/Math.hypot(1,t),s=c*t;
+   for(let i=0;i<m;i++){const a=B[i][p],b=B[i][q];B[i][p]=c*a-s*b;B[i][q]=s*a+c*b;}
+   for(let i=0;i<n;i++){const a=V[i][p],b=V[i][q];V[i][p]=c*a-s*b;V[i][q]=s*a+c*b;}
+   changed=true;
+  }
+  if(!changed)break;
+ }
+ const sig=Array.from({length:n},(_,j)=>Math.hypot(...B.map(r=>r[j])));
+ const order=Array.from({length:n},(_,i)=>i).sort((a,b)=>sig[b]-sig[a]);
+ const U=B.map(r=>order.map(j=>sig[j]>1e-14?r[j]/sig[j]:0));
+ // Complete left null columns for the small square matrices used here.
+ for(let k=0;k<n;k++)if(sig[order[k]]<=1e-14){
+  let best=null,bestNorm=0;
+  for(let a=0;a<m;a++){const q=Array.from({length:m},(_,i)=>+(i===a));for(let pass=0;pass<2;pass++)for(let j=0;j<k;j++){const c=dot(q,U.map(row=>row[j]));for(let i=0;i<m;i++)q[i]-=c*U[i][j];}const z=norm(q);if(z>bestNorm){best=q;bestNorm=z;}}
+  if(bestNorm>1e-12)for(let i=0;i<m;i++)U[i][k]=best[i]/bestNorm;
+ }
+ return {s:order.map(j=>sig[j]),V:V.map(r=>order.map(j=>r[j])),U};
+}
+const api={svd,dot,norm,mv,tr}; if(typeof module!=="undefined"&&module.exports)module.exports=api;root.SVDCore=api;})(typeof globalThis!=="undefined"?globalThis:this);</script><script>(function(root){
+'use strict';
+const LA=typeof module!=='undefined'&&module.exports?require('./linalg.js'):root.SVDCore;
+const dot=LA.dot, clone=x=>JSON.parse(JSON.stringify(x));
+function solve(A,b){
+ const z=LA.svd(A),n=A[0].length,cut=z.s[0]*1e-12,rank=z.s.filter(s=>s>cut).length;
+ if(rank!==n)throw Error('행렬의 독립 조건이 부족합니다. 점 배치·중복·스케일을 확인하세요.');
+ const c=Array(n).fill(0);for(let k=0;k<n;k++){const a=dot(z.U.map(r=>r[k]),b)/z.s[k];for(let j=0;j<n;j++)c[j]+=z.V[j][k]*a;}
+ const residual=Math.max(...A.map((r,i)=>Math.abs(dot(r,c)-b[i])));
+ if(residual>1e-9*Math.max(1,...b.map(Math.abs)))throw Error('정확 통과 조건을 계산 정밀도 안에서 만족하지 못했습니다.');
+ return {c,s:z.s,rank,residual};
+}
+function presets(){const keys=[{"id": "AK1", "kind": "align", "camera": "C1", "side": "left", "s": 0, "t": 0, "pose": "ALIGN-1"}, {"id": "AK2", "kind": "align", "camera": "C4", "side": "left", "s": 0, "t": 1, "pose": "ALIGN-4"}, {"id": "AK3", "kind": "align", "camera": "C2", "side": "right", "s": 1, "t": 0, "pose": "ALIGN-2"}, {"id": "AK4", "kind": "align", "camera": "C3", "side": "right", "s": 1, "t": 1, "pose": "ALIGN-3"}, {"id": "DK1", "kind": "distortion", "camera": "C1", "side": "left", "s": 0, "t": 0.36, "pose": "Y-SCAN-1"}, {"id": "DK2", "kind": "distortion", "camera": "C1", "side": "left", "s": 0, "t": 0.495, "pose": "Y-SCAN-2"}, {"id": "DK3", "kind": "distortion", "camera": "C1", "side": "left", "s": 0, "t": 0.63, "pose": "Y-SCAN-3"}, {"id": "DK4", "kind": "distortion", "camera": "C2", "side": "right", "s": 0.915, "t": 0.36, "pose": "Y-SCAN-1"}, {"id": "DK5", "kind": "distortion", "camera": "C2", "side": "right", "s": 0.915, "t": 0.495, "pose": "Y-SCAN-2"}, {"id": "DK6", "kind": "distortion", "camera": "C2", "side": "right", "s": 0.915, "t": 0.63, "pose": "Y-SCAN-3"}];return [{modelId:'DEMO-MODEL',version:6,width:925,height:1500,imagingVersion:'OPTICS-UNREGISTERED',keys}];}
+function sideOf(k){if(k.side==='left'||k.side==='right')return k.side;if(/^AK[12]$|^DK[123]$/.test(k.id))return 'left';if(/^AK[34]$|^DK[456]$/.test(k.id))return 'right';return null;}
+function validateRecipe(r){
+ if(!r||typeof r.modelId!=='string'||!r.modelId.trim()||r.modelId.length>60||!Number.isInteger(r.version)||r.version<1)throw Error('Model ID·버전을 확인하세요.');
+ if(![r.width,r.height].every(v=>Number.isFinite(v)&&v>0&&v<1e6)||!r.imagingVersion)throw Error('기판 크기·촬영 조건을 확인하세요.');
+ if(!Array.isArray(r.keys)||r.keys.length!==10)throw Error('Align 4개와 Distortion 6개의 레시피를 입력하세요.');
+ const ids=new Set();for(const k of r.keys){if(!k.id||ids.has(k.id)||!['align','distortion'].includes(k.kind)||!['C1','C2','C3','C4'].includes(k.camera)||![k.s,k.t].every(v=>Number.isFinite(v)&&v>=0&&v<=1)||!k.pose)throw Error('Key·Camera·설계 위치·ScanPose를 확인하세요.');ids.add(k.id);}
+ const a=r.keys.filter(k=>k.kind==='align'),d=r.keys.filter(k=>k.kind==='distortion');
+ if(a.length!==4||new Set(a.map(k=>k.camera)).size!==4||d.length!==6||new Set(d.map(k=>k.camera)).size!==2)throw Error('4개 Align 카메라와 2개 Distortion 카메라 구성을 확인하세요.');
+ for(const c of new Set(d.map(k=>k.camera))){const ks=d.filter(k=>k.camera===c).sort((a,b)=>a.t-b.t);if(ks.length!==3)throw Error('Distortion은 카메라별 3개씩입니다.');if(ks.some((k,i)=>i&&k.t-ks[i-1].t<1e-6))throw Error('카메라별 Distortion Y 위치는 서로 달라야 합니다.');}
+ for(let i=0;i<10;i++)for(let j=0;j<i;j++)if(Math.hypot(r.keys[i].s-r.keys[j].s,r.keys[i].t-r.keys[j].t)<1e-6)throw Error('서로 다른 Key의 설계 위치가 중복됩니다.');return r;
+}
+function active(r,count){validateRecipe(r);if(![2,4,6].includes(count))throw Error('Distortion 수는 6·4·2개입니다.');
+ const a=r.keys.filter(k=>k.kind==='align'),d=r.keys.filter(k=>k.kind==='distortion'),out=[];
+ for(const cam of [...new Set(d.map(k=>k.camera))].sort()){const ks=d.filter(k=>k.camera===cam).sort((a,b)=>a.t-b.t);out.push(...(count===6?ks:count===4?[ks[0],ks[2]]:[ks[1]]));}return [...a,...out];
+}
+function metric(r,p){const L=Math.max(r.width,r.height);return [p.s*r.width/L,p.t*r.height/L];}
+function phi(r){return r<1e-15?0:r*r*Math.log(r);}
+function tps(r,keys,values){
+ const q=keys.map(k=>metric(r,k)),n=q.length,P=q.map(p=>[1,...p]);
+ const M=Array.from({length:n+3},(_,i)=>Array.from({length:n+3},(_,j)=>i<n&&j<n?phi(Math.hypot(q[i][0]-q[j][0],q[i][1]-q[j][1])):i<n?P[i][j-n]:j<n?P[j][i-n]:0));
+ const fits=[0,1].map(a=>solve(M,[...values.map(v=>v[a]),0,0,0]));
+ return {kind:'tps',s:fits[0].s,rank:fits[0].rank,coefficients:fits.map(x=>x.c),matrix:M,evaluate(s,t){const p=metric(r,{s,t}),v=q.map(v=>phi(Math.hypot(p[0]-v[0],p[1]-v[1])));return fits.map(f=>dot(f.c,[...v,1,...p]));}};
+}
+function bary(nodes,values,t){let top=0,bot=0;for(let j=0;j<nodes.length;j++){if(Math.abs(t-nodes[j])<1e-13)return values[j];let w=1;for(let k=0;k<nodes.length;k++)if(j!==k)w/=nodes[j]-nodes[k];const z=w/(t-nodes[j]);top+=z*values[j];bot+=z;}return top/bot;}
+function lagrange(r,keys,values,viaSvd=false){
+ const cols=[...new Set(keys.map(k=>Math.round(k.s*1e8)/1e8))].sort((a,b)=>a-b);
+ const labeled=keys.every(k=>sideOf(k));
+ if(!labeled&&cols.length!==2)throw Error('라그랑주 연결에는 각 Key의 왼쪽/오른쪽 구분이 필요합니다.');
+ const groups=(labeled?['left','right']:cols).map(side=>keys.map((k,i)=>({k,v:values[i]})).filter(p=>labeled?sideOf(p.k)===side:Math.abs(p.k.s-side)<1e-7).sort((a,b)=>a.k.t-b.k.t));
+ for(const g of groups){if(g.length<2)throw Error('양쪽 측면에 각각 두 점 이상이 필요합니다.');if(g.some((p,i)=>i&&p.k.t-g[i-1].k.t<1e-6))throw Error('같은 측면의 Y 위치가 중복됩니다.');}
+ const solved=viaSvd?groups.map(g=>{const A=g.map(p=>Array.from({length:g.length},(_,j)=>p.k.t**j));return [0,1].map(a=>solve(A,g.map(p=>p.v[a])).c);}):null;
+ function span(t){return groups.map(g=>bary(g.map(p=>p.k.t),g.map(p=>p.k.s),t));}
+ function mix(s,t){const xs=span(t),width=xs[1]-xs[0];if(!Number.isFinite(width)||width<1e-7)throw Error('양측 설계 프로파일이 교차하거나 간격이 부족합니다.');return (s-xs[0])/width;}
+ return {kind:viaSvd?'same-svd':'lagrange',span,groups,cols,
+ extrapolated(s,t){return mix(s,t)<-1e-9||mix(s,t)>1+1e-9||groups.some(g=>t<g[0].k.t-1e-9||t>g.at(-1).k.t+1e-9);},
+ evaluate(s,t){const h=mix(s,t),v=groups.map((g,i)=>[0,1].map(a=>viaSvd?dot(solved[i][a],solved[i][a].map((_,j)=>t**j)):bary(g.map(p=>p.k.t),g.map(p=>p.v[a]),t)));return v[0].map((x,a)=>(1-h)*x+h*v[1][a]);}};
+}
+// Deliberate unseen smooth bump. Compact support does not touch ANY recipe Key.
+function hidden(r,s,t){const sx=.14,ty=.5,rx=.12,ry=.25;if(r.keys.some(k=>Math.hypot((k.s-sx)/rx,(k.t-ty)/ry)<1))return [0,0];const z=((s-sx)/rx)**2+((t-ty)/ry)**2,b=z<1?(1-z)**3:0;return [.013*b,-.008*b];}
+function truth(r,scenario,index=0){const phase=index*.17,a=1+.22*Math.sin(phase);return (s,t)=>{
+ let u=[a*(.003*(s-.5)+.006*(t-.5)**2+.002*Math.sin(Math.PI*t)),a*(-.002*(t-.5)+.003*(s-.5)*(t-.5))];
+ if(scenario==='bend'){u[0]+=.004*Math.sin(2*Math.PI*t)*(1+.7*(s-.5));u[1]+=.004*Math.sin(Math.PI*s)*Math.sin(Math.PI*t);}
+ if(scenario==='local'){u[0]+=.007*Math.exp(-((s-.55)**2/.03+(t-.52)**2/.025));u[1]-=.005*Math.exp(-((s-.55)**2/.03+(t-.52)**2/.025));}
+ if(scenario==='hidden'){const b=hidden(r,s,t);u=u.map((v,i)=>v+b[i]);}return u;};}
+function samples(r,count,scenario,index=0){const keys=active(r,count),f=truth(r,scenario,index),values=keys.map(k=>f(k.s,k.t));return {keys,values,truth:f};}
+function build(r,count,scenario,index=0){const d=samples(r,count,scenario,index),tp=tps(r,d.keys,d.values);let lag=null,same=null,error='';try{lag=lagrange(r,d.keys,d.values);same=lagrange(r,d.keys,d.values,true);}catch(e){error=e.message;}return {...d,tps:tp,lagrange:lag,same,error};}
+function probes(keys=[]){const p=[];for(let j=1;j<10;j++)for(let i=1;i<10;i++)p.push([i/10,j/10]);for(let j=0;j<=10;j++){const t=j/10;p.push([0,t],[1,t],[t,0],[t,1]);}return p.filter((q,i)=>!keys.some(k=>Math.hypot(q[0]-k.s,q[1]-k.t)<1e-6)&&!p.slice(0,i).some(v=>v[0]===q[0]&&v[1]===q[1]));}
+function loss(f,g,ps=probes()){if(!f)return null;return ps.reduce((a,p)=>{const x=f(...p),y=g(...p);return a+x.reduce((v,z,i)=>v+(z-y[i])**2,0);},0)/ps.length;}
+function nodeError(field,keys,values){return Math.max(...keys.flatMap((k,i)=>field.evaluate(k.s,k.t).map((v,a)=>Math.abs(v-values[i][a]))));}
+function tune(history){
+ if(history.length<12)return {method:null,text:'독립 검증 이력 모으는 중',used:history.map(r=>r.glassId)};
+ const w=history.slice(-24),split=Math.floor(w.length*2/3),a=w.slice(0,split),b=w.slice(split),mean=(xs,k)=>xs.reduce((s,r)=>s+r[k],0)/xs.length;
+ const best=xs=>mean(xs,'lagLoss')<=mean(xs,'tpsLoss')?'lagrange':'tps',ma=best(a),mb=best(b);
+ return {method:ma===mb?ma:null,text:ma===mb?(ma==='tps'?'전영역 연결 후보 유지':'라그랑주 연결 후보 유지'):'앞·뒤 검증 불일치 · 라그랑주 기준선 유지',used:w.map(r=>r.glassId),train:a.map(r=>r.glassId),hold:b.map(r=>r.glassId)};
+}
+function relativePixels(r,rows){validateRecipe(r);const out=[];
+ for(const k of r.keys){const p=rows.find(p=>p.id===k.id);if(!p||!p.reference||!p.pixel||![...p.reference,...p.pixel].every(Number.isFinite)||p.reference.length!==2||p.pixel.length!==2||p.camera!==k.camera||p.pose!==k.pose||p.phase!==(k.kind==='align'?'before-align':'after-align')||p.imagingVersion!==r.imagingVersion)throw Error('각 Key의 기준 pixel·측정 pixel·카메라·ScanPose·촬영 조건·정렬 단계를 확인하세요.');out.push({...k,delta:p.pixel.map((v,i)=>v-p.reference[i]),phase:p.phase});}return out;
+}
+function rawProfiles(rows,count){const d=rows.filter(r=>r.kind==='distortion'),out=[];for(const cam of [...new Set(d.map(p=>p.camera))].sort()){let ks=d.filter(p=>p.camera===cam).sort((a,b)=>a.t-b.t);if(count===4)ks=[ks[0],ks[2]];if(count===2)ks=[ks[1]];out.push({camera:cam,keys:ks,evaluate(t){if(t<ks[0].t||t>ks.at(-1).t)return null;return [0,1].map(a=>bary(ks.map(k=>k.t),ks.map(k=>k.delta[a]),t));}});}return out;}
+function exportStatus(){return {allowed:false,reason:'카메라–가공 좌표 대응·정렬 후 상태·독립 가공 검증을 아직 제공받지 않았습니다. 이 도구는 장비 명령을 내보내지 않습니다.'};}
+const api={clone,solve,sideOf,presets,validateRecipe,active,metric,phi,tps,bary,lagrange,hidden,truth,samples,build,probes,loss,nodeError,tune,relativePixels,rawProfiles,exportStatus};
+if(typeof module!=='undefined'&&module.exports)module.exports=api;root.FullField=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>(function(root){'use strict';
+const M=typeof module!=='undefined'&&module.exports?require('./masking-engine'):root.MaskingEngine;
+const F=typeof module!=='undefined'&&module.exports?require('./field-engine'):root.FullField;
+const FRAME='MASKING_ENGINE_GLOBAL_AFTER_BASE_CORRECTION_MM',clone=x=>JSON.parse(JSON.stringify(x));
+const pair=x=>Array.isArray(x)&&x.length===2&&x.every(Number.isFinite),matrix=A=>Array.isArray(A)&&A.length===2&&A.every(pair)&&Math.abs(A[0][0]*A[1][1]-A[0][1]*A[1][0])>1e-15;
+function canonicalRecipe(input){const r=clone(input);if(r.cellOriginEntryMode==='shotCenter'&&Array.isArray(r.cellConfigurations)){r.cellConfigurations=r.cellConfigurations.map(c=>M.convertCellOriginEntry(c,r,false));r.cellOriginEntryMode='firstPixel';}return r;}
+function base(input){const b=M.generateCoordinates(canonicalRecipe(input));if(input.glassLayout)b.recipe.glassLayout=clone(input.glassLayout);return b;}
+function machiningDomain(result){const pts=result.uniqueCenters,xs=pts.map(p=>p.globalXmm),ys=pts.map(p=>p.globalYmm),x0=Math.min(...xs)-5,y0=Math.min(...ys)-5;return{x0,y0,width:Math.max(...xs)-x0+5,height:Math.max(...ys)-y0+5};}
+function domain(result){const d=result.recipe.glassLayout;if(!d)throw Error('기판 외형/공통 원점/AK·DK 설계 배치를 레시피에 입력하세요. 가공점 범위를 기판 크기로 대신하지 않습니다.');return validateDomain({x0:d.x0,y0:d.y0,width:d.width,height:d.height});}
+function design(result){const d=domain(result),layout=result.recipe.glassLayout;if(!Array.isArray(layout.points)||layout.points.length!==10)throw Error('AK 4점과 DK 6점의 설계 위치를 입력하세요.');const points=clone(layout.points),ids=['AK1','AK2','AK3','AK4','DK1','DK2','DK3','DK4','DK5','DK6'];if(ids.some(id=>!points.some(p=>p.id===id)))throw Error('V6 설계에는 AK1~4 / DK1~6 ID가 필요합니다. 이전 배치를 자동 변환하지 않습니다.');for(const p of points){if(!pair(p.nominalMm)||p.kind!==(p.id.startsWith('AK')?'align':'distortion'))throw Error('Key 종류와 설계 X/Y를 확인하세요.');p.side=p.side||F.sideOf(p);if(p.side!==F.sideOf({id:p.id}))throw Error('Key ID와 좌우 구분을 확인하세요.');}F.validateRecipe(geometry(d,points));return {domainMm:d,points,version:layout.version,coordinateStatus:layout.coordinateStatus,keyPositionStatus:layout.keyPositionStatus,cameraMappingStatus:layout.cameraMappingStatus};}
+function validateDomain(d){if(!d||![d.x0,d.y0,d.width,d.height].every(Number.isFinite)||d.width<=0||d.height<=0)throw Error('변형을 계산할 범위(mm)를 확인하세요.');return d;}
+function geometry(d,points){return {modelId:'V6',version:6,width:d.width,height:d.height,imagingVersion:'V6',keys:points.map(p=>({id:p.id,kind:p.kind,camera:p.camera,pose:p.pose,side:p.side||F.sideOf(p),s:(p.nominalMm[0]-d.x0)/d.width,t:(p.nominalMm[1]-d.y0)/d.height}))};}
+function synth(result,shape='bend',index=0){const layout=design(result),d=layout.domainMm;
+const f=(s,t)=>shape==='stretch'?[.18*(s-.5),.12*(t-.5)]:[.12*Math.sin(Math.PI*t)+.08*(s-.5)*(t-.5),.10*Math.sin(Math.PI*s)*Math.sin(2*Math.PI*t)];
+const hidden=(s,t)=>{const z=((s-.5)/.20)**2+((t-.5)/.24)**2,b=z<1?(1-z)**3:0;return [.28*b,-.15*b];};
+const truth=(x,y)=>{const s=(x-d.x0)/d.width,t=(y-d.y0)/d.height,v=f(s,t),h=shape==='hidden'?hidden(s,t):[0,0];return v.map((a,i)=>a+h[i]);};
+const points=layout.points.map(k=>({...k,phase:'after-align-common',deltaMm:truth(...k.nominalMm)}));
+return {schema:'A3-DISTORTION-MASKING-V6',format:'common-mm',dataClass:'SYNTHETIC_DEMO',coordinateFrame:FRAME,domainMm:d,layoutVersion:layout.version,layoutCoordinateStatus:layout.coordinateStatus,keyPositionStatus:layout.keyPositionStatus,cameraMappingStatus:layout.cameraMappingStatus,modelId:'DEMO-MODEL',recipeVersion:1,glassId:'DEMO-GLASS',mappingVersion:'SYNTHETIC-ONLY',points,truth};}
+function decode(input){const data=clone(input);if(data.schema!=='A3-DISTORTION-MASKING-V6'||data.coordinateFrame!==FRAME)throw Error('V6 입력 schema·좌표 기준을 확인하세요. 이전 배치/Key ID 파일은 자동 변환하지 않습니다.');validateDomain(data.domainMm);
+if(!['camera-pixel','common-mm'].includes(data.format))throw Error('format은 camera-pixel 또는 common-mm로 입력하세요.');
+if(!['SYNTHETIC_DEMO','USER_MEASURED'].includes(data.dataClass)||!data.modelId||!data.glassId||!data.mappingVersion||!Number.isInteger(data.recipeVersion)||data.recipeVersion<1)throw Error('Model/레시피 버전/Glass/좌표 대응 버전과 측정 출처를 입력하세요.');
+if(!Array.isArray(data.points)||data.points.length!==10||new Set(data.points.map(p=>p.id)).size!==10)throw Error('고유한 Align 4점 + Distortion 6점이 필요합니다.');
+const expected=['AK1','AK2','AK3','AK4','DK1','DK2','DK3','DK4','DK5','DK6'];if(expected.some(id=>!data.points.some(p=>p.id===id)))throw Error('AK1~4 / DK1~6의 설계 ID가 필요합니다.');
+for(const p of data.points){if((p.id.startsWith('AK')?'align':'distortion')!==p.kind)throw Error('AK / DK ID와 Key 종류가 다릅니다.');p.side=p.side||F.sideOf(p);if(p.side!==F.sideOf({id:p.id}))throw Error('Key ID와 왼쪽/오른쪽 설계 구분을 확인하세요.');if(!p.id||!['align','distortion'].includes(p.kind)||!p.camera||!p.pose||!pair(p.nominalMm))throw Error('Key·Camera·촬영 위치와 설계 위치(mm)를 확인하세요.');
+ if(data.format==='camera-pixel'){
+  if(p.phase!==(p.kind==='align'?'before-align':'after-align'))throw Error('현재 촬영 구조는 Align=정렬 전, Distortion=정렬 후입니다. 공통 상태로 환산된 값은 common-mm 형식으로 입력하세요.');
+  if(!pair(p.referencePixel)||!pair(p.measuredPixel)||!pair(p.referenceCommonMm)||!matrix(p.pixelToCommonMm))throw Error('실제 pixel에는 동일 촬영 조건의 기준 pixel·기준 위치와 pixel→공통 mm 대응 행렬이 필요합니다.');
+  if(!p.imagingVersion||!p.referenceVersion||!['before-align','after-align'].includes(p.phase))throw Error('촬영/기준 버전과 정렬 전후 상태를 입력하세요.');
+  const dp=p.measuredPixel.map((v,i)=>v-p.referencePixel[i]),a=p.pixelToCommonMm;let actual=p.referenceCommonMm.map((v,i)=>v+a[i][0]*dp[0]+a[i][1]*dp[1]);
+  if(p.phase==='before-align'){const T=data.executedAlignment;if(!T||!matrix(T.A)||!pair(T.b)||!T.version)throw Error('정렬 전 Align 관측을 쓰려면 실제 실행된 정렬 변환이 필요합니다.');actual=T.A.map((row,i)=>row[0]*actual[0]+row[1]*actual[1]+T.b[i]);}
+  p.deltaMm=actual.map((v,i)=>v-p.nominalMm[i]);p.phase='after-align-common';
+ }else if(p.phase!=='after-align-common'||!pair(p.deltaMm))throw Error('공통 mm 변위는 정렬 후 같은 상태의 데이터로 입력하세요.');
+}
+const g=geometry(data.domainMm,data.points);F.validateRecipe(g);return {...data,originalInput:clone(input)};}
+function active(data,count){const g=geometry(data.domainMm,data.points),ks=F.active(g,count);return ks.map(k=>data.points.find(p=>p.id===k.id));}
+function fit(data,method='surface',count=6){if(method==='off')return {evaluate:()=>[0,0],keys:[],kind:'off'};
+const ks=active(data,count),g=geometry(data.domainMm,ks),values=ks.map(k=>k.deltaMm);
+const f=method==='line'?F.lagrange(g,g.keys,values):F.tps(g,g.keys,values),d=data.domainMm;
+const evaluate=(x,y)=>f.evaluate((x-d.x0)/d.width,(y-d.y0)/d.height);
+const exact=Math.max(...ks.flatMap(k=>evaluate(...k.nominalMm).map((v,i)=>Math.abs(v-k.deltaMm[i]))));if(!Number.isFinite(exact)||exact>1e-8)throw Error('실제 측정값 정확 통과 조건을 만족하지 못했습니다.');return {evaluate,keys:ks,kind:method,exact,core:f,extrapolated:(x,y)=>method==='line'&&f.extrapolated((x-d.x0)/d.width,(y-d.y0)/d.height)};}
+function hull(points){const a=points.slice().sort((a,b)=>a[0]-b[0]||a[1]-b[1]),cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]),lo=[],hi=[];for(const p of a){while(lo.length>1&&cross(lo.at(-2),lo.at(-1),p)<=0)lo.pop();lo.push(p);}for(const p of a.reverse()){while(hi.length>1&&cross(hi.at(-2),hi.at(-1),p)<=0)hi.pop();hi.push(p);}return lo.slice(0,-1).concat(hi.slice(0,-1));}
+function inside(q,h){if(h.length<3)return false;let sign=0;for(let i=0;i<h.length;i++){const a=h[i],b=h[(i+1)%h.length],z=(b[0]-a[0])*(q[1]-a[1])-(b[1]-a[1])*(q[0]-a[0]);if(Math.abs(z)>1e-7){if(sign&&Math.sign(z)!==sign)return false;sign=Math.sign(z);}}return true;}
+function process(result,data,options={}){const method=options.method||'surface',field=fit(data,method,options.count||6),h=hull(field.keys.map(k=>k.nominalMm)),recipe=result.recipe,half=recipe.scanFieldWidthMm/2;let fieldErrors=0,extrapolated=0,maxD=0,maxDoeMismatch=0,orderErrors=0;
+const spacing=result.derived.commandSpacingMm/recipe.doeBranchCountPerAxis,branch=recipe.doeBranchCountPerAxis,angle=(Number(recipe.masking?.doeRotationDeg)||0)*Math.PI/180,cs=Math.cos(angle),sn=Math.sin(angle),centerHalf=spacing*(branch-1)/2;
+const records=result.records.map(p=>{const delta=field.evaluate(p.globalXmm,p.globalYmm),x=p.globalXmm+delta[0],y=p.globalYmm+delta[1],GY=p.localGYmm+delta[0],GX=p.gxStageMm-delta[1],centerValid=p.headAssigned&&GY>=-half&&GY<half,interior=method==='off'||(inside([p.globalXmm,p.globalYmm],h)&&!field.extrapolated?.(p.globalXmm,p.globalYmm));let doe=0,beamMin=Infinity,beamMax=-Infinity;
+for(let i=0;i<branch;i++)for(let j=0;j<branch;j++){const bx=-centerHalf+i*spacing,by=-centerHalf+j*spacing,dx=cs*bx-sn*by,dy=sn*bx+cs*by;beamMin=Math.min(beamMin,GY+dx);beamMax=Math.max(beamMax,GY+dx);if(options.checkDoe){const v=field.evaluate(p.globalXmm+dx,p.globalYmm+dy);doe=Math.max(doe,Math.hypot(v[0]-delta[0],v[1]-delta[1]));}}
+const radius=Number(recipe.masking?.beamRadiusMm??0),margin=Number(recipe.masking?.positionMarginMm??0),footprint=p.headAssigned&&beamMin-radius-margin>=-half&&beamMax+radius+margin<half;
+if(p.headAssigned&&!centerValid)fieldErrors++;if(!interior)extrapolated++;maxD=Math.max(maxD,Math.hypot(...delta));maxDoeMismatch=Math.max(maxDoeMismatch,doe);
+return {...p,distortionXmm:delta[0],distortionYmm:delta[1],correctedGlobalXmm:x,correctedGlobalYmm:y,correctedGYmm:GY,correctedGXStageMm:GX,correctedCenterInField:centerValid,correctedDoeCentersInField:footprint,predictionRegion:method==='off'?'NO_CORRECTION':interior?'BETWEEN_MEASURED_KEYS':(inside([p.globalXmm,p.globalYmm],h)?'OUTSIDE_SIDE_PROFILE':'OUTSIDE_MEASURED_HULL'),doeRigidResidualMm:options.checkDoe?doe:null,layoutVersion:data.layoutVersion||'UNSPECIFIED_BY_INPUT',layoutCoordinateStatus:data.layoutCoordinateStatus||'UNSPECIFIED_BY_INPUT',keyPositionStatus:data.keyPositionStatus||'UNSPECIFIED_BY_INPUT',cameraMappingStatus:data.cameraMappingStatus||'UNSPECIFIED_BY_INPUT',coordinateSource:data.dataClass,modelId:data.modelId,recipeVersion:data.recipeVersion,glassId:data.glassId,mappingVersion:data.mappingVersion,coordinateFrame:FRAME,distortionMethod:method,maskBasis:'NOMINAL_MATERIAL_MASK',correctedMaskContactStatus:'NOT_VALIDATED',correctedYOrderReversed:false,correctedXOrderReversed:false,mofSyncStatus:'NOT_VALIDATED'};});
+// Keep existing timing/sequence: flag any order reversal instead of sorting or reassigning Heads.
+const last=new Map();for(let i=0;i<records.length;i++){const p=records[i],prev=last.get(p.headNumber);if(prev){const dy=p.globalYmm-prev.globalYmm,dyNew=p.correctedGlobalYmm-prev.correctedGlobalYmm,dx=p.globalXmm-prev.globalXmm,dxNew=p.correctedGlobalXmm-prev.correctedGlobalXmm;p.correctedYOrderReversed=dy*dyNew<0;p.correctedXOrderReversed=Math.abs(dy)<1e-9&&dx*dxNew<0;if(p.correctedYOrderReversed||p.correctedXOrderReversed)orderErrors++;}last.set(p.headNumber,p);}
+return{base:result,data,field,records,summary:{total:records.length,assigned:records.filter(p=>p.headAssigned).length,on:records.filter(p=>p.headAssigned&&p.laserGate==='ON').length,off:records.filter(p=>p.headAssigned&&p.laserGate==='OFF').length,fieldErrors,extrapolated,maxD,maxDoeMismatch,orderErrors}};}
+function cell(v){if(v===null||v===undefined)return '';if(typeof v==='number'){if(!Number.isFinite(v))throw Error('좌표에 비정상 값이 있습니다.');return v.toFixed(8);}let s=String(v);if(/^[=+@\-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';}
+function csv(result,{assignedOnly=true,includeCorrection=true}={}){const records=assignedOnly?result.records.filter(p=>p.headAssigned):result.records;const cols=[['Head','headId'],['Seq','sequenceNo'],['Cell','cellId'],['ModelType','cellModelType'],['LaserGate','laserGate'],['MaskReason','maskReason'],['Original_GYmm','localGYmm'],['Original_GXStageMm','gxStageMm'],['Original_GlobalXmm','globalXmm'],['Original_GlobalYmm','globalYmm'],['Original_CenterInField','centerInNominalField'],['Original_FieldValid','fieldValid']];
+if(includeCorrection)cols.push(['DeltaXmm','distortionXmm'],['DeltaYmm','distortionYmm'],['Corrected_GlobalXmm','correctedGlobalXmm'],['Corrected_GlobalYmm','correctedGlobalYmm'],['Corrected_GYmm','correctedGYmm'],['Corrected_GXStageMm','correctedGXStageMm'],['Corrected_CenterInField','correctedCenterInField'],['Corrected_DoeCentersInField','correctedDoeCentersInField'],['PredictionRegion','predictionRegion'],['DoeRigidResidualMm','doeRigidResidualMm'],['Corrected_YOrderReversed','correctedYOrderReversed'],['Corrected_XOrderReversed','correctedXOrderReversed'],['Corrected_MaskContactStatus','correctedMaskContactStatus']);
+cols.push(['DataClass','coordinateSource'],['LayoutVersion','layoutVersion'],['LayoutCoordinateStatus','layoutCoordinateStatus'],['KeyPositionStatus','keyPositionStatus'],['CameraMappingStatus','cameraMappingStatus'],['ModelID','modelId'],['RecipeVersion','recipeVersion'],['GlassID','glassId'],['MappingVersion','mappingVersion'],['CoordinateFrame','coordinateFrame'],['CorrectionMethod','distortionMethod'],['MaskBasis','maskBasis'],['MofSyncStatus','mofSyncStatus']);return '\ufeff'+cols.map(c=>c[0]).join(',')+'\r\n'+records.map(p=>cols.map(c=>cell(p[c[1]])).join(',')).join('\r\n');}
+function inputTemplate(result,layoutData=null){const source=layoutData||synth(result),data={};for(const key of['schema','coordinateFrame','domainMm','layoutVersion','layoutCoordinateStatus','keyPositionStatus','cameraMappingStatus'])if(source[key]!==undefined)data[key]=clone(source[key]);data.points=source.points.map(p=>({id:p.id,kind:p.kind,side:p.side||F.sideOf(p),camera:p.camera,pose:p.pose,nominalMm:clone(p.nominalMm)}));data.dataClass='USER_MEASURED';data.format='camera-pixel';data.recipeVersion=source.recipeVersion;data.modelId='ENTER_MODEL_ID';data.glassId='ENTER_GLASS_ID';data.mappingVersion='ENTER_MAPPING_VERSION';data.executedAlignment={A:null,b:null,version:null};for(const p of data.points){p.phase=p.kind==='align'?'before-align':'after-align';p.referencePixel=null;p.measuredPixel=null;p.referenceCommonMm=null;p.pixelToCommonMm=null;p.imagingVersion=null;p.referenceVersion=null;}return data;}
+const api={M,F,FRAME,clone,canonicalRecipe,base,domain,machiningDomain,design,synth,decode,fit,process,csv,inputTemplate,hull,inside};if(typeof module!=='undefined'&&module.exports)module.exports=api;root.MaskingDistortion=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>window.V6_BASELINE={"pixelSizeMmPerPx": 0.09, "designPixelCountX": 864, "designPixelCountY": 512, "doeBranchCountPerAxis": 4, "commandPitchPx": 30, "cellColumnCount": 9, "cellRowCount": 5, "cellPitchXmm": 100, "cellPitchYmm": 200, "escEdgeToGlassEdgeMm": 5, "glassEdgeToAlignKeyMm": 15.5, "glassCenterToScannerCenterMm": 5, "sharedOriginOffsetMm": 1.0125, "scanFieldWidthMm": 110, "headCount": 8, "mofBufferOffsetMm": 120, "oddHeadDistanceMm": 380, "globalCorrectionXmm": 0, "globalCorrectionYmm": 0, "duplicateLaneStart": false, "correctionBudgetGyMm": null, "doeMaxGyOffsetMm": null, "beamRadiusMm": null, "mappingErrorMm": null, "autoDoeCenterOffset": true, "cellOriginEntryMode": "firstPixel", "cellConfigurations": [{"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 500, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 600, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 700, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 800, "alignToFirstPixelYmm": 0, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 500, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 600, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 700, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 800, "alignToFirstPixelYmm": 200, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 500, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 600, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 700, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 800, "alignToFirstPixelYmm": 400, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 500, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 600, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 700, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 800, "alignToFirstPixelYmm": 600, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 500, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 600, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 700, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 800, "alignToFirstPixelYmm": 800, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 0, "alignToFirstPixelYmm": 1000, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 100, "alignToFirstPixelYmm": 1000, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 200, "alignToFirstPixelYmm": 1000, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 300, "alignToFirstPixelYmm": 1000, "rotationDeg": 0}, {"modelType": 1, "alignToFirstPixelXmm": 400, "alignToFirstPixelYmm": 1000, "rotationDeg": 0}], "laserPolicy": {"centerGate": "ON", "repeatGate": "OFF"}, "masking": {"enabled": true, "CELL_MODEL_TYPE_COUNT": 1, "models": [{"MASKING_HOLE_NUMBER": 1, "MASKING_HOLE1_X": 20, "MASKING_HOLE1_Y": 5, "MASKING_HOLE2_X": 0, "MASKING_HOLE2_Y": 0, "MASKING_HOLE3_X": 0, "MASKING_HOLE3_Y": 0, "MASKING_HOLE4_X": 0, "MASKING_HOLE4_Y": 0, "MASKING_HOLE5_X": 0, "MASKING_HOLE5_Y": 0, "MASKING_HOLE1_SIZE_X": 10, "MASKING_HOLE1_SIZE_Y": 10, "MASKING_HOLE2_SIZE_X": 0, "MASKING_HOLE2_SIZE_Y": 0, "MASKING_HOLE3_SIZE_X": 0, "MASKING_HOLE3_SIZE_Y": 0, "MASKING_HOLE4_SIZE_X": 0, "MASKING_HOLE4_SIZE_Y": 0, "MASKING_HOLE5_SIZE_X": 0, "MASKING_HOLE5_SIZE_Y": 0, "CELL_UP_LEFT_ROUND_X": 2, "CELL_UP_LEFT_ROUND_Y": 2, "CELL_UP_RIGHT_ROUND_X": 2, "CELL_UP_RIGHT_ROUND_Y": 2, "CELL_DOWN_LEFT_ROUND_X": 2, "CELL_DOWN_LEFT_ROUND_Y": 2, "CELL_DOWN_RIGHT_ROUND_X": 2, "CELL_DOWN_RIGHT_ROUND_Y": 2}, {"MASKING_HOLE_NUMBER": 0, "MASKING_HOLE1_X": 0, "MASKING_HOLE1_Y": 0, "MASKING_HOLE2_X": 0, "MASKING_HOLE2_Y": 0, "MASKING_HOLE3_X": 0, "MASKING_HOLE3_Y": 0, "MASKING_HOLE4_X": 0, "MASKING_HOLE4_Y": 0, "MASKING_HOLE5_X": 0, "MASKING_HOLE5_Y": 0, "MASKING_HOLE1_SIZE_X": 0, "MASKING_HOLE1_SIZE_Y": 0, "MASKING_HOLE2_SIZE_X": 0, "MASKING_HOLE2_SIZE_Y": 0, "MASKING_HOLE3_SIZE_X": 0, "MASKING_HOLE3_SIZE_Y": 0, "MASKING_HOLE4_SIZE_X": 0, "MASKING_HOLE4_SIZE_Y": 0, "MASKING_HOLE5_SIZE_X": 0, "MASKING_HOLE5_SIZE_Y": 0, "CELL_UP_LEFT_ROUND_X": 0, "CELL_UP_LEFT_ROUND_Y": 0, "CELL_UP_RIGHT_ROUND_X": 0, "CELL_UP_RIGHT_ROUND_Y": 0, "CELL_DOWN_LEFT_ROUND_X": 0, "CELL_DOWN_LEFT_ROUND_Y": 0, "CELL_DOWN_RIGHT_ROUND_X": 0, "CELL_DOWN_RIGHT_ROUND_Y": 0}, {"MASKING_HOLE_NUMBER": 0, "MASKING_HOLE1_X": 0, "MASKING_HOLE1_Y": 0, "MASKING_HOLE2_X": 0, "MASKING_HOLE2_Y": 0, "MASKING_HOLE3_X": 0, "MASKING_HOLE3_Y": 0, "MASKING_HOLE4_X": 0, "MASKING_HOLE4_Y": 0, "MASKING_HOLE5_X": 0, "MASKING_HOLE5_Y": 0, "MASKING_HOLE1_SIZE_X": 0, "MASKING_HOLE1_SIZE_Y": 0, "MASKING_HOLE2_SIZE_X": 0, "MASKING_HOLE2_SIZE_Y": 0, "MASKING_HOLE3_SIZE_X": 0, "MASKING_HOLE3_SIZE_Y": 0, "MASKING_HOLE4_SIZE_X": 0, "MASKING_HOLE4_SIZE_Y": 0, "MASKING_HOLE5_SIZE_X": 0, "MASKING_HOLE5_SIZE_Y": 0, "CELL_UP_LEFT_ROUND_X": 0, "CELL_UP_LEFT_ROUND_Y": 0, "CELL_UP_RIGHT_ROUND_X": 0, "CELL_UP_RIGHT_ROUND_Y": 0, "CELL_DOWN_LEFT_ROUND_X": 0, "CELL_DOWN_LEFT_ROUND_Y": 0, "CELL_DOWN_RIGHT_ROUND_X": 0, "CELL_DOWN_RIGHT_ROUND_Y": 0}, {"MASKING_HOLE_NUMBER": 0, "MASKING_HOLE1_X": 0, "MASKING_HOLE1_Y": 0, "MASKING_HOLE2_X": 0, "MASKING_HOLE2_Y": 0, "MASKING_HOLE3_X": 0, "MASKING_HOLE3_Y": 0, "MASKING_HOLE4_X": 0, "MASKING_HOLE4_Y": 0, "MASKING_HOLE5_X": 0, "MASKING_HOLE5_Y": 0, "MASKING_HOLE1_SIZE_X": 0, "MASKING_HOLE1_SIZE_Y": 0, "MASKING_HOLE2_SIZE_X": 0, "MASKING_HOLE2_SIZE_Y": 0, "MASKING_HOLE3_SIZE_X": 0, "MASKING_HOLE3_SIZE_Y": 0, "MASKING_HOLE4_SIZE_X": 0, "MASKING_HOLE4_SIZE_Y": 0, "MASKING_HOLE5_SIZE_X": 0, "MASKING_HOLE5_SIZE_Y": 0, "CELL_UP_LEFT_ROUND_X": 0, "CELL_UP_LEFT_ROUND_Y": 0, "CELL_UP_RIGHT_ROUND_X": 0, "CELL_UP_RIGHT_ROUND_Y": 0, "CELL_DOWN_LEFT_ROUND_X": 0, "CELL_DOWN_LEFT_ROUND_Y": 0, "CELL_DOWN_RIGHT_ROUND_X": 0, "CELL_DOWN_RIGHT_ROUND_Y": 0}, {"MASKING_HOLE_NUMBER": 0, "MASKING_HOLE1_X": 0, "MASKING_HOLE1_Y": 0, "MASKING_HOLE2_X": 0, "MASKING_HOLE2_Y": 0, "MASKING_HOLE3_X": 0, "MASKING_HOLE3_Y": 0, "MASKING_HOLE4_X": 0, "MASKING_HOLE4_Y": 0, "MASKING_HOLE5_X": 0, "MASKING_HOLE5_Y": 0, "MASKING_HOLE1_SIZE_X": 0, "MASKING_HOLE1_SIZE_Y": 0, "MASKING_HOLE2_SIZE_X": 0, "MASKING_HOLE2_SIZE_Y": 0, "MASKING_HOLE3_SIZE_X": 0, "MASKING_HOLE3_SIZE_Y": 0, "MASKING_HOLE4_SIZE_X": 0, "MASKING_HOLE4_SIZE_Y": 0, "MASKING_HOLE5_SIZE_X": 0, "MASKING_HOLE5_SIZE_Y": 0, "CELL_UP_LEFT_ROUND_X": 0, "CELL_UP_LEFT_ROUND_Y": 0, "CELL_UP_RIGHT_ROUND_X": 0, "CELL_UP_RIGHT_ROUND_Y": 0, "CELL_DOWN_LEFT_ROUND_X": 0, "CELL_DOWN_LEFT_ROUND_Y": 0, "CELL_DOWN_RIGHT_ROUND_X": 0, "CELL_DOWN_RIGHT_ROUND_Y": 0}], "beamRadiusMm": 0, "positionMarginMm": 0, "doeRotationDeg": 0, "edgeRule": "EDGE_CORNER_LONG_SIDE_BOX_V1", "edgeInputReference": "CORNER_PIXEL_INWARD_MM", "footprintMode": "PITCH_TILE"}, "description": "864×512 px · Pitch 30 · 45 Cell 평가. A 기준 Hole 20/5 mm, 10×10 mm. 모서리 장변 금지박스 2×2 mm, Pitch 타일 판정. 8 Head 밖의 좌표는 미배정으로 표시.", "outputAssignedOnly": true, "modelId": "DEMO-MODEL", "recipeVersion": 1, "glassLayout": {"version": "IMAGE-ILLUSTRATIVE-1", "x0": 0, "y0": 0, "width": 925, "height": 1500, "coordinateStatus": "ILLUSTRATIVE_COMMON_FRAME_ORIGIN", "keyPositionStatus": "ILLUSTRATIVE_MATCHING_REFERENCE_LAYOUT", "cameraMappingStatus": "ILLUSTRATIVE_PREVIOUS_ASSOCIATIONS_PRESERVED", "points": [{"id": "AK1", "kind": "align", "side": "left", "camera": "C1", "pose": "ALIGN-1", "nominalMm": [0, 0]}, {"id": "AK2", "kind": "align", "side": "left", "camera": "C4", "pose": "ALIGN-4", "nominalMm": [0, 1500]}, {"id": "AK3", "kind": "align", "side": "right", "camera": "C2", "pose": "ALIGN-2", "nominalMm": [925, 0]}, {"id": "AK4", "kind": "align", "side": "right", "camera": "C3", "pose": "ALIGN-3", "nominalMm": [925, 1500]}, {"id": "DK1", "kind": "distortion", "side": "left", "camera": "C1", "pose": "Y-SCAN-1", "nominalMm": [0, 540.0]}, {"id": "DK2", "kind": "distortion", "side": "left", "camera": "C1", "pose": "Y-SCAN-2", "nominalMm": [0, 742.5]}, {"id": "DK3", "kind": "distortion", "side": "left", "camera": "C1", "pose": "Y-SCAN-3", "nominalMm": [0, 945.0]}, {"id": "DK4", "kind": "distortion", "side": "right", "camera": "C2", "pose": "Y-SCAN-1", "nominalMm": [846.375, 540.0]}, {"id": "DK5", "kind": "distortion", "side": "right", "camera": "C2", "pose": "Y-SCAN-2", "nominalMm": [846.375, 742.5]}, {"id": "DK6", "kind": "distortion", "side": "right", "camera": "C2", "pose": "Y-SCAN-3", "nominalMm": [846.375, 945.0]}]}};</script><script>(function(){'use strict';const E=MaskingDistortion,$=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg',C={blue:'#2472bb',green:'#07806f',orange:'#c5761d',red:'#b85a5a',purple:'#8651a8',gray:'#c7d4dc'};
+let step=0,recipe=E.clone(window.V6_BASELINE),baseResult=null,measurement=null,last=null;recipe.modelId=recipe.modelId||'DEMO-MODEL';recipe.recipeVersion=recipe.recipeVersion||1;
+function node(s,tag,a={},t=''){const n=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(a))n.setAttribute(k,v);if(t)n.textContent=t;s.appendChild(n);return n;}
+function text(s,x,y,t,fill='#657b88',size=12,anchor='start'){node(s,'text',{x,y,fill,'font-size':size,'text-anchor':anchor},t);}
+function line(s,x1,y1,x2,y2,col,width=1,dash=''){node(s,'line',{x1,y1,x2,y2,stroke:col,'stroke-width':width,...(dash?{'stroke-dasharray':dash}:{})});}
+function dot(s,x,y,col,r=3){node(s,'circle',{cx:x,cy:y,r,fill:col,stroke:'white','stroke-width':.6});}
+function path(s,p,col,width=1,dash=''){node(s,'path',{d:p.map((p,i)=>(i?'L':'M')+p.map(x=>x.toFixed(3)).join(',')).join(' '),stroke:col,fill:'none','stroke-width':width,...(dash?{'stroke-dasharray':dash}:{})});}
+function clear(id){const s=$(id);s.replaceChildren();return s;}
+const lessons=[['1. 측정한 점의 위치를 믿습니다','카메라로 정상 측정한 10점은 실제 위치입니다. 그 값을 줄이거나 지우지 않고 그대로 고정합니다.','주황 점은 실제 관측. 아직 안쪽 전체를 측정한 것은 아닙니다.'],['2. 측정점 사이를 이어서 안쪽을 채웁니다','종이에 핀을 꽂았다고 생각해 보세요. 핀은 움직이지 않고, 그 사이 종이의 모양을 정하는 것이 내부 보정입니다.','AK 네 모서리와 DK 양쪽 세 점을 고정해도, 기판 안쪽은 연결 규칙으로 추정하는 곳입니다.'],['3. 원래 가공점을 변형만큼 옮깁니다','Masking으로 만든 가공점 하나하나를 이 변형 지도에 넣습니다. 그 점에서 얻은 이동량만큼 옮긴 뒤 GY / GX_STAGE로 바꿉니다.','Masking OFF도 없어지지 않습니다. 원래 순번으로 비발진 통과하며 위치 보정은 함께 적용됩니다.']];
+function crossKey(svg,p,k,active=true){const col=active?(k.kind==='align'?'#d6a235':'#26a56a'):'#9aabb5';line(svg,p[0]-5,p[1],p[0]+5,p[1],col,2);line(svg,p[0],p[1]-5,p[0],p[1]+5,col,2);const right=k.side==='right'||/^AK[34]$|^DK[456]$/.test(k.id);text(svg,p[0]+(right?-8:8),p[1]-7,k.id,col,11,right?'end':'start');}
+function axes(svg,ox,oy){line(svg,ox,oy-13,ox+45,oy-13,'#17384a',1.8);path(svg,[[ox+39,oy-17],[ox+45,oy-13],[ox+39,oy-9]],'#17384a',1.8);text(svg,ox+51,oy-9,'X+',undefined,12);line(svg,ox-13,oy,ox-13,oy+39,'#17384a',1.8);path(svg,[[ox-17,oy+33],[ox-13,oy+39],[ox-9,oy+33]],'#17384a',1.8);text(svg,ox-24,oy+54,'Y+',undefined,12);}
+function lesson(){const svg=clear('lessonPlot'),b=baseResult||E.base(recipe),data=measurement||E.synth(b,$('shape').value),d=data.domainMm,scale=Math.min(395/d.width,342/d.height),ox=(560-d.width*scale)/2,oy=47,to=(x,y)=>[ox+(x-d.x0)*scale,oy+(y-d.y0)*scale],zoom=60,method=$('correction').value,field=E.fit(data,method,+$('keyCount').value),g=(x,y)=>{const v=step>0?field.evaluate(x,y):[0,0];return to(x+zoom*v[0],y+zoom*v[1]);};
+node(svg,'rect',{x:ox,y:oy,width:d.width*scale,height:d.height*scale,fill:'#fff',stroke:'#8199aa','stroke-width':1.5});axes(svg,ox,oy);
+const cells=new Map();for(const p of b.uniqueCenters){if(!cells.has(p.cellId))cells.set(p.cellId,{x:p.globalXmm,y:p.globalYmm,x2:p.globalXmm,y2:p.globalYmm});const c=cells.get(p.cellId);c.x=Math.min(c.x,p.globalXmm);c.y=Math.min(c.y,p.globalYmm);c.x2=Math.max(c.x2,p.globalXmm);c.y2=Math.max(c.y2,p.globalYmm);}
+for(const c of cells.values()){const a=to(c.x,c.y),z=to(c.x2,c.y2);node(svg,'rect',{x:a[0],y:a[1],width:z[0]-a[0],height:z[1]-a[1],fill:'none',stroke:'#bac8ce','stroke-width':.8});}
+if(step>0)for(let i=0;i<=8;i++){path(svg,Array.from({length:45},(_,j)=>g(d.x0+d.width*i/8,d.y0+d.height*j/44)),C.green,.8);path(svg,Array.from({length:45},(_,j)=>g(d.x0+d.width*j/44,d.y0+d.height*i/8)),C.green,.8);}
+if(step===2)for(const p of b.uniqueCenters.filter((_,i)=>i%270===0)){const a=to(p.globalXmm,p.globalYmm),z=g(p.globalXmm,p.globalYmm);line(svg,...a,...z,'#8ca9b7',.8);dot(svg,...a,C.blue,1.5);dot(svg,...z,C.green,2.2);}
+const ids=new Set(field.keys.map(k=>k.id));for(const k of data.points){const pos=to(k.nominalMm[0]+(step?zoom*k.deltaMm[0]:0),k.nominalMm[1]+(step?zoom*k.deltaMm[1]:0));crossKey(svg,pos,k,step===0||method==='off'||ids.has(k.id));}
+text(svg,280,416,step===0?'AK: 네 모서리 · DK: 양쪽 중앙 높이 3점씩':step===1?'측정점은 유지 · 내부 격자는 연결 모델의 추정':'같은 배치에서 원래 가공점 → 보정 가공점',undefined,12,'middle');text(svg,280,438,'X+ 오른쪽 / Y+ 아래 · Key 간격·공통 원점은 수정 가능한 예시',undefined,10,'middle');$('lessonTitle').textContent=lessons[step][0];$('lessonText').textContent=lessons[step][1];$('lessonTakeaway').textContent=lessons[step][2];document.querySelectorAll('[data-step]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.step===step)));$('previous').disabled=step===0;$('next').textContent=step===2?'직접 좌표 만들기':'다음 그림';}
+function layoutEditor(){const d=measurement?{...measurement.domainMm,points:measurement.points}:recipe.glassLayout;if(!d)return;for(const id of['x0','y0','width','height'])$('glass_'+id).value=d[id];const body=$('layoutRows');body.replaceChildren();for(const k of d.points){const tr=document.createElement('tr');for(const t of[k.id,k.kind==='align'?'AK · Align key':'DK · Distortion key']){const td=document.createElement('td');td.textContent=t;tr.appendChild(td);}for(let a=0;a<2;a++){const td=document.createElement('td'),input=document.createElement('input');input.type='number';input.step='any';input.value=k.nominalMm[a];input.id='layout_'+k.id+'_'+a;input.setAttribute('aria-label',k.id+' '+(a?'Y':'X')+' mm');input.disabled=!!measurement;td.appendChild(input);tr.appendChild(td);}body.appendChild(tr);}$('applyLayout').disabled=!!measurement;for(const id of['x0','y0','width','height'])$('glass_'+id).disabled=!!measurement;$('layoutMessage').textContent=measurement?'측정파일의 설계 배치를 표시합니다. 원입력은 보존하며 이 표에서 덮어쓰지 않습니다.':'첨부 배치에 맞춘 예시입니다. 925×1500은 그림 표기값이며 원점·Key 간격·카메라 대응은 실제 설계치가 아닙니다.';}
+function applyLayout(){try{const r=E.clone(recipe),d=r.glassLayout;for(const id of['x0','y0','width','height']){const value=$('glass_'+id).value;if(value.trim()==='')throw Error('기판 외형 값을 입력하세요.');d[id]=Number(value);}for(const k of d.points)for(let a=0;a<2;a++){const value=$('layout_'+k.id+'_'+a).value;if(value.trim()==='')throw Error(k.id+' 설계 좌표를 입력하세요.');k.nominalMm[a]=Number(value);}r.recipeVersion=(r.recipeVersion||1)+1;d.version='EDITED-LAYOUT-'+r.recipeVersion;d.keyPositionStatus='USER_ENTERED_DESIGN';const b=E.base(r),data=E.synth(b,$('shape').value);E.decode(data);E.process(b,data,{method:$('correction').value,count:+$('keyCount').value});recipe=r;measurement=null;$('recipeEditor').value=JSON.stringify(recipe,null,2);generate();$('layoutMessage').textContent='새 설계 배치와 레시피 버전 '+r.recipeVersion+'을 적용했습니다. 실제 카메라/공통 원점 대응 검증을 뜻하지 않습니다.';}catch(e){fail(e,'layoutMessage');}}
+
+function tab(make){$('learn').classList.toggle('hide',make);$('make').classList.toggle('hide',!make);$('tabLearn').setAttribute('aria-selected',String(!make));$('tabMake').setAttribute('aria-selected',String(make));}
+function fail(e,target='runMessage'){last=null;$('exportCsv').disabled=true;$('totalCount').textContent='—';$('gateCount').textContent='—';$('fitStatus').textContent='입력 확인';$('dataBadge').textContent='새 계산 대기';$('resultHint').textContent='입력을 확인한 뒤 다시 계산하세요.';$('exportMessage').textContent='현재 저장할 유효 결과가 없습니다.';$(target).textContent=e.message||e;$(target).classList.add('error');$('previewRows').replaceChildren();for(const id of['beforePlot','afterPlot']){const s=clear(id);text(s,280,195,'입력 확인 후 다시 계산하세요.','#a82f45',14,'middle');}}
+function updateCellChoices(){const prev=$('viewCell').value;$('viewCell').replaceChildren();for(const id of['all',...new Set(baseResult.records.map(p=>String(p.cellId)))]){const o=document.createElement('option');o.value=id;o.textContent=id==='all'?'전체 좌표 범위':'Cell '+id;$('viewCell').appendChild(o);}if([...$('viewCell').options].some(o=>o.value===prev))$('viewCell').value=prev;}
+function generate(){try{baseResult=E.base(recipe);const data=measurement||E.synth(baseResult,$('shape').value);if(!measurement){data.modelId=recipe.modelId;data.recipeVersion=recipe.recipeVersion;}if(measurement&&(data.modelId!==recipe.modelId||data.recipeVersion!==recipe.recipeVersion))throw Error('측정 파일의 Model ID가 현재 레시피와 다릅니다.');last=E.process(baseResult,data,{method:$('correction').value,count:+$('keyCount').value,checkDoe:true});updateCellChoices();$('dataBadge').textContent=(data.dataClass==='SYNTHETIC_DEMO'?'가상 예제':'실제 입력 기반 후보')+' · '+data.modelId+' / '+data.glassId;$('shape').disabled=!!measurement;$('runMessage').classList.remove('error');$('runMessage').textContent='기존 Masking 엔진으로 좌표 생성 → 선택한 변형 보정 → 기존 축 규칙으로 변환했습니다.';$('totalCount').textContent=last.summary.assigned.toLocaleString();$('gateCount').textContent=last.summary.on.toLocaleString()+' / '+last.summary.off.toLocaleString();$('fitStatus').textContent=$('correction').value==='off'?'보정 미사용':last.field.exact<1e-8?'사용 '+last.field.keys.length+'점 그대로 반영':'계산 확인 필요';$('resultHint').textContent='Head·순번·Gate는 그대로입니다. '+(last.summary.fieldErrors?last.summary.fieldErrors.toLocaleString()+'개 배정 좌표의 보정 중심이 Head 범위를 벗어납니다.':'배정된 좌표의 보정 중심은 기존 Head 범위 안에 있습니다.')+' 측정점 밖 예측과 DOE 빔 사이 보정 차이는 CSV에서 따로 볼 수 있습니다.';$('exportCsv').disabled=false;$('truthLegend').classList.toggle('hide',!(data.truth&&$('shape').value==='hidden'));if(data.truth&&$('shape').value==='hidden')$('resultHint').textContent+=' 보라 고리는 숨은 휨을 포함한 가상 실제 위치입니다. 측정점이 같아도 이 위치를 자동으로 알아내지는 못합니다.';draw();preview();layoutEditor();lesson();}catch(e){fail(e);}}
+function drawPlot(id,after){const s=clear(id);if(!last)return;const selected=$('viewCell').value,rs=last.records.filter(p=>selected==='all'||String(p.cellId)===selected),d=last.data.domainMm;let x0=d.x0,y0=d.y0,W=d.width,H=d.height;if(selected!=='all'){x0=Math.min(...rs.map(p=>p.globalXmm))-4;y0=Math.min(...rs.map(p=>p.globalYmm))-4;W=Math.max(...rs.map(p=>p.globalXmm))-x0+4;H=Math.max(...rs.map(p=>p.globalYmm))-y0+4;}const zoom=$('exaggerate').checked?60:1,pad=35,scale=Math.min((560-pad*2)/W,(410-pad*2)/H),ox=(560-W*scale)/2,oy=(410-H*scale)/2,to=(x,y)=>[ox+(x-x0)*scale,oy+(y-y0)*scale];
+node(s,'rect',{x:ox,y:oy,width:W*scale,height:H*scale,fill:'#fff5e5',stroke:C.gray});const hs=E.hull(last.field.keys.map(k=>to(...k.nominalMm)));if(hs.length>2)node(s,'polygon',{points:hs.map(p=>p.join(',')).join(' '),fill:'#e5f2f0',stroke:'#accfc8','clip-path':'url(#'+id+'-clip)'});
+const clipid=id+'-clip',defs=node(s,'defs'),clip=node(defs,'clipPath',{id:clipid});node(clip,'rect',{x:ox,y:oy,width:W*scale,height:H*scale});const plot=node(s,'g',{'clip-path':'url(#'+clipid+')'});const stride=Math.max(1,Math.ceil(rs.length/1800));
+for(let i=0;i<rs.length;i+=stride){const p=rs[i],a=to(p.globalXmm,p.globalYmm),b=to(p.globalXmm+(after?zoom*p.distortionXmm:0),p.globalYmm+(after?zoom*p.distortionYmm:0)),col=!p.headAssigned?'#abb8c0':p.laserGate==='OFF'?C.red:after?C.green:C.blue;if(after&&selected!=='all'){line(plot,...a,...b,'#c7d7de',.7);dot(plot,...a,'#a4bdca',1.5);}dot(plot,...b,col,rs.length>1500?1.7:2.4);if(after&&last.data.truth&&$('shape').value==='hidden'){const v=last.data.truth(p.globalXmm,p.globalYmm),q=to(p.globalXmm+zoom*v[0],p.globalYmm+zoom*v[1]);if(Math.hypot(q[0]-b[0],q[1]-b[1])>.5)node(plot,'circle',{cx:q[0],cy:q[1],r:3,fill:'none',stroke:C.purple,'stroke-width':1.3});}}
+const activeIds=new Set(last.field.keys.map(k=>k.id));for(const k of last.data.points){const p=to(k.nominalMm[0]+(after?zoom*k.deltaMm[0]:0),k.nominalMm[1]+(after?zoom*k.deltaMm[1]:0));if(p[0]>10&&p[0]<550&&p[1]>25&&p[1]<385){const active=activeIds.has(k.id),col=active?C.orange:'#9aabb5';crossKey(s,p,k,active);if(active)node(s,'circle',{cx:p[0],cy:p[1],r:6,fill:'none',stroke:C.orange,'stroke-width':.8,'data-role':'active-key'});}}
+axes(s,ox,oy);text(s,280,18,selected==='all'?'기판 전체 · AK 4점 / DK 양측 6점':'Cell '+selected+' · 샷 중심 전후 비교',undefined,12,'middle');text(s,280,401,(after&&zoom>1?'화면 이동량만 확대 · CSV는 실제 계산값':'계산 단위 mm · 원래 축/순번 유지'),undefined,11,'middle');}
+function draw(){drawPlot('beforePlot',false);drawPlot('afterPlot',true);}
+function preview(){const inc=$('includeCorrection').checked;document.querySelectorAll('#make table thead th').forEach((th,i)=>th.classList.toggle('hide',!inc&&[3,5].includes(i)));const body=$('previewRows');body.replaceChildren();if(!last)return;const rows=($('assignedOnly').checked?last.records.filter(p=>p.headAssigned):last.records),sample=rows.slice(0,16);for(const p of sample){const tr=document.createElement('tr'),status=p.predictionRegion==='NO_CORRECTION'?'보정 미사용':!p.headAssigned?'미배정':!p.correctedCenterInField?'Head 범위 확인':p.predictionRegion.startsWith('OUTSIDE')?'측정 범위 밖 예측':'측정점 사이 연결';for(const [idx,v] of[p.headId+' / '+p.sequenceNo,p.laserGate,p.localGYmm.toFixed(5),p.correctedGYmm.toFixed(5),p.gxStageMm.toFixed(5),p.correctedGXStageMm.toFixed(5),inc?status:'기존 좌표 저장'].entries()){const td=document.createElement('td');td.textContent=v;td.classList.toggle('hide',!inc&&[3,5].includes(idx));tr.appendChild(td);}body.appendChild(tr);}$('exportMessage').textContent='미리보기 앞 '+sample.length+'행 / 저장 '+rows.length.toLocaleString()+'행 · '+($('includeCorrection').checked?'기존·보정 좌표 함께 저장':'기존 좌표만 저장');}
+function download(name,text,type='application/json'){const u=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);return name;}
+function measurementApply(obj){try{const d=E.decode(obj);if((d.modelId!==recipe.modelId||d.recipeVersion!==recipe.recipeVersion))throw Error('현재 레시피의 Model ID·버전과 측정파일을 맞추세요.');measurement=d;$('measurementMessage').textContent='원측정·좌표 대응을 보존한 '+d.glassId+' 파일을 적용했습니다. 생성 값은 생산 승인 전 개발 후보입니다.';$('measurementMessage').classList.remove('error');generate();}catch(e){fail(e,'measurementMessage');throw e;}}
+function recipeApply(obj){const b=E.base(obj);recipe=E.clone(obj);if(!recipe.glassLayout){recipe.glassLayout=E.clone(window.V6_BASELINE.glassLayout);recipe.glassLayout.keyPositionStatus='ILLUSTRATIVE_IMPORT_REQUIRES_MODEL_DESIGN';}recipe.modelId=recipe.modelId||'DEMO-MODEL';recipe.recipeVersion=recipe.recipeVersion||1;baseResult=b;measurement=null;$('shape').disabled=false;$('recipeEditor').value=JSON.stringify(recipe,null,2);$('recipeMessage').textContent=obj.glassLayout?'레시피와 설계 배치 적용 · 기존 측정파일은 분리했습니다.':'Masking 레시피 적용 · Glass/Key 설계 배치가 없어 첨부 배치 예시를 유지했습니다. 실제 Model 설계치로 수정하세요.';generate();}
+function readFile(input,apply,target){const file=input.files?.[0];if(!file)return;const rd=new FileReader();rd.onload=()=>{try{apply(JSON.parse(rd.result));}catch(e){fail(e,target);}};rd.onerror=()=>fail('파일을 읽을 수 없습니다.',target);rd.readAsText(file);}
+$('applyLayout').addEventListener('click',applyLayout);$('tabLearn').addEventListener('click',()=>tab(false));$('tabMake').addEventListener('click',()=>tab(true));document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>{step=+b.dataset.step;lesson();}));$('previous').addEventListener('click',()=>{step=Math.max(0,step-1);lesson();});$('next').addEventListener('click',()=>{if(step===2)tab(true);else{step++;lesson();}});$('generate').addEventListener('click',generate);for(const id of['correction','shape','keyCount'])$(id).addEventListener('change',generate);for(const id of['viewCell','exaggerate'])$(id).addEventListener('change',draw);for(const id of['assignedOnly','includeCorrection'])$(id).addEventListener('change',preview);
+$('exportCsv').addEventListener('click',()=>{if(!last)return;try{const name=(last.data.dataClass==='SYNTHETIC_DEMO'?'DEMO_':'CANDIDATE_')+'Masking_Distortion_GY_GX_STAGE.csv';download(name,E.csv(last,{assignedOnly:$('assignedOnly').checked,includeCorrection:$('includeCorrection').checked}),'text/csv;charset=utf-8');$('exportMessage').textContent='저장 요청: '+name+' · 장비 실행코드가 아닌 개발 좌표표입니다.';}catch(e){$('exportMessage').textContent=e.message;}});
+$('downloadTemplate').addEventListener('click',()=>{const d=E.inputTemplate(baseResult,measurement);d.modelId=recipe.modelId;d.recipeVersion=recipe.recipeVersion;download('A3_Real_Pixel_Input_TEMPLATE.json',JSON.stringify(d,null,2));});$('measurementFile').addEventListener('change',()=>readFile($('measurementFile'),measurementApply,'measurementMessage'));$('useDemo').addEventListener('click',()=>{measurement=null;$('measurementFile').value='';$('shape').disabled=false;$('measurementMessage').textContent='가상 예제를 사용합니다. 실제 측정파일은 현재 계산에서 제외했습니다.';generate();});$('recipeFile').addEventListener('change',()=>readFile($('recipeFile'),recipeApply,'recipeMessage'));$('saveRecipe').addEventListener('click',()=>download('A3_Masking_Recipe.json',JSON.stringify(recipe,null,2)));$('applyRecipe').addEventListener('click',()=>{try{recipeApply(JSON.parse($('recipeEditor').value));}catch(e){fail(e,'recipeMessage');}});
+$('recipeEditor').value=JSON.stringify(recipe,null,2);lesson();generate();window.StudioV6={generate,recipeApply,measurementApply,getCsv:(o)=>last?E.csv(last,o):null,getState:()=>({step,recipe:E.clone(recipe),measurement:measurement?E.clone(measurement):null,summary:last?E.clone(last.summary):null,layout:last?{domainMm:E.clone(last.data.domainMm),points:E.clone(last.data.points)}:null,records:last?E.clone(last.records.slice(0,30)):[],lastValid:!!last})};
+})();
+</script></body></html>

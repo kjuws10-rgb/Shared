@@ -1,0 +1,53 @@
+{
+  "version": 6,
+  "fileHashes": [
+    {
+      "name": "A3_Masking_Distortion_Easy_Studio.html",
+      "bytes": 134812,
+      "sha256": "9c0d45619c67eb7b0c0d5012a43dbbe79665be42012d1465fd22f572ce098671"
+    },
+    {
+      "name": "A3_Original_Masking_Editor.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "baseline-recipe.json",
+      "bytes": 15789,
+      "sha256": "c3d6cfeec54955abb095a96a3264522c46171d43a6f26a4ca1e9238c85cb60ea"
+    },
+    {
+      "name": "A3_Real_Pixel_Input_TEMPLATE.json",
+      "bytes": 4704,
+      "sha256": "f333e1049e9e2523eeca59cbea7a6f7115950b169dd391bdb68eb8d533f9c2fb"
+    },
+    {
+      "name": "DEMO_Masking_Distortion_GY_GX_STAGE.csv",
+      "bytes": 12101713,
+      "sha256": "6b4a85eb90f94f0189b5700bdc8b852097a74927fefa8442a567089cb6edbaa0"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3668,
+      "sha256": "24dcbef3bfb8fc7dfbf40a0210fdf6b0384dbfc8395859d97f3024666fe71a56"
+    },
+    {
+      "name": "Cell모델별_Masking_전체최종보고서.html",
+      "bytes": 202302,
+      "sha256": "0a899ee97515b03a9481792382fa5b68c9f6f1f04405ff8896b277ad012e4291"
+    },
+    {
+      "name": "Cell모델별_Masking_시뮬레이션.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    }
+  ],
+  "measurementLayout": "AK1 TL / AK2 BL / AK3 TR / AK4 BR; DK1-3 left top-to-bottom; DK4-6 right top-to-bottom",
+  "geometrySource": "User reference image; relative layout corrected, exact key offsets/common origin remain illustrative",
+  "glassDimensionsSource": "925 x 1500 shown in reference image; actual Model dimensions must be entered",
+  "demoCsvRows": 20740,
+  "demoCsvColumns": 38,
+  "actualBrowserVerified": false,
+  "hardwareVerified": false,
+  "published": false
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "A3-DISTORTION-MASKING-V6",
+  "coordinateFrame": "MASKING_ENGINE_GLOBAL_AFTER_BASE_CORRECTION_MM",
+  "domainMm": {
+    "x0": 0,
+    "y0": 0,
+    "width": 925,
+    "height": 1500
+  },
+  "layoutVersion": "IMAGE-ILLUSTRATIVE-1",
+  "layoutCoordinateStatus": "ILLUSTRATIVE_COMMON_FRAME_ORIGIN",
+  "keyPositionStatus": "ILLUSTRATIVE_MATCHING_REFERENCE_LAYOUT",
+  "cameraMappingStatus": "ILLUSTRATIVE_PREVIOUS_ASSOCIATIONS_PRESERVED",
+  "points": [
+    {
+      "id": "AK1",
+      "kind": "align",
+      "side": "left",
+      "camera": "C1",
+      "pose": "ALIGN-1",
+      "nominalMm": [
+        0,
+        0
+      ],
+      "phase": "before-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "AK2",
+      "kind": "align",
+      "side": "left",
+      "camera": "C4",
+      "pose": "ALIGN-4",
+      "nominalMm": [
+        0,
+        1500
+      ],
+      "phase": "before-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "AK3",
+      "kind": "align",
+      "side": "right",
+      "camera": "C2",
+      "pose": "ALIGN-2",
+      "nominalMm": [
+        925,
+        0
+      ],
+      "phase": "before-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "AK4",
+      "kind": "align",
+      "side": "right",
+      "camera": "C3",
+      "pose": "ALIGN-3",
+      "nominalMm": [
+        925,
+        1500
+      ],
+      "phase": "before-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK1",
+      "kind": "distortion",
+      "side": "left",
+      "camera": "C1",
+      "pose": "Y-SCAN-1",
+      "nominalMm": [
+        0,
+        540
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK2",
+      "kind": "distortion",
+      "side": "left",
+      "camera": "C1",
+      "pose": "Y-SCAN-2",
+      "nominalMm": [
+        0,
+        742.5
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK3",
+      "kind": "distortion",
+      "side": "left",
+      "camera": "C1",
+      "pose": "Y-SCAN-3",
+      "nominalMm": [
+        0,
+        945
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK4",
+      "kind": "distortion",
+      "side": "right",
+      "camera": "C2",
+      "pose": "Y-SCAN-1",
+      "nominalMm": [
+        846.375,
+        540
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK5",
+      "kind": "distortion",
+      "side": "right",
+      "camera": "C2",
+      "pose": "Y-SCAN-2",
+      "nominalMm": [
+        846.375,
+        742.5
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "DK6",
+      "kind": "distortion",
+      "side": "right",
+      "camera": "C2",
+      "pose": "Y-SCAN-3",
+      "nominalMm": [
+        846.375,
+        945
+      ],
+      "phase": "after-align",
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    }
+  ],
+  "dataClass": "USER_MEASURED",
+  "format": "camera-pixel",
+  "recipeVersion": 1,
+  "modelId": "DEMO-MODEL",
+  "glassId": "ENTER_GLASS_ID",
+  "mappingVersion": "ENTER_MAPPING_VERSION",
+  "executedAlignment": {
+    "A": null,
+    "b": null,
+    "version": null
+  }
+}
