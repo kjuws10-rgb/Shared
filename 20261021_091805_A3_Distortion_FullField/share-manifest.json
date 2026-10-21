@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-21",
+  "version": "4.0",
+  "measurementLayout": "Align4 + central Distortion6",
+  "syntheticCases": 72,
+  "domCombinations": 96,
+  "diagrams": 11,
+  "externalRuntimeDependencies": 0,
+  "actualBrowserVerified": false,
+  "machineExportAllowed": false,
+  "zipMembers": 2,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 23,
+      "sha256": "05c4929b658fdb9bf0ec12f12b29a131441fce5088e4ad981d34510c2002e263"
+    },
+    {
+      "name": "A3_Distortion_FullField_20261021.zip",
+      "bytes": 26112,
+      "sha256": "66c0617fc623d1d33088724a9c534dda4aa867f4a9b8b2300ec4f249f21bd75e"
+    },
+    {
+      "name": "A3_LD_Distortion_FullField_Studio.html",
+      "bytes": 63315,
+      "sha256": "d2711a59a4f44884247220cf593070f9230c2a79c048e113676cf5e6de414353"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 4700,
+      "sha256": "8126bead02697c630efffb3ebf9093f9701151a58237af634cbfef04712b9537"
+    }
+  ]
+}
