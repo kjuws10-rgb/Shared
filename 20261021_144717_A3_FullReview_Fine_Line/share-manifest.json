@@ -1,0 +1,45 @@
+{
+  "authorizedOn": "2026-10-21T14:48:01+09:00",
+  "publication": "User ★ authorized Shared publication of completed correction",
+  "workbookBytesUnchangedFromReviewedOutput": true,
+  "baselineWorkbookSha256": "08a0aad910f892dd70bae55531f29d29f048a5c299314bebefaf740c31f70de6",
+  "changedWorkbookParts": [
+    "xl/worksheets/sheet9.xml",
+    "xl/drawings/drawing7.xml"
+  ],
+  "otherSevenTabsBytePreserved": true,
+  "upper61ObjectsPreserved": true,
+  "all183ObjectGeometryAndStylesPreserved": true,
+  "changedLowerShapeTexts": 6,
+  "changedChecklistCells": 12,
+  "changedRowHeights": 8,
+  "newTabs": 0,
+  "existingAssessmentStatesPreserved": 24,
+  "addedFrozenPanes": false,
+  "lineCountMeaning": "Y inspection line count independent of per-cell X point count and positions",
+  "xBetweenPointCorrectionPolicy": "configured policy; not newly established by this document",
+  "actualExcelVerified": false,
+  "equipmentTested": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_FullReview_Fine_Line_20261021.zip",
+      "bytes": 73143,
+      "sha256": "892eadfb357639307974984042f9949de406eea35decdffdcc1f05d6936b4e86"
+    },
+    {
+      "name": "A3_LD_시나리오평가_FullReview_Fine_줄검사_수정.xlsx",
+      "bytes": 80788,
+      "sha256": "ddb5b0f336ac1a9be92a716905cf38ae794fa7160ded7c69414d5a8f030c74e9"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2086,
+      "sha256": "d73d710d8cb56e7ad7626dc5761fa6e512837a7571e8e807241ca0a6aff7e78d"
+    }
+  ]
+}
