@@ -1,0 +1,73 @@
+{
+  "publication": "user-authorized Shared publication",
+  "authorizedOn": "2026-10-21T11:21:19+09:00",
+  "version": 5,
+  "payloadUnchanged": true,
+  "originalPackageManifestNote": "file-manifest.json published=false describes the verified local build before this sharing request; this share-manifest records the publication.",
+  "payloadFiles": 9,
+  "zipMembers": 9,
+  "demoCsvRows": 20740,
+  "demoOffRows": 1215,
+  "dataClass": "SYNTHETIC_DEMO",
+  "actualBrowserVerified": false,
+  "hardwareVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 37,
+      "sha256": "e5186e1b475fc8907de56db1eb62b096720c6c5db96590fb5fa7e2ce046a6ee9"
+    },
+    {
+      "name": "A3_Masking_Distortion_Easy_20261021.zip",
+      "bytes": 1806456,
+      "sha256": "bcdaf00a47becc56d7be63ab3ce5477d29cacc6dbc7ed476ba65ba368725370f"
+    },
+    {
+      "name": "A3_Masking_Distortion_Easy_Studio.html",
+      "bytes": 122806,
+      "sha256": "40ac86836a5c3512f8eee429ccd95f768eee7a357331fb6c3d2ca459055fa4ea"
+    },
+    {
+      "name": "A3_Original_Masking_Editor.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "A3_Real_Pixel_Input_TEMPLATE.json",
+      "bytes": 4387,
+      "sha256": "989069d9c9d5e8fab215474a85899f1cf098ba62062bb241495f3d986113d6f9"
+    },
+    {
+      "name": "baseline-recipe.json",
+      "bytes": 12711,
+      "sha256": "399f9414b170fe125cdbac9e02e89e86f1dd67640557f2c501479afa98e6d15f"
+    },
+    {
+      "name": "Cell모델별_Masking_시뮬레이션.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "Cell모델별_Masking_전체최종보고서.html",
+      "bytes": 202302,
+      "sha256": "0a899ee97515b03a9481792382fa5b68c9f6f1f04405ff8896b277ad012e4291"
+    },
+    {
+      "name": "DEMO_Masking_Distortion_GY_GX_STAGE.csv",
+      "bytes": 9078976,
+      "sha256": "076661bd3606c1dae4a1f279f7dfc8bbf2e59fed908934f429f04f308228b749"
+    },
+    {
+      "name": "file-manifest.json",
+      "bytes": 1262,
+      "sha256": "0ab4e321a9d70a04c1cef20f1072fe8f3ea2001240eac442d353365aa5fd4005"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3291,
+      "sha256": "c7337517113ba12a92f98cbfa822ac8aef5f9b2461c5adad3a339b24be320e8d"
+    }
+  ],
+  "packagingNote": "The seven verified local payloads are byte-identical. The shared ZIP additionally includes the previously published original report and its editor filename alias, so all local HTML navigation works offline. The original local-build ZIP is preserved separately.",
+  "originalLocalZipSha256": "91812d4436bed40393970070fbd761611251b32996b66523f8b25d3a7bd04228"
+}
