@@ -1,0 +1,28 @@
+{
+  "publishedScope": "Completed Review implementation assessment and evidence bundle; no source code or knowledge workspace publication",
+  "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "reportCreatedDate": "2026-10-21",
+  "folder": "20261021_202430_A3_Review_구현평가",
+  "files": [
+    {
+      "path": "A3_LD_Review_구현평가_20261021.html",
+      "bytes": 127260,
+      "sha256": "aac8efe7f51f122a550d3cd03c304a09b0ec31aa6f725aa46b239d5dbac99037"
+    },
+    {
+      "path": "A3_LD_Review_구현평가_근거묶음_20261021.zip",
+      "bytes": 738425,
+      "sha256": "8f42e578a6c8b1a6ea19105b7ff07fdaad19a5c55dffd4ce6742f8d40afd54c9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2204,
+      "sha256": "8521af42fd99b19fbf78dae9ce368d897fc35f54018a814d6cf481a88284f7a5"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 90,
+      "sha256": "e181622bcfa0c13f1cc15b921002da5f9ee7ecbe24a0fd4781e7adf325e1fd74"
+    }
+  ]
+}
