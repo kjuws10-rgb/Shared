@@ -1,0 +1,193 @@
+{
+  "schema": "A3-DISTORTION-MASKING-V5",
+  "format": "camera-pixel",
+  "dataClass": "USER_MEASURED",
+  "coordinateFrame": "MASKING_ENGINE_GLOBAL_AFTER_BASE_CORRECTION_MM",
+  "domainMm": {
+    "x0": 21.5125,
+    "y0": -3.9875,
+    "width": 882.9,
+    "height": 853.1999999999999
+  },
+  "modelId": "DEMO-MODEL",
+  "recipeVersion": 1,
+  "glassId": "ENTER_GLASS_ID",
+  "mappingVersion": "ENTER_MAPPING_VERSION",
+  "points": [
+    {
+      "id": "A1",
+      "kind": "align",
+      "camera": "C1",
+      "pose": "ALIGN-1",
+      "phase": "before-align",
+      "nominalMm": [
+        374.6725,
+        149.58849999999998
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "A2",
+      "kind": "align",
+      "camera": "C2",
+      "pose": "ALIGN-2",
+      "phase": "before-align",
+      "nominalMm": [
+        551.2525,
+        149.58849999999998
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "A3",
+      "kind": "align",
+      "camera": "C3",
+      "pose": "ALIGN-3",
+      "phase": "before-align",
+      "nominalMm": [
+        551.2525,
+        695.6365
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "A4",
+      "kind": "align",
+      "camera": "C4",
+      "pose": "ALIGN-4",
+      "phase": "before-align",
+      "nominalMm": [
+        374.6725,
+        695.6365
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D1",
+      "kind": "distortion",
+      "camera": "C1",
+      "pose": "Y-SCAN-1",
+      "phase": "after-align",
+      "nominalMm": [
+        374.6725,
+        322.7881
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D2",
+      "kind": "distortion",
+      "camera": "C2",
+      "pose": "Y-SCAN-1",
+      "phase": "after-align",
+      "nominalMm": [
+        551.2525,
+        322.7881
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D3",
+      "kind": "distortion",
+      "camera": "C1",
+      "pose": "Y-SCAN-2",
+      "phase": "after-align",
+      "nominalMm": [
+        374.6725,
+        422.61249999999995
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D4",
+      "kind": "distortion",
+      "camera": "C2",
+      "pose": "Y-SCAN-2",
+      "phase": "after-align",
+      "nominalMm": [
+        551.2525,
+        422.61249999999995
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D5",
+      "kind": "distortion",
+      "camera": "C1",
+      "pose": "Y-SCAN-3",
+      "phase": "after-align",
+      "nominalMm": [
+        374.6725,
+        522.4369
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    },
+    {
+      "id": "D6",
+      "kind": "distortion",
+      "camera": "C2",
+      "pose": "Y-SCAN-3",
+      "phase": "after-align",
+      "nominalMm": [
+        551.2525,
+        522.4369
+      ],
+      "referencePixel": null,
+      "measuredPixel": null,
+      "referenceCommonMm": null,
+      "pixelToCommonMm": null,
+      "imagingVersion": null,
+      "referenceVersion": null
+    }
+  ],
+  "executedAlignment": {
+    "A": null,
+    "b": null,
+    "version": null
+  }
+}

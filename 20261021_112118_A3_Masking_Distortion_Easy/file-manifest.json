@@ -1,0 +1,40 @@
+{
+  "version": 5,
+  "fileHashes": [
+    {
+      "name": "A3_Masking_Distortion_Easy_Studio.html",
+      "bytes": 122806,
+      "sha256": "40ac86836a5c3512f8eee429ccd95f768eee7a357331fb6c3d2ca459055fa4ea"
+    },
+    {
+      "name": "A3_Original_Masking_Editor.html",
+      "bytes": 718148,
+      "sha256": "b5e1636ca691843dbaa5f27ba19da6ea8b3757e6ead203ed19eed7891ae0e25a"
+    },
+    {
+      "name": "baseline-recipe.json",
+      "bytes": 12711,
+      "sha256": "399f9414b170fe125cdbac9e02e89e86f1dd67640557f2c501479afa98e6d15f"
+    },
+    {
+      "name": "A3_Real_Pixel_Input_TEMPLATE.json",
+      "bytes": 4387,
+      "sha256": "989069d9c9d5e8fab215474a85899f1cf098ba62062bb241495f3d986113d6f9"
+    },
+    {
+      "name": "DEMO_Masking_Distortion_GY_GX_STAGE.csv",
+      "bytes": 9078976,
+      "sha256": "076661bd3606c1dae4a1f279f7dfc8bbf2e59fed908934f429f04f308228b749"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3291,
+      "sha256": "c7337517113ba12a92f98cbfa822ac8aef5f9b2461c5adad3a339b24be320e8d"
+    }
+  ],
+  "demoCsvRows": 20740,
+  "measurementLayout": "Align4 + centralDistortion6 on two internal vertical lines",
+  "actualBrowserVerified": false,
+  "hardwareVerified": false,
+  "published": false
+}
