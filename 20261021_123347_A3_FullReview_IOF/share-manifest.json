@@ -1,0 +1,38 @@
+{
+  "authorizedOn": "2026-10-21T12:33:47+09:00",
+  "publication": "User ★ authorized Shared publication",
+  "sourceWorkbookUnchanged": true,
+  "originalSheetsPreserved": 7,
+  "newSheets": [
+    "Full Review IOF",
+    "Full Review 평가"
+  ],
+  "existingEvaluationItems": 36,
+  "addedEvaluationItems": 24,
+  "newEditableObjects": 93,
+  "yTripletInterpretation": "documented assumption; sharing authorization does not establish engineering confirmation",
+  "actualExcelVerified": false,
+  "equipmentTested": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 38,
+      "sha256": "bed8dd5efa4ad06d55f9b77e1e5cac5b9864e6150c5daf927d41a99bcf1def0a"
+    },
+    {
+      "name": "A3_FullReview_IOF_20261021.zip",
+      "bytes": 67727,
+      "sha256": "097c457c5c5bac25150b77ef3388eff59ccb367466f26d57dd405c360170dd2b"
+    },
+    {
+      "name": "A3_LD_시나리오평가_FullReview_IOF_추가.xlsx",
+      "bytes": 75040,
+      "sha256": "feb114aa19710c3eacc38600709d8633fb9e43e65a98ffce3ff8d41520e2d869"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1586,
+      "sha256": "e7c3b5fc1c9d81065aa7a767689c84ddc75c830f8fe03ee98c7a43cd4c316d59"
+    }
+  ]
+}
