@@ -1,0 +1,41 @@
+{
+  "authorizedOn": "2026-10-22T18:05:12.922172+09:00",
+  "publication": "User explicitly requested workbook update with star publication",
+  "existingTabsPreservedInOrder": 9,
+  "newTabs": [
+    "Default Offset",
+    "보호윈도 관리"
+  ],
+  "originalObjectGeometryPreserved": 518,
+  "textOnlyEditedObjects": 37,
+  "supplementBlocks": 13,
+  "masterEvaluationItems": 60,
+  "fullReviewEvaluationItems": 25,
+  "existingInputsPreserved": true,
+  "freezePanes": false,
+  "structuralChecksPassed": 56,
+  "nativeExcelApplicationVerified": false,
+  "equipmentVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_시나리오평가_미팅반영_20261022.xlsx",
+      "bytes": 102348,
+      "sha256": "c0d44f93818956a4e41bc453f2847e3530acca14a5f9bd33734ba0991156125c"
+    },
+    {
+      "name": "A3_Scenario_Meeting_Update_20261022.zip",
+      "bytes": 94889,
+      "sha256": "a6c9ff849219016a95b1216ae54e68704bf6c0737455090a3ae3bee7f18f8b70"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2359,
+      "sha256": "220bf8e2ea44dcc91decc6840f069c4dfff3a2c60946606ceba52b6d39e0328e"
+    }
+  ]
+}
