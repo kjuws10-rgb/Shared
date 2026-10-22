@@ -1,0 +1,144 @@
+{
+  "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "baseCommit": "0c501c104dec1cebab87bd909de29b1b1395a8b4",
+  "build": {
+    "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+    "command": "dotnet build Drilling.sln --configuration Release --nologo --verbosity minimal",
+    "clone": "separate validation clone",
+    "result": "succeeded",
+    "warnings": 0,
+    "errors": 0,
+    "elapsedSeconds": 31,
+    "uiStarted": false,
+    "hardwareInitialized": false
+  },
+  "numeric": {
+    "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+    "hardwareInitialized": false,
+    "tests": [
+      {
+        "id": "N01",
+        "description": "Bilinear 실제 거리 보간",
+        "expected": [
+          0.1,
+          0.025
+        ],
+        "actual": [
+          0.1,
+          0.02500000000000001
+        ],
+        "matched": true
+      },
+      {
+        "id": "N02",
+        "description": "동일 선형장의 Lagrange 일치",
+        "expected": [
+          0.1,
+          0.02500000000000001
+        ],
+        "actual": [
+          0.10000000000000002,
+          0.025000000000000012
+        ],
+        "matched": true
+      },
+      {
+        "id": "N03",
+        "description": "범위 밖 좌표 거부",
+        "expected": true,
+        "actual": true,
+        "matched": true
+      },
+      {
+        "id": "N04",
+        "description": "최종 mm 셋째자리 반올림",
+        "expected": [
+          0.001,
+          -0.001
+        ],
+        "actual": [
+          0.001,
+          -0.001
+        ],
+        "matched": true
+      },
+      {
+        "id": "N05",
+        "description": "설계 보정 Y의 Stage 방향 변환",
+        "expected": [
+          0.01,
+          -0.02
+        ],
+        "actual": [
+          0.01,
+          -0.02
+        ],
+        "matched": true
+      },
+      {
+        "id": "N06",
+        "description": "일반 편집기 저장에서 숨김 Align 키 보존",
+        "expected": 1,
+        "actual": 1,
+        "matched": true
+      },
+      {
+        "id": "N07",
+        "description": "X/Y 중 하나가 Tolerance를 넘으면 Shot 제외",
+        "expected": true,
+        "actual": true,
+        "matched": true
+      },
+      {
+        "id": "N08",
+        "description": "신규 Align Offset CSV 필드 로드",
+        "expected": 42840,
+        "actual": 42840,
+        "matched": true
+      },
+      {
+        "id": "N09",
+        "description": "계획의 Cell 분리와 별개로 Fine1 결과가 Cell을 섞는지",
+        "expected": 0.01,
+        "actual": 0.015,
+        "matched": false
+      },
+      {
+        "id": "N10",
+        "description": "Fine1 계획은 각 Cell에서 한 라인 선정",
+        "expected": [
+          1,
+          2
+        ],
+        "actual": [
+          1,
+          2
+        ],
+        "matched": true
+      }
+    ],
+    "matched": 9,
+    "mismatched": 1
+  },
+  "sourceFileChanges": {
+    "configuration": 44,
+    "runtime_data": 124,
+    "source": 166,
+    "build_artifact": 1950
+  },
+  "scopeNote": "Selected source/call-path review and pure probes; not complete equipment validation",
+  "reportVerification": {
+    "checkedAt": "2026-10-22T09:16:04.286428+09:00",
+    "pass": true,
+    "checks": 106,
+    "sourceAnchors": 61,
+    "internalLinks": 14,
+    "mermaidDiagrams": 5,
+    "mermaidValidation": "static syntax subset and code fences; rendering engine not executed",
+    "sourceClean": true,
+    "pushDisabled": true,
+    "sourceHead": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+    "sourceFileModification": false,
+    "diffInventoryRows": 2284
+  }
+}

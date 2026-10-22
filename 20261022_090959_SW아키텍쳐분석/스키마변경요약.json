@@ -1,0 +1,261 @@
+{
+  "jhmi": [
+    {
+      "path": "Config/JHMI_RCP.csv",
+      "beforeRows": 303,
+      "afterRows": 323,
+      "beforeHeader": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "CIM NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "SCALE",
+        "CHANGE LIMIT",
+        "MIN",
+        "MAX",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "afterHeader": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "CIM NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "SCALE",
+        "CHANGE LIMIT",
+        "MIN",
+        "MAX",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "addedKeys": 20,
+      "deletedKeys": 0,
+      "changedKeys": 0
+    },
+    {
+      "path": "Config/JHMI_MELSEC_MAP.csv",
+      "beforeRows": 75,
+      "afterRows": 98,
+      "beforeHeader": [
+        "ID",
+        "USE",
+        "GROUP",
+        "NAME",
+        "DEVICE NO",
+        "ADDRESS",
+        "DATA TYPE",
+        "DIRECTION",
+        "ACCESS",
+        "SCALE",
+        "LENGTH",
+        "POLL_MS",
+        "DESCRIPTION"
+      ],
+      "afterHeader": [
+        "ID",
+        "USE",
+        "GROUP",
+        "NAME",
+        "DEVICE NO",
+        "ADDRESS",
+        "DATA TYPE",
+        "DIRECTION",
+        "ACCESS",
+        "READ_SCALE",
+        "WRITE_SCALE",
+        "LENGTH",
+        "POLL_MS",
+        "DESCRIPTION"
+      ],
+      "addedKeys": 29,
+      "deletedKeys": 6,
+      "changedKeys": 67
+    },
+    {
+      "path": "Config/JHMI_MANUAL_SCAN.csv",
+      "beforeRows": 13,
+      "afterRows": 18,
+      "beforeHeader": [
+        "NAME",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "MIN",
+        "MAX",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "afterHeader": [
+        "NAME",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "MIN",
+        "MAX",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "addedKeys": 5,
+      "deletedKeys": 0,
+      "changedKeys": 13
+    },
+    {
+      "path": "Config/JHMI_INTERFACE.csv",
+      "beforeRows": 9,
+      "afterRows": 16,
+      "beforeHeader": [
+        "TYPE",
+        "DEVICE",
+        "NUMBER",
+        "NICKNAME",
+        "SYSTEM_SECTION",
+        "AUTOCONNECTION",
+        "SIMUL",
+        "ARG1",
+        "ARG2",
+        "ARG3",
+        "ARG4",
+        "ARG5",
+        "MAX_CLIENT_COUNT",
+        "FLOW_CONTROL",
+        "ADDRESS"
+      ],
+      "afterHeader": [
+        "TYPE",
+        "DEVICE",
+        "NUMBER",
+        "NICKNAME",
+        "SYSTEM_SECTION",
+        "AUTOCONNECTION",
+        "SIMUL",
+        "ARG1",
+        "ARG2",
+        "ARG3",
+        "ARG4",
+        "ARG5",
+        "MAX_CLIENT_COUNT",
+        "FLOW_CONTROL",
+        "ADDRESS"
+      ],
+      "addedKeys": 7,
+      "deletedKeys": 0,
+      "changedKeys": 1
+    },
+    {
+      "path": "Config/JHMI_ALARMLIST.csv",
+      "beforeRows": 0,
+      "afterRows": 201,
+      "beforeHeader": [],
+      "afterHeader": [
+        "CODE",
+        "GROUP",
+        "ID",
+        "LEVEL",
+        "CAUSE",
+        "SOLUTION",
+        "CIM_ADRESS"
+      ],
+      "addedKeys": 201,
+      "deletedKeys": 0,
+      "changedKeys": 0
+    },
+    {
+      "path": "Config/JHMI_SETTING.csv",
+      "beforeRows": 170,
+      "afterRows": 171,
+      "beforeHeader": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "MIN",
+        "MAX",
+        "DESCRIPTION"
+      ],
+      "afterHeader": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "MIN",
+        "MAX",
+        "DESCRIPTION"
+      ],
+      "addedKeys": 1,
+      "deletedKeys": 0,
+      "changedKeys": 2
+    }
+  ],
+  "recipes": [
+    {
+      "path": "Config/RECIPE/test0929.csv",
+      "beforeRows": 484,
+      "afterRows": 43344,
+      "alignOffsetFields": 42840,
+      "nonZeroAlignFields": 42828,
+      "alignBaseFields": 20
+    },
+    {
+      "path": "Config/RECIPE/sample3.csv",
+      "beforeRows": 305,
+      "afterRows": 0,
+      "alignOffsetFields": 0,
+      "nonZeroAlignFields": 0,
+      "alignBaseFields": 0
+    },
+    {
+      "path": "Config/RECIPE/DRILL_A01.csv",
+      "beforeRows": 484,
+      "afterRows": 504,
+      "alignOffsetFields": 0,
+      "nonZeroAlignFields": 0,
+      "alignBaseFields": 20
+    },
+    {
+      "path": "Config/RECIPE/simple2.csv",
+      "beforeRows": 1021,
+      "afterRows": 1041,
+      "alignOffsetFields": 0,
+      "nonZeroAlignFields": 0,
+      "alignBaseFields": 20
+    }
+  ],
+  "reviewRuleChange": {
+    "reviewsettingsample.review": "ROUGH/3 -> FINE/1",
+    "reviewsettingtest2.review": "FINE -> ROUGH"
+  },
+  "sampleRecipeAlign": {
+    "fieldCount": 42840,
+    "nonZero": 42828,
+    "maxAbsoluteMm": 0.914,
+    "componentsOverCurrentTolerance04": 17122
+  }
+}
