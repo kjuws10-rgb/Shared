@@ -1,0 +1,33 @@
+{
+  "authorizedOn": "2026-10-23T07:24:31.607478+09:00",
+  "publication": "Completed HTML published on user follow-up star request",
+  "contentUnchangedFromCompletedHtml": true,
+  "browserChecksPassed": 41,
+  "independentJsChecksPassed": 12,
+  "embeddedImages": 11,
+  "unchangedSections": 28,
+  "productionSoftwareChanged": false,
+  "equipmentVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_리뷰보정_Head_HeadCell_그림설명_20261023.html",
+      "bytes": 3119726,
+      "sha256": "df79ad75e55629a095dd46e475f539794a55e741e8777d63ded4f7878b5bf9ac"
+    },
+    {
+      "name": "A3_Review_HeadScope_20261023.zip",
+      "bytes": 2022594,
+      "sha256": "c15a1ab88c4f6378ed9582bb01e15e4e19586cab7ff24ee217b1efe45dd5a59b"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2066,
+      "sha256": "b354f9367fcdc19539a50cc60ca1bb19ce1f05027618ec7ff3472c9d26d3d8ea"
+    }
+  ]
+}
