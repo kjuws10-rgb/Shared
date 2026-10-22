@@ -1,0 +1,34 @@
+{
+  "authorizedOn": "2026-10-22T17:14:31.430418+09:00",
+  "publication": "User follow-up star authorizes this completed meeting summary in Shared",
+  "meetingDate": null,
+  "source": "User supplied automatic meeting transcript; ambiguous claims qualified",
+  "content": "14 sections and 19 follow-up actions",
+  "originalHtmlPreserved": true,
+  "productionOrExistingExcelModified": false,
+  "hardwareTested": false,
+  "editorialReviewAreas": 3,
+  "browserChecksPassed": 19,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "name": "A3_Technical_Meeting_Notes_20261022.html",
+      "bytes": 63996,
+      "sha256": "60decce52dc3dc733900c7261bcd9143dbde610c419b1fc62947fa0ebfe24d2e"
+    },
+    {
+      "name": "A3_Technical_Meeting_Notes_20261022.zip",
+      "bytes": 21036,
+      "sha256": "a395d6aab6612e5bfe99264def44f9893394bd5854c6040cc145892597be02a4"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1314,
+      "sha256": "cd20768b79b517d10833d7069b33eac59a701c2a22fd7a84b9e872046a61050c"
+    }
+  ]
+}
