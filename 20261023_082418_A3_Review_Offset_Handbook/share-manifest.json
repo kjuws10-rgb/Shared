@@ -1,0 +1,34 @@
+{
+  "authorizedOn": "2026-10-23T08:24:18.336940+09:00",
+  "publication": "User requested specialized review-correction/offset handbook with prior star publication authorization",
+  "chapters": 14,
+  "staticSvgFigures": 48,
+  "newDiagramDesigns": 21,
+  "interactiveExamples": 5,
+  "browserChecksPassed": 49,
+  "independentReviewAgents": 3,
+  "productionSoftwareChanged": false,
+  "equipmentVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_리뷰보정_오프셋_상세그림_전문자료_20261023.html",
+      "bytes": 664892,
+      "sha256": "6450b6ce9e85c4ed96f75d09c92498264d498466bc93688c6b83cde56f86c89d"
+    },
+    {
+      "name": "A3_Review_Offset_Handbook_20261023.zip",
+      "bytes": 249876,
+      "sha256": "7bf613ff731e2f9ee569bda6e51bd9cf16685802b5c4c0807b94be3f5220f528"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2143,
+      "sha256": "3bb563f2db4a55c0cd4f33c040a7bf3f88c40492b57e1bf18cec4f59fbf12278"
+    }
+  ]
+}
