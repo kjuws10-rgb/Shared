@@ -1,0 +1,67 @@
+{
+  "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "baseCommit": "0c501c104dec1cebab87bd909de29b1b1395a8b4",
+  "folder": "20261022_090959_SW아키텍쳐분석",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 76,
+      "sha256": "f238545d8bc813b970d1529fc00efe5039a6258158ddce45c4c9550ae620296c"
+    },
+    {
+      "path": "01_Commit_변경요약.md",
+      "bytes": 5930,
+      "sha256": "41ec2bd553662ad514cfce382e57eee6c27c0758eabd7d3518068316c0ccd41a"
+    },
+    {
+      "path": "02_데이터구조와_저장형식.md",
+      "bytes": 9810,
+      "sha256": "555ae68cfe8c9d443d5fd7599a04bb6f0ae5770b68b054cefafc0e5662641d9f"
+    },
+    {
+      "path": "03_가공_Review_영향분석.md",
+      "bytes": 14947,
+      "sha256": "b3640f649a54f9d52628e5cd47bdac64f8f75b087e7b8cb073b710208ffcc3ca"
+    },
+    {
+      "path": "04_통합흐름도.md",
+      "bytes": 5611,
+      "sha256": "6111d2d66144d2a17c708f3497457a063e00e901f9c16eaecf22cba54f078cd2"
+    },
+    {
+      "path": "05_위험도별_발견사항.md",
+      "bytes": 11101,
+      "sha256": "1a2b6dba7ef1b3a66949399352fa49d482ccb7492e9e336732f3712932f218bd"
+    },
+    {
+      "path": "06_분석근거와_검증.md",
+      "bytes": 6726,
+      "sha256": "9b207a2b2a442a84d42e3f5da76014130e0862178b19f7d4fa91487b6b62cd9f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3087,
+      "sha256": "fdaca0ff188b169791ff96b321c44d47d7151b0f2c35e00b1163667147e332c4"
+    },
+    {
+      "path": "검증결과.json",
+      "bytes": 3609,
+      "sha256": "0d9426b79a355cb555d47d9048328d829fbadad369c9962f36fb3de45316b3fe"
+    },
+    {
+      "path": "변경파일목록.csv",
+      "bytes": 236218,
+      "sha256": "234ed63cd0225285eaee1ee11f7042100ee17f90d21f037979d6dda09535cd3e"
+    },
+    {
+      "path": "소스링크.json",
+      "bytes": 24627,
+      "sha256": "3b5ffc410355dabdf7219799d63730d58509ec8520499105dfcbafd7f39ad6e9"
+    },
+    {
+      "path": "스키마변경요약.json",
+      "bytes": 5117,
+      "sha256": "5e58269a9b8193f8123aec0bd524a810a59c92967b7e553e110a7fa67467a21a"
+    }
+  ]
+}
