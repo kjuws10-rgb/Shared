@@ -1,0 +1,41 @@
+{
+  "title": "A3 LD Default Offset 개발·작업절차서",
+  "publishedPackageAt": "2026-10-23T13:26:15.606206+09:00",
+  "authorization": "User star follow-up in current task",
+  "contentVersion": "2026-10-23 v1.0",
+  "sections": 12,
+  "operationSteps": 10,
+  "svgFigures": 8,
+  "learningExamples": 1,
+  "validation": {
+    "browserChecksPassed": 17,
+    "independentMathJsChecksPassed": 27,
+    "operationChecksPassed": 11,
+    "visualContentReview": "PASS",
+    "equipmentVerified": false,
+    "productionImplementationVerified": false
+  },
+  "originalHtmlUnchanged": true,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_개발_작업절차서_20261023.html",
+      "bytes": 103401,
+      "sha256": "0bdeeec7b54f73c8648445323acfdf55f8560ccad682aea4c0ccce6bd3fb6923"
+    },
+    {
+      "name": "A3_Default_Offset_Procedure_20261023.zip",
+      "bytes": 27713,
+      "sha256": "61cf62c1c3aca352eea565967cbd3d6febbebab6ad6c1cb15716a4b993df2b1d"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1854,
+      "sha256": "2203f86d66281eeedc248de0357ac03ecf2c0ea1c9cb99651bdb3016ad0a2f5f"
+    }
+  ]
+}
