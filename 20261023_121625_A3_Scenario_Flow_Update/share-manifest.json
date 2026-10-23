@@ -1,0 +1,51 @@
+{
+  "authorizedOn": "2026-10-23T12:16:25.446493+09:00",
+  "authorization": "Current task user star publication",
+  "tabs": [
+    "DoReady",
+    "Process",
+    "Review",
+    "Top Powermeter",
+    "Process Move",
+    "IOF",
+    "시나리오평가 체크리스트",
+    "Full Review IOF",
+    "Full Review 평가",
+    "보호윈도 관리"
+  ],
+  "shapeTextEdits": 71,
+  "cellTextEdits": 29,
+  "addedNativeObjects": 32,
+  "unchangedOriginalObjectsExactXML": 414,
+  "evaluationItems": {
+    "master": 63,
+    "fullReview": 25
+  },
+  "preservedResultEvidenceCells": 186,
+  "structuralChecks": 158,
+  "textFitWarnings": 0,
+  "nativeExcelApplicationVerified": false,
+  "equipmentVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_시나리오평가_Flow반영_20261023.xlsx",
+      "bytes": 91565,
+      "sha256": "5d83256bf4282cf93d77349d5e3c4e58af4af0f68c160a882b75e1bfc0d82f14"
+    },
+    {
+      "name": "A3_Scenario_Flow_Update_20261023.zip",
+      "bytes": 84271,
+      "sha256": "a3294d446a2141d6307dc1f9091784716a9fd0d3f745af3cdf710b78ca802e86"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2374,
+      "sha256": "231775804a2debd40b3d8f3707f33ce9180a60a3ed9648dc9470ef0d5dd42ae0"
+    }
+  ]
+}
