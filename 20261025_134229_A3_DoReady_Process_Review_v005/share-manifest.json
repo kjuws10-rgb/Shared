@@ -1,0 +1,79 @@
+{
+  "title": "A3 LD DoReady / Process / Review v0.05 시나리오·평가",
+  "packageAt": "2026-10-25T13:42:29.673121+09:00",
+  "authorization": "User star in current task",
+  "tabs": [
+    "DoReady",
+    "Process",
+    "Review",
+    "평가체크리스트"
+  ],
+  "nativeObjects": 292,
+  "objects": {
+    "DoReady": 73,
+    "Process": 108,
+    "Review": 111
+  },
+  "nativeAnchorType": "oneCellAnchor",
+  "evaluationItems": 47,
+  "evaluationByScenario": {
+    "Doready": 13,
+    "Process": 18,
+    "Review": 16
+  },
+  "evaluationStatus": "미평가",
+  "signalTimingRemoved": true,
+  "ifDetailTabRemoved": true,
+  "melsecAddressDisplay": "starting Word only; 2 Word per field",
+  "freezePanes": false,
+  "rasterImages": 0,
+  "independentReviews": {
+    "map": {
+      "status": "PASS",
+      "passCount": 30,
+      "failCount": 0
+    },
+    "sequence": {
+      "status": "PASS",
+      "passCount": 30,
+      "failCount": 0
+    },
+    "vision": {
+      "status": "PASS",
+      "passCount": 26,
+      "failCount": 0
+    },
+    "structure": {
+      "status": "PASS",
+      "passCount": 32,
+      "failCount": 0
+    }
+  },
+  "savedAnchorPositions": 292,
+  "textOverflow": 0,
+  "nativeExcelApplicationVerified": false,
+  "equipmentVerified": false,
+  "workbookOriginalBytesPreserved": true,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_DoReady_Process_Review_시나리오_평가체크리스트_20261025.xlsx",
+      "bytes": 65256,
+      "sha256": "d3a08588ae51fbd7f2140a8841be3df5a0e0dd3fab190550f479526c67939189"
+    },
+    {
+      "name": "A3_DoReady_Process_Review_v005_20261025.zip",
+      "bytes": 43147,
+      "sha256": "dae6082eca15e2bdc0976677f22b79ca0a155893b22291c3fd8f96bf002eaca5"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3559,
+      "sha256": "c613cce100b53053cebf89104c876fe7ad259885ff4cf72e46eb3a0caf495338"
+    }
+  ]
+}
