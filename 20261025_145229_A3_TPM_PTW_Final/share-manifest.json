@@ -1,0 +1,81 @@
+{
+  "title": "A3 LD TPM·보호윈도우 포함 최종 시나리오",
+  "packageAt": "2026-10-25T14:52:29.438920+09:00",
+  "authorization": "User requested completion and star sharing in current task",
+  "tabs": [
+    "DoReady",
+    "Process",
+    "Review",
+    "Top Powermeter",
+    "보호윈도우",
+    "평가체크리스트"
+  ],
+  "nativeObjects": 377,
+  "objects": {
+    "DoReady": 74,
+    "Process": 108,
+    "Review": 115,
+    "Top Powermeter": 36,
+    "보호윈도우": 44
+  },
+  "nativeAnchorType": "oneCellAnchor",
+  "evaluationItems": 69,
+  "evaluationByScenario": {
+    "Doready": 13,
+    "Process": 18,
+    "Review": 17,
+    "Top Powermeter": 10,
+    "보호윈도우": 11
+  },
+  "evaluationStatus": "미평가",
+  "flowchartImagesCompared": 10,
+  "signalTimingRemoved": true,
+  "ifDetailTabRemoved": true,
+  "freezePanes": false,
+  "rasterImages": 0,
+  "independentReviews": {
+    "map": {
+      "passCount": 30,
+      "failCount": 0
+    },
+    "sequence": {
+      "passCount": 45,
+      "failCount": 0
+    },
+    "vision": {
+      "passCount": 30,
+      "failCount": 0
+    },
+    "structure": {
+      "passCount": 43,
+      "failCount": 0
+    }
+  },
+  "savedAnchorPositions": 377,
+  "textOverflow": 0,
+  "nativeExcelApplicationVerified": false,
+  "equipmentVerified": false,
+  "productionSoftwareOrUiImplemented": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_통합시나리오_TPM_보호윈도우_최종_20261025.xlsx",
+      "bytes": 94825,
+      "sha256": "29083652a3994f6b8f43bdc651e1e72927d39577b7ee8a73ab0218bf8c235a70"
+    },
+    {
+      "name": "A3_LD_시나리오_TPM_PTW_최종_20261025.zip",
+      "bytes": 61647,
+      "sha256": "757078938beaccfc12f1c3ff0e23781bbeabd7bb747284c8a803fe772561ee23"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 3394,
+      "sha256": "e6e1fbae7c49f333ea383d10e67e8cb667481b0fc5e6e9aa07936f482fe3860c"
+    }
+  ]
+}
