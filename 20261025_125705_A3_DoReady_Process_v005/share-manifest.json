@@ -1,0 +1,54 @@
+{
+  "title": "A3 LD DoReady / Process v0.05 인터페이스 시나리오·평가",
+  "packageAt": "2026-10-25T12:57:05.627357+09:00",
+  "authorization": "User star follow-up in current task",
+  "tabs": [
+    "DoReady",
+    "Process",
+    "I_F 상세",
+    "평가체크리스트"
+  ],
+  "nativeObjects": 373,
+  "objects": {
+    "DoReady": 173,
+    "Process": 200
+  },
+  "nativeAnchorType": "oneCellAnchor",
+  "evaluationItems": 31,
+  "evaluationStatus": "미평가",
+  "freezePanes": false,
+  "rasterImages": 0,
+  "checks": {
+    "map": 33,
+    "sequence": 15,
+    "vision": 26,
+    "structure": 26,
+    "savedAnchorPositions": 373,
+    "textOverflow": 0
+  },
+  "nativeExcelApplicationVerified": false,
+  "equipmentVerified": false,
+  "workbookOriginalBytesPreserved": true,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_DoReady_Process_인터페이스_시나리오_평가체크리스트_20261025.xlsx",
+      "bytes": 65850,
+      "sha256": "67fd5facb33b39328f626636e8570af7bf84cffbbaff7af679b283907fca56c4"
+    },
+    {
+      "name": "A3_DoReady_Process_v005_20261025.zip",
+      "bytes": 46133,
+      "sha256": "c3ea948fd522a703683b3a6a41bcc8cd8e038286c693a2005de375337af1325c"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2494,
+      "sha256": "9326ceacbf3671ad63dbc3484d95173792e89707901fa6aca39529400cd5a133"
+    }
+  ]
+}
