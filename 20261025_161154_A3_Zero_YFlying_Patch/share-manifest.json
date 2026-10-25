@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-10-25T16:11:54.650344+09:00",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_시나리오_0선_YFlying_수정본_20261025.xlsx",
+      "bytes": 96517,
+      "sha256": "cac0b756a5115eb940a60b0cecabeb7ac304e315c85362d7ed9dea8cfc9554ee"
+    },
+    {
+      "name": "A3_LD_0선_YFlying_수정본_20261025.zip",
+      "bytes": 64944,
+      "sha256": "2b237a652ce04194ba31f398b6f9d5ad511a362755b9bfa1201f525a77bad6c5"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1921,
+      "sha256": "72090fbde63034a64347307837ca255be325ad5956bd9b437376590d29174447"
+    }
+  ]
+}
