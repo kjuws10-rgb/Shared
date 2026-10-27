@@ -1,0 +1,67 @@
+{
+  "title": "A3 LD 파워보정·Default Offset 개발자료",
+  "contentVersion": "2026-10-27",
+  "packagedAt": "2026-10-27T10:20:08.805716+09:00",
+  "authorization": "Current user star follow-up to completed two HTML guides",
+  "documents": [
+    {
+      "name": "A3_LD_Power_Correction_Developer_Guide_20261027.html",
+      "bytes": 114797,
+      "sha256": "c878504a5319f0bf8d535274e86fda61bdf96613664abcbbb9cb297acb268df2",
+      "sections": 13,
+      "staticSvgFigures": 15
+    },
+    {
+      "name": "A3_LD_Default_Offset_Developer_Guide_20261027.html",
+      "bytes": 107391,
+      "sha256": "0bd072d69fb9d0eb2dcde906fcd7446afdce37a7cfa8112ed6649f295fc5bda3",
+      "sections": 13,
+      "staticSvgFigures": 14
+    }
+  ],
+  "originalHtmlUnchanged": true,
+  "offlineStandaloneHtml": true,
+  "validation": {
+    "browser": 50,
+    "powerIndependent": 55,
+    "defaultIndependent": 51,
+    "requirement": 53,
+    "runtime": 30,
+    "staticFiguresVisuallyReviewed": 29,
+    "equipmentVerified": false,
+    "productionImplementationVerified": false
+  },
+  "zipMembers": [
+    "A3_LD_Power_Correction_Developer_Guide_20261027.html",
+    "A3_LD_Default_Offset_Developer_Guide_20261027.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Power_Correction_Developer_Guide_20261027.html",
+      "bytes": 114797,
+      "sha256": "c878504a5319f0bf8d535274e86fda61bdf96613664abcbbb9cb297acb268df2"
+    },
+    {
+      "name": "A3_LD_Default_Offset_Developer_Guide_20261027.html",
+      "bytes": 107391,
+      "sha256": "0bd072d69fb9d0eb2dcde906fcd7446afdce37a7cfa8112ed6649f295fc5bda3"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2317,
+      "sha256": "b606b45abe8c200ee303ff7f073ff7ff2f2c32a351e8caad51109f44f3bf7483"
+    },
+    {
+      "name": "A3_LD_Power_Default_Developer_Guides_20261027.zip",
+      "bytes": 59537,
+      "sha256": "9840e9b9e0ce75fe6a4bf4f4fc16dbb0064ad18dd733f7ba9656707e81263cad"
+    }
+  ],
+  "sourceReferences": "R27/M22/D23/S25 source markers; original files are not packaged; no local absolute source links."
+}
