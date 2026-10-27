@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "title": "AI 통합 솔루션 프로모션 회의 정리",
+  "version": "1.0",
+  "created_date": "2026-10-27",
+  "repository": "kjuws10-rgb/Shared",
+  "folder": "20261027_162010_AI_Promotion_Meeting",
+  "basis": "사용자 제공 회의 녹취와 해당 내용의 요약",
+  "scope": "완성 HTML과 열람 안내 및 전달 패키지. 녹취 원문·개인 작업실·검증 산출물 제외.",
+  "files": [
+    {
+      "path": "AI_Promotion_Meeting_Summary_20261027.html",
+      "bytes": 46018,
+      "sha256": "218db37b1700acefd2cbf5e569dda8e1affcc7fbfca62dfa5d2315d84e2602a9"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 1480,
+      "sha256": "5cd762440fc175991ce83e6b0541ac5fe8f99f3ad788b80a7e2699322a30a28e"
+    },
+    {
+      "path": "AI_Promotion_Meeting_20261027.zip",
+      "bytes": 14114,
+      "sha256": "d29134df9cdda3336dee0ac229e3d564bfac510729fdfe751b469f84cef7411e"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 72,
+      "sha256": "931f34bd561ef271f9da8582456721dd1a952de139642f1af84e9ccf40e2416b"
+    }
+  ],
+  "zip_members": [
+    "AI_Promotion_Meeting_Summary_20261027.html",
+    "README.txt"
+  ]
+}
