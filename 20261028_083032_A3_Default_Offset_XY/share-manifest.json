@@ -1,0 +1,46 @@
+{
+  "title": "A3 LD Default Offset X/Y 작업절차",
+  "contentVersion": "2026-10-28",
+  "packagedAt": "2026-10-28T08:30:32.777409+09:00",
+  "authorization": "Current user star follow-up to the completed Default Offset XY HTML",
+  "sections": 8,
+  "staticSvgFigures": 10,
+  "learningExample": "8 Head X/Y calculation",
+  "originalHtmlUnchanged": true,
+  "offlineStandaloneHtml": true,
+  "validation": {
+    "browser": 42,
+    "concept": 56,
+    "conceptMathIncluded": 40,
+    "requirements": 14,
+    "runtime": 30,
+    "equipmentVerified": false,
+    "productionImplementationVerified": false
+  },
+  "zipMembers": [
+    "A3_LD_Default_Offset_XY_작업절차_20261028.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_XY_작업절차_20261028.html",
+      "bytes": 51876,
+      "sha256": "93a16d0247a371038395809cb6e99f48d055dbd29234a66ba5db93e59003d516"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1656,
+      "sha256": "4d20766c85d553e4b1e66a7234924f37d5c392778e3e25331b964adb45ccee11"
+    },
+    {
+      "name": "A3_LD_Default_Offset_XY_20261028.zip",
+      "bytes": 14433,
+      "sha256": "2f61e9444e31c94dd9bae32d42af5e9051012b002a5f4db0399c40385eeb194f"
+    }
+  ]
+}
