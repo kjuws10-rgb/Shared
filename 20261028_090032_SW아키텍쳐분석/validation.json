@@ -1,0 +1,446 @@
+{
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "baseCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "build": {
+    "checkedAt": "2026-10-28T09:05:21.228247+09:00",
+    "exitCode": 0,
+    "elapsedSeconds": 2.56,
+    "command": "dotnet build Drilling.sln --configuration Release --nologo --verbosity minimal",
+    "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+    "uiOrHardwareStarted": false,
+    "warnings": 0,
+    "errors": 0
+  },
+  "numericProbes": {
+    "checkedAt": "2026-10-28T09:06:27.6110642+09:00",
+    "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+    "functionalPassed": 32,
+    "functionalFailed": 0,
+    "checks": [
+      {
+        "id": "N01",
+        "label": "new FINE separates Cells",
+        "expected": 0.01,
+        "actual": 0.01,
+        "passed": true
+      },
+      {
+        "id": "N02",
+        "label": "legacy public projection still mixes Cells; not current Fine UI",
+        "expected": 0.015,
+        "actual": 0.015,
+        "passed": true
+      },
+      {
+        "id": "N03",
+        "label": "new FINE rejects NG",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "N04",
+        "label": "FINE rejects nonfinite or incomplete",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "N05",
+        "label": "FINE rejects nonfinite or incomplete",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "N06",
+        "label": "FINE rejects duplicate Shot",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "T-1_0",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_1",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_2",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_3",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_4",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_5",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_6",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T-1_7",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_0",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_1",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_2",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_3",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_4",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_5",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_6",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "T1_7",
+        "label": "design scanner design round trip",
+        "expected": [
+          0.01,
+          0.02
+        ],
+        "actual": [
+          0.01,
+          0.02
+        ],
+        "passed": true
+      },
+      {
+        "id": "N07",
+        "label": "run option line encoding",
+        "expected": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "id": "N08",
+        "label": "single Lagrange reproduces linear plane",
+        "expected": [
+          0.025,
+          0.1
+        ],
+        "actual": [
+          0.025,
+          0.1
+        ],
+        "passed": true
+      },
+      {
+        "id": "N09",
+        "label": "Align rejects out of domain",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "N10",
+        "label": "trapezoidal duration",
+        "expected": 11,
+        "actual": 11,
+        "passed": true
+      },
+      {
+        "id": "N11",
+        "label": "motion end rest",
+        "expected": [
+          100,
+          0
+        ],
+        "actual": [
+          100,
+          0
+        ],
+        "passed": true
+      },
+      {
+        "id": "N12",
+        "label": "five-column DESIGN offset round trip",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "id": "N13",
+        "label": "four-column offset defaults SCANNER",
+        "expected": false,
+        "actual": false,
+        "passed": true
+      },
+      {
+        "id": "N14",
+        "label": "RUN initialization precedes Process ABLE; machining waits for START",
+        "expected": true,
+        "actual": [
+          "HANDSHAKE_PRC_PROCESS_COMPLETE=0",
+          "HANDSHAKE_PRC_PROCESS_START=0",
+          "HANDSHAKE_PRC_PROCESS_ABLE=0",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=0",
+          "HANDSHAKE_PRC_DOREADY_START=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=1",
+          "HANDSHAKE_PRC_DOREADY_START=1",
+          "PREPARE",
+          "UPLOAD",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=1",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=0",
+          "HANDSHAKE_PRC_DOREADY_START=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=0",
+          "VERIFY",
+          "ZERO",
+          "RUN",
+          "HANDSHAKE_PRC_PROCESS_ABLE=1"
+        ],
+        "passed": true
+      },
+      {
+        "id": "N15",
+        "label": "normal result saved before Process COMPLETE",
+        "expected": true,
+        "actual": [
+          "HANDSHAKE_PRC_PROCESS_COMPLETE=0",
+          "HANDSHAKE_PRC_PROCESS_START=0",
+          "HANDSHAKE_PRC_PROCESS_ABLE=0",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=0",
+          "HANDSHAKE_PRC_DOREADY_START=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=1",
+          "HANDSHAKE_PRC_DOREADY_START=1",
+          "PREPARE",
+          "UPLOAD",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=1",
+          "HANDSHAKE_PRC_DOREADY_COMPLETE=0",
+          "HANDSHAKE_PRC_DOREADY_START=0",
+          "HANDSHAKE_PRC_DOREADY_ABLE=0",
+          "VERIFY",
+          "ZERO",
+          "RUN",
+          "HANDSHAKE_PRC_PROCESS_ABLE=1",
+          "HANDSHAKE_PRC_PROCESS_START=1",
+          "MACHINING",
+          "SAVE",
+          "HANDSHAKE_PRC_PROCESS_COMPLETE=1"
+        ],
+        "passed": true
+      },
+      {
+        "id": "N16",
+        "label": "normal completion releases without STOP",
+        "expected": false,
+        "actual": false,
+        "passed": true
+      }
+    ],
+    "observations": [
+      {
+        "id": "R01",
+        "label": "OK anchors within 0.03 mm can interpolate beyond 0.03 mm",
+        "anchorLimit": 0.03,
+        "expectedPolynomial": -0.04875,
+        "actual": -0.04875,
+        "reproduced": true
+      },
+      {
+        "id": "R02",
+        "label": "public shared Stop cancels exclusive simulation motion",
+        "expectedTarget": 100,
+        "actual": 10,
+        "beforeMoving": true,
+        "afterMoving": false,
+        "reserved": true,
+        "reproduced": true
+      }
+    ],
+    "hardwareStarted": false,
+    "scope": "Pure functions, validation-only CSV round trips, and in-memory Stage handshake delegates. No PLC, Vision, UI or laser instance."
+  },
+  "limits": [
+    "No hardware/UI startup",
+    "Only selected pure and in-memory tests",
+    "No external CIM/PLC/Vision specification conformance test"
+  ],
+  "reportValidation": {
+    "checkedAt": "2026-10-28T09:18:32.976712+09:00",
+    "passed": 279,
+    "failed": 0,
+    "sourceAnchors": 99,
+    "internalLinks": 34,
+    "externalLinks": 104,
+    "mermaidBlocks": 6,
+    "originalUnchanged": true,
+    "originalSourceConfigFiles": 149,
+    "sourceCloneClean": true,
+    "sourceRemoteHead": "223b905daf0d7421c187b727a65d180bfa7472d6"
+  }
+}

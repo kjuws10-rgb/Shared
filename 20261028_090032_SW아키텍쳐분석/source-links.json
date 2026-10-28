@@ -1,0 +1,898 @@
+{
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "verifiedAt": "2026-10-28T09:17:22.353402+09:00",
+  "links": {
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/CRootView.StageRequests.cs#L8-L48": {
+      "path": "Drilling.UI/CRootView.StageRequests.cs",
+      "start": 8,
+      "end": 48,
+      "totalLines": 53,
+      "fileSha256": "3c9f60c5cd145f36a8121fdca9b81eee2f391275ef85f7f27a51c43fed21cea0",
+      "excerptSha256": "7688257304cc441617ba54bbd16437c9e5a87686b4c3cdcd282d2a79f45bfdcf",
+      "gitBlobSha256": "ea93a271b11e9db5d5215f18a249ede4448b863bf6c9f2b18a34d9e684f7271b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageRequestSequence.cs#L37-L95": {
+      "path": "Drilling.Common/Station/CStageRequestSequence.cs",
+      "start": 37,
+      "end": 95,
+      "totalLines": 292,
+      "fileSha256": "fa66fe01798f55a1668b2f74cb4ad4848668dd4894ed0b63d6a4c040029a5df4",
+      "excerptSha256": "8cbf7edc284777b1f312fc97f4474adba7a06c31405170b9a75c8e91b6a3f3a7",
+      "gitBlobSha256": "2dd61b80b683530d44ca3ae3015e1b080f34fcab59742ee4967a54b096b65c7c"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.StageRequests.cs#L20-L81": {
+      "path": "Drilling.Common/Station/CStationProcess.StageRequests.cs",
+      "start": 20,
+      "end": 81,
+      "totalLines": 229,
+      "fileSha256": "7339a71b581b5cff38bf5fa33e381c7e4bc75a9aafed4465ee9325daa0073d1a",
+      "excerptSha256": "86656f505981451531cfe9d065c85a5eeffb2d7419ca9bc9380b31bc5c47fdb6",
+      "gitBlobSha256": "7b2d7cff6c28a7f26e3fc02eb72e57f7aded246794be19a87d7771bc60455ade"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L16-L79": {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 16,
+      "end": 79,
+      "totalLines": 84,
+      "fileSha256": "8da7a3f2c505faf6f0cac8a4f15966c7263514020c3f59922f1d257e709fa642",
+      "excerptSha256": "88c506b77c207a08bb006d6d360106671ff19b3a1614d4927a1e2b9ab6e35372",
+      "gitBlobSha256": "b879e9ce5889d035b35902a881ae693e01de7034cd8608019c89e17b7bd25a65"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageRequestSequence.cs#L96-L176": {
+      "path": "Drilling.Common/Station/CStageRequestSequence.cs",
+      "start": 96,
+      "end": 176,
+      "totalLines": 292,
+      "fileSha256": "fa66fe01798f55a1668b2f74cb4ad4848668dd4894ed0b63d6a4c040029a5df4",
+      "excerptSha256": "e9a71baeffe8f33061573592dce579e7567b169ce08595aaadb1c62dc811f010",
+      "gitBlobSha256": "2dd61b80b683530d44ca3ae3015e1b080f34fcab59742ee4967a54b096b65c7c"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageRequestSequence.cs#L218-L292": {
+      "path": "Drilling.Common/Station/CStageRequestSequence.cs",
+      "start": 218,
+      "end": 292,
+      "totalLines": 292,
+      "fileSha256": "fa66fe01798f55a1668b2f74cb4ad4848668dd4894ed0b63d6a4c040029a5df4",
+      "excerptSha256": "299afe92ea22c24e4161da8898afab45b1f73a72b83237bf1c677c994971c4a4",
+      "gitBlobSha256": "2dd61b80b683530d44ca3ae3015e1b080f34fcab59742ee4967a54b096b65c7c"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageRequestSequence.Process.cs#L9-L72": {
+      "path": "Drilling.Common/Station/CStageRequestSequence.Process.cs",
+      "start": 9,
+      "end": 72,
+      "totalLines": 72,
+      "fileSha256": "3546df0f729bdcd1b7d747574b931f4a41886b9cd7cd39ae75077be02bfb74a9",
+      "excerptSha256": "f436beae24856a350832d474e05e4d58e67bccfe58809db0a4a9198612d2f0d0",
+      "gitBlobSha256": "abea06eb25159f17d37936174fed47f099376f53c53215d663671ab5448a734b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageRequestSequence.Review.cs#L8-L51": {
+      "path": "Drilling.Common/Station/CStageRequestSequence.Review.cs",
+      "start": 8,
+      "end": 51,
+      "totalLines": 51,
+      "fileSha256": "8069cc7b9242186ca20b162c8dda110d08a2f31a8619740a70d36aad27a7bdbf",
+      "excerptSha256": "aafa684ca6b83ae057932240aaaf60227b76855f2cfc7257c542b1f1d6b22b0e",
+      "gitBlobSha256": "03e22b8bdf91044a2811e42c2acc1535aecd14b1dbb5c45c169a43ec49b07914"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Automation/CMofReadiness.cs#L5-L16": {
+      "path": "Drilling.Common/Automation/CMofReadiness.cs",
+      "start": 5,
+      "end": 16,
+      "totalLines": 16,
+      "fileSha256": "7db6f5b0dbf3268d5e61c811bcedf4f9a1e1278c5ded14db6a1edbe4374b5fe5",
+      "excerptSha256": "b2615bd86c11aeed1b28f9c5d0788e91870625b6d0e9bece8b8b4515919ca20b",
+      "gitBlobSha256": "6b751ed61387ed41cc31d9b7970dfcb365a3c467a7b7363187f43f8e33ae44ff"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Automation/CAutomationManager.MofReadiness.cs#L10-L48": {
+      "path": "Drilling.Common/Automation/CAutomationManager.MofReadiness.cs",
+      "start": 10,
+      "end": 48,
+      "totalLines": 56,
+      "fileSha256": "d5bb12a408cbb763c793eff95cfc62ed2bcbb09e810107fbb46f91134f80dac3",
+      "excerptSha256": "54191c5ab8fe6e601d8b6104ee82c41ef0595efd46bc908ec6949182bcc74235",
+      "gitBlobSha256": "536e4c43e45dc8d2666561a71c8b77749f0f7b19674a141de8b13f5b314eff66"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Automation1/CAutomation1Comm.MofReadiness.cs#L16-L29": {
+      "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.MofReadiness.cs",
+      "start": 16,
+      "end": 29,
+      "totalLines": 31,
+      "fileSha256": "2f722c87079ed491650b36557b01016be7fed36ec65a6f8f9489dd33be39b13e",
+      "excerptSha256": "1be65e3d20a4ce4a7eb86db8002378ba8051dbdff54bfcf53e4c3ff814dfc5d4",
+      "gitBlobSha256": "711ade3ce5197e84c64a0c85b98921292c205452e4161fdb96ae858d71ec5865"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.StageRequests.cs#L83-L157": {
+      "path": "Drilling.Common/Station/CStationProcess.StageRequests.cs",
+      "start": 83,
+      "end": 157,
+      "totalLines": 229,
+      "fileSha256": "7339a71b581b5cff38bf5fa33e381c7e4bc75a9aafed4465ee9325daa0073d1a",
+      "excerptSha256": "a69c8b689b934247625af695f29ad86ae11f74605a69fcf9bc195198a8c81e1b",
+      "gitBlobSha256": "7b2d7cff6c28a7f26e3fc02eb72e57f7aded246794be19a87d7771bc60455ade"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L977-L1017": {
+      "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.cs",
+      "start": 977,
+      "end": 1017,
+      "totalLines": 1694,
+      "fileSha256": "62a3f12bea94aaad4da67b3ffcddd1d57fdede030271051f54f60a9c78696bf3",
+      "excerptSha256": "83ba14046c9c8af610fb45aea9fb43093d3d8f94ba56093f75fda6c7e0103957",
+      "gitBlobSha256": "ab6129236f325f9266ff0e6b502c483759d60c4c5677684b9b6bd17c93312435"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.StageProcess.cs#L15-L110": {
+      "path": "Drilling.Common/Station/CStationProcess.StageProcess.cs",
+      "start": 15,
+      "end": 110,
+      "totalLines": 110,
+      "fileSha256": "f6f3248d03eaf8b3b3d8b16d3cd937be143a0b88110ac1eb0840a90523e72af9",
+      "excerptSha256": "38e524148e984d4b1e2b71fe45fd47a71bb64e26ef5678286947b20dc63259f2",
+      "gitBlobSha256": "d628d66a1d1fa1c1f622da50b7ca620c394d92ca3472769e477df3911ffadeed"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.cs#L1010-L1020": {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1010,
+      "end": 1020,
+      "totalLines": 2987,
+      "fileSha256": "f232f00812af5e74f838b01bdc61a19c8789a57a95c16fcfb6ddb24606399f4b",
+      "excerptSha256": "7de1178d8089b1216fbf1b3d0746e5a61c7faab5d28985ea63a56bca2a71146a",
+      "gitBlobSha256": "a0f6f8f4174bf0864a4d14e6434887cc76103652bdaa89f044f6ecd3f08d5720"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/CRootView.StageRequests.cs#L19-L45": {
+      "path": "Drilling.UI/CRootView.StageRequests.cs",
+      "start": 19,
+      "end": 45,
+      "totalLines": 53,
+      "fileSha256": "3c9f60c5cd145f36a8121fdca9b81eee2f391275ef85f7f27a51c43fed21cea0",
+      "excerptSha256": "f6f0acf26ea5a3c0ed7aa709c4f46f09cd20aaacf80eee8852657d0cb8e2b3c4",
+      "gitBlobSha256": "ea93a271b11e9db5d5215f18a249ede4448b863bf6c9f2b18a34d9e684f7271b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/JHMI_RCP.csv#L338-L364": {
+      "path": "Config/JHMI_RCP.csv",
+      "start": 338,
+      "end": 364,
+      "totalLines": 364,
+      "fileSha256": "6d0f745f3364b31f6c42d5f3663ebee75efb88b8da9becd1405357c1747af212",
+      "excerptSha256": "43a859e9e187b2a98ddece99335079d887ecce2f165bd9743bf61b531f27b0af",
+      "gitBlobSha256": "ddff78bfadc6fa1c2a4694fc3fe6a88d864a35911a3eb01e9e5ae5b930532e8b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/RECIPE/test0929.csv#L178-L184": {
+      "path": "Config/RECIPE/test0929.csv",
+      "start": 178,
+      "end": 184,
+      "totalLines": 43384,
+      "fileSha256": "acdc86ca08e205af3f15e9eab24a6f8ec4b0be88a6f41936cd3c692a3b373fb2",
+      "excerptSha256": "7c6ba92008a708a2aff1300656c99f5808448bcf2e8fa709891f6777113c1423",
+      "gitBlobSha256": "8f83a96d8ccd722d5d23648c6f6f41b7b215984da15bf271e67ab67c73b36c61"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/RECIPE/test0929.csv#L337-L361": {
+      "path": "Config/RECIPE/test0929.csv",
+      "start": 337,
+      "end": 361,
+      "totalLines": 43384,
+      "fileSha256": "acdc86ca08e205af3f15e9eab24a6f8ec4b0be88a6f41936cd3c692a3b373fb2",
+      "excerptSha256": "f006db372a43b8a98abf3438f0f347fc15353775c66f78a6373d7651e80e68c5",
+      "gitBlobSha256": "8f83a96d8ccd722d5d23648c6f6f41b7b215984da15bf271e67ab67c73b36c61"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.StageRequests.cs#L24-L34": {
+      "path": "Drilling.Common/Station/CStationProcess.StageRequests.cs",
+      "start": 24,
+      "end": 34,
+      "totalLines": 229,
+      "fileSha256": "7339a71b581b5cff38bf5fa33e381c7e4bc75a9aafed4465ee9325daa0073d1a",
+      "excerptSha256": "42d54c2c061492129d0e1327898c27e1a40cf0b85b6fd93d434901e9c69ddb2f",
+      "gitBlobSha256": "7b2d7cff6c28a7f26e3fc02eb72e57f7aded246794be19a87d7771bc60455ade"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/Review/CReviewSettingFile.cs#L59-L63": {
+      "path": "Drilling.File/Review/CReviewSettingFile.cs",
+      "start": 59,
+      "end": 63,
+      "totalLines": 277,
+      "fileSha256": "7460c0149ff9f307f3c7a1ffee192550dcf1282e07fe58886dc9c4f40ccd9b94",
+      "excerptSha256": "e549de79e7eee2816526c8d7d37e629623f4d4cb012988eec00b770d69c2be55",
+      "gitBlobSha256": "10e466919440dc12f4400215774fe5e7c3f8867aa339ab8725fae4ca12c26ad5"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/Review/CReviewSettingFile.cs#L254-L258": {
+      "path": "Drilling.File/Review/CReviewSettingFile.cs",
+      "start": 254,
+      "end": 258,
+      "totalLines": 277,
+      "fileSha256": "7460c0149ff9f307f3c7a1ffee192550dcf1282e07fe58886dc9c4f40ccd9b94",
+      "excerptSha256": "85b6131535ff8086fd61143c197a687b963044f7859c64cae7d8e7becd1f81d0",
+      "gitBlobSha256": "10e466919440dc12f4400215774fe5e7c3f8867aa339ab8725fae4ca12c26ad5"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Recipe/CReviewOffsetData.cs#L7-L40": {
+      "path": "Drilling.Common/Recipe/CReviewOffsetData.cs",
+      "start": 7,
+      "end": 40,
+      "totalLines": 40,
+      "fileSha256": "c8fd4ebde835d7f4dd9eddac3a8551a5cc6b672aab45cb7dada5082c7fb67be0",
+      "excerptSha256": "7eaa1d525f69acccae74f1aac92bf43d9d21263762b57f0a2e33278e6a768024",
+      "gitBlobSha256": "4c6cac7b7be01ca7f28c5945a01d70268d721147976cf3cd91002c7d6e35b1b9"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Recipe/CScannerAxisTransform.cs#L70-L92": {
+      "path": "Drilling.Common/Recipe/CScannerAxisTransform.cs",
+      "start": 70,
+      "end": 92,
+      "totalLines": 139,
+      "fileSha256": "1d35d64f756533ce21b9e8b6dd660284e982cd4e845d023ecd5a1971912cc966",
+      "excerptSha256": "81ef4083f656fcf40b094e63c31b08d6d85c14a26157fec401d9a70af1a6c869",
+      "gitBlobSha256": "c53554ca0bb49a71cab3964d53793477914ed766fb0f6c3e9dae7e6982f8d3af"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L124-L149": {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 124,
+      "end": 149,
+      "totalLines": 580,
+      "fileSha256": "d0c1c504342d2150f82728fc88b73d2544a478aa8eab4fd26d1a4e6f8e46fa42",
+      "excerptSha256": "2262b56027b956c6b9cb3c05d35e5a95a1b499d19106b086f95aeed5964bfa9c",
+      "gitBlobSha256": "a73515f57c5ad7cfaa99ccfb0c5784e5ea71254f36785938b67f5860a9e2c7b4"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L174-L208": {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 174,
+      "end": 208,
+      "totalLines": 580,
+      "fileSha256": "d0c1c504342d2150f82728fc88b73d2544a478aa8eab4fd26d1a4e6f8e46fa42",
+      "excerptSha256": "b8086e23118e72bbc88e3d1da575b6433aabb3d6e34313f3ffcd66d247434fd6",
+      "gitBlobSha256": "a73515f57c5ad7cfaa99ccfb0c5784e5ea71254f36785938b67f5860a9e2c7b4"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L129-L169": {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 129,
+      "end": 169,
+      "totalLines": 211,
+      "fileSha256": "033a4d23dbed5aeb04422fcb89e4143ef4483fb6d3443cd9e0abc6cdd180ff7e",
+      "excerptSha256": "d98e0598201bf3d915f548761436a6397811df11c62f5648da6911a0ec6f8d8a",
+      "gitBlobSha256": "5e9bf7b0c1f45873401d7aa7ec3ca57aeed963e4e4b2f5e4e5f5ad7d9f17976b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.SimpleOffset.cs#L39-L74": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.SimpleOffset.cs",
+      "start": 39,
+      "end": 74,
+      "totalLines": 105,
+      "fileSha256": "feb69b5ba535e3612439576e13c8af0aadc5f478b09347e4a26182d920167077",
+      "excerptSha256": "d46f6c446a34c5454be4f60df4cb92dc54aaadd2207308fb6db91a6be2b61716",
+      "gitBlobSha256": "1b218cd58f0bcbf556edf1dfce8ac44a0b64052481b6bd67a8ae1c0aa6453884"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CRoughCorrectionPanel.cs#L148-L185": {
+      "path": "Drilling.UI/Menu/Menus/CRoughCorrectionPanel.cs",
+      "start": 148,
+      "end": 185,
+      "totalLines": 216,
+      "fileSha256": "1177995b4ce01ea8e063e1d64f91fe47ca13c529f2eecbc02499b41d0e0ac615",
+      "excerptSha256": "78736b1ca77748673c8de9793326cc0765cc7df24711f431f41997506cca00b8",
+      "gitBlobSha256": "da8c38e28d58ea5840283823e4683aa9f3718f16fabc27d3dc64833608544c56"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.Rough.cs#L76-L108": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.Rough.cs",
+      "start": 76,
+      "end": 108,
+      "totalLines": 123,
+      "fileSha256": "1af4bd116964497dffaf11e5fa80914edd756789899e61649dd2e5942b58468b",
+      "excerptSha256": "d38c2be5a172331e2a7de7bec5eca17eae63fc0b500283da0d1ef4cc1c62395c",
+      "gitBlobSha256": "f983a9fb3d7f978dee26c60a51acca7a57afa9b60e635accf593107219aa7db5"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CFineReviewOffsetCalculator.cs#L8-L63": {
+      "path": "Drilling.Common/Review/CFineReviewOffsetCalculator.cs",
+      "start": 8,
+      "end": 63,
+      "totalLines": 65,
+      "fileSha256": "abf83b053f80ff6f93267f630e9f8794c2f3d35a0baa15d7a7f0f741ee66e22a",
+      "excerptSha256": "7635c9232d46be33e276081a545816a42e164f7fad4e5fef484b31c33539c3c3",
+      "gitBlobSha256": "6fa35c69e963bb36b1fa6239727ebcde5ac0018211be85bc0e7d56a29176e1df"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.FineOffset.cs#L33-L79": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.FineOffset.cs",
+      "start": 33,
+      "end": 79,
+      "totalLines": 100,
+      "fileSha256": "5e916bf7560808532a7d1b28be6a89fb0b4c868344609928e80934972c14cf6c",
+      "excerptSha256": "e23e0b1ac810b19d0bb285f0969c2e2048932b6ec39e6a7e655c18de7582892b",
+      "gitBlobSha256": "a19f10a59d664cb7032dd28a86ea69adcf2cc1436d9898ef8a3ee6bb4c0a4e40"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewResult/CReviewResultFile.FineCorrection.cs#L9-L77": {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.FineCorrection.cs",
+      "start": 9,
+      "end": 77,
+      "totalLines": 79,
+      "fileSha256": "237d1232162617dbc859ce0fc0f3d0bef25586509f381594d76d31c2e38533ad",
+      "excerptSha256": "93ad39329ca9f21d831caaad18bc80051f34892fa12392611e1e1c4bfa763add",
+      "gitBlobSha256": "48885831f9d145a9c3cc0f4285d929fa1a2924caba3ecbaa75903dce62e0860e"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewResult/CReviewResultFile.RoughCorrection.cs#L9-L83": {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.RoughCorrection.cs",
+      "start": 9,
+      "end": 83,
+      "totalLines": 84,
+      "fileSha256": "8d0d32565899274445e73487817fab671ca30ee79a8741957afb0ea217cbe425",
+      "excerptSha256": "c1e533c5e9bb518a000949bb1ec111066a83b9cf5c1e3b23aa11856cb1d3383d",
+      "gitBlobSha256": "ce44abe5af0e7fb75349b688f832b08d0ec4e1a36faaaeec258522c26dba985d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.StageProcess.cs#L70-L110": {
+      "path": "Drilling.Common/Station/CStationProcess.StageProcess.cs",
+      "start": 70,
+      "end": 110,
+      "totalLines": 110,
+      "fileSha256": "f6f3248d03eaf8b3b3d8b16d3cd937be143a0b88110ac1eb0840a90523e72af9",
+      "excerptSha256": "623140f8a0bdf854e77d0ee3f33bdc499954310dda830541e14a3419a6e31ab3",
+      "gitBlobSha256": "d628d66a1d1fa1c1f622da50b7ca620c394d92ca3472769e477df3911ffadeed"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L48-L100": {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 48,
+      "end": 100,
+      "totalLines": 211,
+      "fileSha256": "033a4d23dbed5aeb04422fcb89e4143ef4483fb6d3443cd9e0abc6cdd180ff7e",
+      "excerptSha256": "88a27de540add2f85ec7d46200eafcfd175cee8fb31df723773de1c3e2f0da1a",
+      "gitBlobSha256": "5e9bf7b0c1f45873401d7aa7ec3ca57aeed963e4e4b2f5e4e5f5ad7d9f17976b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L27-L79": {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 27,
+      "end": 79,
+      "totalLines": 84,
+      "fileSha256": "8da7a3f2c505faf6f0cac8a4f15966c7263514020c3f59922f1d257e709fa642",
+      "excerptSha256": "6b52f75359bfda82d7b1b30c837e36015ae550415a12d4a2dc7995989d71457a",
+      "gitBlobSha256": "b879e9ce5889d035b35902a881ae693e01de7034cd8608019c89e17b7bd25a65"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.cs#L1358-L1364": {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1358,
+      "end": 1364,
+      "totalLines": 2987,
+      "fileSha256": "f232f00812af5e74f838b01bdc61a19c8789a57a95c16fcfb6ddb24606399f4b",
+      "excerptSha256": "1d32afd95adde83670c30ca35fcd4353133fe4ad9335eea992ca5743d79f75b3",
+      "gitBlobSha256": "a0f6f8f4174bf0864a4d14e6434887cc76103652bdaa89f044f6ecd3f08d5720"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Correction/CAlignInterpolation.cs#L13-L87": {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "start": 13,
+      "end": 87,
+      "totalLines": 117,
+      "fileSha256": "d0ef08dbfe9cb2ebc1e6472ac7f416a29956a77c8313e84b98b19bf09ba6701c",
+      "excerptSha256": "8b5928f1755aa151682e06c7a0308ea9e5d39bfa3e8ca2b27012f880ab2e8588",
+      "gitBlobSha256": "27f1669087bdb3fea3c332afca8bccf696c6e2a3a832c889182b7f8983e85ab9"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.AlignOffset.cs#L35-L105": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.AlignOffset.cs",
+      "start": 35,
+      "end": 105,
+      "totalLines": 133,
+      "fileSha256": "0dd720d0ef8ea7fe462652edd50f7e7755aba77077b8902cc5f0b4e52f56a595",
+      "excerptSha256": "4bc3b4fbbfff6c9cb28125d482722a3c0689543334204132dbc8f99ade32c4e5",
+      "gitBlobSha256": "93bc82b982d94d8fa64b79108d9c0004f31e504f14820ffb9fd96d05360ce031"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/RECIPE/test0929_reviewoffset/20261026_174834_059_reviewoffset.csv#L1342-L1344": {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261026_174834_059_reviewoffset.csv",
+      "start": 1342,
+      "end": 1344,
+      "totalLines": 20741,
+      "fileSha256": "dfa8003b1c670c35b117ddd0582d24c62f87082cfb702962aea099e2b1626616",
+      "excerptSha256": "2975ad0436f76a76885095151d3736cf70033d96cf048ef13c673c8306df071d",
+      "gitBlobSha256": "02e27c3715d27919c499702100eeba065ae8bebbee7f5bec9458a9aed080813b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/Setting/Setting.csv#L11": {
+      "path": "Config/Setting/Setting.csv",
+      "start": 11,
+      "end": 11,
+      "totalLines": 178,
+      "fileSha256": "e47a095a470829c1d23278d2a849ea208de610167276a04dcbe4f5feb29768ea",
+      "excerptSha256": "1a92cbbf255fd6bfbbe401ca8a61bdf9a42e45ee894cbf9ec9f445195361f825",
+      "gitBlobSha256": "bff8198f0a5f96c5ce593dee3c4368a5006c026056f857634c41dcf15eec3ca0"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/Setting/Setting.csv#L34-L53": {
+      "path": "Config/Setting/Setting.csv",
+      "start": 34,
+      "end": 53,
+      "totalLines": 178,
+      "fileSha256": "e47a095a470829c1d23278d2a849ea208de610167276a04dcbe4f5feb29768ea",
+      "excerptSha256": "3b8d9b8a05f51ac008586c0770ca77c0ed23053ed8e5dda0474e0abd825d8deb",
+      "gitBlobSha256": "bff8198f0a5f96c5ce593dee3c4368a5006c026056f857634c41dcf15eec3ca0"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/RECIPE/test0929.csv#L6-L7": {
+      "path": "Config/RECIPE/test0929.csv",
+      "start": 6,
+      "end": 7,
+      "totalLines": 43384,
+      "fileSha256": "acdc86ca08e205af3f15e9eab24a6f8ec4b0be88a6f41936cd3c692a3b373fb2",
+      "excerptSha256": "76aa182d4c158013d0c81c761a001f5ea10e7f37862f0198f843b16e5582ed64",
+      "gitBlobSha256": "8f83a96d8ccd722d5d23648c6f6f41b7b215984da15bf271e67ab67c73b36c61"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/JHMI_INTERFACE.csv#L2-L17": {
+      "path": "Config/JHMI_INTERFACE.csv",
+      "start": 2,
+      "end": 17,
+      "totalLines": 17,
+      "fileSha256": "06708af06e437e3ae582e7d0fdb49510c978a6aa74ef06cc049e45baf213767c",
+      "excerptSha256": "43a6f2f9b7293b17e167abb98ccdd56a9c7f76c11f017ce0dcd4d855f5c76da3",
+      "gitBlobSha256": "97b6d356cc30a6b11260b0bc612c248a85fd52f1e005a1875a16c257e514810f"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStageReadyPositionCheck.cs#L9-L64": {
+      "path": "Drilling.Common/Station/CStageReadyPositionCheck.cs",
+      "start": 9,
+      "end": 64,
+      "totalLines": 64,
+      "fileSha256": "523919e07f3d344b1cbf39ab109e69b35c6e391538b8e2292e3f50e7ec60c0e4",
+      "excerptSha256": "1a596d3450731ac75c6aa83cb04d4a9a1f1c2a7f08df77f8aa5770a62e0dc501",
+      "gitBlobSha256": "c7c2a6e11f73e54ab9c4d392ec90fd5ddc5d2b0b9e12e7d610152b3fdece366b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Automation/CAutomationManager.AuxiliaryFeedback.cs#L18-L104": {
+      "path": "Drilling.Common/Automation/CAutomationManager.AuxiliaryFeedback.cs",
+      "start": 18,
+      "end": 104,
+      "totalLines": 105,
+      "fileSha256": "45b237cb333263dd1ed4d2ebba271856bb1c05b048e9138df3065ffce56215fb",
+      "excerptSha256": "0fe8c93a640ed80a004391d15a285c07fc81c60ae2a513a000dd019af05b4389",
+      "gitBlobSha256": "586187b20fa2e0ac4de0e4cf32165a8360dc0273dfd67d4d1910741bdd329844"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CAutoFineReviewPlan.cs#L8-L80": {
+      "path": "Drilling.Common/Review/CAutoFineReviewPlan.cs",
+      "start": 8,
+      "end": 80,
+      "totalLines": 82,
+      "fileSha256": "0ee21bab2e146ef43b28b632b004e25d1f16bc27f6544134bcb97e1ea056d3e4",
+      "excerptSha256": "25277a428ae5e8d603aaa4d53b6ba4c8756eb91c8060e3da9a56cee180039609",
+      "gitBlobSha256": "9c626c2e7152028ee42f3cc27f1753c85f49e1a72c16765a596dba77cba5a71a"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.FineCorrection.cs#L120-L157": {
+      "path": "Drilling.Common/Review/CReviewManager.FineCorrection.cs",
+      "start": 120,
+      "end": 157,
+      "totalLines": 387,
+      "fileSha256": "7339a84936c11f2e9878109ea21b1b586fdd48ecb10c74ff137b7846bc657ff2",
+      "excerptSha256": "df24b55225815505d77ce534def402aa4fbaf935de4bf12311daad6d864e0cfe",
+      "gitBlobSha256": "394141d85b408cd053fbca72f6e1831b6db6c9ebe1a3ca18c8353024f293482d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.FineCorrection.cs#L160-L262": {
+      "path": "Drilling.Common/Review/CReviewManager.FineCorrection.cs",
+      "start": 160,
+      "end": 262,
+      "totalLines": 387,
+      "fileSha256": "7339a84936c11f2e9878109ea21b1b586fdd48ecb10c74ff137b7846bc657ff2",
+      "excerptSha256": "69688dbebd8456ce17b7bf0a410c0cabfcd0525c64a5b2dd15e1b4740c4b5299",
+      "gitBlobSha256": "394141d85b408cd053fbca72f6e1831b6db6c9ebe1a3ca18c8353024f293482d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.FineCorrection.cs#L275-L386": {
+      "path": "Drilling.Common/Review/CReviewManager.FineCorrection.cs",
+      "start": 275,
+      "end": 386,
+      "totalLines": 387,
+      "fileSha256": "7339a84936c11f2e9878109ea21b1b586fdd48ecb10c74ff137b7846bc657ff2",
+      "excerptSha256": "c0645e711dad3bc74342ea6e2e3439233ac1161bb5b874c3587f148ae0f7d9c6",
+      "gitBlobSha256": "394141d85b408cd053fbca72f6e1831b6db6c9ebe1a3ca18c8353024f293482d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.DeviceModes.cs#L22-L64": {
+      "path": "Drilling.Common/Review/CReviewManager.DeviceModes.cs",
+      "start": 22,
+      "end": 64,
+      "totalLines": 65,
+      "fileSha256": "fd2564c5f6d5740562f9a1636dff79baa699d4ed3f14f6baba72fb2ff877a6b1",
+      "excerptSha256": "c9ab2f67dd6d70625d9a56a2ff8ec68949a7f5f8d9e64adb04d8527a8a9d927a",
+      "gitBlobSha256": "2f1e67b3609ea3bfdb9011b20fe12acc553bd986124e06f67f8b1b9b82bf3957"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.FineCorrection.cs#L45-L78": {
+      "path": "Drilling.Common/Review/CReviewManager.FineCorrection.cs",
+      "start": 45,
+      "end": 78,
+      "totalLines": 387,
+      "fileSha256": "7339a84936c11f2e9878109ea21b1b586fdd48ecb10c74ff137b7846bc657ff2",
+      "excerptSha256": "606a79851ed16a7096891a2a7453816f862d7ee4daa21178aade68b6cd308bce",
+      "gitBlobSha256": "394141d85b408cd053fbca72f6e1831b6db6c9ebe1a3ca18c8353024f293482d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.RoughCorrection.cs#L28-L33": {
+      "path": "Drilling.Common/Review/CReviewManager.RoughCorrection.cs",
+      "start": 28,
+      "end": 33,
+      "totalLines": 167,
+      "fileSha256": "d1175d8bc2a63586fb3767ca1f8357f286d726d62a846264fef02c482f1b9e65",
+      "excerptSha256": "cad1ee79ac5cda402ea0c8d445631c5030b29007f5b770591b9fa34ee94ea2fd",
+      "gitBlobSha256": "12ac68d7ed782efb7c0ab5b85cf1d5e14f5dd8f8ca7a95627b6fa6e613475291"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.RoughCorrection.cs#L151-L165": {
+      "path": "Drilling.Common/Review/CReviewManager.RoughCorrection.cs",
+      "start": 151,
+      "end": 165,
+      "totalLines": 167,
+      "fileSha256": "d1175d8bc2a63586fb3767ca1f8357f286d726d62a846264fef02c482f1b9e65",
+      "excerptSha256": "3e38324e545000715b5dc681776f7362978378118ff292719e355f9ed684296a",
+      "gitBlobSha256": "12ac68d7ed782efb7c0ab5b85cf1d5e14f5dd8f8ca7a95627b6fa6e613475291"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.cs#L2422-L2429": {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 2422,
+      "end": 2429,
+      "totalLines": 3219,
+      "fileSha256": "8740db81d19f4fd4966ac22cf00f5878cd8cd6d5706b4574223e3dc4a8f3758c",
+      "excerptSha256": "32e24bfa4c49ca88676a868c0a3c140ce2e8972ee9192959ccf21265a092466a",
+      "gitBlobSha256": "e7aae650c69d45a772d22acf3856228b424ac5d9efb67c3ce0d24d5d77a0f801"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.cs#L2601-L2608": {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 2601,
+      "end": 2608,
+      "totalLines": 3219,
+      "fileSha256": "8740db81d19f4fd4966ac22cf00f5878cd8cd6d5706b4574223e3dc4a8f3758c",
+      "excerptSha256": "8435e9d7bbba46d138fece30d3734cad0cfa9a77039aee4381578bace9b3c296",
+      "gitBlobSha256": "e7aae650c69d45a772d22acf3856228b424ac5d9efb67c3ce0d24d5d77a0f801"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Vision/CVisionProtocol.cs#L61-L68": {
+      "path": "Drilling.Common/Interface/Vision/CVisionProtocol.cs",
+      "start": 61,
+      "end": 68,
+      "totalLines": 575,
+      "fileSha256": "264cffc5b0b92870a430ce23d2cbe88488a69984faa9385b5f86c120d4bff86b",
+      "excerptSha256": "37efb9927a102550776a734db5fda0218ee02627c2e8c6a0da8203f2353e22c9",
+      "gitBlobSha256": "62d6744f0f8da4f1ae1c3a571a2deb35090e04e78c00cddbab00fef3bdf8c879"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Vision/CVisionProtocol.cs#L298-L338": {
+      "path": "Drilling.Common/Interface/Vision/CVisionProtocol.cs",
+      "start": 298,
+      "end": 338,
+      "totalLines": 575,
+      "fileSha256": "264cffc5b0b92870a430ce23d2cbe88488a69984faa9385b5f86c120d4bff86b",
+      "excerptSha256": "b2902c096e40a8a4668f60e13ecde03320a59ead07432429c81b6403c71d3ef1",
+      "gitBlobSha256": "62d6744f0f8da4f1ae1c3a571a2deb35090e04e78c00cddbab00fef3bdf8c879"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Vision/CVisionComm.cs#L325-L329": {
+      "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "start": 325,
+      "end": 329,
+      "totalLines": 621,
+      "fileSha256": "c52b412ba742e90d6f4a82b148ec6605b0ce47a65fa284bcb280454da491a6a7",
+      "excerptSha256": "81ce1b626ab91f36a973093ecf900b420acd17ac8ba7d0faeb8c58934eb6fd7f",
+      "gitBlobSha256": "c0e7679f758a17f94e83e11e98d150c5055da60620699d070836f7b755703e8d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Vision/CVisionComm.cs#L473-L476": {
+      "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "start": 473,
+      "end": 476,
+      "totalLines": 621,
+      "fileSha256": "c52b412ba742e90d6f4a82b148ec6605b0ce47a65fa284bcb280454da491a6a7",
+      "excerptSha256": "33c55c30adc0daf1bef770a3ec7df7f2ea8348bdfccab299f9c609d506b81293",
+      "gitBlobSha256": "c0e7679f758a17f94e83e11e98d150c5055da60620699d070836f7b755703e8d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L98": {
+      "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+      "start": 15,
+      "end": 98,
+      "totalLines": 100,
+      "fileSha256": "66ced4710d0852996b87e1635891a92a13b9360e255c2e080bf673a5d25aeee2",
+      "excerptSha256": "c20432edadac9f8e866f14596c294551034338a628969af371b3476334bafd16",
+      "gitBlobSha256": "42242e276051ca599d90c94e6bf6e2f09ccca6673077ffd1fb2c64a6e09d87cf"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CZeroDefenceTiming.cs#L36-L94": {
+      "path": "Drilling.Common/Review/CZeroDefenceTiming.cs",
+      "start": 36,
+      "end": 94,
+      "totalLines": 96,
+      "fileSha256": "22b2a8dff8be3ec0ebd700b73c0265d60992b987d49cc67419fc0fba563e5b86",
+      "excerptSha256": "d9349caffb4e46c80c8bf78f4903b858dc3ef27ee78d9003d0a60e182167fc93",
+      "gitBlobSha256": "07d0e3040dd4ba8e4aae60ff64b7640ea5b6e81ed79b940d9ff004459820ce1b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CRecipeZeroDefencePanel.cs#L95-L170": {
+      "path": "Drilling.UI/Menu/Menus/CRecipeZeroDefencePanel.cs",
+      "start": 95,
+      "end": 170,
+      "totalLines": 353,
+      "fileSha256": "a5dff7edae00cc08da0a11feb3c7b52c0b513251755f678457dbc9d82c6e1e9d",
+      "excerptSha256": "159d42d11a17b7bb8672f92fb7cff227102410436ecfc459c3b8348217b560ac",
+      "gitBlobSha256": "743f5384491c8b6f5ebef247bb0d9a79acbc34c811484a781587a176e0b93847"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMainSequenceStatus.cs#L110-L180": {
+      "path": "Drilling.UI/Menu/Menus/CMainSequenceStatus.cs",
+      "start": 110,
+      "end": 180,
+      "totalLines": 268,
+      "fileSha256": "d3d1a8bbf428e1697f9da82beff4e358d91ccbae43f1cc49f94ee3c4eb6ae049",
+      "excerptSha256": "72ff317a7215246c76938af20b730415269bb0e4776590c8f229e964d2dbfa82",
+      "gitBlobSha256": "33d46f93dfe18fa130fb8b0fce663c84d01d5c93e81a31ca4ca71bb47b2362ff"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMainInterlockGroups.cs#L7-L35": {
+      "path": "Drilling.UI/Menu/Menus/CMainInterlockGroups.cs",
+      "start": 7,
+      "end": 35,
+      "totalLines": 76,
+      "fileSha256": "08f4c609da4783363e9025c25357e70949e96001b4d6101fba8fd097e8f0d450",
+      "excerptSha256": "67614402572f90dc0820ab42aad1cc523509256249fd68c3ace82e43936bb5c2",
+      "gitBlobSha256": "b574615f70b5bf8d487d54d2cf33fb933a89bbaf8bad43d8299dd8e25f2db361"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMainInterlockSnapshot.cs#L13-L33": {
+      "path": "Drilling.UI/Menu/Menus/CMainInterlockSnapshot.cs",
+      "start": 13,
+      "end": 33,
+      "totalLines": 36,
+      "fileSha256": "05e93c40d0948e95ae76a72458f295b45a2d95713c5a43fc415461acbc9003d0",
+      "excerptSha256": "19d2e8e705ffcc8594cd53b734cb25188cec5ec1410ea81fd604ae6dab6eff49",
+      "gitBlobSha256": "8f0b4ac40c92170ae269bf78eafd5a9e8d257ed30333dbe7e0ec924e1c40fd78"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Managers/CRunOptionSettings.cs#L7-L46": {
+      "path": "Drilling.Common/Managers/CRunOptionSettings.cs",
+      "start": 7,
+      "end": 46,
+      "totalLines": 46,
+      "fileSha256": "90ab81b44dd33e4b1637886c4cb5c1dac51ec2b48f181786440596ba9120ccf8",
+      "excerptSha256": "a2e872bbc62857d85e5c325f62d765efcd6b1f8bb63d294b31a6bd6871b63910",
+      "gitBlobSha256": "481d0c1790e4ce3ff1690e1a403783fa59088da8685ccf59de6a71cf34a235b2"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMainRunOptionPanel.cs#L57-L86": {
+      "path": "Drilling.UI/Menu/Menus/CMainRunOptionPanel.cs",
+      "start": 57,
+      "end": 86,
+      "totalLines": 163,
+      "fileSha256": "48e74c739bec23830564d3bb812de480f6444c7928ea30a877065337516c75e8",
+      "excerptSha256": "04e93eff77a59a4318ad217ebf5e31efa5e49b1d683afff548d53a764a1c7be0",
+      "gitBlobSha256": "702217bc569e08dcd501b2eaaf1eaa2a9e7976b02d4f8a03ef95290345e80f94"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMainRunOptionPanel.cs#L125-L141": {
+      "path": "Drilling.UI/Menu/Menus/CMainRunOptionPanel.cs",
+      "start": 125,
+      "end": 141,
+      "totalLines": 163,
+      "fileSha256": "48e74c739bec23830564d3bb812de480f6444c7928ea30a877065337516c75e8",
+      "excerptSha256": "3670ea6b4b351bd2e55376c0cd6ba7cb339df310f9278fe02a31720ebf0719cd",
+      "gitBlobSha256": "702217bc569e08dcd501b2eaaf1eaa2a9e7976b02d4f8a03ef95290345e80f94"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/CRootView.StageRequests.cs#L19-L35": {
+      "path": "Drilling.UI/CRootView.StageRequests.cs",
+      "start": 19,
+      "end": 35,
+      "totalLines": 53,
+      "fileSha256": "3c9f60c5cd145f36a8121fdca9b81eee2f391275ef85f7f27a51c43fed21cea0",
+      "excerptSha256": "4bf8531415ab85846b199395cbc1d624c8fbc54b70b490509b9c150c646fce3d",
+      "gitBlobSha256": "ea93a271b11e9db5d5215f18a249ede4448b863bf6c9f2b18a34d9e684f7271b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/InterLock/CDoeZInterlock.cs#L11-L54": {
+      "path": "Drilling.Common/InterLock/CDoeZInterlock.cs",
+      "start": 11,
+      "end": 54,
+      "totalLines": 64,
+      "fileSha256": "9fe40e26748d3af86da05177eb23943eb781f91d726b6a490c7aa3ee3aa73f0f",
+      "excerptSha256": "b3273453c4cb7729d73c3de31ce46fb3990ae9adcc6b27371595d61654d832ab",
+      "gitBlobSha256": "c48941e489fdc1d9384ccdf01ea8ecbf0b8938b3819e19576f80f887388a5aa5"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/InterLock/COpticInterlock.cs#L20-L70": {
+      "path": "Drilling.Common/InterLock/COpticInterlock.cs",
+      "start": 20,
+      "end": 70,
+      "totalLines": 81,
+      "fileSha256": "0655f8800066c97160f4de66400971f4a37f5bf7c088644b89457c497fa2cd79",
+      "excerptSha256": "972cd93edb1c4fdeb0518216ee46a5965375d883c8a0233674b6902e1f7cb077",
+      "gitBlobSha256": "3adc648fcf6a48b87b69305c45e6d5c695dd9034fd437c7c7a9d39501c3bf43f"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Station/CStationProcess.cs#L1172-L1202": {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1172,
+      "end": 1202,
+      "totalLines": 2987,
+      "fileSha256": "f232f00812af5e74f838b01bdc61a19c8789a57a95c16fcfb6ddb24606399f4b",
+      "excerptSha256": "c6c3a6cdb1becffd45d7c9c3ea0498993b5c57594f88b696546a0e9d7fafae3d",
+      "gitBlobSha256": "a0f6f8f4174bf0864a4d14e6434887cc76103652bdaa89f044f6ecd3f08d5720"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualMofStagePanel.Commands.cs#L31-L101": {
+      "path": "Drilling.UI/Menu/Menus/CManualMofStagePanel.Commands.cs",
+      "start": 31,
+      "end": 101,
+      "totalLines": 103,
+      "fileSha256": "8edaa600a3d7d0201c3080af268bcdc6f00e0c5e71a450d071a233c0273db064",
+      "excerptSha256": "2ef941303f141a09681dc61a36ee000e18a7cc41b14d28dea168e0cf0c61965f",
+      "gitBlobSha256": "b2e1ffdd690f4ee957101c41f98f9066a4614d2b8bc7833cd6bcad7d35d7073d"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L137-L167": {
+      "path": "Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs",
+      "start": 137,
+      "end": 167,
+      "totalLines": 296,
+      "fileSha256": "c856c181c11f921ebb1e35bde20e75c50f572d3d0cbca0cba4ec5e89d026c51f",
+      "excerptSha256": "b5c096467f640fed24f808859cd6c5ac77c2b533f97b2a473a0b1dd0e11996af",
+      "gitBlobSha256": "a8cca46bf788b27ba12eb02a2931b66656354f591cd9713b601a7e0f8f58a9c3"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualMofAlignPanel.cs#L77-L139": {
+      "path": "Drilling.UI/Menu/Menus/CManualMofAlignPanel.cs",
+      "start": 77,
+      "end": 139,
+      "totalLines": 152,
+      "fileSha256": "e14f1aeb1d61e35d8909eb9c6331ec6912683765ef87ab8399d1183a57513deb",
+      "excerptSha256": "72208538dd75acdc097123e264c4c0b99eff2dc3c4ac8693ad348c12806cb9ca",
+      "gitBlobSha256": "13464dbb9ee5e950b289cb6b04e416e72469f87b9d55ba3ec2a893f83f0508a0"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Melsec/CMelsec.cs#L476-L512": {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 476,
+      "end": 512,
+      "totalLines": 2961,
+      "fileSha256": "a810f9da55986f810153c5a57f7167108000cdb330b21e0fcbae6c4d1a4050e0",
+      "excerptSha256": "ab15af5b391e06bdb407af21fd6201f7248417d10103985dbecbe72c65e6e0f1",
+      "gitBlobSha256": "0ff69f5c1ba4600364a7432aca18a00060e9eafedec631da347c5ef42ec79926"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Interface/Melsec/CMelsec.cs#L724-L760": {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 724,
+      "end": 760,
+      "totalLines": 2961,
+      "fileSha256": "a810f9da55986f810153c5a57f7167108000cdb330b21e0fcbae6c4d1a4050e0",
+      "excerptSha256": "3c0a4d5eca81c5d4bd45cec5a9d46c212b2a860529d2712b9dda10387b551c29",
+      "gitBlobSha256": "0ff69f5c1ba4600364a7432aca18a00060e9eafedec631da347c5ef42ec79926"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Config/JHMI_MELSEC_MAP.csv#L2-L42": {
+      "path": "Config/JHMI_MELSEC_MAP.csv",
+      "start": 2,
+      "end": 42,
+      "totalLines": 103,
+      "fileSha256": "6e2a2218b37f78aa57ec1c3038385a594580837a97fa5bdc3065257f42291bc5",
+      "excerptSha256": "72f4e9150128ee1dab7ef6989af151992a68e42d2613fdadada450c3518a0da4",
+      "gitBlobSha256": "51c1dc5150429c3b068447a5c5506dd1f95951ff8e8137b2fa825cb56d738f8c"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/JHMI/CMelsecMapFile.cs#L45-L77": {
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 45,
+      "end": 77,
+      "totalLines": 230,
+      "fileSha256": "b7ab19d4b5eaea329624f100e3e738ae2ad200d1c698c85ad8aacfcc66837ddf",
+      "excerptSha256": "5c4f88c0c359bd84cc041fd6d34818b0940c778f12b6aecc465ee15f1423cfac",
+      "gitBlobSha256": "c66b4e07b63cb7a9f21a1816cb1005a79cfaeaf3d823d739e338407351fc9ba1"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L41-L79": {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 41,
+      "end": 79,
+      "totalLines": 84,
+      "fileSha256": "8da7a3f2c505faf6f0cac8a4f15966c7263514020c3f59922f1d257e709fa642",
+      "excerptSha256": "eca0fbd594e3eff3b5282527345927a53b21f6726f941ad86054818a5a36e4b8",
+      "gitBlobSha256": "b879e9ce5889d035b35902a881ae693e01de7034cd8608019c89e17b7bd25a65"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L9-L24": {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 9,
+      "end": 24,
+      "totalLines": 211,
+      "fileSha256": "033a4d23dbed5aeb04422fcb89e4143ef4483fb6d3443cd9e0abc6cdd180ff7e",
+      "excerptSha256": "5feac1694b9ab8957f080d1d970af167ae536620276c983017b271cdb03af5fc",
+      "gitBlobSha256": "5e9bf7b0c1f45873401d7aa7ec3ca57aeed963e4e4b2f5e4e5f5ad7d9f17976b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L48-L57": {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 48,
+      "end": 57,
+      "totalLines": 211,
+      "fileSha256": "033a4d23dbed5aeb04422fcb89e4143ef4483fb6d3443cd9e0abc6cdd180ff7e",
+      "excerptSha256": "f4298f8498ee4b01f40fc4cdde3aaf6eb7dabd67b8e7f1045d416023d33314c5",
+      "gitBlobSha256": "5e9bf7b0c1f45873401d7aa7ec3ca57aeed963e4e4b2f5e4e5f5ad7d9f17976b"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.AlignOffset.cs#L86-L105": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.AlignOffset.cs",
+      "start": 86,
+      "end": 105,
+      "totalLines": 133,
+      "fileSha256": "0dd720d0ef8ea7fe462652edd50f7e7755aba77077b8902cc5f0b4e52f56a595",
+      "excerptSha256": "790f7c9f746e7e954885d62994ef254ee2f86b6c88172b329e188d48a2ba298c",
+      "gitBlobSha256": "93bc82b982d94d8fa64b79108d9c0004f31e504f14820ffb9fd96d05360ce031"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CFineReviewOffsetCalculator.cs#L29-L63": {
+      "path": "Drilling.Common/Review/CFineReviewOffsetCalculator.cs",
+      "start": 29,
+      "end": 63,
+      "totalLines": 65,
+      "fileSha256": "abf83b053f80ff6f93267f630e9f8794c2f3d35a0baa15d7a7f0f741ee66e22a",
+      "excerptSha256": "ca5080b7dcce1e5295461bfe5fc4ed390d5ec60cff499c0abf0ea1eaaf2a4733",
+      "gitBlobSha256": "6fa35c69e963bb36b1fa6239727ebcde5ac0018211be85bc0e7d56a29176e1df"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L66-L75": {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 66,
+      "end": 75,
+      "totalLines": 84,
+      "fileSha256": "8da7a3f2c505faf6f0cac8a4f15966c7263514020c3f59922f1d257e709fa642",
+      "excerptSha256": "128a3765f71b827733e062276bfafd7d481539772c098157e70196e044bf72cb",
+      "gitBlobSha256": "b879e9ce5889d035b35902a881ae693e01de7034cd8608019c89e17b7bd25a65"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CSimpleCorrectionPanel.cs#L518-L524": {
+      "path": "Drilling.UI/Menu/Menus/CSimpleCorrectionPanel.cs",
+      "start": 518,
+      "end": 524,
+      "totalLines": 532,
+      "fileSha256": "0bee3c6717870845d8e3d387774facc4e6b4f8c8c9ff0c0837c722e811f082c6",
+      "excerptSha256": "9c7d3ba13c647fbefde28421b538462f58fe8afe15c876d4ab1660885842b6d8",
+      "gitBlobSha256": "5f027a8ce4849af7900a29497db98398b3f19f9870cc9bf856946ed5b346dfb7"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/InterLock/CInterLockManager.cs#L36-L44": {
+      "path": "Drilling.Common/InterLock/CInterLockManager.cs",
+      "start": 36,
+      "end": 44,
+      "totalLines": 119,
+      "fileSha256": "71ef6842c179eb6ccc7b364eab9173f448ccc2a255cd0acf1e09fcada5a20781",
+      "excerptSha256": "878b86a6b8704392da18357063f8b03088c307c139e48c9d941cc87143768c02",
+      "gitBlobSha256": "7a3137480a2abedb43118f6d88540ecf9a851ec5b996b1ac3995ce119ba0c629"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuManual.PowerMeasure.cs#L15-L25": {
+      "path": "Drilling.UI/Menu/Menus/CMenuManual.PowerMeasure.cs",
+      "start": 15,
+      "end": 25,
+      "totalLines": 32,
+      "fileSha256": "907f0372646868a3b19b5966f79e057dbf72c78490fcb2248c84c7b7096d68cf",
+      "excerptSha256": "86092d1912b36fcfb67e5c4222ec93f5b9a5f90c4a05e53f7830a81e71e0567e",
+      "gitBlobSha256": "a1445004f1372f83cff57765f2cbb7e6cd3db200d3cbabd3e220c96e153d38ae"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L137-L185": {
+      "path": "Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs",
+      "start": 137,
+      "end": 185,
+      "totalLines": 296,
+      "fileSha256": "c856c181c11f921ebb1e35bde20e75c50f572d3d0cbca0cba4ec5e89d026c51f",
+      "excerptSha256": "dc0d24b505e094a8b8197ebb8313e50ea863a89c4bc927ba3510723e10e75d78",
+      "gitBlobSha256": "a8cca46bf788b27ba12eb02a2931b66656354f591cd9713b601a7e0f8f58a9c3"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L72-L77": {
+      "path": "Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs",
+      "start": 72,
+      "end": 77,
+      "totalLines": 199,
+      "fileSha256": "26714d78d0c24d666363973252c718c1cd0ea4f613a02e8009910372527f49a5",
+      "excerptSha256": "01ff5d29d722ba65f891f028f0bba6e0f4a149fc15c0f0d6fba4f5e9d979541e",
+      "gitBlobSha256": "5ab635c49802757f3e3f135bf4bd781c1a1371b157a5200b90e5fa0284441970"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Motion/CManualStageMotionSimulation.cs#L81-L88": {
+      "path": "Drilling.Common/Motion/CManualStageMotionSimulation.cs",
+      "start": 81,
+      "end": 88,
+      "totalLines": 161,
+      "fileSha256": "7b141e5222b05431e7e92316c2db813a8a4eb7415c97370135c800ff7038ed5c",
+      "excerptSha256": "2458ecf617cddddc65220ebd9d20c55825fe1063669ab397393d45098f6e0fa2",
+      "gitBlobSha256": "c4a87e53b9ba251b23af05fc2fa7c2f94ae96809e5c3924cecbd9466269c6273"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CFineCorrectionPanel.cs#L101-L108": {
+      "path": "Drilling.UI/Menu/Menus/CFineCorrectionPanel.cs",
+      "start": 101,
+      "end": 108,
+      "totalLines": 352,
+      "fileSha256": "f9f6f5477df10ebac190a66539cb1ed7a9fbdb72a82369e832834d5bdbe96095",
+      "excerptSha256": "0ef582b47fecad60029dd0501ec3edc3448dfd6d2292ded5d270a9099ff68f2f",
+      "gitBlobSha256": "9eff439f5c888b5d10b38ae7658b892d0e233c42e69265d037b78cca903ebcfb"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.FineOffset.cs#L56-L79": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.FineOffset.cs",
+      "start": 56,
+      "end": 79,
+      "totalLines": 100,
+      "fileSha256": "5e916bf7560808532a7d1b28be6a89fb0b4c868344609928e80934972c14cf6c",
+      "excerptSha256": "26fb1bacb0a380704dd558bc74d685f27f405e5470470ce3c3278a3a56a7adf8",
+      "gitBlobSha256": "a19f10a59d664cb7032dd28a86ea69adcf2cc1436d9898ef8a3ee6bb4c0a4e40"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CManualMofAlignPanel.cs#L35-L139": {
+      "path": "Drilling.UI/Menu/Menus/CManualMofAlignPanel.cs",
+      "start": 35,
+      "end": 139,
+      "totalLines": 152,
+      "fileSha256": "e14f1aeb1d61e35d8909eb9c6331ec6912683765ef87ab8399d1183a57513deb",
+      "excerptSha256": "546515dcfb6b0c898f7283baa527e877ef9b55521c12893da28735e23e6e94b1",
+      "gitBlobSha256": "13464dbb9ee5e950b289cb6b04e416e72469f87b9d55ba3ec2a893f83f0508a0"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.cs#L1710-L1741": {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1710,
+      "end": 1741,
+      "totalLines": 3219,
+      "fileSha256": "8740db81d19f4fd4966ac22cf00f5878cd8cd6d5706b4574223e3dc4a8f3758c",
+      "excerptSha256": "bd8d0563998a6d04bf642a27cc600d244dd203a2ba444f46e33030e0ab7b1ae7",
+      "gitBlobSha256": "e7aae650c69d45a772d22acf3856228b424ac5d9efb67c3ce0d24d5d77a0f801"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.Common/Review/CReviewManager.cs#L1787-L1821": {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1787,
+      "end": 1821,
+      "totalLines": 3219,
+      "fileSha256": "8740db81d19f4fd4966ac22cf00f5878cd8cd6d5706b4574223e3dc4a8f3758c",
+      "excerptSha256": "d787e7a861e36d3076ea63e1c378d4f587c86c9cad439b3bda5c2fec0f27ce04",
+      "gitBlobSha256": "e7aae650c69d45a772d22acf3856228b424ac5d9efb67c3ce0d24d5d77a0f801"
+    },
+    "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/223b905daf0d7421c187b727a65d180bfa7472d6/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L754-L789": {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 754,
+      "end": 789,
+      "totalLines": 2231,
+      "fileSha256": "4e995bf39b424890da046381cda3297065b5addfe959690d54605005fdbd2da7",
+      "excerptSha256": "68e2ab8f105e22f316784026c1ec34873f45f3244965e4ea094fe4a2a859fe93",
+      "gitBlobSha256": "c17c9c4eb15a9d0e3f6df5924b47b8eff83a46f70bcc472694cabd2bbc3f291c"
+    }
+  },
+  "hashConvention": "fileSha256 hashes the Windows checkout bytes; gitBlobSha256 hashes pinned Git blob bytes; line content equality verified independently (CRLF/LF allowed)."
+}
