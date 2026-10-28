@@ -1,0 +1,85 @@
+{
+  "folder": "20261028_090032_SW아키텍쳐분석",
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "baseCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "createdAt": "2026-10-28T09:18:32.992669+09:00",
+  "scope": "Only this analysis folder; no source, binary, raw patches, personal knowledge workspace or secrets",
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 32,
+      "sha256": "be8edcd6c36df8dee5cb702c5a4afd55e5de39b99df7d398baec6f3adeb5b018"
+    },
+    {
+      "path": "01_Commit변경요약.md",
+      "size": 8787,
+      "sha256": "daf1528e9b25d3f2af7ff7989c0e6397a10969e693dace0ccb5d627ea5425620"
+    },
+    {
+      "path": "02_데이터구조와흐름.md",
+      "size": 13918,
+      "sha256": "5064ccd11c7f1d603b7956a21b5c40c4008062dab15561b06fbc0cf2bad738e0"
+    },
+    {
+      "path": "03_가공_Review영향분석.md",
+      "size": 14459,
+      "sha256": "61f47d619ba661329aad1e64c2cea76dbaf532e0cc0d6466fe0aae0d63c1dbf4"
+    },
+    {
+      "path": "04_통합흐름도.md",
+      "size": 5013,
+      "sha256": "ac2102d908b1243e8656a5cd9b32c9b707460251d1cf7fd2880805bdc5a59aaf"
+    },
+    {
+      "path": "05_위험도별발견사항.md",
+      "size": 12319,
+      "sha256": "735c7f5caac1f5c5b99b04025875f6e31f08f5c01bda2d12fff0d4681ce029a7"
+    },
+    {
+      "path": "06_분석근거_검증기록.md",
+      "size": 6173,
+      "sha256": "d010360bd23fed8c4f68e7e6f402c7cd777024ac85c7f4c6c81aad7078bed1c7"
+    },
+    {
+      "path": "changed-files.csv",
+      "size": 209207,
+      "sha256": "7d232b8b9be5d13309672fecfa022f2b2b9aeafb89873420d4eeec367dfa3d01"
+    },
+    {
+      "path": "README.md",
+      "size": 4721,
+      "sha256": "2c5209b82d9fe8a088d760da20692c326eec91a5cb9c28c7f0d520edfaabf281"
+    },
+    {
+      "path": "schema-diff.json",
+      "size": 15725,
+      "sha256": "2418a73885cdd3cacffe8fecfaad3eba4952843768e0431e2d5fb8de974758af"
+    },
+    {
+      "path": "source-links.json",
+      "size": 56479,
+      "sha256": "124a5ceee0b8a32dceb0c7869276f5e41372159685233e8cd1b18d48fe914e0f"
+    },
+    {
+      "path": "validation.json",
+      "size": 10210,
+      "sha256": "25446c0591e4f9391e7f2eef0f037846d521d31d93bbbd406d1e6c3649db7357"
+    }
+  ],
+  "sourceOriginalUnchanged": true,
+  "sourceCloneClean": true,
+  "verification": {
+    "checkedAt": "2026-10-28T09:18:32.976712+09:00",
+    "passed": 279,
+    "failed": 0,
+    "sourceAnchors": 99,
+    "internalLinks": 34,
+    "externalLinks": 104,
+    "mermaidBlocks": 6,
+    "originalUnchanged": true,
+    "originalSourceConfigFiles": 149,
+    "sourceCloneClean": true,
+    "sourceRemoteHead": "223b905daf0d7421c187b727a65d180bfa7472d6"
+  }
+}

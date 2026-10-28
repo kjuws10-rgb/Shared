@@ -1,0 +1,639 @@
+{
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "baseCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d",
+  "files": [
+    {
+      "path": "Config/JHMI_INTERFACE.csv",
+      "beforeRows": 16,
+      "afterRows": 16,
+      "headers": [
+        "TYPE",
+        "DEVICE",
+        "NUMBER",
+        "NICKNAME",
+        "SYSTEM_SECTION",
+        "AUTOCONNECTION",
+        "SIMUL",
+        "ARG1",
+        "ARG2",
+        "ARG3",
+        "ARG4",
+        "ARG5",
+        "MAX_CLIENT_COUNT",
+        "FLOW_CONTROL",
+        "ADDRESS"
+      ],
+      "status": "M"
+    },
+    {
+      "path": "Config/JHMI_MELSEC_MAP.csv",
+      "beforeRows": 98,
+      "afterRows": 102,
+      "headers": [
+        "ID",
+        "USE",
+        "GROUP",
+        "NAME",
+        "DEVICE NO",
+        "ADDRESS",
+        "DATA TYPE",
+        "DIRECTION",
+        "ACCESS",
+        "READ_SCALE",
+        "WRITE_SCALE",
+        "LENGTH",
+        "POLL_MS",
+        "DESCRIPTION"
+      ],
+      "status": "M",
+      "addedKeys": 4,
+      "removedKeys": 0,
+      "modifiedKeys": 35,
+      "addedKeyNames": [
+        "MOTOR_CAMERA_X_BUSY",
+        "PROCESS_DO_ALIGN",
+        "SDC_DO_ALIGN_COMPLETE",
+        "SDC_DO_ALIGN_STATUS"
+      ],
+      "removedKeyNames": []
+    },
+    {
+      "path": "Config/JHMI_RCP.csv",
+      "beforeRows": 323,
+      "afterRows": 363,
+      "headers": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "CIM NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "SCALE",
+        "CHANGE LIMIT",
+        "MIN",
+        "MAX",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "status": "M",
+      "addedKeys": 41,
+      "removedKeys": 1,
+      "modifiedKeys": 1,
+      "addedKeyNames": [
+        "HEAD/H01_BET_DIVERGENCE",
+        "HEAD/H01_BET_MAGNIFICATION",
+        "HEAD/H02_BET_DIVERGENCE",
+        "HEAD/H02_BET_MAGNIFICATION",
+        "HEAD/H03_BET_DIVERGENCE",
+        "HEAD/H03_BET_MAGNIFICATION",
+        "HEAD/H04_BET_DIVERGENCE",
+        "HEAD/H04_BET_MAGNIFICATION",
+        "HEAD/H05_BET_DIVERGENCE",
+        "HEAD/H05_BET_MAGNIFICATION",
+        "HEAD/H06_BET_DIVERGENCE",
+        "HEAD/H06_BET_MAGNIFICATION",
+        "HEAD/H07_BET_DIVERGENCE",
+        "HEAD/H07_BET_MAGNIFICATION",
+        "HEAD/H08_BET_DIVERGENCE",
+        "HEAD/H08_BET_MAGNIFICATION",
+        "ZERO_DEFENCE/ZD_H01_BEAM",
+        "ZERO_DEFENCE/ZD_H01_CELL",
+        "ZERO_DEFENCE/ZD_H01_SHOT",
+        "ZERO_DEFENCE/ZD_H02_BEAM",
+        "ZERO_DEFENCE/ZD_H02_CELL",
+        "ZERO_DEFENCE/ZD_H02_SHOT",
+        "ZERO_DEFENCE/ZD_H03_BEAM",
+        "ZERO_DEFENCE/ZD_H03_CELL",
+        "ZERO_DEFENCE/ZD_H03_SHOT",
+        "ZERO_DEFENCE/ZD_H04_BEAM",
+        "ZERO_DEFENCE/ZD_H04_CELL",
+        "ZERO_DEFENCE/ZD_H04_SHOT",
+        "ZERO_DEFENCE/ZD_H05_BEAM",
+        "ZERO_DEFENCE/ZD_H05_CELL",
+        "ZERO_DEFENCE/ZD_H05_SHOT",
+        "ZERO_DEFENCE/ZD_H06_BEAM",
+        "ZERO_DEFENCE/ZD_H06_CELL",
+        "ZERO_DEFENCE/ZD_H06_SHOT",
+        "ZERO_DEFENCE/ZD_H07_BEAM",
+        "ZERO_DEFENCE/ZD_H07_CELL",
+        "ZERO_DEFENCE/ZD_H07_SHOT",
+        "ZERO_DEFENCE/ZD_H08_BEAM",
+        "ZERO_DEFENCE/ZD_H08_CELL",
+        "ZERO_DEFENCE/ZD_H08_SHOT",
+        "ZERO_DEFENCE/ZERO_DEFENCE_POINT_COUNT"
+      ],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ]
+    },
+    {
+      "path": "Config/JHMI_REVIEW_RULE.csv",
+      "beforeRows": 6,
+      "afterRows": 0,
+      "headers": [
+        "GROUP",
+        "KEY",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "VALUE",
+        "DESCRIPTION",
+        "ORDER"
+      ],
+      "status": "D"
+    },
+    {
+      "path": "Config/JHMI_SETTING.csv",
+      "beforeRows": 171,
+      "afterRows": 177,
+      "headers": [
+        "TAB",
+        "GROUP",
+        "NAME",
+        "DISPLAY NAME",
+        "DATA TYPE",
+        "UNIT",
+        "SHOW",
+        "USE",
+        "VALUE",
+        "MIN",
+        "MAX",
+        "DESCRIPTION"
+      ],
+      "status": "M",
+      "addedKeys": 11,
+      "removedKeys": 5,
+      "modifiedKeys": 0,
+      "addedKeyNames": [
+        "MOTOR/REVIEW_X_ACC",
+        "MOTOR/REVIEW_X_SPEED",
+        "OPTION/REVIEW_X_ANIMATION_FLIP",
+        "OPTION/RUNOPTION_CURRENT_GROUP",
+        "OPTION/RUNOPTION_FOLLOWUP_USE",
+        "OPTION/RUNOPTION_REVIEW_IMMEDIATE_RETRY",
+        "OPTION/RUNOPTION_REVIEW_LINE",
+        "OPTION/RUNOPTION_REVIEW_METHOD",
+        "OPTION/RUNOPTION_REVIEW_RETRY_COUNT",
+        "OPTION/RUNOPTION_ZERO_DEFENCE_USE",
+        "OPTION/VISION_ANIMATION_USE"
+      ],
+      "removedKeyNames": [
+        "MOTOR/STAGE_START_POS_X",
+        "OPTION/AUTO_ALIGN_USE",
+        "OPTION/AUTO_INSPECTION_USE",
+        "OPTION/AUTO_POWER_CHECK_USE",
+        "OPTION/AUTO_PROCESS_USE"
+      ]
+    },
+    {
+      "path": "Config/RECIPE/DRILL_A01.csv",
+      "beforeRows": 504,
+      "afterRows": 503,
+      "headers": [],
+      "status": "M",
+      "addedKeys": 0,
+      "removedKeys": 1,
+      "modifiedKeys": 0,
+      "addedKeyNames": [],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ]
+    },
+    {
+      "path": "Config/RECIPE/animotion.csv",
+      "beforeRows": 341,
+      "afterRows": 340,
+      "headers": [],
+      "status": "M",
+      "addedKeys": 0,
+      "removedKeys": 1,
+      "modifiedKeys": 0,
+      "addedKeyNames": [],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ]
+    },
+    {
+      "path": "Config/RECIPE/simple2.csv",
+      "beforeRows": 1041,
+      "afterRows": 1040,
+      "headers": [],
+      "status": "M",
+      "addedKeys": 0,
+      "removedKeys": 1,
+      "modifiedKeys": 0,
+      "addedKeyNames": [],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ]
+    },
+    {
+      "path": "Config/RECIPE/test0929.csv",
+      "beforeRows": 43344,
+      "afterRows": 43384,
+      "headers": [],
+      "status": "M",
+      "addedKeys": 41,
+      "removedKeys": 1,
+      "modifiedKeys": 42859,
+      "addedKeyNames": [
+        "HEAD/H01_BET_DIVERGENCE",
+        "HEAD/H01_BET_MAGNIFICATION",
+        "HEAD/H02_BET_DIVERGENCE",
+        "HEAD/H02_BET_MAGNIFICATION",
+        "HEAD/H03_BET_DIVERGENCE",
+        "HEAD/H03_BET_MAGNIFICATION",
+        "HEAD/H04_BET_DIVERGENCE",
+        "HEAD/H04_BET_MAGNIFICATION",
+        "HEAD/H05_BET_DIVERGENCE",
+        "HEAD/H05_BET_MAGNIFICATION",
+        "HEAD/H06_BET_DIVERGENCE",
+        "HEAD/H06_BET_MAGNIFICATION",
+        "HEAD/H07_BET_DIVERGENCE",
+        "HEAD/H07_BET_MAGNIFICATION",
+        "HEAD/H08_BET_DIVERGENCE",
+        "HEAD/H08_BET_MAGNIFICATION",
+        "ZERO_DEFENCE/ZD_H01_BEAM",
+        "ZERO_DEFENCE/ZD_H01_CELL",
+        "ZERO_DEFENCE/ZD_H01_SHOT",
+        "ZERO_DEFENCE/ZD_H02_BEAM",
+        "ZERO_DEFENCE/ZD_H02_CELL",
+        "ZERO_DEFENCE/ZD_H02_SHOT",
+        "ZERO_DEFENCE/ZD_H03_BEAM",
+        "ZERO_DEFENCE/ZD_H03_CELL",
+        "ZERO_DEFENCE/ZD_H03_SHOT",
+        "ZERO_DEFENCE/ZD_H04_BEAM",
+        "ZERO_DEFENCE/ZD_H04_CELL",
+        "ZERO_DEFENCE/ZD_H04_SHOT",
+        "ZERO_DEFENCE/ZD_H05_BEAM",
+        "ZERO_DEFENCE/ZD_H05_CELL",
+        "ZERO_DEFENCE/ZD_H05_SHOT",
+        "ZERO_DEFENCE/ZD_H06_BEAM",
+        "ZERO_DEFENCE/ZD_H06_CELL",
+        "ZERO_DEFENCE/ZD_H06_SHOT",
+        "ZERO_DEFENCE/ZD_H07_BEAM",
+        "ZERO_DEFENCE/ZD_H07_CELL",
+        "ZERO_DEFENCE/ZD_H07_SHOT",
+        "ZERO_DEFENCE/ZD_H08_BEAM",
+        "ZERO_DEFENCE/ZD_H08_CELL",
+        "ZERO_DEFENCE/ZD_H08_SHOT",
+        "ZERO_DEFENCE/ZERO_DEFENCE_POINT_COUNT"
+      ],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ],
+      "alignFields": {
+        "count": 42840,
+        "nonzero": 0,
+        "maxAbs": 0.0
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_160757_371_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 0.02,
+        "over0_03Rows": 0,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN",
+          "SCANNER"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_160829_863_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20264,
+        "maxAbs": 0.02,
+        "over0_03Rows": 0,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN",
+          "SCANNER"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_193352_653_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 1.166,
+        "over0_03Rows": 20715,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_193645_127_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 1.166,
+        "over0_03Rows": 20715,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_193711_063_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 1.795,
+        "over0_03Rows": 20715,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_193744_899_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 2.403,
+        "over0_03Rows": 20719,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_193823_035_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 0,
+        "maxAbs": 0.0,
+        "over0_03Rows": 0,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_194330_550_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 476,
+        "maxAbs": 2.0,
+        "over0_03Rows": 476,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_194409_070_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 2856,
+        "maxAbs": 2.0,
+        "over0_03Rows": 2856,
+        "over3Rows": 0,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261023_194455_164_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 3.008,
+        "over0_03Rows": 20704,
+        "over3Rows": 3,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261026_174834_059_reviewoffset.csv",
+      "beforeRows": 0,
+      "afterRows": 20740,
+      "headers": [
+        "CELLID",
+        "SHOTID",
+        "REVIEWOFFSETX",
+        "REVIEWOFFSETY",
+        "COORDINATE_SPACE"
+      ],
+      "status": "A",
+      "offsetSummary": {
+        "nonzeroRows": 20740,
+        "maxAbs": 3.013,
+        "over0_03Rows": 20706,
+        "over3Rows": 3,
+        "spaces": [
+          "DESIGN"
+        ],
+        "duplicateKeys": 0,
+        "finite": true
+      }
+    },
+    {
+      "path": "Config/RECIPE/wizardtest.csv",
+      "beforeRows": 1041,
+      "afterRows": 1040,
+      "headers": [],
+      "status": "M",
+      "addedKeys": 0,
+      "removedKeys": 1,
+      "modifiedKeys": 0,
+      "addedKeyNames": [],
+      "removedKeyNames": [
+        "COMMON/REVIEW_RULE_FILE"
+      ]
+    },
+    {
+      "path": "Config/ReviewSetting/test0929/reviewsettingsample.review",
+      "beforeRows": 8,
+      "afterRows": 0,
+      "headers": [
+        "NAME",
+        "VALUE"
+      ],
+      "status": "D"
+    },
+    {
+      "path": "Config/ReviewSetting/test0929/reviewsettingtest2.review",
+      "beforeRows": 8,
+      "afterRows": 0,
+      "headers": [
+        "NAME",
+        "VALUE"
+      ],
+      "status": "D"
+    },
+    {
+      "path": "Config/ReviewSetting/wizardtest/simplehead.review",
+      "beforeRows": 8,
+      "afterRows": 0,
+      "headers": [
+        "NAME",
+        "VALUE"
+      ],
+      "status": "D"
+    },
+    {
+      "path": "Config/Setting/Setting.csv",
+      "beforeRows": 171,
+      "afterRows": 177,
+      "headers": [
+        "TAB",
+        "NAME",
+        "VALUE"
+      ],
+      "status": "M",
+      "addedKeys": 11,
+      "removedKeys": 5,
+      "modifiedKeys": 4,
+      "addedKeyNames": [
+        "MOTOR/REVIEW_X_ACC",
+        "MOTOR/REVIEW_X_SPEED",
+        "OPTION/REVIEW_X_ANIMATION_FLIP",
+        "OPTION/RUNOPTION_CURRENT_GROUP",
+        "OPTION/RUNOPTION_FOLLOWUP_USE",
+        "OPTION/RUNOPTION_REVIEW_IMMEDIATE_RETRY",
+        "OPTION/RUNOPTION_REVIEW_LINE",
+        "OPTION/RUNOPTION_REVIEW_METHOD",
+        "OPTION/RUNOPTION_REVIEW_RETRY_COUNT",
+        "OPTION/RUNOPTION_ZERO_DEFENCE_USE",
+        "OPTION/VISION_ANIMATION_USE"
+      ],
+      "removedKeyNames": [
+        "MOTOR/STAGE_START_POS_X",
+        "OPTION/AUTO_ALIGN_USE",
+        "OPTION/AUTO_INSPECTION_USE",
+        "OPTION/AUTO_POWER_CHECK_USE",
+        "OPTION/AUTO_PROCESS_USE"
+      ]
+    }
+  ]
+}
