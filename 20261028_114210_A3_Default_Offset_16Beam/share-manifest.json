@@ -1,0 +1,43 @@
+{
+  "title": "A3 LD Default Offset · 16분기빔 중심 작업절차",
+  "version": "2026-10-28-v2",
+  "packagedAt": "2026-10-28T11:42:10.184037+09:00",
+  "authorization": "Current user Default Offset HTML revision request and star instruction",
+  "sections": 11,
+  "figures": 15,
+  "staticFigures": 14,
+  "interactiveFigures": 1,
+  "standaloneOffline": true,
+  "validation": {
+    "render": 55,
+    "concept": 29,
+    "requirements": 21,
+    "equipmentVerified": false
+  },
+  "zipMembers": [
+    "A3_LD_Default_Offset_16Beam_작업절차_20261028.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_16Beam_작업절차_20261028.html",
+      "bytes": 123671,
+      "sha256": "1927951c0491bc131e1689506b3f2523d0d7d76de049014205d22c2d3371c4b2"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1350,
+      "sha256": "3d04d24b05789b8f5844fdbb5724dfe1ae1a14d105014a63bb4151f43d91c49e"
+    },
+    {
+      "name": "A3_LD_Default_Offset_16Beam_20261028.zip",
+      "bytes": 23707,
+      "sha256": "2a413b9071afd0b6adab1c040697e26f0ccad8dcc0772936d4190a72faf961ec"
+    }
+  ]
+}
