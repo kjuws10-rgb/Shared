@@ -1,0 +1,30 @@
+{
+  "folder": "20261028_204916_A3_코드주간요약",
+  "publishedScope": "Completed HTML, README, ZIP, manifest and attributes only",
+  "sourceHtmlSha256": "5fe49ce7340c03e34a21aa417a69970422c3130fc689ae6dcb2b018ddc77bad2",
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "contentChanged": false,
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "A3_LD_Code_Weekly_20261022_20261028.zip",
+      "size": 6356,
+      "sha256": "992cde02a12e05eea5c4c04125181e6099f9e437f627246697661d65e639e9a9"
+    },
+    {
+      "path": "A3_LD_코드관련_주간작업요약_20261022_20261028.html",
+      "size": 13971,
+      "sha256": "5fe49ce7340c03e34a21aa417a69970422c3130fc689ae6dcb2b018ddc77bad2"
+    },
+    {
+      "path": "README.txt",
+      "size": 1130,
+      "sha256": "a5a5e289bf813bcad0879e1bbf72be64b5024c8a072ba790391deb7623490a30"
+    }
+  ]
+}
