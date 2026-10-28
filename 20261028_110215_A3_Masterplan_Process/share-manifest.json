@@ -1,0 +1,39 @@
+{
+  "title": "A3 LD Masterplan Process 진행현황",
+  "version": "2026-10-28",
+  "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "packagedAt": "2026-10-28T11:02:16.027444+09:00",
+  "authorization": "Current user Masterplan update request and star sharing instruction",
+  "detailsAssessed": 145,
+  "progressValuesChanged": 122,
+  "otherTabsUnchanged": true,
+  "originalFormatsPreserved": true,
+  "equipmentVerified": false,
+  "sourceModified": false,
+  "zipMembers": [
+    "A3LD_SW_MasterPlan_Process_진행현황_20261028.xlsx",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3LD_SW_MasterPlan_Process_진행현황_20261028.xlsx",
+      "bytes": 1049462,
+      "sha256": "4432fb1eafd2305911cdac1379067e9f34df79c5fb2137f395fdd63b7ecd1fce"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 2097,
+      "sha256": "e29f980cae71c434c19ec18a58bf53223dce2b6b75a5132575866d0302dbda38"
+    },
+    {
+      "name": "A3LD_SW_MasterPlan_Process_20261028.zip",
+      "bytes": 770083,
+      "sha256": "8235636c43babba23dc2c3e7646d07453684e280a3467fedb9ee4e172281a545"
+    }
+  ]
+}
