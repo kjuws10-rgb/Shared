@@ -1,0 +1,42 @@
+{
+  "title": "A3 LD Default Offset · 16분기빔 중심 자동찾기",
+  "version": "2026-10-28-v3-centering",
+  "packagedAt": "2026-10-28T14:15:43.657560+09:00",
+  "sections": 20,
+  "figures": 23,
+  "staticFigures": 21,
+  "interactiveFigures": 2,
+  "standaloneOffline": true,
+  "validation": {
+    "render": 44,
+    "concept": 22,
+    "requirements": 41,
+    "equipmentVerified": false
+  },
+  "zipMembers": [
+    "A3_LD_Default_Offset_16Beam_중심자동찾기_개발작업절차_20261028.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_16Beam_중심자동찾기_개발작업절차_20261028.html",
+      "bytes": 199895,
+      "sha256": "d9dcb7b71b06e05f8dd671313a55983683d16b0df0aa12a349f37c06822eac1d"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1511,
+      "sha256": "9cdc6edf48de5d43fc0ecde9569019d6e5203fdba183658b83dcebbce4ce2341"
+    },
+    {
+      "name": "A3_LD_Default_Offset_16Beam_Centering_20261028.zip",
+      "bytes": 41579,
+      "sha256": "beb1e7a787ce3b7ac47bc8af162c0f056d97b50060b2807aeb82a0f7f9e6aa3e"
+    }
+  ]
+}
