@@ -1,0 +1,40 @@
+{
+  "title": "A3 LD Default Offset · 팀장 보고용 3페이지",
+  "version": "2026-10-30-manager-brief",
+  "packagedAt": "2026-10-30T10:27:47.257721+09:00",
+  "pages": 3,
+  "figures": 10,
+  "standaloneOffline": true,
+  "validation": {
+    "render": 25,
+    "printPages": 3,
+    "concept": 18,
+    "content": 29
+  },
+  "zipMembers": [
+    "A3_LD_Default_Offset_팀장보고_3페이지_20261030.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_팀장보고_3페이지_20261030.html",
+      "bytes": 46976,
+      "sha256": "f609b47fd8dadff6350dbf1a43df9a61031fa0d20c15d5f09a0898001e932867"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 819,
+      "sha256": "188c09e1375cfb57db0b5e6adb97d7e0b9f49254774b9601c3fb37f92145e181"
+    },
+    {
+      "name": "A3_LD_Default_Offset_Manager_Brief_20261030.zip",
+      "bytes": 8271,
+      "sha256": "1ef7b03bf964778c322eae662e6518a5353264141362d6ce7ef11fe736a314a9"
+    }
+  ]
+}
