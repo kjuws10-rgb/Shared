@@ -1,0 +1,31 @@
+{
+  "title": "A3 LD 사전시나리오 정례미팅 반영",
+  "createdAt": "2026-10-30T15:35:47.568394+09:00",
+  "evaluationCount": 104,
+  "newItems": 35,
+  "sourcePreserved": true,
+  "sheetCount": 6,
+  "equipmentVerified": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "02fce390680af9bf65ea3736dc1ebdf44d1250ef20a530fce40c5224cebd135a"
+    },
+    {
+      "name": "A3_LD_PreScenario_Meeting_Update_20261030.zip",
+      "bytes": 70218,
+      "sha256": "abf30a675002a5f5e12a7a93a86656475157161d0244d70b75d685ea69854742"
+    },
+    {
+      "name": "A3_LD_사전시나리오평가_정례미팅반영_20261030.xlsx",
+      "bytes": 101785,
+      "sha256": "300b1e1a70def127989c561df73f8edea64d151debf97ef0340a97c4f66f984e"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1820,
+      "sha256": "165638565854862051c034005bf626189e17539011dbde5e30db4e83fb846bc8"
+    }
+  ]
+}
