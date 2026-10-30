@@ -1,0 +1,54 @@
+{
+  "title": "A3 Default Offset 설치기울기·Field균형추천",
+  "packagedAt": "2026-10-30T14:34:06.755836+09:00",
+  "htmlFiles": 3,
+  "briefPrintPages": 3,
+  "standaloneOffline": true,
+  "scope": "documentation_and_synthetic_calculation",
+  "equipmentVerified": false,
+  "zipMembers": [
+    "A3_LD_Default_Offset_종합_Field균형추천_20261030.html",
+    "A3_LD_Default_Offset_Y절충_Field개발절차_20261030.html",
+    "A3_LD_Default_Offset_팀장보고_Field균형_3페이지_20261030.html",
+    "README.txt"
+  ],
+  "validation": {
+    "render-validation.json": 62,
+    "brief-render-validation.json": 20,
+    "concept-review.json": 30,
+    "requirements-review.json": 51,
+    "balance-solver-independent.json": 121
+  },
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_Default_Offset_Field_Balance_20261030.zip",
+      "bytes": 69237,
+      "sha256": "27fa86f982aeba1b2626c0b98356026c912862ab156b8251016ecf7f80a13601"
+    },
+    {
+      "name": "A3_LD_Default_Offset_Y절충_Field개발절차_20261030.html",
+      "bytes": 67822,
+      "sha256": "950c3cd77ca2f65db6bd37e6292cd92ce15b4ff90c7a9fa484ae9f2daf3244c0"
+    },
+    {
+      "name": "A3_LD_Default_Offset_종합_Field균형추천_20261030.html",
+      "bytes": 188021,
+      "sha256": "7fa2903217ee7fe216d884e335fd5950770975361e2f675369978df90328eb8d"
+    },
+    {
+      "name": "A3_LD_Default_Offset_팀장보고_Field균형_3페이지_20261030.html",
+      "bytes": 31076,
+      "sha256": "4debf6012eff74e193cf68398e14f1b5c8ff93d69c677df8a688e5e2d6b1a0eb"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1357,
+      "sha256": "4d4e2620ca6777ffe8ac495c2bfa2f26435e1703551fc766bc6f575d3a699fba"
+    }
+  ]
+}
