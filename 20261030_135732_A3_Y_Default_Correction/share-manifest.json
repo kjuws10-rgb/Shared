@@ -1,0 +1,56 @@
+{
+  "title": "A3 Default Offset Y 거리 정정·보고용3페이지",
+  "packagedAt": "2026-10-30T13:57:32.737204+09:00",
+  "midDistanceMm": 1467,
+  "scannerRowGapMm": 380,
+  "nearMm": 1277,
+  "farMm": 1657,
+  "htmlFiles": 3,
+  "briefPrintPages": 3,
+  "standaloneOffline": true,
+  "zipMembers": [
+    "A3_LD_Default_Offset_종합_Y거리정정_20261030.html",
+    "A3_LD_Y_Default_1467_380_정정설명_20261030.html",
+    "A3_LD_Default_Offset_팀장보고_Y거리정정_3페이지_20261030.html",
+    "README.txt"
+  ],
+  "validation": {
+    "detailRender": 46,
+    "briefRender": 31,
+    "concept": 40,
+    "requirements": 59,
+    "equipmentVerified": false
+  },
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_Default_Offset_Y_Correction_20261030.zip",
+      "bytes": 55589,
+      "sha256": "5f757e3d79331ff1ebd835d6d25aa5799ebece32e2564cda9d0531a7aa0b15ee"
+    },
+    {
+      "name": "A3_LD_Default_Offset_종합_Y거리정정_20261030.html",
+      "bytes": 196283,
+      "sha256": "630abb8a9618b57436016642e661aba06b7cd738f09484de31cff329546a1701"
+    },
+    {
+      "name": "A3_LD_Default_Offset_팀장보고_Y거리정정_3페이지_20261030.html",
+      "bytes": 35705,
+      "sha256": "5d618bee0c7b10f5be620eac04cf057f48f77d6088329dc9695d51d58ca76738"
+    },
+    {
+      "name": "A3_LD_Y_Default_1467_380_정정설명_20261030.html",
+      "bytes": 30095,
+      "sha256": "0ddb0c7c4dd4f329f66d19fb06950317f0c2412bae448d88314776ed1a8c6250"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1253,
+      "sha256": "b06368969bcaf4ba8121523fca773c2ab1f91ed2cd1bbd81b15a0f0e25b1d26d"
+    }
+  ]
+}
