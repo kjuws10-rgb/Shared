@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A3 LD · 현재 코드의 Distortion / Lagrange 상세 해설</title>
+<style>
+:root{--ink:#163047;--muted:#576c7a;--line:#d7e2e8;--blue:#0869a6;--teal:#087c75;--purple:#6a48ad;--amber:#996019;--bg:#f3f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 "Malgun Gothic","Segoe UI",sans-serif;overflow-wrap:anywhere}
+main{max-width:1200px;margin:auto;padding:35px 36px 80px}
+header{border-radius:20px;padding:36px;background:#133249;color:white}
+h1{font-size:32px;line-height:1.4;margin:10px 0 18px;letter-spacing:-1px}h2{font-size:25px;line-height:1.4;margin:0 0 18px;letter-spacing:-.7px}h3{font-size:19px;margin:18px 0 10px}p{margin:10px 0}
+.eyebrow{color:#97d8e7;font-size:13px;letter-spacing:1px}.lead{font-size:19px;max-width:900px}
+.meta{font-size:13px;color:#c4d8e3;margin-top:22px;overflow-wrap:anywhere}
+nav{margin:22px 0;padding:18px;border:1px solid var(--line);border-radius:14px;background:white;display:flex;gap:9px;flex-wrap:wrap}
+nav a{padding:5px 12px;background:#edf5fa;border-radius:20px;font-size:14px}
+a{color:var(--blue);text-underline-offset:3px;overflow-wrap:anywhere}header a{color:#b6e5ff}
+section{background:white;padding:30px;border:1px solid var(--line);border-radius:16px;margin:22px 0}
+.num{color:var(--teal);font-size:14px;display:block;letter-spacing:1px;margin-bottom:7px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{border:1px solid var(--line);padding:17px;border-radius:12px;background:#fbfdfe}.card h3{margin-top:0}
+.tag{display:inline-block;border-radius:5px;padding:2px 8px;font-size:12px;background:#e5f3ef;color:#12634e;font-weight:700}
+.tag.warn{background:#fff0d9;color:#855012}.tag.neutral{background:#edf0f6;color:#4c5d7c}
+.note{padding:16px 18px;border-left:4px solid var(--blue);background:#edf6fc;margin:17px 0;border-radius:0 10px 10px 0}
+.warnbox{background:#fff7e9;border-left-color:#c8862a}.okbox{background:#edf9f5;border-left-color:var(--teal)}
+.small{font-size:13px;color:var(--muted)}.refs{font-size:12px;color:var(--muted);margin-top:13px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:15px 0}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#eaf2f7;color:#28465a}tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}.mono,code{font:13px/1.6 Consolas,monospace;overflow-wrap:anywhere}code{background:#edf2f7;padding:2px 5px;border-radius:4px}
+.formula{font:16px/1.8 Consolas,"Malgun Gothic",monospace;background:#142f44;color:#f4fbff;padding:20px;border-radius:12px;margin:14px 0;overflow-wrap:anywhere}
+.formula .accent{color:#8ee3c7}.equation{margin:7px 0}.flow{display:flex;align-items:stretch;gap:8px;margin:18px 0;flex-wrap:wrap}.flow .box{background:#eaf5f8;border:1px solid #bfdae2;border-radius:10px;padding:12px;flex:1;min-width:130px}.flow .arrow{align-self:center;font-size:24px;color:var(--teal)}
+figure{margin:18px 0;background:#f8fbfd;border:1px solid var(--line);padding:15px;border-radius:12px}svg{width:100%;height:auto;display:block}svg text{font-family:"Malgun Gothic","Segoe UI",sans-serif;fill:#244459;font-size:16px}svg .tiny{font-size:13px}svg .big{font-size:21px;font-weight:700}svg .key{fill:#087c75}svg .dk{fill:#7353b6}svg .guide{stroke:#bdccd5;stroke-dasharray:6 5;fill:none}svg .box{fill:#edf5fa;stroke:#b4cbd8}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+ol,ul{padding-left:24px}li{margin:7px 0}
+details{margin:13px 0;border:1px solid var(--line);border-radius:10px;padding:13px 16px}summary{cursor:pointer;font-weight:700}
+.controls{display:flex;align-items:center;gap:15px;flex-wrap:wrap;background:#eef6f9;padding:16px;border-radius:12px}
+label{display:flex;align-items:center;gap:8px;font-size:14px}input[type=range]{width:165px;max-width:100%}button,select{font:inherit;font-size:14px;border:1px solid #adc8d6;background:white;color:var(--ink);padding:7px 13px;border-radius:7px;cursor:pointer}
+.result{font-size:22px;font-weight:700;color:var(--teal);padding:16px 0;overflow-wrap:anywhere}
+.source-list{font-size:13px;line-height:1.7;display:grid;gap:10px}.source-list>div{padding:10px;background:#f2f6f9;border-radius:8px}
+footer{font-size:13px;color:var(--muted);padding:15px}
+@media(max-width:760px){main{padding:16px 12px 45px}header{padding:24px 20px}h1{font-size:27px}h2{font-size:22px}section{padding:22px 18px}.grid,.three{grid-template-columns:1fr}body{font-size:15px}th,td{padding:9px;font-size:13px}.flow .arrow{display:none}}
+@media print{body{background:white;font-size:10pt}main{max-width:none;padding:0}header{background:#edf4f8;color:#163047;padding:20px;border-radius:0}header .eyebrow,header .meta,header a{color:#315b73}h1{font-size:22pt}h2{font-size:16pt}h3{font-size:12pt}section{border-radius:0;margin:12px 0;padding:17px;break-inside:auto}figure,.card,tr,.note,.formula{break-inside:avoid}nav,.controls,.no-print{display:none}.grid{gap:10px}.small,.refs,figcaption{font-size:8pt}a{color:inherit}.table-wrap{overflow:visible}table{font-size:9pt}svg text{font-size:16px}.source-list{font-size:8pt}}
+</style>
+</head>
+<body><main>
+<header>
+<div class="eyebrow">A3 LASER DRILLER · CODE-GROUNDED EXPLANATION</div>
+<h1>현재 코드의 Distortion 보정<br>라그랑주 적용부터 실제 가공 반영까지</h1>
+<p class="lead">“키 10개로 무엇을 계산하고, 언제 저장하며, 어느 가공좌표에 더해지는가?”를 실제 소스와 그림으로 설명합니다.</p>
+<p>핵심은 <strong>각 수평행에서 X 선형 보간 → 선택한 모든 행으로 Y 라그랑주 보간 → Shot 중심별 Align Offset 저장</strong>입니다.</p>
+<div class="meta">기준: main <a href="https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/commit/99d78ddf0e680b55dbd9662764b71a1ffe93a457">99d78ddf0e680b55dbd9662764b71a1ffe93a457</a> · 2026-10-30 KST<br>소스 정적 추적 + 원본 수학 클래스 분리 시험 15/15 통과 · 실제 PLC/Vision/레이저 정밀도 검증 아님</div>
+</header>
+<nav aria-label="목차">
+<a href="#overview">전체 개념</a><a href="#coordinates">좌표와 키 배치</a><a href="#math">라그랑주 수식</a><a href="#example">계산 체험</a><a href="#operation">버튼·동작 순서</a><a href="#storage">저장 형식</a><a href="#runtime">가공 반영</a><a href="#limits">한계·확인사항</a><a href="#evidence">검증·소스</a>
+</nav>
+<section id="overview">
+<span class="num">01 · 먼저 결론</span><h2>현재 구현은 “기준과 이번 검출값의 차이”를 Shot별 이동량으로 만드는 기능입니다.</h2>
+<div class="grid three">
+<div class="card"><span class="tag">구현 확인</span><h3>계산</h3><p>AK 4개는 항상 사용합니다. DK는 같은 Y의 좌우 두 점을 한 행으로 선택합니다. 각 키의 <strong>Base − LastLoad</strong>를 전체 Shot 위치로 보간합니다.</p></div>
+<div class="card"><span class="tag">구현 확인</span><h3>반영</h3><p>사용자가 <strong>Offset Apply</strong>하면 레시피에 Shot별 보정값을 저장합니다. 이후 가공 준비에서 Head 방향을 변환해 Scanner 좌표에 더합니다.</p></div>
+<div class="card"><span class="tag warn">경계 구분</span><h3>아직 다른 문제</h3><p>매 기판 자동 측정·자동 재계산, H/Pose 정규화, 실제 장비 정밀도 보장은 이 구현만으로 확인되지 않습니다.</p></div>
+</div>
+<div class="flow" aria-label="전체 흐름"><div class="box">① 레시피 키 위치<br>+ 정상 기준 Base</div><div class="arrow">→</div><div class="box">② Load Data<br>이번 검출값 읽기</div><div class="arrow">→</div><div class="box">③ Base − Load<br>X/Y 보정 벡터</div><div class="arrow">→</div><div class="box">④ 보간 · 저장<br>Shot별 Align Offset</div><div class="arrow">→</div><div class="box">⑤ 가공 준비<br>방향 변환 후 합산</div></div>
+<div class="note">“Distortion 보정”이라는 이름을 사용하지만, 현재 계산에는 AK로 이동·회전을 먼저 분리한 뒤 DK 잔차만 보정하는 별도 단계가 없습니다. <strong>선택 AK/DK의 차이 벡터를 함께 보간</strong>합니다.</div>
+<p class="refs">근거: <a href="#s01">S01</a>, <a href="#s02">S02</a>, <a href="#s03">S03</a>, <a href="#s09">S09</a></p>
+</section>
+<section id="coordinates">
+<span class="num">02 · 세 종류의 값을 분리해서 이해</span><h2>키의 “설계 위치”와 “검출값”은 역할이 다릅니다.</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>구분</th><th>무엇인가</th><th>계산에서 하는 일</th></tr></thead><tbody>
+<tr><td>GlassX / GlassY</td><td>키가 기판의 어디에 배치됐는지 나타내는 레시피 설계좌표</td><td>보간 지점의 위치, 행 구분, 보간 범위 결정</td></tr>
+<tr><td>BaseRaw X/Y</td><td>정상 기준으로 레시피에 저장한 검출값</td><td>보정량의 기준</td></tr>
+<tr><td>LastLoadRaw X/Y</td><td>이번 Load에서 MELSEC 또는 Simulation으로 받은 검출값</td><td>기준과 비교할 값</td></tr>
+<tr><td>Correction X/Y</td><td>BaseRaw − LastLoadRaw</td><td>Shot에 이동량으로 적용할 보정 벡터</td></tr>
+</tbody></table></div>
+<figure><svg viewBox="0 0 1000 235" role="img" aria-label="설계 위치에서 Base와 LastLoad의 차이를 보정 벡터로 사용하는 개념">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#087c75"/></marker></defs>
+<rect class="box" x="20" y="25" width="270" height="180" rx="12"/><text x="40" y="60" class="big">설계 위치 (xᵢ, yᵢ)</text><text x="40" y="100">“이 키는 기판의 여기”</text><text x="40" y="132">예: DK2 = (15.5, 745.5)</text><text x="40" y="169" class="tiny">배치좌표 ≠ 검출값 자체</text>
+<path d="M305 115H365" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect class="box" x="385" y="25" width="280" height="180" rx="12"/><text x="405" y="60" class="big">검출 차이</text><text x="405" y="100">Base = (+0.020, −0.010)</text><text x="405" y="132">Load = (+0.050, −0.030)</text><text x="405" y="169" class="tiny">수치 예시 · 단위 mm</text>
+<path d="M680 115H735" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="755" y="25" width="225" height="180" rx="12" fill="#e0f4ec" stroke="#9acaba"/><text x="775" y="60" class="big">보정 벡터</text><text x="775" y="105">ΔX = −0.030</text><text x="775" y="140">ΔY = +0.020</text><text x="775" y="176" class="tiny">그 키 위치의 보간 입력</text>
+</svg><figcaption>그림 1. 설계 위치에 “측정 차이 벡터”를 붙입니다. 화면의 Raw는 PLC 정수 원문이라는 뜻이 아닙니다.</figcaption></figure>
+<p><strong>Raw의 정확한 뜻:</strong> 이 화면에서는 스케일 변환 후, 화면 표시용 반올림을 하지 않은 <strong>mm 실수</strong>입니다. 현재 DOUBLE 맵은 이름과 달리 두 Word의 Int32 × READ_SCALE로 읽습니다. FLOAT 경로는 Float32입니다. 예를 들어 READ_SCALE=0.0001이면 정수 10000이 1.0000mm가 됩니다.</p>
+<div class="note warnbox">Base−Load의 부호가 현장 보정 방향과 맞는지는 Vision이 넘기는 값의 의미와 Head/Stage 방향 계약까지 확인해야 합니다. 과거 문서의 “현재−Benchmark 변위”와 부호가 반대라는 이유만으로 코드 오류라고 단정할 수 없습니다.</div>
+<p class="refs">근거: <a href="#s02">S02</a>, <a href="#s05">S05</a>, <a href="#s06">S06</a>, <a href="#s20">S20</a></p>
+</section>
+<section id="layout">
+<span class="num">03 · 실제 레시피의 키 배치</span><h2>DK는 번호 순서가 아니라, 같은 Y에 있는 좌우 두 점이 한 쌍입니다.</h2>
+<div class="grid">
+<figure><svg viewBox="0 0 470 625" role="img" aria-label="test0929의 AK4 DK6 배치와 수평행 연결">
+<rect x="58" y="40" width="350" height="530" fill="#eef7f8" stroke="#8bb1bf" stroke-width="2"/><text x="58" y="24">설계 +X →</text><text x="12" y="95" class="tiny">+Y ↓</text>
+<path d="M78 70L78 255L78 320L78 385L78 540M388 70L387 255L387 320L387 385L388 540" fill="none" stroke="#b7a2d9" stroke-width="3"/>
+<path d="M78 70H388M78 255H387M78 320H387M78 385H387M78 540H388" class="guide"/>
+<g class="key"><circle cx="78" cy="70" r="8"/><circle cx="388" cy="70" r="8"/><circle cx="78" cy="540" r="8"/><circle cx="388" cy="540" r="8"/></g>
+<g class="dk"><circle cx="78" cy="255" r="8"/><circle cx="387" cy="255" r="8"/><circle cx="78" cy="320" r="8"/><circle cx="387" cy="320" r="8"/><circle cx="78" cy="385" r="8"/><circle cx="387" cy="385" r="8"/></g>
+<text x="90" y="61">AK1</text><text x="327" y="61">AK3</text><text x="90" y="532">AK2</text><text x="327" y="532">AK4</text>
+<text x="90" y="246">DK1</text><text x="326" y="246">DK4</text><text x="90" y="311">DK2</text><text x="326" y="311">DK5</text><text x="90" y="376">DK3</text><text x="326" y="376">DK6</text>
+<text x="156" y="271" class="tiny">Y = 545.5</text><text x="156" y="336" class="tiny">Y = 745.5</text><text x="156" y="401" class="tiny">Y = 945.5</text><text x="116" y="598">Glass = 925 × 1500mm</text>
+</svg><figcaption>그림 2. 현재 test0929 레시피의 배치 개념도. 오른쪽 DK와 AK의 X차이 1mm는 저장소 예제의 실제 값 차이입니다. 그림은 차이를 과장한 비축척도이며 실장비 설계 확정값을 뜻하지 않습니다.</figcaption></figure>
+<div>
+<div class="table-wrap"><table><thead><tr><th>한 행의 좌/우 키</th><th>Y (mm)</th><th>좌/우 X (mm)</th></tr></thead><tbody>
+<tr><td>AK1 / AK3</td><td>15.5</td><td>15.5 / 909.5</td></tr>
+<tr><td>DK1 / DK4</td><td>545.5</td><td>15.5 / 908.5</td></tr>
+<tr><td>DK2 / DK5</td><td>745.5</td><td>15.5 / 908.5</td></tr>
+<tr><td>DK3 / DK6</td><td>945.5</td><td>15.5 / 908.5</td></tr>
+<tr><td>AK2 / AK4</td><td>1484.5</td><td>15.5 / 909.5</td></tr>
+</tbody></table></div>
+<p>AK는 Glass 크기와 AK Margin으로 배치합니다. DK 설계좌표는 <strong>AK Margin + DISTORTION_KEYn_X/Y</strong>입니다. 현재 예제에서 오른쪽 DK는 X=908.5, 오른쪽 AK는 X=909.5로 서로 다릅니다.</p>
+<p>DK 행은 사용자가 선택하고 AK 4개는 항상 포함됩니다. 선택 DK는 <strong>레시피 설계 Y가 정확히 같은 두 점</strong>이어야 합니다. 측정값 Y로 행을 묶는 것이 아닙니다.</p>
+<div class="note">번호가 가까운 DK1/DK2를 묶는 것이 아닙니다. 현재 레시피는 <strong>DK1↔DK4, DK2↔DK5, DK3↔DK6</strong>이 쌍입니다. 신규 레시피의 초기 키 배치가 이 조건에 맞는지도 별도로 확인해야 합니다.</div>
+</div></div>
+<p class="refs">근거: <a href="#s01">S01</a>, <a href="#s04">S04</a>, <a href="#s21">S21</a>, <a href="#s22">S22</a></p>
+</section>
+<section id="math">
+<span class="num">04 · 라그랑주를 적용하는 정확한 위치</span><h2>먼저 각 행을 X 직선으로 만들고, 그 행들을 Y 곡선으로 연결합니다.</h2>
+<figure><svg viewBox="0 0 1000 320" role="img" aria-label="같은 X에서 행별 선형보간 후 Y라그랑주보간">
+<rect class="box" x="20" y="25" width="435" height="270" rx="12"/><text x="42" y="57" class="big">1단계 · 모든 행에서 같은 X 평가</text>
+<path d="M80 105H405M80 160H405M80 215H405M80 267H405" class="guide"/><path d="M245 80V280" stroke="#d9872c" stroke-width="3"/>
+<g fill="#087c75"><circle cx="80" cy="105" r="7"/><circle cx="405" cy="105" r="7"/><circle cx="80" cy="160" r="7"/><circle cx="405" cy="160" r="7"/><circle cx="80" cy="215" r="7"/><circle cx="405" cy="215" r="7"/><circle cx="80" cy="267" r="7"/><circle cx="405" cy="267" r="7"/></g>
+<g fill="#d9872c"><circle cx="245" cy="105" r="6"/><circle cx="245" cy="160" r="6"/><circle cx="245" cy="215" r="6"/><circle cx="245" cy="267" r="6"/></g>
+<text x="90" y="96" class="tiny">좌 키 ─── X 선형 ─── 우 키</text><text x="255" y="184" class="tiny">목표 X</text>
+<path d="M470 160H530" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect class="box" x="550" y="25" width="430" height="270" rx="12"/><text x="575" y="57" class="big">2단계 · 전체 Y행을 함께 보간</text>
+<path d="M595 100L910 100M595 100V275" class="guide"/><path d="M600 110C705 40 810 300 915 255" fill="none" stroke="#7353b6" stroke-width="4"/>
+<g fill="#7353b6"><circle cx="600" cy="110" r="7"/><circle cx="705" cy="126.4814815" r="7"/><circle cx="810" cy="221.8518519" r="7"/><circle cx="915" cy="255" r="7"/></g>
+<text x="605" y="286" class="tiny">Y 위치 → / 곡선 높이 = 보정량 개념</text><text x="576" y="85" class="tiny">가까운 두 행만 쓰는 구간선형 방식 아님</text>
+</svg><figcaption>그림 3. X/Y 각각의 보정 성분에 같은 순서를 적용합니다. 오른쪽 곡선은 구조 설명용이며 실제 측정 곡선이 아닙니다.</figcaption></figure>
+<h3>① 행 안의 X 선형 보간</h3>
+<div class="formula"><div class="equation">sⱼ = (x − xLⱼ) / (xRⱼ − xLⱼ)</div><div class="equation"><span class="accent">rⱼ(x) = (1 − sⱼ)cLⱼ + sⱼcRⱼ</span></div></div>
+<p>cL/cR은 그 행 좌·우 키의 <strong>(Base−Load X, Base−Load Y)</strong> 벡터입니다. 목표 X가 왼쪽에서 25% 지점이면 좌 75%와 우 25%를 섞습니다. 행마다 좌우 X가 달라도 각각의 폭으로 계산합니다.</p>
+<h3>② Y 전체를 라그랑주로 보간</h3>
+<div class="formula"><div class="equation">t = (y − y₀) / (yₙ − y₀),　tⱼ = (yⱼ − y₀) / (yₙ − y₀)</div><div class="equation">Lⱼ(t) = Π(k≠j) (t − tₖ) / (tⱼ − tₖ)</div><div class="equation"><span class="accent">C(x,y) = Σⱼ Lⱼ(t) rⱼ(x)</span></div></div>
+<p>정규화는 Y좌표의 큰 수를 0~1 구간으로 바꾸는 계산상 처리입니다. 보정량 mm를 0~1로 줄이는 기능이 아닙니다. Lⱼ는 해당 행을 얼마나 반영할지 정하는 수학 계수이며 음수나 1보다 큰 값도 가능합니다.</p>
+<h3>③ 실제 코드는 같은 다항식을 barycentric 형태로 계산</h3>
+<div class="formula"><div class="equation">wⱼ = 1 / Π(k≠j)(tⱼ − tₖ)</div><div class="equation"><span class="accent">C = [Σⱼ {wⱼ/(t−tⱼ)} rⱼ(x)] / [Σⱼ {wⱼ/(t−tⱼ)}]</span></div></div>
+<p>이 식은 위 라그랑주 다항식의 계산 형태입니다. 정확히 키 행의 Y에 도달하면 0으로 나누지 않고 그 행의 X 선형 값을 직접 반환합니다. 수학 형식의 참고자료는 <a href="https://dlmf.nist.gov/3.3">NIST DLMF §3.3</a>이며, A3 구현 여부의 근거는 아래 실제 소스입니다.</p>
+<div class="note warnbox"><strong>코드의 _weights ≠ 사용자 보정 가중치.</strong> 사용자 Start/End 배율 0.8을 곱하거나 상·하단에서 점진적으로 보정량을 줄이는 기능이 아닙니다. 현재 활성 보간 경로에서 그런 배율 적용은 확인되지 않습니다.</div>
+<p class="refs">근거: <a href="#s01">S01</a>, <a href="#s23">S23</a></p>
+</section>
+<section id="degree">
+<span class="num">05 · 키 수가 바뀌면 무엇이 달라지나</span><h2>전체 키 4 / 6 / 8 / 10개 → Y 최대 1 / 2 / 3 / 4차</h2>
+<div class="table-wrap"><table><thead><tr><th>선택 DK 수평행</th><th>전체 키</th><th>수평행 수</th><th>Y 최대 차수</th><th>의미</th></tr></thead><tbody>
+<tr><td>0행</td><td>AK4</td><td>2</td><td>1차</td><td>위·아래 AK행을 직선으로 연결</td></tr>
+<tr><td>1행</td><td>AK4 + DK2</td><td>3</td><td>2차</td><td>한 내부 행을 통과하는 곡선</td></tr>
+<tr><td>2행</td><td>AK4 + DK4</td><td>4</td><td>3차</td><td>두 내부 행을 통과하는 곡선</td></tr>
+<tr><td>3행</td><td>AK4 + DK6</td><td>5</td><td>4차</td><td>세 내부 행을 모두 통과하는 곡선</td></tr>
+</tbody></table></div>
+<p>“최대” 차수이므로 입력값이 직선이면 10키를 사용해도 직선이 나올 수 있습니다. 반대로 키가 많아지면 측정점을 더 통과하지만 내부 정확도가 반드시 더 좋아지는 것은 아닙니다.</p>
+<div class="note"><strong>현재 표현할 수 있는 형태: C(x,y) = A(y) + x·B(y).</strong> X방향은 1차, Y방향은 최대 4차입니다. 기판 전체의 2D 위치에 보정값을 주지만, X² 굴곡이나 자유로운 국소변형을 복원하는 일반 2D 곡면/TPS/SVD 모델은 아닙니다.</div>
+<p class="refs">근거: <a href="#s01">S01</a>. 식의 형태·최대 차수는 해당 코드에서 도출한 수학적 해석입니다.</p>
+</section>
+<section id="example">
+<span class="num">06 · 숫자를 따라 계산해 보기</span><h2>교육용 예제: (X=25, Y=25)에서 (+0.025, +0.0125)mm</h2>
+<p>아래는 <strong>실제 레시피 값이 아닌 설명용 100×100mm 영역</strong>입니다. 세 수평행, 좌·우 X=0/100을 사용합니다. 표의 값은 이미 Base−Load로 계산된 보정 벡터입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>행 Y</th><th>좌측 보정 (X,Y) mm</th><th>우측 보정 (X,Y) mm</th><th>X=25에서 행 보정</th></tr></thead><tbody>
+<tr><td>0</td><td>(0, 0)</td><td>(0.040, 0.020)</td><td>(0.010, 0.005)</td></tr>
+<tr><td>50</td><td>(0.020, 0.010)</td><td>(0.060, 0.030)</td><td>(0.030, 0.015)</td></tr>
+<tr><td>100</td><td>(0, 0)</td><td>(0.040, 0.020)</td><td>(0.010, 0.005)</td></tr>
+</tbody></table></div>
+<p>Y=25에서 각 행의 라그랑주 계수는 <strong>0.375 / 0.750 / −0.125</strong>입니다.</p>
+<div class="formula"><div>ΔX = 0.375×0.010 + 0.750×0.030 − 0.125×0.010 = <span class="accent">0.025mm</span></div><div>ΔY = 0.375×0.005 + 0.750×0.015 − 0.125×0.005 = <span class="accent">0.0125mm</span></div><div>저장: (0.025, 0.013)mm = (25, 13)µm</div></div>
+<h3>위치만 바꿔 보는 교육용 계산기</h3>
+<div class="controls">
+<label>X <input id="demo-x" type="range" min="0" max="100" value="25" step="1"><output id="demo-x-label">25</output></label>
+<label>Y <input id="demo-y" type="range" min="0" max="100" value="25" step="1"><output id="demo-y-label">25</output></label>
+<button id="demo-reset" type="button">예제로 되돌리기</button>
+</div>
+<div id="demo-result" class="result" aria-live="polite">계산 중</div>
+<div class="grid">
+<figure><svg id="demo-svg" viewBox="0 0 430 320" role="img" aria-label="교육용 영역 내 목표점 위치">
+<rect x="55" y="28" width="300" height="240" fill="#e9f4f3" stroke="#8ab2bd"/>
+<path d="M55 148H355" class="guide"/><path id="demo-v" d="M130 28V268" stroke="#ca8228" stroke-width="2"/><path id="demo-h" d="M55 88H355" stroke="#ca8228" stroke-width="2"/><circle id="demo-point" cx="130" cy="88" r="8" fill="#6a48ad"/>
+<text x="55" y="20" class="tiny">(0,0)</text><text x="278" y="294" class="tiny">(100,100)</text><text x="74" y="307" class="tiny">점의 위치를 바꿔도 장비에는 연결되지 않습니다.</text>
+</svg><figcaption>그림 4. X/Y 위치를 이동하면 위 고정 입력의 보간 결과만 바뀝니다.</figcaption></figure>
+<div class="card"><h3>계산에서 기억할 부분</h3><p id="demo-detail"></p><p class="small">이 계산기는 개념 설명용 JavaScript입니다. 원본 C# 클래스는 별도 15개 시험으로 확인했습니다. JavaScript 결과·그림은 장비 동작, 승인 Recipe 또는 실제 측정값이 아닙니다.</p></div>
+</div>
+<p class="refs">반올림 근거: <a href="#s03">S03</a>. 최종 mm 소수 셋째 자리까지(넷째 자리에서) AwayFromZero 반올림하며 중간 보간값은 반올림하지 않습니다.</p>
+</section>
+<section id="operation">
+<span class="num">07 · 작업자가 누르는 버튼의 의미</span><h2>기준 설정, 이번 값 읽기, 보정 저장은 서로 다른 작업입니다.</h2>
+<div class="table-wrap"><table><thead><tr><th>버튼</th><th>실제 동작</th><th>하지 않는 일 / 주의</th></tr></thead><tbody>
+<tr><td>Base Edit</td><td>키 선택 후 기준 X/Y를 입력하고 레시피 저장</td><td>기존 Shot Align Offset을 재계산·초기화하지 않음</td></tr>
+<tr><td>Base Init</td><td>AK4/DK6 기준 X/Y 20개를 0으로 저장</td><td><strong>보정 OFF 버튼이 아님.</strong> 저장된 Shot 보정값은 남음</td></tr>
+<tr><td>Load Data</td><td>AK4 + 선택 DK의 LastLoad X/Y를 읽어 메모리에 보관</td><td><strong>새 Vision 측정·축 이동을 시작하지 않음.</strong> 레시피에 자동 저장하지 않음</td></tr>
+<tr><td>Load to Base</td><td>선택 키의 이번 Load 값을 새 Base로 저장</td><td>미선택 DK Base는 유지. 기존 Shot Offset도 유지</td></tr>
+<tr><td>Offset Apply</td><td>Base−Load로 계산하고 Shot별 Align Offset을 대체 저장</td><td>이 버튼만으로 이미 생성·업로드된 Script가 바뀌었다고 볼 수 없음</td></tr>
+<tr><td>Offset Init</td><td>전체 설계 Shot의 저장된 Align Offset X/Y를 0.000으로 저장</td><td>Base 자체를 0으로 지우는 버튼과 구분</td></tr>
+<tr><td>Offset View / Refresh</td><td>저장 Offset 조회 / 선택 레시피·화면 갱신</td><td>새 측정이나 보정 Apply와 구분</td></tr>
+</tbody></table></div>
+<div class="note okbox"><strong>권장 이해 순서:</strong> 기준 Base가 올바른지 확인 → 이번 측정이 완료됐는지 외부 절차로 확인 → DK행 선택 → Load → 값·출처 확인 → Apply → 저장 결과 확인 → 새 가공 준비에서 Script 재생성 → 실제 위치 검증. 이 순서는 설명용 운영 제안이며 현재 코드가 모든 단계를 자동 보장한다는 뜻은 아닙니다.</div>
+<p>키 카드의 Base/LastLoad 표시는 읽기 전용이고 Base 입력은 별도 Edit 동작으로 제공합니다. <strong>DK를 전부 해제해도 AK4 보정은 남습니다.</strong></p>
+<p class="refs">근거: <a href="#s07">S07</a>, <a href="#s08">S08</a>, <a href="#s09">S09</a></p>
+</section>
+<section id="load">
+<span class="num">08 · Load Data의 실제 통신 흐름</span><h2>주소 전체를 먼저 확인하고 순차 읽은 뒤, 성공한 묶음을 화면에 게시합니다.</h2>
+<figure><svg viewBox="0 0 1000 320" role="img" aria-label="Load Data 통신의 확인 단계와 동일데이터세대 한계">
+<rect class="box" x="20" y="30" width="200" height="105" rx="10"/><text x="40" y="65">① 선택 키 확정</text><text x="40" y="96" class="tiny">AK4 + 선택 DK의 X/Y</text>
+<rect class="box" x="272" y="30" width="220" height="105" rx="10"/><text x="292" y="65">② 전체 맵 검사</text><text x="292" y="96" class="tiny">Use / Address / Type</text>
+<rect class="box" x="545" y="30" width="205" height="105" rx="10"/><text x="565" y="65">③ 순차 Read</text><text x="565" y="96" class="tiny">공통 MELSEC worker</text>
+<rect class="box" x="800" y="30" width="180" height="105" rx="10"/><text x="819" y="65">④ 완료 확인</text><text x="819" y="96" class="tiny">맵·연결 재확인</text>
+<path d="M225 80H260M497 80H533M755 80H790" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="20" y="183" width="460" height="103" rx="10" fill="#e4f5ef" stroke="#a7cdbf"/><text x="40" y="219" class="big">보장: 부분 실패값을 게시하지 않음</text><text x="40" y="253">성공한 전체 읽기 결과를 함께 반영</text>
+<rect x="515" y="183" width="465" height="103" rx="10" fill="#fff3de" stroke="#d9bc89"/><text x="535" y="219" class="big">별도 필요: 동일 Glass / Frame 보장</text><text x="535" y="253">순차 읽기 사이 Vision/PLC 데이터가 바뀔 수 있음</text>
+</svg><figcaption>그림 5. 화면 갱신의 일괄성과 PLC/Vision 측정 세대의 일치성은 다른 문제입니다.</figcaption></figure>
+<p>온라인 Load는 연결, 주소 사용 여부, 읽기 권한, DOUBLE/FLOAT 형식, 읽은 값의 유한성을 검사합니다. UI는 확인 후 약 10초 취소 제한을 사용하고 선택·레시피·모드 변경을 점검합니다. 단, 진행 중인 native SDK 한 호출을 즉시 강제 중단하는 보장은 아닙니다.</p>
+<p><strong>Load 실패·Offline 경고 시 이전에 성공한 LastLoad가 남을 수 있습니다.</strong> 화면에 값이 보인다는 이유만으로 이번 기판의 새 측정이 성공했다고 판단하지 말고, Load 시각과 출처를 함께 확인해야 합니다.</p>
+<div class="note warnbox"><strong>현재 저장소 기본 맵 상태:</strong> ALIGN_LASTLOAD_AK1_X부터 DK6_Y까지 20항목은 모두 <code>USE=0 / UNASSIGNED</code>입니다. 읽는 기능과 사전 검사 코드는 있으나, 저장소만으로 실제 Vision 수신 주소 연결 완료를 판정할 수 없습니다.</div>
+<p>Simulation 모드는 Base±1mm 난수를 만듭니다. 출처는 기록하지만 현재 Apply 경로가 Simulation 결과 저장 자체를 금지하지는 않습니다. 이를 실제 측정 데이터와 혼동하면 안 됩니다.</p>
+<p class="refs">근거: <a href="#s05">S05</a>, <a href="#s08">S08</a>, <a href="#s20">S20</a>. PR7의 수신 대기 개선은 이 데이터의 측정 의미·동일 Frame 계약을 새로 만들지는 않습니다.</p>
+</section>
+<section id="apply">
+<span class="num">09 · Apply 시 실제로 확인하는 항목</span><h2>계산 전·계산 중·저장 직전에 각각 상태를 확인합니다.</h2>
+<div class="table-wrap"><table><thead><tr><th>순서</th><th>확인 내용</th><th>불만족 시</th></tr></thead><tbody>
+<tr><td>1. 선택·Load</td><td>선택 레시피, Load 시각 존재, 선택 키 X/Y 값 존재, Load 당시와 키 위치 동일</td><td>재선택·재Load 요청</td></tr>
+<tr><td>2. 키 형상</td><td>선택 키가 Glass 안에 있음, 좌우가 같은 Y, X폭&gt;1e−9mm, DK행당 2개</td><td>모델 생성 중단</td></tr>
+<tr><td>3. 행 관계</td><td>DK행이 상·하 AK 사이, Y행 간격&gt;1e−9mm, 가중치 유한</td><td>모델 생성 중단</td></tr>
+<tr><td>4. 전체 설계 Shot</td><td>기존 ALIGN_OFFSET을 빼고 원설계 Shot 생성, 모든 중심이 보간 영역 안인지 확인</td><td>한 Shot이라도 밖이면 전체 계산 취소</td></tr>
+<tr><td>5. 계산값</td><td>유한값, 저장 범위 ±100000mm, 최종 0.001mm 반올림</td><td>계산 중단</td></tr>
+<tr><td>6. Tolerance</td><td>반올림 후 |X| 또는 |Y|가 설정값보다 큰 Shot 찾기</td><td>초과 목록 표시, 전체 취소 또는 나머지 적용 확인</td></tr>
+<tr><td>7. 저장 직전</td><td>레시피 ID/파라미터, 선택·Base/Load 입력, Tolerance가 계산 당시와 같은지 재검사</td><td>다시 Apply 요청</td></tr>
+<tr><td>8. 저장</td><td>허용된 Shot의 두 축을 새 값으로 저장 → CSV 로그 저장</td><td>로그 실패는 “레시피는 저장됨” 경고. 자동 Rollback 아님</td></tr>
+</tbody></table></div>
+<p>여기서 ±100000mm는 <strong>데이터 저장 범위</strong>이지 공정 허용오차가 아닙니다. 또한 계산은 Head 사용 OFF나 Chess/Mask 출사 제외 여부로 미리 줄이지 않은 <strong>전체 설계 Shot</strong>을 대상으로 합니다. 따라서 실제 미출사 Shot 때문에 전체 범위 검사에 걸리는 경우도 확인해야 합니다.</p>
+<p class="refs">근거: <a href="#s01">S01</a>, <a href="#s02">S02</a>, <a href="#s03">S03</a>, <a href="#s09">S09</a>, <a href="#s10">S10</a></p>
+</section>
+<section id="tolerance">
+<span class="num">10 · Tolerance 초과 시 기존 값은 어떻게 되나</span><h2>초과 Shot은 두 축 모두 “기존 값 유지”입니다.</h2>
+<div class="grid">
+<div class="card"><h3>판정식</h3><p><strong>|계산 X| &gt; T 또는 |계산 Y| &gt; T</strong></p><p>같은 값은 통과합니다. 벡터 길이 √(X²+Y²)를 검사하는 방식이 아닙니다. 최종 3자리 반올림 결과를 검사합니다.</p><p>한 축만 초과해도 그 Shot의 X/Y를 함께 제외합니다.</p></div>
+<div class="card"><h3>설정값의 세 가지 층</h3><p>코드 기본값: <strong>0.500mm</strong><br>저장소 Setting.csv: <strong>12mm</strong><br>실장비 승인값: <strong>미확인</strong></p><p>12mm가 장비 정밀도 요구나 승인된 운전값이라는 뜻은 아닙니다.</p></div>
+</div>
+<figure><svg viewBox="0 0 1000 235" role="img" aria-label="Tolerance 초과시 정상Shot 새값과 초과Shot 기존값이 혼재되는 정책">
+<text x="25" y="32" class="big">설명용 T = 0.500mm</text>
+<rect x="25" y="58" width="450" height="145" fill="#e6f5ee" stroke="#a9cbbd" rx="10"/><text x="45" y="93">Shot A: 계산 (+0.020, +0.010)</text><text x="45" y="132">정상 → 두 축을 새 값으로 대체</text><text x="45" y="173">최종 (+0.020, +0.010)</text>
+<rect x="515" y="58" width="460" height="145" fill="#fff3df" stroke="#d6b983" rx="10"/><text x="535" y="93">Shot B: 계산 (+0.700, +0.010)</text><text x="535" y="132">초과 → 기존 (+0.003, −0.002) 유지</text><text x="535" y="173">최종 (+0.003, −0.002), Y도 유지</text>
+</svg><figcaption>그림 6. “나머지 적용”을 선택하면 새 보정과 과거 보정이 함께 남을 수 있습니다. 기존 항목이 없었던 축은 읽기 기본값 0입니다.</figcaption></figure>
+<p>Apply는 이전 Align Offset에 새 값을 더하는 누적 방식이 아니라 <strong>새 전체 계산값으로 대체</strong>하는 방식입니다. 다만 Tolerance로 제외된 Shot은 대체 대상에서 빠지므로, 완전히 같은 세대의 보정값으로 통일됐다는 보장은 없습니다.</p>
+<p class="refs">근거: <a href="#s03">S03</a>, <a href="#s09">S09</a>, <a href="#s10">S10</a>, <a href="#s24">S24</a></p>
+</section>
+<section id="storage">
+<span class="num">11 · 무엇을 어디에 보관하나</span><h2>기준값, 이번 읽기, 가공에 쓸 보정값, 작업 이력이 나뉩니다.</h2>
+<div class="table-wrap"><table><thead><tr><th>데이터</th><th>보관 위치 / 형식</th><th>언제 바뀌나</th></tr></thead><tbody>
+<tr><td>Base 기준 X/Y</td><td>Config/RECIPE/{RecipeId}.csv<br>COMMON, ALIGNBASE_AK1_X 등 20개</td><td>Base Edit / Init / Load to Base</td></tr>
+<tr><td>LastLoad</td><td>현재 Panel 메모리<br>선택 값 + 키 위치 + 시각 + Simulation 여부</td><td>Load 성공. 레시피·선택 변경 등에 따라 초기화/무효화</td></tr>
+<tr><td>Shot Align Offset</td><td>같은 Recipe CSV<br>CELL, CELL1_A1_ALIGN_OFFSET_X/Y 등</td><td>Offset Apply / Offset Init</td></tr>
+<tr><td>Align 작업 이력</td><td>Data/AlignOffset/{RecipeName}/yyMMdd_HHmmss.csv<br>같은 초 중복이면 _1, _2…</td><td>Recipe 저장 후 Apply / Init 로그</td></tr>
+<tr><td>Script 좌표 진단</td><td>생성 PROCESS_COORDINATES.csv의 AlignOffsetX/Y</td><td>가공 좌표 생성 시. 이 값은 Scanner 변환 후 값</td></tr>
+</tbody></table></div>
+<figure><svg viewBox="0 0 1000 255" role="img" aria-label="메모리와레시피저장 및로그의분리">
+<rect class="box" x="20" y="40" width="255" height="175" rx="10"/><text x="40" y="78" class="big">메모리</text><text x="40" y="115">이번 LastLoad / 시각</text><text x="40" y="150">선택 키 / 읽은 위치</text><text x="40" y="186" class="tiny">가공 실행용 영구값과 구분</text>
+<path d="M290 125H355" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect class="box" x="375" y="40" width="260" height="175" rx="10"/><text x="395" y="78" class="big">Recipe CSV</text><text x="395" y="115">Base = 검출 기준값</text><text x="395" y="150">Shot Offset = 설계 보정량</text><text x="395" y="186" class="tiny">가공 준비가 Shot Offset 소비</text>
+<path d="M650 125H710" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<rect class="box" x="730" y="40" width="250" height="175" rx="10"/><text x="750" y="78" class="big">Align 로그 CSV</text><text x="750" y="115">입력·계산·최종값</text><text x="750" y="150">APPLIED / EXCLUDED_KEEP</text><text x="750" y="186" class="tiny">실측 출처와 Simulation 구별</text>
+</svg><figcaption>그림 7. 저장 순서는 Recipe → 로그입니다. 두 파일을 묶은 단일 트랜잭션은 아닙니다.</figcaption></figure>
+<p>로그에는 KEY/SHOT 행, 선택 여부, 설계 위치, Base/LastLoad, Base−Load, 계산 Offset, 최종 저장 Offset, Tolerance, 출처가 들어갑니다. <strong>로그도 수치 대부분을 mm 3자리로 기록</strong>하므로 반올림 전 원측정의 완전 보관소는 아닙니다.</p>
+<p>자동 생성된 Shot Align 필드는 일반 Recipe 편집 화면에서 숨기되, 일반 편집 저장 시 기존 생성 필드를 유지하는 코드가 있습니다. 화면에서 안 보인다고 데이터가 없는 것은 아닙니다.</p>
+<p class="refs">근거: <a href="#s03">S03</a>, <a href="#s11">S11</a>, <a href="#s12">S12</a>, <a href="#s13">S13</a></p>
+</section>
+<section id="runtime">
+<span class="num">12 · 저장값이 실제 가공에 들어가는 경로</span><h2>설계 보정값을 저장하고, 가공 준비 때 한 번 방향 변환합니다.</h2>
+<div class="flow"><div class="box">Recipe CSV<br>Shot ALIGN_OFFSET<br>설계 ΔX/ΔY</div><div class="arrow">→</div><div class="box">BuildDesignShots / Build<br>Shot 중심·Cell 생성 후<br>Head 배정·좌표 준비</div><div class="arrow">→</div><div class="box">DesignOffsetToScanner<br>Stage Y방향 + Head Flip</div><div class="arrow">→</div><div class="box">최종 Scanner 좌표<br>다른 Offset과 합산</div><div class="arrow">→</div><div class="box">Script<br>MoveRapid(GX,GY)</div></div>
+<h3>방향 변환의 순서</h3>
+<div class="formula"><div>① (ΔX, ΔY × STAGE_SCAN_DIRECTION_Y)</div><div>② XY Flip이면 X와 Y 교환</div><div>③ X Flip 적용 → Y Flip 적용</div></div>
+<p>교육 예제의 저장값 <strong>(+0.025, +0.013)mm</strong>에 Stage Y방향 −1, XY Flip ON, X Flip ON, Y Flip OFF를 적용하면 다음과 같습니다.</p>
+<figure><svg viewBox="0 0 1000 155" role="img" aria-label="설계보정에서Scanner방향변환수치예제">
+<text x="20" y="42">설계 저장</text><text x="20" y="88" class="big">(+0.025,+0.013)</text>
+<text x="270" y="42">Y × −1</text><text x="270" y="88" class="big">(+0.025,−0.013)</text>
+<text x="520" y="42">XY 교환</text><text x="520" y="88" class="big">(−0.013,+0.025)</text>
+<text x="775" y="42">X 반전</text><text x="775" y="88" class="big">(+0.013,+0.025)</text>
+<path d="M215 115H260M465 115H510M720 115H765" stroke="#087c75" stroke-width="3" marker-end="url(#arr)"/>
+<text x="20" y="142" class="tiny">단위 mm · 현재 H01 설정 조합의 예. 모든 Head에 임의로 같은 부호를 적용하면 안 됩니다.</text>
+</svg><figcaption>그림 8. 저장 시 미리 Flip하고 Script 생성 시 다시 Flip하면 중복 변환이 됩니다.</figcaption></figure>
+<h3>최종 합산 관계</h3>
+<div class="formula"><div>FinalScannerOffset = Recipe Offset + Head Default(변환)</div><div>　+ First Beam Offset(변환) + Review Offset(해당 형식 변환)</div><div>　+ <span class="accent">Align Offset(설계→Scanner 변환)</span></div><div>Scanner 명령 = 이동 Stage 추종을 포함한 기본좌표 + FinalScannerOffset + X Shift 변환분</div></div>
+<p>위 식은 Builder의 실제 합산을 요약한 것입니다. 모든 Offset이 같은 저장 좌표계라는 뜻은 아닙니다. Y Shift는 Stage 대기거리·기본 추종 좌표에도 반영되므로 마지막 항에 단순히 X/Y Shift를 통째로 다시 더하면 안 됩니다.</p>
+<div class="note">보정 단위는 <strong>DOE Shot 중심</strong>입니다. 한 Shot의 분기빔들은 중심 이동량을 공유하며, 16개 빔 각각을 개별적으로 구부리거나 각 빔의 내부 오차를 독립 보정하는 기능이 아닙니다.</div>
+<p class="refs">근거: <a href="#s13">S13</a>, <a href="#s14">S14</a>, <a href="#s15">S15</a></p>
+</section>
+<section id="auto">
+<span class="num">13 · Auto / Manual 경계</span><h2>저장된 보정을 사용하는 것과 매 기판 새 보정을 계산하는 것은 다릅니다.</h2>
+<div class="grid">
+<div class="card"><span class="tag">현재 연결</span><h3>Auto의 활성 Stage-master 경로</h3><p>DoReady 시작 → 선택 Recipe snapshot → PrepareProcess → Runtime Parameter / 좌표 생성 → Head Script 생성·업로드.</p><p>이 과정에서 <strong>저장된 ALIGN_OFFSET을 사용</strong>합니다. LastLoad / CAlignInterpolation / Offset Apply를 자동으로 호출하는 연결은 확인되지 않습니다.</p></div>
+<div class="card"><span class="tag">현재 연결</span><h3>Manual MOF 경로</h3><p>선택 Recipe / Head 조건 → RunManualMofAsync / ExecuteManualMof → PrepareProcessCore → 공통 좌표 Builder.</p><p>여기서도 저장된 Align Offset을 사용합니다. Manual Align 요청 버튼은 Stage 측 Align 요청·상태 표시이며, 이번 Lagrange Load·Apply까지 자동 완료하는 버튼이 아닙니다.</p><p class="small">현행 Manual MOF Stage 이동 브리지는 Simulation 전용 허용 경계를 갖습니다. 공통 Builder 사용 확인을 실제 Manual MOF 실가공 검수 완료로 해석하지 않습니다.</p></div>
+</div>
+<div class="note warnbox">따라서 현재 코드 기준으로 “레시피 선택 순간 매 기판 변형을 계산해 보관한다”, “Auto Align 완료라서 Lagrange 재계산도 끝났다”라고 설명하면 부정확합니다. 별도/기존 FSM의 Product Align·Distortion 완료 표시도 활성 Stage-master의 새 보간 완료 증거로 사용하면 안 됩니다.</div>
+<p>Offset Apply 후 생성·업로드돼 있는 기존 Script를 그대로 쓰면 새 값이 반영됐다고 확정할 수 없습니다. <strong>새 준비·재생성 경계</strong>에서 해당 Recipe snapshot을 사용했는지 확인해야 합니다.</p>
+<p class="refs">근거: <a href="#s16">S16</a>, <a href="#s17">S17</a>, <a href="#s18">S18</a>, <a href="#s19">S19</a>, <a href="#s25">S25</a></p>
+</section>
+<section id="limits">
+<span class="num">14 · 보간 범위와 오버슈트</span><h2>영역 밖은 막지만, 영역 안의 보정량이 측정 최대·최소를 넘을 수 있습니다.</h2>
+<div class="grid">
+<div class="card"><h3>범위 판정 Contains</h3><p>Y는 최상·최하 AK행 사이여야 합니다. 해당 Y의 좌·우 경계는 이웃 행의 좌우 X를 <strong>선형 연결한 Polygon</strong>으로 정합니다. 그 밖의 Shot이 하나라도 있으면 전체 계산을 취소합니다.</p><p>Glass 사각형 안이라는 조건만으로 보간 가능하다고 볼 수 없습니다.</p></div>
+<div class="card"><h3>전역 다항식의 특성</h3><p>행 값을 정확히 통과하되 내부를 측정 범위로 Clamp하지 않습니다. 이웃한 두 행만 쓰지 않으므로 먼 행의 이상값도 다른 위치에 영향을 줄 수 있습니다.</p><p>정확한 보간 ≠ 측정하지 않은 내부의 정확도 보장.</p></div>
+</div>
+<figure><svg viewBox="0 0 1000 280" role="img" aria-label="측정값사이오버슈트와좁은행의내부X외삽">
+<rect class="box" x="20" y="25" width="465" height="225" rx="10"/><text x="40" y="59" class="big">Y 내부 오버슈트</text>
+<path d="M70 160H425M70 95V218" class="guide"/><path d="M75 160Q250 192.5 425 95" fill="none" stroke="#7353b6" stroke-width="4"/><circle cx="75" cy="160" r="6" fill="#087c75"/><circle cx="250" cy="160" r="6" fill="#087c75"/><circle cx="425" cy="95" r="6" fill="#087c75"/>
+<text x="80" y="103" class="tiny">행 값 0 / 0 / +0.010mm</text><text x="90" y="237" class="tiny">내부 −0.00125mm도 가능 (원본 클래스 시험)</text>
+<rect class="box" x="515" y="25" width="465" height="225" rx="10"/><text x="535" y="59" class="big">전체 안이지만 특정 행 X 밖</text>
+<path d="M575 90H925M645 150H855M575 210H925" stroke="#b3c8d3" stroke-width="3"/><path d="M610 80V225" stroke="#ca8228" stroke-width="3"/>
+<circle cx="610" cy="120" r="7" fill="#6a48ad"/><text x="660" y="143" class="tiny">중간 행은 X=2~8</text><text x="630" y="112" class="tiny">평가점 X=1</text><text x="535" y="237" class="tiny">모든 행에 같은 X 입력 → 좁은 행은 외삽</text>
+</svg><figcaption>그림 9. 두 예 모두 현재 수학 클래스에서 재현했습니다. 장비 이상 재현 또는 실제 공정 불량 판정은 아닙니다.</figcaption></figure>
+<p>왼쪽 예제는 같은 간격의 세 Y행에서 키 보정이 모두 0~+0.010mm여도 내부에서 −0.00125mm가 나옵니다. 오른쪽 예제는 Y행=0/5/10, 위·아래 행 보정=0, 중간 행의 좌(X=2) 보정=0·우(X=8) 보정=+0.060mm입니다. 전체 Polygon 안의 (1,2.5)를 평가하면 중간 행은 X외삽으로 −0.010mm, 그 행의 Y계수는 0.750이 되어 최종 −0.0075mm가 됩니다. <strong>“외삽이 전혀 없다”는 설명은 부정확</strong>합니다.</p>
+<div class="note">확인 방향: 키만 검사하지 말고 전체 Shot의 보정량 분포, 극값, 인접 Shot 간 변화량을 함께 봐야 합니다. 이것은 보완 제안이며 현재 코드에 해당 추가 제한이 구현됐다는 뜻은 아닙니다.</div>
+<p class="refs">근거: <a href="#s01">S01</a> 및 독립 순수 계산 시험. Contains의 경계 선형 연결과 Evaluate의 전역 Y 계산은 용도가 다릅니다.</p>
+</section>
+<section id="otheroffset">
+<span class="num">15 · Review 보정·Masking과의 관계</span><h2>Align과 Review는 최종 좌표에서 함께 더해집니다.</h2>
+<div class="table-wrap"><table><thead><tr><th>보정</th><th>현재 저장 동작</th><th>Distortion과 구분할 점</th></tr></thead><tbody>
+<tr><td>Align / Lagrange</td><td>Shot별 ALIGN_OFFSET을 새 값으로 대체</td><td>AK/DK Base−Load를 공간 보간</td></tr>
+<tr><td>Simple</td><td>선택 범위 Review Offset을 입력값으로 대체</td><td>Align 필드를 대신하지 않음</td></tr>
+<tr><td>Rough / Fine</td><td>기존 Review Offset에 계산값 누적</td><td>이미 적용한 Align 상태에서 측정한 잔차인지 확인 필요</td></tr>
+</tbody></table></div>
+<p>Fine에는 같은 UI 결과의 재적용을 막는 상태가 있습니다. 그러나 측정 결과의 기준 Recipe를 비교할 때 이름에 <code>OFFSET</code>이 들어간 필드를 제외하므로, <strong>Align/Simple/Rough/Default 변경 이후에도 기존 Fine 결과가 같은 기준 세대로 간주될 수 있는 경계</strong>가 있습니다. 중복 보정이 언제나 방지된다고 설명할 수 없습니다.</p>
+<h3>Masking은 별도이며 최종 Offset의 영향도 받습니다.</h3>
+<p>현재 Masking은 Group 위치에 <strong>FinalScannerOffset X/Y를 포함</strong>해 Beam footprint를 평가하고, Script가 그 결과와 Chess 조건으로 출사 여부를 결정합니다. 과거 설명용 HTML의 “원 Gate 유지”를 현재 코드 설명으로 그대로 가져오면 안 됩니다.</p>
+<div class="note warnbox">Head XY Flip·Cell 회전·최종 Scanner Offset을 Masking의 Cell 좌표에 반영하는 계약은 별도 검증 대상입니다. 이번 작업은 소스 연결을 확인한 것이며, 실제 장비의 Masking 오류를 재현한 것은 아닙니다.</div>
+<p class="refs">근거: <a href="#s14">S14</a>, <a href="#s26">S26</a>, <a href="#s27">S27</a>, <a href="#s28">S28</a>, <a href="#s29">S29</a></p>
+</section>
+<section id="comparison">
+<span class="num">16 · 이전 컨셉 자료와 현재 구현 구분</span><h2>설계 제안과 생산 소스의 구현 사실을 섞지 않습니다.</h2>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>현재 코드에서 확인</th><th>현재 구현으로 단정하면 안 되는 내용</th></tr></thead><tbody>
+<tr><td>보간 방식</td><td>X 선형 + Y 전역 Lagrange</td><td>TPS/SVD 자유곡면, Y 구간선형 권고안이 실구현됐다는 설명</td></tr>
+<tr><td>입력 정규화</td><td>이미 mm로 받은 Base/Load 차이</td><td>카메라 H/Pose/ROI·Encoder 촬영좌표 정규화를 이 경로에서 수행</td></tr>
+<tr><td>Align/Distortion 분리</td><td>AK/DK 차이 벡터를 함께 사용</td><td>강체 이동·회전 분리 후 DK 잔차만 처리</td></tr>
+<tr><td>가중치</td><td>수학적 Lagrange weight</td><td>사용자 Start/End 가중치, 0.8 배율, Scanner Ramp Rate와 동일한 기능</td></tr>
+<tr><td>기판별 자동화</td><td>수동 Apply 저장값을 Auto/Manual이 소비</td><td>모든 기판에서 새 측정·보간·저장을 자동 완료</td></tr>
+<tr><td>보라색 Preview</td><td>선택 키의 영역과 키 수를 표시</td><td>실제 변형 분포, 내부 정밀도 결과, 승인된 보정 Heatmap</td></tr>
+</tbody></table></div>
+<p>과거 v4의 TPS/SVD, v7의 H/Pose·Benchmark·구간선형 권고는 비교할 설계 관점으로만 사용했습니다. 현행 키 위치는 실제 Recipe를 우선했습니다. 이전 그림을 현행 알고리즘의 실행 결과로 재사용하지 않았습니다.</p>
+<p class="refs">근거: <a href="#s01">S01</a>, <a href="#s02">S02</a>, <a href="#s05">S05</a>, <a href="#s23">S23</a>. 비교 문서는 로컬 기존 v4/v6/v7 기록과 원본 HTML을 대조했습니다.</p>
+</section>
+<section id="followup">
+<span class="num">17 · 추가로 확정·검증할 부분</span><h2>계산 구현 확인 이후, 실제 가공에 연결하려면</h2>
+<div class="table-wrap"><table><thead><tr><th>우선 확인</th><th>현재 상태</th><th>필요한 확인 / 보완 방향</th></tr></thead><tbody>
+<tr><td>1. 실측 입력 계약</td><td>LastLoad 맵 미할당, 값의 수신 서비스 존재</td><td>주소·단위·부호·기준 좌표계, Vision이 보장하는 H/Pose 처리 범위 확정</td></tr>
+<tr><td>2. 같은 기판·측정 세대</td><td>순차 읽기, 완료 후 일괄 게시</td><td>GlassID / DatasetID / 완료 Flag와 읽기 전후 동일성 확인, 만료시간</td></tr>
+<tr><td>3. 자동 적용 시점</td><td>수동 Apply → Recipe 저장</td><td>Auto 측정 후 어느 단계에서 계산·승인·Script 재생성할지 결정</td></tr>
+<tr><td>4. 승인 Tolerance</td><td>코드 기본 0.5mm, 저장 예제 12mm</td><td>현장 요구값과 단위 확정, 전체 Shot 극값·변화량 검증</td></tr>
+<tr><td>5. 실패 정책</td><td>범위 밖 전체 취소, 초과 Shot은 기존값 유지 선택 가능</td><td>이전/새 보정 혼재 허용 여부와 재작업·추적 정책 확정</td></tr>
+<tr><td>6. 보정 버전 추적</td><td>Recipe별 저장, 로그에 Glass/Calibration 세대 없음</td><td>Base·측정·Align·Review·Script가 같은 기준인지 추적, Fine 결과 무효화 조건</td></tr>
+<tr><td>7. 검증 경로</td><td>순수 수학 시험, 실제 I/O 미검증</td><td>단일 키 의도 이동 → 부호 확인 → Shot 분포 → Masking → 다중 Head → 실제 가공 측정</td></tr>
+<tr><td>8. 화면 구분</td><td>범위 Preview, 표시 3자리</td><td>저장/미저장·Simulation·Load 나이·적용 버전·실제 보정 분포 구분</td></tr>
+</tbody></table></div>
+<div class="note">이 표는 <strong>이번 소스 분석의 후속 검증·설계 제안</strong>입니다. 원본 코드를 변경하거나 장비를 운전하지 않았으며, 미구현 항목을 이번 문서 작성으로 완료 처리하지 않습니다.</div>
+</section>
+<section id="faq">
+<span class="num">18 · 자주 혼동하는 질문</span><h2>짧은 질문으로 다시 정리</h2>
+<details open><summary>DK를 모두 해제하면 Distortion 보정이 꺼지나?</summary><p>아닙니다. AK4로 X/Y 선형 보간을 합니다. 저장된 Shot Offset을 지우려면 Offset Init이 필요합니다. DK 선택 변경만으로 이미 저장한 값이 자동 변경되지는 않습니다.</p></details>
+<details><summary>Base Init이나 Load to Base를 누르면 기존 보정도 0이 되나?</summary><p>아닙니다. Base와 저장 Shot Align Offset은 별도입니다. 새 Base와 동일한 Load로 다시 Apply해야 계산값이 0이 되며, 별도 Offset Init으로 직접 지울 수 있습니다.</p></details>
+<details><summary>Load를 누르면 새 측정과 Align 동작도 시작하나?</summary><p>아닙니다. 이미 MELSEC에 존재하는 값을 읽습니다. Vision 측정 완료·같은 Glass인지의 확인 절차가 별도 필요합니다.</p></details>
+<details><summary>키를 정확히 통과하면 기판 안쪽도 정확한가?</summary><p>그렇지 않습니다. 내부는 선택한 모델의 추정입니다. 측정 오차·관측하지 못한 X방향 굴곡·오버슈트·촬영 좌표계 오차가 남을 수 있습니다.</p></details>
+<details><summary>Apply를 두 번 누르면 보정이 두 배가 되나?</summary><p>Align은 같은 입력으로 계산한 새 값으로 대체하므로 정상 동일 조건에서는 누적되지 않습니다. 반면 Review Rough/Fine은 별도의 누적 방식이므로 구분해야 합니다.</p></details>
+<details><summary>현재 화면의 차이와 저장값이 약간 다를 수 있나?</summary><p>예. 화면 Base−Load는 표시용 반올림 문자열끼리 빼지만, 보간은 반올림 전 Raw 값으로 계산합니다. 화면 차이와 입력 차이는 0.001mm 수준에서 다를 수 있고, 최종 저장도 1µm 단위입니다.</p></details>
+<details><summary>이번 MELSEC PR7 병합으로 Distortion 자동화까지 완료됐나?</summary><p>아닙니다. PR7은 공통 수신·Monitor 표시 대기 개선입니다. Distortion 수학·Recipe·Review 적용 파일은 이전 main과 같으며, 같은 측정 세대 보장이나 Auto Lagrange 호출을 새로 추가하지 않았습니다.</p></details>
+</section>
+<section id="evidence">
+<span class="num">19 · 검증 범위와 결과</span><h2>계산 결과를 확인한 것과 실장비를 검증한 것을 분리했습니다.</h2>
+<div class="grid">
+<div class="card"><span class="tag">확인한 것</span><h3>소스·순수 계산</h3><ul>
+<li>UI → LastLoad → 보간 → Recipe/로그 → Auto/Manual → Script 호출 관계 추적</li>
+<li>원본 CAlignInterpolation.cs를 별도 net8 시험에 Link, <strong>15개 모두 통과</strong></li>
+<li>X1차·Y4차 기준 곡면 121점: 최대오차 약 5.55×10⁻¹⁷mm</li>
+<li>영역 밖·잘못된 DK쌍·퇴화 행·비유한값 거부, 내부 오버슈트·좁은 행 외삽 재현</li>
+</ul></div>
+<div class="card"><span class="tag warn">하지 않은 것</span><h3>장비·공정 검수</h3><ul>
+<li>실제 Vision / PLC / MDFUNC 수신 시험</li>
+<li>실제 화면·축·레이저 기동, 기판 가공</li>
+<li>현장 승인 Tolerance 또는 정밀도 합격 판정</li>
+<li>새 자동 측정·Apply 기능 개발 또는 장비 배포</li>
+</ul></div>
+</div>
+<details><summary>과거 Simulation 로그 21,420 Shot의 보조 재계산</summary><p>과거 SIMULATION 입력을 현재 수학 클래스로 재계산해 로그 계산값과 최대 차이 0을 확인했습니다. 키 X범위는 약 −0.883~+0.913mm인데 Shot X는 약 −1.939~+0.913mm로 확장됐습니다. Y도 키 약 −0.994~+0.532mm에서 Shot 약 −1.000~+1.534mm가 됐습니다.</p><p>현재 저장과 같은 3자리 반올림 후 ±0.5mm 초과는 19,949 Shot, ±12mm 초과는 0이었습니다. 난수 예제로서 오버슈트와 설정값의 차이를 보여줄 뿐, 실측 정확도·최신 장비 운전 결과가 아닙니다.</p></details>
+<p class="small">계산 시험 수행 snapshot: 223b905daf0d7421c187b727a65d180bfa7472d6, 수학 파일 SHA256 D0EF08DBFE9CB2EBC1E6472AC7F416A29956A77C8313E84B98B19BF09BA6701C. 이후 요청된 PR7 병합 main99d78ddf와 관련 파일 동일성을 검증했습니다. 최신 링크만 바꾸고 시험을 최신 전체 솔루션 실기 시험으로 바꿔 부르지 않습니다.</p>
+<p class="small">PR7 별도 결과: main99d78ddf에 병합 완료. 기존 Release 빌드 오류/경고 0, 드라이버 19 / UI 30개 시험 통과 기록은 MELSEC 작업의 검증이며 본 Distortion의 실기 합격 증거는 아닙니다.</p>
+</section>
+<section id="sources">
+<span class="num">20 · 코드 위치 / 근거</span><h2>최신 Commit에 고정한 주요 소스</h2>
+<p class="small">아래 링크는 실제 파일과 줄 범위를 검사한 근거입니다. 링크가 가리키는 코드는 변경하지 않았습니다. 보고서 그림은 직접 작성한 개념도이며 실제 SW 화면 캡처가 아닙니다.</p>
+<div class="source-list">
+<div id="s01"><a class="src" data-file="Drilling.Common/Correction/CAlignInterpolation.cs" data-lines="22-117">S01 · 수평행·범위 검사 / X 선형 + Y Lagrange</a></div>
+<div id="s02"><a class="src" data-file="Drilling.UI/Menu/Menus/CAlignDistortionPanel.Algorithm.cs" data-lines="25-90">S02 · Base−Load 입력 / Load 검증 / 범위 Preview</a></div>
+<div id="s03"><a class="src" data-file="Drilling.Common/Recipe/CAlignShotOffsetData.cs" data-lines="19-100">S03 · 전체 Shot 계산 / 반올림 / 대체 저장 / 숨은 필드 유지</a></div>
+<div id="s04"><a class="src" data-file="Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs" data-lines="61-80">S04 · DK 설계좌표 생성</a></div>
+<div id="s05"><a class="src" data-file="Drilling.UI/Menu/Menus/CAlignLastLoadService.cs" data-lines="14-107">S05 · Simulation / 온라인 순차 읽기 / 맵 검사</a></div>
+<div id="s06"><a class="src" data-file="Drilling.Common/Interface/Melsec/CMelsec.cs" data-lines="771-793" data-find="private double ReadDoubleCore">S06 · MELSEC DOUBLE/FLOAT 변환</a></div>
+<div id="s07"><a class="src" data-file="Drilling.UI/Menu/Menus/CAlignBaseData.cs" data-lines="1-122">S07 · Base 초기화·편집·Load to Base</a></div>
+<div id="s08"><a class="src" data-file="Drilling.UI/Menu/Menus/CMenuCorrection.AlignBase.cs" data-lines="78-126">S08 · Load 실행 / 취소·모드·선택 검사</a></div>
+<div id="s09"><a class="src" data-file="Drilling.UI/Menu/Menus/CMenuCorrection.AlignOffset.cs" data-lines="35-114">S09 · Apply / Init / 초과 제외 / Recipe→로그 저장</a></div>
+<div id="s10"><a class="src" data-file="Drilling.Common/Correction/CAlignOffsetTolerance.cs" data-lines="1-35">S10 · Tolerance 정의와 판정</a></div>
+<div id="s11"><a class="src" data-file="Drilling.File/Correction/CAlignOffsetLogFile.cs" data-lines="9-100">S11 · 로그 경로·필드·출처·3자리 값</a></div>
+<div id="s12"><a class="src" data-file="Drilling.File/JHMI/CJhmiRecipeFile.cs" data-lines="180-218">S12 · Recipe CSV 저장</a></div>
+<div id="s13"><a class="src" data-file="Drilling.File/Script/CAutomation1ScriptFile.cs" data-lines="176-187">S13 · PROCESS_COORDINATES의 AlignScannerOffset</a></div>
+<div id="s14"><a class="src" data-file="Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs" data-lines="125-149">S14 · 설계 보정 방향 변환 / 최종 Offset 합산</a></div>
+<div id="s15"><a class="src" data-file="Drilling.Common/Recipe/CScannerAxisTransform.cs" data-lines="5-24">S15a · XY 교환 → X/Y 반전</a> / <a class="src" data-file="Drilling.Common/Recipe/CScannerAxisTransform.cs" data-lines="70-76">S15b · Stage Y방향 적용</a> / <a class="src" data-file="Drilling.File/Script/CAutomation1ScriptFile.cs" data-lines="390-403">S15c · MoveRapid 출력</a></div>
+<div id="s16"><a class="src" data-file="Drilling.UI/CRootView.StageRequests.cs" data-lines="36-51">S16 · 활성 DoReady Recipe snapshot</a></div>
+<div id="s17"><a class="src" data-file="Drilling.Common/Station/CStationProcess.StageRequests.cs" data-lines="55-71">S17 · Stage 요청 PrepareProcess / Build / Upload</a></div>
+<div id="s18"><a class="src" data-file="Drilling.Common/Station/CStationProcess.cs" data-lines="1319-1383">S18 · Runtime Parameter / 공통 가공 모델 생성</a></div>
+<div id="s19"><a class="src" data-file="Drilling.Common/Station/CStationProcess.ManualMof.cs" data-lines="100-130">S19 · Manual MOF 준비 경로</a></div>
+<div id="s20"><a class="src" data-file="Config/JHMI_MELSEC_MAP.csv" data-lines="84-103">S20 · LastLoad 20항목 USE=0 / UNASSIGNED</a></div>
+<div id="s21"><a class="src" data-file="Config/RECIPE/test0929.csv" data-lines="28-48">S21 · 실제 Glass 크기 / AK Margin / DK 레시피</a></div>
+<div id="s22"><a class="src" data-file="Drilling.UI/Menu/Menus/CAlignDistortionPanel.cs" data-lines="110-140">S22 · AK / DK 위치와 값 갱신</a></div>
+<div id="s23"><a class="src" data-file="Drilling.UI/Menu/Menus/CMenuCorrection.cs" data-lines="1963-1980">S23 · 활성 배율로 오해하면 안 되는 예시 함수</a></div>
+<div id="s24"><a class="src" data-file="Config/Setting/Setting.csv" data-lines="38-41">S24 · 저장소 Tolerance=12mm</a></div>
+<div id="s25"><a class="src" data-file="Drilling.UI/Menu/Menus/CManualMofAlignPanel.cs" data-lines="90-116">S25 · 별도 Manual Align 요청</a></div>
+<div id="s26"><a class="src" data-file="Drilling.UI/Menu/Menus/CFineCorrectionPanel.cs" data-lines="104-110">S26 · Fine source signature의 OFFSET 제외</a></div>
+<div id="s27"><a class="src" data-file="Drilling.UI/Menu/Menus/CFineCorrectionPanel.Offset.cs" data-lines="16-38">S27 · Fine 같은 결과 재적용 방지</a></div>
+<div id="s28"><a class="src" data-file="Drilling.Common/Recipe/CRecipeShotMaskingPlan.cs" data-lines="117-142">S28 · 최종 Offset을 포함한 Masking footprint</a></div>
+<div id="s29"><a class="src" data-file="Drilling.File/Script/CAutomation1ScriptFile.cs" data-lines="50-68">S29 · Masking/Chess 판정 소비</a></div>
+</div>
+</section>
+<footer>작성 목적: 현재 구현을 설명하기 위한 코드 해설. 실측·양산 승인서가 아닙니다. 단위 mm, 1mm=1000µm. 최신 구현 사실 / 과거 설계 제안 / 후속 검증을 구분했습니다. 독립 조사·수학·호출 경로 3개 역할의 교차 검토를 통합했습니다.</footer>
+</main>
+<script>
+'use strict';
+const sourceCommit='99d78ddf0e680b55dbd9662764b71a1ffe93a457';
+for(const a of document.querySelectorAll('a.src')){
+ const [s,e]=a.dataset.lines.split('-');
+ a.href='https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/'+sourceCommit+'/'+a.dataset.file+'#L'+s+(e?'-L'+e:'');
+ a.target='_blank';a.rel='noopener';
+}
+function demoCalculation(x,y){
+ const t=y/100,nodes=[0,.5,1],rows=[[.000,.000,.040,.020],[.020,.010,.060,.030],[.000,.000,.040,.020]];
+ const rowValues=rows.map(r=>[r[0]+(r[2]-r[0])*x/100,r[1]+(r[3]-r[1])*x/100]);
+ const basis=nodes.map((v,j)=>nodes.reduce((p,k,i)=>i===j?p:p*(t-k)/(v-k),1));
+ return {basis,rowValues,result:[0,1].map(k=>basis.reduce((sum,v,j)=>sum+v*rowValues[j][k],0))};
+}
+function roundMm(v){const r=Math.sign(v)*Math.round((Math.abs(v)+1e-12)*1000)/1000;return Object.is(r,-0)?0:r;}
+function updateDemo(){
+ const x=Number(document.getElementById('demo-x').value),y=Number(document.getElementById('demo-y').value),r=demoCalculation(x,y);
+ document.getElementById('demo-x-label').textContent=x;document.getElementById('demo-y-label').textContent=y;
+ document.getElementById('demo-result').textContent='계산 Δ = ('+r.result.map(v=>v.toFixed(6)).join(', ')+') mm → 저장 ('+r.result.map(v=>roundMm(v).toFixed(3)).join(', ')+') mm';
+ document.getElementById('demo-detail').textContent='Y행 계수: '+r.basis.map(v=>v.toFixed(4)).join(' / ')+' · X='+x+'에서 각 행 ΔX: '+r.rowValues.map(v=>v[0].toFixed(4)).join(' / ')+' mm. 계수 합은 '+r.basis.reduce((s,v)=>s+v,0).toFixed(4)+'입니다.';
+ const px=55+x*3,py=28+y*2.4;
+ document.getElementById('demo-point').setAttribute('cx',px);document.getElementById('demo-point').setAttribute('cy',py);
+ document.getElementById('demo-v').setAttribute('d','M'+px+' 28V268');document.getElementById('demo-h').setAttribute('d','M55 '+py+'H355');
+}
+for(const id of ['demo-x','demo-y'])document.getElementById(id).addEventListener('input',updateDemo);
+document.getElementById('demo-reset').addEventListener('click',()=>{document.getElementById('demo-x').value=25;document.getElementById('demo-y').value=25;updateDemo();});
+updateDemo();
+</script>
+</body></html>

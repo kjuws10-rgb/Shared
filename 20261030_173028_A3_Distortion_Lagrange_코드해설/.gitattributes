@@ -1,0 +1,4 @@
+*.html -text
+*.txt -text
+*.zip binary
+*.json -text
