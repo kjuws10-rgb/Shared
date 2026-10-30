@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-10-30T17:30:28.253895+09:00",
+  "folder": "20261030_173028_A3_Distortion_Lagrange_코드해설",
+  "sourceCommit": "99d78ddf0e680b55dbd9662764b71a1ffe93a457",
+  "mathProbeCommit": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "sections": 20,
+  "figures": 9,
+  "pureMathTestsPassed": 15,
+  "browserChecksPassed": 24,
+  "sourceLinksVerified": 31,
+  "realEquipmentTested": false,
+  "files": {
+    "A3_LD_Distortion_Lagrange_현재코드_상세해설.html": {
+      "bytes": 64155,
+      "sha256": "817bb9574515388dc13411fcb1053b1303c5e04047349c9c1956d75aa4b81aa4"
+    },
+    "README.txt": {
+      "bytes": 2246,
+      "sha256": "ddee76f05b0775ae74a21996ef01718b85a9d530e4c9add095edf8565809200b"
+    },
+    "A3_LD_Distortion_Lagrange_코드해설.zip": {
+      "bytes": 23459,
+      "sha256": "e88467d129c06bb6d9f8aeeba68e0fdb5b45c64e5ee59a5a5ac81de0577b9397"
+    },
+    ".gitattributes": {
+      "bytes": 51,
+      "sha256": "a2d5cc03f332c33d222e4398c1e0dfff828f5e636ba696ecdf5af6fca075de5f"
+    }
+  }
+}
