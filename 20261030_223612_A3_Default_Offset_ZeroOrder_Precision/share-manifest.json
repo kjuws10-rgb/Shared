@@ -1,0 +1,54 @@
+{
+  "title": "A3 Default Offset 정밀 중심·전체 추천 자동화",
+  "packagedAt": "2026-10-30T22:36:12.297424+09:00",
+  "htmlFiles": 3,
+  "briefPrintPages": 3,
+  "standaloneOffline": true,
+  "equipmentVerified": false,
+  "scope": "documentation_and_synthetic_calculation",
+  "zipMembers": [
+    "A3_LD_Default_Offset_종합_정밀중심자동화_20261030.html",
+    "A3_LD_Default_Offset_ZeroOrder계산_자동화개발절차_20261030.html",
+    "A3_LD_Default_Offset_팀장보고_정밀중심자동화_3페이지_20261030.html",
+    "README.txt"
+  ],
+  "validation": {
+    "numerical": 1259,
+    "browser": 76,
+    "mathContent": 47,
+    "sequenceContent": 58,
+    "package": 17
+  },
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_Default_Offset_ZeroOrder_Precision_20261030.zip",
+      "bytes": 54211,
+      "sha256": "9d99fc52a06ca4cc3673d70eaff1b704c037cdca0789487d842b9626fc74f735"
+    },
+    {
+      "name": "A3_LD_Default_Offset_ZeroOrder계산_자동화개발절차_20261030.html",
+      "bytes": 79095,
+      "sha256": "0e1a9c92570d09419a17c79112bb865c27f69f97a423d6fade40b413ce534f69"
+    },
+    {
+      "name": "A3_LD_Default_Offset_종합_정밀중심자동화_20261030.html",
+      "bytes": 92284,
+      "sha256": "bd7f7fc30973c3010ccaa377abd8d023b56afa3a7c24573d896b59c241f4ad6d"
+    },
+    {
+      "name": "A3_LD_Default_Offset_팀장보고_정밀중심자동화_3페이지_20261030.html",
+      "bytes": 30182,
+      "sha256": "4d8ed8d1c3d22c474bb06459209194d909ec2acbf8f15f4501a795c8997259d7"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1358,
+      "sha256": "313c0d637b53656481ebe2331bb5c75822e612f9fb7c39b17776b8aaadcf7072"
+    }
+  ]
+}
