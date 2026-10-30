@@ -1,0 +1,41 @@
+{
+  "title": "시스앤제이 협업현황 · 최초 기술목표 기준",
+  "version": "2026-10-30-sysj-goal-brief",
+  "packagedAt": "2026-10-30T11:50:26.194702+09:00",
+  "pages": 1,
+  "goals": 9,
+  "differentiationItems": 3,
+  "standaloneOffline": true,
+  "validation": {
+    "render": 19,
+    "printPages": 1,
+    "concept": 20,
+    "content": 24
+  },
+  "zipMembers": [
+    "A3_시스앤제이_협업현황_목표대비_20261030.html",
+    "README.txt"
+  ],
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 35,
+      "sha256": "9fe4b20685925824abd863a501e9fdf8e1b31368206c1046569eaea7c4f87da0"
+    },
+    {
+      "name": "A3_시스앤제이_협업현황_목표대비_20261030.html",
+      "bytes": 5864,
+      "sha256": "1303a79d2d624a01f7c693e5ce9a678bd70c64200639257bc68ab91011fa2807"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 748,
+      "sha256": "cab61b77ce9863255f826f985f4799ac1f5465fb39e4e155296ad293941d085e"
+    },
+    {
+      "name": "A3_SysJ_Collaboration_Brief_20261030.zip",
+      "bytes": 3584,
+      "sha256": "87adb11e3931bdd6a612e90edc5052b62c205531c1f906eed19ddbe348c41135"
+    }
+  ]
+}
