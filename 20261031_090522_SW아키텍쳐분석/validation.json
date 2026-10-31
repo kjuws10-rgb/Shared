@@ -1,0 +1,136 @@
+{
+  "commands": [
+    "dotnet build Drilling.sln -c Release",
+    "dotnet run --project tests/MelsecLatency.Regression --configuration Release",
+    "dotnet run --project tests/MelsecPresentation.Regression -c Release"
+  ],
+  "observedCommandExitCodes": [
+    0,
+    0,
+    0
+  ],
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "driverCheckedAt": "2026-10-31T09:06:15.3147756+09:00",
+  "driverTestCount": 19,
+  "driverFailures": 0,
+  "presentationChecks": 30,
+  "presentationFailures": 0,
+  "benchmarks": [
+    {
+      "name": "actual-map-poll-arrival-and-cache-age",
+      "passed": true,
+      "fakeDelayMode": "Thread.Sleep request",
+      "requestedDelayMs": 4,
+      "mapRows": 102,
+      "pollBlocks": 24,
+      "configured100msRows": 42,
+      "observedFakeDurationMs": {
+        "count": 58,
+        "minMs": 9.91319999999996,
+        "p50Ms": 15.888899999999921,
+        "p95Ms": 15.98739999999998,
+        "maxMs": 15.996800000000007
+      },
+      "allBlockArrivalMs": {
+        "count": 34,
+        "minMs": 753.4562999999999,
+        "p50Ms": 759.4008000000001,
+        "p95Ms": 761.4286,
+        "maxMs": 761.4486999999999
+      },
+      "sampledCacheAgeMs": {
+        "count": 3867,
+        "minMs": 0.0619,
+        "p50Ms": 331.3409,
+        "p95Ms": 697.6694,
+        "maxMs": 760.3143
+      },
+      "sdkThreadCount": 1
+    },
+    {
+      "name": "actual-map-fast-zero-delay",
+      "passed": true,
+      "fakeDelayMode": "Thread.Sleep request",
+      "requestedDelayMs": 0,
+      "mapRows": 102,
+      "pollBlocks": 24,
+      "configured100msRows": 42,
+      "observedFakeDurationMs": {
+        "count": 394,
+        "minMs": 0,
+        "p50Ms": 0.00020000000006348273,
+        "p95Ms": 0.0016999999999143256,
+        "maxMs": 0.0029000000000038995
+      },
+      "allBlockArrivalMs": {
+        "count": 370,
+        "minMs": 106.92459999999994,
+        "p50Ms": 109.88390000000004,
+        "p95Ms": 111.75340000000006,
+        "maxMs": 111.93650000000002
+      },
+      "sampledCacheAgeMs": {
+        "count": 4692,
+        "minMs": 0.0191,
+        "p50Ms": 61.5082,
+        "p95Ms": 109.759,
+        "maxMs": 111.8707
+      },
+      "sdkThreadCount": 1
+    },
+    {
+      "name": "actual-map-precise-four-ms-delay",
+      "passed": true,
+      "fakeDelayMode": "Stopwatch busy-wait",
+      "requestedDelayMs": 4,
+      "mapRows": 102,
+      "pollBlocks": 24,
+      "configured100msRows": 42,
+      "observedFakeDurationMs": {
+        "count": 232,
+        "minMs": 4.000400000000013,
+        "p50Ms": 4.00240000000008,
+        "p95Ms": 4.0043000000000575,
+        "maxMs": 4.046199999999999
+      },
+      "allBlockArrivalMs": {
+        "count": 208,
+        "minMs": 180.05100000000004,
+        "p50Ms": 186.35980000000018,
+        "p95Ms": 191.6456,
+        "maxMs": 191.8584
+      },
+      "sampledCacheAgeMs": {
+        "count": 4610,
+        "minMs": 2.9357,
+        "p50Ms": 91.275,
+        "p95Ms": 180.7323,
+        "maxMs": 187.9807
+      },
+      "sdkThreadCount": 1
+    }
+  ],
+  "commonAssemblySha256ReportedByDriver": "8A33369A76AE1857893B2D2A64353EF4508ED0CD44B4ABCD36A771DE6151739A",
+  "commonAssemblySha256OnDisk": "8A33369A76AE1857893B2D2A64353EF4508ED0CD44B4ABCD36A771DE6151739A",
+  "safetyScope": {
+    "driverFakeOnly": true,
+    "nativeLibraryLoaded": false,
+    "hardwareOrUiStarted": false,
+    "presentationScope": "Public row model, detached monitor with null device dependencies, and static timer/XAML contracts. No Root/App/Manager instance, worker, window, native API or equipment is started.",
+    "presentationLimitations": [
+      "The active end-to-end CMenuMonitor fast path requires a real CInterfaceManager; it is not instantiated here. Cache-only call-chain structure is checked instead.",
+      "WPF bindings use property-specific Changed events in CBindingBase, not INotifyPropertyChanged. The tooltip event is additionally checked through TypeDescriptor.",
+      "No Dispatcher timing, native read duration, or actual screen-paint latency is measured."
+    ],
+    "note": "Fresh verification-clone execution, not a live PLC/board/network/axis/laser/Dispatcher/paint or deployment test. Soft polling budget cannot interrupt one vendor native call."
+  },
+  "sourceCommit": "99d78ddf0e680b55dbd9662764b71a1ffe93a457",
+  "baseline": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "execution": "Fresh separate validation clone on 2026-10-31 Asia/Seoul",
+  "baselineRerun": false,
+  "sourceClean": true,
+  "sourcePushDisabled": true,
+  "schemaAreasUnchanged": 9,
+  "sourceRangesVerified": 41
+}

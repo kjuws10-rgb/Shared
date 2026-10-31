@@ -1,0 +1,16 @@
+path,category,added,deleted
+Drilling.Common/Interface/Melsec/CMelsec.Polling.cs,source,75,6
+Drilling.Common/Interface/Melsec/CMelsec.cs,source,49,3
+Drilling.UI/CRootView.MelsecMonitor.cs,source,51,0
+Drilling.UI/CRootView.cs,source,2,0
+Drilling.UI/Menu/Menus/CMenuMonitor.cs,source,94,8
+Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs,source,6,2
+Drilling.UI/Views/CMonitorView.xaml,source,1,6
+docs/MelsecDataFreshness.md,guide,72,0
+tests/.gitignore,test,3,0
+tests/MelsecLatency.Regression/MelsecLatency.Regression.csproj,test,12,0
+tests/MelsecLatency.Regression/Program.cs,test,524,0
+tests/MelsecLatency.Regression/README.md,test,113,0
+tests/MelsecPresentation.Regression/MelsecPresentation.Regression.csproj,test,12,0
+tests/MelsecPresentation.Regression/Program.cs,test,399,0
+tests/MelsecPresentation.Regression/README.md,test,18,0
