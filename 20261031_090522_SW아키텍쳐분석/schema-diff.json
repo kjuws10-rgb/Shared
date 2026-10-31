@@ -1,0 +1,75 @@
+{
+  "baseline": "223b905daf0d7421c187b727a65d180bfa7472d6",
+  "latest": "99d78ddf0e680b55dbd9662764b71a1ffe93a457",
+  "areas": [
+    {
+      "area": "PROCESS_RECIPE_COORDINATES",
+      "path": "Drilling.Common/Recipe",
+      "trackedFiles": 8,
+      "beforeTree": "27587cf85e489a417c98a76a4808e76302525174",
+      "afterTree": "27587cf85e489a417c98a76a4808e76302525174",
+      "unchanged": true
+    },
+    {
+      "area": "REVIEW_PLAN_SAMPLING_RESULT",
+      "path": "Drilling.Common/Review",
+      "trackedFiles": 22,
+      "beforeTree": "a146fb180990046e0c4ebd4402a9674417ea520a",
+      "afterTree": "a146fb180990046e0c4ebd4402a9674417ea520a",
+      "unchanged": true
+    },
+    {
+      "area": "VISION_PROTOCOL",
+      "path": "Drilling.Common/Interface/Vision",
+      "trackedFiles": 2,
+      "beforeTree": "e666bad90918da13d4c7a244cf3e0771551e3938",
+      "afterTree": "e666bad90918da13d4c7a244cf3e0771551e3938",
+      "unchanged": true
+    },
+    {
+      "area": "CONFIG_ALL",
+      "path": "Config",
+      "trackedFiles": 63,
+      "beforeTree": "88302662385c391afe535bcbc157fc0b59a030eb",
+      "afterTree": "88302662385c391afe535bcbc157fc0b59a030eb",
+      "unchanged": true
+    },
+    {
+      "area": "PRODUCT",
+      "path": "Drilling.Common/Product",
+      "trackedFiles": 1,
+      "beforeTree": "3f6cb9bc6568e3d60775cbd7e7064ba99292fb88",
+      "afterTree": "3f6cb9bc6568e3d60775cbd7e7064ba99292fb88",
+      "unchanged": true
+    },
+    {
+      "area": "FILE_STORAGE",
+      "path": "Drilling.File",
+      "trackedFiles": 120,
+      "beforeTree": "db9a3c98de9b84b19bad082a33ecde7817ebf80b",
+      "afterTree": "db9a3c98de9b84b19bad082a33ecde7817ebf80b",
+      "unchanged": true
+    },
+    {
+      "area": "EXISTING_DATA",
+      "path": "Data",
+      "beforeTree": "474e8a0202b1dd3c58f1341ee6d0392e34804492",
+      "afterTree": "474e8a0202b1dd3c58f1341ee6d0392e34804492",
+      "unchanged": true
+    },
+    {
+      "area": "CORRECTION",
+      "path": "Drilling.Common/Correction",
+      "beforeTree": "e4df859c1a7d306da61b9cbead6903cf83b9830b",
+      "afterTree": "e4df859c1a7d306da61b9cbead6903cf83b9830b",
+      "unchanged": true
+    },
+    {
+      "area": "STATION",
+      "path": "Drilling.Common/Station",
+      "beforeTree": "d47054804c4b33f9fc775ce4095f3d47f2d5369d",
+      "afterTree": "d47054804c4b33f9fc775ce4095f3d47f2d5369d",
+      "unchanged": true
+    }
+  ]
+}
