@@ -1,0 +1,58 @@
+{
+  "codeFilesBefore": 351,
+  "codeFilesAfter": 192,
+  "changedNonGeneratedCodeFiles": 264,
+  "relocatedDeclarationNameCount": 254,
+  "missingDeclarationNameCount": 25,
+  "newDeclarationNameCount": 40,
+  "largestCurrentFiles": [
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuManual.cs",
+      "lines": 8715
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "lines": 7621
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "lines": 5828
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "lines": 5542
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "lines": 4732
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMain.cs",
+      "lines": 4078
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "lines": 4051
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "lines": 3971
+    },
+    {
+      "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "lines": 3568
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "lines": 3043
+    },
+    {
+      "path": "Drilling.UI/Menu/CBindingBase.cs",
+      "lines": 2952
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "lines": 2817
+    }
+  ]
+}

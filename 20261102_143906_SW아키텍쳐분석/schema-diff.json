@@ -1,0 +1,61 @@
+{
+  "note": "Tree difference indicates files changed, not necessarily persisted format changes. See prose for compatibility.",
+  "areas": [
+    {
+      "area": "Config",
+      "path": "Config",
+      "beforeTree": "88302662385c391afe535bcbc157fc0b59a030eb",
+      "afterTree": "1317e90ed10b9961566fb99d022c41f8aa9faa75",
+      "unchanged": false
+    },
+    {
+      "area": "Recipe",
+      "path": "Drilling.Common/Recipe",
+      "beforeTree": "27587cf85e489a417c98a76a4808e76302525174",
+      "afterTree": "b441b29dc9fc1b09320e8f97abae121ab1300dec",
+      "unchanged": false
+    },
+    {
+      "area": "Review",
+      "path": "Drilling.Common/Review",
+      "beforeTree": "a146fb180990046e0c4ebd4402a9674417ea520a",
+      "afterTree": "3a8da858cc0251cae425367c843bfc0c5117a1a6",
+      "unchanged": false
+    },
+    {
+      "area": "Vision",
+      "path": "Drilling.Common/Interface/Vision",
+      "beforeTree": "e666bad90918da13d4c7a244cf3e0771551e3938",
+      "afterTree": "09f27f5c23d28b787c019aad70906184afe7fdcf",
+      "unchanged": false
+    },
+    {
+      "area": "Correction",
+      "path": "Drilling.Common/Correction",
+      "beforeTree": "e4df859c1a7d306da61b9cbead6903cf83b9830b",
+      "afterTree": "cfd762330645bd0b0f0fda3d9254384676eb76ff",
+      "unchanged": false
+    },
+    {
+      "area": "Station",
+      "path": "Drilling.Common/Station",
+      "beforeTree": "d47054804c4b33f9fc775ce4095f3d47f2d5369d",
+      "afterTree": "8d570be939e679d5eeb8018a491cb13f0bd34924",
+      "unchanged": false
+    },
+    {
+      "area": "Product",
+      "path": "Drilling.Common/Product",
+      "beforeTree": "3f6cb9bc6568e3d60775cbd7e7064ba99292fb88",
+      "afterTree": "5ea346266b32849bfb61b54382b0711fcb58b20c",
+      "unchanged": false
+    },
+    {
+      "area": "File",
+      "path": "Drilling.File",
+      "beforeTree": "db9a3c98de9b84b19bad082a33ecde7817ebf80b",
+      "afterTree": "5f1ab723c8beba95b89e61bf21f823138437ea43",
+      "unchanged": false
+    }
+  ]
+}

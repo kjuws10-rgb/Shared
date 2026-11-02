@@ -1,0 +1,75 @@
+{
+  "createdAt": "2026-11-02T15:15:12.957328+09:00",
+  "folder": "20261102_143906_SW아키텍쳐분석",
+  "sourceCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "baseline": "99d78ddf0e680b55dbd9662764b71a1ffe93a457",
+  "baselineFolder": "20261031_090522_SW아키텍쳐분석",
+  "sharedBaseCommit": "d05d57e52ccac6388a7f872acfcf71a57e902341",
+  "sourceUnmodified": true,
+  "sourcePushDisabled": true,
+  "protectedTrackedFiles": 769,
+  "currentSourceBuildPassed": false,
+  "baselineBuildPassed": true,
+  "mermaidDiagrams": 8,
+  "mermaidStaticChecked": true,
+  "mermaidBrowserRendered": false,
+  "realEquipmentTested": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 81,
+      "sha256": "cbeda57f46dd5e96f40fbbfb3df8182145dfc293770d4104e23b3fe36936d294"
+    },
+    "01_Commit변경요약.md": {
+      "bytes": 7856,
+      "sha256": "29f16d21419b7bbab4fb8769bd193b2931c2e2df794e57552ab0513ac22ca483"
+    },
+    "02_데이터구조와흐름.md": {
+      "bytes": 11004,
+      "sha256": "410c163fe2dfc3877278414e1077b1eda83fb6fc6d2329586756e2de32107dd6"
+    },
+    "03_가공_Review영향분석.md": {
+      "bytes": 11804,
+      "sha256": "a52e4ffcd829a6263960f0359329df4679cd68452e7d79c22b7bce0a652a8836"
+    },
+    "04_통합흐름도.md": {
+      "bytes": 7074,
+      "sha256": "4bdf56f392a908f155fefd4deddf3bb4de66e8ecf92b9861e4eea86a06a670a7"
+    },
+    "05_위험도별발견사항.md": {
+      "bytes": 12098,
+      "sha256": "007e26d8969407dcfaa23eb2b412a1484ad70e70315b2a7b4e141c21bdb127ae"
+    },
+    "06_분석근거_검증기록.md": {
+      "bytes": 6473,
+      "sha256": "b6f455b0e48d2a5af05a1ec5978059b149e5b841c38b27c9c7c73a1b1ed3a895"
+    },
+    "changed-files.csv": {
+      "bytes": 1166398,
+      "sha256": "7c53483b5eee0769e395748582b77571c22b4ed806af67617e14f79140a0d4ac"
+    },
+    "map-diff.json": {
+      "bytes": 56801,
+      "sha256": "cb05ae8c776c47d6d992108cd1fd52a1c5f44522f668b4d023357e3b9d2771f9"
+    },
+    "README.md": {
+      "bytes": 5071,
+      "sha256": "ebe6bf5a461c33680541b1f750f6665849759f14391cbe3650677ac4fb07878f"
+    },
+    "schema-diff.json": {
+      "bytes": 1972,
+      "sha256": "6044d58c335ddf52122882de6706993c163778c2d373e0678078bafe2b251490"
+    },
+    "source-links.json": {
+      "bytes": 31031,
+      "sha256": "6470f088c7c6335615eaf8b8dfd1c76fa1a7dded57d7d1686f5b616b39bfbdb4"
+    },
+    "structure-summary.json": {
+      "bytes": 1298,
+      "sha256": "f1200dd24fde304e23ab06dc4f8d8ddbaf260de6b4ad066910e1bac31cb1388f"
+    },
+    "validation.json": {
+      "bytes": 3757,
+      "sha256": "aff944fd5c3d1deda9b138b622ed46d32e899c07ceaa922c201659cd58a2c36d"
+    }
+  }
+}
