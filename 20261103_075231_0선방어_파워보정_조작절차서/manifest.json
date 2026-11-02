@@ -1,0 +1,212 @@
+{
+  "source_commit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "checked_date_kst": "2026-11-03",
+  "scope": "documentation only; no app/device execution",
+  "source_ranges": [
+    {
+      "title": "설정 화면·저장",
+      "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
+      "start": 318,
+      "end": 431
+    },
+    {
+      "title": "장치별 SIMUL 정의",
+      "path": "Config/JHMI_INTERFACE.csv",
+      "start": 1,
+      "end": 17
+    },
+    {
+      "title": "ConfigRoot 결정",
+      "path": "Drilling.UI/CAppStartup.cs",
+      "start": 121,
+      "end": 135
+    },
+    {
+      "title": "0선 Recipe 화면",
+      "path": "Drilling.UI/Views/CRecipeZeroDefenceView.xaml",
+      "start": 16,
+      "end": 127
+    },
+    {
+      "title": "Recipe 선택·저장",
+      "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "start": 1047,
+      "end": 1078
+    },
+    {
+      "title": "검사점 지정·전체 검증",
+      "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "start": 4247,
+      "end": 4605
+    },
+    {
+      "title": "Main Run Option",
+      "path": "Drilling.UI/Views/CMainRunOptionView.xaml",
+      "start": 18,
+      "end": 40
+    },
+    {
+      "title": "MODE 전환·Stop 확인",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 577,
+      "end": 635
+    },
+    {
+      "title": "Simulator 입력 화면",
+      "path": "Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml",
+      "start": 16,
+      "end": 101
+    },
+    {
+      "title": "Simulator 입력 제한",
+      "path": "Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs",
+      "start": 54,
+      "end": 160
+    },
+    {
+      "title": "DoReady 신호 순서",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 4819,
+      "end": 4868
+    },
+    {
+      "title": "Process 신호 순서",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5131,
+      "end": 5212
+    },
+    {
+      "title": "실제 첫 Review X 선대기",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5472,
+      "end": 5561
+    },
+    {
+      "title": "실제 0선 실행 제한",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5621,
+      "end": 5647
+    },
+    {
+      "title": "0선 측정·lateReady",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5651,
+      "end": 5712
+    },
+    {
+      "title": "0선 후속 요청·그룹 진행",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5755,
+      "end": 5791
+    },
+    {
+      "title": "SDC 이동",
+      "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+      "start": 356,
+      "end": 429
+    },
+    {
+      "title": "IOF 배열·가상 구간 완료",
+      "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+      "start": 513,
+      "end": 628
+    },
+    {
+      "title": "Vision point cycle",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 3065,
+      "end": 3118
+    },
+    {
+      "title": "0선 결과 파일",
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "start": 701,
+      "end": 733
+    },
+    {
+      "title": "PowerMeasure 입력·START/STOP",
+      "path": "Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs",
+      "start": 24,
+      "end": 215
+    },
+    {
+      "title": "숫자 칸 입력 방식",
+      "path": "Drilling.UI/Views/CManualPowerMeasureView.xaml.cs",
+      "start": 14,
+      "end": 44
+    },
+    {
+      "title": "PowerMeasure 화면·단위",
+      "path": "Drilling.UI/Views/CManualPowerMeasureView.xaml",
+      "start": 129,
+      "end": 258
+    },
+    {
+      "title": "가상 측정 서비스",
+      "path": "Drilling.Common/Interface/CPowerMeasureService.cs",
+      "start": 286,
+      "end": 321
+    },
+    {
+      "title": "가상 테이블 고정 연결",
+      "path": "Drilling.UI/Menu/Menus/CMenuManual.cs",
+      "start": 6255,
+      "end": 6278
+    },
+    {
+      "title": "PowerMeasure Stage 제한",
+      "path": "Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs",
+      "start": 29,
+      "end": 165
+    },
+    {
+      "title": "PowerTable 경로",
+      "path": "Drilling.File/PowerTable/CPowerTableFile.cs",
+      "start": 19,
+      "end": 37
+    },
+    {
+      "title": "실측 테이블과 데모 안내",
+      "path": "Config/PowerTable/README.txt",
+      "start": 1,
+      "end": 34
+    },
+    {
+      "title": "Monitor 센서 읽기 UI",
+      "path": "Drilling.UI/Views/CMonitorView.xaml",
+      "start": 1389,
+      "end": 1467
+    },
+    {
+      "title": "Monitor 공개 메뉴",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 80,
+      "end": 99
+    },
+    {
+      "title": "AUTO 파워 reserved",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1126,
+      "end": 1130
+    },
+    {
+      "title": "MELSEC 신호 맵",
+      "path": "Config/JHMI_MELSEC_MAP.csv",
+      "start": 5,
+      "end": 58
+    },
+    {
+      "title": "RESET SEQUENCE의 실제 역할",
+      "path": "Drilling.UI/Menu/Menus/CMenuManual.cs",
+      "start": 2264,
+      "end": 2305
+    }
+  ],
+  "files": {
+    ".gitattributes": "e76d4a144893785b7e797902f2af5a4a09619dad28a5f203dd4576361a63883a",
+    "A3_LD_0선방어_파워보정_조작절차서.md": "e1f32e07a4f101d3c76705aea7d9560ad08eab1bfb1c8032f576ebafec6b77b7",
+    "MELSEC_REAL_조작절차서.html": "2376bc7949ae28925f1c95d01e18cdc6cfe3c81860e08ed15a9903715f513407",
+    "README.md": "ebda2a8fb787d55c02e4890ad99bbb944a75d609fcc83b8d33fab63e3041537c",
+    "Simulator_조작절차서.html": "97017655a3acdb955ac8e5c884f2726313332a8ca1fb10b7ebf82b59ccb08d63"
+  }
+}
