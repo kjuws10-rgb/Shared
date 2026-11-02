@@ -1,0 +1,24 @@
+{
+  "createdAt": "2026-11-02T16:05:36.725161+09:00",
+  "sourceCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "items": 19,
+  "productionCodeModified": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 82,
+      "sha256": "61938baf22880d0fb7a862ca3aefa18db343e72df90d85b62e072af9efde0669"
+    },
+    "A3_LD_시뮬레이션_개발리스트_20261102.html": {
+      "bytes": 14292,
+      "sha256": "76797ce695c0d6ff2753328429ce985efd2df9685d166fc40c4342347830644d"
+    },
+    "A3_LD_시뮬레이션_개발리스트_20261102.md": {
+      "bytes": 10111,
+      "sha256": "6df9fdfe636ba403bb91a7b81ad145d236d6b89393c793379987c93486c4eede"
+    },
+    "README.md": {
+      "bytes": 790,
+      "sha256": "769060394de00985f052dd7e10e4fd5fe6245cd22ad2dbcb8dc5cda01d90792f"
+    }
+  }
+}
