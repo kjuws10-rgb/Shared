@@ -1,0 +1,100 @@
+{
+  "sourceCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "baseline": "99d78ddf0e680b55dbd9662764b71a1ffe93a457",
+  "collectedAt": "2026-11-02T14:42:29.5459464+09:00",
+  "currentBuild": {
+    "command": "dotnet build Drilling.sln -c Release",
+    "exitCode": 1,
+    "passed": false,
+    "uniqueCompilerErrors": 19,
+    "uniqueCompilerWarnings": 0,
+    "errorCodes": [
+      "CS0234",
+      "CS0246"
+    ],
+    "outputSummary": [
+      "    경고 0개",
+      "    오류 19개",
+      "경과 시간: 00:00:12.55"
+    ],
+    "logSha256": "2433200A31A014568C7E3C31E15B4DA7CA570858E8830178E20FFD3A47306097"
+  },
+  "baselineBuild": {
+    "command": "dotnet build Drilling.sln -c Release",
+    "exitCode": 0,
+    "passed": true,
+    "uniqueCompilerErrors": 0,
+    "uniqueCompilerWarnings": 0,
+    "outputSummary": [
+      "    경고 0개",
+      "    오류 0개",
+      "경과 시간: 00:00:41.90"
+    ],
+    "logSha256": "756862DD1A0141DA20C81B32482BFD7D498D8F932E94948F977EDD2D2C1C3CB1"
+  },
+  "regressions": [
+    {
+      "project": "tests/MelsecLatency.Regression/MelsecLatency.Regression.csproj",
+      "existsAtCurrentCommit": false,
+      "status": "not_run_project_removed_from_current_commit",
+      "passed": null,
+      "testsRun": 0,
+      "note": "Not a test FAIL and not a regression-project compile attempt. Previous 19/30 passes must not be carried forward."
+    },
+    {
+      "project": "tests/MelsecPresentation.Regression/MelsecPresentation.Regression.csproj",
+      "existsAtCurrentCommit": false,
+      "status": "not_run_project_removed_from_current_commit",
+      "passed": null,
+      "testsRun": 0,
+      "note": "Not a test FAIL and not a regression-project compile attempt. Previous 19/30 passes must not be carried forward."
+    }
+  ],
+  "sourceDefect": {
+    "missingTrackedLogSources": [
+      "Drilling.Common/Log/CLogFileScope.cs",
+      "Drilling.Common/Log/CLogManager.Alarm.cs",
+      "Drilling.Common/Log/CLogManager.InterfaceHistory.cs",
+      "Drilling.Common/Log/CLogManager.cs",
+      "Drilling.Common/Log/CLogTextReader.cs",
+      "Drilling.Common/Log/CProgramOpenLog.cs"
+    ],
+    "logSourceDirectoryExists": false,
+    "referencesRemain": true,
+    "commonCompilationBlocked": true,
+    "note": "Missing Drilling.Common.Log/CLogManager is a source-level build defect. Subsequent UI/File compilation and runtime correctness remain unverified; the 19 initial errors are not an exhaustive defect count."
+  },
+  "removedSourceApis": [
+    {
+      "token": "GetPollingDiagnostics",
+      "currentFile": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "present": false
+    },
+    {
+      "token": "ST_MELSEC_POLLING_DIAGNOSTIC",
+      "currentFile": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "present": false
+    },
+    {
+      "token": "RefreshMelsecPresentation",
+      "currentFile": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "present": false
+    }
+  ],
+  "limitations": [
+    "Compilation does not validate actual equipment, PLC/Vision data, stage/laser safety, WPF rendering or timing.",
+    "No application or visiontestclient executable was launched.",
+    "No source repair, missing Log source restoration, test restoration, old DLL mixing or build-error bypass was attempted.",
+    "Current revision fails at Common compilation; later compilation/runtime paths are not certified.",
+    "Baseline build is a separate validation clone; its generated tracked bin/obj changes are isolated there."
+  ],
+  "applicationStarted": false,
+  "realEquipmentTested": false,
+  "sourceModified": false,
+  "buildInSeparateClone": true,
+  "sourceDiffCheck": {
+    "exitCode": 2,
+    "lines": 11260,
+    "note": "Original diff is diagnostic only; source is never repaired during heartbeat."
+  }
+}
