@@ -1,0 +1,48 @@
+{
+  "project": "MiniRemote",
+  "version": "0.1.0",
+  "date": "2026-11-03",
+  "repository": "kjuws10-rgb/Shared",
+  "folder": "20261103_145914_MiniRemote",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "시작안내.html",
+      "bytes": 5945,
+      "sha256": "BCA0A35D0BEFE1AAF5064391FDF87A6724FDD336D95B1162D71E4F4B2905827B"
+    },
+    {
+      "path": "MiniRemote-0.1.0.zip",
+      "bytes": 46505149,
+      "sha256": "A9BB6E47A4600E79A394E228D2BF13F50F9A4364B04620B4A0098F6EB9AE242C"
+    },
+    {
+      "path": "MiniRemote-Light.exe",
+      "bytes": 221288,
+      "sha256": "0A06FA617F03B885ADACAD5B666C229E7D05DBF8504CF5F1F24B43805A500DF0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4342,
+      "sha256": "F5174B7130C8F580AA1FDF09CC8381F08819EEF52FBF41CF2AD2784D6C78B770"
+    }
+  ],
+  "verification": {
+    "releaseBuild": "0 warnings / 0 errors",
+    "coreSynthetic": 32,
+    "relay": 30,
+    "viewerUnit": 24,
+    "browserSyntheticGroups": 10,
+    "crossRuntimeDirections": 2,
+    "actualDesktopCapture": false,
+    "actualOsInputInjection": false,
+    "publicHttpsDeployed": false,
+    "corporateNetworkVerified": false,
+    "dockerExecuted": false
+  },
+  "scope": "Program artifacts and public instructions; approved HTTPS relay required; no operational session keys."
+}
