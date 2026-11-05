@@ -1,0 +1,300 @@
+[
+  {
+    "label": "baseline",
+    "source": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+    "command": "dotnet build Drilling.sln -c Release --nologo -v:minimal -p:UseSharedCompilation=false --disable-build-servers",
+    "exitCode": 1,
+    "seconds": 13.28,
+    "uniqueCompilerErrors": 19,
+    "uniqueCompilerWarnings": 0,
+    "errorCodes": [
+      "CS0234",
+      "CS0246"
+    ],
+    "compilerDiagnostics": [
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 23,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 43,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 8,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 21,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 60,
+        "column": 60,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 7,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 1,
+        "column": 23,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 28,
+        "column": 22,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 365,
+        "column": 12,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 64,
+        "column": 9,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Product/CProductManager.cs",
+        "line": 1,
+        "column": 23,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Product/CProductManager.cs",
+        "line": 4,
+        "column": 67,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "line": 10,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "line": 22,
+        "column": 9,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationManager.cs",
+        "line": 3,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationManager.cs",
+        "line": 38,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 11,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 124,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 80,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      }
+    ],
+    "applicationStarted": false
+  },
+  {
+    "label": "latest",
+    "source": "a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f",
+    "command": "dotnet build Drilling.sln -c Release --nologo -v:minimal -p:UseSharedCompilation=false --disable-build-servers",
+    "exitCode": 1,
+    "seconds": 16.81,
+    "uniqueCompilerErrors": 19,
+    "uniqueCompilerWarnings": 0,
+    "errorCodes": [
+      "CS0234",
+      "CS0246"
+    ],
+    "compilerDiagnostics": [
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 25,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 45,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "line": 8,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 21,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 61,
+        "column": 60,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "line": 7,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 1,
+        "column": 23,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 28,
+        "column": 22,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 369,
+        "column": 12,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "line": 64,
+        "column": 9,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Product/CProductManager.cs",
+        "line": 1,
+        "column": 23,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Product/CProductManager.cs",
+        "line": 4,
+        "column": 67,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "line": 10,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "line": 22,
+        "column": 9,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationManager.cs",
+        "line": 3,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationManager.cs",
+        "line": 38,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 11,
+        "column": 27,
+        "code": "CS0234",
+        "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 125,
+        "column": 13,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "line": 80,
+        "column": 26,
+        "code": "CS0246",
+        "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+      }
+    ],
+    "applicationStarted": false
+  }
+]

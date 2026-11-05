@@ -1,0 +1,76 @@
+{
+  "sourceCommit": "a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f",
+  "baselineCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "files": [
+    {
+      "name": "01_Commit변경요약.md",
+      "bytes": 4960,
+      "sha256": "89f0f30ddf3d278229ab7be3508e77516c96601f9e2a28ed30853fec1e66255e"
+    },
+    {
+      "name": "02_데이터구조와흐름.md",
+      "bytes": 9662,
+      "sha256": "0b694ac3e311e40ea1d4a3bdeea3d4fa9399a9c5982e36540efac5a6c1030ec0"
+    },
+    {
+      "name": "03_가공_Review영향분석.md",
+      "bytes": 10028,
+      "sha256": "e6bdd0af49966695823fd10b7f512404493efddd26b3718617e523439bc6517c"
+    },
+    {
+      "name": "04_통합흐름도.md",
+      "bytes": 3835,
+      "sha256": "9457e18147c5ec18f062b031b2e1d3ea1da924b36f3be50c4d8a595926efa99c"
+    },
+    {
+      "name": "05_위험도별발견사항.md",
+      "bytes": 9336,
+      "sha256": "606fe66231f9ea57651b20aab186f83ba7d4919c7dba0222957cb5e65f19d102"
+    },
+    {
+      "name": "06_분석근거_검증기록.md",
+      "bytes": 5247,
+      "sha256": "0b51ff8d8df8c7e7f1a0083d8981d330eb7c2c53e4f3d2bf1f9240004f6c935c"
+    },
+    {
+      "name": "build-validation.json",
+      "bytes": 13113,
+      "sha256": "319aa36ee3e80191d18c6cbc6e89320debf8241a6e1580a9540867a112eb3a94"
+    },
+    {
+      "name": "changed-files.csv",
+      "bytes": 35762,
+      "sha256": "323a79f249c6ae1650a62345a52b4f86f33252469b3ecc09550343d64bde7fff"
+    },
+    {
+      "name": "map-checks.json",
+      "bytes": 1280,
+      "sha256": "8937ea8631ff1327725c61e368bc814629c673a86ad92025cca35ef15076d3e0"
+    },
+    {
+      "name": "offset-selection-audit.json",
+      "bytes": 824,
+      "sha256": "2f298eaf68b972ef16ff3e9f577d65b34b3475e0eb50b54c00d6708c0897dcd4"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4803,
+      "sha256": "b778190c736c67ecc800f158743e1f545f23ec7e76a0e468dd77b671ae3cbf65"
+    },
+    {
+      "name": "schema-diff.json",
+      "bytes": 86322,
+      "sha256": "f23c408596b6eeb1120e1123e0496bdafeed6339425cb01fe1bb0984ee90b0a6"
+    },
+    {
+      "name": "source-links.json",
+      "bytes": 17332,
+      "sha256": "339f8dcdf41ed9ddad688cbbbb17d7441469560bf70ad517ee733f410ee8e1b3"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 2105,
+      "sha256": "77047cddab375e44caa09abf12bce209eec9192a19d41bd5eaba35d9297abe51"
+    }
+  ]
+}

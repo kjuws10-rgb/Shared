@@ -1,0 +1,30 @@
+{
+  "recipe": "test0929",
+  "baseSelected": "Config/RECIPE/test0929_reviewoffset/20261102_113238_021_reviewoffset.csv",
+  "latestSelected": "Config/RECIPE/test0929_reviewoffset/20261026_190115_502_reviewoffset.csv",
+  "rowsBefore": 20740,
+  "rowsAfter": 20740,
+  "identitiesEqual": true,
+  "changedRows": 2380,
+  "example": {
+    "key": [
+      "1",
+      "A1"
+    ],
+    "before": {
+      "CELLID": "1",
+      "SHOTID": "A1",
+      "REVIEWOFFSETX": "0.000000",
+      "REVIEWOFFSETY": "0.000000",
+      "COORDINATE_SPACE": "DESIGN"
+    },
+    "after": {
+      "CELLID": "1",
+      "SHOTID": "A1",
+      "REVIEWOFFSETX": "0.230000",
+      "REVIEWOFFSETY": "1.016000",
+      "COORDINATE_SPACE": "DESIGN"
+    }
+  },
+  "scope": "Fresh checked-out configuration; deployment retaining newer field files can select differently."
+}

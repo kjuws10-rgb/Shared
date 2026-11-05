@@ -1,0 +1,87 @@
+{
+  "sourceCommit": "a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f",
+  "baselineCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+  "documents": 7,
+  "documentChecks": [
+    {
+      "document": "01_Commit변경요약.md",
+      "utf8": true,
+      "fences": 0,
+      "links": 10
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "utf8": true,
+      "fences": 2,
+      "links": 22
+    },
+    {
+      "document": "03_가공_Review영향분석.md",
+      "utf8": true,
+      "fences": 0,
+      "links": 25
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "utf8": true,
+      "fences": 10,
+      "links": 0
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "utf8": true,
+      "fences": 0,
+      "links": 20
+    },
+    {
+      "document": "06_분석근거_검증기록.md",
+      "utf8": true,
+      "fences": 0,
+      "links": 1
+    },
+    {
+      "document": "README.md",
+      "utf8": true,
+      "fences": 2,
+      "links": 18
+    }
+  ],
+  "mermaidDiagramCount": 6,
+  "fixedSourceLinkCount": 65,
+  "sourcePreservation": {
+    "trackedFiles": 404,
+    "allTrackedBytesMatch": true,
+    "headUnchanged": true,
+    "clean": true,
+    "pushDisabled": true
+  },
+  "sourceDiffWhitespace": {
+    "exitCode": 2,
+    "outputLines": 142,
+    "scope": "Source code diff only; preserved, not repaired in this documentation run."
+  },
+  "scope": {
+    "actualApplicationStarted": false,
+    "hardwareOrSocketsStarted": false,
+    "productionSourceEdited": false,
+    "sourceCommitOrPush": false,
+    "buildsInSeparateClonesOnly": true
+  },
+  "mermaidRendering": {
+    "library": "mermaid@11.4.1",
+    "parsed": 6,
+    "rendered": 6,
+    "javascriptErrors": 0,
+    "desktopVisualChecked": true
+  },
+  "reportDiffWhitespace": {
+    "exitCode": 0,
+    "passed": true,
+    "lineEndings": "LF",
+    "scope": "Only this report folder; source whitespace findings preserved separately."
+  },
+  "reviewedByAgents": 3,
+  "mapChecksPass": true,
+  "offsetChangedRowsVerified": 2380,
+  "readiness": "Documentation validation complete; production compilation remains blocked."
+}

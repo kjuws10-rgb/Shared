@@ -1,0 +1,1721 @@
+{
+  "Config/JHMI_RCP.csv": {
+    "oldRows": 364,
+    "newRows": 364,
+    "oldHeader": [
+      "TAB",
+      "GROUP",
+      "NAME",
+      "DISPLAY NAME",
+      "CIM NAME",
+      "DATA TYPE",
+      "UNIT",
+      "SHOW",
+      "USE",
+      "VALUE",
+      "SCALE",
+      "CHANGE LIMIT",
+      "MIN",
+      "MAX",
+      "DESCRIPTION",
+      "ORDER"
+    ],
+    "newHeader": [
+      "TAB",
+      "GROUP",
+      "NAME",
+      "DISPLAY NAME",
+      "CIM NAME",
+      "DATA TYPE",
+      "UNIT",
+      "SHOW",
+      "USE",
+      "VALUE",
+      "SCALE",
+      "CHANGE LIMIT",
+      "MIN",
+      "MAX",
+      "DESCRIPTION",
+      "ORDER"
+    ],
+    "fileChanged": false,
+    "key": "NAME",
+    "addedKeys": [],
+    "removedKeys": [],
+    "changedKeys": {}
+  },
+  "Config/JHMI_SETTING.csv": {
+    "oldRows": 177,
+    "newRows": 232,
+    "oldHeader": [
+      "TAB",
+      "GROUP",
+      "NAME",
+      "DISPLAY NAME",
+      "DATA TYPE",
+      "UNIT",
+      "SHOW",
+      "USE",
+      "VALUE",
+      "MIN",
+      "MAX",
+      "DESCRIPTION"
+    ],
+    "newHeader": [
+      "TAB",
+      "GROUP",
+      "NAME",
+      "DISPLAY NAME",
+      "DATA TYPE",
+      "UNIT",
+      "SHOW",
+      "USE",
+      "VALUE",
+      "MIN",
+      "MAX",
+      "DESCRIPTION"
+    ],
+    "fileChanged": true,
+    "key": "NAME",
+    "addedKeys": [
+      "CameraResolution",
+      "H01_TPM_INTERVAL_MS",
+      "H01_TPM_MAX_ATTEMPTS",
+      "H01_TPM_MEASURE_COUNT",
+      "H01_TPM_SETTLE_TIME_MS",
+      "H01_TPM_TARGET_POWER_W",
+      "H01_TPM_TOLERANCE_W",
+      "H02_TPM_INTERVAL_MS",
+      "H02_TPM_MAX_ATTEMPTS",
+      "H02_TPM_MEASURE_COUNT",
+      "H02_TPM_SETTLE_TIME_MS",
+      "H02_TPM_TARGET_POWER_W",
+      "H02_TPM_TOLERANCE_W",
+      "H03_TPM_INTERVAL_MS",
+      "H03_TPM_MAX_ATTEMPTS",
+      "H03_TPM_MEASURE_COUNT",
+      "H03_TPM_SETTLE_TIME_MS",
+      "H03_TPM_TARGET_POWER_W",
+      "H03_TPM_TOLERANCE_W",
+      "H04_TPM_INTERVAL_MS",
+      "H04_TPM_MAX_ATTEMPTS",
+      "H04_TPM_MEASURE_COUNT",
+      "H04_TPM_SETTLE_TIME_MS",
+      "H04_TPM_TARGET_POWER_W",
+      "H04_TPM_TOLERANCE_W",
+      "H05_TPM_INTERVAL_MS",
+      "H05_TPM_MAX_ATTEMPTS",
+      "H05_TPM_MEASURE_COUNT",
+      "H05_TPM_SETTLE_TIME_MS",
+      "H05_TPM_TARGET_POWER_W",
+      "H05_TPM_TOLERANCE_W",
+      "H06_TPM_INTERVAL_MS",
+      "H06_TPM_MAX_ATTEMPTS",
+      "H06_TPM_MEASURE_COUNT",
+      "H06_TPM_SETTLE_TIME_MS",
+      "H06_TPM_TARGET_POWER_W",
+      "H06_TPM_TOLERANCE_W",
+      "H07_TPM_INTERVAL_MS",
+      "H07_TPM_MAX_ATTEMPTS",
+      "H07_TPM_MEASURE_COUNT",
+      "H07_TPM_SETTLE_TIME_MS",
+      "H07_TPM_TARGET_POWER_W",
+      "H07_TPM_TOLERANCE_W",
+      "H08_TPM_INTERVAL_MS",
+      "H08_TPM_MAX_ATTEMPTS",
+      "H08_TPM_MEASURE_COUNT",
+      "H08_TPM_SETTLE_TIME_MS",
+      "H08_TPM_TARGET_POWER_W",
+      "H08_TPM_TOLERANCE_W",
+      "MaxHoleCountPerLine",
+      "TPM_COOLING_TIME_MS",
+      "TPM_MAX_ATTEMPTS",
+      "TPM_OPERATION_TIMEOUT_MS",
+      "TPM_STAGE_Y_TOLERANCE_MM",
+      "TPM_TOLERANCE_W"
+    ],
+    "removedKeys": [],
+    "changedKeys": {}
+  },
+  "Config/Setting/Setting.csv": {
+    "oldRows": 177,
+    "newRows": 232,
+    "oldHeader": [
+      "TAB",
+      "NAME",
+      "VALUE"
+    ],
+    "newHeader": [
+      "TAB",
+      "NAME",
+      "VALUE"
+    ],
+    "fileChanged": true,
+    "key": "NAME",
+    "addedKeys": [
+      "CameraResolution",
+      "H01_TPM_INTERVAL_MS",
+      "H01_TPM_MAX_ATTEMPTS",
+      "H01_TPM_MEASURE_COUNT",
+      "H01_TPM_SETTLE_TIME_MS",
+      "H01_TPM_TARGET_POWER_W",
+      "H01_TPM_TOLERANCE_W",
+      "H02_TPM_INTERVAL_MS",
+      "H02_TPM_MAX_ATTEMPTS",
+      "H02_TPM_MEASURE_COUNT",
+      "H02_TPM_SETTLE_TIME_MS",
+      "H02_TPM_TARGET_POWER_W",
+      "H02_TPM_TOLERANCE_W",
+      "H03_TPM_INTERVAL_MS",
+      "H03_TPM_MAX_ATTEMPTS",
+      "H03_TPM_MEASURE_COUNT",
+      "H03_TPM_SETTLE_TIME_MS",
+      "H03_TPM_TARGET_POWER_W",
+      "H03_TPM_TOLERANCE_W",
+      "H04_TPM_INTERVAL_MS",
+      "H04_TPM_MAX_ATTEMPTS",
+      "H04_TPM_MEASURE_COUNT",
+      "H04_TPM_SETTLE_TIME_MS",
+      "H04_TPM_TARGET_POWER_W",
+      "H04_TPM_TOLERANCE_W",
+      "H05_TPM_INTERVAL_MS",
+      "H05_TPM_MAX_ATTEMPTS",
+      "H05_TPM_MEASURE_COUNT",
+      "H05_TPM_SETTLE_TIME_MS",
+      "H05_TPM_TARGET_POWER_W",
+      "H05_TPM_TOLERANCE_W",
+      "H06_TPM_INTERVAL_MS",
+      "H06_TPM_MAX_ATTEMPTS",
+      "H06_TPM_MEASURE_COUNT",
+      "H06_TPM_SETTLE_TIME_MS",
+      "H06_TPM_TARGET_POWER_W",
+      "H06_TPM_TOLERANCE_W",
+      "H07_TPM_INTERVAL_MS",
+      "H07_TPM_MAX_ATTEMPTS",
+      "H07_TPM_MEASURE_COUNT",
+      "H07_TPM_SETTLE_TIME_MS",
+      "H07_TPM_TARGET_POWER_W",
+      "H07_TPM_TOLERANCE_W",
+      "H08_TPM_INTERVAL_MS",
+      "H08_TPM_MAX_ATTEMPTS",
+      "H08_TPM_MEASURE_COUNT",
+      "H08_TPM_SETTLE_TIME_MS",
+      "H08_TPM_TARGET_POWER_W",
+      "H08_TPM_TOLERANCE_W",
+      "MaxHoleCountPerLine",
+      "TPM_COOLING_TIME_MS",
+      "TPM_MAX_ATTEMPTS",
+      "TPM_OPERATION_TIMEOUT_MS",
+      "TPM_STAGE_Y_TOLERANCE_MM",
+      "TPM_TOLERANCE_W"
+    ],
+    "removedKeys": [],
+    "changedKeys": {
+      "RUNOPTION_REVIEW_METHOD": {
+        "VALUE": {
+          "before": "1",
+          "after": "0"
+        }
+      },
+      "ATTENUATOR_DEGREE_MAX_SW_LIMIT": {
+        "VALUE": {
+          "before": "180",
+          "after": "360"
+        }
+      },
+      "BuzzerAutoOff": {
+        "VALUE": {
+          "before": "OFF",
+          "after": "ON"
+        }
+      },
+      "RUNOPTION_REVIEW_LINE": {
+        "VALUE": {
+          "before": "1",
+          "after": "0"
+        }
+      }
+    }
+  },
+  "Config/RECIPE/test0929.csv": {
+    "oldRows": 43385,
+    "newRows": 43385,
+    "hasHeader": false,
+    "fields": [
+      "GROUP",
+      "NAME",
+      "VALUE"
+    ],
+    "key": [
+      "GROUP",
+      "NAME"
+    ],
+    "fileChanged": true,
+    "addedKeys": [],
+    "removedKeys": [],
+    "changedKeys": {
+      "HEAD/H03_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.195"
+      },
+      "HEAD/H07_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.196"
+      },
+      "HEAD/H05_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.2"
+      },
+      "HEAD/H08_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.208"
+      },
+      "HEAD/H01_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.208"
+      },
+      "HEAD/H04_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.197"
+      },
+      "HEAD/H02_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.194"
+      },
+      "HEAD/H06_ATTENUATOR_POSITION": {
+        "before": "55",
+        "after": "188.208"
+      }
+    }
+  },
+  "Config/JHMI_MELSEC_MAP.csv": {
+    "oldRows": 164,
+    "newRows": 690,
+    "oldHeader": [
+      "ID",
+      "USE",
+      "GROUP",
+      "NAME",
+      "DEVICE NO",
+      "ADDRESS",
+      "DATA TYPE",
+      "DIRECTION",
+      "ACCESS",
+      "READ_SCALE",
+      "WRITE_SCALE",
+      "LENGTH",
+      "POLL_MS",
+      "DESCRIPTION"
+    ],
+    "newHeader": [
+      "ID",
+      "USE",
+      "GROUP",
+      "NAME",
+      "DEVICE NO",
+      "ADDRESS",
+      "DATA TYPE",
+      "DIRECTION",
+      "ACCESS",
+      "READ_SCALE",
+      "WRITE_SCALE",
+      "LENGTH",
+      "POLL_MS",
+      "DESCRIPTION"
+    ],
+    "fileChanged": true,
+    "key": "ID",
+    "addedKeys": [
+      "DISTORTION_INSP_BUSY",
+      "DISTORTION_INSP_RESULT_NG",
+      "DISTORTION_INSP_RESULT_OK",
+      "DISTORTION_POS0_CAM1X",
+      "DISTORTION_POS0_CAM1Y",
+      "DISTORTION_POS0_CAM2X",
+      "DISTORTION_POS0_CAM2Y",
+      "DISTORTION_POS0_CAM3X",
+      "DISTORTION_POS0_CAM3Y",
+      "DISTORTION_POS0_CAM4X",
+      "DISTORTION_POS0_CAM4Y",
+      "DISTORTION_POS1_CAM2X",
+      "DISTORTION_POS1_CAM2Y",
+      "DISTORTION_POS1_CAM4X",
+      "DISTORTION_POS1_CAM4Y",
+      "DISTORTION_POS2_CAM2X",
+      "DISTORTION_POS2_CAM2Y",
+      "DISTORTION_POS2_CAM4X",
+      "DISTORTION_POS2_CAM4Y",
+      "DISTORTION_POS3_CAM2X",
+      "DISTORTION_POS3_CAM2Y",
+      "DISTORTION_POS3_CAM4X",
+      "DISTORTION_POS3_CAM4Y",
+      "IOF_POS_ARRAY_10",
+      "IOF_POS_ARRAY_100",
+      "IOF_POS_ARRAY_101",
+      "IOF_POS_ARRAY_102",
+      "IOF_POS_ARRAY_103",
+      "IOF_POS_ARRAY_104",
+      "IOF_POS_ARRAY_105",
+      "IOF_POS_ARRAY_106",
+      "IOF_POS_ARRAY_107",
+      "IOF_POS_ARRAY_108",
+      "IOF_POS_ARRAY_109",
+      "IOF_POS_ARRAY_11",
+      "IOF_POS_ARRAY_110",
+      "IOF_POS_ARRAY_111",
+      "IOF_POS_ARRAY_112",
+      "IOF_POS_ARRAY_113",
+      "IOF_POS_ARRAY_114",
+      "IOF_POS_ARRAY_115",
+      "IOF_POS_ARRAY_116",
+      "IOF_POS_ARRAY_117",
+      "IOF_POS_ARRAY_118",
+      "IOF_POS_ARRAY_119",
+      "IOF_POS_ARRAY_12",
+      "IOF_POS_ARRAY_120",
+      "IOF_POS_ARRAY_121",
+      "IOF_POS_ARRAY_122",
+      "IOF_POS_ARRAY_123",
+      "IOF_POS_ARRAY_124",
+      "IOF_POS_ARRAY_125",
+      "IOF_POS_ARRAY_126",
+      "IOF_POS_ARRAY_127",
+      "IOF_POS_ARRAY_128",
+      "IOF_POS_ARRAY_129",
+      "IOF_POS_ARRAY_13",
+      "IOF_POS_ARRAY_130",
+      "IOF_POS_ARRAY_131",
+      "IOF_POS_ARRAY_132",
+      "IOF_POS_ARRAY_133",
+      "IOF_POS_ARRAY_134",
+      "IOF_POS_ARRAY_135",
+      "IOF_POS_ARRAY_136",
+      "IOF_POS_ARRAY_137",
+      "IOF_POS_ARRAY_138",
+      "IOF_POS_ARRAY_139",
+      "IOF_POS_ARRAY_14",
+      "IOF_POS_ARRAY_140",
+      "IOF_POS_ARRAY_141",
+      "IOF_POS_ARRAY_142",
+      "IOF_POS_ARRAY_143",
+      "IOF_POS_ARRAY_144",
+      "IOF_POS_ARRAY_145",
+      "IOF_POS_ARRAY_146",
+      "IOF_POS_ARRAY_147",
+      "IOF_POS_ARRAY_148",
+      "IOF_POS_ARRAY_149",
+      "IOF_POS_ARRAY_15",
+      "IOF_POS_ARRAY_150",
+      "IOF_POS_ARRAY_151",
+      "IOF_POS_ARRAY_152",
+      "IOF_POS_ARRAY_153",
+      "IOF_POS_ARRAY_154",
+      "IOF_POS_ARRAY_155",
+      "IOF_POS_ARRAY_156",
+      "IOF_POS_ARRAY_157",
+      "IOF_POS_ARRAY_158",
+      "IOF_POS_ARRAY_159",
+      "IOF_POS_ARRAY_16",
+      "IOF_POS_ARRAY_160",
+      "IOF_POS_ARRAY_161",
+      "IOF_POS_ARRAY_162",
+      "IOF_POS_ARRAY_163",
+      "IOF_POS_ARRAY_164",
+      "IOF_POS_ARRAY_165",
+      "IOF_POS_ARRAY_166",
+      "IOF_POS_ARRAY_167",
+      "IOF_POS_ARRAY_168",
+      "IOF_POS_ARRAY_169",
+      "IOF_POS_ARRAY_17",
+      "IOF_POS_ARRAY_170",
+      "IOF_POS_ARRAY_171",
+      "IOF_POS_ARRAY_172",
+      "IOF_POS_ARRAY_173",
+      "IOF_POS_ARRAY_174",
+      "IOF_POS_ARRAY_175",
+      "IOF_POS_ARRAY_176",
+      "IOF_POS_ARRAY_177",
+      "IOF_POS_ARRAY_178",
+      "IOF_POS_ARRAY_179",
+      "IOF_POS_ARRAY_18",
+      "IOF_POS_ARRAY_180",
+      "IOF_POS_ARRAY_181",
+      "IOF_POS_ARRAY_182",
+      "IOF_POS_ARRAY_183",
+      "IOF_POS_ARRAY_184",
+      "IOF_POS_ARRAY_185",
+      "IOF_POS_ARRAY_186",
+      "IOF_POS_ARRAY_187",
+      "IOF_POS_ARRAY_188",
+      "IOF_POS_ARRAY_189",
+      "IOF_POS_ARRAY_19",
+      "IOF_POS_ARRAY_190",
+      "IOF_POS_ARRAY_191",
+      "IOF_POS_ARRAY_192",
+      "IOF_POS_ARRAY_193",
+      "IOF_POS_ARRAY_194",
+      "IOF_POS_ARRAY_195",
+      "IOF_POS_ARRAY_196",
+      "IOF_POS_ARRAY_197",
+      "IOF_POS_ARRAY_198",
+      "IOF_POS_ARRAY_199",
+      "IOF_POS_ARRAY_2",
+      "IOF_POS_ARRAY_20",
+      "IOF_POS_ARRAY_200",
+      "IOF_POS_ARRAY_201",
+      "IOF_POS_ARRAY_202",
+      "IOF_POS_ARRAY_203",
+      "IOF_POS_ARRAY_204",
+      "IOF_POS_ARRAY_205",
+      "IOF_POS_ARRAY_206",
+      "IOF_POS_ARRAY_207",
+      "IOF_POS_ARRAY_208",
+      "IOF_POS_ARRAY_209",
+      "IOF_POS_ARRAY_21",
+      "IOF_POS_ARRAY_210",
+      "IOF_POS_ARRAY_211",
+      "IOF_POS_ARRAY_212",
+      "IOF_POS_ARRAY_213",
+      "IOF_POS_ARRAY_214",
+      "IOF_POS_ARRAY_215",
+      "IOF_POS_ARRAY_216",
+      "IOF_POS_ARRAY_217",
+      "IOF_POS_ARRAY_218",
+      "IOF_POS_ARRAY_219",
+      "IOF_POS_ARRAY_22",
+      "IOF_POS_ARRAY_220",
+      "IOF_POS_ARRAY_221",
+      "IOF_POS_ARRAY_222",
+      "IOF_POS_ARRAY_223",
+      "IOF_POS_ARRAY_224",
+      "IOF_POS_ARRAY_225",
+      "IOF_POS_ARRAY_226",
+      "IOF_POS_ARRAY_227",
+      "IOF_POS_ARRAY_228",
+      "IOF_POS_ARRAY_229",
+      "IOF_POS_ARRAY_23",
+      "IOF_POS_ARRAY_230",
+      "IOF_POS_ARRAY_231",
+      "IOF_POS_ARRAY_232",
+      "IOF_POS_ARRAY_233",
+      "IOF_POS_ARRAY_234",
+      "IOF_POS_ARRAY_235",
+      "IOF_POS_ARRAY_236",
+      "IOF_POS_ARRAY_237",
+      "IOF_POS_ARRAY_238",
+      "IOF_POS_ARRAY_239",
+      "IOF_POS_ARRAY_24",
+      "IOF_POS_ARRAY_240",
+      "IOF_POS_ARRAY_241",
+      "IOF_POS_ARRAY_242",
+      "IOF_POS_ARRAY_243",
+      "IOF_POS_ARRAY_244",
+      "IOF_POS_ARRAY_245",
+      "IOF_POS_ARRAY_246",
+      "IOF_POS_ARRAY_247",
+      "IOF_POS_ARRAY_248",
+      "IOF_POS_ARRAY_249",
+      "IOF_POS_ARRAY_25",
+      "IOF_POS_ARRAY_250",
+      "IOF_POS_ARRAY_251",
+      "IOF_POS_ARRAY_252",
+      "IOF_POS_ARRAY_253",
+      "IOF_POS_ARRAY_254",
+      "IOF_POS_ARRAY_255",
+      "IOF_POS_ARRAY_256",
+      "IOF_POS_ARRAY_257",
+      "IOF_POS_ARRAY_258",
+      "IOF_POS_ARRAY_259",
+      "IOF_POS_ARRAY_26",
+      "IOF_POS_ARRAY_260",
+      "IOF_POS_ARRAY_261",
+      "IOF_POS_ARRAY_262",
+      "IOF_POS_ARRAY_263",
+      "IOF_POS_ARRAY_264",
+      "IOF_POS_ARRAY_265",
+      "IOF_POS_ARRAY_266",
+      "IOF_POS_ARRAY_267",
+      "IOF_POS_ARRAY_268",
+      "IOF_POS_ARRAY_269",
+      "IOF_POS_ARRAY_27",
+      "IOF_POS_ARRAY_270",
+      "IOF_POS_ARRAY_271",
+      "IOF_POS_ARRAY_272",
+      "IOF_POS_ARRAY_273",
+      "IOF_POS_ARRAY_274",
+      "IOF_POS_ARRAY_275",
+      "IOF_POS_ARRAY_276",
+      "IOF_POS_ARRAY_277",
+      "IOF_POS_ARRAY_278",
+      "IOF_POS_ARRAY_279",
+      "IOF_POS_ARRAY_28",
+      "IOF_POS_ARRAY_280",
+      "IOF_POS_ARRAY_281",
+      "IOF_POS_ARRAY_282",
+      "IOF_POS_ARRAY_283",
+      "IOF_POS_ARRAY_284",
+      "IOF_POS_ARRAY_285",
+      "IOF_POS_ARRAY_286",
+      "IOF_POS_ARRAY_287",
+      "IOF_POS_ARRAY_288",
+      "IOF_POS_ARRAY_289",
+      "IOF_POS_ARRAY_29",
+      "IOF_POS_ARRAY_290",
+      "IOF_POS_ARRAY_291",
+      "IOF_POS_ARRAY_292",
+      "IOF_POS_ARRAY_293",
+      "IOF_POS_ARRAY_294",
+      "IOF_POS_ARRAY_295",
+      "IOF_POS_ARRAY_296",
+      "IOF_POS_ARRAY_297",
+      "IOF_POS_ARRAY_298",
+      "IOF_POS_ARRAY_299",
+      "IOF_POS_ARRAY_3",
+      "IOF_POS_ARRAY_30",
+      "IOF_POS_ARRAY_300",
+      "IOF_POS_ARRAY_301",
+      "IOF_POS_ARRAY_302",
+      "IOF_POS_ARRAY_303",
+      "IOF_POS_ARRAY_304",
+      "IOF_POS_ARRAY_305",
+      "IOF_POS_ARRAY_306",
+      "IOF_POS_ARRAY_307",
+      "IOF_POS_ARRAY_308",
+      "IOF_POS_ARRAY_309",
+      "IOF_POS_ARRAY_31",
+      "IOF_POS_ARRAY_310",
+      "IOF_POS_ARRAY_311",
+      "IOF_POS_ARRAY_312",
+      "IOF_POS_ARRAY_313",
+      "IOF_POS_ARRAY_314",
+      "IOF_POS_ARRAY_315",
+      "IOF_POS_ARRAY_316",
+      "IOF_POS_ARRAY_317",
+      "IOF_POS_ARRAY_318",
+      "IOF_POS_ARRAY_319",
+      "IOF_POS_ARRAY_32",
+      "IOF_POS_ARRAY_320",
+      "IOF_POS_ARRAY_321",
+      "IOF_POS_ARRAY_322",
+      "IOF_POS_ARRAY_323",
+      "IOF_POS_ARRAY_324",
+      "IOF_POS_ARRAY_325",
+      "IOF_POS_ARRAY_326",
+      "IOF_POS_ARRAY_327",
+      "IOF_POS_ARRAY_328",
+      "IOF_POS_ARRAY_329",
+      "IOF_POS_ARRAY_33",
+      "IOF_POS_ARRAY_330",
+      "IOF_POS_ARRAY_331",
+      "IOF_POS_ARRAY_332",
+      "IOF_POS_ARRAY_333",
+      "IOF_POS_ARRAY_334",
+      "IOF_POS_ARRAY_335",
+      "IOF_POS_ARRAY_336",
+      "IOF_POS_ARRAY_337",
+      "IOF_POS_ARRAY_338",
+      "IOF_POS_ARRAY_339",
+      "IOF_POS_ARRAY_34",
+      "IOF_POS_ARRAY_340",
+      "IOF_POS_ARRAY_341",
+      "IOF_POS_ARRAY_342",
+      "IOF_POS_ARRAY_343",
+      "IOF_POS_ARRAY_344",
+      "IOF_POS_ARRAY_345",
+      "IOF_POS_ARRAY_346",
+      "IOF_POS_ARRAY_347",
+      "IOF_POS_ARRAY_348",
+      "IOF_POS_ARRAY_349",
+      "IOF_POS_ARRAY_35",
+      "IOF_POS_ARRAY_350",
+      "IOF_POS_ARRAY_351",
+      "IOF_POS_ARRAY_352",
+      "IOF_POS_ARRAY_353",
+      "IOF_POS_ARRAY_354",
+      "IOF_POS_ARRAY_355",
+      "IOF_POS_ARRAY_356",
+      "IOF_POS_ARRAY_357",
+      "IOF_POS_ARRAY_358",
+      "IOF_POS_ARRAY_359",
+      "IOF_POS_ARRAY_36",
+      "IOF_POS_ARRAY_360",
+      "IOF_POS_ARRAY_361",
+      "IOF_POS_ARRAY_362",
+      "IOF_POS_ARRAY_363",
+      "IOF_POS_ARRAY_364",
+      "IOF_POS_ARRAY_365",
+      "IOF_POS_ARRAY_366",
+      "IOF_POS_ARRAY_367",
+      "IOF_POS_ARRAY_368",
+      "IOF_POS_ARRAY_369",
+      "IOF_POS_ARRAY_37",
+      "IOF_POS_ARRAY_370",
+      "IOF_POS_ARRAY_371",
+      "IOF_POS_ARRAY_372",
+      "IOF_POS_ARRAY_373",
+      "IOF_POS_ARRAY_374",
+      "IOF_POS_ARRAY_375",
+      "IOF_POS_ARRAY_376",
+      "IOF_POS_ARRAY_377",
+      "IOF_POS_ARRAY_378",
+      "IOF_POS_ARRAY_379",
+      "IOF_POS_ARRAY_38",
+      "IOF_POS_ARRAY_380",
+      "IOF_POS_ARRAY_381",
+      "IOF_POS_ARRAY_382",
+      "IOF_POS_ARRAY_383",
+      "IOF_POS_ARRAY_384",
+      "IOF_POS_ARRAY_385",
+      "IOF_POS_ARRAY_386",
+      "IOF_POS_ARRAY_387",
+      "IOF_POS_ARRAY_388",
+      "IOF_POS_ARRAY_389",
+      "IOF_POS_ARRAY_39",
+      "IOF_POS_ARRAY_390",
+      "IOF_POS_ARRAY_391",
+      "IOF_POS_ARRAY_392",
+      "IOF_POS_ARRAY_393",
+      "IOF_POS_ARRAY_394",
+      "IOF_POS_ARRAY_395",
+      "IOF_POS_ARRAY_396",
+      "IOF_POS_ARRAY_397",
+      "IOF_POS_ARRAY_398",
+      "IOF_POS_ARRAY_399",
+      "IOF_POS_ARRAY_4",
+      "IOF_POS_ARRAY_40",
+      "IOF_POS_ARRAY_400",
+      "IOF_POS_ARRAY_401",
+      "IOF_POS_ARRAY_402",
+      "IOF_POS_ARRAY_403",
+      "IOF_POS_ARRAY_404",
+      "IOF_POS_ARRAY_405",
+      "IOF_POS_ARRAY_406",
+      "IOF_POS_ARRAY_407",
+      "IOF_POS_ARRAY_408",
+      "IOF_POS_ARRAY_409",
+      "IOF_POS_ARRAY_41",
+      "IOF_POS_ARRAY_410",
+      "IOF_POS_ARRAY_411",
+      "IOF_POS_ARRAY_412",
+      "IOF_POS_ARRAY_413",
+      "IOF_POS_ARRAY_414",
+      "IOF_POS_ARRAY_415",
+      "IOF_POS_ARRAY_416",
+      "IOF_POS_ARRAY_417",
+      "IOF_POS_ARRAY_418",
+      "IOF_POS_ARRAY_419",
+      "IOF_POS_ARRAY_42",
+      "IOF_POS_ARRAY_420",
+      "IOF_POS_ARRAY_421",
+      "IOF_POS_ARRAY_422",
+      "IOF_POS_ARRAY_423",
+      "IOF_POS_ARRAY_424",
+      "IOF_POS_ARRAY_425",
+      "IOF_POS_ARRAY_426",
+      "IOF_POS_ARRAY_427",
+      "IOF_POS_ARRAY_428",
+      "IOF_POS_ARRAY_429",
+      "IOF_POS_ARRAY_43",
+      "IOF_POS_ARRAY_430",
+      "IOF_POS_ARRAY_431",
+      "IOF_POS_ARRAY_432",
+      "IOF_POS_ARRAY_433",
+      "IOF_POS_ARRAY_434",
+      "IOF_POS_ARRAY_435",
+      "IOF_POS_ARRAY_436",
+      "IOF_POS_ARRAY_437",
+      "IOF_POS_ARRAY_438",
+      "IOF_POS_ARRAY_439",
+      "IOF_POS_ARRAY_44",
+      "IOF_POS_ARRAY_440",
+      "IOF_POS_ARRAY_441",
+      "IOF_POS_ARRAY_442",
+      "IOF_POS_ARRAY_443",
+      "IOF_POS_ARRAY_444",
+      "IOF_POS_ARRAY_445",
+      "IOF_POS_ARRAY_446",
+      "IOF_POS_ARRAY_447",
+      "IOF_POS_ARRAY_448",
+      "IOF_POS_ARRAY_449",
+      "IOF_POS_ARRAY_45",
+      "IOF_POS_ARRAY_450",
+      "IOF_POS_ARRAY_451",
+      "IOF_POS_ARRAY_452",
+      "IOF_POS_ARRAY_453",
+      "IOF_POS_ARRAY_454",
+      "IOF_POS_ARRAY_455",
+      "IOF_POS_ARRAY_456",
+      "IOF_POS_ARRAY_457",
+      "IOF_POS_ARRAY_458",
+      "IOF_POS_ARRAY_459",
+      "IOF_POS_ARRAY_46",
+      "IOF_POS_ARRAY_460",
+      "IOF_POS_ARRAY_461",
+      "IOF_POS_ARRAY_462",
+      "IOF_POS_ARRAY_463",
+      "IOF_POS_ARRAY_464",
+      "IOF_POS_ARRAY_465",
+      "IOF_POS_ARRAY_466",
+      "IOF_POS_ARRAY_467",
+      "IOF_POS_ARRAY_468",
+      "IOF_POS_ARRAY_469",
+      "IOF_POS_ARRAY_47",
+      "IOF_POS_ARRAY_470",
+      "IOF_POS_ARRAY_471",
+      "IOF_POS_ARRAY_472",
+      "IOF_POS_ARRAY_473",
+      "IOF_POS_ARRAY_474",
+      "IOF_POS_ARRAY_475",
+      "IOF_POS_ARRAY_476",
+      "IOF_POS_ARRAY_477",
+      "IOF_POS_ARRAY_478",
+      "IOF_POS_ARRAY_479",
+      "IOF_POS_ARRAY_48",
+      "IOF_POS_ARRAY_480",
+      "IOF_POS_ARRAY_481",
+      "IOF_POS_ARRAY_482",
+      "IOF_POS_ARRAY_483",
+      "IOF_POS_ARRAY_484",
+      "IOF_POS_ARRAY_485",
+      "IOF_POS_ARRAY_486",
+      "IOF_POS_ARRAY_487",
+      "IOF_POS_ARRAY_488",
+      "IOF_POS_ARRAY_489",
+      "IOF_POS_ARRAY_49",
+      "IOF_POS_ARRAY_490",
+      "IOF_POS_ARRAY_491",
+      "IOF_POS_ARRAY_492",
+      "IOF_POS_ARRAY_493",
+      "IOF_POS_ARRAY_494",
+      "IOF_POS_ARRAY_495",
+      "IOF_POS_ARRAY_496",
+      "IOF_POS_ARRAY_497",
+      "IOF_POS_ARRAY_498",
+      "IOF_POS_ARRAY_499",
+      "IOF_POS_ARRAY_5",
+      "IOF_POS_ARRAY_50",
+      "IOF_POS_ARRAY_500",
+      "IOF_POS_ARRAY_51",
+      "IOF_POS_ARRAY_52",
+      "IOF_POS_ARRAY_53",
+      "IOF_POS_ARRAY_54",
+      "IOF_POS_ARRAY_55",
+      "IOF_POS_ARRAY_56",
+      "IOF_POS_ARRAY_57",
+      "IOF_POS_ARRAY_58",
+      "IOF_POS_ARRAY_59",
+      "IOF_POS_ARRAY_6",
+      "IOF_POS_ARRAY_60",
+      "IOF_POS_ARRAY_61",
+      "IOF_POS_ARRAY_62",
+      "IOF_POS_ARRAY_63",
+      "IOF_POS_ARRAY_64",
+      "IOF_POS_ARRAY_65",
+      "IOF_POS_ARRAY_66",
+      "IOF_POS_ARRAY_67",
+      "IOF_POS_ARRAY_68",
+      "IOF_POS_ARRAY_69",
+      "IOF_POS_ARRAY_7",
+      "IOF_POS_ARRAY_70",
+      "IOF_POS_ARRAY_71",
+      "IOF_POS_ARRAY_72",
+      "IOF_POS_ARRAY_73",
+      "IOF_POS_ARRAY_74",
+      "IOF_POS_ARRAY_75",
+      "IOF_POS_ARRAY_76",
+      "IOF_POS_ARRAY_77",
+      "IOF_POS_ARRAY_78",
+      "IOF_POS_ARRAY_79",
+      "IOF_POS_ARRAY_8",
+      "IOF_POS_ARRAY_80",
+      "IOF_POS_ARRAY_81",
+      "IOF_POS_ARRAY_82",
+      "IOF_POS_ARRAY_83",
+      "IOF_POS_ARRAY_84",
+      "IOF_POS_ARRAY_85",
+      "IOF_POS_ARRAY_86",
+      "IOF_POS_ARRAY_87",
+      "IOF_POS_ARRAY_88",
+      "IOF_POS_ARRAY_89",
+      "IOF_POS_ARRAY_9",
+      "IOF_POS_ARRAY_90",
+      "IOF_POS_ARRAY_91",
+      "IOF_POS_ARRAY_92",
+      "IOF_POS_ARRAY_93",
+      "IOF_POS_ARRAY_94",
+      "IOF_POS_ARRAY_95",
+      "IOF_POS_ARRAY_96",
+      "IOF_POS_ARRAY_97",
+      "IOF_POS_ARRAY_98",
+      "IOF_POS_ARRAY_99",
+      "IOF_POS_ARRAY_X_1",
+      "STAGE_DISTORTION_INSP_DIR",
+      "STAGE_DISTORTION_INSP_REQ",
+      "STAGE_DISTORTION_INSP_STEP"
+    ],
+    "removedKeys": [],
+    "changedKeys": {
+      "SDC_DRYRUN_USE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D465:G465 SDC_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율은 활성화 전 Stage 계약 확인",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D465:G465 SDC_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율은 활성화 전 Stage 계약 확인"
+        }
+      },
+      "HANDSHAKE_STG_REVIEW_ABLE_SDC": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D296:G296 IPS_ReviewAbleSDC; IPS_ReviewAbleSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: SDC Moving에 대한 able",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D296:G296 IPS_ReviewAbleSDC; IPS_ReviewAbleSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: SDC Moving에 대한 able"
+        }
+      },
+      "MOTOR_STAGE_Y_CUR_POS": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D349:G349 Stage_Y#1 Current Position; 물류 D349:G349 Stage_Y#1 Current Position; READ_SCALE=0.0001; WRITE_SCALE=10000",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D349:G349 Stage_Y#1 Current Position; 물류 D349:G349 Stage_Y#1 Current Position; READ_SCALE=0.0001; WRITE_SCALE=10000"
+        }
+      },
+      "MOTOR_STAGE_Y_SERVO_WARNING_CODE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D356:G356 Stage_Y#1 Servo Warning Code; raw code",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D356:G356 Stage_Y#1 Servo Warning Code; raw code"
+        }
+      },
+      "PROCESS_REVIEW_CONTROL_MODE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D186:G186 PROCESS_REVIEW_CONTROL_MODE; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=XY; 1=Review X만; 2=Main Y만; raw 0/10000/20000; Map 0.08: 0 : X, Y 동시구동 / 10000 : Review X만 구동 / 20000 : Main Y만 구동",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D186:G186 PROCESS_REVIEW_CONTROL_MODE; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=XY; 1=Review X만; 2=Main Y만; raw 0/10000/20000; Map 0.10: 0 : X, Y 동시구동 / 10000 : Review X만 구동 / 20000 : Main Y만 구동"
+        }
+      },
+      "MOTOR_STAGE_Y_ENCODER_POS": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D439:G439 StageY1_EncoderPosition; 주소 정의만 등록; 시퀀스 연결 전 USE=0; StageY1_EncoderPosition; 단위와 배율은 사용 전 Stage 계약 확인",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D439:G439 StageY1_EncoderPosition; 주소 정의만 등록; 시퀀스 연결 전 USE=0; StageY1_EncoderPosition; 단위와 배율은 사용 전 Stage 계약 확인"
+        }
+      },
+      "PROCESS_SEQUENCE_TPD_PTW_EXCHANGE_FLAG": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D212:G212 PR0CESS_SEQUENCE_TPD_PTW_EXCHANGE_FLAG; 현재매수 >= Max이면 요청(raw 10000); Max=0 즉시 요청; 교체완료 WF150 확인 후 Stage Tray Count를 현재매수로 저장 및 보고한 뒤 요청 OFF; TPM은 별도; ATT/Model Job 조건은 후속 작업; Map 0.08: 가공진행완료 시점에 보호윈도우 교체(이동) 요청 Flag",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D212:G212 PR0CESS_SEQUENCE_TPD_PTW_EXCHANGE_FLAG; 현재매수 >= Max이면 요청(raw 10000); Max=0 즉시 요청; 교체완료 WF150 확인 후 Stage Tray Count를 현재매수로 저장 및 보고한 뒤 요청 OFF; TPM은 별도; ATT/Model Job 조건은 후속 작업; Map 0.10: 가공진행완료 시점에 보호윈도우 교체(이동) 요청 Flag"
+        }
+      },
+      "IPS_IOF_BUFFER_RUN_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D307:G307 IPS_IOF_BufferRunComplete; 공통 Process Move/IOF 시퀀스에 연결; raw 0/10000; Stage 소유 수신 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D307:G307 IPS_IOF_BufferRunComplete; 공통 Process Move/IOF 시퀀스에 연결; raw 0/10000; Stage 소유 수신 신호"
+        }
+      },
+      "HANDSHAKE_PRC_REVIEW_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D438:G438 PROCESS_SEQUENCE_REVIEW_ABLE; PROCESS_SEQUENCE_REVIEW_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D438:G438 PROCESS_SEQUENCE_REVIEW_ABLE; PROCESS_SEQUENCE_REVIEW_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "PROCESS_ICR_FLAG": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D200:I200 PROCESS_ICR_FLAG; Glass Data정보에 ICR Flag 확인 시 APC 보정용 기판 표시; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D200:I200 PROCESS_ICR_FLAG; Glass Data정보에 ICR Flag 확인 시 APC 보정용 기판 표시; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_Y3": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D222:G222 PROCESS_RECIPE_ALIGNBASE_Y3; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D222:G222 PROCESS_RECIPE_ALIGNBASE_Y3; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_X1": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D229:I229 PROCESS_RECIPE_ALIGNBASE_RAGNE_X1; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D229:I229 PROCESS_RECIPE_ALIGNBASE_RAGNE_X1; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_Y3": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D235:I235 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y3; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D235:I235 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y3; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_PROCESS_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 가공 D199:I199 PROCESS_PROCESS_COMPLETE; 실제 전체 Task/큐 정상 완료시 1 게시; Process COMPLETE와 구분; 다음 DoReady에서 0; raw 0/10000; 실패/STOP을 완료로 보고하지 않음",
+          "after": "Spec 0.10 가공 D199:I199 PROCESS_PROCESS_COMPLETE; 실제 전체 Task/큐 정상 완료시 1 게시; Process COMPLETE와 구분; 다음 DoReady에서 0; raw 0/10000; 실패/STOP을 완료로 보고하지 않음"
+        }
+      },
+      "MOTOR_STAGE_Y_SERVO_ALARM_CODE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D355:G355 Stage_Y#1 Servo Alarm Code; raw code",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D355:G355 Stage_Y#1 Servo Alarm Code; raw code"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_X3": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D231:I231 PROCESS_RECIPE_ALIGNBASE_RAGNE_X3; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D231:I231 PROCESS_RECIPE_ALIGNBASE_RAGNE_X3; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "HANDSHAKE_PRC_REVIEW_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D440:G440 PROCESS_SEQUENCE_REVIEW_COMPLETE; PROCESS_SEQUENCE_REVIEW_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D440:G440 PROCESS_SEQUENCE_REVIEW_COMPLETE; PROCESS_SEQUENCE_REVIEW_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "IPS_REVIEW_CONTROL_MODE_Y": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D294:I294 IPS_ReviewControlModeY; 해당 축의 Process 구동 허가; SDC 공통 허가 WC124와 별개; READ_SCALE 적용 논리값 0/1; 공통 시퀀스에 연결",
+          "after": "Spec 0.10 물류 D294:I294 IPS_ReviewControlModeY; 해당 축의 Process 구동 허가; SDC 공통 허가 WC124와 별개; READ_SCALE 적용 논리값 0/1; 공통 시퀀스에 연결"
+        }
+      },
+      "IPS_REVIEW_CONTROL_MODE_X": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D295:I295 IPS_ReviewControlModeX; 해당 축의 Process 구동 허가; SDC 공통 허가 WC124와 별개; READ_SCALE 적용 논리값 0/1; 공통 시퀀스에 연결",
+          "after": "Spec 0.10 물류 D295:I295 IPS_ReviewControlModeX; 해당 축의 Process 구동 허가; SDC 공통 허가 WC124와 별개; READ_SCALE 적용 논리값 0/1; 공통 시퀀스에 연결"
+        }
+      },
+      "IPS_CASSETTE_MOVE_BUSY": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D310:G310 IPS_CassetteMoveBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 교체 준비 시 Busy 인터락; logical 0/1",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D310:G310 IPS_CassetteMoveBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 교체 준비 시 Busy 인터락; logical 0/1"
+        }
+      },
+      "SDC_DO_ALIGN_STATUS": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D584:G584 SDC_DO_Align_Status; raw UInt16 10000 x READ_SCALE 0.0001 = 1 means Available; all other scaled values=Unavailable",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D584:G584 SDC_DO_Align_Status; raw UInt16 10000 x READ_SCALE 0.0001 = 1 means Available; all other scaled values=Unavailable"
+        }
+      },
+      "HANDSHAKE_STG_TOP_POWERMETER_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D291:G291 IPS_TPM_Complete; IPS_TPM_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Top powermeter에 대한 complete",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D291:G291 IPS_TPM_Complete; IPS_TPM_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Top powermeter에 대한 complete"
+        }
+      },
+      "IPS_REVIEW_MODE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D293:I293 IPS_Review_Mode; raw 0=1줄 / 10000=3줄; READ_SCALE 적용 후 0=1줄 / 1=3줄; Main 1/3/5/7줄 옵션과 우선순위는 별도 계약; 자동 연결 전 USE=0",
+          "after": "Spec 0.10 물류 D293:I293 IPS_Review_Mode; raw 0=1줄 / 10000=3줄; READ_SCALE 적용 후 0=1줄 / 1=3줄; Main 1/3/5/7줄 옵션과 우선순위는 별도 계약; 자동 연결 전 USE=0"
+        }
+      },
+      "MOTOR_STAGE_Y_CUR_SPEED": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D352:G352 Stage_Y#1 Current Speed; 물류 D352:G352 Stage_Y#1 Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D352:G352 Stage_Y#1 Current Speed; 물류 D352:G352 Stage_Y#1 Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000"
+        }
+      },
+      "PROCESS_STAGE_SPEED": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 가공 D198:I198 PROCESS_STAGE_SPEED; Recipe STAGE_SPEED mm/sec; DoReady 준비/Process 준비/START/COMPLETE 전에 WRITE_SCALE 적용 및 공유 캐시 확인",
+          "after": "Spec 0.10 가공 D198:I198 PROCESS_STAGE_SPEED; Recipe STAGE_SPEED mm/sec; DoReady 준비/Process 준비/START/COMPLETE 전에 WRITE_SCALE 적용 및 공유 캐시 확인"
+        }
+      },
+      "STAGE_MCC_BUSY_FLAGS": {
+        "USE": {
+          "before": "1",
+          "after": "0"
+        },
+        "NAME": {
+          "before": "MCC Busy Word (bit1 Align)",
+          "after": "MCC Busy Word (unused)"
+        },
+        "POLL_MS": {
+          "before": "100",
+          "after": "0"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D3075:H3076; WFAB4 원시 Word; bit 1 (mask 2)=MCC_ALIGN_BUSY; 다른 비트로 Align 중 판정 금지; 0선 첫 Review X 선대기 기동 관측",
+          "after": "미사용: 0선 선이동은 현재 기판의 확정 가공 계획과 WC124 허가로 요청; FAB3/FAB4 ALIGN_BUSY 주소 감시 제외"
+        }
+      },
+      "IOF_TRIGGER_ZERO_POINT_COUNT": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D457:G457 IOF_TRIGGER_ZERO_POINT_COUNT; 공통 Process Move/IOF 시퀀스에 연결; 0선 총 개수 N; 논리 4개는 raw 40000; Map 0.08: 0선 측정 시 계측 개수",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D457:G457 IOF_TRIGGER_ZERO_POINT_COUNT; 공통 Process Move/IOF 시퀀스에 연결; 0선 총 개수 N; 논리 4개는 raw 40000; Map 0.10: 0선 측정 시 계측 개수"
+        }
+      },
+      "PTW_EXCHANGE_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D2066:G2066 PTW_EXCHANGE_COMPLETE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 최신 시나리오 raw 20000=인터락 NG; 정상 교체 완료로 처리 금지",
+          "after": "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; Stage 확인 필요; Spec 0.08 Config_Map Word Detail(물류) D2066:G2066 PTW_EXCHANGE_COMPLETE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 최신 시나리오 raw 20000=인터락 NG; 정상 교체 완료로 처리 금지"
+        }
+      },
+      "HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D189:G189 PROCESS_REVIEW_GENERAL_RUNNING; PROCESS_REVIEW_GENERAL_RUNNING; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: SDC 제어권으로 이동 시 Stage 이동완료 신호 확인 목적",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D189:G189 PROCESS_REVIEW_GENERAL_RUNNING; PROCESS_REVIEW_GENERAL_RUNNING; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: SDC 제어권으로 이동 시 Stage 이동완료 신호 확인 목적"
+        }
+      },
+      "MOTOR_CAMERA_X_CUR_POS": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D421:G421 Review Axis Current Position; 물류 D421:G421 Review Axis Current Position; READ_SCALE=0.0001; WRITE_SCALE=10000",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D421:G421 Review Axis Current Position; 물류 D421:G421 Review Axis Current Position; READ_SCALE=0.0001; WRITE_SCALE=10000"
+        }
+      },
+      "PROCESS_DO_ALIGN": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D310:G310 PROCESS_DO_ALIGN; Stage Align request; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: 가공에서 Align 직접 제어",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D310:G310 PROCESS_DO_ALIGN; Stage Align request; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: 가공에서 Align 직접 제어"
+        }
+      },
+      "HANDSHAKE_PRC_TOP_POWERMETER_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 가공 D211:G211 PROCESS_SEQUENCE_TPD_COMPLETE; 최신 시나리오 Top Powermeter 일치; raw 0/10000; READ_SCALE=0.0001 WRITE_SCALE=10000; W8218은 후속 Review 요청이며 TPM 아님",
+          "after": "Spec 0.10 가공 D211:G211 PROCESS_SEQUENCE_TPD_COMPLETE; 최신 시나리오 Top Powermeter 일치; raw 0/10000; READ_SCALE=0.0001 WRITE_SCALE=10000; W8218은 후속 Review 요청이며 TPM 아님"
+        }
+      },
+      "MOTOR_CAMERA_X_BUSY": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D420:G420 Review Axis Busy; 0=OFF nonzero=BUSY",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D420:G420 Review Axis Busy; 0=OFF nonzero=BUSY"
+        }
+      },
+      "HANDSHAKE_PRC_REVIEW_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D439:G439 PROCESS_SEQUENCE_REVIEW_START; PROCESS_SEQUENCE_REVIEW_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D439:G439 PROCESS_SEQUENCE_REVIEW_START; PROCESS_SEQUENCE_REVIEW_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "PROCESS_REVIEW_COMMAND_POSITION_X": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D181:G181 PROCESS_REVIEW_COMMAND_POSITION_X; 공통 Process Move/IOF 시퀀스에 연결; Review X 목표 mm; Map 0.08: mm 단위",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D181:G181 PROCESS_REVIEW_COMMAND_POSITION_X; 공통 Process Move/IOF 시퀀스에 연결; Review X 목표 mm; Map 0.10: mm 단위"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_Y1": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D233:I233 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y1; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D233:I233 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y1; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "HANDSHAKE_PRC_DOREADY_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D432:G432 PROCESS_SEQUENCE_READY_COMPLETE; PROCESS_SEQUENCE_READY_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D432:G432 PROCESS_SEQUENCE_READY_COMPLETE; PROCESS_SEQUENCE_READY_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "HANDSHAKE_STG_REVIEW_COMPLETE_SDC": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D298:G298 IPS_ReviewCompleteSDC; IPS_ReviewCompleteSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: SDC Moving에 대한 Complete",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D298:G298 IPS_ReviewCompleteSDC; IPS_ReviewCompleteSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: SDC Moving에 대한 Complete"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_Y2": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D221:G221 PROCESS_RECIPE_ALIGNBASE_Y2; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D221:G221 PROCESS_RECIPE_ALIGNBASE_Y2; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "IOF_TRIGGER_POINT_COUNT": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D456:G456 IOF_TRIGGER_POINT_COUNT; 공통 Process Move/IOF 시퀀스에 연결; 일반 Review 현재 LINE 개수 M; 논리 개수 x WRITE_SCALE; Map 0.08: IOF측정 시 계측 개수; 일반 X 실제 배열 형식 미정으로 실제 Flying은 차단; Simulation은 공통 버퍼 준비 I/F 사용",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D456:G456 IOF_TRIGGER_POINT_COUNT; 일반 IOF Review 이번 라인 Shot 수 M; 논리 개수 x WRITE_SCALE; W8300부터 검사 순서대로 X M개; 역방향은 역순; W8238 요청-WC13C 완료-W823A 응답; 실제/Simulation 공통 처리"
+        }
+      },
+      "HANDSHAKE_PRC_PROCESS_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D435:G435 PROCESS_SEQUENCE_PROCESS_START; PROCESS_SEQUENCE_PROCESS_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D435:G435 PROCESS_SEQUENCE_PROCESS_START; PROCESS_SEQUENCE_PROCESS_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "HANDSHAKE_STG_PROCESS_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D285:G285 IPS_Process_Complete; IPS_Process_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Process 스텝에서 가공 레디 I/F Complete 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D285:G285 IPS_Process_Complete; IPS_Process_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Process 스텝에서 가공 레디 I/F Complete 신호"
+        }
+      },
+      "HANDSHAKE_STG_IOF_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D308:G308 IPS_IOF_Complete; IPS_IOF_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D308:G308 IPS_IOF_Complete; IPS_IOF_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "PROCESS_LASER_ON": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D175:G175 PROCESS_LASER_ON; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 0/10000; 실제 출사 중에만 ON; 자동 출력 연결은 후속 작업; Map 0.08: 레이저 출사 시 항상 On상태 유지",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D175:G175 PROCESS_LASER_ON; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 0/10000; 실제 출사 중에만 ON; 자동 출력 연결은 후속 작업; Map 0.10: 레이저 출사 시 항상 On상태 유지"
+        }
+      },
+      "PROCESS_REVIEW_COMMAND_POSITION_Y": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D182:G182 PROCESS_REVIEW_COMMAND_POSITION_Y; 공통 Process Move/IOF 시퀀스에 연결; Stage Y 목표 mm; Map 0.08: mm 단위",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D182:G182 PROCESS_REVIEW_COMMAND_POSITION_Y; 공통 Process Move/IOF 시퀀스에 연결; Stage Y 목표 mm; Map 0.10: mm 단위"
+        }
+      },
+      "HANDSHAKE_STG_DOREADY_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D281:G281 IPS_DoReady_Complete; IPS_DoReady_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Move Process 스텝에서 가공 레디 I/F Complete 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D281:G281 IPS_DoReady_Complete; IPS_DoReady_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Move Process 스텝에서 가공 레디 I/F Complete 신호"
+        }
+      },
+      "HANDSHAKE_STG_TOP_POWERMETER_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D290:G290 IPS_TPM_Able; IPS_TPM_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Top powermeter에 대한 able",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D290:G290 IPS_TPM_Able; IPS_TPM_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Top powermeter에 대한 able"
+        }
+      },
+      "IPS_PTW_EXCHANGE_BUSY": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D311:G311 IPS_PTWExchangeBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 교체 준비 시 Busy 인터락; logical 0/1",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D311:G311 IPS_PTWExchangeBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 교체 준비 시 Busy 인터락; logical 0/1"
+        }
+      },
+      "HANDSHAKE_PRC_DOREADY_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D430:G430 PROCESS_SEQUENCE_READY_ABLE; PROCESS_SEQUENCE_READY_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D430:G430 PROCESS_SEQUENCE_READY_ABLE; PROCESS_SEQUENCE_READY_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "SDC_REVIEW_RETRY_REQUEST": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 W8218; 0선 NG & 후속 옵션 ON이면 logical 1/raw10000; Process 결과 종결 후 요청 게시; 후속 1줄 Review 실행은 별도 시퀀스",
+          "after": "Spec 0.10 W8218; 0선 NG & 후속 옵션 ON이면 logical 1/raw10000; Process 결과 종결 후 요청 게시; 후속 1줄 Review 실행은 별도 시퀀스"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_X2": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D217:G217 PROCESS_RECIPE_ALIGNBASE_X2; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D217:G217 PROCESS_RECIPE_ALIGNBASE_X2; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "PROCESS_LDPRO_ALARM": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D174:I174 PROCESS_LDPRO_ALARM; ; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D174:I174 PROCESS_LDPRO_ALARM; ; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "HANDSHAKE_STG_PROCESS_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D283:G283 IPS_Process_Able; IPS_Process_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Process 스텝에서 가공 레디 I/F Able 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D283:G283 IPS_Process_Able; IPS_Process_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Process 스텝에서 가공 레디 I/F Able 신호"
+        }
+      },
+      "PTW_EXCHANGE_SEQ_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D2065:G2065 PTW_EXCHANGE_SEQ_COMPLETE; 교체요청 중 완료(logical 1) 수신시 Stage Tray Count를 현재 가공매수로 저장 및 보고 후 요청 OFF; TPM 완료와 별개; 이전 완료 ON으로 새 요청을 즉시 해제하지 않음",
+          "after": "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; Stage 확인 필요; Spec 0.08 Config_Map Word Detail(물류) D2065:G2065 PTW_EXCHANGE_SEQ_COMPLETE; 교체요청 중 완료(logical 1) 수신시 Stage Tray Count를 현재 가공매수로 저장 및 보고 후 요청 OFF; TPM 완료와 별개; 이전 완료 ON으로 새 요청을 즉시 해제하지 않음"
+        }
+      },
+      "HANDSHAKE_PRC_REVIEW_MOVE_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D193:G193 PROCESS_REVIEW_MOVE_START; PROCESS_REVIEW_MOVE_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: WC124 bit(SDC 구동제어권) 활성화 확인 후 Review 이동",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D193:G193 PROCESS_REVIEW_MOVE_START; PROCESS_REVIEW_MOVE_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: WC124 bit(SDC 구동제어권) 활성화 확인 후 Review 이동"
+        }
+      },
+      "HANDSHAKE_STG_REVIEW_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D287:G287 IPS_Review_Able; IPS_Review_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Review 스텝에서 가공 레디 I/F Able 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D287:G287 IPS_Review_Able; IPS_Review_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Review 스텝에서 가공 레디 I/F Able 신호"
+        }
+      },
+      "EQ_STAGE_HOME_FLAG": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D26:G26 EQ_Stage_HomeFlag; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 명시된 raw 1=ON; 0=OFF; 초기 Home 완료 조건; Map 0.08: ON - 1, OFF - 0",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D26:G26 EQ_Stage_HomeFlag; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 명시된 raw 1=ON; 0=OFF; 초기 Home 완료 조건; Map 0.10: ON - 1, OFF - 0"
+        }
+      },
+      "IPS_IOF_READ_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D306:G306 IPS_IOF_ReadComplete; 공통 Process Move/IOF 시퀀스에 연결; raw 0/10000; Stage 소유 수신 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D306:G306 IPS_IOF_ReadComplete; 공통 Process Move/IOF 시퀀스에 연결; raw 0/10000; Stage 소유 수신 신호"
+        }
+      },
+      "PROCESS_LDPRO_ALIVE": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D176:I176 PROCESS_LDPRO_ALIVE; 1초마다 On Off 점멸; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D176:I176 PROCESS_LDPRO_ALIVE; 1초마다 On Off 점멸; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "IPS_PTW_CHANGED": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D299:I299 IPS_PTW_Changed; PTW 동작 모드 raw 0=Auto / 10000=Manual; 물리 교체완료 edge로 사용 금지; USE=0 유지",
+          "after": "Spec 0.10 물류 D299:I299 IPS_PTW_Changed; PTW 동작 모드 raw 0=Auto / 10000=Manual; 물리 교체완료 edge로 사용 금지; USE=0 유지"
+        }
+      },
+      "PTW_EXCHANGE_FLATNESS_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D2067:G2067 PTW_EXCHANGE_FLATNESS_COMPLETE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 실교체 후 평탄도 정상 직후 보고; 가공 위치 이동 전; 수신 경로 확인 필요",
+          "after": "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; Stage 확인 필요; Spec 0.08 Config_Map Word Detail(물류) D2067:G2067 PTW_EXCHANGE_FLATNESS_COMPLETE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 실교체 후 평탄도 정상 직후 보고; 가공 위치 이동 전; 수신 경로 확인 필요"
+        }
+      },
+      "SDC_DO_ALIGN_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D586:G586 SDC_DO_Align_Complete; raw UInt16 10000 x READ_SCALE 0.0001 = 1 means Complete; all other scaled values=Incomplete",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D586:G586 SDC_DO_Align_Complete; raw UInt16 10000 x READ_SCALE 0.0001 = 1 means Complete; all other scaled values=Incomplete"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_Y2": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D234:I234 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y2; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D234:I234 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y2; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "MOTOR_CAMERA_X_CUR_SPEED": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D424:G424 Review Axis Current Speed; 물류 D424:G424 Review Axis Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D424:G424 Review Axis Current Speed; 물류 D424:G424 Review Axis Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000"
+        }
+      },
+      "PROCESS_SEQUENCE_PTW_PROCESS_COUNT": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D214:G214 PROCESS_SEQUENCE_PTW_PROCESS_COUNT; 레시피 CURRENT_PROCESS_COUNT를 AUTO START/정상 완료 직후/완료 인계 전에 게시; 가공 중 매수 판정 반복 없음; 교체완료시 Stage Tray Count 인계값 저장 및 게시; WRITE_SCALE 적용; Map 0.08: 보호윈도우 교체 후 Stage에서 관리하는 Count를 받아서 가공SW이어서 업데이트",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D214:G214 PROCESS_SEQUENCE_PTW_PROCESS_COUNT; 레시피 CURRENT_PROCESS_COUNT를 AUTO START/정상 완료 직후/완료 인계 전에 게시; 가공 중 매수 판정 반복 없음; 교체완료시 Stage Tray Count 인계값 저장 및 게시; WRITE_SCALE 적용; Map 0.10: 보호윈도우 교체 후 Stage에서 관리하는 Count를 받아서 가공SW이어서 업데이트"
+        }
+      },
+      "PROCESS_REVIEW_COMMAND_SPEED_Y": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D184:G184 PROCESS_REVIEW_COMMAND_SPEED_Y; 공통 Process Move/IOF 시퀀스에 연결; Stage Y 속도 mm/sec; Map 0.08: mm/s 단위",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D184:G184 PROCESS_REVIEW_COMMAND_SPEED_Y; 공통 Process Move/IOF 시퀀스에 연결; Stage Y 속도 mm/sec; Map 0.10: mm/s 단위"
+        }
+      },
+      "HANDSHAKE_STG_DOREADY_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D280:G280 IPS_DoReady_Start; IPS_DoReady_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Move Process 스텝에서 가공 레디 I/F Start 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D280:G280 IPS_DoReady_Start; IPS_DoReady_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Move Process 스텝에서 가공 레디 I/F Start 신호"
+        }
+      },
+      "IPS_PTW_MAPPING_BUSY": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D312:G312 IPS_PTWMappingBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Cassette Mapping Busy; 평탄도 완료와 구분",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D312:G312 IPS_PTWMappingBusy; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Cassette Mapping Busy; 평탄도 완료와 구분"
+        }
+      },
+      "HANDSHAKE_STG_DOREADY_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D279:G279 IPS_DoReady_Able; IPS_DoReady_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Move Process 스텝에서 가공 레디 I/F Able 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D279:G279 IPS_DoReady_Able; IPS_DoReady_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Move Process 스텝에서 가공 레디 I/F Able 신호"
+        }
+      },
+      "HANDSHAKE_STG_PROCESS_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D284:G284 IPS_Process_Start; IPS_Process_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Process 스텝에서 가공 레디 I/F Start 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D284:G284 IPS_Process_Start; IPS_Process_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Process 스텝에서 가공 레디 I/F Start 신호"
+        }
+      },
+      "PROCESS_REVIEW_STOP_SIGNAL": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D196:G196 PROCESS_REVIEW_STOP_SIGNAL; 공통 Process Move/IOF 시퀀스에 연결; raw 10000=정지 요청; 관련 이동 I/F 복귀 필요; Map 0.08: 모션 즉정지 + 구동조건 관련 신호 리셋 (구동관련 I/F신호 리셋해줘야함)",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D196:G196 PROCESS_REVIEW_STOP_SIGNAL; 공통 Process Move/IOF 시퀀스에 연결; raw 10000=정지 요청; 관련 이동 I/F 복귀 필요; Map 0.10: 모션 즉정지 + 구동조건 관련 신호 리셋 (구동관련 I/F신호 리셋해줘야함)"
+        }
+      },
+      "HANDSHAKE_STG_REVIEW_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D288:G288 IPS_Review_Start; IPS_Review_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Review 스텝에서 가공 레디 I/F Start 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D288:G288 IPS_Review_Start; IPS_Review_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Review 스텝에서 가공 레디 I/F Start 신호"
+        }
+      },
+      "MOTOR_WINDOW_Y_CUR_POS": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 PLC M302:N302 Axis27 Window Moving Y1 base W1B00 + 2; 공통 PLC D276:G276; READ_SCALE=0.0001 WRITE_SCALE=10000",
+          "after": "Spec 0.10 PLC M302:N302 Axis27 Window Moving Y1 base W1B00 + 2; 공통 PLC D276:G276; READ_SCALE=0.0001 WRITE_SCALE=10000"
+        }
+      },
+      "PTW_MOVING_FLAG": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D488:G488 PTW_MOVING_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 10000=Moving; 기존 PLC 요청과 SDC 통지 수신 경로 확인 필요; Map 0.08: Stage > PLC_Req (Auto Ready Function)",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D488:G488 PTW_MOVING_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 10000=Moving; 기존 PLC 요청과 SDC 통지 수신 경로 확인 필요; Map 0.10: Stage > PLC_Req (Auto Ready Function)"
+        }
+      },
+      "IPS_ZERO_DEFENCE_OPT": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 물류 D292:I292 IPS_ZeroDefenceOpt; Stage 0선방어 사용 여부; READ_SCALE 적용 논리값 0/1; Main 0선방어 옵션과 우선순위는 별도 계약; 자동 연결 전 USE=0",
+          "after": "Spec 0.10 물류 D292:I292 IPS_ZeroDefenceOpt; Stage 0선방어 사용 여부; READ_SCALE 적용 논리값 0/1; Main 0선방어 옵션과 우선순위는 별도 계약; 자동 연결 전 USE=0"
+        }
+      },
+      "STAGE_DRYRUN_USE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D464:G464 STAGE_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율은 활성화 전 Stage 계약 확인",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D464:G464 STAGE_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율은 활성화 전 Stage 계약 확인"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_X3": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D218:G218 PROCESS_RECIPE_ALIGNBASE_X3; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D218:G218 PROCESS_RECIPE_ALIGNBASE_X3; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "IOF_POS_ARRAY_1": {
+        "NAME": {
+          "before": "IOF Position Array Base",
+          "after": "IOF Position 1"
+        },
+        "LENGTH": {
+          "before": "16",
+          "after": "2"
+        },
+        "POLL_MS": {
+          "before": "1000",
+          "after": "0"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 W8300; 0선 전용 packed [Y1..YN][X1..XN], N=2/4, 각 좌표 signed 32-bit 2 Word; READ_SCALE=0.0001 WRITE_SCALE=10000; 최대 16 Word; 미사용 tail=0; 일반 X 배열 형식은 미정",
+          "after": "Spec 0.10 가공 D558:G558; 촬영 순서 1; signed Int32 2 Word; 입력 mm; WRITE_SCALE=10000 / READ_SCALE=0.0001; 0선은 Y 2/4개, 일반 IOF는 해당 라인의 X를 실제 Count만 전송/읽기 확인; 역방향도 실제 촬영 순서; Count 밖 영역은 미사용/변경 안 함; 자동 폴링 없음"
+        }
+      },
+      "HANDSHAKE_PRC_PROCESS_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D436:G436 PROCESS_SEQUENCE_PROCESS_COMPLETE; PROCESS_SEQUENCE_PROCESS_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D436:G436 PROCESS_SEQUENCE_PROCESS_COMPLETE; PROCESS_SEQUENCE_PROCESS_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "PTW_TRAY_COUNT": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D504:G504 PTW_TRAY_COUNT; Stage Tray Count; 1 Word 원시 Count; WF150 완료 확인 시 현재 가공매수로 저장하고 W8052 보고",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D504:G504 PTW_TRAY_COUNT; Stage Tray Count; 1 Word 원시 Count; WF150 완료 확인 시 현재 가공매수로 저장하고 W8052 보고"
+        }
+      },
+      "SV_SDC_ALIVE_ON_DEVICE1": {
+        "ADDRESS": {
+          "before": "UNASSIGNED",
+          "after": "WEFD6"
+        },
+        "DESCRIPTION": {
+          "before": "미사용: 대응 신호 미확인; 주소와 자료형 확정 후 설정",
+          "after": "Spec 0.10 물류; SDC_ALIVE_ON_DEVICE1; 2 Word; 주소 정의만 등록, 자동 감시 미연결; USE=0 유지"
+        }
+      },
+      "IOF_SETTING": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D454:G454 IOF_SETTING; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=일반 X; 1=0선 Y; 3=일반 Y; raw 0/10000/30000; Map 0.08: 10000 : 0선 Y방향 / 30000 : 일반 Y방향 / 0 : 일반 X방향",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D454:G454 IOF_SETTING; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=일반 X; 1=0선 Y; 3=일반 Y; raw 0/10000/30000; Map 0.10: 10000 : 0선 Y방향 / 30000 : 일반 Y방향 / 0 : 일반 X방향"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_X2": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D230:I230 PROCESS_RECIPE_ALIGNBASE_RAGNE_X2; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D230:I230 PROCESS_RECIPE_ALIGNBASE_RAGNE_X2; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "SV_SDC_ALIVE_ON_DEVICE2": {
+        "ADDRESS": {
+          "before": "UNASSIGNED",
+          "after": "WF010"
+        },
+        "DESCRIPTION": {
+          "before": "미사용: 대응 신호 미확인; 주소와 자료형 확정 후 설정",
+          "after": "Spec 0.10 물류; SDC_ALIVE_ON_DEVICE2; 2 Word; 주소 정의만 등록, 자동 감시 미연결; USE=0 유지"
+        }
+      },
+      "PROCESS_LDPRO_AUTO": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D177:I177 PROCESS_LDPRO_AUTO; Auto / Manual 전환 여부; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D177:I177 PROCESS_LDPRO_AUTO; Auto / Manual 전환 여부; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_SEQUENCE_TPM_LASER_ON": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D206:I206 PROCESS_SEQUENCE_TPM_LASER_ON; Auto 중 Top Power Meter 측정 시 Laser On일 경우; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D206:I206 PROCESS_SEQUENCE_TPM_LASER_ON; Auto 중 Top Power Meter 측정 시 Laser On일 경우; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D459:G459 IOF_COMPLETE_RESPONSE; IOF_COMPLETE_RESPONSE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: 생성완료 응답",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D459:G459 IOF_COMPLETE_RESPONSE; IOF_COMPLETE_RESPONSE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: 생성완료 응답"
+        }
+      },
+      "IPS_REVIEW_POSITION_Y_MOVING_SDC": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D301:G301 IPS_ReviewPositionYMovingSDC; 주소 정의만 등록; 시퀀스 연결 전 USE=0; READ_SCALE 적용 논리값으로 사용; 모드의 상세 enum 계약은 사용 시 확인; Map 0.08: Y Moving 동작 중 : Motor Busy로 대체 가능",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D301:G301 IPS_ReviewPositionYMovingSDC; 주소 정의만 등록; 시퀀스 연결 전 USE=0; READ_SCALE 적용 논리값으로 사용; 모드의 상세 enum 계약은 사용 시 확인; Map 0.10: Y Moving 동작 중 : Motor Busy로 대체 가능"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_X4": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D219:G219 PROCESS_RECIPE_ALIGNBASE_X4; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D219:G219 PROCESS_RECIPE_ALIGNBASE_X4; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "HANDSHAKE_PRC_IOF_START_REQUEST": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D458:G458 IOF_START_REQUEST; IOF_START_REQUEST; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: ACS PEG버퍼 생성요청",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D458:G458 IOF_START_REQUEST; IOF_START_REQUEST; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: ACS PEG버퍼 생성요청"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_Y4": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D236:I236 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y4; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D236:I236 PROCESS_RECIPE_ALIGNBASE_RAGNE_Y4; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_Y4": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D223:G223 PROCESS_RECIPE_ALIGNBASE_Y4; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D223:G223 PROCESS_RECIPE_ALIGNBASE_Y4; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "PROCESS_LDPRO_MANUAL": {
+        "USE": {
+          "before": "0",
+          "after": "1"
+        },
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D178:I178 PROCESS_LDPRO_MANUAL; ; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D178:I178 PROCESS_LDPRO_MANUAL; ; raw 0/10000; logical 0/1; 자동 송신 연결은 후속 작업; USE=0"
+        }
+      },
+      "PROCESS_REVIEW_COMMAND_SPEED_X": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D183:G183 PROCESS_REVIEW_COMMAND_SPEED_X; 공통 Process Move/IOF 시퀀스에 연결; Review X 속도 mm/sec; Map 0.08: mm/s 단위",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D183:G183 PROCESS_REVIEW_COMMAND_SPEED_X; 공통 Process Move/IOF 시퀀스에 연결; Review X 속도 mm/sec; Map 0.10: mm/s 단위"
+        }
+      },
+      "MOTOR_WINDOW_Y_CUR_SPEED": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 PLC M302:N302 Axis27 Window Moving Y1 base W1B00 + 8; 공통 PLC D279:G279; READ_SCALE=0.0001 WRITE_SCALE=10000",
+          "after": "Spec 0.10 PLC M302:N302 Axis27 Window Moving Y1 base W1B00 + 8; 공통 PLC D279:G279; READ_SCALE=0.0001 WRITE_SCALE=10000"
+        }
+      },
+      "HANDSHAKE_PRC_DOREADY_START": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D431:G431 PROCESS_SEQUENCE_READY_START; PROCESS_SEQUENCE_READY_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D431:G431 PROCESS_SEQUENCE_READY_START; PROCESS_SEQUENCE_READY_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "HANDSHAKE_PRC_TOP_POWERMETER_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 가공 D210:G210 PROCESS_SEQUENCE_TPD_ABLE; 최신 시나리오 Top Powermeter 일치; raw 0/10000; READ_SCALE=0.0001 WRITE_SCALE=10000; W8218은 후속 Review 요청이며 TPM 아님",
+          "after": "Spec 0.10 가공 D210:G210 PROCESS_SEQUENCE_TPD_ABLE; 최신 시나리오 Top Powermeter 일치; raw 0/10000; READ_SCALE=0.0001 WRITE_SCALE=10000; W8218은 후속 Review 요청이며 TPM 아님"
+        }
+      },
+      "PROCESS_SEQUENCE_TPD_PTW_MEASURE_FLAG": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D213:G213 PROCESS_SEQUENCE_TPD_PTW_MEASURE_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 10000=기본 TPM 후 재측정; 0이어도 Shift/교체 후 최초 TPM 1회 수행; Map 0.08: 보호윈도우 교체(이동) 후 파워보정 진행 여부 (Option상태보고 업데이트)",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D213:G213 PROCESS_SEQUENCE_TPD_PTW_MEASURE_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0; raw 10000=기본 TPM 후 재측정; 0이어도 Shift/교체 후 최초 TPM 1회 수행; Map 0.10: 보호윈도우 교체(이동) 후 파워보정 진행 여부 (Option상태보고 업데이트)"
+        }
+      },
+      "IPS_REVIEW_POSITION_X_MOVING_SDC": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D300:G300 IPS_ReviewPositionXMovingSDC; 주소 정의만 등록; 시퀀스 연결 전 USE=0; READ_SCALE 적용 논리값으로 사용; 모드의 상세 enum 계약은 사용 시 확인; Map 0.08: X Moving 동작 중 : Motor Busy로 대체 가능",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D300:G300 IPS_ReviewPositionXMovingSDC; 주소 정의만 등록; 시퀀스 연결 전 USE=0; READ_SCALE 적용 논리값으로 사용; 모드의 상세 enum 계약은 사용 시 확인; Map 0.10: X Moving 동작 중 : Motor Busy로 대체 가능"
+        }
+      },
+      "PROCESS_SEQUENCE_PTW_COMPLETE_FLAG": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D215:I215; 문서상 미사용; USE=0 유지",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D215:I215; 문서상 미사용; USE=0 유지"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_RAGNE_X4": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D232:I232 PROCESS_RECIPE_ALIGNBASE_RAGNE_X4; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D232:I232 PROCESS_RECIPE_ALIGNBASE_RAGNE_X4; Distortion Bench Mark Limit Range; 문서의 RAGNE 표기를 유지; 단위는 Stage 계약 확인; Align Offset Tolerance와 다른 Bench Mark 허용범위; 값 선택/자동 송신은 후속 작업; USE=0"
+        }
+      },
+      "HANDSHAKE_PRC_PROCESS_ABLE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D434:G434 PROCESS_SEQUENCE_PROCESS_ABLE; PROCESS_SEQUENCE_PROCESS_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D434:G434 PROCESS_SEQUENCE_PROCESS_ABLE; PROCESS_SEQUENCE_PROCESS_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"
+        }
+      },
+      "HANDSHAKE_STG_REVIEW_COMPLETE": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D289:G289 IPS_Review_Complete; IPS_Review_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.08: Review 스텝에서 가공 레디 I/F Complete 신호",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D289:G289 IPS_Review_Complete; IPS_Review_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE; Map 0.10: Review 스텝에서 가공 레디 I/F Complete 신호"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_Y1": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D220:G220 PROCESS_RECIPE_ALIGNBASE_Y1; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D220:G220 PROCESS_RECIPE_ALIGNBASE_Y1; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "PROCESS_RECIPE_ALIGNBASE_X1": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(가공) D216:G216 PROCESS_RECIPE_ALIGNBASE_X1; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.08: Distortion Bench Mark",
+          "after": "Spec 0.10 Config_Map Word Detail(가공) D216:G216 PROCESS_RECIPE_ALIGNBASE_X1; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Recipe 기준값의 가공 PC 보고 주소; Vision LastLoad 수신 주소가 아님; 실제 전송은 후속 연결; Map 0.10: Distortion Bench Mark"
+        }
+      },
+      "MOTOR_STAGE_Y_BUSY": {
+        "DESCRIPTION": {
+          "before": "Spec 0.08 Config_Map Word Detail(물류) D348:G348 Stage_Y#1 Busy; 0=OFF 1=ON",
+          "after": "Spec 0.10 Config_Map Word Detail(물류) D348:G348 Stage_Y#1 Busy; 0=OFF 1=ON"
+        }
+      }
+    }
+  },
+  "Config/JHMI_INTERFACE.csv": {
+    "oldRows": 16,
+    "newRows": 30,
+    "oldHeader": [
+      "TYPE",
+      "DEVICE",
+      "NUMBER",
+      "NICKNAME",
+      "SYSTEM_SECTION",
+      "AUTOCONNECTION",
+      "SIMUL",
+      "ARG1",
+      "ARG2",
+      "ARG3",
+      "ARG4",
+      "ARG5",
+      "MAX_CLIENT_COUNT",
+      "FLOW_CONTROL",
+      "ADDRESS"
+    ],
+    "newHeader": [
+      "TYPE",
+      "DEVICE",
+      "NUMBER",
+      "NICKNAME",
+      "SYSTEM_SECTION",
+      "AUTOCONNECTION",
+      "SIMUL",
+      "ARG1",
+      "ARG2",
+      "ARG3",
+      "ARG4",
+      "ARG5",
+      "MAX_CLIENT_COUNT",
+      "FLOW_CONTROL",
+      "ADDRESS"
+    ],
+    "fileChanged": true
+  },
+  "Config/JHMI_ALARMLIST.csv": {
+    "oldRows": 201,
+    "newRows": 303,
+    "oldHeader": [
+      "CODE",
+      "GROUP",
+      "ID",
+      "LEVEL",
+      "CAUSE",
+      "SOLUTION",
+      "CIM_ADRESS"
+    ],
+    "newHeader": [
+      "CODE",
+      "GROUP",
+      "ID",
+      "LEVEL",
+      "CAUSE",
+      "SOLUTION",
+      "CIM_ADRESS"
+    ],
+    "fileChanged": true,
+    "key": "ID",
+    "addedKeys": [
+      "SEQ_AUTO_NG",
+      "SEQ_DOREADY_DOREADY_DATA_PREPARE_NG",
+      "SEQ_DOREADY_DOREADY_SCRIPT_BUILD_UPLOAD_NG",
+      "SEQ_DOREADY_DOREADY_SIGNALS_CLEAR_NG",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_ABLE_NG",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_ABLE_TIMEOUT",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_COMPLETE_NG",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_COMPLETE_TIMEOUT",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_START_NG",
+      "SEQ_DOREADY_HANDSHAKE_PRC_DOREADY_START_TIMEOUT",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_ABLE_NG",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_ABLE_TIMEOUT",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_COMPLETE_NG",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_COMPLETE_TIMEOUT",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_START_NG",
+      "SEQ_DOREADY_HANDSHAKE_STG_DOREADY_START_TIMEOUT",
+      "SEQ_DOREADY_NG",
+      "SEQ_DO_ALIGN_NG",
+      "SEQ_DO_ALIGN_PROCESS_DO_ALIGN_NG",
+      "SEQ_DO_ALIGN_PROCESS_DO_ALIGN_TIMEOUT",
+      "SEQ_DO_ALIGN_SDC_DO_ALIGN_COMPLETE_NG",
+      "SEQ_DO_ALIGN_SDC_DO_ALIGN_COMPLETE_TIMEOUT",
+      "SEQ_DO_ALIGN_SDC_DO_ALIGN_STATUS_NG",
+      "SEQ_DO_ALIGN_SDC_DO_ALIGN_STATUS_TIMEOUT",
+      "SEQ_DO_ALIGN_STAGE_MCC_BUSY_FLAGS_NG",
+      "SEQ_DO_ALIGN_STAGE_MCC_BUSY_FLAGS_TIMEOUT",
+      "SEQ_IOF_HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE_NG",
+      "SEQ_IOF_HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE_TIMEOUT",
+      "SEQ_IOF_HANDSHAKE_PRC_IOF_START_REQUEST_NG",
+      "SEQ_IOF_HANDSHAKE_PRC_IOF_START_REQUEST_TIMEOUT",
+      "SEQ_IOF_HANDSHAKE_STG_IOF_COMPLETE_NG",
+      "SEQ_IOF_HANDSHAKE_STG_IOF_COMPLETE_TIMEOUT",
+      "SEQ_IOF_IOF_PLAN_NG",
+      "SEQ_IOF_IOF_SIGNALS_CLEAR_NG",
+      "SEQ_IOF_NG",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_ABLE_NG",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_ABLE_TIMEOUT",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_COMPLETE_NG",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_COMPLETE_TIMEOUT",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_START_NG",
+      "SEQ_PROCESS_HANDSHAKE_PRC_PROCESS_START_TIMEOUT",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_ABLE_NG",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_ABLE_TIMEOUT",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_COMPLETE_NG",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_COMPLETE_TIMEOUT",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_START_NG",
+      "SEQ_PROCESS_HANDSHAKE_STG_PROCESS_START_TIMEOUT",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING_NG",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING_TIMEOUT",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_PRC_REVIEW_MOVE_START_NG",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_PRC_REVIEW_MOVE_START_TIMEOUT",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_STG_REVIEW_ABLE_SDC_NG",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_STG_REVIEW_ABLE_SDC_TIMEOUT",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_STG_REVIEW_COMPLETE_SDC_NG",
+      "SEQ_PROCESS_MOVE_HANDSHAKE_STG_REVIEW_COMPLETE_SDC_TIMEOUT",
+      "SEQ_PROCESS_MOVE_MOVE_RELEASE_NG",
+      "SEQ_PROCESS_MOVE_MOVE_SETTLE_NG",
+      "SEQ_PROCESS_MOVE_MOVE_TARGETS_NG",
+      "SEQ_PROCESS_MOVE_MOVE_XREADY_NG",
+      "SEQ_PROCESS_MOVE_NG",
+      "SEQ_PROCESS_NG",
+      "SEQ_PROCESS_PROCESS_MACHINING_INSPECTION_NG",
+      "SEQ_PROCESS_PROCESS_MOF_ZERO_NG",
+      "SEQ_PROCESS_PROCESS_READY_POSITION_NG",
+      "SEQ_PROCESS_PROCESS_RESULTS_NG",
+      "SEQ_PROCESS_PROCESS_SIGNALS_CLEAR_NG",
+      "SEQ_PROCESS_PROCESS_TASK_RUN_NG",
+      "SEQ_PROCESS_PROCESS_ZERO_MEASURE_NG",
+      "SEQ_PROCESS_PROCESS_ZERO_PREPARE_NG",
+      "SEQ_PROCESS_PROCESS_ZERO_RESULTS_NG",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_ABLE_NG",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_ABLE_TIMEOUT",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_COMPLETE_NG",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_COMPLETE_TIMEOUT",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_START_NG",
+      "SEQ_REVIEW_HANDSHAKE_PRC_REVIEW_START_TIMEOUT",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_ABLE_NG",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_ABLE_TIMEOUT",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_COMPLETE_NG",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_COMPLETE_TIMEOUT",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_START_NG",
+      "SEQ_REVIEW_HANDSHAKE_STG_REVIEW_START_TIMEOUT",
+      "SEQ_REVIEW_NG",
+      "SEQ_REVIEW_REVIEW_MEASURE_NG",
+      "SEQ_REVIEW_REVIEW_PLAN_NG",
+      "SEQ_REVIEW_REVIEW_RESULTS_NG",
+      "SEQ_REVIEW_REVIEW_SIGNALS_CLEAR_NG",
+      "SEQ_TPM_HANDSHAKE_PRC_TOP_POWERMETER_ABLE_NG",
+      "SEQ_TPM_HANDSHAKE_PRC_TOP_POWERMETER_ABLE_TIMEOUT",
+      "SEQ_TPM_HANDSHAKE_PRC_TOP_POWERMETER_COMPLETE_NG",
+      "SEQ_TPM_HANDSHAKE_PRC_TOP_POWERMETER_COMPLETE_TIMEOUT",
+      "SEQ_TPM_HANDSHAKE_STG_TOP_POWERMETER_ABLE_NG",
+      "SEQ_TPM_HANDSHAKE_STG_TOP_POWERMETER_ABLE_TIMEOUT",
+      "SEQ_TPM_HANDSHAKE_STG_TOP_POWERMETER_COMPLETE_NG",
+      "SEQ_TPM_HANDSHAKE_STG_TOP_POWERMETER_COMPLETE_TIMEOUT",
+      "SEQ_TPM_NG",
+      "SEQ_TPM_TPM_MEASURE_NG",
+      "SEQ_TPM_TPM_PREPARE_NG",
+      "SEQ_TPM_TPM_RESULTS_NG",
+      "SEQ_TPM_TPM_SIGNALS_CLEAR_NG",
+      "TPM_POWER_CORRECTION_FAILED",
+      "VISION_LINE_HOLE_COUNT_EXCEEDED"
+    ],
+    "removedKeys": [],
+    "changedKeys": {}
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "positionRows": 500,
+  "twoWords": true,
+  "pollZero": true,
+  "signedIntegerDoubleMap": true,
+  "addressesContinuous": true,
+  "distortionRows": 26,
+  "distortionUnused": true,
+  "busyFlags": {
+    "ID": "STAGE_MCC_BUSY_FLAGS",
+    "USE": "0",
+    "GROUP": "IF_ALIGN",
+    "NAME": "MCC Busy Word (unused)",
+    "DEVICE NO": "0",
+    "ADDRESS": "WFAB4",
+    "DATA TYPE": "WORD",
+    "DIRECTION": "IN",
+    "ACCESS": "R",
+    "READ_SCALE": "1",
+    "WRITE_SCALE": "1",
+    "LENGTH": "1",
+    "POLL_MS": "0",
+    "DESCRIPTION": "미사용: 0선 선이동은 현재 기판의 확정 가공 계획과 WC124 허가로 요청; FAB3/FAB4 ALIGN_BUSY 주소 감시 제외"
+  },
+  "distortionVisionRows": 23,
+  "distortionStageRows": 3,
+  "unusedAuxiliaryXArray": {
+    "ID": "IOF_POS_ARRAY_X_1",
+    "USE": "0",
+    "GROUP": "IF_IOF_DATA",
+    "NAME": "IOF X Array (Unused)",
+    "DEVICE NO": "0",
+    "ADDRESS": "W8900",
+    "DATA TYPE": "DOUBLE",
+    "DIRECTION": "OUT",
+    "ACCESS": "RW",
+    "READ_SCALE": "0.0001",
+    "WRITE_SCALE": "10000",
+    "LENGTH": "1000",
+    "POLL_MS": "0",
+    "DESCRIPTION": "Spec 0.10 가공 D1326:G1825; W8900~W8CE7; 좌표 500개/1000 Word; 문서에서 사용안함으로 명시; USE=0 유지; 일반 X용으로 자동 선택하지 않음"
+  }
+}

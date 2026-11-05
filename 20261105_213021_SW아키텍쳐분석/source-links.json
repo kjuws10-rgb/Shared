@@ -1,0 +1,392 @@
+[
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 49,
+    "end": 58,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L49-L58"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1473,
+    "end": 1503,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L1473-L1503"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 640,
+    "end": 670,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.UI/CRootView.cs#L640-L670"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2748,
+    "end": 2762,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.UI/CRootView.cs#L2748-L2762"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 415,
+    "end": 526,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStageReviewSequences.cs#L415-L526"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5161,
+    "end": 5175,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5161-L5175"
+  },
+  {
+    "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+    "start": 224,
+    "end": 233,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Alarm/CAlarmManager.cs#L224-L233"
+  },
+  {
+    "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+    "start": 612,
+    "end": 661,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Alarm/CAlarmManager.cs#L612-L661"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+    "start": 2892,
+    "end": 2905,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2892-L2905"
+  },
+  {
+    "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+    "start": 2890,
+    "end": 2910,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CInterfaceManager.cs#L2890-L2910"
+  },
+  {
+    "path": "Config/RECIPE/test0929.csv",
+    "start": 185,
+    "end": 210,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Config/RECIPE/test0929.csv#L185-L210"
+  },
+  {
+    "path": "Drilling.Common/Managers/CRecipeManager.cs",
+    "start": 73,
+    "end": 88,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Managers/CRecipeManager.cs#L73-L88"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 418,
+    "end": 421,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CReviewManager.cs#L418-L421"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2030,
+    "end": 2087,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CReviewManager.cs#L2030-L2087"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureService.cs",
+    "start": 268,
+    "end": 311,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureService.cs#L268-L311"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureRun.cs",
+    "start": 8,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureRun.cs#L8-L34"
+  },
+  {
+    "path": "Drilling.File/PowerTable/CPowerTableFile.cs",
+    "start": 32,
+    "end": 59,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/PowerTable/CPowerTableFile.cs#L32-L59"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 329,
+    "end": 340,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Vision/CVisionComm.cs#L329-L340"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 272,
+    "end": 298,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Vision/CVisionComm.cs#L272-L298"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 576,
+    "end": 594,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Vision/CVisionComm.cs#L576-L594"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 734,
+    "end": 802,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Vision/CVisionComm.cs#L734-L802"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 10,
+    "end": 25,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L25"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 61,
+    "end": 103,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L61-L103"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 78,
+    "end": 119,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L78-L119"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1489,
+    "end": 1503,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L1489-L1503"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 12,
+    "end": 18,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/Product/CProductFile.cs#L12-L18"
+  },
+  {
+    "path": "Drilling.Common/Product/CProductManager.cs",
+    "start": 25,
+    "end": 35,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Product/CProductManager.cs#L25-L35"
+  },
+  {
+    "path": "Drilling.File/Correction/CAlignOffsetLogFile.cs",
+    "start": 46,
+    "end": 78,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/Correction/CAlignOffsetLogFile.cs#L46-L78"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 654,
+    "end": 660,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L654-L660"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 665,
+    "end": 690,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Config/JHMI_MELSEC_MAP.csv#L665-L690"
+  },
+  {
+    "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+    "start": 102,
+    "end": 110,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/JHMI/CMelsecMapFile.cs#L102-L110"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3385,
+    "end": 3453,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L3385-L3453"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2241,
+    "end": 2297,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CReviewManager.cs#L2241-L2297"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2937,
+    "end": 3005,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CReviewManager.cs#L2937-L3005"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3830,
+    "end": 3855,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L3830-L3855"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 4875,
+    "end": 4888,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L4875-L4888"
+  },
+  {
+    "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+    "start": 110,
+    "end": 171,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/Script/CAutomation1ScriptFile.cs#L110-L171"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 609,
+    "end": 676,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStageReviewSequences.cs#L609-L676"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 523,
+    "end": 557,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Melsec/CMelsec.cs#L523-L557"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2394,
+    "end": 2500,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Melsec/CMelsec.cs#L2394-L2500"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2550,
+    "end": 2558,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Melsec/CMelsec.cs#L2550-L2558"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2602,
+    "end": 2646,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Melsec/CMelsec.cs#L2602-L2646"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 4051,
+    "end": 4094,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L4051-L4094"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5670,
+    "end": 5729,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5670-L5729"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5833,
+    "end": 5908,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5833-L5908"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 698,
+    "end": 777,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStageReviewSequences.cs#L698-L777"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5934,
+    "end": 5955,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5934-L5955"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 35,
+    "end": 58,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L35-L58"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 4846,
+    "end": 4871,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L4846-L4871"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5312,
+    "end": 5349,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5312-L5349"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureRun.cs",
+    "start": 159,
+    "end": 225,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L225"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureRun.cs",
+    "start": 267,
+    "end": 347,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureRun.cs#L267-L347"
+  },
+  {
+    "path": "Drilling.Common/Automation/CAutomationManager.cs",
+    "start": 564,
+    "end": 585,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Automation/CAutomationManager.cs#L564-L585"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2788,
+    "end": 2802,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.UI/CRootView.cs#L2788-L2802"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3691,
+    "end": 3715,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L3691-L3715"
+  },
+  {
+    "path": "Drilling.Common/Managers/CManager.cs",
+    "start": 1,
+    "end": 30,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Managers/CManager.cs#L1-L30"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5080,
+    "end": 5130,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L5080-L5130"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 662,
+    "end": 674,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStageReviewSequences.cs#L662-L674"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 764,
+    "end": 802,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/Vision/CVisionComm.cs#L764-L802"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3847,
+    "end": 3855,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStationProcess.cs#L3847-L3855"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 701,
+    "end": 717,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.File/ReviewResult/CReviewResultFile.cs#L701-L717"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureRun.cs",
+    "start": 60,
+    "end": 94,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureRun.cs#L60-L94"
+  },
+  {
+    "path": "Drilling.Common/Interface/CPowerMeasureRun.cs",
+    "start": 159,
+    "end": 177,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L177"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2062,
+    "end": 2072,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Review/CReviewManager.cs#L2062-L2072"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 575,
+    "end": 588,
+    "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW_IPS/blob/a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f/Drilling.Common/Station/CStageReviewSequences.cs#L575-L588"
+  }
+]
