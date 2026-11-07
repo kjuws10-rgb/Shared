@@ -1768,6 +1768,7 @@ globalThis.ReviewFeatures = [
       const id = ev.target.id;
       if (id === 'lab-shift-auto-reset') { if(options.locked){l.error=true;l.notice='측정 종료 후 AUTO 전환 옵션을 바꿔 주세요.';}else{const before=l.shift.autoReset;l.shift.autoReset=!!ev.target.checked;l.shift.transition=null;l.error=false;l.notice=l.shift.autoReset?'별도 양산 옵션 ON: AUTO 전환 요청 시 Shift를 자동 초기화합니다.':'별도 양산 옵션 OFF: Shift가 있으면 유지/취소 확인을 받습니다.';addLog(engine,'SIM_AUTO_SHIFT_POLICY','가상 AUTO 전환 정책 변경',before,l.shift.autoReset);}finish(); }
       else if (id.startsWith('onebeam-')) {
+        if(id.startsWith('onebeam-reference-')&&id!=='onebeam-reference-shot')l.onebeam.referenceDraftDirty=true;
         captureOneBeam();
         if(id==='onebeam-reference-shot'){if(l.onebeam.referenceDraftDirty){l.error=true;l.notice='수정한 Zero Order 기준 입력을 먼저 저장하거나 실험 설정을 초기화하세요.';}else l.onebeam.referenceShotKey=ev.target.value;finish();}
         else {l.onebeam.dirty=true;l.onebeam.preview=null;if(id.startsWith('onebeam-reference-'))l.onebeam.referenceDraftDirty=true;if(id.startsWith('onebeam-doe-'))finish();else{engine.save();const exp=container.querySelector('[data-action="lab-onebeam-export"]');if(exp)exp.disabled=true;let warning=container.querySelector('[data-onebeam-dirty]');if(!warning){warning=document.createElement('p');warning.className='lab-readonly';warning.dataset.onebeamDirty='true';container.querySelector('.lab-card')?.append(warning);}warning.textContent='입력이 바뀌었습니다. 기준 입력은 먼저 저장하고 미리보기를 다시 계산하세요.';}}
