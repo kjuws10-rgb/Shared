@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "repository": "kjuws10-rgb/A3Drilling",
+  "ref": "master",
+  "commit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "validation_checkout": "detached",
+  "push_url": "DISABLED",
+  "command": "dotnet build Drilling.sln -c Release --nologo -v:minimal -p:UseSharedCompilation=false --disable-build-servers",
+  "dotnet_sdk": "10.0.400",
+  "target_frameworks": [
+    "net8.0",
+    "net8.0-windows"
+  ],
+  "started_at": "2026-11-08T09:07:54.0136945+09:00",
+  "ended_at": "2026-11-08T09:08:04.4704865+09:00",
+  "duration_seconds": 10.456792,
+  "msbuild_elapsed": "00:00:09.96",
+  "exit_code": 1,
+  "result": "failed",
+  "summary_errors": 19,
+  "summary_warnings": 0,
+  "unique_diagnostic_count": 19,
+  "diagnostics": [
+    {
+      "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "line": 8,
+      "column": 27,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "line": 25,
+      "column": 26,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "line": 45,
+      "column": 13,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "line": 7,
+      "column": 27,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "line": 21,
+      "column": 26,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "line": 65,
+      "column": 60,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Managers/CManager.cs",
+      "line": 1,
+      "column": 23,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Managers/CManager.cs",
+      "line": 28,
+      "column": 22,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Managers/CManager.cs",
+      "line": 64,
+      "column": 9,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Managers/CManager.cs",
+      "line": 380,
+      "column": 12,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Product/CProductManager.cs",
+      "line": 1,
+      "column": 23,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Product/CProductManager.cs",
+      "line": 4,
+      "column": 67,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "line": 10,
+      "column": 27,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "line": 22,
+      "column": 9,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Station/CStationManager.cs",
+      "line": 3,
+      "column": 27,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Station/CStationManager.cs",
+      "line": 40,
+      "column": 13,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Station/CStationProcess.cs",
+      "line": 11,
+      "column": 27,
+      "code": "CS0234",
+      "message": "'Drilling.Common' 네임스페이스에 'Log' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Station/CStationProcess.cs",
+      "line": 81,
+      "column": 26,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    },
+    {
+      "file": "Drilling.Common/Station/CStationProcess.cs",
+      "line": 125,
+      "column": 13,
+      "code": "CS0246",
+      "message": "'CLogManager' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요."
+    }
+  ],
+  "blocker": "Drilling.Common.Log namespace and CLogManager type are referenced but their implementation is absent from this tracked snapshot.",
+  "gitignore_evidence": ".gitignore:33 [Ll]og/ matches Drilling.Common/Log/CLogManager.cs (git check-ignore -v actually executed); this proves exclusion pattern, not historical cause.",
+  "build_log_sha256": "7859bd98f1f396347f581716f2388cbc2dd398d003666ae6993a4a2fc1bf7901",
+  "source_tracked_status": [],
+  "validation_tracked_status": [],
+  "source_modified": false,
+  "stubs_used": false,
+  "sdk_copied": false,
+  "configuration_modified": false,
+  "app_or_hardware_started": false,
+  "scope": "One unmodified Release solution build only; failure prevents validating later build/runtime stages.",
+  "build_log": "Private evidence retained; diagnostic summary published without local paths"
+}
