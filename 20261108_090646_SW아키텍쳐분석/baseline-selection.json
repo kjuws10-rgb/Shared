@@ -1,0 +1,56 @@
+{
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "sourceCommitDate": "2026-11-06T00:03:40Z",
+  "sourceCommitMessage": "11.5.5버전으로 커밋",
+  "previousSourceCommit": null,
+  "mode": "initial_baseline",
+  "sharedMainAtSelection": "01b9ebc97a74daf130dac37ec794d202d9d5e862",
+  "sharedRecursiveTreeTruncated": false,
+  "candidates": [
+    {
+      "folder": "20261105_213021_SW아키텍쳐분석",
+      "readmeUrl": "https://github.com/kjuws10-rgb/Shared/blob/01b9ebc97a74daf130dac37ec794d202d9d5e862/20261105_213021_SW아키텍쳐분석/README.md",
+      "containsA3Drilling": false,
+      "containsIPS": true,
+      "eligible": false,
+      "reason": "README does not identify A3Drilling as its source; IPS analysis excluded"
+    },
+    {
+      "folder": "20261102_143906_SW아키텍쳐분석",
+      "readmeUrl": "https://github.com/kjuws10-rgb/Shared/blob/01b9ebc97a74daf130dac37ec794d202d9d5e862/20261102_143906_SW아키텍쳐분석/README.md",
+      "containsA3Drilling": false,
+      "containsIPS": true,
+      "eligible": false,
+      "reason": "README does not identify A3Drilling as its source; IPS analysis excluded"
+    },
+    {
+      "folder": "20261031_090522_SW아키텍쳐분석",
+      "readmeUrl": "https://github.com/kjuws10-rgb/Shared/blob/01b9ebc97a74daf130dac37ec794d202d9d5e862/20261031_090522_SW아키텍쳐분석/README.md",
+      "containsA3Drilling": false,
+      "containsIPS": true,
+      "eligible": false,
+      "reason": "README does not identify A3Drilling as its source; IPS analysis excluded"
+    },
+    {
+      "folder": "20261028_090032_SW아키텍쳐분석",
+      "readmeUrl": "https://github.com/kjuws10-rgb/Shared/blob/01b9ebc97a74daf130dac37ec794d202d9d5e862/20261028_090032_SW아키텍쳐분석/README.md",
+      "containsA3Drilling": false,
+      "containsIPS": true,
+      "eligible": false,
+      "reason": "README does not identify A3Drilling as its source; IPS analysis excluded"
+    },
+    {
+      "folder": "20261022_090959_SW아키텍쳐분석",
+      "readmeUrl": "https://github.com/kjuws10-rgb/Shared/blob/01b9ebc97a74daf130dac37ec794d202d9d5e862/20261022_090959_SW아키텍쳐분석/README.md",
+      "containsA3Drilling": false,
+      "containsIPS": false,
+      "eligible": false,
+      "reason": "README does not identify A3Drilling as its source; IPS analysis excluded"
+    }
+  ],
+  "selectionReason": "No prior A3Drilling README in either accepted timestamp folder format; first baseline required",
+  "runAtKst": "2026-11-08T09:06:46+09:00",
+  "folder": "20261108_090646_SW아키텍쳐분석"
+}

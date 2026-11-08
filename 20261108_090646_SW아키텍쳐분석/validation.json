@@ -1,0 +1,86 @@
+{
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "previousSourceCommit": null,
+  "analysisMode": "initial_baseline",
+  "gitDiffPerformed": false,
+  "documents": 7,
+  "documentChecks": [
+    {
+      "file": "01_Commit변경요약.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "02_데이터구조와흐름.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "03_가공_Review영향분석.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "04_통합흐름도.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "05_위험도별발견사항.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "06_분석근거_검증기록.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "README.md",
+      "utf8": true,
+      "fences": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    }
+  ],
+  "fixedSourceLinks": 152,
+  "mermaidDiagrams": 10,
+  "mermaidParsedAndRendered": true,
+  "sourcePreservation": {
+    "trackedFiles": 315,
+    "allTrackedBytesMatch": true,
+    "headUnchanged": true,
+    "clean": true,
+    "pushDisabled": true
+  },
+  "build": {
+    "result": "failed",
+    "errors": 19,
+    "warnings": 0,
+    "separateClone": true,
+    "stubsUsed": false
+  },
+  "scope": {
+    "applicationStarted": false,
+    "hardwareStarted": false,
+    "originalSourceModified": false,
+    "sourceCommitOrPush": false,
+    "privateKnowledgePublished": false
+  },
+  "reportDiffCheck": "passed on staged report tree",
+  "publication": "Pre-publication validation record; post-commit download comparison is retained in the private publication audit."
+}

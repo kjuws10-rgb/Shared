@@ -1,0 +1,100 @@
+{
+  "mapRows": 689,
+  "activeMapRows": 622,
+  "enabledUnassignedIds": [],
+  "distortionHandshake": [
+    {
+      "id": "HANDSHAKE_PRC_DISTORTION_ABLE",
+      "use": "1",
+      "address": "W8056",
+      "type": "DWORD",
+      "readScale": "0.0001",
+      "writeScale": "10000"
+    },
+    {
+      "id": "HANDSHAKE_STG_DISTORTION_ABLE",
+      "use": "0",
+      "address": "UNASSIGNED",
+      "type": "DWORD",
+      "readScale": "0.0001",
+      "writeScale": "10000"
+    },
+    {
+      "id": "HANDSHAKE_PRC_DISTORTION_COMPLETE",
+      "use": "1",
+      "address": "W8058",
+      "type": "DWORD",
+      "readScale": "0.0001",
+      "writeScale": "10000"
+    },
+    {
+      "id": "HANDSHAKE_STG_DISTORTION_COMPLETE",
+      "use": "0",
+      "address": "UNASSIGNED",
+      "type": "DWORD",
+      "readScale": "0.0001",
+      "writeScale": "10000"
+    }
+  ],
+  "trackedTestRecipeValues": {
+    "REVIEW_TOLERANCE_X": "3",
+    "REVIEW_TOLERANCE_Y": "3",
+    "SPLITED_BEAM_COUNT": "4"
+  },
+  "trackedLatestReviewOffset": {
+    "path": "Config/RECIPE/test0929_reviewoffset/20261104_135833_105_reviewoffset.csv",
+    "rows": 20740,
+    "coordinateSpaces": [
+      "DESIGN"
+    ],
+    "maxAbsXmm": 3.413,
+    "maxAbsYmm": 2.253
+  },
+  "scope": "Static tracked-file checks, not current machine runtime or process approval",
+  "trackedFineSamples": [
+    {
+      "path": "Data/ReviewResult/FINE/test0929/20261104/20261104_135049_352.csv",
+      "headerCount": 39,
+      "rows": 1220,
+      "judgeCounts": {
+        "NG": 1220
+      },
+      "maxAbsRawXmm": 0.493,
+      "maxAbsRawYmm": 0.489,
+      "missingGenericResultLoadColumns": [
+        "ERROR_X",
+        "ERROR_Y"
+      ]
+    },
+    {
+      "path": "Data/ReviewResult/FINE/test0929/20261104/20261104_135832_883.csv",
+      "headerCount": 39,
+      "rows": 1220,
+      "judgeCounts": {
+        "OK": 1220
+      },
+      "maxAbsRawXmm": 0.491,
+      "maxAbsRawYmm": 0.491,
+      "missingGenericResultLoadColumns": [
+        "ERROR_X",
+        "ERROR_Y"
+      ]
+    },
+    {
+      "path": "Data/ReviewResult/FINE/test0929/20261104/20261104_140318_902.csv",
+      "headerCount": 39,
+      "rows": 1220,
+      "judgeCounts": {
+        "OK": 732,
+        "ERROR": 244,
+        "미검사": 244
+      },
+      "maxAbsRawXmm": 0.484,
+      "maxAbsRawYmm": 0.485,
+      "missingGenericResultLoadColumns": [
+        "ERROR_X",
+        "ERROR_Y"
+      ]
+    }
+  ]
+}

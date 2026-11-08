@@ -1,0 +1,481 @@
+{
+  "repository": "kjuws10-rgb/A3Drilling",
+  "branch": "master",
+  "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "analysisType": "FIRST_BASELINE",
+  "comparisonCommit": null,
+  "sourceModified": false,
+  "applicationStarted": false,
+  "method": "static call/units/schema review and tracked CSV summary; no C# execution/device test",
+  "vision": {
+    "headerBytes": 16,
+    "capacityDefault": 300,
+    "request1001BodyBytes": 7208,
+    "response1003BodyBytes": 10808,
+    "requestSlotBytes": 24,
+    "responsePackedSlotBytes": 36,
+    "countMeaning": "actual valid entries, not physical slots"
+  },
+  "tolerance": {
+    "recipeXmm": 3,
+    "recipeYmm": 3,
+    "definitionDefaultMm": 0.03,
+    "definitionUnit": "mm",
+    "definitionScale": 1,
+    "interpretation": "valid data within declared limits; intended production tolerance unknown"
+  },
+  "trackedFineSummaries": [
+    {
+      "file": "Data/ReviewResult/FINE/test0929/20261104/20261104_135049_352.csv",
+      "rows": 1220,
+      "headerCount": 39,
+      "requiredGenericHeadersMissing": [
+        "ERROR_X",
+        "ERROR_Y"
+      ],
+      "judges": {
+        "NG": 1220
+      },
+      "maxAbsErrorXmm": 0.493,
+      "maxAbsErrorYmm": 0.489,
+      "resultStatus": [
+        "COMPLETED"
+      ],
+      "stageSimulationLabels": [
+        "OFF"
+      ],
+      "visionSimulationLabels": [
+        "OFF"
+      ]
+    },
+    {
+      "file": "Data/ReviewResult/FINE/test0929/20261104/20261104_135832_883.csv",
+      "rows": 1220,
+      "headerCount": 39,
+      "requiredGenericHeadersMissing": [
+        "ERROR_X",
+        "ERROR_Y"
+      ],
+      "judges": {
+        "OK": 1220
+      },
+      "maxAbsErrorXmm": 0.491,
+      "maxAbsErrorYmm": 0.491,
+      "resultStatus": [
+        "COMPLETED"
+      ],
+      "stageSimulationLabels": [
+        "OFF"
+      ],
+      "visionSimulationLabels": [
+        "OFF"
+      ]
+    },
+    {
+      "file": "Data/ReviewResult/FINE/test0929/20261104/20261104_140318_902.csv",
+      "rows": 1220,
+      "headerCount": 39,
+      "requiredGenericHeadersMissing": [
+        "ERROR_X",
+        "ERROR_Y"
+      ],
+      "judges": {
+        "ERROR": 244,
+        "OK": 732,
+        "미검사": 244
+      },
+      "maxAbsErrorXmm": 0.484,
+      "maxAbsErrorYmm": 0.485,
+      "resultStatus": [
+        "FAILED"
+      ],
+      "stageSimulationLabels": [
+        "OFF"
+      ],
+      "visionSimulationLabels": [
+        "OFF"
+      ]
+    }
+  ],
+  "latestReviewOffset": {
+    "file": "Config/RECIPE/test0929_reviewoffset/20261104_135833_105_reviewoffset.csv",
+    "rowCount": 20740,
+    "headers": [
+      "CELLID",
+      "SHOTID",
+      "REVIEWOFFSETX",
+      "REVIEWOFFSETY",
+      "COORDINATE_SPACE"
+    ],
+    "spaces": [
+      "DESIGN"
+    ],
+    "maxAbsXmm": 3.413,
+    "maxAbsYmm": 2.253
+  },
+  "risks": [
+    {
+      "id": "REVIEW-TOLERANCE-DATA",
+      "severity": "P1",
+      "evidence": [
+        "tolerance_definition",
+        "tolerance_recipe",
+        "mm_judge"
+      ],
+      "claim": "sample tolerance is ±3mm; final accumulated offsets need separate field verification"
+    },
+    {
+      "id": "ONEBEAM-AUTO-11",
+      "severity": "P1",
+      "evidence": [
+        "auto_beam",
+        "beam_validation"
+      ],
+      "claim": "split1 supports Beam1 but AUTO uses constant11"
+    },
+    {
+      "id": "FINE-RESULT-IMPORT",
+      "severity": "P1",
+      "evidence": [
+        "fine_result_schema",
+        "rough_result_schema",
+        "generic_result_load",
+        "correction_load"
+      ],
+      "claim": "dedicated schema lacks generic required ERROR_X/Y; no dedicated importer found"
+    },
+    {
+      "id": "DISTORTION-MAP",
+      "severity": "P1",
+      "evidence": [
+        "distortion_unassigned",
+        "distortion_sequence"
+      ],
+      "claim": "Stage Distortion inputs remain disabled/unassigned"
+    },
+    {
+      "id": "OFFSET-PROVENANCE",
+      "severity": "P2",
+      "evidence": [
+        "offset_schema",
+        "offset_latest"
+      ],
+      "claim": "latest name can reselect old after deletion; schema lacks run/result/baseline-revision"
+    },
+    {
+      "id": "AUTO-PRODUCT-LINK",
+      "severity": "P2",
+      "evidence": [
+        "auto_review_adapter",
+        "fine_save_guard",
+        "fine_result_end",
+        "product_review"
+      ],
+      "claim": "dedicated AUTO end path contains no SetReview* calls unlike generic Review"
+    },
+    {
+      "id": "AK-MEASUREMENT-FRESHNESS",
+      "severity": "P2",
+      "evidence": [
+        "manual_ak_load",
+        "ak_read_service"
+      ],
+      "claim": "manual read returns current MELSEC memory and SW load time, not new capture proof"
+    },
+    {
+      "id": "VISION-PEER-CONTRACT",
+      "severity": "P2",
+      "evidence": [
+        "vision_contract",
+        "vision_result_count"
+      ],
+      "claim": "counterpart Vision source unavailable; fixed capacity/packing unverified"
+    }
+  ],
+  "reviewedFiles": [
+    "Config/JHMI_MELSEC_MAP.csv",
+    "Config/JHMI_RCP.csv",
+    "Config/JHMI_SETTING.csv",
+    "Config/RECIPE/test0929.csv",
+    "Drilling.Common/Correction/CAlignInterpolation.cs",
+    "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "Drilling.Common/Product/CProductManager.cs",
+    "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "Drilling.Common/Review/CReviewManager.cs",
+    "Drilling.Common/Station/CStageReviewSequences.cs",
+    "Drilling.Common/Station/CStationProcess.cs",
+    "Drilling.File/Product/CProductFile.cs",
+    "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "Drilling.UI/CRootView.cs",
+    "Drilling.UI/Menu/Menus/CMenuCorrection.cs"
+  ],
+  "links": [
+    {
+      "id": "vision_frame",
+      "file": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "start": 272,
+      "end": 339,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L272-L339"
+    },
+    {
+      "id": "vision_contract",
+      "file": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "start": 558,
+      "end": 594,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L558-L594"
+    },
+    {
+      "id": "vision_result_count",
+      "file": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "start": 768,
+      "end": 802,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L768-L802"
+    },
+    {
+      "id": "flying_retry",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 2550,
+      "end": 2618,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2550-L2618"
+    },
+    {
+      "id": "mm_judge",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 2030,
+      "end": 2086,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2030-L2086"
+    },
+    {
+      "id": "fine_interpolation",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 3274,
+      "end": 3340,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L3274-L3340"
+    },
+    {
+      "id": "fine_save_guard",
+      "file": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 93,
+      "end": 174,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L93-L174"
+    },
+    {
+      "id": "auto_beam",
+      "file": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 310,
+      "end": 313,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L310-L313"
+    },
+    {
+      "id": "beam_validation",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 838,
+      "end": 850,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L838-L850"
+    },
+    {
+      "id": "offset_schema",
+      "file": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 10,
+      "end": 25,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L25"
+    },
+    {
+      "id": "offset_latest",
+      "file": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 49,
+      "end": 58,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L49-L58"
+    },
+    {
+      "id": "offset_atomic",
+      "file": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 74,
+      "end": 103,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L74-L103"
+    },
+    {
+      "id": "offset_space",
+      "file": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "start": 159,
+      "end": 178,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L159-L178"
+    },
+    {
+      "id": "offset_validation",
+      "file": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 1120,
+      "end": 1172,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1120-L1172"
+    },
+    {
+      "id": "script_offset",
+      "file": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 131,
+      "end": 182,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L131-L182"
+    },
+    {
+      "id": "doready_reload",
+      "file": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1505,
+      "end": 1535,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1505-L1535"
+    },
+    {
+      "id": "product_review",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1350,
+      "end": 1415,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L1350-L1415"
+    },
+    {
+      "id": "auto_review_adapter",
+      "file": "Drilling.UI/CRootView.cs",
+      "start": 2791,
+      "end": 2836,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CRootView.cs#L2791-L2836"
+    },
+    {
+      "id": "fine_result_end",
+      "file": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 2778,
+      "end": 2812,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2778-L2812"
+    },
+    {
+      "id": "product_csv",
+      "file": "Drilling.File/Product/CProductFile.cs",
+      "start": 8,
+      "end": 11,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Product/CProductFile.cs#L8-L11"
+    },
+    {
+      "id": "product_sections",
+      "file": "Drilling.File/Product/CProductFile.cs",
+      "start": 133,
+      "end": 192,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Product/CProductFile.cs#L133-L192"
+    },
+    {
+      "id": "fine_result_schema",
+      "file": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "start": 446,
+      "end": 549,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L446-L549"
+    },
+    {
+      "id": "rough_result_schema",
+      "file": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "start": 580,
+      "end": 667,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L580-L667"
+    },
+    {
+      "id": "generic_result_load",
+      "file": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "start": 12,
+      "end": 55,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L55"
+    },
+    {
+      "id": "correction_load",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 869,
+      "end": 892,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L869-L892"
+    },
+    {
+      "id": "simple_replace",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 6492,
+      "end": 6507,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6492-L6507"
+    },
+    {
+      "id": "rough_accumulate",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 3331,
+      "end": 3364,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3331-L3364"
+    },
+    {
+      "id": "fine_accumulate",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 2473,
+      "end": 2514,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2473-L2514"
+    },
+    {
+      "id": "manual_ak_load",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 2157,
+      "end": 2194,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2157-L2194"
+    },
+    {
+      "id": "ak_read_service",
+      "file": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "start": 4672,
+      "end": 4708,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4672-L4708"
+    },
+    {
+      "id": "ak_mapping",
+      "file": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "start": 237,
+      "end": 251,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Correction/CAlignInterpolation.cs#L237-L251"
+    },
+    {
+      "id": "distortion_measure",
+      "file": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "start": 306,
+      "end": 346,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Correction/CAlignInterpolation.cs#L306-L346"
+    },
+    {
+      "id": "distortion_sequence",
+      "file": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 5480,
+      "end": 5514,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L5480-L5514"
+    },
+    {
+      "id": "ak_addresses",
+      "file": "Config/JHMI_MELSEC_MAP.csv",
+      "start": 632,
+      "end": 639,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L632-L639"
+    },
+    {
+      "id": "distortion_unassigned",
+      "file": "Config/JHMI_MELSEC_MAP.csv",
+      "start": 687,
+      "end": 690,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L687-L690"
+    },
+    {
+      "id": "tolerance_definition",
+      "file": "Config/JHMI_RCP.csv",
+      "start": 5,
+      "end": 6,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_RCP.csv#L5-L6"
+    },
+    {
+      "id": "tolerance_recipe",
+      "file": "Config/RECIPE/test0929.csv",
+      "start": 6,
+      "end": 7,
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/RECIPE/test0929.csv#L6-L7"
+    }
+  ],
+  "limitations": [
+    "No physical device or UI operation",
+    "Tracked sample CSV labels are not independently verified provenance",
+    "No earlier eligible A3Drilling comparison baseline",
+    "No raw result rows copied"
+  ]
+}

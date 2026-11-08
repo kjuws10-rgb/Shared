@@ -1,0 +1,35 @@
+{
+  "files": 315,
+  "byTopDirectory": {
+    "ROOT": 4,
+    "Config": 78,
+    "Data": 24,
+    "Drilling.Common": 60,
+    "Drilling.File": 17,
+    "Drilling.UI": 132
+  },
+  "byExtension": {
+    "": 2,
+    ".csv": 64,
+    ".scan": 11,
+    ".txt": 3,
+    ".bak": 8,
+    ".ascript": 16,
+    ".cs": 140,
+    ".csproj": 3,
+    ".dll": 12,
+    ".xml": 1,
+    ".xaml": 53,
+    ".sln": 1,
+    ".config": 1
+  },
+  "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "previousCommit": null,
+  "mode": "initial_baseline",
+  "gitDiffPerformed": false,
+  "gitDiffReason": "No eligible prior A3Drilling report; do not compare IPS commits",
+  "csvFiles": 64,
+  "trackedAGENTS": []
+}

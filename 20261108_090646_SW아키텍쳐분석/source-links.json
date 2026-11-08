@@ -1,0 +1,914 @@
+[
+  {
+    "path": "Drilling.File/Drilling.File.csproj",
+    "start": 1,
+    "end": 8,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Drilling.File.csproj#L1-L8"
+  },
+  {
+    "path": "Drilling.UI/Drilling.UI.csproj",
+    "start": 1,
+    "end": 26,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Drilling.UI.csproj#L1-L26"
+  },
+  {
+    "path": ".gitignore",
+    "start": 29,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/.gitignore#L29-L34"
+  },
+  {
+    "path": "Drilling.Common/Managers/CManager.cs",
+    "start": 55,
+    "end": 83,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CManager.cs#L55-L83"
+  },
+  {
+    "path": "Drilling.UI/CApp.xaml.cs",
+    "start": 23,
+    "end": 44,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CApp.xaml.cs#L23-L44"
+  },
+  {
+    "path": "Drilling.UI/CAppStartup.cs",
+    "start": 14,
+    "end": 68,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CAppStartup.cs#L14-L68"
+  },
+  {
+    "path": "Drilling.UI/CAppStartup.cs",
+    "start": 121,
+    "end": 151,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CAppStartup.cs#L121-L151"
+  },
+  {
+    "path": "Drilling.Common/Managers/CManager.cs",
+    "start": 86,
+    "end": 142,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CManager.cs#L86-L142"
+  },
+  {
+    "path": "Drilling.Common/Managers/CManager.cs",
+    "start": 204,
+    "end": 217,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CManager.cs#L204-L217"
+  },
+  {
+    "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+    "start": 12,
+    "end": 35,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CInterfaceFile.cs#L12-L35"
+  },
+  {
+    "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+    "start": 54,
+    "end": 78,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CInterfaceFile.cs#L54-L78"
+  },
+  {
+    "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+    "start": 7,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CMelsecMapFile.cs#L7-L34"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationManager.cs",
+    "start": 15,
+    "end": 59,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationManager.cs#L15-L59"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationManager.cs",
+    "start": 87,
+    "end": 110,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationManager.cs#L87-L110"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3769,
+    "end": 3793,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L3769-L3793"
+  },
+  {
+    "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+    "start": 157,
+    "end": 180,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/CInterfaceManager.cs#L157-L180"
+  },
+  {
+    "path": "Drilling.Common/Interface/CComm.cs",
+    "start": 10,
+    "end": 53,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/CComm.cs#L10-L53"
+  },
+  {
+    "path": "Drilling.Common/Interface/CComm.cs",
+    "start": 138,
+    "end": 153,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/CComm.cs#L138-L153"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 10,
+    "end": 29,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L10-L29"
+  },
+  {
+    "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.cs",
+    "start": 9,
+    "end": 19,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L9-L19"
+  },
+  {
+    "path": "Drilling.Common/Interface/Serial/CTalonLaser.cs",
+    "start": 10,
+    "end": 13,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Serial/CTalonLaser.cs#L10-L13"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 15,
+    "end": 60,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L15-L60"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 145,
+    "end": 153,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L145-L153"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 197,
+    "end": 229,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L197-L229"
+  },
+  {
+    "path": "Drilling.Common/Threading/CtrlThread.cs",
+    "start": 232,
+    "end": 267,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Threading/CtrlThread.cs#L232-L267"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2660,
+    "end": 2715,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L2660-L2715"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2532,
+    "end": 2565,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L2532-L2565"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2577,
+    "end": 2651,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L2577-L2651"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2825,
+    "end": 2906,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L2825-L2906"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 2928,
+    "end": 2975,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L2928-L2975"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 3010,
+    "end": 3014,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L3010-L3014"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 1182,
+    "end": 1257,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L1182-L1257"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 5,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L5-L34"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 578,
+    "end": 591,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L578-L591"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs",
+    "start": 9,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L9-L34"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs",
+    "start": 289,
+    "end": 320,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L289-L320"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 39,
+    "end": 42,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CRootView.cs#L39-L42"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 1920,
+    "end": 1948,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CRootView.cs#L1920-L1948"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 1687,
+    "end": 1697,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L1687-L1697"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 3279,
+    "end": 3313,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L3279-L3313"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 566,
+    "end": 566,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L566-L566"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 687,
+    "end": 690,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L687-L690"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs",
+    "start": 19,
+    "end": 35,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L19-L35"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs",
+    "start": 44,
+    "end": 84,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L44-L84"
+  },
+  {
+    "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+    "start": 225,
+    "end": 229,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Melsec/CMelsec.cs#L225-L229"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 847,
+    "end": 886,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L847-L886"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 889,
+    "end": 923,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L889-L923"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 1065,
+    "end": 1110,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1065-L1110"
+  },
+  {
+    "path": "Drilling.Common/Managers/CRecipeManager.cs",
+    "start": 355,
+    "end": 405,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CRecipeManager.cs#L355-L405"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 480,
+    "end": 500,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L480-L500"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 143,
+    "end": 206,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L143-L206"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 217,
+    "end": 241,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L217-L241"
+  },
+  {
+    "path": "Drilling.Common/Managers/CRecipeManager.cs",
+    "start": 145,
+    "end": 170,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CRecipeManager.cs#L145-L170"
+  },
+  {
+    "path": "Drilling.Common/Managers/CRecipeManager.cs",
+    "start": 74,
+    "end": 108,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CRecipeManager.cs#L74-L108"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+    "start": 427,
+    "end": 464,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CCellPatternCalculator.cs#L427-L464"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 207,
+    "end": 267,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L207-L267"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+    "start": 93,
+    "end": 146,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CCellPatternCalculator.cs#L93-L146"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+    "start": 224,
+    "end": 247,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CCellPatternCalculator.cs#L224-L247"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 21,
+    "end": 67,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L21-L67"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 361,
+    "end": 409,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L361-L409"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 435,
+    "end": 487,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L435-L487"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 131,
+    "end": 182,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L131-L182"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 1309,
+    "end": 1370,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1309-L1370"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 908,
+    "end": 927,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L908-L927"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 838,
+    "end": 890,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L838-L890"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 752,
+    "end": 769,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L752-L769"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 898,
+    "end": 905,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L898-L905"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1543,
+    "end": 1548,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1543-L1548"
+  },
+  {
+    "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+    "start": 514,
+    "end": 556,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Script/CAutomation1ScriptFile.cs#L514-L556"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 390,
+    "end": 440,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L390-L440"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 443,
+    "end": 466,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L443-L466"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 198,
+    "end": 231,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L198-L231"
+  },
+  {
+    "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "start": 62,
+    "end": 74,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L74"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3715,
+    "end": 3805,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L3715-L3805"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 816,
+    "end": 849,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L816-L849"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 852,
+    "end": 872,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L852-L872"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 5,
+    "end": 22,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L22"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 503,
+    "end": 535,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L503-L535"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 25,
+    "end": 66,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L25-L66"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 361,
+    "end": 400,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L400"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+    "start": 69,
+    "end": 81,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuReview.cs#L69-L81"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+    "start": 609,
+    "end": 650,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuReview.cs#L609-L650"
+  },
+  {
+    "path": "Drilling.Common/Managers/CSettingManager.cs",
+    "start": 183,
+    "end": 243,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CSettingManager.cs#L183-L243"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 310,
+    "end": 313,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L310-L313"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 236,
+    "end": 251,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L236-L251"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 143,
+    "end": 149,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L143-L149"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 857,
+    "end": 865,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L857-L865"
+  },
+  {
+    "path": "Drilling.File/Parser/CCsvParser.cs",
+    "start": 106,
+    "end": 115,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Parser/CCsvParser.cs#L106-L115"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 226,
+    "end": 241,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/JHMI/CJhmiRecipeFile.cs#L226-L241"
+  },
+  {
+    "path": "Config/RECIPE/test0929.csv",
+    "start": 1,
+    "end": 7,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/RECIPE/test0929.csv#L1-L7"
+  },
+  {
+    "path": "Config/JHMI_RCP.csv",
+    "start": 1,
+    "end": 6,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_RCP.csv#L1-L6"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 12,
+    "end": 40,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L40"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 446,
+    "end": 549,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L446-L549"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 580,
+    "end": 667,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L580-L667"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 10,
+    "end": 25,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L25"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 8,
+    "end": 11,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Product/CProductFile.cs#L8-L11"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 109,
+    "end": 192,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Product/CProductFile.cs#L109-L192"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 258,
+    "end": 265,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Product/CProductFile.cs#L258-L265"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 869,
+    "end": 892,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L869-L892"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 13,
+    "end": 13,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L13-L13"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 47,
+    "end": 55,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L47-L55"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2791,
+    "end": 2836,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/CRootView.cs#L2791-L2836"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 192,
+    "end": 247,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L192-L247"
+  },
+  {
+    "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+    "start": 742,
+    "end": 815,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStageReviewSequences.cs#L742-L815"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 1779,
+    "end": 1849,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L1779-L1849"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2555,
+    "end": 2618,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2555-L2618"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2550,
+    "end": 2618,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2550-L2618"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2030,
+    "end": 2086,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2030-L2086"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3345,
+    "end": 3364,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L3345-L3364"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 93,
+    "end": 174,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L93-L174"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3274,
+    "end": 3340,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L3274-L3340"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1505,
+    "end": 1535,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1505-L1535"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 110,
+    "end": 118,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L110-L118"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 558,
+    "end": 567,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L558-L567"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 648,
+    "end": 666,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L648-L666"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 576,
+    "end": 594,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L576-L594"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 734,
+    "end": 745,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L734-L745"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 768,
+    "end": 802,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L768-L802"
+  },
+  {
+    "path": "Config/JHMI_SETTING.csv",
+    "start": 94,
+    "end": 94,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_SETTING.csv#L94-L94"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2574,
+    "end": 2591,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2574-L2591"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3392,
+    "end": 3464,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3392-L3464"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6492,
+    "end": 6507,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6492-L6507"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3331,
+    "end": 3364,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3331-L3364"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6126,
+    "end": 6141,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6126-L6141"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2473,
+    "end": 2514,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2473-L2514"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 77,
+    "end": 174,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L77-L174"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 5444,
+    "end": 5464,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5444-L5464"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 1350,
+    "end": 1415,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L1350-L1415"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2157,
+    "end": 2194,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2157-L2194"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 4108,
+    "end": 4109,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4108-L4109"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 4672,
+    "end": 4708,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4672-L4708"
+  },
+  {
+    "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+    "start": 237,
+    "end": 251,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Correction/CAlignInterpolation.cs#L237-L251"
+  },
+  {
+    "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+    "start": 306,
+    "end": 346,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Correction/CAlignInterpolation.cs#L306-L346"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5480,
+    "end": 5514,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L5480-L5514"
+  },
+  {
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 632,
+    "end": 639,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_MELSEC_MAP.csv#L632-L639"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 139,
+    "end": 149,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L149"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1505,
+    "end": 1548,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1505-L1548"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1581,
+    "end": 1615,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1581-L1615"
+  },
+  {
+    "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+    "start": 46,
+    "end": 105,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/Script/CAutomation1ScriptFile.cs#L46-L105"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1505,
+    "end": 1615,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Station/CStationProcess.cs#L1505-L1615"
+  },
+  {
+    "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+    "start": 558,
+    "end": 594,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Interface/Vision/CVisionComm.cs#L558-L594"
+  },
+  {
+    "path": "Drilling.Common/Managers/CManager.cs",
+    "start": 1,
+    "end": 28,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Managers/CManager.cs#L1-L28"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 869,
+    "end": 895,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L869-L895"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 12,
+    "end": 55,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L55"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 446,
+    "end": 500,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewResult/CReviewResultFile.cs#L446-L500"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 838,
+    "end": 849,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L838-L849"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2030,
+    "end": 2047,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Review/CReviewManager.cs#L2030-L2047"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 131,
+    "end": 149,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L131-L149"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 10,
+    "end": 59,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L59"
+  },
+  {
+    "path": "Config/JHMI_RCP.csv",
+    "start": 66,
+    "end": 66,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Config/JHMI_RCP.csv#L66-L66"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+    "start": 93,
+    "end": 105,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Recipe/CCellPatternCalculator.cs#L93-L105"
+  },
+  {
+    "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+    "start": 18,
+    "end": 111,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/3a6b021af7dad60578e7fb85e3191b43b3b3c183/Drilling.Common/Correction/CAlignInterpolation.cs#L18-L111"
+  }
+]

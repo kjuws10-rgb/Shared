@@ -1,0 +1,604 @@
+{
+  "sourceRepo": "kjuws10-rgb/A3Drilling",
+  "branch": "master",
+  "commit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "analysisKind": "initial-baseline",
+  "baselineCommit": null,
+  "readOnly": true,
+  "checks": [
+    {
+      "name": "JHMI schema has required sixteen fields",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Recipe direct CSV shape is Tab,Name,Value",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "All five committed recipe axis split values are four",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Model type limit is five",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Runtime axis split supports one or four",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "JHMI permits a wider axis split range",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Shot laser skip is masked OR chess",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Review exclusions use same masking plan",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "AUTO Fine uses fixed beam eleven",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "General recipe writer directly overwrites target",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "Recipe Save performs readback validation",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "AUTO line indices map to one/three/five/seven",
+      "pass": true,
+      "kind": "static source/CSV"
+    },
+    {
+      "name": "test0929 committed tolerance is three mm",
+      "pass": true,
+      "kind": "static source/CSV"
+    }
+  ],
+  "checksPassed": 13,
+  "checksFailed": 0,
+  "jhmiformRows": 355,
+  "jhmiformColumns": [
+    "TAB",
+    "GROUP",
+    "NAME",
+    "DISPLAY NAME",
+    "CIM NAME",
+    "DATA TYPE",
+    "UNIT",
+    "SHOW",
+    "USE",
+    "VALUE",
+    "SCALE",
+    "CHANGE LIMIT",
+    "MIN",
+    "MAX",
+    "DESCRIPTION",
+    "ORDER"
+  ],
+  "recipes": [
+    {
+      "id": "animotion",
+      "rows": 332,
+      "cellCount": 5,
+      "axisSplit": 4,
+      "toleranceXmm": 0.03,
+      "toleranceYmm": 0.03,
+      "modelCount": 5,
+      "modelAssignments": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      }
+    },
+    {
+      "id": "DRILL_A01",
+      "rows": 495,
+      "cellCount": 45,
+      "axisSplit": 4,
+      "toleranceXmm": 0.03,
+      "toleranceYmm": 0.03,
+      "modelCount": 5,
+      "modelAssignments": {
+        "2": 9,
+        "3": 8,
+        "4": 8,
+        "5": 12,
+        "1": 8
+      }
+    },
+    {
+      "id": "simple2",
+      "rows": 1032,
+      "cellCount": 180,
+      "axisSplit": 4,
+      "toleranceXmm": 0.03,
+      "toleranceYmm": 0.03,
+      "modelCount": 5,
+      "modelAssignments": {
+        "1": 36,
+        "2": 36,
+        "3": 36,
+        "4": 36,
+        "5": 36
+      }
+    },
+    {
+      "id": "test0929",
+      "rows": 43376,
+      "cellCount": 45,
+      "axisSplit": 4,
+      "toleranceXmm": 3.0,
+      "toleranceYmm": 3.0,
+      "modelCount": 5,
+      "modelAssignments": {
+        "1": 45
+      }
+    },
+    {
+      "id": "wizardtest",
+      "rows": 1032,
+      "cellCount": 180,
+      "axisSplit": 4,
+      "toleranceXmm": 0.03,
+      "toleranceYmm": 0.03,
+      "modelCount": 5,
+      "modelAssignments": {
+        "1": 90,
+        "2": 36,
+        "3": 18,
+        "4": 18,
+        "5": 18
+      }
+    }
+  ],
+  "sourceReferences": [
+    {
+      "title": "양식 검증·로더",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 847,
+      "end": 886,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "실제값 읽기",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 889,
+      "end": 923,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "3필드 직렬화·readback검증",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 1065,
+      "end": 1110,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "Recipe 자료형",
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "start": 355,
+      "end": 405,
+      "lineCount": 440,
+      "sha256": "489bd204fadb9948929e6d665db38a2e3bc7aa2b0a4343fd74975809c3490106"
+    },
+    {
+      "title": "Value 원문 전달",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 480,
+      "end": 500,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "Cell/Shot 범위 및 내부 매수 보존",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 143,
+      "end": 206,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "파일 commit후 확인",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 217,
+      "end": 241,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "Manager 저장·보정 보존",
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "start": 145,
+      "end": 170,
+      "lineCount": 440,
+      "sha256": "489bd204fadb9948929e6d665db38a2e3bc7aa2b0a4343fd74975809c3490106"
+    },
+    {
+      "title": "낡은 Recipe 기준 보호",
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "start": 74,
+      "end": 108,
+      "lineCount": 440,
+      "sha256": "489bd204fadb9948929e6d665db38a2e3bc7aa2b0a4343fd74975809c3490106"
+    },
+    {
+      "title": "Model 선택과 형상값",
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "start": 427,
+      "end": 464,
+      "lineCount": 490,
+      "sha256": "2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd"
+    },
+    {
+      "title": "Cell별 입력 구성",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 207,
+      "end": 267,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "개수/간격/DOE 검증",
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "start": 93,
+      "end": 146,
+      "lineCount": 490,
+      "sha256": "2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd"
+    },
+    {
+      "title": "Shot 중심 회전·원점 합산",
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "start": 224,
+      "end": 247,
+      "lineCount": 490,
+      "sha256": "2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd"
+    },
+    {
+      "title": "Head 배정의 전후 필터",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 21,
+      "end": 67,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Field 후보와 동률 선택",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 361,
+      "end": 409,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Head 기준 위치·원점 차이",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 435,
+      "end": 487,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "최종 Scanner·Offset 구성",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 131,
+      "end": 182,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "가공 좌표 자료형",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 1309,
+      "end": 1370,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Model Masking 생성",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 908,
+      "end": 927,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Beam별 사각영역 교차·Edge 판정",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 838,
+      "end": 890,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Shot 전체 제외 조건",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 752,
+      "end": 769,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Chess 패턴",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 898,
+      "end": 905,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "가공 모델의 Chess 제거",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1543,
+      "end": 1548,
+      "lineCount": 6336,
+      "sha256": "0a7d49c687bb614ed0a14218f4c664c740a3ea545fac8d5aa5ec2c144c199366"
+    },
+    {
+      "title": "이동 유지·레이저 ON 조건",
+      "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+      "start": 514,
+      "end": 556,
+      "lineCount": 2453,
+      "sha256": "4219f835bc4212ca9c897f64971874f0ddcaf15451e7fd2f74b11e17f5fc5f49"
+    },
+    {
+      "title": "Review Plan과 제외 전달",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 390,
+      "end": 440,
+      "lineCount": 4123,
+      "sha256": "ff050f5b3333bfcdad1f90934611a18209ef0eafe9d81c38a1d2415e261440ac"
+    },
+    {
+      "title": "Option/Motor 병합",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 443,
+      "end": 466,
+      "lineCount": 4123,
+      "sha256": "ff050f5b3333bfcdad1f90934611a18209ef0eafe9d81c38a1d2415e261440ac"
+    },
+    {
+      "title": "AUTO FINE 선택 전 제외",
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 198,
+      "end": 231,
+      "lineCount": 422,
+      "sha256": "afaea7d827716e865951756b4f1f3c6a552808b84f3c6f4568ef186914b1fcdf"
+    },
+    {
+      "title": "0선 검사점 검증",
+      "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+      "start": 62,
+      "end": 74,
+      "lineCount": 325,
+      "sha256": "4c5abba61d0ca22e595ff0c8c29f70a560212c162e0185e91aa3ffda52800641"
+    },
+    {
+      "title": "Review 식별자와 상태",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 3715,
+      "end": 3805,
+      "lineCount": 4123,
+      "sha256": "ff050f5b3333bfcdad1f90934611a18209ef0eafe9d81c38a1d2415e261440ac"
+    },
+    {
+      "title": "Beam 개수·상대좌표·번호검증",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 816,
+      "end": 849,
+      "lineCount": 4123,
+      "sha256": "ff050f5b3333bfcdad1f90934611a18209ef0eafe9d81c38a1d2415e261440ac"
+    },
+    {
+      "title": "ReviewX/StageY 수식",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 852,
+      "end": 872,
+      "lineCount": 4123,
+      "sha256": "ff050f5b3333bfcdad1f90934611a18209ef0eafe9d81c38a1d2415e261440ac"
+    },
+    {
+      "title": "규칙 분기",
+      "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+      "start": 5,
+      "end": 22,
+      "lineCount": 537,
+      "sha256": "fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b"
+    },
+    {
+      "title": "규칙 자료형",
+      "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+      "start": 503,
+      "end": 535,
+      "lineCount": 537,
+      "sha256": "fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b"
+    },
+    {
+      "title": "Rough 범위 분기",
+      "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+      "start": 25,
+      "end": 66,
+      "lineCount": 537,
+      "sha256": "fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b"
+    },
+    {
+      "title": "Cell별 Fine 줄 선정",
+      "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+      "start": 361,
+      "end": 400,
+      "lineCount": 537,
+      "sha256": "fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b"
+    },
+    {
+      "title": "화면 기본값",
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "start": 69,
+      "end": 81,
+      "lineCount": 4083,
+      "sha256": "243f3eb7c91b5963199ac72ab7fa95b0295b2fabdc370ce3730d319927113751"
+    },
+    {
+      "title": "수동 Rule 선택·줄수",
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "start": 609,
+      "end": 650,
+      "lineCount": 4083,
+      "sha256": "243f3eb7c91b5963199ac72ab7fa95b0295b2fabdc370ce3730d319927113751"
+    },
+    {
+      "title": "AUTO 옵션 encode/decode",
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "start": 183,
+      "end": 243,
+      "lineCount": 285,
+      "sha256": "0e893139d294e11572f73c72fddd379c521fe16f86d7730c205ed1ec72607b5b"
+    },
+    {
+      "title": "Beam11 고정",
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 310,
+      "end": 313,
+      "lineCount": 422,
+      "sha256": "afaea7d827716e865951756b4f1f3c6a552808b84f3c6f4568ef186914b1fcdf"
+    },
+    {
+      "title": "실제 좌표계산 호출",
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "start": 236,
+      "end": 251,
+      "lineCount": 422,
+      "sha256": "afaea7d827716e865951756b4f1f3c6a552808b84f3c6f4568ef186914b1fcdf"
+    },
+    {
+      "title": "Shift 별도 합산",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 143,
+      "end": 149,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "Masking 기준 중심",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 857,
+      "end": 865,
+      "lineCount": 1388,
+      "sha256": "8da88a302fb326686debcc48e66a0757a9f6e33b19df8fee980540eeb15b5f31"
+    },
+    {
+      "title": "직접 WriteAllLines",
+      "path": "Drilling.File/Parser/CCsvParser.cs",
+      "start": 106,
+      "end": 115,
+      "lineCount": 426,
+      "sha256": "aac1a9bfd750d8c1901c0fbcce9cbcbb16791761d91a53e2181bbed4b63567dc"
+    },
+    {
+      "title": "readback 확인",
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "start": 226,
+      "end": 241,
+      "lineCount": 1452,
+      "sha256": "5247385edd0603b32e5676ce28dc63253488823d38a57f08c1c1888831b6bda3"
+    },
+    {
+      "title": "test0929 포함 공차",
+      "path": "Config/RECIPE/test0929.csv",
+      "start": 1,
+      "end": 7,
+      "lineCount": 43376,
+      "sha256": "5a2c76d952603b837b16fe1c6cb18785dabc272a45331513c21b4c470f9db817"
+    },
+    {
+      "title": "JHMI 기본 공차와 단위",
+      "path": "Config/JHMI_RCP.csv",
+      "start": 1,
+      "end": 6,
+      "lineCount": 356,
+      "sha256": "79a037d6427e2230b36485a5c8c1982fba6b6f25fbfe4b3cf3758ba482f34d18"
+    }
+  ],
+  "reviewedFiles": [
+    "Config/JHMI_RCP.csv",
+    "Config/RECIPE/test0929.csv",
+    "Drilling.Common/Managers/CRecipeManager.cs",
+    "Drilling.Common/Managers/CSettingManager.cs",
+    "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+    "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "Drilling.Common/Review/CReviewManager.cs",
+    "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "Drilling.Common/Station/CStationProcess.cs",
+    "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "Drilling.File/Parser/CCsvParser.cs",
+    "Drilling.File/Script/CAutomation1ScriptFile.cs",
+    "Drilling.UI/Menu/Menus/CMenuReview.cs"
+  ],
+  "limitations": [
+    "Static source and CSV examination; no C# function execution.",
+    "No build, WPF, PLC, Vision, motion, or laser use by this agent.",
+    "No source or Config mutation.",
+    "Head-specific mixed DOE/no-DOE physical integration is not inferred from global split=1 support."
+  ],
+  "findings": [
+    {
+      "id": "RC-01",
+      "severity": "high",
+      "title": "AUTO FINE Beam11 conflicts with global split1",
+      "evidence": [
+        "Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L236-L251",
+        "Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L310-L313",
+        "Drilling.Common/Review/CReviewManager.cs#L838-L849"
+      ]
+    },
+    {
+      "id": "RC-02",
+      "severity": "high-conditional",
+      "title": "Shift machining vs nominal Masking/Review coordinate contract",
+      "evidence": [
+        "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L143-L149",
+        "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L857-L865",
+        "Drilling.Common/Review/CReviewManager.cs#L852-L872"
+      ]
+    },
+    {
+      "id": "RC-03",
+      "severity": "medium",
+      "title": "JHMI split MAX64 vs runtime only1/4"
+    },
+    {
+      "id": "RC-04",
+      "severity": "medium",
+      "title": "General Recipe Save uses direct target WriteAllLines before validation"
+    },
+    {
+      "id": "RC-05",
+      "severity": "operational-check",
+      "title": "test0929 tolerance3mm vs other recipes/default0.030mm"
+    }
+  ]
+}
