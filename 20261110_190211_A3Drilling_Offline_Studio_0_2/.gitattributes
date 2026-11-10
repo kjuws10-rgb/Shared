@@ -1,0 +1,4 @@
+*.zip binary -filter
+*.html text eol=lf
+*.md text eol=lf
+*.json text eol=lf
