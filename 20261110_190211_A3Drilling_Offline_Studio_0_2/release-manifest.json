@@ -55,8 +55,8 @@
     },
     {
       "path": "A3Drilling_Offline_Studio_0_2_안내.html",
-      "bytes": 21105,
-      "sha256": "952d175fc74598c7d2b51dd7609f378179905cdf7c1872e9d395cf4696f04ceb"
+      "bytes": 21313,
+      "sha256": "c07b90d42405b23bb39374e4b44c75c28099b59d4a8f3fa8d5bed55fa5ecab1f"
     },
     {
       "path": "README.md",
@@ -72,6 +72,7 @@
     "guideAndPackageIndependentChecks": 19,
     "physicalAirGapTest": false,
     "equipmentRun": false,
-    "prerequisiteInstalledByAgent": false
+    "prerequisiteInstalledByAgent": false,
+    "absoluteGuideDownloads": true
   }
 }
