@@ -1,0 +1,77 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-10",
+  "sourceCommit": "57f9be8869467fb96bb856fff843e19e4af5427f",
+  "analysisTargetCommit": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "publicToolOnly": true,
+  "exeSha256": "6381d7a77e08d1f419c790675b22fae9ddd3ad61718ebc5d200f39387800e233",
+  "buildOptions": [
+    "self-contained win-x64",
+    "DebugType=None",
+    "DebugSymbols=false",
+    "PathMap=/_/A3Local",
+    "clean no-incremental rebuild"
+  ],
+  "excluded": [
+    "equipment source and .git",
+    "private Context and user documents",
+    "GGUF weights",
+    "SDK/feed",
+    "QA sessions and logs",
+    "personal MD"
+  ],
+  "model": {
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/13fb94bfda8c8cf22497dc57b78f391a9acb426a/qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+    "bytes": 4683073536,
+    "sha256": "509287f78cb4d4cf6b3843734733b914b2c158e43e22a7f4bf5e963800894d3c",
+    "included": false
+  },
+  "prerequisite": {
+    "bytes": 18731856,
+    "installedByAgent": false,
+    "sha256": "843068991daaa1f73ad9f6239bce4d0f6a07a51f18c37ea2a867e9beca71295c",
+    "version": "14.51.36247.0",
+    "publisher": "Microsoft Corporation",
+    "documentation": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
+    "source": "https://aka.ms/vc14/vc_redist.x64.exe",
+    "signatureVerified": true
+  },
+  "portableFiles": 48,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 76,
+      "sha256": "19b1b55e2d0979b0a5e20c9b41576eab4ffb210ed354691664790ed66575e4bc"
+    },
+    {
+      "path": "A3Drilling_Offline_Studio_0_2_Source.zip",
+      "bytes": 126533,
+      "sha256": "a2eade0472721f819d28640c68cd5e8d1cc555bbfd6dc3a575d6dcbb5ec34421"
+    },
+    {
+      "path": "A3Drilling_Offline_Studio_0_2_Windows_x64.zip",
+      "bytes": 96487871,
+      "sha256": "65d4a2b02538fde50d43d29fb5f23b1b98bccb770e1d30ebdcf02979d6323ac0"
+    },
+    {
+      "path": "A3Drilling_Offline_Studio_0_2_안내.html",
+      "bytes": 21105,
+      "sha256": "952d175fc74598c7d2b51dd7609f378179905cdf7c1872e9d395cf4696f04ceb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6483,
+      "sha256": "6bf33b86a6e60f0c394052a45eb621a020cccc8e66cd19ff7bdb88cf47ec74c5"
+    }
+  ],
+  "verification": {
+    "publicBuildActual7BChecks": 8,
+    "publicBuildSourceRestored": true,
+    "emptyStateIndependentChecks": 20,
+    "packageIndependentChecks": 22,
+    "guideAndPackageIndependentChecks": 19,
+    "physicalAirGapTest": false,
+    "equipmentRun": false,
+    "prerequisiteInstalledByAgent": false
+  }
+}
