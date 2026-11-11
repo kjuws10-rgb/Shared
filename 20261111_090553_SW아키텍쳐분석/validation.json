@@ -1,0 +1,104 @@
+{
+  "repository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "baseline": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "latest": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "analysisMode": "git_diff",
+  "changedPaths": 115,
+  "changedCodePaths": 31,
+  "documents": [
+    {
+      "file": "01_Commit변경요약.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "02_변경데이터구조와흐름.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "03_가공Review영향분석.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "04_통합흐름도.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "05_위험도별발견사항.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "06_분석근거와검증.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    },
+    {
+      "file": "README.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true,
+      "noPrivatePaths": true
+    }
+  ],
+  "fixedSourceLinks": 118,
+  "inlineSourceLinks": 52,
+  "csvFiles": {
+    "baseline": 64,
+    "latest": 126
+  },
+  "mermaid": {
+    "parsedAndRendered": 11,
+    "portableFigures": 6,
+    "errors": []
+  },
+  "sourcePreservation": {
+    "analysisTracked": 404,
+    "analysisBytesUnchanged": true,
+    "analysisPushDisabled": true,
+    "originalTracked": 404,
+    "originalBytesUnchanged": true,
+    "originalHeadBranchStatusUnchanged": true
+  },
+  "build": {
+    "restore": "passed",
+    "release": "failed",
+    "errors": 19,
+    "warnings": 0,
+    "sdk": "10.0.400",
+    "separateClone": true,
+    "stubsUsed": false
+  },
+  "scope": {
+    "productionSourceEdits": false,
+    "sourceCommitOrPush": false,
+    "applicationOrHardwareStarted": false,
+    "rawMeasurementRowsPublished": false,
+    "privateKnowledgePublished": false
+  },
+  "reportDiffCheck": "passed on staged report tree",
+  "publication": "Pre-publication validation; final blob comparisons retained in private publication audit."
+}
