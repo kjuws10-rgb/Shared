@@ -1,0 +1,96 @@
+{
+  "baseline": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "latest": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "files": [
+    {
+      "path": "01_Commit변경요약.md",
+      "bytes": 4473,
+      "sha256": "4f2d497749b18ec990c6cb9ac2a732826f48dd6b5d08335bbfb64d4e33317ac7"
+    },
+    {
+      "path": "02_변경데이터구조와흐름.md",
+      "bytes": 23356,
+      "sha256": "bf12e15c1f16f13059c974a795aa075762afcda9f7487c1ee8fab2fa0a0be166"
+    },
+    {
+      "path": "03_가공Review영향분석.md",
+      "bytes": 16770,
+      "sha256": "f8b0620759a14612816dc5bf1fa7a8d7378509edfd5fa09a2a4d7c19d264ae5f"
+    },
+    {
+      "path": "04_통합흐름도.md",
+      "bytes": 5302,
+      "sha256": "f36aba840a2570012cf4fbe07b9ad1163a30e44ec12c93e45716743edf244d82"
+    },
+    {
+      "path": "05_위험도별발견사항.md",
+      "bytes": 10772,
+      "sha256": "ff513b0ccab55846c29d7041908debfa430365106ec6365e5fd358b4a294a260"
+    },
+    {
+      "path": "06_분석근거와검증.md",
+      "bytes": 6238,
+      "sha256": "0a91a349121709349d6b4fbb41387339256a7366b6eadc2f648c525f89cf51f6"
+    },
+    {
+      "path": "changed-code.csv",
+      "bytes": 1605,
+      "sha256": "83521c03c6b9ef108a0de8c0beb6ba2ba1ac7be7a42efea648157f77d1543c0b"
+    },
+    {
+      "path": "figures/flow-0.svg",
+      "bytes": 14250,
+      "sha256": "33b01b19b8effd4593e7de08e6cba90adaf7360200fc6aff52cf183c791b63d9"
+    },
+    {
+      "path": "figures/flow-1.svg",
+      "bytes": 17083,
+      "sha256": "18f36e82b6a03260b46259e5b4dd7df6de2cd6685400d09ffeb4c99ac6fd5e3f"
+    },
+    {
+      "path": "figures/flow-2.svg",
+      "bytes": 21727,
+      "sha256": "a448edc48d565a74b1e90f15e9ebd8373b2c0369450136c54c136e3c9260f410"
+    },
+    {
+      "path": "figures/flow-3.svg",
+      "bytes": 14015,
+      "sha256": "7e477a789400adee6a539539b0d480a91600a0dfb189026453d854ff6ada9ffa"
+    },
+    {
+      "path": "figures/flow-4.svg",
+      "bytes": 15151,
+      "sha256": "9298e278a7d7c7ad102705e19b6cb89471f560232112bdb14f912226fdbfae73"
+    },
+    {
+      "path": "figures/flow-5.svg",
+      "bytes": 14646,
+      "sha256": "78e216db15d444beb90398fc45c2602b09200ee26573ebd82cc41de2181a6d2f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3812,
+      "sha256": "621cbd8420e1fb21f90cccc529c96b67d8ea810a3f89b44e9edca48568c33981"
+    },
+    {
+      "path": "schema-comparison.json",
+      "bytes": 44638,
+      "sha256": "e4de08c5e6056a248109250839da43ab9d9571b0b9dcf40654a7dc08129fd420"
+    },
+    {
+      "path": "source-links.json",
+      "bytes": 41529,
+      "sha256": "6559606813e299b8ba77a863068843060b1e51862806caab71e79b0e80c8d169"
+    },
+    {
+      "path": "structure-snapshot.json",
+      "bytes": 767,
+      "sha256": "32021953eaa31f4e97b3a36dca48712d852fb63f018b7f2c62a2152c9d5045d8"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 2589,
+      "sha256": "0fb9cf79e9b95822de4c094e589ef8e41ec827999ab218b82d94b55b114b6443"
+    }
+  ]
+}

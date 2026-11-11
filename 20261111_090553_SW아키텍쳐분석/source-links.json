@@ -1,0 +1,946 @@
+[
+  {
+    "label": "좌표 생성 옵션 읽기",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 26,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L26-L34",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "보정율의 입력 검증",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 203,
+    "end": 211,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L203-L211"
+  },
+  {
+    "label": "변환 후 기여율과 최종 합산",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 133,
+    "end": 188,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L133-L188",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "양식의% 항목",
+    "path": "Config/JHMI_SETTING.csv",
+    "start": 95,
+    "end": 99,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/JHMI_SETTING.csv#L95-L99",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "코드 기본 양식 보완",
+    "path": "Drilling.File/JHMI/CSettingFile.cs",
+    "start": 227,
+    "end": 232,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/JHMI/CSettingFile.cs#L227-L232",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "현재 포함 Setting",
+    "path": "Config/Setting/Setting.csv",
+    "start": 89,
+    "end": 99,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/Setting/Setting.csv#L89-L99",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "설계 Shot과 전역 DOE",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 222,
+    "end": 243,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L222-L243",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Head 후보 선정",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 376,
+    "end": 389,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L376-L389",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Process 모델 구성",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1591,
+    "end": 1614,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L1591-L1614",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "최종 Scanner 좌표를 쓰는 Script",
+    "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+    "start": 514,
+    "end": 553,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/Script/CAutomation1ScriptFile.cs#L514-L553"
+  },
+  {
+    "label": "설계 기준 Masking",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 868,
+    "end": 907,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L868-L907"
+  },
+  {
+    "label": "Chess 설계 행/열 기준",
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 916,
+    "end": 924,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L916-L924",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "0선 공통 Plan·Masking 생성",
+    "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "start": 18,
+    "end": 34,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L18-L34",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "0선 검사점 제외 보호",
+    "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "start": 62,
+    "end": 74,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L74",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Review 축 목표 계산",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 852,
+    "end": 864,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L852-L864"
+  },
+  {
+    "label": "최신 Align 행의 예",
+    "path": "Config/RECIPE/test0929.csv",
+    "start": 354,
+    "end": 361,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/RECIPE/test0929.csv#L354-L361",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "포함 Recipe 공차",
+    "path": "Config/RECIPE/test0929.csv",
+    "start": 1,
+    "end": 7,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/RECIPE/test0929.csv#L1-L7",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "포함 전역 DOE4",
+    "path": "Config/RECIPE/test0929.csv",
+    "start": 64,
+    "end": 68,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/RECIPE/test0929.csv#L64-L68",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Default 측정 계약",
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 233,
+    "end": 249,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L233-L249",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "조건 UI의 명령 자동결정",
+    "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+    "start": 79,
+    "end": 89,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L79-L89",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Cross 조건의 Pitch 분기",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2983,
+    "end": 2997,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2983-L2997",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Cross1회와 Shot16회 분리",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3583,
+    "end": 3615,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3583-L3615",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Default 전용 수신과 환산",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2851,
+    "end": 2880,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L2851-L2880",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Default Stage 이동·실수신 기록",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2894,
+    "end": 2922,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L2894-L2922",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "새 FitCross와 Head 기준",
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 162,
+    "end": 200,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L162-L200",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "Head별 추천값",
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 206,
+    "end": 228,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L206-L228",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "현재 AUTO Beam11",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 315,
+    "end": 318,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L315-L318",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "0선 상태 자료형",
+    "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "start": 251,
+    "end": 260,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L251-L260",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "성공 후 시각 게시",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 6327,
+    "end": 6334,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L6327-L6334",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "후속 대상 식별자·시각 전달",
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2836,
+    "end": 2854,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/CRootView.cs#L2836-L2854",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "result_models",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3894,
+    "end": 3938,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L3894-L3938",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "one_shot_save",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2988,
+    "end": 3015,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L2988-L3015",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "fine_save_glass",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2787,
+    "end": 2795,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L2787-L2795",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "auto_save_existing",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 93,
+    "end": 144,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L93-L144",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "auto_zero_context",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 274,
+    "end": 286,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L274-L286",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "auto_beam_unchanged",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 315,
+    "end": 335,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L315-L335",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "new_result_schema",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 13,
+    "end": 50,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L13-L50",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "result_load",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 53,
+    "end": 94,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L53-L94",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "구형·신형 오차 열 선택",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 160,
+    "end": 203,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L160-L203"
+  },
+  {
+    "label": "누락·비정상 숫자의 기본 0 처리",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 347,
+    "end": 364,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L347-L364"
+  },
+  {
+    "id": "new_save_raw_converted",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 205,
+    "end": 245,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L205-L245",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "directories_unique_write",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 394,
+    "end": 450,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L394-L450",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "beam_new_schema",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 471,
+    "end": 512,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L471-L512",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "beam_legacy_load",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 516,
+    "end": 552,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L516-L552",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "one_shot_schema",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 655,
+    "end": 708,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L655-L708",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "fine42_schema",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 713,
+    "end": 767,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L713-L767",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "followup_identity_path",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 824,
+    "end": 840,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L824-L840",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "zero_save",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 939,
+    "end": 957,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L939-L957",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "catalog_new_roots",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs",
+    "start": 19,
+    "end": 100,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L19-L100",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "catalog_first_row",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs",
+    "start": 102,
+    "end": 159,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L102-L159",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "catalog_blank_status",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs",
+    "start": 186,
+    "end": 190,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L186-L190",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "review_data_injection",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 136,
+    "end": 144,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L136-L144",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "review_data_tree_recipe",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+    "start": 118,
+    "end": 159,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L118-L159",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U04",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 93,
+    "end": 171,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L93-L171",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "review_data_readonly_display",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 205,
+    "end": 248,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L205-L248",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "review_data_load_status",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 798,
+    "end": 802,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L798-L802",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "apply_guard",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 20,
+    "end": 49,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L20-L49",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "파일 기반 Apply와 저장",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 74,
+    "end": 124,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L74-L124"
+  },
+  {
+    "id": "init",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 127,
+    "end": 198,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L127-L198",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "apply_plan_mask_current_final",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 244,
+    "end": 326,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L244-L326",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "direct_rough_fine_policy",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 369,
+    "end": 452,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L369-L452",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "measured_rows_filter",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 455,
+    "end": 460,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L455-L460",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "result_point_identity",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 476,
+    "end": 510,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L476-L510",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "동일 파일·Offset 검사 범위",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 513,
+    "end": 545,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L513-L545"
+  },
+  {
+    "id": "popup_readonly_types",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 553,
+    "end": 591,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L553-L591",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U16",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3823,
+    "end": 3905,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3823-L3905",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "offset_individual_lock",
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 27,
+    "end": 49,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L27-L49",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "개별 Offset 저장 잠금",
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 73,
+    "end": 127,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L73-L127"
+  },
+  {
+    "label": "Rollback 보관 및 이전 파일 활성화",
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 135,
+    "end": 218,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L135-L218"
+  },
+  {
+    "id": "view_commands",
+    "path": "Drilling.UI/Views/CReviewDataView.xaml",
+    "start": 371,
+    "end": 433,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CReviewDataView.xaml#L371-L433",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "view_events",
+    "path": "Drilling.UI/Views/CReviewDataView.xaml.cs",
+    "start": 17,
+    "end": 68,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CReviewDataView.xaml.cs#L17-L68",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "dialog_save_cancel",
+    "path": "Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs",
+    "start": 53,
+    "end": 70,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L53-L70",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U01",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+    "start": 27,
+    "end": 53,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L27-L53",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U02",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+    "start": 94,
+    "end": 168,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L94-L168",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U03",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 57,
+    "end": 85,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L57-L85",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U05",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 205,
+    "end": 300,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L205-L300",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U06",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 934,
+    "end": 954,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L934-L954",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U07",
+    "path": "Drilling.UI/Views/CReviewDataView.xaml",
+    "start": 341,
+    "end": 440,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CReviewDataView.xaml#L341-L440",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U08",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 20,
+    "end": 50,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L20-L50",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U10",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 244,
+    "end": 280,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L244-L280",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U11",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 283,
+    "end": 366,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L283-L366",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "보정 대상과 측정 출처 필터",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 369,
+    "end": 460,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L369-L460"
+  },
+  {
+    "id": "U13",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 463,
+    "end": 492,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L463-L492",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U14",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 513,
+    "end": 529,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L513-L529",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U15",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 127,
+    "end": 199,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L127-L199",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U17",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1534,
+    "end": 1583,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L1534-L1583",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U18",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6295,
+    "end": 6324,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6295-L6324",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U19",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 174,
+    "end": 201,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L174-L201",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U20",
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 807,
+    "end": 820,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/ReviewResult/CReviewResultFile.cs#L807-L820",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U21",
+    "path": "Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml",
+    "start": 273,
+    "end": 365,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml#L273-L365",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U22",
+    "path": "Drilling.UI/Views/CReviewDataView.xaml.cs",
+    "start": 42,
+    "end": 68,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CReviewDataView.xaml.cs#L42-L68",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U23",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 816,
+    "end": 848,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L816-L848",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "AUTO 대표 Beam11",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 315,
+    "end": 324,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L315-L324"
+  },
+  {
+    "id": "U25",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2562,
+    "end": 2594,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2562-L2594",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U26",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 4693,
+    "end": 4717,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4693-L4717",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U27",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 5260,
+    "end": 5295,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5260-L5295",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U28",
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 581,
+    "end": 667,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/CRootView.cs#L581-L667",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U29",
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2868,
+    "end": 2890,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/CRootView.cs#L2868-L2890",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U30",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 7066,
+    "end": 7086,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7066-L7086",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U31",
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 712,
+    "end": 754,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L712-L754",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U32",
+    "path": "Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs",
+    "start": 53,
+    "end": 72,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L53-L72",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U33",
+    "path": "Drilling.UI/Views/CFineCorrectionView.xaml",
+    "start": 145,
+    "end": 147,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Views/CFineCorrectionView.xaml#L145-L147",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U34",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 265,
+    "end": 275,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L265-L275",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "id": "U35",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 542,
+    "end": 552,
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L542-L552",
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39"
+  },
+  {
+    "label": "가공 준비와 시작 검사",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 234,
+    "end": 291,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L234-L291"
+  },
+  {
+    "label": "준비 시 Setting·Offset 결합",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1512,
+    "end": 1549,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L1512-L1549"
+  },
+  {
+    "label": "최신 Offset 대조와 무효화",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1551,
+    "end": 1585,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L1551-L1585"
+  },
+  {
+    "label": "Process 모델·Head 구성",
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1591,
+    "end": 1623,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Station/CStationProcess.cs#L1591-L1623"
+  },
+  {
+    "label": "자동 Review 연결",
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2791,
+    "end": 2816,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/CRootView.cs#L2791-L2816"
+  },
+  {
+    "label": "일반 Review의 Product 저장",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 1341,
+    "end": 1403,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L1341-L1403"
+  },
+  {
+    "label": "pixel에서 mm 환산",
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2061,
+    "end": 2088,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CReviewManager.cs#L2061-L2088"
+  },
+  {
+    "label": "Setting 저장 검증·캐시",
+    "path": "Drilling.Common/Managers/CSettingManager.cs",
+    "start": 122,
+    "end": 148,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Managers/CSettingManager.cs#L122-L148"
+  },
+  {
+    "label": "실제 Interface 설정 파일 경로",
+    "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+    "start": 99,
+    "end": 110,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.File/JHMI/CInterfaceFile.cs#L99-L110"
+  },
+  {
+    "label": "UI 빌드 대상과 버전",
+    "path": "Drilling.UI/Drilling.UI.csproj",
+    "start": 17,
+    "end": 24,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.UI/Drilling.UI.csproj#L17-L24"
+  },
+  {
+    "label": "Log 소스 제외 규칙",
+    "path": ".gitignore",
+    "start": 29,
+    "end": 35,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/.gitignore#L29-L35"
+  },
+  {
+    "label": "Stage Distortion 입력 미할당",
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 680,
+    "end": 690,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/JHMI_MELSEC_MAP.csv#L680-L690"
+  },
+  {
+    "label": "PTW 완료 주소의 미확정 주석",
+    "path": "Config/JHMI_MELSEC_MAP.csv",
+    "start": 563,
+    "end": 568,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Config/JHMI_MELSEC_MAP.csv#L563-L568"
+  },
+  {
+    "label": "자동 누적과 세션 중복 방어",
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 77,
+    "end": 174,
+    "ref": "a1162209220fd31caa68cbf82b5a98db9588af39",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/a1162209220fd31caa68cbf82b5a98db9588af39/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L77-L174"
+  }
+]

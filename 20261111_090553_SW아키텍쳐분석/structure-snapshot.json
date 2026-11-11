@@ -1,0 +1,35 @@
+{
+  "baseline": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+  "latest": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "baselineTracked": 315,
+  "latestTracked": 404,
+  "changedPaths": 115,
+  "sourceChangedPaths": 31,
+  "topDirectories": {
+    "ROOT": 4,
+    "Config": 80,
+    "Data": 103,
+    "Drilling.Common": 60,
+    "Drilling.File": 18,
+    "Drilling.UI": 139
+  },
+  "extensions": {
+    "": 2,
+    ".csv": 126,
+    ".scan": 11,
+    ".txt": 3,
+    ".bak": 8,
+    ".ascript": 35,
+    ".cs": 146,
+    ".csproj": 3,
+    ".dll": 12,
+    ".xml": 1,
+    ".xaml": 55,
+    ".sln": 1,
+    ".config": 1
+  },
+  "sourceTreeEqualsRecovered1190": true,
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "comparisonMode": "git_diff"
+}
