@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "version": "0.3.0",
+  "distribution": "public-model-included",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3_LD_Process_Local_LLM",
+  "sourceCommit": "4bc8e6f539c8619844867a2e525aa9b79c71bd56",
+  "model": {
+    "name": "Qwen3-8B · Q4_K_M",
+    "repository": "Qwen/Qwen3-8B-GGUF",
+    "revision": "7c41481f57cb95916b40956ab2f0b139b296d974",
+    "url": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/7c41481f57cb95916b40956ab2f0b139b296d974/Qwen3-8B-Q4_K_M.gguf",
+    "bytes": 5027783488,
+    "sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+    "reason": "실제 A3 Review 오차 레벨 함수 생성에서 컴파일과 22개 경계값·예외 검사를 통과했고, 현재 LoRA 도구와 같은 Qwen3 구조를 사용합니다. 검증 PC의 CPU Auto에서 이 함수 생성은 273.4초였습니다. 엔진 보완도 함께 적용한 제한된 과제 결과이며, 모든 개발 과제에서 우수하거나 Codex와 동등하다는 의미는 아닙니다.",
+    "trainingBaseIncluded": false,
+    "largeA3WeightsTrained": false,
+    "inferenceMode": "CPU Auto; reasoning off",
+    "observedContext": 4096,
+    "observedThreads": 4,
+    "existingEditFinalCheckPending": false,
+    "existingEditSeconds": 139.3,
+    "existingEditChecksPassed": 8,
+    "file": "Models/Qwen3-8B-Q4_K_M.gguf"
+  },
+  "runtime": "llama.cpp b11960 Windows CPU x64",
+  "included": [
+    "Qwen3-8B Q4_K_M GGUF",
+    "CPU runtime",
+    "portable .NET toolchain",
+    "VC++ prerequisite installer",
+    "original third-party licenses and notices",
+    "training scripts"
+  ],
+  "excluded": [
+    "equipment source and .git",
+    "internal A3/MOF Context summaries",
+    "personal documents and sessions",
+    "actual training datasets and adapters",
+    "training HF original and Python environment"
+  ],
+  "boundaries": {
+    "originalA3SourceChanged": false,
+    "trainedActualLargeA3Weights": false,
+    "hardwareVerified": false,
+    "physicalNetworkDisconnectedTested": false,
+    "codexEquivalentAccuracyProven": false,
+    "trainingBaseAndPythonIncluded": false,
+    "appSourceRemotePushedForThisShare": false,
+    "publicationIsDistributionOnly": true
+  },
+  "verificationSummary": {
+    "singleGeneratedFunctionChecks": 22,
+    "singleGeneratedFunctionPassed": 22,
+    "scope": "Previously verified single pure-function task; not a complete device or Codex-equivalence benchmark",
+    "largeA3WeightsTrained": false,
+    "codeChangesForPublicDistribution": false,
+    "exeSha256": "b8432124a14654d00d5b3f5bce9509efeeeea53f0083b3066072d0a3e52aff3f"
+  },
+  "releaseUrl": "https://github.com/kjuws10-rgb/Shared/releases/tag/a3-offline-studio-v0.3.0-20261112",
+  "payloadFileCount": 5649,
+  "archive": {
+    "file": "A3_Offline_Studio_0_3_Public_Ready.zip",
+    "bytes": 5463107664,
+    "sha256": "d580ff880ec2a2cadc1bb2981d89d277d234dbc45aa31ecc3fadff4b774c4cae"
+  },
+  "parts": [
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part01",
+      "bytes": 1887436800,
+      "sha256": "bc97d641fba0b4825fa0fc3d05e8c779adbe5be2b20d5b0ea12ac5a460c62616"
+    },
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part02",
+      "bytes": 1887436800,
+      "sha256": "25421f509a1a60261c23a8111d2f3de7c831748d3429585b68f474834b71507d"
+    },
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part03",
+      "bytes": 1688234064,
+      "sha256": "db16955e7d4c6278347506fa9984655a1bdf36496b15eaedbf1c128fb93ce515"
+    }
+  ],
+  "sourceZip": {
+    "file": "A3_Offline_Studio_0_3_Source.zip",
+    "bytes": 216089,
+    "sha256": "892065278e1ece5b9d86440415f71ee53fa3bac679c347a6f821bb8148f3ee1a"
+  },
+  "readyZipCrcAndPayloadHashesVerified": 5651,
+  "originalLocalPackagePreserved": true
+}
