@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "archive": {
+    "file": "A3_Offline_Studio_0_3_Public_Ready.zip",
+    "bytes": 5463107664,
+    "sha256": "d580ff880ec2a2cadc1bb2981d89d277d234dbc45aa31ecc3fadff4b774c4cae"
+  },
+  "parts": [
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part01",
+      "bytes": 1887436800,
+      "sha256": "bc97d641fba0b4825fa0fc3d05e8c779adbe5be2b20d5b0ea12ac5a460c62616"
+    },
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part02",
+      "bytes": 1887436800,
+      "sha256": "25421f509a1a60261c23a8111d2f3de7c831748d3429585b68f474834b71507d"
+    },
+    {
+      "file": "A3_Offline_Studio_0_3_Public_Ready.zip.part03",
+      "bytes": 1688234064,
+      "sha256": "db16955e7d4c6278347506fa9984655a1bdf36496b15eaedbf1c128fb93ce515"
+    }
+  ]
+}
