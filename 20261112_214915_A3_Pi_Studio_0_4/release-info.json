@@ -1,0 +1,48 @@
+{
+  "sourceCommit": "f626747800386b8d5d0111a802f6a54f37769518",
+  "appFiles": 21207,
+  "appBytes": 1258615169,
+  "privateFilesDetected": 0,
+  "assets": [
+    {
+      "file": "A3_Pi_Studio_0_4_Source.zip",
+      "bytes": 304668,
+      "sha256": "877612672e278ac9e3f59be6c6fead89fff47bdeb470c898c9966c2242c29f8c",
+      "entries": 111,
+      "crc": "pass"
+    },
+    {
+      "file": "A3_Pi_Studio_0_4_Windows_x64.zip",
+      "bytes": 486504946,
+      "sha256": "9c4805f4ffd4c25eaa70a265c49b97d939ae9607991f3d349db9481a5cd17930",
+      "entries": 21215,
+      "crc": "pass"
+    },
+    {
+      "file": "A3_Pi_Studio_0_4_설치_사용법.html",
+      "bytes": 29069,
+      "sha256": "2d113b8443504ef20d8f73cd006e99cfac9c1b29b80719ff8535c0c69b541fb1"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3719,
+      "sha256": "d77a102a2a7b5f2424bc5e4732bef247ff06fec3fe06383be11b7f3c6b261d66"
+    },
+    {
+      "file": "검증_요약.md",
+      "bytes": 7080,
+      "sha256": "748e078816fd40e3554215aad20034c08e91f8d443a4b224505f214034484dbb"
+    },
+    {
+      "file": "A3_실제프로젝트_검증.md",
+      "bytes": 5784,
+      "sha256": "154924532ede736c2c97a1340cb19944b86012a09565c94666b28585e66b6b1f"
+    },
+    {
+      "file": "release-manifest.json",
+      "bytes": 4743943,
+      "sha256": "d5a6ec67c8eef9cabedd8b9ef32033dd7c508a54d2e96c020a3c7a176f1039ee"
+    }
+  ],
+  "releaseUrl": "https://github.com/kjuws10-rgb/Shared/releases/tag/a3-pi-studio-v0.4.0-20261112"
+}
