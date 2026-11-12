@@ -1,0 +1,141 @@
+{
+  "baseline": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "latest": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "files": [
+    {
+      "path": "01_Commit변경요약.md",
+      "bytes": 3986,
+      "sha256": "ef94f7af92fcc7b3bf138e22a376c3874f48b72f4b8479fba2b02f0dc59b8a5b"
+    },
+    {
+      "path": "02_변경데이터구조와흐름.md",
+      "bytes": 7291,
+      "sha256": "ff5dd36be5b32057194c8049ba2408270322b113b20f52b375e707fe9e7fae90"
+    },
+    {
+      "path": "03_가공Review영향분석.md",
+      "bytes": 5512,
+      "sha256": "859adf0b5612c7fa2743a0b8146f9a2f32b0e19bfd290094cd074923e8e5b621"
+    },
+    {
+      "path": "04_통합흐름도.md",
+      "bytes": 3340,
+      "sha256": "c37209a1ab7ef5db8fa017d8aede2c9fe836b2c6c0eaa446280503e77b1ce5f0"
+    },
+    {
+      "path": "05_위험도별발견사항.md",
+      "bytes": 6497,
+      "sha256": "383dac6e1b22d48f15dae58e4c81b22ef5d623ed8b4df5b2f75502833551603d"
+    },
+    {
+      "path": "06_분석근거와검증.md",
+      "bytes": 4352,
+      "sha256": "8984ad8493ef655ddd6c609a48631521bc93f917e1a33f8f1931cdfa07e3ae6b"
+    },
+    {
+      "path": "07_Recipe좌표상세검토.md",
+      "bytes": 22431,
+      "sha256": "f26e26e8c7e0376a3d224004ed299c684af0a7796fae0795d4afb2375ce5538e"
+    },
+    {
+      "path": "08_결과보정상세검토.md",
+      "bytes": 29399,
+      "sha256": "78ee4ced7afefe789a4d2cfe7bfdeadcb8abbd13cfc06dc0b7a197fb53238185"
+    },
+    {
+      "path": "09_UI재검사상세검토.md",
+      "bytes": 30749,
+      "sha256": "d38bf9625f5e76b701313066eee237035db2a323e3f5f9c983afd40712ab1ea5"
+    },
+    {
+      "path": "10_Default중앙기준설정검토.md",
+      "bytes": 10462,
+      "sha256": "30313c716addc886de8a8457d80046aca163a5033fc32ff11ac9376524f2d98d"
+    },
+    {
+      "path": "baseline-selection.json",
+      "bytes": 1290,
+      "sha256": "efe2f606b7cbd35b723786e6e1f5071a2671afa6e4832341165240881b7d9d6e"
+    },
+    {
+      "path": "build-validation.json",
+      "bytes": 360,
+      "sha256": "dbe674378658ed9fe1740ef8682bfe7089b1b0ec5f05e721fddfae8b1167b02b"
+    },
+    {
+      "path": "changed-files.csv",
+      "bytes": 16545,
+      "sha256": "c0b33a3665cbebcc5303f1a8aa02e5275599d64ac2bb77b19e37dc9eb19307bc"
+    },
+    {
+      "path": "default-midpoint-validation.json",
+      "bytes": 1177,
+      "sha256": "3fa80d90263a7edc564eaf7fa03fef207e33bc5da1613c3729f7490a32669726"
+    },
+    {
+      "path": "figures/default-midpoint.svg",
+      "bytes": 3068,
+      "sha256": "e410a595285b043d07970222def381f10f0d4295e0445abbf108fef1b7bc7a22"
+    },
+    {
+      "path": "figures/flow-0.svg",
+      "bytes": 20939,
+      "sha256": "f70dc6aa15e9baf5168e2a879300f99fa89b351bd810e1686a62baa692f896de"
+    },
+    {
+      "path": "figures/flow-1.svg",
+      "bytes": 16652,
+      "sha256": "17bfec68be7d94247b95af5c992fb7cbdee88d8e8dda174e5bf998edac986af3"
+    },
+    {
+      "path": "figures/flow-2.svg",
+      "bytes": 16642,
+      "sha256": "56ce37049ab283c19e472090b46813cdc74c5a738f684fc7c8939e913c1ffc1e"
+    },
+    {
+      "path": "figures/flow-3.svg",
+      "bytes": 17787,
+      "sha256": "b7037188e806ecce9fdafa6f823bc2f4e62cac646675dd9c793390e88507c544"
+    },
+    {
+      "path": "figures/flow-4.svg",
+      "bytes": 12698,
+      "sha256": "32ab795968276d133188aaf8fd8d8a5b1c8d891de7ac8b847255b0a1f9aa48e9"
+    },
+    {
+      "path": "figures/flow-5.svg",
+      "bytes": 12861,
+      "sha256": "822716f711f4e6702f6e43970a7552d88fdbdd4939a5e4786c315b0ae32952f1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4024,
+      "sha256": "81ea1692e9e09c32472ae077c72c4e655384b5ed25550a947318752acf1635c9"
+    },
+    {
+      "path": "schema-summary.json",
+      "bytes": 40059,
+      "sha256": "55cf1867a549ba60cc114db4a2bba3db07d64b0b81230b228f1b2cae96dbadce"
+    },
+    {
+      "path": "shift-formula-validation.json",
+      "bytes": 262,
+      "sha256": "cf8b4a8b85d5de3f55f0d18bf73dad088a0ac4d288fd55f43b88424562441cfb"
+    },
+    {
+      "path": "source-inventory.csv",
+      "bytes": 40265,
+      "sha256": "76029e1db48f12b72a0f52407152d23f6daee37bb61682790467f2b3ee1b87da"
+    },
+    {
+      "path": "source-links.json",
+      "bytes": 53265,
+      "sha256": "9f21e3dd73e0895ce33c15f1d23cbe066e9ca176682abbc81d9aff4c0e4d1c8a"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 3053,
+      "sha256": "d5d8e0c196a99ba03db186de09bf513f0d09af312de682ae2cb2e2e5240ce8f7"
+    }
+  ]
+}

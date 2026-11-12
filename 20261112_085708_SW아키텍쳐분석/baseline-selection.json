@@ -1,0 +1,44 @@
+{
+  "sharedAtStart": "b189004a311f176faf145a973b0b6e851df8221e",
+  "acceptedFolder": "20261111_090553_SW아키텍쳐분석",
+  "baseline": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "candidateFolders": [
+    {
+      "folder": "20261111_090553_SW아키텍쳐분석",
+      "accepted": true,
+      "sourceCommit": "a1162209220fd31caa68cbf82b5a98db9588af39"
+    },
+    {
+      "folder": "20261108_090646_SW아키텍쳐분석",
+      "accepted": true,
+      "sourceCommit": "not selected"
+    },
+    {
+      "folder": "20261105_213021_SW아키텍쳐분석",
+      "accepted": false,
+      "sourceCommit": "not selected"
+    },
+    {
+      "folder": "20261102_143906_SW아키텍쳐분석",
+      "accepted": false,
+      "sourceCommit": "not selected"
+    },
+    {
+      "folder": "20261031_090522_SW아키텍쳐분석",
+      "accepted": false,
+      "sourceCommit": "not selected"
+    },
+    {
+      "folder": "20261028_090032_SW아키텍쳐분석",
+      "accepted": false,
+      "sourceCommit": "not selected"
+    },
+    {
+      "folder": "20261022_090959_SW아키텍쳐분석",
+      "accepted": false,
+      "sourceCommit": "not selected"
+    }
+  ]
+}

@@ -1,0 +1,1150 @@
+[
+  {
+    "path": "Drilling.UI/Drilling.UI.csproj",
+    "start": 17,
+    "end": 25,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Drilling.UI.csproj#L17-L25"
+  },
+  {
+    "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+    "start": 95,
+    "end": 109,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CInterfaceFile.cs#L95-L109"
+  },
+  {
+    "path": "Config/Setting/Setting.csv",
+    "start": 52,
+    "end": 104,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/Setting/Setting.csv#L52-L104"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 12,
+    "end": 48,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L48"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 79,
+    "end": 98,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L79-L98"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 434,
+    "end": 484,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L434-L484"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 30,
+    "end": 45,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L30-L45"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 129,
+    "end": 211,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L129-L211"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 213,
+    "end": 260,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L213-L260"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3576,
+    "end": 3597,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3576-L3597"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3722,
+    "end": 3761,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3722-L3761"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5853,
+    "end": 5857,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L5853-L5857"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 142,
+    "end": 178,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L142-L178"
+  },
+  {
+    "path": "Drilling.File/Product/CProductFile.cs",
+    "start": 258,
+    "end": 266,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L258-L266"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 211,
+    "end": 235,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L211-L235"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 647,
+    "end": 695,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L647-L695"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 954,
+    "end": 974,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L954-L974"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3986,
+    "end": 3998,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3986-L3998"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 515,
+    "end": 582,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L515-L582"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 11,
+    "end": 55,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L11-L55"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 5,
+    "end": 22,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L22"
+  },
+  {
+    "path": ".gitignore",
+    "start": 21,
+    "end": 34,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/.gitignore#L21-L34"
+  },
+  {
+    "path": "Drilling.File/Drilling.File.csproj",
+    "start": 1,
+    "end": 13,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Drilling.File.csproj#L1-L13"
+  },
+  {
+    "path": "Drilling.Common/Drilling.Common.csproj",
+    "start": 1,
+    "end": 20,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Drilling.Common.csproj#L1-L20"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 847,
+    "end": 886,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L847-L886"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 889,
+    "end": 924,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L889-L924"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 188,
+    "end": 228,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L188-L228"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1526,
+    "end": 1560,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1526-L1560"
+  },
+  {
+    "path": "Config/Setting/Setting.csv",
+    "start": 55,
+    "end": 99,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/Setting/Setting.csv#L55-L99"
+  },
+  {
+    "path": "Config/JHMI_SETTING.csv",
+    "start": 95,
+    "end": 95,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_SETTING.csv#L95-L95"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2173,
+    "end": 2196,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2173-L2196"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 1324,
+    "end": 1334,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1324-L1334"
+  },
+  {
+    "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+    "start": 1364,
+    "end": 1399,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1364-L1399"
+  },
+  {
+    "path": "Drilling.File/Parser/CCsvParser.cs",
+    "start": 96,
+    "end": 144,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Parser/CCsvParser.cs#L96-L144"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 911,
+    "end": 974,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L911-L974"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 647,
+    "end": 705,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L647-L705"
+  },
+  {
+    "path": "Config/JHMI_RCP.csv",
+    "start": 34,
+    "end": 35,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_RCP.csv#L34-L35"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 21,
+    "end": 70,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L21-L70"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 119,
+    "end": 156,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L119-L156"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3415,
+    "end": 3440,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3415-L3440"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3576,
+    "end": 3589,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3576-L3589"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3713,
+    "end": 3758,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3713-L3758"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5856,
+    "end": 5856,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L5856-L5856"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+    "start": 2027,
+    "end": 2056,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2027-L2056"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6067,
+    "end": 6127,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6067-L6127"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6178,
+    "end": 6230,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6178-L6230"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3984,
+    "end": 3996,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3984-L3996"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 201,
+    "end": 234,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L201-L234"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 767,
+    "end": 784,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L767-L784"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 853,
+    "end": 909,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L853-L909"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 456,
+    "end": 525,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L456-L525"
+  },
+  {
+    "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+    "start": 17,
+    "end": 74,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L74"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 361,
+    "end": 400,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L400"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+    "start": 434,
+    "end": 451,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L451"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 250,
+    "end": 272,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L250-L272"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 911,
+    "end": 944,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L911-L944"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 340,
+    "end": 342,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L340-L342"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+    "start": 2193,
+    "end": 2217,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2193-L2217"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+    "start": 2332,
+    "end": 2353,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2332-L2353"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 138,
+    "end": 155,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L138-L155"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 1294,
+    "end": 1303,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1294-L1303"
+  },
+  {
+    "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+    "start": 94,
+    "end": 166,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L94-L166"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2250,
+    "end": 2311,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2250-L2311"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 565,
+    "end": 602,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L565-L602"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 135,
+    "end": 210,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L135-L210"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 293,
+    "end": 338,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L293-L338"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 461,
+    "end": 466,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L461-L466"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 579,
+    "end": 600,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L579-L600"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 1140,
+    "end": 1193,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1140-L1193"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 56,
+    "end": 99,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L56-L99"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 1182,
+    "end": 1193,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1182-L1193"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5693,
+    "end": 5728,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L5693-L5728"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2790,
+    "end": 2831,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2790-L2831"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2883,
+    "end": 2924,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2883-L2924"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 1546,
+    "end": 1595,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1546-L1595"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3486,
+    "end": 3512,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L3486-L3512"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3416,
+    "end": 3481,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L3416-L3481"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 1260,
+    "end": 1281,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1260-L1281"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 390,
+    "end": 431,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L390-L431"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 375,
+    "end": 458,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L375-L458"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 482,
+    "end": 498,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L482-L498"
+  },
+  {
+    "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+    "start": 139,
+    "end": 155,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L155"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 12,
+    "end": 47,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L47"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 987,
+    "end": 1117,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L987-L1117"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 1121,
+    "end": 1217,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L1121-L1217"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 792,
+    "end": 891,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L792-L891"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 12,
+    "end": 41,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L12-L41"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 1220,
+    "end": 1220,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L1220-L1220"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 736,
+    "end": 738,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L736-L738"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 212,
+    "end": 290,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L212-L290"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 389,
+    "end": 403,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L389-L403"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 260,
+    "end": 326,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L260-L326"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 328,
+    "end": 381,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L328-L381"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 4021,
+    "end": 4086,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4021-L4086"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 214,
+    "end": 258,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L214-L258"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 145,
+    "end": 211,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L145-L211"
+  },
+  {
+    "path": "Drilling.File/Parser/CCsvParser.cs",
+    "start": 96,
+    "end": 136,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Parser/CCsvParser.cs#L96-L136"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 481,
+    "end": 529,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L481-L529"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 641,
+    "end": 674,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L641-L674"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 101,
+    "end": 131,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L101-L131"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 519,
+    "end": 535,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L519-L535"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2834,
+    "end": 2868,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2834-L2868"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 1465,
+    "end": 1488,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1465-L1488"
+  },
+  {
+    "path": "Drilling.UI/Drilling.UI.csproj",
+    "start": 20,
+    "end": 20,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Drilling.UI.csproj#L20-L20"
+  },
+  {
+    "path": "Drilling.UI/CRootView.xaml",
+    "start": 211,
+    "end": 216,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.xaml#L211-L216"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 15,
+    "end": 72,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L15-L72"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 181,
+    "end": 245,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L181-L245"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 294,
+    "end": 334,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L294-L334"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 2364,
+    "end": 2379,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2364-L2379"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 515,
+    "end": 584,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L515-L584"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 903,
+    "end": 931,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L903-L931"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 940,
+    "end": 969,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L940-L969"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 337,
+    "end": 396,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L337-L396"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 411,
+    "end": 443,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L411-L443"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 594,
+    "end": 628,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L594-L628"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 114,
+    "end": 146,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L114-L146"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 59,
+    "end": 108,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L59-L108"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2250,
+    "end": 2297,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2250-L2297"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 2788,
+    "end": 2820,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2788-L2820"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 4004,
+    "end": 4072,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4004-L4072"
+  },
+  {
+    "path": "Drilling.UI/Popup/CReviewShiftOffsetDialog.xaml.cs",
+    "start": 18,
+    "end": 34,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CReviewShiftOffsetDialog.xaml.cs#L18-L34"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 7218,
+    "end": 7251,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7218-L7251"
+  },
+  {
+    "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+    "start": 145,
+    "end": 184,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L145-L184"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 433,
+    "end": 466,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L433-L466"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 293,
+    "end": 313,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L293-L313"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+    "start": 48,
+    "end": 115,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L48-L115"
+  },
+  {
+    "path": "Drilling.UI/Views/CReviewDataView.xaml",
+    "start": 110,
+    "end": 140,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CReviewDataView.xaml#L110-L140"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 542,
+    "end": 560,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L542-L560"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 3722,
+    "end": 3755,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3722-L3755"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 4015,
+    "end": 4040,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L4015-L4040"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 812,
+    "end": 828,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L812-L828"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 933,
+    "end": 945,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L933-L945"
+  },
+  {
+    "path": "Drilling.UI/Views/CReviewDataView.xaml",
+    "start": 41,
+    "end": 44,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CReviewDataView.xaml#L41-L44"
+  },
+  {
+    "path": "Drilling.UI/CRootView.cs",
+    "start": 25,
+    "end": 25,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L25-L25"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 141,
+    "end": 179,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L141-L179"
+  },
+  {
+    "path": "Drilling.Common/Review/CReviewManager.cs",
+    "start": 3036,
+    "end": 3072,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L3036-L3072"
+  },
+  {
+    "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+    "start": 149,
+    "end": 208,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.cs#L149-L208"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+    "start": 74,
+    "end": 120,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L74-L120"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 2900,
+    "end": 2942,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2900-L2942"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3880,
+    "end": 3904,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3880-L3904"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 6209,
+    "end": 6229,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6209-L6229"
+  },
+  {
+    "path": "Drilling.UI/Views/CReviewDataView.xaml.cs",
+    "start": 46,
+    "end": 54,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CReviewDataView.xaml.cs#L46-L54"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 446,
+    "end": 512,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L446-L512"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 656,
+    "end": 686,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L656-L686"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+    "start": 742,
+    "end": 756,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L742-L756"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+    "start": 361,
+    "end": 388,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L361-L388"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 5957,
+    "end": 5989,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5957-L5989"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 749,
+    "end": 859,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L749-L859"
+  },
+  {
+    "path": "Drilling.UI/Views/CReviewDataView.xaml",
+    "start": 470,
+    "end": 484,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CReviewDataView.xaml#L470-L484"
+  },
+  {
+    "path": "Drilling.Common/Station/CStationProcess.cs",
+    "start": 5855,
+    "end": 5856,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L5855-L5856"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+    "start": 886,
+    "end": 911,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L886-L911"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 29,
+    "end": 38,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L29-L38"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 172,
+    "end": 200,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L172-L200"
+  },
+  {
+    "path": "Config/Setting/Setting.csv",
+    "start": 125,
+    "end": 145,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/Setting/Setting.csv#L125-L145"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 31,
+    "end": 38,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L31-L38"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 232,
+    "end": 249,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L232-L249"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3296,
+    "end": 3360,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3296-L3360"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3361,
+    "end": 3393,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3361-L3393"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 184,
+    "end": 225,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L184-L225"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 92,
+    "end": 104,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L92-L104"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3727,
+    "end": 3764,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3727-L3764"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 107,
+    "end": 159,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L107-L159"
+  },
+  {
+    "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+    "start": 162,
+    "end": 169,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L162-L169"
+  },
+  {
+    "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+    "start": 3740,
+    "end": 3758,
+    "ref": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3740-L3758"
+  }
+]

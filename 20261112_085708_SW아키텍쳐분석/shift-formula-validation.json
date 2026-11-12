@@ -1,0 +1,7 @@
+{
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "scope": "Independent arithmetic only; no application or device code executed",
+  "caseCount": 30,
+  "maximumAbsoluteDifferenceMm": 4.547473508864641e-13,
+  "sameShift10IsIdempotent": true
+}

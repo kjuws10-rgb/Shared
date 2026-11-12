@@ -1,0 +1,72 @@
+{
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "mode": "static source and independent arithmetic; no C# or hardware execution",
+  "inputs": {
+    "reviewAkX": 0,
+    "glassSizeX": 925,
+    "akMarginX": 15.5,
+    "headGapX": 110
+  },
+  "centerX": 447,
+  "targets": [
+    {
+      "head": 1,
+      "fromCenter": -385.0,
+      "targetX": 62.0
+    },
+    {
+      "head": 2,
+      "fromCenter": -275.0,
+      "targetX": 172.0
+    },
+    {
+      "head": 3,
+      "fromCenter": -165.0,
+      "targetX": 282.0
+    },
+    {
+      "head": 4,
+      "fromCenter": -55.0,
+      "targetX": 392.0
+    },
+    {
+      "head": 5,
+      "fromCenter": 55.0,
+      "targetX": 502.0
+    },
+    {
+      "head": 6,
+      "fromCenter": 165.0,
+      "targetX": 612.0
+    },
+    {
+      "head": 7,
+      "fromCenter": 275.0,
+      "targetX": 722.0
+    },
+    {
+      "head": 8,
+      "fromCenter": 385.0,
+      "targetX": 832.0
+    }
+  ],
+  "pairOrder": [
+    [
+      4,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      8
+    ]
+  ],
+  "measuredAkMidpointUsed": false
+}

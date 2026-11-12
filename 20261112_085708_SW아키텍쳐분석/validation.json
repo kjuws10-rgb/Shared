@@ -1,0 +1,121 @@
+{
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "branch": "master",
+  "baseline": "a1162209220fd31caa68cbf82b5a98db9588af39",
+  "latest": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "documents": [
+    {
+      "file": "01_Commit변경요약.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "02_변경데이터구조와흐름.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "03_가공Review영향분석.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "04_통합흐름도.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "05_위험도별발견사항.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "06_분석근거와검증.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "07_Recipe좌표상세검토.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "08_결과보정상세검토.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "09_UI재검사상세검토.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "10_Default중앙기준설정검토.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    },
+    {
+      "file": "README.md",
+      "utf8": true,
+      "fences": true,
+      "tableColumns": true,
+      "internalLinks": true
+    }
+  ],
+  "fixedSourceLinks": 164,
+  "mermaidParsedRendered": 6,
+  "portableFigures": 7,
+  "sourcePreservation": {
+    "source": {
+      "trackedFiles": 571,
+      "bytesUnchanged": true,
+      "headBranchStatusUnchanged": true
+    },
+    "original": {
+      "trackedFiles": 310,
+      "bytesUnchanged": true,
+      "headBranchStatusUnchanged": true
+    }
+  },
+  "pushDisabled": true,
+  "build": {
+    "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "separateClone": true,
+    "pushDisabled": true,
+    "stubsUsed": false,
+    "restoreExit": 0,
+    "sdk": "10.0.400",
+    "buildExit": 1,
+    "uniqueErrors": 19,
+    "warnings": 0,
+    "reason": "Missing Drilling.Common.Log / CLogManager; no stubs supplied; new File/UI compilation not confirmed."
+  },
+  "reportDiffCheck": "passed",
+  "scope": {
+    "productionEdits": false,
+    "sourceCommitPush": false,
+    "hardwareExecution": false,
+    "rawMeasurementsPublished": false,
+    "privateKnowledgePublished": false
+  }
+}

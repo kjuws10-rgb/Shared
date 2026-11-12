@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "separateClone": true,
+  "pushDisabled": true,
+  "stubsUsed": false,
+  "restoreExit": 0,
+  "sdk": "10.0.400",
+  "buildExit": 1,
+  "uniqueErrors": 19,
+  "warnings": 0,
+  "reason": "Missing Drilling.Common.Log / CLogManager; no stubs supplied; new File/UI compilation not confirmed."
+}
