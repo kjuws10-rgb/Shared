@@ -1,0 +1,51 @@
+{
+  "version": "0.5.1",
+  "sourceCommit": "0664cb451100c4ba678a3f4708aef757955cc7a8",
+  "sourceCommitLocation": "local implementation commit; exact source ZIP supplied",
+  "inputA3Commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "release": "https://github.com/kjuws10-rgb/Shared/releases/tag/a3-pi-studio-v0.5.1-20261113",
+  "assets": [
+    {
+      "name": "A3_Pi_Studio_0_5_1_Windows_x64.zip",
+      "bytes": 483781814,
+      "sha256": "9933dacafe492ddb08b65872c53b2c087ba6fe01a255da3bfaf8862802e68965",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/A3_Pi_Studio_0_5_1_Windows_x64.zip"
+    },
+    {
+      "name": "A3_Pi_Studio_0_5_1_Source.zip",
+      "bytes": 419450,
+      "sha256": "2a45ac7856ec0e71a348c0597153e9d9bdcf34998bc2406eb174e31ce91625fc",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/A3_Pi_Studio_0_5_1_Source.zip"
+    },
+    {
+      "name": "Installation_Guide.html",
+      "bytes": 6942,
+      "sha256": "9c22b07006dfec333ad09be6819d8e1ad21d33c3f3c18df03b078e8cb456b2d8",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/Installation_Guide.html"
+    },
+    {
+      "name": "Verification_Summary.md",
+      "bytes": 3626,
+      "sha256": "214a39c5bafb77dcf768aa2a69c271eb7eadeb02e45011f3c5d98edfdde4e61b",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/Verification_Summary.md"
+    },
+    {
+      "name": "release-manifest.json",
+      "bytes": 4743159,
+      "sha256": "0454faaa757d6a407c6bf24d89823efad861c432245d47fe66eb895efaf22b08",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/release-manifest.json"
+    },
+    {
+      "name": "Quick_Start.txt",
+      "bytes": 640,
+      "sha256": "f5f5ac30a9d9989a4127b85c8c8c7271aecf1bd0fdff4a347dc8c8b7f1506ef2",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/Quick_Start.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 553,
+      "sha256": "b7f6496b091fdddf6c14058eb8cf6cab78a35f6993bdcb8d07c896afd858db48",
+      "url": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-pi-studio-v0.5.1-20261113/SHA256SUMS.txt"
+    }
+  ]
+}
