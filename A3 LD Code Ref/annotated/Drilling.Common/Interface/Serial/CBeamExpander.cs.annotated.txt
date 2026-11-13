@@ -1,0 +1,907 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Serial/CBeamExpander.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000003 | using System.Text; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000005 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000007 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000008 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000009 | using Drilling.Common.Station; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000011 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("Serial", "Bet")] ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 | [CCommType("ModbusSerial", "Bet")] ⟦EOL⟧
+// 해설 L14: 타입의 구조/상속 선언입니다: internal sealed class CBeamExpander(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option)
+L000014 | internal sealed class CBeamExpander(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다.
+L000015 | { ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: ResponseQuietTimeoutMs = 50
+L000016 |     private const int ResponseQuietTimeoutMs = 50; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: ResponsePollIntervalMs = 5
+L000017 |     private const int ResponsePollIntervalMs = 5; ⟦EOL⟧
+// 해설 L18: 변수의 초기값을 지정합니다: MaxResponseLength = 128
+L000018 |     private const int MaxResponseLength = 128; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000019 |     public static string Build(EN_BET_COMMAND command, double magnification = 0.0, double divergence = 0.0) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 Build.
+L000020 |     { ⟦EOL⟧
+// 해설 L21: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.InitMotor => "#I:", EN_BET_COMMAND.MoveManual => string.Join(":", "MOVE", magnification.ToString("F3", CultureInfo.InvariantCulture), divergence.ToString("F3", CultureInfo.InvariantCulture)), / 값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.InitMotor => "#I:", EN_BET_COMMAND.MoveManual => string.Join(":", "MOVE", magnification.ToString("F3", CultureInfo.InvariantCulture), divergence.ToString("F3", CultureInfo.InvariantCulture)), EN_BET
+L000021 |         return command switch ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Build.
+L000022 |         { ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000023 |             EN_BET_COMMAND.InitMotor => "#I:", ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(":", "MOVE", magnification.ToString("F3", CultureInfo.InvariantCulture), divergence.ToString("F3", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: magnification.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: divergence.ToString("F3", CultureInfo.InvariantCulture)
+L000024 |             EN_BET_COMMAND.MoveManual => string.Join(":", "MOVE", magnification.ToString("F3", CultureInfo.InvariantCulture), divergence.ToString("F3", CultureInfo.InvariantCulture)), ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)
+L000025 |             EN_BET_COMMAND.MoveMagnification => $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)
+L000026 |             EN_BET_COMMAND.MoveDivergence => $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000027 |             EN_BET_COMMAND.Refresh => "#8:", ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000028 |             EN_BET_COMMAND.PollMagnificationPosition => "#8:", ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000029 |             EN_BET_COMMAND.PollDivergencePosition => "#7:", ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000030 |             EN_BET_COMMAND.ResetAlarm => "#0:", ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000031 |             _ => "" ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Build.
+L000032 |         }; ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 Build.
+L000033 |     } ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.BuildLogText(Drilling.Common.Interface.EN_BET_COMMAND, double, double)
+L000035 |     public static string BuildLogText(EN_BET_COMMAND command, double magnification = 0.0, double divergence = 0.0) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 BuildLogText.
+L000036 |     { ⟦EOL⟧
+// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.MoveManual => string.Join(" / ", $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"), EN_BET_COM / 값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.MoveManual => string.Join(" / ", $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"), EN_BET_COMMAND.Mo
+L000037 |         return command switch ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 BuildLogText.
+L000038 |         { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" / ", $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)
+L000039 |             EN_BET_COMMAND.MoveManual => string.Join(" / ", $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"), ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)
+L000040 |             EN_BET_COMMAND.MoveMagnification => $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)
+L000041 |             EN_BET_COMMAND.MoveDivergence => $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: Build(command, magnification, divergence)
+L000042 |             _ => Build(command, magnification, divergence)}; ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 BuildLogText.
+L000043 |     } ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CBeamExpander.IsSuccessResponse(string)
+L000045 |     public static bool IsSuccessResponse(string response) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000046 |     { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) && !response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase);
+L000047 |         return !string.IsNullOrWhiteSpace(response) && !response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000048 |     } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000050 |     public static ST_BET_STATUS Apply(EN_BET_COMMAND command, double magnification, double divergence, string response, ST_BET_STATUS current, bool simulation) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Apply.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, magnification, divergence, current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim() / 지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim(); / 변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim()
+L000052 |         var value = simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim(); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSuccessResponse(value) / 조건에 따라 분기합니다: if (!simulation && !IsSuccessResponse(value))
+L000053 |         if (!simulation && !IsSuccessResponse(value)) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 Apply.
+L000054 |         { ⟦EOL⟧
+// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return current with { CommOk = false, LastError = ReadError(value), UpdatedAt = DateTimeOffset.Now };
+L000055 |             return current with ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Apply.
+L000056 |             { ⟦EOL⟧
+// 해설 L57: 값을 대상에 대입합니다: CommOk = false
+L000057 |                 CommOk = false, ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: LastError = ReadError(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadError(value)
+L000058 |                 LastError = ReadError(value), ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000059 |                 UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Apply.
+L000060 |             }; ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Apply.
+L000061 |         } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 지역 변수를 선언합니다: var ok = current with { CommOk = true, LastError = EN_BET_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }; / 변수의 초기값을 지정합니다: ok = current with { CommOk = true, LastError = EN_BET_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }
+L000063 |         var ok = current with ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 Apply.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: CommOk = true
+L000065 |             CommOk = true, ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: LastError = EN_BET_ERROR.Ok
+L000066 |             LastError = EN_BET_ERROR.Ok, ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000067 |             UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Apply.
+L000068 |         }; ⟦EOL⟧
+// 해설 L69: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.InitMotor => ok with { IsMoving = false, MagHomeCompleted = true, DivHomeCompleted = true, LastCommand = "INIT" }, EN_BET_COMMAND.MoveManual => ok with { CurrentMagnification = simulation ? m / 값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.InitMotor => ok with { IsMoving = false, MagHomeCompleted = true, DivHomeCompleted = true, LastCommand = "INIT" }, EN_BET_COMMAND.MoveManual => ok with { CurrentMagnification = simulation ? magnific
+L000069 |         return command switch ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 Apply.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000071 |             EN_BET_COMMAND.InitMotor => ok with ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Apply.
+L000072 |             { ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: IsMoving = false
+L000073 |                 IsMoving = false, ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: MagHomeCompleted = true
+L000074 |                 MagHomeCompleted = true, ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: DivHomeCompleted = true
+L000075 |                 DivHomeCompleted = true, ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: LastCommand = "INIT"
+L000076 |                 LastCommand = "INIT" ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000077 |             }, ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000078 |             EN_BET_COMMAND.MoveManual => ok with ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Apply.
+L000079 |             { ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: CurrentMagnification = simulation ? magnification : ok.CurrentMagnification / 조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.CurrentMagnification
+L000080 |                 CurrentMagnification = simulation ? magnification : ok.CurrentMagnification, ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: TargetMagnification = magnification
+L000081 |                 TargetMagnification = magnification, ⟦EOL⟧
+// 해설 L82: 값을 대상에 대입합니다: CurrentDivergence = simulation ? divergence : ok.CurrentDivergence / 조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.CurrentDivergence
+L000082 |                 CurrentDivergence = simulation ? divergence : ok.CurrentDivergence, ⟦EOL⟧
+// 해설 L83: 값을 대상에 대입합니다: TargetDivergence = divergence
+L000083 |                 TargetDivergence = divergence, ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition / 조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.MagnificationAxisPosition
+L000084 |                 MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition, ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition / 조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.DivergenceAxisPosition
+L000085 |                 DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition, ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: IsMoving = !simulation
+L000086 |                 IsMoving = !simulation, ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: LastCommand = "MOVE"
+L000087 |                 LastCommand = "MOVE" ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000088 |             }, ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000089 |             EN_BET_COMMAND.MoveMagnification => ok with ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Apply.
+L000090 |             { ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: CurrentMagnification = simulation ? magnification : ok.CurrentMagnification / 조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.CurrentMagnification
+L000091 |                 CurrentMagnification = simulation ? magnification : ok.CurrentMagnification, ⟦EOL⟧
+// 해설 L92: 값을 대상에 대입합니다: TargetMagnification = magnification
+L000092 |                 TargetMagnification = magnification, ⟦EOL⟧
+// 해설 L93: 값을 대상에 대입합니다: MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition / 조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.MagnificationAxisPosition
+L000093 |                 MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition, ⟦EOL⟧
+// 해설 L94: 값을 대상에 대입합니다: IsMoving = !simulation
+L000094 |                 IsMoving = !simulation, ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: LastCommand = "MOVE MAG"
+L000095 |                 LastCommand = "MOVE MAG" ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000096 |             }, ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000097 |             EN_BET_COMMAND.MoveDivergence => ok with ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 Apply.
+L000098 |             { ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: CurrentDivergence = simulation ? divergence : ok.CurrentDivergence / 조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.CurrentDivergence
+L000099 |                 CurrentDivergence = simulation ? divergence : ok.CurrentDivergence, ⟦EOL⟧
+// 해설 L100: 값을 대상에 대입합니다: TargetDivergence = divergence
+L000100 |                 TargetDivergence = divergence, ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition / 조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.DivergenceAxisPosition
+L000101 |                 DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition, ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: IsMoving = !simulation
+L000102 |                 IsMoving = !simulation, ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: LastCommand = "MOVE DIV"
+L000103 |                 LastCommand = "MOVE DIV" ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000104 |             }, ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000105 |             EN_BET_COMMAND.Stop => ok with ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Apply.
+L000106 |             { ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: IsMoving = false
+L000107 |                 IsMoving = false, ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: LastCommand = "STOP"
+L000108 |                 LastCommand = "STOP" ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000109 |             }, ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000110 |             EN_BET_COMMAND.ResetAlarm => ok with ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 Apply.
+L000111 |             { ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: AlarmOn = false
+L000112 |                 AlarmOn = false, ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: LastCommand = "RESET"
+L000113 |                 LastCommand = "RESET" ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000114 |             }, ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000115 |             EN_BET_COMMAND.Refresh or EN_BET_COMMAND.PollMagnificationPosition => ok with ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 Apply.
+L000116 |             { ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: CurrentMagnification = ReadTaggedDouble(value, "M2", ok.CurrentMagnification) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "M2", ok.CurrentMagnification)
+L000117 |                 CurrentMagnification = ReadTaggedDouble(value, "M2", ok.CurrentMagnification), ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: MagnificationAxisPosition = ReadTaggedDouble(value, "M2", ok.MagnificationAxisPosition) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "M2", ok.MagnificationAxisPosition)
+L000118 |                 MagnificationAxisPosition = ReadTaggedDouble(value, "M2", ok.MagnificationAxisPosition), ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: IsMoving = false
+L000119 |                 IsMoving = false ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000120 |             }, ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000121 |             EN_BET_COMMAND.PollDivergencePosition => ok with ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 Apply.
+L000122 |             { ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: CurrentDivergence = ReadTaggedDouble(value, "M1", ok.CurrentDivergence) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "M1", ok.CurrentDivergence)
+L000123 |                 CurrentDivergence = ReadTaggedDouble(value, "M1", ok.CurrentDivergence), ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: DivergenceAxisPosition = ReadTaggedDouble(value, "M1", ok.DivergenceAxisPosition) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "M1", ok.DivergenceAxisPosition)
+L000124 |                 DivergenceAxisPosition = ReadTaggedDouble(value, "M1", ok.DivergenceAxisPosition), ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: IsMoving = false
+L000125 |                 IsMoving = false ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000126 |             }, ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)
+L000127 |             _ => ok ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 Apply.
+L000128 |         }; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 Apply.
+L000129 |     } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CBeamExpander.Execute(string, System.Threading.CancellationToken)
+L000131 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 Execute.
+L000132 |     { ⟦EOL⟧
+// 해설 L133: 비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)
+L000133 |         await SerialLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L134: 예외 처리 범위입니다: try
+L000134 |         try ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 Execute.
+L000135 |         { ⟦EOL⟧
+// 해설 L136: 비동기 완료를 기다립니다: await ExecuteBeamExpander(function, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteBeamExpander(function, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return await ExecuteBeamExpander(function, cancellationToken);
+L000136 |             return await ExecuteBeamExpander(function, cancellationToken); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Execute.
+L000137 |         } ⟦EOL⟧
+// 해설 L138: 종료 정리 구간입니다: finally
+L000138 |         finally ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 Execute.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()
+L000140 |             SerialLock.Release(); ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 Execute.
+L000141 |         } ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Execute.
+L000142 |     } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string, System.Threading.CancellationToken)
+L000144 |     private async Task<string> ExecuteBeamExpander(string function, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000145 |     { ⟦EOL⟧
+// 해설 L146: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000146 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000147 |         { ⟦EOL⟧
+// 해설 L148: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000148 |             await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000149 |         } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000151 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000152 |         { ⟦EOL⟧
+// 해설 L153: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000153 |             return ""; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000154 |         } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 값을 대상에 대입합니다: LastSent = function
+L000156 |         LastSent = function; ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · string SelectValue()
+L000157 |         string SelectValue() ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 SelectValue.
+L000158 |         { ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteBeamExpander(function) / 호출자에게 값 또는 제어를 반환합니다: return ExecuteBeamExpander(function);
+L000159 |             return ExecuteBeamExpander(function); ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 SelectValue.
+L000160 |         } ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 예외 처리 범위입니다: try
+L000162 |         try ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 값을 대상에 대입합니다: LastReceived = await Task.Run(SelectValue, cancellationToken) / 비동기 완료를 기다립니다: await Task.Run(SelectValue, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, cancellationToken)
+L000164 |             LastReceived = await Task.Run(SelectValue, cancellationToken); ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: LastError = LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : ""
+L000165 |             LastError = LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : ""; ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResponseState(LastReceived)
+L000166 |             SetResponseState(LastReceived); ⟦EOL⟧
+// 해설 L167: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000167 |             return LastReceived; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000168 |         } ⟦EOL⟧
+// 해설 L169: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException)
+L000169 |         catch (Exception ex)when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000170 |         { ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000171 |             CloseSerialPort(); ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000172 |             SetError(ex); ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000173 |             return ""; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000174 |         } ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000175 |     } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string)
+L000177 |     private string ExecuteBeamExpander(string function) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000178 |     { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var parts = function.Split(':', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: parts = function.Split(':', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+L000179 |         var parts = function.Split(':', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 지역 변수를 선언합니다: var text = function.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: text = function.Trim().ToUpperInvariant()
+L000180 |         var text = function.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L181: 조건에 따라 분기합니다: if (text is "#I:" or "#I:!" or "#0:" or "#0:!")
+L000181 |         if (text is "#I:" or "#I:!" or "#0:" or "#0:!") ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000182 |         { ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(text) / 호출자에게 값 또는 제어를 반환합니다: return SendSelecting(text);
+L000183 |             return SendSelecting(text); ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000184 |         } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith("#1:", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith("#2:", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (text.StartsWith("#1:", StringComparison.Ordinal) || text.StartsWith("#2:", StringComparison.Ordinal))
+L000186 |         if (text.StartsWith("#1:", StringComparison.Ordinal) || text.StartsWith("#2:", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000187 |         { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(text) / 호출자에게 값 또는 제어를 반환합니다: return SendSelecting(text);
+L000188 |             return SendSelecting(text); ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000189 |         } ⟦EOL⟧
+L000190 |  ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPollingCommand(text) / 조건에 따라 분기합니다: if (IsPollingCommand(text))
+L000191 |         if (IsPollingCommand(text)) ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000192 |         { ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text) / 호출자에게 값 또는 제어를 반환합니다: return SendPolling(text);
+L000193 |             return SendPolling(text); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000194 |         } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[0].ToUpperInvariant() / 조건에 따라 결과식을 선택합니다: parts.Length > 0 ? parts[0].ToUpperInvariant() switch { "MOVE" when parts.Length >= 3 && double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) && double.TryParse(parts[2], NumberStyles.Float, Cul / 호출자에게 값 또는 제어를 반환합니다: return parts.Length > 0 ? parts[0].ToUpperInvariant() switch { "MOVE" when parts.Length >= 3 && double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) && double.TryParse(parts
+L000196 |         return parts.Length > 0 ? parts[0].ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000197 |         { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[2], NumberStyles.Float, CultureInfo.InvariantCulture, out var div) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendMove(mag, div)
+L000198 |             "MOVE" when parts.Length >= 3 && double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) && double.TryParse(parts[2], NumberStyles.Float, CultureInfo.InvariantCulture, out var div) => SendMove(mag, div), ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string)
+L000199 |             _ => "ERR:-2" ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string)
+L000200 |         } : "ERR:-2"; ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 ExecuteBeamExpander.
+L000201 |     } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendMove(double, double)
+L000203 |     private string SendMove(double magnification, double divergence) ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 SendMove.
+L000204 |     { ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()
+L000205 |         SerialPort!.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()
+L000206 |         SerialPort.DiscardOutBuffer(); ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence) / 지역 변수를 선언합니다: var divCommand = $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}"; / 변수의 초기값을 지정합니다: divCommand = $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}"
+L000207 |         var divCommand = $"#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}"; ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification) / 지역 변수를 선언합니다: var magCommand = $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"; / 변수의 초기값을 지정합니다: magCommand = $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"
+L000208 |         var magCommand = $"#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}"; ⟦EOL⟧
+// 해설 L209: 값을 대상에 대입합니다: LastSent = $"{divCommand} / {magCommand}"
+L000209 |         LastSent = $"{divCommand} / {magCommand}"; ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(divCommand) / 조건에 따라 분기합니다: if (!SendAndWaitAck(divCommand))
+L000210 |         if (!SendAndWaitAck(divCommand)) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 SendMove.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-2";
+L000212 |             return "ERR:-2"; ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 SendMove.
+L000213 |         } ⟦EOL⟧
+L000214 |  ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(magCommand) / 조건에 따라 분기합니다: if (!SendAndWaitAck(magCommand))
+L000215 |         if (!SendAndWaitAck(magCommand)) ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 SendMove.
+L000216 |         { ⟦EOL⟧
+// 해설 L217: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-2";
+L000217 |             return "ERR:-2"; ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 SendMove.
+L000218 |         } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 호출자에게 값 또는 제어를 반환합니다: return "OK";
+L000220 |         return "OK"; ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 SendMove.
+L000221 |     } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendSelecting(string)
+L000223 |     private string SendSelecting(string command) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000224 |     { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()
+L000225 |         SerialPort!.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()
+L000226 |         SerialPort.DiscardOutBuffer(); ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(command) / 조건에 따라 결과식을 선택합니다: SendAndWaitAck(command) ? "OK" : "ERR:-2" / 호출자에게 값 또는 제어를 반환합니다: return SendAndWaitAck(command) ? "OK" : "ERR:-2";
+L000227 |         return SendAndWaitAck(command) ? "OK" : "ERR:-2"; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000228 |     } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendPolling(string)
+L000230 |     private string SendPolling(string command) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 SendPolling.
+L000231 |     { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command) / 지역 변수를 선언합니다: var normalized = NormalizePollingCommand(command) switch { "7" => "M1", "8" => "M2", _ => "" }; / 값별 결과식을 선택합니다: NormalizePollingCommand(command) switch { "7" => "M1", "8" => "M2", _ => "" } / 변수의 초기값을 지정합니다: normalized = NormalizePollingCommand(command) switch { "7" => "M1", "8" => "M2", _ => "" }
+L000232 |         var normalized = NormalizePollingCommand(command) switch ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 SendPolling.
+L000233 |         { ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendPolling(string)
+L000234 |             "7" => "M1", ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendPolling(string)
+L000235 |             "8" => "M2", ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.SendPolling(string)
+L000236 |             _ => "" ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 SendPolling.
+L000237 |         }; ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalized))
+L000238 |         if (string.IsNullOrWhiteSpace(normalized)) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 SendPolling.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-2";
+L000240 |             return "ERR:-2"; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 SendPolling.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()
+L000243 |         SerialPort!.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()
+L000244 |         SerialPort.DiscardOutBuffer(); ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(NormalizePollingWriteCommand(command)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingWriteCommand(command)
+L000245 |         SerialPort.Write(NormalizePollingWriteCommand(command)); ⟦EOL⟧
+// 해설 L246: 예외 처리 범위입니다: try
+L000246 |         try ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 SendPolling.
+L000247 |         { ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDeviceResponse() / 지역 변수를 선언합니다: var response = ReadDeviceResponse(); / 변수의 초기값을 지정합니다: response = ReadDeviceResponse()
+L000248 |             var response = ReadDeviceResponse(); ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadBeamPosition(response, out var position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: position.ToString("F3", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2" / 호출자에게 값 또는 제어를 반환합니다: return TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2";
+L000249 |             return TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2"; ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 SendPolling.
+L000250 |         } ⟦EOL⟧
+// 해설 L251: 지정 예외를 처리합니다: catch (TimeoutException)
+L000251 |         catch (TimeoutException) ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 SendPolling.
+L000252 |         { ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting() / 지역 변수를 선언합니다: var response = SerialPort.ReadExisting(); / 변수의 초기값을 지정합니다: response = SerialPort.ReadExisting()
+L000253 |             var response = SerialPort.ReadExisting(); ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response))
+L000254 |             if (string.IsNullOrWhiteSpace(response)) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 SendPolling.
+L000255 |             { ⟦EOL⟧
+// 해설 L256: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-1";
+L000256 |                 return "ERR:-1"; ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 SendPolling.
+L000257 |             } ⟦EOL⟧
+L000258 |  ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadBeamPosition(response, out var position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: position.ToString("F3", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2" / 호출자에게 값 또는 제어를 반환합니다: return TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2";
+L000259 |             return TryReadBeamPosition(response, out var position) ? $"{normalized}:{position.ToString("F3", CultureInfo.InvariantCulture)}" : "ERR:-2"; ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 SendPolling.
+L000260 |         } ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 SendPolling.
+L000261 |     } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string)
+L000263 |     private bool SendAndWaitAck(string command) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 SendAndWaitAck.
+L000264 |     { ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.Write(NormalizeAckWriteCommand(command)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeAckWriteCommand(command)
+L000265 |         SerialPort!.Write(NormalizeAckWriteCommand(command)); ⟦EOL⟧
+// 해설 L266: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000266 |         return true; ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 SendAndWaitAck.
+L000267 |     } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizeAckWriteCommand(string)
+L000269 |     private static string NormalizeAckWriteCommand(string command) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 NormalizeAckWriteCommand.
+L000270 |     { ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim() / 지역 변수를 선언합니다: var text = command.Trim(); / 변수의 초기값을 지정합니다: text = command.Trim()
+L000271 |         var text = command.Trim(); ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.EndsWith('!') / 조건에 따라 결과식을 선택합니다: text.EndsWith('!') ? text[..^1] : text / 호출자에게 값 또는 제어를 반환합니다: return text.EndsWith('!') ? text[..^1] : text;
+L000272 |         return text.EndsWith('!') ? text[..^1] : text; ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 NormalizeAckWriteCommand.
+L000273 |     } ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)
+L000275 |     private static string NormalizePollingWriteCommand(string command) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 NormalizePollingWriteCommand.
+L000276 |     { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command) / 호출자에게 값 또는 제어를 반환합니다: return NormalizePollingCommand(command) switch { "7" => "#7:", "8" => "#8:", _ => command }; / 값별 결과식을 선택합니다: NormalizePollingCommand(command) switch { "7" => "#7:", "8" => "#8:", _ => command }
+L000277 |         return NormalizePollingCommand(command) switch ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 NormalizePollingWriteCommand.
+L000278 |         { ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)
+L000279 |             "7" => "#7:", ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)
+L000280 |             "8" => "#8:", ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)
+L000281 |             _ => command ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 NormalizePollingWriteCommand.
+L000282 |         }; ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 NormalizePollingWriteCommand.
+L000283 |     } ⟦EOL⟧
+L000284 |  ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CBeamExpander.IsPollingCommand(string)
+L000285 |     private static bool IsPollingCommand(string command) ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 IsPollingCommand.
+L000286 |     { ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command) / 지역 변수를 선언합니다: var normalized = NormalizePollingCommand(command); / 변수의 초기값을 지정합니다: normalized = NormalizePollingCommand(command)
+L000287 |         var normalized = NormalizePollingCommand(command); ⟦EOL⟧
+// 해설 L288: 호출자에게 값 또는 제어를 반환합니다: return normalized is "7" or "8";
+L000288 |         return normalized is "7" or "8"; ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 IsPollingCommand.
+L000289 |     } ⟦EOL⟧
+L000290 |  ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string)
+L000291 |     private static string NormalizePollingCommand(string command) ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000292 |     { ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim() / 지역 변수를 선언합니다: var text = command.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: text = command.Trim().ToUpperInvariant()
+L000293 |         var text = command.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith("#7:", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (text.StartsWith("#7:", StringComparison.Ordinal))
+L000294 |         if (text.StartsWith("#7:", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000295 |         { ⟦EOL⟧
+// 해설 L296: 호출자에게 값 또는 제어를 반환합니다: return "7";
+L000296 |             return "7"; ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000297 |         } ⟦EOL⟧
+L000298 |  ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith("#8:", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (text.StartsWith("#8:", StringComparison.Ordinal))
+L000299 |         if (text.StartsWith("#8:", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000300 |         { ⟦EOL⟧
+// 해설 L301: 호출자에게 값 또는 제어를 반환합니다: return "8";
+L000301 |             return "8"; ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000302 |         } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000304 |         return ""; ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 NormalizePollingCommand.
+L000305 |     } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.ReadDeviceResponse()
+L000307 |     private string ReadDeviceResponse() ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000308 |     { ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var builder = new StringBuilder(); / 변수의 초기값을 지정합니다: builder = new StringBuilder()
+L000309 |         var builder = new StringBuilder(); ⟦EOL⟧
+// 해설 L310: 조건을 먼저 확인하며 반복합니다: while (builder.Length < MaxResponseLength)
+L000310 |         while (builder.Length < MaxResponseLength) ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000311 |         { ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitForNextResponseByte() / 조건에 따라 분기합니다: if (builder.Length > 0 && !WaitForNextResponseByte())
+L000312 |             if (builder.Length > 0 && !WaitForNextResponseByte()) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000313 |             { ⟦EOL⟧
+// 해설 L314: 해당 반복/분기 구간을 종료합니다: break;
+L000314 |                 break; ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000315 |             } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.ReadChar() / 지역 변수를 선언합니다: var value = SerialPort!.ReadChar(); / 변수의 초기값을 지정합니다: value = SerialPort!.ReadChar()
+L000317 |             var value = SerialPort!.ReadChar(); ⟦EOL⟧
+// 해설 L318: 조건에 따라 분기합니다: if (value < 0)
+L000318 |             if (value < 0) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000319 |             { ⟦EOL⟧
+// 해설 L320: 해당 반복/분기 구간을 종료합니다: break;
+L000320 |                 break; ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000321 |             } ⟦EOL⟧
+L000322 |  ⟦EOL⟧
+// 해설 L323: 지역 변수를 선언합니다: var character = (char)value; / 변수의 초기값을 지정합니다: character = (char)value
+L000323 |             var character = (char)value; ⟦EOL⟧
+// 해설 L324: 조건에 따라 분기합니다: if (character is '\r' or '\n')
+L000324 |             if (character is '\r' or '\n') ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000325 |             { ⟦EOL⟧
+// 해설 L326: 조건에 따라 분기합니다: if (builder.Length > 0)
+L000326 |                 if (builder.Length > 0) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000327 |                 { ⟦EOL⟧
+// 해설 L328: 해당 반복/분기 구간을 종료합니다: break;
+L000328 |                     break; ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000329 |                 } ⟦EOL⟧
+L000330 |  ⟦EOL⟧
+// 해설 L331: 다음 반복으로 진행합니다: continue;
+L000331 |                 continue; ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000332 |             } ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(character)
+L000334 |             builder.Append(character); ⟦EOL⟧
+// 해설 L335: 조건에 따라 분기합니다: if (character == '!')
+L000335 |             if (character == '!') ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000336 |             { ⟦EOL⟧
+// 해설 L337: 해당 반복/분기 구간을 종료합니다: break;
+L000337 |                 break; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000338 |             } ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000339 |         } ⟦EOL⟧
+L000340 |  ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString() / 호출자에게 값 또는 제어를 반환합니다: return builder.ToString();
+L000341 |         return builder.ToString(); ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 ReadDeviceResponse.
+L000342 |     } ⟦EOL⟧
+L000343 |  ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CBeamExpander.WaitForNextResponseByte()
+L000344 |     private bool WaitForNextResponseByte() ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000345 |     { ⟦EOL⟧
+// 해설 L346: 조건에 따라 분기합니다: if (SerialPort!.BytesToRead > 0)
+L000346 |         if (SerialPort!.BytesToRead > 0) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000347 |         { ⟦EOL⟧
+// 해설 L348: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000348 |             return true; ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000349 |         } ⟦EOL⟧
+L000350 |  ⟦EOL⟧
+// 해설 L351: 지역 변수를 선언합니다: var expiresAt = Environment.TickCount64 + ResponseQuietTimeoutMs; / 변수의 초기값을 지정합니다: expiresAt = Environment.TickCount64 + ResponseQuietTimeoutMs
+L000351 |         var expiresAt = Environment.TickCount64 + ResponseQuietTimeoutMs; ⟦EOL⟧
+// 해설 L352: 조건을 먼저 확인하며 반복합니다: while (Environment.TickCount64 < expiresAt)
+L000352 |         while (Environment.TickCount64 < expiresAt) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000353 |         { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(ResponsePollIntervalMs)
+L000354 |             Thread.Sleep(ResponsePollIntervalMs); ⟦EOL⟧
+// 해설 L355: 조건에 따라 분기합니다: if (SerialPort.BytesToRead > 0)
+L000355 |             if (SerialPort.BytesToRead > 0) ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000356 |             { ⟦EOL⟧
+// 해설 L357: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000357 |                 return true; ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000358 |             } ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000359 |         } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000361 |         return false; ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 WaitForNextResponseByte.
+L000362 |     } ⟦EOL⟧
+L000363 |  ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double)
+L000364 |     private static int ToMotorStep(double value) ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 ToMotorStep.
+L000365 |     { ⟦EOL⟧
+// 해설 L366: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)Math.Round(value), 0, 4500) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(value) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp((int)Math.Round(value), 0, 4500);
+L000366 |         return Math.Clamp((int)Math.Round(value), 0, 4500); ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 ToMotorStep.
+L000367 |     } ⟦EOL⟧
+L000368 |  ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.CreateSimulationResponse(Drilling.Common.Interface.EN_BET_COMMAND, double, double, Drilling.Common.Interface.ST_BET_STATUS)
+L000369 |     private static string CreateSimulationResponse(EN_BET_COMMAND command, double magnification, double divergence, ST_BET_STATUS current) ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000370 |     { ⟦EOL⟧
+// 해설 L371: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.PollMagnificationPosition or EN_BET_COMMAND.Refresh => $"M2:{current.CurrentMagnification.ToString("F3", CultureInfo.InvariantCulture)}", EN_BET_COMMAND.PollDivergencePosition => $"M1:{curren / 값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.PollMagnificationPosition or EN_BET_COMMAND.Refresh => $"M2:{current.CurrentMagnification.ToString("F3", CultureInfo.InvariantCulture)}", EN_BET_COMMAND.PollDivergencePosition => $"M1:{current.Curre
+L000371 |         return command switch ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000372 |         { ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentMagnification.ToString("F3", CultureInfo.InvariantCulture)
+L000373 |             EN_BET_COMMAND.PollMagnificationPosition or EN_BET_COMMAND.Refresh => $"M2:{current.CurrentMagnification.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentDivergence.ToString("F3", CultureInfo.InvariantCulture)
+L000374 |             EN_BET_COMMAND.PollDivergencePosition => $"M1:{current.CurrentDivergence.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: magnification.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: divergence.ToString("F3", CultureInfo.InvariantCulture)
+L000375 |             EN_BET_COMMAND.MoveManual => $"MOVE:{magnification.ToString("F3", CultureInfo.InvariantCulture)}:{divergence.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CBeamExpander.CreateSimulationResponse(Drilling.Common.Interface.EN_BET_COMMAND, double, double, Drilling.Common.Interface.ST_BET_STATUS)
+L000376 |             _ => "OK" ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000377 |         }; ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000378 |     } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)
+L000380 |     private static EN_BET_ERROR ReadError(string response) ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 ReadError.
+L000381 |     { ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : "" / 지역 변수를 선언합니다: var value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""; / 변수의 초기값을 지정합니다: value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""
+L000382 |         var value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""; ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code))
+L000383 |         if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code)) ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 ReadError.
+L000384 |         { ⟦EOL⟧
+// 해설 L385: 호출자에게 값 또는 제어를 반환합니다: return EN_BET_ERROR.Error;
+L000385 |             return EN_BET_ERROR.Error; ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 ReadError.
+L000386 |         } ⟦EOL⟧
+L000387 |  ⟦EOL⟧
+// 해설 L388: 호출자에게 값 또는 제어를 반환합니다: return code switch { -99 => EN_BET_ERROR.NotSupported, -2 => EN_BET_ERROR.InvalidResponse, -1 => EN_BET_ERROR.Timeout, _ => EN_BET_ERROR.Error }; / 값별 결과식을 선택합니다: code switch { -99 => EN_BET_ERROR.NotSupported, -2 => EN_BET_ERROR.InvalidResponse, -1 => EN_BET_ERROR.Timeout, _ => EN_BET_ERROR.Error }
+L000388 |         return code switch ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 ReadError.
+L000389 |         { ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)
+L000390 |             -99 => EN_BET_ERROR.NotSupported, ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)
+L000391 |             -2 => EN_BET_ERROR.InvalidResponse, ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)
+L000392 |             -1 => EN_BET_ERROR.Timeout, ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)
+L000393 |             _ => EN_BET_ERROR.Error ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 ReadError.
+L000394 |         }; ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 ReadError.
+L000395 |     } ⟦EOL⟧
+L000396 |  ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double)
+L000397 |     private static double ReadTaggedDouble(string response, string tag, double defaultValue) ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 ReadTaggedDouble.
+L000398 |     { ⟦EOL⟧
+// 해설 L399: 지역 변수를 선언합니다: var prefix = $"{tag}:"; / 변수의 초기값을 지정합니다: prefix = $"{tag}:"
+L000399 |         var prefix = $"{tag}:"; ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response / 지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; / 변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response
+L000400 |         var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000401 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 ReadTaggedDouble.
+L000402 |     } ⟦EOL⟧
+L000403 |  ⟦EOL⟧
+// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CBeamExpander.TryReadBeamPosition(string, out double)
+L000404 |     private static bool TryReadBeamPosition(string response, out double position) ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 TryReadBeamPosition.
+L000405 |     { ⟦EOL⟧
+// 해설 L406: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 지역 변수를 선언합니다: var text = response.Trim(); / 변수의 초기값을 지정합니다: text = response.Trim()
+L000406 |         var text = response.Trim(); ⟦EOL⟧
+// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.IndexOf(':', StringComparison.Ordinal) / 지역 변수를 선언합니다: var colonIndex = text.IndexOf(':', StringComparison.Ordinal); / 변수의 초기값을 지정합니다: colonIndex = text.IndexOf(':', StringComparison.Ordinal)
+L000407 |         var colonIndex = text.IndexOf(':', StringComparison.Ordinal); ⟦EOL⟧
+// 해설 L408: 조건에 따라 결과식을 선택합니다: colonIndex >= 0 ? text[(colonIndex + 1)..] : text / 지역 변수를 선언합니다: var value = colonIndex >= 0 ? text[(colonIndex + 1)..] : text; / 변수의 초기값을 지정합니다: value = colonIndex >= 0 ? text[(colonIndex + 1)..] : text
+L000408 |         var value = colonIndex >= 0 ? text[(colonIndex + 1)..] : text; ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · bool MatchesChar(char)
+L000409 |         bool MatchesChar(char character) ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000410 |         { ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 호출자에게 값 또는 제어를 반환합니다: return char.IsDigit(character) || character == '-' || character == '+' || character == '.';
+L000411 |             return char.IsDigit(character) || character == '-' || character == '+' || character == '.'; ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000412 |         } ⟦EOL⟧
+L000413 |  ⟦EOL⟧
+// 해설 L414: 값을 대상에 대입합니다: value = new string (value.TakeWhile(MatchesChar).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new string (value.TakeWhile(MatchesChar).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.TakeWhile(MatchesChar).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.TakeWhile(MatchesChar)
+L000414 |         value = new string (value.TakeWhile(MatchesChar).ToArray()); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var step) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(step) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var step) || !double.IsFinite(step))
+L000415 |         if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var step) || !double.IsFinite(step)) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 TryReadBeamPosition.
+L000416 |         { ⟦EOL⟧
+// 해설 L417: 값을 대상에 대입합니다: position = 0.0
+L000417 |             position = 0.0; ⟦EOL⟧
+// 해설 L418: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000418 |             return false; ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 TryReadBeamPosition.
+L000419 |         } ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 값을 대상에 대입합니다: position = step
+L000421 |         position = step; ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000422 |         return true; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 TryReadBeamPosition.
+L000423 |     } ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다.
+L000424 | } ⟦EOL⟧
+L000425 |  ⟦EOL⟧
+// 해설 L426: 타입의 구조/상속 선언입니다: public enum EN_BET_COMMAND
+L000426 | public enum EN_BET_COMMAND ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다.
+L000427 | { ⟦EOL⟧
+// 해설 L428: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.InitMotor
+L000428 |     InitMotor, ⟦EOL⟧
+// 해설 L429: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.MoveManual
+L000429 |     MoveManual, ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.MoveMagnification
+L000430 |     MoveMagnification, ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.MoveDivergence
+L000431 |     MoveDivergence, ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.MoveTable
+L000432 |     MoveTable, ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.Stop
+L000433 |     Stop, ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.ResetAlarm
+L000434 |     ResetAlarm, ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.Refresh
+L000435 |     Refresh, ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.PollMagnificationPosition
+L000436 |     PollMagnificationPosition, ⟦EOL⟧
+// 해설 L437: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_COMMAND.PollDivergencePosition
+L000437 |     PollDivergencePosition ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다.
+L000438 | } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+// 해설 L440: 타입의 구조/상속 선언입니다: public enum EN_BET_ERROR
+L000440 | public enum EN_BET_ERROR ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다.
+L000441 | { ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR.Ok
+L000442 |     Ok = 0, ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR.Error
+L000443 |     Error = 1, ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR.Timeout
+L000444 |     Timeout = -1, ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR.InvalidResponse
+L000445 |     InvalidResponse = -2, ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_BET_ERROR.NotSupported
+L000446 |     NotSupported = -99 ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다.
+L000447 | } ⟦EOL⟧
+L000448 |  ⟦EOL⟧
+// 해설 L449: 타입의 구조/상속 선언입니다: public sealed record ST_BET_STATUS(
+L000449 | public sealed record ST_BET_STATUS( ⟦EOL⟧
+// 해설 L450: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000450 |     double CurrentMagnification,  ⟦EOL⟧
+// 해설 L451: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000451 |     double TargetMagnification,  ⟦EOL⟧
+// 해설 L452: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000452 |     double CurrentDivergence,  ⟦EOL⟧
+// 해설 L453: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000453 |     double TargetDivergence,  ⟦EOL⟧
+// 해설 L454: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000454 |     double MagnificationAxisPosition,  ⟦EOL⟧
+// 해설 L455: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000455 |     double DivergenceAxisPosition,  ⟦EOL⟧
+// 해설 L456: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000456 |     bool IsMoving,  ⟦EOL⟧
+// 해설 L457: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000457 |     bool MagHomeCompleted,  ⟦EOL⟧
+// 해설 L458: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000458 |     bool DivHomeCompleted,  ⟦EOL⟧
+// 해설 L459: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000459 |     bool AlarmOn,  ⟦EOL⟧
+// 해설 L460: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000460 |     bool CommOk = true,  ⟦EOL⟧
+// 해설 L461: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000461 |     EN_BET_ERROR LastError = EN_BET_ERROR.Ok,  ⟦EOL⟧
+// 해설 L462: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000462 |     DateTimeOffset? UpdatedAt = null,  ⟦EOL⟧
+// 해설 L463: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000463 |     string LastCommand = "" ⟦EOL⟧
+// 해설 L464: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000464 | ); ⟦EOL⟧
+// 해설 L465: 타입의 구조/상속 선언입니다: public sealed record ST_BET_TABLE_DATA(int Index, int Magnification, int Divergence, string Description)
+L000465 | public sealed record ST_BET_TABLE_DATA(int Index, int Magnification, int Divergence, string Description) ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다.
+L000466 | { ⟦EOL⟧
+// 해설 L467: 변수의 초기값을 지정합니다: DefaultRowBeamSize = 32.64
+L000467 |     private const double DefaultRowBeamSize = 32.64; ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize
+L000468 |     public double SpotSize ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 SpotSize.
+L000469 |     { ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize.get
+L000470 |         get ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 get_SpotSize.
+L000471 |         { ⟦EOL⟧
+// 해설 L472: 조건에 따라 결과식을 선택합니다: Magnification == 0.0 ? 0.001 : (DefaultRowBeamSize / Magnification) / 1000.0 / 호출자에게 값 또는 제어를 반환합니다: return Magnification == 0.0 ? 0.001 : (DefaultRowBeamSize / Magnification) / 1000.0;
+L000472 |             return Magnification == 0.0 ? 0.001 : (DefaultRowBeamSize / Magnification) / 1000.0; ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 get_SpotSize.
+L000473 |         } ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 SpotSize.
+L000474 |     } ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다.
+L000475 | } ⟦EOL⟧

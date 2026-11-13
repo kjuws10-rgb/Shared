@@ -1,0 +1,680 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/CPowerMeasureService.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface
+L000001 | namespace Drilling.Common.Interface ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000003 |     /// <summary>One independent sensor per Head; views only read immutable snapshots.</summary> ⟦EOL⟧
+// 해설 L4: 타입의 구조/상속 선언입니다: public sealed class CPowerMeasureService : IAsyncDisposable
+L000004 |     public sealed class CPowerMeasureService : IAsyncDisposable ⟦EOL⟧
+// 해설 L5: 구문 블록 경계입니다.
+L000005 |     { ⟦EOL⟧
+// 해설 L6: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _sync = new()
+L000006 |         private readonly object _sync = new(); ⟦EOL⟧
+// 해설 L7: 변수의 초기값을 지정합니다: _heads = []
+L000007 |         private Dictionary<int, ST_POWER_MEASURE_HEAD> _heads = []; ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.Common.Interface.CPowerMeasureService._cancellation
+L000008 |         private CancellationTokenSource? _cancellation; ⟦EOL⟧
+// 해설 L9: 변수의 초기값을 지정합니다: _completion = Task.CompletedTask
+L000009 |         private Task _completion = Task.CompletedTask; ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: _stageState = "IDLE"
+L000010 |         private string _stageState = "IDLE"; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: _origin = ""
+L000011 |         private string _origin = ""; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT Drilling.Common.Interface.CPowerMeasureService.GetSnapshot()
+L000012 |         public ST_POWER_MEASURE_SNAPSHOT GetSnapshot() ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000013 |         { ⟦EOL⟧
+// 해설 L14: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000014 |             lock (_sync) ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: Origin = _origin / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_cancellation is not null, _heads.Values.OrderBy(h => h.Target.HeadNo).ToArray(), _stageState) { Origin = _origin } / 함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.Values.OrderBy(h => h.Target.HeadNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.Values.OrderBy(h => h.Target.HeadNo) / 호출자에게 값 또는 제어를 반환합니다: return new(_cancellation is not null, _heads.Values.OrderBy(h => h.Target.HeadNo).ToArray(), _stageState) { Origin = _origin };
+L000015 |                 return new(_cancellation is not null, _heads.Values.OrderBy(h => h.Target.HeadNo).ToArray(), _stageState) { Origin = _origin }; ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000016 |         } ⟦EOL⟧
+L000017 |  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeasureService.ValidateTargets(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_TARGET>)
+L000018 |         public static void ValidateTargets(IReadOnlyList<ST_POWER_MEASURE_TARGET> targets) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 ValidateTargets.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h => h.HeadNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h => h.HeadNo) / 지역 변수를 선언합니다: var batch = targets.OrderBy(h => h.HeadNo).ToArray(); / 변수의 초기값을 지정합니다: batch = targets.OrderBy(h => h.HeadNo).ToArray()
+L000020 |             var batch = targets.OrderBy(h => h.HeadNo).ToArray(); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.HeadNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.HeadNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.HeadNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h => h.HeadNo is < 1 or > 8 || h.PowerMeterNo < 0 || !double.IsFinite(h.TargetPower) || h.TargetPower <= 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(h.TargetPower) / 조건에 따라 분기합니다: if (batch.Length == 0 || batch.Select(h => h.HeadNo).Distinct().Count() != batch.Length || batch.Any(h => h.HeadNo is
+L000021 |             if (batch.Length == 0 || batch.Select(h => h.HeadNo).Distinct().Count() != batch.Length || batch.Any(h => h.HeadNo is < 1 or > 8 || h.PowerMeterNo < 0 || !double.IsFinite(h.TargetPower) || h.TargetPower <= 0)) ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("Head, PowerMeter 및 0보다 큰 Target Power를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("Head, PowerMeter 및 0보다 큰 Target Power를 확인해 주세요.");
+L000022 |                 throw new ArgumentException("Head, PowerMeter 및 0보다 큰 Target Power를 확인해 주세요."); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h => h.Options is not { } options || options.Mode is not ("ROUGH" or "FINE" or "DETAIL") || options.SettleTimeMs is < 0 or > 60000 || options.MeasureCount is < 1 or > 1000 || options.MeasureIntervalMs is < 0 or… / 조건에 따라 분기합니다: if (batch.Any(h => h.Options is not { } options || options.Mode is not ("ROUGH" or "FINE" or "DETAIL") || options.SettleTimeMs is < 0 or > 60000 || options.MeasureCount is < 1 or > 1000 || options.MeasureIntervalMs is < 0 or…)
+L000023 |             if (batch.Any(h => h.Options is not { } options || options.Mode is not ("ROUGH" or "FINE" or "DETAIL") || options.SettleTimeMs is < 0 or > 60000 || options.MeasureCount is < 1 or > 1000 || options.MeasureIntervalMs is < 0 or > 60000)) ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("측정 모드, 안정화 시간, 측정 횟수 및 간격을 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("측정 모드, 안정화 시간, 측정 횟수 및 간격을 확인해 주세요.");
+L000024 |                 throw new ArgumentException("측정 모드, 안정화 시간, 측정 횟수 및 간격을 확인해 주세요."); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.PowerMeterNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.PowerMeterNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h => h.PowerMeterNo) / 조건에 따라 분기합니다: if (batch.Select(h => h.PowerMeterNo).Distinct().Count() != batch.Length)
+L000025 |             if (batch.Select(h => h.PowerMeterNo).Distinct().Count() != batch.Length) ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("각 Head에는 서로 다른 전용 PowerMeter가 필요합니다.") / 예외를 발생/전달합니다: throw new ArgumentException("각 Head에는 서로 다른 전용 PowerMeter가 필요합니다.");
+L000026 |                 throw new ArgumentException("각 Head에는 서로 다른 전용 PowerMeter가 필요합니다."); ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h => !double.IsFinite(h.Options.Tolerance) || h.Options.Tolerance < 0 || h.Options.MaxAttempts is < 1 or > 100 || h.Options.CoolingTimeMs is < 0 or > 60000) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(h.Options.Tolerance) / 조건에 따라 분기합니다: if (batch.Any(h => !double.IsFinite(h.Options.Tolerance) || h.Options.Tolerance < 0 || h.Options.MaxAttempts is < 1 or > 100 || h.Options.CoolingTimeMs is < 0 or > 60000))
+L000027 |             if (batch.Any(h => !double.IsFinite(h.Options.Tolerance) || h.Options.Tolerance < 0 || h.Options.MaxAttempts is < 1 or > 100 || h.Options.CoolingTimeMs is < 0 or > 60000)) ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("허용오차, 최대 시도 횟수 및 냉각 시간을 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("허용오차, 최대 시도 횟수 및 냉각 시간을 확인해 주세요.");
+L000028 |                 throw new ArgumentException("허용오차, 최대 시도 횟수 및 냉각 시간을 확인해 주세요."); ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 ValidateTargets.
+L000029 |         } ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Start(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_TARGET>, Drilling.Common.Interface.IPowerMeas
+L000030 |         public Task Start(IReadOnlyList<ST_POWER_MEASURE_TARGET> targets, IPowerMeasureSession session, IPowerMeasureTable? table = null, CancellationToken token = default, string origin = "MANUAL") ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Start.
+L000031 |         { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTargets(targets)
+L000032 |             ValidateTargets(targets); ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h => h.HeadNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h => h.HeadNo) / 지역 변수를 선언합니다: var batch = targets.OrderBy(h => h.HeadNo).ToArray(); / 변수의 초기값을 지정합니다: batch = targets.OrderBy(h => h.HeadNo).ToArray()
+L000033 |             var batch = targets.OrderBy(h => h.HeadNo).ToArray(); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(session)
+L000034 |             ArgumentNullException.ThrowIfNull(session); ⟦EOL⟧
+// 해설 L35: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000035 |             lock (_sync) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Start.
+L000036 |             { ⟦EOL⟧
+// 해설 L37: 조건에 따라 분기합니다: if (_cancellation is not null)
+L000037 |                 if (_cancellation is not null) ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeasure가 이미 진행 중입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("PowerMeasure가 이미 진행 중입니다.");
+L000038 |                     throw new InvalidOperationException("PowerMeasure가 이미 진행 중입니다."); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 지역 변수를 선언합니다: var cancellation = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: cancellation = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000039 |                 var cancellation = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: _cancellation = cancellation
+L000040 |                 _cancellation = cancellation; ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: _origin = origin
+L000041 |                 _origin = origin; ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _stageState = "CHECKING"
+L000042 |                 _stageState = "CHECKING"; ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: _heads = batch.ToDictionary(h => h.HeadNo, h => new ST_POWER_MEASURE_HEAD(h, "WAITING", null, null, "측정 준비", [])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: batch.ToDictionary(h => h.HeadNo, h => new ST_POWER_MEASURE_HEAD(h, "WAITING", null, null, "측정 준비", [])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_POWER_MEASURE_HEAD(h, "WAITING", null, null, "측정 준비", [])
+L000043 |                 _heads = batch.ToDictionary(h => h.HeadNo, h => new ST_POWER_MEASURE_HEAD(h, "WAITING", null, null, "측정 준비", [])); ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: _completion = Task.Run(() => RunBatch(batch, session, table, cancellation)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => RunBatch(batch, session, table, cancellation)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBatch(batch, session, table, cancellation)
+L000044 |                 _completion = Task.Run(() => RunBatch(batch, session, table, cancellation)); ⟦EOL⟧
+// 해설 L45: 호출자에게 값 또는 제어를 반환합니다: return _completion;
+L000045 |                 return _completion; ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Start.
+L000046 |             } ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 Start.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Stop()
+L000049 |         public Task Stop() ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 Stop.
+L000050 |         { ⟦EOL⟧
+// 해설 L51: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000051 |             lock (_sync) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 Stop.
+L000052 |             { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000053 |                 _cancellation?.Cancel(); ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return _completion;
+L000054 |                 return _completion; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 Stop.
+L000055 |             } ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Stop.
+L000056 |         } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 비동기 완료를 기다립니다: await Stop().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()
+L000058 |         public async ValueTask DisposeAsync() => await Stop().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.RunBatch(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[], Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface
+L000059 |         private async Task RunBatch(ST_POWER_MEASURE_TARGET[] targets, IPowerMeasureSession session, IPowerMeasureTable? table, CancellationTokenSource cancellation) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 RunBatch.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 예외 처리 범위입니다: try
+L000061 |             try ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 RunBatch.
+L000062 |             { ⟦EOL⟧
+// 해설 L63: 비동기 완료를 기다립니다: await session.CheckStageReady(cancellation.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.CheckStageReady(cancellation.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.CheckStageReady(cancellation.Token)
+L000063 |                 await session.CheckStageReady(cancellation.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Token.ThrowIfCancellationRequested()
+L000064 |                 cancellation.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L65: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000065 |                 lock (_sync) ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: _stageState = "COMPLETE"
+L000066 |                     _stageState = "COMPLETE"; ⟦EOL⟧
+// 해설 L67: 비동기 완료를 기다립니다: await Task.WhenAll(targets.Select(target => RunHead(target, session, table, cancellation.Token))).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(target => RunHead(target, session, table, cancellation.Token))).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(target => RunHead(target, session, table, cancellation.Token))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(target => RunHead(target, session, table, cancellation.Token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunHe
+L000067 |                 await Task.WhenAll(targets.Select(target => RunHead(target, session, table, cancellation.Token))).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 RunBatch.
+L000068 |             } ⟦EOL⟧
+// 해설 L69: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellation.IsCancellationRequested)
+L000069 |             catch (OperationCanceledException)when (cancellation.IsCancellationRequested) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 RunBatch.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000071 |                 lock (_sync) ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: _stageState = "STOPPED"
+L000072 |                     _stageState = "STOPPED"; ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 RunBatch.
+L000073 |             } ⟦EOL⟧
+// 해설 L74: 지정 예외를 처리합니다: catch (Exception error)
+L000074 |             catch (Exception error) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 RunBatch.
+L000075 |             { ⟦EOL⟧
+// 해설 L76: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000076 |                 lock (_sync) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 RunBatch.
+L000077 |                 { ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: _stageState = "ERROR"
+L000078 |                     _stageState = "ERROR"; ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.ToArray() / 컬렉션 요소를 순회합니다: foreach (var(head, state)in _heads.ToArray()) if (state.State == "WAITING") _heads[head] = state with { State = "ERROR", Message = $"측정 준비 실패: {error.Message}"};
+L000079 |                     foreach (var(head, state)in _heads.ToArray()) ⟦EOL⟧
+// 해설 L80: 조건에 따라 분기합니다: if (state.State == "WAITING")
+L000080 |                         if (state.State == "WAITING") ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: _heads[head] = state with { State = "ERROR", Message = $"측정 준비 실패: {error.Message}"}
+L000081 |                             _heads[head] = state with ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 RunBatch.
+L000082 |                             { ⟦EOL⟧
+// 해설 L83: 값을 대상에 대입합니다: State = "ERROR"
+L000083 |                                 State = "ERROR", ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: Message = $"측정 준비 실패: {error.Message}"
+L000084 |                                 Message = $"측정 준비 실패: {error.Message}"}; ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 RunBatch.
+L000085 |                 } ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 RunBatch.
+L000086 |             } ⟦EOL⟧
+// 해설 L87: 종료 정리 구간입니다: finally
+L000087 |             finally ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 RunBatch.
+L000088 |             { ⟦EOL⟧
+// 해설 L89: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000089 |                 lock (_sync) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 RunBatch.
+L000090 |                 { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.ToArray() / 컬렉션 요소를 순회합니다: foreach (var(head, state)in _heads.ToArray()) if (state.State == "WAITING") _heads[head] = state with { State = "STOPPED", Message = "대기 작업 취소" };
+L000091 |                     foreach (var(head, state)in _heads.ToArray()) ⟦EOL⟧
+// 해설 L92: 조건에 따라 분기합니다: if (state.State == "WAITING")
+L000092 |                         if (state.State == "WAITING") ⟦EOL⟧
+// 해설 L93: 값을 대상에 대입합니다: _heads[head] = state with { State = "STOPPED", Message = "대기 작업 취소" }
+L000093 |                             _heads[head] = state with ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 RunBatch.
+L000094 |                             { ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: State = "STOPPED"
+L000095 |                                 State = "STOPPED", ⟦EOL⟧
+// 해설 L96: 값을 대상에 대입합니다: Message = "대기 작업 취소"
+L000096 |                                 Message = "대기 작업 취소" ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 RunBatch.
+L000097 |                             }; ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: _cancellation = null
+L000098 |                     _cancellation = null; ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Dispose()
+L000099 |                     cancellation.Dispose(); ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 RunBatch.
+L000100 |                 } ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 RunBatch.
+L000101 |             } ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 RunBatch.
+L000102 |         } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<bool> Drilling.Common.Interface.CPowerMeasureService.RunHead(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interf
+L000104 |         private async Task<bool> RunHead(ST_POWER_MEASURE_TARGET target, IPowerMeasureSession session, IPowerMeasureTable? table, CancellationToken token) ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 RunHead.
+L000105 |         { ⟦EOL⟧
+// 해설 L106: 지역 변수를 선언합니다: var options = target.Options; / 변수의 초기값을 지정합니다: options = target.Options
+L000106 |             var options = target.Options; ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_POWER_MEASURE_SAMPLE>() / 지역 변수를 선언합니다: var samples = new List<ST_POWER_MEASURE_SAMPLE>(); / 변수의 초기값을 지정합니다: samples = new List<ST_POWER_MEASURE_SAMPLE>()
+L000107 |             var samples = new List<ST_POWER_MEASURE_SAMPLE>(); ⟦EOL⟧
+// 해설 L108: 지역 변수를 선언합니다: var clean = true; / 변수의 초기값을 지정합니다: clean = true
+L000108 |             var clean = true; ⟦EOL⟧
+// 해설 L109: 지역 변수를 선언합니다: var reachedTarget = false; / 변수의 초기값을 지정합니다: reachedTarget = false
+L000109 |             var reachedTarget = false; ⟦EOL⟧
+// 해설 L110: 예외 처리 범위입니다: try
+L000110 |             try ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 RunHead.
+L000111 |             { ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000112 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("POSITIONING", "Head 측정 위치 이동")
+L000113 |                 State("POSITIONING", "Head 측정 위치 이동"); ⟦EOL⟧
+// 해설 L114: 비동기 완료를 기다립니다: await session.Prepare(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Prepare(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Prepare(target, token)
+L000114 |                 await session.Prepare(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FindStart(target.HeadNo, target.TargetPower, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "PowerTable 값 없음") / 지역 변수를 선언합니다: var start = table?.FindStart(target.HeadNo, target.TargetPower, token) ?? new(null, "PowerTable 값 없음"); / 변수의 초기값을 지정합니다: start = table?.FindStart(target.HeadNo, target.TargetPower, token) ?? new(null, "PowerTable 값 없음")
+L000115 |                 var start = table?.FindStart(target.HeadNo, target.TargetPower, token) ?? new(null, "PowerTable 값 없음"); ⟦EOL⟧
+// 해설 L116: 비동기 완료를 기다립니다: await session.GetAttenuatorPosition(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token) / 지역 변수를 선언합니다: var angle = start.Angle ?? await session.GetAttenuatorPosition(target, token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: angle = start.Angle ?? await session.GetAttenuatorPosition(target, token).ConfigureAwait(false)
+L000116 |                 var angle = start.Angle ?? await session.GetAttenuatorPosition(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle) / 조건에 따라 분기합니다: if (!double.IsFinite(angle) || angle is < 0 or > 360)
+L000117 |                 if (!double.IsFinite(angle) || angle is < 0 or > 360) ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("유효한 현재 ATT 위치를 확인할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("유효한 현재 ATT 위치를 확인할 수 없습니다.");
+L000118 |                     throw new InvalidOperationException("유효한 현재 ATT 위치를 확인할 수 없습니다."); ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: InitialAngle = angle / 값을 대상에 대입합니다: StartDetail = start.Angle.HasValue ? $"PowerTable 보간/조회 → {angle:0.####}°" : $"현재 ATT {angle:0.####}°에서 측정 ({start.Detail})" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { InitialAngle = angle, StartDetail = start.Angle.HasValue ? $"PowerTable 보간/조회 → {angle:0.####}°" : $"현재 ATT {angle:0.####}°에서 측정 ({start.Detail})" }) / 조건에 따라 결과식을 선택합니다: start.Angle.HasValue ? $"PowerTable 보간/조회 → {angle:0.####}°" : $"현재 ATT {angle:0.####}°에서 측정 ({start.Detail})"
+L000119 |                 Update(target.HeadNo, h => h with { InitialAngle = angle, StartDetail = start.Angle.HasValue ? $"PowerTable 보간/조회 → {angle:0.####}°" : $"현재 ATT {angle:0.####}°에서 측정 ({start.Detail})" }); ⟦EOL⟧
+// 해설 L120: 초기화·조건·증감이 있는 반복입니다: for (var attempt = 1; attempt <= options.MaxAttempts; attempt++) / 변수의 초기값을 지정합니다: attempt = 1
+L000120 |                 for (var attempt = 1; attempt <= options.MaxAttempts; attempt++) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 RunHead.
+L000121 |                 { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000122 |                     token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L123: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000123 |                     // With no table estimate, measure at the current position before issuing any ATT move. ⟦EOL⟧
+// 해설 L124: 조건에 따라 분기합니다: if (attempt > 1 || start.Angle.HasValue)
+L000124 |                     if (attempt > 1 || start.Angle.HasValue) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 RunHead.
+L000125 |                     { ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("MOVING", $"ATT {angle:0.####}° 이동")
+L000126 |                         State("MOVING", $"ATT {angle:0.####}° 이동"); ⟦EOL⟧
+// 해설 L127: 비동기 완료를 기다립니다: await session.MoveAttenuator(target, angle, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAttenuator(target, angle, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAttenuator(target, angle, token)
+L000127 |                         await session.MoveAttenuator(target, angle, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: angle = await session.GetAttenuatorPosition(target, token).ConfigureAwait(false) / 비동기 완료를 기다립니다: await session.GetAttenuatorPosition(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token)
+L000128 |                         angle = await session.GetAttenuatorPosition(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 RunHead.
+L000129 |                     } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: Angle = angle / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { Angle = angle })
+L000131 |                     Update(target.HeadNo, h => h with { Angle = angle }); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<double>() / 지역 변수를 선언합니다: var values = new List<double>(); / 변수의 초기값을 지정합니다: values = new List<double>()
+L000132 |                     var values = new List<double>(); ⟦EOL⟧
+// 해설 L133: 비동기 완료를 기다립니다: await session.BeginMeasurement(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.BeginMeasurement(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.BeginMeasurement(target, token)
+L000133 |                     await session.BeginMeasurement(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L134: 예외 처리 범위입니다: try
+L000134 |                     try ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 RunHead.
+L000135 |                     { ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("SETTLING", "레이저 출사 · 안정화 대기")
+L000136 |                     State("SETTLING", "레이저 출사 · 안정화 대기"); ⟦EOL⟧
+// 해설 L137: 비동기 완료를 기다립니다: await Task.Delay(options.SettleTimeMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.SettleTimeMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.SettleTimeMs, token)
+L000137 |                     await Task.Delay(options.SettleTimeMs, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L138: 초기화·조건·증감이 있는 반복입니다: for (var i = 0; i < options.MeasureCount; i++) / 변수의 초기값을 지정합니다: i = 0
+L000138 |                     for (var i = 0; i < options.MeasureCount; i++) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 RunHead.
+L000139 |                     { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000140 |                         token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("MEASURING", $"Attempt {attempt} · Sample {i + 1}/{options.MeasureCount}")
+L000141 |                         State("MEASURING", $"Attempt {attempt} · Sample {i + 1}/{options.MeasureCount}"); ⟦EOL⟧
+// 해설 L142: 비동기 완료를 기다립니다: await session.ReadPower(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.ReadPower(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.ReadPower(target, token) / 지역 변수를 선언합니다: var value = await session.ReadPower(target, token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: value = await session.ReadPower(target, token).ConfigureAwait(false)
+L000142 |                         var value = await session.ReadPower(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!double.IsFinite(value) || value < 0)
+L000143 |                         if (!double.IsFinite(value) || value < 0) ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("유효하지 않은 파워 측정값입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("유효하지 않은 파워 측정값입니다.");
+L000144 |                             throw new InvalidOperationException("유효하지 않은 파워 측정값입니다."); ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add(value)
+L000145 |                         values.Add(value); ⟦EOL⟧
+// 해설 L146: 조건에 따라 분기합니다: if (i + 1 < options.MeasureCount)
+L000146 |                         if (i + 1 < options.MeasureCount) ⟦EOL⟧
+// 해설 L147: 비동기 완료를 기다립니다: await Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.MeasureIntervalMs, token)
+L000147 |                             await Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 RunHead.
+L000148 |                     } ⟦EOL⟧
+L000149 |  ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 RunHead.
+L000150 |                     } ⟦EOL⟧
+// 해설 L151: 비동기 완료를 기다립니다: await session.EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.EndMeasurement(target) / 종료 정리 구간입니다: finally
+L000151 |                     finally { await session.EndMeasurement(target).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L152: 조건에 따라 분기합니다: if (options.CoolingTimeMs > 0)
+L000152 |                     if (options.CoolingTimeMs > 0) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 RunHead.
+L000153 |                     { ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("COOLING", "레이저 OFF · 냉각 대기")
+L000154 |                         State("COOLING", "레이저 OFF · 냉각 대기"); ⟦EOL⟧
+// 해설 L155: 비동기 완료를 기다립니다: await Task.Delay(options.CoolingTimeMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.CoolingTimeMs, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.CoolingTimeMs, token)
+L000155 |                         await Task.Delay(options.CoolingTimeMs, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 RunHead.
+L000156 |                     } ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Average() / 지역 변수를 선언합니다: var power = values.Average(); / 변수의 초기값을 지정합니다: power = values.Average()
+L000157 |                     var power = values.Average(); ⟦EOL⟧
+// 해설 L158: 지역 변수를 선언합니다: var error = power - target.TargetPower; / 변수의 초기값을 지정합니다: error = power - target.TargetPower
+L000158 |                     var error = power - target.TargetPower; ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(error) / 조건에 따라 결과식을 선택합니다: Math.Abs(error) <= options.Tolerance ? "OK" : error < 0 ? "LOW" : "HIGH" / 조건에 따라 결과식을 선택합니다: error < 0 ? "LOW" : "HIGH" / 지역 변수를 선언합니다: var result = Math.Abs(error) <= options.Tolerance ? "OK" : error < 0 ? "LOW" : "HIGH"; / 변수의 초기값을 지정합니다: result = Math.Abs(error) <= options.Tolerance ? "OK" : error < 0 ? "LOW" : "HIGH"
+L000159 |                     var result = Math.Abs(error) <= options.Tolerance ? "OK" : error < 0 ? "LOW" : "HIGH"; ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Add(new(attempt, angle, power, error, result)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(attempt, angle, power, error, result)
+L000160 |                     samples.Add(new(attempt, angle, power, error, result)); ⟦EOL⟧
+// 해설 L161: 값을 대상에 대입합니다: Power = power / 값을 대상에 대입합니다: Samples = Array.AsReadOnly(samples.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { Power = power, Samples = Array.AsReadOnly(samples.ToArray()) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(samples.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.ToArray()
+L000161 |                     Update(target.HeadNo, h => h with { Power = power, Samples = Array.AsReadOnly(samples.ToArray()) }); ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000162 |                     token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L163: 조건에 따라 분기합니다: if (result == "OK")
+L000163 |                     if (result == "OK") ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 RunHead.
+L000164 |                     { ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: reachedTarget = true
+L000165 |                         reachedTarget = true; ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("FINISHING", "목표 출력 도달 · 종료 처리 중")
+L000166 |                         State("FINISHING", "목표 출력 도달 · 종료 처리 중"); ⟦EOL⟧
+// 해설 L167: 해당 반복/분기 구간을 종료합니다: break;
+L000167 |                         break; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 RunHead.
+L000168 |                     } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 조건에 따라 분기합니다: if (attempt == options.MaxAttempts)
+L000170 |                     if (attempt == options.MaxAttempts) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 RunHead.
+L000171 |                     { ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("NG", "최대 시도 횟수 내 목표 출력에 도달하지 못했습니다.")
+L000172 |                         State("NG", "최대 시도 횟수 내 목표 출력에 도달하지 못했습니다."); ⟦EOL⟧
+// 해설 L173: 해당 반복/분기 구간을 종료합니다: break;
+L000173 |                         break; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 RunHead.
+L000174 |                     } ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: angle = NextAngle(samples, target.TargetPower) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NextAngle(samples, target.TargetPower)
+L000176 |                     angle = NextAngle(samples, target.TargetPower); ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 RunHead.
+L000177 |                 } ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 RunHead.
+L000178 |             } ⟦EOL⟧
+// 해설 L179: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000179 |             catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 RunHead.
+L000180 |             { ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("STOPPED", "측정 중지")
+L000181 |                 State("STOPPED", "측정 중지"); ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 RunHead.
+L000182 |             } ⟦EOL⟧
+// 해설 L183: 지정 예외를 처리합니다: catch (Exception error)
+L000183 |             catch (Exception error) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 RunHead.
+L000184 |             { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("ERROR", error.Message)
+L000185 |                 State("ERROR", error.Message); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 RunHead.
+L000186 |             } ⟦EOL⟧
+// 해설 L187: 종료 정리 구간입니다: finally
+L000187 |             finally ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 RunHead.
+L000188 |             { ⟦EOL⟧
+// 해설 L189: 예외 처리 범위입니다: try
+L000189 |                 try ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 RunHead.
+L000190 |                 { ⟦EOL⟧
+// 해설 L191: 비동기 완료를 기다립니다: await session.Finish(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Finish(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Finish(target)
+L000191 |                     await session.Finish(target).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 RunHead.
+L000192 |                 } ⟦EOL⟧
+// 해설 L193: 지정 예외를 처리합니다: catch (Exception error)
+L000193 |                 catch (Exception error) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 RunHead.
+L000194 |                 { ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("ERROR", $"측정 종료 처리 실패: {error.Message}")
+L000195 |                     State("ERROR", $"측정 종료 처리 실패: {error.Message}"); ⟦EOL⟧
+// 해설 L196: 값을 대상에 대입합니다: clean = false
+L000196 |                     clean = false; ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 RunHead.
+L000197 |                 } ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 RunHead.
+L000198 |             } ⟦EOL⟧
+L000199 |  ⟦EOL⟧
+// 해설 L200: 조건에 따라 분기합니다: if (reachedTarget && clean)
+L000200 |             if (reachedTarget && clean) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 RunHead.
+L000201 |             { ⟦EOL⟧
+// 해설 L202: 예외 처리 범위입니다: try
+L000202 |                 try ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 RunHead.
+L000203 |                 { ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000204 |                     token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L205: 조건에 따라 분기합니다: if (table is not null)
+L000205 |                     if (table is not null) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 RunHead.
+L000206 |                     { ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("SAVING", "PowerTable 업데이트 중")
+L000207 |                         State("SAVING", "PowerTable 업데이트 중"); ⟦EOL⟧
+// 해설 L208: 지역 변수를 선언합니다: var sample = samples[^1]; / 변수의 초기값을 지정합니다: sample = samples[^1]
+L000208 |                         var sample = samples[^1]; ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: table.SaveMeasurement(target.HeadNo, sample.Angle, sample.Power, token)
+L000209 |                         table.SaveMeasurement(target.HeadNo, sample.Angle, sample.Power, token); ⟦EOL⟧
+// 해설 L210: 값을 대상에 대입합니다: TableState = "UPDATED" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { TableState = "UPDATED" })
+L000210 |                         Update(target.HeadNo, h => h with { TableState = "UPDATED" }); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 RunHead.
+L000211 |                     } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("OK", table is null ? "목표 출력 도달" : "목표 출력 도달 · PowerTable 업데이트 완료") / 조건에 따라 결과식을 선택합니다: table is null ? "목표 출력 도달" : "목표 출력 도달 · PowerTable 업데이트 완료"
+L000213 |                     State("OK", table is null ? "목표 출력 도달" : "목표 출력 도달 · PowerTable 업데이트 완료"); ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 RunHead.
+L000214 |                 } ⟦EOL⟧
+// 해설 L215: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000215 |                 catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 RunHead.
+L000216 |                 { ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("STOPPED", "측정 중지 · PowerTable 저장 취소")
+L000217 |                     State("STOPPED", "측정 중지 · PowerTable 저장 취소"); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 RunHead.
+L000218 |                 } ⟦EOL⟧
+// 해설 L219: 지정 예외를 처리합니다: catch (Exception error)
+L000219 |                 catch (Exception error) ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 RunHead.
+L000220 |                 { ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: TableState = "ERROR" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { TableState = "ERROR" })
+L000221 |                     Update(target.HeadNo, h => h with { TableState = "ERROR" }); ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: State("ERROR", $"목표 출력 도달 / PowerTable 저장 실패: {error.Message}")
+L000222 |                     State("ERROR", $"목표 출력 도달 / PowerTable 저장 실패: {error.Message}"); ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 RunHead.
+L000223 |                 } ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 RunHead.
+L000224 |             } ⟦EOL⟧
+L000225 |  ⟦EOL⟧
+// 해설 L226: 호출자에게 값 또는 제어를 반환합니다: return clean;
+L000226 |             return clean; ⟦EOL⟧
+// 해설 L227: 값을 대상에 대입합니다: State = state / 값을 대상에 대입합니다: Message = message / 함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h => h with { State = state, Message = message })
+L000227 |             void State(string state, string message) => Update(target.HeadNo, h => h with { State = state, Message = message }); ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 RunHead.
+L000228 |         } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeasureService.NextAngle(System.Collections.Generic.List<Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE>, double)
+L000230 |         private static double NextAngle(List<ST_POWER_MEASURE_SAMPLE> samples, double target) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 NextAngle.
+L000231 |         { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power < target).OrderByDescending(s => s.Power).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power < target).OrderByDescending(s => s.Power) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power < target) / 지역 변수를 선언합니다: var below = samples.Where(s => s.Power < target).OrderByDescending(s => s.Power).FirstOrDefault(); / 변수의 초기값을 지정합니다: below = samples.Where(s => s.Power < target).OrderByDescending(s => s.Power).FirstOrDefault()
+L000232 |             var below = samples.Where(s => s.Power < target).OrderByDescending(s => s.Power).FirstOrDefault(); ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power > target).OrderBy(s => s.Power).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power > target).OrderBy(s => s.Power) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Power > target) / 지역 변수를 선언합니다: var above = samples.Where(s => s.Power > target).OrderBy(s => s.Power).FirstOrDefault(); / 변수의 초기값을 지정합니다: above = samples.Where(s => s.Power > target).OrderBy(s => s.Power).FirstOrDefault()
+L000233 |             var above = samples.Where(s => s.Power > target).OrderBy(s => s.Power).FirstOrDefault(); ⟦EOL⟧
+// 해설 L234: 조건에 따라 분기합니다: if (below is not null && above is not null)
+L000234 |             if (below is not null && above is not null) ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(below.Angle + (target - below.Power) * (above.Angle - below.Angle) / (above.Power - below.Power), 0, 360) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(below.Angle + (target - below.Power) * (above.Angle - below.Angle) / (above.Power - below.Power), 0, 360);
+L000235 |                 return Math.Clamp(below.Angle + (target - below.Power) * (above.Angle - below.Angle) / (above.Power - below.Power), 0, 360); ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.MinBy(s => Math.Abs(s.Error)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Error) / 지역 변수를 선언합니다: var best = samples.MinBy(s => Math.Abs(s.Error))!; / 변수의 초기값을 지정합니다: best = samples.MinBy(s => Math.Abs(s.Error))!
+L000236 |             var best = samples.MinBy(s => Math.Abs(s.Error))!; ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Angle != best.Angle && Math.Abs(s.Power - best.Power) > 1e-9).MinBy(s => Math.Abs(s.Angle - best.Angle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s => s.Angle != best.Angle && Math.Abs(s.Power - best.Power) > 1e-9) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Power - best.Power) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - best.Angle) / 지역 변수를 선언합니다: var other = samples.Where(s => s.Angle != best.Angle && Math.Abs(s.Power - best.Power) > 1e-9).MinBy(s => Math.Abs(s.Angle - best.Angle));
+L000237 |             var other = samples.Where(s => s.Angle != best.Angle && Math.Abs(s.Power - best.Power) > 1e-9).MinBy(s => Math.Abs(s.Angle - best.Angle)); ⟦EOL⟧
+// 해설 L238: 조건에 따라 분기합니다: if (other is not null)
+L000238 |             if (other is not null) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 NextAngle.
+L000239 |             { ⟦EOL⟧
+// 해설 L240: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000240 |                 // Measured slope also supports decreasing ATT curves; do not assume larger angle means more W. ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360) / 지역 변수를 선언합니다: var estimate = Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360); / 변수의 초기값을 지정합니다: estimate = Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360)
+L000241 |                 var estimate = Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360); ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(estimate) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.All(s => Math.Abs(s.Angle - estimate) > 0.000001) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - estimate) / 조건에 따라 분기합니다: if (double.IsFinite(estimate) && samples.All(s => Math.Abs(s.Angle - estimate) > 0.000001))
+L000242 |                 if (double.IsFinite(estimate) && samples.All(s => Math.Abs(s.Angle - estimate) > 0.000001)) ⟦EOL⟧
+// 해설 L243: 호출자에게 값 또는 제어를 반환합니다: return estimate;
+L000243 |                     return estimate; ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 NextAngle.
+L000244 |             } ⟦EOL⟧
+L000245 |  ⟦EOL⟧
+// 해설 L246: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000246 |             // No slope yet: probe a nearby angle, widening only if the measured response is flat. ⟦EOL⟧
+// 해설 L247: 값을 대상에 대입합니다: step *= 2 / 초기화·조건·증감이 있는 반복입니다: for (var step = 10.0; step <= 640; step *= 2) / 변수의 초기값을 지정합니다: step = 10.0
+L000247 |             for (var step = 10.0; step <= 640; step *= 2) ⟦EOL⟧
+// 해설 L248: 컬렉션 요소를 순회합니다: foreach (var candidate in new[] { Math.Clamp(best.Angle + step, 0, 360), Math.Clamp(best.Angle - step, 0, 360) })
+L000248 |                 foreach (var candidate in new[] ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 NextAngle.
+L000249 |                 { ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle + step, 0, 360)
+L000250 |                     Math.Clamp(best.Angle + step, 0, 360), ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle - step, 0, 360)
+L000251 |                     Math.Clamp(best.Angle - step, 0, 360) ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 NextAngle.
+L000252 |                 } ⟦EOL⟧
+L000253 |  ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeasureService.NextAngle(System.Collections.Generic.List<Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE>, double)
+L000254 |                 ) ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.All(s => Math.Abs(s.Angle - candidate) > 0.000001) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - candidate) / 조건에 따라 분기합니다: if (samples.All(s => Math.Abs(s.Angle - candidate) > 0.000001))
+L000255 |                     if (samples.All(s => Math.Abs(s.Angle - candidate) > 0.000001)) ⟦EOL⟧
+// 해설 L256: 호출자에게 값 또는 제어를 반환합니다: return candidate;
+L000256 |                         return candidate; ⟦EOL⟧
+// 해설 L257: 호출자에게 값 또는 제어를 반환합니다: return best.Angle;
+L000257 |             return best.Angle; ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 NextAngle.
+L000258 |         } ⟦EOL⟧
+L000259 |  ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func<Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD>)
+L000260 |         private void Update(int headNo, Func<ST_POWER_MEASURE_HEAD, ST_POWER_MEASURE_HEAD> update) ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 Update.
+L000261 |         { ⟦EOL⟧
+// 해설 L262: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000262 |             lock (_sync) ⟦EOL⟧
+// 해설 L263: 값을 대상에 대입합니다: _heads[headNo] = update(_heads[headNo]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: update(_heads[headNo])
+L000263 |                 _heads[headNo] = update(_heads[headNo]); ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 Update.
+L000264 |         } ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다.
+L000265 |     } ⟦EOL⟧
+L000266 |  ⟦EOL⟧
+// 해설 L267: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_TARGET(int HeadNo, int PowerMeterNo, double TargetPower, ST_POWER_MEASURE_OPTIONS Options);
+L000267 |     public sealed record ST_POWER_MEASURE_TARGET(int HeadNo, int PowerMeterNo, double TargetPower, ST_POWER_MEASURE_OPTIONS Options); ⟦EOL⟧
+// 해설 L268: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_OPTIONS(string Mode, int SettleTimeMs, int MeasureCount, int MeasureIntervalMs)
+L000268 |     public sealed record ST_POWER_MEASURE_OPTIONS(string Mode, int SettleTimeMs, int MeasureCount, int MeasureIntervalMs) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다.
+L000269 |     { ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW
+L000270 |         public double? ToleranceW { get; init; } ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts
+L000271 |         public int? MaximumAttempts { get; init; } ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs
+L000272 |         public int CoolingTimeMs { get; init; } = 100; ⟦EOL⟧
+// 해설 L273: 값별 결과식을 선택합니다: Mode switch { "ROUGH" => 0.05, "DETAIL" => 0.003, _ => 0.01 }
+L000273 |         public double Tolerance => ToleranceW ?? (Mode switch ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 Tolerance.
+L000274 |         { ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance
+L000275 |             "ROUGH" => 0.05, ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance
+L000276 |             "DETAIL" => 0.003, ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance
+L000277 |             _ => 0.01 ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance
+L000278 |         }); ⟦EOL⟧
+// 해설 L279: 값별 결과식을 선택합니다: Mode switch { "ROUGH" => 8, "DETAIL" => 18, _ => 12 }
+L000279 |         public int MaxAttempts => MaximumAttempts ?? (Mode switch ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 MaxAttempts.
+L000280 |         { ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts
+L000281 |             "ROUGH" => 8, ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts
+L000282 |             "DETAIL" => 18, ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts
+L000283 |             _ => 12 ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts
+L000284 |         }); ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다.
+L000285 |     } ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_SAMPLE(int Attempt, double Angle, double Power, double Error, string Result);
+L000287 |     public sealed record ST_POWER_MEASURE_SAMPLE(int Attempt, double Angle, double Power, double Error, string Result); ⟦EOL⟧
+// 해설 L288: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_HEAD(ST_POWER_MEASURE_TARGET Target, string State, double? Angle, double? Power, string Message, IReadOnlyList<ST_POWER_MEASURE_SAMPLE> Samples)
+L000288 |     public sealed record ST_POWER_MEASURE_HEAD(ST_POWER_MEASURE_TARGET Target, string State, double? Angle, double? Power, string Message, IReadOnlyList<ST_POWER_MEASURE_SAMPLE> Samples) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다.
+L000289 |     { ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle
+L000290 |         public double? InitialAngle { get; init; } ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail
+L000291 |         public string StartDetail { get; init; } = ""; ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState
+L000292 |         public string TableState { get; init; } = ""; ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다.
+L000293 |     } ⟦EOL⟧
+L000294 |  ⟦EOL⟧
+// 해설 L295: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_SNAPSHOT(bool IsRunning, IReadOnlyList<ST_POWER_MEASURE_HEAD> Heads, string StageState)
+L000295 |     public sealed record ST_POWER_MEASURE_SNAPSHOT(bool IsRunning, IReadOnlyList<ST_POWER_MEASURE_HEAD> Heads, string StageState) ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다.
+L000296 |     { ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin
+L000297 |         public string Origin { get; init; } = ""; ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다.
+L000298 |     } ⟦EOL⟧
+// 해설 L299: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000299 |     /// <summary>A session owns sensor positioning, exclusive illumination and cleanup for each head.</summary> ⟦EOL⟧
+// 해설 L300: 타입의 구조/상속 선언입니다: public interface IPowerMeasureSession
+L000300 |     public interface IPowerMeasureSession ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다.
+L000301 |     { ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.CheckStageReady(System.Threading.CancellationToken)
+L000302 |         Task CheckStageReady(CancellationToken token); ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000303 |         Task Prepare(ST_POWER_MEASURE_TARGET target, CancellationToken token); ⟦EOL⟧
+// 해설 L304: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000304 |         // Read a fresh, valid shared ATT snapshot (no position query from the view). ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.IPowerMeasureSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000305 |         Task<double> GetAttenuatorPosition(ST_POWER_MEASURE_TARGET target, CancellationToken token); ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)
+L000306 |         Task MoveAttenuator(ST_POWER_MEASURE_TARGET target, double angle, CancellationToken token); ⟦EOL⟧
+// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000307 |         Task BeginMeasurement(ST_POWER_MEASURE_TARGET target, CancellationToken token); ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000308 |         Task EndMeasurement(ST_POWER_MEASURE_TARGET target); ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.IPowerMeasureSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000309 |         Task<double> ReadPower(ST_POWER_MEASURE_TARGET target, CancellationToken token); ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000310 |         Task Finish(ST_POWER_MEASURE_TARGET target); ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다.
+L000311 |     } ⟦EOL⟧
+L000312 |  ⟦EOL⟧
+// 해설 L313: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000313 |     /// <summary>Demonstration only: no device interfaces, motion commands or laser output.</summary> ⟦EOL⟧
+// 해설 L314: 타입의 구조/상속 선언입니다: public sealed class CPowerMeasureSimulationSession : IPowerMeasureSession
+L000314 |     public sealed class CPowerMeasureSimulationSession : IPowerMeasureSession ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다.
+L000315 |     { ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _angles = new()
+L000316 |         private readonly System.Collections.Concurrent.ConcurrentDictionary<int, double> _angles = new(); ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(10, token)
+L000317 |         public Task CheckStageReady(CancellationToken token) => Task.Delay(10, token); ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000318 |         public Task BeginMeasurement(ST_POWER_MEASURE_TARGET target, CancellationToken token) => Task.CompletedTask; ⟦EOL⟧
+// 해설 L319: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000319 |         public Task EndMeasurement(ST_POWER_MEASURE_TARGET target) => Task.CompletedTask; ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(150, token)
+L000320 |         public Task Prepare(ST_POWER_MEASURE_TARGET target, CancellationToken token) => Task.Delay(150, token); ⟦EOL⟧
+// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.CPowerMeasureSimulationSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000321 |         public Task<double> GetAttenuatorPosition(ST_POWER_MEASURE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000322 |         { ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000323 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(_angles.GetOrAdd(target.HeadNo, 55.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _angles.GetOrAdd(target.HeadNo, 55.0) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(_angles.GetOrAdd(target.HeadNo, 55.0));
+L000324 |             return Task.FromResult(_angles.GetOrAdd(target.HeadNo, 55.0)); ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000325 |         } ⟦EOL⟧
+L000326 |  ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)
+L000327 |         public async Task MoveAttenuator(ST_POWER_MEASURE_TARGET target, double angle, CancellationToken token) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 MoveAttenuator.
+L000328 |         { ⟦EOL⟧
+// 해설 L329: 비동기 완료를 기다립니다: await Task.Delay(220, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(220, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(220, token)
+L000329 |             await Task.Delay(220, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L330: 값을 대상에 대입합니다: _angles[target.HeadNo] = angle
+L000330 |             _angles[target.HeadNo] = angle; ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 MoveAttenuator.
+L000331 |         } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.CPowerMeasureSimulationSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000333 |         public async Task<double> ReadPower(ST_POWER_MEASURE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 ReadPower.
+L000334 |         { ⟦EOL⟧
+// 해설 L335: 비동기 완료를 기다립니다: await Task.Delay(100, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token)
+L000335 |             await Task.Delay(100, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L336: 호출자에게 값 또는 제어를 반환합니다: return _angles[target.HeadNo] / 360 * (3.0 + target.HeadNo * 0.12);
+L000336 |             return _angles[target.HeadNo] / 360 * (3.0 + target.HeadNo * 0.12); ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 ReadPower.
+L000337 |         } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000339 |         public Task Finish(ST_POWER_MEASURE_TARGET target) => Task.CompletedTask; ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다.
+L000340 |     } ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_START(double? Angle, string Detail);
+L000342 |     public sealed record ST_POWER_MEASURE_START(double? Angle, string Detail); ⟦EOL⟧
+// 해설 L343: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000343 |     /// <summary>Calibration data for a single Head. Simulations must use a separate writable store.</summary> ⟦EOL⟧
+// 해설 L344: 타입의 구조/상속 선언입니다: public interface IPowerMeasureTable
+L000344 |     public interface IPowerMeasureTable ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다.
+L000345 |     { ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.Common.Interface.IPowerMeasureTable.FindStart(int, double, System.Threading.CancellationToken)
+L000346 |         ST_POWER_MEASURE_START FindStart(int headNo, double targetPower, CancellationToken token); ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.IPowerMeasureTable.SaveMeasurement(int, double, double, System.Threading.CancellationToken)
+L000347 |         void SaveMeasurement(int headNo, double angle, double measuredPower, CancellationToken token); ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다.
+L000348 |     } ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다.
+L000349 | } ⟦EOL⟧

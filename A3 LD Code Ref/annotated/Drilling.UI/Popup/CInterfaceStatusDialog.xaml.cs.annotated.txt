@@ -1,0 +1,137 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000002 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000004 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000006 | namespace Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public partial class CInterfaceStatusDialog : Window
+L000007 | public partial class CInterfaceStatusDialog : Window ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusDialog(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS>)
+L000009 |     public CInterfaceStatusDialog(string title, IReadOnlyList<ST_INTERFACE_COMM_STATUS> statuses) ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 .ctor.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000011 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)
+L000012 |         int SelectNumber(global::Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS status) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000013 |         { ⟦EOL⟧
+// 해설 L14: 호출자에게 값 또는 제어를 반환합니다: return status.Number;
+L000014 |             return status.Number; ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000015 |         } ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)
+L000017 |         string SelectNickName(global::Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS status) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 호출자에게 값 또는 제어를 반환합니다: return status.NickName;
+L000019 |             return status.NickName; ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000020 |         } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow BuildCInterfaceStatusRow(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)
+L000022 |         global::Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow BuildCInterfaceStatusRow(global::Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS status) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 BuildCInterfaceStatusRow.
+L000023 |         { ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CInterfaceStatusRow(status) / 호출자에게 값 또는 제어를 반환합니다: return new CInterfaceStatusRow(status);
+L000024 |             return new CInterfaceStatusRow(status); ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 BuildCInterfaceStatusRow.
+L000025 |         } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.OrderBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildCInterfaceStatusRow).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.OrderBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildCInterfaceStatusRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.OrderBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.OrderBy(SelectNumber) / 지역 변수를 선언합니다: var rows = statuses.OrderBy(SelectNumbe
+L000027 |         var rows = statuses.OrderBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildCInterfaceStatusRow).ToArray(); ⟦EOL⟧
+// 해설 L28: 값을 대상에 대입합니다: Title = $"{title} Status"
+L000028 |         Title = $"{title} Status"; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: TitleText.Text = title
+L000029 |         TitleText.Text = title; ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: SummaryText.Text = $"{rows.Length} interface item(s)"
+L000030 |         SummaryText.Text = $"{rows.Length} interface item(s)"; ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: StatusGrid.ItemsSource = rows
+L000031 |         StatusGrid.ItemsSource = rows; ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 .ctor.
+L000032 |     } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CInterfaceStatusDialog.OnCloseClicked(object, RoutedEventArgs)
+L000034 |     private void OnCloseClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000035 |     { ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000036 |         Close(); ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 타입의 구조/상속 선언입니다: public sealed class CInterfaceStatusRow
+L000039 |     public sealed class CInterfaceStatusRow ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.CInterfaceStatusRow(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)
+L000041 |         public CInterfaceStatusRow(ST_INTERFACE_COMM_STATUS status) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 .ctor.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: No = status.Number + 1
+L000043 |             No = status.Number + 1; ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: NickName = string.IsNullOrWhiteSpace(status.NickName) ? "-" : status.NickName / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(status.NickName) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(status.NickName) ? "-" : status.NickName
+L000044 |             NickName = string.IsNullOrWhiteSpace(status.NickName) ? "-" : status.NickName; ⟦EOL⟧
+// 해설 L45: 값을 대상에 대입합니다: InterfaceType = status.InterfaceType.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.InterfaceType.ToString()
+L000045 |             InterfaceType = status.InterfaceType.ToString(); ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: State = status.ConnectionText
+L000046 |             State = status.ConnectionText; ⟦EOL⟧
+// 해설 L47: 값을 대상에 대입합니다: Endpoint = string.IsNullOrWhiteSpace(status.Endpoint) ? "-" : status.Endpoint / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(status.Endpoint) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(status.Endpoint) ? "-" : status.Endpoint
+L000047 |             Endpoint = string.IsNullOrWhiteSpace(status.Endpoint) ? "-" : status.Endpoint; ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: LastChangedText = status.LastChangedAt?.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss") ?? "-" / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToLocalTime()
+L000048 |             LastChangedText = status.LastChangedAt?.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss") ?? "-"; ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: StateBrush = CStatusBrush.ForHeaderState(ToStateText(status.ConnectionState)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForHeaderState(ToStateText(status.ConnectionState)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToStateText(status.ConnectionState)
+L000049 |             StateBrush = CStatusBrush.ForHeaderState(ToStateText(status.ConnectionState)); ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 .ctor.
+L000050 |         } ⟦EOL⟧
+L000051 |  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.No
+L000052 |         public int No { get; } ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.NickName
+L000053 |         public string NickName { get; } ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.InterfaceType
+L000054 |         public string InterfaceType { get; } ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.State
+L000055 |         public string State { get; } ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.Endpoint
+L000056 |         public string Endpoint { get; } ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.LastChangedText
+L000057 |         public string LastChangedText { get; } ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.StateBrush
+L000058 |         public Brush StateBrush { get; } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.ToStateText(Drilling.Common.Interface.EN_COMM_STATE)
+L000060 |         private static string ToStateText(EN_COMM_STATE state) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 ToStateText.
+L000061 |         { ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return state switch { EN_COMM_STATE.Online => "ONLINE", EN_COMM_STATE.Offline => "OFFLINE", _ => "SIMULATION" }; / 값별 결과식을 선택합니다: state switch { EN_COMM_STATE.Online => "ONLINE", EN_COMM_STATE.Offline => "OFFLINE", _ => "SIMULATION" }
+L000062 |             return state switch ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 ToStateText.
+L000063 |             { ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.ToStateText(Drilling.Common.Interface.EN_COMM_STATE)
+L000064 |                 EN_COMM_STATE.Online => "ONLINE", ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.ToStateText(Drilling.Common.Interface.EN_COMM_STATE)
+L000065 |                 EN_COMM_STATE.Offline => "OFFLINE", ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.ToStateText(Drilling.Common.Interface.EN_COMM_STATE)
+L000066 |                 _ => "SIMULATION" ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 ToStateText.
+L000067 |             }; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 ToStateText.
+L000068 |         } ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다.
+L000069 |     } ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다.
+L000070 | } ⟦EOL⟧

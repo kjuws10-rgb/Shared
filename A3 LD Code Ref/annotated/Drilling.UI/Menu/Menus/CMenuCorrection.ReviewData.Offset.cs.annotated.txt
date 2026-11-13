@@ -1,0 +1,1470 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
+L000001 | namespace Drilling.UI.Menu.Menus ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000003 |     using System.ComponentModel; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000004 |     using System.Globalization; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000005 |     using System.IO; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000006 |     using System.Windows; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000007 |     using System.Windows.Media; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000008 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000009 |     using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000010 |     using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L11: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu;
+L000011 |     using Drilling.UI.Menu; ⟦EOL⟧
+// 해설 L12: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000012 |     using Drilling.UI.Popup; ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 타입의 구조/상속 선언입니다: public sealed partial class CMenuCorrection
+L000014 |     public sealed partial class CMenuCorrection ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 타입의 구조/상속 선언입니다: public sealed partial class CReviewDataPanel
+L000016 |         public sealed partial class CReviewDataPanel ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다.
+L000017 |         { ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isOffsetBusy
+L000018 |             private bool _isOffsetBusy; ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanEditOffsets
+L000020 |             public bool CanEditOffsets => HasLoadedData && !_isOffsetBusy && !_isDataLoading && !IsBusy; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanApplyOffset
+L000021 |             public bool CanApplyOffset => CanEditOffsets ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanApplyOffset
+L000022 |                 && _loadedCatalog is { } catalog ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsOffsetApplicableResultType(catalog.ResultType)
+L000023 |                 && IsOffsetApplicableResultType(catalog.ResultType) ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: catalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase)
+L000024 |                 && catalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint
+L000026 |             public string OffsetActionHint ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 OffsetActionHint.
+L000027 |             { ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000028 |                 get ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000029 |                 { ⟦EOL⟧
+// 해설 L30: 조건에 따라 분기합니다: if (!HasLoadedData || _loadedCatalog is null)
+L000030 |                     if (!HasLoadedData || _loadedCatalog is null) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000031 |                     { ⟦EOL⟧
+// 해설 L32: 호출자에게 값 또는 제어를 반환합니다: return "검사 결과를 DATA LOAD한 뒤 Review Offset 작업을 사용할 수 있습니다.";
+L000032 |                         return "검사 결과를 DATA LOAD한 뒤 Review Offset 작업을 사용할 수 있습니다."; ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000033 |                     } ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: _loadedCatalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!_loadedCatalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase))
+L000035 |                     if (!_loadedCatalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000036 |                     { ⟦EOL⟧
+// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return $"OFFSET APPLY 불가능. 사유 : 완료된 결과가 아닙니다. ({_loadedCatalog.ResultStatus})";
+L000037 |                         return $"OFFSET APPLY 불가능. 사유 : 완료된 결과가 아닙니다. ({_loadedCatalog.ResultStatus})"; ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000038 |                     } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: _loadedCatalog.ResultType.ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return _loadedCatalog.ResultType.ToUpperInvariant() switch { "ALL_SHOT" => "ALL SHOT의 측정 OK 값을 같은 Shot의 Review Offset에 직접 누적합니다.", "ONE_SHOT" => "ONE SHOT의 측정 OK 값을 선택 Shot의 Review Offset에 직접 누적합니다.", "ROUGH" => "ROUGH 결과의 HEAD 또는 / 값별 결과식을 선택합니다: _loadedCatalog.ResultType.ToUpperInvariant() switch { "ALL_SHOT" => "ALL SHOT의 측정 OK 값을 같은 Shot의 Review Offset에 직접 누적합니다.", "ONE_SHOT" => "ONE SHOT의 측정 OK 값을 선택 Shot의 Review Offset에 직접 누적합니다.", "R
+L000040 |                     return _loadedCatalog.ResultType.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000041 |                     { ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000042 |                         "ALL_SHOT" => "ALL SHOT의 측정 OK 값을 같은 Shot의 Review Offset에 직접 누적합니다.", ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000043 |                         "ONE_SHOT" => "ONE SHOT의 측정 OK 값을 선택 Shot의 Review Offset에 직접 누적합니다.", ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000044 |                         "ROUGH" => "ROUGH 결과의 HEAD 또는 HEAD + CELL 범위에 측정 OK 값을 누적합니다.", ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000045 |                         "FINE" => "FINE 측정값을 Cell 열별로 보간하여 Review Offset에 누적합니다.", ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000046 |                         "AUTO" => "AUTO 검사 측정값을 Cell 열별로 보간하여 Review Offset에 누적합니다.", ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000047 |                         "BEAM_INSPECTION" => "OFFSET APPLY 불가능. 사유 : BEAM INSPECTION은 Beam 상태 확인 결과입니다.", ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000048 |                         "ZERO_DEFENCE" or "FOLLOWUP" => "OFFSET APPLY 불가능. 사유 : Zero Defence 결과는 Review Offset 적용 대상이 아닙니다.", ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetActionHint.get
+L000049 |                         _ => $"OFFSET APPLY 불가능. 사유 : 지원하지 않는 결과 종류입니다. ({_loadedCatalog.ResultType})" ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000050 |                     }; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 get_OffsetActionHint.
+L000051 |                 } ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 OffsetActionHint.
+L000052 |             } ⟦EOL⟧
+L000053 |  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetApplyRequested(object?)
+L000054 |             private async void OffsetApplyRequested(object? parameter) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 OffsetApplyRequested.
+L000055 |             { ⟦EOL⟧
+// 해설 L56: 비동기 완료를 기다립니다: await ShowOffsetApplyDialog() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowOffsetApplyDialog()
+L000056 |                 await ShowOffsetApplyDialog(); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 OffsetApplyRequested.
+L000057 |             } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetInitRequested(object?)
+L000059 |             private async void OffsetInitRequested(object? parameter) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 OffsetInitRequested.
+L000060 |             { ⟦EOL⟧
+// 해설 L61: 비동기 완료를 기다립니다: await InitializeReviewOffsets() / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeReviewOffsets()
+L000061 |                 await InitializeReviewOffsets(); ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 OffsetInitRequested.
+L000062 |             } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetRollbackRequested(object?)
+L000064 |             private async void OffsetRollbackRequested(object? parameter) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 OffsetRollbackRequested.
+L000065 |             { ⟦EOL⟧
+// 해설 L66: 비동기 완료를 기다립니다: await _rollbackReviewOffset() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _rollbackReviewOffset()
+L000066 |                 await _rollbackReviewOffset(); ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 OffsetRollbackRequested.
+L000067 |             } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetViewRequested(object?)
+L000069 |             private async void OffsetViewRequested(object? parameter) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 OffsetViewRequested.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 비동기 완료를 기다립니다: await ShowCurrentReviewOffsets() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowCurrentReviewOffsets()
+L000071 |                 await ShowCurrentReviewOffsets(); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 OffsetViewRequested.
+L000072 |             } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowOffsetApplyDialog()
+L000074 |             private async Task ShowOffsetApplyDialog() ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000075 |             { ⟦EOL⟧
+// 해설 L76: 조건에 따라 분기합니다: if (!CanApplyOffset || _loadedCatalog is null || _loadedResultFile is null || _loadedRecipe is null)
+L000076 |                 if (!CanApplyOffset || _loadedCatalog is null || _loadedResultFile is null || _loadedRecipe is null) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000077 |                 { ⟦EOL⟧
+// 해설 L78: 호출자에게 값 또는 제어를 반환합니다: return;
+L000078 |                     return; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000079 |                 } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 지역 변수를 선언합니다: var sourcePath = _loadedResultFile.FilePath; / 변수의 초기값을 지정합니다: sourcePath = _loadedResultFile.FilePath
+L000081 |                 var sourcePath = _loadedResultFile.FilePath; ⟦EOL⟧
+// 해설 L82: 지역 변수를 선언합니다: var recipe = _loadedRecipe; / 변수의 초기값을 지정합니다: recipe = _loadedRecipe
+L000082 |                 var recipe = _loadedRecipe; ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: var catalog = _loadedCatalog; / 변수의 초기값을 지정합니다: catalog = _loadedCatalog
+L000083 |                 var catalog = _loadedCatalog; ⟦EOL⟧
+// 해설 L84: 지역 변수를 선언합니다: var result = _loadedResultFile; / 변수의 초기값을 지정합니다: result = _loadedResultFile
+L000084 |                 var result = _loadedResultFile; ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase)
+L000085 |                 var parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(true)
+L000086 |                 SetOffsetBusy(true); ⟦EOL⟧
+// 해설 L87: 예외 처리 범위입니다: try
+L000087 |                 try ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000088 |                 { ⟦EOL⟧
+// 해설 L89: 비동기 완료를 기다립니다: await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewOffsetFile.LoadLatest(recipe.Id) / 지역 변수를 선언합니다: var latest = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); / 변수의 초기값을 지정합니다: latest = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id))
+L000089 |                     var latest = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); ⟦EOL⟧
+// 해설 L90: 비동기 완료를 기다립니다: await Task.Run(() => BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest) / 지역 변수를 선언합니다: var plan = await Task.Run(() => BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest)); / 변수의 초기값을 지정합니다: plan = await Task.Run(() => BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest))
+L000090 |                     var plan = await Task.Run(() => BuildOffsetApplyPlan(catalog, result, recipe, parameters, latest)); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureLoadedResultUnchanged(sourcePath, recipe.Id)
+L000091 |                     EnsureLoadedResultUnchanged(sourcePath, recipe.Id); ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewDataOffsetApplyPanel(plan) / 지역 변수를 선언합니다: var panel = new CReviewDataOffsetApplyPanel(plan); / 변수의 초기값을 지정합니다: panel = new CReviewDataOffsetApplyPanel(plan)
+L000093 |                     var panel = new CReviewDataOffsetApplyPanel(plan); ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewDataOffsetApplyDialog(panel) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CReviewDataOffsetApplyDialog(panel) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CReviewDataOffsetApplyDialog(panel) { Owner = Application.Current?.MainWindow }
+L000094 |                     var dialog = new CReviewDataOffsetApplyDialog(panel) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000095 |                     { ⟦EOL⟧
+// 해설 L96: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000096 |                         Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000097 |                     }; ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000098 |                     if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000099 |                     { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter("Review Data Offset Apply를 취소했습니다.")
+L000100 |                         _statusReporter("Review Data Offset Apply를 취소했습니다."); ⟦EOL⟧
+// 해설 L101: 호출자에게 값 또는 제어를 반환합니다: return;
+L000101 |                         return; ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000102 |                     } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureLoadedResultUnchanged(sourcePath, recipe.Id)
+L000104 |                     EnsureLoadedResultUnchanged(sourcePath, recipe.Id); ⟦EOL⟧
+// 해설 L105: 비동기 완료를 기다립니다: await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewOffsetFile.LoadLatest(recipe.Id) / 지역 변수를 선언합니다: var current = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); / 변수의 초기값을 지정합니다: current = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id))
+L000105 |                     var current = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: SameOffsetSource(latest, current) / 조건에 따라 분기합니다: if (!SameOffsetSource(latest, current))
+L000106 |                     if (!SameOffsetSource(latest, current)) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000107 |                     { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("팝업을 확인하는 동안 Review Offset 파일이 변경되었습니다. DATA LOAD 상태는 유지되므로 OFFSET APPLY를 다시 열어 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("팝업을 확인하는 동안 Review Offset 파일이 변경되었습니다. DATA LOAD 상태는 유지되므로 OFFSET APPLY를 다시 열어 확인해 주세요.");
+L000108 |                         throw new InvalidOperationException("팝업을 확인하는 동안 Review Offset 파일이 변경되었습니다. DATA LOAD 상태는 유지되므로 OFFSET APPLY를 다시 열어 확인해 주세요."); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000109 |                     } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 비동기 완료를 기다립니다: await _saveReviewOffsetFromResult(recipe.Id, plan.SavedRows, sourcePath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _saveReviewOffsetFromResult(recipe.Id, plan.SavedRows, sourcePath) / 지역 변수를 선언합니다: var saved = await _saveReviewOffsetFromResult(recipe.Id, plan.SavedRows, sourcePath); / 변수의 초기값을 지정합니다: saved = await _saveReviewOffsetFromResult(recipe.Id, plan.SavedRows, sourcePath)
+L000111 |                     var saved = await _saveReviewOffsetFromResult(recipe.Id, plan.SavedRows, sourcePath); ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (saved is null)
+L000112 |                     if (saved is null) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000113 |                     { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter("Review Data Offset Apply: 동일한 검사 결과의 중복 적용을 취소했습니다.")
+L000114 |                         _statusReporter("Review Data Offset Apply: 동일한 검사 결과의 중복 적용을 취소했습니다."); ⟦EOL⟧
+// 해설 L115: 호출자에게 값 또는 제어를 반환합니다: return;
+L000115 |                         return; ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000116 |                     } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 지역 변수를 선언합니다: var message = $"{plan.ApplicationType.Name} / {plan.Rows.Count:N0}개 Shot의 Review Offset을 누적 적용했습니다.\n{saved.FileName}"; / 변수의 초기값을 지정합니다: message = $"{plan.ApplicationType.Name} / {plan.Rows.Count:N0}개 Shot의 Review Offset을 누적 적용했습니다.\n{saved.FileName}"
+L000118 |                     var message = $"{plan.ApplicationType.Name} / {plan.Rows.Count:N0}개 Shot의 Review Offset을 누적 적용했습니다.\n{saved.FileName}"; ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(message.Replace(Environment.NewLine, " ")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: message.Replace(Environment.NewLine, " ")
+L000119 |                     _statusReporter(message.Replace(Environment.NewLine, " ")); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("Review Data Offset Apply 완료", message)
+L000120 |                     CRecipeConfirmDialog.ShowCompletion("Review Data Offset Apply 완료", message); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000121 |                 } ⟦EOL⟧
+// 해설 L122: 지정 예외를 처리합니다: catch (Exception exception)
+L000122 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000123 |                 { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Data Offset Apply: {exception.Message}")
+L000124 |                     _statusReporter($"Review Data Offset Apply: {exception.Message}"); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Review Data Offset Apply 확인", exception.Message)
+L000125 |                     CRecipeConfirmDialog.ShowWarning("Review Data Offset Apply 확인", exception.Message); ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000126 |                 } ⟦EOL⟧
+// 해설 L127: 종료 정리 구간입니다: finally
+L000127 |                 finally ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000128 |                 { ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(false)
+L000129 |                     SetOffsetBusy(false); ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000130 |                 } ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 ShowOffsetApplyDialog.
+L000131 |             } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000133 |             private async Task InitializeReviewOffsets() ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000134 |             { ⟦EOL⟧
+// 해설 L135: 조건에 따라 분기합니다: if (!CanEditOffsets || _loadedRecipe is null || _loadedResultFile is null)
+L000135 |                 if (!CanEditOffsets || _loadedRecipe is null || _loadedResultFile is null) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000136 |                 { ⟦EOL⟧
+// 해설 L137: 호출자에게 값 또는 제어를 반환합니다: return;
+L000137 |                     return; ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000138 |                 } ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 지역 변수를 선언합니다: var sourcePath = _loadedResultFile.FilePath; / 변수의 초기값을 지정합니다: sourcePath = _loadedResultFile.FilePath
+L000140 |                 var sourcePath = _loadedResultFile.FilePath; ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: var recipe = _loadedRecipe; / 변수의 초기값을 지정합니다: recipe = _loadedRecipe
+L000141 |                 var recipe = _loadedRecipe; ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(true)
+L000142 |                 SetOffsetBusy(true); ⟦EOL⟧
+// 해설 L143: 예외 처리 범위입니다: try
+L000143 |                 try ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000144 |                 { ⟦EOL⟧
+// 해설 L145: 비동기 완료를 기다립니다: await Task.Run(() => _reviewManager.CreateAllPlan(recipe, 1).Points .Where(point => point.HeadNo > 0) .ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _reviewManager.CreateAllPlan(recipe, 1).Points .Where(point => point.HeadNo > 0) .ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.CreateAllPlan(recipe, 1).Points .Where(point => point.HeadNo > 0) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.CreateAllPlan(recipe, 1).Points .Where(point => point.HeadNo > 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager
+L000145 |                     var points = await Task.Run(() => _reviewManager.CreateAllPlan(recipe, 1).Points ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000146 |                         .Where(point => point.HeadNo > 0) ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000147 |                         .ToArray()); ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (points.Length == 0)
+L000148 |                     if (points.Length == 0) ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000149 |                     { ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("현재 레시피에 Review Offset을 초기화할 Shot이 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("현재 레시피에 Review Offset을 초기화할 Shot이 없습니다.");
+L000150 |                         throw new InvalidOperationException("현재 레시피에 Review Offset을 초기화할 Shot이 없습니다."); ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000151 |                     } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation( "Review Offset Init", $"현재 레시피: {recipe.Name}\n대상: {points.Select(point => point.CellNo).Distinct().Count():N0} Cells / {points.Length:N0} Shots\n\n기존 Review Offset X/Y를 모두 0.000으로 … / 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation( "Review Offset Init", $"현재 레시피: {recipe.Name}\n대상: {points.Select(point => point.CellNo).Distinct().Count():N0} Cells / {points.Length:N0} Shots\n\n기존 Review Offset X/Y를 모두 0.000으로…)
+L000153 |                     if (!CRecipeConfirmDialog.ShowConfirmation( ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000154 |                             "Review Offset Init", ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(point => point.CellNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(point => point.CellNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(point => point.CellNo)
+L000155 |                             $"현재 레시피: {recipe.Name}\n대상: {points.Select(point => point.CellNo).Distinct().Count():N0} Cells / {points.Length:N0} Shots\n\n기존 Review Offset X/Y를 모두 0.000으로 초기화하시겠습니까?\n새 REVIEW OFFSET 파일을 생성합니다.", ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000156 |                             "초기화", ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000157 |                             useDangerStyle: true)) ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000158 |                     { ⟦EOL⟧
+// 해설 L159: 호출자에게 값 또는 제어를 반환합니다: return;
+L000159 |                         return; ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000160 |                     } ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureLoadedResultUnchanged(sourcePath, recipe.Id)
+L000162 |                     EnsureLoadedResultUnchanged(sourcePath, recipe.Id); ⟦EOL⟧
+// 해설 L163: 비동기 완료를 기다립니다: await Task.Run(async () => { var latest = await _reviewOffsetFile.LoadLatest(recipe.Id); var rows = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); foreach (var row in latest.Rows) { var shot = NormalizeReviewOffs / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(async () => { var latest = await _reviewOffsetFile.LoadLatest(recipe.Id); var rows = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); foreach (var row in latest.Rows) { var shot = NormalizeReview… / 지역 변수를 선언합니다: var saved = await Task.Run(
+L000163 |                     var saved = await Task.Run(async () => ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000164 |                     { ⟦EOL⟧
+// 해설 L165: 비동기 완료를 기다립니다: await _reviewOffsetFile.LoadLatest(recipe.Id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewOffsetFile.LoadLatest(recipe.Id) / 지역 변수를 선언합니다: var latest = await _reviewOffsetFile.LoadLatest(recipe.Id); / 변수의 초기값을 지정합니다: latest = await _reviewOffsetFile.LoadLatest(recipe.Id)
+L000165 |                         var latest = await _reviewOffsetFile.LoadLatest(recipe.Id); ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>() / 지역 변수를 선언합니다: var rows = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); / 변수의 초기값을 지정합니다: rows = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>()
+L000166 |                         var rows = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); ⟦EOL⟧
+// 해설 L167: 컬렉션 요소를 순회합니다: foreach (var row in latest.Rows)
+L000167 |                         foreach (var row in latest.Rows) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000168 |                         { ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewOffsetShotId(row.ShotId) / 지역 변수를 선언합니다: var shot = NormalizeReviewOffsetShotId(row.ShotId); / 변수의 초기값을 지정합니다: shot = NormalizeReviewOffsetShotId(row.ShotId)
+L000169 |                             var shot = NormalizeReviewOffsetShotId(row.ShotId); ⟦EOL⟧
+// 해설 L170: 조건에 따라 분기합니다: if (row.CellId > 0 && shot.Length > 0)
+L000170 |                             if (row.CellId > 0 && shot.Length > 0) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000171 |                             { ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: rows[(row.CellId, shot)] = new ST_REVIEW_OFFSET_ROW(row.CellId, shot, 0.0, 0.0) { IsDesignCoordinate = true } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_ROW(row.CellId, shot, 0.0, 0.0) { IsDesignCoordinate = true }
+L000172 |                                 rows[(row.CellId, shot)] = new ST_REVIEW_OFFSET_ROW(row.CellId, shot, 0.0, 0.0) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000173 |                                 { ⟦EOL⟧
+// 해설 L174: 값을 대상에 대입합니다: IsDesignCoordinate = true
+L000174 |                                     IsDesignCoordinate = true ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000175 |                                 }; ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000176 |                             } ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000177 |                         } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 컬렉션 요소를 순회합니다: foreach (var point in points)
+L000179 |                         foreach (var point in points) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000180 |                         { ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX) / 지역 변수를 선언합니다: var shot = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)); / 변수의 초기값을 지정합니다: shot = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX))
+L000181 |                             var shot = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)); ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: rows[(point.CellNo, shot)] = new ST_REVIEW_OFFSET_ROW(point.CellNo, shot, 0.0, 0.0) { IsDesignCoordinate = true } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_ROW(point.CellNo, shot, 0.0, 0.0) { IsDesignCoordinate = true }
+L000182 |                             rows[(point.CellNo, shot)] = new ST_REVIEW_OFFSET_ROW(point.CellNo, shot, 0.0, 0.0) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000183 |                             { ⟦EOL⟧
+// 해설 L184: 값을 대상에 대입합니다: IsDesignCoordinate = true
+L000184 |                                 IsDesignCoordinate = true ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000185 |                             }; ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000186 |                         } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 비동기 완료를 기다립니다: await _reviewOffsetFile.SaveNew( recipe.Id, rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewOffsetFile.SaveNew( recipe.Id, rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray()) / 호출자에게 값 또는 제어를 반환합니다: return await _reviewOffsetFile.SaveNew( recipe.Id, rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray());
+L000188 |                         return await _reviewOffsetFile.SaveNew( ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000189 |                             recipe.Id, ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId)
+L000190 |                             rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray()); ⟦EOL⟧
+// 해설 L191: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReviewOffsets()
+L000191 |                     }); ⟦EOL⟧
+// 해설 L192: 지역 변수를 선언합니다: var message = $"{points.Length:N0}개 Shot의 Review Offset을 0.000으로 초기화했습니다.\n{saved.FileName}"; / 변수의 초기값을 지정합니다: message = $"{points.Length:N0}개 Shot의 Review Offset을 0.000으로 초기화했습니다.\n{saved.FileName}"
+L000192 |                     var message = $"{points.Length:N0}개 Shot의 Review Offset을 0.000으로 초기화했습니다.\n{saved.FileName}"; ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(message.Replace(Environment.NewLine, " ")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: message.Replace(Environment.NewLine, " ")
+L000193 |                     _statusReporter(message.Replace(Environment.NewLine, " ")); ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("Review Offset Init 완료", message)
+L000194 |                     CRecipeConfirmDialog.ShowCompletion("Review Offset Init 완료", message); ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000195 |                 } ⟦EOL⟧
+// 해설 L196: 지정 예외를 처리합니다: catch (Exception exception)
+L000196 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000197 |                 { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Offset Init: {exception.Message}")
+L000198 |                     _statusReporter($"Review Offset Init: {exception.Message}"); ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Review Offset Init 확인", exception.Message)
+L000199 |                     CRecipeConfirmDialog.ShowWarning("Review Offset Init 확인", exception.Message); ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000200 |                 } ⟦EOL⟧
+// 해설 L201: 종료 정리 구간입니다: finally
+L000201 |                 finally ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000202 |                 { ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(false)
+L000203 |                     SetOffsetBusy(false); ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000204 |                 } ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 InitializeReviewOffsets.
+L000205 |             } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowCurrentReviewOffsets()
+L000207 |             private async Task ShowCurrentReviewOffsets() ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000208 |             { ⟦EOL⟧
+// 해설 L209: 조건에 따라 분기합니다: if (!CanEditOffsets || _loadedRecipe is null || _loadedResultFile is null)
+L000209 |                 if (!CanEditOffsets || _loadedRecipe is null || _loadedResultFile is null) ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000210 |                 { ⟦EOL⟧
+// 해설 L211: 호출자에게 값 또는 제어를 반환합니다: return;
+L000211 |                     return; ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000212 |                 } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 지역 변수를 선언합니다: var sourcePath = _loadedResultFile.FilePath; / 변수의 초기값을 지정합니다: sourcePath = _loadedResultFile.FilePath
+L000214 |                 var sourcePath = _loadedResultFile.FilePath; ⟦EOL⟧
+// 해설 L215: 지역 변수를 선언합니다: var recipe = _loadedRecipe; / 변수의 초기값을 지정합니다: recipe = _loadedRecipe
+L000215 |                 var recipe = _loadedRecipe; ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(true)
+L000216 |                 SetOffsetBusy(true); ⟦EOL⟧
+// 해설 L217: 예외 처리 범위입니다: try
+L000217 |                 try ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000218 |                 { ⟦EOL⟧
+// 해설 L219: 비동기 완료를 기다립니다: await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewOffsetFile.LoadLatest(recipe.Id) / 지역 변수를 선언합니다: var saved = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); / 변수의 초기값을 지정합니다: saved = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id))
+L000219 |                     var saved = await Task.Run(() => _reviewOffsetFile.LoadLatest(recipe.Id)); ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureLoadedResultUnchanged(sourcePath, recipe.Id)
+L000220 |                     EnsureLoadedResultUnchanged(sourcePath, recipe.Id); ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase)
+L000221 |                     var parameters = new Dictionary<string, string>(_loadedParameters, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewOffsetData.ApplyToParameters(parameters, saved)
+L000222 |                     CReviewOffsetData.ApplyToParameters(parameters, saved); ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOutputViewerInt(parameters, 0, "MAX_CELL_NUMBER") / 지역 변수를 선언합니다: var cellCount = ReadOutputViewerInt(parameters, 0, "MAX_CELL_NUMBER"); / 변수의 초기값을 지정합니다: cellCount = ReadOutputViewerInt(parameters, 0, "MAX_CELL_NUMBER")
+L000223 |                     var cellCount = ReadOutputViewerInt(parameters, 0, "MAX_CELL_NUMBER"); ⟦EOL⟧
+// 해설 L224: 조건에 따라 분기합니다: if (cellCount <= 0)
+L000224 |                     if (cellCount <= 0) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000225 |                     { ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("현재 레시피의 MAX_CELL_NUMBER를 확인할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("현재 레시피의 MAX_CELL_NUMBER를 확인할 수 없습니다.");
+L000226 |                         throw new InvalidDataException("현재 레시피의 MAX_CELL_NUMBER를 확인할 수 없습니다."); ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000227 |                     } ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlignOffsetViewerPanel( recipe, parameters, cellNo => BuildOutputViewerGlassPreview(parameters, cellCount, cellNo), reviewOffsets: true) / 지역 변수를 선언합니다: var viewer = new CAlignOffsetViewerPanel( recipe, parameters, cellNo => BuildOutputViewerGlassPreview(parameters, cellCount, cellNo), reviewOffsets: true); / 변수의 초기값을 지정합니다: viewer = new CAlignOffsetViewerPanel( recipe, parameters, cellNo => BuildOutputViewerGlassPreview(parameters, cellCount, cellNo), reviewOffsets: true)
+L000229 |                     var viewer = new CAlignOffsetViewerPanel( ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowCurrentReviewOffsets()
+L000230 |                         recipe, ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowCurrentReviewOffsets()
+L000231 |                         parameters, ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildOutputViewerGlassPreview(parameters, cellCount, cellNo)
+L000232 |                         cellNo => BuildOutputViewerGlassPreview(parameters, cellCount, cellNo), ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowCurrentReviewOffsets()
+L000233 |                         reviewOffsets: true); ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlignOffsetViewerDialog(viewer) { Owner = Application.Current?.MainWindow }.ShowDialog() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlignOffsetViewerDialog(viewer) { Owner = Application.Current?.MainWindow }
+L000234 |                     new CAlignOffsetViewerDialog(viewer) ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000235 |                     { ⟦EOL⟧
+// 해설 L236: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000236 |                         Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ShowCurrentReviewOffsets()
+L000237 |                     }.ShowDialog(); ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000238 |                 } ⟦EOL⟧
+// 해설 L239: 지정 예외를 처리합니다: catch (Exception exception)
+L000239 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000240 |                 { ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Cur Review Offset View: {exception.Message}")
+L000241 |                     _statusReporter($"Cur Review Offset View: {exception.Message}"); ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Cur Review Offset View 확인", exception.Message)
+L000242 |                     CRecipeConfirmDialog.ShowWarning("Cur Review Offset View 확인", exception.Message); ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000243 |                 } ⟦EOL⟧
+// 해설 L244: 종료 정리 구간입니다: finally
+L000244 |                 finally ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000245 |                 { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(false)
+L000246 |                     SetOffsetBusy(false); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000247 |                 } ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 ShowCurrentReviewOffsets.
+L000248 |             } ⟦EOL⟧
+L000249 |  ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000250 |             private ST_REVIEW_OFFSET_APPLY_PLAN BuildOffsetApplyPlan( ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000251 |                 ST_REVIEW_RESULT_CATALOG_ITEM catalog, ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000252 |                 ST_REVIEW_RESULT_FILE_DATA result, ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000253 |                 ST_RECIPE_DEFINITION recipe, ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000254 |                 IReadOnlyDictionary<string, string> parameters, ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000255 |                 ST_REVIEW_OFFSET_FILE_DATA latest) ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000256 |             { ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: catalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!catalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase) || !result.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase))
+L000257 |                 if (!catalog.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase)
+L000258 |                     || !result.ResultStatus.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000259 |                 { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("COMPLETED 상태의 검사 결과만 Offset에 적용할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("COMPLETED 상태의 검사 결과만 Offset에 적용할 수 있습니다.");
+L000260 |                     throw new InvalidOperationException("COMPLETED 상태의 검사 결과만 Offset에 적용할 수 있습니다."); ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000261 |                 } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Rows.Select(row => row.BeamNo).FirstOrDefault(value => value > 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Rows.Select(row => row.BeamNo) / 조건에 따라 결과식을 선택합니다: result.BeamNo > 0 ? result.BeamNo : result.Rows.Select(row => row.BeamNo).FirstOrDefault(value => value > 0) / 지역 변수를 선언합니다: var beamNo = result.BeamNo > 0 ? result.BeamNo : result.Rows.Select(row => row.BeamNo).FirstOrDefault(value => value > 0); / 변수의 초기값을 지정합니다: beamNo = result.BeamNo > 0 ? result.BeamNo : result.Rows.Select(row => row.BeamNo).Fir
+L000263 |                 var beamNo = result.BeamNo > 0 ? result.BeamNo : result.Rows.Select(row => row.BeamNo).FirstOrDefault(value => value > 0); ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: beamNo = Math.Max(1, beamNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, beamNo)
+L000264 |                 beamNo = Math.Max(1, beamNo); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.CreateAllPlan(recipe, beamNo) / 지역 변수를 선언합니다: var allPlan = _reviewManager.CreateAllPlan(recipe, beamNo); / 변수의 초기값을 지정합니다: allPlan = _reviewManager.CreateAllPlan(recipe, beamNo)
+L000265 |                 var allPlan = _reviewManager.CreateAllPlan(recipe, beamNo); ⟦EOL⟧
+// 해설 L266: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000266 |                 // Match AUTO FINE: excluded MASKING/CHESS shots stay visible in the map, ⟦EOL⟧
+// 해설 L267: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000267 |                 // but never receive an interpolated Review Offset. ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: allPlan.Points.Where(point => point.HeadNo > 0 && point.Use).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: allPlan.Points.Where(point => point.HeadNo > 0 && point.Use) / 지역 변수를 선언합니다: var allPoints = allPlan.Points.Where(point => point.HeadNo > 0 && point.Use).ToArray(); / 변수의 초기값을 지정합니다: allPoints = allPlan.Points.Where(point => point.HeadNo > 0 && point.Use).ToArray()
+L000268 |                 var allPoints = allPlan.Points.Where(point => point.HeadNo > 0 && point.Use).ToArray(); ⟦EOL⟧
+// 해설 L269: 조건에 따라 분기합니다: if (allPoints.Length == 0)
+L000269 |                 if (allPoints.Length == 0) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000270 |                 { ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("현재 레시피에 Head가 배정된 Shot이 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("현재 레시피에 Head가 배정된 Shot이 없습니다.");
+L000271 |                     throw new InvalidOperationException("현재 레시피에 Head가 배정된 Shot이 없습니다."); ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000272 |                 } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildPointLookup(allPoints) / 지역 변수를 선언합니다: var pointLookup = BuildPointLookup(allPoints); / 변수의 초기값을 지정합니다: pointLookup = BuildPointLookup(allPoints)
+L000274 |                 var pointLookup = BuildPointLookup(allPoints); ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: catalog.ResultType.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: catalog.ResultType.Trim() / 지역 변수를 선언합니다: var resultType = catalog.ResultType.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: resultType = catalog.ResultType.Trim().ToUpperInvariant()
+L000275 |                 var resultType = catalog.ResultType.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateApplicationType(resultType, result) / 지역 변수를 선언합니다: var applicationType = CreateApplicationType(resultType, result); / 변수의 초기값을 지정합니다: applicationType = CreateApplicationType(resultType, result)
+L000276 |                 var applicationType = CreateApplicationType(resultType, result); ⟦EOL⟧
+// 해설 L277: 지역 변수를 선언합니다: IReadOnlyList<ST_REVIEW_OFFSET_DELTA> deltas = resultType switch { "ALL_SHOT" or "ONE_SHOT" => BuildDirectDeltas(result.Rows, pointLookup), "ROUGH" => BuildRoughDeltas(result, allPoints, pointLookup), "FINE" or "AUTO" => BuildFine / 값별 결과식을 선택합니다: resultType switch { "ALL_SHOT" or "ONE_SHOT" => BuildDirectDeltas(result.Rows, pointLookup), "ROUGH" => BuildRoughDeltas(result, allPoints, pointLookup), "FINE" or "AUTO" => BuildFineDeltas(result, allPoints, pointLookup), _ => th / 변수의 초기값을 지정합니다: deltas = resultType switch {
+L000277 |                 IReadOnlyList<ST_REVIEW_OFFSET_DELTA> deltas = resultType switch ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000278 |                 { ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildDirectDeltas(result.Rows, pointLookup)
+L000279 |                     "ALL_SHOT" or "ONE_SHOT" => BuildDirectDeltas(result.Rows, pointLookup), ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildRoughDeltas(result, allPoints, pointLookup)
+L000280 |                     "ROUGH" => BuildRoughDeltas(result, allPoints, pointLookup), ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildFineDeltas(result, allPoints, pointLookup)
+L000281 |                     "FINE" or "AUTO" => BuildFineDeltas(result, allPoints, pointLookup), ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{catalog.ResultType} 결과는 Review Offset 적용을 지원하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{catalog.ResultType} 결과는 Review Offset 적용을 지원하지 않습니다.")
+L000282 |                     _ => throw new InvalidOperationException($"{catalog.ResultType} 결과는 Review Offset 적용을 지원하지 않습니다.") ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000283 |                 }; ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (deltas.Count == 0)
+L000284 |                 if (deltas.Count == 0) ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000285 |                 { ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("검사 결과에서 Offset을 적용할 수 있는 OK Shot을 찾지 못했습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("검사 결과에서 Offset을 적용할 수 있는 OK Shot을 찾지 못했습니다.");
+L000286 |                     throw new InvalidOperationException("검사 결과에서 Offset을 적용할 수 있는 OK Shot을 찾지 못했습니다."); ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000287 |                 } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>() / 지역 변수를 선언합니다: var latestByKey = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); / 변수의 초기값을 지정합니다: latestByKey = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>()
+L000289 |                 var latestByKey = new Dictionary<(int Cell, string Shot), ST_REVIEW_OFFSET_ROW>(); ⟦EOL⟧
+// 해설 L290: 컬렉션 요소를 순회합니다: foreach (var row in latest.Rows)
+L000290 |                 foreach (var row in latest.Rows) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000291 |                 { ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewOffsetShotId(row.ShotId) / 지역 변수를 선언합니다: var shot = NormalizeReviewOffsetShotId(row.ShotId); / 변수의 초기값을 지정합니다: shot = NormalizeReviewOffsetShotId(row.ShotId)
+L000292 |                     var shot = NormalizeReviewOffsetShotId(row.ShotId); ⟦EOL⟧
+// 해설 L293: 조건에 따라 분기합니다: if (row.CellId > 0 && shot.Length > 0)
+L000293 |                     if (row.CellId > 0 && shot.Length > 0) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000294 |                     { ⟦EOL⟧
+// 해설 L295: 값을 대상에 대입합니다: latestByKey[(row.CellId, shot)] = row with { ShotId = shot } / 값을 대상에 대입합니다: ShotId = shot
+L000295 |                         latestByKey[(row.CellId, shot)] = row with { ShotId = shot }; ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000296 |                     } ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000297 |                 } ⟦EOL⟧
+L000298 |  ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_OFFSET_APPLY_GRID_ROW>(deltas.Count) / 지역 변수를 선언합니다: var displayRows = new List<ST_REVIEW_OFFSET_APPLY_GRID_ROW>(deltas.Count); / 변수의 초기값을 지정합니다: displayRows = new List<ST_REVIEW_OFFSET_APPLY_GRID_ROW>(deltas.Count)
+L000299 |                 var displayRows = new List<ST_REVIEW_OFFSET_APPLY_GRID_ROW>(deltas.Count); ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<(int Cell, string Shot)>() / 지역 변수를 선언합니다: var seen = new HashSet<(int Cell, string Shot)>(); / 변수의 초기값을 지정합니다: seen = new HashSet<(int Cell, string Shot)>()
+L000300 |                 var seen = new HashSet<(int Cell, string Shot)>(); ⟦EOL⟧
+// 해설 L301: 컬렉션 요소를 순회합니다: foreach (var delta in deltas)
+L000301 |                 foreach (var delta in deltas) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000302 |                 { ⟦EOL⟧
+// 해설 L303: 지역 변수를 선언합니다: var point = delta.Point; / 변수의 초기값을 지정합니다: point = delta.Point
+L000303 |                     var point = delta.Point; ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX) / 지역 변수를 선언합니다: var shotName = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)); / 변수의 초기값을 지정합니다: shotName = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX))
+L000304 |                     var shotName = NormalizeReviewOffsetShotId(CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)); ⟦EOL⟧
+// 해설 L305: 지역 변수를 선언합니다: var key = (point.CellNo, shotName); / 변수의 초기값을 지정합니다: key = (point.CellNo, shotName)
+L000305 |                     var key = (point.CellNo, shotName); ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: seen.Add(key) / 조건에 따라 분기합니다: if (!seen.Add(key))
+L000306 |                     if (!seen.Add(key)) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000307 |                     { ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Offset 적용 대상 Shot이 중복되었습니다: CELL{point.CellNo:00}_{shotName}") / 예외를 발생/전달합니다: throw new InvalidDataException($"Offset 적용 대상 Shot이 중복되었습니다: CELL{point.CellNo:00}_{shotName}");
+L000308 |                         throw new InvalidDataException($"Offset 적용 대상 Shot이 중복되었습니다: CELL{point.CellNo:00}_{shotName}"); ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000309 |                     } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: latestByKey.GetValueOrDefault(key) / 지역 변수를 선언합니다: var previous = latestByKey.GetValueOrDefault(key); / 변수의 초기값을 지정합니다: previous = latestByKey.GetValueOrDefault(key)
+L000311 |                     var previous = latestByKey.GetValueOrDefault(key); ⟦EOL⟧
+// 해설 L312: 조건에 따라 결과식을 선택합니다: previous is null ? (X: 0.0, Y: 0.0) : CReviewOffsetData.ToDesign(parameters, point.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate) / 지역 변수를 선언합니다: var current = previous is null ? (X: 0.0, Y: 0.0) : CReviewOffsetData.ToDesign(parameters, point.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate); / 변수의 초기값을 지정합니다: current = previous is null ? (X: 0.0, Y: 0.0) : CReviewOffsetData.ToDesign(parameters, point.HeadNo, previous.ReviewOffsetX, previous.Re
+L000312 |                     var current = previous is null ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000313 |                         ? (X: 0.0, Y: 0.0) ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewOffsetData.ToDesign(parameters, point.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate)
+L000314 |                         : CReviewOffsetData.ToDesign(parameters, point.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate); ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.RoundValue(current.X + delta.X) / 지역 변수를 선언합니다: var finalX = CAlignShotOffsetData.RoundValue(current.X + delta.X); / 변수의 초기값을 지정합니다: finalX = CAlignShotOffsetData.RoundValue(current.X + delta.X)
+L000315 |                     var finalX = CAlignShotOffsetData.RoundValue(current.X + delta.X); ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.RoundValue(current.Y + delta.Y) / 지역 변수를 선언합니다: var finalY = CAlignShotOffsetData.RoundValue(current.Y + delta.Y); / 변수의 초기값을 지정합니다: finalY = CAlignShotOffsetData.RoundValue(current.Y + delta.Y)
+L000316 |                     var finalY = CAlignShotOffsetData.RoundValue(current.Y + delta.Y); ⟦EOL⟧
+// 해설 L317: 값을 대상에 대입합니다: latestByKey[key] = new ST_REVIEW_OFFSET_ROW(point.CellNo, shotName, finalX, finalY) { IsDesignCoordinate = true } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_ROW(point.CellNo, shotName, finalX, finalY) { IsDesignCoordinate = true }
+L000317 |                     latestByKey[key] = new ST_REVIEW_OFFSET_ROW(point.CellNo, shotName, finalX, finalY) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000318 |                     { ⟦EOL⟧
+// 해설 L319: 값을 대상에 대입합니다: IsDesignCoordinate = true
+L000319 |                         IsDesignCoordinate = true ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000320 |                     }; ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: displayRows.Add(new ST_REVIEW_OFFSET_APPLY_GRID_ROW( point.HeadNo, point.CellNo, shotName, point.ShotKey, current.X, current.Y, delta.X, delta.Y, finalX, finalY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_APPLY_GRID_ROW( point.HeadNo, point.CellNo, shotName, point.ShotKey, current.X, current.Y, delta.X, delta.Y, finalX, finalY)
+L000321 |                     displayRows.Add(new ST_REVIEW_OFFSET_APPLY_GRID_ROW( ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000322 |                         point.HeadNo, ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000323 |                         point.CellNo, ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000324 |                         shotName, ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000325 |                         point.ShotKey, ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000326 |                         current.X, ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000327 |                         current.Y, ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000328 |                         delta.X, ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000329 |                         delta.Y, ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000330 |                         finalX, ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000331 |                         finalY)); ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000332 |                 } ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: displayRows .OrderBy(row => row.CellNo) .ThenBy(row => row.ShotName, CReviewShotNameComparer.Instance) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: displayRows .OrderBy(row => row.CellNo) .ThenBy(row => row.ShotName, CReviewShotNameComparer.Instance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: displayRows .OrderBy(row => row.CellNo) / 지역 변수를 선언합니다: var orderedRows = displayRows .OrderBy(row => row.CellNo) .ThenBy(row => row.ShotName, CReviewShotNameComparer.Instance) .ToArray(); / 변수의 초기값을 지정합니다: orderedRows = displayRows .Orde
+L000334 |                 var orderedRows = displayRows ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000335 |                     .OrderBy(row => row.CellNo) ⟦EOL⟧
+// 해설 L336: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000336 |                     .ThenBy(row => row.ShotName, CReviewShotNameComparer.Instance) ⟦EOL⟧
+// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000337 |                     .ToArray(); ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: orderedRows.Select(row => row.CellNo).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: orderedRows.Select(row => row.CellNo) / 지역 변수를 선언합니다: var targetCells = orderedRows.Select(row => row.CellNo).ToHashSet(); / 변수의 초기값을 지정합니다: targetCells = orderedRows.Select(row => row.CellNo).ToHashSet()
+L000338 |                 var targetCells = orderedRows.Select(row => row.CellNo).ToHashSet(); ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: orderedRows.Select(row => NormalizeReviewShotKey(row.ShotKey, row.CellNo)).ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: orderedRows.Select(row => NormalizeReviewShotKey(row.ShotKey, row.CellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(row.ShotKey, row.CellNo) / 지역 변수를 선언합니다: var targetKeys = orderedRows.Select(row => NormalizeReviewShotKey(row.ShotKey, row.CellNo)).ToHashSet(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: targetKeys = orderedRows.Select(row => Nor
+L000339 |                 var targetKeys = orderedRows.Select(row => NormalizeReviewShotKey(row.ShotKey, row.CellNo)).ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, IReadOnlyList<ST_REVIEW_DATA_SHOT_POSITION>>() / 지역 변수를 선언합니다: var shotsByCell = new Dictionary<int, IReadOnlyList<ST_REVIEW_DATA_SHOT_POSITION>>(); / 변수의 초기값을 지정합니다: shotsByCell = new Dictionary<int, IReadOnlyList<ST_REVIEW_DATA_SHOT_POSITION>>()
+L000340 |                 var shotsByCell = new Dictionary<int, IReadOnlyList<ST_REVIEW_DATA_SHOT_POSITION>>(); ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: targetCells.Order() / 컬렉션 요소를 순회합니다: foreach (var cellNo in targetCells.Order())
+L000341 |                 foreach (var cellNo in targetCells.Order()) ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000342 |                 { ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: allPlan.GetCellPoints(cellNo) .Select(point => new ST_REVIEW_DATA_SHOT_POSITION( point.ShotKey, point.CellNo, point.ShotNo, (point.ShotNo - 1) % Math.Max(1, point.PixelCountX), (point.ShotNo - 1) / Math.Max(1, point.Pixe… / 함수·델리게이트 또는 객체 생성자를 호출합니다: allPlan.GetCellPoints(cellNo) / 지역 변수를 선언합니다: var shots = allPlan.GetCellPoints(cellNo) .Select(point => new ST_REVIEW_DATA_SHOT_POSITION( point.ShotKey, point.CellNo, point.ShotNo, (point.ShotNo - 1) % Math.Max(1, point.PixelCountX), (point.ShotNo - 1) / Math.M
+L000343 |                     var shots = allPlan.GetCellPoints(cellNo) ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_SHOT_POSITION( point.ShotKey, point.CellNo, point.ShotNo, (point.ShotNo - 1) % Math.Max(1, point.PixelCountX), (point.ShotNo - 1) / Math.Max(1, point.PixelCountX), Math.Max(1, point.PixelCountX), Math.…
+L000344 |                         .Select(point => new ST_REVIEW_DATA_SHOT_POSITION( ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000345 |                             point.ShotKey, ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000346 |                             point.CellNo, ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000347 |                             point.ShotNo, ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountX)
+L000348 |                             (point.ShotNo - 1) % Math.Max(1, point.PixelCountX), ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountX)
+L000349 |                             (point.ShotNo - 1) / Math.Max(1, point.PixelCountX), ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountX)
+L000350 |                             Math.Max(1, point.PixelCountX), ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountY)
+L000351 |                             Math.Max(1, point.PixelCountY), ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000352 |                             true) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000353 |                         { ⟦EOL⟧
+// 해설 L354: 값을 대상에 대입합니다: HeadNo = point.HeadNo
+L000354 |                             HeadNo = point.HeadNo, ⟦EOL⟧
+// 해설 L355: 값을 대상에 대입합니다: IsResult = targetKeys.Contains(NormalizeReviewShotKey(point.ShotKey, point.CellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targetKeys.Contains(NormalizeReviewShotKey(point.ShotKey, point.CellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(point.ShotKey, point.CellNo)
+L000355 |                             IsResult = targetKeys.Contains(NormalizeReviewShotKey(point.ShotKey, point.CellNo)), ⟦EOL⟧
+// 해설 L356: 값을 대상에 대입합니다: IsMasked = point.ExclusionReason.Contains("MASKING", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ExclusionReason.Contains("MASKING", StringComparison.OrdinalIgnoreCase)
+L000356 |                             IsMasked = point.ExclusionReason.Contains("MASKING", StringComparison.OrdinalIgnoreCase), ⟦EOL⟧
+// 해설 L357: 값을 대상에 대입합니다: IsChessSkipped = point.ExclusionReason.Contains("CHESS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ExclusionReason.Contains("CHESS", StringComparison.OrdinalIgnoreCase)
+L000357 |                             IsChessSkipped = point.ExclusionReason.Contains("CHESS", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000358 |                         }) ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000359 |                         .ToArray(); ⟦EOL⟧
+// 해설 L360: 값을 대상에 대입합니다: shotsByCell[cellNo] = shots
+L000360 |                     shotsByCell[cellNo] = shots; ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000361 |                 } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_APPLY_PLAN( applicationType, result.FileName, recipe.Name, new Dictionary<string, string>(parameters, StringComparer.OrdinalIgnoreCase), ReadOutputViewerInt(parameters, allPlan.CellCount, "MAX_CELL_N… / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_APPLY_PLAN( applicationType, result.FileName, recipe.Name, new Dictionary<string, string>(parameters, StringComparer.OrdinalIgnoreCase), ReadOutputViewerInt(parameters, allPlan.CellCount, "MAX_CELL_NUMB
+L000363 |                 return new ST_REVIEW_OFFSET_APPLY_PLAN( ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000364 |                     applicationType, ⟦EOL⟧
+// 해설 L365: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000365 |                     result.FileName, ⟦EOL⟧
+// 해설 L366: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000366 |                     recipe.Name, ⟦EOL⟧
+// 해설 L367: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(parameters, StringComparer.OrdinalIgnoreCase)
+L000367 |                     new Dictionary<string, string>(parameters, StringComparer.OrdinalIgnoreCase), ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOutputViewerInt(parameters, allPlan.CellCount, "MAX_CELL_NUMBER")
+L000368 |                     ReadOutputViewerInt(parameters, allPlan.CellCount, "MAX_CELL_NUMBER"), ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000369 |                     targetCells, ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000370 |                     shotsByCell, ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildOffsetApplyPlan(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, Drilling.Com
+L000371 |                     orderedRows, ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: latestByKey.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: latestByKey.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: latestByKey.Values.OrderBy(row => row.CellId)
+L000372 |                     latestByKey.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).ToArray()); ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 BuildOffsetApplyPlan.
+L000373 |             } ⟦EOL⟧
+L000374 |  ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000375 |             private static IReadOnlyList<ST_REVIEW_OFFSET_DELTA> BuildDirectDeltas( ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000376 |                 IReadOnlyList<ST_REVIEW_RESULT_FILE_ROW> rows, ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000377 |                 IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> pointLookup) ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 BuildDirectDeltas.
+L000378 |             { ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(rows) .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) .Select(row => { var point = ResolveResultPoint(row, pointLookup); return new ST_REVIEW_OFFSET_DELTA(point, row.ErrorX, row.Err… / 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(rows) .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(rows) / 호출자에게 값 또는 제어를 반환합니다: return MeasuredRows(rows) .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase
+L000379 |                 return MeasuredRows(rows) ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)
+L000380 |                     .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000381 |                     .Select(row => ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 BuildDirectDeltas.
+L000382 |                     { ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultPoint(row, pointLookup) / 지역 변수를 선언합니다: var point = ResolveResultPoint(row, pointLookup); / 변수의 초기값을 지정합니다: point = ResolveResultPoint(row, pointLookup)
+L000383 |                         var point = ResolveResultPoint(row, pointLookup); ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_DELTA(point, row.ErrorX, row.ErrorY) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_DELTA(point, row.ErrorX, row.ErrorY);
+L000384 |                         return new ST_REVIEW_OFFSET_DELTA(point, row.ErrorX, row.ErrorY); ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000385 |                     }) ⟦EOL⟧
+// 해설 L386: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildDirectDeltas(System.Collecti
+L000386 |                     .ToArray(); ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 BuildDirectDeltas.
+L000387 |             } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000389 |             private static IReadOnlyList<ST_REVIEW_OFFSET_DELTA> BuildRoughDeltas( ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000390 |                 ST_REVIEW_RESULT_FILE_DATA result, ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000391 |                 IReadOnlyList<ST_REVIEW_PLAN_POINT> allPoints, ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000392 |                 IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> pointLookup) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000393 |             { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RuleScope.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RuleScope.Trim() / 지역 변수를 선언합니다: var scope = result.RuleScope.Trim().ToUpperInvariant() switch { "HEAD" => EN_REVIEW_CORRECTION_SCOPE.Head, "HEAD_CELL" => EN_REVIEW_CORRECTION_SCOPE.HeadCell, _ => throw new InvalidDataException("ROUGH 결과의 RULE_SCOPE가 HEAD 또는 HEAD / 값별 결과식을 선택합니다: result.RuleScope.Trim().ToUpperInvariant() switch { "HEAD" => EN_REVIEW_CORRECTION_SCOPE.Head, "HEAD_CELL" => EN_REVIEW_CORRECTION_SCOPE.HeadCell, _ => t
+L000394 |                 var scope = result.RuleScope.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000395 |                 { ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000396 |                     "HEAD" => EN_REVIEW_CORRECTION_SCOPE.Head, ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000397 |                     "HEAD_CELL" => EN_REVIEW_CORRECTION_SCOPE.HeadCell, ⟦EOL⟧
+// 해설 L398: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("ROUGH 결과의 RULE_SCOPE가 HEAD 또는 HEAD_CELL이 아닙니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("ROUGH 결과의 RULE_SCOPE가 HEAD 또는 HEAD_CELL이 아닙니다.")
+L000398 |                     _ => throw new InvalidDataException("ROUGH 결과의 RULE_SCOPE가 HEAD 또는 HEAD_CELL이 아닙니다.") ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000399 |                 }; ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(result.Rows) .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) .Select(row => { var point = ResolveResultPoint(row, pointLookup); return point with { Use = true, ErrorX = row.ErrorX, … / 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(result.Rows) .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(result.Rows) / 지역 변수를 선언합니다: var measured = MeasuredRows(result.Rows) .Where(row => row.Judge.Equals("OK", StringCompari
+L000400 |                 var measured = MeasuredRows(result.Rows) ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)
+L000401 |                     .Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000402 |                     .Select(row => ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000403 |                     { ⟦EOL⟧
+// 해설 L404: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultPoint(row, pointLookup) / 지역 변수를 선언합니다: var point = ResolveResultPoint(row, pointLookup); / 변수의 초기값을 지정합니다: point = ResolveResultPoint(row, pointLookup)
+L000404 |                         var point = ResolveResultPoint(row, pointLookup); ⟦EOL⟧
+// 해설 L405: 호출자에게 값 또는 제어를 반환합니다: return point with { Use = true, ErrorX = row.ErrorX, ErrorY = row.ErrorY, State = EN_REVIEW_POINT_STATE.Ok, Judge = "OK" };
+L000405 |                         return point with ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000406 |                         { ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: Use = true
+L000407 |                             Use = true, ⟦EOL⟧
+// 해설 L408: 값을 대상에 대입합니다: ErrorX = row.ErrorX
+L000408 |                             ErrorX = row.ErrorX, ⟦EOL⟧
+// 해설 L409: 값을 대상에 대입합니다: ErrorY = row.ErrorY
+L000409 |                             ErrorY = row.ErrorY, ⟦EOL⟧
+// 해설 L410: 값을 대상에 대입합니다: State = EN_REVIEW_POINT_STATE.Ok
+L000410 |                             State = EN_REVIEW_POINT_STATE.Ok, ⟦EOL⟧
+// 해설 L411: 값을 대상에 대입합니다: Judge = "OK"
+L000411 |                             Judge = "OK" ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000412 |                         }; ⟦EOL⟧
+// 해설 L413: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000413 |                     }) ⟦EOL⟧
+// 해설 L414: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000414 |                     .ToArray(); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: measured .GroupBy(point => scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell ? (point.HeadNo, point.CellNo) : (point.HeadNo, 0)) .FirstOrDefault(group => group.Count() > 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: measured .GroupBy(point => scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell ? (point.HeadNo, point.CellNo) : (point.HeadNo, 0)) / 지역 변수를 선언합니다: var duplicateScope = measured .GroupBy(point => scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell ? (point.HeadNo, point.CellNo) : (point.HeadNo, 0)) .FirstOrDefault(group => group.
+L000415 |                 var duplicateScope = measured ⟦EOL⟧
+// 해설 L416: 조건에 따라 결과식을 선택합니다: scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell ? (point.HeadNo, point.CellNo) : (point.HeadNo, 0)
+L000416 |                     .GroupBy(point => scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell ? (point.HeadNo, point.CellNo) : (point.HeadNo, 0)) ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Count()
+L000417 |                     .FirstOrDefault(group => group.Count() > 1); ⟦EOL⟧
+// 해설 L418: 조건에 따라 분기합니다: if (duplicateScope is not null)
+L000418 |                 if (duplicateScope is not null) ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000419 |                 { ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"ROUGH 결과에 같은 적용 범위의 측정값이 중복되었습니다: H{duplicateScope.Key.HeadNo:00} / CELL {duplicateScope.Key.Item2:00}") / 예외를 발생/전달합니다: throw new InvalidDataException($"ROUGH 결과에 같은 적용 범위의 측정값이 중복되었습니다: H{duplicateScope.Key.HeadNo:00} / CELL {duplicateScope.Key.Item2:00}");
+L000420 |                     throw new InvalidDataException($"ROUGH 결과에 같은 적용 범위의 측정값이 중복되었습니다: H{duplicateScope.Key.HeadNo:00} / CELL {duplicateScope.Key.Item2:00}"); ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000421 |                 } ⟦EOL⟧
+L000422 |  ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_CORRECTION_PLAN(EN_REVIEW_CORRECTION_RULE.Rough, scope, allPoints) / 지역 변수를 선언합니다: var correctionPlan = new ST_REVIEW_CORRECTION_PLAN(EN_REVIEW_CORRECTION_RULE.Rough, scope, allPoints); / 변수의 초기값을 지정합니다: correctionPlan = new ST_REVIEW_CORRECTION_PLAN(EN_REVIEW_CORRECTION_RULE.Rough, scope, allPoints)
+L000423 |                 var correctionPlan = new ST_REVIEW_CORRECTION_PLAN(EN_REVIEW_CORRECTION_RULE.Rough, scope, allPoints); ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_PLAN("OFFSET_PREVIEW", 0, 0, 0, EN_VISION_FLIP_TYPE.Normal, DateTimeOffset.Now, measured) { CorrectionPlan = correctionPlan } / 지역 변수를 선언합니다: var plan = new ST_REVIEW_PLAN("OFFSET_PREVIEW", 0, 0, 0, EN_VISION_FLIP_TYPE.Normal, DateTimeOffset.Now, measured) { CorrectionPlan = correctionPlan }; / 변수의 초기값을 지정합니다: plan = new ST_REVIEW_PLAN("OFFSET_PREVIEW", 0, 0, 0, EN_VISION_FLIP_TYPE.Normal, DateTimeOffset.Now, measured) { CorrectionPlan = correctionPlan }
+L000424 |                 var plan = new ST_REVIEW_PLAN("OFFSET_PREVIEW", 0, 0, 0, EN_VISION_FLIP_TYPE.Normal, DateTimeOffset.Now, measured) ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000425 |                 { ⟦EOL⟧
+// 해설 L426: 값을 대상에 대입합니다: CorrectionPlan = correctionPlan
+L000426 |                     CorrectionPlan = correctionPlan ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000427 |                 }; ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.ProjectCorrectionRows(plan, measured) .Select(point => new ST_REVIEW_OFFSET_DELTA(point, point.ErrorX, point.ErrorY)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.ProjectCorrectionRows(plan, measured) .Select(point => new ST_REVIEW_OFFSET_DELTA(point, point.ErrorX, point.ErrorY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.ProjectCorrectionRows(plan, measured) / 호출자에게 값 또는 제어를 반환합니다: return CReviewManager.ProjectCorrectionRows(plan, measured) .Select(point => new ST_REVIEW_OFFSET_DEL
+L000428 |                 return CReviewManager.ProjectCorrectionRows(plan, measured) ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_DELTA(point, point.ErrorX, point.ErrorY)
+L000429 |                     .Select(point => new ST_REVIEW_OFFSET_DELTA(point, point.ErrorX, point.ErrorY)) ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildRoughDeltas(Drilling.Common.
+L000430 |                     .ToArray(); ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 BuildRoughDeltas.
+L000431 |             } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000433 |             private static IReadOnlyList<ST_REVIEW_OFFSET_DELTA> BuildFineDeltas( ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000434 |                 ST_REVIEW_RESULT_FILE_DATA result, ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000435 |                 IReadOnlyList<ST_REVIEW_PLAN_POINT> allPoints, ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000436 |                 IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> pointLookup) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000437 |             { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(result.Rows).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: MeasuredRows(result.Rows) / 지역 변수를 선언합니다: var measuredRows = MeasuredRows(result.Rows).ToArray(); / 변수의 초기값을 지정합니다: measuredRows = MeasuredRows(result.Rows).ToArray()
+L000438 |                 var measuredRows = MeasuredRows(result.Rows).ToArray(); ⟦EOL⟧
+// 해설 L439: 함수·델리게이트 또는 객체 생성자를 호출합니다: measuredRows.Any(row => !row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (measuredRows.Any(row => !row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)))
+L000439 |                 if (measuredRows.Any(row => !row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase))) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000440 |                 { ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("FINE/AUTO 측정 결과에 NG 또는 비정상 상태가 있어 전체 Offset을 적용할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("FINE/AUTO 측정 결과에 NG 또는 비정상 상태가 있어 전체 Offset을 적용할 수 없습니다.");
+L000441 |                     throw new InvalidOperationException("FINE/AUTO 측정 결과에 NG 또는 비정상 상태가 있어 전체 Offset을 적용할 수 없습니다."); ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000442 |                 } ⟦EOL⟧
+L000443 |  ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: measuredRows.Select(row => { var point = ResolveResultPoint(row, pointLookup); return point with { Use = true, ErrorX = row.ErrorX, ErrorY = row.ErrorY, State = EN_REVIEW_POINT_STATE.Ok, Judge = "OK" }; }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: measuredRows.Select(row => { var point = ResolveResultPoint(row, pointLookup); return point with { Use = true, ErrorX = row.ErrorX, ErrorY = row.ErrorY, State = EN_REVIEW_POINT_STATE.Ok, Judge = "OK" }; }) / 지역 변수를 선언합니다: var measurements = measuredRows.Select(row =>
+L000444 |                 var measurements = measuredRows.Select(row => ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000445 |                 { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultPoint(row, pointLookup) / 지역 변수를 선언합니다: var point = ResolveResultPoint(row, pointLookup); / 변수의 초기값을 지정합니다: point = ResolveResultPoint(row, pointLookup)
+L000446 |                     var point = ResolveResultPoint(row, pointLookup); ⟦EOL⟧
+// 해설 L447: 호출자에게 값 또는 제어를 반환합니다: return point with { Use = true, ErrorX = row.ErrorX, ErrorY = row.ErrorY, State = EN_REVIEW_POINT_STATE.Ok, Judge = "OK" };
+L000447 |                     return point with ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000448 |                     { ⟦EOL⟧
+// 해설 L449: 값을 대상에 대입합니다: Use = true
+L000449 |                         Use = true, ⟦EOL⟧
+// 해설 L450: 값을 대상에 대입합니다: ErrorX = row.ErrorX
+L000450 |                         ErrorX = row.ErrorX, ⟦EOL⟧
+// 해설 L451: 값을 대상에 대입합니다: ErrorY = row.ErrorY
+L000451 |                         ErrorY = row.ErrorY, ⟦EOL⟧
+// 해설 L452: 값을 대상에 대입합니다: State = EN_REVIEW_POINT_STATE.Ok
+L000452 |                         State = EN_REVIEW_POINT_STATE.Ok, ⟦EOL⟧
+// 해설 L453: 값을 대상에 대입합니다: Judge = "OK"
+L000453 |                         Judge = "OK" ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000454 |                     }; ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000455 |                 }).ToArray(); ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CalculateFineOffsets(allPoints, measurements, EN_VISION_FLIP_TYPE.Normal) .Select(delta => new ST_REVIEW_OFFSET_DELTA(delta.Shot, delta.X, delta.Y)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CalculateFineOffsets(allPoints, measurements, EN_VISION_FLIP_TYPE.Normal) .Select(delta => new ST_REVIEW_OFFSET_DELTA(delta.Shot, delta.X, delta.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CalculateFineOffsets(allPoints, measurements, EN_VISION_FLIP_TYPE.Normal) / 호출자에게 값 또는 제어를 반환합니다: ret
+L000456 |                 return CReviewManager.CalculateFineOffsets(allPoints, measurements, EN_VISION_FLIP_TYPE.Normal) ⟦EOL⟧
+// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_DELTA(delta.Shot, delta.X, delta.Y)
+L000457 |                     .Select(delta => new ST_REVIEW_OFFSET_DELTA(delta.Shot, delta.X, delta.Y)) ⟦EOL⟧
+// 해설 L458: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ST_REVIEW_OFFSET_DELTA> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildFineDeltas(Drilling.Common.R
+L000458 |                     .ToArray(); ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 BuildFineDeltas.
+L000459 |             } ⟦EOL⟧
+L000460 |  ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_REVIEW_RESULT_FILE_ROW> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.MeasuredRows(System.Collections.Generic.IReadOnlyList<Drilling.Co
+L000461 |             private static IEnumerable<ST_REVIEW_RESULT_FILE_ROW> MeasuredRows(IReadOnlyList<ST_REVIEW_RESULT_FILE_ROW> rows) ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 MeasuredRows.
+L000462 |             { ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Any(row => !string.IsNullOrWhiteSpace(row.ResultSource)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(row.ResultSource) / 지역 변수를 선언합니다: var hasSourceMetadata = rows.Any(row => !string.IsNullOrWhiteSpace(row.ResultSource)); / 변수의 초기값을 지정합니다: hasSourceMetadata = rows.Any(row => !string.IsNullOrWhiteSpace(row.ResultSource))
+L000463 |                 var hasSourceMetadata = rows.Any(row => !string.IsNullOrWhiteSpace(row.ResultSource)); ⟦EOL⟧
+// 해설 L464: 조건에 따라 결과식을 선택합니다: hasSourceMetadata ? rows.Where(row => row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase)) : rows.Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) || row.Judge.Equals("NG", StringComparis / 호출자에게 값 또는 제어를 반환합니다: return hasSourceMetadata ? rows.Where(row => row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase)) : rows.Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) || row.Judge.Equals("NG", StringC
+L000464 |                 return hasSourceMetadata ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(row => row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase)
+L000465 |                     ? rows.Where(row => row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) || row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase)
+L000466 |                     : rows.Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) || row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 MeasuredRows.
+L000467 |             } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Review.ST_REVIEW_PLAN_POINT> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildPointLookup(System.Collections.Generic.IReadOnlyL
+L000469 |             private static IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> BuildPointLookup(IReadOnlyList<ST_REVIEW_PLAN_POINT> points) ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 BuildPointLookup.
+L000470 |             { ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, ST_REVIEW_PLAN_POINT>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var lookup = new Dictionary<string, ST_REVIEW_PLAN_POINT>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: lookup = new Dictionary<string, ST_REVIEW_PLAN_POINT>(StringComparer.OrdinalIgnoreCase)
+L000471 |                 var lookup = new Dictionary<string, ST_REVIEW_PLAN_POINT>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L472: 컬렉션 요소를 순회합니다: foreach (var point in points)
+L000472 |                 foreach (var point in points) ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 BuildPointLookup.
+L000473 |                 { ⟦EOL⟧
+// 해설 L474: 값을 대상에 대입합니다: lookup[NormalizeReviewShotKey(point.ShotKey, point.CellNo)] = point / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(point.ShotKey, point.CellNo)
+L000474 |                     lookup[NormalizeReviewShotKey(point.ShotKey, point.CellNo)] = point; ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX) / 지역 변수를 선언합니다: var shotName = CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX); / 변수의 초기값을 지정합니다: shotName = CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX)
+L000475 |                     var shotName = CReviewShotNameFormatter.ToMatrixName(point.ShotNo, point.PixelCountX); ⟦EOL⟧
+// 해설 L476: 값을 대상에 대입합니다: lookup[NormalizeReviewShotKey(shotName, point.CellNo)] = point / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(shotName, point.CellNo)
+L000476 |                     lookup[NormalizeReviewShotKey(shotName, point.CellNo)] = point; ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 BuildPointLookup.
+L000477 |                 } ⟦EOL⟧
+L000478 |  ⟦EOL⟧
+// 해설 L479: 호출자에게 값 또는 제어를 반환합니다: return lookup;
+L000479 |                 return lookup; ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 BuildPointLookup.
+L000480 |             } ⟦EOL⟧
+L000481 |  ⟦EOL⟧
+// 해설 L482: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_PLAN_POINT Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResolveResultPoint(Drilling.Common.Review.ST_REVIEW_RESULT_FILE_ROW, System.Collections.Generic.IReadOnlyDicti
+L000482 |             private static ST_REVIEW_PLAN_POINT ResolveResultPoint( ⟦EOL⟧
+// 해설 L483: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_PLAN_POINT Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResolveResultPoint(Drilling.Common.Review.ST_REVIEW_RESULT_FILE_ROW, System.Collections.Generic.IReadOnlyDicti
+L000483 |                 ST_REVIEW_RESULT_FILE_ROW row, ⟦EOL⟧
+// 해설 L484: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_PLAN_POINT Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResolveResultPoint(Drilling.Common.Review.ST_REVIEW_RESULT_FILE_ROW, System.Collections.Generic.IReadOnlyDicti
+L000484 |                 IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> pointLookup) ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000485 |             { ⟦EOL⟧
+// 해설 L486: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(row.ShotKey, row.CellNo) / 지역 변수를 선언합니다: var key = NormalizeReviewShotKey(row.ShotKey, row.CellNo); / 변수의 초기값을 지정합니다: key = NormalizeReviewShotKey(row.ShotKey, row.CellNo)
+L000486 |                 var key = NormalizeReviewShotKey(row.ShotKey, row.CellNo); ⟦EOL⟧
+// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: pointLookup.TryGetValue(key, out var point) / 조건에 따라 분기합니다: if (!pointLookup.TryGetValue(key, out var point) && !pointLookup.TryGetValue(NormalizeReviewShotKey(row.ShotName, row.CellNo), out point))
+L000487 |                 if (!pointLookup.TryGetValue(key, out var point) ⟦EOL⟧
+// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: pointLookup.TryGetValue(NormalizeReviewShotKey(row.ShotName, row.CellNo), out point) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReviewShotKey(row.ShotName, row.CellNo)
+L000488 |                     && !pointLookup.TryGetValue(NormalizeReviewShotKey(row.ShotName, row.CellNo), out point)) ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000489 |                 { ⟦EOL⟧
+// 해설 L490: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"현재 레시피에서 검사 결과 Shot을 찾지 못했습니다: CELL{row.CellNo:00} / {row.ShotName} / {row.ShotKey}") / 예외를 발생/전달합니다: throw new InvalidDataException($"현재 레시피에서 검사 결과 Shot을 찾지 못했습니다: CELL{row.CellNo:00} / {row.ShotName} / {row.ShotKey}");
+L000490 |                     throw new InvalidDataException($"현재 레시피에서 검사 결과 Shot을 찾지 못했습니다: CELL{row.CellNo:00} / {row.ShotName} / {row.ShotKey}"); ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000491 |                 } ⟦EOL⟧
+L000492 |  ⟦EOL⟧
+// 해설 L493: 조건에 따라 분기합니다: if (point.HeadNo != row.HeadNo)
+L000493 |                 if (point.HeadNo != row.HeadNo) ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000494 |                 { ⟦EOL⟧
+// 해설 L495: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"검사 결과와 현재 레시피의 Head 배정이 다릅니다: CELL{row.CellNo:00}_{row.ShotName} / Result=H{row.HeadNo:00}, Recipe=H{point.HeadNo:00}") / 예외를 발생/전달합니다: throw new InvalidDataException($"검사 결과와 현재 레시피의 Head 배정이 다릅니다: CELL{row.CellNo:00}_{row.ShotName} / Result=H{row.HeadNo:00}, Recipe=H{point.HeadNo:00}");
+L000495 |                     throw new InvalidDataException($"검사 결과와 현재 레시피의 Head 배정이 다릅니다: CELL{row.CellNo:00}_{row.ShotName} / Result=H{row.HeadNo:00}, Recipe=H{point.HeadNo:00}"); ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000496 |                 } ⟦EOL⟧
+L000497 |  ⟦EOL⟧
+// 해설 L498: 호출자에게 값 또는 제어를 반환합니다: return point;
+L000498 |                 return point; ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 ResolveResultPoint.
+L000499 |             } ⟦EOL⟧
+L000500 |  ⟦EOL⟧
+// 해설 L501: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_TYPE Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateApplicationType(string, Drilling.Common.Review.ST_REVIEW_RESULT_FILE_DATA)
+L000501 |             private static ST_REVIEW_OFFSET_APPLY_TYPE CreateApplicationType(string resultType, ST_REVIEW_RESULT_FILE_DATA result) ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 CreateApplicationType.
+L000502 |             { ⟦EOL⟧
+// 해설 L503: 호출자에게 값 또는 제어를 반환합니다: return resultType switch { "ALL_SHOT" => new("DIRECT_ALL", "DIRECT / ALL SHOT", "측정 OK Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), "ONE_SHOT" => new("DIRECT_ONE", "DIRECT / ONE SHOT", "선택 검사 Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), "ROUGH" => new("R / 값별 결과식을 선택합니다: resultType switch { "ALL_SHOT" => new("DIRECT_ALL", "DIRECT / ALL SHOT", "측정 OK Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), "ONE_SHOT" => new("DIRECT_ONE", "DIRECT / ONE SHOT", "선택 검사 Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), "ROUGH" => new("ROUGH",
+L000503 |                 return resultType switch ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 CreateApplicationType.
+L000504 |                 { ⟦EOL⟧
+// 해설 L505: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("DIRECT_ALL", "DIRECT / ALL SHOT", "측정 OK Shot의 변환된 X/Y를 같은 Shot에 직접 누적")
+L000505 |                     "ALL_SHOT" => new("DIRECT_ALL", "DIRECT / ALL SHOT", "측정 OK Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), ⟦EOL⟧
+// 해설 L506: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("DIRECT_ONE", "DIRECT / ONE SHOT", "선택 검사 Shot의 변환된 X/Y를 같은 Shot에 직접 누적")
+L000506 |                     "ONE_SHOT" => new("DIRECT_ONE", "DIRECT / ONE SHOT", "선택 검사 Shot의 변환된 X/Y를 같은 Shot에 직접 누적"), ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ROUGH", $"ROUGH / {result.RuleScope.Trim().ToUpperInvariant().Replace("_", " + ", StringComparison.Ordinal)}", "측정 OK 값을 같은 Head 또는 Head + Cell 범위에 누적") / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RuleScope.Trim().ToUpperInvariant().Replace("_", " + ", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RuleScope.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RuleScope.Trim()
+L000507 |                     "ROUGH" => new("ROUGH", $"ROUGH / {result.RuleScope.Trim().ToUpperInvariant().Replace("_", " + ", StringComparison.Ordinal)}", "측정 OK 값을 같은 Head 또는 Head + Cell 범위에 누적"), ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("FINE", $"FINE / {Math.Max(result.LineCount, result.FineLineCount)} LINE", "Cell의 같은 X 열에서 측정값을 Y 방향 보간 후 누적") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(result.LineCount, result.FineLineCount)
+L000508 |                     "FINE" => new("FINE", $"FINE / {Math.Max(result.LineCount, result.FineLineCount)} LINE", "Cell의 같은 X 열에서 측정값을 Y 방향 보간 후 누적"), ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("AUTO_FINE", $"AUTO / {Math.Max(result.LineCount, result.FineLineCount)} LINE", "자동 검사 측정값을 Cell의 같은 X 열에서 Y 방향 보간 후 누적") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(result.LineCount, result.FineLineCount)
+L000509 |                     "AUTO" => new("AUTO_FINE", $"AUTO / {Math.Max(result.LineCount, result.FineLineCount)} LINE", "자동 검사 측정값을 Cell의 같은 X 열에서 Y 방향 보간 후 누적"), ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{resultType} 결과는 Review Offset 적용을 지원하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{resultType} 결과는 Review Offset 적용을 지원하지 않습니다.")
+L000510 |                     _ => throw new InvalidOperationException($"{resultType} 결과는 Review Offset 적용을 지원하지 않습니다.") ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 CreateApplicationType.
+L000511 |                 }; ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 CreateApplicationType.
+L000512 |             } ⟦EOL⟧
+L000513 |  ⟦EOL⟧
+// 해설 L514: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsOffsetApplicableResultType(string)
+L000514 |             private static bool IsOffsetApplicableResultType(string resultType) ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다 · 소속 IsOffsetApplicableResultType.
+L000515 |             { ⟦EOL⟧
+// 해설 L516: 함수·델리게이트 또는 객체 생성자를 호출합니다: resultType.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: resultType.Trim() / 호출자에게 값 또는 제어를 반환합니다: return resultType.Trim().ToUpperInvariant() is "ALL_SHOT" or "ONE_SHOT" or "ROUGH" or "FINE" or "AUTO";
+L000516 |                 return resultType.Trim().ToUpperInvariant() is "ALL_SHOT" or "ONE_SHOT" or "ROUGH" or "FINE" or "AUTO"; ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 IsOffsetApplicableResultType.
+L000517 |             } ⟦EOL⟧
+L000518 |  ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.EnsureLoadedResultUnchanged(string, string)
+L000519 |             private void EnsureLoadedResultUnchanged(string filePath, string recipeId) ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 EnsureLoadedResultUnchanged.
+L000520 |             { ⟦EOL⟧
+// 해설 L521: 조건에 따라 분기합니다: if (!HasLoadedData || _loadedResultFile is null || _loadedRecipe is null || !_loadedResultFile.FilePath.Equals(filePath, StringComparison.OrdinalIgnoreCase) || !_loadedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnor…)
+L000521 |                 if (!HasLoadedData ⟦EOL⟧
+// 해설 L522: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.EnsureLoadedResultUnchanged(string, string)
+L000522 |                     || _loadedResultFile is null ⟦EOL⟧
+// 해설 L523: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.EnsureLoadedResultUnchanged(string, string)
+L000523 |                     || _loadedRecipe is null ⟦EOL⟧
+// 해설 L524: 함수·델리게이트 또는 객체 생성자를 호출합니다: _loadedResultFile.FilePath.Equals(filePath, StringComparison.OrdinalIgnoreCase)
+L000524 |                     || !_loadedResultFile.FilePath.Equals(filePath, StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: _loadedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)
+L000525 |                     || !_loadedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L526: 구문 블록 경계입니다 · 소속 EnsureLoadedResultUnchanged.
+L000526 |                 { ⟦EOL⟧
+// 해설 L527: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("작업 중 선택한 Review Result 또는 현재 레시피가 변경되었습니다. DATA LOAD 후 다시 실행해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("작업 중 선택한 Review Result 또는 현재 레시피가 변경되었습니다. DATA LOAD 후 다시 실행해 주세요.");
+L000527 |                     throw new InvalidOperationException("작업 중 선택한 Review Result 또는 현재 레시피가 변경되었습니다. DATA LOAD 후 다시 실행해 주세요."); ⟦EOL⟧
+// 해설 L528: 구문 블록 경계입니다 · 소속 EnsureLoadedResultUnchanged.
+L000528 |                 } ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 EnsureLoadedResultUnchanged.
+L000529 |             } ⟦EOL⟧
+L000530 |  ⟦EOL⟧
+// 해설 L531: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SameOffsetSource(Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA, Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA)
+L000531 |             private static bool SameOffsetSource(ST_REVIEW_OFFSET_FILE_DATA expected, ST_REVIEW_OFFSET_FILE_DATA current) ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 SameOffsetSource.
+L000532 |             { ⟦EOL⟧
+// 해설 L533: 함수·델리게이트 또는 객체 생성자를 호출합니다: expected.FilePath.Equals(current.FilePath, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return expected.FilePath.Equals(current.FilePath, StringComparison.OrdinalIgnoreCase) && expected.SavedAt.Equals(current.SavedAt) && expected.Rows.Count == current.Rows.Count;
+L000533 |                 return expected.FilePath.Equals(current.FilePath, StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L534: 함수·델리게이트 또는 객체 생성자를 호출합니다: expected.SavedAt.Equals(current.SavedAt)
+L000534 |                     && expected.SavedAt.Equals(current.SavedAt) ⟦EOL⟧
+// 해설 L535: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SameOffsetSource(Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA, Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA)
+L000535 |                     && expected.Rows.Count == current.Rows.Count; ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다 · 소속 SameOffsetSource.
+L000536 |             } ⟦EOL⟧
+L000537 |  ⟦EOL⟧
+// 해설 L538: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetOffsetBusy(bool)
+L000538 |             private void SetOffsetBusy(bool value) ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 SetOffsetBusy.
+L000539 |             { ⟦EOL⟧
+// 해설 L540: 조건에 따라 분기합니다: if (_isOffsetBusy == value)
+L000540 |                 if (_isOffsetBusy == value) ⟦EOL⟧
+// 해설 L541: 구문 블록 경계입니다 · 소속 SetOffsetBusy.
+L000541 |                 { ⟦EOL⟧
+// 해설 L542: 호출자에게 값 또는 제어를 반환합니다: return;
+L000542 |                     return; ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 SetOffsetBusy.
+L000543 |                 } ⟦EOL⟧
+L000544 |  ⟦EOL⟧
+// 해설 L545: 값을 대상에 대입합니다: _isOffsetBusy = value
+L000545 |                 _isOffsetBusy = value; ⟦EOL⟧
+// 해설 L546: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyLoadCommandState()
+L000546 |                 NotifyLoadCommandState(); ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 SetOffsetBusy.
+L000547 |             } ⟦EOL⟧
+L000548 |  ⟦EOL⟧
+// 해설 L549: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetSharedOffsetOperationRunning(bool)
+L000549 |             internal void SetSharedOffsetOperationRunning(bool value) ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 SetSharedOffsetOperationRunning.
+L000550 |             { ⟦EOL⟧
+// 해설 L551: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffsetBusy(value)
+L000551 |                 SetOffsetBusy(value); ⟦EOL⟧
+// 해설 L552: 구문 블록 경계입니다 · 소속 SetSharedOffsetOperationRunning.
+L000552 |             } ⟦EOL⟧
+L000553 |  ⟦EOL⟧
+// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AcceptOffsetRollback()
+L000554 |             internal void AcceptOffsetRollback() ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 AcceptOffsetRollback.
+L000555 |             { ⟦EOL⟧
+// 해설 L556: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyLoadCommandState()
+L000556 |                 NotifyLoadCommandState(); ⟦EOL⟧
+// 해설 L557: 구문 블록 경계입니다 · 소속 AcceptOffsetRollback.
+L000557 |             } ⟦EOL⟧
+L000558 |  ⟦EOL⟧
+// 해설 L559: 타입의 구조/상속 선언입니다: public sealed class CReviewDataOffsetApplyPanel : INotifyPropertyChanged
+L000559 |             public sealed class CReviewDataOffsetApplyPanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L560: 구문 블록 경계입니다.
+L000560 |             { ⟦EOL⟧
+// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel._plan
+L000561 |                 private readonly ST_REVIEW_OFFSET_APPLY_PLAN _plan; ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel._selectedCellNo
+L000562 |                 private int _selectedCellNo; ⟦EOL⟧
+// 해설 L563: 변수의 초기값을 지정합니다: _selectedShotKey = ""
+L000563 |                 private string _selectedShotKey = ""; ⟦EOL⟧
+L000564 |  ⟦EOL⟧
+// 해설 L565: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.CReviewDataOffsetApplyPanel(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_PLAN)
+L000565 |                 internal CReviewDataOffsetApplyPanel(ST_REVIEW_OFFSET_APPLY_PLAN plan) ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 .ctor.
+L000566 |                 { ⟦EOL⟧
+// 해설 L567: 값을 대상에 대입합니다: _plan = plan
+L000567 |                     _plan = plan; ⟦EOL⟧
+// 해설 L568: 값을 대상에 대입합니다: ApplicationTypes = [plan.ApplicationType]
+L000568 |                     ApplicationTypes = [plan.ApplicationType]; ⟦EOL⟧
+// 해설 L569: 값을 대상에 대입합니다: SelectedApplicationType = plan.ApplicationType
+L000569 |                     SelectedApplicationType = plan.ApplicationType; ⟦EOL⟧
+// 해설 L570: 값을 대상에 대입합니다: SelectCellCommand = new CButtonCommand(SelectCell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectCell)
+L000570 |                     SelectCellCommand = new CButtonCommand(SelectCell); ⟦EOL⟧
+// 해설 L571: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.CellNos.Order().FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.CellNos.Order() / 지역 변수를 선언합니다: var firstCell = plan.CellNos.Order().FirstOrDefault(); / 변수의 초기값을 지정합니다: firstCell = plan.CellNos.Order().FirstOrDefault()
+L000571 |                     var firstCell = plan.CellNos.Order().FirstOrDefault(); ⟦EOL⟧
+// 해설 L572: 조건에 따라 분기합니다: if (firstCell > 0)
+L000572 |                     if (firstCell > 0) ⟦EOL⟧
+// 해설 L573: 구문 블록 경계입니다 · 소속 .ctor.
+L000573 |                     { ⟦EOL⟧
+// 해설 L574: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyCellSelection(firstCell)
+L000574 |                         ApplyCellSelection(firstCell); ⟦EOL⟧
+// 해설 L575: 구문 블록 경계입니다 · 소속 .ctor.
+L000575 |                     } ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다 · 소속 .ctor.
+L000576 |                 } ⟦EOL⟧
+L000577 |  ⟦EOL⟧
+// 해설 L578: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.PropertyChanged
+L000578 |                 public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+L000579 |  ⟦EOL⟧
+// 해설 L580: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectCellCommand
+L000580 |                 public CButtonCommand SelectCellCommand { get; } ⟦EOL⟧
+// 해설 L581: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_TYPE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ApplicationTypes
+L000581 |                 public IReadOnlyList<ST_REVIEW_OFFSET_APPLY_TYPE> ApplicationTypes { get; } ⟦EOL⟧
+// 해설 L582: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_TYPE Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectedApplicationType
+L000582 |                 public ST_REVIEW_OFFSET_APPLY_TYPE SelectedApplicationType { get; } ⟦EOL⟧
+// 해설 L583: 선언·서명/매개변수·접근 조건입니다 · ImageSource? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.GlassPreviewImage
+L000583 |                 public ImageSource? GlassPreviewImage { get; private set; } ⟦EOL⟧
+// 해설 L584: 선언·서명/매개변수·접근 조건입니다 · ImageSource? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ShotMapImage
+L000584 |                 public ImageSource? ShotMapImage { get; private set; } ⟦EOL⟧
+// 해설 L585: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_CELL_LABEL> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.CellLabels
+L000585 |                 public IReadOnlyList<ST_REVIEW_DATA_CELL_LABEL> CellLabels { get; private set; } = []; ⟦EOL⟧
+// 해설 L586: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.Rows
+L000586 |                 public IReadOnlyList<ST_REVIEW_OFFSET_APPLY_GRID_ROW> Rows { get; private set; } = []; ⟦EOL⟧
+// 해설 L587: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectedRow
+L000587 |                 public ST_REVIEW_OFFSET_APPLY_GRID_ROW? SelectedRow { get; private set; } ⟦EOL⟧
+// 해설 L588: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.GlassSurfaceWidth
+L000588 |                 public double GlassSurfaceWidth { get; private set; } = 760.0; ⟦EOL⟧
+// 해설 L589: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.GlassSurfaceHeight
+L000589 |                 public double GlassSurfaceHeight { get; private set; } = 500.0; ⟦EOL⟧
+// 해설 L590: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ShotMapSurfaceWidth
+L000590 |                 public double ShotMapSurfaceWidth { get; private set; } = 680.0; ⟦EOL⟧
+// 해설 L591: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ShotMapSurfaceHeight
+L000591 |                 public double ShotMapSurfaceHeight { get; private set; } = 420.0; ⟦EOL⟧
+// 해설 L592: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.RecipeName
+L000592 |                 public string RecipeName => _plan.RecipeName; ⟦EOL⟧
+// 해설 L593: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ResultFileName
+L000593 |                 public string ResultFileName => _plan.ResultFileName; ⟦EOL⟧
+// 해설 L594: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.Summary
+L000594 |                 public string Summary => $"{_plan.CellNos.Count:N0} Cells / {_plan.Rows.Count:N0} Shots"; ⟦EOL⟧
+// 해설 L595: 조건에 따라 결과식을 선택합니다: _selectedCellNo > 0 ? $"CELL{_selectedCellNo:00} / {Rows.Count:N0} APPLY SHOTS" : "NO CELL SELECTED"
+L000595 |                 public string SelectedCellTitle => _selectedCellNo > 0 ? $"CELL{_selectedCellNo:00} / {Rows.Count:N0} APPLY SHOTS" : "NO CELL SELECTED"; ⟦EOL⟧
+// 해설 L596: 조건에 따라 결과식을 선택합니다: SelectedRow is null ? "NO SHOT SELECTED" : $"{SelectedRow.Cell} / {SelectedRow.ShotName} / {SelectedRow.Head}"
+L000596 |                 public string SelectedShotTitle => SelectedRow is null ? "NO SHOT SELECTED" : $"{SelectedRow.Cell} / {SelectedRow.ShotName} / {SelectedRow.Head}"; ⟦EOL⟧
+// 해설 L597: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.CanSave
+L000597 |                 public bool CanSave => _plan.Rows.Count > 0; ⟦EOL⟧
+L000598 |  ⟦EOL⟧
+// 해설 L599: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectShotAt(double, double)
+L000599 |                 public void SelectShotAt(double x, double y) ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000600 |                 { ⟦EOL⟧
+// 해설 L601: 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.ShotsByCell.TryGetValue(_selectedCellNo, out var shots) / 조건에 따라 분기합니다: if (!_plan.ShotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0)
+L000601 |                     if (!_plan.ShotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0) ⟦EOL⟧
+// 해설 L602: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000602 |                     { ⟦EOL⟧
+// 해설 L603: 호출자에게 값 또는 제어를 반환합니다: return;
+L000603 |                         return; ⟦EOL⟧
+// 해설 L604: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000604 |                     } ⟦EOL⟧
+L000605 |  ⟦EOL⟧
+// 해설 L606: 지역 변수를 선언합니다: var first = shots[0]; / 변수의 초기값을 지정합니다: first = shots[0]
+L000606 |                     var first = shots[0]; ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY) / 지역 변수를 선언합니다: var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); / 변수의 초기값을 지정합니다: mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY)
+L000607 |                     var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); ⟦EOL⟧
+// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: mapRect.Contains(new Point(x, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y) / 조건에 따라 분기합니다: if (!mapRect.Contains(new Point(x, y)))
+L000608 |                     if (!mapRect.Contains(new Point(x, y))) ⟦EOL⟧
+// 해설 L609: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000609 |                     { ⟦EOL⟧
+// 해설 L610: 호출자에게 값 또는 제어를 반환합니다: return;
+L000610 |                         return; ⟦EOL⟧
+// 해설 L611: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000611 |                     } ⟦EOL⟧
+L000612 |  ⟦EOL⟧
+// 해설 L613: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * first.GroupCountX), 0, first.GroupCountX - 1) / 지역 변수를 선언합니다: var column = Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * first.GroupCountX), 0, first.GroupCountX - 1); / 변수의 초기값을 지정합니다: column = Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * first.GroupCountX), 0, first.GroupCountX - 1)
+L000613 |                     var column = Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * first.GroupCountX), 0, first.GroupCountX - 1); ⟦EOL⟧
+// 해설 L614: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * first.GroupCountY), 0, first.GroupCountY - 1) / 지역 변수를 선언합니다: var row = Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * first.GroupCountY), 0, first.GroupCountY - 1); / 변수의 초기값을 지정합니다: row = Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * first.GroupCountY), 0, first.GroupCountY - 1)
+L000614 |                     var row = Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * first.GroupCountY), 0, first.GroupCountY - 1); ⟦EOL⟧
+// 해설 L615: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots.FirstOrDefault(item => item.GroupColumn == column && item.GroupRow == row && item.IsResult) / 지역 변수를 선언합니다: var shot = shots.FirstOrDefault(item => item.GroupColumn == column && item.GroupRow == row && item.IsResult); / 변수의 초기값을 지정합니다: shot = shots.FirstOrDefault(item => item.GroupColumn == column && item.GroupRow == row && item.IsResult)
+L000615 |                     var shot = shots.FirstOrDefault(item => item.GroupColumn == column && item.GroupRow == row && item.IsResult); ⟦EOL⟧
+// 해설 L616: 조건에 따라 분기합니다: if (shot is not null)
+L000616 |                     if (shot is not null) ⟦EOL⟧
+// 해설 L617: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000617 |                     { ⟦EOL⟧
+// 해설 L618: 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectShot(shot.ShotKey, null)
+L000618 |                         SelectShot(shot.ShotKey, null); ⟦EOL⟧
+// 해설 L619: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000619 |                     } ⟦EOL⟧
+// 해설 L620: 구문 블록 경계입니다 · 소속 SelectShotAt.
+L000620 |                 } ⟦EOL⟧
+L000621 |  ⟦EOL⟧
+// 해설 L622: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW)
+L000622 |                 public void SelectRow(ST_REVIEW_OFFSET_APPLY_GRID_ROW row) ⟦EOL⟧
+// 해설 L623: 구문 블록 경계입니다 · 소속 SelectRow.
+L000623 |                 { ⟦EOL⟧
+// 해설 L624: 조건에 따라 분기합니다: if (_selectedCellNo != row.CellNo)
+L000624 |                     if (_selectedCellNo != row.CellNo) ⟦EOL⟧
+// 해설 L625: 구문 블록 경계입니다 · 소속 SelectRow.
+L000625 |                     { ⟦EOL⟧
+// 해설 L626: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyCellSelection(row.CellNo)
+L000626 |                         ApplyCellSelection(row.CellNo); ⟦EOL⟧
+// 해설 L627: 구문 블록 경계입니다 · 소속 SelectRow.
+L000627 |                     } ⟦EOL⟧
+L000628 |  ⟦EOL⟧
+// 해설 L629: 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectShot(row.ShotKey, row)
+L000629 |                     SelectShot(row.ShotKey, row); ⟦EOL⟧
+// 해설 L630: 구문 블록 경계입니다 · 소속 SelectRow.
+L000630 |                 } ⟦EOL⟧
+L000631 |  ⟦EOL⟧
+// 해설 L632: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectCell(object?)
+L000632 |                 private void SelectCell(object? parameter) ⟦EOL⟧
+// 해설 L633: 구문 블록 경계입니다 · 소속 SelectCell.
+L000633 |                 { ⟦EOL⟧
+// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(parameter?.ToString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var cellNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 조건에 따라 분기합니다: if (int.TryParse(parameter?.ToString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var cellNo) && _plan.CellNos.Contains(cellNo))
+L000634 |                     if (int.TryParse(parameter?.ToString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var cellNo) ⟦EOL⟧
+// 해설 L635: 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.CellNos.Contains(cellNo)
+L000635 |                         && _plan.CellNos.Contains(cellNo)) ⟦EOL⟧
+// 해설 L636: 구문 블록 경계입니다 · 소속 SelectCell.
+L000636 |                     { ⟦EOL⟧
+// 해설 L637: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyCellSelection(cellNo)
+L000637 |                         ApplyCellSelection(cellNo); ⟦EOL⟧
+// 해설 L638: 구문 블록 경계입니다 · 소속 SelectCell.
+L000638 |                     } ⟦EOL⟧
+// 해설 L639: 구문 블록 경계입니다 · 소속 SelectCell.
+L000639 |                 } ⟦EOL⟧
+L000640 |  ⟦EOL⟧
+// 해설 L641: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.ApplyCellSelection(int)
+L000641 |                 private void ApplyCellSelection(int cellNo) ⟦EOL⟧
+// 해설 L642: 구문 블록 경계입니다 · 소속 ApplyCellSelection.
+L000642 |                 { ⟦EOL⟧
+// 해설 L643: 값을 대상에 대입합니다: _selectedCellNo = cellNo
+L000643 |                     _selectedCellNo = cellNo; ⟦EOL⟧
+// 해설 L644: 값을 대상에 대입합니다: Rows = _plan.Rows.Where(row => row.CellNo == cellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.Rows.Where(row => row.CellNo == cellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.Rows.Where(row => row.CellNo == cellNo)
+L000644 |                     Rows = _plan.Rows.Where(row => row.CellNo == cellNo).ToArray(); ⟦EOL⟧
+// 해설 L645: 값을 대상에 대입합니다: SelectedRow = Rows.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.FirstOrDefault()
+L000645 |                     SelectedRow = Rows.FirstOrDefault(); ⟦EOL⟧
+// 해설 L646: 값을 대상에 대입합니다: _selectedShotKey = SelectedRow?.ShotKey ?? ""
+L000646 |                     _selectedShotKey = SelectedRow?.ShotKey ?? ""; ⟦EOL⟧
+// 해설 L647: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshImages()
+L000647 |                     RefreshImages(); ⟦EOL⟧
+// 해설 L648: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyAll()
+L000648 |                     NotifyAll(); ⟦EOL⟧
+// 해설 L649: 구문 블록 경계입니다 · 소속 ApplyCellSelection.
+L000649 |                 } ⟦EOL⟧
+L000650 |  ⟦EOL⟧
+// 해설 L651: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.SelectShot(string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW?)
+L000651 |                 private void SelectShot(string shotKey, ST_REVIEW_OFFSET_APPLY_GRID_ROW? preferred) ⟦EOL⟧
+// 해설 L652: 구문 블록 경계입니다 · 소속 SelectShot.
+L000652 |                 { ⟦EOL⟧
+// 해설 L653: 값을 대상에 대입합니다: _selectedShotKey = shotKey
+L000653 |                     _selectedShotKey = shotKey; ⟦EOL⟧
+// 해설 L654: 값을 대상에 대입합니다: SelectedRow = preferred ?? Rows.FirstOrDefault(row => row.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.FirstOrDefault(row => row.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)
+L000654 |                     SelectedRow = preferred ?? Rows.FirstOrDefault(row => row.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L655: 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []) / 지역 변수를 선언합니다: var shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []); / 변수의 초기값을 지정합니다: shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, [])
+L000655 |                     var shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []); ⟦EOL⟧
+// 해설 L656: 값을 대상에 대입합니다: ShotMapImage = BuildReviewDataShotMap(shots, _selectedShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildReviewDataShotMap(shots, _selectedShotKey)
+L000656 |                     ShotMapImage = BuildReviewDataShotMap(shots, _selectedShotKey); ⟦EOL⟧
+// 해설 L657: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ShotMapImage)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ShotMapImage)
+L000657 |                     Notify(nameof(ShotMapImage)); ⟦EOL⟧
+// 해설 L658: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedRow)
+L000658 |                     Notify(nameof(SelectedRow)); ⟦EOL⟧
+// 해설 L659: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedShotTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedShotTitle)
+L000659 |                     Notify(nameof(SelectedShotTitle)); ⟦EOL⟧
+// 해설 L660: 구문 블록 경계입니다 · 소속 SelectShot.
+L000660 |                 } ⟦EOL⟧
+L000661 |  ⟦EOL⟧
+// 해설 L662: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.RefreshImages()
+L000662 |                 private void RefreshImages() ⟦EOL⟧
+// 해설 L663: 구문 블록 경계입니다 · 소속 RefreshImages.
+L000663 |                 { ⟦EOL⟧
+// 해설 L664: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildReviewDataGlassPreview(_plan.Parameters, _plan.CellCount, _plan.CellNos, _selectedCellNo) / 지역 변수를 선언합니다: var preview = BuildReviewDataGlassPreview(_plan.Parameters, _plan.CellCount, _plan.CellNos, _selectedCellNo); / 변수의 초기값을 지정합니다: preview = BuildReviewDataGlassPreview(_plan.Parameters, _plan.CellCount, _plan.CellNos, _selectedCellNo)
+L000664 |                     var preview = BuildReviewDataGlassPreview(_plan.Parameters, _plan.CellCount, _plan.CellNos, _selectedCellNo); ⟦EOL⟧
+// 해설 L665: 값을 대상에 대입합니다: GlassPreviewImage = preview.Image
+L000665 |                     GlassPreviewImage = preview.Image; ⟦EOL⟧
+// 해설 L666: 값을 대상에 대입합니다: CellLabels = preview.CellLabels
+L000666 |                     CellLabels = preview.CellLabels; ⟦EOL⟧
+// 해설 L667: 값을 대상에 대입합니다: GlassSurfaceWidth = preview.Width
+L000667 |                     GlassSurfaceWidth = preview.Width; ⟦EOL⟧
+// 해설 L668: 값을 대상에 대입합니다: GlassSurfaceHeight = preview.Height
+L000668 |                     GlassSurfaceHeight = preview.Height; ⟦EOL⟧
+// 해설 L669: 함수·델리게이트 또는 객체 생성자를 호출합니다: _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []) / 지역 변수를 선언합니다: var shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []); / 변수의 초기값을 지정합니다: shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, [])
+L000669 |                     var shots = _plan.ShotsByCell.GetValueOrDefault(_selectedCellNo, []); ⟦EOL⟧
+// 해설 L670: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetReviewDataShotMapSize(shots) / 지역 변수를 선언합니다: var size = GetReviewDataShotMapSize(shots); / 변수의 초기값을 지정합니다: size = GetReviewDataShotMapSize(shots)
+L000670 |                     var size = GetReviewDataShotMapSize(shots); ⟦EOL⟧
+// 해설 L671: 값을 대상에 대입합니다: ShotMapSurfaceWidth = size.Width
+L000671 |                     ShotMapSurfaceWidth = size.Width; ⟦EOL⟧
+// 해설 L672: 값을 대상에 대입합니다: ShotMapSurfaceHeight = size.Height
+L000672 |                     ShotMapSurfaceHeight = size.Height; ⟦EOL⟧
+// 해설 L673: 값을 대상에 대입합니다: ShotMapImage = BuildReviewDataShotMap(shots, _selectedShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildReviewDataShotMap(shots, _selectedShotKey)
+L000673 |                     ShotMapImage = BuildReviewDataShotMap(shots, _selectedShotKey); ⟦EOL⟧
+// 해설 L674: 구문 블록 경계입니다 · 소속 RefreshImages.
+L000674 |                 } ⟦EOL⟧
+L000675 |  ⟦EOL⟧
+// 해설 L676: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.NotifyAll()
+L000676 |                 private void NotifyAll() ⟦EOL⟧
+// 해설 L677: 구문 블록 경계입니다 · 소속 NotifyAll.
+L000677 |                 { ⟦EOL⟧
+// 해설 L678: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GlassPreviewImage)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GlassPreviewImage)
+L000678 |                     Notify(nameof(GlassPreviewImage)); ⟦EOL⟧
+// 해설 L679: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ShotMapImage)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ShotMapImage)
+L000679 |                     Notify(nameof(ShotMapImage)); ⟦EOL⟧
+// 해설 L680: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CellLabels)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CellLabels)
+L000680 |                     Notify(nameof(CellLabels)); ⟦EOL⟧
+// 해설 L681: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Rows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
+L000681 |                     Notify(nameof(Rows)); ⟦EOL⟧
+// 해설 L682: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedRow)
+L000682 |                     Notify(nameof(SelectedRow)); ⟦EOL⟧
+// 해설 L683: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedCellTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedCellTitle)
+L000683 |                     Notify(nameof(SelectedCellTitle)); ⟦EOL⟧
+// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedShotTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedShotTitle)
+L000684 |                     Notify(nameof(SelectedShotTitle)); ⟦EOL⟧
+// 해설 L685: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GlassSurfaceWidth)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GlassSurfaceWidth)
+L000685 |                     Notify(nameof(GlassSurfaceWidth)); ⟦EOL⟧
+// 해설 L686: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GlassSurfaceHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GlassSurfaceHeight)
+L000686 |                     Notify(nameof(GlassSurfaceHeight)); ⟦EOL⟧
+// 해설 L687: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ShotMapSurfaceWidth)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ShotMapSurfaceWidth)
+L000687 |                     Notify(nameof(ShotMapSurfaceWidth)); ⟦EOL⟧
+// 해설 L688: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ShotMapSurfaceHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ShotMapSurfaceHeight)
+L000688 |                     Notify(nameof(ShotMapSurfaceHeight)); ⟦EOL⟧
+// 해설 L689: 구문 블록 경계입니다 · 소속 NotifyAll.
+L000689 |                 } ⟦EOL⟧
+L000690 |  ⟦EOL⟧
+// 해설 L691: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel.Notify(string)
+L000691 |                 private void Notify(string propertyName) ⟦EOL⟧
+// 해설 L692: 구문 블록 경계입니다 · 소속 Notify.
+L000692 |                 { ⟦EOL⟧
+// 해설 L693: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
+L000693 |                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
+// 해설 L694: 구문 블록 경계입니다 · 소속 Notify.
+L000694 |                 } ⟦EOL⟧
+// 해설 L695: 구문 블록 경계입니다.
+L000695 |             } ⟦EOL⟧
+L000696 |  ⟦EOL⟧
+// 해설 L697: 타입의 구조/상속 선언입니다: private sealed record ST_REVIEW_OFFSET_DELTA(ST_REVIEW_PLAN_POINT Point, double X, double Y);
+L000697 |             private sealed record ST_REVIEW_OFFSET_DELTA(ST_REVIEW_PLAN_POINT Point, double X, double Y); ⟦EOL⟧
+// 해설 L698: 구문 블록 경계입니다.
+L000698 |         } ⟦EOL⟧
+L000699 |  ⟦EOL⟧
+// 해설 L700: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_OFFSET_APPLY_TYPE(string Key, string Name, string Detail);
+L000700 |         public sealed record ST_REVIEW_OFFSET_APPLY_TYPE(string Key, string Name, string Detail); ⟦EOL⟧
+L000701 |  ⟦EOL⟧
+// 해설 L702: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_OFFSET_APPLY_GRID_ROW(
+L000702 |         public sealed record ST_REVIEW_OFFSET_APPLY_GRID_ROW( ⟦EOL⟧
+// 해설 L703: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000703 |             int HeadNo, ⟦EOL⟧
+// 해설 L704: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000704 |             int CellNo, ⟦EOL⟧
+// 해설 L705: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000705 |             string ShotName, ⟦EOL⟧
+// 해설 L706: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000706 |             string ShotKey, ⟦EOL⟧
+// 해설 L707: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000707 |             double CurrentX, ⟦EOL⟧
+// 해설 L708: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000708 |             double CurrentY, ⟦EOL⟧
+// 해설 L709: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000709 |             double AddX, ⟦EOL⟧
+// 해설 L710: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000710 |             double AddY, ⟦EOL⟧
+// 해설 L711: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000711 |             double FinalX, ⟦EOL⟧
+// 해설 L712: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000712 |             double FinalY) ⟦EOL⟧
+// 해설 L713: 구문 블록 경계입니다.
+L000713 |         { ⟦EOL⟧
+// 해설 L714: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW.Head
+L000714 |             public string Head => $"H{HeadNo:00}"; ⟦EOL⟧
+// 해설 L715: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW.Cell
+L000715 |             public string Cell => $"CELL{CellNo:00}"; ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: CurrentX.ToString("F3", CultureInfo.InvariantCulture)
+L000716 |             public string CurrentXText => CurrentX.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L717: 함수·델리게이트 또는 객체 생성자를 호출합니다: CurrentY.ToString("F3", CultureInfo.InvariantCulture)
+L000717 |             public string CurrentYText => CurrentY.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L718: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddX.ToString("F3", CultureInfo.InvariantCulture)
+L000718 |             public string AddXText => AddX.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L719: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddY.ToString("F3", CultureInfo.InvariantCulture)
+L000719 |             public string AddYText => AddY.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L720: 함수·델리게이트 또는 객체 생성자를 호출합니다: FinalX.ToString("F3", CultureInfo.InvariantCulture)
+L000720 |             public string FinalXText => FinalX.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L721: 함수·델리게이트 또는 객체 생성자를 호출합니다: FinalY.ToString("F3", CultureInfo.InvariantCulture)
+L000721 |             public string FinalYText => FinalY.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L722: 구문 블록 경계입니다.
+L000722 |         } ⟦EOL⟧
+L000723 |  ⟦EOL⟧
+// 해설 L724: 타입의 구조/상속 선언입니다: internal sealed record ST_REVIEW_OFFSET_APPLY_PLAN(
+L000724 |         internal sealed record ST_REVIEW_OFFSET_APPLY_PLAN( ⟦EOL⟧
+// 해설 L725: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000725 |             ST_REVIEW_OFFSET_APPLY_TYPE ApplicationType, ⟦EOL⟧
+// 해설 L726: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000726 |             string ResultFileName, ⟦EOL⟧
+// 해설 L727: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000727 |             string RecipeName, ⟦EOL⟧
+// 해설 L728: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000728 |             IReadOnlyDictionary<string, string> Parameters, ⟦EOL⟧
+// 해설 L729: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000729 |             int CellCount, ⟦EOL⟧
+// 해설 L730: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000730 |             IReadOnlySet<int> CellNos, ⟦EOL⟧
+// 해설 L731: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000731 |             IReadOnlyDictionary<int, IReadOnlyList<ST_REVIEW_DATA_SHOT_POSITION>> ShotsByCell, ⟦EOL⟧
+// 해설 L732: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000732 |             IReadOnlyList<ST_REVIEW_OFFSET_APPLY_GRID_ROW> Rows, ⟦EOL⟧
+// 해설 L733: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000733 |             IReadOnlyList<ST_REVIEW_OFFSET_ROW> SavedRows); ⟦EOL⟧
+L000734 |  ⟦EOL⟧
+// 해설 L735: 타입의 구조/상속 선언입니다: private sealed class CReviewShotNameComparer : IComparer<string>
+L000735 |         private sealed class CReviewShotNameComparer : IComparer<string> ⟦EOL⟧
+// 해설 L736: 구문 블록 경계입니다.
+L000736 |         { ⟦EOL⟧
+// 해설 L737: 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000737 |             public static CReviewShotNameComparer Instance { get; } = new(); ⟦EOL⟧
+L000738 |  ⟦EOL⟧
+// 해설 L739: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewShotNameComparer.Compare(string?, string?)
+L000739 |             public int Compare(string? x, string? y) ⟦EOL⟧
+// 해설 L740: 구문 블록 경계입니다 · 소속 Compare.
+L000740 |             { ⟦EOL⟧
+// 해설 L741: 선언·서명/매개변수·접근 조건입니다 · (int Row, int Column, string Text) Parse(string?)
+L000741 |                 static (int Row, int Column, string Text) Parse(string? value) ⟦EOL⟧
+// 해설 L742: 구문 블록 경계입니다 · 소속 Parse.
+L000742 |                 { ⟦EOL⟧
+// 해설 L743: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var text = value?.Trim().ToUpperInvariant() ?? ""; / 변수의 초기값을 지정합니다: text = value?.Trim().ToUpperInvariant() ?? ""
+L000743 |                     var text = value?.Trim().ToUpperInvariant() ?? ""; ⟦EOL⟧
+// 해설 L744: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.TakeWhile(char.IsLetter).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.TakeWhile(char.IsLetter) / 지역 변수를 선언합니다: var letters = text.TakeWhile(char.IsLetter).ToArray(); / 변수의 초기값을 지정합니다: letters = text.TakeWhile(char.IsLetter).ToArray()
+L000744 |                     var letters = text.TakeWhile(char.IsLetter).ToArray(); ⟦EOL⟧
+// 해설 L745: 지역 변수를 선언합니다: var column = 0; / 변수의 초기값을 지정합니다: column = 0
+L000745 |                     var column = 0; ⟦EOL⟧
+// 해설 L746: 컬렉션 요소를 순회합니다: foreach (var letter in letters)
+L000746 |                     foreach (var letter in letters) ⟦EOL⟧
+// 해설 L747: 구문 블록 경계입니다 · 소속 Parse.
+L000747 |                     { ⟦EOL⟧
+// 해설 L748: 값을 대상에 대입합니다: column = (column * 26) + letter - 'A' + 1
+L000748 |                         column = (column * 26) + letter - 'A' + 1; ⟦EOL⟧
+// 해설 L749: 구문 블록 경계입니다 · 소속 Parse.
+L000749 |                     } ⟦EOL⟧
+L000750 |  ⟦EOL⟧
+// 해설 L751: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text.AsSpan(letters.Length), NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.AsSpan(letters.Length) / 조건에 따라 결과식을 선택합니다: int.TryParse(text.AsSpan(letters.Length), NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : int.MaxValue / 지역 변수를 선언합니다: var row = int.TryParse(text.AsSpan(letters.Length), NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : int.MaxValue; / 변수의 초기값을 지정합니다: row = int.Tr
+L000751 |                     var row = int.TryParse(text.AsSpan(letters.Length), NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ⟦EOL⟧
+// 해설 L752: 선언·서명/매개변수·접근 조건입니다 · (int Row, int Column, string Text) Parse(string?)
+L000752 |                         ? parsed ⟦EOL⟧
+// 해설 L753: 선언·서명/매개변수·접근 조건입니다 · (int Row, int Column, string Text) Parse(string?)
+L000753 |                         : int.MaxValue; ⟦EOL⟧
+// 해설 L754: 호출자에게 값 또는 제어를 반환합니다: return (row, column, text);
+L000754 |                     return (row, column, text); ⟦EOL⟧
+// 해설 L755: 구문 블록 경계입니다 · 소속 Parse.
+L000755 |                 } ⟦EOL⟧
+L000756 |  ⟦EOL⟧
+// 해설 L757: 함수·델리게이트 또는 객체 생성자를 호출합니다: Parse(x) / 지역 변수를 선언합니다: var left = Parse(x); / 변수의 초기값을 지정합니다: left = Parse(x)
+L000757 |                 var left = Parse(x); ⟦EOL⟧
+// 해설 L758: 함수·델리게이트 또는 객체 생성자를 호출합니다: Parse(y) / 지역 변수를 선언합니다: var right = Parse(y); / 변수의 초기값을 지정합니다: right = Parse(y)
+L000758 |                 var right = Parse(y); ⟦EOL⟧
+// 해설 L759: 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Row.CompareTo(right.Row) / 지역 변수를 선언합니다: var rowCompare = left.Row.CompareTo(right.Row); / 변수의 초기값을 지정합니다: rowCompare = left.Row.CompareTo(right.Row)
+L000759 |                 var rowCompare = left.Row.CompareTo(right.Row); ⟦EOL⟧
+// 해설 L760: 조건에 따라 분기합니다: if (rowCompare != 0)
+L000760 |                 if (rowCompare != 0) ⟦EOL⟧
+// 해설 L761: 구문 블록 경계입니다 · 소속 Compare.
+L000761 |                 { ⟦EOL⟧
+// 해설 L762: 호출자에게 값 또는 제어를 반환합니다: return rowCompare;
+L000762 |                     return rowCompare; ⟦EOL⟧
+// 해설 L763: 구문 블록 경계입니다 · 소속 Compare.
+L000763 |                 } ⟦EOL⟧
+L000764 |  ⟦EOL⟧
+// 해설 L765: 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Column.CompareTo(right.Column) / 지역 변수를 선언합니다: var columnCompare = left.Column.CompareTo(right.Column); / 변수의 초기값을 지정합니다: columnCompare = left.Column.CompareTo(right.Column)
+L000765 |                 var columnCompare = left.Column.CompareTo(right.Column); ⟦EOL⟧
+// 해설 L766: 함수·델리게이트 또는 객체 생성자를 호출합니다: StringComparer.OrdinalIgnoreCase.Compare(left.Text, right.Text) / 조건에 따라 결과식을 선택합니다: columnCompare != 0 ? columnCompare : StringComparer.OrdinalIgnoreCase.Compare(left.Text, right.Text) / 호출자에게 값 또는 제어를 반환합니다: return columnCompare != 0 ? columnCompare : StringComparer.OrdinalIgnoreCase.Compare(left.Text, right.Text);
+L000766 |                 return columnCompare != 0 ? columnCompare : StringComparer.OrdinalIgnoreCase.Compare(left.Text, right.Text); ⟦EOL⟧
+// 해설 L767: 구문 블록 경계입니다 · 소속 Compare.
+L000767 |             } ⟦EOL⟧
+// 해설 L768: 구문 블록 경계입니다.
+L000768 |         } ⟦EOL⟧
+// 해설 L769: 구문 블록 경계입니다.
+L000769 |     } ⟦EOL⟧
+// 해설 L770: 구문 블록 경계입니다.
+L000770 | } ⟦EOL⟧

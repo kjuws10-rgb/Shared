@@ -1,0 +1,615 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs">Git 원본</a></p><h1>Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>2fddb6562636e40afb9ed6a3efef49f9513df07b4a0f35b1004aa54abff08a58</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>9,086 bytes / 192 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/16298f8d17d690ca836b.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CReviewResultFile</td><td>ClassDeclaration</td><td>8–191</td><td>CReviewResultFile</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>ManualResultTypes</td><td>FieldDeclaration</td><td>L10–10</td><td>string[] Drilling.File.ReviewResult.CReviewResultFile.ManualResultTypes</td></tr>
+<tr><td>ListCorrectionResults</td><td>MethodDeclaration</td><td>L12–17</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt; Drilling.File.ReviewResult.CReviewResultFile.ListCorrectionResults(System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadResultCatalog</td><td>MethodDeclaration</td><td>L19–29</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt; Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadManualCatalog</td><td>MethodDeclaration</td><td>L31–47</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadManualCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadAutoCatalog</td><td>MethodDeclaration</td><td>L49–59</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadAutoCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadZeroDefenceCatalog</td><td>MethodDeclaration</td><td>L61–84</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>AddFiles</td><td>MethodDeclaration</td><td>L86–100</td><td>void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, string, string, string, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadCatalogItem</td><td>MethodDeclaration</td><td>L102–165</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)</td></tr>
+<tr><td>Value</td><td>MethodDeclaration</td><td>L167–167</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
+<tr><td>ValueOrFallback</td><td>MethodDeclaration</td><td>L169–177</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[])</td></tr>
+<tr><td>ParseSavedAt</td><td>MethodDeclaration</td><td>L179–184</td><td>System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset)</td></tr>
+<tr><td>NormalizeCatalogStatus</td><td>MethodDeclaration</td><td>L186–190</td><td>string Drilling.File.ReviewResult.CReviewResultFile.NormalizeCatalogStatus(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L10">FieldDeclaration <code>ManualResultTypes</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L10-L10">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string[] Drilling.File.ReviewResult.CReviewResultFile.ManualResultTypes</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string[]</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ManualResultTypes = [&quot;ALL_SHOT&quot;, &quot;ONE_SHOT&quot;, &quot;BEAM_INSPECTION&quot;, &quot;ROUGH&quot;, &quot;FINE&quot;]</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">MethodDeclaration <code>ListCorrectionResults</code> · L12–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L12-L17">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:12–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt; Drilling.File.ReviewResult.CReviewResultFile.ListCorrectionResults(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>Task.Run&lt;IReadOnlyList&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt; System.Threading.Tasks.Task.Run&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;(System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>15</td><td>ReadResultCatalog</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt; Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:19</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run&lt;IReadOnlyList&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;( () =&gt; ReadResultCatalog(cancellationToken), cancellationToken)</td></tr>
+<tr><td>14</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.Run&lt;IReadOnlyList&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;&gt;( () =&gt; ReadResultCatalog(cancellationToken), cancellationToken);</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadResultCatalog(cancellationToken)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">MethodDeclaration <code>ReadResultCatalog</code> · L19–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L19-L29">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:19–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt; Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L15-L15">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:15–15</a></td><td>ReadResultCatalog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>new List&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.List()</td></tr>
+<tr><td>22</td><td>ReadManualCatalog</td><td>resolved</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadManualCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:31</td></tr>
+<tr><td>23</td><td>ReadAutoCatalog</td><td>resolved</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadAutoCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:49</td></tr>
+<tr><td>24</td><td>ReadZeroDefenceCatalog</td><td>resolved</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:61</td></tr>
+<tr><td>25</td><td>results .OrderByDescending(item =&gt; item.SavedAt) .ThenBy(item =&gt; item.FileName, StringComparer.OrdinalIgnoreCase) .ToArray</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.ToArray&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;()</td></tr>
+<tr><td>25</td><td>results .OrderByDescending(item =&gt; item.SavedAt) .ThenBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt; System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.ThenBy&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, string&gt;(System.Func&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, string&gt;, System.Collections.Generic.IComparer&lt;string&gt;?)</td></tr>
+<tr><td>25</td><td>results .OrderByDescending</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.OrderByDescending&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, System.DateTimeOffset&gt;(System.Func&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM, System.DateTimeOffset&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;()</td></tr>
+<tr><td>21</td><td>local-declaration</td><td>지역 변수를 선언합니다: var results = new List&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;();</td></tr>
+<tr><td>21</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: results = new List&lt;ST_REVIEW_RESULT_CATALOG_ITEM&gt;()</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadManualCatalog(results, cancellationToken)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAutoCatalog(results, cancellationToken)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadZeroDefenceCatalog(results, cancellationToken)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item =&gt; item.SavedAt)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item =&gt; item.SavedAt) .ThenBy(item =&gt; item.FileName, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item =&gt; item.SavedAt) .ThenBy(item =&gt; item.FileName, StringComparer.OrdinalIgnoreCase) .ToArray()</td></tr>
+<tr><td>25</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return results .OrderByDescending(item =&gt; item.SavedAt) .ThenBy(item =&gt; item.FileName, StringComparer.OrdinalIgnoreCase) .ToArray();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">MethodDeclaration <code>ReadManualCatalog</code> · L31–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L31-L47">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:31–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadManualCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>results</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L22-L22">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:22–22</a></td><td>ReadManualCatalog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>33</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>34</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>36</td><td>Directory.EnumerateDirectories</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateDirectories(string)</td></tr>
+<tr><td>38</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>39</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+<tr><td>42</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>43</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>44</td><td>AddFiles</td><td>resolved</td><td>void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, string, string, string, string, string, System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:86</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, &quot;Manual&quot;)</td></tr>
+<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, &quot;Manual&quot;);</td></tr>
+<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, &quot;Manual&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root)</td></tr>
+<tr><td>34</td><td>if</td><td>조건에 따라 분기합니다: if (!Directory.Exists(root))</td></tr>
+<tr><td>35</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root)</td></tr>
+<tr><td>36</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipeId = Path.GetFileName(recipeDirectory);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipeId = Path.GetFileName(recipeDirectory)</td></tr>
+<tr><td>40</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var resultType in ManualResultTypes)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(recipeDirectory, resultType)</td></tr>
+<tr><td>42</td><td>local-declaration</td><td>지역 변수를 선언합니다: var typeDirectory = Path.Combine(recipeDirectory, resultType);</td></tr>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: typeDirectory = Path.Combine(recipeDirectory, resultType)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(typeDirectory)</td></tr>
+<tr><td>43</td><td>if</td><td>조건에 따라 분기합니다: if (Directory.Exists(typeDirectory))</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddFiles(results, typeDirectory, &quot;MANUAL&quot;, resultType, recipeId, &quot;&quot;, cancellationToken)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadManualCatalog&quot;]
+ N0[&quot;L34 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L36 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L40 foreach&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L43 if&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">MethodDeclaration <code>ReadAutoCatalog</code> · L49–59</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L49-L59">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:49–59</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadAutoCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>results</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L23-L23">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:23–23</a></td><td>ReadAutoCatalog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>51</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>52</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>54</td><td>Directory.EnumerateDirectories</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateDirectories(string)</td></tr>
+<tr><td>56</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>57</td><td>AddFiles</td><td>resolved</td><td>void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, string, string, string, string, string, System.Threading.CancellationToken) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:86</td></tr>
+<tr><td>57</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, &quot;Auto&quot;)</td></tr>
+<tr><td>51</td><td>local-declaration</td><td>지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, &quot;Auto&quot;);</td></tr>
+<tr><td>51</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, &quot;Auto&quot;)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root)</td></tr>
+<tr><td>52</td><td>if</td><td>조건에 따라 분기합니다: if (!Directory.Exists(root))</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root)</td></tr>
+<tr><td>54</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddFiles(results, recipeDirectory, &quot;AUTO&quot;, &quot;AUTO&quot;, Path.GetFileName(recipeDirectory), &quot;&quot;, cancellationToken)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadAutoCatalog&quot;]
+ N0[&quot;L52 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L54 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L61">MethodDeclaration <code>ReadZeroDefenceCatalog</code> · L61–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L61-L84">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:61–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>results</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L24-L24">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:24–24</a></td><td>ReadZeroDefenceCatalog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>63</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>64</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>66</td><td>Directory.EnumerateDirectories</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateDirectories(string)</td></tr>
+<tr><td>68</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>69</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+<tr><td>70</td><td>Directory.EnumerateDirectories</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateDirectories(string)</td></tr>
+<tr><td>72</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>73</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+<tr><td>74</td><td>Directory.EnumerateFiles</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateFiles(string, string, System.IO.SearchOption)</td></tr>
+<tr><td>76</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>77</td><td>Path.GetFileNameWithoutExtension(filePath).Contains</td><td>resolved</td><td>bool string.Contains(string, System.StringComparison)</td></tr>
+<tr><td>77</td><td>Path.GetFileNameWithoutExtension</td><td>resolved</td><td>string? System.IO.Path.GetFileNameWithoutExtension(string?)</td></tr>
+<tr><td>80</td><td>results.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.Add(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM)</td></tr>
+<tr><td>80</td><td>ReadCatalogItem</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:102</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, &quot;ZeroDefence&quot;)</td></tr>
+<tr><td>63</td><td>local-declaration</td><td>지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, &quot;ZeroDefence&quot;);</td></tr>
+<tr><td>63</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, &quot;ZeroDefence&quot;)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root)</td></tr>
+<tr><td>64</td><td>if</td><td>조건에 따라 분기합니다: if (!Directory.Exists(root))</td></tr>
+<tr><td>65</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root)</td></tr>
+<tr><td>66</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory)</td></tr>
+<tr><td>69</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipeId = Path.GetFileName(recipeDirectory);</td></tr>
+<tr><td>69</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipeId = Path.GetFileName(recipeDirectory)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(recipeDirectory)</td></tr>
+<tr><td>70</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var glassDirectory in Directory.EnumerateDirectories(recipeDirectory))</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(glassDirectory)</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var glassId = Path.GetFileName(glassDirectory);</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: glassId = Path.GetFileName(glassDirectory)</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(glassDirectory, &quot;*.csv&quot;, System.IO.SearchOption.TopDirectoryOnly)</td></tr>
+<tr><td>74</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var filePath in Directory.EnumerateFiles(glassDirectory, &quot;*.csv&quot;, System.IO.SearchOption.TopDirectoryOnly))</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(filePath).Contains(&quot;FOLLOWUP&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(filePath)</td></tr>
+<tr><td>77</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Path.GetFileNameWithoutExtension(filePath).Contains(&quot;FOLLOWUP&quot;, StringComparison.OrdinalIgnoreCase) ? &quot;FOLLOWUP&quot; : &quot;ZERO_DEFENCE&quot;</td></tr>
+<tr><td>77</td><td>local-declaration</td><td>지역 변수를 선언합니다: var resultType = Path.GetFileNameWithoutExtension(filePath).Contains(&quot;FOLLOWUP&quot;, StringComparison.OrdinalIgnoreCase) ? &quot;FOLLOWUP&quot; : &quot;ZERO_DEFENCE&quot;;</td></tr>
+<tr><td>77</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: resultType = Path.GetFileNameWithoutExtension(filePath).Contains(&quot;FOLLOWUP&quot;, StringComparison.OrdinalIgnoreCase) ? &quot;FOLLOWUP&quot; : &quot;ZERO_DEFENCE&quot;</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results.Add(ReadCatalogItem(filePath, &quot;ZERO_DEFENCE&quot;, resultType, recipeId, glassId))</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCatalogItem(filePath, &quot;ZERO_DEFENCE&quot;, resultType, recipeId, glassId)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadZeroDefenceCatalog&quot;]
+ N0[&quot;L64 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L66 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L70 foreach&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L74 foreach&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">MethodDeclaration <code>AddFiles</code> · L86–100</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L86-L100">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:86–100</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;, string, string, string, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>results</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>directory</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>source</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>resultType</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>recipeId</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>glassId</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L44-L44">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:44–44</a></td><td>AddFiles</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L57-L57">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:57–57</a></td><td>AddFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>95</td><td>Directory.EnumerateFiles</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateFiles(string, string, System.IO.SearchOption)</td></tr>
+<tr><td>97</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>98</td><td>results.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM&gt;.Add(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM)</td></tr>
+<tr><td>98</td><td>ReadCatalogItem</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:102</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, &quot;*.csv&quot;, System.IO.SearchOption.TopDirectoryOnly)</td></tr>
+<tr><td>95</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var filePath in Directory.EnumerateFiles(directory, &quot;*.csv&quot;, System.IO.SearchOption.TopDirectoryOnly))</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results.Add(ReadCatalogItem(filePath, source, resultType, recipeId, glassId))</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCatalogItem(filePath, source, resultType, recipeId, glassId)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;AddFiles&quot;]
+ N0[&quot;L95 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L102">MethodDeclaration <code>ReadCatalogItem</code> · L102–165</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L102-L165">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:102–165</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>filePath</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>source</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>resultType</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallbackRecipeId</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallbackGlassId</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L80-L80">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:80–80</a></td><td>ReadCatalogItem</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L98-L98">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:98–98</a></td><td>ReadCatalogItem</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>109</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>110</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+<tr><td>111</td><td>new DateTimeOffset</td><td>resolved</td><td>System.DateTimeOffset.DateTimeOffset(System.DateTime)</td></tr>
+<tr><td>111</td><td>System.IO.File.GetLastWriteTime</td><td>resolved</td><td>System.DateTime System.IO.File.GetLastWriteTime(string)</td></tr>
+<tr><td>114</td><td>new TextFieldParser</td><td>resolved</td><td>Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldParser(string, System.Text.Encoding, bool)</td></tr>
+<tr><td>120</td><td>parser.SetDelimiters</td><td>resolved</td><td>void Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters(params string[])</td></tr>
+<tr><td>121</td><td>parser.ReadFields</td><td>resolved</td><td>string[] Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields()</td></tr>
+<tr><td>122</td><td>parser.ReadFields</td><td>resolved</td><td>string[] Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields()</td></tr>
+<tr><td>123</td><td>new Dictionary&lt;string, string&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>126</td><td>headers[index].Trim().TrimStart</td><td>resolved</td><td>string string.TrimStart(char)</td></tr>
+<tr><td>126</td><td>headers[index].Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>128</td><td>values[index].Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>131</td><td>ParseSavedAt</td><td>resolved</td><td>System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:179</td></tr>
+<tr><td>131</td><td>Value</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167</td></tr>
+<tr><td>132</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>132</td><td>Value</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167</td></tr>
+<tr><td>135</td><td>new ST_REVIEW_RESULT_CATALOG_ITEM</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM.ST_REVIEW_RESULT_CATALOG_ITEM(string, string, string, string, string, System.DateTimeOffset, string, string, string, string, int?, string) · Drilling.Common/Review/CReviewManager.cs:4063</td></tr>
+<tr><td>140</td><td>ValueOrFallback</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169</td></tr>
+<tr><td>142</td><td>NormalizeCatalogStatus</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.NormalizeCatalogStatus(string) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:186</td></tr>
+<tr><td>142</td><td>Value</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167</td></tr>
+<tr><td>143</td><td>ValueOrFallback</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169</td></tr>
+<tr><td>143</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>144</td><td>ValueOrFallback</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169</td></tr>
+<tr><td>145</td><td>ValueOrFallback</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169</td></tr>
+<tr><td>147</td><td>Value</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167</td></tr>
+<tr><td>151</td><td>new ST_REVIEW_RESULT_CATALOG_ITEM</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM.ST_REVIEW_RESULT_CATALOG_ITEM(string, string, string, string, string, System.DateTimeOffset, string, string, string, string, int?, string) · Drilling.Common/Review/CReviewManager.cs:4063</td></tr>
+<tr><td>159</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(filePath)</td></tr>
+<tr><td>109</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fullPath = Path.GetFullPath(filePath);</td></tr>
+<tr><td>109</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fullPath = Path.GetFullPath(filePath)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(fullPath)</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fileName = Path.GetFileName(fullPath);</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fileName = Path.GetFileName(fullPath)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath))</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.GetLastWriteTime(fullPath)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fallbackSavedAt = new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath));</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fallbackSavedAt = new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath))</td></tr>
+<tr><td>112</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false }</td></tr>
+<tr><td>114</td><td>using-declaration</td><td>정리할 자원을 선언합니다: using var parser = new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false };</td></tr>
+<tr><td>114</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parser = new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false }</td></tr>
+<tr><td>116</td><td>assignment</td><td>값을 대상에 대입합니다: TextFieldType = FieldType.Delimited</td></tr>
+<tr><td>117</td><td>assignment</td><td>값을 대상에 대입합니다: HasFieldsEnclosedInQuotes = true</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: TrimWhiteSpace = false</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parser.SetDelimiters(&quot;,&quot;)</td></tr>
+<tr><td>121</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parser.ReadFields()</td></tr>
+<tr><td>121</td><td>local-declaration</td><td>지역 변수를 선언합니다: var headers = parser.ReadFields() ?? [];</td></tr>
+<tr><td>121</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: headers = parser.ReadFields() ?? []</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parser.ReadFields()</td></tr>
+<tr><td>122</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parser.EndOfData ? [] : parser.ReadFields() ?? []</td></tr>
+<tr><td>122</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = parser.EndOfData ? [] : parser.ReadFields() ?? [];</td></tr>
+<tr><td>122</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = parser.EndOfData ? [] : parser.ReadFields() ?? []</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var firstRow = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: firstRow = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>124</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>124</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; headers.Length; index++)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: headers[index].Trim().TrimStart(&#x27;\uFEFF&#x27;)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: headers[index].Trim()</td></tr>
+<tr><td>126</td><td>local-declaration</td><td>지역 변수를 선언합니다: var name = headers[index].Trim().TrimStart(&#x27;\uFEFF&#x27;);</td></tr>
+<tr><td>126</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: name = headers[index].Trim().TrimStart(&#x27;\uFEFF&#x27;)</td></tr>
+<tr><td>127</td><td>if</td><td>조건에 따라 분기합니다: if (name.Length &gt; 0)</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: firstRow[name] = index &lt; values.Length ? values[index].Trim() : &quot;&quot;</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values[index].Trim()</td></tr>
+<tr><td>128</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: index &lt; values.Length ? values[index].Trim() : &quot;&quot;</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseSavedAt(Value(firstRow, &quot;SAVED_AT&quot;, &quot;SavedAt&quot;), fallbackSavedAt)</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, &quot;SAVED_AT&quot;, &quot;SavedAt&quot;)</td></tr>
+<tr><td>131</td><td>local-declaration</td><td>지역 변수를 선언합니다: var savedAt = ParseSavedAt(Value(firstRow, &quot;SAVED_AT&quot;, &quot;SavedAt&quot;), fallbackSavedAt);</td></tr>
+<tr><td>131</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: savedAt = ParseSavedAt(Value(firstRow, &quot;SAVED_AT&quot;, &quot;SavedAt&quot;), fallbackSavedAt)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(Value(firstRow, &quot;TOTAL_COUNT&quot;), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, &quot;TOTAL_COUNT&quot;)</td></tr>
+<tr><td>132</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: int.TryParse(Value(firstRow, &quot;TOTAL_COUNT&quot;), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ? count : null</td></tr>
+<tr><td>132</td><td>local-declaration</td><td>지역 변수를 선언합니다: int? totalCount = int.TryParse(Value(firstRow, &quot;TOTAL_COUNT&quot;), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ? count : null;</td></tr>
+<tr><td>132</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: totalCount = int.TryParse(Value(firstRow, &quot;TOTAL_COUNT&quot;), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ? count : null</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, ValueOrFallback(firstRow, fallbackRecipeId, &quot;RECIPE_ID&quot;, &quot;Recipe&quot;), savedAt, NormalizeCatalogStatus(Value(firstRow, &quot;RESULT_STATUS&quot;, &quot;ResultStatu…</td></tr>
+<tr><td>135</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, ValueOrFallback(firstRow, fallbackRecipeId, &quot;RECIPE_ID&quot;, &quot;Recipe&quot;), savedAt, NormalizeCatalogStatus(Value(firstRow, &quot;RESULT_STATUS&quot;, &quot;ResultStatus&quot;,</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, fallbackRecipeId, &quot;RECIPE_ID&quot;, &quot;Recipe&quot;)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeCatalogStatus(Value(firstRow, &quot;RESULT_STATUS&quot;, &quot;ResultStatus&quot;, &quot;STATE&quot;, &quot;State&quot;))</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, &quot;RESULT_STATUS&quot;, &quot;ResultStatus&quot;, &quot;STATE&quot;, &quot;State&quot;)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, string.IsNullOrWhiteSpace(fallbackGlassId) ? &quot;UNLINKED&quot; : fallbackGlassId, &quot;GLASS_ID&quot;, &quot;GLASS_NAME&quot;, &quot;Glass&quot;)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fallbackGlassId)</td></tr>
+<tr><td>143</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(fallbackGlassId) ? &quot;UNLINKED&quot; : fallbackGlassId</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, source, &quot;RUN_TYPE&quot;)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, &quot;-&quot;, &quot;METHOD&quot;, &quot;INSPECTION_METHOD&quot;)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, &quot;RESULT_MESSAGE&quot;, &quot;DETAIL&quot;, &quot;Detail&quot;)</td></tr>
+<tr><td>149</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or MalformedLineException or InvalidDataException)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, fallbackRecipeId, fallbackSavedAt, &quot;INVALID&quot;, string.IsNullOrWhiteSpace(fallbackGlassId) ? &quot;UNLINKED&quot; : fallbackGlassId, source, &quot;-&quot;, null, excep…</td></tr>
+<tr><td>151</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, fallbackRecipeId, fallbackSavedAt, &quot;INVALID&quot;, string.IsNullOrWhiteSpace(fallbackGlassId) ? &quot;UNLINKED&quot; : fallbackGlassId, source, &quot;-&quot;, null, exceptio</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fallbackGlassId)</td></tr>
+<tr><td>159</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(fallbackGlassId) ? &quot;UNLINKED&quot; : fallbackGlassId</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadCatalogItem&quot;]
+ N0[&quot;L112 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L124 for&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L127 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L149 catch&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L167">MethodDeclaration <code>Value</code> · L167–167</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.ReviewResult.CReviewResultFile.Value(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>names</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131</a></td><td>Value</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L132-L132">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:132–132</a></td><td>Value</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142</a></td><td>Value</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L147-L147">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:147–147</a></td><td>Value</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>167</td><td>ValueOrFallback</td><td>resolved</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[]) · Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(values, &quot;&quot;, names)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L169">MethodDeclaration <code>ValueOrFallback</code> · L169–177</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L169-L177">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169–177</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>names</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L140-L140">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:140–140</a></td><td>ValueOrFallback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L143-L143">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:143–143</a></td><td>ValueOrFallback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L144-L144">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:144–144</a></td><td>ValueOrFallback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L145-L145">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:145–145</a></td><td>ValueOrFallback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167</a></td><td>ValueOrFallback</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>173</td><td>values.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>173</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>171</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var name in names)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(name, out var value)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>173</td><td>if</td><td>조건에 따라 분기합니다: if (values.TryGetValue(name, out var value) &amp;&amp; !string.IsNullOrWhiteSpace(value))</td></tr>
+<tr><td>174</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+<tr><td>176</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return fallback;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValueOrFallback&quot;]
+ N0[&quot;L171 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L173 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L179">MethodDeclaration <code>ParseSavedAt</code> · L179–184</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L179-L184">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:179–184</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.DateTimeOffset</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>System.DateTimeOffset</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131</a></td><td>ParseSavedAt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>181</td><td>DateTimeOffset.TryParse</td><td>resolved</td><td>bool System.DateTimeOffset.TryParse(string?, System.IFormatProvider?, System.Globalization.DateTimeStyles, out System.DateTimeOffset)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt)</td></tr>
+<tr><td>181</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : fallback</td></tr>
+<tr><td>181</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : fallback;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L186">MethodDeclaration <code>NormalizeCatalogStatus</code> · L186–190</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L186-L190">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:186–190</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.ReviewResult.CReviewResultFile.NormalizeCatalogStatus(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.ReviewResult.CReviewResultFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142">Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142</a></td><td>NormalizeCatalogStatus</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>188</td><td>value.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>188</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant()</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>188</td><td>local-declaration</td><td>지역 변수를 선언합니다: var status = value.Trim().ToUpperInvariant();</td></tr>
+<tr><td>188</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: status = value.Trim().ToUpperInvariant()</td></tr>
+<tr><td>189</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status.Length == 0 ? &quot;UNKNOWN&quot; : status</td></tr>
+<tr><td>189</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return status.Length == 0 ? &quot;UNKNOWN&quot; : status;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

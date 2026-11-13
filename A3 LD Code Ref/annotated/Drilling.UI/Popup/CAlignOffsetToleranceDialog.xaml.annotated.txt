@@ -1,0 +1,87 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <Window x:Class="Drilling.UI.Popup.CAlignOffsetToleranceDialog"
+L000001 | <Window x:Class="Drilling.UI.Popup.CAlignOffsetToleranceDialog" ⟦EOL⟧
+// 해설 L2: XAML UI 구조·속성·리소스 선언입니다: xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+L000002 |         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ⟦EOL⟧
+// 해설 L3: XAML UI 구조·속성·리소스 선언입니다: xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+L000003 |         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ⟦EOL⟧
+// 해설 L4: XAML UI 구조·속성·리소스 선언입니다: Title="Align Offset Tolerance" Width="900" Height="650" MinWidth="760" MinHeight="420"
+L000004 |         Title="Align Offset Tolerance" Width="900" Height="650" MinWidth="760" MinHeight="420" ⟦EOL⟧
+// 해설 L5: XAML UI 구조·속성·리소스 선언입니다: WindowStartupLocation="CenterOwner" FontFamily="Segoe UI" KeyDown="OnKeyDown"
+L000005 |         WindowStartupLocation="CenterOwner" FontFamily="Segoe UI" KeyDown="OnKeyDown" ⟦EOL⟧
+// 해설 L6: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource GridBackgroundBrush}" Foreground="{DynamicResource TextPrimaryBrush}">
+L000006 |         Background="{DynamicResource GridBackgroundBrush}" Foreground="{DynamicResource TextPrimaryBrush}"> ⟦EOL⟧
+// 해설 L7: XAML UI 구조·속성·리소스 선언입니다: <Border Padding="24" Background="{DynamicResource PanelBackgroundBrush}"
+L000007 |     <Border Padding="24" Background="{DynamicResource PanelBackgroundBrush}" ⟦EOL⟧
+// 해설 L8: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}" BorderThickness="1">
+L000008 |             BorderBrush="{DynamicResource PanelBorderBrush}" BorderThickness="1"> ⟦EOL⟧
+// 해설 L9: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000009 |         <Grid> ⟦EOL⟧
+// 해설 L10: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000010 |             <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L11: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000011 |                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L12: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000012 |                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L13: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="*" />
+L000013 |                 <RowDefinition Height="*" /> ⟦EOL⟧
+// 해설 L14: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000014 |                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L15: XAML 요소 범위를 닫습니다.
+L000015 |             </Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L16: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="Align Offset Tolerance 초과" FontSize="23" FontWeight="SemiBold" />
+L000016 |             <TextBlock Text="Align Offset Tolerance 초과" FontSize="23" FontWeight="SemiBold" /> ⟦EOL⟧
+// 해설 L17: XAML UI 구조·속성·리소스 선언입니다: <StackPanel Grid.Row="1" Margin="0,12,0,14">
+L000017 |             <StackPanel Grid.Row="1" Margin="0,12,0,14"> ⟦EOL⟧
+// 해설 L18: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding Summary}" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" />
+L000018 |                 <TextBlock Text="{Binding Summary}" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" /> ⟦EOL⟧
+// 해설 L19: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Margin="0,8,0,0" FontSize="13" TextWrapping="Wrap"
+L000019 |                 <TextBlock Margin="0,8,0,0" FontSize="13" TextWrapping="Wrap" ⟦EOL⟧
+// 해설 L20: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}"
+L000020 |                            Foreground="{DynamicResource TextSecondaryBrush}" ⟦EOL⟧
+// 해설 L21: XAML UI 구조·속성·리소스 선언입니다: Text="X 또는 Y 중 하나만 초과해도 해당 Shot의 X/Y 둘 다 제외합니다.&#x0a;제외된 Shot은 기존 저장값을 유지합니다. 전부 제외를 선택하면 레시피를 변경하지 않습니다." />
+L000021 |                            Text="X 또는 Y 중 하나만 초과해도 해당 Shot의 X/Y 둘 다 제외합니다.&#x0a;제외된 Shot은 기존 저장값을 유지합니다. 전부 제외를 선택하면 레시피를 변경하지 않습니다." /> ⟦EOL⟧
+// 해설 L22: XAML 요소 범위를 닫습니다.
+L000022 |             </StackPanel> ⟦EOL⟧
+// 해설 L23: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGrid Grid.Row="2" ItemsSource="{Binding ExceededShots}" Style="{StaticResource PlainDataGrid}"
+L000023 |             <DataGrid Grid.Row="2" ItemsSource="{Binding ExceededShots}" Style="{StaticResource PlainDataGrid}" ⟦EOL⟧
+// 해설 L24: XAML UI 구조·속성·리소스 선언입니다: IsReadOnly="True" RowHeight="30" ColumnHeaderHeight="36" FontSize="14"
+L000024 |                       IsReadOnly="True" RowHeight="30" ColumnHeaderHeight="36" FontSize="14" ⟦EOL⟧
+// 해설 L25: XAML UI 구조·속성·리소스 선언입니다: EnableRowVirtualization="True" EnableColumnVirtualization="True"
+L000025 |                       EnableRowVirtualization="True" EnableColumnVirtualization="True" ⟦EOL⟧
+// 해설 L26: XAML UI 구조·속성·리소스 선언입니다: VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
+L000026 |                       VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"> ⟦EOL⟧
+// 해설 L27: XAML UI 구조·속성·리소스 선언입니다: <DataGrid.Columns>
+L000027 |                 <DataGrid.Columns> ⟦EOL⟧
+// 해설 L28: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="Cell" Binding="{Binding CellNo, StringFormat='Cell {0}'}" Width="*" />
+L000028 |                     <DataGridTextColumn Header="Cell" Binding="{Binding CellNo, StringFormat='Cell {0}'}" Width="*" /> ⟦EOL⟧
+// 해설 L29: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="Shot" Binding="{Binding ShotName}" Width="*" />
+L000029 |                     <DataGridTextColumn Header="Shot" Binding="{Binding ShotName}" Width="*" /> ⟦EOL⟧
+// 해설 L30: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="Design Offset X (mm)" Binding="{Binding X, StringFormat={}{0:0.000}}" Width="2*" />
+L000030 |                     <DataGridTextColumn Header="Design Offset X (mm)" Binding="{Binding X, StringFormat={}{0:0.000}}" Width="2*" /> ⟦EOL⟧
+// 해설 L31: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="Design Offset Y (mm)" Binding="{Binding Y, StringFormat={}{0:0.000}}" Width="2*" />
+L000031 |                     <DataGridTextColumn Header="Design Offset Y (mm)" Binding="{Binding Y, StringFormat={}{0:0.000}}" Width="2*" /> ⟦EOL⟧
+// 해설 L32: XAML 요소 범위를 닫습니다.
+L000032 |                 </DataGrid.Columns> ⟦EOL⟧
+// 해설 L33: XAML 요소 범위를 닫습니다.
+L000033 |             </DataGrid> ⟦EOL⟧
+// 해설 L34: XAML UI 구조·속성·리소스 선언입니다: <UniformGrid Grid.Row="3" Columns="2" Margin="0,18,0,0" Height="46">
+L000034 |             <UniformGrid Grid.Row="3" Columns="2" Margin="0,18,0,0" Height="46"> ⟦EOL⟧
+// 해설 L35: XAML UI 구조·속성·리소스 선언입니다: <Button x:Name="ApplyRemainingButton" Content="초과 Shot 제외 후 적용" Margin="0,0,10,0" FontSize="16"
+L000035 |                 <Button x:Name="ApplyRemainingButton" Content="초과 Shot 제외 후 적용" Margin="0,0,10,0" FontSize="16" ⟦EOL⟧
+// 해설 L36: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Style="{StaticResource SecondaryButton}" IsEnabled="{Binding CanApplyRemaining}" Click="OnApplyRemaining" />
+L000036 |                         Style="{StaticResource SecondaryButton}" IsEnabled="{Binding CanApplyRemaining}" Click="OnApplyRemaining" /> ⟦EOL⟧
+// 해설 L37: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: <Button Content="전부 제외 (적용 안 함)" FontSize="16" Style="{StaticResource SecondaryButton}" Click="OnCancel" />
+L000037 |                 <Button Content="전부 제외 (적용 안 함)" FontSize="16" Style="{StaticResource SecondaryButton}" Click="OnCancel" /> ⟦EOL⟧
+// 해설 L38: XAML 요소 범위를 닫습니다.
+L000038 |             </UniformGrid> ⟦EOL⟧
+// 해설 L39: XAML 요소 범위를 닫습니다.
+L000039 |         </Grid> ⟦EOL⟧
+// 해설 L40: XAML 요소 범위를 닫습니다.
+L000040 |     </Border> ⟦EOL⟧
+// 해설 L41: XAML 요소 범위를 닫습니다.
+L000041 | </Window> ⟦EOL⟧

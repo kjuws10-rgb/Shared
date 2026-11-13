@@ -1,0 +1,240 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup
+L000001 | namespace Drilling.UI.Popup ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 |     using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000004 |     using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000005 |     using System.Diagnostics; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000006 |     using System.Windows.Threading; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000007 |     using Drilling.Common.Interface; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CProtectWindowRequestDialog : Window
+L000009 |     public partial class CProtectWindowRequestDialog : Window ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CProtectWindowRequestDialog.CProtectWindowRequestDialog(Drilling.UI.Menu.Menus.CMainProtectWindowPanel)
+L000011 |         public CProtectWindowRequestDialog(CMainProtectWindowPanel status) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 .ctor.
+L000012 |         { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000013 |             InitializeComponent(); ⟦EOL⟧
+// 해설 L14: 값을 대상에 대입합니다: DataContext = status
+L000014 |             DataContext = status; ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width * 0.95) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width * 0.95)
+L000015 |             Width = Math.Min(Width, SystemParameters.WorkArea.Width * 0.95); ⟦EOL⟧
+// 해설 L16: 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height * 0.9) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height * 0.9)
+L000016 |             Height = Math.Min(Height, SystemParameters.WorkArea.Height * 0.9); ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |         } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000019 |         private void CloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다.
+L000020 |     } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000022 |     /// <summary>Menu-independent, modeless notice. Copies shared snapshots only; never reads a device or recipe file.</summary> ⟦EOL⟧
+// 해설 L23: 타입의 구조/상속 선언입니다: public sealed class CProtectWindowRequestNotice : IDisposable
+L000023 |     public sealed class CProtectWindowRequestNotice : IDisposable ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager Drilling.UI.Popup.CProtectWindowRequestNotice._interfaces
+L000025 |         private readonly CInterfaceManager _interfaces; ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · Window Drilling.UI.Popup.CProtectWindowRequestNotice._owner
+L000026 |         private readonly Window _owner; ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Func<Drilling.UI.Menu.Menus.CMainProtectWindowPanel, Drilling.UI.Popup.CProtectWindowRequestDialog> Drilling.UI.Popup.CProtectWindowRequestNotice._createDialog
+L000027 |         private readonly Func<CMainProtectWindowPanel, CProtectWindowRequestDialog> _createDialog; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · DispatcherTimer Drilling.UI.Popup.CProtectWindowRequestNotice._timer
+L000028 |         private readonly DispatcherTimer _timer; ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CProtectWindowRequestDialog? Drilling.UI.Popup.CProtectWindowRequestNotice._dialog
+L000029 |         private CProtectWindowRequestDialog? _dialog; ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CProtectWindowRequestNotice._pending
+L000030 |         private bool _pending; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CProtectWindowRequestNotice._disposed
+L000031 |         private bool _disposed; ⟦EOL⟧
+// 해설 L32: 변수의 초기값을 지정합니다: _lastError = ""
+L000032 |         private string _lastError = ""; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000033 |         public CMainProtectWindowPanel Status { get; } = new(); ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CProtectWindowRequestDialog? Drilling.UI.Popup.CProtectWindowRequestNotice.CurrentDialog
+L000034 |         public CProtectWindowRequestDialog? CurrentDialog => _dialog; ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · System.TimeSpan Drilling.UI.Popup.CProtectWindowRequestNotice.RefreshInterval
+L000035 |         public TimeSpan RefreshInterval => _timer.Interval; ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CProtectWindowRequestNotice.CProtectWindowRequestNotice(Drilling.Common.Interface.CInterfaceManager, Window, System.Func<Drilling.UI.Menu.Menus.CMainProtectWindowPanel, Drilling.UI.Popup.CProt
+L000037 |         public CProtectWindowRequestNotice(CInterfaceManager interfaces, Window owner, Func<CMainProtectWindowPanel, CProtectWindowRequestDialog>? createDialog = null) ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 .ctor.
+L000038 |         { ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: _interfaces = interfaces
+L000039 |             _interfaces = interfaces; ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: _owner = owner
+L000040 |             _owner = owner; ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: _createDialog = createDialog ?? (status => new(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(status)
+L000041 |             _createDialog = createDialog ?? (status => new(status)); ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _timer = new(DispatcherPriority.Background, owner.Dispatcher) { Interval = TimeSpan.FromSeconds(1) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background, owner.Dispatcher) { Interval = TimeSpan.FromSeconds(1) }
+L000042 |             _timer = new(DispatcherPriority.Background, owner.Dispatcher) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 .ctor.
+L000043 |             { ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: Interval = TimeSpan.FromSeconds(1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1)
+L000044 |                 Interval = TimeSpan.FromSeconds(1) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 .ctor.
+L000045 |             }; ⟦EOL⟧
+// 해설 L46: 복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick += Tick
+L000046 |             _timer.Tick += Tick; ⟦EOL⟧
+// 해설 L47: 복합 대입 또는 이벤트 구독/해지 표현입니다: _owner.Closed += OwnerClosed
+L000047 |             _owner.Closed += OwnerClosed; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 .ctor.
+L000048 |         } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CProtectWindowRequestNotice.Start()
+L000050 |         public void Start() ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Start.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Dispatcher.VerifyAccess()
+L000052 |             _owner.Dispatcher.VerifyAccess(); ⟦EOL⟧
+// 해설 L53: 조건에 따라 분기합니다: if (_disposed)
+L000053 |             if (_disposed) ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return;
+L000054 |                 return; ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000055 |             Refresh(); ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Start()
+L000056 |             _timer.Start(); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 Start.
+L000057 |         } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CProtectWindowRequestNotice.Refresh()
+L000059 |         public void Refresh() ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Refresh.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Dispatcher.VerifyAccess()
+L000061 |             _owner.Dispatcher.VerifyAccess(); ⟦EOL⟧
+// 해설 L62: 조건에 따라 분기합니다: if (_disposed)
+L000062 |             if (_disposed) ⟦EOL⟧
+// 해설 L63: 호출자에게 값 또는 제어를 반환합니다: return;
+L000063 |                 return; ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedSnapshot([CMainProtectWindowPanel.CurrentCountId, CMainProtectWindowPanel.RequestId, CMainProtectWindowPanel.CompleteId, CMainProtectWindowPanel.TrayCountId], out var map) / 지역 변수를 선언합니다: var values = _interfaces.Melsec.GetCachedSnapshot([CMainProtectWindowPanel.CurrentCountId, CMainProtectWindowPanel.RequestId, CMainProtectWindowPanel.CompleteId, CMainProtectWindowPanel.TrayCountId], out var map); / 변수의 초기값을 지정합니다: values = _interfaces.Melsec.GetCachedSnapshot([CMainProtectWindow
+L000064 |             var values = _interfaces.Melsec.GetCachedSnapshot([CMainProtectWindowPanel.CurrentCountId, CMainProtectWindowPanel.RequestId, CMainProtectWindowPanel.CompleteId, CMainProtectWindowPanel.TrayCountId], out var map); ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(device => device.Number, device => device.IsSimulation ? EN_COMM_STATE.Simulation : device.ConnectionState) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 조건에 따라 결과식을 선택합니다: device.IsSimulation ? EN_COMM_STATE.Simulation : device.ConnectionState / 지역 변수를 선언합니다: var connections = _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(device => device.Number, device
+L000065 |             var connections = _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(device => device.Number, device => device.IsSimulation ? EN_COMM_STATE.Simulation : device.ConnectionState); ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: Status.RefreshSignals(values, map, connections)
+L000066 |             Status.RefreshSignals(values, map, connections); ⟦EOL⟧
+// 해설 L67: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000067 |             // Preserve a last-confirmed ON across stale/offline feedback. Only a valid OFF dismisses it. ⟦EOL⟧
+// 해설 L68: 조건에 따라 분기합니다: if (Status.Request.IsActive is { } active)
+L000068 |             if (Status.Request.IsActive is { } active) ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: _pending = active
+L000069 |                 _pending = active; ⟦EOL⟧
+// 해설 L70: 조건에 따라 분기합니다: if (!_pending)
+L000070 |             if (!_pending) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Refresh.
+L000071 |             { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Close()
+L000072 |                 _dialog?.Close(); ⟦EOL⟧
+// 해설 L73: 호출자에게 값 또는 제어를 반환합니다: return;
+L000073 |                 return; ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 Refresh.
+L000074 |             } ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 조건에 따라 분기합니다: if (!_owner.IsVisible)
+L000076 |             if (!_owner.IsVisible) ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return;
+L000077 |                 return; ⟦EOL⟧
+// 해설 L78: 조건에 따라 분기합니다: if (_dialog is null)
+L000078 |             if (_dialog is null) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Refresh.
+L000079 |             { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: _createDialog(Status) / 지역 변수를 선언합니다: var dialog = _createDialog(Status); / 변수의 초기값을 지정합니다: dialog = _createDialog(Status)
+L000080 |                 var dialog = _createDialog(Status); ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: dialog.Owner = _owner
+L000081 |                 dialog.Owner = _owner; ⟦EOL⟧
+// 해설 L82: 복합 대입 또는 이벤트 구독/해지 표현입니다: dialog.Closed += (_, _) => { if (ReferenceEquals(_dialog, dialog)) _dialog = null; }
+L000082 |                 dialog.Closed += (_, _) => ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Refresh.
+L000083 |                 { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_dialog, dialog) / 조건에 따라 분기합니다: if (ReferenceEquals(_dialog, dialog))
+L000084 |                     if (ReferenceEquals(_dialog, dialog)) ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: _dialog = null
+L000085 |                         _dialog = null; ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Refresh.
+L000086 |                 }; ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: _dialog = dialog
+L000087 |                 _dialog = dialog; ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.Show()
+L000088 |                 dialog.Show(); // Modeless: does not block operation or the sequence. ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Refresh.
+L000089 |             } ⟦EOL⟧
+// 해설 L90: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (!_dialog.IsVisible)
+L000090 |             else if (!_dialog.IsVisible) ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: _dialog.Show()
+L000091 |                 _dialog.Show(); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Refresh.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CProtectWindowRequestNotice.Tick(object?, System.EventArgs)
+L000094 |         private void Tick(object? sender, EventArgs e) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Tick.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 예외 처리 범위입니다: try
+L000096 |             try ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Tick.
+L000097 |             { ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000098 |                 Refresh(); ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _lastError = ""
+L000099 |                 _lastError = ""; ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 Tick.
+L000100 |             } ⟦EOL⟧
+// 해설 L101: 지정 예외를 처리합니다: catch (Exception error)
+L000101 |             catch (Exception error) ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 Tick.
+L000102 |             { ⟦EOL⟧
+// 해설 L103: 조건에 따라 분기합니다: if (_lastError != error.Message)
+L000103 |                 if (_lastError != error.Message) ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: Trace.TraceError($"Protect Window notice refresh failed: {error}")
+L000104 |                     Trace.TraceError($"Protect Window notice refresh failed: {error}"); ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: _lastError = error.Message
+L000105 |                 _lastError = error.Message; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Tick.
+L000106 |             } ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 Tick.
+L000107 |         } ⟦EOL⟧
+L000108 |  ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispose()
+L000109 |         private void OwnerClosed(object? sender, EventArgs e) => Dispose(); ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CProtectWindowRequestNotice.Dispose()
+L000110 |         public void Dispose() ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 Dispose.
+L000111 |         { ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (_disposed)
+L000112 |             if (_disposed) ⟦EOL⟧
+// 해설 L113: 호출자에게 값 또는 제어를 반환합니다: return;
+L000113 |                 return; ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: _disposed = true
+L000114 |             _disposed = true; ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Stop()
+L000115 |             _timer.Stop(); ⟦EOL⟧
+// 해설 L116: 복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick -= Tick
+L000116 |             _timer.Tick -= Tick; ⟦EOL⟧
+// 해설 L117: 복합 대입 또는 이벤트 구독/해지 표현입니다: _owner.Closed -= OwnerClosed
+L000117 |             _owner.Closed -= OwnerClosed; ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Close()
+L000118 |             _dialog?.Close(); ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: _dialog = null
+L000119 |             _dialog = null; ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 Dispose.
+L000120 |         } ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다.
+L000121 |     } ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다.
+L000122 | } ⟦EOL⟧

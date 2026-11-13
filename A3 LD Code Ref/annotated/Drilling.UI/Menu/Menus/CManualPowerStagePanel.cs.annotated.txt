@@ -1,0 +1,587 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000001 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000003 | using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000005 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000006 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000009 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000011 | /// <summary>Owns only this Manual menu's accepted fixed-position move, including cancellation cleanup.</summary> ⟦EOL⟧
+// 해설 L12: 타입의 구조/상속 선언입니다: public sealed class CManualStageMoveOperation(
+L000012 | public sealed class CManualStageMoveOperation( ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 |     Func<EN_MANUAL_STAGE_AXIS, double, bool, double, CancellationToken, Task> move, ⟦EOL⟧
+// 해설 L14: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000014 |     Action? stopSharedMove = null, Func<bool>? sharedMoveRunning = null) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다.
+L000015 | { ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _sync = new()
+L000016 |     private readonly object _sync = new(); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CManualStageMoveOperation._cancellation
+L000017 |     private CancellationTokenSource? _cancellation; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.TaskCompletionSource<bool>? Drilling.UI.Menu.Menus.CManualStageMoveOperation._completion
+L000018 |     private TaskCompletionSource<bool>? _completion; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Action? Drilling.UI.Menu.Menus.CManualStageMoveOperation.Changed
+L000019 |     public event Action? Changed; ⟦EOL⟧
+// 해설 L20: 공유 상태의 임계 구역에 진입합니다: lock (_sync) / 호출자에게 값 또는 제어를 반환합니다: return _cancellation is not null;
+L000020 |     public bool IsRunning { get { lock (_sync) return _cancellation is not null; } } ⟦EOL⟧
+// 해설 L21: 공유 상태의 임계 구역에 진입합니다: lock (_sync) / 호출자에게 값 또는 제어를 반환합니다: return _cancellation?.IsCancellationRequested == true;
+L000021 |     public bool IsStopping { get { lock (_sync) return _cancellation?.IsCancellationRequested == true; } } ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000022 |     public bool CanStop => IsRunning || sharedMoveRunning?.Invoke() == true; ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.Move(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double)
+L000024 |     public async Task Move(EN_MANUAL_STAGE_AXIS axis, double value, bool relative, double speed) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Move.
+L000025 |     { ⟦EOL⟧
+// 해설 L26: 지역 변수를 선언합니다: CancellationTokenSource cancellation;
+L000026 |         CancellationTokenSource cancellation; ⟦EOL⟧
+// 해설 L27: 지역 변수를 선언합니다: TaskCompletionSource<bool> completion;
+L000027 |         TaskCompletionSource<bool> completion; ⟦EOL⟧
+// 해설 L28: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000028 |         lock (_sync) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Move.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 조건에 따라 분기합니다: if (_cancellation is not null)
+L000030 |             if (_cancellation is not null) ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("수동 Stage/Review 이동 또는 정리 작업이 진행 중입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("수동 Stage/Review 이동 또는 정리 작업이 진행 중입니다.");
+L000031 |                 throw new InvalidOperationException("수동 Stage/Review 이동 또는 정리 작업이 진행 중입니다."); ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: _cancellation = cancellation = new() / 값을 대상에 대입합니다: cancellation = new() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000032 |             _cancellation = cancellation = new(); ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: _completion = completion = new(TaskCreationOptions.RunContinuationsAsynchronously) / 값을 대상에 대입합니다: completion = new(TaskCreationOptions.RunContinuationsAsynchronously) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(TaskCreationOptions.RunContinuationsAsynchronously)
+L000033 |             _completion = completion = new(TaskCreationOptions.RunContinuationsAsynchronously); ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Move.
+L000034 |         } ⟦EOL⟧
+// 해설 L35: 예외 처리 범위입니다: try
+L000035 |         try ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Move.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000037 |             Changed?.Invoke(); ⟦EOL⟧
+// 해설 L38: 비동기 완료를 기다립니다: await move(axis, value, relative, speed, cancellation.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: move(axis, value, relative, speed, cancellation.Token)
+L000038 |             await move(axis, value, relative, speed, cancellation.Token); ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 Move.
+L000039 |         } ⟦EOL⟧
+// 해설 L40: 종료 정리 구간입니다: finally
+L000040 |         finally ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Move.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _cancellation = null / 값을 대상에 대입합니다: _completion = null / 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000042 |             lock (_sync) { _cancellation = null; _completion = null; } ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Dispose()
+L000043 |             cancellation.Dispose(); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: completion.TrySetResult(true)
+L000044 |             completion.TrySetResult(true); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000045 |             Changed?.Invoke(); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Move.
+L000046 |         } ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 Move.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync(false)
+L000049 |     public Task StopAsync() => StopAsync(false); ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync(bool)
+L000050 |     public Task StopAsync(bool includeSharedMove) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 StopAsync.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 지역 변수를 선언합니다: CancellationTokenSource? cancellation;
+L000052 |         CancellationTokenSource? cancellation; ⟦EOL⟧
+// 해설 L53: 지역 변수를 선언합니다: Task completion;
+L000053 |         Task completion; ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: cancellation = _cancellation / 값을 대상에 대입합니다: completion = _completion?.Task ?? Task.CompletedTask / 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000054 |         lock (_sync) { cancellation = _cancellation; completion = _completion?.Task ?? Task.CompletedTask; } ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel() / 예외 처리 범위입니다: try
+L000055 |         try { cancellation?.Cancel(); } ⟦EOL⟧
+// 해설 L56: 지정 예외를 처리합니다: catch (ObjectDisposedException)
+L000056 |         catch (ObjectDisposedException) { } // The move may have completed between capture and cancellation. ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (includeSharedMove)
+L000057 |         if (includeSharedMove) stopSharedMove?.Invoke(); ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000058 |         Changed?.Invoke(); ⟦EOL⟧
+// 해설 L59: 호출자에게 값 또는 제어를 반환합니다: return completion;
+L000059 |         return completion; ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 StopAsync.
+L000060 |     } ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: _ = StopAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync()
+L000061 |     public void Stop() => _ = StopAsync(); ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: _ = StopAsync(includeSharedMove) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync(includeSharedMove)
+L000062 |     public void Stop(bool includeSharedMove) => _ = StopAsync(includeSharedMove); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다.
+L000063 | } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 타입의 구조/상속 선언입니다: public sealed class CManualPowerStagePanel : INotifyPropertyChanged
+L000065 | public sealed class CManualPowerStagePanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다.
+L000066 | { ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>> Drilling.UI.Menu.Menus.CManualPowerStagePanel._readCachedStatus
+L000067 |     private readonly Func<IReadOnlyList<ST_MOTOR_STATUS_ITEM>> _readCachedStatus; ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · System.Func<Drilling.Common.Interface.EN_COMM_STATE> Drilling.UI.Menu.Menus.CManualPowerStagePanel._readConnectionState
+L000068 |     private readonly Func<EN_COMM_STATE> _readConnectionState; ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Func<string, bool> Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirm
+L000069 |     private readonly Func<string, bool> _confirm; ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · System.Action<string> Drilling.UI.Menu.Menus.CManualPowerStagePanel._warn
+L000070 |     private readonly Action<string> _warn; ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CManualStageMotionSimulation Drilling.UI.Menu.Menus.CManualPowerStagePanel._simulation
+L000071 |     private readonly CManualStageMotionSimulation _simulation; ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualStageMoveOperation? Drilling.UI.Menu.Menus.CManualPowerStagePanel._stageMove
+L000072 |     private readonly CManualStageMoveOperation? _stageMove; ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · DispatcherTimer Drilling.UI.Menu.Menus.CManualPowerStagePanel._animation
+L000073 |     private readonly DispatcherTimer _animation; ⟦EOL⟧
+// 해설 L74: 변수의 초기값을 지정합니다: _connectionState = EN_COMM_STATE.Offline
+L000074 |     private EN_COMM_STATE _connectionState = EN_COMM_STATE.Offline; ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._active
+L000075 |     private bool _active; ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReferenceEqualityComparer.Instance) / 변수의 초기값을 지정합니다: _activeViews = new(ReferenceEqualityComparer.Instance)
+L000076 |     private readonly HashSet<object> _activeViews = new(ReferenceEqualityComparer.Instance); ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._measurementRunning
+L000077 |     private bool _measurementRunning; ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirming
+L000078 |     private bool _confirming; ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CManualPowerStagePanel._generation
+L000079 |     private int _generation; ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._reserved
+L000080 |     private bool _reserved; ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._sharedMoveRunning
+L000081 |     private bool _sharedMoveRunning; ⟦EOL⟧
+// 해설 L82: 변수의 초기값을 지정합니다: _motionMessage = ""
+L000082 |     private string _motionMessage = ""; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStagePanel.PropertyChanged
+L000083 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CManualPowerStageAxis> Drilling.UI.Menu.Menus.CManualPowerStagePanel.Axes
+L000084 |     public IReadOnlyList<CManualPowerStageAxis> Axes { get; } ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStagePanel.StopCommand
+L000085 |     public CButtonCommand StopCommand { get; } ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · System.Func<bool>? Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed
+L000086 |     public Func<bool>? MoveAllowed { get; set; } ⟦EOL⟧
+// 해설 L87: 값별 결과식을 선택합니다: _connectionState switch { EN_COMM_STATE.Simulation => "SIMULATION", EN_COMM_STATE.Online => "MELSEC ONLINE", _ => "MELSEC OFFLINE" }
+L000087 |     public string Mode => _connectionState switch { EN_COMM_STATE.Simulation => "SIMULATION", EN_COMM_STATE.Online => "MELSEC ONLINE", _ => "MELSEC OFFLINE" }; ⟦EOL⟧
+// 해설 L88: 값별 결과식을 선택합니다: _connectionState switch { EN_COMM_STATE.Simulation => CStatusBrush.Simul, EN_COMM_STATE.Online => CStatusBrush.Online, _ => CStatusBrush.Offline }
+L000088 |     public Brush ModeBackground => _connectionState switch ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 ModeBackground.
+L000089 |     { ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CManualPowerStagePanel.ModeBackground
+L000090 |         EN_COMM_STATE.Simulation => CStatusBrush.Simul, ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CManualPowerStagePanel.ModeBackground
+L000091 |         EN_COMM_STATE.Online => CStatusBrush.Online, ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CManualPowerStagePanel.ModeBackground
+L000092 |         _ => CStatusBrush.Offline ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ModeBackground.
+L000093 |     }; ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.IsSimulation
+L000094 |     public bool IsSimulation => _connectionState == EN_COMM_STATE.Simulation; ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanMove
+L000095 |     public bool CanMove => (IsSimulation || _connectionState == EN_COMM_STATE.Online && _stageMove is not null) ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanMove
+L000096 |         && _active && !_measurementRunning && !_confirming && (!IsSimulation || !_simulation.IsReserved) && _stageMove?.CanStop != true; ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanJog
+L000097 |     public bool CanJog => IsSimulation && CanMove; ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanStop
+L000098 |     public bool CanStop => _stageMove?.CanStop == true || IsSimulation && !_simulation.IsReserved; ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanEdit
+L000099 |     public bool CanEdit => !_measurementRunning && !_confirming && (!IsSimulation || !_simulation.IsReserved) && _stageMove?.CanStop != true; ⟦EOL⟧
+// 해설 L100: 조건에 따라 결과식을 선택합니다: _connectionState == EN_COMM_STATE.Offline ? "MELSEC 연결 대기" : _stageMove?.IsStopping == true ? "STOPPING · 이동 신호 정리 대기" : _stageMove?.CanStop == true ? "Process Move · 허가/이동/완료 확인 중" : _measurementRunning ? "PowerMeasure 진행 중 · 수동
+L000100 |     public string StatusText => _connectionState == EN_COMM_STATE.Offline ? "MELSEC 연결 대기" : ⟦EOL⟧
+// 해설 L101: 조건에 따라 결과식을 선택합니다: _stageMove?.IsStopping == true ? "STOPPING · 이동 신호 정리 대기" : _stageMove?.CanStop == true ? "Process Move · 허가/이동/완료 확인 중" : _measurementRunning ? "PowerMeasure 진행 중 · 수동 이동 차단" : _motionMessage.Length > 0 ? _motionMessage : !IsSimu
+L000101 |         _stageMove?.IsStopping == true ? "STOPPING · 이동 신호 정리 대기" : ⟦EOL⟧
+// 해설 L102: 조건에 따라 결과식을 선택합니다: _stageMove?.CanStop == true ? "Process Move · 허가/이동/완료 확인 중" : _measurementRunning ? "PowerMeasure 진행 중 · 수동 이동 차단" : _motionMessage.Length > 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MEL
+L000102 |         _stageMove?.CanStop == true ? "Process Move · 허가/이동/완료 확인 중" : ⟦EOL⟧
+// 해설 L103: 조건에 따라 결과식을 선택합니다: _measurementRunning ? "PowerMeasure 진행 중 · 수동 이동 차단" : _motionMessage.Length > 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원") : _simulation.IsRe
+L000103 |         _measurementRunning ? "PowerMeasure 진행 중 · 수동 이동 차단" : ⟦EOL⟧
+// 해설 L104: 조건에 따라 결과식을 선택합니다: _motionMessage.Length > 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원") : _simulation.IsReserved ? "SIMULATION · MOF 진행 중" : "SIMULATION · JOG 속도
+L000104 |         _motionMessage.Length > 0 ? _motionMessage : ⟦EOL⟧
+// 해설 L105: 조건에 따라 결과식을 선택합니다: !IsSimulation ? (_stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원") : _simulation.IsReserved ? "SIMULATION · MOF 진행 중" : "SIMULATION · JOG 속도 5 mm/sec" / 조건에 따라 결과식을 선택합니다: _stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원"
+L000105 |         !IsSimulation ? (_stageMove is null ? "현재값 표시 · 실제 이동 연결 대기" : "MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원") : ⟦EOL⟧
+// 해설 L106: 조건에 따라 결과식을 선택합니다: _simulation.IsReserved ? "SIMULATION · MOF 진행 중" : "SIMULATION · JOG 속도 5 mm/sec"
+L000106 |         _simulation.IsReserved ? "SIMULATION · MOF 진행 중" : ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStagePanel.StatusText
+L000107 |         "SIMULATION · JOG 속도 5 mm/sec"; ⟦EOL⟧
+L000108 |  ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000109 |     public CManualPowerStagePanel( ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000110 |         Func<IReadOnlyList<ST_MOTOR_STATUS_ITEM>> readCachedStatus, ⟦EOL⟧
+L000111 |  ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000112 |         Action<string> warn,  ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000113 |         Func<string, bool> confirm,  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000114 |         CManualStageMotionSimulation? simulation = null, ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000116 |         Func<EN_COMM_STATE>? readConnectionState = null, ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000117 |         CManualStageMoveOperation? stageMove = null ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM>>, System.Action<string>, System.Func<string
+L000118 |     ) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 .ctor.
+L000119 |     { ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: _readCachedStatus = readCachedStatus / 값을 대상에 대입합니다: _warn = warn / 값을 대상에 대입합니다: _confirm = confirm
+L000120 |         _readCachedStatus = readCachedStatus; _warn = warn; _confirm = confirm; ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: _readConnectionState = readConnectionState ?? (() => EN_COMM_STATE.Offline)
+L000121 |         _readConnectionState = readConnectionState ?? (() => EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: _simulation = simulation ?? new() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000122 |         _simulation = simulation ?? new(); ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: _stageMove = stageMove
+L000123 |         _stageMove = stageMove; ⟦EOL⟧
+// 해설 L124: 복합 대입 또는 이벤트 구독/해지 표현입니다: _stageMove.Changed += UpdateCommands / 조건에 따라 분기합니다: if (_stageMove is not null)
+L000124 |         if (_stageMove is not null) _stageMove.Changed += UpdateCommands; ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: Axes = [new(this, EN_MANUAL_STAGE_AXIS.StageY, "Stage Y", "Stage Y"), new(this, EN_MANUAL_STAGE_AXIS.ReviewX, "Review X", "Review X")] / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(this, EN_MANUAL_STAGE_AXIS.StageY, "Stage Y", "Stage Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(this, EN_MANUAL_STAGE_AXIS.ReviewX, "Review X", "Review X")
+L000125 |         Axes = [new(this, EN_MANUAL_STAGE_AXIS.StageY, "Stage Y", "Stage Y"), new(this, EN_MANUAL_STAGE_AXIS.ReviewX, "Review X", "Review X")]; ⟦EOL⟧
+// 해설 L126: 값을 대상에 대입합니다: StopCommand = new(_ => Stop(includeSharedMove: true), _ => CanStop) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => Stop(includeSharedMove: true), _ => CanStop) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(includeSharedMove: true)
+L000126 |         StopCommand = new(_ => Stop(includeSharedMove: true), _ => CanStop); ⟦EOL⟧
+// 해설 L127: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000127 |         // This timer animates local simulation only; MELSEC feedback is read from the shared cache by Refresh. ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: _animation = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) } / 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(100) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(100)
+L000128 |         _animation = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) }; ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() / 복합 대입 또는 이벤트 구독/해지 표현입니다: _animation.Tick += (_, _) => Refresh()
+L000129 |         _animation.Tick += (_, _) => Refresh(); ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000130 |         Refresh(); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 .ctor.
+L000131 |     } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000133 |     // Scan, MOF and PowerMeasure bind the same panel. A hidden/unloaded sibling ⟦EOL⟧
+// 해설 L134: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000134 |     // must not disable commands belonging to another visible view. ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetViewActive(object, bool)
+L000135 |     public void SetViewActive(object view, bool active) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 SetViewActive.
+L000136 |     { ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: _activeViews.Add(view) / 조건에 따라 분기합니다: if (active)
+L000137 |         if (active) _activeViews.Add(view); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: _activeViews.Remove(view) / 앞 조건이 거짓인 경로입니다: else
+L000138 |         else _activeViews.Remove(view); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetActive(_activeViews.Count > 0)
+L000139 |         SetActive(_activeViews.Count > 0); ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 SetViewActive.
+L000140 |     } ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetActive(bool)
+L000142 |     public void SetActive(bool active) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 SetActive.
+L000143 |     { ⟦EOL⟧
+// 해설 L144: 조건에 따라 분기합니다: if (_active == active) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000144 |         if (_active == active) return; ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: _active = active
+L000145 |         _active = active; ⟦EOL⟧
+// 해설 L146: 조건에 따라 분기합니다: if (!active)
+L000146 |         if (!active) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 SetActive.
+L000147 |         { ⟦EOL⟧
+// 해설 L148: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000148 |             // Hide controls without cancelling an accepted ABS/REL move. JOG still ⟦EOL⟧
+// 해설 L149: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000149 |             // requires a held button, and pending confirmations cannot outlive the tab. ⟦EOL⟧
+// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetActive(bool)
+L000150 |             _generation++; ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.StopJog()
+L000151 |             _simulation.StopJog(); ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 SetActive.
+L000152 |         } ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000153 |         UpdateCommands(); Refresh(); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SetActive.
+L000154 |     } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetMeasurementRunning(bool)
+L000156 |     public void SetMeasurementRunning(bool running) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 SetMeasurementRunning.
+L000157 |     { ⟦EOL⟧
+// 해설 L158: 조건에 따라 분기합니다: if (_measurementRunning == running) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000158 |         if (_measurementRunning == running) return; ⟦EOL⟧
+// 해설 L159: 값을 대상에 대입합니다: _measurementRunning = running
+L000159 |         _measurementRunning = running; ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop() / 조건에 따라 분기합니다: if (running)
+L000160 |         if (running) Stop(); ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()
+L000161 |         UpdateCommands(); ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 SetMeasurementRunning.
+L000162 |     } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh()
+L000164 |     public void Refresh() ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Refresh.
+L000165 |     { ⟦EOL⟧
+// 해설 L166: 조건에 따라 분기합니다: if (_sharedMoveRunning != (_stageMove?.CanStop == true))
+L000166 |         if (_sharedMoveRunning != (_stageMove?.CanStop == true)) ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: _sharedMoveRunning = _stageMove?.CanStop == true / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()
+L000167 |         { _sharedMoveRunning = _stageMove?.CanStop == true; UpdateCommands(); } ⟦EOL⟧
+// 해설 L168: 값을 대상에 대입합니다: _reserved = _simulation.IsReserved / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands() / 조건에 따라 분기합니다: if (_reserved != _simulation.IsReserved)
+L000168 |         if (_reserved != _simulation.IsReserved) { _reserved = _simulation.IsReserved; UpdateCommands(); } ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: _readConnectionState() / 지역 변수를 선언합니다: var connectionState = _readConnectionState(); / 변수의 초기값을 지정합니다: connectionState = _readConnectionState()
+L000169 |         var connectionState = _readConnectionState(); ⟦EOL⟧
+// 해설 L170: 조건에 따라 분기합니다: if (connectionState != _connectionState)
+L000170 |         if (connectionState != _connectionState) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Refresh.
+L000171 |         { ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: _connectionState = connectionState / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()
+L000172 |             Stop(); _connectionState = connectionState; ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Mode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Mode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ModeBackground)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModeBackground) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsSimulation)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSimulation) / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()
+L000173 |             Notify(nameof(Mode)); Notify(nameof(ModeBackground)); Notify(nameof(IsSimulation)); UpdateCommands(); ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 Refresh.
+L000174 |         } ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation() / 조건에 따라 분기합니다: if (IsSimulation) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000175 |         if (IsSimulation) { RefreshSimulation(); return; } ⟦EOL⟧
+// 해설 L176: 조건에 따라 분기합니다: if (_connectionState == EN_COMM_STATE.Offline)
+L000176 |         if (_connectionState == EN_COMM_STATE.Offline) ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 Refresh.
+L000177 |         { ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback("—", "—", "MELSEC 연결 안 됨", "MELSEC 연결 안 됨") / 컬렉션 요소를 순회합니다: foreach (var axis in Axes)
+L000178 |             foreach (var axis in Axes) axis.SetFeedback("—", "—", "MELSEC 연결 안 됨", "MELSEC 연결 안 됨"); ⟦EOL⟧
+// 해설 L179: 호출자에게 값 또는 제어를 반환합니다: return;
+L000179 |             return; ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 Refresh.
+L000180 |         } ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: _readCachedStatus() / 지역 변수를 선언합니다: var snapshot = _readCachedStatus(); / 변수의 초기값을 지정합니다: snapshot = _readCachedStatus()
+L000181 |         var snapshot = _readCachedStatus(); ⟦EOL⟧
+// 해설 L182: 컬렉션 요소를 순회합니다: foreach (var axis in Axes)
+L000182 |         foreach (var axis in Axes) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 Refresh.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.FirstOrDefault(item => item.Name == axis.SnapshotName) / 지역 변수를 선언합니다: var value = snapshot.FirstOrDefault(item => item.Name == axis.SnapshotName); / 변수의 초기값을 지정합니다: value = snapshot.FirstOrDefault(item => item.Name == axis.SnapshotName)
+L000184 |             var value = snapshot.FirstOrDefault(item => item.Name == axis.SnapshotName); ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback(value?.Position ?? "—", value?.Speed ?? "—", value?.PositionMessage ?? "현재 위치 미설정", value?.SpeedMessage ?? "현재 속도 미설정")
+L000185 |             axis.SetFeedback(value?.Position ?? "—", value?.Speed ?? "—", ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh()
+L000186 |                 value?.PositionMessage ?? "현재 위치 미설정", value?.SpeedMessage ?? "현재 속도 미설정"); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Refresh.
+L000187 |         } ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 Refresh.
+L000188 |     } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation()
+L000190 |     private void RefreshSimulation() ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 RefreshSimulation.
+L000191 |     { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop() / 조건에 따라 분기합니다: if (!IsSimulation) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000192 |         if (!IsSimulation) { _animation.Stop(); return; } ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.GetSnapshot() / 지역 변수를 선언합니다: var snapshot = _simulation.GetSnapshot(); / 변수의 초기값을 지정합니다: snapshot = _simulation.GetSnapshot()
+L000193 |         var snapshot = _simulation.GetSnapshot(); ⟦EOL⟧
+// 해설 L194: 컬렉션 요소를 순회합니다: foreach (var axis in Axes)
+L000194 |         foreach (var axis in Axes) ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 RefreshSimulation.
+L000195 |         { ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Single(item => item.Axis == axis.Axis) / 지역 변수를 선언합니다: var value = snapshot.Single(item => item.Axis == axis.Axis); / 변수의 초기값을 지정합니다: value = snapshot.Single(item => item.Axis == axis.Axis)
+L000196 |             var value = snapshot.Single(item => item.Axis == axis.Axis); ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback(value.Position.ToString("F3", CultureInfo.InvariantCulture), value.Speed.ToString("F3", CultureInfo.InvariantCulture), "시뮬레이션 위치 (실장비 값 아님)", "시뮬레이션 속도 (실장비 값 아님)") / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Position.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Speed.ToString("F3", CultureInfo.InvariantCulture)
+L000197 |             axis.SetFeedback(value.Position.ToString("F3", CultureInfo.InvariantCulture), value.Speed.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation()
+L000198 |                 "시뮬레이션 위치 (실장비 값 아님)", "시뮬레이션 속도 (실장비 값 아님)"); ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 RefreshSimulation.
+L000199 |         } ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.All(axis => axis.Speed == 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop() / 조건에 따라 분기합니다: if (snapshot.All(axis => axis.Speed == 0) && _stageMove?.IsRunning != true)
+L000200 |         if (snapshot.All(axis => axis.Speed == 0) && _stageMove?.IsRunning != true) _animation.Stop(); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 RefreshSimulation.
+L000201 |     } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerStagePanel.Move(Drilling.UI.Menu.Menus.CManualPowerStageAxis, bool)
+L000203 |     internal async Task Move(CManualPowerStageAxis axis, bool relative) ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 Move.
+L000204 |     { ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (MoveAllowed?.Invoke() == false) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000205 |         if (MoveAllowed?.Invoke() == false) return; ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000206 |         Refresh(); ⟦EOL⟧
+// 해설 L207: 조건에 따라 분기합니다: if (!CanMove) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000207 |         if (!CanMove) return; ⟦EOL⟧
+// 해설 L208: 조건에 따라 결과식을 선택합니다: relative ? axis.Relative : axis.Absolute / 지역 변수를 선언합니다: var text = relative ? axis.Relative : axis.Absolute; / 변수의 초기값을 지정합니다: text = relative ? axis.Relative : axis.Absolute
+L000208 |         var text = relative ? axis.Relative : axis.Absolute; ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))
+L000209 |         if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value)) ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn($"{axis.Name}: 올바른 이동값을 입력해 주세요.") / 호출자에게 값 또는 제어를 반환합니다: return;
+L000210 |         { _warn($"{axis.Name}: 올바른 이동값을 입력해 주세요."); return; } ⟦EOL⟧
+// 해설 L211: 조건에 따라 결과식을 선택합니다: relative ? axis.RelativeSpeed : axis.AbsoluteSpeed / 지역 변수를 선언합니다: var speedText = relative ? axis.RelativeSpeed : axis.AbsoluteSpeed; / 변수의 초기값을 지정합니다: speedText = relative ? axis.RelativeSpeed : axis.AbsoluteSpeed
+L000211 |         var speedText = relative ? axis.RelativeSpeed : axis.AbsoluteSpeed; ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(speedText, NumberStyles.Float, CultureInfo.InvariantCulture, out var speed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(speed) / 조건에 따라 분기합니다: if (!double.TryParse(speedText, NumberStyles.Float, CultureInfo.InvariantCulture, out var speed) || !double.IsFinite(speed) || speed <= 0)
+L000212 |         if (!double.TryParse(speedText, NumberStyles.Float, CultureInfo.InvariantCulture, out var speed) || !double.IsFinite(speed) || speed <= 0) ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn($"{axis.Name}: 이동 속도는 0보다 큰 숫자로 입력해 주세요. (mm/sec)") / 호출자에게 값 또는 제어를 반환합니다: return;
+L000213 |         { _warn($"{axis.Name}: 이동 속도는 0보다 큰 숫자로 입력해 주세요. (mm/sec)"); return; } ⟦EOL⟧
+// 해설 L214: 지역 변수를 선언합니다: var generation = _generation; / 변수의 초기값을 지정합니다: generation = _generation
+L000214 |         var generation = _generation; ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: _confirming = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()
+L000215 |         _confirming = true; UpdateCommands(); ⟦EOL⟧
+// 해설 L216: 지역 변수를 선언합니다: bool accepted;
+L000216 |         bool accepted; ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: accepted = _confirm($"[{(IsSimulation ? "SIMULATION" : "MELSEC REAL")}] {axis.Name}\n{(relative ? "REL 이동 거리" : "ABS 목표 위치")}: {value:G} mm\n이동 속도: {speed:G} mm/sec\n\n이동하시겠습니까?") / 함수·델리게이트 또는 객체 생성자를 호출합니다: _confirm($"[{(IsSimulation ? "SIMULATION" : "MELSEC REAL")}] {axis.Name}\n{(relative ? "REL 이동 거리" : "ABS 목표 위치")}: {value:G} mm\n이동 속도: {speed:G} mm/sec\n\n이동하시겠습니까?") / 조건에 따라 결과식을 선택합니다: IsSimulation ? "SIMULATION" : "MELSEC REAL" / 조건에 따라 결과식을 선택합니다: relative ? "REL 이동 거리" : "ABS 목표 위치" / 예외 처리 범위입니다: try
+L000217 |         try { accepted = _confirm($"[{(IsSimulation ? "SIMULATION" : "MELSEC REAL")}] {axis.Name}\n{(relative ? "REL 이동 거리" : "ABS 목표 위치")}: {value:G} mm\n이동 속도: {speed:G} mm/sec\n\n이동하시겠습니까?"); } ⟦EOL⟧
+// 해설 L218: 값을 대상에 대입합니다: _confirming = false / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands() / 종료 정리 구간입니다: finally
+L000218 |         finally { _confirming = false; UpdateCommands(); } ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000219 |         Refresh(); ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (!accepted || !CanMove || generation != _generation || MoveAllowed?.Invoke() == false) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000220 |         if (!accepted || !CanMove || generation != _generation || MoveAllowed?.Invoke() == false) return; ⟦EOL⟧
+// 해설 L221: 예외 처리 범위입니다: try
+L000221 |         try ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 Move.
+L000222 |         { ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: _motionMessage = ""
+L000223 |             _motionMessage = ""; ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Start() / 조건에 따라 분기합니다: if (IsSimulation)
+L000224 |             if (IsSimulation) _animation.Start(); ⟦EOL⟧
+// 해설 L225: 비동기 완료를 기다립니다: await _stageMove.Move(axis.Axis, value, relative, speed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stageMove.Move(axis.Axis, value, relative, speed) / 조건에 따라 분기합니다: if (_stageMove is not null)
+L000225 |             if (_stageMove is not null) await _stageMove.Move(axis.Axis, value, relative, speed); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.Move(axis.Axis, value, relative, speed) / 앞 조건이 거짓인 경로입니다: else
+L000226 |             else _simulation.Move(axis.Axis, value, relative, speed); ⟦EOL⟧
+// 해설 L227: 값을 대상에 대입합니다: _motionMessage = IsSimulation ? "SIMULATION · 이동 완료" : "MELSEC · 이동 완료" / 조건에 따라 결과식을 선택합니다: IsSimulation ? "SIMULATION · 이동 완료" : "MELSEC · 이동 완료"
+L000227 |             _motionMessage = IsSimulation ? "SIMULATION · 이동 완료" : "MELSEC · 이동 완료"; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 Move.
+L000228 |         } ⟦EOL⟧
+// 해설 L229: 값을 대상에 대입합니다: _motionMessage = "이동 중지 · 공통 시퀀스 정리 상태를 확인하세요." / 지정 예외를 처리합니다: catch (OperationCanceledException)
+L000229 |         catch (OperationCanceledException) { _motionMessage = "이동 중지 · 공통 시퀀스 정리 상태를 확인하세요."; } ⟦EOL⟧
+// 해설 L230: 값을 대상에 대입합니다: _motionMessage = error.Message / 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(error.Message) / 지정 예외를 처리합니다: catch (Exception error)
+L000230 |         catch (Exception error) { _motionMessage = error.Message; _warn(error.Message); } ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands() / 종료 정리 구간입니다: finally
+L000231 |         finally { Refresh(); UpdateCommands(); } ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 Move.
+L000232 |     } ⟦EOL⟧
+L000233 |  ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)
+L000234 |     public bool StartJog(string direction) ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 StartJog.
+L000235 |     { ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (MoveAllowed?.Invoke() == false) / 호출자에게 값 또는 제어를 반환합니다: return false;
+L000236 |         if (MoveAllowed?.Invoke() == false) return false; ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000237 |         Refresh(); ⟦EOL⟧
+// 해설 L238: 조건에 따라 분기합니다: if (!CanJog) / 호출자에게 값 또는 제어를 반환합니다: return false;
+L000238 |         if (!CanJog) return false; ⟦EOL⟧
+// 해설 L239: 지역 변수를 선언합니다: var target = direction switch { "Y+" => (EN_MANUAL_STAGE_AXIS.StageY, 1), "Y-" => (EN_MANUAL_STAGE_AXIS.StageY, -1), "X-" => (EN_MANUAL_STAGE_AXIS.ReviewX, -1), "X+" => (EN_MANUAL_STAGE_AXIS.ReviewX, 1), _ => (EN_MANUAL_STAGE_AXIS / 값별 결과식을 선택합니다: direction switch { "Y+" => (EN_MANUAL_STAGE_AXIS.StageY, 1), "Y-" => (EN_MANUAL_STAGE_AXIS.StageY, -1), "X-" => (EN_MANUAL_STAGE_AXIS.ReviewX, -1), "X+" => (EN_MANUAL_STAGE_AXIS.ReviewX, 1), _ => (EN_MANUAL_STAGE_AXIS.StageY, 0) } / 변수의 초기값을 지정합니다: target = direction switch { "
+L000239 |         var target = direction switch ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 StartJog.
+L000240 |         { ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)
+L000241 |             "Y+" => (EN_MANUAL_STAGE_AXIS.StageY, 1), "Y-" => (EN_MANUAL_STAGE_AXIS.StageY, -1), ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)
+L000242 |             "X-" => (EN_MANUAL_STAGE_AXIS.ReviewX, -1), "X+" => (EN_MANUAL_STAGE_AXIS.ReviewX, 1), ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)
+L000243 |             _ => (EN_MANUAL_STAGE_AXIS.StageY, 0) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 StartJog.
+L000244 |         }; ⟦EOL⟧
+// 해설 L245: 조건에 따라 분기합니다: if (target.Item2 == 0) / 호출자에게 값 또는 제어를 반환합니다: return false;
+L000245 |         if (target.Item2 == 0) return false; ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.StartJog(target.Item1, target.Item2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Start() / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation() / 호출자에게 값 또는 제어를 반환합니다: return true; / 예외 처리 범위입니다: try
+L000246 |         try { _simulation.StartJog(target.Item1, target.Item2); _animation.Start(); RefreshSimulation(); return true; } ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(error.Message) / 지정 예외를 처리합니다: catch (InvalidOperationException error) / 호출자에게 값 또는 제어를 반환합니다: return false;
+L000247 |         catch (InvalidOperationException error) { _warn(error.Message); return false; } ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 StartJog.
+L000248 |     } ⟦EOL⟧
+L000249 |  ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool)
+L000250 |     public void Stop(bool includeSharedMove = false) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 Stop.
+L000251 |     { ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool)
+L000252 |         _generation++; ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop(includeSharedMove)
+L000253 |         _stageMove?.Stop(includeSharedMove); ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.Stop() / 조건에 따라 분기합니다: if (_stageMove?.IsRunning != true && !_simulation.IsReserved)
+L000254 |         if (_stageMove?.IsRunning != true && !_simulation.IsReserved) _simulation.Stop(); ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop()
+L000255 |         _animation.Stop(); ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation() / 조건에 따라 분기합니다: if (IsSimulation)
+L000256 |         if (IsSimulation) RefreshSimulation(); ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()
+L000257 |         UpdateCommands(); ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 Stop.
+L000258 |     } ⟦EOL⟧
+L000259 |  ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands()
+L000260 |     private void UpdateCommands() ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 UpdateCommands.
+L000261 |     { ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanMove)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanMove) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanJog)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanJog) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanStop)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanStop) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEdit)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEdit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)
+L000262 |         Notify(nameof(CanMove)); Notify(nameof(CanJog)); Notify(nameof(CanStop)); Notify(nameof(CanEdit)); Notify(nameof(StatusText)); ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.AbsoluteCommand.NotifyCanExecuteChanged() / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.RelativeCommand.NotifyCanExecuteChanged() / 컬렉션 요소를 순회합니다: foreach (var axis in Axes)
+L000263 |         foreach (var axis in Axes) { axis.AbsoluteCommand.NotifyCanExecuteChanged(); axis.RelativeCommand.NotifyCanExecuteChanged(); } ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopCommand.NotifyCanExecuteChanged()
+L000264 |         StopCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 UpdateCommands.
+L000265 |     } ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000266 |     private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다.
+L000267 | } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 타입의 구조/상속 선언입니다: public sealed class CManualPowerStageAxis : INotifyPropertyChanged
+L000269 | public sealed class CManualPowerStageAxis : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다.
+L000270 | { ⟦EOL⟧
+// 해설 L271: 변수의 초기값을 지정합니다: _absolute = "0.000" / 변수의 초기값을 지정합니다: _relative = "0.000"
+L000271 |     private string _absolute = "0.000", _relative = "0.000"; ⟦EOL⟧
+// 해설 L272: 변수의 초기값을 지정합니다: _absoluteSpeed = "5.000" / 변수의 초기값을 지정합니다: _relativeSpeed = "5.000"
+L000272 |     private string _absoluteSpeed = "5.000", _relativeSpeed = "5.000"; ⟦EOL⟧
+// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStageAxis.PropertyChanged
+L000273 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS Drilling.UI.Menu.Menus.CManualPowerStageAxis.Axis
+L000274 |     public EN_MANUAL_STAGE_AXIS Axis { get; } ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Name
+L000275 |     public string Name { get; } ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SnapshotName
+L000276 |     internal string SnapshotName { get; } ⟦EOL⟧
+// 해설 L277: 값을 대상에 대입합니다: _absolute = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000277 |     public string Absolute { get => _absolute; set { _absolute = value; Notify(); } } ⟦EOL⟧
+// 해설 L278: 값을 대상에 대입합니다: _relative = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000278 |     public string Relative { get => _relative; set { _relative = value; Notify(); } } ⟦EOL⟧
+// 해설 L279: 값을 대상에 대입합니다: _absoluteSpeed = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000279 |     public string AbsoluteSpeed { get => _absoluteSpeed; set { _absoluteSpeed = value; Notify(); } } ⟦EOL⟧
+// 해설 L280: 값을 대상에 대입합니다: _relativeSpeed = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000280 |     public string RelativeSpeed { get => _relativeSpeed; set { _relativeSpeed = value; Notify(); } } ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position
+L000281 |     public string Position { get; private set; } = "—"; ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed
+L000282 |     public string Speed { get; private set; } = "—"; ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage
+L000283 |     public string PositionMessage { get; private set; } = ""; ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage
+L000284 |     public string SpeedMessage { get; private set; } = ""; ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteCommand
+L000285 |     public CButtonCommand AbsoluteCommand { get; } ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeCommand
+L000286 |     public CButtonCommand RelativeCommand { get; } ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStageAxis.CManualPowerStageAxis(Drilling.UI.Menu.Menus.CManualPowerStagePanel, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, string, string)
+L000287 |     public CManualPowerStageAxis(CManualPowerStagePanel panel, EN_MANUAL_STAGE_AXIS axis, string name, string snapshotName) ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 .ctor.
+L000288 |     { ⟦EOL⟧
+// 해설 L289: 값을 대상에 대입합니다: Axis = axis / 값을 대상에 대입합니다: Name = name / 값을 대상에 대입합니다: SnapshotName = snapshotName
+L000289 |         Axis = axis; Name = name; SnapshotName = snapshotName; ⟦EOL⟧
+// 해설 L290: 값을 대상에 대입합니다: AbsoluteCommand = new(async _ => await panel.Move(this, false), _ => panel.CanMove) / 비동기 완료를 기다립니다: await panel.Move(this, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await panel.Move(this, false), _ => panel.CanMove) / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Move(this, false)
+L000290 |         AbsoluteCommand = new(async _ => await panel.Move(this, false), _ => panel.CanMove); ⟦EOL⟧
+// 해설 L291: 값을 대상에 대입합니다: RelativeCommand = new(async _ => await panel.Move(this, true), _ => panel.CanMove) / 비동기 완료를 기다립니다: await panel.Move(this, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await panel.Move(this, true), _ => panel.CanMove) / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Move(this, true)
+L000291 |         RelativeCommand = new(async _ => await panel.Move(this, true), _ => panel.CanMove); ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 .ctor.
+L000292 |     } ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string)
+L000293 |     internal void SetFeedback(string position, string speed, string positionMessage, string speedMessage) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 SetFeedback.
+L000294 |     { ⟦EOL⟧
+// 해설 L295: 조건에 따라 분기합니다: if (Position == position && Speed == speed && PositionMessage == positionMessage && SpeedMessage == speedMessage) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000295 |         if (Position == position && Speed == speed && PositionMessage == positionMessage && SpeedMessage == speedMessage) return; ⟦EOL⟧
+// 해설 L296: 값을 대상에 대입합니다: Position = position / 값을 대상에 대입합니다: Speed = speed / 값을 대상에 대입합니다: PositionMessage = positionMessage / 값을 대상에 대입합니다: SpeedMessage = speedMessage
+L000296 |         Position = position; Speed = speed; PositionMessage = positionMessage; SpeedMessage = speedMessage; ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Speed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(PositionMessage) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SpeedMessage) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name) / 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(Position), nameof(Speed), nameof(PositionMessage), nameof(SpeedMessage) })
+L000297 |         foreach (var name in new[] { nameof(Position), nameof(Speed), nameof(PositionMessage), nameof(SpeedMessage) }) Notify(name); ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 SetFeedback.
+L000298 |     } ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000299 |     private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다.
+L000300 | } ⟦EOL⟧

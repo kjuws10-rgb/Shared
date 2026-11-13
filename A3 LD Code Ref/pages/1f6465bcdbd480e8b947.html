@@ -1,0 +1,1073 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Serial/CSerialComm.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Serial/CSerialComm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Serial/CSerialComm.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>a578af2d52c06c9a5318a31279edee8d52b3000efafc1e76ec12d22f5a44d37b</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>12,959 bytes / 410 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/1f6465bcdbd480e8b947.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CSerialComm</td><td>ClassDeclaration</td><td>11–410</td><td>CSerialComm: CCommBase(data, option)</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>MaxAutoReconnectAttempts</td><td>FieldDeclaration</td><td>L15–15</td><td>int Drilling.Common.Interface.CSerialComm.MaxAutoReconnectAttempts</td></tr>
+<tr><td>AutoReconnectInterval</td><td>FieldDeclaration</td><td>L16–16</td><td>System.TimeSpan Drilling.Common.Interface.CSerialComm.AutoReconnectInterval</td></tr>
+<tr><td>_reconnectPolicyLock</td><td>FieldDeclaration</td><td>L17–17</td><td>object Drilling.Common.Interface.CSerialComm._reconnectPolicyLock</td></tr>
+<tr><td>_serialPortLifecycleLock</td><td>FieldDeclaration</td><td>L18–18</td><td>object Drilling.Common.Interface.CSerialComm._serialPortLifecycleLock</td></tr>
+<tr><td>_autoReconnectAttempts</td><td>FieldDeclaration</td><td>L19–19</td><td>int Drilling.Common.Interface.CSerialComm._autoReconnectAttempts</td></tr>
+<tr><td>_initialConnectAttempted</td><td>FieldDeclaration</td><td>L20–20</td><td>bool Drilling.Common.Interface.CSerialComm._initialConnectAttempted</td></tr>
+<tr><td>_connectInProgress</td><td>FieldDeclaration</td><td>L21–21</td><td>bool Drilling.Common.Interface.CSerialComm._connectInProgress</td></tr>
+<tr><td>_autoReconnectSuppressed</td><td>FieldDeclaration</td><td>L22–22</td><td>bool Drilling.Common.Interface.CSerialComm._autoReconnectSuppressed</td></tr>
+<tr><td>_connectAttemptCompletion</td><td>FieldDeclaration</td><td>L23–23</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;? Drilling.Common.Interface.CSerialComm._connectAttemptCompletion</td></tr>
+<tr><td>_nextAutoReconnectAt</td><td>FieldDeclaration</td><td>L24–24</td><td>System.DateTimeOffset Drilling.Common.Interface.CSerialComm._nextAutoReconnectAt</td></tr>
+<tr><td>SerialPort</td><td>FieldDeclaration</td><td>L25–25</td><td>SerialPort? Drilling.Common.Interface.CSerialComm.SerialPort</td></tr>
+<tr><td>SerialLock</td><td>FieldDeclaration</td><td>L26–26</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CSerialComm.SerialLock</td></tr>
+<tr><td>ConfigureSerialPort</td><td>MethodDeclaration</td><td>L28–30</td><td>void Drilling.Common.Interface.CSerialComm.ConfigureSerialPort(SerialPort)</td></tr>
+<tr><td>Connect</td><td>MethodDeclaration</td><td>L32–91</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>ResetAutoReconnectPolicy</td><td>MethodDeclaration</td><td>L93–102</td><td>void Drilling.Common.Interface.CSerialComm.ResetAutoReconnectPolicy()</td></tr>
+<tr><td>SuppressAutoReconnect</td><td>MethodDeclaration</td><td>L104–113</td><td>void Drilling.Common.Interface.CSerialComm.SuppressAutoReconnect()</td></tr>
+<tr><td>TryBeginConnectAttempt</td><td>MethodDeclaration</td><td>L115–149</td><td>bool Drilling.Common.Interface.CSerialComm.TryBeginConnectAttempt(out System.Threading.Tasks.Task?)</td></tr>
+<tr><td>CompleteConnectAttempt</td><td>MethodDeclaration</td><td>L151–162</td><td>void Drilling.Common.Interface.CSerialComm.CompleteConnectAttempt()</td></tr>
+<tr><td>RegisterConnectSuccess</td><td>MethodDeclaration</td><td>L164–171</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectSuccess()</td></tr>
+<tr><td>RegisterConnectFailure</td><td>MethodDeclaration</td><td>L173–179</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectFailure()</td></tr>
+<tr><td>Disconnect</td><td>MethodDeclaration</td><td>L181–190</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>SetError</td><td>MethodDeclaration</td><td>L192–197</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception)</td></tr>
+<tr><td>SetError</td><td>MethodDeclaration</td><td>L199–204</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string)</td></tr>
+<tr><td>SetResponseState</td><td>MethodDeclaration</td><td>L206–215</td><td>void Drilling.Common.Interface.CSerialComm.SetResponseState(string)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L217–228</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSerialComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ExecuteSerial</td><td>MethodDeclaration</td><td>L230–348</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSerialComm.ExecuteSerial(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ifCallback</td><td>LocalFunctionStatement</td><td>L245–280</td><td>string? ifCallback()</td></tr>
+<tr><td>CommandNewLine</td><td>PropertyDeclaration</td><td>L350–356</td><td>string Drilling.Common.Interface.CSerialComm.CommandNewLine</td></tr>
+<tr><td>get_CommandNewLine</td><td>GetAccessorDeclaration</td><td>L352–355</td><td>string Drilling.Common.Interface.CSerialComm.CommandNewLine.get</td></tr>
+<tr><td>FormatCommand</td><td>MethodDeclaration</td><td>L358–361</td><td>string Drilling.Common.Interface.CSerialComm.FormatCommand(string)</td></tr>
+<tr><td>CloseSerialPort</td><td>MethodDeclaration</td><td>L363–382</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort()</td></tr>
+<tr><td>ParseParity</td><td>MethodDeclaration</td><td>L384–387</td><td>Parity Drilling.Common.Interface.CSerialComm.ParseParity(string)</td></tr>
+<tr><td>ParseStopBits</td><td>MethodDeclaration</td><td>L389–392</td><td>StopBits Drilling.Common.Interface.CSerialComm.ParseStopBits(string)</td></tr>
+<tr><td>ParseHandshake</td><td>MethodDeclaration</td><td>L394–404</td><td>Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)</td></tr>
+<tr><td>NormalizeEnumValue</td><td>MethodDeclaration</td><td>L406–409</td><td>string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">FieldDeclaration <code>MaxAutoReconnectAttempts</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L15-L15">Drilling.Common/Interface/Serial/CSerialComm.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CSerialComm.MaxAutoReconnectAttempts</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaxAutoReconnectAttempts = 3</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>AutoReconnectInterval</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L16-L16">Drilling.Common/Interface/Serial/CSerialComm.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.TimeSpan Drilling.Common.Interface.CSerialComm.AutoReconnectInterval</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.TimeSpan</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(long)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: AutoReconnectInterval = TimeSpan.FromSeconds(5)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_reconnectPolicyLock</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L17-L17">Drilling.Common/Interface/Serial/CSerialComm.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Interface.CSerialComm._reconnectPolicyLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>17</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _reconnectPolicyLock = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>_serialPortLifecycleLock</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L18-L18">Drilling.Common/Interface/Serial/CSerialComm.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Interface.CSerialComm._serialPortLifecycleLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>18</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>18</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _serialPortLifecycleLock = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">FieldDeclaration <code>_autoReconnectAttempts</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L19-L19">Drilling.Common/Interface/Serial/CSerialComm.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CSerialComm._autoReconnectAttempts</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">FieldDeclaration <code>_initialConnectAttempted</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L20-L20">Drilling.Common/Interface/Serial/CSerialComm.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CSerialComm._initialConnectAttempted</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">FieldDeclaration <code>_connectInProgress</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L21-L21">Drilling.Common/Interface/Serial/CSerialComm.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CSerialComm._connectInProgress</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">FieldDeclaration <code>_autoReconnectSuppressed</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L22-L22">Drilling.Common/Interface/Serial/CSerialComm.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CSerialComm._autoReconnectSuppressed</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">FieldDeclaration <code>_connectAttemptCompletion</code> · L23–23</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L23-L23">Drilling.Common/Interface/Serial/CSerialComm.cs:23–23</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;? Drilling.Common.Interface.CSerialComm._connectAttemptCompletion</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L24">FieldDeclaration <code>_nextAutoReconnectAt</code> · L24–24</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L24-L24">Drilling.Common/Interface/Serial/CSerialComm.cs:24–24</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.DateTimeOffset Drilling.Common.Interface.CSerialComm._nextAutoReconnectAt</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.DateTimeOffset</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>24</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L25">FieldDeclaration <code>SerialPort</code> · L25–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L25-L25">Drilling.Common/Interface/Serial/CSerialComm.cs:25–25</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>SerialPort? Drilling.Common.Interface.CSerialComm.SerialPort</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected</td></tr>
+<tr><td>반환/값 타입</td><td>SerialPort?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L26">FieldDeclaration <code>SerialLock</code> · L26–26</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L26-L26">Drilling.Common/Interface/Serial/CSerialComm.cs:26–26</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CSerialComm.SerialLock</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.SemaphoreSlim</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>26</td><td>new</td><td>resolved</td><td>System.Threading.SemaphoreSlim.SemaphoreSlim(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1)</td></tr>
+<tr><td>26</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: SerialLock = new(1, 1)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>ConfigureSerialPort</code> · L28–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L28-L30">Drilling.Common/Interface/Serial/CSerialComm.cs:28–30</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.ConfigureSerialPort(SerialPort)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, virtual</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>serialPort</td><td>SerialPort</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L72-L72">Drilling.Common/Interface/Serial/CSerialComm.cs:72–72</a></td><td>ConfigureSerialPort</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">MethodDeclaration <code>Connect</code> · L32–91</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L32-L91">Drilling.Common/Interface/Serial/CSerialComm.cs:32–91</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L148-L148">Drilling.Common/Interface/Serial/CBeamExpander.cs:148–148</a></td><td>Connect</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L178-L178">Drilling.Common/Interface/Serial/CConex_AGP.cs:178–178</a></td><td>Connect</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L45-L45">Drilling.Common/Interface/Serial/CPowerMeter.cs:45–45</a></td><td>Connect</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L234-L234">Drilling.Common/Interface/Serial/CSerialComm.cs:234–234</a></td><td>Connect</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L35-L35">Drilling.Common/Interface/Serial/CTalonLaser.cs:35–35</a></td><td>Connect</td><td>True</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>34</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>35</td><td>TryBeginConnectAttempt</td><td>resolved</td><td>bool Drilling.Common.Interface.CSerialComm.TryBeginConnectAttempt(out System.Threading.Tasks.Task?) · Drilling.Common/Interface/Serial/CSerialComm.cs:115</td></tr>
+<tr><td>39</td><td>activeConnectAttempt.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>51</td><td>RegisterConnectSuccess</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectSuccess() · Drilling.Common/Interface/Serial/CSerialComm.cs:164</td></tr>
+<tr><td>56</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>59</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>61</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:199</td></tr>
+<tr><td>65</td><td>new SerialPort</td><td>unresolved</td><td>None</td></tr>
+<tr><td>65</td><td>ParseParity</td><td>resolved</td><td>Parity Drilling.Common.Interface.CSerialComm.ParseParity(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:384</td></tr>
+<tr><td>65</td><td>ParseStopBits</td><td>resolved</td><td>StopBits Drilling.Common.Interface.CSerialComm.ParseStopBits(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:389</td></tr>
+<tr><td>67</td><td>ParseHandshake</td><td>resolved</td><td>Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:394</td></tr>
+<tr><td>68</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>69</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>72</td><td>ConfigureSerialPort</td><td>resolved · 동적 구현 선택 가능</td><td>void Drilling.Common.Interface.CSerialComm.ConfigureSerialPort(SerialPort) · Drilling.Common/Interface/Serial/CSerialComm.cs:28</td></tr>
+<tr><td>74</td><td>SerialPort.Open</td><td>unresolved</td><td>None</td></tr>
+<tr><td>75</td><td>RegisterConnectSuccess</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectSuccess() · Drilling.Common/Interface/Serial/CSerialComm.cs:164</td></tr>
+<tr><td>77</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>81</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>82</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception) · Drilling.Common/Interface/Serial/CSerialComm.cs:192</td></tr>
+<tr><td>88</td><td>CompleteConnectAttempt</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CompleteConnectAttempt() · Drilling.Common/Interface/Serial/CSerialComm.cs:151</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryBeginConnectAttempt(out var activeConnectAttempt)</td></tr>
+<tr><td>35</td><td>if</td><td>조건에 따라 분기합니다: if (!TryBeginConnectAttempt(out var activeConnectAttempt))</td></tr>
+<tr><td>37</td><td>if</td><td>조건에 따라 분기합니다: if (activeConnectAttempt is not null)</td></tr>
+<tr><td>39</td><td>await</td><td>비동기 완료를 기다립니다: await activeConnectAttempt.WaitAsync(cancellationToken)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: activeConnectAttempt.WaitAsync(cancellationToken)</td></tr>
+<tr><td>42</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>45</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>47</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_serialPortLifecycleLock)</td></tr>
+<tr><td>49</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is { IsOpen: true } &amp;&amp; ConnectionState == EN_COMM_STATE.Online)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectSuccess()</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>57</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.SerialPort)</td></tr>
+<tr><td>59</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.SerialPort) || Option.BaudRate &lt;= 0)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(&quot;Serial port option is invalid.&quot;)</td></tr>
+<tr><td>62</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseParity(Option.Parity)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseStopBits(Option.StopBits)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) { Handshake = ParseHandshake(Option.Handshake), ReadTimeout = Math.Max(500, Option.TimeoutMs…</td></tr>
+<tr><td>65</td><td>local-declaration</td><td>지역 변수를 선언합니다: var serialPort = new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) { Handshake = ParseHandshake(Option.Handshake), ReadTimeout = Math.Max(500, Option.Ti</td></tr>
+<tr><td>65</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: serialPort = new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) { Handshake = ParseHandshake(Option.Handshake), ReadTimeout = Math.Max(500, Option.Timeou</td></tr>
+<tr><td>67</td><td>assignment</td><td>값을 대상에 대입합니다: Handshake = ParseHandshake(Option.Handshake)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseHandshake(Option.Handshake)</td></tr>
+<tr><td>68</td><td>assignment</td><td>값을 대상에 대입합니다: ReadTimeout = Math.Max(500, Option.TimeoutMs)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(500, Option.TimeoutMs)</td></tr>
+<tr><td>69</td><td>assignment</td><td>값을 대상에 대입합니다: WriteTimeout = Math.Max(500, Option.TimeoutMs)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(500, Option.TimeoutMs)</td></tr>
+<tr><td>70</td><td>assignment</td><td>값을 대상에 대입합니다: NewLine = CommandNewLine</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConfigureSerialPort(serialPort)</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: SerialPort = serialPort</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Open()</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectSuccess()</td></tr>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>79</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or ArgumentException or InvalidOperationException)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>86</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CompleteConnectAttempt()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Connect&quot;]
+ N0[&quot;L35 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L37 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L45 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L47 lock&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L49 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L57 try&quot;]
+ N3 --&gt;|포함| N5
+ N6[&quot;L59 if&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L79 catch&quot;]
+ N5 --&gt;|포함| N7
+ N8[&quot;L86 finally&quot;]
+ N2 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L93">MethodDeclaration <code>ResetAutoReconnectPolicy</code> · L93–102</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L93-L102">Drilling.Common/Interface/Serial/CSerialComm.cs:93–102</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.ResetAutoReconnectPolicy()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>95</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>97</td><td>assignment</td><td>값을 대상에 대입합니다: _autoReconnectAttempts = 0</td></tr>
+<tr><td>98</td><td>assignment</td><td>값을 대상에 대입합니다: _initialConnectAttempted = false</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue</td></tr>
+<tr><td>100</td><td>assignment</td><td>값을 대상에 대입합니다: _autoReconnectSuppressed = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ResetAutoReconnectPolicy&quot;]
+ N0[&quot;L95 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L104">MethodDeclaration <code>SuppressAutoReconnect</code> · L104–113</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L104-L113">Drilling.Common/Interface/Serial/CSerialComm.cs:104–113</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.SuppressAutoReconnect()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>106</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>108</td><td>assignment</td><td>값을 대상에 대입합니다: _autoReconnectAttempts = MaxAutoReconnectAttempts</td></tr>
+<tr><td>109</td><td>assignment</td><td>값을 대상에 대입합니다: _initialConnectAttempted = true</td></tr>
+<tr><td>110</td><td>assignment</td><td>값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MaxValue</td></tr>
+<tr><td>111</td><td>assignment</td><td>값을 대상에 대입합니다: _autoReconnectSuppressed = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SuppressAutoReconnect&quot;]
+ N0[&quot;L106 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L115">MethodDeclaration <code>TryBeginConnectAttempt</code> · L115–149</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L115-L149">Drilling.Common/Interface/Serial/CSerialComm.cs:115–149</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CSerialComm.TryBeginConnectAttempt(out System.Threading.Tasks.Task?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>activeConnectAttempt</td><td>System.Threading.Tasks.Task?</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L35-L35">Drilling.Common/Interface/Serial/CSerialComm.cs:35–35</a></td><td>TryBeginConnectAttempt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>135</td><td>new TaskCompletionSource&lt;bool&gt;</td><td>resolved</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;.TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)</td></tr>
+<tr><td>146</td><td>new TaskCompletionSource&lt;bool&gt;</td><td>resolved</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;.TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>117</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>119</td><td>if</td><td>조건에 따라 분기합니다: if (_connectInProgress)</td></tr>
+<tr><td>121</td><td>assignment</td><td>값을 대상에 대입합니다: activeConnectAttempt = _connectAttemptCompletion?.Task</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: activeConnectAttempt = null</td></tr>
+<tr><td>126</td><td>if</td><td>조건에 따라 분기합니다: if (_autoReconnectSuppressed)</td></tr>
+<tr><td>128</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>131</td><td>if</td><td>조건에 따라 분기합니다: if (!_initialConnectAttempted)</td></tr>
+<tr><td>133</td><td>assignment</td><td>값을 대상에 대입합니다: _initialConnectAttempted = true</td></tr>
+<tr><td>134</td><td>assignment</td><td>값을 대상에 대입합니다: _connectInProgress = true</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: _connectAttemptCompletion = new TaskCompletionSource&lt;bool&gt;(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TaskCompletionSource&lt;bool&gt;(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>136</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>139</td><td>if</td><td>조건에 따라 분기합니다: if (_autoReconnectAttempts &gt;= MaxAutoReconnectAttempts || DateTimeOffset.Now &lt; _nextAutoReconnectAt)</td></tr>
+<tr><td>141</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>145</td><td>assignment</td><td>값을 대상에 대입합니다: _connectInProgress = true</td></tr>
+<tr><td>146</td><td>assignment</td><td>값을 대상에 대입합니다: _connectAttemptCompletion = new TaskCompletionSource&lt;bool&gt;(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TaskCompletionSource&lt;bool&gt;(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>147</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryBeginConnectAttempt&quot;]
+ N0[&quot;L117 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L119 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L126 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L131 if&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L139 if&quot;]
+ N0 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L151">MethodDeclaration <code>CompleteConnectAttempt</code> · L151–162</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L151-L162">Drilling.Common/Interface/Serial/CSerialComm.cs:151–162</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.CompleteConnectAttempt()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L88-L88">Drilling.Common/Interface/Serial/CSerialComm.cs:88–88</a></td><td>CompleteConnectAttempt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>161</td><td>.TrySetResult</td><td>resolved</td><td>bool System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;.TrySetResult(bool)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>153</td><td>local-declaration</td><td>지역 변수를 선언합니다: TaskCompletionSource&lt;bool&gt;? completion;</td></tr>
+<tr><td>154</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>156</td><td>assignment</td><td>값을 대상에 대입합니다: _connectInProgress = false</td></tr>
+<tr><td>157</td><td>assignment</td><td>값을 대상에 대입합니다: completion = _connectAttemptCompletion</td></tr>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: _connectAttemptCompletion = null</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .TrySetResult(true)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CompleteConnectAttempt&quot;]
+ N0[&quot;L154 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L164">MethodDeclaration <code>RegisterConnectSuccess</code> · L164–171</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L164-L171">Drilling.Common/Interface/Serial/CSerialComm.cs:164–171</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectSuccess()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L51-L51">Drilling.Common/Interface/Serial/CSerialComm.cs:51–51</a></td><td>RegisterConnectSuccess</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L75-L75">Drilling.Common/Interface/Serial/CSerialComm.cs:75–75</a></td><td>RegisterConnectSuccess</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>166</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>168</td><td>assignment</td><td>값을 대상에 대입합니다: _autoReconnectAttempts = 0</td></tr>
+<tr><td>169</td><td>assignment</td><td>값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RegisterConnectSuccess&quot;]
+ N0[&quot;L166 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L173">MethodDeclaration <code>RegisterConnectFailure</code> · L173–179</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L173-L179">Drilling.Common/Interface/Serial/CSerialComm.cs:173–179</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectFailure()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L195-L195">Drilling.Common/Interface/Serial/CSerialComm.cs:195–195</a></td><td>RegisterConnectFailure</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L202-L202">Drilling.Common/Interface/Serial/CSerialComm.cs:202–202</a></td><td>RegisterConnectFailure</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>177</td><td>DateTimeOffset.Now.Add</td><td>resolved</td><td>System.DateTimeOffset System.DateTimeOffset.Add(System.TimeSpan)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>175</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)</td></tr>
+<tr><td>177</td><td>assignment</td><td>값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.Now.Add(AutoReconnectInterval)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.Now.Add(AutoReconnectInterval)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RegisterConnectFailure&quot;]
+ N0[&quot;L175 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L181">MethodDeclaration <code>Disconnect</code> · L181–190</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L181-L190">Drilling.Common/Interface/Serial/CSerialComm.cs:181–190</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>183</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>186</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>187</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>184</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_serialPortLifecycleLock)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)</td></tr>
+<tr><td>189</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Disconnect&quot;]
+ N0[&quot;L184 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L192">MethodDeclaration <code>SetError</code> · L192–197</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L192-L197">Drilling.Common/Interface/Serial/CSerialComm.cs:192–197</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, new</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>ex</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L172-L172">Drilling.Common/Interface/Serial/CBeamExpander.cs:172–172</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L202-L202">Drilling.Common/Interface/Serial/CConex_AGP.cs:202–202</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L95-L95">Drilling.Common/Interface/Serial/CPowerMeter.cs:95–95</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L122-L122">Drilling.Common/Interface/Serial/CPowerMeter.cs:122–122</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L82-L82">Drilling.Common/Interface/Serial/CSerialComm.cs:82–82</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L301-L301">Drilling.Common/Interface/Serial/CSerialComm.cs:301–301</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L80-L80">Drilling.Common/Interface/Serial/CTalonLaser.cs:80–80</a></td><td>SetError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>194</td><td>base.SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetError(System.Exception) · Drilling.Common/Interface/CComm.cs:120</td></tr>
+<tr><td>195</td><td>RegisterConnectFailure</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectFailure() · Drilling.Common/Interface/Serial/CSerialComm.cs:173</td></tr>
+<tr><td>196</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: base.SetError(ex)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectFailure()</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L199">MethodDeclaration <code>SetError</code> · L199–204</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L199-L204">Drilling.Common/Interface/Serial/CSerialComm.cs:199–204</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, new</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L74-L74">Drilling.Common/Interface/Serial/CPowerMeter.cs:74–74</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L114-L114">Drilling.Common/Interface/Serial/CPowerMeter.cs:114–114</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L61-L61">Drilling.Common/Interface/Serial/CSerialComm.cs:61–61</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L210-L210">Drilling.Common/Interface/Serial/CSerialComm.cs:210–210</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L291-L291">Drilling.Common/Interface/Serial/CSerialComm.cs:291–291</a></td><td>SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L69-L69">Drilling.Common/Interface/Serial/CTalonLaser.cs:69–69</a></td><td>SetError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>201</td><td>base.SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetError(string) · Drilling.Common/Interface/CComm.cs:126</td></tr>
+<tr><td>202</td><td>RegisterConnectFailure</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.RegisterConnectFailure() · Drilling.Common/Interface/Serial/CSerialComm.cs:173</td></tr>
+<tr><td>203</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: base.SetError(message)</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectFailure()</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L206">MethodDeclaration <code>SetResponseState</code> · L206–215</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L206-L215">Drilling.Common/Interface/Serial/CSerialComm.cs:206–215</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.SetResponseState(string)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L166-L166">Drilling.Common/Interface/Serial/CBeamExpander.cs:166–166</a></td><td>SetResponseState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L196-L196">Drilling.Common/Interface/Serial/CConex_AGP.cs:196–196</a></td><td>SetResponseState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>208</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>210</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:199</td></tr>
+<tr><td>214</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;ERR:-1&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>208</td><td>if</td><td>조건에 따라 분기합니다: if (response.StartsWith(&quot;ERR:-1&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(response)</td></tr>
+<tr><td>211</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetResponseState&quot;]
+ N0[&quot;L208 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L217">MethodDeclaration <code>Execute</code> · L217–228</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L217-L228">Drilling.Common/Interface/Serial/CSerialComm.cs:217–228</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSerialComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>219</td><td>SerialLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>222</td><td>ExecuteSerial</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSerialComm.ExecuteSerial(string, System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CSerialComm.cs:230</td></tr>
+<tr><td>226</td><td>SerialLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>219</td><td>await</td><td>비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>220</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>222</td><td>await</td><td>비동기 완료를 기다립니다: await ExecuteSerial(function, cancellationToken)</td></tr>
+<tr><td>222</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSerial(function, cancellationToken)</td></tr>
+<tr><td>222</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return await ExecuteSerial(function, cancellationToken);</td></tr>
+<tr><td>224</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L220 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L224 finally&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L230">MethodDeclaration <code>ExecuteSerial</code> · L230–348</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L230-L348">Drilling.Common/Interface/Serial/CSerialComm.cs:230–348</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSerialComm.ExecuteSerial(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L222-L222">Drilling.Common/Interface/Serial/CSerialComm.cs:222–222</a></td><td>ExecuteSerial</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>234</td><td>Connect</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CSerialComm.cs:32</td></tr>
+<tr><td>242</td><td>FormatCommand</td><td>resolved · 동적 구현 선택 가능</td><td>string Drilling.Common.Interface.CSerialComm.FormatCommand(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:358</td></tr>
+<tr><td>285</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>287</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string?&gt; System.Threading.Tasks.Task.Run&lt;string?&gt;(System.Func&lt;string?&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>288</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>289</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>291</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:199</td></tr>
+<tr><td>295</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>300</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>301</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception) · Drilling.Common/Interface/Serial/CSerialComm.cs:192</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>232</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>234</td><td>await</td><td>비동기 완료를 기다립니다: await Connect(cancellationToken)</td></tr>
+<tr><td>234</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)</td></tr>
+<tr><td>237</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>239</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>242</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = FormatCommand(function)</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommand(function)</td></tr>
+<tr><td>282</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>287</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = await Task.Run(ifCallback, cancellationToken) ?? &quot;&quot;</td></tr>
+<tr><td>287</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Run(ifCallback, cancellationToken)</td></tr>
+<tr><td>287</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(ifCallback, cancellationToken)</td></tr>
+<tr><td>288</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = string.IsNullOrWhiteSpace(LastReceived) ? &quot;Serial response timeout.&quot; : &quot;&quot;</td></tr>
+<tr><td>288</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived)</td></tr>
+<tr><td>288</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(LastReceived) ? &quot;Serial response timeout.&quot; : &quot;&quot;</td></tr>
+<tr><td>289</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastError)</td></tr>
+<tr><td>289</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(LastError))</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(LastError)</td></tr>
+<tr><td>292</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>296</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>298</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or TimeoutException or ObjectDisposedException or OperationCanceledException)</td></tr>
+<tr><td>300</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>301</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>302</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteSerial&quot;]
+ N0[&quot;L232 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L237 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L282 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L289 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L298 catch&quot;]
+ N2 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L245">LocalFunctionStatement <code>ifCallback</code> · L245–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L245-L280">Drilling.Common/Interface/Serial/CSerialComm.cs:245–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string? ifCallback()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>250</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>254</td><td>SerialPort.WriteLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>259</td><td>SerialPort.ReadLine().Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>259</td><td>SerialPort.ReadLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>267</td><td>SerialPort.ReadExisting().Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>267</td><td>SerialPort.ReadExisting</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>247</td><td>if</td><td>조건에 따라 분기합니다: if (this is CTalonLaser)</td></tr>
+<tr><td>249</td><td>assignment</td><td>값을 대상에 대입합니다: SerialPort.NewLine = &quot;\n&quot;</td></tr>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(LastSent + &quot;\r&quot;)</td></tr>
+<tr><td>252</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>254</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.WriteLine(LastSent)</td></tr>
+<tr><td>257</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().Trim()</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine()</td></tr>
+<tr><td>259</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadLine().Trim();</td></tr>
+<tr><td>262</td><td>catch</td><td>지정 예외를 처리합니다: catch (TimeoutException)</td></tr>
+<tr><td>265</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>267</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().Trim()</td></tr>
+<tr><td>267</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting()</td></tr>
+<tr><td>267</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadExisting().Trim();</td></tr>
+<tr><td>269</td><td>catch</td><td>지정 예외를 처리합니다: catch</td></tr>
+<tr><td>271</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>274</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception)</td></tr>
+<tr><td>278</td><td>throw</td><td>예외를 발생/전달합니다: throw;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ifCallback&quot;]
+ N0[&quot;L247 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L252 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L257 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L262 catch&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L265 try&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L269 catch&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L274 catch&quot;]
+ N2 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L350">PropertyDeclaration <code>CommandNewLine</code> · L350–356</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L350-L356">Drilling.Common/Interface/Serial/CSerialComm.cs:350–356</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSerialComm.CommandNewLine</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, virtual</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L352">GetAccessorDeclaration <code>get_CommandNewLine</code> · L352–355</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L352-L355">Drilling.Common/Interface/Serial/CSerialComm.cs:352–355</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSerialComm.CommandNewLine.get</td></tr>
+<tr><td>접근/수식자</td><td>Protected / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>354</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;\r\n&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L358">MethodDeclaration <code>FormatCommand</code> · L358–361</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L358-L361">Drilling.Common/Interface/Serial/CSerialComm.cs:358–361</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSerialComm.FormatCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, virtual</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L242-L242">Drilling.Common/Interface/Serial/CSerialComm.cs:242–242</a></td><td>FormatCommand</td><td>True</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>360</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return function;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L363">MethodDeclaration <code>CloseSerialPort</code> · L363–382</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L363-L382">Drilling.Common/Interface/Serial/CSerialComm.cs:363–382</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort()</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L171-L171">Drilling.Common/Interface/Serial/CBeamExpander.cs:171–171</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L201-L201">Drilling.Common/Interface/Serial/CConex_AGP.cs:201–201</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L73-L73">Drilling.Common/Interface/Serial/CPowerMeter.cs:73–73</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L94-L94">Drilling.Common/Interface/Serial/CPowerMeter.cs:94–94</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L113-L113">Drilling.Common/Interface/Serial/CPowerMeter.cs:113–113</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CPowerMeter.cs#L121-L121">Drilling.Common/Interface/Serial/CPowerMeter.cs:121–121</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L56-L56">Drilling.Common/Interface/Serial/CSerialComm.cs:56–56</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L81-L81">Drilling.Common/Interface/Serial/CSerialComm.cs:81–81</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L186-L186">Drilling.Common/Interface/Serial/CSerialComm.cs:186–186</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L300-L300">Drilling.Common/Interface/Serial/CSerialComm.cs:300–300</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L68-L68">Drilling.Common/Interface/Serial/CTalonLaser.cs:68–68</a></td><td>CloseSerialPort</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L79-L79">Drilling.Common/Interface/Serial/CTalonLaser.cs:79–79</a></td><td>CloseSerialPort</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>374</td><td>SerialPort.Close</td><td>unresolved</td><td>None</td></tr>
+<tr><td>379</td><td>SerialPort.Dispose</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>365</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null)</td></tr>
+<tr><td>367</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>370</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>372</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort.IsOpen)</td></tr>
+<tr><td>374</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Close()</td></tr>
+<tr><td>377</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Dispose()</td></tr>
+<tr><td>380</td><td>assignment</td><td>값을 대상에 대입합니다: SerialPort = null</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CloseSerialPort&quot;]
+ N0[&quot;L365 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L370 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L372 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L377 finally&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L384">MethodDeclaration <code>ParseParity</code> · L384–387</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L384-L387">Drilling.Common/Interface/Serial/CSerialComm.cs:384–387</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Parity Drilling.Common.Interface.CSerialComm.ParseParity(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Parity</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65">Drilling.Common/Interface/Serial/CSerialComm.cs:65–65</a></td><td>ParseParity</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>386</td><td>Enum.TryParse&lt;Parity&gt;</td><td>resolved</td><td>bool System.Enum.TryParse&lt;Parity&gt;(string?, bool, out Parity)</td></tr>
+<tr><td>386</td><td>NormalizeEnumValue</td><td>resolved</td><td>string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:406</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse&lt;Parity&gt;(NormalizeEnumValue(value), ignoreCase: true, out var parity)</td></tr>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value)</td></tr>
+<tr><td>386</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Enum.TryParse&lt;Parity&gt;(NormalizeEnumValue(value), ignoreCase: true, out var parity) ? parity : Parity.None</td></tr>
+<tr><td>386</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse&lt;Parity&gt;(NormalizeEnumValue(value), ignoreCase: true, out var parity) ? parity : Parity.None;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L389">MethodDeclaration <code>ParseStopBits</code> · L389–392</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L389-L392">Drilling.Common/Interface/Serial/CSerialComm.cs:389–392</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>StopBits Drilling.Common.Interface.CSerialComm.ParseStopBits(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>StopBits</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65">Drilling.Common/Interface/Serial/CSerialComm.cs:65–65</a></td><td>ParseStopBits</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>391</td><td>Enum.TryParse&lt;StopBits&gt;</td><td>resolved</td><td>bool System.Enum.TryParse&lt;StopBits&gt;(string?, bool, out StopBits)</td></tr>
+<tr><td>391</td><td>NormalizeEnumValue</td><td>resolved</td><td>string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:406</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>391</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse&lt;StopBits&gt;(NormalizeEnumValue(value), ignoreCase: true, out var stopBits)</td></tr>
+<tr><td>391</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value)</td></tr>
+<tr><td>391</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Enum.TryParse&lt;StopBits&gt;(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) ? stopBits : StopBits.One</td></tr>
+<tr><td>391</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse&lt;StopBits&gt;(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) ? stopBits : StopBits.One;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L394">MethodDeclaration <code>ParseHandshake</code> · L394–404</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L394-L404">Drilling.Common/Interface/Serial/CSerialComm.cs:394–404</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Handshake</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L67-L67">Drilling.Common/Interface/Serial/CSerialComm.cs:67–67</a></td><td>ParseHandshake</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>396</td><td>NormalizeEnumValue</td><td>resolved</td><td>string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:406</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value)</td></tr>
+<tr><td>396</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return NormalizeEnumValue(value) switch { &quot;&quot; or &quot;NONE&quot; or &quot;NO&quot; or &quot;OFF&quot; =&gt; Handshake.None, &quot;XONXOFF&quot; or &quot;XONOFF&quot; =&gt; Handshake.XOnXOff, &quot;REQUESTTOSEND&quot; or &quot;RTSCTS&quot; =&gt; Handshake.RequestToSend, &quot;REQUESTTOSENDXONXOFF&quot; or &quot;RTSCTSXONXOF</td></tr>
+<tr><td>396</td><td>switch-expression</td><td>값별 결과식을 선택합니다: NormalizeEnumValue(value) switch { &quot;&quot; or &quot;NONE&quot; or &quot;NO&quot; or &quot;OFF&quot; =&gt; Handshake.None, &quot;XONXOFF&quot; or &quot;XONOFF&quot; =&gt; Handshake.XOnXOff, &quot;REQUESTTOSEND&quot; or &quot;RTSCTS&quot; =&gt; Handshake.RequestToSend, &quot;REQUESTTOSENDXONXOFF&quot; or &quot;RTSCTSXONXOFF&quot; =&gt; H</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ParseHandshake&quot;]
+ N0[&quot;L396 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L406">MethodDeclaration <code>NormalizeEnumValue</code> · L406–409</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L406-L409">Drilling.Common/Interface/Serial/CSerialComm.cs:406–409</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSerialComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L386-L386">Drilling.Common/Interface/Serial/CSerialComm.cs:386–386</a></td><td>NormalizeEnumValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L391-L391">Drilling.Common/Interface/Serial/CSerialComm.cs:391–391</a></td><td>NormalizeEnumValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CSerialComm.cs#L396-L396">Drilling.Common/Interface/Serial/CSerialComm.cs:396–396</a></td><td>NormalizeEnumValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>408</td><td>value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;/&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>408</td><td>value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+<tr><td>408</td><td>value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+<tr><td>408</td><td>value.Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>408</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;/&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Trim()</td></tr>
+<tr><td>408</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;/&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>408</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>408</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>408</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Replace(&quot;_&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;-&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Replace(&quot;/&quot;, &quot;&quot;, StringComparison.OrdinalIgnoreCase).Trim();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Serial/CSerialComm.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

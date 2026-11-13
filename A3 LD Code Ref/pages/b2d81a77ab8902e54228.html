@@ -1,0 +1,949 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>0cc7146a473b5b04a7356a87ca2c75cc42977833e705c9dd35f6174bbc0f0e04</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>10,118 bytes / 288 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/b2d81a77ab8902e54228.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CShiftOffsetDialog</td><td>ClassDeclaration</td><td>9–286</td><td>CShiftOffsetDialog: Window</td></tr>
+<tr><td>ST_SHIFT_OFFSET_HEAD_ROW</td><td>RecordDeclaration</td><td>288–288</td><td>ST_SHIFT_OFFSET_HEAD_ROW</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_headRowsProvider</td><td>FieldDeclaration</td><td>L11–11</td><td>System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt; Drilling.UI.Popup.CShiftOffsetDialog._headRowsProvider</td></tr>
+<tr><td>_validateApply</td><td>FieldDeclaration</td><td>L12–12</td><td>System.Func&lt;double, double, string?&gt; Drilling.UI.Popup.CShiftOffsetDialog._validateApply</td></tr>
+<tr><td>_isLoading</td><td>FieldDeclaration</td><td>L13–13</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog._isLoading</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L14–36</td><td>Drilling.UI.Popup.CShiftOffsetDialog.CShiftOffsetDialog(string, string, System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt;, System.Func&lt;double, double, string?&gt;)</td></tr>
+<tr><td>ResultShiftOffsetX</td><td>PropertyDeclaration</td><td>L38–38</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX</td></tr>
+<tr><td>get_ResultShiftOffsetX</td><td>GetAccessorDeclaration</td><td>L38–38</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX.get</td></tr>
+<tr><td>set_ResultShiftOffsetX</td><td>SetAccessorDeclaration</td><td>L38–38</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX.set</td></tr>
+<tr><td>ResultShiftOffsetY</td><td>PropertyDeclaration</td><td>L39–39</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY</td></tr>
+<tr><td>get_ResultShiftOffsetY</td><td>GetAccessorDeclaration</td><td>L39–39</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY.get</td></tr>
+<tr><td>set_ResultShiftOffsetY</td><td>SetAccessorDeclaration</td><td>L39–39</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY.set</td></tr>
+<tr><td>OnShiftInputChanged</td><td>MethodDeclaration</td><td>L41–49</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnShiftInputChanged(object, TextChangedEventArgs)</td></tr>
+<tr><td>RefreshPreview</td><td>MethodDeclaration</td><td>L51–65</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.RefreshPreview()</td></tr>
+<tr><td>TryReadInputs</td><td>MethodDeclaration</td><td>L67–84</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryReadInputs(out double, out double, out string)</td></tr>
+<tr><td>TryParseFinite</td><td>MethodDeclaration</td><td>L86–89</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryParseFinite(string?, out double)</td></tr>
+<tr><td>DrawPreview</td><td>MethodDeclaration</td><td>L91–148</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.DrawPreview(double, double, bool)</td></tr>
+<tr><td>AddRect</td><td>MethodDeclaration</td><td>L150–163</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddRect(double, double, double, double, Brush, Brush, double)</td></tr>
+<tr><td>AddLine</td><td>MethodDeclaration</td><td>L165–168</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush)</td></tr>
+<tr><td>AddArrow</td><td>MethodDeclaration</td><td>L170–179</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddArrow(double, double, double, double, Brush)</td></tr>
+<tr><td>AddText</td><td>MethodDeclaration</td><td>L181–193</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddText(string, double, double, Brush)</td></tr>
+<tr><td>NumericTextBoxPreviewTextInput</td><td>MethodDeclaration</td><td>L195–203</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPreviewTextInput(object, TextCompositionEventArgs)</td></tr>
+<tr><td>NumericTextBoxPasting</td><td>MethodDeclaration</td><td>L205–211</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPasting(object, DataObjectPastingEventArgs)</td></tr>
+<tr><td>CreateProspectiveValue</td><td>MethodDeclaration</td><td>L213–219</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.CreateProspectiveValue(TextBox, string)</td></tr>
+<tr><td>IsValidNumericInput</td><td>MethodDeclaration</td><td>L221–246</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string)</td></tr>
+<tr><td>OnApplyClicked</td><td>MethodDeclaration</td><td>L248–266</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnApplyClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>OnCloseClicked</td><td>MethodDeclaration</td><td>L268–271</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnCloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>WindowKeyDown</td><td>MethodDeclaration</td><td>L273–280</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>Format</td><td>MethodDeclaration</td><td>L282–285</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L11">FieldDeclaration <code>_headRowsProvider</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt; Drilling.UI.Popup.CShiftOffsetDialog._headRowsProvider</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_validateApply</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L12-L12">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;double, double, string?&gt; Drilling.UI.Popup.CShiftOffsetDialog._validateApply</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;double, double, string?&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>_isLoading</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L13-L13">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog._isLoading</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">ConstructorDeclaration <code>.ctor</code> · L14–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L14-L36">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:14–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CShiftOffsetDialog.CShiftOffsetDialog(string, string, System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt;, System.Func&lt;double, double, string?&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>shiftOffsetX</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>shiftOffsetY</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>headRowsProvider</td><td>System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>validateApply</td><td>System.Func&lt;double, double, string?&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1367-L1370">Drilling.UI/CRootView.cs:1367–1370</a></td><td>new CShiftOffsetDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>28</td><td>DataObject.AddPastingHandler</td><td>unresolved</td><td>None</td></tr>
+<tr><td>29</td><td>DataObject.AddPastingHandler</td><td>unresolved</td><td>None</td></tr>
+<tr><td>32</td><td>RefreshPreview</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.RefreshPreview() · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:51</td></tr>
+<tr><td>33</td><td>ShiftXTextBox.Focus</td><td>unresolved</td><td>None</td></tr>
+<tr><td>34</td><td>ShiftXTextBox.SelectAll</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>22</td><td>assignment</td><td>값을 대상에 대입합니다: _headRowsProvider = headRowsProvider</td></tr>
+<tr><td>23</td><td>assignment</td><td>값을 대상에 대입합니다: _validateApply = validateApply</td></tr>
+<tr><td>24</td><td>assignment</td><td>값을 대상에 대입합니다: _isLoading = true</td></tr>
+<tr><td>25</td><td>assignment</td><td>값을 대상에 대입합니다: ShiftXTextBox.Text = shiftOffsetX</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: ShiftYTextBox.Text = shiftOffsetY</td></tr>
+<tr><td>27</td><td>assignment</td><td>값을 대상에 대입합니다: _isLoading = false</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DataObject.AddPastingHandler(ShiftXTextBox, NumericTextBoxPasting)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DataObject.AddPastingHandler(ShiftYTextBox, NumericTextBoxPasting)</td></tr>
+<tr><td>30</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) =&gt; { RefreshPreview(); ShiftXTextBox.Focus(); ShiftXTextBox.SelectAll(); }</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshPreview()</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ShiftXTextBox.Focus()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ShiftXTextBox.SelectAll()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">PropertyDeclaration <code>ResultShiftOffsetX</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">GetAccessorDeclaration <code>get_ResultShiftOffsetX</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">SetAccessorDeclaration <code>set_ResultShiftOffsetX</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetX.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">PropertyDeclaration <code>ResultShiftOffsetY</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">GetAccessorDeclaration <code>get_ResultShiftOffsetY</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">SetAccessorDeclaration <code>set_ResultShiftOffsetY</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.ResultShiftOffsetY.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">MethodDeclaration <code>OnShiftInputChanged</code> · L41–49</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L41-L49">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:41–49</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnShiftInputChanged(object, TextChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>TextChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>48</td><td>RefreshPreview</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.RefreshPreview() · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:51</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>43</td><td>if</td><td>조건에 따라 분기합니다: if (_isLoading)</td></tr>
+<tr><td>45</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshPreview()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnShiftInputChanged&quot;]
+ N0[&quot;L43 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L51">MethodDeclaration <code>RefreshPreview</code> · L51–65</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L51-L65">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:51–65</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.RefreshPreview()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L32-L32">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:32–32</a></td><td>RefreshPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L48-L48">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:48–48</a></td><td>RefreshPreview</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>TryReadInputs</td><td>resolved</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryReadInputs(out double, out double, out string) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:67</td></tr>
+<tr><td>56</td><td>Array.Empty&lt;ST_SHIFT_OFFSET_HEAD_ROW&gt;</td><td>resolved</td><td>Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW[] System.Array.Empty&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;()</td></tr>
+<tr><td>57</td><td>DrawPreview</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.DrawPreview(double, double, bool) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:91</td></tr>
+<tr><td>61</td><td>_headRowsProvider</td><td>resolved · 동적 구현 선택 가능</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt; System.Func&lt;double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_SHIFT_OFFSET_HEAD_ROW&gt;&gt;.Invoke(double, double)</td></tr>
+<tr><td>63</td><td>DrawPreview</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.DrawPreview(double, double, bool) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:91</td></tr>
+<tr><td>64</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+<tr><td>64</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadInputs(out var shiftX, out var shiftY, out var error)</td></tr>
+<tr><td>53</td><td>if</td><td>조건에 따라 분기합니다: if (!TryReadInputs(out var shiftX, out var shiftY, out var error))</td></tr>
+<tr><td>55</td><td>assignment</td><td>값을 대상에 대입합니다: StatusText.Text = error</td></tr>
+<tr><td>56</td><td>assignment</td><td>값을 대상에 대입합니다: HeadRowsControl.ItemsSource = Array.Empty&lt;ST_SHIFT_OFFSET_HEAD_ROW&gt;()</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty&lt;ST_SHIFT_OFFSET_HEAD_ROW&gt;()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPreview(0.0, 0.0, isValid: false)</td></tr>
+<tr><td>58</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _headRowsProvider(shiftX, shiftY)</td></tr>
+<tr><td>61</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = _headRowsProvider(shiftX, shiftY);</td></tr>
+<tr><td>61</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = _headRowsProvider(shiftX, shiftY)</td></tr>
+<tr><td>62</td><td>assignment</td><td>값을 대상에 대입합니다: HeadRowsControl.ItemsSource = rows</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPreview(shiftX, shiftY, isValid: true)</td></tr>
+<tr><td>64</td><td>assignment</td><td>값을 대상에 대입합니다: StatusText.Text = $&quot;Design Shift X {Format(shiftX)} mm / Y {Format(shiftY)} mm&quot;</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RefreshPreview&quot;]
+ N0[&quot;L53 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L67">MethodDeclaration <code>TryReadInputs</code> · L67–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L67-L84">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:67–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryReadInputs(out double, out double, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>shiftX</td><td>double</td><td>Out</td><td>False /</td></tr>
+<tr><td>shiftY</td><td>double</td><td>Out</td><td>False /</td></tr>
+<tr><td>error</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:53–53</a></td><td>TryReadInputs</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L250-L250">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:250–250</a></td><td>TryReadInputs</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>70</td><td>TryParseFinite</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>77</td><td>TryParseFinite</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>69</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseFinite(ShiftXTextBox.Text, out shiftX)</td></tr>
+<tr><td>70</td><td>if</td><td>조건에 따라 분기합니다: if (!TryParseFinite(ShiftXTextBox.Text, out shiftX))</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: shiftY = 0.0</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;SHIFT OFFSET X 값을 확인하세요.&quot;</td></tr>
+<tr><td>74</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseFinite(ShiftYTextBox.Text, out shiftY)</td></tr>
+<tr><td>77</td><td>if</td><td>조건에 따라 분기합니다: if (!TryParseFinite(ShiftYTextBox.Text, out shiftY))</td></tr>
+<tr><td>79</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;SHIFT OFFSET Y 값을 확인하세요.&quot;</td></tr>
+<tr><td>80</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>83</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryReadInputs&quot;]
+ N0[&quot;L70 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L77 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">MethodDeclaration <code>TryParseFinite</code> · L86–89</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L86-L89">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:86–89</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryParseFinite(string?, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string?</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>88</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>88</td><td>(text ?? &quot;&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>88</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse((text ?? &quot;&quot;).Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value)</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (text ?? &quot;&quot;).Trim()</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>88</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse((text ?? &quot;&quot;).Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) &amp;&amp; double.IsFinite(value);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L91">MethodDeclaration <code>DrawPreview</code> · L91–148</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L91-L148">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:91–148</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.DrawPreview(double, double, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>shiftX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>shiftY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>isValid</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:57–57</a></td><td>DrawPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L63-L63">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:63–63</a></td><td>DrawPreview</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>93</td><td>PreviewCanvas.Children.Clear</td><td>unresolved</td><td>None</td></tr>
+<tr><td>96</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>97</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>98</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>99</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>100</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>113</td><td>AddRect</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>120</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>121</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>122</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>122</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>129</td><td>AddRect</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>135</td><td>AddArrow</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>139</td><td>AddText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>143</td><td>AddLine</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>144</td><td>AddLine</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>145</td><td>AddText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>146</td><td>AddText</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddText(string, double, double, Brush) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:181</td></tr>
+<tr><td>147</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+<tr><td>147</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Clear()</td></tr>
+<tr><td>94</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: PreviewCanvas.ActualWidth &gt; 0 ? PreviewCanvas.ActualWidth : 360.0</td></tr>
+<tr><td>94</td><td>local-declaration</td><td>지역 변수를 선언합니다: var width = PreviewCanvas.ActualWidth &gt; 0 ? PreviewCanvas.ActualWidth : 360.0;</td></tr>
+<tr><td>94</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: width = PreviewCanvas.ActualWidth &gt; 0 ? PreviewCanvas.ActualWidth : 360.0</td></tr>
+<tr><td>95</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: PreviewCanvas.ActualHeight &gt; 0 ? PreviewCanvas.ActualHeight : 220.0</td></tr>
+<tr><td>95</td><td>local-declaration</td><td>지역 변수를 선언합니다: var height = PreviewCanvas.ActualHeight &gt; 0 ? PreviewCanvas.ActualHeight : 220.0;</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: height = PreviewCanvas.ActualHeight &gt; 0 ? PreviewCanvas.ActualHeight : 220.0</td></tr>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;PanelBorderBrush&quot;)</td></tr>
+<tr><td>96</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gridBrush = (Brush)FindResource(&quot;PanelBorderBrush&quot;);</td></tr>
+<tr><td>96</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gridBrush = (Brush)FindResource(&quot;PanelBorderBrush&quot;)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;ButtonSecondaryBrush&quot;)</td></tr>
+<tr><td>97</td><td>local-declaration</td><td>지역 변수를 선언합니다: var offFill = (Brush)FindResource(&quot;ButtonSecondaryBrush&quot;);</td></tr>
+<tr><td>97</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offFill = (Brush)FindResource(&quot;ButtonSecondaryBrush&quot;)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;TextSecondaryBrush&quot;)</td></tr>
+<tr><td>98</td><td>local-declaration</td><td>지역 변수를 선언합니다: var offStroke = (Brush)FindResource(&quot;TextSecondaryBrush&quot;);</td></tr>
+<tr><td>98</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offStroke = (Brush)FindResource(&quot;TextSecondaryBrush&quot;)</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;StatusReadyBrush&quot;)</td></tr>
+<tr><td>99</td><td>local-declaration</td><td>지역 변수를 선언합니다: var onStroke = (Brush)FindResource(&quot;StatusReadyBrush&quot;);</td></tr>
+<tr><td>99</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: onStroke = (Brush)FindResource(&quot;StatusReadyBrush&quot;)</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;TextSecondaryBrush&quot;)</td></tr>
+<tr><td>100</td><td>local-declaration</td><td>지역 변수를 선언합니다: var textBrush = (Brush)FindResource(&quot;TextSecondaryBrush&quot;);</td></tr>
+<tr><td>100</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: textBrush = (Brush)FindResource(&quot;TextSecondaryBrush&quot;)</td></tr>
+<tr><td>101</td><td>local-declaration</td><td>지역 변수를 선언합니다: var originX = width * 0.27;</td></tr>
+<tr><td>101</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: originX = width * 0.27</td></tr>
+<tr><td>102</td><td>local-declaration</td><td>지역 변수를 선언합니다: var originY = height * 0.62;</td></tr>
+<tr><td>102</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: originY = height * 0.62</td></tr>
+<tr><td>103</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double cellW = 46.0;</td></tr>
+<tr><td>103</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cellW = 46.0</td></tr>
+<tr><td>104</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double cellH = 30.0;</td></tr>
+<tr><td>104</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cellH = 30.0</td></tr>
+<tr><td>105</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double gapX = 12.0;</td></tr>
+<tr><td>105</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gapX = 12.0</td></tr>
+<tr><td>106</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double gapY = 12.0;</td></tr>
+<tr><td>106</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gapY = 12.0</td></tr>
+<tr><td>107</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = 0</td></tr>
+<tr><td>107</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var row = 0; row &lt; 3; row++)</td></tr>
+<tr><td>109</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: col = 0</td></tr>
+<tr><td>109</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var col = 0; col &lt; 4; col++)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = originX + col * (cellW + gapX);</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = originX + col * (cellW + gapX)</td></tr>
+<tr><td>112</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = originY - row * (cellH + gapY);</td></tr>
+<tr><td>112</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = originY - row * (cellH + gapY)</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddRect(x, y, cellW, cellH, offFill, offStroke, 1.0)</td></tr>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (isValid)</td></tr>
+<tr><td>119</td><td>local-declaration</td><td>지역 변수를 선언합니다: var vectorScale = 5.5;</td></tr>
+<tr><td>119</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: vectorScale = 5.5</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(shiftX * vectorScale, -75.0, 75.0)</td></tr>
+<tr><td>120</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dx = Math.Clamp(shiftX * vectorScale, -75.0, 75.0);</td></tr>
+<tr><td>120</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dx = Math.Clamp(shiftX * vectorScale, -75.0, 75.0)</td></tr>
+<tr><td>121</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(-shiftY * vectorScale, -75.0, 75.0)</td></tr>
+<tr><td>121</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dy = Math.Clamp(-shiftY * vectorScale, -75.0, 75.0);</td></tr>
+<tr><td>121</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dy = Math.Clamp(-shiftY * vectorScale, -75.0, 75.0)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftX)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftY)</td></tr>
+<tr><td>122</td><td>local-declaration</td><td>지역 변수를 선언합니다: var hasShift = Math.Abs(shiftX) &gt;= 0.000001 || Math.Abs(shiftY) &gt;= 0.000001;</td></tr>
+<tr><td>122</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: hasShift = Math.Abs(shiftX) &gt;= 0.000001 || Math.Abs(shiftY) &gt;= 0.000001</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = 0</td></tr>
+<tr><td>123</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var row = 0; row &lt; 3; row++)</td></tr>
+<tr><td>125</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: col = 0</td></tr>
+<tr><td>125</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var col = 0; col &lt; 4; col++)</td></tr>
+<tr><td>127</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = originX + col * (cellW + gapX) + dx;</td></tr>
+<tr><td>127</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = originX + col * (cellW + gapX) + dx</td></tr>
+<tr><td>128</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = originY - row * (cellH + gapY) + dy;</td></tr>
+<tr><td>128</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = originY - row * (cellH + gapY) + dy</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddRect(x, y, cellW, cellH, Brushes.Transparent, onStroke, 2.0)</td></tr>
+<tr><td>133</td><td>if</td><td>조건에 따라 분기합니다: if (hasShift)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddArrow(originX + 28.0, originY - 94.0, originX + 28.0 + dx, originY - 94.0 + dy, onStroke)</td></tr>
+<tr><td>137</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddText(&quot;NO SHIFT&quot;, originX + 12.0, originY - 106.0, onStroke)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, width - 24, height - 26, gridBrush)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, 24, 24, gridBrush)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddText(&quot;Design X&quot;, width - 78, height - 22, textBrush)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddText(&quot;Design Y&quot;, 8, 28, textBrush)</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: PreviewCaptionText.Text = isValid ? $&quot;Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm&quot; : &quot;입력값을 확인하세요.&quot;</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY)</td></tr>
+<tr><td>147</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isValid ? $&quot;Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm&quot; : &quot;입력값을 확인하세요.&quot;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawPreview&quot;]
+ N0[&quot;L107 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L109 for&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L117 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L123 for&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L125 for&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L133 if&quot;]
+ N2 --&gt;|포함| N5
+ N6[&quot;L137 else&quot;]
+ N5 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L150">MethodDeclaration <code>AddRect</code> · L150–163</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L150-L163">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:150–163</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddRect(double, double, double, double, Brush, Brush, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>x</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>width</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>height</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>fill</td><td>Brush</td><td>None</td><td>False /</td></tr>
+<tr><td>stroke</td><td>Brush</td><td>None</td><td>False /</td></tr>
+<tr><td>strokeThickness</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>152</td><td>new Rectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>160</td><td>Canvas.SetLeft</td><td>unresolved</td><td>None</td></tr>
+<tr><td>161</td><td>Canvas.SetTop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>162</td><td>PreviewCanvas.Children.Add</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }</td></tr>
+<tr><td>152</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rect = new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness };</td></tr>
+<tr><td>152</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rect = new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }</td></tr>
+<tr><td>154</td><td>assignment</td><td>값을 대상에 대입합니다: Width = width</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: Height = height</td></tr>
+<tr><td>156</td><td>assignment</td><td>값을 대상에 대입합니다: Fill = fill</td></tr>
+<tr><td>157</td><td>assignment</td><td>값을 대상에 대입합니다: Stroke = stroke</td></tr>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: StrokeThickness = strokeThickness</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(rect, x)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(rect, y)</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(rect)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L165">MethodDeclaration <code>AddLine</code> · L165–168</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L165-L168">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165–168</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>x1</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y1</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>x2</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y2</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>stroke</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L172-L172">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:172–172</a></td><td>AddLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L177-L177">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:177–177</a></td><td>AddLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L178-L178">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:178–178</a></td><td>AddLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>167</td><td>PreviewCanvas.Children.Add</td><td>unresolved</td><td>None</td></tr>
+<tr><td>167</td><td>new Line</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: X1 = x1</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: Y1 = y1</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: X2 = x2</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: Y2 = y2</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: Stroke = stroke</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: StrokeThickness = 1.0</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = 1.0 })</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = 1.0 }</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L170">MethodDeclaration <code>AddArrow</code> · L170–179</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L170-L179">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:170–179</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddArrow(double, double, double, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>x1</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y1</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>x2</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y2</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>stroke</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>172</td><td>AddLine</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165</td></tr>
+<tr><td>173</td><td>Math.Atan2</td><td>resolved</td><td>double System.Math.Atan2(double, double)</td></tr>
+<tr><td>177</td><td>AddLine</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165</td></tr>
+<tr><td>177</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>177</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>178</td><td>AddLine</td><td>resolved</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165</td></tr>
+<tr><td>178</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>178</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x1, y1, x2, y2, stroke)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Atan2(y2 - y1, x2 - x1)</td></tr>
+<tr><td>173</td><td>local-declaration</td><td>지역 변수를 선언합니다: var angle = Math.Atan2(y2 - y1, x2 - x1);</td></tr>
+<tr><td>173</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: angle = Math.Atan2(y2 - y1, x2 - x1)</td></tr>
+<tr><td>174</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double length = 9.0;</td></tr>
+<tr><td>174</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: length = 9.0</td></tr>
+<tr><td>175</td><td>local-declaration</td><td>지역 변수를 선언합니다: var left = angle + Math.PI * 0.82;</td></tr>
+<tr><td>175</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: left = angle + Math.PI * 0.82</td></tr>
+<tr><td>176</td><td>local-declaration</td><td>지역 변수를 선언합니다: var right = angle - Math.PI * 0.82;</td></tr>
+<tr><td>176</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: right = angle - Math.PI * 0.82</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x2, y2, x2 + Math.Cos(left) * length, y2 + Math.Sin(left) * length, stroke)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(left)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(left)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x2, y2, x2 + Math.Cos(right) * length, y2 + Math.Sin(right) * length, stroke)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(right)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(right)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L181">MethodDeclaration <code>AddText</code> · L181–193</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L181-L193">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:181–193</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.AddText(string, double, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>x</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>foreground</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L146-L146">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:146–146</a></td><td>AddText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>183</td><td>new TextBlock</td><td>unresolved</td><td>None</td></tr>
+<tr><td>190</td><td>Canvas.SetLeft</td><td>unresolved</td><td>None</td></tr>
+<tr><td>191</td><td>Canvas.SetTop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>192</td><td>PreviewCanvas.Children.Add</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }</td></tr>
+<tr><td>183</td><td>local-declaration</td><td>지역 변수를 선언합니다: var label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold };</td></tr>
+<tr><td>183</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }</td></tr>
+<tr><td>185</td><td>assignment</td><td>값을 대상에 대입합니다: Text = text</td></tr>
+<tr><td>186</td><td>assignment</td><td>값을 대상에 대입합니다: Foreground = foreground</td></tr>
+<tr><td>187</td><td>assignment</td><td>값을 대상에 대입합니다: FontSize = 12.0</td></tr>
+<tr><td>188</td><td>assignment</td><td>값을 대상에 대입합니다: FontWeight = FontWeights.SemiBold</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(label, x)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(label, y)</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(label)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L195">MethodDeclaration <code>NumericTextBoxPreviewTextInput</code> · L195–203</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L195-L203">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:195–203</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPreviewTextInput(object, TextCompositionEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>TextCompositionEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>202</td><td>IsValidNumericInput</td><td>resolved</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:221</td></tr>
+<tr><td>202</td><td>CreateProspectiveValue</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>197</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not TextBox textBox)</td></tr>
+<tr><td>199</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>202</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = !IsValidNumericInput(CreateProspectiveValue(textBox, e.Text))</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, e.Text))</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, e.Text)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NumericTextBoxPreviewTextInput&quot;]
+ N0[&quot;L197 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L205">MethodDeclaration <code>NumericTextBoxPasting</code> · L205–211</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L205-L211">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:205–211</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPasting(object, DataObjectPastingEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>DataObjectPastingEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>207</td><td>e.DataObject.GetDataPresent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>207</td><td>e.DataObject.GetData</td><td>unresolved</td><td>None</td></tr>
+<tr><td>207</td><td>IsValidNumericInput</td><td>resolved</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:221</td></tr>
+<tr><td>207</td><td>CreateProspectiveValue</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.CreateProspectiveValue(TextBox, string) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:213</td></tr>
+<tr><td>209</td><td>e.CancelCommand</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetDataPresent(DataFormats.UnicodeText)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetData(DataFormats.UnicodeText)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, pastedText))</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, pastedText)</td></tr>
+<tr><td>207</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not TextBox textBox || !e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(textBox, past…)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.CancelCommand()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NumericTextBoxPasting&quot;]
+ N0[&quot;L207 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">MethodDeclaration <code>CreateProspectiveValue</code> · L213–219</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L213-L219">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:213–219</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.CreateProspectiveValue(TextBox, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>textBox</td><td>TextBox</td><td>None</td><td>False /</td></tr>
+<tr><td>input</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207</a></td><td>CreateProspectiveValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>216</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>217</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>218</td><td>text.Remove(start, length).Insert</td><td>unresolved</td><td>None</td></tr>
+<tr><td>218</td><td>text.Remove</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>215</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = textBox.Text ?? &quot;&quot;;</td></tr>
+<tr><td>215</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = textBox.Text ?? &quot;&quot;</td></tr>
+<tr><td>216</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionStart, 0, text.Length)</td></tr>
+<tr><td>216</td><td>local-declaration</td><td>지역 변수를 선언합니다: var start = Math.Clamp(textBox.SelectionStart, 0, text.Length);</td></tr>
+<tr><td>216</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: start = Math.Clamp(textBox.SelectionStart, 0, text.Length)</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionLength, 0, text.Length - start)</td></tr>
+<tr><td>217</td><td>local-declaration</td><td>지역 변수를 선언합니다: var length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start);</td></tr>
+<tr><td>217</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start)</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length).Insert(start, input)</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length)</td></tr>
+<tr><td>218</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return text.Remove(start, length).Insert(start, input);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L221">MethodDeclaration <code>IsValidNumericInput</code> · L221–246</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L221-L246">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:221–246</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L202-L202">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:202–202</a></td><td>IsValidNumericInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207</a></td><td>IsValidNumericInput</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>223</td><td>if</td><td>조건에 따라 분기합니다: if (value.Length == 0 || value == &quot;-&quot;)</td></tr>
+<tr><td>225</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>228</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value[0] == &#x27;-&#x27; ? value[1..] : value</td></tr>
+<tr><td>228</td><td>local-declaration</td><td>지역 변수를 선언합니다: var unsigned = value[0] == &#x27;-&#x27; ? value[1..] : value;</td></tr>
+<tr><td>228</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: unsigned = value[0] == &#x27;-&#x27; ? value[1..] : value</td></tr>
+<tr><td>229</td><td>local-declaration</td><td>지역 변수를 선언합니다: var decimalPointCount = 0;</td></tr>
+<tr><td>229</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: decimalPointCount = 0</td></tr>
+<tr><td>230</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var character in unsigned)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character)</td></tr>
+<tr><td>232</td><td>if</td><td>조건에 따라 분기합니다: if (char.IsDigit(character))</td></tr>
+<tr><td>234</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>237</td><td>if</td><td>조건에 따라 분기합니다: if (character == &#x27;.&#x27; &amp;&amp; ++decimalPointCount == 1)</td></tr>
+<tr><td>239</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>242</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>245</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return unsigned.Length &gt; 0;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsValidNumericInput&quot;]
+ N0[&quot;L223 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L230 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L232 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L237 if&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L248">MethodDeclaration <code>OnApplyClicked</code> · L248–266</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L248-L266">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:248–266</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnApplyClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>250</td><td>TryReadInputs</td><td>resolved</td><td>bool Drilling.UI.Popup.CShiftOffsetDialog.TryReadInputs(out double, out double, out string) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:67</td></tr>
+<tr><td>252</td><td>MessageBox.Show</td><td>unresolved</td><td>None</td></tr>
+<tr><td>256</td><td>_validateApply</td><td>resolved · 동적 구현 선택 가능</td><td>string? System.Func&lt;double, double, string?&gt;.Invoke(double, double)</td></tr>
+<tr><td>257</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>259</td><td>MessageBox.Show</td><td>unresolved</td><td>None</td></tr>
+<tr><td>263</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+<tr><td>264</td><td>Format</td><td>resolved</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double) · Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadInputs(out var shiftX, out var shiftY, out var error)</td></tr>
+<tr><td>250</td><td>if</td><td>조건에 따라 분기합니다: if (!TryReadInputs(out var shiftX, out var shiftY, out var error))</td></tr>
+<tr><td>252</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, &quot;입력값 오류&quot;, MessageBoxButton.OK, MessageBoxImage.Warning)</td></tr>
+<tr><td>253</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>256</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _validateApply(shiftX, shiftY)</td></tr>
+<tr><td>256</td><td>local-declaration</td><td>지역 변수를 선언합니다: var validationMessage = _validateApply(shiftX, shiftY);</td></tr>
+<tr><td>256</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: validationMessage = _validateApply(shiftX, shiftY)</td></tr>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(validationMessage)</td></tr>
+<tr><td>257</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(validationMessage))</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, validationMessage, &quot;Shift Offset 적용 불가&quot;, MessageBoxButton.OK, MessageBoxImage.Warning)</td></tr>
+<tr><td>260</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>263</td><td>assignment</td><td>값을 대상에 대입합니다: ResultShiftOffsetX = Format(shiftX)</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX)</td></tr>
+<tr><td>264</td><td>assignment</td><td>값을 대상에 대입합니다: ResultShiftOffsetY = Format(shiftY)</td></tr>
+<tr><td>264</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY)</td></tr>
+<tr><td>265</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnApplyClicked&quot;]
+ N0[&quot;L250 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L257 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L268">MethodDeclaration <code>OnCloseClicked</code> · L268–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L268-L271">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:268–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.OnCloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>270</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">MethodDeclaration <code>WindowKeyDown</code> · L273–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L273-L280">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:273–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CShiftOffsetDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>KeyEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>275</td><td>if</td><td>조건에 따라 분기합니다: if (e.Key == Key.Escape)</td></tr>
+<tr><td>277</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>278</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WindowKeyDown&quot;]
+ N0[&quot;L275 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">MethodDeclaration <code>Format</code> · L282–285</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L282-L285">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282–285</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CShiftOffsetDialog.Format(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CShiftOffsetDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:263–263</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L264-L264">Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:264–264</a></td><td>Format</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>284</td><td>value.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>284</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>284</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

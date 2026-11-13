@@ -1,0 +1,531 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/InterLock/CInterLockManager.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.InterLock
+L000001 | namespace Drilling.Common.InterLock ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000003 |     using System.Diagnostics; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000004 |     using System.Globalization; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Automation;
+L000005 |     using Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000006 |     using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000007 |     using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000008 |     using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000009 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000010 |     using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L11: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000011 |     using Drilling.Common.Station; ⟦EOL⟧
+L000012 |  ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: public sealed class CInterLockManager
+L000013 |     public sealed class CInterLockManager ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: Rules = [ Rule("Door", "DOOR_LOCK_SENSOR", true, "Closed", "Door is open", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn), Rule("EMS", "EMS", true, "Normal", "
+L000015 |         private static readonly IReadOnlyList<ST_INTERLOCK_RULE> Rules = [ ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Door", "DOOR_LOCK_SENSOR", true, "Closed", "Door is open", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)
+L000016 |             Rule("Door", "DOOR_LOCK_SENSOR", true, "Closed", "Door is open", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("EMS", "EMS", true, "Normal", "Emergency stop is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)
+L000017 |             Rule("EMS", "EMS", true, "Normal", "Emergency stop is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Key Switch", "KEY_SWITCH_AUTO", true, "AUTO", "Key switch is not AUTO", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)
+L000018 |             Rule("Key Switch", "KEY_SWITCH_AUTO", true, "AUTO", "Key switch is not AUTO", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun),  ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Laser Shutter", "LASER_SHUTTER_CLOSED", true, "SAFE", "Laser shutter is not closed", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.LaserOn)
+L000019 |             Rule("Laser Shutter", "LASER_SHUTTER_CLOSED", true, "SAFE", "Laser shutter is not closed", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Leak Sensor", "LEAK_SENSOR", true, "OK", "Leak sensor is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn)
+L000020 |             Rule("Leak Sensor", "LEAK_SENSOR", true, "OK", "Leak sensor is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Smoke Temp", "SMOKE_TEMP", true, "OK", "Smoke or over temperature input is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn)
+L000021 |             Rule("Smoke Temp", "SMOKE_TEMP", true, "OK", "Smoke or over temperature input is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("PM Lock", "PM_LOCK", true, "READY", "PM lock is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)
+L000022 |             Rule("PM Lock", "PM_LOCK", true, "READY", "PM lock is active", EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn),  ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Scanner Ready", "SCANNER_READY", true, "READY", "Scanner ready signal is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)
+L000023 |             Rule("Scanner Ready", "SCANNER_READY", true, "READY", "Scanner ready signal is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun),  ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Vision Ready", "VISION_READY", true, "READY", "Vision ready signal is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)
+L000024 |             Rule("Vision Ready", "VISION_READY", true, "READY", "Vision ready signal is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun),  ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Panel In Position", "PANEL_IN_POSITION", true, "OK", "Panel is not in position", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)
+L000025 |             Rule("Panel In Position", "PANEL_IN_POSITION", true, "OK", "Panel is not in position", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun),  ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rule("Vacuum Check", "VACUUM_CHECK", true, "OK", "Vacuum check is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)
+L000026 |             Rule("Vacuum Check", "VACUUM_CHECK", true, "OK", "Vacuum check is off", EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun) ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_RULE> Drilling.Common.InterLock.CInterLockManager.Rules
+L000027 |         ]; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY Drilling.Common.InterLock.CInterLockManager.Evaluate(Drilling.Common.Managers.ST_DEVICE_STATUS)
+L000028 |         public ST_INTERLOCK_SUMMARY Evaluate(ST_DEVICE_STATUS status) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Evaluate.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK EvaluateInterlockRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE)
+L000030 |             global::Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK EvaluateInterlockRule(global::Drilling.Common.InterLock.ST_INTERLOCK_RULE rule) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 EvaluateInterlockRule.
+L000031 |             { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: EvaluateRule(rule, status) / 호출자에게 값 또는 제어를 반환합니다: return EvaluateRule(rule, status);
+L000032 |                 return EvaluateRule(rule, status); ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 EvaluateInterlockRule.
+L000033 |             } ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rules.Select(EvaluateInterlockRule).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rules.Select(EvaluateInterlockRule) / 조건에 따라 결과식을 선택합니다: status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray() / 지역 변수를 선언합니다: ST_INTERLOCK_CHECK[] checks = status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray(); / 변수의 초기값을 지정합니다: checks = status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray()
+L000035 |             ST_INTERLOCK_CHECK[] checks = status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray(); ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.ST_INTERLOCK_ITEM SelectInterlockItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)
+L000036 |             global::Drilling.Common.InterLock.ST_INTERLOCK_ITEM SelectInterlockItem(global::Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK check) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 SelectInterlockItem.
+L000037 |             { ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return check.Item with { BlocksAutoRun = !check.IsOk && check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun) };
+L000038 |                 return check.Item with ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 SelectInterlockItem.
+L000039 |                 { ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: BlocksAutoRun = !check.IsOk && check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun) / 함수·델리게이트 또는 객체 생성자를 호출합니다: check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun)
+L000040 |                     BlocksAutoRun = !check.IsOk && check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 SelectInterlockItem.
+L000041 |                 }; ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 SelectInterlockItem.
+L000042 |             } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Select(SelectInterlockItem).ToList() / 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Select(SelectInterlockItem) / 지역 변수를 선언합니다: var items = checks.Select(SelectInterlockItem).ToList(); / 변수의 초기값을 지정합니다: items = checks.Select(SelectInterlockItem).ToList()
+L000044 |             var items = checks.Select(SelectInterlockItem).ToList(); ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · bool IsAlarmOn(Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS)
+L000045 |             bool IsAlarmOn(global::Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS axis) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 IsAlarmOn.
+L000046 |             { ⟦EOL⟧
+// 해설 L47: 호출자에게 값 또는 제어를 반환합니다: return axis.AlarmOn;
+L000047 |                 return axis.AlarmOn; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 IsAlarmOn.
+L000048 |             } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.Motors.Any(IsAlarmOn) / 지역 변수를 선언합니다: var motionOk = !status.Motors.Any(IsAlarmOn); / 변수의 초기값을 지정합니다: motionOk = !status.Motors.Any(IsAlarmOn)
+L000050 |             var motionOk = !status.Motors.Any(IsAlarmOn); ⟦EOL⟧
+// 해설 L51: 컬렉션 요소를 순회합니다: foreach (var axis in status.Motors)
+L000051 |             foreach (var axis in status.Motors) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 Evaluate.
+L000052 |             { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.Name) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name / 지역 변수를 선언합니다: var axisName = string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name; / 변수의 초기값을 지정합니다: axisName = string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name
+L000053 |                 var axisName = string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name; ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: Group = "MOTION" / 값을 대상에 대입합니다: BlocksAutoRun = axis.AlarmOn / 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_INTERLOCK_ITEM(axisName, axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok, axis.AlarmOn ? "ALARM" : "READY", $"{axis.AxisId}: Alarm {(axis.AlarmOn ? "ON" : "OFF")}") { Group = "MOTION", Bl… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(axisName, axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok, axis.AlarmOn ? "ALARM" : "READY", $"{axis.AxisId}: Alarm {(axis.AlarmOn ? "ON" : "OFF")
+L000054 |                 items.Add(new ST_INTERLOCK_ITEM(axisName, axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok, axis.AlarmOn ? "ALARM" : "READY", $"{axis.AxisId}: Alarm {(axis.AlarmOn ? "ON" : "OFF")}") { Group = "MOTION", BlocksAutoRun = axis.AlarmOn }); ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 Evaluate.
+L000055 |             } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 지역 변수를 선언합니다: var betOk = !status.Bet.AlarmOn; / 변수의 초기값을 지정합니다: betOk = !status.Bet.AlarmOn
+L000057 |             var betOk = !status.Bet.AlarmOn; ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: BlocksAutoRun = !betOk / 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_INTERLOCK_ITEM("BET", betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn, betOk ? "READY" : "ALARM", betOk ? "Beam expander normal" : "Beam expander alarm is active") { BlocksAutoRun = !betOk }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM("BET", betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn, betOk ? "READY" : "ALARM", betOk ? "Beam expander normal" : "Beam expander alarm is active") { BlocksAutoRun = !betOk } / 조건에 따라 결과식을 선택합니다: b
+L000058 |             items.Add(new ST_INTERLOCK_ITEM("BET", betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn, betOk ? "READY" : "ALARM", betOk ? "Beam expander normal" : "Beam expander alarm is active") { BlocksAutoRun = !betOk }); ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)
+L000059 |             bool MatchesItem(global::Drilling.Common.InterLock.ST_INTERLOCK_ITEM item) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000060 |             { ⟦EOL⟧
+// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return item.Level == EN_INTERLOCK_LEVEL.Error;
+L000061 |                 return item.Level == EN_INTERLOCK_LEVEL.Error; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000062 |             } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Any(MatchesItem) / 지역 변수를 선언합니다: var hasError = items.Any(MatchesItem); / 변수의 초기값을 지정합니다: hasError = items.Any(MatchesItem)
+L000064 |             var hasError = items.Any(MatchesItem); ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) / 지역 변수를 선언합니다: var canAutoRun = IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) && motionOk && betOk; / 변수의 초기값을 지정합니다: canAutoRun = IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) && motionOk && betOk
+L000065 |             var canAutoRun = IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) && motionOk && betOk; ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) / 지역 변수를 선언합니다: var canManualMove = IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) && motionOk; / 변수의 초기값을 지정합니다: canManualMove = IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) && motionOk
+L000066 |             var canManualMove = IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) && motionOk; ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn) / 지역 변수를 선언합니다: var canLaserOn = IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn); / 변수의 초기값을 지정합니다: canLaserOn = IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn)
+L000067 |             var canLaserOn = IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_SUMMARY(canAutoRun, canManualMove, canLaserOn, hasError, items) / 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_SUMMARY(canAutoRun, canManualMove, canLaserOn, hasError, items);
+L000068 |             return new ST_INTERLOCK_SUMMARY(canAutoRun, canManualMove, canLaserOn, hasError, items); ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Evaluate.
+L000069 |         } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK Drilling.Common.InterLock.CInterLockManager.EvaluateRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.Managers.ST_DEVICE_STATUS)
+L000071 |         private static ST_INTERLOCK_CHECK EvaluateRule(ST_INTERLOCK_RULE rule, ST_DEVICE_STATUS status) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 EvaluateRule.
+L000072 |         { ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.Motion.ST_IO_STATUS)
+L000073 |             bool MatchesItem(global::Drilling.Common.Motion.ST_IO_STATUS channel) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000074 |             { ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: channel.Id.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: channel.Address.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return channel.Id.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase) || channel.Address.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase);
+L000075 |                 return channel.Id.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase) || channel.Address.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000076 |             } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.Io.FirstOrDefault(MatchesItem) / 지역 변수를 선언합니다: var io = status.Io.FirstOrDefault(MatchesItem); / 변수의 초기값을 지정합니다: io = status.Io.FirstOrDefault(MatchesItem)
+L000078 |             var io = status.Io.FirstOrDefault(MatchesItem); ⟦EOL⟧
+// 해설 L79: 조건에 따라 분기합니다: if (io is null)
+L000079 |             if (io is null) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 EvaluateRule.
+L000080 |             { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_CHECK(rule, false, new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, "UNKNOWN", $"{rule.IoId} is not registered")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, "UNKNOWN", $"{rule.IoId} is not registered") / 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_CHECK(rule, false, new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, "UNKNOWN", $"{rule.IoId} is not registered"));
+L000081 |                 return new ST_INTERLOCK_CHECK(rule, false, new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, "UNKNOWN", $"{rule.IoId} is not registered")); ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 EvaluateRule.
+L000082 |             } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 지역 변수를 선언합니다: var isOk = io.IsOn == rule.ExpectedOn; / 변수의 초기값을 지정합니다: isOk = io.IsOn == rule.ExpectedOn
+L000084 |             var isOk = io.IsOn == rule.ExpectedOn; ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_CHECK(rule, isOk, new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? "ON" : "OFF"), isOk ? io.Name : rule.NgDetail)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? "ON" : "OFF"), isOk ? io.Name : rule.NgDetail) / 조건에 따라 결과식을 선택합니다: isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel / 조건에 따라 결과식을 선택합니다: isOk ? rule.OkState : (io.IsOn ? "ON" : "O
+L000085 |             return new ST_INTERLOCK_CHECK(rule, isOk, new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? "ON" : "OFF"), isOk ? io.Name : rule.NgDetail)); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 EvaluateRule.
+L000086 |         } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable<Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK>, Drilling.Common.InterLock.EN_INTERLOCK_TARGET)
+L000088 |         private static bool IsTargetOk(IEnumerable<ST_INTERLOCK_CHECK> checks, EN_INTERLOCK_TARGET target) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 IsTargetOk.
+L000089 |         { ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)
+L000090 |             bool ShouldIncludeItem(global::Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK check) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000091 |             { ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: check.Rule.Targets.HasFlag(target) / 호출자에게 값 또는 제어를 반환합니다: return check.Rule.Targets.HasFlag(target);
+L000092 |                 return check.Rule.Targets.HasFlag(target); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000093 |             } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · bool IsIsOk(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)
+L000095 |             bool IsIsOk(global::Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK check) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 IsIsOk.
+L000096 |             { ⟦EOL⟧
+// 해설 L97: 호출자에게 값 또는 제어를 반환합니다: return check.IsOk;
+L000097 |                 return check.IsOk; ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 IsIsOk.
+L000098 |             } ⟦EOL⟧
+L000099 |  ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Where(ShouldIncludeItem).All(IsIsOk) / 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Where(ShouldIncludeItem) / 호출자에게 값 또는 제어를 반환합니다: return checks.Where(ShouldIncludeItem).All(IsIsOk);
+L000100 |             return checks.Where(ShouldIncludeItem).All(IsIsOk); ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 IsTargetOk.
+L000101 |         } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTE
+L000103 |         private static ST_INTERLOCK_RULE Rule(string signal, string ioId, bool expectedOn, string okState, string ngDetail, EN_INTERLOCK_LEVEL ngLevel, EN_INTERLOCK_TARGET targets) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 Rule.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_RULE(signal, ioId, expectedOn, okState, ngDetail, ngLevel, targets) / 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_RULE(signal, ioId, expectedOn, okState, ngDetail, ngLevel, targets);
+L000105 |             return new ST_INTERLOCK_RULE(signal, ioId, expectedOn, okState, ngDetail, ngLevel, targets); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Rule.
+L000106 |         } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 타입의 구조/상속 선언입니다: private sealed record ST_INTERLOCK_CHECK(ST_INTERLOCK_RULE Rule, bool IsOk, ST_INTERLOCK_ITEM Item);
+L000108 |         private sealed record ST_INTERLOCK_CHECK(ST_INTERLOCK_RULE Rule, bool IsOk, ST_INTERLOCK_ITEM Item); ⟦EOL⟧
+// 해설 L109: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region AUTO - Head USE 판정
+L000109 | #region AUTO - Head USE 판정 ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(head => { var key = $"H{head:00}_USE"; var value = parameters?.GetValueOrDefault(key)?.Trim(); var enabled = value?.ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES"; var state = enabled ?… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)
+L000110 |         public static IReadOnlyList<ST_INTERLOCK_ITEM> EvaluateHeadUse(IReadOnlyDictionary<string, string>? parameters) => Enumerable.Range(1, 8).Select(head => ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 EvaluateHeadUse.
+L000111 |         { ⟦EOL⟧
+// 해설 L112: 지역 변수를 선언합니다: var key = $"H{head:00}_USE"; / 변수의 초기값을 지정합니다: key = $"H{head:00}_USE"
+L000112 |             var key = $"H{head:00}_USE"; ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: .GetValueOrDefault(key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var value = parameters?.GetValueOrDefault(key)?.Trim(); / 변수의 초기값을 지정합니다: value = parameters?.GetValueOrDefault(key)?.Trim()
+L000113 |             var value = parameters?.GetValueOrDefault(key)?.Trim(); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToUpperInvariant() / 지역 변수를 선언합니다: var enabled = value?.ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES"; / 변수의 초기값을 지정합니다: enabled = value?.ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES"
+L000114 |             var enabled = value?.ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES"; ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 결과식을 선택합니다: enabled ? "USE" : string.IsNullOrWhiteSpace(value) ? "NOT CONFIGURED" : "NOT USE" / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? "NOT CONFIGURED" : "NOT USE" / 지역 변수를 선언합니다: var state = enabled ? "USE" : string.IsNullOrWhiteSpace(value) ? "NOT CONFIGURED" : "NOT USE"; / 변수의 초기값을 지정합니다: state = enabled ? "USE" : string.IsNullOrWhiteSpace(value) ? "NOT CONFIGURED" : "NOT USE"
+L000115 |             var state = enabled ? "USE" : string.IsNullOrWhiteSpace(value) ? "NOT CONFIGURED" : "NOT USE"; ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM($"H{head:00} USE", enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, $"{key} = {(string.IsNullOrWhiteSpace(value) ? "미설정" : value)}. AUTO는 HEAD 1~8이 모두 USE여야 합니다.") { HeadNo = head,… / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 결과식을 선택합니다: enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? "미설정" : value / 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_ITEM($"H{head:00} USE", enabled
+L000116 |             return new ST_INTERLOCK_ITEM($"H{head:00} USE", enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, $"{key} = {(string.IsNullOrWhiteSpace(value) ? "미설정" : value)}. AUTO는 HEAD 1~8이 모두 USE여야 합니다.") ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 EvaluateHeadUse.
+L000117 |             { ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: HeadNo = head
+L000118 |                 HeadNo = head, ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: BlocksAutoRun = !enabled
+L000119 |                 BlocksAutoRun = !enabled ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 EvaluateHeadUse.
+L000120 |             }; ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary<string, string>?)
+L000121 |         }).ToArray(); ⟦EOL⟧
+// 해설 L122: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000122 | #endregion ⟦EOL⟧
+// 해설 L123: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region DOE Z - 현재 위치 판정
+L000123 | #region DOE Z - 현재 위치 판정 ⟦EOL⟧
+// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateDoeZ(System.Collections.Generic.IReadOnlyDictionary<string, string>, Sys
+L000124 |         public static IReadOnlyList<ST_INTERLOCK_ITEM> EvaluateDoeZ(IReadOnlyDictionary<string, string> parameters, Func<ST_SCANNER_AXIS_SETTING, ST_AUTOMATION_STATUS_SNAPSHOT<ST_AUTOMATION_AXIS_STATUS>> readSnapshot) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000125 |         { ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_INTERLOCK_ITEM>() / 지역 변수를 선언합니다: var items = new List<ST_INTERLOCK_ITEM>(); / 변수의 초기값을 지정합니다: items = new List<ST_INTERLOCK_ITEM>()
+L000126 |             var items = new List<ST_INTERLOCK_ITEM>(); ⟦EOL⟧
+// 해설 L127: 초기화·조건·증감이 있는 반복입니다: for (var head = 1; head <= 8; head++) / 변수의 초기값을 지정합니다: head = 1
+L000127 |             for (var head = 1; head <= 8; head++) ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000128 |             { ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis => axis.AxisName == "Z" && axis.IsUsed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head) / 지역 변수를 선언합니다: var axis = CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis => axis.AxisName == "Z" && axis.IsUsed); / 변수의 초기값을 지정합니다: axis = CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis => axis.AxisName == "Z" && axis
+L000129 |                 var axis = CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis => axis.AxisName == "Z" && axis.IsUsed); ⟦EOL⟧
+// 해설 L130: 조건에 따라 분기합니다: if (axis.HeadNo == 0)
+L000130 |                 if (axis.HeadNo == 0) ⟦EOL⟧
+// 해설 L131: 다음 반복으로 진행합니다: continue;
+L000131 |                     continue; ⟦EOL⟧
+// 해설 L132: 값을 대상에 대입합니다: Group = "HEAD" / 값을 대상에 대입합니다: HeadNo = head / 값을 대상에 대입합니다: BlocksAutoRun = !ready / 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new("DOE Z Position", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, detail) { Group = "HEAD", HeadNo = head, BlocksAutoRun = !ready }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("DOE Z Position", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, detail) { Group = "HEAD", HeadNo = head, BlocksAutoRun = !ready } / 조건에 따라 결과식을 선택합니다: ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_L
+L000132 |                 void Add(bool ready, string state, string detail) => items.Add(new("DOE Z Position", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, detail) { Group = "HEAD", HeadNo = head, BlocksAutoRun = !ready }); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError) / 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(axis.ConfigurationError))
+L000133 |                 if (!string.IsNullOrEmpty(axis.ConfigurationError)) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000134 |                 { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, "AXIS NG", axis.ConfigurationError)
+L000135 |                     Add(false, "AXIS NG", axis.ConfigurationError); ⟦EOL⟧
+// 해설 L136: 다음 반복으로 진행합니다: continue;
+L000136 |                     continue; ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000137 |                 } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoeZNumber(parameters, $"H{head:00}_DOE_Z_POSITION", out var target) / 조건에 따라 분기합니다: if (!ReadDoeZNumber(parameters, $"H{head:00}_DOE_Z_POSITION", out var target))
+L000139 |                 if (!ReadDoeZNumber(parameters, $"H{head:00}_DOE_Z_POSITION", out var target)) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000140 |                 { ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, "TARGET NG", "Recipe의 DOE Z 목표 위치를 확인해 주세요.")
+L000141 |                     Add(false, "TARGET NG", "Recipe의 DOE Z 목표 위치를 확인해 주세요."); ⟦EOL⟧
+// 해설 L142: 다음 반복으로 진행합니다: continue;
+L000142 |                     continue; ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000143 |                 } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoeZNumber(parameters, "DOE_Z_TOLERANCE", out var tolerance) / 조건에 따라 분기합니다: if (!ReadDoeZNumber(parameters, "DOE_Z_TOLERANCE", out var tolerance) || tolerance < 0)
+L000145 |                 if (!ReadDoeZNumber(parameters, "DOE_Z_TOLERANCE", out var tolerance) || tolerance < 0) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000146 |                 { ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, "SETTING NG", "Setting의 DOE Z Tolerance는 0 이상의 유한한 값이어야 합니다.")
+L000147 |                     Add(false, "SETTING NG", "Setting의 DOE Z Tolerance는 0 이상의 유한한 값이어야 합니다."); ⟦EOL⟧
+// 해설 L148: 다음 반복으로 진행합니다: continue;
+L000148 |                     continue; ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000149 |                 } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: readSnapshot(axis) / 지역 변수를 선언합니다: var snapshot = readSnapshot(axis); / 변수의 초기값을 지정합니다: snapshot = readSnapshot(axis)
+L000151 |                 var snapshot = readSnapshot(axis); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) / 조건에 따라 결과식을 선택합니다: snapshot.CollectedTimestamp > 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt / 지역 변수를 선언합니다: var age = snapshot.CollectedTimestamp > 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt; / 변수의 초기값을 지정합니다: age = snapshot.CollectedTimestamp > 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapsho
+L000152 |                 var age = snapshot.CollectedTimestamp > 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt; ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 지역 변수를 선언합니다: var fresh = snapshot.UpdatedAt != default && age >= TimeSpan.Zero && age <= TimeSpan.FromSeconds(5); / 변수의 초기값을 지정합니다: fresh = snapshot.UpdatedAt != default && age >= TimeSpan.Zero && age <= TimeSpan.FromSeconds(5)
+L000153 |                 var fresh = snapshot.UpdatedAt != default && age >= TimeSpan.Zero && age <= TimeSpan.FromSeconds(5); ⟦EOL⟧
+// 해설 L154: 조건에 따라 분기합니다: if (snapshot.State != "OK" || snapshot.Value is not { } status || !fresh)
+L000154 |                 if (snapshot.State != "OK" || snapshot.Value is not { } status || !fresh) ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000155 |                 { ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, snapshot.State == "OK" ? "STALE" : snapshot.State, $"{axis.AxisReference}: 유효한 현재 위치 스냅샷이 필요합니다. {snapshot.Detail}") / 조건에 따라 결과식을 선택합니다: snapshot.State == "OK" ? "STALE" : snapshot.State
+L000156 |                     Add(false, snapshot.State == "OK" ? "STALE" : snapshot.State, $"{axis.AxisReference}: 유효한 현재 위치 스냅샷이 필요합니다. {snapshot.Detail}"); ⟦EOL⟧
+// 해설 L157: 다음 반복으로 진행합니다: continue;
+L000157 |                     continue; ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000158 |                 } ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 지역 변수를 선언합니다: var position = status.PositionFeedback; / 변수의 초기값을 지정합니다: position = status.PositionFeedback
+L000160 |                 var position = status.PositionFeedback; ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(position - target) / 지역 변수를 선언합니다: var ready = double.IsFinite(position) && Math.Abs(position - target) <= tolerance + 1e-9; / 변수의 초기값을 지정합니다: ready = double.IsFinite(position) && Math.Abs(position - target) <= tolerance + 1e-9
+L000161 |                 var ready = double.IsFinite(position) && Math.Abs(position - target) <= tolerance + 1e-9; ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add(ready, ready ? "OK" : "POSITION NG", FormattableString.Invariant($"{axis.AxisReference}: Current {position:0.######} mm / Recipe {target:0.######} mm; Tolerance ±{tolerance:0.######} mm")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"{axis.AxisReference}: Current {position:0.######} mm / Recipe {target:0.######} mm; Tolerance ±{tolerance:0.######} mm") / 조건에 따라 결과식을 선택합니다: ready ? "OK" : "POSITION NG"
+L000162 |                 Add(ready, ready ? "OK" : "POSITION NG", FormattableString.Invariant($"{axis.AxisReference}: Current {position:0.######} mm / Recipe {target:0.######} mm; Tolerance ±{tolerance:0.######} mm")); ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000163 |             } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return items;
+L000165 |             return items; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 EvaluateDoeZ.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.InterLock.CInterLockManager.ReadDoeZNumber(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, out double)
+L000168 |         private static bool ReadDoeZNumber(IReadOnlyDictionary<string, string> parameters, string key, out double value) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 ReadDoeZNumber.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: value = 0
+L000170 |             value = 0; ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value);
+L000171 |             return parameters.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value); ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ReadDoeZNumber.
+L000172 |         } ⟦EOL⟧
+// 해설 L173: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000173 | #endregion ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region Laser·BET·ATT - 레시피 준비 판정
+L000175 | #region Laser·BET·ATT - 레시피 준비 판정 ⟦EOL⟧
+// 해설 L176: 변수의 초기값을 지정합니다: OpticPositionTolerance = 0.01
+L000176 |         public const double OpticPositionTolerance = 0.01; ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000177 |         public static IReadOnlyList<ST_INTERLOCK_ITEM> EvaluateOptics( ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000178 |             IReadOnlyDictionary<string, string> parameters,  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000179 |             IReadOnlyList<ST_INTERFACE_DATA> devices,  ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000180 |             Func<int, ST_SHARED_DEVICE_SNAPSHOT<ST_LASER_STATUS>> laser,  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000181 |             Func<int, ST_SHARED_DEVICE_SNAPSHOT<ST_BET_STATUS>> bet,  ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000182 |             Func<int, ST_ATTENUATOR_STATUS_SNAPSHOT> attenuator ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000183 |         ) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000184 |         { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_INTERLOCK_ITEM>() / 지역 변수를 선언합니다: var items = new List<ST_INTERLOCK_ITEM>(); / 변수의 초기값을 지정합니다: items = new List<ST_INTERLOCK_ITEM>()
+L000185 |             var items = new List<ST_INTERLOCK_ITEM>(); ⟦EOL⟧
+// 해설 L186: 초기화·조건·증감이 있는 반복입니다: for (var head = 1; head <= 8; head++) / 변수의 초기값을 지정합니다: head = 1
+L000186 |             for (var head = 1; head <= 8; head++) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000187 |             { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue($"H{head:00}_USE", out var use) / 함수·델리게이트 또는 객체 생성자를 호출합니다: use.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: use.Trim() / 조건에 따라 분기합니다: if (parameters.TryGetValue($"H{head:00}_USE", out var use) && use.Trim().ToUpperInvariant()is "OFF" or "FALSE" or "0" or "NO")
+L000188 |                 if (parameters.TryGetValue($"H{head:00}_USE", out var use) && use.Trim().ToUpperInvariant()is "OFF" or "FALSE" or "0" or "NO") ⟦EOL⟧
+// 해설 L189: 다음 반복으로 진행합니다: continue;
+L000189 |                     continue; ⟦EOL⟧
+// 해설 L190: 지역 변수를 선언합니다: var name = $"H{head:00}"; / 변수의 초기값을 지정합니다: name = $"H{head:00}"
+L000190 |                 var name = $"H{head:00}"; ⟦EOL⟧
+// 해설 L191: 값을 대상에 대입합니다: HeadNo = head / 값을 대상에 대입합니다: BlocksAutoRun = !ready / 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new($"{name} {signal}", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, ready ? "READY" : state, detail) { HeadNo = head, BlocksAutoRun = !ready }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new($"{name} {signal}", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, ready ? "READY" : state, detail) { HeadNo = head, BlocksAutoRun = !ready } / 조건에 따라 결과식을 선택합니다: ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error / 조건에 따라 결과식
+L000191 |                 void Add(string signal, bool ready, string detail, string state = "NOT READY") => items.Add(new($"{name} {signal}", ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, ready ? "READY" : state, detail) { HeadNo = head, BlocksAutoRun = !ready }); ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: devices.Any(device => device.Device == module && device.Number == head - 1)
+L000192 |                 bool Registered(EN_EQP_MODULE module) => devices.Any(device => device.Device == module && device.Number == head - 1); ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.TalonLaser) / 조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.TalonLaser))
+L000193 |                 if (Registered(EN_EQP_MODULE.TalonLaser)) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000194 |                 { ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: laser(head - 1) / 지역 변수를 선언합니다: var laserStatus = laser(head - 1); / 변수의 초기값을 지정합니다: laserStatus = laser(head - 1)
+L000195 |                     var laserStatus = laser(head - 1); ⟦EOL⟧
+// 해설 L196: 지역 변수를 선언합니다: var laserValid = laserStatus is { State: "OK", Value: not null }; / 변수의 초기값을 지정합니다: laserValid = laserStatus is { State: "OK", Value: not null }
+L000196 |                     var laserValid = laserStatus is { State: "OK", Value: not null }; ⟦EOL⟧
+// 해설 L197: 지역 변수를 선언합니다: var value = laserStatus.Value; / 변수의 초기값을 지정합니다: value = laserStatus.Value
+L000197 |                     var value = laserStatus.Value; ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add("Laser ON", laserValid && value!.PowerOn, laserValid ? $"Laser={(value!.PowerOn ? "ON" : "OFF")}" : laserStatus.Detail, laserValid ? "OFF" : laserStatus.State) / 조건에 따라 결과식을 선택합니다: laserValid ? $"Laser={(value!.PowerOn ? "ON" : "OFF")}" : laserStatus.Detail / 조건에 따라 결과식을 선택합니다: value!.PowerOn ? "ON" : "OFF" / 조건에 따라 결과식을 선택합니다: laserValid ? "OFF" : laserStatus.State
+L000198 |                     Add("Laser ON", laserValid && value!.PowerOn, laserValid ? $"Laser={(value!.PowerOn ? "ON" : "OFF")}" : laserStatus.Detail, laserValid ? "OFF" : laserStatus.State); ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add("Laser Gate", laserValid && value!.GateOn, laserValid ? $"Gate={(value!.GateOn ? "OPEN" : "CLOSE")}" : laserStatus.Detail, laserValid ? "CLOSE" : laserStatus.State) / 조건에 따라 결과식을 선택합니다: laserValid ? $"Gate={(value!.GateOn ? "OPEN" : "CLOSE")}" : laserStatus.Detail / 조건에 따라 결과식을 선택합니다: value!.GateOn ? "OPEN" : "CLOSE" / 조건에 따라 결과식을 선택합니다: laserValid ? "CLOSE" : laserStatus.State
+L000199 |                     Add("Laser Gate", laserValid && value!.GateOn, laserValid ? $"Gate={(value!.GateOn ? "OPEN" : "CLOSE")}" : laserStatus.Detail, laserValid ? "CLOSE" : laserStatus.State); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add("Laser Shutter", laserValid && value!.ShutterOpen, laserValid ? $"Shutter={(value!.ShutterOpen ? "OPEN" : "CLOSE")}" : laserStatus.Detail, laserValid ? "CLOSE" : laserStatus.State) / 조건에 따라 결과식을 선택합니다: laserValid ? $"Shutter={(value!.ShutterOpen ? "OPEN" : "CLOSE")}" : laserStatus.Detail / 조건에 따라 결과식을 선택합니다: value!.ShutterOpen ? "OPEN" : "CLOSE" / 조건에 따라 결과식을 선택합니다: laserValid ? "CLOSE" : laserStatus.State
+L000200 |                     Add("Laser Shutter", laserValid && value!.ShutterOpen, laserValid ? $"Shutter={(value!.ShutterOpen ? "OPEN" : "CLOSE")}" : laserStatus.Detail, laserValid ? "CLOSE" : laserStatus.State); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000201 |                 } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.Bet) / 조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.Bet))
+L000203 |                 if (Registered(EN_EQP_MODULE.Bet)) ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000204 |                 { ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $"{name}_BET_MAGNIFICATION", out var targetMag) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $"{name}_BET_DIVERGENCE", out var targetDiv) / 조건에 따라 분기합니다: if (!ReadOpticNumber(parameters, $"{name}_BET_MAGNIFICATION", out var targetMag) || !ReadOpticNumber(parameters, $"{name}_BET_DIVERGENCE", out var targetDiv))
+L000205 |                     if (!ReadOpticNumber(parameters, $"{name}_BET_MAGNIFICATION", out var targetMag) || !ReadOpticNumber(parameters, $"{name}_BET_DIVERGENCE", out var targetDiv)) ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add("BET Position", false, "레시피의 BET MAG/DIV 목표값을 확인해 주세요.", "TARGET NG")
+L000206 |                         Add("BET Position", false, "레시피의 BET MAG/DIV 목표값을 확인해 주세요.", "TARGET NG"); ⟦EOL⟧
+// 해설 L207: 앞 조건이 거짓인 경로입니다: else
+L000207 |                     else ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000208 |                     { ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: bet(head - 1) / 지역 변수를 선언합니다: var status = bet(head - 1); / 변수의 초기값을 지정합니다: status = bet(head - 1)
+L000209 |                         var status = bet(head - 1); ⟦EOL⟧
+// 해설 L210: 지역 변수를 선언합니다: var current = status.Value; / 변수의 초기값을 지정합니다: current = status.Value
+L000210 |                         var current = status.Value; ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentMagnification, targetMag) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentDivergence, targetDiv) / 지역 변수를 선언합니다: var ready = status.State == "OK" && current is { CommOk: true, AlarmOn: false, IsMoving: false, LastError: EN_BET_ERROR.Ok } && NearOpticPosition(current.CurrentMagnification, targetMag) && NearOpticPosition(current.CurrentDiverge / 변수의 초기값을 지정합니다: ready = status.State == "OK" && current is { CommOk: true, AlarmOn: false, IsMoving: false, LastError: E
+L000211 |                         var ready = status.State == "OK" && current is { CommOk: true, AlarmOn: false, IsMoving: false, LastError: EN_BET_ERROR.Ok } && NearOpticPosition(current.CurrentMagnification, targetMag) && NearOpticPosition(current.CurrentDivergence, targetDiv); ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add( "BET Position", ready, current is null ? status.Detail : FormattableString.Invariant($"MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0…
+L000212 |                         Add( ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000213 |                             "BET Position",  ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000214 |                             ready,  ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0.###}; Tolerance ±{OpticPositionTolerance}; Moving={current.Is… / 조건에 따라 결과식을 선택합니다: current is null ? status.Detail : FormattableString.Invariant($"MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0.###}; Tolerance ±{OpticPositionTolera
+L000215 |                             current is null ? status.Detail : FormattableString.Invariant($"MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0.###}; Tolerance ±{OpticPositionTolerance}; Moving={current.IsMoving}, Alarm={current.AlarmOn}, Error={current.LastError}"),  ⟦EOL⟧
+// 해설 L216: 조건에 따라 결과식을 선택합니다: status.State == "OK" ? "POS NG" : status.State
+L000216 |                             status.State == "OK" ? "POS NG" : status.State ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000217 |                         ); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000218 |                     } ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000219 |                 } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.Attenuator) / 조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.Attenuator))
+L000221 |                 if (Registered(EN_EQP_MODULE.Attenuator)) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000222 |                 { ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $"{name}_ATTENUATOR_POSITION", out var targetAtt) / 조건에 따라 분기합니다: if (!ReadOpticNumber(parameters, $"{name}_ATTENUATOR_POSITION", out var targetAtt))
+L000223 |                     if (!ReadOpticNumber(parameters, $"{name}_ATTENUATOR_POSITION", out var targetAtt)) ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add("ATT Position", false, "레시피의 ATT 목표각도를 확인해 주세요.", "TARGET NG")
+L000224 |                         Add("ATT Position", false, "레시피의 ATT 목표각도를 확인해 주세요.", "TARGET NG"); ⟦EOL⟧
+// 해설 L225: 앞 조건이 거짓인 경로입니다: else
+L000225 |                     else ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000226 |                     { ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: attenuator(head - 1) / 지역 변수를 선언합니다: var status = attenuator(head - 1); / 변수의 초기값을 지정합니다: status = attenuator(head - 1)
+L000227 |                         var status = attenuator(head - 1); ⟦EOL⟧
+// 해설 L228: 지역 변수를 선언합니다: var current = status?.Value; / 변수의 초기값을 지정합니다: current = status?.Value
+L000228 |                         var current = status?.Value; ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.IsFresh(TimeSpan.FromSeconds(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CommandState.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CommandState.Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentPosition, targetAtt) / 지역 변수를 선언합니다: var ready = status is { IsValid: true, IsInPosition: true } && status.IsFresh(TimeSpan.FromSeconds(2)) && current is not null && current.CommandState.Trim().ToUpperInvariant()is not ("MOVI
+L000229 |                         var ready = status is { IsValid: true, IsInPosition: true } && status.IsFresh(TimeSpan.FromSeconds(2)) && current is not null && current.CommandState.Trim().ToUpperInvariant()is not ("MOVING" or "HOMING" or "BUSY") && NearOpticPosition(current.CurrentPosition, targetAtt); ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: Add( "ATT Position", ready, current is null ? status?.Detail ?? "ATT가 등록되지 않았습니다." : FormattableString.Invariant($"Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}…
+L000230 |                         Add( ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000231 |                             "ATT Position",  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000232 |                             ready,  ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}°; InPosition={status!.IsInPosition}, State={current.CommandState}") / 조건에 따라 결과식을 선택합니다: current is null ? status?.Detail ?? "ATT가 등록되지 않았습니다." : FormattableString.Invariant($"Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}°; InPosition={status!.IsInPosition},
+L000233 |                             current is null ? status?.Detail ?? "ATT가 등록되지 않았습니다." : FormattableString.Invariant($"Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}°; InPosition={status!.IsInPosition}, State={current.CommandState}"),  ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.IsFresh(TimeSpan.FromSeconds(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 조건에 따라 결과식을 선택합니다: status is { IsValid: true } && !status.IsFresh(TimeSpan.FromSeconds(2)) ? "STALE" : status is { IsValid: true } ? "POS NG" : status?.State ?? "N/C" / 조건에 따라 결과식을 선택합니다: status is { IsValid: true } ? "POS NG" : status?.State ?? "N/C"
+L000234 |                             status is { IsValid: true } && !status.IsFresh(TimeSpan.FromSeconds(2)) ? "STALE" : status is { IsValid: true } ? "POS NG" : status?.State ?? "N/C" ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary<string, string>, S
+L000235 |                         ); ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000236 |                     } ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000237 |                 } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000238 |             } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 호출자에게 값 또는 제어를 반환합니다: return items;
+L000240 |             return items; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 EvaluateOptics.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, out double)
+L000243 |         private static bool ReadOpticNumber(IReadOnlyDictionary<string, string> parameters, string key, out double value) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 ReadOpticNumber.
+L000244 |         { ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: value = 0
+L000245 |             value = 0; ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value);
+L000246 |             return parameters.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ReadOpticNumber.
+L000247 |         } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(current - target)
+L000249 |         private static bool NearOpticPosition(double current, double target) => double.IsFinite(current) && Math.Abs(current - target) <= OpticPositionTolerance + 1e-9; ⟦EOL⟧
+// 해설 L250: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000250 | #endregion ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다.
+L000251 |     } ⟦EOL⟧
+L000252 |  ⟦EOL⟧
+// 해설 L253: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000253 |     [Flags] ⟦EOL⟧
+// 해설 L254: 타입의 구조/상속 선언입니다: public enum EN_INTERLOCK_TARGET
+L000254 |     public enum EN_INTERLOCK_TARGET ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다.
+L000255 |     { ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_TARGET.None
+L000256 |         None = 0, ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_TARGET.AutoRun
+L000257 |         AutoRun = 1, ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_TARGET.ManualMove
+L000258 |         ManualMove = 2, ⟦EOL⟧
+// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_TARGET.LaserOn
+L000259 |         LaserOn = 4 ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다.
+L000260 |     } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 타입의 구조/상속 선언입니다: public enum EN_INTERLOCK_LEVEL
+L000262 |     public enum EN_INTERLOCK_LEVEL ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다.
+L000263 |     { ⟦EOL⟧
+// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Ok
+L000264 |         Ok, ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Warn
+L000265 |         Warn, ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Error
+L000266 |         Error ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다.
+L000267 |     } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 타입의 구조/상속 선언입니다: public sealed record ST_INTERLOCK_ITEM(string Signal, EN_INTERLOCK_LEVEL Level, string State, string Detail)
+L000269 |     public sealed record ST_INTERLOCK_ITEM(string Signal, EN_INTERLOCK_LEVEL Level, string State, string Detail) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다.
+L000270 |     { ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group
+L000271 |         public string Group { get; init; } = ""; ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun
+L000272 |         public bool BlocksAutoRun { get; init; } ⟦EOL⟧
+// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo
+L000273 |         public int? HeadNo { get; init; } ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다.
+L000274 |     } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 타입의 구조/상속 선언입니다: public sealed record ST_INTERLOCK_RULE(string Signal, string IoId, bool ExpectedOn, string OkState, string NgDetail, EN_INTERLOCK_LEVEL NgLevel, EN_INTERLOCK_TARGET Targets);
+L000276 |     public sealed record ST_INTERLOCK_RULE(string Signal, string IoId, bool ExpectedOn, string OkState, string NgDetail, EN_INTERLOCK_LEVEL NgLevel, EN_INTERLOCK_TARGET Targets); ⟦EOL⟧
+// 해설 L277: 타입의 구조/상속 선언입니다: public sealed record ST_INTERLOCK_SUMMARY(bool CanAutoRun, bool CanManualMove, bool CanLaserOn, bool HasError, IReadOnlyList<ST_INTERLOCK_ITEM> Items);
+L000277 |     public sealed record ST_INTERLOCK_SUMMARY(bool CanAutoRun, bool CanManualMove, bool CanLaserOn, bool HasError, IReadOnlyList<ST_INTERLOCK_ITEM> Items); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다.
+L000278 | } ⟦EOL⟧

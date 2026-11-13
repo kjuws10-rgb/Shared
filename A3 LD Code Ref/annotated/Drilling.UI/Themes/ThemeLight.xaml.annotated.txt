@@ -1,0 +1,103 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Themes/ThemeLight.xaml
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+L000001 | <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ⟦EOL⟧
+// 해설 L2: XAML UI 구조·속성·리소스 선언입니다: xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+L000002 |                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"> ⟦EOL⟧
+// 해설 L3: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F0F0F0" />
+L000003 |     <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F0F0F0" /> ⟦EOL⟧
+// 해설 L4: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ShellBackgroundBrush" Color="#F5F7FA" />
+L000004 |     <SolidColorBrush x:Key="ShellBackgroundBrush" Color="#F5F7FA" /> ⟦EOL⟧
+// 해설 L5: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderBackgroundBrush" Color="#FFFFFF" />
+L000005 |     <SolidColorBrush x:Key="HeaderBackgroundBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L6: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderBorderBrush" Color="#4C6F91" />
+L000006 |     <SolidColorBrush x:Key="HeaderBorderBrush" Color="#4C6F91" /> ⟦EOL⟧
+// 해설 L7: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="SideBarBackgroundBrush" Color="#E6EEF7" />
+L000007 |     <SolidColorBrush x:Key="SideBarBackgroundBrush" Color="#E6EEF7" /> ⟦EOL⟧
+// 해설 L8: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="FooterBackgroundBrush" Color="#F0F4F8" />
+L000008 |     <SolidColorBrush x:Key="FooterBackgroundBrush" Color="#F0F4F8" /> ⟦EOL⟧
+// 해설 L9: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#FFFFFF" />
+L000009 |     <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L10: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PanelAltBackgroundBrush" Color="#F0F8FF" />
+L000010 |     <SolidColorBrush x:Key="PanelAltBackgroundBrush" Color="#F0F8FF" /> ⟦EOL⟧
+// 해설 L11: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PanelBorderBrush" Color="#5B6F84" />
+L000011 |     <SolidColorBrush x:Key="PanelBorderBrush" Color="#5B6F84" /> ⟦EOL⟧
+// 해설 L12: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="TextPrimaryBrush" Color="#050505" />
+L000012 |     <SolidColorBrush x:Key="TextPrimaryBrush" Color="#050505" /> ⟦EOL⟧
+// 해설 L13: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="TextSecondaryBrush" Color="#111111" />
+L000013 |     <SolidColorBrush x:Key="TextSecondaryBrush" Color="#111111" /> ⟦EOL⟧
+// 해설 L14: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="TextMutedBrush" Color="#1F1F1F" />
+L000014 |     <SolidColorBrush x:Key="TextMutedBrush" Color="#1F1F1F" /> ⟦EOL⟧
+// 해설 L15: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="TextInvertedBrush" Color="#FFFFFF" />
+L000015 |     <SolidColorBrush x:Key="TextInvertedBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L16: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="GridBackgroundBrush" Color="#FFFFFF" />
+L000016 |     <SolidColorBrush x:Key="GridBackgroundBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L17: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="GridAltBackgroundBrush" Color="#F0F8FF" />
+L000017 |     <SolidColorBrush x:Key="GridAltBackgroundBrush" Color="#F0F8FF" /> ⟦EOL⟧
+// 해설 L18: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="GridHeaderBackgroundBrush" Color="#4682B4" />
+L000018 |     <SolidColorBrush x:Key="GridHeaderBackgroundBrush" Color="#4682B4" /> ⟦EOL⟧
+// 해설 L19: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="GridLineBrush" Color="#9EB6CA" />
+L000019 |     <SolidColorBrush x:Key="GridLineBrush" Color="#9EB6CA" /> ⟦EOL⟧
+// 해설 L20: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderCardBackgroundBrush" Color="#FFFFFF" />
+L000020 |     <SolidColorBrush x:Key="HeaderCardBackgroundBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L21: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderCardBorderBrush" Color="#4C6F91" />
+L000021 |     <SolidColorBrush x:Key="HeaderCardBorderBrush" Color="#4C6F91" /> ⟦EOL⟧
+// 해설 L22: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonPrimaryBrush" Color="#4682B4" />
+L000022 |     <SolidColorBrush x:Key="ButtonPrimaryBrush" Color="#4682B4" /> ⟦EOL⟧
+// 해설 L23: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonPrimaryBorderBrush" Color="#2D5F8A" />
+L000023 |     <SolidColorBrush x:Key="ButtonPrimaryBorderBrush" Color="#2D5F8A" /> ⟦EOL⟧
+// 해설 L24: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonSecondaryBrush" Color="#E6EEF7" />
+L000024 |     <SolidColorBrush x:Key="ButtonSecondaryBrush" Color="#E6EEF7" /> ⟦EOL⟧
+// 해설 L25: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonSecondaryBorderBrush" Color="#5B6F84" />
+L000025 |     <SolidColorBrush x:Key="ButtonSecondaryBorderBrush" Color="#5B6F84" /> ⟦EOL⟧
+// 해설 L26: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonSuccessBrush" Color="#2E8B57" />
+L000026 |     <SolidColorBrush x:Key="ButtonSuccessBrush" Color="#2E8B57" /> ⟦EOL⟧
+// 해설 L27: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonSuccessBorderBrush" Color="#1F6E42" />
+L000027 |     <SolidColorBrush x:Key="ButtonSuccessBorderBrush" Color="#1F6E42" /> ⟦EOL⟧
+// 해설 L28: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonWarningBrush" Color="#D59A00" />
+L000028 |     <SolidColorBrush x:Key="ButtonWarningBrush" Color="#D59A00" /> ⟦EOL⟧
+// 해설 L29: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonWarningBorderBrush" Color="#A87500" />
+L000029 |     <SolidColorBrush x:Key="ButtonWarningBorderBrush" Color="#A87500" /> ⟦EOL⟧
+// 해설 L30: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonDangerBrush" Color="#E62121" />
+L000030 |     <SolidColorBrush x:Key="ButtonDangerBrush" Color="#E62121" /> ⟦EOL⟧
+// 해설 L31: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonDangerBorderBrush" Color="#B00000" />
+L000031 |     <SolidColorBrush x:Key="ButtonDangerBorderBrush" Color="#B00000" /> ⟦EOL⟧
+// 해설 L32: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ButtonTextOnColorBrush" Color="#FFFFFF" />
+L000032 |     <SolidColorBrush x:Key="ButtonTextOnColorBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L33: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="#4682B4" />
+L000033 |     <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="#4682B4" /> ⟦EOL⟧
+// 해설 L34: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="MenuItemSelectedBorderBrush" Color="#002D74" />
+L000034 |     <SolidColorBrush x:Key="MenuItemSelectedBorderBrush" Color="#002D74" /> ⟦EOL⟧
+// 해설 L35: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="MenuItemSelectedTextBrush" Color="#FFFFFF" />
+L000035 |     <SolidColorBrush x:Key="MenuItemSelectedTextBrush" Color="#FFFFFF" /> ⟦EOL⟧
+// 해설 L36: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="MenuAccentBrush" Color="#002D74" />
+L000036 |     <SolidColorBrush x:Key="MenuAccentBrush" Color="#002D74" /> ⟦EOL⟧
+// 해설 L37: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="AccentBrush" Color="#0057A4" />
+L000037 |     <SolidColorBrush x:Key="AccentBrush" Color="#0057A4" /> ⟦EOL⟧
+// 해설 L38: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="AccentTextBrush" Color="#002D74" />
+L000038 |     <SolidColorBrush x:Key="AccentTextBrush" Color="#002D74" /> ⟦EOL⟧
+// 해설 L39: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="StatusReadyBrush" Color="#2E8B57" />
+L000039 |     <SolidColorBrush x:Key="StatusReadyBrush" Color="#2E8B57" /> ⟦EOL⟧
+// 해설 L40: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderNavHoverBackgroundBrush" Color="#4682B4" />
+L000040 |     <SolidColorBrush x:Key="HeaderNavHoverBackgroundBrush" Color="#4682B4" /> ⟦EOL⟧
+// 해설 L41: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="HeaderNavPressedBackgroundBrush" Color="#002D74" />
+L000041 |     <SolidColorBrush x:Key="HeaderNavPressedBackgroundBrush" Color="#002D74" /> ⟦EOL⟧
+// 해설 L42: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PreviewHoverTipBackgroundBrush" Color="#F8FAFC" />
+L000042 |     <SolidColorBrush x:Key="PreviewHoverTipBackgroundBrush" Color="#F8FAFC" /> ⟦EOL⟧
+// 해설 L43: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PreviewHoverTipBorderBrush" Color="#5B6F84" />
+L000043 |     <SolidColorBrush x:Key="PreviewHoverTipBorderBrush" Color="#5B6F84" /> ⟦EOL⟧
+// 해설 L44: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="PreviewHoverTipTextBrush" Color="#050505" />
+L000044 |     <SolidColorBrush x:Key="PreviewHoverTipTextBrush" Color="#050505" /> ⟦EOL⟧
+// 해설 L45: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ReviewMaskBackgroundBrush" Color="#F7E5E5" />
+L000045 |     <SolidColorBrush x:Key="ReviewMaskBackgroundBrush" Color="#F7E5E5" /> ⟦EOL⟧
+// 해설 L46: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ReviewChessBackgroundBrush" Color="#F0E7FF" />
+L000046 |     <SolidColorBrush x:Key="ReviewChessBackgroundBrush" Color="#F0E7FF" /> ⟦EOL⟧
+// 해설 L47: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ReviewMaskTextBrush" Color="#D71920" />
+L000047 |     <SolidColorBrush x:Key="ReviewMaskTextBrush" Color="#D71920" /> ⟦EOL⟧
+// 해설 L48: XAML UI 구조·속성·리소스 선언입니다: <SolidColorBrush x:Key="ReviewChessTextBrush" Color="#7A1FD0" />
+L000048 |     <SolidColorBrush x:Key="ReviewChessTextBrush" Color="#7A1FD0" /> ⟦EOL⟧
+// 해설 L49: XAML 요소 범위를 닫습니다.
+L000049 | </ResourceDictionary> ⟦EOL⟧

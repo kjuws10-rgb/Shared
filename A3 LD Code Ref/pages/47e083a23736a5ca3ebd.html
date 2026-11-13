@@ -1,0 +1,723 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CValueInputDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CValueInputDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CValueInputDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>2b05f6cf626e622daefee01b894f4aba1909dbcd11b77da23e4cda5caf502166</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>7,609 bytes / 223 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/47e083a23736a5ca3ebd.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CValueInputDialog</td><td>ClassDeclaration</td><td>8–223</td><td>CValueInputDialog: Window</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_dataType</td><td>FieldDeclaration</td><td>L10–10</td><td>Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Popup.CValueInputDialog._dataType</td></tr>
+<tr><td>_min</td><td>FieldDeclaration</td><td>L11–11</td><td>double Drilling.UI.Popup.CValueInputDialog._min</td></tr>
+<tr><td>_max</td><td>FieldDeclaration</td><td>L12–12</td><td>double Drilling.UI.Popup.CValueInputDialog._max</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L13–29</td><td>Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double)</td></tr>
+<tr><td>ResultValue</td><td>PropertyDeclaration</td><td>L31–37</td><td>string Drilling.UI.Popup.CValueInputDialog.ResultValue</td></tr>
+<tr><td>get_ResultValue</td><td>GetAccessorDeclaration</td><td>L33–36</td><td>string Drilling.UI.Popup.CValueInputDialog.ResultValue.get</td></tr>
+<tr><td>BuildKeys</td><td>MethodDeclaration</td><td>L39–58</td><td>void Drilling.UI.Popup.CValueInputDialog.BuildKeys()</td></tr>
+<tr><td>KeyClick</td><td>MethodDeclaration</td><td>L60–77</td><td>void Drilling.UI.Popup.CValueInputDialog.KeyClick(object, RoutedEventArgs)</td></tr>
+<tr><td>SpaceClick</td><td>MethodDeclaration</td><td>L79–87</td><td>void Drilling.UI.Popup.CValueInputDialog.SpaceClick(object, RoutedEventArgs)</td></tr>
+<tr><td>BackClick</td><td>MethodDeclaration</td><td>L89–101</td><td>void Drilling.UI.Popup.CValueInputDialog.BackClick(object, RoutedEventArgs)</td></tr>
+<tr><td>ClearClick</td><td>MethodDeclaration</td><td>L103–106</td><td>void Drilling.UI.Popup.CValueInputDialog.ClearClick(object, RoutedEventArgs)</td></tr>
+<tr><td>ValueTextBoxPreviewTextInput</td><td>MethodDeclaration</td><td>L108–113</td><td>void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPreviewTextInput(object, TextCompositionEventArgs)</td></tr>
+<tr><td>ValueTextBoxPasting</td><td>MethodDeclaration</td><td>L115–123</td><td>void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPasting(object, DataObjectPastingEventArgs)</td></tr>
+<tr><td>CreateProspectiveValue</td><td>MethodDeclaration</td><td>L125–131</td><td>string Drilling.UI.Popup.CValueInputDialog.CreateProspectiveValue(string)</td></tr>
+<tr><td>IsValidNumericInput</td><td>MethodDeclaration</td><td>L133–154</td><td>bool Drilling.UI.Popup.CValueInputDialog.IsValidNumericInput(string)</td></tr>
+<tr><td>CancelClick</td><td>MethodDeclaration</td><td>L156–159</td><td>void Drilling.UI.Popup.CValueInputDialog.CancelClick(object, RoutedEventArgs)</td></tr>
+<tr><td>WindowKeyDown</td><td>MethodDeclaration</td><td>L161–173</td><td>void Drilling.UI.Popup.CValueInputDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>OkClick</td><td>MethodDeclaration</td><td>L175–186</td><td>void Drilling.UI.Popup.CValueInputDialog.OkClick(object, RoutedEventArgs)</td></tr>
+<tr><td>Validate</td><td>MethodDeclaration</td><td>L188–211</td><td>bool Drilling.UI.Popup.CValueInputDialog.Validate(string, out string)</td></tr>
+<tr><td>ValidateRange</td><td>MethodDeclaration</td><td>L213–222</td><td>bool Drilling.UI.Popup.CValueInputDialog.ValidateRange(double, out string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L10">FieldDeclaration <code>_dataType</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CValueInputDialog.xaml.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Popup.CValueInputDialog._dataType</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_RECIPE_DATA_TYPE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>_min</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CValueInputDialog.xaml.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CValueInputDialog._min</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_max</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L12-L12">Drilling.UI/Popup/CValueInputDialog.xaml.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CValueInputDialog._max</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">ConstructorDeclaration <code>.ctor</code> · L13–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L13-L29">Drilling.UI/Popup/CValueInputDialog.xaml.cs:13–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>dataType</td><td>Drilling.Common.Managers.EN_RECIPE_DATA_TYPE</td><td>None</td><td>False /</td></tr>
+<tr><td>min</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>max</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L32-L33">Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:32–33</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L24-L25">Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:24–25</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L51-L53">Drilling.UI/Views/CManualPowerStageView.xaml.cs:51–53</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualView.xaml.cs#L107-L110">Drilling.UI/Views/CManualView.xaml.cs:107–110</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualView.xaml.cs#L121-L124">Drilling.UI/Views/CManualView.xaml.cs:121–124</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualView.xaml.cs#L134-L137">Drilling.UI/Views/CManualView.xaml.cs:134–137</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualView.xaml.cs#L147-L150">Drilling.UI/Views/CManualView.xaml.cs:147–150</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L243-L246">Drilling.UI/Views/CMonitorView.xaml.cs:243–246</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L322-L325">Drilling.UI/Views/CMonitorView.xaml.cs:322–325</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L341-L344">Drilling.UI/Views/CMonitorView.xaml.cs:341–344</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L360-L363">Drilling.UI/Views/CMonitorView.xaml.cs:360–363</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L446-L449">Drilling.UI/Views/CMonitorView.xaml.cs:446–449</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L474-L477">Drilling.UI/Views/CMonitorView.xaml.cs:474–477</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L507-L510">Drilling.UI/Views/CMonitorView.xaml.cs:507–510</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L531-L534">Drilling.UI/Views/CMonitorView.xaml.cs:531–534</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L158-L161">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:158–161</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L335-L338">Drilling.UI/Views/CRecipeView.xaml.cs:335–338</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L365-L368">Drilling.UI/Views/CRecipeView.xaml.cs:365–368</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L53-L56">Drilling.UI/Views/CSettingView.xaml.cs:53–56</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L83-L86">Drilling.UI/Views/CSettingView.xaml.cs:83–86</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L42-L43">Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:42–43</a></td><td>new CValueInputDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>21</td><td>min.ToString</td><td>resolved</td><td>string double.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>21</td><td>max.ToString</td><td>resolved</td><td>string double.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>22</td><td>DataObject.AddPastingHandler</td><td>unresolved</td><td>None</td></tr>
+<tr><td>23</td><td>BuildKeys</td><td>resolved</td><td>void Drilling.UI.Popup.CValueInputDialog.BuildKeys() · Drilling.UI/Popup/CValueInputDialog.xaml.cs:39</td></tr>
+<tr><td>26</td><td>ValueTextBox.Focus</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>16</td><td>assignment</td><td>값을 대상에 대입합니다: _dataType = dataType</td></tr>
+<tr><td>17</td><td>assignment</td><td>값을 대상에 대입합니다: _min = min</td></tr>
+<tr><td>18</td><td>assignment</td><td>값을 대상에 대입합니다: _max = max</td></tr>
+<tr><td>19</td><td>assignment</td><td>값을 대상에 대입합니다: PromptText.Text = parameter</td></tr>
+<tr><td>20</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.Text = value</td></tr>
+<tr><td>21</td><td>assignment</td><td>값을 대상에 대입합니다: RangeText.Text = dataType is EN_RECIPE_DATA_TYPE.Int or EN_RECIPE_DATA_TYPE.Double &amp;&amp; max &gt; min ? $&quot;Range: {min.ToString(CultureInfo.InvariantCulture)} ~ {max.ToString(CultureInfo.InvariantCulture)}&quot; : dataType == EN_RECIPE_DATA_T</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: min.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: max.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>21</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dataType is EN_RECIPE_DATA_TYPE.Int or EN_RECIPE_DATA_TYPE.Double &amp;&amp; max &gt; min ? $&quot;Range: {min.ToString(CultureInfo.InvariantCulture)} ~ {max.ToString(CultureInfo.InvariantCulture)}&quot; : dataType == EN_RECIPE_DATA_TYPE.String ? &quot;Str</td></tr>
+<tr><td>21</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dataType == EN_RECIPE_DATA_TYPE.String ? &quot;String input&quot; : &quot;Numeric input&quot;</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DataObject.AddPastingHandler(ValueTextBox, ValueTextBoxPasting)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: BuildKeys()</td></tr>
+<tr><td>24</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) =&gt; { ValueTextBox.Focus(); ValueTextBox.CaretIndex = ValueTextBox.Text.Length; }</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Focus()</td></tr>
+<tr><td>27</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.CaretIndex = ValueTextBox.Text.Length</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">PropertyDeclaration <code>ResultValue</code> · L31–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L31-L37">Drilling.UI/Popup/CValueInputDialog.xaml.cs:31–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CValueInputDialog.ResultValue</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">GetAccessorDeclaration <code>get_ResultValue</code> · L33–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L33-L36">Drilling.UI/Popup/CValueInputDialog.xaml.cs:33–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CValueInputDialog.ResultValue.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>35</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValueTextBox.Text;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">MethodDeclaration <code>BuildKeys</code> · L39–58</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L39-L58">Drilling.UI/Popup/CValueInputDialog.xaml.cs:39–58</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.BuildKeys()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L23-L23">Drilling.UI/Popup/CValueInputDialog.xaml.cs:23–23</a></td><td>BuildKeys</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>45</td><td>&quot;1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:&quot;.Select(value =&gt; value.ToString()).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>45</td><td>&quot;1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:&quot;.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.Select&lt;char, string&gt;(System.Func&lt;char, string&gt;)</td></tr>
+<tr><td>45</td><td>value.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string char.ToString()</td></tr>
+<tr><td>49</td><td>new Button</td><td>unresolved</td><td>None</td></tr>
+<tr><td>53</td><td>FindResource</td><td>unresolved</td><td>None</td></tr>
+<tr><td>56</td><td>KeyGrid.Children.Add</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var keys = _dataType switch { EN_RECIPE_DATA_TYPE.Int =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;-&quot;], EN_RECIPE_DATA_TYPE.Double =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;.&quot;, &quot;-&quot;], _ =&gt; &quot;1234567890QWERTYUI</td></tr>
+<tr><td>41</td><td>switch-expression</td><td>값별 결과식을 선택합니다: _dataType switch { EN_RECIPE_DATA_TYPE.Int =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;-&quot;], EN_RECIPE_DATA_TYPE.Double =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;.&quot;, &quot;-&quot;], _ =&gt; &quot;1234567890QWERTYUIOPASDFGHJKL</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: keys = _dataType switch { EN_RECIPE_DATA_TYPE.Int =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;-&quot;], EN_RECIPE_DATA_TYPE.Double =&gt; [&quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;0&quot;, &quot;.&quot;, &quot;-&quot;], _ =&gt; &quot;1234567890QWERTYUIOPAS</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: &quot;1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:&quot;.Select(value =&gt; value.ToString()).ToArray()</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: &quot;1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:&quot;.Select(value =&gt; value.ToString())</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()</td></tr>
+<tr><td>46</td><td>assignment</td><td>값을 대상에 대입합니다: KeyGrid.Columns = _dataType == EN_RECIPE_DATA_TYPE.String ? 10 : 3</td></tr>
+<tr><td>46</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _dataType == EN_RECIPE_DATA_TYPE.String ? 10 : 3</td></tr>
+<tr><td>47</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var key in keys)</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = key, Tag = key, Style = (Style)FindResource(&quot;KeyButton&quot;) }</td></tr>
+<tr><td>49</td><td>local-declaration</td><td>지역 변수를 선언합니다: var button = new Button { Content = key, Tag = key, Style = (Style)FindResource(&quot;KeyButton&quot;) };</td></tr>
+<tr><td>49</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: button = new Button { Content = key, Tag = key, Style = (Style)FindResource(&quot;KeyButton&quot;) }</td></tr>
+<tr><td>51</td><td>assignment</td><td>값을 대상에 대입합니다: Content = key</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: Tag = key</td></tr>
+<tr><td>53</td><td>assignment</td><td>값을 대상에 대입합니다: Style = (Style)FindResource(&quot;KeyButton&quot;)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource(&quot;KeyButton&quot;)</td></tr>
+<tr><td>55</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click += KeyClick</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: KeyGrid.Children.Add(button)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BuildKeys&quot;]
+ N0[&quot;L41 switch-expression&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L47 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L60">MethodDeclaration <code>KeyClick</code> · L60–77</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L60-L77">Drilling.UI/Popup/CValueInputDialog.xaml.cs:60–77</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.KeyClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>66</td><td>ValueTextBox.Text.StartsWith</td><td>unresolved</td><td>None</td></tr>
+<tr><td>71</td><td>ValueTextBox.Text.Contains</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>62</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not Button { Tag: string key })</td></tr>
+<tr><td>63</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>64</td><td>if</td><td>조건에 따라 분기합니다: if (key == &quot;-&quot;)</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.Text = ValueTextBox.Text.StartsWith(&#x27;-&#x27;) ? ValueTextBox.Text[1..] : $&quot;-{ValueTextBox.Text}&quot;</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.StartsWith(&#x27;-&#x27;)</td></tr>
+<tr><td>66</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ValueTextBox.Text.StartsWith(&#x27;-&#x27;) ? ValueTextBox.Text[1..] : $&quot;-{ValueTextBox.Text}&quot;</td></tr>
+<tr><td>67</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.CaretIndex = ValueTextBox.Text.Length</td></tr>
+<tr><td>68</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Contains(&#x27;.&#x27;)</td></tr>
+<tr><td>71</td><td>if</td><td>조건에 따라 분기합니다: if (key == &quot;.&quot; &amp;&amp; ValueTextBox.Text.Contains(&#x27;.&#x27;))</td></tr>
+<tr><td>72</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var insertionStart = ValueTextBox.SelectionStart;</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: insertionStart = ValueTextBox.SelectionStart</td></tr>
+<tr><td>74</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.SelectedText = key</td></tr>
+<tr><td>75</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.CaretIndex = insertionStart + key.Length</td></tr>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.SelectionLength = 0</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;KeyClick&quot;]
+ N0[&quot;L62 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L64 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L71 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">MethodDeclaration <code>SpaceClick</code> · L79–87</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L79-L87">Drilling.UI/Popup/CValueInputDialog.xaml.cs:79–87</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.SpaceClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType != EN_RECIPE_DATA_TYPE.String)</td></tr>
+<tr><td>82</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>83</td><td>local-declaration</td><td>지역 변수를 선언합니다: var insertionStart = ValueTextBox.SelectionStart;</td></tr>
+<tr><td>83</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: insertionStart = ValueTextBox.SelectionStart</td></tr>
+<tr><td>84</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.SelectedText = &quot; &quot;</td></tr>
+<tr><td>85</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.CaretIndex = insertionStart + 1</td></tr>
+<tr><td>86</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.SelectionLength = 0</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SpaceClick&quot;]
+ N0[&quot;L81 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L89">MethodDeclaration <code>BackClick</code> · L89–101</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L89-L101">Drilling.UI/Popup/CValueInputDialog.xaml.cs:89–101</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.BackClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>98</td><td>ValueTextBox.Text.Remove</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>91</td><td>if</td><td>조건에 따라 분기합니다: if (ValueTextBox.SelectionLength &gt; 0)</td></tr>
+<tr><td>93</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.SelectedText = &quot;&quot;</td></tr>
+<tr><td>95</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>95</td><td>if</td><td>조건에 따라 분기합니다: if (ValueTextBox.CaretIndex &gt; 0)</td></tr>
+<tr><td>97</td><td>local-declaration</td><td>지역 변수를 선언합니다: var caretIndex = ValueTextBox.CaretIndex;</td></tr>
+<tr><td>97</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: caretIndex = ValueTextBox.CaretIndex</td></tr>
+<tr><td>98</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.Text = ValueTextBox.Text.Remove(caretIndex - 1, 1)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Remove(caretIndex - 1, 1)</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.CaretIndex = caretIndex - 1</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BackClick&quot;]
+ N0[&quot;L91 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L95 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L95 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L103">MethodDeclaration <code>ClearClick</code> · L103–106</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L103-L106">Drilling.UI/Popup/CValueInputDialog.xaml.cs:103–106</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.ClearClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>105</td><td>ValueTextBox.Clear</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Clear()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L108">MethodDeclaration <code>ValueTextBoxPreviewTextInput</code> · L108–113</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L108-L113">Drilling.UI/Popup/CValueInputDialog.xaml.cs:108–113</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPreviewTextInput(object, TextCompositionEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>TextCompositionEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>112</td><td>IsValidNumericInput</td><td>resolved</td><td>bool Drilling.UI.Popup.CValueInputDialog.IsValidNumericInput(string) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:133</td></tr>
+<tr><td>112</td><td>CreateProspectiveValue</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>110</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)</td></tr>
+<tr><td>111</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>112</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = !IsValidNumericInput(CreateProspectiveValue(e.Text))</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(e.Text))</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(e.Text)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValueTextBoxPreviewTextInput&quot;]
+ N0[&quot;L110 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L115">MethodDeclaration <code>ValueTextBoxPasting</code> · L115–123</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L115-L123">Drilling.UI/Popup/CValueInputDialog.xaml.cs:115–123</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPasting(object, DataObjectPastingEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>DataObjectPastingEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>119</td><td>e.DataObject.GetDataPresent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>119</td><td>e.DataObject.GetData</td><td>unresolved</td><td>None</td></tr>
+<tr><td>119</td><td>IsValidNumericInput</td><td>resolved</td><td>bool Drilling.UI.Popup.CValueInputDialog.IsValidNumericInput(string) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:133</td></tr>
+<tr><td>119</td><td>CreateProspectiveValue</td><td>resolved</td><td>string Drilling.UI.Popup.CValueInputDialog.CreateProspectiveValue(string) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:125</td></tr>
+<tr><td>121</td><td>e.CancelCommand</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)</td></tr>
+<tr><td>118</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetDataPresent(DataFormats.UnicodeText)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetData(DataFormats.UnicodeText)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(pastedText))</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(pastedText)</td></tr>
+<tr><td>119</td><td>if</td><td>조건에 따라 분기합니다: if (!e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(pastedText)))</td></tr>
+<tr><td>121</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.CancelCommand()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValueTextBoxPasting&quot;]
+ N0[&quot;L117 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L119 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L125">MethodDeclaration <code>CreateProspectiveValue</code> · L125–131</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L125-L131">Drilling.UI/Popup/CValueInputDialog.xaml.cs:125–131</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CValueInputDialog.CreateProspectiveValue(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>input</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119">Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119</a></td><td>CreateProspectiveValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>128</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>129</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>130</td><td>text.Remove(start, length).Insert</td><td>unresolved</td><td>None</td></tr>
+<tr><td>130</td><td>text.Remove</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>127</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = ValueTextBox.Text ?? &quot;&quot;;</td></tr>
+<tr><td>127</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = ValueTextBox.Text ?? &quot;&quot;</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length)</td></tr>
+<tr><td>128</td><td>local-declaration</td><td>지역 변수를 선언합니다: var start = Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length);</td></tr>
+<tr><td>128</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: start = Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start)</td></tr>
+<tr><td>129</td><td>local-declaration</td><td>지역 변수를 선언합니다: var length = Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start);</td></tr>
+<tr><td>129</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: length = Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start)</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length).Insert(start, input)</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length)</td></tr>
+<tr><td>130</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return text.Remove(start, length).Insert(start, input);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L133">MethodDeclaration <code>IsValidNumericInput</code> · L133–154</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L133-L154">Drilling.UI/Popup/CValueInputDialog.xaml.cs:133–154</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CValueInputDialog.IsValidNumericInput(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L112-L112">Drilling.UI/Popup/CValueInputDialog.xaml.cs:112–112</a></td><td>IsValidNumericInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119">Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119</a></td><td>IsValidNumericInput</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>140</td><td>unsigned.All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;char&gt;.All&lt;char&gt;(System.Func&lt;char, bool&gt;)</td></tr>
+<tr><td>146</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>135</td><td>if</td><td>조건에 따라 분기합니다: if (value.Length == 0 || value == &quot;-&quot;)</td></tr>
+<tr><td>136</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>137</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value[0] == &#x27;-&#x27; ? value[1..] : value</td></tr>
+<tr><td>137</td><td>local-declaration</td><td>지역 변수를 선언합니다: var unsigned = value[0] == &#x27;-&#x27; ? value[1..] : value;</td></tr>
+<tr><td>137</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: unsigned = value[0] == &#x27;-&#x27; ? value[1..] : value</td></tr>
+<tr><td>138</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.Int)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: unsigned.All(char.IsDigit)</td></tr>
+<tr><td>140</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return unsigned.Length &gt; 0 &amp;&amp; unsigned.All(char.IsDigit);</td></tr>
+<tr><td>143</td><td>local-declaration</td><td>지역 변수를 선언합니다: var decimalPointCount = 0;</td></tr>
+<tr><td>143</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: decimalPointCount = 0</td></tr>
+<tr><td>144</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var character in unsigned)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character)</td></tr>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (char.IsDigit(character))</td></tr>
+<tr><td>147</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>148</td><td>if</td><td>조건에 따라 분기합니다: if (character == &#x27;.&#x27; &amp;&amp; ++decimalPointCount == 1)</td></tr>
+<tr><td>149</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>150</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>153</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsValidNumericInput&quot;]
+ N0[&quot;L135 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L138 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L144 foreach&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L146 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L148 if&quot;]
+ N2 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L156">MethodDeclaration <code>CancelClick</code> · L156–159</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L156-L159">Drilling.UI/Popup/CValueInputDialog.xaml.cs:156–159</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.CancelClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L161">MethodDeclaration <code>WindowKeyDown</code> · L161–173</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L161-L173">Drilling.UI/Popup/CValueInputDialog.xaml.cs:161–173</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>KeyEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>166</td><td>OkClick</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>163</td><td>if</td><td>조건에 따라 분기합니다: if (e.Key == Key.Enter)</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: OkClick(sender, e)</td></tr>
+<tr><td>168</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>168</td><td>if</td><td>조건에 따라 분기합니다: if (e.Key == Key.Escape)</td></tr>
+<tr><td>170</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>171</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WindowKeyDown&quot;]
+ N0[&quot;L163 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L168 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L168 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L175">MethodDeclaration <code>OkClick</code> · L175–186</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L175-L186">Drilling.UI/Popup/CValueInputDialog.xaml.cs:175–186</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CValueInputDialog.OkClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>177</td><td>ValueTextBox.Text.Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>178</td><td>Validate</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>180</td><td>MessageBox.Show</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Trim()</td></tr>
+<tr><td>177</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = ValueTextBox.Text.Trim();</td></tr>
+<tr><td>177</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = ValueTextBox.Text.Trim()</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(value, out var error)</td></tr>
+<tr><td>178</td><td>if</td><td>조건에 따라 분기합니다: if (!Validate(value, out var error))</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, &quot;입력값 오류&quot;, MessageBoxButton.OK, MessageBoxImage.Warning)</td></tr>
+<tr><td>181</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>184</td><td>assignment</td><td>값을 대상에 대입합니다: ValueTextBox.Text = value</td></tr>
+<tr><td>185</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OkClick&quot;]
+ N0[&quot;L178 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L188">MethodDeclaration <code>Validate</code> · L188–211</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L188-L211">Drilling.UI/Popup/CValueInputDialog.xaml.cs:188–211</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CValueInputDialog.Validate(string, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>error</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>195</td><td>long.TryParse</td><td>resolved</td><td>bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long)</td></tr>
+<tr><td>201</td><td>ValidateRange</td><td>resolved</td><td>bool Drilling.UI.Popup.CValueInputDialog.ValidateRange(double, out string) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:213</td></tr>
+<tr><td>204</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>204</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>210</td><td>ValidateRange</td><td>resolved</td><td>bool Drilling.UI.Popup.CValueInputDialog.ValidateRange(double, out string) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:213</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>190</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>191</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)</td></tr>
+<tr><td>192</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>193</td><td>if</td><td>조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.Int)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)</td></tr>
+<tr><td>195</td><td>if</td><td>조건에 따라 분기합니다: if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))</td></tr>
+<tr><td>197</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;Enter a valid integer.&quot;</td></tr>
+<tr><td>198</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRange(parsed, out error)</td></tr>
+<tr><td>201</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValidateRange(parsed, out error);</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number)</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(number)</td></tr>
+<tr><td>204</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))</td></tr>
+<tr><td>206</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;Enter a valid number.&quot;</td></tr>
+<tr><td>207</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRange(number, out error)</td></tr>
+<tr><td>210</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValidateRange(number, out error);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Validate&quot;]
+ N0[&quot;L191 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L193 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L195 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L204 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">MethodDeclaration <code>ValidateRange</code> · L213–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L213-L222">Drilling.UI/Popup/CValueInputDialog.xaml.cs:213–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CValueInputDialog.ValidateRange(double, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CValueInputDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>error</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L201-L201">Drilling.UI/Popup/CValueInputDialog.xaml.cs:201–201</a></td><td>ValidateRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L210-L210">Drilling.UI/Popup/CValueInputDialog.xaml.cs:210–210</a></td><td>ValidateRange</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>220</td><td>_min.ToString</td><td>resolved</td><td>string double.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>220</td><td>_max.ToString</td><td>resolved</td><td>string double.ToString(System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>215</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>218</td><td>if</td><td>조건에 따라 분기합니다: if (_max &lt;= _min || value &gt;= _min &amp;&amp; value &lt;= _max)</td></tr>
+<tr><td>219</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>220</td><td>assignment</td><td>값을 대상에 대입합니다: error = $&quot;Value must be between {_min.ToString(CultureInfo.InvariantCulture)} and {_max.ToString(CultureInfo.InvariantCulture)}.&quot;</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _min.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _max.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>221</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateRange&quot;]
+ N0[&quot;L218 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CValueInputDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

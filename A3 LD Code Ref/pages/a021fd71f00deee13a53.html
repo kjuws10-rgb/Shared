@@ -1,0 +1,730 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/Correction/CAlignOffsetLogFile.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/Correction/CAlignOffsetLogFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs">Git 원본</a></p><h1>Drilling.File/Correction/CAlignOffsetLogFile.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>e9c8b33fe1e31dbe1e8b115152140fc8a54eb2c58b2bc023fdc163a0eaef74dc</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>10,145 bytes / 172 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>보정 계산·설정·원본/적용값의 관계를 다루는 계층입니다. 값의 좌표계와 단위는 호출부의 근거를 따릅니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/a021fd71f00deee13a53.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CDefaultOffsetLogFile</td><td>ClassDeclaration</td><td>8–38</td><td>CDefaultOffsetLogFile</td></tr>
+<tr><td>CAlignOffsetLogFile</td><td>ClassDeclaration</td><td>40–172</td><td>CAlignOffsetLogFile: CAlignOffsetLogFileBase</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Save</td><td>MethodDeclaration</td><td>L10–37</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.File.Correction.CDefaultOffsetLogFile.Save(Drilling.Common.Correction.ST_DEFAULT_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>F</td><td>LocalFunctionStatement</td><td>L17–17</td><td>string F(double)</td></tr>
+<tr><td>Rows</td><td>LocalFunctionStatement</td><td>L27–36</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt; Rows()</td></tr>
+<tr><td>Headers</td><td>FieldDeclaration</td><td>L42–74</td><td>string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers</td></tr>
+<tr><td>RootPath</td><td>PropertyDeclaration</td><td>L76–76</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.RootPath</td></tr>
+<tr><td>get_RootPath</td><td>GetAccessorDeclaration</td><td>L76–76</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.RootPath.get</td></tr>
+<tr><td>Save</td><td>MethodDeclaration</td><td>L78–79</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.File.Correction.CAlignOffsetLogFile.Save(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>SaveCore</td><td>MethodDeclaration</td><td>L81–156</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SaveCore(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>Rows</td><td>LocalFunctionStatement</td><td>L110–140</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Rows()</td></tr>
+<tr><td>CommonRow</td><td>LocalFunctionStatement</td><td>L142–155</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; CommonRow(string, double, double, double?, double?)</td></tr>
+<tr><td>Number</td><td>MethodDeclaration</td><td>L158–158</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?)</td></tr>
+<tr><td>SafeRecipeName</td><td>MethodDeclaration</td><td>L160–171</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L10">MethodDeclaration <code>Save</code> · L10–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L10-L37">Drilling.File/Correction/CAlignOffsetLogFile.cs:10–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.File.Correction.CDefaultOffsetLogFile.Save(Drilling.Common.Correction.ST_DEFAULT_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CDefaultOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>data</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_LOG</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3792-L3792">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3792–3792</a></td><td>new Drilling.File.Correction.CDefaultOffsetLogFile(_defaultManager!.ConfigRoot).Save</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>10</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.Task.Run&lt;string&gt;(System.Func&lt;string&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>12</td><td>string.Concat</td><td>resolved</td><td>string string.Concat&lt;char&gt;(System.Collections.Generic.IEnumerable&lt;char&gt;)</td></tr>
+<tr><td>12</td><td>data.Recipe.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;char&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.Select&lt;char, char&gt;(System.Func&lt;char, char&gt;)</td></tr>
+<tr><td>12</td><td>Path.GetInvalidFileNameChars().Contains</td><td>resolved</td><td>bool System.ReadOnlySpan&lt;char&gt;.Contains&lt;char&gt;(char)</td></tr>
+<tr><td>12</td><td>Path.GetInvalidFileNameChars</td><td>resolved</td><td>char[] System.IO.Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>13</td><td>new IOException</td><td>resolved</td><td>System.IO.IOException.IOException(string?)</td></tr>
+<tr><td>14</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string, string, string)</td></tr>
+<tr><td>14</td><td>Directory.GetParent</td><td>resolved</td><td>System.IO.DirectoryInfo? System.IO.Directory.GetParent(string)</td></tr>
+<tr><td>14</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>15</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>15</td><td>Guid.NewGuid</td><td>resolved</td><td>System.Guid System.Guid.NewGuid()</td></tr>
+<tr><td>21</td><td>CCsvParser.Write</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:58</td></tr>
+<tr><td>21</td><td>Rows().Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;.Select&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;(System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>21</td><td>Rows</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt; Rows() · Drilling.File/Correction/CAlignOffsetLogFile.cs:27</td></tr>
+<tr><td>21</td><td>headers.Zip(row).ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; System.Collections.Generic.IEnumerable&lt;(string First, string Second)&gt;.ToDictionary&lt;(string First, string Second), string, string&gt;(System.Func&lt;(string First, string Second), string&gt;, System.Func&lt;(string First, string Second), string&gt;)</td></tr>
+<tr><td>21</td><td>headers.Zip</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;(string First, string Second)&gt; System.Collections.Generic.IEnumerable&lt;string&gt;.Zip&lt;string, string&gt;(System.Collections.Generic.IEnumerable&lt;string&gt;)</td></tr>
+<tr><td>22</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>23</td><td>System.IO.File.Move</td><td>resolved</td><td>void System.IO.File.Move(string, string)</td></tr>
+<tr><td>26</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>26</td><td>System.IO.File.Delete</td><td>resolved</td><td>void System.IO.File.Delete(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =&gt; { var safeName = string.Concat(data.Recipe.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c)); if (safeName is &quot;&quot; or &quot;.&quot; or &quot;..&quot;) throw new IOException(&quot;Default 결과의 레시피명을 확인해 주세요.&quot;); var di…</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Concat(data.Recipe.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c))</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Recipe.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c)</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars().Contains(c)</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>12</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c</td></tr>
+<tr><td>12</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeName = string.Concat(data.Recipe.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c));</td></tr>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeName = string.Concat(data.Recipe.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c))</td></tr>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException(&quot;Default 결과의 레시피명을 확인해 주세요.&quot;)</td></tr>
+<tr><td>13</td><td>if</td><td>조건에 따라 분기합니다: if (safeName is &quot;&quot; or &quot;.&quot; or &quot;..&quot;)</td></tr>
+<tr><td>13</td><td>throw</td><td>예외를 발생/전달합니다: throw new IOException(&quot;Default 결과의 레시피명을 확인해 주세요.&quot;);</td></tr>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, &quot;Data&quot;, &quot;DefaultOffset&quot;, safeName)</td></tr>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(Path.GetFullPath(configRoot))</td></tr>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot)</td></tr>
+<tr><td>14</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, &quot;Data&quot;, &quot;DefaultOffset&quot;, safeName);</td></tr>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, &quot;Data&quot;, &quot;DefaultOffset&quot;, safeName)</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $&quot;{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv&quot;)</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid()</td></tr>
+<tr><td>15</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = Path.Combine(directory, $&quot;{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv&quot;);</td></tr>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = Path.Combine(directory, $&quot;{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv&quot;)</td></tr>
+<tr><td>16</td><td>local-declaration</td><td>지역 변수를 선언합니다: var temporary = path + &quot;.tmp&quot;;</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: temporary = path + &quot;.tmp&quot;</td></tr>
+<tr><td>18</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>20</td><td>local-declaration</td><td>지역 변수를 선언합니다: string[] headers = [&quot;SESSION&quot;, &quot;RECIPE&quot;, &quot;ACTION&quot;, &quot;TIME&quot;, &quot;MODE&quot;, &quot;HEAD&quot;, &quot;TEST_ID&quot;, &quot;Q&quot;, &quot;R&quot;, &quot;AUTOMATION_SIMULATION&quot;, &quot;STAGE_SIMULATION&quot;, &quot;VISION_SIMULATION&quot;, &quot;BEAM&quot;, &quot;MARK_X&quot;, &quot;MARK_Y&quot;, &quot;RECV_TARGET_HOLE_X&quot;, &quot;RECV_TARGET_HOLE_</td></tr>
+<tr><td>20</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: headers = [&quot;SESSION&quot;, &quot;RECIPE&quot;, &quot;ACTION&quot;, &quot;TIME&quot;, &quot;MODE&quot;, &quot;HEAD&quot;, &quot;TEST_ID&quot;, &quot;Q&quot;, &quot;R&quot;, &quot;AUTOMATION_SIMULATION&quot;, &quot;STAGE_SIMULATION&quot;, &quot;VISION_SIMULATION&quot;, &quot;BEAM&quot;, &quot;MARK_X&quot;, &quot;MARK_Y&quot;, &quot;RECV_TARGET_HOLE_X&quot;, &quot;RECV_TARGET_HOLE_Y&quot;, &quot;VISI</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporary, headers, Rows().Select(row =&gt; (IReadOnlyDictionary&lt;string, string&gt;)headers.Zip(row).ToDictionary(p =&gt; p.First, p =&gt; p.Second)))</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows().Select(row =&gt; (IReadOnlyDictionary&lt;string, string&gt;)headers.Zip(row).ToDictionary(p =&gt; p.First, p =&gt; p.Second))</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows()</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Zip(row).ToDictionary(p =&gt; p.First, p =&gt; p.Second)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Zip(row)</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporary, path)</td></tr>
+<tr><td>24</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return path;</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporary)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporary)</td></tr>
+<tr><td>26</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>26</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(temporary))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Save&quot;]
+ N0[&quot;L13 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L18 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L26 finally&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L26 if&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">LocalFunctionStatement <code>F</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L17-L17">Drilling.File/Correction/CAlignOffsetLogFile.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string F(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CDefaultOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>v</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34">Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34</a></td><td>F</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>17</td><td>v.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: v.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">LocalFunctionStatement <code>Rows</code> · L27–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L27-L36">Drilling.File/Correction/CAlignOffsetLogFile.cs:27–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt; Rows()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CDefaultOffsetLogFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L21-L21">Drilling.File/Correction/CAlignOffsetLogFile.cs:21–21</a></td><td>Rows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>29</td><td>data.Results.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt;.OrderBy&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT, int&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT, int&gt;)</td></tr>
+<tr><td>32</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>34</td><td>data.SessionId.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Guid.ToString()</td></tr>
+<tr><td>34</td><td>data.Time.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
+<tr><td>34</td><td>result.Head.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string int.ToString()</td></tr>
+<tr><td>34</td><td>result.TestId.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Guid.ToString()</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>result.AutomationSimulation.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string bool.ToString()</td></tr>
+<tr><td>34</td><td>result.StageSimulation.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string bool.ToString()</td></tr>
+<tr><td>34</td><td>result.VisionSimulation.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string bool.ToString()</td></tr>
+<tr><td>34</td><td>mark.Beam.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string int.ToString()</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>mark.CapturedAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>data.Before.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+<tr><td>34</td><td>data.Before.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+<tr><td>34</td><td>data.After.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+<tr><td>34</td><td>data.After.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>result.Model.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>34</td><td>result.ReferenceCell.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>data.Options.MachiningMode.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Enum.ToString()</td></tr>
+<tr><td>34</td><td>F</td><td>resolved</td><td>string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17</td></tr>
+<tr><td>34</td><td>data.Options.VisionMethod.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Enum.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Results.OrderBy(r =&gt; r.Head)</td></tr>
+<tr><td>29</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var result in data.Results.OrderBy(r =&gt; r.Head))</td></tr>
+<tr><td>30</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var mark in result.Marks)</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{result.Head:00}_DEFAULT_OFFSET_&quot;;</td></tr>
+<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{result.Head:00}_DEFAULT_OFFSET_&quot;</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.SessionId.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Time.ToString(&quot;O&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Head.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.TestId.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Q)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.R)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.AutomationSimulation.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.StageSimulation.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.VisionSimulation.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: mark.Beam.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.X)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.Y)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.RawX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.RawY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.CorrectionX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.CorrectionY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.EncoderX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(mark.EncoderY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: mark.CapturedAt.ToString(&quot;O&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.CenterErrorX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.CenterErrorY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Fit.Residual)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Fit.PitchX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Fit.PitchY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Before.GetValueOrDefault(prefix + &quot;X&quot;, &quot;&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Before.GetValueOrDefault(prefix + &quot;Y&quot;, &quot;&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.After.GetValueOrDefault(prefix + &quot;X&quot;, &quot;&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.After.GetValueOrDefault(prefix + &quot;Y&quot;, &quot;&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.BoardCenterX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.TestStageY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.Tolerance)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(fieldX.FieldHalfX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(fieldY.FieldHalfY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(doe.DoeAngle)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Model.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.ReferenceCell.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.TargetReviewX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.TargetStageY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.CenterReviewX)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.CenterStageY)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Fit.X)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Fit.Y)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Options.MachiningMode.ToString()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.CrossSize)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Options.VisionMethod.ToString()</td></tr>
+<tr><td>34</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result.Geometry is { } fieldX ? F(fieldX.FieldHalfX) : &quot;&quot;</td></tr>
+<tr><td>34</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result.Geometry is { } fieldY ? F(fieldY.FieldHalfY) : &quot;&quot;</td></tr>
+<tr><td>34</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result.Geometry is { } doe ? F(doe.DoeAngle) : &quot;&quot;</td></tr>
+<tr><td>34</td><td>yield</td><td>열거값/종료를 전달합니다: yield return new[] { data.SessionId.ToString(), data.Recipe, data.Action, data.Time.ToString(&quot;O&quot;), &quot;SETUP_CENTER&quot;, result.Head.ToString(), result.TestId.ToString(), F(result.Q), F(result.R), result.AutomationSimulation.ToString(),</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Rows&quot;]
+ N0[&quot;L29 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L30 foreach&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">FieldDeclaration <code>Headers</code> · L42–74</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L42-L74">Drilling.File/Correction/CAlignOffsetLogFile.cs:42–74</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string[]</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: Headers = [ &quot;RECIPE_NAME&quot;, &quot;ACTION&quot;, &quot;ALGORITHM&quot;, &quot;APPLIED_AT&quot;, &quot;LAST_LOAD_TIME&quot;, &quot;SOURCE&quot;, &quot;ROW_TYPE&quot;, &quot;KEY_NAME&quot;, &quot;INCLUDED&quot;, &quot;CELL_NO&quot;, &quot;SHOT_NAME&quot;, &quot;DESIGN_X_MM&quot;, &quot;DESIGN_Y_MM&quot;, &quot;BASE_X_MM&quot;, &quot;BASE_Y_MM&quot;, &quot;LAST_LOAD_X_MM&quot;, &quot;LAS</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">PropertyDeclaration <code>RootPath</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76">Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.RootPath</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>76</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string, string)</td></tr>
+<tr><td>76</td><td>Directory.GetParent</td><td>resolved</td><td>System.IO.DirectoryInfo? System.IO.Directory.GetParent(string)</td></tr>
+<tr><td>76</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, &quot;Data&quot;, &quot;AlignOffset&quot;)</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(Path.GetFullPath(configRoot))</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">GetAccessorDeclaration <code>get_RootPath</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76">Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.RootPath.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L78">MethodDeclaration <code>Save</code> · L78–79</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L78-L79">Drilling.File/Correction/CAlignOffsetLogFile.cs:78–79</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.File.Correction.CAlignOffsetLogFile.Save(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>entry</td><td>Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>79</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.Task.Run&lt;string&gt;(System.Func&lt;string&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>79</td><td>SaveCore</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SaveCore(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken) · Drilling.File/Correction/CAlignOffsetLogFile.cs:81</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =&gt; SaveCore(entry, cancellationToken), cancellationToken)</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SaveCore(entry, cancellationToken)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">MethodDeclaration <code>SaveCore</code> · L81–156</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L81-L156">Drilling.File/Correction/CAlignOffsetLogFile.cs:81–156</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SaveCore(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>entry</td><td>Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L79-L79">Drilling.File/Correction/CAlignOffsetLogFile.cs:79–79</a></td><td>SaveCore</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>83</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>84</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>84</td><td>SafeRecipeName</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string) · Drilling.File/Correction/CAlignOffsetLogFile.cs:160</td></tr>
+<tr><td>85</td><td>entry.ChangedAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>86</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>87</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>87</td><td>Guid.NewGuid</td><td>resolved</td><td>System.Guid System.Guid.NewGuid()</td></tr>
+<tr><td>88</td><td>(entry.CalculatedOffsets.Count &gt; 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;(int CellNo, string ShotName), Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET&gt;.ToDictionary&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET, (int CellNo, string ShotName)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET, (int CellNo, string ShotName)&gt;)</td></tr>
+<tr><td>90</td><td>entry.ExcludedOffsets.Select(shot =&gt; (shot.CellNo, shot.ShotName)).ToHashSet</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;(int CellNo, string ShotName)&gt; System.Collections.Generic.IEnumerable&lt;(int CellNo, string ShotName)&gt;.ToHashSet&lt;(int CellNo, string ShotName)&gt;()</td></tr>
+<tr><td>90</td><td>entry.ExcludedOffsets.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;(int CellNo, string ShotName)&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET&gt;.Select&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET, (int CellNo, string ShotName)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET, (int CellNo, string ShotName)&gt;)</td></tr>
+<tr><td>93</td><td>CCsvParser.Write</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:58</td></tr>
+<tr><td>93</td><td>Rows</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Rows() · Drilling.File/Correction/CAlignOffsetLogFile.cs:110</td></tr>
+<tr><td>94</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>97</td><td>System.IO.File.Move</td><td>resolved</td><td>void System.IO.File.Move(string, string)</td></tr>
+<tr><td>98</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>101</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>107</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>107</td><td>System.IO.File.Delete</td><td>resolved</td><td>void System.IO.File.Delete(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(RootPath, SafeRecipeName(entry.RecipeName))</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SafeRecipeName(entry.RecipeName)</td></tr>
+<tr><td>84</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = Path.Combine(RootPath, SafeRecipeName(entry.RecipeName));</td></tr>
+<tr><td>84</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = Path.Combine(RootPath, SafeRecipeName(entry.RecipeName))</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ChangedAt.ToString(&quot;yyMMdd_HHmmss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>85</td><td>local-declaration</td><td>지역 변수를 선언합니다: var name = entry.ChangedAt.ToString(&quot;yyMMdd_HHmmss&quot;, CultureInfo.InvariantCulture);</td></tr>
+<tr><td>85</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: name = entry.ChangedAt.ToString(&quot;yyMMdd_HHmmss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, name + &quot;.csv&quot;)</td></tr>
+<tr><td>86</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = Path.Combine(directory, name + &quot;.csv&quot;);</td></tr>
+<tr><td>86</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = Path.Combine(directory, name + &quot;.csv&quot;)</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $&quot;.{Guid.NewGuid():N}.tmp&quot;)</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid()</td></tr>
+<tr><td>87</td><td>local-declaration</td><td>지역 변수를 선언합니다: var temporaryPath = Path.Combine(directory, $&quot;.{Guid.NewGuid():N}.tmp&quot;);</td></tr>
+<tr><td>87</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: temporaryPath = Path.Combine(directory, $&quot;.{Guid.NewGuid():N}.tmp&quot;)</td></tr>
+<tr><td>88</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.CalculatedOffsets.Count &gt; 0 ? entry.CalculatedOffsets : entry.Shots</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (entry.CalculatedOffsets.Count &gt; 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot =&gt; (shot.CellNo, shot.ShotName))</td></tr>
+<tr><td>88</td><td>local-declaration</td><td>지역 변수를 선언합니다: var calculated = (entry.CalculatedOffsets.Count &gt; 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot =&gt; (shot.CellNo, shot.ShotName));</td></tr>
+<tr><td>88</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: calculated = (entry.CalculatedOffsets.Count &gt; 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot =&gt; (shot.CellNo, shot.ShotName))</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ExcludedOffsets.Select(shot =&gt; (shot.CellNo, shot.ShotName)).ToHashSet()</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ExcludedOffsets.Select(shot =&gt; (shot.CellNo, shot.ShotName))</td></tr>
+<tr><td>90</td><td>local-declaration</td><td>지역 변수를 선언합니다: var excluded = entry.ExcludedOffsets.Select(shot =&gt; (shot.CellNo, shot.ShotName)).ToHashSet();</td></tr>
+<tr><td>90</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: excluded = entry.ExcludedOffsets.Select(shot =&gt; (shot.CellNo, shot.ShotName)).ToHashSet()</td></tr>
+<tr><td>91</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, Headers, Rows())</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows()</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: duplicate = 1</td></tr>
+<tr><td>95</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var duplicate = 1; ; duplicate++)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, path)</td></tr>
+<tr><td>97</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return path;</td></tr>
+<tr><td>97</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>98</td><td>catch</td><td>지정 예외를 처리합니다: catch (IOException) when (System.IO.File.Exists(path))</td></tr>
+<tr><td>101</td><td>assignment</td><td>값을 대상에 대입합니다: path = Path.Combine(directory, $&quot;{name}_{duplicate}.csv&quot;)</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $&quot;{name}_{duplicate}.csv&quot;)</td></tr>
+<tr><td>105</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporaryPath)</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporaryPath)</td></tr>
+<tr><td>107</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(temporaryPath))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SaveCore&quot;]
+ N0[&quot;L91 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L95 for&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L97 try&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L98 catch&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L105 finally&quot;]
+ N0 --&gt;|포함| N4
+ N5[&quot;L107 if&quot;]
+ N4 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L110">LocalFunctionStatement <code>Rows</code> · L110–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L110-L140">Drilling.File/Correction/CAlignOffsetLogFile.cs:110–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Rows()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L93-L93">Drilling.File/Correction/CAlignOffsetLogFile.cs:93–93</a></td><td>Rows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>114</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>115</td><td>CommonRow</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; CommonRow(string, double, double, double?, double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:142</td></tr>
+<tr><td>118</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>119</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>120</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>121</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>122</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>123</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>128</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>129</td><td>CommonRow</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; CommonRow(string, double, double, double?, double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:142</td></tr>
+<tr><td>130</td><td>shot.CellNo.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>132</td><td>excluded.Contains</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;(int CellNo, string ShotName)&gt;.Contains((int CellNo, string ShotName))</td></tr>
+<tr><td>133</td><td>calculated.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;(int CellNo, string ShotName), Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET&gt;.TryGetValue((int CellNo, string ShotName), out Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET)</td></tr>
+<tr><td>135</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>136</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>112</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var key in entry.Keys)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CommonRow(&quot;KEY&quot;, key.DesignX, key.DesignY, key.OffsetX, key.OffsetY)</td></tr>
+<tr><td>115</td><td>local-declaration</td><td>지역 변수를 선언합니다: var row = CommonRow(&quot;KEY&quot;, key.DesignX, key.DesignY, key.OffsetX, key.OffsetY);</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = CommonRow(&quot;KEY&quot;, key.DesignX, key.DesignY, key.OffsetX, key.OffsetY)</td></tr>
+<tr><td>116</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;KEY_NAME&quot;] = key.Name</td></tr>
+<tr><td>117</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;INCLUDED&quot;] = key.Included ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>117</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: key.Included ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;BASE_X_MM&quot;] = Number(key.BaseX)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseX)</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;BASE_Y_MM&quot;] = Number(key.BaseY)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseY)</td></tr>
+<tr><td>120</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;LAST_LOAD_X_MM&quot;] = Number(key.LastLoadX)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.LastLoadX)</td></tr>
+<tr><td>121</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;LAST_LOAD_Y_MM&quot;] = Number(key.LastLoadY)</td></tr>
+<tr><td>121</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.LastLoadY)</td></tr>
+<tr><td>122</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;BASE_LOAD_X_MM&quot;] = Number(key.BaseX - key.LastLoadX)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseX - key.LastLoadX)</td></tr>
+<tr><td>123</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;BASE_LOAD_Y_MM&quot;] = Number(key.BaseY - key.LastLoadY)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseY - key.LastLoadY)</td></tr>
+<tr><td>124</td><td>yield</td><td>열거값/종료를 전달합니다: yield return row;</td></tr>
+<tr><td>126</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var shot in entry.Shots)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CommonRow(&quot;SHOT&quot;, shot.DesignX, shot.DesignY, shot.X, shot.Y)</td></tr>
+<tr><td>129</td><td>local-declaration</td><td>지역 변수를 선언합니다: var row = CommonRow(&quot;SHOT&quot;, shot.DesignX, shot.DesignY, shot.X, shot.Y);</td></tr>
+<tr><td>129</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = CommonRow(&quot;SHOT&quot;, shot.DesignX, shot.DesignY, shot.X, shot.Y)</td></tr>
+<tr><td>130</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;CELL_NO&quot;] = shot.CellNo.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: shot.CellNo.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;SHOT_NAME&quot;] = shot.ShotName</td></tr>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;APPLY_STATUS&quot;] = entry.IsInit ? &quot;INIT&quot; : excluded.Contains((shot.CellNo, shot.ShotName)) ? &quot;EXCLUDED_KEEP&quot; : &quot;APPLIED&quot;</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: excluded.Contains((shot.CellNo, shot.ShotName))</td></tr>
+<tr><td>132</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.IsInit ? &quot;INIT&quot; : excluded.Contains((shot.CellNo, shot.ShotName)) ? &quot;EXCLUDED_KEEP&quot; : &quot;APPLIED&quot;</td></tr>
+<tr><td>132</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: excluded.Contains((shot.CellNo, shot.ShotName)) ? &quot;EXCLUDED_KEEP&quot; : &quot;APPLIED&quot;</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: calculated.TryGetValue((shot.CellNo, shot.ShotName), out var result)</td></tr>
+<tr><td>133</td><td>if</td><td>조건에 따라 분기합니다: if (calculated.TryGetValue((shot.CellNo, shot.ShotName), out var result))</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;CALCULATED_OFFSET_X_MM&quot;] = Number(result.X)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(result.X)</td></tr>
+<tr><td>136</td><td>assignment</td><td>값을 대상에 대입합니다: row[&quot;CALCULATED_OFFSET_Y_MM&quot;] = Number(result.Y)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(result.Y)</td></tr>
+<tr><td>138</td><td>yield</td><td>열거값/종료를 전달합니다: yield return row;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Rows&quot;]
+ N0[&quot;L112 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L126 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L133 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L142">LocalFunctionStatement <code>CommonRow</code> · L142–155</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L142-L155">Drilling.File/Correction/CAlignOffsetLogFile.cs:142–155</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; CommonRow(string, double, double, double?, double?)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>type</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>x</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>offsetX</td><td>double?</td><td>None</td><td>False /</td></tr>
+<tr><td>offsetY</td><td>double?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L115-L115">Drilling.File/Correction/CAlignOffsetLogFile.cs:115–115</a></td><td>CommonRow</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L129-L129">Drilling.File/Correction/CAlignOffsetLogFile.cs:129–129</a></td><td>CommonRow</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>142</td><td>new</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary()</td></tr>
+<tr><td>147</td><td>entry.ChangedAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>148</td><td>.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>150</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>152</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>152</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>154</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+<tr><td>154</td><td>Number</td><td>resolved</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?) · Drilling.File/Correction/CAlignOffsetLogFile.cs:158</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new() { [&quot;RECIPE_NAME&quot;] = entry.RecipeName, [&quot;ACTION&quot;] = entry.IsInit ? &quot;Init&quot; : &quot;Apply&quot;, [&quot;ALGORITHM&quot;] = entry.IsInit ? &quot;&quot; : CAlignInterpolation.AlgorithmName, [&quot;APPLIED_AT&quot;] = entry.ChangedAt.ToString(&quot;O&quot;, CultureInfo.…</td></tr>
+<tr><td>144</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;RECIPE_NAME&quot;] = entry.RecipeName</td></tr>
+<tr><td>145</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;ACTION&quot;] = entry.IsInit ? &quot;Init&quot; : &quot;Apply&quot;</td></tr>
+<tr><td>145</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.IsInit ? &quot;Init&quot; : &quot;Apply&quot;</td></tr>
+<tr><td>146</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;ALGORITHM&quot;] = entry.IsInit ? &quot;&quot; : CAlignInterpolation.AlgorithmName</td></tr>
+<tr><td>146</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.IsInit ? &quot;&quot; : CAlignInterpolation.AlgorithmName</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;APPLIED_AT&quot;] = entry.ChangedAt.ToString(&quot;O&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ChangedAt.ToString(&quot;O&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>148</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;LAST_LOAD_TIME&quot;] = entry.LastLoadedAt?.ToString(&quot;O&quot;, CultureInfo.InvariantCulture) ?? &quot;&quot;</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;O&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;SOURCE&quot;] = entry.LastLoadedAt is null ? &quot;NOT_LOADED&quot; : entry.IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC&quot;</td></tr>
+<tr><td>149</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.LastLoadedAt is null ? &quot;NOT_LOADED&quot; : entry.IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC&quot;</td></tr>
+<tr><td>149</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC&quot;</td></tr>
+<tr><td>150</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;TOLERANCE_MM&quot;] = Number(entry.Tolerance)</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(entry.Tolerance)</td></tr>
+<tr><td>151</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;ROW_TYPE&quot;] = type</td></tr>
+<tr><td>152</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;DESIGN_X_MM&quot;] = Number(x)</td></tr>
+<tr><td>152</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;DESIGN_Y_MM&quot;] = Number(y)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(x)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(y)</td></tr>
+<tr><td>154</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;OFFSET_X_MM&quot;] = Number(offsetX)</td></tr>
+<tr><td>154</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;OFFSET_Y_MM&quot;] = Number(offsetY)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(offsetX)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(offsetY)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L158">MethodDeclaration <code>Number</code> · L158–158</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L158-L158">Drilling.File/Correction/CAlignOffsetLogFile.cs:158–158</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.Number(double?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L118-L118">Drilling.File/Correction/CAlignOffsetLogFile.cs:118–118</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L119-L119">Drilling.File/Correction/CAlignOffsetLogFile.cs:119–119</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L120-L120">Drilling.File/Correction/CAlignOffsetLogFile.cs:120–120</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L121-L121">Drilling.File/Correction/CAlignOffsetLogFile.cs:121–121</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L122-L122">Drilling.File/Correction/CAlignOffsetLogFile.cs:122–122</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L123-L123">Drilling.File/Correction/CAlignOffsetLogFile.cs:123–123</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L135-L135">Drilling.File/Correction/CAlignOffsetLogFile.cs:135–135</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L136-L136">Drilling.File/Correction/CAlignOffsetLogFile.cs:136–136</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L150-L150">Drilling.File/Correction/CAlignOffsetLogFile.cs:150–150</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152">Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152">Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154">Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154">Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154</a></td><td>Number</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>158</td><td>CAlignShotOffsetData.FormatValue</td><td>resolved</td><td>string Drilling.Common.Recipe.CAlignShotOffsetData.FormatValue(double) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:668</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.FormatValue(number)</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value is { } number ? CAlignShotOffsetData.FormatValue(number) : &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">MethodDeclaration <code>SafeRecipeName</code> · L160–171</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L160-L171">Drilling.File/Correction/CAlignOffsetLogFile.cs:160–171</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.Correction.CAlignOffsetLogFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L84-L84">Drilling.File/Correction/CAlignOffsetLogFile.cs:84–84</a></td><td>SafeRecipeName</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>162</td><td>Path.GetInvalidFileNameChars</td><td>resolved</td><td>char[] System.IO.Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>163</td><td>new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim().TrimEnd</td><td>resolved</td><td>string string.TrimEnd(char)</td></tr>
+<tr><td>163</td><td>new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>163</td><td>new string</td><td>resolved</td><td>string.String(char[]?)</td></tr>
+<tr><td>163</td><td>name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray</td><td>resolved</td><td>char[] System.Collections.Generic.IEnumerable&lt;char&gt;.ToArray&lt;char&gt;()</td></tr>
+<tr><td>163</td><td>name.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;char&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.Select&lt;char, char&gt;(System.Func&lt;char, char&gt;)</td></tr>
+<tr><td>163</td><td>invalid.Contains</td><td>resolved</td><td>bool System.ReadOnlySpan&lt;char&gt;.Contains&lt;char&gt;(char)</td></tr>
+<tr><td>163</td><td>char.IsControl</td><td>resolved</td><td>bool char.IsControl(char)</td></tr>
+<tr><td>165</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>165</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>166</td><td>result.Split(&#x27;.&#x27;)[0].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>166</td><td>result.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>162</td><td>local-declaration</td><td>지역 변수를 선언합니다: var invalid = Path.GetInvalidFileNameChars();</td></tr>
+<tr><td>162</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: invalid = Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray())</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: invalid.Contains(character)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsControl(character)</td></tr>
+<tr><td>163</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim().TrimEnd(&#x27;.&#x27;)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim()</td></tr>
+<tr><td>163</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim().TrimEnd(&#x27;.&#x27;);</td></tr>
+<tr><td>163</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = new string(name.Select(character =&gt; invalid.Contains(character) || char.IsControl(character) ? &#x27;_&#x27; : character).ToArray()) .Trim().TrimEnd(&#x27;.&#x27;)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Align Offset 로그의 레시피명이 없습니다.&quot;)</td></tr>
+<tr><td>165</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(result))</td></tr>
+<tr><td>165</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Align Offset 로그의 레시피명이 없습니다.&quot;);</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Split(&#x27;.&#x27;)[0].ToUpperInvariant()</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Split(&#x27;.&#x27;)</td></tr>
+<tr><td>166</td><td>if</td><td>조건에 따라 분기합니다: if (result.Split(&#x27;.&#x27;)[0].ToUpperInvariant() is &quot;CON&quot; or &quot;PRN&quot; or &quot;AUX&quot; or &quot;NUL&quot; or &quot;COM1&quot; or &quot;COM2&quot; or &quot;COM3&quot; or &quot;COM4&quot; or &quot;COM5&quot; or &quot;COM6&quot; or &quot;COM7&quot; or &quot;COM8&quot; or &quot;COM9&quot; or &quot;LPT1&quot; or &quot;LPT2&quot; or &quot;LPT3&quot; or &quot;LPT4&quot; or &quot;LPT5&quot; or &quot;…)</td></tr>
+<tr><td>169</td><td>assignment</td><td>값을 대상에 대입합니다: result = &quot;_&quot; + result</td></tr>
+<tr><td>170</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SafeRecipeName&quot;]
+ N0[&quot;L165 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L166 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.File/Correction/CAlignOffsetLogFile.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

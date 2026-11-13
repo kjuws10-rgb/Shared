@@ -1,0 +1,658 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000001 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000003 | using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000004 | using System.Windows; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000005 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000006 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000009 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CManualPowerMeasurePanel : INotifyPropertyChanged
+L000011 | public sealed class CManualPowerMeasurePanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CPowerMeasureService Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._service
+L000013 |     private readonly CPowerMeasureService _service; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._getPowerMeters
+L000014 |     private readonly Func<IReadOnlyList<ST_INTERFACE_DATA>> _getPowerMeters; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_TARGET>, System.Threading.CancellationToken, System.Threading.Tasks.Task>? Drilling.UI.Menu.Menus.CManualPowerMeas
+L000015 |     private readonly Func<IReadOnlyList<ST_POWER_MEASURE_TARGET>, CancellationToken, Task>? _runMeasurement; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._runCancellation
+L000016 |     private CancellationTokenSource? _runCancellation; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Action<string> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._warn
+L000017 |     private readonly Action<string> _warn; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Func<string, bool> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._confirm
+L000018 |     private readonly Func<string, bool> _confirm; ⟦EOL⟧
+// 해설 L19: 변수의 초기값을 지정합니다: _rows = []
+L000019 |     private readonly Dictionary<int, CPowerMeasureRow> _rows = []; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._selectedHead
+L000020 |     private CPowerMeasureRow? _selectedHead; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._busy
+L000021 |     private bool _busy; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._stopping
+L000022 |     private bool _stopping; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._isGraphView
+L000023 |     private bool _isGraphView; ⟦EOL⟧
+// 해설 L24: 변수의 초기값을 지정합니다: _mode = "FINE"
+L000024 |     private string _mode = "FINE"; ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.PropertyChanged
+L000025 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Action? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.RunningChanged
+L000026 |     public event Action? RunningChanged; ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CPowerMeasureRow> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Heads
+L000027 |     public IReadOnlyList<CPowerMeasureRow> Heads { get; private set; } = []; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Modes
+L000028 |     public IReadOnlyList<string> Modes { get; } = ["ROUGH", "FINE", "DETAIL"]; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: _mode = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ToleranceText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ToleranceText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot()
+L000029 |     public string Mode { get => _mode; set { _mode = value; Notify(); Notify(nameof(ToleranceText)); ApplySnapshot(); } } ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot().Heads.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot() / 조건에 따라 결과식을 선택합니다: IsReadOnly && _service.GetSnapshot().Heads.FirstOrDefault() is { } head ? $"±{head.Target.Options.Tolerance:0.0000} W / {head.Target.Options.MaxAttempts} attempts" : Mode switch { "ROUGH" => "±0.0500 W / 8 attempts", "DETAIL" => "
+L000030 |     public string ToleranceText => IsReadOnly && _service.GetSnapshot().Heads.FirstOrDefault() is { } head ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ToleranceText
+L000031 |         ? $"±{head.Target.Options.Tolerance:0.0000} W / {head.Target.Options.MaxAttempts} attempts" ⟦EOL⟧
+// 해설 L32: 값별 결과식을 선택합니다: Mode switch { "ROUGH" => "±0.0500 W / 8 attempts", "DETAIL" => "±0.0030 W / 18 attempts", _ => "±0.0100 W / 12 attempts" }
+L000032 |         : Mode switch { "ROUGH" => "±0.0500 W / 8 attempts", "DETAIL" => "±0.0030 W / 18 attempts", _ => "±0.0100 W / 12 attempts" }; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.IsRunning
+L000033 |     public bool IsRunning => _busy; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Func<bool>? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartAllowed
+L000034 |     public Func<bool>? StartAllowed { get; set; } ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.IsReadOnly
+L000035 |     public bool IsReadOnly { get; } ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CanEdit
+L000036 |     public bool CanEdit => !_busy && !IsReadOnly; ⟦EOL⟧
+// 해설 L37: 조건에 따라 결과식을 선택합니다: IsReadOnly ? Visibility.Collapsed : Visibility.Visible
+L000037 |     public Visibility RunControlsVisibility => IsReadOnly ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L38: 조건에 따라 결과식을 선택합니다: IsReadOnly ? Visibility.Visible : Visibility.Collapsed
+L000038 |     public Visibility AutoSettingsVisibility => IsReadOnly ? Visibility.Visible : Visibility.Collapsed; ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.HasHeads
+L000039 |     public bool HasHeads => Heads.Count > 0; ⟦EOL⟧
+// 해설 L40: 조건에 따라 결과식을 선택합니다: _isGraphView ? Visibility.Visible : Visibility.Collapsed
+L000040 |     public Visibility GraphViewVisibility => _isGraphView ? Visibility.Visible : Visibility.Collapsed; ⟦EOL⟧
+// 해설 L41: 조건에 따라 결과식을 선택합니다: _isGraphView ? Visibility.Collapsed : Visibility.Visible
+L000041 |     public Visibility GridViewVisibility => _isGraphView ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L42: 조건에 따라 결과식을 선택합니다: _isGraphView ? "GRID VIEW" : "GRAPH VIEW"
+L000042 |     public string ViewToggleText => _isGraphView ? "GRID VIEW" : "GRAPH VIEW"; ⟦EOL⟧
+// 해설 L43: 조건에 따라 결과식을 선택합니다: Heads.Count <= 1 ? 1 : Heads.Count <= 4 ? 2 : 4 / 조건에 따라 결과식을 선택합니다: Heads.Count <= 4 ? 2 : 4
+L000043 |     public int GraphColumns => Heads.Count <= 1 ? 1 : Heads.Count <= 4 ? 2 : 4; ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Summary
+L000044 |     public string Summary { get; private set; } = "Head Select에서 측정할 Head를 선택해 주세요."; ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.QueueText
+L000045 |     public string QueueText { get; private set; } = "PowerMeter를 선택해 주세요."; ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageText
+L000046 |     public string StageText { get; private set; } = "Stage Y 0 mm · IDLE"; ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Graph
+L000047 |     public CPowerMeasureGraph Graph => SelectedHead?.Graph ?? CPowerMeasureGraph.Empty; ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · PointCollection Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GraphPoints
+L000048 |     public PointCollection GraphPoints => Graph.Points; ⟦EOL⟧
+// 해설 L49: 조건에 따라 결과식을 선택합니다: SelectedHead is null ? "Head를 선택하면 측정 이력을 표시합니다." : $"{SelectedHead.HeadName} / {SelectedHead.SelectedPowerMeter?.DisplayText ?? "미선택"} · Target {SelectedHead.Target} W"
+L000049 |     public string DetailTitle => SelectedHead is null ? "Head를 선택하면 측정 이력을 표시합니다." : $"{SelectedHead.HeadName} / {SelectedHead.SelectedPowerMeter?.DisplayText ?? "미선택"} · Target {SelectedHead.Target} W"; ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Samples
+L000050 |     public IReadOnlyList<ST_POWER_MEASURE_SAMPLE> Samples => SelectedHead?.Snapshot?.Samples ?? []; ⟦EOL⟧
+// 해설 L51: 조건에 따라 결과식을 선택합니다: SelectedHead?.Snapshot is { } snapshot ? $"{snapshot.Message} · {snapshot.StartDetail}" : "아직 측정한 값이 없습니다."
+L000051 |     public string DetailMessage => SelectedHead?.Snapshot is { } snapshot ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.DetailMessage
+L000052 |         ? $"{snapshot.Message} · {snapshot.StartDetail}" : "아직 측정한 값이 없습니다."; ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead
+L000053 |     public CPowerMeasureRow? SelectedHead ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 SelectedHead.
+L000054 |     { ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead.get
+L000055 |         get => _selectedHead; ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead.set
+L000056 |         set ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 set_SelectedHead.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_selectedHead, value) / 조건에 따라 분기합니다: if (ReferenceEquals(_selectedHead, value)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000058 |             if (ReferenceEquals(_selectedHead, value)) return; ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetGraphSelected(false)
+L000059 |             _selectedHead?.SetGraphSelected(false); ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: _selectedHead = value
+L000060 |             _selectedHead = value; ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetGraphSelected(true)
+L000061 |             _selectedHead?.SetGraphSelected(true); ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify() / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshDetail()
+L000062 |             Notify(); RefreshDetail(); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 set_SelectedHead.
+L000063 |         } ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 SelectedHead.
+L000064 |     } ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartCommand
+L000065 |     public CButtonCommand StartCommand { get; } ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StopCommand
+L000066 |     public CButtonCommand StopCommand { get; } ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ToggleViewCommand
+L000067 |     public CButtonCommand ToggleViewCommand { get; } ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectGraphHeadCommand
+L000068 |     public CButtonCommand SelectGraphHeadCommand { get; } ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageMotion
+L000069 |     public CManualPowerStagePanel StageMotion { get; } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000071 |     public CManualPowerMeasurePanel( ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000072 |         CPowerMeasureService service,  ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000073 |         Func<IReadOnlyList<ST_INTERFACE_DATA>> getPowerMeters,  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000074 |         IPowerMeasureTable? powerTable, ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000076 |         Action<string> warn,  ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000077 |         Func<string, bool> confirm,  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000078 |         Func<IReadOnlyList<ST_MOTOR_STATUS_ITEM>>? readStageSnapshot = null, ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000080 |         Func<EN_COMM_STATE>? readStageConnectionState = null,  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000081 |         CManualStageMotionSimulation? stageSimulation = null, ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000082 |         CManualStageMoveOperation? stageMove = null, ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000083 |         Func<IReadOnlyList<ST_POWER_MEASURE_TARGET>, CancellationToken, Task>? runMeasurement = null, ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000084 |         bool readOnly = false ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000085 |     ) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 .ctor.
+L000086 |     { ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: _service = service / 값을 대상에 대입합니다: _getPowerMeters = getPowerMeters / 값을 대상에 대입합니다: _warn = warn / 값을 대상에 대입합니다: _confirm = confirm
+L000087 |         _service = service; _getPowerMeters = getPowerMeters; _warn = warn; _confirm = confirm; ⟦EOL⟧
+// 해설 L88: 값을 대상에 대입합니다: _runMeasurement = runMeasurement / 값을 대상에 대입합니다: IsReadOnly = readOnly
+L000088 |         _runMeasurement = runMeasurement; IsReadOnly = readOnly; ⟦EOL⟧
+// 해설 L89: 값을 대상에 대입합니다: StageMotion = new(readStageSnapshot ?? (() => []), warn, confirm, stageSimulation, readStageConnectionState, stageMove) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(readStageSnapshot ?? (() => []), warn, confirm, stageSimulation, readStageConnectionState, stageMove)
+L000089 |         StageMotion = new(readStageSnapshot ?? (() => []), warn, confirm, stageSimulation, readStageConnectionState, stageMove); ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: StartCommand = new(async _ => await Start(), _ => CanEdit && Heads.Count > 0) / 비동기 완료를 기다립니다: await Start() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await Start(), _ => CanEdit && Heads.Count > 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Start()
+L000090 |         StartCommand = new(async _ => await Start(), _ => CanEdit && Heads.Count > 0); ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: StopCommand = new(async _ => await Stop(), _ => _busy && !_stopping) / 비동기 완료를 기다립니다: await Stop() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await Stop(), _ => _busy && !_stopping) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()
+L000091 |         StopCommand = new(async _ => await Stop(), _ => _busy && !_stopping); ⟦EOL⟧
+// 해설 L92: 값을 대상에 대입합니다: ToggleViewCommand = new(_ => { _isGraphView = !_isGraphView; Notify(nameof(GraphViewVisibility)); Notify(nameof(GridViewVisibility)); Notify(nameof(ViewToggleText)); }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => { _isGraphView = !_isGraphView; Notify(nameof(GraphViewVisibility)); Notify(nameof(GridViewVisibility)); Notify(nameof(ViewToggleText)); })
+L000092 |         ToggleViewCommand = new(_ => ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 .ctor.
+L000093 |         { ⟦EOL⟧
+// 해설 L94: 값을 대상에 대입합니다: _isGraphView = !_isGraphView
+L000094 |             _isGraphView = !_isGraphView; ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GraphViewVisibility)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GraphViewVisibility) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GridViewVisibility)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GridViewVisibility) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ViewToggleText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ViewToggleText)
+L000095 |             Notify(nameof(GraphViewVisibility)); Notify(nameof(GridViewVisibility)); Notify(nameof(ViewToggleText)); ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000096 |         }); ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: SelectGraphHeadCommand = new(value => { if (value is CPowerMeasureRow row && Heads.Contains(row)) SelectedHead = row; }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(value => { if (value is CPowerMeasureRow row && Heads.Contains(row)) SelectedHead = row; })
+L000097 |         SelectGraphHeadCommand = new(value => ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 .ctor.
+L000098 |         { ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: SelectedHead = row / 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Contains(row) / 조건에 따라 분기합니다: if (value is CPowerMeasureRow row && Heads.Contains(row))
+L000099 |             if (value is CPowerMeasureRow row && Heads.Contains(row)) SelectedHead = row; ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFA
+L000100 |         }); ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 .ctor.
+L000101 |     } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.UpdateHeads(System.Collections.Generic.IReadOnlyList<int>)
+L000103 |     public void UpdateHeads(IReadOnlyList<int> selectedHeads) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000104 |     { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot() / 조건에 따라 분기합니다: if (_busy) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000105 |         if (_busy) { ApplySnapshot(); return; } ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPowerMeterOptions() / 지역 변수를 선언합니다: var meters = GetPowerMeterOptions(); / 변수의 초기값을 지정합니다: meters = GetPowerMeterOptions()
+L000106 |         var meters = GetPowerMeterOptions(); ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeads.Distinct().Order().Select(head => { if (!_rows.TryGetValue(head, out var row)) { _rows[head] = row = new(head); row.InputChanged += ApplySnapshot; } row.UpdatePowerMeters(meters); return row; }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeads.Distinct().Order().Select(head => { if (!_rows.TryGetValue(head, out var row)) { _rows[head] = row = new(head); row.InputChanged += ApplySnapshot; } row.UpdatePowerMeters(meters); return row; }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeads.Distinct().Or
+L000107 |         var rows = selectedHeads.Distinct().Order().Select(head => ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000108 |         { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: _rows.TryGetValue(head, out var row) / 조건에 따라 분기합니다: if (!_rows.TryGetValue(head, out var row))
+L000109 |             if (!_rows.TryGetValue(head, out var row)) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000110 |             { ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: _rows[head] = row = new(head) / 값을 대상에 대입합니다: row = new(head) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(head)
+L000111 |                 _rows[head] = row = new(head); ⟦EOL⟧
+// 해설 L112: 복합 대입 또는 이벤트 구독/해지 표현입니다: row.InputChanged += ApplySnapshot
+L000112 |                 row.InputChanged += ApplySnapshot; ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000113 |             } ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.UpdatePowerMeters(meters)
+L000114 |             row.UpdatePowerMeters(meters); ⟦EOL⟧
+// 해설 L115: 호출자에게 값 또는 제어를 반환합니다: return row;
+L000115 |             return row; ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.UpdateHeads(System.Collections.Generic.IReadOnlyList<int>)
+L000116 |         }).ToArray(); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.SequenceEqual(rows) / 조건에 따라 분기합니다: if (!Heads.SequenceEqual(rows))
+L000117 |         if (!Heads.SequenceEqual(rows)) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: Heads = rows
+L000119 |             Heads = rows; ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Heads)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Heads) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(HasHeads)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(HasHeads) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(GraphColumns)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GraphColumns)
+L000120 |             Notify(nameof(Heads)); Notify(nameof(HasHeads)); Notify(nameof(GraphColumns)); ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: SelectedHead = Heads.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Contains(SelectedHead) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.FirstOrDefault() / 조건에 따라 분기합니다: if (SelectedHead is null || !Heads.Contains(SelectedHead))
+L000121 |             if (SelectedHead is null || !Heads.Contains(SelectedHead)) SelectedHead = Heads.FirstOrDefault(); ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000122 |         } ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot()
+L000123 |         ApplySnapshot(); ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCommands()
+L000124 |         NotifyCommands(); ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 UpdateHeads.
+L000125 |     } ⟦EOL⟧
+L000126 |  ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: _getPowerMeters() .Where(m => m.Device == EN_EQP_MODULE.PowerMeter && m.Number >= 0) .DistinctBy(m => m.Number).OrderBy(m => m.Number) .Select(m => new ST_MANUAL_POWER_METER_OPTION(m.Number, $"{(string.IsNullOrWhiteSpace… / 함수·델리게이트 또는 객체 생성자를 호출합니다: _getPowerMeters() .Where(m => m.Device == EN_EQP_MODULE.PowerMeter && m.Number >= 0) .DistinctBy(m => m.Number).OrderBy(m => m.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _getPowerMeters() .Where(m => m.Device == EN_EQP_MODULE.PowerMeter && m.Number >= 0) .DistinctBy(m
+L000127 |     private IReadOnlyList<ST_MANUAL_POWER_METER_OPTION> GetPowerMeterOptions() => _getPowerMeters() ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GetPowerMeterOptions()
+L000128 |         .Where(m => m.Device == EN_EQP_MODULE.PowerMeter && m.Number >= 0) ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION> Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GetPowerMeterOptions()
+L000129 |         .DistinctBy(m => m.Number).OrderBy(m => m.Number) ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MANUAL_POWER_METER_OPTION(m.Number, $"{(string.IsNullOrWhiteSpace(m.NickName) ? "PowerMeter" : m.NickName)} [{m.Number}]")
+L000130 |         .Select(m => new ST_MANUAL_POWER_METER_OPTION(m.Number, ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(m.NickName) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(m.NickName) ? "PowerMeter" : m.NickName
+L000131 |             $"{(string.IsNullOrWhiteSpace(m.NickName) ? "PowerMeter" : m.NickName)} [{m.Number}]")).ToArray(); ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ApplySnapshot()
+L000133 |     public void ApplySnapshot() ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 ApplySnapshot.
+L000134 |     { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: StageMotion.Refresh()
+L000135 |         StageMotion.Refresh(); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot() / 지역 변수를 선언합니다: var snapshot = _service.GetSnapshot(); / 변수의 초기값을 지정합니다: snapshot = _service.GetSnapshot()
+L000136 |         var snapshot = _service.GetSnapshot(); ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: StageText = $"Stage Y 0 mm · {snapshot.StageState}"
+L000137 |         StageText = $"Stage Y 0 mm · {snapshot.StageState}"; ⟦EOL⟧
+// 해설 L138: 컬렉션 요소를 순회합니다: foreach (var row in Heads)
+L000138 |         foreach (var row in Heads) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ApplySnapshot.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Heads.FirstOrDefault(h => h.Target.HeadNo == row.HeadNo) / 지역 변수를 선언합니다: var state = snapshot.Heads.FirstOrDefault(h => h.Target.HeadNo == row.HeadNo); / 변수의 초기값을 지정합니다: state = snapshot.Heads.FirstOrDefault(h => h.Target.HeadNo == row.HeadNo)
+L000140 |             var state = snapshot.Heads.FirstOrDefault(h => h.Target.HeadNo == row.HeadNo); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.ApplyTarget(state.Target) / 조건에 따라 분기합니다: if (IsReadOnly && state is not null)
+L000141 |             if (IsReadOnly && state is not null) row.ApplyTarget(state.Target); ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Matches(state.Target, Mode) / 지역 변수를 선언합니다: var matches = state is not null && (IsReadOnly || row.Matches(state.Target, Mode)); / 변수의 초기값을 지정합니다: matches = state is not null && (IsReadOnly || row.Matches(state.Target, Mode))
+L000142 |             var matches = state is not null && (IsReadOnly || row.Matches(state.Target, Mode)); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Apply(matches ? state : null) / 조건에 따라 결과식을 선택합니다: matches ? state : null
+L000143 |             row.Apply(matches ? state : null); ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 ApplySnapshot.
+L000144 |         } ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Where(h => h.SelectedPowerMeter is not null).GroupBy(h => h.SelectedPowerMeter!.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Where(h => h.SelectedPowerMeter is not null) / 지역 변수를 선언합니다: var queues = Heads.Where(h => h.SelectedPowerMeter is not null).GroupBy(h => h.SelectedPowerMeter!.Number); / 변수의 초기값을 지정합니다: queues = Heads.Where(h => h.SelectedPowerMeter is not null).GroupBy(h => h.SelectedPowerMeter!.Number)
+L000145 |         var queues = Heads.Where(h => h.SelectedPowerMeter is not null).GroupBy(h => h.SelectedPowerMeter!.Number); ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: QueueText = string.Join(" | ", queues.Select(q => $"{q.First().SelectedPowerMeter!.DisplayText}: {string.Join(" / ", q.Select(h => $"H{h.HeadNo:00}"))}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", queues.Select(q => $"{q.First().SelectedPowerMeter!.DisplayText}: {string.Join(" / ", q.Select(h => $"H{h.HeadNo:00}"))}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: queues.Select(q => $"{q.First().SelectedPowerMeter!.DisplayText}: {string.Join(" / ", q.Select(h => $"H{h.HeadNo:00}"))}")
+L000146 |         QueueText = string.Join("   |   ", queues.Select(q => ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: q.First() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" / ", q.Select(h => $"H{h.HeadNo:00}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: q.Select(h => $"H{h.HeadNo:00}")
+L000147 |             $"{q.First().SelectedPowerMeter!.DisplayText}: {string.Join(" / ", q.Select(h => $"H{h.HeadNo:00}"))}")); ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: QueueText = "INTERFACE에 Head별 전용 PowerMeter를 등록해 주세요." / 조건에 따라 분기합니다: if (QueueText.Length == 0)
+L000148 |         if (QueueText.Length == 0) QueueText = "INTERFACE에 Head별 전용 PowerMeter를 등록해 주세요."; ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Count(h => h.Snapshot?.State is "OK" or "NG" or "ERROR" or "STOPPED") / 지역 변수를 선언합니다: var done = Heads.Count(h => h.Snapshot?.State is "OK" or "NG" or "ERROR" or "STOPPED"); / 변수의 초기값을 지정합니다: done = Heads.Count(h => h.Snapshot?.State is "OK" or "NG" or "ERROR" or "STOPPED")
+L000149 |         var done = Heads.Count(h => h.Snapshot?.State is "OK" or "NG" or "ERROR" or "STOPPED"); ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: Summary = !HasHeads ? "Head Select에서 측정할 Head를 선택해 주세요." : _stopping ? "STOPPING · 진행 중인 측정과 대기 작업을 정리하고 있습니다." : $"{snapshot.Origin} · {(snapshot.IsRunning ? "측정 중" : "측정 현황")} · {done} / {Heads.Count} Heads 완료" / 조건에 따라 결과식을 선택합니다: !HasHeads ? "Head Select에서 측정할 Head를 선택해 주세요." : _stopping ? "STOPPING · 진행 중인 측정과 대기 작업을 정리하고 있습니다." : $"{snapshot.Origin} · {(snapshot.IsRunning ? "측정 중" : "측정 현황")} · {done} / {Heads.Count} Heads 완료"
+L000150 |         Summary = !HasHeads ? "Head Select에서 측정할 Head를 선택해 주세요." : ⟦EOL⟧
+// 해설 L151: 조건에 따라 결과식을 선택합니다: _stopping ? "STOPPING · 진행 중인 측정과 대기 작업을 정리하고 있습니다." : $"{snapshot.Origin} · {(snapshot.IsRunning ? "측정 중" : "측정 현황")} · {done} / {Heads.Count} Heads 완료"
+L000151 |             _stopping ? "STOPPING · 진행 중인 측정과 대기 작업을 정리하고 있습니다." : ⟦EOL⟧
+// 해설 L152: 조건에 따라 결과식을 선택합니다: snapshot.IsRunning ? "측정 중" : "측정 현황"
+L000152 |             $"{snapshot.Origin} · {(snapshot.IsRunning ? "측정 중" : "측정 현황")} · {done} / {Heads.Count} Heads 완료"; ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(QueueText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Summary) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StageText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ToleranceText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name) / 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(QueueText), nameof(Summary), nameof(StageText), nameof(ToleranceText) })
+L000153 |         foreach (var name in new[] { nameof(QueueText), nameof(Summary), nameof(StageText), nameof(ToleranceText) }) Notify(name); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshDetail()
+L000154 |         RefreshDetail(); ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 ApplySnapshot.
+L000155 |     } ⟦EOL⟧
+L000156 |  ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000157 |     public async Task Start() ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 Start.
+L000158 |     { ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (IsReadOnly || StartAllowed?.Invoke() == false) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000159 |         if (IsReadOnly || StartAllowed?.Invoke() == false) return; ⟦EOL⟧
+// 해설 L160: 조건에 따라 분기합니다: if (_busy) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000160 |         if (_busy) return; ⟦EOL⟧
+// 해설 L161: 예외 처리 범위입니다: try
+L000161 |         try ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Start.
+L000162 |         { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPowerMeterOptions().Select(m => m.Number).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPowerMeterOptions().Select(m => m.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPowerMeterOptions() / 지역 변수를 선언합니다: var registered = GetPowerMeterOptions().Select(m => m.Number).ToHashSet(); / 변수의 초기값을 지정합니다: registered = GetPowerMeterOptions().Select(m => m.Number).ToHashSet()
+L000163 |             var registered = GetPowerMeterOptions().Select(m => m.Number).ToHashSet(); ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: Heads.Select(h => { if (h.SelectedPowerMeter is not { } meter || !registered.Contains(meter.Number)) throw new ArgumentException($"{h.HeadName}: INTERFACE에 등록된 PowerMeter를 선택해 주세요."); try { return new ST_POWER_MEASURE_TA… / 지역 변수를 선언합니다: var targets = Heads.Select(h => { if (h.SelectedPowerMeter is not { } meter || !registered.Contains(meter.Number)) throw new ArgumentException($"{h.HeadName}: INTERFACE에 등록된 PowerMeter를 선택해 주세요."); try { return new ST_POWER_MEASUR / 변수의 초기값을 지정합니다: targets = Heads.Select(h =
+L000164 |             var targets = Heads.Select(h => ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Start.
+L000165 |             { ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: registered.Contains(meter.Number) / 조건에 따라 분기합니다: if (h.SelectedPowerMeter is not { } meter || !registered.Contains(meter.Number))
+L000166 |                 if (h.SelectedPowerMeter is not { } meter || !registered.Contains(meter.Number)) ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException($"{h.HeadName}: INTERFACE에 등록된 PowerMeter를 선택해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException($"{h.HeadName}: INTERFACE에 등록된 PowerMeter를 선택해 주세요.");
+L000167 |                     throw new ArgumentException($"{h.HeadName}: INTERFACE에 등록된 PowerMeter를 선택해 주세요."); ⟦EOL⟧
+// 해설 L168: 예외 처리 범위입니다: try
+L000168 |                 try ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Start.
+L000169 |                 { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_POWER_MEASURE_TARGET( h.HeadNo, meter.Number, ParsePower(h.Target), new(Mode, ParseInt(h.SettleTime, 0, 60000, "Settle Time"), ParseInt(h.MeasureCount, 1, 1000, "Measure Count"), ParseInt(h.MeasureInterval, 0, 600… / 호출자에게 값 또는 제어를 반환합니다: return new ST_POWER_MEASURE_TARGET( h.HeadNo, meter.Number, ParsePower(h.Target), new(Mode, ParseInt(h.SettleTime, 0, 60000, "Settle Time"), ParseInt(h.MeasureCount, 1, 1000, "Measure Count"), ParseInt(h.MeasureInterval, 0, 60000,
+L000170 |                     return new ST_POWER_MEASURE_TARGET( ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000171 |                         h.HeadNo,  ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000172 |                         meter.Number,  ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParsePower(h.Target)
+L000173 |                         ParsePower(h.Target), ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(Mode, ParseInt(h.SettleTime, 0, 60000, "Settle Time"), ParseInt(h.MeasureCount, 1, 1000, "Measure Count"), ParseInt(h.MeasureInterval, 0, 60000, "Interval")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(h.SettleTime, 0, 60000, "Settle Time")
+L000175 |                         new(Mode, ParseInt(h.SettleTime, 0, 60000, "Settle Time"), ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(h.MeasureCount, 1, 1000, "Measure Count") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(h.MeasureInterval, 0, 60000, "Interval")
+L000176 |                             ParseInt(h.MeasureCount, 1, 1000, "Measure Count"), ParseInt(h.MeasureInterval, 0, 60000, "Interval")) ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000177 |                     ); ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 Start.
+L000178 |                 } ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException($"{h.HeadName}: {error.Message}") / 지정 예외를 처리합니다: catch (ArgumentException error) / 예외를 발생/전달합니다: throw new ArgumentException($"{h.HeadName}: {error.Message}");
+L000179 |                 catch (ArgumentException error) { throw new ArgumentException($"{h.HeadName}: {error.Message}"); } ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000180 |             }).ToArray(); ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("측정할 Head를 선택해 주세요.") / 조건에 따라 분기합니다: if (targets.Length == 0) / 예외를 발생/전달합니다: throw new ArgumentException("측정할 Head를 선택해 주세요.");
+L000181 |             if (targets.Length == 0) throw new ArgumentException("측정할 Head를 선택해 주세요."); ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: _confirm($"선택한 {targets.Length}개 Head의 파워 측정을 시작하시겠습니까?\nStage Y가 0 mm에서 정지해 있어야 합니다.\n각 Head를 CENTER(0,0)로 이동한 뒤 전용 센서로 동시에 측정합니다.\n목표 W에 도달하면 최종 ATT 각도를 Recipe에도 저장합니다.") / 조건에 따라 분기합니다: if (!_confirm($"선택한 {targets.Length}개 Head의 파워 측정을 시작하시겠습니까?\nStage Y가 0 mm에서 정지해 있어야 합니다.\n각 Head를 CENTER(0,0)로 이동한 뒤 전용 센서로 동시에 측정합니다.\n목표 W에 도달하면 최종 ATT 각도를 Recipe에도 저장합니다.")) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000182 |             if (!_confirm($"선택한 {targets.Length}개 Head의 파워 측정을 시작하시겠습니까?\nStage Y가 0 mm에서 정지해 있어야 합니다.\n각 Head를 CENTER(0,0)로 이동한 뒤 전용 센서로 동시에 측정합니다.\n목표 W에 도달하면 최종 ATT 각도를 Recipe에도 저장합니다.")) return; ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (StartAllowed?.Invoke() == false) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000183 |             if (StartAllowed?.Invoke() == false) return; ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetBusy(true)
+L000184 |             SetBusy(true); ⟦EOL⟧
+// 해설 L185: 값을 대상에 대입합니다: _runCancellation = new() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000185 |             _runCancellation = new(); ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: (_runMeasurement ?? throw new InvalidOperationException("PowerMeasure 장치 실행이 연결되지 않았습니다."))(targets, _runCancellation.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeasure 장치 실행이 연결되지 않았습니다.") / 지역 변수를 선언합니다: var run = (_runMeasurement ?? throw new InvalidOperationException("PowerMeasure 장치 실행이 연결되지 않았습니다."))(targets, _runCancellation.Token); / 예외를 발생/전달합니다: throw new InvalidOperationException("PowerMeasure 장치 실행이 연결되지 않았습니다.") / 변수의 초기값을 지정합니다: run = (_runMeasurement ?? throw new I
+L000186 |             var run = (_runMeasurement ?? throw new InvalidOperationException("PowerMeasure 장치 실행이 연결되지 않았습니다."))(targets, _runCancellation.Token); ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot()
+L000187 |             ApplySnapshot(); ⟦EOL⟧
+// 해설 L188: 비동기 완료를 기다립니다: await run
+L000188 |             await run; ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot().Heads.Where(h => h.TableState == "ERROR") .Select(h => $"HEAD {h.Target.HeadNo:00}: {h.Message}").ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot().Heads.Where(h => h.TableState == "ERROR") .Select(h => $"HEAD {h.Target.HeadNo:00}: {h.Message}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot().Heads.Where(h => h.TableState == "ERROR") / 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.GetSnapshot() / 지역 변수를 선언합니다: var saveErrors = _service.GetSnapshot().Heads.Where(h => h.TableState
+L000189 |             var saveErrors = _service.GetSnapshot().Heads.Where(h => h.TableState == "ERROR") ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()
+L000190 |                 .Select(h => $"HEAD {h.Target.HeadNo:00}: {h.Message}").ToArray(); ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(string.Join("\n", saveErrors)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("\n", saveErrors) / 조건에 따라 분기합니다: if (saveErrors.Length > 0)
+L000191 |             if (saveErrors.Length > 0) _warn(string.Join("\n", saveErrors)); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 Start.
+L000192 |         } ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(error.Message) / 지정 예외를 처리합니다: catch (Exception error)
+L000193 |         catch (Exception error) { _warn(error.Message); } ⟦EOL⟧
+// 해설 L194: 값을 대상에 대입합니다: _runCancellation = null / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetBusy(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot() / 종료 정리 구간입니다: finally
+L000194 |         finally { _runCancellation?.Dispose(); _runCancellation = null; SetBusy(false); ApplySnapshot(); } ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 Start.
+L000195 |     } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Stop()
+L000197 |     public async Task Stop() ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Stop.
+L000198 |     { ⟦EOL⟧
+// 해설 L199: 조건에 따라 분기합니다: if (!_busy || _stopping) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000199 |         if (!_busy || _stopping) return; ⟦EOL⟧
+// 해설 L200: 값을 대상에 대입합니다: _stopping = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCommands() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot()
+L000200 |         _stopping = true; NotifyCommands(); ApplySnapshot(); ⟦EOL⟧
+// 해설 L201: 비동기 완료를 기다립니다: await _service.Stop() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _service.Stop() / 예외 처리 범위입니다: try
+L000201 |         try { _runCancellation?.Cancel(); await _service.Stop(); } ⟦EOL⟧
+// 해설 L202: 값을 대상에 대입합니다: _stopping = false / 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCommands() / 종료 정리 구간입니다: finally
+L000202 |         finally { _stopping = false; ApplySnapshot(); NotifyCommands(); } ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 Stop.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 조건에 따라 결과식을 선택합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value > 0 ? value : throw new ArgumentException("Target Power는 0보다 큰 숫자로 입력해 주세요.")
+L000205 |     private static double ParsePower(string text) => double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("Target Power는 0보다 큰 숫자로 입력해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("Target Power는 0보다 큰 숫자로 입력해 주세요.")
+L000206 |         && double.IsFinite(value) && value > 0 ? value : throw new ArgumentException("Target Power는 0보다 큰 숫자로 입력해 주세요."); ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, out var value) / 조건에 따라 결과식을 선택합니다: int.TryParse(text, out var value) && value >= min && value <= max ? value : throw new ArgumentException($"{name}: {min}~{max} 범위의 정수를 입력해 주세요.")
+L000207 |     private static int ParseInt(string text, int min, int max, string name) => int.TryParse(text, out var value) && value >= min && value <= max ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException($"{name}: {min}~{max} 범위의 정수를 입력해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException($"{name}: {min}~{max} 범위의 정수를 입력해 주세요.")
+L000208 |         ? value : throw new ArgumentException($"{name}: {min}~{max} 범위의 정수를 입력해 주세요."); ⟦EOL⟧
+// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SetBusy(bool)
+L000209 |     private void SetBusy(bool busy) ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 SetBusy.
+L000210 |     { ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: StageMotion.SetMeasurementRunning(busy)
+L000211 |         StageMotion.SetMeasurementRunning(busy); ⟦EOL⟧
+// 해설 L212: 값을 대상에 대입합니다: _busy = busy / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsRunning)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsRunning) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEdit)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEdit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCommands() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000212 |         _busy = busy; Notify(nameof(IsRunning)); Notify(nameof(CanEdit)); NotifyCommands(); RunningChanged?.Invoke(); ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 SetBusy.
+L000213 |     } ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: StartCommand.NotifyCanExecuteChanged() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopCommand.NotifyCanExecuteChanged()
+L000214 |     private void NotifyCommands() { StartCommand.NotifyCanExecuteChanged(); StopCommand.NotifyCanExecuteChanged(); } ⟦EOL⟧
+// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.RefreshDetail()
+L000215 |     private void RefreshDetail() ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 RefreshDetail.
+L000216 |     { ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Samples) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(DetailTitle) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(DetailMessage) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Graph) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GraphPoints) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name) / 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(Samples), nameof(DetailTitle), nameof(DetailMessage), nameof(Graph), nameof(GraphPoints) })
+L000217 |         foreach (var name in new[] { nameof(Samples), nameof(DetailTitle), nameof(DetailMessage), nameof(Graph), nameof(GraphPoints) }) Notify(name); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 RefreshDetail.
+L000218 |     } ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000219 |     private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다.
+L000220 | } ⟦EOL⟧
+L000221 |  ⟦EOL⟧
+// 해설 L222: 타입의 구조/상속 선언입니다: public sealed class CPowerMeasureRow(int headNo) : INotifyPropertyChanged
+L000222 | public sealed class CPowerMeasureRow(int headNo) : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다.
+L000223 | { ⟦EOL⟧
+// 해설 L224: 변수의 초기값을 지정합니다: _target = "1.2000" / 변수의 초기값을 지정합니다: _settleTime = "300" / 변수의 초기값을 지정합니다: _measureCount = "1" / 변수의 초기값을 지정합니다: _measureInterval = "100"
+L000224 |     private string _target = "1.2000", _settleTime = "300", _measureCount = "1", _measureInterval = "100"; ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow._selectedPowerMeter
+L000225 |     private ST_MANUAL_POWER_METER_OPTION? _selectedPowerMeter; ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow._metersInitialized
+L000226 |     private bool _metersInitialized; ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow._updatingPowerMeters
+L000227 |     private bool _updatingPowerMeters; ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow._isGraphSelected
+L000228 |     private bool _isGraphSelected; ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CPowerMeasureRow.PropertyChanged
+L000229 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · System.Action? Drilling.UI.Menu.Menus.CPowerMeasureRow.InputChanged
+L000230 |     public event Action? InputChanged; ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CPowerMeasureRow.HeadNo
+L000231 |     public int HeadNo { get; } = headNo; ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CPowerMeasureRow.HeadName
+L000232 |     public string HeadName => $"HEAD {HeadNo:00}"; ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow.IsGraphSelected
+L000233 |     public bool IsGraphSelected => _isGraphSelected; ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureRow.Graph
+L000234 |     public CPowerMeasureGraph Graph { get; private set; } = CPowerMeasureGraph.Empty; ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.SetGraphSelected(bool)
+L000235 |     public void SetGraphSelected(bool selected) ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 SetGraphSelected.
+L000236 |     { ⟦EOL⟧
+// 해설 L237: 조건에 따라 분기합니다: if (_isGraphSelected == selected) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000237 |         if (_isGraphSelected == selected) return; ⟦EOL⟧
+// 해설 L238: 값을 대상에 대입합니다: _isGraphSelected = selected / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsGraphSelected)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsGraphSelected)
+L000238 |         _isGraphSelected = selected; Notify(nameof(IsGraphSelected)); ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 SetGraphSelected.
+L000239 |     } ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION> Drilling.UI.Menu.Menus.CPowerMeasureRow.PowerMeters
+L000240 |     public IReadOnlyList<ST_MANUAL_POWER_METER_OPTION> PowerMeters { get; private set; } = []; ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow.SelectedPowerMeter
+L000241 |     public ST_MANUAL_POWER_METER_OPTION? SelectedPowerMeter ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 SelectedPowerMeter.
+L000242 |     { ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow.SelectedPowerMeter.get
+L000243 |         get => _selectedPowerMeter; ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: _selectedPowerMeter = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke() / 조건에 따라 분기합니다: if (_updatingPowerMeters || _selectedPowerMeter == value) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000244 |         set { if (_updatingPowerMeters || _selectedPowerMeter == value) return; _selectedPowerMeter = value; Notify(); InputChanged?.Invoke(); } ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 SelectedPowerMeter.
+L000245 |     } ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetInput(ref _target, value)
+L000246 |     public string Target { get => _target; set => SetInput(ref _target, value); } ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetInput(ref _settleTime, value)
+L000247 |     public string SettleTime { get => _settleTime; set => SetInput(ref _settleTime, value); } ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetInput(ref _measureCount, value)
+L000248 |     public string MeasureCount { get => _measureCount; set => SetInput(ref _measureCount, value); } ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetInput(ref _measureInterval, value)
+L000249 |     public string MeasureInterval { get => _measureInterval; set => SetInput(ref _measureInterval, value); } ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.UpdatePowerMeters(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION>)
+L000250 |     public void UpdatePowerMeters(IReadOnlyList<ST_MANUAL_POWER_METER_OPTION> meters) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 UpdatePowerMeters.
+L000251 |     { ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: PowerMeters.SequenceEqual(meters) / 조건에 따라 분기합니다: if (_metersInitialized && PowerMeters.SequenceEqual(meters)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000252 |         if (_metersInitialized && PowerMeters.SequenceEqual(meters)) return; ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: meters.FirstOrDefault(m => m.Number == HeadNo - 1) / 지역 변수를 선언합니다: var selected = meters.FirstOrDefault(m => m.Number == HeadNo - 1); / 변수의 초기값을 지정합니다: selected = meters.FirstOrDefault(m => m.Number == HeadNo - 1)
+L000253 |         var selected = meters.FirstOrDefault(m => m.Number == HeadNo - 1); ⟦EOL⟧
+// 해설 L254: 값을 대상에 대입합니다: _metersInitialized = true
+L000254 |         _metersInitialized = true; ⟦EOL⟧
+// 해설 L255: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000255 |         // Replacing the dropdown list temporarily clears its selection. Keep the selection by device ID. ⟦EOL⟧
+// 해설 L256: 값을 대상에 대입합니다: _updatingPowerMeters = true
+L000256 |         _updatingPowerMeters = true; ⟦EOL⟧
+// 해설 L257: 예외 처리 범위입니다: try
+L000257 |         try ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 UpdatePowerMeters.
+L000258 |         { ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: PowerMeters = meters
+L000259 |             PowerMeters = meters; ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(PowerMeters)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(PowerMeters)
+L000260 |             Notify(nameof(PowerMeters)); ⟦EOL⟧
+// 해설 L261: 값을 대상에 대입합니다: _selectedPowerMeter = selected
+L000261 |             _selectedPowerMeter = selected; ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedPowerMeter)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedPowerMeter)
+L000262 |             Notify(nameof(SelectedPowerMeter)); ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 UpdatePowerMeters.
+L000263 |         } ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: _updatingPowerMeters = false / 종료 정리 구간입니다: finally
+L000264 |         finally { _updatingPowerMeters = false; } ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 UpdatePowerMeters.
+L000265 |     } ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.ApplyTarget(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000266 |     public void ApplyTarget(ST_POWER_MEASURE_TARGET target) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 ApplyTarget.
+L000267 |     { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(Snapshot?.Target, target) / 조건에 따라 분기합니다: if (ReferenceEquals(Snapshot?.Target, target)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000268 |         if (ReferenceEquals(Snapshot?.Target, target)) return; ⟦EOL⟧
+// 해설 L269: 값을 대상에 대입합니다: _target = target.TargetPower.ToString("0.0000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: target.TargetPower.ToString("0.0000", CultureInfo.InvariantCulture)
+L000269 |         _target = target.TargetPower.ToString("0.0000", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L270: 값을 대상에 대입합니다: _settleTime = target.Options.SettleTimeMs.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: target.Options.SettleTimeMs.ToString(CultureInfo.InvariantCulture)
+L000270 |         _settleTime = target.Options.SettleTimeMs.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: _measureCount = target.Options.MeasureCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: target.Options.MeasureCount.ToString(CultureInfo.InvariantCulture)
+L000271 |         _measureCount = target.Options.MeasureCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: _measureInterval = target.Options.MeasureIntervalMs.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: target.Options.MeasureIntervalMs.ToString(CultureInfo.InvariantCulture)
+L000272 |         _measureInterval = target.Options.MeasureIntervalMs.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Target) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SettleTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(MeasureCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(MeasureInterval) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name) / 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(Target), nameof(SettleTime), nameof(MeasureCount), nameof(MeasureInterval) })
+L000273 |         foreach (var name in new[] { nameof(Target), nameof(SettleTime), nameof(MeasureCount), nameof(MeasureInterval) }) Notify(name); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ApplyTarget.
+L000274 |     } ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow.Matches(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, string)
+L000275 |     public bool Matches(ST_POWER_MEASURE_TARGET target, string mode) => ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CPowerMeasureRow.Matches(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, string)
+L000276 |         SelectedPowerMeter?.Number == target.PowerMeterNo && ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var power)
+L000277 |         double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var power) && power == target.TargetPower && ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(SettleTime, out var settle)
+L000278 |         int.TryParse(SettleTime, out var settle) && settle == target.Options.SettleTimeMs && ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(MeasureCount, out var count)
+L000279 |         int.TryParse(MeasureCount, out var count) && count == target.Options.MeasureCount && ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(MeasureInterval, out var interval)
+L000280 |         int.TryParse(MeasureInterval, out var interval) && interval == target.Options.MeasureIntervalMs && mode == target.Options.Mode; ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.SetInput(ref string, string, string?)
+L000281 |     private void SetInput(ref string field, string value, [CallerMemberName] string? name = null) ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 SetInput.
+L000282 |     { ⟦EOL⟧
+// 해설 L283: 조건에 따라 분기합니다: if (field == value) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000283 |         if (field == value) return; ⟦EOL⟧
+// 해설 L284: 값을 대상에 대입합니다: field = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshGraph() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000284 |         field = value; Notify(name); RefreshGraph(); InputChanged?.Invoke(); ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 SetInput.
+L000285 |     } ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000286 |     private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_POWER_MEASURE_HEAD? Drilling.UI.Menu.Menus.CPowerMeasureRow.Snapshot
+L000287 |     public ST_POWER_MEASURE_HEAD? Snapshot { get; private set; } ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("0.0000", CultureInfo.InvariantCulture)
+L000288 |     public string Measured => Snapshot?.Power?.ToString("0.0000", CultureInfo.InvariantCulture) ?? "—"; ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: (value - Snapshot.Target.TargetPower).ToString("+0.0000;-0.0000;0.0000", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: Snapshot?.Power is { } value ? (value - Snapshot.Target.TargetPower).ToString("+0.0000;-0.0000;0.0000", CultureInfo.InvariantCulture) : "—"
+L000289 |     public string Error => Snapshot?.Power is { } value ? (value - Snapshot.Target.TargetPower).ToString("+0.0000;-0.0000;0.0000", CultureInfo.InvariantCulture) : "—"; ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("0.0000", CultureInfo.InvariantCulture)
+L000290 |     public string Angle => Snapshot?.Angle?.ToString("0.0000", CultureInfo.InvariantCulture) ?? "—"; ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: state.Target.Options.Tolerance.ToString("0.0000", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: Snapshot is { } state ? state.Target.Options.Tolerance.ToString("0.0000", CultureInfo.InvariantCulture) : "—"
+L000291 |     public string Tolerance => Snapshot is { } state ? state.Target.Options.Tolerance.ToString("0.0000", CultureInfo.InvariantCulture) : "—"; ⟦EOL⟧
+// 해설 L292: 조건에 따라 결과식을 선택합니다: Snapshot is { } state ? $"{state.Samples.Count} / {state.Target.Options.MaxAttempts}" : "—"
+L000292 |     public string AttemptProgress => Snapshot is { } state ? $"{state.Samples.Count} / {state.Target.Options.MaxAttempts}" : "—"; ⟦EOL⟧
+// 해설 L293: 조건에 따라 결과식을 선택합니다: Snapshot is null ? $"ATT {Angle}°" : $"ATT {Angle}° · ±{Tolerance} W · {AttemptProgress}회"
+L000293 |     public string GraphSummary => Snapshot is null ? $"ATT {Angle}°" : $"ATT {Angle}° · ±{Tolerance} W · {AttemptProgress}회"; ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CPowerMeasureRow.State
+L000294 |     public string State => Snapshot?.State ?? "IDLE"; ⟦EOL⟧
+// 해설 L295: 값별 결과식을 선택합니다: State switch { "OK" => Brushes.SeaGreen, "ERROR" => Brushes.Firebrick, "NG" => Brushes.DarkOrange, "POSITIONING" or "MOVING" or "SETTLING" or "MEASURING" or "FINISHING" or "SAVING" => Brushes.SteelBlue, _ => Brushes.DimGray }
+L000295 |     public Brush StateBackground => State switch ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 StateBackground.
+L000296 |     { ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CPowerMeasureRow.StateBackground
+L000297 |         "OK" => Brushes.SeaGreen, "ERROR" => Brushes.Firebrick, "NG" => Brushes.DarkOrange, ⟦EOL⟧
+// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CPowerMeasureRow.StateBackground
+L000298 |         "POSITIONING" or "MOVING" or "SETTLING" or "MEASURING" or "FINISHING" or "SAVING" => Brushes.SteelBlue, ⟦EOL⟧
+// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CPowerMeasureRow.StateBackground
+L000299 |         _ => Brushes.DimGray ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 StateBackground.
+L000300 |     }; ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.Apply(Drilling.Common.Interface.ST_POWER_MEASURE_HEAD?)
+L000301 |     public void Apply(ST_POWER_MEASURE_HEAD? state) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 Apply.
+L000302 |     { ⟦EOL⟧
+// 해설 L303: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(Snapshot, state) / 조건에 따라 분기합니다: if (ReferenceEquals(Snapshot, state)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000303 |         if (ReferenceEquals(Snapshot, state)) return; ⟦EOL⟧
+// 해설 L304: 값을 대상에 대입합니다: Snapshot = state
+L000304 |         Snapshot = state; ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshGraph()
+L000305 |         RefreshGraph(); ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Snapshot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Measured) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Angle) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Tolerance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(AttemptProgress) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(GraphSummary) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(State) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StateBackground) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name) / 컬렉션 요소를 순회합니다: foreach
+L000306 |         foreach (var name in new[] { nameof(Snapshot), nameof(Measured), nameof(Error), nameof(Angle), nameof(Tolerance), nameof(AttemptProgress), nameof(GraphSummary), nameof(State), nameof(StateBackground) }) PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 Apply.
+L000307 |     } ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CPowerMeasureRow.RefreshGraph()
+L000308 |     private void RefreshGraph() ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 RefreshGraph.
+L000309 |     { ⟦EOL⟧
+// 해설 L310: 지역 변수를 선언합니다: var target = Snapshot?.Target.TargetPower ?? (double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : 0); / 변수의 초기값을 지정합니다: target = Snapshot?.Target.TargetPower ?? (double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : 0)
+L000310 |         var target = Snapshot?.Target.TargetPower ?? ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 결과식을 선택합니다: double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : 0
+L000311 |             (double.TryParse(Target, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : 0); ⟦EOL⟧
+// 해설 L312: 값을 대상에 대입합니다: Graph = CPowerMeasureGraph.Create(Snapshot?.Samples ?? [], target) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPowerMeasureGraph.Create(Snapshot?.Samples ?? [], target)
+L000312 |         Graph = CPowerMeasureGraph.Create(Snapshot?.Samples ?? [], target); ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Graph)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Graph)
+L000313 |         Notify(nameof(Graph)); ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 RefreshGraph.
+L000314 |     } ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다.
+L000315 | } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 타입의 구조/상속 선언입니다: public sealed record CPowerMeasureGraph(PointCollection Points, double TargetLineY, string Maximum, string Attempts)
+L000317 | public sealed record CPowerMeasureGraph(PointCollection Points, double TargetLineY, string Maximum, string Attempts) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다.
+L000318 | { ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create([], 1.2)
+L000319 |     public static CPowerMeasureGraph Empty { get; } = Create([], 1.2); ⟦EOL⟧
+// 해설 L320: 조건에 따라 결과식을 선택합니다: Points.Count > 0 ? Visibility.Visible : Visibility.Collapsed
+L000320 |     public Visibility LastPointVisibility => Points.Count > 0 ? Visibility.Visible : Visibility.Collapsed; ⟦EOL⟧
+// 해설 L321: 조건에 따라 결과식을 선택합니다: Points.Count > 0 ? Points[^1].X - 5 : 0
+L000321 |     public double LastPointLeft => Points.Count > 0 ? Points[^1].X - 5 : 0; ⟦EOL⟧
+// 해설 L322: 조건에 따라 결과식을 선택합니다: Points.Count > 0 ? Points[^1].Y - 5 : 0
+L000322 |     public double LastPointTop => Points.Count > 0 ? Points[^1].Y - 5 : 0; ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureGraph.Create(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE>, double)
+L000323 |     public static CPowerMeasureGraph Create(IReadOnlyList<ST_POWER_MEASURE_SAMPLE> samples, double target) ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 Create.
+L000324 |     { ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.1, Math.Max(target, samples.Select(s => s.Power).DefaultIfEmpty(0).Max()) * 1.15) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(target, samples.Select(s => s.Power).DefaultIfEmpty(0).Max()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Select(s => s.Power).DefaultIfEmpty(0).Max() / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Select(s => s.Power).DefaultIfEmpty(0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Select(s => s.Power) / 지역 변수를 선언합니다: var maximum = Math.Max(0.1, Math.Max(target, samples.Select(s => s.Power).DefaultIfEmpty
+L000325 |         var maximum = Math.Max(0.1, Math.Max(target, samples.Select(s => s.Power).DefaultIfEmpty(0).Max()) * 1.15); ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · double Y(double)
+L000326 |         double Y(double power) => 152 - 144 * power / maximum; ⟦EOL⟧
+// 해설 L327: 함수·델리게이트 또는 객체 생성자를 호출합니다: new PointCollection(samples.Select((sample, index) => new Point( samples.Count == 1 ? 300 : 8 + index * 584.0 / (samples.Count - 1), Y(sample.Power)))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Select((sample, index) => new Point( samples.Count == 1 ? 300 : 8 + index * 584.0 / (samples.Count - 1), Y(sample.Power))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point( samples.Count == 1 ? 300 : 8 + index * 584.0 / (samples.Count - 1), Y(sample.Power)) / 지역 변수를 선언합니다: var points = new PointCollection(samples.Select((sample, ind
+L000327 |         var points = new PointCollection(samples.Select((sample, index) => new Point( ⟦EOL⟧
+// 해설 L328: 함수·델리게이트 또는 객체 생성자를 호출합니다: Y(sample.Power) / 조건에 따라 결과식을 선택합니다: samples.Count == 1 ? 300 : 8 + index * 584.0 / (samples.Count - 1)
+L000328 |             samples.Count == 1 ? 300 : 8 + index * 584.0 / (samples.Count - 1), Y(sample.Power)))); ⟦EOL⟧
+// 해설 L329: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Freeze()
+L000329 |         points.Freeze(); ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(points, Y(target), $"{maximum:0.0000} W", samples.Count == 0 ? "측정 대기" : $"Attempt 1 – {samples[^1].Attempt}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Y(target) / 조건에 따라 결과식을 선택합니다: samples.Count == 0 ? "측정 대기" : $"Attempt 1 – {samples[^1].Attempt}" / 호출자에게 값 또는 제어를 반환합니다: return new(points, Y(target), $"{maximum:0.0000} W", samples.Count == 0 ? "측정 대기" : $"Attempt 1 – {samples[^1].Attempt}");
+L000330 |         return new(points, Y(target), $"{maximum:0.0000} W", samples.Count == 0 ? "측정 대기" : $"Attempt 1 – {samples[^1].Attempt}"); ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 Create.
+L000331 |     } ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다.
+L000332 | } ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 타입의 구조/상속 선언입니다: public sealed record ST_MANUAL_POWER_METER_OPTION(int Number, string DisplayText);
+L000334 | public sealed record ST_MANUAL_POWER_METER_OPTION(int Number, string DisplayText); ⟦EOL⟧

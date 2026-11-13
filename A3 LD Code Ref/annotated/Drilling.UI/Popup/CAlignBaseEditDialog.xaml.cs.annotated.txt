@@ -1,0 +1,146 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000001 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000004 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000008 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CAlignBaseEditDialog : Window
+L000010 | public partial class CAlignBaseEditDialog : Window ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CAlignBaseEditPanel Drilling.UI.Popup.CAlignBaseEditDialog._panel
+L000012 |     private readonly CAlignBaseEditPanel _panel; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Threading.Tasks.Task> Drilling.UI.Popup.CAlignBaseEditDialog._save
+L000013 |     private readonly Func<IReadOnlyDictionary<string, string>, Task> _save; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAlignBaseEditDialog._saving
+L000014 |     private bool _saving; ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlignBaseEditDialog.CAlignBaseEditDialog(Drilling.UI.Menu.Menus.CAlignBaseEditPanel, System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Threading.Tasks.Task>)
+L000016 |     public CAlignBaseEditDialog(CAlignBaseEditPanel panel, Func<IReadOnlyDictionary<string, string>, Task> save) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: _panel = panel
+L000019 |         _panel = panel; ⟦EOL⟧
+// 해설 L20: 값을 대상에 대입합니다: _save = save
+L000020 |         _save = save; ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: DataContext = panel
+L000021 |         DataContext = panel; ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width - 40) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width - 40)
+L000022 |         Width = Math.Min(Width, SystemParameters.WorkArea.Width - 40); ⟦EOL⟧
+// 해설 L23: 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height - 40) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height - 40)
+L000023 |         Height = Math.Min(Height, SystemParameters.WorkArea.Height - 40); ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 .ctor.
+L000024 |     } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlignBaseEditDialog.OpenCoordinateInput(object, MouseButtonEventArgs)
+L000026 |     private void OpenCoordinateInput(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 OpenCoordinateInput.
+L000027 |     { ⟦EOL⟧
+// 해설 L28: 조건에 따라 분기합니다: if (_saving || sender is not TextBox { DataContext: CAlignBaseEditKey key } input) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000028 |         if (_saving || sender is not TextBox { DataContext: CAlignBaseEditKey key } input) return; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: e.Handled = true
+L000029 |         e.Handled = true; ⟦EOL⟧
+// 해설 L30: 지역 변수를 선언합니다: var isX = input.Tag as string == "X"; / 변수의 초기값을 지정합니다: isX = input.Tag as string == "X"
+L000030 |         var isX = input.Tag as string == "X"; ⟦EOL⟧
+// 해설 L31: 조건에 따라 결과식을 선택합니다: isX ? key.ParameterX : key.ParameterY / 지역 변수를 선언합니다: var parameter = isX ? key.ParameterX : key.ParameterY; / 변수의 초기값을 지정합니다: parameter = isX ? key.ParameterX : key.ParameterY
+L000031 |         var parameter = isX ? key.ParameterX : key.ParameterY; ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{key.Name} Base{(isX ? "X" : "Y")} (mm)", isX ? key.BaseX : key.BaseY, EN_RECIPE_DATA_TYPE.Double, parameter.Min, parameter.Max) { Owner = this } / 조건에 따라 결과식을 선택합니다: isX ? "X" : "Y" / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{key.Name} Base{(isX ? "X" : "Y")} (mm)", isX ? key.BaseX : key.BaseY, EN_RECIPE_DATA_TYPE.Double, parameter.Min, parameter.Max) { Owner = this }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{key.Name} Base{(isX ? "X" : "Y")} (mm)", isX ? key.Bas
+L000032 |         var dialog = new CValueInputDialog($"{key.Name} Base{(isX ? "X" : "Y")} (mm)", ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: Owner = this / 조건에 따라 결과식을 선택합니다: isX ? key.BaseX : key.BaseY
+L000033 |             isX ? key.BaseX : key.BaseY, EN_RECIPE_DATA_TYPE.Double, parameter.Min, parameter.Max) { Owner = this }; ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000034 |         if (dialog.ShowDialog() != true) return; ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: key.BaseX = dialog.ResultValue / 조건에 따라 분기합니다: if (isX)
+L000035 |         if (isX) key.BaseX = dialog.ResultValue; ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: key.BaseY = dialog.ResultValue / 앞 조건이 거짓인 경로입니다: else
+L000036 |         else key.BaseY = dialog.ResultValue; ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 OpenCoordinateInput.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlignBaseEditDialog.SaveClicked(object, RoutedEventArgs)
+L000039 |     private async void SaveClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 조건에 따라 분기합니다: if (_saving) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000041 |         if (_saving) return; ⟦EOL⟧
+// 해설 L42: 예외 처리 범위입니다: try
+L000042 |         try ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000043 |         { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.BuildValues() / 지역 변수를 선언합니다: var values = _panel.BuildValues(); / 변수의 초기값을 지정합니다: values = _panel.BuildValues()
+L000044 |             var values = _panel.BuildValues(); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSaving(true)
+L000045 |             SetSaving(true); ⟦EOL⟧
+// 해설 L46: 비동기 완료를 기다립니다: await _save(values) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _save(values)
+L000046 |             await _save(values); ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000047 |         } ⟦EOL⟧
+// 해설 L48: 지정 예외를 처리합니다: catch (Exception exception)
+L000048 |         catch (Exception exception) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSaving(false)
+L000050 |             SetSaving(false); ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Base 저장 확인", exception.Message, this)
+L000051 |             CRecipeConfirmDialog.ShowWarning("Base 저장 확인", exception.Message, this); ⟦EOL⟧
+// 해설 L52: 호출자에게 값 또는 제어를 반환합니다: return;
+L000052 |             return; ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000053 |         } ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSaving(false)
+L000054 |         SetSaving(false); ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: DialogResult = true
+L000055 |         DialogResult = true; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000056 |     } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlignBaseEditDialog.SetSaving(bool)
+L000058 |     private void SetSaving(bool saving) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 SetSaving.
+L000059 |     { ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: _saving = saving
+L000060 |         _saving = saving; ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: PreviewArea.IsEnabled = !saving
+L000061 |         PreviewArea.IsEnabled = !saving; ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: SaveButton.IsEnabled = !saving
+L000062 |         SaveButton.IsEnabled = !saving; ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: CancelButton.IsEnabled = !saving
+L000063 |         CancelButton.IsEnabled = !saving; ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 SetSaving.
+L000064 |     } ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: DialogResult = false / 조건에 따라 분기합니다: if (!_saving)
+L000066 |     private void CancelClicked(object sender, RoutedEventArgs e) { if (!_saving) DialogResult = false; } ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: e.Cancel = true / 조건에 따라 분기합니다: if (_saving)
+L000067 |     private void OnClosing(object? sender, CancelEventArgs e) { if (_saving) e.Cancel = true; } ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlignBaseEditDialog.OnKeyDown(object, KeyEventArgs)
+L000068 |     private void OnKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000069 |     { ⟦EOL⟧
+// 해설 L70: 조건에 따라 분기합니다: if (e.Key != Key.Escape) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000070 |         if (e.Key != Key.Escape) return; ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: e.Handled = true
+L000071 |         e.Handled = true; ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: DialogResult = false / 조건에 따라 분기합니다: if (!_saving)
+L000072 |         if (!_saving) DialogResult = false; ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000073 |     } ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다.
+L000074 | } ⟦EOL⟧

@@ -1,0 +1,1048 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Automation/CAutomationStatusSnapshotService.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Automation
+L000001 | namespace Drilling.Common.Automation ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000003 |     using System.Diagnostics; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000005 |     /// <summary>One acquisition owner per Automation manager. Consumers only register/read cached values.</summary> ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public sealed partial class CAutomationStatusSnapshotService : IDisposable
+L000006 |     public sealed partial class CAutomationStatusSnapshotService : IDisposable ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 |     { ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationManager Drilling.Common.Automation.CAutomationStatusSnapshotService._automation
+L000008 |         private readonly CAutomationManager _automation; ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _sync = new()
+L000009 |         private readonly object _sync = new(); ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.Ordinal) / 변수의 초기값을 지정합니다: _entries = new(StringComparer.Ordinal)
+L000010 |         private readonly Dictionary<string, Entry> _entries = new(StringComparer.Ordinal); ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _stop = new()
+L000011 |         private readonly CancellationTokenSource _stop = new(); ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CAutomationStatusSnapshotService._autoStart
+L000012 |         private readonly bool _autoStart; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task? Drilling.Common.Automation.CAutomationStatusSnapshotService._worker
+L000013 |         private Task? _worker; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CAutomationStatusSnapshotService._disposed
+L000014 |         private bool _disposed; ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: LeaseMs = 10000
+L000015 |         private const int LeaseMs = 10000; ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: StaleMs = 5000
+L000016 |         private const int StaleMs = 5000; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationStatusSnapshotService.CAutomationStatusSnapshotService(Drilling.Common.Automation.CAutomationManager, bool)
+L000017 |         internal CAutomationStatusSnapshotService(CAutomationManager automation, bool autoStart = true) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 .ctor.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: _automation = automation
+L000019 |             _automation = automation; ⟦EOL⟧
+// 해설 L20: 값을 대상에 대입합니다: _autoStart = autoStart
+L000020 |             _autoStart = autoStart; ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 .ctor.
+L000021 |         } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get<ST_AUTOMATION_AXIS_STATUS>($"AXIS|{controller}|{axis.Trim().ToUpperInvariant()}|{aio}|{extended}", controller, token => _automation.ReadAxisStatusByNameNoLog(axis, controller, aio, extended, token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadAxisStatusByNameNoLog(axis, controller, aio, extended, token)
+L000023 |         public ST_AUTOMATION_STATUS_SNAPSHOT<ST_AUTOMATION_AXIS_STATUS> GetAxis(string axis, int controller, int aio, bool extended) => Get<ST_AUTOMATION_AXIS_STATUS>($"AXIS|{controller}|{axis.Trim().ToUpperInvariant()}|{aio}|{extended}", controller, token => _automation.ReadAxisStatusByNameNoLog(axis, controller, aio, extended, token)); ⟦EOL⟧
+// 해설 L24: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000024 |         /// <summary>Invalidate after a command acknowledgement so an earlier in-flight read cannot complete that command.</summary> ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAxis(string, int, int, bool)
+L000025 |         public void InvalidateAxis(string axis, int controller, int aio = 0, bool extended = false) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 InvalidateAxis.
+L000026 |         { ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAxis(axis, controller, aio, extended)
+L000027 |             GetAxis(axis, controller, aio, extended); ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim() / 지역 변수를 선언합니다: var key = $"AXIS|{controller}|{axis.Trim().ToUpperInvariant()}|{aio}|{extended}"; / 변수의 초기값을 지정합니다: key = $"AXIS|{controller}|{axis.Trim().ToUpperInvariant()}|{aio}|{extended}"
+L000028 |             var key = $"AXIS|{controller}|{axis.Trim().ToUpperInvariant()}|{aio}|{extended}"; ⟦EOL⟧
+// 해설 L29: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000029 |             lock (_sync) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 InvalidateAxis.
+L000030 |             { ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.TryGetValue(key, out var entry) / 조건에 따라 분기합니다: if (_disposed || !_entries.TryGetValue(key, out var entry))
+L000031 |                 if (_disposed || !_entries.TryGetValue(key, out var entry)) ⟦EOL⟧
+// 해설 L32: 호출자에게 값 또는 제어를 반환합니다: return;
+L000032 |                     return; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAxis(string, int, int, bool)
+L000033 |                 entry.Generation++; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAxis(string, int, int, bool)
+L000034 |                 entry.Version++; ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: entry.Value = null
+L000035 |                 entry.Value = null; ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: entry.State = "LOADING"
+L000036 |                 entry.State = "LOADING"; ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: entry.Detail = "Waiting for an Automation snapshot collected after the command."
+L000037 |                 entry.Detail = "Waiting for an Automation snapshot collected after the command."; ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: entry.UpdatedAt = default
+L000038 |                 entry.UpdatedAt = default; ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: entry.CollectedAt = 0
+L000039 |                 entry.CollectedAt = 0; ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: entry.CollectedTimestamp = 0
+L000040 |                 entry.CollectedTimestamp = 0; ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 InvalidateAxis.
+L000041 |             } ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 InvalidateAxis.
+L000042 |         } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get<string>($"TASK|{controller}|{task}", controller, token => _automation.ReadTaskStatus(task, controller, token).GetAwaiter().GetResult()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadTaskStatus(task, controller, token).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadTaskStatus(task, controller, token).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadTaskStatus(task, controller, token)
+L000044 |         public ST_AUTOMATION_STATUS_SNAPSHOT<string> GetTask(int task, int controller) => Get<string>($"TASK|{controller}|{task}", controller, token => _automation.ReadTaskStatus(task, controller, token).GetAwaiter().GetResult()); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get<string>($"CPU|{controller}", controller, token => _automation.ReadProcessorUsage(controller, token).GetAwaiter().GetResult()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadProcessorUsage(controller, token).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadProcessorUsage(controller, token).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadProcessorUsage(controller, token)
+L000045 |         public ST_AUTOMATION_STATUS_SNAPSHOT<string> GetProcessorUsage(int controller) => Get<string>($"CPU|{controller}", controller, token => _automation.ReadProcessorUsage(controller, token).GetAwaiter().GetResult()); ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<T> Drilling.Common.Automation.CAutomationStatusSnapshotService.Get<T>(string, int, System.Func<System.Threading.CancellationToken, object>)
+L000046 |         internal ST_AUTOMATION_STATUS_SNAPSHOT<T> Get<T>(string key, int controller, Func<CancellationToken, object> read) ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<T> Drilling.Common.Automation.CAutomationStatusSnapshotService.Get<T>(string, int, System.Func<System.Threading.CancellationToken, object>)
+L000047 |             where T : class ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Get.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000049 |             lock (_sync) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 Get.
+L000050 |             { ⟦EOL⟧
+// 해설 L51: 조건에 따라 분기합니다: if (_disposed)
+L000051 |                 if (_disposed) ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "STOPPED", "Automation status acquisition stopped.", default) / 호출자에게 값 또는 제어를 반환합니다: return new(null, "STOPPED", "Automation status acquisition stopped.", default);
+L000052 |                     return new(null, "STOPPED", "Automation status acquisition stopped.", default); ⟦EOL⟧
+// 해설 L53: 지역 변수를 선언합니다: var now = Environment.TickCount64; / 변수의 초기값을 지정합니다: now = Environment.TickCount64
+L000053 |                 var now = Environment.TickCount64; ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.TryGetValue(key, out var entry) / 조건에 따라 분기합니다: if (!_entries.TryGetValue(key, out var entry))
+L000054 |                 if (!_entries.TryGetValue(key, out var entry)) ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: entry = new Entry(controller, read) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Add(key, entry = new Entry(controller, read)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Entry(controller, read)
+L000055 |                     _entries.Add(key, entry = new Entry(controller, read)); ⟦EOL⟧
+// 해설 L56: 값을 대상에 대입합니다: entry.LastRequested = now
+L000056 |                 entry.LastRequested = now; ⟦EOL⟧
+// 해설 L57: 조건에 따라 분기합니다: if (_autoStart)
+L000057 |                 if (_autoStart) ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: _worker ??= Task.Run(Collect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(Collect)
+L000058 |                     _worker ??= Task.Run(Collect); ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (entry.UpdatedAt == default)
+L000059 |                 if (entry.UpdatedAt == default) ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "LOADING", "Waiting for shared Automation snapshot.", default) { Version = entry.Version } / 호출자에게 값 또는 제어를 반환합니다: return new(null, "LOADING", "Waiting for shared Automation snapshot.", default) { Version = entry.Version };
+L000060 |                     return new(null, "LOADING", "Waiting for shared Automation snapshot.", default) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Get.
+L000061 |                     { ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: Version = entry.Version
+L000062 |                         Version = entry.Version ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Get.
+L000063 |                     }; ⟦EOL⟧
+// 해설 L64: 조건에 따라 분기합니다: if (now - entry.CollectedAt > StaleMs)
+L000064 |                 if (now - entry.CollectedAt > StaleMs) ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "STALE", "Automation snapshot is older than 5 seconds.", entry.UpdatedAt) { Version = entry.Version, CollectedTimestamp = entry.CollectedTimestamp } / 호출자에게 값 또는 제어를 반환합니다: return new(null, "STALE", "Automation snapshot is older than 5 seconds.", entry.UpdatedAt) { Version = entry.Version, CollectedTimestamp = entry.CollectedTimestamp };
+L000065 |                     return new(null, "STALE", "Automation snapshot is older than 5 seconds.", entry.UpdatedAt) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 Get.
+L000066 |                     { ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: Version = entry.Version
+L000067 |                         Version = entry.Version, ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: CollectedTimestamp = entry.CollectedTimestamp
+L000068 |                         CollectedTimestamp = entry.CollectedTimestamp ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Get.
+L000069 |                     }; ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(entry.Value as T, entry.State, entry.Detail, entry.UpdatedAt) { Version = entry.Version, CollectedTimestamp = entry.CollectedTimestamp } / 호출자에게 값 또는 제어를 반환합니다: return new(entry.Value as T, entry.State, entry.Detail, entry.UpdatedAt) { Version = entry.Version, CollectedTimestamp = entry.CollectedTimestamp };
+L000070 |                 return new(entry.Value as T, entry.State, entry.Detail, entry.UpdatedAt) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Get.
+L000071 |                 { ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: Version = entry.Version
+L000072 |                     Version = entry.Version, ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: CollectedTimestamp = entry.CollectedTimestamp
+L000073 |                     CollectedTimestamp = entry.CollectedTimestamp ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 Get.
+L000074 |                 }; ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Get.
+L000075 |             } ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Get.
+L000076 |         } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.Collect()
+L000078 |         private async Task Collect() ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Collect.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 예외 처리 범위입니다: try
+L000080 |             try ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 Collect.
+L000081 |             { ⟦EOL⟧
+// 해설 L82: 조건을 먼저 확인하며 반복합니다: while (!_stop.IsCancellationRequested)
+L000082 |                 while (!_stop.IsCancellationRequested) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Collect.
+L000083 |                 { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.StartNew() / 지역 변수를 선언합니다: var elapsed = Stopwatch.StartNew(); / 변수의 초기값을 지정합니다: elapsed = Stopwatch.StartNew()
+L000084 |                     var elapsed = Stopwatch.StartNew(); ⟦EOL⟧
+// 해설 L85: 비동기 완료를 기다립니다: await CollectOnce(_stop.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CollectOnce(_stop.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CollectOnce(_stop.Token)
+L000085 |                     await CollectOnce(_stop.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L86: 비동기 완료를 기다립니다: await Task.Delay(Math.Max(1, 1000 - (int)Math.Min(1000, elapsed.ElapsedMilliseconds)), _stop.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(Math.Max(1, 1000 - (int)Math.Min(1000, elapsed.ElapsedMilliseconds)), _stop.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(Math.Max(1, 1000 - (int)Math.Min(1000, elapsed.ElapsedMilliseconds)), _stop.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, 1000 - (int)Math.Min(1000, elapsed.ElapsedMilliseconds)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min
+L000086 |                     await Task.Delay(Math.Max(1, 1000 - (int)Math.Min(1000, elapsed.ElapsedMilliseconds)), _stop.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Collect.
+L000087 |                 } ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 Collect.
+L000088 |             } ⟦EOL⟧
+// 해설 L89: 지정 예외를 처리합니다: catch (OperationCanceledException) when (_stop.IsCancellationRequested)
+L000089 |             catch (OperationCanceledException)when (_stop.IsCancellationRequested) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Collect.
+L000090 |             { ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Collect.
+L000091 |             } ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Collect.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectOnce(System.Threading.CancellationToken)
+L000094 |         internal Task CollectOnce(CancellationToken token) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 지역 변수를 선언합니다: Entry[] entries;
+L000096 |             Entry[] entries; ⟦EOL⟧
+// 해설 L97: 지역 변수를 선언합니다: ConfiguredHomeSpeedRead[] configuredReads;
+L000097 |             ConfiguredHomeSpeedRead[] configuredReads; ⟦EOL⟧
+// 해설 L98: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000098 |             lock (_sync) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000099 |             { ⟦EOL⟧
+// 해설 L100: 지역 변수를 선언합니다: var now = Environment.TickCount64; / 변수의 초기값을 지정합니다: now = Environment.TickCount64
+L000100 |                 var now = Environment.TickCount64; ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Where(pair => now - pair.Value.LastRequested > LeaseMs).Select(pair => pair.Key).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Where(pair => now - pair.Value.LastRequested > LeaseMs).Select(pair => pair.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Where(pair => now - pair.Value.LastRequested > LeaseMs) / 컬렉션 요소를 순회합니다: foreach (var key in _entries.Where(pair => now - pair.Value.LastRequested > LeaseMs).Select(pair => pair.Key).ToArray())
+L000101 |                 foreach (var key in _entries.Where(pair => now - pair.Value.LastRequested > LeaseMs).Select(pair => pair.Key).ToArray()) ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Remove(key)
+L000102 |                     _entries.Remove(key); ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: entries = _entries.Values.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Values.ToArray()
+L000103 |                 entries = _entries.Values.ToArray(); ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: configuredReads = PrepareConfiguredHomeSpeedReads(now) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PrepareConfiguredHomeSpeedReads(now)
+L000104 |                 configuredReads = PrepareConfiguredHomeSpeedReads(now); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000105 |             } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000107 |             // Different controllers are independent; each controller has one sequential read queue. ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(entries.Select(entry => entry.Controller).Concat(configuredReads.Select(read => read.Controller)).Distinct().Select(controller => Task.Run(() => { foreach (var entry in entries.Where(entry => entry.Controlle… / 함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Select(entry => entry.Controller).Concat(configuredReads.Select(read => read.Controller)).Distinct().Select(controller => Task.Run(() => { foreach (var entry in entries.Where(entry => entry.Controller == controll… / 함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Sel
+L000108 |             return Task.WhenAll(entries.Select(entry => entry.Controller).Concat(configuredReads.Select(read => read.Controller)).Distinct().Select(controller => Task.Run(() => ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Where(entry => entry.Controller == controller) / 컬렉션 요소를 순회합니다: foreach (var entry in entries.Where(entry => entry.Controller == controller))
+L000110 |                 foreach (var entry in entries.Where(entry => entry.Controller == controller)) ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000111 |                 { ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000112 |                     token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L113: 지역 변수를 선언합니다: long generation;
+L000113 |                     long generation; ⟦EOL⟧
+// 해설 L114: 지역 변수를 선언합니다: long collectedTimestamp;
+L000114 |                     long collectedTimestamp; ⟦EOL⟧
+// 해설 L115: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000115 |                     lock (_sync) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000116 |                     { ⟦EOL⟧
+// 해설 L117: 조건에 따라 분기합니다: if (_disposed)
+L000117 |                         if (_disposed) ⟦EOL⟧
+// 해설 L118: 호출자에게 값 또는 제어를 반환합니다: return;
+L000118 |                             return; ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: generation = entry.Generation
+L000119 |                         generation = entry.Generation; ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: collectedTimestamp = Stopwatch.GetTimestamp() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp()
+L000120 |                         collectedTimestamp = Stopwatch.GetTimestamp(); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000121 |                     } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 지역 변수를 선언합니다: object? value = null; / 변수의 초기값을 지정합니다: value = null
+L000123 |                     object? value = null; ⟦EOL⟧
+// 해설 L124: 지역 변수를 선언합니다: var state = "OK"; / 변수의 초기값을 지정합니다: state = "OK"
+L000124 |                     var state = "OK"; ⟦EOL⟧
+// 해설 L125: 지역 변수를 선언합니다: var detail = "Shared Automation snapshot"; / 변수의 초기값을 지정합니다: detail = "Shared Automation snapshot"
+L000125 |                     var detail = "Shared Automation snapshot"; ⟦EOL⟧
+// 해설 L126: 예외 처리 범위입니다: try
+L000126 |                     try ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000127 |                     { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.IsSimul(entry.Controller) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.IsConnect(entry.Controller) / 조건에 따라 분기합니다: if (!_automation.IsSimul(entry.Controller) && !_automation.IsConnect(entry.Controller))
+L000128 |                         if (!_automation.IsSimul(entry.Controller) && !_automation.IsConnect(entry.Controller)) ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: (state, detail) = ("OFFLINE", "Automation not connected.")
+L000129 |                             (state, detail) = ("OFFLINE", "Automation not connected."); ⟦EOL⟧
+// 해설 L130: 앞 조건이 거짓인 경로입니다: else
+L000130 |                         else ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000131 |                         { ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000132 |                             using var timeout = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(2000)
+L000133 |                             timeout.CancelAfter(2000); ⟦EOL⟧
+// 해설 L134: 값을 대상에 대입합니다: value = entry.Read(timeout.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.Read(timeout.Token)
+L000134 |                             value = entry.Read(timeout.Token); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.Token.ThrowIfCancellationRequested()
+L000135 |                             timeout.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000136 |                         } ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000137 |                     } ⟦EOL⟧
+// 해설 L138: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000138 |                     catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000139 |                     { ⟦EOL⟧
+// 해설 L140: 예외를 발생/전달합니다: throw;
+L000140 |                         throw; ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000141 |                     } ⟦EOL⟧
+// 해설 L142: 지정 예외를 처리합니다: catch (Exception exception)
+L000142 |                     catch (Exception exception) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000143 |                     { ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: (state, detail) = ("ERROR", exception.Message)
+L000144 |                         (state, detail) = ("ERROR", exception.Message); ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000145 |                     } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000147 |                     lock (_sync) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000148 |                     { ⟦EOL⟧
+// 해설 L149: 조건에 따라 분기합니다: if (_disposed)
+L000149 |                         if (_disposed) ⟦EOL⟧
+// 해설 L150: 호출자에게 값 또는 제어를 반환합니다: return;
+L000150 |                             return; ⟦EOL⟧
+// 해설 L151: 조건에 따라 분기합니다: if (entry.Generation != generation)
+L000151 |                         if (entry.Generation != generation) ⟦EOL⟧
+// 해설 L152: 다음 반복으로 진행합니다: continue;
+L000152 |                             continue; ⟦EOL⟧
+// 해설 L153: 값을 대상에 대입합니다: entry.Value = value
+L000153 |                         entry.Value = value; ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: entry.State = state
+L000154 |                         entry.State = state; ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: entry.Detail = detail
+L000155 |                         entry.Detail = detail; ⟦EOL⟧
+// 해설 L156: 값을 대상에 대입합니다: entry.UpdatedAt = DateTimeOffset.Now
+L000156 |                         entry.UpdatedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: entry.CollectedAt = Environment.TickCount64
+L000157 |                         entry.CollectedAt = Environment.TickCount64; ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: entry.CollectedTimestamp = collectedTimestamp
+L000158 |                         entry.CollectedTimestamp = collectedTimestamp; ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectOnce(System.Threading.CancellationToken)
+L000159 |                         entry.Version++; ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000160 |                     } ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000161 |                 } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: configuredReads.Where(read => read.Controller == controller) / 컬렉션 요소를 순회합니다: foreach (var read in configuredReads.Where(read => read.Controller == controller))
+L000163 |                 foreach (var read in configuredReads.Where(read => read.Controller == controller)) ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: CollectConfiguredHomeSpeeds(read, token)
+L000164 |                     CollectConfiguredHomeSpeeds(read, token); ⟦EOL⟧
+// 해설 L165: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectOnce(System.Threading.CancellationToken)
+L000165 |             }, token))); ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 CollectOnce.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.Dispose()
+L000168 |         public void Dispose() ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Dispose.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000170 |             lock (_sync) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Dispose.
+L000171 |             { ⟦EOL⟧
+// 해설 L172: 조건에 따라 분기합니다: if (_disposed)
+L000172 |                 if (_disposed) ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return;
+L000173 |                     return; ⟦EOL⟧
+// 해설 L174: 값을 대상에 대입합니다: _disposed = true
+L000174 |                 _disposed = true; ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.Clear()
+L000175 |                 _entries.Clear(); ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.Clear()
+L000176 |                 _configuredHomeSpeedEntries.Clear(); ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 Dispose.
+L000177 |             } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stop.Cancel()
+L000179 |             _stop.Cancel(); ⟦EOL⟧
+// 해설 L180: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000180 |             // Do not dispose the token source while an SDK read may still be unwinding. ⟦EOL⟧
+// 해설 L181: 조건에 따라 분기합니다: if (_worker is { } worker)
+L000181 |             if (_worker is { } worker) ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: _ = worker.ContinueWith(_ => _stop.Dispose(), TaskScheduler.Default) / 함수·델리게이트 또는 객체 생성자를 호출합니다: worker.ContinueWith(_ => _stop.Dispose(), TaskScheduler.Default) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stop.Dispose()
+L000182 |                 _ = worker.ContinueWith(_ => _stop.Dispose(), TaskScheduler.Default); ⟦EOL⟧
+// 해설 L183: 앞 조건이 거짓인 경로입니다: else
+L000183 |             else ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stop.Dispose()
+L000184 |                 _stop.Dispose(); ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Dispose.
+L000185 |         } ⟦EOL⟧
+L000186 |  ⟦EOL⟧
+// 해설 L187: 타입의 구조/상속 선언입니다: private sealed class Entry(int controller, Func<CancellationToken, object> read)
+L000187 |         private sealed class Entry(int controller, Func<CancellationToken, object> read) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다.
+L000188 |         { ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Controller
+L000189 |             public int Controller { get; } = controller; ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Threading.CancellationToken, object> Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Read
+L000190 |             public Func<CancellationToken, object> Read { get; } = read; ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.LastRequested
+L000192 |             public long LastRequested; ⟦EOL⟧
+// 해설 L193: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.CollectedAt
+L000193 |             public long CollectedAt; ⟦EOL⟧
+// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Value
+L000194 |             public object? Value; ⟦EOL⟧
+// 해설 L195: 변수의 초기값을 지정합니다: State = "LOADING"
+L000195 |             public string State = "LOADING"; ⟦EOL⟧
+// 해설 L196: 변수의 초기값을 지정합니다: Detail = ""
+L000196 |             public string Detail = ""; ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.UpdatedAt
+L000197 |             public DateTimeOffset UpdatedAt; ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Generation
+L000198 |             public long Generation; ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Version
+L000199 |             public long Version; ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.CollectedTimestamp
+L000200 |             public long CollectedTimestamp; ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다.
+L000201 |         } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 변수의 초기값을 지정합니다: ConfiguredHomeSpeedRefreshMs = 10000
+L000203 |         private const int ConfiguredHomeSpeedRefreshMs = 10000; ⟦EOL⟧
+// 해설 L204: 변수의 초기값을 지정합니다: ConfiguredHomeSpeedStaleMs = 30000
+L000204 |         private const int ConfiguredHomeSpeedStaleMs = 30000; ⟦EOL⟧
+// 해설 L205: 변수의 초기값을 지정합니다: _configuredHomeSpeedEntries = []
+L000205 |         private readonly Dictionary<int, ConfiguredHomeSpeedEntry> _configuredHomeSpeedEntries = []; ⟦EOL⟧
+// 해설 L206: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000206 |         /// <summary>Registers requested axes and immediately returns the centrally acquired saved settings.</summary> ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Automation.CAutomationStatusSnapshotService.GetConfiguredHomeSpeeds(Syste
+L000207 |         public ST_AUTOMATION_STATUS_SNAPSHOT<IReadOnlyDictionary<string, double>> GetConfiguredHomeSpeeds(IReadOnlyList<string> axes, int controller) ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000208 |         { ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(axes)
+L000209 |             ArgumentNullException.ThrowIfNull(axes); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentOutOfRangeException.ThrowIfNegative(controller)
+L000210 |             ArgumentOutOfRangeException.ThrowIfNegative(controller); ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.Select(CAutomationManager.ValidateConfiguredHomeAxis).Select(axis => axis.ToUpperInvariant()).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.Select(CAutomationManager.ValidateConfiguredHomeAxis).Select(axis => axis.ToUpperInvariant()).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.Select(CAutomationManager.ValidateConfiguredHomeAxis).Select(axis => axis.ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.Select(CAutomationManager.Va
+L000211 |             var normalizedAxes = axes.Select(CAutomationManager.ValidateConfiguredHomeAxis).Select(axis => axis.ToUpperInvariant()).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L212: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000212 |             lock (_sync) ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000213 |             { ⟦EOL⟧
+// 해설 L214: 조건에 따라 분기합니다: if (_disposed)
+L000214 |                 if (_disposed) ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "STOPPED", "Automation status acquisition stopped.", default) / 호출자에게 값 또는 제어를 반환합니다: return new(null, "STOPPED", "Automation status acquisition stopped.", default);
+L000215 |                     return new(null, "STOPPED", "Automation status acquisition stopped.", default); ⟦EOL⟧
+// 해설 L216: 조건에 따라 분기합니다: if (normalizedAxes.Length == 0)
+L000216 |                 if (normalizedAxes.Length == 0) ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReadOnlyValues(new Dictionary<string, double>()), "OK", "No configured axes requested.", DateTimeOffset.Now) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOnlyValues(new Dictionary<string, double>()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double>() / 호출자에게 값 또는 제어를 반환합니다: return new(ReadOnlyValues(new Dictionary<string, double>()), "OK", "No configured axes requested.", DateTimeOffset.Now);
+L000217 |                     return new(ReadOnlyValues(new Dictionary<string, double>()), "OK", "No configured axes requested.", DateTimeOffset.Now); ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.TryGetValue(controller, out var entry) / 조건에 따라 분기합니다: if (!_configuredHomeSpeedEntries.TryGetValue(controller, out var entry))
+L000218 |                 if (!_configuredHomeSpeedEntries.TryGetValue(controller, out var entry)) ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: entry = new ConfiguredHomeSpeedEntry(controller) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.Add(controller, entry = new ConfiguredHomeSpeedEntry(controller)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ConfiguredHomeSpeedEntry(controller)
+L000219 |                     _configuredHomeSpeedEntries.Add(controller, entry = new ConfiguredHomeSpeedEntry(controller)); ⟦EOL⟧
+// 해설 L220: 지역 변수를 선언합니다: var now = Environment.TickCount64; / 변수의 초기값을 지정합니다: now = Environment.TickCount64
+L000220 |                 var now = Environment.TickCount64; ⟦EOL⟧
+// 해설 L221: 지역 변수를 선언합니다: var addedAxis = false; / 변수의 초기값을 지정합니다: addedAxis = false
+L000221 |                 var addedAxis = false; ⟦EOL⟧
+// 해설 L222: 컬렉션 요소를 순회합니다: foreach (var axis in normalizedAxes)
+L000222 |                 foreach (var axis in normalizedAxes) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000223 |                 { ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: addedAxis |= !entry.RequestedAxes.ContainsKey(axis) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.ContainsKey(axis)
+L000224 |                     addedAxis |= !entry.RequestedAxes.ContainsKey(axis); ⟦EOL⟧
+// 해설 L225: 값을 대상에 대입합니다: entry.RequestedAxes[axis] = now
+L000225 |                     entry.RequestedAxes[axis] = now; ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000226 |                 } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 조건에 따라 분기합니다: if (addedAxis)
+L000228 |                 if (addedAxis) ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateConfiguredHomeSpeedEntry(entry)
+L000229 |                     InvalidateConfiguredHomeSpeedEntry(entry); ⟦EOL⟧
+// 해설 L230: 조건에 따라 분기합니다: if (_autoStart)
+L000230 |                 if (_autoStart) ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: _worker ??= Task.Run(Collect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(Collect)
+L000231 |                     _worker ??= Task.Run(Collect); ⟦EOL⟧
+// 해설 L232: 조건에 따라 분기합니다: if (entry.UpdatedAt == default)
+L000232 |                 if (entry.UpdatedAt == default) ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "LOADING", "Waiting for shared saved HomeSpeed snapshot.", default) / 호출자에게 값 또는 제어를 반환합니다: return new(null, "LOADING", "Waiting for shared saved HomeSpeed snapshot.", default);
+L000233 |                     return new(null, "LOADING", "Waiting for shared saved HomeSpeed snapshot.", default); ⟦EOL⟧
+// 해설 L234: 조건에 따라 분기합니다: if (now - entry.CollectedAt > ConfiguredHomeSpeedStaleMs)
+L000234 |                 if (now - entry.CollectedAt > ConfiguredHomeSpeedStaleMs) ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, "STALE", "Saved HomeSpeed snapshot is older than 30 seconds.", entry.UpdatedAt) / 호출자에게 값 또는 제어를 반환합니다: return new(null, "STALE", "Saved HomeSpeed snapshot is older than 30 seconds.", entry.UpdatedAt);
+L000235 |                     return new(null, "STALE", "Saved HomeSpeed snapshot is older than 30 seconds.", entry.UpdatedAt); ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(entry.Value, entry.State, entry.Detail, entry.UpdatedAt) / 호출자에게 값 또는 제어를 반환합니다: return new(entry.Value, entry.State, entry.Detail, entry.UpdatedAt);
+L000236 |                 return new(entry.Value, entry.State, entry.Detail, entry.UpdatedAt); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000237 |             } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 GetConfiguredHomeSpeeds.
+L000238 |         } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000240 |         /// <summary>Requests a new central read; never performs controller I/O on the caller.</summary> ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.RequestConfiguredHomeSpeedsRefresh(int)
+L000241 |         public void RequestConfiguredHomeSpeedsRefresh(int controller) ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 RequestConfiguredHomeSpeedsRefresh.
+L000242 |         { ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentOutOfRangeException.ThrowIfNegative(controller)
+L000243 |             ArgumentOutOfRangeException.ThrowIfNegative(controller); ⟦EOL⟧
+// 해설 L244: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000244 |             lock (_sync) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 RequestConfiguredHomeSpeedsRefresh.
+L000245 |             { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.TryGetValue(controller, out var entry) / 조건에 따라 분기합니다: if (!_disposed && _configuredHomeSpeedEntries.TryGetValue(controller, out var entry))
+L000246 |                 if (!_disposed && _configuredHomeSpeedEntries.TryGetValue(controller, out var entry)) ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateConfiguredHomeSpeedEntry(entry)
+L000247 |                     InvalidateConfiguredHomeSpeedEntry(entry); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 RequestConfiguredHomeSpeedsRefresh.
+L000248 |             } ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 RequestConfiguredHomeSpeedsRefresh.
+L000249 |         } ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000251 |         // Caller holds _sync. Each axis has its own demand lease so one consumer cannot retain unused axes. ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedRead[] Drilling.Common.Automation.CAutomationStatusSnapshotService.PrepareConfiguredHomeSpeedReads(long)
+L000252 |         private ConfiguredHomeSpeedRead[] PrepareConfiguredHomeSpeedReads(long now) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000253 |         { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ConfiguredHomeSpeedRead>() / 지역 변수를 선언합니다: var reads = new List<ConfiguredHomeSpeedRead>(); / 변수의 초기값을 지정합니다: reads = new List<ConfiguredHomeSpeedRead>()
+L000254 |             var reads = new List<ConfiguredHomeSpeedRead>(); ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.ToArray() / 컬렉션 요소를 순회합니다: foreach (var pair in _configuredHomeSpeedEntries.ToArray())
+L000255 |             foreach (var pair in _configuredHomeSpeedEntries.ToArray()) ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000256 |             { ⟦EOL⟧
+// 해설 L257: 지역 변수를 선언합니다: var entry = pair.Value; / 변수의 초기값을 지정합니다: entry = pair.Value
+L000257 |                 var entry = pair.Value; ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.Where(axis => now - axis.Value > LeaseMs).Select(axis => axis.Key).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.Where(axis => now - axis.Value > LeaseMs).Select(axis => axis.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.Where(axis => now - axis.Value > LeaseMs) / 지역 변수를 선언합니다: var expired = entry.RequestedAxes.Where(axis => now - axis.Value > LeaseMs).Select(axis => axis.Key).ToArray(); / 변수의 초기값을 지정합니다: expired = entry.RequestedAxes.Where(axis => now - axis.Value >
+L000258 |                 var expired = entry.RequestedAxes.Where(axis => now - axis.Value > LeaseMs).Select(axis => axis.Key).ToArray(); ⟦EOL⟧
+// 해설 L259: 컬렉션 요소를 순회합니다: foreach (var axis in expired)
+L000259 |                 foreach (var axis in expired) ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.Remove(axis)
+L000260 |                     entry.RequestedAxes.Remove(axis); ⟦EOL⟧
+// 해설 L261: 조건에 따라 분기합니다: if (entry.RequestedAxes.Count == 0)
+L000261 |                 if (entry.RequestedAxes.Count == 0) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000262 |                 { ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.Remove(pair.Key)
+L000263 |                     _configuredHomeSpeedEntries.Remove(pair.Key); ⟦EOL⟧
+// 해설 L264: 다음 반복으로 진행합니다: continue;
+L000264 |                     continue; ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000265 |                 } ⟦EOL⟧
+L000266 |  ⟦EOL⟧
+// 해설 L267: 조건에 따라 분기합니다: if (expired.Length > 0)
+L000267 |                 if (expired.Length > 0) ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateConfiguredHomeSpeedEntry(entry)
+L000268 |                     InvalidateConfiguredHomeSpeedEntry(entry); ⟦EOL⟧
+// 해설 L269: 조건에 따라 분기합니다: if (entry.InFlight || entry.UpdatedAt != default && now - entry.LastAttemptAt < ConfiguredHomeSpeedRefreshMs)
+L000269 |                 if (entry.InFlight || entry.UpdatedAt != default && now - entry.LastAttemptAt < ConfiguredHomeSpeedRefreshMs) ⟦EOL⟧
+// 해설 L270: 다음 반복으로 진행합니다: continue;
+L000270 |                     continue; ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: entry.InFlight = true
+L000271 |                 entry.InFlight = true; ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: entry.LastAttemptAt = now
+L000272 |                 entry.LastAttemptAt = now; ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: reads.Add(new(entry.Controller, entry, entry.RequestedAxes.Keys.ToArray(), entry.Version)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(entry.Controller, entry, entry.RequestedAxes.Keys.ToArray(), entry.Version) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.RequestedAxes.Keys.ToArray()
+L000273 |                 reads.Add(new(entry.Controller, entry, entry.RequestedAxes.Keys.ToArray(), entry.Version)); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000274 |             } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: reads.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return reads.ToArray();
+L000276 |             return reads.ToArray(); ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 PrepareConfiguredHomeSpeedReads.
+L000277 |         } ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectConfiguredHomeSpeeds(Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedRead, System.Threading.CancellationTok
+L000279 |         private void CollectConfiguredHomeSpeeds(ConfiguredHomeSpeedRead read, CancellationToken token) ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000280 |         { ⟦EOL⟧
+// 해설 L281: 지역 변수를 선언합니다: IReadOnlyDictionary<string, double>? values = null; / 변수의 초기값을 지정합니다: values = null
+L000281 |             IReadOnlyDictionary<string, double>? values = null; ⟦EOL⟧
+// 해설 L282: 지역 변수를 선언합니다: var state = "OK"; / 변수의 초기값을 지정합니다: state = "OK"
+L000282 |             var state = "OK"; ⟦EOL⟧
+// 해설 L283: 지역 변수를 선언합니다: var detail = "Shared saved HomeSpeed snapshot"; / 변수의 초기값을 지정합니다: detail = "Shared saved HomeSpeed snapshot"
+L000283 |             var detail = "Shared saved HomeSpeed snapshot"; ⟦EOL⟧
+// 해설 L284: 예외 처리 범위입니다: try
+L000284 |             try ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000285 |             { ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000286 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.IsSimul(read.Controller) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.IsConnect(read.Controller) / 조건에 따라 분기합니다: if (!_automation.IsSimul(read.Controller) && !_automation.IsConnect(read.Controller))
+L000287 |                 if (!_automation.IsSimul(read.Controller) && !_automation.IsConnect(read.Controller)) ⟦EOL⟧
+// 해설 L288: 값을 대상에 대입합니다: (state, detail) = ("OFFLINE", "Automation not connected.")
+L000288 |                     (state, detail) = ("OFFLINE", "Automation not connected."); ⟦EOL⟧
+// 해설 L289: 앞 조건이 거짓인 경로입니다: else
+L000289 |                 else ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000290 |                 { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000291 |                     using var timeout = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(2000)
+L000292 |                     timeout.CancelAfter(2000); ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadConfiguredHomeSpeeds(read.Axes, read.Controller, timeout.Token).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadConfiguredHomeSpeeds(read.Axes, read.Controller, timeout.Token).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadConfiguredHomeSpeeds(read.Axes, read.Controller, timeout.Token) / 지역 변수를 선언합니다: var result = _automation.ReadConfiguredHomeSpeeds(read.Axes, read.Controller, timeout.Token).GetAwaiter().GetResult(); / 변수의 초기값을 지정합니다: result = _automation.Rea
+L000293 |                     var result = _automation.ReadConfiguredHomeSpeeds(read.Axes, read.Controller, timeout.Token).GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.Token.ThrowIfCancellationRequested()
+L000294 |                     timeout.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: read.Axes.Any(axis => !result.TryGetValue(axis, out var value) || !double.IsFinite(value) || value < 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.TryGetValue(axis, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (read.Axes.Any(axis => !result.TryGetValue(axis, out var value) || !double.IsFinite(value) || value < 0))
+L000295 |                     if (read.Axes.Any(axis => !result.TryGetValue(axis, out var value) || !double.IsFinite(value) || value < 0)) ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Saved HomeSpeed snapshot did not contain valid values for all requested axes.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Saved HomeSpeed snapshot did not contain valid values for all requested axes.");
+L000296 |                         throw new InvalidOperationException("Saved HomeSpeed snapshot did not contain valid values for all requested axes."); ⟦EOL⟧
+// 해설 L297: 값을 대상에 대입합니다: values = ReadOnlyValues(result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOnlyValues(result)
+L000297 |                     values = ReadOnlyValues(result); ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000298 |                 } ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000299 |             } ⟦EOL⟧
+// 해설 L300: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000300 |             catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000301 |             { ⟦EOL⟧
+// 해설 L302: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000302 |                 lock (_sync) ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: read.Entry.InFlight = false
+L000303 |                     read.Entry.InFlight = false; ⟦EOL⟧
+// 해설 L304: 예외를 발생/전달합니다: throw;
+L000304 |                 throw; ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000305 |             } ⟦EOL⟧
+// 해설 L306: 지정 예외를 처리합니다: catch (Exception exception)
+L000306 |             catch (Exception exception) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000307 |             { ⟦EOL⟧
+// 해설 L308: 값을 대상에 대입합니다: (state, detail) = ("ERROR", exception.Message)
+L000308 |                 (state, detail) = ("ERROR", exception.Message); ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000309 |             } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000311 |             lock (_sync) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000312 |             { ⟦EOL⟧
+// 해설 L313: 값을 대상에 대입합니다: read.Entry.InFlight = false
+L000313 |                 read.Entry.InFlight = false; ⟦EOL⟧
+// 해설 L314: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000314 |                 // SET/REFRESH or a new axis may invalidate an already-running read. Never republish it. ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configuredHomeSpeedEntries.TryGetValue(read.Controller, out var current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(current, read.Entry) / 조건에 따라 분기합니다: if (_disposed || !_configuredHomeSpeedEntries.TryGetValue(read.Controller, out var current) || !ReferenceEquals(current, read.Entry) || current.Version != read.Version)
+L000315 |                 if (_disposed || !_configuredHomeSpeedEntries.TryGetValue(read.Controller, out var current) || !ReferenceEquals(current, read.Entry) || current.Version != read.Version) ⟦EOL⟧
+// 해설 L316: 호출자에게 값 또는 제어를 반환합니다: return;
+L000316 |                     return; ⟦EOL⟧
+// 해설 L317: 값을 대상에 대입합니다: current.Value = values
+L000317 |                 current.Value = values; ⟦EOL⟧
+// 해설 L318: 값을 대상에 대입합니다: current.State = state
+L000318 |                 current.State = state; ⟦EOL⟧
+// 해설 L319: 값을 대상에 대입합니다: current.Detail = detail
+L000319 |                 current.Detail = detail; ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: current.UpdatedAt = DateTimeOffset.Now
+L000320 |                 current.UpdatedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L321: 값을 대상에 대입합니다: current.CollectedAt = Environment.TickCount64
+L000321 |                 current.CollectedAt = Environment.TickCount64; ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000322 |             } ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 CollectConfiguredHomeSpeeds.
+L000323 |         } ⟦EOL⟧
+L000324 |  ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CConfiguredHomeSpeedValues(values, (values as CConfiguredHomeSpeedValues)?.Units)
+L000325 |         private static IReadOnlyDictionary<string, double> ReadOnlyValues(IEnumerable<KeyValuePair<string, double>> values) => new CConfiguredHomeSpeedValues(values, (values as CConfiguredHomeSpeedValues)?.Units); ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateConfiguredHomeSpeedEntry(Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry)
+L000326 |         private static void InvalidateConfiguredHomeSpeedEntry(ConfiguredHomeSpeedEntry entry) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 InvalidateConfiguredHomeSpeedEntry.
+L000327 |         { ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateConfiguredHomeSpeedEntry(Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry)
+L000328 |             entry.Version++; ⟦EOL⟧
+// 해설 L329: 값을 대상에 대입합니다: entry.Value = null
+L000329 |             entry.Value = null; ⟦EOL⟧
+// 해설 L330: 값을 대상에 대입합니다: entry.State = "LOADING"
+L000330 |             entry.State = "LOADING"; ⟦EOL⟧
+// 해설 L331: 값을 대상에 대입합니다: entry.Detail = "Waiting for shared saved HomeSpeed snapshot."
+L000331 |             entry.Detail = "Waiting for shared saved HomeSpeed snapshot."; ⟦EOL⟧
+// 해설 L332: 값을 대상에 대입합니다: entry.UpdatedAt = default
+L000332 |             entry.UpdatedAt = default; ⟦EOL⟧
+// 해설 L333: 값을 대상에 대입합니다: entry.CollectedAt = 0
+L000333 |             entry.CollectedAt = 0; ⟦EOL⟧
+// 해설 L334: 값을 대상에 대입합니다: entry.LastAttemptAt = 0
+L000334 |             entry.LastAttemptAt = 0; ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 InvalidateConfiguredHomeSpeedEntry.
+L000335 |         } ⟦EOL⟧
+L000336 |  ⟦EOL⟧
+// 해설 L337: 타입의 구조/상속 선언입니다: private sealed class ConfiguredHomeSpeedEntry(int controller)
+L000337 |         private sealed class ConfiguredHomeSpeedEntry(int controller) ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다.
+L000338 |         { ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Controller
+L000339 |             public int Controller { get; } = controller; ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase)
+L000340 |             public Dictionary<string, long> RequestedAxes { get; } = new(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, double>? Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Value
+L000342 |             public IReadOnlyDictionary<string, double>? Value; ⟦EOL⟧
+// 해설 L343: 변수의 초기값을 지정합니다: State = "LOADING"
+L000343 |             public string State = "LOADING"; ⟦EOL⟧
+// 해설 L344: 변수의 초기값을 지정합니다: Detail = ""
+L000344 |             public string Detail = ""; ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.UpdatedAt
+L000345 |             public DateTimeOffset UpdatedAt; ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.CollectedAt
+L000346 |             public long CollectedAt; ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.LastAttemptAt
+L000347 |             public long LastAttemptAt; ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Version
+L000348 |             public long Version; ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.InFlight
+L000349 |             public bool InFlight; ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다.
+L000350 |         } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 타입의 구조/상속 선언입니다: private sealed record ConfiguredHomeSpeedRead(int Controller, ConfiguredHomeSpeedEntry Entry, string[] Axes, long Version);
+L000352 |         private sealed record ConfiguredHomeSpeedRead(int Controller, ConfiguredHomeSpeedEntry Entry, string[] Axes, long Version); ⟦EOL⟧
+// 해설 L353: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000353 |         // Encoder axes need only AuxiliaryFeedback; do not query galvo-only status on them. ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get<ST_AUXILIARY_FEEDBACK>(AuxiliaryKey(axis, controller), controller, token => _automation.ReadAuxiliaryFeedback(axis, controller, token).GetAwaiter().GetResult()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: AuxiliaryKey(axis, controller) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadAuxiliaryFeedback(axis, controller, token).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadAuxiliaryFeedback(axis, controller, token).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadAuxiliaryFeedback(axis, contr
+L000354 |         public ST_AUTOMATION_STATUS_SNAPSHOT<ST_AUXILIARY_FEEDBACK> GetAuxiliaryFeedback(string axis, int controller) => Get<ST_AUXILIARY_FEEDBACK>(AuxiliaryKey(axis, controller), controller, token => _automation.ReadAuxiliaryFeedback(axis, controller, token).GetAwaiter().GetResult()); ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAuxiliaryFeedback(string, int)
+L000355 |         internal void InvalidateAuxiliaryFeedback(string axis, int controller) ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 InvalidateAuxiliaryFeedback.
+L000356 |         { ⟦EOL⟧
+// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAuxiliaryFeedback(axis, controller)
+L000357 |             GetAuxiliaryFeedback(axis, controller); ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateEntry(AuxiliaryKey(axis, controller)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: AuxiliaryKey(axis, controller)
+L000358 |             InvalidateEntry(AuxiliaryKey(axis, controller)); ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 InvalidateAuxiliaryFeedback.
+L000359 |         } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int)
+L000361 |         public void InvalidateTask(int task, int controller) ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 InvalidateTask.
+L000362 |         { ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetTask(task, controller)
+L000363 |             GetTask(task, controller); ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateEntry($"TASK|{controller}|{task}")
+L000364 |             InvalidateEntry($"TASK|{controller}|{task}"); ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 InvalidateTask.
+L000365 |         } ⟦EOL⟧
+L000366 |  ⟦EOL⟧
+// 해설 L367: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateEntry(string)
+L000367 |         private void InvalidateEntry(string key) ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 InvalidateEntry.
+L000368 |         { ⟦EOL⟧
+// 해설 L369: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000369 |             lock (_sync) ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 InvalidateEntry.
+L000370 |             { ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: _entries.TryGetValue(key, out var entry) / 조건에 따라 분기합니다: if (!_entries.TryGetValue(key, out var entry))
+L000371 |                 if (!_entries.TryGetValue(key, out var entry)) ⟦EOL⟧
+// 해설 L372: 호출자에게 값 또는 제어를 반환합니다: return;
+L000372 |                     return; ⟦EOL⟧
+// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateEntry(string)
+L000373 |                 entry.Generation++; ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateEntry(string)
+L000374 |                 entry.Version++; ⟦EOL⟧
+// 해설 L375: 값을 대상에 대입합니다: entry.Value = null
+L000375 |                 entry.Value = null; ⟦EOL⟧
+// 해설 L376: 값을 대상에 대입합니다: entry.State = "LOADING"
+L000376 |                 entry.State = "LOADING"; ⟦EOL⟧
+// 해설 L377: 값을 대상에 대입합니다: entry.UpdatedAt = default
+L000377 |                 entry.UpdatedAt = default; ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: entry.CollectedAt = 0
+L000378 |                 entry.CollectedAt = 0; ⟦EOL⟧
+// 해설 L379: 값을 대상에 대입합니다: entry.CollectedTimestamp = 0
+L000379 |                 entry.CollectedTimestamp = 0; ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 InvalidateEntry.
+L000380 |             } ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 InvalidateEntry.
+L000381 |         } ⟦EOL⟧
+L000382 |  ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.Trim()
+L000383 |         private static string AuxiliaryKey(string axis, int controller) => $"AUX|{controller}|{axis.Trim().ToUpperInvariant()}"; ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get<ST_MOF_READINESS>($"MOF_READY|{controller}|{task}", controller, token => _automation.ReadMofReadiness(task, controller, token).GetAwaiter().GetResult()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadMofReadiness(task, controller, token).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadMofReadiness(task, controller, token).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _automation.ReadMofReadiness(task, controller, token)
+L000384 |         public ST_AUTOMATION_STATUS_SNAPSHOT<ST_MOF_READINESS> GetMofReadiness(int task, int controller) => Get<ST_MOF_READINESS>($"MOF_READY|{controller}|{task}", controller, token => _automation.ReadMofReadiness(task, controller, token).GetAwaiter().GetResult()); ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateMofReadiness(int, int)
+L000385 |         public void InvalidateMofReadiness(int task, int controller) ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 InvalidateMofReadiness.
+L000386 |         { ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMofReadiness(task, controller)
+L000387 |             GetMofReadiness(task, controller); ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateEntry($"MOF_READY|{controller}|{task}")
+L000388 |             InvalidateEntry($"MOF_READY|{controller}|{task}"); ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 InvalidateMofReadiness.
+L000389 |         } ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다.
+L000390 |     } ⟦EOL⟧
+L000391 |  ⟦EOL⟧
+// 해설 L392: 타입의 구조/상속 선언입니다: public sealed record ST_AUTOMATION_STATUS_SNAPSHOT<T>(T? Value, string State, string Detail, DateTimeOffset UpdatedAt)
+L000392 |     public sealed record ST_AUTOMATION_STATUS_SNAPSHOT<T>(T? Value, string State, string Detail, DateTimeOffset UpdatedAt) ⟦EOL⟧
+// 해설 L393: 타입의 구조/상속 선언입니다: where T : class
+L000393 |         where T : class ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다.
+L000394 |     { ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<T>.Version
+L000395 |         public long Version { get; init; } ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<T>.CollectedTimestamp
+L000396 |         public long CollectedTimestamp { get; init; } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000398 |         /// <summary>Age is measured from the device read start, not cache publication.</summary> ⟦EOL⟧
+// 해설 L399: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<T>.IsFresh(System.TimeSpan)
+L000399 |         public bool IsFresh(TimeSpan maximumAge) ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 IsFresh.
+L000400 |         { ⟦EOL⟧
+// 해설 L401: 조건에 따라 분기합니다: if (State != "OK" || Value is null || CollectedTimestamp <= 0)
+L000401 |             if (State != "OK" || Value is null || CollectedTimestamp <= 0) ⟦EOL⟧
+// 해설 L402: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000402 |                 return false; ⟦EOL⟧
+// 해설 L403: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp() / 지역 변수를 선언합니다: var now = Stopwatch.GetTimestamp(); / 변수의 초기값을 지정합니다: now = Stopwatch.GetTimestamp()
+L000403 |             var now = Stopwatch.GetTimestamp(); ⟦EOL⟧
+// 해설 L404: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(CollectedTimestamp, now) / 호출자에게 값 또는 제어를 반환합니다: return CollectedTimestamp <= now && Stopwatch.GetElapsedTime(CollectedTimestamp, now) <= maximumAge;
+L000404 |             return CollectedTimestamp <= now && Stopwatch.GetElapsedTime(CollectedTimestamp, now) <= maximumAge; ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 IsFresh.
+L000405 |         } ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다.
+L000406 |     } ⟦EOL⟧
+L000407 |  ⟦EOL⟧
+// 해설 L408: 타입의 구조/상속 선언입니다: public sealed record ST_SCANNER_AXIS_LIVE_STATUS(
+L000408 |     public sealed record ST_SCANNER_AXIS_LIVE_STATUS( ⟦EOL⟧
+// 해설 L409: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000409 |         int HeadNo,  ⟦EOL⟧
+// 해설 L410: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000410 |         int AutomationNo,  ⟦EOL⟧
+// 해설 L411: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000411 |         int ControllerNo,  ⟦EOL⟧
+// 해설 L412: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000412 |         int TaskNo,  ⟦EOL⟧
+// 해설 L413: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000413 |         string Head,  ⟦EOL⟧
+// 해설 L414: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000414 |         string Automation,  ⟦EOL⟧
+// 해설 L415: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000415 |         string Axis,  ⟦EOL⟧
+// 해설 L416: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000416 |         string AxisNo,  ⟦EOL⟧
+// 해설 L417: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000417 |         string AxisPosition,  ⟦EOL⟧
+// 해설 L418: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000418 |         string AxisCurrentFeedback,  ⟦EOL⟧
+// 해설 L419: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000419 |         string AxisEnableStatus,  ⟦EOL⟧
+// 해설 L420: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000420 |         string AxisHomeStatus,  ⟦EOL⟧
+// 해설 L421: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000421 |         string AxisFault,  ⟦EOL⟧
+// 해설 L422: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000422 |         string GalvoTemperature,  ⟦EOL⟧
+// 해설 L423: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000423 |         string GalvoLaserOutputRaw,  ⟦EOL⟧
+// 해설 L424: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000424 |         string PositionFbkAux,  ⟦EOL⟧
+// 해설 L425: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000425 |         string TaskStatus,  ⟦EOL⟧
+// 해설 L426: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000426 |         string ProcessorUsage,  ⟦EOL⟧
+// 해설 L427: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000427 |         string Error,  ⟦EOL⟧
+// 해설 L428: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000428 |         string Detail ⟦EOL⟧
+// 해설 L429: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000429 |     ); ⟦EOL⟧
+// 해설 L430: 타입의 구조/상속 선언입니다: public static class CScannerStatusLiveSnapshotStore
+L000430 |     public static class CScannerStatusLiveSnapshotStore ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다.
+L000431 |     { ⟦EOL⟧
+// 해설 L432: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: SnapshotLock = new()
+L000432 |         private static readonly object SnapshotLock = new(); ⟦EOL⟧
+// 해설 L433: 변수의 초기값을 지정합니다: _ownerId = Guid.Empty
+L000433 |         private static Guid _ownerId = Guid.Empty; ⟦EOL⟧
+// 해설 L434: 변수의 초기값을 지정합니다: _snapshot = []
+L000434 |         private static IReadOnlyList<ST_SCANNER_AXIS_LIVE_STATUS> _snapshot = []; ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · System.Guid Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.Begin()
+L000435 |         public static Guid Begin() ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 Begin.
+L000436 |         { ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var ownerId = Guid.NewGuid(); / 변수의 초기값을 지정합니다: ownerId = Guid.NewGuid()
+L000437 |             var ownerId = Guid.NewGuid(); ⟦EOL⟧
+// 해설 L438: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000438 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 Begin.
+L000439 |             { ⟦EOL⟧
+// 해설 L440: 값을 대상에 대입합니다: _ownerId = ownerId
+L000440 |                 _ownerId = ownerId; ⟦EOL⟧
+// 해설 L441: 값을 대상에 대입합니다: _snapshot = []
+L000441 |                 _snapshot = []; ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 Begin.
+L000442 |             } ⟦EOL⟧
+L000443 |  ⟦EOL⟧
+// 해설 L444: 호출자에게 값 또는 제어를 반환합니다: return ownerId;
+L000444 |             return ownerId; ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 Begin.
+L000445 |         } ⟦EOL⟧
+L000446 |  ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.Update(System.Guid, System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_LIVE_STATUS>)
+L000447 |         public static void Update(Guid ownerId, IReadOnlyList<ST_SCANNER_AXIS_LIVE_STATUS> snapshot) ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 Update.
+L000448 |         { ⟦EOL⟧
+// 해설 L449: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000449 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 Update.
+L000450 |             { ⟦EOL⟧
+// 해설 L451: 조건에 따라 분기합니다: if (_ownerId != ownerId)
+L000451 |                 if (_ownerId != ownerId) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 Update.
+L000452 |                 { ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return;
+L000453 |                     return; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 Update.
+L000454 |                 } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 값을 대상에 대입합니다: _snapshot = snapshot
+L000456 |                 _snapshot = snapshot; ⟦EOL⟧
+// 해설 L457: 구문 블록 경계입니다 · 소속 Update.
+L000457 |             } ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 Update.
+L000458 |         } ⟦EOL⟧
+L000459 |  ⟦EOL⟧
+// 해설 L460: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.End(System.Guid)
+L000460 |         public static void End(Guid ownerId) ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 End.
+L000461 |         { ⟦EOL⟧
+// 해설 L462: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000462 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다 · 소속 End.
+L000463 |             { ⟦EOL⟧
+// 해설 L464: 조건에 따라 분기합니다: if (_ownerId != ownerId)
+L000464 |                 if (_ownerId != ownerId) ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 End.
+L000465 |                 { ⟦EOL⟧
+// 해설 L466: 호출자에게 값 또는 제어를 반환합니다: return;
+L000466 |                     return; ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 End.
+L000467 |                 } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 값을 대상에 대입합니다: _ownerId = Guid.Empty
+L000469 |                 _ownerId = Guid.Empty; ⟦EOL⟧
+// 해설 L470: 값을 대상에 대입합니다: _snapshot = []
+L000470 |                 _snapshot = []; ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 End.
+L000471 |             } ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 End.
+L000472 |         } ⟦EOL⟧
+L000473 |  ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetHeadSnapshot(int, out System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_LIVE_STATUS>)
+L000474 |         public static bool TryGetHeadSnapshot(int headNo, out IReadOnlyList<ST_SCANNER_AXIS_LIVE_STATUS> snapshot) ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000475 |         { ⟦EOL⟧
+// 해설 L476: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000476 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000477 |             { ⟦EOL⟧
+// 해설 L478: 조건에 따라 분기합니다: if (_ownerId == Guid.Empty)
+L000478 |                 if (_ownerId == Guid.Empty) ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000479 |                 { ⟦EOL⟧
+// 해설 L480: 값을 대상에 대입합니다: snapshot = []
+L000480 |                     snapshot = []; ⟦EOL⟧
+// 해설 L481: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000481 |                     return false; ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000482 |                 } ⟦EOL⟧
+L000483 |  ⟦EOL⟧
+// 해설 L484: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCANNER_AXIS_LIVE_STATUS>() / 지역 변수를 선언합니다: var items = new List<ST_SCANNER_AXIS_LIVE_STATUS>(); / 변수의 초기값을 지정합니다: items = new List<ST_SCANNER_AXIS_LIVE_STATUS>()
+L000484 |                 var items = new List<ST_SCANNER_AXIS_LIVE_STATUS>(); ⟦EOL⟧
+// 해설 L485: 컬렉션 요소를 순회합니다: foreach (var item in _snapshot)
+L000485 |                 foreach (var item in _snapshot) ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000486 |                 { ⟦EOL⟧
+// 해설 L487: 조건에 따라 분기합니다: if (item.HeadNo == headNo)
+L000487 |                     if (item.HeadNo == headNo) ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000488 |                     { ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(item)
+L000489 |                         items.Add(item); ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000490 |                     } ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000491 |                 } ⟦EOL⟧
+L000492 |  ⟦EOL⟧
+// 해설 L493: 값을 대상에 대입합니다: snapshot = items
+L000493 |                 snapshot = items; ⟦EOL⟧
+// 해설 L494: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000494 |                 return true; ⟦EOL⟧
+// 해설 L495: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000495 |             } ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 TryGetHeadSnapshot.
+L000496 |         } ⟦EOL⟧
+L000497 |  ⟦EOL⟧
+// 해설 L498: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetTaskStatus(int, int, out string)
+L000498 |         public static bool TryGetTaskStatus(int automationNo, int taskNo, out string taskStatus) ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000499 |         { ⟦EOL⟧
+// 해설 L500: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000500 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000501 |             { ⟦EOL⟧
+// 해설 L502: 값을 대상에 대입합니다: taskStatus = "WAIT"
+L000502 |                 taskStatus = "WAIT"; ⟦EOL⟧
+// 해설 L503: 조건에 따라 분기합니다: if (_ownerId == Guid.Empty)
+L000503 |                 if (_ownerId == Guid.Empty) ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000504 |                 { ⟦EOL⟧
+// 해설 L505: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000505 |                     return false; ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000506 |                 } ⟦EOL⟧
+L000507 |  ⟦EOL⟧
+// 해설 L508: 컬렉션 요소를 순회합니다: foreach (var item in _snapshot)
+L000508 |                 foreach (var item in _snapshot) ⟦EOL⟧
+// 해설 L509: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000509 |                 { ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(item.TaskStatus) / 조건에 따라 분기합니다: if (item.AutomationNo == automationNo && item.TaskNo == taskNo && !string.IsNullOrWhiteSpace(item.TaskStatus))
+L000510 |                     if (item.AutomationNo == automationNo && item.TaskNo == taskNo && !string.IsNullOrWhiteSpace(item.TaskStatus)) ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000511 |                     { ⟦EOL⟧
+// 해설 L512: 값을 대상에 대입합니다: taskStatus = item.TaskStatus
+L000512 |                         taskStatus = item.TaskStatus; ⟦EOL⟧
+// 해설 L513: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000513 |                         return true; ⟦EOL⟧
+// 해설 L514: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000514 |                     } ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000515 |                 } ⟦EOL⟧
+L000516 |  ⟦EOL⟧
+// 해설 L517: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000517 |                 return true; ⟦EOL⟧
+// 해설 L518: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000518 |             } ⟦EOL⟧
+// 해설 L519: 구문 블록 경계입니다 · 소속 TryGetTaskStatus.
+L000519 |         } ⟦EOL⟧
+L000520 |  ⟦EOL⟧
+// 해설 L521: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetProcessorUsage(int, out string)
+L000521 |         public static bool TryGetProcessorUsage(int automationNo, out string processorUsage) ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000522 |         { ⟦EOL⟧
+// 해설 L523: 공유 상태의 임계 구역에 진입합니다: lock (SnapshotLock)
+L000523 |             lock (SnapshotLock) ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000524 |             { ⟦EOL⟧
+// 해설 L525: 값을 대상에 대입합니다: processorUsage = "WAIT"
+L000525 |                 processorUsage = "WAIT"; ⟦EOL⟧
+// 해설 L526: 조건에 따라 분기합니다: if (_ownerId == Guid.Empty)
+L000526 |                 if (_ownerId == Guid.Empty) ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000527 |                 { ⟦EOL⟧
+// 해설 L528: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000528 |                     return false; ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000529 |                 } ⟦EOL⟧
+L000530 |  ⟦EOL⟧
+// 해설 L531: 컬렉션 요소를 순회합니다: foreach (var item in _snapshot)
+L000531 |                 foreach (var item in _snapshot) ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000532 |                 { ⟦EOL⟧
+// 해설 L533: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(item.ProcessorUsage) / 조건에 따라 분기합니다: if (item.AutomationNo == automationNo && !string.IsNullOrWhiteSpace(item.ProcessorUsage))
+L000533 |                     if (item.AutomationNo == automationNo && !string.IsNullOrWhiteSpace(item.ProcessorUsage)) ⟦EOL⟧
+// 해설 L534: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000534 |                     { ⟦EOL⟧
+// 해설 L535: 값을 대상에 대입합니다: processorUsage = item.ProcessorUsage
+L000535 |                         processorUsage = item.ProcessorUsage; ⟦EOL⟧
+// 해설 L536: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000536 |                         return true; ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000537 |                     } ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000538 |                 } ⟦EOL⟧
+L000539 |  ⟦EOL⟧
+// 해설 L540: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000540 |                 return true; ⟦EOL⟧
+// 해설 L541: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000541 |             } ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 TryGetProcessorUsage.
+L000542 |         } ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다.
+L000543 |     } ⟦EOL⟧
+// 해설 L544: 구문 블록 경계입니다.
+L000544 | } ⟦EOL⟧

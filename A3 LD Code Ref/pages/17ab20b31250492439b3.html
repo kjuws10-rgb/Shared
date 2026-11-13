@@ -1,0 +1,906 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/PowerTable/CPowerTableFile.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/PowerTable/CPowerTableFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs">Git 원본</a></p><h1>Drilling.File/PowerTable/CPowerTableFile.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>464dfb6cb7f8623591fba5bcda068159015f1f9181ff3bb02be7c3fd82365646</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>15,391 bytes / 246 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/17ab20b31250492439b3.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CPowerTableFile</td><td>ClassDeclaration</td><td>10–245</td><td>CPowerTableFile: IPowerMeasureTable</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_directory</td><td>FieldDeclaration</td><td>L13–13</td><td>string Drilling.File.PowerTable.CPowerTableFile._directory</td></tr>
+<tr><td>_initialDirectory</td><td>FieldDeclaration</td><td>L14–14</td><td>string? Drilling.File.PowerTable.CPowerTableFile._initialDirectory</td></tr>
+<tr><td>MeasurementLocks</td><td>FieldDeclaration</td><td>L15–15</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;string, object&gt; Drilling.File.PowerTable.CPowerTableFile.MeasurementLocks</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L19–28</td><td>Drilling.File.PowerTable.CPowerTableFile.CPowerTableFile(string, bool)</td></tr>
+<tr><td>CreateRun</td><td>MethodDeclaration</td><td>L32–33</td><td>Drilling.Common.Interface.CPowerMeasureRun Drilling.File.PowerTable.CPowerTableFile.CreateRun(Drilling.Common.Managers.CManager, Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, bool)</td></tr>
+<tr><td>SaveReport</td><td>MethodDeclaration</td><td>L35–56</td><td>string Drilling.File.PowerTable.CPowerTableFile.SaveReport(string, Drilling.Common.Interface.ST_POWER_MEASURE_REPORT)</td></tr>
+<tr><td>GetPath</td><td>MethodDeclaration</td><td>L58–63</td><td>string Drilling.File.PowerTable.CPowerTableFile.GetPath(int)</td></tr>
+<tr><td>ResolveAttenuatorAngle</td><td>MethodDeclaration</td><td>L69–137</td><td>double Drilling.File.PowerTable.CPowerTableFile.ResolveAttenuatorAngle(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadNumber</td><td>MethodDeclaration</td><td>L139–145</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int)</td></tr>
+<tr><td>Format</td><td>MethodDeclaration</td><td>L147–147</td><td>string Drilling.File.PowerTable.CPowerTableFile.Format(double)</td></tr>
+<tr><td>FindStart</td><td>MethodDeclaration</td><td>L150–184</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.File.PowerTable.CPowerTableFile.FindStart(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>SaveMeasurement</td><td>MethodDeclaration</td><td>L187–222</td><td>void Drilling.File.PowerTable.CPowerTableFile.SaveMeasurement(int, double, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadMeasurementPoints</td><td>MethodDeclaration</td><td>L224–243</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt; Drilling.File.PowerTable.CPowerTableFile.LoadMeasurementPoints(string, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L13">FieldDeclaration <code>_directory</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L13-L13">Drilling.File/PowerTable/CPowerTableFile.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.PowerTable.CPowerTableFile._directory</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_initialDirectory</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L14-L14">Drilling.File/PowerTable/CPowerTableFile.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string? Drilling.File.PowerTable.CPowerTableFile._initialDirectory</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>MeasurementLocks</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L15-L15">Drilling.File/PowerTable/CPowerTableFile.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;string, object&gt; Drilling.File.PowerTable.CPowerTableFile.MeasurementLocks</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;string, object&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>new</td><td>resolved</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;string, object&gt;.ConcurrentDictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MeasurementLocks = new(StringComparer.OrdinalIgnoreCase)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">ConstructorDeclaration <code>.ctor</code> · L19–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L19-L28">Drilling.File/PowerTable/CPowerTableFile.cs:19–28</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.File.PowerTable.CPowerTableFile.CPowerTableFile(string, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>원본 XML 주석:</p>
+<pre data-language="xml"><code>/// &lt;param name = &quot;configRoot&quot;&gt;The application&#x27;s Config directory.&lt;/param&gt;</code></pre>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>configRoot</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>bool</td><td>None</td><td>True / false</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33">Drilling.File/PowerTable/CPowerTableFile.cs:33–33</a></td><td>new CPowerTableFile</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3437-L3437">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3437–3437</a></td><td>new Drilling.File.PowerTable.CPowerTableFile</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3589-L3589">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3589–3589</a></td><td>new Drilling.File.PowerTable.CPowerTableFile</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4552-L4552">Drilling.UI/Menu/Menus/CMenuManual.cs:4552–4552</a></td><td>new CPowerTableFile</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6297-L6297">Drilling.UI/Menu/Menus/CMenuManual.cs:6297–6297</a></td><td>new CPowerTableFile</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>ArgumentException.ThrowIfNullOrWhiteSpace</td><td>resolved</td><td>void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?)</td></tr>
+<tr><td>22</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>22</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>26</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(configRoot)</td></tr>
+<tr><td>22</td><td>assignment</td><td>값을 대상에 대입합니다: _directory = Path.GetFullPath(Path.Combine(configRoot, &quot;PowerTable&quot;))</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(configRoot, &quot;PowerTable&quot;))</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, &quot;PowerTable&quot;)</td></tr>
+<tr><td>23</td><td>if</td><td>조건에 따라 분기합니다: if (simulation)</td></tr>
+<tr><td>25</td><td>assignment</td><td>값을 대상에 대입합니다: _initialDirectory = _directory</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: _directory = Path.Combine(_directory, &quot;Simulation&quot;)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_directory, &quot;Simulation&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L23 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">MethodDeclaration <code>CreateRun</code> · L32–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L32-L33">Drilling.File/PowerTable/CPowerTableFile.cs:32–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.CPowerMeasureRun Drilling.File.PowerTable.CPowerTableFile.CreateRun(Drilling.Common.Managers.CManager, Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.CPowerMeasureRun</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>manager</td><td>Drilling.Common.Managers.CManager</td><td>None</td><td>False /</td></tr>
+<tr><td>recipe</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>targets</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>automatic</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2783-L2783">Drilling.UI/CRootView.cs:2783–2783</a></td><td>Drilling.File.PowerTable.CPowerTableFile.CreateRun</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6307-L6307">Drilling.UI/Menu/Menus/CMenuManual.cs:6307–6307</a></td><td>CPowerTableFile.CreateRun</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>33</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CPowerMeasureRun.CPowerMeasureRun(Drilling.Common.Managers.CManager, Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, bool, System.Func&lt;int, bool, Drilling.Common.Interface.IPowerMeasureTable&gt;, System.Action&lt;Drilling.Common.Interface.ST_POWER_MEASURE_REPORT&gt;) · Drilling.Common/Interface/CPowerMeasureRun.cs:11</td></tr>
+<tr><td>33</td><td>new CPowerTableFile</td><td>resolved</td><td>Drilling.File.PowerTable.CPowerTableFile.CPowerTableFile(string, bool) · Drilling.File/PowerTable/CPowerTableFile.cs:19</td></tr>
+<tr><td>33</td><td>SaveReport</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.SaveReport(string, Drilling.Common.Interface.ST_POWER_MEASURE_REPORT) · Drilling.File/PowerTable/CPowerTableFile.cs:35</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(manager, recipe, targets, automatic, (_, simulation) =&gt; new CPowerTableFile(manager.ConfigRoot, simulation), report =&gt; SaveReport(manager.ConfigRoot, report))</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CPowerTableFile(manager.ConfigRoot, simulation)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SaveReport(manager.ConfigRoot, report)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">MethodDeclaration <code>SaveReport</code> · L35–56</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L35-L56">Drilling.File/PowerTable/CPowerTableFile.cs:35–56</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.PowerTable.CPowerTableFile.SaveReport(string, Drilling.Common.Interface.ST_POWER_MEASURE_REPORT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>configRoot</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>report</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_REPORT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33">Drilling.File/PowerTable/CPowerTableFile.cs:33–33</a></td><td>SaveReport</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>37</td><td>new string</td><td>resolved</td><td>string.String(char[]?)</td></tr>
+<tr><td>37</td><td>report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c).ToArray</td><td>resolved</td><td>char[] System.Collections.Generic.IEnumerable&lt;char&gt;.ToArray&lt;char&gt;()</td></tr>
+<tr><td>37</td><td>report.RecipeId.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;char&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.Select&lt;char, char&gt;(System.Func&lt;char, char&gt;)</td></tr>
+<tr><td>37</td><td>Path.GetInvalidFileNameChars().Contains</td><td>resolved</td><td>bool System.ReadOnlySpan&lt;char&gt;.Contains&lt;char&gt;(char)</td></tr>
+<tr><td>37</td><td>Path.GetInvalidFileNameChars</td><td>resolved</td><td>char[] System.IO.Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>38</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>39</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string, string, string)</td></tr>
+<tr><td>39</td><td>Path.GetDirectoryName</td><td>resolved</td><td>string? System.IO.Path.GetDirectoryName(string?)</td></tr>
+<tr><td>39</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>40</td><td>Directory.CreateDirectory</td><td>resolved</td><td>System.IO.DirectoryInfo System.IO.Directory.CreateDirectory(string)</td></tr>
+<tr><td>41</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>41</td><td>Guid.NewGuid</td><td>resolved</td><td>System.Guid System.Guid.NewGuid()</td></tr>
+<tr><td>42</td><td>new StringBuilder</td><td>resolved</td><td>System.Text.StringBuilder.StringBuilder(string?)</td></tr>
+<tr><td>45</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE.ST_POWER_MEASURE_SAMPLE(int, double, double, double, string) · Drilling.Common/Interface/CPowerMeasureService.cs:287</td></tr>
+<tr><td>48</td><td>report.StartedAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
+<tr><td>48</td><td>report.FinishedAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
+<tr><td>49</td><td>text.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(string?)</td></tr>
+<tr><td>49</td><td>string.Join</td><td>resolved</td><td>string string.Join&lt;string&gt;(char, System.Collections.Generic.IEnumerable&lt;string&gt;)</td></tr>
+<tr><td>49</td><td>fields.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;object?&gt;.Select&lt;object?, string&gt;(System.Func&lt;object?, string&gt;)</td></tr>
+<tr><td>49</td><td>Convert.ToString</td><td>resolved</td><td>string? System.Convert.ToString(object?, System.IFormatProvider?)</td></tr>
+<tr><td>49</td><td>.Replace</td><td>resolved</td><td>string string.Replace(string, string?)</td></tr>
+<tr><td>53</td><td>System.IO.File.WriteAllText</td><td>resolved</td><td>void System.IO.File.WriteAllText(string, string?, System.Text.Encoding)</td></tr>
+<tr><td>53</td><td>text.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>53</td><td>new UTF8Encoding</td><td>resolved</td><td>System.Text.UTF8Encoding.UTF8Encoding(bool)</td></tr>
+<tr><td>53</td><td>System.IO.File.Move</td><td>resolved</td><td>void System.IO.File.Move(string, string)</td></tr>
+<tr><td>54</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>54</td><td>System.IO.File.Delete</td><td>resolved</td><td>void System.IO.File.Delete(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string(report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c).ToArray())</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c).ToArray()</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars().Contains(c)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars()</td></tr>
+<tr><td>37</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c</td></tr>
+<tr><td>37</td><td>local-declaration</td><td>지역 변수를 선언합니다: var folder = new string(report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c).ToArray());</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: folder = new string(report.RecipeId.Select(c =&gt; Path.GetInvalidFileNameChars().Contains(c) ? &#x27;_&#x27; : c).ToArray())</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;유효한 Recipe 이름이 필요합니다.&quot;)</td></tr>
+<tr><td>38</td><td>if</td><td>조건에 따라 분기합니다: if (folder is &quot;&quot; or &quot;.&quot; or &quot;..&quot;)</td></tr>
+<tr><td>38</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;유효한 Recipe 이름이 필요합니다.&quot;);</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Path.GetDirectoryName(Path.GetFullPath(configRoot))!, &quot;Data&quot;, &quot;PowerMeasure&quot;, folder)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(Path.GetFullPath(configRoot))</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(configRoot))!, &quot;Data&quot;, &quot;PowerMeasure&quot;, folder);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(configRoot))!, &quot;Data&quot;, &quot;PowerMeasure&quot;, folder)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(directory)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $&quot;{report.Origin}_{report.StartedAt:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}.csv&quot;)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid()</td></tr>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = Path.Combine(directory, $&quot;{report.Origin}_{report.StartedAt:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}.csv&quot;);</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = Path.Combine(directory, $&quot;{report.Origin}_{report.StartedAt:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}.csv&quot;)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder(&quot;Recipe,Origin,StartedAt,FinishedAt,Head,Sensor,Simulation,Target_W,Settle_ms,MeasureCount,Interval_ms,Tolerance_W,MaxAttempts,State,Attempt,ATT_deg,Power_W,Diff_W,Result,Message\r\n&quot;)</td></tr>
+<tr><td>42</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = new StringBuilder(&quot;Recipe,Origin,StartedAt,FinishedAt,Head,Sensor,Simulation,Target_W,Settle_ms,MeasureCount,Interval_ms,Tolerance_W,MaxAttempts,State,Attempt,ATT_deg,Power_W,Diff_W,Result,Message\r\n&quot;);</td></tr>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = new StringBuilder(&quot;Recipe,Origin,StartedAt,FinishedAt,Head,Sensor,Simulation,Target_W,Settle_ms,MeasureCount,Interval_ms,Tolerance_W,MaxAttempts,State,Attempt,ATT_deg,Power_W,Diff_W,Result,Message\r\n&quot;)</td></tr>
+<tr><td>43</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var head in report.Snapshot.Heads)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, head.Angle ?? double.NaN, head.Power ?? double.NaN, double.NaN, head.State)</td></tr>
+<tr><td>45</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: head.Samples.Count &gt; 0 ? head.Samples : new ST_POWER_MEASURE_SAMPLE[] { new(0, head.Angle ?? double.NaN, head.Power ?? double.NaN, double.NaN, head.State) }</td></tr>
+<tr><td>45</td><td>local-declaration</td><td>지역 변수를 선언합니다: var samples = head.Samples.Count &gt; 0 ? head.Samples : new ST_POWER_MEASURE_SAMPLE[] { new(0, head.Angle ?? double.NaN, head.Power ?? double.NaN, double.NaN, head.State) };</td></tr>
+<tr><td>45</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: samples = head.Samples.Count &gt; 0 ? head.Samples : new ST_POWER_MEASURE_SAMPLE[] { new(0, head.Angle ?? double.NaN, head.Power ?? double.NaN, double.NaN, head.State) }</td></tr>
+<tr><td>46</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var sample in samples)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: report.StartedAt.ToString(&quot;O&quot;)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: report.FinishedAt.ToString(&quot;O&quot;)</td></tr>
+<tr><td>48</td><td>local-declaration</td><td>지역 변수를 선언합니다: object?[] fields = [report.RecipeId, report.Origin, report.StartedAt.ToString(&quot;O&quot;), report.FinishedAt.ToString(&quot;O&quot;), head.Target.HeadNo, head.Target.PowerMeterNo, report.Simulation[head.Target.HeadNo], head.Target.TargetPower, hea</td></tr>
+<tr><td>48</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fields = [report.RecipeId, report.Origin, report.StartedAt.ToString(&quot;O&quot;), report.FinishedAt.ToString(&quot;O&quot;), head.Target.HeadNo, head.Target.PowerMeterNo, report.Simulation[head.Target.HeadNo], head.Target.TargetPower, head.Target.O</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.AppendLine(string.Join(&#x27;,&#x27;, fields.Select(value =&gt; &quot;\&quot;&quot; + Convert.ToString(value, CultureInfo.InvariantCulture)?.Replace(&quot;\&quot;&quot;, &quot;\&quot;\&quot;&quot;) + &quot;\&quot;&quot;)))</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&#x27;,&#x27;, fields.Select(value =&gt; &quot;\&quot;&quot; + Convert.ToString(value, CultureInfo.InvariantCulture)?.Replace(&quot;\&quot;&quot;, &quot;\&quot;\&quot;&quot;) + &quot;\&quot;&quot;))</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Select(value =&gt; &quot;\&quot;&quot; + Convert.ToString(value, CultureInfo.InvariantCulture)?.Replace(&quot;\&quot;&quot;, &quot;\&quot;\&quot;&quot;) + &quot;\&quot;&quot;)</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToString(value, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Replace(&quot;\&quot;&quot;, &quot;\&quot;\&quot;&quot;)</td></tr>
+<tr><td>52</td><td>local-declaration</td><td>지역 변수를 선언합니다: var temp = path + &quot;.tmp&quot;;</td></tr>
+<tr><td>52</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: temp = path + &quot;.tmp&quot;</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.WriteAllText(temp, text.ToString(), new UTF8Encoding(true))</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.ToString()</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new UTF8Encoding(true)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temp, path)</td></tr>
+<tr><td>53</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temp)</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temp)</td></tr>
+<tr><td>54</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>54</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(temp))</td></tr>
+<tr><td>55</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return path;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SaveReport&quot;]
+ N0[&quot;L38 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L43 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L46 foreach&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L53 try&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L54 finally&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L54 if&quot;]
+ N3 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L58">MethodDeclaration <code>GetPath</code> · L58–63</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L58-L63">Drilling.File/PowerTable/CPowerTableFile.cs:58–63</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.PowerTable.CPowerTableFile.GetPath(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L74-L74">Drilling.File/PowerTable/CPowerTableFile.cs:74–74</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L153-L153">Drilling.File/PowerTable/CPowerTableFile.cs:153–153</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L189-L189">Drilling.File/PowerTable/CPowerTableFile.cs:189–189</a></td><td>GetPath</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>61</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, string?)</td></tr>
+<tr><td>61</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>62</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>60</td><td>if</td><td>조건에 따라 분기합니다: if (headNo is &lt; 1 or &gt; 8)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(headNo), &quot;PowerTable의 Head 번호는 1~8이어야 합니다.&quot;)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(headNo)</td></tr>
+<tr><td>61</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(headNo), &quot;PowerTable의 Head 번호는 1~8이어야 합니다.&quot;);</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_directory, $&quot;HEAD{headNo:00}.csv&quot;)</td></tr>
+<tr><td>62</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_directory, $&quot;HEAD{headNo:00}.csv&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetPath&quot;]
+ N0[&quot;L60 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L69">MethodDeclaration <code>ResolveAttenuatorAngle</code> · L69–137</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L69-L137">Drilling.File/PowerTable/CPowerTableFile.cs:69–137</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.File.PowerTable.CPowerTableFile.ResolveAttenuatorAngle(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>원본 XML 주석:</p>
+<pre data-language="xml"><code>/// &lt;summary&gt;
+        /// Reads fresh table data, then returns an exact point or a linear interpolation.
+        /// Ambiguous tables and powers outside the measured range are rejected; no extrapolation is performed.
+        /// &lt;/summary&gt;</code></pre>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>powerWatts</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3455-L3455">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3455–3455</a></td><td>table.ResolveAttenuatorAngle</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3590-L3590">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3590–3590</a></td><td>table.ResolveAttenuatorAngle</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4556-L4556">Drilling.UI/Menu/Menus/CMenuManual.cs:4556–4556</a></td><td>table.ResolveAttenuatorAngle</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>73</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>74</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.GetPath(int) · Drilling.File/PowerTable/CPowerTableFile.cs:58</td></tr>
+<tr><td>75</td><td>powerWatts.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>78</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>79</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>80</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>81</td><td>new FileNotFoundException</td><td>resolved</td><td>System.IO.FileNotFoundException.FileNotFoundException(string?, string?)</td></tr>
+<tr><td>82</td><td>CCsvParser.ValidateRequiredHeaders</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:280</td></tr>
+<tr><td>83</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+<tr><td>84</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>86</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>87</td><td>new List&lt;(double Angle, double Power)&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.List(int)</td></tr>
+<tr><td>90</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>92</td><td>ReadNumber</td><td>resolved</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int) · Drilling.File/PowerTable/CPowerTableFile.cs:139</td></tr>
+<tr><td>93</td><td>ReadNumber</td><td>resolved</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int) · Drilling.File/PowerTable/CPowerTableFile.cs:139</td></tr>
+<tr><td>95</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>97</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>98</td><td>points.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Add((double Angle, double Power))</td></tr>
+<tr><td>101</td><td>points.Sort</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Sort(System.Comparison&lt;(double Angle, double Power)&gt;)</td></tr>
+<tr><td>101</td><td>left.Angle.CompareTo</td><td>resolved</td><td>int double.CompareTo(double)</td></tr>
+<tr><td>102</td><td>Math.Sign</td><td>resolved</td><td>int System.Math.Sign(double)</td></tr>
+<tr><td>106</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>106</td><td>Format</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.Format(double) · Drilling.File/PowerTable/CPowerTableFile.cs:147</td></tr>
+<tr><td>107</td><td>Math.Sign</td><td>resolved</td><td>int System.Math.Sign(double)</td></tr>
+<tr><td>108</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>111</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>112</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>114</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>114</td><td>Format</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.Format(double) · Drilling.File/PowerTable/CPowerTableFile.cs:147</td></tr>
+<tr><td>114</td><td>Format</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.Format(double) · Drilling.File/PowerTable/CPowerTableFile.cs:147</td></tr>
+<tr><td>117</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>124</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>124</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>131</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>135</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?, System.Exception?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(headNo)</td></tr>
+<tr><td>74</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(headNo);</td></tr>
+<tr><td>74</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(headNo)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: powerWatts.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>75</td><td>local-declaration</td><td>지역 변수를 선언합니다: var context = $&quot;HEAD {headNo:00} PowerTable 변환 실패 (요청 {powerWatts.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)} W).\n파일: {path}&quot;;</td></tr>
+<tr><td>75</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: context = $&quot;HEAD {headNo:00} PowerTable 변환 실패 (요청 {powerWatts.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)} W).\n파일: {path}&quot;</td></tr>
+<tr><td>76</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(powerWatts)</td></tr>
+<tr><td>78</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(powerWatts) || powerWatts &lt; 0)</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;요청 출력은 0 이상의 유한한 W 값이어야 합니다.&quot;)</td></tr>
+<tr><td>79</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;요청 출력은 0 이상의 유한한 W 값이어야 합니다.&quot;);</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>80</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(path))</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException(&quot;PowerTable 파일이 없습니다.&quot;, path)</td></tr>
+<tr><td>81</td><td>throw</td><td>예외를 발생/전달합니다: throw new FileNotFoundException(&quot;PowerTable 파일이 없습니다.&quot;, path);</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, &quot;PowerTable&quot;, [[&quot;Attenuator_deg&quot;], [&quot;Power_W&quot;]])</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path)</td></tr>
+<tr><td>83</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = CCsvParser.Read(path);</td></tr>
+<tr><td>83</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>85</td><td>if</td><td>조건에 따라 분기합니다: if (rows.Count &lt; 2)</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;PowerTable에는 서로 다른 각도의 측정값이 최소 2개 필요합니다.&quot;)</td></tr>
+<tr><td>86</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;PowerTable에는 서로 다른 각도의 측정값이 최소 2개 필요합니다.&quot;);</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;(double Angle, double Power)&gt;(rows.Count)</td></tr>
+<tr><td>87</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = new List&lt;(double Angle, double Power)&gt;(rows.Count);</td></tr>
+<tr><td>87</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = new List&lt;(double Angle, double Power)&gt;(rows.Count)</td></tr>
+<tr><td>88</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>88</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; rows.Count; index++)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>91</td><td>local-declaration</td><td>지역 변수를 선언합니다: var row = rows[index];</td></tr>
+<tr><td>91</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = rows[index]</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadNumber(row, &quot;Attenuator_deg&quot;, index + 1)</td></tr>
+<tr><td>92</td><td>local-declaration</td><td>지역 변수를 선언합니다: var angle = ReadNumber(row, &quot;Attenuator_deg&quot;, index + 1);</td></tr>
+<tr><td>92</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: angle = ReadNumber(row, &quot;Attenuator_deg&quot;, index + 1)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadNumber(row, &quot;Power_W&quot;, index + 1)</td></tr>
+<tr><td>93</td><td>local-declaration</td><td>지역 변수를 선언합니다: var power = ReadNumber(row, &quot;Power_W&quot;, index + 1);</td></tr>
+<tr><td>93</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: power = ReadNumber(row, &quot;Power_W&quot;, index + 1)</td></tr>
+<tr><td>94</td><td>if</td><td>조건에 따라 분기합니다: if (angle is &lt; 0 or &gt; 360)</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;측정값 {index + 1}: ATT 각도는 0~360 deg 범위여야 합니다.&quot;)</td></tr>
+<tr><td>95</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;측정값 {index + 1}: ATT 각도는 0~360 deg 범위여야 합니다.&quot;);</td></tr>
+<tr><td>96</td><td>if</td><td>조건에 따라 분기합니다: if (power &lt; 0)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;측정값 {index + 1}: Power_W는 0 이상이어야 합니다.&quot;)</td></tr>
+<tr><td>97</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;측정값 {index + 1}: Power_W는 0 이상이어야 합니다.&quot;);</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Add((angle, power))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Sort((left, right) =&gt; left.Angle.CompareTo(right.Angle))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: left.Angle.CompareTo(right.Angle)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sign(points[1].Power - points[0].Power)</td></tr>
+<tr><td>102</td><td>local-declaration</td><td>지역 변수를 선언합니다: var direction = Math.Sign(points[1].Power - points[0].Power);</td></tr>
+<tr><td>102</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: direction = Math.Sign(points[1].Power - points[0].Power)</td></tr>
+<tr><td>103</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 1</td></tr>
+<tr><td>103</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 1; index &lt; points.Count; index++)</td></tr>
+<tr><td>105</td><td>if</td><td>조건에 따라 분기합니다: if (points[index].Angle == points[index - 1].Angle)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;ATT 각도 {Format(points[index].Angle)} deg가 중복되었습니다.&quot;)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(points[index].Angle)</td></tr>
+<tr><td>106</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;ATT 각도 {Format(points[index].Angle)} deg가 중복되었습니다.&quot;);</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sign(points[index].Power - points[index - 1].Power)</td></tr>
+<tr><td>107</td><td>if</td><td>조건에 따라 분기합니다: if (direction == 0 || Math.Sign(points[index].Power - points[index - 1].Power) != direction)</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;ATT 각도 순서에 따른 W 값은 계속 증가하거나 계속 감소해야 합니다. 같은 W 값 또는 방향이 바뀌는 구간이 있어 목표 각도를 결정할 수 없습니다.&quot;)</td></tr>
+<tr><td>108</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;ATT 각도 순서에 따른 W 값은 계속 증가하거나 계속 감소해야 합니다. 같은 W 값 또는 방향이 바뀌는 구간이 있어 목표 각도를 결정할 수 없습니다.&quot;);</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(points[0].Power, points[^1].Power)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minPower = Math.Min(points[0].Power, points[^1].Power);</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minPower = Math.Min(points[0].Power, points[^1].Power)</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(points[0].Power, points[^1].Power)</td></tr>
+<tr><td>112</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxPower = Math.Max(points[0].Power, points[^1].Power);</td></tr>
+<tr><td>112</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxPower = Math.Max(points[0].Power, points[^1].Power)</td></tr>
+<tr><td>113</td><td>if</td><td>조건에 따라 분기합니다: if (powerWatts &lt; minPower || powerWatts &gt; maxPower)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;요청 출력이 PowerTable 범위 {Format(minPower)}~{Format(maxPower)} W를 벗어났습니다.&quot;)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(minPower)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Format(maxPower)</td></tr>
+<tr><td>114</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;요청 출력이 PowerTable 범위 {Format(minPower)}~{Format(maxPower)} W를 벗어났습니다.&quot;);</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>115</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; points.Count; index++)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>118</td><td>local-declaration</td><td>지역 변수를 선언합니다: var point = points[index];</td></tr>
+<tr><td>118</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: point = points[index]</td></tr>
+<tr><td>119</td><td>if</td><td>조건에 따라 분기합니다: if (powerWatts == point.Power)</td></tr>
+<tr><td>120</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return point.Angle;</td></tr>
+<tr><td>121</td><td>if</td><td>조건에 따라 분기합니다: if (index == 0)</td></tr>
+<tr><td>122</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var previous = points[index - 1];</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: previous = points[index - 1]</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(previous.Power, point.Power)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(previous.Power, point.Power)</td></tr>
+<tr><td>124</td><td>if</td><td>조건에 따라 분기합니다: if (powerWatts &gt; Math.Min(previous.Power, point.Power) &amp;&amp; powerWatts &lt; Math.Max(previous.Power, point.Power))</td></tr>
+<tr><td>126</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fraction = (powerWatts - previous.Power) / (point.Power - previous.Power);</td></tr>
+<tr><td>126</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fraction = (powerWatts - previous.Power) / (point.Power - previous.Power)</td></tr>
+<tr><td>127</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return previous.Angle + (point.Angle - previous.Angle) * fraction;</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;요청 출력에 해당하는 ATT 각도를 찾을 수 없습니다.&quot;)</td></tr>
+<tr><td>131</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;요청 출력에 해당하는 ATT 각도를 찾을 수 없습니다.&quot;);</td></tr>
+<tr><td>133</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;{context}\n{exception.Message}&quot;, exception)</td></tr>
+<tr><td>135</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;{context}\n{exception.Message}&quot;, exception);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ResolveAttenuatorAngle&quot;]
+ N0[&quot;L76 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L78 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L80 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L85 if&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L88 for&quot;]
+ N0 --&gt;|포함| N4
+ N5[&quot;L94 if&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L96 if&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L103 for&quot;]
+ N0 --&gt;|포함| N7
+ N8[&quot;L105 if&quot;]
+ N7 --&gt;|포함| N8
+ N9[&quot;L107 if&quot;]
+ N7 --&gt;|포함| N9
+ N10[&quot;L113 if&quot;]
+ N0 --&gt;|포함| N10
+ N11[&quot;L115 for&quot;]
+ N0 --&gt;|포함| N11
+ N12[&quot;L119 if&quot;]
+ N11 --&gt;|포함| N12
+ N13[&quot;L121 if&quot;]
+ N11 --&gt;|포함| N13
+ N14[&quot;L124 if&quot;]
+ N11 --&gt;|포함| N14
+ N15[&quot;L133 catch&quot;]
+ N0 --&gt;|포함| N15</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L139">MethodDeclaration <code>ReadNumber</code> · L139–145</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L139-L145">Drilling.File/PowerTable/CPowerTableFile.cs:139–145</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>measurementNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L92-L92">Drilling.File/PowerTable/CPowerTableFile.cs:92–92</a></td><td>ReadNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L93-L93">Drilling.File/PowerTable/CPowerTableFile.cs:93–93</a></td><td>ReadNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L232-L232">Drilling.File/PowerTable/CPowerTableFile.cs:232–232</a></td><td>ReadNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L233-L233">Drilling.File/PowerTable/CPowerTableFile.cs:233–233</a></td><td>ReadNumber</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>141</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>142</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>142</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>143</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, name)</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = CCsvParser.Get(row, name);</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = CCsvParser.Get(row, name)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>142</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;측정값 {measurementNo}: {name}은 유한한 숫자여야 합니다. 소수점은 &#x27;.&#x27;을 사용하세요. 입력: {text}&quot;)</td></tr>
+<tr><td>143</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;측정값 {measurementNo}: {name}은 유한한 숫자여야 합니다. 소수점은 &#x27;.&#x27;을 사용하세요. 입력: {text}&quot;);</td></tr>
+<tr><td>144</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadNumber&quot;]
+ N0[&quot;L142 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L147">MethodDeclaration <code>Format</code> · L147–147</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L147-L147">Drilling.File/PowerTable/CPowerTableFile.cs:147–147</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.PowerTable.CPowerTableFile.Format(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L106-L106">Drilling.File/PowerTable/CPowerTableFile.cs:106–106</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114">Drilling.File/PowerTable/CPowerTableFile.cs:114–114</a></td><td>Format</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114">Drilling.File/PowerTable/CPowerTableFile.cs:114–114</a></td><td>Format</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>147</td><td>value.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L150">MethodDeclaration <code>FindStart</code> · L150–184</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L150-L184">Drilling.File/PowerTable/CPowerTableFile.cs:150–184</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.File.PowerTable.CPowerTableFile.FindStart(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>targetPower</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>152</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>153</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.GetPath(int) · Drilling.File/PowerTable/CPowerTableFile.cs:58</td></tr>
+<tr><td>154</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>155</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>155</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>157</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>158</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>161</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>162</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>163</td><td>LoadMeasurementPoints</td><td>resolved</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt; Drilling.File.PowerTable.CPowerTableFile.LoadMeasurementPoints(string, System.Threading.CancellationToken) · Drilling.File/PowerTable/CPowerTableFile.cs:224</td></tr>
+<tr><td>164</td><td>points.Where(p =&gt; p.Power == targetPower).ToArray</td><td>resolved</td><td>(double Angle, double Power)[] System.Collections.Generic.IEnumerable&lt;(double Angle, double Power)&gt;.ToArray&lt;(double Angle, double Power)&gt;()</td></tr>
+<tr><td>164</td><td>points.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;(double Angle, double Power)&gt; System.Collections.Generic.IEnumerable&lt;(double Angle, double Power)&gt;.Where&lt;(double Angle, double Power)&gt;(System.Func&lt;(double Angle, double Power), bool&gt;)</td></tr>
+<tr><td>166</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>168</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>169</td><td>new List&lt;double&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;double&gt;.List()</td></tr>
+<tr><td>174</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>174</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>175</td><td>candidates.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;double&gt;.Add(double)</td></tr>
+<tr><td>178</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>178</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>182</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(headNo)</td></tr>
+<tr><td>153</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(headNo);</td></tr>
+<tr><td>153</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(headNo)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(targetPower)</td></tr>
+<tr><td>154</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(targetPower) || targetPower &lt; 0)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(targetPower))</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(targetPower)</td></tr>
+<tr><td>155</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(targetPower));</td></tr>
+<tr><td>157</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>157</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(path) &amp;&amp; _initialDirectory is not null)</td></tr>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: path = Path.Combine(_initialDirectory, $&quot;HEAD{headNo:00}.csv&quot;)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_initialDirectory, $&quot;HEAD{headNo:00}.csv&quot;)</td></tr>
+<tr><td>159</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>161</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(path))</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, &quot;PowerTable 파일 없음&quot;)</td></tr>
+<tr><td>162</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(null, &quot;PowerTable 파일 없음&quot;);</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadMeasurementPoints(path, token)</td></tr>
+<tr><td>163</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = LoadMeasurementPoints(path, token);</td></tr>
+<tr><td>163</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = LoadMeasurementPoints(path, token)</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Where(p =&gt; p.Power == targetPower).ToArray()</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Where(p =&gt; p.Power == targetPower)</td></tr>
+<tr><td>164</td><td>local-declaration</td><td>지역 변수를 선언합니다: var exact = points.Where(p =&gt; p.Power == targetPower).ToArray();</td></tr>
+<tr><td>164</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: exact = points.Where(p =&gt; p.Power == targetPower).ToArray()</td></tr>
+<tr><td>165</td><td>if</td><td>조건에 따라 분기합니다: if (exact.Length == 1)</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(exact[0].Angle, &quot;PowerTable 실측값&quot;)</td></tr>
+<tr><td>166</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(exact[0].Angle, &quot;PowerTable 실측값&quot;);</td></tr>
+<tr><td>167</td><td>if</td><td>조건에 따라 분기합니다: if (exact.Length &gt; 1)</td></tr>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, &quot;목표 W에 해당하는 ATT 각도가 여러 개임&quot;)</td></tr>
+<tr><td>168</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(null, &quot;목표 W에 해당하는 ATT 각도가 여러 개임&quot;);</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;double&gt;()</td></tr>
+<tr><td>169</td><td>local-declaration</td><td>지역 변수를 선언합니다: var candidates = new List&lt;double&gt;();</td></tr>
+<tr><td>169</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: candidates = new List&lt;double&gt;()</td></tr>
+<tr><td>170</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: i = 1</td></tr>
+<tr><td>170</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var i = 1; i &lt; points.Count; i++)</td></tr>
+<tr><td>172</td><td>local-declaration</td><td>지역 변수를 선언합니다: var a = points[i - 1];</td></tr>
+<tr><td>172</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: a = points[i - 1]</td></tr>
+<tr><td>173</td><td>local-declaration</td><td>지역 변수를 선언합니다: var b = points[i];</td></tr>
+<tr><td>173</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: b = points[i]</td></tr>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(a.Power, b.Power)</td></tr>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(a.Power, b.Power)</td></tr>
+<tr><td>174</td><td>if</td><td>조건에 따라 분기합니다: if (targetPower &gt; Math.Min(a.Power, b.Power) &amp;&amp; targetPower &lt; Math.Max(a.Power, b.Power))</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.Add(a.Angle + (targetPower - a.Power) * (b.Angle - a.Angle) / (b.Power - a.Power))</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(candidates[0], &quot;PowerTable 선형 보간&quot;)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, candidates.Count == 0 ? &quot;목표 W를 포함하는 PowerTable 구간 없음&quot; : &quot;목표 W에 해당하는 PowerTable 구간이 여러 개임&quot;)</td></tr>
+<tr><td>178</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: candidates.Count == 1 ? new(candidates[0], &quot;PowerTable 선형 보간&quot;) : new(null, candidates.Count == 0 ? &quot;목표 W를 포함하는 PowerTable 구간 없음&quot; : &quot;목표 W에 해당하는 PowerTable 구간이 여러 개임&quot;)</td></tr>
+<tr><td>178</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: candidates.Count == 0 ? &quot;목표 W를 포함하는 PowerTable 구간 없음&quot; : &quot;목표 W에 해당하는 PowerTable 구간이 여러 개임&quot;</td></tr>
+<tr><td>178</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return candidates.Count == 1 ? new(candidates[0], &quot;PowerTable 선형 보간&quot;) : new(null, candidates.Count == 0 ? &quot;목표 W를 포함하는 PowerTable 구간 없음&quot; : &quot;목표 W에 해당하는 PowerTable 구간이 여러 개임&quot;);</td></tr>
+<tr><td>180</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error) when (error is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, $&quot;PowerTable 조회 불가: {error.Message}&quot;)</td></tr>
+<tr><td>182</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(null, $&quot;PowerTable 조회 불가: {error.Message}&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FindStart&quot;]
+ N0[&quot;L154 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L157 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L159 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L161 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L165 if&quot;]
+ N2 --&gt;|포함| N4
+ N5[&quot;L167 if&quot;]
+ N2 --&gt;|포함| N5
+ N6[&quot;L170 for&quot;]
+ N2 --&gt;|포함| N6
+ N7[&quot;L174 if&quot;]
+ N6 --&gt;|포함| N7
+ N8[&quot;L180 catch&quot;]
+ N2 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L187">MethodDeclaration <code>SaveMeasurement</code> · L187–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L187-L222">Drilling.File/PowerTable/CPowerTableFile.cs:187–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.PowerTable.CPowerTableFile.SaveMeasurement(int, double, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>원본 XML 주석:</p>
+<pre data-language="xml"><code>/// &lt;summary&gt;Keep the final measured W (not the requested W). Replace the same angle, otherwise insert.&lt;/summary&gt;</code></pre>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>measuredPower</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>189</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.PowerTable.CPowerTableFile.GetPath(int) · Drilling.File/PowerTable/CPowerTableFile.cs:58</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>191</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>192</td><td>MeasurementLocks.GetOrAdd</td><td>resolved</td><td>object System.Collections.Concurrent.ConcurrentDictionary&lt;string, object&gt;.GetOrAdd(string, System.Func&lt;string, object&gt;)</td></tr>
+<tr><td>192</td><td>new object</td><td>resolved</td><td>object.Object()</td></tr>
+<tr><td>194</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>196</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>196</td><td>LoadMeasurementPoints</td><td>resolved</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt; Drilling.File.PowerTable.CPowerTableFile.LoadMeasurementPoints(string, System.Threading.CancellationToken) · Drilling.File/PowerTable/CPowerTableFile.cs:224</td></tr>
+<tr><td>197</td><td>points.FindIndex</td><td>resolved</td><td>int System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.FindIndex(System.Predicate&lt;(double Angle, double Power)&gt;)</td></tr>
+<tr><td>197</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>201</td><td>points.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Add((double Angle, double Power))</td></tr>
+<tr><td>202</td><td>points.Sort</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Sort(System.Comparison&lt;(double Angle, double Power)&gt;)</td></tr>
+<tr><td>202</td><td>a.Angle.CompareTo</td><td>resolved</td><td>int double.CompareTo(double)</td></tr>
+<tr><td>203</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+<tr><td>203</td><td>points.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;(double Angle, double Power)&gt;.Select&lt;(double Angle, double Power), string&gt;(System.Func&lt;(double Angle, double Power), string&gt;)</td></tr>
+<tr><td>203</td><td>p.Angle.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>203</td><td>p.Power.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>204</td><td>Directory.CreateDirectory</td><td>resolved</td><td>System.IO.DirectoryInfo System.IO.Directory.CreateDirectory(string)</td></tr>
+<tr><td>205</td><td>Guid.NewGuid().ToString</td><td>resolved</td><td>string System.Guid.ToString(string?)</td></tr>
+<tr><td>205</td><td>Guid.NewGuid</td><td>resolved</td><td>System.Guid System.Guid.NewGuid()</td></tr>
+<tr><td>208</td><td>System.IO.File.WriteAllText</td><td>resolved</td><td>void System.IO.File.WriteAllText(string, string?, System.Text.Encoding)</td></tr>
+<tr><td>208</td><td>new UTF8Encoding</td><td>resolved</td><td>System.Text.UTF8Encoding.UTF8Encoding(bool)</td></tr>
+<tr><td>209</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>211</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>212</td><td>System.IO.File.Replace</td><td>resolved</td><td>void System.IO.File.Replace(string, string, string?)</td></tr>
+<tr><td>214</td><td>System.IO.File.Move</td><td>resolved</td><td>void System.IO.File.Move(string, string)</td></tr>
+<tr><td>218</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>219</td><td>System.IO.File.Delete</td><td>resolved</td><td>void System.IO.File.Delete(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(headNo)</td></tr>
+<tr><td>189</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(headNo);</td></tr>
+<tr><td>189</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(headNo)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(measuredPower)</td></tr>
+<tr><td>190</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(angle) || angle is &lt; 0 or &gt; 360 || !double.IsFinite(measuredPower) || measuredPower &lt; 0)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;PowerTable에는 유효한 ATT 각도(0~360°)와 측정 W(0 이상)만 저장할 수 있습니다.&quot;)</td></tr>
+<tr><td>191</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;PowerTable에는 유효한 ATT 각도(0~360°)와 측정 W(0 이상)만 저장할 수 있습니다.&quot;);</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MeasurementLocks.GetOrAdd(path, _ =&gt; new object ())</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new object ()</td></tr>
+<tr><td>192</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (MeasurementLocks.GetOrAdd(path, _ =&gt; new object ()))</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadMeasurementPoints(path, token)</td></tr>
+<tr><td>196</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: System.IO.File.Exists(path) ? LoadMeasurementPoints(path, token) : []</td></tr>
+<tr><td>196</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = System.IO.File.Exists(path) ? LoadMeasurementPoints(path, token) : [];</td></tr>
+<tr><td>196</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = System.IO.File.Exists(path) ? LoadMeasurementPoints(path, token) : []</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.FindIndex(p =&gt; Math.Abs(p.Angle - angle) &lt;= 0.000001)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(p.Angle - angle)</td></tr>
+<tr><td>197</td><td>local-declaration</td><td>지역 변수를 선언합니다: var index = points.FindIndex(p =&gt; Math.Abs(p.Angle - angle) &lt;= 0.000001);</td></tr>
+<tr><td>197</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = points.FindIndex(p =&gt; Math.Abs(p.Angle - angle) &lt;= 0.000001)</td></tr>
+<tr><td>198</td><td>if</td><td>조건에 따라 분기합니다: if (index &gt;= 0)</td></tr>
+<tr><td>199</td><td>assignment</td><td>값을 대상에 대입합니다: points[index] = (angle, measuredPower)</td></tr>
+<tr><td>200</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Add((angle, measuredPower))</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Sort((a, b) =&gt; a.Angle.CompareTo(b.Angle))</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: a.Angle.CompareTo(b.Angle)</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;\r\n&quot;, points.Select(p =&gt; $&quot;{p.Angle.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)},{p.Power.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)}&quot;))</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p =&gt; $&quot;{p.Angle.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)},{p.Power.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)}&quot;)</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Angle.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Power.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>203</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = &quot;Attenuator_deg,Power_W\r\n&quot; + string.Join(&quot;\r\n&quot;, points.Select(p =&gt; $&quot;{p.Angle.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)},{p.Power.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)}&quot;)) + &quot;\r\n&quot;;</td></tr>
+<tr><td>203</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = &quot;Attenuator_deg,Power_W\r\n&quot; + string.Join(&quot;\r\n&quot;, points.Select(p =&gt; $&quot;{p.Angle.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)},{p.Power.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)}&quot;)) + &quot;\r\n&quot;</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(_directory)</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid().ToString(&quot;N&quot;)</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid()</td></tr>
+<tr><td>205</td><td>local-declaration</td><td>지역 변수를 선언합니다: var temporary = path + &quot;.&quot; + Guid.NewGuid().ToString(&quot;N&quot;) + &quot;.tmp&quot;;</td></tr>
+<tr><td>205</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: temporary = path + &quot;.&quot; + Guid.NewGuid().ToString(&quot;N&quot;) + &quot;.tmp&quot;</td></tr>
+<tr><td>206</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.WriteAllText(temporary, text, new UTF8Encoding(false))</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new UTF8Encoding(false)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>211</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(path))</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporary, path, path + &quot;.bak&quot;)</td></tr>
+<tr><td>213</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporary, path)</td></tr>
+<tr><td>216</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporary)</td></tr>
+<tr><td>218</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(temporary))</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporary)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SaveMeasurement&quot;]
+ N0[&quot;L190 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L192 lock&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L198 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L200 else&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L206 try&quot;]
+ N1 --&gt;|포함| N4
+ N5[&quot;L211 if&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L213 else&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L216 finally&quot;]
+ N4 --&gt;|포함| N7
+ N8[&quot;L218 if&quot;]
+ N7 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>LoadMeasurementPoints</code> · L224–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L224-L243">Drilling.File/PowerTable/CPowerTableFile.cs:224–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt; Drilling.File.PowerTable.CPowerTableFile.LoadMeasurementPoints(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.PowerTable.CPowerTableFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L163-L163">Drilling.File/PowerTable/CPowerTableFile.cs:163–163</a></td><td>LoadMeasurementPoints</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/PowerTable/CPowerTableFile.cs#L196-L196">Drilling.File/PowerTable/CPowerTableFile.cs:196–196</a></td><td>LoadMeasurementPoints</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>226</td><td>CCsvParser.ValidateRequiredHeaders</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:280</td></tr>
+<tr><td>227</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+<tr><td>228</td><td>new List&lt;(double Angle, double Power)&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.List()</td></tr>
+<tr><td>231</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>232</td><td>ReadNumber</td><td>resolved</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int) · Drilling.File/PowerTable/CPowerTableFile.cs:139</td></tr>
+<tr><td>233</td><td>ReadNumber</td><td>resolved</td><td>double Drilling.File.PowerTable.CPowerTableFile.ReadNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int) · Drilling.File/PowerTable/CPowerTableFile.cs:139</td></tr>
+<tr><td>235</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>236</td><td>points.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Add((double Angle, double Power))</td></tr>
+<tr><td>239</td><td>points.Sort</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(double Angle, double Power)&gt;.Sort(System.Comparison&lt;(double Angle, double Power)&gt;)</td></tr>
+<tr><td>239</td><td>a.Angle.CompareTo</td><td>resolved</td><td>int double.CompareTo(double)</td></tr>
+<tr><td>240</td><td>points.Select(p =&gt; p.Angle).Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;double&gt;.Count&lt;double&gt;()</td></tr>
+<tr><td>240</td><td>points.Select(p =&gt; p.Angle).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;double&gt; System.Collections.Generic.IEnumerable&lt;double&gt;.Distinct&lt;double&gt;()</td></tr>
+<tr><td>240</td><td>points.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;double&gt; System.Collections.Generic.IEnumerable&lt;(double Angle, double Power)&gt;.Select&lt;(double Angle, double Power), double&gt;(System.Func&lt;(double Angle, double Power), double&gt;)</td></tr>
+<tr><td>241</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, &quot;PowerTable&quot;, [[&quot;Attenuator_deg&quot;], [&quot;Power_W&quot;]])</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path)</td></tr>
+<tr><td>227</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = CCsvParser.Read(path);</td></tr>
+<tr><td>227</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;(double Angle, double Power)&gt;()</td></tr>
+<tr><td>228</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = new List&lt;(double Angle, double Power)&gt;();</td></tr>
+<tr><td>228</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = new List&lt;(double Angle, double Power)&gt;()</td></tr>
+<tr><td>229</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var row in rows)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadNumber(row, &quot;Attenuator_deg&quot;, points.Count + 1)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var angle = ReadNumber(row, &quot;Attenuator_deg&quot;, points.Count + 1);</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: angle = ReadNumber(row, &quot;Attenuator_deg&quot;, points.Count + 1)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadNumber(row, &quot;Power_W&quot;, points.Count + 1)</td></tr>
+<tr><td>233</td><td>local-declaration</td><td>지역 변수를 선언합니다: var power = ReadNumber(row, &quot;Power_W&quot;, points.Count + 1);</td></tr>
+<tr><td>233</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: power = ReadNumber(row, &quot;Power_W&quot;, points.Count + 1)</td></tr>
+<tr><td>234</td><td>if</td><td>조건에 따라 분기합니다: if (angle is &lt; 0 or &gt; 360 || power &lt; 0)</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;PowerTable의 각도 또는 출력 범위가 올바르지 않습니다.&quot;)</td></tr>
+<tr><td>235</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;PowerTable의 각도 또는 출력 범위가 올바르지 않습니다.&quot;);</td></tr>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Add((angle, power))</td></tr>
+<tr><td>239</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Sort((a, b) =&gt; a.Angle.CompareTo(b.Angle))</td></tr>
+<tr><td>239</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: a.Angle.CompareTo(b.Angle)</td></tr>
+<tr><td>240</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p =&gt; p.Angle).Distinct().Count()</td></tr>
+<tr><td>240</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p =&gt; p.Angle).Distinct()</td></tr>
+<tr><td>240</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p =&gt; p.Angle)</td></tr>
+<tr><td>240</td><td>if</td><td>조건에 따라 분기합니다: if (points.Select(p =&gt; p.Angle).Distinct().Count() != points.Count)</td></tr>
+<tr><td>241</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;PowerTable에 중복 ATT 각도가 있습니다.&quot;)</td></tr>
+<tr><td>241</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;PowerTable에 중복 ATT 각도가 있습니다.&quot;);</td></tr>
+<tr><td>242</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return points;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;LoadMeasurementPoints&quot;]
+ N0[&quot;L229 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L234 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L240 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.File/PowerTable/CPowerTableFile.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

@@ -1,0 +1,1121 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Station/CStationManager.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Station
+L000001 | namespace Drilling.Common.Station ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000003 |     using Drilling.Common.Log; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000005 |     using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000006 |     using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000007 |     using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000008 |     using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000009 |     using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Product;
+L000010 |     using Drilling.Common.Product; ⟦EOL⟧
+// 해설 L11: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000011 |     using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L12: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Automation;
+L000012 |     using Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L13: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000013 |     using Drilling.Common.Review; ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 타입의 구조/상속 선언입니다: public sealed class CStationManager
+L000015 |     public sealed class CStationManager ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StartZeroLinePrewaitMonitoring(selectedRecipe)
+L000017 |         public void StartZeroLinePrewaitMonitoring(Func<string> selectedRecipe) => _processStation.StartZeroLinePrewaitMonitoring(selectedRecipe); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StopZeroLinePrewaitMonitoring()
+L000018 |         public Task StopZeroLinePrewaitMonitoring() => _processStation.StopZeroLinePrewaitMonitoring(); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.CompleteZeroLineFollowUp(runId, token)
+L000019 |         public Task CompleteZeroLineFollowUp(Guid runId, CancellationToken token = default) => _processStation.CompleteZeroLineFollowUp(runId, token); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StartProtectWindowCompletionMonitoring(selectedRecipe)
+L000020 |         public void StartProtectWindowCompletionMonitoring(Func<string> selectedRecipe) => _processStation.StartProtectWindowCompletionMonitoring(selectedRecipe); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StopProtectWindowCompletionMonitoring()
+L000021 |         public Task StopProtectWindowCompletionMonitoring() => _processStation.StopProtectWindowCompletionMonitoring(); ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_MANUAL_MOF_STATUS Drilling.Common.Station.CStationManager.ManualMofStatus
+L000022 |         public ST_MANUAL_MOF_STATUS ManualMofStatus => _processStation.ManualMofStatus; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_MANUAL_MOF_COMPLETION? Drilling.Common.Station.CStationManager.LastCompletedManualMof
+L000023 |         public ST_MANUAL_MOF_COMPLETION? LastCompletedManualMof => _processStation.LastCompletedManualMof; ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.RunManualMofAsync(request, heads, token)
+L000025 |         public Task RunManualMofAsync(ST_STAGE_PROCESS_REQUEST request, IReadOnlySet<int> heads, CancellationToken token = default) => _processStation.RunManualMofAsync(request, heads, token); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StopManualMofAsync()
+L000026 |         public Task StopManualMofAsync() => _processStation.StopManualMofAsync(); ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStageRequestSequence Drilling.Common.Station.CStationManager.StageRequests
+L000027 |         public CStageRequestSequence StageRequests => _processStation.StageRequests; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStationManager.CanReset
+L000028 |         public bool CanReset => _processStation.CanReset; ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.StartStageRequests(request, review, tpm, distortion)
+L000030 |         public void StartStageRequests(Func<CancellationToken, Task<ST_STAGE_PROCESS_REQUEST>> request, ST_STAGE_REVIEW_ACTIONS? review = null, ST_STAGE_TPM_ACTIONS? tpm = null, ST_STAGE_DISTORTION_ACTIONS? distortion = null) => _processStation.StartStageRequests(request, review, tpm, distortion); ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationProcess Drilling.Common.Station.CStationManager._processStation
+L000031 |         private readonly CStationProcess _processStation; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000032 |         public CStationManager( ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000033 |             CInterfaceManager interfaceManager,  ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000034 |             CMotionManager motionManager,  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000035 |             CInterLockManager interLockManager,  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000036 |             CSettingManager settingManager,  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000037 |             CAutomationScriptFileBase automationScriptFile,  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000038 |             CAutomationManager automationManager,  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000039 |             CReviewOffsetFileBase? reviewOffsetFile = null,  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000040 |             CProductManager? productManager = null,  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000041 |             CLogManager? logManager = null,  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000042 |             string? scriptDirectory = null,  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000043 |             CRecipeManager? recipeManager = null,  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000044 |             Review.CReviewManager? zeroLineReview = null ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000045 |         ) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 .ctor.
+L000046 |         { ⟦EOL⟧
+// 해설 L47: 값을 대상에 대입합니다: _processStation = new CStationProcess( interfaceManager, motionManager, interLockManager, settingManager, automationScriptFile, automationManager, reviewOffsetFile, productManager, logManager, scriptDirectory: scriptDirectory, rec / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CStationProcess( interfaceManager, motionManager, interLockManager, settingManager, automationScriptFile, automationManager, reviewOffsetFile, productManager, logManager, scriptDirectory: scriptDirectory, recipeManag…
+L000047 |             _processStation = new CStationProcess( ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000048 |                 interfaceManager,  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000049 |                 motionManager,  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000050 |                 interLockManager,  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000051 |                 settingManager,  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000052 |                 automationScriptFile,  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000053 |                 automationManager,  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000054 |                 reviewOffsetFile,  ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000055 |                 productManager,  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000056 |                 logManager,  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000057 |                 scriptDirectory: scriptDirectory,  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000058 |                 recipeManager: recipeManager,  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000059 |                 zeroLineReview: zeroLineReview ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager.CStationManager(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.
+L000060 |             ); ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 .ctor.
+L000061 |         } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.GetStatus(System.Threading.CancellationToken)
+L000063 |         public ST_STATION_PROCESS_STATUS GetStatus(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 GetStatus.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000065 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L66: 호출자에게 값 또는 제어를 반환합니다: return _processStation.Current;
+L000066 |             return _processStation.Current; ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 GetStatus.
+L000067 |         } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.GetLiveInterlockItems(parameters, cancellationToken)
+L000069 |         public IReadOnlyList<ST_INTERLOCK_ITEM> GetLiveInterlockItems(IReadOnlyDictionary<string, string> parameters, CancellationToken cancellationToken = default) => _processStation.GetLiveInterlockItems(parameters, cancellationToken); ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.Station.CStationManager.GetLiveInterlockItems(System.Threading.CancellationToken)
+L000070 |         public IReadOnlyList<ST_INTERLOCK_ITEM> GetLiveInterlockItems(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 GetLiveInterlockItems.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000072 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.GetLiveInterlockItems(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _processStation.GetLiveInterlockItems(cancellationToken);
+L000073 |             return _processStation.GetLiveInterlockItems(cancellationToken); ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 GetLiveInterlockItems.
+L000074 |         } ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.GetManualInterlockItems(parameters, selectedHeads, cancellationToken)
+L000076 |         public IReadOnlyList<ST_INTERLOCK_ITEM> GetManualInterlockItems(IReadOnlyDictionary<string, string> parameters, IReadOnlySet<int> selectedHeads, CancellationToken cancellationToken = default) => _processStation.GetManualInterlockItems(parameters, selectedHeads, cancellationToken); ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Station.ST_STATION_STATUS> Drilling.Common.Station.CStationManager.GetStationStatus(System.Threading.CancellationToken)
+L000077 |         public IReadOnlyList<ST_STATION_STATUS> GetStationStatus(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 GetStationStatus.
+L000078 |         { ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000079 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L80: 호출자에게 값 또는 제어를 반환합니다: return[_processStation.Status];
+L000080 |             return[_processStation.Status]; ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 GetStationStatus.
+L000081 |         } ⟦EOL⟧
+L000082 |  ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Station.ST_STATION_PROCESS_FLOW_ITEM> Drilling.Common.Station.CStationManager.GetProcessFlow()
+L000083 |         public IReadOnlyList<ST_STATION_PROCESS_FLOW_ITEM> GetProcessFlow() ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 GetProcessFlow.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStationProcess.GetProcessFlow() / 호출자에게 값 또는 제어를 반환합니다: return CStationProcess.GetProcessFlow();
+L000085 |             return CStationProcess.GetProcessFlow(); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 GetProcessFlow.
+L000086 |         } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.PrepareProcess(string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Th
+L000088 |         public ST_STATION_PROCESS_STATUS PrepareProcess(string processId, string recipeId, string glassId, string lotId, IReadOnlyDictionary<string, string> parameters, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 PrepareProcess.
+L000089 |         { ⟦EOL⟧
+// 해설 L90: 조건에 따라 분기합니다: if (StageRequests.IsRunning)
+L000090 |             if (StageRequests.IsRunning) ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Stage request monitoring is active.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Stage request monitoring is active.");
+L000091 |                 throw new InvalidOperationException("AUTO Stage request monitoring is active."); ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.PrepareProcess(processId, recipeId, glassId, lotId, parameters, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _processStation.PrepareProcess(processId, recipeId, glassId, lotId, parameters, cancellationToken);
+L000092 |             return _processStation.PrepareProcess(processId, recipeId, glassId, lotId, parameters, cancellationToken); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 PrepareProcess.
+L000093 |         } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.Start(System.Threading.CancellationToken)
+L000095 |         public ST_STATION_PROCESS_STATUS Start(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Start.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 조건에 따라 분기합니다: if (StageRequests.IsRunning)
+L000097 |             if (StageRequests.IsRunning) ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO execution is controlled by Stage requests.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO execution is controlled by Stage requests.");
+L000098 |                 throw new InvalidOperationException("AUTO execution is controlled by Stage requests."); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.Start(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _processStation.Start(cancellationToken);
+L000099 |             return _processStation.Start(cancellationToken); ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 Start.
+L000100 |         } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.Stop(System.Threading.CancellationToken)
+L000102 |         public ST_STATION_PROCESS_STATUS Stop(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 Stop.
+L000103 |         { ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.Stop(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _processStation.Stop(cancellationToken);
+L000104 |             return _processStation.Stop(cancellationToken); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 Stop.
+L000105 |         } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.Reset(System.Threading.CancellationToken)
+L000107 |         public ST_STATION_PROCESS_STATUS Reset(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 Reset.
+L000108 |         { ⟦EOL⟧
+// 해설 L109: 조건에 따라 분기합니다: if (StageRequests.IsRunning)
+L000109 |             if (StageRequests.IsRunning) ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stop AUTO Stage request monitoring before RESET.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stop AUTO Stage request monitoring before RESET.");
+L000110 |                 throw new InvalidOperationException("Stop AUTO Stage request monitoring before RESET."); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.Reset(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _processStation.Reset(cancellationToken);
+L000111 |             return _processStation.Reset(cancellationToken); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 Reset.
+L000112 |         } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStationManager.InvalidatePreparedReviewOffset()
+L000114 |         public void InvalidatePreparedReviewOffset() ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 InvalidatePreparedReviewOffset.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 조건에 따라 분기합니다: if (StageRequests.IsRunning)
+L000116 |             if (StageRequests.IsRunning) ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Stage request monitoring이 실행 중일 때 Review Offset을 롤백할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Stage request monitoring이 실행 중일 때 Review Offset을 롤백할 수 없습니다.");
+L000117 |                 throw new InvalidOperationException("AUTO Stage request monitoring이 실행 중일 때 Review Offset을 롤백할 수 없습니다."); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: _processStation.InvalidatePreparedReviewOffset()
+L000118 |             _processStation.InvalidatePreparedReviewOffset(); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 InvalidatePreparedReviewOffset.
+L000119 |         } ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다.
+L000120 |     } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 타입의 구조/상속 선언입니다: public enum EN_SEQUENCE_ACTION_STATE
+L000122 |     public enum EN_SEQUENCE_ACTION_STATE ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다.
+L000123 |     { ⟦EOL⟧
+// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE.Waiting
+L000124 |         Waiting, ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE.Running
+L000125 |         Running, ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE.Completed
+L000126 |         Completed, ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE.Error
+L000127 |         Error, ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE.Stopped
+L000128 |         Stopped ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다.
+L000129 |     } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 타입의 구조/상속 선언입니다: public sealed record ST_SEQUENCE_ACTION_STATUS(string Id, EN_SEQUENCE_ACTION_STATE State, string Detail = "");
+L000131 |     public sealed record ST_SEQUENCE_ACTION_STATUS(string Id, EN_SEQUENCE_ACTION_STATE State, string Detail = ""); ⟦EOL⟧
+// 해설 L132: 타입의 구조/상속 선언입니다: public static class CSequenceActionIds
+L000132 |     public static class CSequenceActionIds ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다.
+L000133 |     { ⟦EOL⟧
+// 해설 L134: 변수의 초기값을 지정합니다: PrepareData = "DOREADY_DATA_PREPARE"
+L000134 |         public const string PrepareData = "DOREADY_DATA_PREPARE"; ⟦EOL⟧
+// 해설 L135: 변수의 초기값을 지정합니다: DistortionPrepare = "DISTORTION_PREPARE"
+L000135 |         public const string DistortionPrepare = "DISTORTION_PREPARE"; ⟦EOL⟧
+// 해설 L136: 변수의 초기값을 지정합니다: DistortionLoad = "DISTORTION_LOAD"
+L000136 |         public const string DistortionLoad = "DISTORTION_LOAD"; ⟦EOL⟧
+// 해설 L137: 변수의 초기값을 지정합니다: DistortionCalculate = "DISTORTION_CALCULATE"
+L000137 |         public const string DistortionCalculate = "DISTORTION_CALCULATE"; ⟦EOL⟧
+// 해설 L138: 변수의 초기값을 지정합니다: DistortionSave = "DISTORTION_SAVE"
+L000138 |         public const string DistortionSave = "DISTORTION_SAVE"; ⟦EOL⟧
+// 해설 L139: 변수의 초기값을 지정합니다: DistortionSignalsClear = "DISTORTION_SIGNALS_CLEAR"
+L000139 |         public const string DistortionSignalsClear = "DISTORTION_SIGNALS_CLEAR"; ⟦EOL⟧
+// 해설 L140: 변수의 초기값을 지정합니다: BuildUploadScript = "DOREADY_SCRIPT_BUILD_UPLOAD"
+L000140 |         public const string BuildUploadScript = "DOREADY_SCRIPT_BUILD_UPLOAD"; ⟦EOL⟧
+// 해설 L141: 변수의 초기값을 지정합니다: DoReadySignalsClear = "DOREADY_SIGNALS_CLEAR"
+L000141 |         public const string DoReadySignalsClear = "DOREADY_SIGNALS_CLEAR"; ⟦EOL⟧
+// 해설 L142: 변수의 초기값을 지정합니다: ProcessReadyPosition = "PROCESS_READY_POSITION"
+L000142 |         public const string ProcessReadyPosition = "PROCESS_READY_POSITION"; ⟦EOL⟧
+// 해설 L143: 변수의 초기값을 지정합니다: ProcessMofZero = "PROCESS_MOF_ZERO"
+L000143 |         public const string ProcessMofZero = "PROCESS_MOF_ZERO"; ⟦EOL⟧
+// 해설 L144: 변수의 초기값을 지정합니다: ProcessTaskRun = "PROCESS_TASK_RUN"
+L000144 |         public const string ProcessTaskRun = "PROCESS_TASK_RUN"; ⟦EOL⟧
+// 해설 L145: 변수의 초기값을 지정합니다: ProcessMachining = "PROCESS_MACHINING_INSPECTION"
+L000145 |         public const string ProcessMachining = "PROCESS_MACHINING_INSPECTION"; ⟦EOL⟧
+// 해설 L146: 변수의 초기값을 지정합니다: ProcessResults = "PROCESS_RESULTS"
+L000146 |         public const string ProcessResults = "PROCESS_RESULTS"; ⟦EOL⟧
+// 해설 L147: 변수의 초기값을 지정합니다: ProcessZeroPrepare = "PROCESS_ZERO_PREPARE"
+L000147 |         public const string ProcessZeroPrepare = "PROCESS_ZERO_PREPARE"; ⟦EOL⟧
+// 해설 L148: 변수의 초기값을 지정합니다: ProcessZeroMeasure = "PROCESS_ZERO_MEASURE"
+L000148 |         public const string ProcessZeroMeasure = "PROCESS_ZERO_MEASURE"; ⟦EOL⟧
+// 해설 L149: 변수의 초기값을 지정합니다: ProcessZeroResults = "PROCESS_ZERO_RESULTS"
+L000149 |         public const string ProcessZeroResults = "PROCESS_ZERO_RESULTS"; ⟦EOL⟧
+// 해설 L150: 변수의 초기값을 지정합니다: ProcessSignalsClear = "PROCESS_SIGNALS_CLEAR"
+L000150 |         public const string ProcessSignalsClear = "PROCESS_SIGNALS_CLEAR"; ⟦EOL⟧
+// 해설 L151: 변수의 초기값을 지정합니다: ReviewPlan = "REVIEW_PLAN"
+L000151 |         public const string ReviewPlan = "REVIEW_PLAN"; ⟦EOL⟧
+// 해설 L152: 변수의 초기값을 지정합니다: ReviewMeasure = "REVIEW_MEASURE"
+L000152 |         public const string ReviewMeasure = "REVIEW_MEASURE"; ⟦EOL⟧
+// 해설 L153: 변수의 초기값을 지정합니다: ReviewResults = "REVIEW_RESULTS"
+L000153 |         public const string ReviewResults = "REVIEW_RESULTS"; ⟦EOL⟧
+// 해설 L154: 변수의 초기값을 지정합니다: ReviewSignalsClear = "REVIEW_SIGNALS_CLEAR"
+L000154 |         public const string ReviewSignalsClear = "REVIEW_SIGNALS_CLEAR"; ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다.
+L000155 |     } ⟦EOL⟧
+L000156 |  ⟦EOL⟧
+// 해설 L157: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000157 |     /// <summary>In-memory execution feedback. Never holds its lock while an action executes.</summary> ⟦EOL⟧
+// 해설 L158: 타입의 구조/상속 선언입니다: public sealed class CSequenceActionStatusStore
+L000158 |     public sealed class CSequenceActionStatusStore ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다.
+L000159 |     { ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _sync = new()
+L000160 |         private readonly object _sync = new(); ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: _states = new(StringComparer.OrdinalIgnoreCase)
+L000161 |         private readonly Dictionary<string, (long Run, ST_SEQUENCE_ACTION_STATUS Status)> _states = new(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Station.CSequenceActionStatusStore._run
+L000162 |         private long _run; ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Station.ST_SEQUENCE_ACTION_STATUS> Drilling.Common.Station.CSequenceActionStatusStore.GetSnapshot()
+L000163 |         public IReadOnlyDictionary<string, ST_SEQUENCE_ACTION_STATUS> GetSnapshot() ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000165 |             lock (_sync) ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: _states.ToDictionary(pair => pair.Key, pair => pair.Value.Status, StringComparer.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return _states.ToDictionary(pair => pair.Key, pair => pair.Value.Status, StringComparer.OrdinalIgnoreCase);
+L000166 |                 return _states.ToDictionary(pair => pair.Key, pair => pair.Value.Status, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000167 |         } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CSequenceActionStatusStore.Reset()
+L000169 |         public void Reset() ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 Reset.
+L000170 |         { ⟦EOL⟧
+// 해설 L171: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000171 |             lock (_sync) ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: _states.Clear()
+L000172 |                 _states.Clear(); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 Reset.
+L000173 |         } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CSequenceActionStatusStore.ResetToWaiting(System.Collections.Generic.IEnumerable<string>)
+L000175 |         public void ResetToWaiting(IEnumerable<string> ids) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 ResetToWaiting.
+L000176 |         { ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(ids)
+L000177 |             ArgumentNullException.ThrowIfNull(ids); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Distinct(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var selected = ids.Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); / 변수의 초기값을 지정합니다: selected = ids.Distinct(StringComparer.OrdinalIgnoreCase).ToArray()
+L000178 |             var selected = ids.Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L179: 컬렉션 요소를 순회합니다: foreach (var id in selected)
+L000179 |             foreach (var id in selected) ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(id)
+L000180 |                 ArgumentException.ThrowIfNullOrWhiteSpace(id); ⟦EOL⟧
+// 해설 L181: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000181 |             lock (_sync) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 ResetToWaiting.
+L000182 |             { ⟦EOL⟧
+// 해설 L183: 컬렉션 요소를 순회합니다: foreach (var id in selected)
+L000183 |                 foreach (var id in selected) ⟦EOL⟧
+// 해설 L184: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000184 |                     // A fresh run identity prevents an earlier completion from restoring DONE. ⟦EOL⟧
+// 해설 L185: 값을 대상에 대입합니다: _states[id] = (++_run, new(id, EN_SEQUENCE_ACTION_STATE.Waiting)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(id, EN_SEQUENCE_ACTION_STATE.Waiting)
+L000185 |                     _states[id] = (++_run, new(id, EN_SEQUENCE_ACTION_STATE.Waiting)); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 ResetToWaiting.
+L000186 |             } ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 ResetToWaiting.
+L000187 |         } ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CSequenceActionStatusStore.SetError(string, string)
+L000189 |         public void SetError(string id, string detail) ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 SetError.
+L000190 |         { ⟦EOL⟧
+// 해설 L191: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000191 |             lock (_sync) ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: _states.TryGetValue(id, out var entry) / 조건에 따라 분기합니다: if (_states.TryGetValue(id, out var entry))
+L000192 |                 if (_states.TryGetValue(id, out var entry)) ⟦EOL⟧
+// 해설 L193: 값을 대상에 대입합니다: _states[id] = (entry.Run, new(id, EN_SEQUENCE_ACTION_STATE.Error, detail)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(id, EN_SEQUENCE_ACTION_STATE.Error, detail)
+L000193 |                     _states[id] = (entry.Run, new(id, EN_SEQUENCE_ACTION_STATE.Error, detail)); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 SetError.
+L000194 |         } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: RunAsync(id, () => { action(); return Task.CompletedTask; }).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunAsync(id, () => { action(); return Task.CompletedTask; }).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunAsync(id, () => { action(); return Task.CompletedTask; })
+L000196 |         public void Run(string id, Action action) => RunAsync(id, () => ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 Run.
+L000197 |         { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: action()
+L000198 |             action(); ⟦EOL⟧
+// 해설 L199: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000199 |             return Task.CompletedTask; ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CSequenceActionStatusStore.Run(string, System.Action)
+L000200 |         }).GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CSequenceActionStatusStore.RunAsync(string, System.Func<System.Threading.Tasks.Task>, bool)
+L000201 |         public async Task RunAsync(string id, Func<Task> action, bool resetToWaitingOnSuccess = false) ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 RunAsync.
+L000202 |         { ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(id)
+L000203 |             ArgumentException.ThrowIfNullOrWhiteSpace(id); ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(action)
+L000204 |             ArgumentNullException.ThrowIfNull(action); ⟦EOL⟧
+// 해설 L205: 지역 변수를 선언합니다: long run;
+L000205 |             long run; ⟦EOL⟧
+// 해설 L206: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000206 |             lock (_sync) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 RunAsync.
+L000207 |             { ⟦EOL⟧
+// 해설 L208: 값을 대상에 대입합니다: run = ++_run
+L000208 |                 run = ++_run; ⟦EOL⟧
+// 해설 L209: 값을 대상에 대입합니다: _states[id] = (run, new(id, EN_SEQUENCE_ACTION_STATE.Running)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(id, EN_SEQUENCE_ACTION_STATE.Running)
+L000209 |                 _states[id] = (run, new(id, EN_SEQUENCE_ACTION_STATE.Running)); ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 RunAsync.
+L000210 |             } ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 예외 처리 범위입니다: try
+L000212 |             try ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 RunAsync.
+L000213 |             { ⟦EOL⟧
+// 해설 L214: 비동기 완료를 기다립니다: await action().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: action().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: action()
+L000214 |                 await action().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: Finish(resetToWaitingOnSuccess ? EN_SEQUENCE_ACTION_STATE.Waiting : EN_SEQUENCE_ACTION_STATE.Completed, "") / 조건에 따라 결과식을 선택합니다: resetToWaitingOnSuccess ? EN_SEQUENCE_ACTION_STATE.Waiting : EN_SEQUENCE_ACTION_STATE.Completed
+L000215 |                 Finish(resetToWaitingOnSuccess ? EN_SEQUENCE_ACTION_STATE.Waiting : EN_SEQUENCE_ACTION_STATE.Completed, ""); ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 RunAsync.
+L000216 |             } ⟦EOL⟧
+// 해설 L217: 지정 예외를 처리합니다: catch (OperationCanceledException exception)
+L000217 |             catch (OperationCanceledException exception) ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 RunAsync.
+L000218 |             { ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: Finish(EN_SEQUENCE_ACTION_STATE.Stopped, exception.Message)
+L000219 |                 Finish(EN_SEQUENCE_ACTION_STATE.Stopped, exception.Message); ⟦EOL⟧
+// 해설 L220: 예외를 발생/전달합니다: throw;
+L000220 |                 throw; ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 RunAsync.
+L000221 |             } ⟦EOL⟧
+// 해설 L222: 지정 예외를 처리합니다: catch (Exception exception)
+L000222 |             catch (Exception exception) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 RunAsync.
+L000223 |             { ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: Finish(EN_SEQUENCE_ACTION_STATE.Error, exception.Message)
+L000224 |                 Finish(EN_SEQUENCE_ACTION_STATE.Error, exception.Message); ⟦EOL⟧
+// 해설 L225: 예외를 발생/전달합니다: throw;
+L000225 |                 throw; ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 RunAsync.
+L000226 |             } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · void Finish(Drilling.Common.Station.EN_SEQUENCE_ACTION_STATE, string)
+L000228 |             void Finish(EN_SEQUENCE_ACTION_STATE state, string detail) ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 Finish.
+L000229 |             { ⟦EOL⟧
+// 해설 L230: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000230 |                 lock (_sync) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 Finish.
+L000231 |                 { ⟦EOL⟧
+// 해설 L232: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000232 |                     // An earlier execution must not republish after RESET or a new execution. ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: _states.TryGetValue(id, out var entry) / 조건에 따라 분기합니다: if (_states.TryGetValue(id, out var entry) && entry.Run == run)
+L000233 |                     if (_states.TryGetValue(id, out var entry) && entry.Run == run) ⟦EOL⟧
+// 해설 L234: 값을 대상에 대입합니다: _states[id] = (run, new(id, state, detail)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(id, state, detail)
+L000234 |                         _states[id] = (run, new(id, state, detail)); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 Finish.
+L000235 |                 } ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 Finish.
+L000236 |             } ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 RunAsync.
+L000237 |         } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다.
+L000238 |     } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 타입의 구조/상속 선언입니다: public enum EN_SCRIPT_STATUS
+L000240 |     public enum EN_SCRIPT_STATUS ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다.
+L000241 |     { ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SCRIPT_STATUS.NotCreated
+L000242 |         NotCreated, ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SCRIPT_STATUS.Created
+L000243 |         Created, ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SCRIPT_STATUS.Running
+L000244 |         Running, ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SCRIPT_STATUS.Completed
+L000245 |         Completed, ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_SCRIPT_STATUS.Error
+L000246 |         Error ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다.
+L000247 |     } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 타입의 구조/상속 선언입니다: public enum EN_PROCESS_STEP
+L000249 |     public enum EN_PROCESS_STEP ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다.
+L000250 |     { ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Idle
+L000251 |         Idle, ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.PowerCheck
+L000252 |         PowerCheck = 3, ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Align
+L000253 |         Align, ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Process
+L000254 |         Process, ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Inspection
+L000255 |         Inspection, ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Completed
+L000256 |         Completed, ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Stopped
+L000257 |         Stopped, ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP.Error
+L000258 |         Error ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다.
+L000259 |     } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 타입의 구조/상속 선언입니다: public enum EN_STATION_SEQUENCE
+L000261 |     public enum EN_STATION_SEQUENCE ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다.
+L000262 |     { ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Ready
+L000263 |         Ready, ⟦EOL⟧
+// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.PowerCheck
+L000264 |         PowerCheck = 3, ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Align
+L000265 |         Align, ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Process
+L000266 |         Process, ⟦EOL⟧
+// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Inspection
+L000267 |         Inspection, ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Complete
+L000268 |         Complete, ⟦EOL⟧
+// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Stop
+L000269 |         Stop, ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Reset
+L000270 |         Reset, ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE.Error
+L000271 |         Error ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다.
+L000272 |     } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 타입의 구조/상속 선언입니다: public enum EN_HEAD_PROCESS_STATUS
+L000274 |     public enum EN_HEAD_PROCESS_STATUS ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다.
+L000275 |     { ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_HEAD_PROCESS_STATUS.Ready
+L000276 |         Ready, ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_HEAD_PROCESS_STATUS.Running
+L000277 |         Running, ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_HEAD_PROCESS_STATUS.Completed
+L000278 |         Completed, ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_HEAD_PROCESS_STATUS.Error
+L000279 |         Error, ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_HEAD_PROCESS_STATUS.Disabled
+L000280 |         Disabled ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다.
+L000281 |     } ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 타입의 구조/상속 선언입니다: public enum EN_STATION_ID
+L000283 |     public enum EN_STATION_ID ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다.
+L000284 |     { ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_ID.Process
+L000285 |         Process = 0 ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다.
+L000286 |     } ⟦EOL⟧
+L000287 |  ⟦EOL⟧
+// 해설 L288: 타입의 구조/상속 선언입니다: public enum EN_STATION_STATE
+L000288 |     public enum EN_STATION_STATE ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다.
+L000289 |     { ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Idle
+L000290 |         Idle, ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Check
+L000291 |         Check, ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Process
+L000292 |         Process, ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Complete
+L000293 |         Complete, ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Alarm
+L000294 |         Alarm, ⟦EOL⟧
+// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_STATE.Stopped
+L000295 |         Stopped ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다.
+L000296 |     } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 타입의 구조/상속 선언입니다: public sealed record ST_HEAD_PROCESS_PLAN(
+L000298 |     public sealed record ST_HEAD_PROCESS_PLAN( ⟦EOL⟧
+// 해설 L299: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000299 |         int HeadNo,  ⟦EOL⟧
+// 해설 L300: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000300 |         double LaserPower,  ⟦EOL⟧
+// 해설 L301: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000301 |         double FrequencyKhz,  ⟦EOL⟧
+// 해설 L302: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000302 |         int ShotCount,  ⟦EOL⟧
+// 해설 L303: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000303 |         double MarkSpeed,  ⟦EOL⟧
+// 해설 L304: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000304 |         double JumpSpeed,  ⟦EOL⟧
+// 해설 L305: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000305 |         double ScannerXRampRate,  ⟦EOL⟧
+// 해설 L306: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000306 |         double ScannerYRampRate,  ⟦EOL⟧
+// 해설 L307: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000307 |         double ScannerZRampRate,  ⟦EOL⟧
+// 해설 L308: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000308 |         double ScannerZSpeed,  ⟦EOL⟧
+// 해설 L309: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000309 |         double ScannerAccLimit,  ⟦EOL⟧
+// 해설 L310: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000310 |         double DoeZPosition,  ⟦EOL⟧
+// 해설 L311: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000311 |         IReadOnlyList<ST_HEAD_SHOT_POINT> Shots ⟦EOL⟧
+// 해설 L312: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000312 |     ) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다.
+L000313 |     { ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Station.ST_HEAD_PROCESS_PLAN.AutomationNo
+L000314 |         public int AutomationNo { get; init; } = 0; ⟦EOL⟧
+// 해설 L315: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Station.ST_HEAD_PROCESS_PLAN.TaskNo
+L000315 |         public int TaskNo { get; init; } = HeadNo; ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.ST_HEAD_PROCESS_PLAN.ScriptFileName
+L000316 |         public string ScriptFileName { get; init; } = $"PROCESS_H{HeadNo:00}.ascript"; ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다.
+L000317 |     } ⟦EOL⟧
+L000318 |  ⟦EOL⟧
+// 해설 L319: 타입의 구조/상속 선언입니다: public sealed record ST_PROCESS_MODEL(
+L000319 |     public sealed record ST_PROCESS_MODEL( ⟦EOL⟧
+// 해설 L320: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000320 |         string ProcessId,  ⟦EOL⟧
+// 해설 L321: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000321 |         string RecipeId,  ⟦EOL⟧
+// 해설 L322: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000322 |         string GlassId,  ⟦EOL⟧
+// 해설 L323: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000323 |         string LotId,  ⟦EOL⟧
+// 해설 L324: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000324 |         IReadOnlyList<ST_HEAD_PROCESS_PLAN> HeadPlans,  ⟦EOL⟧
+// 해설 L325: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000325 |         IReadOnlyDictionary<string, string> Parameters,  ⟦EOL⟧
+// 해설 L326: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000326 |         DateTimeOffset CreatedAt ⟦EOL⟧
+// 해설 L327: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000327 |     ); ⟦EOL⟧
+// 해설 L328: 타입의 구조/상속 선언입니다: public sealed record ST_HEAD_PREVIEW_DATA(int HeadNo, EN_HEAD_PROCESS_STATUS Status, int ShotCount);
+L000328 |     public sealed record ST_HEAD_PREVIEW_DATA(int HeadNo, EN_HEAD_PROCESS_STATUS Status, int ShotCount); ⟦EOL⟧
+// 해설 L329: 타입의 구조/상속 선언입니다: public sealed record ST_PROCESS_RESULT(bool IsSuccess, string Message, DateTimeOffset CompletedAt, string ResultCode = "");
+L000329 |     public sealed record ST_PROCESS_RESULT(bool IsSuccess, string Message, DateTimeOffset CompletedAt, string ResultCode = ""); ⟦EOL⟧
+// 해설 L330: 타입의 구조/상속 선언입니다: public sealed record ST_PROCESS_DISPLAY_ITEM(string Name, string Value, string Detail = "");
+L000330 |     public sealed record ST_PROCESS_DISPLAY_ITEM(string Name, string Value, string Detail = ""); ⟦EOL⟧
+// 해설 L331: 타입의 구조/상속 선언입니다: public sealed record ST_PROCESS_LOG_ITEM(DateTimeOffset OccurredAt, string Level, string Source, string Message);
+L000331 |     public sealed record ST_PROCESS_LOG_ITEM(DateTimeOffset OccurredAt, string Level, string Source, string Message); ⟦EOL⟧
+// 해설 L332: 타입의 구조/상속 선언입니다: public sealed record ST_PROCESS_STATISTICS(int TotalShots, int MoveCount, int LaserOnSegments, TimeSpan EstimatedTime, TimeSpan ElapsedTime, double ProgressPercent);
+L000332 |     public sealed record ST_PROCESS_STATISTICS(int TotalShots, int MoveCount, int LaserOnSegments, TimeSpan EstimatedTime, TimeSpan ElapsedTime, double ProgressPercent); ⟦EOL⟧
+// 해설 L333: 타입의 구조/상속 선언입니다: public sealed record ST_SCRIPT_BUILD_RESULT(string FileName, string FilePath, int TotalShots, DateTimeOffset CreatedAt, IReadOnlyList<ST_HEAD_SCRIPT_RESULT> HeadScripts)
+L000333 |     public sealed record ST_SCRIPT_BUILD_RESULT(string FileName, string FilePath, int TotalShots, DateTimeOffset CreatedAt, IReadOnlyList<ST_HEAD_SCRIPT_RESULT> HeadScripts) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다.
+L000334 |     { ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Station.ST_SCRIPT_BUILD_RESULT.MofReadyRunId
+L000335 |         public long MofReadyRunId { get; init; } ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다.
+L000336 |     } ⟦EOL⟧
+L000337 |  ⟦EOL⟧
+// 해설 L338: 타입의 구조/상속 선언입니다: public sealed record ST_HEAD_SCRIPT_RESULT(int HeadNo, int AutomationNo, int TaskNo, string FileName, string FilePath, int TotalShots, int TotalLines, DateTimeOffset CreatedAt);
+L000338 |     public sealed record ST_HEAD_SCRIPT_RESULT(int HeadNo, int AutomationNo, int TaskNo, string FileName, string FilePath, int TotalShots, int TotalLines, DateTimeOffset CreatedAt); ⟦EOL⟧
+// 해설 L339: 타입의 구조/상속 선언입니다: public enum EN_AEROTECH_PSO_MODE
+L000339 |     public enum EN_AEROTECH_PSO_MODE ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다.
+L000340 |     { ⟦EOL⟧
+// 해설 L341: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_PSO_MODE.Unused
+L000341 |         Unused = 0, ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_PSO_MODE.WindowMask
+L000342 |         WindowMask = 1, ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_PSO_MODE.ExtSync
+L000343 |         ExtSync = 2, ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_PSO_MODE.LaserMask
+L000344 |         LaserMask = 3, ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_PSO_MODE.ExtSyncGalvo
+L000345 |         ExtSyncGalvo = 4 ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다.
+L000346 |     } ⟦EOL⟧
+L000347 |  ⟦EOL⟧
+// 해설 L348: 타입의 구조/상속 선언입니다: public enum EN_AEROTECH_MODE
+L000348 |     public enum EN_AEROTECH_MODE ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다.
+L000349 |     { ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_MODE.Mof
+L000350 |         Mof = 0, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_MODE.Ifov
+L000351 |         Ifov = 1, ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_AEROTECH_MODE.Scanner
+L000352 |         Scanner = 2 ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다.
+L000353 |     } ⟦EOL⟧
+L000354 |  ⟦EOL⟧
+// 해설 L355: 타입의 구조/상속 선언입니다: public abstract class CAutomation1ScriptBase
+L000355 |     public abstract class CAutomation1ScriptBase ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다.
+L000356 |     { ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.CAutomation1ScriptBase.FileName
+L000357 |         public abstract string FileName { get; } ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.CAutomation1ScriptBase.FilePath
+L000358 |         public abstract string FilePath { get; } ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.Common.Station.CAutomation1ScriptBase.Lines
+L000359 |         public abstract IReadOnlyList<string> Lines { get; } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Clear()
+L000361 |         public abstract void Clear(); ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.AddLine(string)
+L000362 |         public abstract void AddLine(string line); ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Start(string)
+L000363 |         public abstract void Start(string title = ""); ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetDeviceNo(int)
+L000364 |         public abstract void SetDeviceNo(int deviceNo); ⟦EOL⟧
+// 해설 L365: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetNMarkDriveLaserControl(bool)
+L000365 |         public abstract void SetNMarkDriveLaserControl(bool use); ⟦EOL⟧
+// 해설 L366: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScanPlannerStageEncoderMode(bool)
+L000366 |         public abstract void SetScanPlannerStageEncoderMode(bool use); ⟦EOL⟧
+// 해설 L367: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.DefaultSetting(double, int, int, bool)
+L000367 |         public abstract void DefaultSetting(double scannerAcc = 500000.0, int motionUpdateRate = 0, int executeLineCount = 110, bool resetPso = true); ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.DefaultFigureScanSetting(int, int, bool)
+L000368 |         public abstract void DefaultFigureScanSetting(int motionUpdateRate = 100, int executeLineCount = 110, bool moveToCenter = true); ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetAxis(string, string, string?)
+L000369 |         public abstract void SetAxis(string xAxis, string yAxis, string? laserAxis = null); ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetStageAxis(string, string)
+L000370 |         public abstract void SetStageAxis(string xAxis, string yAxis); ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetFrequency(double)
+L000371 |         public abstract void SetFrequency(double frequencyKhz); ⟦EOL⟧
+// 해설 L372: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetLaserPower(double, double, bool)
+L000372 |         public abstract void SetLaserPower(double powerPercent, double outputRate = 100.0, bool analogOutputUse = false); ⟦EOL⟧
+// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetLaserPowerNoDelay(double, double)
+L000373 |         public abstract void SetLaserPowerNoDelay(double powerPercent, double outputRate = 100.0); ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPulseOnTimeLaserPower(double, double, double)
+L000374 |         public abstract void SetPulseOnTimeLaserPower(double powerPercent, double dutyPercent, double outputRate = 100.0); ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetLaserMode(int)
+L000375 |         public abstract void SetLaserMode(int mode); ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetLaserDelay(double, double)
+L000376 |         public abstract void SetLaserDelay(double onDelay, double offDelay); ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetJumpSpeed(double)
+L000377 |         public abstract void SetJumpSpeed(double speedMeterPerSec); ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetJumpSpeedRate(double, double)
+L000378 |         public abstract void SetJumpSpeedRate(double speedMeterPerSec, double rate = 1.0); ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetMarkSpeed(double)
+L000379 |         public abstract void SetMarkSpeed(double speedMeterPerSec); ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetStageSpeed(double, double)
+L000380 |         public abstract void SetStageSpeed(double speedX, double speedY); ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScannerAcc(double)
+L000381 |         public abstract void SetScannerAcc(double acc); ⟦EOL⟧
+// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetMarkAcc(double)
+L000382 |         public abstract void SetMarkAcc(double acc); ⟦EOL⟧
+// 해설 L383: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOV(bool)
+L000383 |         public abstract void SetIFOV(bool use); ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVEmulatedQuadratureDivider()
+L000384 |         public abstract void SetIFOVEmulatedQuadratureDivider(); ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVIO(bool)
+L000385 |         public abstract void SetIFOVIO(bool use = true); ⟦EOL⟧
+// 해설 L386: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVScaleXY()
+L000386 |         public abstract void SetIFOVScaleXY(); ⟦EOL⟧
+// 해설 L387: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVTime(long)
+L000387 |         public abstract void SetIFOVTime(long time); ⟦EOL⟧
+// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVSize(double)
+L000388 |         public abstract void SetIFOVSize(double size); ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVTrackingSpeed(long)
+L000389 |         public abstract void SetIFOVTrackingSpeed(long speed); ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVTrackingAccel(long)
+L000390 |         public abstract void SetIFOVTrackingAccel(long acc); ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVPair(string, string, bool, bool)
+L000391 |         public abstract void SetIFOVPair(string xStageAxis, string yStageAxis, bool xDirection, bool yDirection); ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIFOVSyncAxis()
+L000392 |         public abstract void SetIFOVSyncAxis(); ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetMoveBlending(bool)
+L000393 |         public abstract void SetMoveBlending(bool use); ⟦EOL⟧
+// 해설 L394: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetAbsoluteMode()
+L000394 |         public abstract void SetAbsoluteMode(); ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetIncrementalMode()
+L000395 |         public abstract void SetIncrementalMode(); ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetWaitModeAuto()
+L000396 |         public abstract void SetWaitModeAuto(); ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetMoveDelay(double, bool, bool)
+L000397 |         public abstract void SetMoveDelay(double delaySeconds, bool addTactTime = true, bool applyMinimumDelay = true); ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetExecuteLineCount(int)
+L000398 |         public abstract void SetExecuteLineCount(int lineCount); ⟦EOL⟧
+// 해설 L399: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScannerRotate(double)
+L000399 |         public abstract void SetScannerRotate(double angle); ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScannerRotate(string, double)
+L000400 |         public abstract void SetScannerRotate(string laserAxis, double angle); ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetMoveUpdateRate(int)
+L000401 |         public abstract void SetMoveUpdateRate(int rate); ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetCoordinatedAccelLimit(long, long)
+L000402 |         public abstract void SetCoordinatedAccelLimit(long acc, long arcAcc); ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetTaskAccelLimit(long, long)
+L000403 |         public abstract void SetTaskAccelLimit(long acc, long arcAcc); ⟦EOL⟧
+// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScanTrajectoryFIRFilterX(long)
+L000404 |         public abstract void SetScanTrajectoryFIRFilterX(long delay); ⟦EOL⟧
+// 해설 L405: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScanTrajectoryFIRFilterY(long)
+L000405 |         public abstract void SetScanTrajectoryFIRFilterY(long delay); ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetStageTrajectoryFIRFilterX(long)
+L000406 |         public abstract void SetStageTrajectoryFIRFilterX(long delay); ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetStageTrajectoryFIRFilterY(long)
+L000407 |         public abstract void SetStageTrajectoryFIRFilterY(long delay); ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetProjection(string, double, double, double)
+L000408 |         public abstract void SetProjection(string axis, double offsetX, double offsetY, double offsetT); ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetProjectionOff(string)
+L000409 |         public abstract void SetProjectionOff(string axis); ⟦EOL⟧
+// 해설 L410: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetGearing(string, string)
+L000410 |         public abstract void SetGearing(string masterAxis, string slaveAxis); ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetGearingOff(string)
+L000411 |         public abstract void SetGearingOff(string slaveAxis = "AUTO"); ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetSoftwareLimitSetup(bool)
+L000412 |         public abstract void SetSoftwareLimitSetup(bool use = true); ⟦EOL⟧
+// 해설 L413: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetAerotechEncoderReset(string, string)
+L000413 |         public abstract void SetAerotechEncoderReset(string axisX, string axisY); ⟦EOL⟧
+// 해설 L414: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetScanPlannerStageEncoder(string)
+L000414 |         public abstract void SetScanPlannerStageEncoder(string stageAxis); ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEmulatedQuadratureDividerX(int)
+L000415 |         public abstract void SetEmulatedQuadratureDividerX(int value); ⟦EOL⟧
+// 해설 L416: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEmulatedQuadratureDividerY(int)
+L000416 |         public abstract void SetEmulatedQuadratureDividerY(int value); ⟦EOL⟧
+// 해설 L417: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetStageEmulatedQuadratureDivider(int, int)
+L000417 |         public abstract void SetStageEmulatedQuadratureDivider(int xValue, int yValue); ⟦EOL⟧
+// 해설 L418: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000418 |         public abstract void SetPSO( ⟦EOL⟧
+// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000419 |             double pulseDistance,  ⟦EOL⟧
+// 해설 L420: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000420 |             double totalTime,  ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000421 |             double laserOnTime,  ⟦EOL⟧
+// 해설 L422: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000422 |             double delay,  ⟦EOL⟧
+// 해설 L423: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000423 |             EN_AEROTECH_MODE mode,  ⟦EOL⟧
+// 해설 L424: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000424 |             EN_AEROTECH_PSO_MODE psoMode,  ⟦EOL⟧
+// 해설 L425: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000425 |             double frequencyKhz,  ⟦EOL⟧
+// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000426 |             double powerPercent,  ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000427 |             int windowMaskDirection,  ⟦EOL⟧
+// 해설 L428: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000428 |             double markSpeed,  ⟦EOL⟧
+// 해설 L429: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000429 |             bool manual = false ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSO(double, double, double, double, Drilling.Common.Station.EN_AEROTECH_MODE, Drilling.Common.Station.EN_AEROTECH_PSO_MODE, double, double, int, double, bo
+L000430 |         ); ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSODistance(double)
+L000431 |         public abstract void SetPSODistance(double pulseDistance); ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSOOnOff(bool)
+L000432 |         public abstract void SetPSOOnOff(bool on); ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSOChangePower(double, double)
+L000433 |         public abstract void SetPSOChangePower(double frequencyKhz, double powerPercent); ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSOFire(double, double, int, double, Drilling.Common.Station.EN_AEROTECH_MODE)
+L000434 |         public abstract void SetPSOFire(double totalTime, double laserOnTime, int count, double delay, EN_AEROTECH_MODE mode); ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetPSOLaserWindowMask(bool, double, double)
+L000435 |         public abstract void SetPSOLaserWindowMask(bool on, double windowStartRange = 0, double windowEndRange = 0); ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.DeclareEncoderVariable(string, bool)
+L000436 |         public abstract void DeclareEncoderVariable(string axis = "", bool useFeedback = false); ⟦EOL⟧
+// 해설 L437: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.InitDeclareVariable()
+L000437 |         public abstract void InitDeclareVariable(); ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.InitDeclareVariableIFOV()
+L000438 |         public abstract void InitDeclareVariableIFOV(); ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetWaitForEncoder(string, double, bool)
+L000439 |         public abstract void SetWaitForEncoder(string axis, double position, bool directionPlus = true); ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetWaitForEncoder(string, bool, double, double, double)
+L000440 |         public abstract void SetWaitForEncoder(string axis, bool directionPlus, double position, double limit, double encoderScale = 1.0); ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetWaitForEncoder2Axis(string, string, bool, double, double, double, double)
+L000441 |         public abstract void SetWaitForEncoder2Axis(string axisX, string axisY, bool inToOut, double posX, double posY, double limitX, double limitY); ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetWaitForStartAxis2(string, string, bool, double, double, double, double)
+L000442 |         public abstract void SetWaitForStartAxis2(string axisX, string axisY, bool inToOut, double posX, double posY, double limitX, double limitY); ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEncoderScaleFactor(string, string, int)
+L000443 |         public abstract void SetEncoderScaleFactor(string galvoAxis, string encoderAxis, int scale); ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEncoderScaleFactor(string, string, bool)
+L000444 |         public abstract void SetEncoderScaleFactor(string galvoAxis, string encoderAxis, bool directionPlus); ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEncoderScaleFactor(string, string, double, double, bool)
+L000445 |         public abstract void SetEncoderScaleFactor(string galvoAxis, string encoderAxis, double encoderX, double encoderY, bool directionPlus); ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetEncoderScaleFactorByPrimaryDivider(string, string, bool)
+L000446 |         public abstract void SetEncoderScaleFactorByPrimaryDivider(string galvoAxis, string encoderAxis, bool directionPlus); ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.InitEncoderCount(string)
+L000447 |         public abstract void InitEncoderCount(string galvoAxis); ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.EncoderNotFeedback(string)
+L000448 |         public abstract void EncoderNotFeedback(string axis); ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.ReleaseEncoderScaleFactor(string)
+L000449 |         public abstract void ReleaseEncoderScaleFactor(string galvoAxis); ⟦EOL⟧
+// 해설 L450: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.LaserAuto()
+L000450 |         public abstract void LaserAuto(); ⟦EOL⟧
+// 해설 L451: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.LaserOn()
+L000451 |         public abstract void LaserOn(); ⟦EOL⟧
+// 해설 L452: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.LaserOff()
+L000452 |         public abstract void LaserOff(); ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.PsoLaserControl(bool, bool)
+L000453 |         public abstract void PsoLaserControl(bool on, bool manual = false); ⟦EOL⟧
+// 해설 L454: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.LaserFire(bool)
+L000454 |         public abstract void LaserFire(bool on); ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Jump(double, double)
+L000455 |         public abstract void Jump(double x, double y); ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Mark(double, double)
+L000456 |         public abstract void Mark(double x, double y); ⟦EOL⟧
+// 해설 L457: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.GCodeMove(double, double)
+L000457 |         public abstract void GCodeMove(double x, double y); ⟦EOL⟧
+// 해설 L458: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.JumpRel(double, double)
+L000458 |         public abstract void JumpRel(double x, double y); ⟦EOL⟧
+// 해설 L459: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.MarkRel(double, double)
+L000459 |         public abstract void MarkRel(double x, double y); ⟦EOL⟧
+// 해설 L460: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Arc(double, double, double, double, double, double, double)
+L000460 |         public abstract void Arc(double startX, double startY, double endX, double endY, double centerX, double centerY, double angle); ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.JumpLinear(double, double)
+L000461 |         public abstract void JumpLinear(double x, double y); ⟦EOL⟧
+// 해설 L462: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.WaitMoveDone()
+L000462 |         public abstract void WaitMoveDone(); ⟦EOL⟧
+// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.Dwell(double)
+L000463 |         public abstract void Dwell(double delay); ⟦EOL⟧
+// 해설 L464: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.EnableAxisPair()
+L000464 |         public abstract void EnableAxisPair(); ⟦EOL⟧
+// 해설 L465: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.DisableAxisPair()
+L000465 |         public abstract void DisableAxisPair(); ⟦EOL⟧
+// 해설 L466: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.FaultAckAxisPair()
+L000466 |         public abstract void FaultAckAxisPair(); ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.HomeAxisPair()
+L000467 |         public abstract void HomeAxisPair(); ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.OffsetClearAxisPair()
+L000468 |         public abstract void OffsetClearAxisPair(); ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.OffsetSetAxisPair(double, double)
+L000469 |         public abstract void OffsetSetAxisPair(double x, double y); ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetSignalLogTrigger(bool)
+L000470 |         public abstract void SetSignalLogTrigger(bool use); ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.ProgramStart()
+L000471 |         public abstract void ProgramStart(); ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.ProgramEnd()
+L000472 |         public abstract void ProgramEnd(); ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.BufferedEnd()
+L000473 |         public abstract void BufferedEnd(); ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.WaitInpos()
+L000474 |         public abstract void WaitInpos(); ⟦EOL⟧
+// 해설 L475: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetHomePos()
+L000475 |         public abstract void SetHomePos(); ⟦EOL⟧
+// 해설 L476: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.SetGalvoPosZero()
+L000476 |         public abstract void SetGalvoPosZero(); ⟦EOL⟧
+// 해설 L477: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CAutomation1ScriptBase.End(bool)
+L000477 |         public abstract void End(bool bufferedRun = false); ⟦EOL⟧
+// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_SCRIPT_BUILD_RESULT Drilling.Common.Station.CAutomation1ScriptBase.Save(System.Threading.CancellationToken)
+L000478 |         public abstract ST_SCRIPT_BUILD_RESULT Save(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다.
+L000479 |     } ⟦EOL⟧
+L000480 |  ⟦EOL⟧
+// 해설 L481: 타입의 구조/상속 선언입니다: public abstract class CAutomationScriptFileBase
+L000481 |     public abstract class CAutomationScriptFileBase ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다.
+L000482 |     { ⟦EOL⟧
+// 해설 L483: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.CAutomationScriptFileBase.ScriptFileName
+L000483 |         public abstract string ScriptFileName { get; } ⟦EOL⟧
+L000484 |  ⟦EOL⟧
+// 해설 L485: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CAutomation1ScriptBase Drilling.Common.Station.CAutomationScriptFileBase.Create(string?)
+L000485 |         public abstract CAutomation1ScriptBase Create(string? fileName = null); ⟦EOL⟧
+// 해설 L486: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_SCRIPT_BUILD_RESULT Drilling.Common.Station.CAutomationScriptFileBase.Build(Drilling.Common.Station.ST_PROCESS_MODEL, System.Threading.CancellationToken)
+L000486 |         public abstract ST_SCRIPT_BUILD_RESULT Build(ST_PROCESS_MODEL processModel, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L487: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_SCRIPT_BUILD_RESULT Drilling.Common.Station.CAutomationScriptFileBase.Build(Drilling.Common.Station.ST_PROCESS_MODEL, string, System.Threading.CancellationToken)
+L000487 |         public abstract ST_SCRIPT_BUILD_RESULT Build(ST_PROCESS_MODEL processModel, string subDirectoryName, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L488: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_SCRIPT_BUILD_RESULT Drilling.Common.Station.CAutomationScriptFileBase.LoadLatest(Drilling.Common.Station.ST_PROCESS_MODEL, string, System.Threading.CancellationToken)
+L000488 |         public abstract ST_SCRIPT_BUILD_RESULT LoadLatest(ST_PROCESS_MODEL processModel, string subDirectoryName, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다.
+L000489 |     } ⟦EOL⟧
+L000490 |  ⟦EOL⟧
+// 해설 L491: 타입의 구조/상속 선언입니다: public sealed record ST_STATION_PROCESS_STATUS(
+L000491 |     public sealed record ST_STATION_PROCESS_STATUS( ⟦EOL⟧
+// 해설 L492: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000492 |         ST_PROCESS_MODEL? ProcessModel,  ⟦EOL⟧
+// 해설 L493: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000493 |         IReadOnlyList<ST_HEAD_PREVIEW_DATA> HeadPreviews,  ⟦EOL⟧
+// 해설 L494: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000494 |         EN_SCRIPT_STATUS ScriptStatus,  ⟦EOL⟧
+// 해설 L495: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000495 |         EN_PROCESS_STEP ProcessStep,  ⟦EOL⟧
+// 해설 L496: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000496 |         ST_PROCESS_RESULT? Result,  ⟦EOL⟧
+// 해설 L497: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000497 |         IReadOnlyList<ST_PROCESS_DISPLAY_ITEM> ProcessSequence,  ⟦EOL⟧
+// 해설 L498: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000498 |         IReadOnlyList<ST_PROCESS_DISPLAY_ITEM> CurrentStepDetails,  ⟦EOL⟧
+// 해설 L499: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000499 |         IReadOnlyList<ST_PROCESS_DISPLAY_ITEM> ProcessSummary,  ⟦EOL⟧
+// 해설 L500: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000500 |         IReadOnlyList<ST_PROCESS_LOG_ITEM> ProcessLogs,  ⟦EOL⟧
+// 해설 L501: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000501 |         IReadOnlyList<ST_PROCESS_DISPLAY_ITEM> ScriptStatusItems,  ⟦EOL⟧
+// 해설 L502: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000502 |         IReadOnlyList<ST_PROCESS_DISPLAY_ITEM> ScriptLifecycleItems,  ⟦EOL⟧
+// 해설 L503: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000503 |         IReadOnlyList<ST_INTERLOCK_ITEM> InterlockItems,  ⟦EOL⟧
+// 해설 L504: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000504 |         ST_PROCESS_STATISTICS Statistics ⟦EOL⟧
+// 해설 L505: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000505 |     ) ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다.
+L000506 |     { ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, ST_SEQUENCE_ACTION_STATUS>()
+L000507 |         public IReadOnlyDictionary<string, ST_SEQUENCE_ACTION_STATUS> SequenceActions { get; init; } = new Dictionary<string, ST_SEQUENCE_ACTION_STATUS>(); ⟦EOL⟧
+// 해설 L508: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STAGE_REQUEST_STATUS? Drilling.Common.Station.ST_STATION_PROCESS_STATUS.StageRequest
+L000508 |         public ST_STAGE_REQUEST_STATUS? StageRequest { get; init; } ⟦EOL⟧
+// 해설 L509: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_ZERO_LINE_PREWAIT_STATUS? Drilling.Common.Station.ST_STATION_PROCESS_STATUS.ZeroLinePrewait
+L000509 |         public ST_ZERO_LINE_PREWAIT_STATUS? ZeroLinePrewait { get; init; } ⟦EOL⟧
+// 해설 L510: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS? Drilling.Common.Station.ST_STATION_PROCESS_STATUS.ZeroLine
+L000510 |         public Review.ST_ZERO_LINE_CYCLE_STATUS? ZeroLine { get; init; } ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다.
+L000511 |     } ⟦EOL⟧
+L000512 |  ⟦EOL⟧
+// 해설 L513: 타입의 구조/상속 선언입니다: public sealed record ST_STATION_STATUS(
+L000513 |     public sealed record ST_STATION_STATUS( ⟦EOL⟧
+// 해설 L514: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000514 |         EN_STATION_ID StationId,  ⟦EOL⟧
+// 해설 L515: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000515 |         string StationName,  ⟦EOL⟧
+// 해설 L516: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000516 |         EN_STATION_STATE State,  ⟦EOL⟧
+// 해설 L517: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000517 |         EN_PROCESS_STEP ProcessStep,  ⟦EOL⟧
+// 해설 L518: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000518 |         EN_SCRIPT_STATUS ScriptStatus,  ⟦EOL⟧
+// 해설 L519: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000519 |         string LastMessage,  ⟦EOL⟧
+// 해설 L520: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000520 |         DateTimeOffset ChangedAt ⟦EOL⟧
+// 해설 L521: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000521 |     ) ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다.
+L000522 |     { ⟦EOL⟧
+// 해설 L523: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE? Drilling.Common.Station.ST_STATION_STATUS.ExplicitSequenceState
+L000523 |         public EN_STATION_SEQUENCE? ExplicitSequenceState { get; init; } ⟦EOL⟧
+// 해설 L524: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_PROCESS_STEP? Drilling.Common.Station.ST_STATION_STATUS.ExplicitSequenceProcessStep
+L000524 |         public EN_PROCESS_STEP? ExplicitSequenceProcessStep { get; init; } ⟦EOL⟧
+L000525 |  ⟦EOL⟧
+// 해설 L526: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.SequenceState
+L000526 |         public EN_STATION_SEQUENCE SequenceState ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 SequenceState.
+L000527 |         { ⟦EOL⟧
+// 해설 L528: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.SequenceState.get
+L000528 |             get ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 get_SequenceState.
+L000529 |             { ⟦EOL⟧
+// 해설 L530: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveSequenceState(ProcessStep) / 조건에 따라 결과식을 선택합니다: ExplicitSequenceState is { } sequenceState && ExplicitSequenceProcessStep == ProcessStep ? sequenceState : ResolveSequenceState(ProcessStep) / 호출자에게 값 또는 제어를 반환합니다: return ExplicitSequenceState is { } sequenceState && ExplicitSequenceProcessStep == ProcessStep ? sequenceState : ResolveSequenceState(ProcessStep);
+L000530 |                 return ExplicitSequenceState is { } sequenceState && ExplicitSequenceProcessStep == ProcessStep ? sequenceState : ResolveSequenceState(ProcessStep); ⟦EOL⟧
+// 해설 L531: 구문 블록 경계입니다 · 소속 get_SequenceState.
+L000531 |             } ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 SequenceState.
+L000532 |         } ⟦EOL⟧
+L000533 |  ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STATION_STATUS Drilling.Common.Station.ST_STATION_STATUS.WithSequenceState(Drilling.Common.Station.EN_STATION_SEQUENCE?)
+L000534 |         public ST_STATION_STATUS WithSequenceState(EN_STATION_SEQUENCE? sequenceState) ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000535 |         { ⟦EOL⟧
+// 해설 L536: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveSequenceState(ProcessStep) / 조건에 따라 분기합니다: if (sequenceState is null || sequenceState == ResolveSequenceState(ProcessStep))
+L000536 |             if (sequenceState is null || sequenceState == ResolveSequenceState(ProcessStep)) ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000537 |             { ⟦EOL⟧
+// 해설 L538: 호출자에게 값 또는 제어를 반환합니다: return this with { ExplicitSequenceState = null, ExplicitSequenceProcessStep = null };
+L000538 |                 return this with ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000539 |                 { ⟦EOL⟧
+// 해설 L540: 값을 대상에 대입합니다: ExplicitSequenceState = null
+L000540 |                     ExplicitSequenceState = null, ⟦EOL⟧
+// 해설 L541: 값을 대상에 대입합니다: ExplicitSequenceProcessStep = null
+L000541 |                     ExplicitSequenceProcessStep = null ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000542 |                 }; ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000543 |             } ⟦EOL⟧
+L000544 |  ⟦EOL⟧
+// 해설 L545: 호출자에게 값 또는 제어를 반환합니다: return this with { ExplicitSequenceState = sequenceState, ExplicitSequenceProcessStep = ProcessStep };
+L000545 |             return this with ⟦EOL⟧
+// 해설 L546: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000546 |             { ⟦EOL⟧
+// 해설 L547: 값을 대상에 대입합니다: ExplicitSequenceState = sequenceState
+L000547 |                 ExplicitSequenceState = sequenceState, ⟦EOL⟧
+// 해설 L548: 값을 대상에 대입합니다: ExplicitSequenceProcessStep = ProcessStep
+L000548 |                 ExplicitSequenceProcessStep = ProcessStep ⟦EOL⟧
+// 해설 L549: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000549 |             }; ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 WithSequenceState.
+L000550 |         } ⟦EOL⟧
+L000551 |  ⟦EOL⟧
+// 해설 L552: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000552 |         private static EN_STATION_SEQUENCE ResolveSequenceState(EN_PROCESS_STEP processStep) ⟦EOL⟧
+// 해설 L553: 구문 블록 경계입니다 · 소속 ResolveSequenceState.
+L000553 |         { ⟦EOL⟧
+// 해설 L554: 호출자에게 값 또는 제어를 반환합니다: return processStep switch { EN_PROCESS_STEP.Idle => EN_STATION_SEQUENCE.Ready, EN_PROCESS_STEP.PowerCheck => EN_STATION_SEQUENCE.PowerCheck, EN_PROCESS_STEP.Align => EN_STATION_SEQUENCE.Align, EN_PROCESS_STEP.Process => EN_STATION / 값별 결과식을 선택합니다: processStep switch { EN_PROCESS_STEP.Idle => EN_STATION_SEQUENCE.Ready, EN_PROCESS_STEP.PowerCheck => EN_STATION_SEQUENCE.PowerCheck, EN_PROCESS_STEP.Align => EN_STATION_SEQUENCE.Align, EN_PROCESS_STEP.Process => EN_STATION_SEQUEN
+L000554 |             return processStep switch ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 ResolveSequenceState.
+L000555 |             { ⟦EOL⟧
+// 해설 L556: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000556 |                 EN_PROCESS_STEP.Idle => EN_STATION_SEQUENCE.Ready, ⟦EOL⟧
+// 해설 L557: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000557 |                 EN_PROCESS_STEP.PowerCheck => EN_STATION_SEQUENCE.PowerCheck, ⟦EOL⟧
+// 해설 L558: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000558 |                 EN_PROCESS_STEP.Align => EN_STATION_SEQUENCE.Align, ⟦EOL⟧
+// 해설 L559: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000559 |                 EN_PROCESS_STEP.Process => EN_STATION_SEQUENCE.Process, ⟦EOL⟧
+// 해설 L560: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000560 |                 EN_PROCESS_STEP.Inspection => EN_STATION_SEQUENCE.Inspection, ⟦EOL⟧
+// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000561 |                 EN_PROCESS_STEP.Completed => EN_STATION_SEQUENCE.Complete, ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000562 |                 EN_PROCESS_STEP.Stopped => EN_STATION_SEQUENCE.Stop, ⟦EOL⟧
+// 해설 L563: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000563 |                 EN_PROCESS_STEP.Error => EN_STATION_SEQUENCE.Error, ⟦EOL⟧
+// 해설 L564: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STATION_SEQUENCE Drilling.Common.Station.ST_STATION_STATUS.ResolveSequenceState(Drilling.Common.Station.EN_PROCESS_STEP)
+L000564 |                 _ => EN_STATION_SEQUENCE.Error ⟦EOL⟧
+// 해설 L565: 구문 블록 경계입니다 · 소속 ResolveSequenceState.
+L000565 |             }; ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 ResolveSequenceState.
+L000566 |         } ⟦EOL⟧
+// 해설 L567: 구문 블록 경계입니다.
+L000567 |     } ⟦EOL⟧
+L000568 |  ⟦EOL⟧
+// 해설 L569: 타입의 구조/상속 선언입니다: public sealed record ST_STATION_PROCESS_FLOW_ITEM(
+L000569 |     public sealed record ST_STATION_PROCESS_FLOW_ITEM( ⟦EOL⟧
+// 해설 L570: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000570 |         int Order,  ⟦EOL⟧
+// 해설 L571: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000571 |         string StepKey,  ⟦EOL⟧
+// 해설 L572: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000572 |         string StepName,  ⟦EOL⟧
+// 해설 L573: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000573 |         EN_STATION_STATE RunningState,  ⟦EOL⟧
+// 해설 L574: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000574 |         EN_PROCESS_STEP RunningStep,  ⟦EOL⟧
+// 해설 L575: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000575 |         EN_SCRIPT_STATUS ScriptStatus,  ⟦EOL⟧
+// 해설 L576: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000576 |         string OnSuccess,  ⟦EOL⟧
+// 해설 L577: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000577 |         string OnFail ⟦EOL⟧
+// 해설 L578: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000578 |     ); ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다.
+L000579 | } ⟦EOL⟧

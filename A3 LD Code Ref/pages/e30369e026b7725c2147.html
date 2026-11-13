@@ -1,0 +1,1616 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Managers/CSettingManager.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Managers/CSettingManager.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs">Git 원본</a></p><h1>Drilling.Common/Managers/CSettingManager.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>0e893139d294e11572f73c72fddd379c521fe16f86d7730c205ed1ec72607b5b</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>15,242 bytes / 285 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/e30369e026b7725c2147.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CSettingManager</td><td>ClassDeclaration</td><td>14–180</td><td>CSettingManager</td></tr>
+<tr><td>CRunOptionSettings</td><td>ClassDeclaration</td><td>183–230</td><td>CRunOptionSettings</td></tr>
+<tr><td>ST_RUN_OPTION_SETTINGS</td><td>RecordDeclaration</td><td>232–244</td><td>ST_RUN_OPTION_SETTINGS</td></tr>
+<tr><td>EN_SETTING_TAB</td><td>EnumDeclaration</td><td>246–253</td><td>EN_SETTING_TAB</td></tr>
+<tr><td>ST_SYSTEM_PARAMETER</td><td>RecordDeclaration</td><td>255–271</td><td>ST_SYSTEM_PARAMETER</td></tr>
+<tr><td>ST_SETTING_HISTORY</td><td>RecordDeclaration</td><td>272–272</td><td>ST_SETTING_HISTORY</td></tr>
+<tr><td>CSettingFileBase</td><td>ClassDeclaration</td><td>273–278</td><td>CSettingFileBase</td></tr>
+<tr><td>CInterfaceFileBase</td><td>ClassDeclaration</td><td>280–284</td><td>CInterfaceFileBase</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>ReviewCameraResolutionKey</td><td>FieldDeclaration</td><td>L16–16</td><td>string Drilling.Common.Managers.CSettingManager.ReviewCameraResolutionKey</td></tr>
+<tr><td>VisionCameraResolutionKey</td><td>FieldDeclaration</td><td>L17–17</td><td>string Drilling.Common.Managers.CSettingManager.VisionCameraResolutionKey</td></tr>
+<tr><td>DefaultVisionCameraResolution</td><td>FieldDeclaration</td><td>L18–18</td><td>double Drilling.Common.Managers.CSettingManager.DefaultVisionCameraResolution</td></tr>
+<tr><td>AlignCameraResolutionKey</td><td>FieldDeclaration</td><td>L19–19</td><td>string Drilling.Common.Managers.CSettingManager.AlignCameraResolutionKey</td></tr>
+<tr><td>DefaultAlignCameraResolution</td><td>FieldDeclaration</td><td>L20–20</td><td>double Drilling.Common.Managers.CSettingManager.DefaultAlignCameraResolution</td></tr>
+<tr><td>WapageAlignBaseToleranceKey</td><td>FieldDeclaration</td><td>L21–21</td><td>string Drilling.Common.Managers.CSettingManager.WapageAlignBaseToleranceKey</td></tr>
+<tr><td>DefaultWapageAlignBaseTolerance</td><td>FieldDeclaration</td><td>L22–22</td><td>double Drilling.Common.Managers.CSettingManager.DefaultWapageAlignBaseTolerance</td></tr>
+<tr><td>_cacheLock</td><td>FieldDeclaration</td><td>L23–23</td><td>object Drilling.Common.Managers.CSettingManager._cacheLock</td></tr>
+<tr><td>_saveLock</td><td>FieldDeclaration</td><td>L24–24</td><td>object Drilling.Common.Managers.CSettingManager._saveLock</td></tr>
+<tr><td>_sectionCache</td><td>FieldDeclaration</td><td>L25–25</td><td>System.Collections.Generic.Dictionary&lt;Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;&gt; Drilling.Common.Managers.CSettingManager._sectionCache</td></tr>
+<tr><td>LoadSection</td><td>MethodDeclaration</td><td>L26–38</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReloadSection</td><td>MethodDeclaration</td><td>L40–49</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadAllSections</td><td>MethodDeclaration</td><td>L51–57</td><td>void Drilling.Common.Managers.CSettingManager.LoadAllSections(System.Threading.CancellationToken)</td></tr>
+<tr><td>GetValue</td><td>MethodDeclaration</td><td>L59–70</td><td>string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>MatchesItem</td><td>LocalFunctionStatement</td><td>L63–66</td><td>bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+<tr><td>SetValue</td><td>MethodDeclaration</td><td>L72–102</td><td>void Drilling.Common.Managers.CSettingManager.SetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectParameter</td><td>LocalFunctionStatement</td><td>L79–92</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER SelectParameter(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+<tr><td>GetVisionMaxHoleCountPerLine</td><td>MethodDeclaration</td><td>L104–111</td><td>int Drilling.Common.Managers.CSettingManager.GetVisionMaxHoleCountPerLine()</td></tr>
+<tr><td>GetVisionCameraResolution</td><td>MethodDeclaration</td><td>L113–113</td><td>double Drilling.Common.Managers.CSettingManager.GetVisionCameraResolution()</td></tr>
+<tr><td>ParseVisionCameraResolution</td><td>MethodDeclaration</td><td>L115–120</td><td>double Drilling.Common.Managers.CSettingManager.ParseVisionCameraResolution(string)</td></tr>
+<tr><td>SaveSection</td><td>MethodDeclaration</td><td>L122–148</td><td>void Drilling.Common.Managers.CSettingManager.SaveSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadHistory</td><td>MethodDeclaration</td><td>L150–153</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt; Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadInterfaceList</td><td>MethodDeclaration</td><td>L155–158</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken)</td></tr>
+<tr><td>SaveInterfaceList</td><td>MethodDeclaration</td><td>L160–164</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>ConnectInterface</td><td>MethodDeclaration</td><td>L166–169</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>DisconnectInterface</td><td>MethodDeclaration</td><td>L171–174</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReconnectInterface</td><td>MethodDeclaration</td><td>L176–179</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ReconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>ZeroDefence</td><td>FieldDeclaration</td><td>L185–185</td><td>string Drilling.Common.Managers.CRunOptionSettings.ZeroDefence</td></tr>
+<tr><td>CurrentGroup</td><td>FieldDeclaration</td><td>L186–186</td><td>string Drilling.Common.Managers.CRunOptionSettings.CurrentGroup</td></tr>
+<tr><td>FollowUp</td><td>FieldDeclaration</td><td>L187–187</td><td>string Drilling.Common.Managers.CRunOptionSettings.FollowUp</td></tr>
+<tr><td>DistortionGroup0</td><td>FieldDeclaration</td><td>L188–188</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup0</td></tr>
+<tr><td>DistortionGroup1</td><td>FieldDeclaration</td><td>L189–189</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup1</td></tr>
+<tr><td>DistortionGroup2</td><td>FieldDeclaration</td><td>L190–190</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup2</td></tr>
+<tr><td>ReviewMethod</td><td>FieldDeclaration</td><td>L191–191</td><td>string Drilling.Common.Managers.CRunOptionSettings.ReviewMethod</td></tr>
+<tr><td>ReviewLine</td><td>FieldDeclaration</td><td>L192–192</td><td>string Drilling.Common.Managers.CRunOptionSettings.ReviewLine</td></tr>
+<tr><td>ImmediateRetry</td><td>FieldDeclaration</td><td>L193–193</td><td>string Drilling.Common.Managers.CRunOptionSettings.ImmediateRetry</td></tr>
+<tr><td>RetryCount</td><td>FieldDeclaration</td><td>L194–194</td><td>string Drilling.Common.Managers.CRunOptionSettings.RetryCount</td></tr>
+<tr><td>Keys</td><td>FieldDeclaration</td><td>L195–195</td><td>System.Collections.Generic.HashSet&lt;string&gt; Drilling.Common.Managers.CRunOptionSettings.Keys</td></tr>
+<tr><td>IsKey</td><td>MethodDeclaration</td><td>L196–196</td><td>bool Drilling.Common.Managers.CRunOptionSettings.IsKey(string)</td></tr>
+<tr><td>Read</td><td>MethodDeclaration</td><td>L197–197</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(Drilling.Common.Managers.CSettingManager)</td></tr>
+<tr><td>Read</td><td>MethodDeclaration</td><td>L198–221</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>Number</td><td>LocalFunctionStatement</td><td>L213–220</td><td>int Number(string, int, int, int)</td></tr>
+<tr><td>EncodeLine</td><td>MethodDeclaration</td><td>L223–229</td><td>int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)</td></tr>
+<tr><td>DistortionGroupMask</td><td>PropertyDeclaration</td><td>L234–234</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask</td></tr>
+<tr><td>get_DistortionGroupMask</td><td>GetAccessorDeclaration</td><td>L234–234</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask.get</td></tr>
+<tr><td>set_DistortionGroupMask</td><td>InitAccessorDeclaration</td><td>L234–234</td><td>void Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask.init</td></tr>
+<tr><td>DistortionGroups</td><td>PropertyDeclaration</td><td>L235–235</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroups</td></tr>
+<tr><td>ReviewLineCount</td><td>PropertyDeclaration</td><td>L236–242</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount</td></tr>
+<tr><td>ReviewOptions</td><td>PropertyDeclaration</td><td>L243–243</td><td>Drilling.Common.Review.ST_AUTO_REVIEW_OPTIONS Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewOptions</td></tr>
+<tr><td>Option</td><td>EnumMemberDeclaration</td><td>L248–248</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Option</td></tr>
+<tr><td>Interface</td><td>EnumMemberDeclaration</td><td>L249–249</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Interface</td></tr>
+<tr><td>Io</td><td>EnumMemberDeclaration</td><td>L250–250</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Io</td></tr>
+<tr><td>Motor</td><td>EnumMemberDeclaration</td><td>L251–251</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Motor</td></tr>
+<tr><td>Alarm</td><td>EnumMemberDeclaration</td><td>L252–252</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Alarm</td></tr>
+<tr><td>Load</td><td>MethodDeclaration</td><td>L275–275</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingFileBase.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>Save</td><td>MethodDeclaration</td><td>L276–276</td><td>void Drilling.Common.Managers.CSettingFileBase.Save(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadHistory</td><td>MethodDeclaration</td><td>L277–277</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt; Drilling.Common.Managers.CSettingFileBase.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>LoadAll</td><td>MethodDeclaration</td><td>L282–282</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Managers.CInterfaceFileBase.LoadAll(System.Threading.CancellationToken)</td></tr>
+<tr><td>SaveAll</td><td>MethodDeclaration</td><td>L283–283</td><td>void Drilling.Common.Managers.CInterfaceFileBase.SaveAll(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L16">FieldDeclaration <code>ReviewCameraResolutionKey</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L16-L16">Drilling.Common/Managers/CSettingManager.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CSettingManager.ReviewCameraResolutionKey</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ReviewCameraResolutionKey = &quot;Review_Camera_Resolution&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>VisionCameraResolutionKey</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L17-L17">Drilling.Common/Managers/CSettingManager.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CSettingManager.VisionCameraResolutionKey</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: VisionCameraResolutionKey = ReviewCameraResolutionKey</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>DefaultVisionCameraResolution</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L18-L18">Drilling.Common/Managers/CSettingManager.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Managers.CSettingManager.DefaultVisionCameraResolution</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>18</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultVisionCameraResolution = 0.0025</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">FieldDeclaration <code>AlignCameraResolutionKey</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L19-L19">Drilling.Common/Managers/CSettingManager.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CSettingManager.AlignCameraResolutionKey</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>19</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: AlignCameraResolutionKey = &quot;Align_Camera_Resolution&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">FieldDeclaration <code>DefaultAlignCameraResolution</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L20-L20">Drilling.Common/Managers/CSettingManager.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Managers.CSettingManager.DefaultAlignCameraResolution</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultAlignCameraResolution = 0.00345</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">FieldDeclaration <code>WapageAlignBaseToleranceKey</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L21-L21">Drilling.Common/Managers/CSettingManager.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CSettingManager.WapageAlignBaseToleranceKey</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: WapageAlignBaseToleranceKey = &quot;Wapage_AlignBase_Tolerance&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">FieldDeclaration <code>DefaultWapageAlignBaseTolerance</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L22-L22">Drilling.Common/Managers/CSettingManager.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Managers.CSettingManager.DefaultWapageAlignBaseTolerance</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>22</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultWapageAlignBaseTolerance = 0.1</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">FieldDeclaration <code>_cacheLock</code> · L23–23</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L23-L23">Drilling.Common/Managers/CSettingManager.cs:23–23</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Managers.CSettingManager._cacheLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>23</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>23</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _cacheLock = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L24">FieldDeclaration <code>_saveLock</code> · L24–24</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L24-L24">Drilling.Common/Managers/CSettingManager.cs:24–24</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Managers.CSettingManager._saveLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>24</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>24</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _saveLock = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L25">FieldDeclaration <code>_sectionCache</code> · L25–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L25-L25">Drilling.Common/Managers/CSettingManager.cs:25–25</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;&gt; Drilling.Common.Managers.CSettingManager._sectionCache</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>25</td><td>new</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;&gt;.Dictionary()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>25</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _sectionCache = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L26">MethodDeclaration <code>LoadSection</code> · L26–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L26-L38">Drilling.Common/Managers/CSettingManager.cs:26–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L577-L577">Drilling.Common/Alarm/CAlarmManager.cs:577–577</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CAlignInterpolation.cs#L272-L272">Drilling.Common/Correction/CAlignInterpolation.cs:272–272</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273">Drilling.Common/Correction/CAlignInterpolation.cs:273–273</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L252-L252">Drilling.Common/Interface/CPowerMeasureRun.cs:252–252</a></td><td>manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L100-L100">Drilling.Common/Managers/CManager.cs:100–100</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L105-L105">Drilling.Common/Managers/CManager.cs:105–105</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L62-L62">Drilling.Common/Managers/CSettingManager.cs:62–62</a></td><td>LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L77-L77">Drilling.Common/Managers/CSettingManager.cs:77–77</a></td><td>LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L138-L138">Drilling.Common/Managers/CSettingManager.cs:138–138</a></td><td>LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L197-L197">Drilling.Common/Managers/CSettingManager.cs:197–197</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L433-L433">Drilling.Common/Review/CReviewManager.cs:433–433</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L542-L542">Drilling.Common/Review/CReviewManager.cs:542–542</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L556-L556">Drilling.Common/Review/CReviewManager.cs:556–556</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2499-L2499">Drilling.Common/Review/CReviewManager.cs:2499–2499</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2499-L2499">Drilling.Common/Review/CReviewManager.cs:2499–2499</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L4263-L4263">Drilling.Common/Review/CReviewManager.cs:4263–4263</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1530-L1530">Drilling.Common/Station/CStationProcess.cs:1530–1530</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1531-L1531">Drilling.Common/Station/CStationProcess.cs:1531–1531</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4237-L4237">Drilling.Common/Station/CStationProcess.cs:4237–4237</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4237-L4237">Drilling.Common/Station/CStationProcess.cs:4237–4237</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6095-L6095">Drilling.Common/Station/CStationProcess.cs:6095–6095</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6095-L6095">Drilling.Common/Station/CStationProcess.cs:6095–6095</a></td><td>settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L556-L556">Drilling.UI/CRootView.cs:556–556</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1399-L1399">Drilling.UI/CRootView.cs:1399–1399</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1407-L1407">Drilling.UI/CRootView.cs:1407–1407</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1911-L1911">Drilling.UI/CRootView.cs:1911–1911</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L130-L130">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:130–130</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L131-L131">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:131–131</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L379-L379">Drilling.UI/Menu/Menus/CMenuCorrection.cs:379–379</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L380-L380">Drilling.UI/Menu/Menus/CMenuCorrection.cs:380–380</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L392-L392">Drilling.UI/Menu/Menus/CMenuCorrection.cs:392–392</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L409-L409">Drilling.UI/Menu/Menus/CMenuCorrection.cs:409–409</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L409-L409">Drilling.UI/Menu/Menus/CMenuCorrection.cs:409–409</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L589-L589">Drilling.UI/Menu/Menus/CMenuCorrection.cs:589–589</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L590-L590">Drilling.UI/Menu/Menus/CMenuCorrection.cs:590–590</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2194-L2194">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2194–2194</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2640-L2640">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2640–2640</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2745-L2745">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2745–2745</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2745-L2745">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2745–2745</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2832-L2832">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2832–2832</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4186-L4186">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4186–4186</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4186-L4186">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4186–4186</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2185-L2185">Drilling.UI/Menu/Menus/CMenuMain.cs:2185–2185</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2211-L2211">Drilling.UI/Menu/Menus/CMenuMain.cs:2211–2211</a></td><td>settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2875-L2875">Drilling.UI/Menu/Menus/CMenuMain.cs:2875–2875</a></td><td>_settings.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1089-L1089">Drilling.UI/Menu/Menus/CMenuManual.cs:1089–1089</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1096-L1096">Drilling.UI/Menu/Menus/CMenuManual.cs:1096–1096</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1450-L1450">Drilling.UI/Menu/Menus/CMenuManual.cs:1450–1450</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1749-L1749">Drilling.UI/Menu/Menus/CMenuManual.cs:1749–1749</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1794-L1794">Drilling.UI/Menu/Menus/CMenuManual.cs:1794–1794</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1886-L1886">Drilling.UI/Menu/Menus/CMenuManual.cs:1886–1886</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1991-L1991">Drilling.UI/Menu/Menus/CMenuManual.cs:1991–1991</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2007-L2007">Drilling.UI/Menu/Menus/CMenuManual.cs:2007–2007</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2260-L2260">Drilling.UI/Menu/Menus/CMenuManual.cs:2260–2260</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2594-L2594">Drilling.UI/Menu/Menus/CMenuManual.cs:2594–2594</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2781-L2781">Drilling.UI/Menu/Menus/CMenuManual.cs:2781–2781</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3359-L3359">Drilling.UI/Menu/Menus/CMenuManual.cs:3359–3359</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3470-L3470">Drilling.UI/Menu/Menus/CMenuManual.cs:3470–3470</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3612-L3612">Drilling.UI/Menu/Menus/CMenuManual.cs:3612–3612</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3659-L3659">Drilling.UI/Menu/Menus/CMenuManual.cs:3659–3659</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4158-L4158">Drilling.UI/Menu/Menus/CMenuManual.cs:4158–4158</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4393-L4393">Drilling.UI/Menu/Menus/CMenuManual.cs:4393–4393</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4676-L4676">Drilling.UI/Menu/Menus/CMenuManual.cs:4676–4676</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4800-L4800">Drilling.UI/Menu/Menus/CMenuManual.cs:4800–4800</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5301-L5301">Drilling.UI/Menu/Menus/CMenuManual.cs:5301–5301</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5370-L5370">Drilling.UI/Menu/Menus/CMenuManual.cs:5370–5370</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5535-L5535">Drilling.UI/Menu/Menus/CMenuManual.cs:5535–5535</a></td><td>_manager.Setting().LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2297-L2297">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2297–2297</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2907-L2907">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2907–2907</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2908-L2908">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2908–2908</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3034-L3034">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3034–3034</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L568-L568">Drilling.UI/Menu/Menus/CMenuRecipe.cs:568–568</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L568-L568">Drilling.UI/Menu/Menus/CMenuRecipe.cs:568–568</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L660-L660">Drilling.UI/Menu/Menus/CMenuRecipe.cs:660–660</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3091-L3091">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3091–3091</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3091-L3091">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3091–3091</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L1051-L1051">Drilling.UI/Menu/Menus/CMenuReview.cs:1051–1051</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2316-L2316">Drilling.UI/Menu/Menus/CMenuReview.cs:2316–2316</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2871-L2871">Drilling.UI/Menu/Menus/CMenuReview.cs:2871–2871</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3316-L3316">Drilling.UI/Menu/Menus/CMenuReview.cs:3316–3316</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3337-L3337">Drilling.UI/Menu/Menus/CMenuReview.cs:3337–3337</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3688-L3688">Drilling.UI/Menu/Menus/CMenuReview.cs:3688–3688</a></td><td>.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L224-L224">Drilling.UI/Menu/Menus/CMenuSetting.cs:224–224</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L230-L230">Drilling.UI/Menu/Menus/CMenuSetting.cs:230–230</a></td><td>_settingManager.LoadSection</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>28</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>31</td><td>_sectionCache.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;&gt;.TryGetValue(Drilling.Common.Managers.EN_SETTING_TAB, out System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>37</td><td>ReloadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:40</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>29</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _sectionCache.TryGetValue(section, out var cachedParameters)</td></tr>
+<tr><td>31</td><td>if</td><td>조건에 따라 분기합니다: if (_sectionCache.TryGetValue(section, out var cachedParameters))</td></tr>
+<tr><td>33</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return cachedParameters;</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReloadSection(section, cancellationToken)</td></tr>
+<tr><td>37</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReloadSection(section, cancellationToken);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;LoadSection&quot;]
+ N0[&quot;L29 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L31 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">MethodDeclaration <code>ReloadSection</code> · L40–49</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L40-L49">Drilling.Common/Managers/CSettingManager.cs:40–49</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L37-L37">Drilling.Common/Managers/CSettingManager.cs:37–37</a></td><td>ReloadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L55-L55">Drilling.Common/Managers/CSettingManager.cs:55–55</a></td><td>ReloadSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L512-L512">Drilling.UI/Menu/Menus/CMenuSetting.cs:512–512</a></td><td>_settingManager.ReloadSection</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>44</td><td>settingFile.Load(section, cancellationToken).ToArray</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.ToArray&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;()</td></tr>
+<tr><td>44</td><td>settingFile.Load</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingFileBase.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:275</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>42</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_saveLock)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(section, cancellationToken).ToArray()</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(section, cancellationToken)</td></tr>
+<tr><td>44</td><td>local-declaration</td><td>지역 변수를 선언합니다: var loadedParameters = settingFile.Load(section, cancellationToken).ToArray();</td></tr>
+<tr><td>44</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: loadedParameters = settingFile.Load(section, cancellationToken).ToArray()</td></tr>
+<tr><td>45</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)</td></tr>
+<tr><td>46</td><td>assignment</td><td>값을 대상에 대입합니다: _sectionCache[section] = loadedParameters</td></tr>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return loadedParameters;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReloadSection&quot;]
+ N0[&quot;L42 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L45 lock&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L51">MethodDeclaration <code>LoadAllSections</code> · L51–57</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L51-L57">Drilling.Common/Managers/CSettingManager.cs:51–57</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.CSettingManager.LoadAllSections(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L99-L99">Drilling.Common/Managers/CManager.cs:99–99</a></td><td>_settingManager.LoadAllSections</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>Enum.GetValues&lt;EN_SETTING_TAB&gt;</td><td>resolved</td><td>Drilling.Common.Managers.EN_SETTING_TAB[] System.Enum.GetValues&lt;Drilling.Common.Managers.EN_SETTING_TAB&gt;()</td></tr>
+<tr><td>55</td><td>ReloadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:40</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.GetValues&lt;EN_SETTING_TAB&gt;()</td></tr>
+<tr><td>53</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var section in Enum.GetValues&lt;EN_SETTING_TAB&gt;())</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReloadSection(section, cancellationToken)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;LoadAllSections&quot;]
+ N0[&quot;L53 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L59">MethodDeclaration <code>GetValue</code> · L59–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L59-L70">Drilling.Common/Managers/CSettingManager.cs:59–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>string</td><td>None</td><td>True / &quot;&quot;</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1043-L1043">Drilling.Common/Automation/CAutomationManager.cs:1043–1043</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1069-L1069">Drilling.Common/Automation/CAutomationManager.cs:1069–1069</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L25-L25">Drilling.Common/Interface/CPowerMeasureRun.cs:25–25</a></td><td>settings.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L27-L27">Drilling.Common/Interface/CPowerMeasureRun.cs:27–27</a></td><td>settings.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L38-L38">Drilling.Common/Interface/CPowerMeasureRun.cs:38–38</a></td><td>settings.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L261-L261">Drilling.Common/Managers/CManager.cs:261–261</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L262-L262">Drilling.Common/Managers/CManager.cs:262–262</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L107-L107">Drilling.Common/Managers/CSettingManager.cs:107–107</a></td><td>GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L113-L113">Drilling.Common/Managers/CSettingManager.cs:113–113</a></td><td>GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4830-L4830">Drilling.Common/Station/CStationProcess.cs:4830–4830</a></td><td>settings.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L152-L152">Drilling.UI/CRootView.cs:152–152</a></td><td>settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2169-L2169">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2169–2169</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2170-L2170">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2170–2170</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2171-L2171">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2171–2171</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2839-L2839">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2839–2839</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2901-L2901">Drilling.UI/Menu/Menus/CMenuMain.cs:2901–2901</a></td><td>_settings.GetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5984-L5984">Drilling.UI/Menu/Menus/CMenuMonitor.cs:5984–5984</a></td><td>_settingManager.GetValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>61</td><td>ArgumentException.ThrowIfNullOrWhiteSpace</td><td>resolved</td><td>void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?)</td></tr>
+<tr><td>62</td><td>LoadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26</td></tr>
+<tr><td>68</td><td>parameters.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>69</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(name)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSection(section, cancellationToken)</td></tr>
+<tr><td>62</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameters = LoadSection(section, cancellationToken);</td></tr>
+<tr><td>62</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameters = LoadSection(section, cancellationToken)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.FirstOrDefault(MatchesItem)</td></tr>
+<tr><td>68</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameter = parameters.FirstOrDefault(MatchesItem);</td></tr>
+<tr><td>68</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameter = parameters.FirstOrDefault(MatchesItem)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parameter.Value)</td></tr>
+<tr><td>69</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parameter is null || string.IsNullOrWhiteSpace(parameter.Value) ? defaultValue : parameter.Value</td></tr>
+<tr><td>69</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameter is null || string.IsNullOrWhiteSpace(parameter.Value) ? defaultValue : parameter.Value;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L63">LocalFunctionStatement <code>MatchesItem</code> · L63–66</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L63-L66">Drilling.Common/Managers/CSettingManager.cs:63–66</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>item</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>65</td><td>item.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>65</td><td>item.Name.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals(name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>65</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return item.Key.Equals(name, StringComparison.OrdinalIgnoreCase) || item.Name.Equals(name, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L72">MethodDeclaration <code>SetValue</code> · L72–102</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L72-L102">Drilling.Common/Managers/CSettingManager.cs:72–102</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.CSettingManager.SetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4248-L4248">Drilling.Common/Station/CStationProcess.cs:4248–4248</a></td><td>_settingManager.SetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6135-L6135">Drilling.Common/Station/CStationProcess.cs:6135–6135</a></td><td>settings.SetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6383-L6383">Drilling.Common/Station/CStationProcess.cs:6383–6383</a></td><td>settings.SetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2902-L2902">Drilling.UI/Menu/Menus/CMenuMain.cs:2902–2902</a></td><td>_settings.SetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L768-L768">Drilling.UI/Menu/Menus/CMenuRecipe.cs:768–768</a></td><td>_settingManager.SetValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1161-L1161">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1161–1161</a></td><td>_settingManager.SetValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>76</td><td>ArgumentException.ThrowIfNullOrWhiteSpace</td><td>resolved</td><td>void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?)</td></tr>
+<tr><td>77</td><td>LoadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26</td></tr>
+<tr><td>94</td><td>parameters.Select(SelectParameter).ToArray</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.ToArray&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;()</td></tr>
+<tr><td>94</td><td>parameters.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.Select&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>97</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>100</td><td>SaveSection</td><td>resolved</td><td>void Drilling.Common.Managers.CSettingManager.SaveSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:122</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>74</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_saveLock)</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(name)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSection(section, cancellationToken)</td></tr>
+<tr><td>77</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameters = LoadSection(section, cancellationToken);</td></tr>
+<tr><td>77</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameters = LoadSection(section, cancellationToken)</td></tr>
+<tr><td>78</td><td>local-declaration</td><td>지역 변수를 선언합니다: var found = false;</td></tr>
+<tr><td>78</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: found = false</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(SelectParameter).ToArray()</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(SelectParameter)</td></tr>
+<tr><td>94</td><td>local-declaration</td><td>지역 변수를 선언합니다: var editedParameters = parameters.Select(SelectParameter).ToArray();</td></tr>
+<tr><td>94</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: editedParameters = parameters.Select(SelectParameter).ToArray()</td></tr>
+<tr><td>95</td><td>if</td><td>조건에 따라 분기합니다: if (!found)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;Setting parameter is not defined: {section}/{name}&quot;)</td></tr>
+<tr><td>97</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;Setting parameter is not defined: {section}/{name}&quot;);</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SaveSection(section, editedParameters, cancellationToken)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetValue&quot;]
+ N0[&quot;L74 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L95 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">LocalFunctionStatement <code>SelectParameter</code> · L79–92</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L79-L92">Drilling.Common/Managers/CSettingManager.cs:79–92</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER SelectParameter(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>parameter.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>81</td><td>parameter.Name.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Key.Equals(name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Name.Equals(name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>81</td><td>local-declaration</td><td>지역 변수를 선언합니다: var isTarget = parameter.Key.Equals(name, StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals(name, StringComparison.OrdinalIgnoreCase);</td></tr>
+<tr><td>81</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: isTarget = parameter.Key.Equals(name, StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals(name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>82</td><td>if</td><td>조건에 따라 분기합니다: if (!isTarget)</td></tr>
+<tr><td>84</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameter;</td></tr>
+<tr><td>87</td><td>assignment</td><td>값을 대상에 대입합니다: found = true</td></tr>
+<tr><td>88</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameter with { Value = value };</td></tr>
+<tr><td>90</td><td>assignment</td><td>값을 대상에 대입합니다: Value = value</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SelectParameter&quot;]
+ N0[&quot;L82 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L104">MethodDeclaration <code>GetVisionMaxHoleCountPerLine</code> · L104–111</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L104-L111">Drilling.Common/Managers/CSettingManager.cs:104–111</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Managers.CSettingManager.GetVisionMaxHoleCountPerLine()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1966-L1966">Drilling.Common/Review/CReviewManager.cs:1966–1966</a></td><td>settingManager.GetVisionMaxHoleCountPerLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2358-L2358">Drilling.Common/Review/CReviewManager.cs:2358–2358</a></td><td>settingManager.GetVisionMaxHoleCountPerLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2475-L2475">Drilling.Common/Review/CReviewManager.cs:2475–2475</a></td><td>settingManager.GetVisionMaxHoleCountPerLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>107</td><td>GetValue</td><td>resolved</td><td>string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:59</td></tr>
+<tr><td>107</td><td>CVisionProtocol.DefaultMaxHoleCountPerLine.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>108</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>109</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>110</td><td>CVisionProtocol.ValidateLineCapacity</td><td>resolved</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.ValidateLineCapacity(int) · Drilling.Common/Interface/Vision/CVisionComm.cs:568</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(EN_SETTING_TAB.Option, CVisionProtocol.MaxHoleCountPerLineSettingKey, CVisionProtocol.DefaultMaxHoleCountPerLine.ToString(CultureInfo.InvariantCulture))</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.DefaultMaxHoleCountPerLine.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>107</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = GetValue(EN_SETTING_TAB.Option, CVisionProtocol.MaxHoleCountPerLineSettingKey, CVisionProtocol.DefaultMaxHoleCountPerLine.ToString(CultureInfo.InvariantCulture));</td></tr>
+<tr><td>107</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = GetValue(EN_SETTING_TAB.Option, CVisionProtocol.MaxHoleCountPerLineSettingKey, CVisionProtocol.DefaultMaxHoleCountPerLine.ToString(CultureInfo.InvariantCulture))</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>108</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value))</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Setting-Review MaxHoleCountPerLine은 정수여야 합니다.&quot;)</td></tr>
+<tr><td>109</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Setting-Review MaxHoleCountPerLine은 정수여야 합니다.&quot;);</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.ValidateLineCapacity(value)</td></tr>
+<tr><td>110</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CVisionProtocol.ValidateLineCapacity(value);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetVisionMaxHoleCountPerLine&quot;]
+ N0[&quot;L108 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L113">MethodDeclaration <code>GetVisionCameraResolution</code> · L113–113</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L113-L113">Drilling.Common/Managers/CSettingManager.cs:113–113</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Managers.CSettingManager.GetVisionCameraResolution()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L48-L48">Drilling.Common/Review/CReviewManager.cs:48–48</a></td><td>settingManager.GetVisionCameraResolution</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2026-L2026">Drilling.Common/Review/CReviewManager.cs:2026–2026</a></td><td>settingManager.GetVisionCameraResolution</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2119-L2119">Drilling.Common/Review/CReviewManager.cs:2119–2119</a></td><td>settingManager.GetVisionCameraResolution</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2175-L2175">Drilling.Common/Review/CReviewManager.cs:2175–2175</a></td><td>settingManager.GetVisionCameraResolution</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>113</td><td>ParseVisionCameraResolution</td><td>resolved</td><td>double Drilling.Common.Managers.CSettingManager.ParseVisionCameraResolution(string) · Drilling.Common/Managers/CSettingManager.cs:115</td></tr>
+<tr><td>113</td><td>GetValue</td><td>resolved</td><td>string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:59</td></tr>
+<tr><td>113</td><td>DefaultVisionCameraResolution.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseVisionCameraResolution(GetValue(EN_SETTING_TAB.Option, VisionCameraResolutionKey, DefaultVisionCameraResolution.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)))</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(EN_SETTING_TAB.Option, VisionCameraResolutionKey, DefaultVisionCameraResolution.ToString(&quot;R&quot;, CultureInfo.InvariantCulture))</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultVisionCameraResolution.ToString(&quot;R&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L115">MethodDeclaration <code>ParseVisionCameraResolution</code> · L115–120</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L115-L120">Drilling.Common/Managers/CSettingManager.cs:115–120</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Managers.CSettingManager.ParseVisionCameraResolution(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L113-L113">Drilling.Common/Managers/CSettingManager.cs:113–113</a></td><td>ParseVisionCameraResolution</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L130-L130">Drilling.Common/Managers/CSettingManager.cs:130–130</a></td><td>ParseVisionCameraResolution</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>117</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>117</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>118</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value) || value &lt;= 0)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Setting-Review Review_Camera_Resolution은 0보다 큰 유한한 mm/pixel 값이어야 합니다.&quot;)</td></tr>
+<tr><td>118</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Setting-Review Review_Camera_Resolution은 0보다 큰 유한한 mm/pixel 값이어야 합니다.&quot;);</td></tr>
+<tr><td>119</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ParseVisionCameraResolution&quot;]
+ N0[&quot;L117 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L122">MethodDeclaration <code>SaveSection</code> · L122–148</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L122-L148">Drilling.Common/Managers/CSettingManager.cs:122–148</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.CSettingManager.SaveSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L100-L100">Drilling.Common/Managers/CSettingManager.cs:100–100</a></td><td>SaveSection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L444-L444">Drilling.UI/Menu/Menus/CMenuSetting.cs:444–444</a></td><td>_settingManager.SaveSection</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>128</td><td>parameters.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>128</td><td>p.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>130</td><td>ParseVisionCameraResolution</td><td>resolved</td><td>double Drilling.Common.Managers.CSettingManager.ParseVisionCameraResolution(string) · Drilling.Common/Managers/CSettingManager.cs:115</td></tr>
+<tr><td>131</td><td>parameters.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>131</td><td>p.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>132</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>132</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>133</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>134</td><td>parameters.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>134</td><td>p.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>135</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>135</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>136</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>137</td><td>CRunOptionSettings.Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:198</td></tr>
+<tr><td>138</td><td>CRunOptionSettings.Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:198</td></tr>
+<tr><td>138</td><td>LoadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26</td></tr>
+<tr><td>139</td><td>.Melsec.GetCachedValue</td><td>resolved</td><td>Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE? Drilling.Common.Interface.CMelsec.GetCachedValue(string) · Drilling.Common/Interface/Melsec/CMelsec.cs:2568</td></tr>
+<tr><td>140</td><td>Convert.ToDouble</td><td>resolved</td><td>double System.Convert.ToDouble(object?, System.IFormatProvider?)</td></tr>
+<tr><td>141</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>144</td><td>settingFile.Save</td><td>resolved</td><td>void Drilling.Common.Managers.CSettingFileBase.Save(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:276</td></tr>
+<tr><td>146</td><td>parameters.ToArray</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.ToArray&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>124</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_saveLock)</td></tr>
+<tr><td>126</td><td>if</td><td>조건에 따라 분기합니다: if (section == EN_SETTING_TAB.Option)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.FirstOrDefault(p =&gt; p.Key.Equals(VisionCameraResolutionKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(VisionCameraResolutionKey, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>128</td><td>local-declaration</td><td>지역 변수를 선언합니다: var resolution = parameters.FirstOrDefault(p =&gt; p.Key.Equals(VisionCameraResolutionKey, StringComparison.OrdinalIgnoreCase));</td></tr>
+<tr><td>128</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: resolution = parameters.FirstOrDefault(p =&gt; p.Key.Equals(VisionCameraResolutionKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>129</td><td>if</td><td>조건에 따라 분기합니다: if (resolution is not null)</td></tr>
+<tr><td>130</td><td>assignment</td><td>값을 대상에 대입합니다: _ = ParseVisionCameraResolution(resolution.Value)</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseVisionCameraResolution(resolution.Value)</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.FirstOrDefault(p =&gt; p.Key.Equals(AlignCameraResolutionKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(AlignCameraResolutionKey, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>131</td><td>local-declaration</td><td>지역 변수를 선언합니다: var alignResolution = parameters.FirstOrDefault(p =&gt; p.Key.Equals(AlignCameraResolutionKey, StringComparison.OrdinalIgnoreCase));</td></tr>
+<tr><td>131</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: alignResolution = parameters.FirstOrDefault(p =&gt; p.Key.Equals(AlignCameraResolutionKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(alignResolution.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var alignValue)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(alignValue)</td></tr>
+<tr><td>132</td><td>if</td><td>조건에 따라 분기합니다: if (alignResolution is not null &amp;&amp; (!double.TryParse(alignResolution.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var alignValue) || !double.IsFinite(alignValue) || alignValue &lt;= 0))</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Setting-Align Align_Camera_Resolution은 0보다 큰 유한한 mm/pixel 값이어야 합니다.&quot;)</td></tr>
+<tr><td>133</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Setting-Align Align_Camera_Resolution은 0보다 큰 유한한 mm/pixel 값이어야 합니다.&quot;);</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.FirstOrDefault(p =&gt; p.Key.Equals(WapageAlignBaseToleranceKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(WapageAlignBaseToleranceKey, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>134</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tolerance = parameters.FirstOrDefault(p =&gt; p.Key.Equals(WapageAlignBaseToleranceKey, StringComparison.OrdinalIgnoreCase));</td></tr>
+<tr><td>134</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tolerance = parameters.FirstOrDefault(p =&gt; p.Key.Equals(WapageAlignBaseToleranceKey, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(tolerance.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var toleranceValue)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(toleranceValue)</td></tr>
+<tr><td>135</td><td>if</td><td>조건에 따라 분기합니다: if (tolerance is not null &amp;&amp; (!double.TryParse(tolerance.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var toleranceValue) || !double.IsFinite(toleranceValue) || toleranceValue &lt; 0))</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Setting-Align Wapage_AlignBase_Tolerance는 0 이상의 유한한 mm 값이어야 합니다.&quot;)</td></tr>
+<tr><td>136</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Setting-Align Wapage_AlignBase_Tolerance는 0 이상의 유한한 mm 값이어야 합니다.&quot;);</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(parameters)</td></tr>
+<tr><td>137</td><td>local-declaration</td><td>지역 변수를 선언합니다: var edited = CRunOptionSettings.Read(parameters);</td></tr>
+<tr><td>137</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: edited = CRunOptionSettings.Read(parameters)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(LoadSection(section, cancellationToken))</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSection(section, cancellationToken)</td></tr>
+<tr><td>138</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = CRunOptionSettings.Read(LoadSection(section, cancellationToken));</td></tr>
+<tr><td>138</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = CRunOptionSettings.Read(LoadSection(section, cancellationToken))</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Melsec.GetCachedValue(&quot;HANDSHAKE_PRC_REVIEW_ABLE&quot;)</td></tr>
+<tr><td>139</td><td>local-declaration</td><td>지역 변수를 선언합니다: var able = interfaceManager?.Melsec.GetCachedValue(&quot;HANDSHAKE_PRC_REVIEW_ABLE&quot;);</td></tr>
+<tr><td>139</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: able = interfaceManager?.Melsec.GetCachedValue(&quot;HANDSHAKE_PRC_REVIEW_ABLE&quot;)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture)</td></tr>
+<tr><td>140</td><td>if</td><td>조건에 따라 분기합니다: if (edited.ReviewOptions != current.ReviewOptions &amp;&amp; able?.IsValid == true &amp;&amp; Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) == 1)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.&quot;)</td></tr>
+<tr><td>141</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.&quot;);</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Save(section, parameters, cancellationToken)</td></tr>
+<tr><td>145</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)</td></tr>
+<tr><td>146</td><td>assignment</td><td>값을 대상에 대입합니다: _sectionCache[section] = parameters.ToArray()</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.ToArray()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SaveSection&quot;]
+ N0[&quot;L124 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L126 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L129 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L132 if&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L135 if&quot;]
+ N1 --&gt;|포함| N4
+ N5[&quot;L140 if&quot;]
+ N1 --&gt;|포함| N5
+ N6[&quot;L145 lock&quot;]
+ N0 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L150">MethodDeclaration <code>LoadHistory</code> · L150–153</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L150-L153">Drilling.Common/Managers/CSettingManager.cs:150–153</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt; Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L255-L255">Drilling.UI/Menu/Menus/CMenuSetting.cs:255–255</a></td><td>_settingManager.LoadHistory</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>152</td><td>settingFile.LoadHistory</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt; Drilling.Common.Managers.CSettingFileBase.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:277</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.LoadHistory(section, cancellationToken)</td></tr>
+<tr><td>152</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return settingFile.LoadHistory(section, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L155">MethodDeclaration <code>LoadInterfaceList</code> · L155–158</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L155-L158">Drilling.Common/Managers/CSettingManager.cs:155–158</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L232-L232">Drilling.UI/Menu/Menus/CMenuSetting.cs:232–232</a></td><td>_settingManager.LoadInterfaceList</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>157</td><td>interfaceFile.LoadAll</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Managers.CInterfaceFileBase.LoadAll(System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:282</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>157</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.LoadAll(cancellationToken)</td></tr>
+<tr><td>157</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return interfaceFile.LoadAll(cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">MethodDeclaration <code>SaveInterfaceList</code> · L160–164</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L160-L164">Drilling.Common/Managers/CSettingManager.cs:160–164</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>interfaces</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L414-L414">Drilling.UI/Menu/Menus/CMenuSetting.cs:414–414</a></td><td>_settingManager.SaveInterfaceList</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>162</td><td>interfaceFile.SaveAll</td><td>resolved</td><td>void Drilling.Common.Managers.CInterfaceFileBase.SaveAll(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:283</td></tr>
+<tr><td>163</td><td>interfaceManager.Reload</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CInterfaceManager.Reload(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, bool, System.Threading.CancellationToken) · Drilling.Common/Interface/CInterfaceManager.cs:2057</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.SaveAll(interfaces, cancellationToken)</td></tr>
+<tr><td>163</td><td>await</td><td>비동기 완료를 기다립니다: await interfaceManager.Reload(interfaces, reconnect: false, cancellationToken)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reload(interfaces, reconnect: false, cancellationToken)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L166">MethodDeclaration <code>ConnectInterface</code> · L166–169</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L166-L169">Drilling.Common/Managers/CSettingManager.cs:166–169</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>module</td><td>Drilling.Common.Interface.EN_EQP_MODULE</td><td>None</td><td>False /</td></tr>
+<tr><td>number</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L346-L348">Drilling.UI/Menu/Menus/CMenuSetting.cs:346–348</a></td><td>_settingManager.ConnectInterface</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>168</td><td>interfaceManager.Connect</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CInterfaceManager.Connect(Drilling.Common.Interface.EN_EQP_MODULE, int, bool, System.Threading.CancellationToken) · Drilling.Common/Interface/CInterfaceManager.cs:262</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Connect(module, number, cancellationToken: cancellationToken)</td></tr>
+<tr><td>168</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Connect(module, number, cancellationToken: cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">MethodDeclaration <code>DisconnectInterface</code> · L171–174</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L171-L174">Drilling.Common/Managers/CSettingManager.cs:171–174</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>module</td><td>Drilling.Common.Interface.EN_EQP_MODULE</td><td>None</td><td>False /</td></tr>
+<tr><td>number</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L388-L390">Drilling.UI/Menu/Menus/CMenuSetting.cs:388–390</a></td><td>_settingManager.DisconnectInterface</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>173</td><td>interfaceManager.Disconnect</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CInterfaceManager.Disconnect(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Interface/CInterfaceManager.cs:276</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Disconnect(module, number, cancellationToken)</td></tr>
+<tr><td>173</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Disconnect(module, number, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L176">MethodDeclaration <code>ReconnectInterface</code> · L176–179</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L176-L179">Drilling.Common/Managers/CSettingManager.cs:176–179</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ReconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>module</td><td>Drilling.Common.Interface.EN_EQP_MODULE</td><td>None</td><td>False /</td></tr>
+<tr><td>number</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>178</td><td>interfaceManager.Reconnect</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CInterfaceManager.Reconnect(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Interface/CInterfaceManager.cs:292</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reconnect(module, number, cancellationToken)</td></tr>
+<tr><td>178</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Reconnect(module, number, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L185">FieldDeclaration <code>ZeroDefence</code> · L185–185</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L185-L185">Drilling.Common/Managers/CSettingManager.cs:185–185</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.ZeroDefence</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>185</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ZeroDefence = &quot;RUNOPTION_ZERO_DEFENCE_USE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L186">FieldDeclaration <code>CurrentGroup</code> · L186–186</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L186-L186">Drilling.Common/Managers/CSettingManager.cs:186–186</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.CurrentGroup</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>186</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: CurrentGroup = &quot;RUNOPTION_CURRENT_GROUP&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L187">FieldDeclaration <code>FollowUp</code> · L187–187</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L187-L187">Drilling.Common/Managers/CSettingManager.cs:187–187</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.FollowUp</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>187</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: FollowUp = &quot;RUNOPTION_FOLLOWUP_USE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L188">FieldDeclaration <code>DistortionGroup0</code> · L188–188</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L188-L188">Drilling.Common/Managers/CSettingManager.cs:188–188</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup0</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>188</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DistortionGroup0 = &quot;RUNOPTION_DISTORTION_GROUP0_USE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L189">FieldDeclaration <code>DistortionGroup1</code> · L189–189</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L189-L189">Drilling.Common/Managers/CSettingManager.cs:189–189</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup1</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>189</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DistortionGroup1 = &quot;RUNOPTION_DISTORTION_GROUP1_USE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L190">FieldDeclaration <code>DistortionGroup2</code> · L190–190</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L190-L190">Drilling.Common/Managers/CSettingManager.cs:190–190</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.DistortionGroup2</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>190</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DistortionGroup2 = &quot;RUNOPTION_DISTORTION_GROUP2_USE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L191">FieldDeclaration <code>ReviewMethod</code> · L191–191</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L191-L191">Drilling.Common/Managers/CSettingManager.cs:191–191</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.ReviewMethod</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>191</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ReviewMethod = &quot;RUNOPTION_REVIEW_METHOD&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L192">FieldDeclaration <code>ReviewLine</code> · L192–192</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L192-L192">Drilling.Common/Managers/CSettingManager.cs:192–192</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.ReviewLine</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>192</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ReviewLine = &quot;RUNOPTION_REVIEW_LINE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L193">FieldDeclaration <code>ImmediateRetry</code> · L193–193</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L193-L193">Drilling.Common/Managers/CSettingManager.cs:193–193</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.ImmediateRetry</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>193</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ImmediateRetry = &quot;RUNOPTION_REVIEW_IMMEDIATE_RETRY&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L194">FieldDeclaration <code>RetryCount</code> · L194–194</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L194-L194">Drilling.Common/Managers/CSettingManager.cs:194–194</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Managers.CRunOptionSettings.RetryCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>194</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: RetryCount = &quot;RUNOPTION_REVIEW_RETRY_COUNT&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L195">FieldDeclaration <code>Keys</code> · L195–195</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L195-L195">Drilling.Common/Managers/CSettingManager.cs:195–195</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.HashSet&lt;string&gt; Drilling.Common.Managers.CRunOptionSettings.Keys</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.HashSet&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>195</td><td>new</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;string&gt;.HashSet(System.Collections.Generic.IEnumerable&lt;string&gt;, System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>195</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: Keys = new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L196">MethodDeclaration <code>IsKey</code> · L196–196</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L196-L196">Drilling.Common/Managers/CSettingManager.cs:196–196</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Managers.CRunOptionSettings.IsKey(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L200-L200">Drilling.Common/Managers/CSettingManager.cs:200–200</a></td><td>IsKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1195-L1195">Drilling.UI/Menu/Menus/CMenuSetting.cs:1195–1195</a></td><td>CRunOptionSettings.IsKey</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>196</td><td>Keys.Contains</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;string&gt;.Contains(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Keys.Contains(key)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L197">MethodDeclaration <code>Read</code> · L197–197</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L197-L197">Drilling.Common/Managers/CSettingManager.cs:197–197</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(Drilling.Common.Managers.CSettingManager)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>Drilling.Common.Managers.CSettingManager</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L5937-L5937">Drilling.Common/Station/CStationProcess.cs:5937–5937</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6045-L6045">Drilling.Common/Station/CStationProcess.cs:6045–6045</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6140-L6140">Drilling.Common/Station/CStationProcess.cs:6140–6140</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6375-L6375">Drilling.Common/Station/CStationProcess.cs:6375–6375</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6381-L6381">Drilling.Common/Station/CStationProcess.cs:6381–6381</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2765-L2765">Drilling.UI/Menu/Menus/CMenuMain.cs:2765–2765</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2775-L2775">Drilling.UI/Menu/Menus/CMenuMain.cs:2775–2775</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2874-L2874">Drilling.UI/Menu/Menus/CMenuMain.cs:2874–2874</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>197</td><td>Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:198</td></tr>
+<tr><td>197</td><td>settings.LoadSection</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(settings.LoadSection(EN_SETTING_TAB.Option))</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L198">MethodDeclaration <code>Read</code> · L198–221</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L198-L221">Drilling.Common/Managers/CSettingManager.cs:198–221</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CAlignInterpolation.cs#L274-L274">Drilling.Common/Correction/CAlignInterpolation.cs:274–274</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L137-L137">Drilling.Common/Managers/CSettingManager.cs:137–137</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L138-L138">Drilling.Common/Managers/CSettingManager.cs:138–138</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L197-L197">Drilling.Common/Managers/CSettingManager.cs:197–197</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L266-L266">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:266–266</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4247-L4247">Drilling.Common/Station/CStationProcess.cs:4247–4247</a></td><td>CRunOptionSettings.Read</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>200</td><td>parameters.Where(p =&gt; IsKey(p.Key)).ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.ToDictionary&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, string, string&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, string&gt;, System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, string&gt;, System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>200</td><td>parameters.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.Where&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>200</td><td>IsKey</td><td>resolved</td><td>bool Drilling.Common.Managers.CRunOptionSettings.IsKey(string) · Drilling.Common/Managers/CSettingManager.cs:196</td></tr>
+<tr><td>201</td><td>new</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ST_RUN_OPTION_SETTINGS(bool, int, bool, int, int, bool, int) · Drilling.Common/Managers/CSettingManager.cs:232</td></tr>
+<tr><td>202</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>203</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>204</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>205</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>206</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>207</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>208</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>211</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>211</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+<tr><td>211</td><td>Number</td><td>resolved</td><td>int Number(string, int, int, int) · Drilling.Common/Managers/CSettingManager.cs:213</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p =&gt; IsKey(p.Key)).ToDictionary(p =&gt; p.Key, p =&gt; p.Value, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p =&gt; IsKey(p.Key))</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsKey(p.Key)</td></tr>
+<tr><td>200</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = parameters.Where(p =&gt; IsKey(p.Key)).ToDictionary(p =&gt; p.Key, p =&gt; p.Value, StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>200</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = parameters.Where(p =&gt; IsKey(p.Key)).ToDictionary(p =&gt; p.Key, p =&gt; p.Value, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, …</td></tr>
+<tr><td>201</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, 1,</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ZeroDefence, 0, 0, 1)</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(CurrentGroup, 1, 1, 4)</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(FollowUp, 0, 0, 1)</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewMethod, 1, 0, 1)</td></tr>
+<tr><td>206</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewLine, 0, 0, 3)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ImmediateRetry, 0, 0, 1)</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(RetryCount, 1, 1, 3)</td></tr>
+<tr><td>211</td><td>assignment</td><td>값을 대상에 대입합니다: DistortionGroupMask = Number(DistortionGroup0, 0, 0, 1) | Number(DistortionGroup1, 0, 0, 1) &lt;&lt; 1 | Number(DistortionGroup2, 0, 0, 1) &lt;&lt; 2</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup0, 0, 0, 1)</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup1, 0, 0, 1)</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup2, 0, 0, 1)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">LocalFunctionStatement <code>Number</code> · L213–220</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L213-L220">Drilling.Common/Managers/CSettingManager.cs:213–220</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Number(string, int, int, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>min</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>max</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L202-L202">Drilling.Common/Managers/CSettingManager.cs:202–202</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L203-L203">Drilling.Common/Managers/CSettingManager.cs:203–203</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L204-L204">Drilling.Common/Managers/CSettingManager.cs:204–204</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L205-L205">Drilling.Common/Managers/CSettingManager.cs:205–205</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L206-L206">Drilling.Common/Managers/CSettingManager.cs:206–206</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L207-L207">Drilling.Common/Managers/CSettingManager.cs:207–207</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L208-L208">Drilling.Common/Managers/CSettingManager.cs:208–208</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L211-L211">Drilling.Common/Managers/CSettingManager.cs:211–211</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L211-L211">Drilling.Common/Managers/CSettingManager.cs:211–211</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L211-L211">Drilling.Common/Managers/CSettingManager.cs:211–211</a></td><td>Number</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>215</td><td>values.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>217</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>219</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text)</td></tr>
+<tr><td>215</td><td>if</td><td>조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text))</td></tr>
+<tr><td>216</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return fallback;</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>217</td><td>if</td><td>조건에 따라 분기합니다: if (int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) &amp;&amp; value &gt;= min &amp;&amp; value &lt;= max)</td></tr>
+<tr><td>218</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;{key}: {min}~{max} 범위의 정수를 입력해 주세요.&quot;)</td></tr>
+<tr><td>219</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;{key}: {min}~{max} 범위의 정수를 입력해 주세요.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Number&quot;]
+ N0[&quot;L215 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L217 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L223">MethodDeclaration <code>EncodeLine</code> · L223–229</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L223-L229">Drilling.Common/Managers/CSettingManager.cs:223–229</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CRunOptionSettings</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>count</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2845-L2845">Drilling.UI/Menu/Menus/CMenuMain.cs:2845–2845</a></td><td>CRunOptionSettings.EncodeLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>229</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>229</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>223</td><td>switch-expression</td><td>값별 결과식을 선택합니다: count switch { 1 =&gt; 0, 3 =&gt; 1, 5 =&gt; 2, 7 =&gt; 3, _ =&gt; throw new ArgumentOutOfRangeException(nameof(count))}</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(count))</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(count)</td></tr>
+<tr><td>229</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(count))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EncodeLine&quot;]
+ N0[&quot;L223 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L234">PropertyDeclaration <code>DistortionGroupMask</code> · L234–234</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L234-L234">Drilling.Common/Managers/CSettingManager.cs:234–234</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L234">GetAccessorDeclaration <code>get_DistortionGroupMask</code> · L234–234</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L234-L234">Drilling.Common/Managers/CSettingManager.cs:234–234</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L234">InitAccessorDeclaration <code>set_DistortionGroupMask</code> · L234–234</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L234-L234">Drilling.Common/Managers/CSettingManager.cs:234–234</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L235">PropertyDeclaration <code>DistortionGroups</code> · L235–235</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L235-L235">Drilling.Common/Managers/CSettingManager.cs:235–235</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroups</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>235</td><td>Enumerable.Range(0, 3).Where(index =&gt; (DistortionGroupMask &amp; (1 &lt;&lt; index)) != 0).ToArray</td><td>resolved</td><td>int[] System.Collections.Generic.IEnumerable&lt;int&gt;.ToArray&lt;int&gt;()</td></tr>
+<tr><td>235</td><td>Enumerable.Range(0, 3).Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Where&lt;int&gt;(System.Func&lt;int, bool&gt;)</td></tr>
+<tr><td>235</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index =&gt; (DistortionGroupMask &amp; (1 &lt;&lt; index)) != 0).ToArray()</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index =&gt; (DistortionGroupMask &amp; (1 &lt;&lt; index)) != 0)</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">PropertyDeclaration <code>ReviewLineCount</code> · L236–242</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L236-L242">Drilling.Common/Managers/CSettingManager.cs:236–242</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>242</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>236</td><td>switch-expression</td><td>값별 결과식을 선택합니다: ReviewLineIndex switch { 0 =&gt; 1, 1 =&gt; 3, 2 =&gt; 5, 3 =&gt; 7, _ =&gt; throw new InvalidDataException(&quot;Review Line 설정 오류&quot;)}</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(&quot;Review Line 설정 오류&quot;)</td></tr>
+<tr><td>242</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException(&quot;Review Line 설정 오류&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReviewLineCount&quot;]
+ N0[&quot;L236 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">PropertyDeclaration <code>ReviewOptions</code> · L243–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L243-L243">Drilling.Common/Managers/CSettingManager.cs:243–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_AUTO_REVIEW_OPTIONS Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewOptions</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_AUTO_REVIEW_OPTIONS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>243</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_AUTO_REVIEW_OPTIONS.ST_AUTO_REVIEW_OPTIONS(int, Drilling.Common.Review.EN_FINE_INSPECTION_METHOD, int, bool) · Drilling.Common/Review/CAutoFineReviewCoordinator.cs:340</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReviewLineCount, ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying, RetryCount, ImmediateRetry)</td></tr>
+<tr><td>243</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L248">EnumMemberDeclaration <code>Option</code> · L248–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L248-L248">Drilling.Common/Managers/CSettingManager.cs:248–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Option</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L249">EnumMemberDeclaration <code>Interface</code> · L249–249</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L249-L249">Drilling.Common/Managers/CSettingManager.cs:249–249</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Interface</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">EnumMemberDeclaration <code>Io</code> · L250–250</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L250-L250">Drilling.Common/Managers/CSettingManager.cs:250–250</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Io</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L251">EnumMemberDeclaration <code>Motor</code> · L251–251</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L251-L251">Drilling.Common/Managers/CSettingManager.cs:251–251</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Motor</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L252">EnumMemberDeclaration <code>Alarm</code> · L252–252</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L252-L252">Drilling.Common/Managers/CSettingManager.cs:252–252</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.EN_SETTING_TAB.Alarm</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.EN_SETTING_TAB</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L275">MethodDeclaration <code>Load</code> · L275–275</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L275-L275">Drilling.Common/Managers/CSettingManager.cs:275–275</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.Common.Managers.CSettingFileBase.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingFileBase</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L602-L602">Drilling.Common/Managers/CManager.cs:602–602</a></td><td>_settingFile.Load</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L44-L44">Drilling.Common/Managers/CSettingManager.cs:44–44</a></td><td>settingFile.Load</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L276">MethodDeclaration <code>Save</code> · L276–276</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L276-L276">Drilling.Common/Managers/CSettingManager.cs:276–276</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.CSettingFileBase.Save(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingFileBase</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L144-L144">Drilling.Common/Managers/CSettingManager.cs:144–144</a></td><td>settingFile.Save</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L277">MethodDeclaration <code>LoadHistory</code> · L277–277</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L277-L277">Drilling.Common/Managers/CSettingManager.cs:277–277</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt; Drilling.Common.Managers.CSettingFileBase.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SETTING_HISTORY&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CSettingFileBase</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>section</td><td>Drilling.Common.Managers.EN_SETTING_TAB</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L152-L152">Drilling.Common/Managers/CSettingManager.cs:152–152</a></td><td>settingFile.LoadHistory</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">MethodDeclaration <code>LoadAll</code> · L282–282</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L282-L282">Drilling.Common/Managers/CSettingManager.cs:282–282</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Managers.CInterfaceFileBase.LoadAll(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CInterfaceFileBase</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L472-L472">Drilling.Common/Managers/CManager.cs:472–472</a></td><td>_interfaceFile.LoadAll</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L157-L157">Drilling.Common/Managers/CSettingManager.cs:157–157</a></td><td>interfaceFile.LoadAll</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L283">MethodDeclaration <code>SaveAll</code> · L283–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L283-L283">Drilling.Common/Managers/CSettingManager.cs:283–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Managers.CInterfaceFileBase.SaveAll(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Managers.CInterfaceFileBase</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>interfaces</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L162-L162">Drilling.Common/Managers/CSettingManager.cs:162–162</a></td><td>interfaceFile.SaveAll</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Managers/CSettingManager.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

@@ -1,0 +1,1147 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMenuBase.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000001 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000002 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000003 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000005 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000006 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu;
+L000007 | using Drilling.UI.Menu; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000008 | using System.Windows.Media; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000010 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public abstract class CMenuBase : CBindingBase
+L000011 | public abstract class CMenuBase : CBindingBase ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Func<string, bool>? Drilling.UI.Menu.Menus.CMenuBase.OperationAllowed
+L000013 |     public Func<string, bool>? OperationAllowed { get; set; } ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(operation)
+L000015 |     protected bool CheckOperationAlarm(string operation) => OperationAllowed?.Invoke(operation) ?? true; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuBase.StopForHeavyAlarm()
+L000016 |     public virtual Task StopForHeavyAlarm() => Task.CompletedTask; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuBase.Menu
+L000017 |     public abstract EN_MENU Menu { get; } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuBase.Build(System.Threading.CancellationToken)
+L000019 |     public abstract Task<CScreenViewModel> Build(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuBase.OnActivated()
+L000020 |     public virtual void OnActivated() ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 OnActivated.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 OnActivated.
+L000022 |     } ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuBase.OnDeactivated()
+L000024 |     public virtual void OnDeactivated() ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 OnDeactivated.
+L000025 |     { ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 OnDeactivated.
+L000026 |     } ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다.
+L000027 | } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 타입의 구조/상속 선언입니다: public enum EN_MENU
+L000029 | public enum EN_MENU ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다.
+L000030 | { ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Main
+L000031 |     Main, ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Manual
+L000032 |     Manual, ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Recipe
+L000033 |     Recipe, ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Setting
+L000034 |     Setting, ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Alarm
+L000035 |     Alarm, ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Monitor
+L000036 |     Monitor, ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Review
+L000037 |     Review, ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Correction
+L000038 |     Correction, ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Pm
+L000039 |     Pm, ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU.Exit
+L000040 |     Exit ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다.
+L000041 | } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 타입의 구조/상속 선언입니다: public sealed record ST_DISPLAY_ITEM(string Name, string Value, string Detail = "")
+L000043 | public sealed record ST_DISPLAY_ITEM(string Name, string Value, string Detail = "") ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다.
+L000044 | { ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ValueBrush
+L000045 |     public Brush ValueBrush ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000046 |     { ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ValueBrush.get
+L000047 |         get ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(string.IsNullOrWhiteSpace(Detail) ? Value : Detail) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Detail) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(Detail) ? Value : Detail / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForDisplayState(string.IsNullOrWhiteSpace(Detail) ? Value : Detail);
+L000049 |             return CStatusBrush.ForDisplayState(string.IsNullOrWhiteSpace(Detail) ? Value : Detail); ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000050 |         } ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000051 |     } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.StateBrush
+L000053 |     public Brush StateBrush ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 StateBrush.
+L000054 |     { ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.StateBrush.get
+L000055 |         get ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 get_StateBrush.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(Value) / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForDisplayState(Value);
+L000057 |             return CStatusBrush.ForDisplayState(Value); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 get_StateBrush.
+L000058 |         } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 StateBrush.
+L000059 |     } ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다.
+L000060 | } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 타입의 구조/상속 선언입니다: internal static class CStatusBrush
+L000062 | internal static class CStatusBrush ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다.
+L000063 | { ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x05, 0x05, 0x05) / 변수의 초기값을 지정합니다: LightPrimaryText = Frozen(0x05, 0x05, 0x05)
+L000064 |     private static readonly Brush LightPrimaryText = Frozen(0x05, 0x05, 0x05); ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x05, 0x05, 0x05) / 변수의 초기값을 지정합니다: LightRecipe = Frozen(0x05, 0x05, 0x05)
+L000065 |     private static readonly Brush LightRecipe = Frozen(0x05, 0x05, 0x05); ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x2E, 0x8B, 0x57) / 변수의 초기값을 지정합니다: LightOnline = Frozen(0x2E, 0x8B, 0x57)
+L000066 |     private static readonly Brush LightOnline = Frozen(0x2E, 0x8B, 0x57); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xB8, 0x7A, 0x00) / 변수의 초기값을 지정합니다: LightSimul = Frozen(0xB8, 0x7A, 0x00)
+L000067 |     private static readonly Brush LightSimul = Frozen(0xB8, 0x7A, 0x00); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xE6, 0x21, 0x21) / 변수의 초기값을 지정합니다: LightOffline = Frozen(0xE6, 0x21, 0x21)
+L000068 |     private static readonly Brush LightOffline = Frozen(0xE6, 0x21, 0x21); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xB8, 0x7A, 0x00) / 변수의 초기값을 지정합니다: LightWait = Frozen(0xB8, 0x7A, 0x00)
+L000069 |     private static readonly Brush LightWait = Frozen(0xB8, 0x7A, 0x00); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x46, 0x82, 0xB4) / 변수의 초기값을 지정합니다: LightActive = Frozen(0x46, 0x82, 0xB4)
+L000070 |     private static readonly Brush LightActive = Frozen(0x46, 0x82, 0xB4); ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x1F, 0x1F, 0x1F) / 변수의 초기값을 지정합니다: LightMuted = Frozen(0x1F, 0x1F, 0x1F)
+L000071 |     private static readonly Brush LightMuted = Frozen(0x1F, 0x1F, 0x1F); ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x46, 0x82, 0xB4) / 변수의 초기값을 지정합니다: LightCommandBlue = Frozen(0x46, 0x82, 0xB4)
+L000072 |     private static readonly Brush LightCommandBlue = Frozen(0x46, 0x82, 0xB4); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x2D, 0x5F, 0x8A) / 변수의 초기값을 지정합니다: LightCommandBlueBorder = Frozen(0x2D, 0x5F, 0x8A)
+L000073 |     private static readonly Brush LightCommandBlueBorder = Frozen(0x2D, 0x5F, 0x8A); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x2E, 0x8B, 0x57) / 변수의 초기값을 지정합니다: LightCommandGreen = Frozen(0x2E, 0x8B, 0x57)
+L000074 |     private static readonly Brush LightCommandGreen = Frozen(0x2E, 0x8B, 0x57); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x1F, 0x6E, 0x42) / 변수의 초기값을 지정합니다: LightCommandGreenBorder = Frozen(0x1F, 0x6E, 0x42)
+L000075 |     private static readonly Brush LightCommandGreenBorder = Frozen(0x1F, 0x6E, 0x42); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xE6, 0x21, 0x21) / 변수의 초기값을 지정합니다: LightCommandRed = Frozen(0xE6, 0x21, 0x21)
+L000076 |     private static readonly Brush LightCommandRed = Frozen(0xE6, 0x21, 0x21); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xB0, 0x00, 0x00) / 변수의 초기값을 지정합니다: LightCommandRedBorder = Frozen(0xB0, 0x00, 0x00)
+L000077 |     private static readonly Brush LightCommandRedBorder = Frozen(0xB0, 0x00, 0x00); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x70, 0x80, 0x90) / 변수의 초기값을 지정합니다: LightCommandDark = Frozen(0x70, 0x80, 0x90)
+L000078 |     private static readonly Brush LightCommandDark = Frozen(0x70, 0x80, 0x90); ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x5B, 0x6F, 0x84) / 변수의 초기값을 지정합니다: LightCommandDarkBorder = Frozen(0x5B, 0x6F, 0x84)
+L000079 |     private static readonly Brush LightCommandDarkBorder = Frozen(0x5B, 0x6F, 0x84); ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xFF, 0xFF, 0xFF) / 변수의 초기값을 지정합니다: LightCardBackground = Frozen(0xFF, 0xFF, 0xFF)
+L000080 |     private static readonly Brush LightCardBackground = Frozen(0xFF, 0xFF, 0xFF); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xF3, 0xF9, 0xFF) / 변수의 초기값을 지정합니다: LightSoftSelectedBackground = Frozen(0xF3, 0xF9, 0xFF)
+L000081 |     private static readonly Brush LightSoftSelectedBackground = Frozen(0xF3, 0xF9, 0xFF); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xF7, 0xE5, 0xE5) / 변수의 초기값을 지정합니다: LightMaskBackground = Frozen(0xF7, 0xE5, 0xE5)
+L000082 |     private static readonly Brush LightMaskBackground = Frozen(0xF7, 0xE5, 0xE5); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xF0, 0xE7, 0xFF) / 변수의 초기값을 지정합니다: LightChessBackground = Frozen(0xF0, 0xE7, 0xFF)
+L000083 |     private static readonly Brush LightChessBackground = Frozen(0xF0, 0xE7, 0xFF); ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xF3, 0xF6, 0xFA) / 변수의 초기값을 지정합니다: DarkPrimaryText = Frozen(0xF3, 0xF6, 0xFA)
+L000084 |     private static readonly Brush DarkPrimaryText = Frozen(0xF3, 0xF6, 0xFA); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xB8, 0xC7, 0xD6) / 변수의 초기값을 지정합니다: DarkRecipe = Frozen(0xB8, 0xC7, 0xD6)
+L000085 |     private static readonly Brush DarkRecipe = Frozen(0xB8, 0xC7, 0xD6); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x5F, 0x9B, 0x75) / 변수의 초기값을 지정합니다: DarkOnline = Frozen(0x5F, 0x9B, 0x75)
+L000086 |     private static readonly Brush DarkOnline = Frozen(0x5F, 0x9B, 0x75); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xC4, 0x9A, 0x35) / 변수의 초기값을 지정합니다: DarkSimul = Frozen(0xC4, 0x9A, 0x35)
+L000087 |     private static readonly Brush DarkSimul = Frozen(0xC4, 0x9A, 0x35); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xBF, 0x62, 0x62) / 변수의 초기값을 지정합니다: DarkOffline = Frozen(0xBF, 0x62, 0x62)
+L000088 |     private static readonly Brush DarkOffline = Frozen(0xBF, 0x62, 0x62); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xC4, 0x9A, 0x35) / 변수의 초기값을 지정합니다: DarkWait = Frozen(0xC4, 0x9A, 0x35)
+L000089 |     private static readonly Brush DarkWait = Frozen(0xC4, 0x9A, 0x35); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x86, 0xA8, 0xC1) / 변수의 초기값을 지정합니다: DarkActive = Frozen(0x86, 0xA8, 0xC1)
+L000090 |     private static readonly Brush DarkActive = Frozen(0x86, 0xA8, 0xC1); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x87, 0x92, 0x9E) / 변수의 초기값을 지정합니다: DarkMuted = Frozen(0x87, 0x92, 0x9E)
+L000091 |     private static readonly Brush DarkMuted = Frozen(0x87, 0x92, 0x9E); ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x3F, 0x66, 0x88) / 변수의 초기값을 지정합니다: DarkCommandBlue = Frozen(0x3F, 0x66, 0x88)
+L000092 |     private static readonly Brush DarkCommandBlue = Frozen(0x3F, 0x66, 0x88); ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x55, 0x7C, 0x9B) / 변수의 초기값을 지정합니다: DarkCommandBlueBorder = Frozen(0x55, 0x7C, 0x9B)
+L000093 |     private static readonly Brush DarkCommandBlueBorder = Frozen(0x55, 0x7C, 0x9B); ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x3A, 0x76, 0x56) / 변수의 초기값을 지정합니다: DarkCommandGreen = Frozen(0x3A, 0x76, 0x56)
+L000094 |     private static readonly Brush DarkCommandGreen = Frozen(0x3A, 0x76, 0x56); ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x50, 0x91, 0x6C) / 변수의 초기값을 지정합니다: DarkCommandGreenBorder = Frozen(0x50, 0x91, 0x6C)
+L000095 |     private static readonly Brush DarkCommandGreenBorder = Frozen(0x50, 0x91, 0x6C); ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x93, 0x40, 0x40) / 변수의 초기값을 지정합니다: DarkCommandRed = Frozen(0x93, 0x40, 0x40)
+L000096 |     private static readonly Brush DarkCommandRed = Frozen(0x93, 0x40, 0x40); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0xAF, 0x58, 0x58) / 변수의 초기값을 지정합니다: DarkCommandRedBorder = Frozen(0xAF, 0x58, 0x58)
+L000097 |     private static readonly Brush DarkCommandRedBorder = Frozen(0xAF, 0x58, 0x58); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x2A, 0x32, 0x3B) / 변수의 초기값을 지정합니다: DarkCommandDark = Frozen(0x2A, 0x32, 0x3B)
+L000098 |     private static readonly Brush DarkCommandDark = Frozen(0x2A, 0x32, 0x3B); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x4B, 0x59, 0x67) / 변수의 초기값을 지정합니다: DarkCommandDarkBorder = Frozen(0x4B, 0x59, 0x67)
+L000099 |     private static readonly Brush DarkCommandDarkBorder = Frozen(0x4B, 0x59, 0x67); ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x20, 0x26, 0x2D) / 변수의 초기값을 지정합니다: DarkCardBackground = Frozen(0x20, 0x26, 0x2D)
+L000100 |     private static readonly Brush DarkCardBackground = Frozen(0x20, 0x26, 0x2D); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x24, 0x3B, 0x4D) / 변수의 초기값을 지정합니다: DarkSoftSelectedBackground = Frozen(0x24, 0x3B, 0x4D)
+L000101 |     private static readonly Brush DarkSoftSelectedBackground = Frozen(0x24, 0x3B, 0x4D); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x3A, 0x22, 0x24) / 변수의 초기값을 지정합니다: DarkMaskBackground = Frozen(0x3A, 0x22, 0x24)
+L000102 |     private static readonly Brush DarkMaskBackground = Frozen(0x3A, 0x22, 0x24); ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: Frozen(0x32, 0x26, 0x4A) / 변수의 초기값을 지정합니다: DarkChessBackground = Frozen(0x32, 0x26, 0x4A)
+L000103 |     private static readonly Brush DarkChessBackground = Frozen(0x32, 0x26, 0x4A); ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.PrimaryText
+L000104 |     public static Brush PrimaryText ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 PrimaryText.
+L000105 |     { ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.PrimaryText.get
+L000106 |         get ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 get_PrimaryText.
+L000107 |         { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightPrimaryText, DarkPrimaryText) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightPrimaryText, DarkPrimaryText);
+L000108 |             return Pick(LightPrimaryText, DarkPrimaryText); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 get_PrimaryText.
+L000109 |         } ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 PrimaryText.
+L000110 |     } ⟦EOL⟧
+L000111 |  ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Recipe
+L000112 |     public static Brush Recipe ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 Recipe.
+L000113 |     { ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Recipe.get
+L000114 |         get ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 get_Recipe.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightRecipe, DarkRecipe) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightRecipe, DarkRecipe);
+L000116 |             return Pick(LightRecipe, DarkRecipe); ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 get_Recipe.
+L000117 |         } ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 Recipe.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Online
+L000120 |     public static Brush Online ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 Online.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Online.get
+L000122 |         get ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 get_Online.
+L000123 |         { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightOnline, DarkOnline) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightOnline, DarkOnline);
+L000124 |             return Pick(LightOnline, DarkOnline); ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 get_Online.
+L000125 |         } ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 Online.
+L000126 |     } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Simul
+L000128 |     public static Brush Simul ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 Simul.
+L000129 |     { ⟦EOL⟧
+// 해설 L130: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Simul.get
+L000130 |         get ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 get_Simul.
+L000131 |         { ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightSimul, DarkSimul) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightSimul, DarkSimul);
+L000132 |             return Pick(LightSimul, DarkSimul); ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 get_Simul.
+L000133 |         } ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 Simul.
+L000134 |     } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Offline
+L000136 |     public static Brush Offline ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Offline.
+L000137 |     { ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Offline.get
+L000138 |         get ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 get_Offline.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightOffline, DarkOffline) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightOffline, DarkOffline);
+L000140 |             return Pick(LightOffline, DarkOffline); ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 get_Offline.
+L000141 |         } ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Offline.
+L000142 |     } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Wait
+L000144 |     public static Brush Wait ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 Wait.
+L000145 |     { ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Wait.get
+L000146 |         get ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 get_Wait.
+L000147 |         { ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightWait, DarkWait) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightWait, DarkWait);
+L000148 |             return Pick(LightWait, DarkWait); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 get_Wait.
+L000149 |         } ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Wait.
+L000150 |     } ⟦EOL⟧
+L000151 |  ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Active
+L000152 |     public static Brush Active ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 Active.
+L000153 |     { ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Active.get
+L000154 |         get ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 get_Active.
+L000155 |         { ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightActive, DarkActive) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightActive, DarkActive);
+L000156 |             return Pick(LightActive, DarkActive); ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 get_Active.
+L000157 |         } ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 Active.
+L000158 |     } ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Muted
+L000160 |     public static Brush Muted ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 Muted.
+L000161 |     { ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Muted.get
+L000162 |         get ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 get_Muted.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightMuted, DarkMuted) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightMuted, DarkMuted);
+L000164 |             return Pick(LightMuted, DarkMuted); ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 get_Muted.
+L000165 |         } ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 Muted.
+L000166 |     } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandBlue
+L000168 |     public static Brush CommandBlue ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 CommandBlue.
+L000169 |     { ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandBlue.get
+L000170 |         get ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 get_CommandBlue.
+L000171 |         { ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandBlue, DarkCommandBlue) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandBlue, DarkCommandBlue);
+L000172 |             return Pick(LightCommandBlue, DarkCommandBlue); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 get_CommandBlue.
+L000173 |         } ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 CommandBlue.
+L000174 |     } ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandBlueBorder
+L000176 |     public static Brush CommandBlueBorder ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 CommandBlueBorder.
+L000177 |     { ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandBlueBorder.get
+L000178 |         get ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 get_CommandBlueBorder.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandBlueBorder, DarkCommandBlueBorder) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandBlueBorder, DarkCommandBlueBorder);
+L000180 |             return Pick(LightCommandBlueBorder, DarkCommandBlueBorder); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 get_CommandBlueBorder.
+L000181 |         } ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 CommandBlueBorder.
+L000182 |     } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandGreen
+L000184 |     public static Brush CommandGreen ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 CommandGreen.
+L000185 |     { ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandGreen.get
+L000186 |         get ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 get_CommandGreen.
+L000187 |         { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandGreen, DarkCommandGreen) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandGreen, DarkCommandGreen);
+L000188 |             return Pick(LightCommandGreen, DarkCommandGreen); ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 get_CommandGreen.
+L000189 |         } ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 CommandGreen.
+L000190 |     } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandGreenBorder
+L000192 |     public static Brush CommandGreenBorder ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 CommandGreenBorder.
+L000193 |     { ⟦EOL⟧
+// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandGreenBorder.get
+L000194 |         get ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 get_CommandGreenBorder.
+L000195 |         { ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandGreenBorder, DarkCommandGreenBorder) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandGreenBorder, DarkCommandGreenBorder);
+L000196 |             return Pick(LightCommandGreenBorder, DarkCommandGreenBorder); ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 get_CommandGreenBorder.
+L000197 |         } ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 CommandGreenBorder.
+L000198 |     } ⟦EOL⟧
+L000199 |  ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandRed
+L000200 |     public static Brush CommandRed ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 CommandRed.
+L000201 |     { ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandRed.get
+L000202 |         get ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 get_CommandRed.
+L000203 |         { ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandRed, DarkCommandRed) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandRed, DarkCommandRed);
+L000204 |             return Pick(LightCommandRed, DarkCommandRed); ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 get_CommandRed.
+L000205 |         } ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 CommandRed.
+L000206 |     } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandRedBorder
+L000208 |     public static Brush CommandRedBorder ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 CommandRedBorder.
+L000209 |     { ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandRedBorder.get
+L000210 |         get ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 get_CommandRedBorder.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandRedBorder, DarkCommandRedBorder) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandRedBorder, DarkCommandRedBorder);
+L000212 |             return Pick(LightCommandRedBorder, DarkCommandRedBorder); ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 get_CommandRedBorder.
+L000213 |         } ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 CommandRedBorder.
+L000214 |     } ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandDark
+L000216 |     public static Brush CommandDark ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 CommandDark.
+L000217 |     { ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandDark.get
+L000218 |         get ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 get_CommandDark.
+L000219 |         { ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandDark, DarkCommandDark) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandDark, DarkCommandDark);
+L000220 |             return Pick(LightCommandDark, DarkCommandDark); ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 get_CommandDark.
+L000221 |         } ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 CommandDark.
+L000222 |     } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandDarkBorder
+L000224 |     public static Brush CommandDarkBorder ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 CommandDarkBorder.
+L000225 |     { ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CommandDarkBorder.get
+L000226 |         get ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 get_CommandDarkBorder.
+L000227 |         { ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCommandDarkBorder, DarkCommandDarkBorder) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCommandDarkBorder, DarkCommandDarkBorder);
+L000228 |             return Pick(LightCommandDarkBorder, DarkCommandDarkBorder); ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 get_CommandDarkBorder.
+L000229 |         } ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 CommandDarkBorder.
+L000230 |     } ⟦EOL⟧
+L000231 |  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CardBackground
+L000232 |     public static Brush CardBackground ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 CardBackground.
+L000233 |     { ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.CardBackground.get
+L000234 |         get ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 get_CardBackground.
+L000235 |         { ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightCardBackground, DarkCardBackground) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightCardBackground, DarkCardBackground);
+L000236 |             return Pick(LightCardBackground, DarkCardBackground); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 get_CardBackground.
+L000237 |         } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 CardBackground.
+L000238 |     } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.SoftSelectedBackground
+L000240 |     public static Brush SoftSelectedBackground ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 SoftSelectedBackground.
+L000241 |     { ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.SoftSelectedBackground.get
+L000242 |         get ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 get_SoftSelectedBackground.
+L000243 |         { ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightSoftSelectedBackground, DarkSoftSelectedBackground) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightSoftSelectedBackground, DarkSoftSelectedBackground);
+L000244 |             return Pick(LightSoftSelectedBackground, DarkSoftSelectedBackground); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 get_SoftSelectedBackground.
+L000245 |         } ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 SoftSelectedBackground.
+L000246 |     } ⟦EOL⟧
+L000247 |  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.MaskBackground
+L000248 |     public static Brush MaskBackground ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 MaskBackground.
+L000249 |     { ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.MaskBackground.get
+L000250 |         get ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 get_MaskBackground.
+L000251 |         { ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightMaskBackground, DarkMaskBackground) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightMaskBackground, DarkMaskBackground);
+L000252 |             return Pick(LightMaskBackground, DarkMaskBackground); ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 get_MaskBackground.
+L000253 |         } ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 MaskBackground.
+L000254 |     } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ChessBackground
+L000256 |     public static Brush ChessBackground ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 ChessBackground.
+L000257 |     { ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ChessBackground.get
+L000258 |         get ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 get_ChessBackground.
+L000259 |         { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: Pick(LightChessBackground, DarkChessBackground) / 호출자에게 값 또는 제어를 반환합니다: return Pick(LightChessBackground, DarkChessBackground);
+L000260 |             return Pick(LightChessBackground, DarkChessBackground); ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 get_ChessBackground.
+L000261 |         } ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 ChessBackground.
+L000262 |     } ⟦EOL⟧
+L000263 |  ⟦EOL⟧
+// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.SoftSelectedText
+L000264 |     public static Brush SoftSelectedText ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 SoftSelectedText.
+L000265 |     { ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.SoftSelectedText.get
+L000266 |         get ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 get_SoftSelectedText.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 조건에 따라 결과식을 선택합니다: IsLightTheme ? PrimaryText : Brushes.White / 호출자에게 값 또는 제어를 반환합니다: return IsLightTheme ? PrimaryText : Brushes.White;
+L000268 |             return IsLightTheme ? PrimaryText : Brushes.White; ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 get_SoftSelectedText.
+L000269 |         } ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 SoftSelectedText.
+L000270 |     } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CStatusBrush.IsLightTheme
+L000272 |     public static bool IsLightTheme ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 IsLightTheme.
+L000273 |     { ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CStatusBrush.IsLightTheme.get
+L000274 |         get ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 get_IsLightTheme.
+L000275 |         { ⟦EOL⟧
+// 해설 L276: 호출자에게 값 또는 제어를 반환합니다: return Drilling.UI.CThemeManager.CurrentTheme == Drilling.UI.EN_UI_THEME.Light;
+L000276 |             return Drilling.UI.CThemeManager.CurrentTheme == Drilling.UI.EN_UI_THEME.Light; ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 get_IsLightTheme.
+L000277 |         } ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 IsLightTheme.
+L000278 |     } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000280 |     public static Brush ForHeaderState(string state) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ForHeaderState.
+L000281 |     { ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(state) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(state) switch { "RECIPE" => Recipe, "ONLINE" or "CLEAR" or "READY" or "OK" or "RUN" or "SAFE" or "DONE" => Online, "SIM" or "SIMUL" or "SIMULATION" => Simul, "OFFLINE" or "OCCUR" or "ERROR" or "NG" or "FAILED" or  / 값별 결과식을 선택합니다: Normalize(state) switch { "RECIPE" => Recipe, "ONLINE" or "CLEAR" or "READY" or "OK" or "RUN" or "SAFE" or "DONE" => Online, "SIM" or "SIMUL" or "SIMULATION" => Simul, "OFFLINE" or "OCCUR" or "ERROR" or "NG" or "FAILED" or "
+L000282 |         return Normalize(state) switch ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ForHeaderState.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000284 |             "RECIPE" => Recipe, ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000285 |             "ONLINE" or "CLEAR" or "READY" or "OK" or "RUN" or "SAFE" or "DONE" => Online, ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000286 |             "SIM" or "SIMUL" or "SIMULATION" => Simul, ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000287 |             "OFFLINE" or "OCCUR" or "ERROR" or "NG" or "FAILED" or "FAIL" or "ALARM" or "STOP" or "STOPPED" => Offline, ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000288 |             "WAIT" or "WAITING" or "WARN" or "WARNING" or "PENDING" => Wait, ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000289 |             "ACTIVE" or "RUNNING" => Active, ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeaderState(string)
+L000290 |             _ => Muted ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 ForHeaderState.
+L000291 |         }; ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 ForHeaderState.
+L000292 |     } ⟦EOL⟧
+L000293 |  ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000294 |     public static Brush ForDisplayState(string state) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 ForDisplayState.
+L000295 |     { ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(state) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(state) switch { "OK" or "DONE" or "COMPLETE" or "COMPLETED" or "CLEAR" or "READY" => Online, "RUN" or "RUNNING" or "ACTIVE" or "CURRENT" => Active, "WAIT" or "WAITING" or "PENDING" or "WARN" or "WARNING" => Wait,  / 값별 결과식을 선택합니다: Normalize(state) switch { "OK" or "DONE" or "COMPLETE" or "COMPLETED" or "CLEAR" or "READY" => Online, "RUN" or "RUNNING" or "ACTIVE" or "CURRENT" => Active, "WAIT" or "WAITING" or "PENDING" or "WARN" or "WARNING" => Wait, "
+L000296 |         return Normalize(state) switch ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 ForDisplayState.
+L000297 |         { ⟦EOL⟧
+// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000298 |             "OK" or "DONE" or "COMPLETE" or "COMPLETED" or "CLEAR" or "READY" => Online, ⟦EOL⟧
+// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000299 |             "RUN" or "RUNNING" or "ACTIVE" or "CURRENT" => Active, ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000300 |             "WAIT" or "WAITING" or "PENDING" or "WARN" or "WARNING" => Wait, ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000301 |             "SKIP" or "SKIPPED" or "DISABLE" or "DISABLED" or "NOT USE" => Muted, ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000302 |             "ERROR" or "NG" or "FAILED" or "FAIL" or "ALARM" or "STOP" or "STOPPED" => Offline, ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000303 |             "SIM" or "SIMUL" or "SIMULATION" => Simul, ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForDisplayState(string)
+L000304 |             _ => Muted ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 ForDisplayState.
+L000305 |         }; ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 ForDisplayState.
+L000306 |     } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000308 |     public static Brush ForHeadStatus(string status) ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 ForHeadStatus.
+L000309 |     { ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(status) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(status) switch { "RUN" or "RUNNING" or "ACTIVE" => Active, "WAIT" or "WAITING" or "IDLE" => Wait, "SKIP" or "SKIPPED" or "DISABLE" or "DISABLED" or "NOT USE" => Muted, "ERROR" or "ALARM" => Offline, _ => Online }; / 값별 결과식을 선택합니다: Normalize(status) switch { "RUN" or "RUNNING" or "ACTIVE" => Active, "WAIT" or "WAITING" or "IDLE" => Wait, "SKIP" or "SKIPPED" or "DISABLE" or "DISABLED" or "NOT USE" => Muted, "ERROR" or "ALARM" => Offline, _ => Online }
+L000310 |         return Normalize(status) switch ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 ForHeadStatus.
+L000311 |         { ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000312 |             "RUN" or "RUNNING" or "ACTIVE" => Active, ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000313 |             "WAIT" or "WAITING" or "IDLE" => Wait, ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000314 |             "SKIP" or "SKIPPED" or "DISABLE" or "DISABLED" or "NOT USE" => Muted, ⟦EOL⟧
+// 해설 L315: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000315 |             "ERROR" or "ALARM" => Offline, ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.ForHeadStatus(string)
+L000316 |             _ => Online ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 ForHeadStatus.
+L000317 |         }; ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 ForHeadStatus.
+L000318 |     } ⟦EOL⟧
+L000319 |  ⟦EOL⟧
+// 해설 L320: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CStatusBrush.Normalize(string)
+L000320 |     private static string Normalize(string value) ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 Normalize.
+L000321 |     { ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant();
+L000322 |         return value.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 Normalize.
+L000323 |     } ⟦EOL⟧
+L000324 |  ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CStatusBrush.Pick(Brush, Brush)
+L000325 |     private static Brush Pick(Brush lightBrush, Brush darkBrush) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 Pick.
+L000326 |     { ⟦EOL⟧
+// 해설 L327: 조건에 따라 결과식을 선택합니다: IsLightTheme ? lightBrush : darkBrush / 호출자에게 값 또는 제어를 반환합니다: return IsLightTheme ? lightBrush : darkBrush;
+L000327 |         return IsLightTheme ? lightBrush : darkBrush; ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 Pick.
+L000328 |     } ⟦EOL⟧
+L000329 |  ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · SolidColorBrush Drilling.UI.Menu.Menus.CStatusBrush.Frozen(byte, byte, byte)
+L000330 |     public static SolidColorBrush Frozen(byte r, byte g, byte b) ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 Frozen.
+L000331 |     { ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(r, g, b)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(r, g, b) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(r, g, b)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(r, g, b))
+L000332 |         var brush = new SolidColorBrush(Color.FromRgb(r, g, b)); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000333 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L334: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000334 |         return brush; ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 Frozen.
+L000335 |     } ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다.
+L000336 | } ⟦EOL⟧
+L000337 |  ⟦EOL⟧
+// 해설 L338: 타입의 구조/상속 선언입니다: public sealed record ST_HEADER_STATUS_ITEM(
+L000338 | public sealed record ST_HEADER_STATUS_ITEM( ⟦EOL⟧
+// 해설 L339: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000339 |     string Name,  ⟦EOL⟧
+// 해설 L340: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000340 |     string Value,  ⟦EOL⟧
+// 해설 L341: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000341 |     string State,  ⟦EOL⟧
+// 해설 L342: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000342 |     bool CanNavigate = false,  ⟦EOL⟧
+// 해설 L343: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000343 |     string PageText = "",  ⟦EOL⟧
+// 해설 L344: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000344 |     CButtonCommand? PreviousCommand = null,  ⟦EOL⟧
+// 해설 L345: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000345 |     CButtonCommand? NextCommand = null,  ⟦EOL⟧
+// 해설 L346: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000346 |     CButtonCommand? OpenCommand = null ⟦EOL⟧
+// 해설 L347: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000347 | ) ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다.
+L000348 | { ⟦EOL⟧
+// 해설 L349: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000349 |     // Keep the full status in Value while fitting the Vision peer detail under ⟦EOL⟧
+// 해설 L350: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000350 |     // ONLINE in the existing fixed-width communication card. ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: Name.Equals("VISION", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: Name.Equals("VISION", StringComparison.OrdinalIgnoreCase) ? Value.Replace(" (", "\n(", StringComparison.Ordinal) : Value
+L000351 |     public string DisplayValue => Name.Equals("VISION", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value.Replace(" (", "\n(", StringComparison.Ordinal)
+L000352 |         ? Value.Replace(" (", "\n(", StringComparison.Ordinal) : Value; ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.CardBrush
+L000353 |     public Brush CardBrush ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 CardBrush.
+L000354 |     { ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.CardBrush.get
+L000355 |         get ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 get_CardBrush.
+L000356 |         { ⟦EOL⟧
+// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.Frozen(0xFF, 0xFF, 0xFF) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForHeaderState(State) / 조건에 따라 결과식을 선택합니다: Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.Frozen(0xFF, 0xFF, 0xFF) : CStatusBrush.ForHeaderState(State) / 호출자에게 값 또는 제어를 반환합니다: return Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.Frozen(0xFF, 0xFF, 0xFF) : CStatusBrush.ForHeaderState(State);
+L000357 |             return Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.Frozen(0xFF, 0xFF, 0xFF) : CStatusBrush.ForHeaderState(State); ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 get_CardBrush.
+L000358 |         } ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 CardBrush.
+L000359 |     } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.CardTextBrush
+L000361 |     public Brush CardTextBrush ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 CardTextBrush.
+L000362 |     { ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.CardTextBrush.get
+L000363 |         get ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 get_CardTextBrush.
+L000364 |         { ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.PrimaryText : Brushes.White / 호출자에게 값 또는 제어를 반환합니다: return Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.PrimaryText : Brushes.White;
+L000365 |             return Name.Equals("RECIPE", StringComparison.OrdinalIgnoreCase) ? CStatusBrush.PrimaryText : Brushes.White; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 get_CardTextBrush.
+L000366 |         } ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 CardTextBrush.
+L000367 |     } ⟦EOL⟧
+L000368 |  ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.AccentBrush
+L000369 |     public Brush AccentBrush ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 AccentBrush.
+L000370 |     { ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.AccentBrush.get
+L000371 |         get ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 get_AccentBrush.
+L000372 |         { ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForHeaderState(State) / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForHeaderState(State);
+L000373 |             return CStatusBrush.ForHeaderState(State); ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 get_AccentBrush.
+L000374 |         } ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 AccentBrush.
+L000375 |     } ⟦EOL⟧
+L000376 |  ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.ValueBrush
+L000377 |     public Brush ValueBrush ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000378 |     { ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.ValueBrush.get
+L000379 |         get ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000380 |         { ⟦EOL⟧
+// 해설 L381: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForHeaderState(State) / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForHeaderState(State);
+L000381 |             return CStatusBrush.ForHeaderState(State); ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000382 |         } ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000383 |     } ⟦EOL⟧
+L000384 |  ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Previous
+L000385 |     public CButtonCommand Previous ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 Previous.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Previous.get
+L000387 |         get ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 get_Previous.
+L000388 |         { ⟦EOL⟧
+// 해설 L389: 호출자에게 값 또는 제어를 반환합니다: return PreviousCommand ?? CButtonCommand.NoOp;
+L000389 |             return PreviousCommand ?? CButtonCommand.NoOp; ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 get_Previous.
+L000390 |         } ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 Previous.
+L000391 |     } ⟦EOL⟧
+L000392 |  ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Next
+L000393 |     public CButtonCommand Next ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 Next.
+L000394 |     { ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Next.get
+L000395 |         get ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 get_Next.
+L000396 |         { ⟦EOL⟧
+// 해설 L397: 호출자에게 값 또는 제어를 반환합니다: return NextCommand ?? CButtonCommand.NoOp;
+L000397 |             return NextCommand ?? CButtonCommand.NoOp; ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 get_Next.
+L000398 |         } ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 Next.
+L000399 |     } ⟦EOL⟧
+L000400 |  ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Open
+L000401 |     public CButtonCommand Open ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 Open.
+L000402 |     { ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.ST_HEADER_STATUS_ITEM.Open.get
+L000403 |         get ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 get_Open.
+L000404 |         { ⟦EOL⟧
+// 해설 L405: 호출자에게 값 또는 제어를 반환합니다: return OpenCommand ?? CButtonCommand.NoOp;
+L000405 |             return OpenCommand ?? CButtonCommand.NoOp; ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 get_Open.
+L000406 |         } ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 Open.
+L000407 |     } ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다.
+L000408 | } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 타입의 구조/상속 선언입니다: public sealed record ST_SCREEN_SECTION(string Title, IReadOnlyList<ST_DISPLAY_ITEM> Items);
+L000410 | public sealed record ST_SCREEN_SECTION(string Title, IReadOnlyList<ST_DISPLAY_ITEM> Items); ⟦EOL⟧
+// 해설 L411: 타입의 구조/상속 선언입니다: public sealed class CScreenViewModel(
+L000411 | public sealed class CScreenViewModel( ⟦EOL⟧
+// 해설 L412: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000412 |     EN_MENU menu,  ⟦EOL⟧
+// 해설 L413: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000413 |     string title,  ⟦EOL⟧
+// 해설 L414: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000414 |     string subtitle,  ⟦EOL⟧
+// 해설 L415: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000415 |     IReadOnlyList<ST_DISPLAY_ITEM> metrics,  ⟦EOL⟧
+// 해설 L416: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000416 |     IReadOnlyList<ST_SCREEN_SECTION> sections,  ⟦EOL⟧
+// 해설 L417: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000417 |     bool showCycleControls = false,  ⟦EOL⟧
+// 해설 L418: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000418 |     CMenuMain? mainOperating = null,  ⟦EOL⟧
+// 해설 L419: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000419 |     CMenuManual? manual = null,  ⟦EOL⟧
+// 해설 L420: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000420 |     CMenuRecipe? recipe = null,  ⟦EOL⟧
+// 해설 L421: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000421 |     CMenuSetting? setting = null,  ⟦EOL⟧
+// 해설 L422: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000422 |     CMenuAlarm? alarm = null,  ⟦EOL⟧
+// 해설 L423: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000423 |     CMenuMonitor? monitor = null,  ⟦EOL⟧
+// 해설 L424: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000424 |     CMenuReview? review = null,  ⟦EOL⟧
+// 해설 L425: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000425 |     CMenuCorrection? correction = null,  ⟦EOL⟧
+// 해설 L426: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000426 |     CMenuPm? pm = null ⟦EOL⟧
+// 해설 L427: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000427 | ) ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다.
+L000428 | { ⟦EOL⟧
+// 해설 L429: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CScreenViewModel.Menu
+L000429 |     public EN_MENU Menu { get; } = menu; ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScreenViewModel.Title
+L000430 |     public string Title { get; } = title; ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScreenViewModel.Subtitle
+L000431 |     public string Subtitle { get; } = subtitle; ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CScreenViewModel.Metrics
+L000432 |     public IReadOnlyList<ST_DISPLAY_ITEM> Metrics { get; } = metrics; ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION> Drilling.UI.Menu.Menus.CScreenViewModel.Sections
+L000433 |     public IReadOnlyList<ST_SCREEN_SECTION> Sections { get; } = sections; ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.ShowCycleControls
+L000434 |     public bool ShowCycleControls { get; } = showCycleControls; ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuMain? Drilling.UI.Menu.Menus.CScreenViewModel.MainOperating
+L000435 |     public CMenuMain? MainOperating { get; } = mainOperating; ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuManual? Drilling.UI.Menu.Menus.CScreenViewModel.Manual
+L000436 |     public CMenuManual? Manual { get; } = manual; ⟦EOL⟧
+// 해설 L437: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuRecipe? Drilling.UI.Menu.Menus.CScreenViewModel.Recipe
+L000437 |     public CMenuRecipe? Recipe { get; } = recipe; ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuSetting? Drilling.UI.Menu.Menus.CScreenViewModel.Setting
+L000438 |     public CMenuSetting? Setting { get; } = setting; ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuAlarm? Drilling.UI.Menu.Menus.CScreenViewModel.Alarm
+L000439 |     public CMenuAlarm? Alarm { get; } = alarm; ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Menu.Menus.CScreenViewModel.Monitor
+L000440 |     public CMenuMonitor? Monitor { get; } = monitor; ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuReview? Drilling.UI.Menu.Menus.CScreenViewModel.Review
+L000441 |     public CMenuReview? Review { get; } = review ?? manual?.Review; ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection? Drilling.UI.Menu.Menus.CScreenViewModel.Correction
+L000442 |     public CMenuCorrection? Correction { get; } = correction; ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuPm? Drilling.UI.Menu.Menus.CScreenViewModel.Pm
+L000443 |     public CMenuPm? Pm { get; } = pm; ⟦EOL⟧
+L000444 |  ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsMainLayout
+L000445 |     public bool IsMainLayout ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 IsMainLayout.
+L000446 |     { ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsMainLayout.get
+L000447 |         get ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 get_IsMainLayout.
+L000448 |         { ⟦EOL⟧
+// 해설 L449: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Main;
+L000449 |             return Menu == EN_MENU.Main; ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 get_IsMainLayout.
+L000450 |         } ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 IsMainLayout.
+L000451 |     } ⟦EOL⟧
+L000452 |  ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsManualLayout
+L000453 |     public bool IsManualLayout ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 IsManualLayout.
+L000454 |     { ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsManualLayout.get
+L000455 |         get ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 get_IsManualLayout.
+L000456 |         { ⟦EOL⟧
+// 해설 L457: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Manual;
+L000457 |             return Menu == EN_MENU.Manual; ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 get_IsManualLayout.
+L000458 |         } ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 IsManualLayout.
+L000459 |     } ⟦EOL⟧
+L000460 |  ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsRecipeLayout
+L000461 |     public bool IsRecipeLayout ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 IsRecipeLayout.
+L000462 |     { ⟦EOL⟧
+// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsRecipeLayout.get
+L000463 |         get ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 get_IsRecipeLayout.
+L000464 |         { ⟦EOL⟧
+// 해설 L465: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Recipe;
+L000465 |             return Menu == EN_MENU.Recipe; ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 get_IsRecipeLayout.
+L000466 |         } ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 IsRecipeLayout.
+L000467 |     } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsSettingLayout
+L000469 |     public bool IsSettingLayout ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 IsSettingLayout.
+L000470 |     { ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsSettingLayout.get
+L000471 |         get ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 get_IsSettingLayout.
+L000472 |         { ⟦EOL⟧
+// 해설 L473: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Setting;
+L000473 |             return Menu == EN_MENU.Setting; ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 get_IsSettingLayout.
+L000474 |         } ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 IsSettingLayout.
+L000475 |     } ⟦EOL⟧
+L000476 |  ⟦EOL⟧
+// 해설 L477: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsAlarmLayout
+L000477 |     public bool IsAlarmLayout ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 IsAlarmLayout.
+L000478 |     { ⟦EOL⟧
+// 해설 L479: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsAlarmLayout.get
+L000479 |         get ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 get_IsAlarmLayout.
+L000480 |         { ⟦EOL⟧
+// 해설 L481: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Alarm;
+L000481 |             return Menu == EN_MENU.Alarm; ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 get_IsAlarmLayout.
+L000482 |         } ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다 · 소속 IsAlarmLayout.
+L000483 |     } ⟦EOL⟧
+L000484 |  ⟦EOL⟧
+// 해설 L485: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsMonitorLayout
+L000485 |     public bool IsMonitorLayout ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 IsMonitorLayout.
+L000486 |     { ⟦EOL⟧
+// 해설 L487: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsMonitorLayout.get
+L000487 |         get ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 get_IsMonitorLayout.
+L000488 |         { ⟦EOL⟧
+// 해설 L489: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Monitor;
+L000489 |             return Menu == EN_MENU.Monitor; ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 get_IsMonitorLayout.
+L000490 |         } ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 IsMonitorLayout.
+L000491 |     } ⟦EOL⟧
+L000492 |  ⟦EOL⟧
+// 해설 L493: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsReviewLayout
+L000493 |     public bool IsReviewLayout ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 IsReviewLayout.
+L000494 |     { ⟦EOL⟧
+// 해설 L495: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsReviewLayout.get
+L000495 |         get ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 get_IsReviewLayout.
+L000496 |         { ⟦EOL⟧
+// 해설 L497: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Review;
+L000497 |             return Menu == EN_MENU.Review; ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 get_IsReviewLayout.
+L000498 |         } ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 IsReviewLayout.
+L000499 |     } ⟦EOL⟧
+L000500 |  ⟦EOL⟧
+// 해설 L501: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsCorrectionLayout
+L000501 |     public bool IsCorrectionLayout ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 IsCorrectionLayout.
+L000502 |     { ⟦EOL⟧
+// 해설 L503: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsCorrectionLayout.get
+L000503 |         get ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 get_IsCorrectionLayout.
+L000504 |         { ⟦EOL⟧
+// 해설 L505: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Correction;
+L000505 |             return Menu == EN_MENU.Correction; ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 get_IsCorrectionLayout.
+L000506 |         } ⟦EOL⟧
+// 해설 L507: 구문 블록 경계입니다 · 소속 IsCorrectionLayout.
+L000507 |     } ⟦EOL⟧
+L000508 |  ⟦EOL⟧
+// 해설 L509: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsPmLayout
+L000509 |     public bool IsPmLayout ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 IsPmLayout.
+L000510 |     { ⟦EOL⟧
+// 해설 L511: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsPmLayout.get
+L000511 |         get ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 get_IsPmLayout.
+L000512 |         { ⟦EOL⟧
+// 해설 L513: 호출자에게 값 또는 제어를 반환합니다: return Menu == EN_MENU.Pm;
+L000513 |             return Menu == EN_MENU.Pm; ⟦EOL⟧
+// 해설 L514: 구문 블록 경계입니다 · 소속 get_IsPmLayout.
+L000514 |         } ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다 · 소속 IsPmLayout.
+L000515 |     } ⟦EOL⟧
+L000516 |  ⟦EOL⟧
+// 해설 L517: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsGenericLayout
+L000517 |     public bool IsGenericLayout ⟦EOL⟧
+// 해설 L518: 구문 블록 경계입니다 · 소속 IsGenericLayout.
+L000518 |     { ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScreenViewModel.IsGenericLayout.get
+L000519 |         get ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 get_IsGenericLayout.
+L000520 |         { ⟦EOL⟧
+// 해설 L521: 호출자에게 값 또는 제어를 반환합니다: return !IsMainLayout && !IsManualLayout && !IsRecipeLayout && !IsSettingLayout && !IsAlarmLayout && !IsMonitorLayout && !IsReviewLayout && !IsCorrectionLayout && !IsPmLayout;
+L000521 |             return !IsMainLayout && !IsManualLayout && !IsRecipeLayout && !IsSettingLayout && !IsAlarmLayout && !IsMonitorLayout && !IsReviewLayout && !IsCorrectionLayout && !IsPmLayout; ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 get_IsGenericLayout.
+L000522 |         } ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 IsGenericLayout.
+L000523 |     } ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다.
+L000524 | } ⟦EOL⟧
+L000525 |  ⟦EOL⟧
+// 해설 L526: 타입의 구조/상속 선언입니다: public sealed class CMenuItem(EN_MENU menu, string name) : CBindingBase
+L000526 | public sealed class CMenuItem(EN_MENU menu, string name) : CBindingBase ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다.
+L000527 | { ⟦EOL⟧
+// 해설 L528: 변수의 초기값을 지정합니다: _isEnabled = true
+L000528 |     private bool _isEnabled = true; ⟦EOL⟧
+// 해설 L529: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuItem.Menu
+L000529 |     public EN_MENU Menu { get; } = menu; ⟦EOL⟧
+// 해설 L530: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Name
+L000530 |     public string Name { get; } = name; ⟦EOL⟧
+L000531 |  ⟦EOL⟧
+// 해설 L532: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuItem.IsEnabled
+L000532 |     public bool IsEnabled ⟦EOL⟧
+// 해설 L533: 구문 블록 경계입니다 · 소속 IsEnabled.
+L000533 |     { ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuItem.IsEnabled.get
+L000534 |         get ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다 · 소속 get_IsEnabled.
+L000535 |         { ⟦EOL⟧
+// 해설 L536: 호출자에게 값 또는 제어를 반환합니다: return _isEnabled;
+L000536 |             return _isEnabled; ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 get_IsEnabled.
+L000537 |         } ⟦EOL⟧
+L000538 |  ⟦EOL⟧
+// 해설 L539: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuItem.IsEnabled.set
+L000539 |         set ⟦EOL⟧
+// 해설 L540: 구문 블록 경계입니다 · 소속 set_IsEnabled.
+L000540 |         { ⟦EOL⟧
+// 해설 L541: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _isEnabled, value)
+L000541 |             SetProperty(ref _isEnabled, value); ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 set_IsEnabled.
+L000542 |         } ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 IsEnabled.
+L000543 |     } ⟦EOL⟧
+L000544 |  ⟦EOL⟧
+// 해설 L545: 선언·서명/매개변수·접근 조건입니다 · Geometry Drilling.UI.Menu.Menus.CMenuItem.IconGeometry
+L000545 |     public Geometry IconGeometry ⟦EOL⟧
+// 해설 L546: 구문 블록 경계입니다 · 소속 IconGeometry.
+L000546 |     { ⟦EOL⟧
+// 해설 L547: 선언·서명/매개변수·접근 조건입니다 · Geometry Drilling.UI.Menu.Menus.CMenuItem.IconGeometry.get
+L000547 |         get ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 get_IconGeometry.
+L000548 |         { ⟦EOL⟧
+// 해설 L549: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMenuIcon.Get(Menu) / 호출자에게 값 또는 제어를 반환합니다: return CMenuIcon.Get(Menu);
+L000549 |             return CMenuIcon.Get(Menu); ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 get_IconGeometry.
+L000550 |         } ⟦EOL⟧
+// 해설 L551: 구문 블록 경계입니다 · 소속 IconGeometry.
+L000551 |     } ⟦EOL⟧
+L000552 |  ⟦EOL⟧
+// 해설 L553: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description
+L000553 |     public string Description ⟦EOL⟧
+// 해설 L554: 구문 블록 경계입니다 · 소속 Description.
+L000554 |     { ⟦EOL⟧
+// 해설 L555: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000555 |         get ⟦EOL⟧
+// 해설 L556: 구문 블록 경계입니다 · 소속 get_Description.
+L000556 |         { ⟦EOL⟧
+// 해설 L557: 호출자에게 값 또는 제어를 반환합니다: return Menu switch { EN_MENU.Main => "Auto", EN_MENU.Manual => "Manual", EN_MENU.Recipe => "Recipe", EN_MENU.Setting => "Setting", EN_MENU.Alarm => "Alarm", EN_MENU.Monitor => "Monitor", EN_MENU.Review => "Review", EN_MENU.Correct / 값별 결과식을 선택합니다: Menu switch { EN_MENU.Main => "Auto", EN_MENU.Manual => "Manual", EN_MENU.Recipe => "Recipe", EN_MENU.Setting => "Setting", EN_MENU.Alarm => "Alarm", EN_MENU.Monitor => "Monitor", EN_MENU.Review => "Review", EN_MENU.Correction =>
+L000557 |             return Menu switch ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 get_Description.
+L000558 |             { ⟦EOL⟧
+// 해설 L559: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000559 |                 EN_MENU.Main => "Auto", ⟦EOL⟧
+// 해설 L560: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000560 |                 EN_MENU.Manual => "Manual", ⟦EOL⟧
+// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000561 |                 EN_MENU.Recipe => "Recipe", ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000562 |                 EN_MENU.Setting => "Setting", ⟦EOL⟧
+// 해설 L563: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000563 |                 EN_MENU.Alarm => "Alarm", ⟦EOL⟧
+// 해설 L564: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000564 |                 EN_MENU.Monitor => "Monitor", ⟦EOL⟧
+// 해설 L565: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000565 |                 EN_MENU.Review => "Review", ⟦EOL⟧
+// 해설 L566: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000566 |                 EN_MENU.Correction => "Correction", ⟦EOL⟧
+// 해설 L567: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000567 |                 EN_MENU.Pm => "PM Lock", ⟦EOL⟧
+// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000568 |                 EN_MENU.Exit => "Exit", ⟦EOL⟧
+// 해설 L569: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuItem.Description.get
+L000569 |                 _ => string.Empty ⟦EOL⟧
+// 해설 L570: 구문 블록 경계입니다 · 소속 get_Description.
+L000570 |             }; ⟦EOL⟧
+// 해설 L571: 구문 블록 경계입니다 · 소속 get_Description.
+L000571 |         } ⟦EOL⟧
+// 해설 L572: 구문 블록 경계입니다 · 소속 Description.
+L000572 |     } ⟦EOL⟧
+// 해설 L573: 구문 블록 경계입니다.
+L000573 | } ⟦EOL⟧
+L000574 |  ⟦EOL⟧
+// 해설 L575: 타입의 구조/상속 선언입니다: internal static class CMenuIcon
+L000575 | internal static class CMenuIcon ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다.
+L000576 | { ⟦EOL⟧
+// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<EN_MENU, Geometry> { [EN_MENU.Main] = Icon("M3,11 L12,4 L21,11 M5,10 V21 H10 V15 H14 V21 H19 V10"), [EN_MENU.Manual] = Icon("M7,12 V6 M10,12 V4 M13,12 V5 M16,13 V7 M7,12 L5,10 C4,9 3,10 4,12 L6,17 C7,20 9,… / 변수의 초기값을 지정합니다: Icons = new Dictionary<EN_MENU, Geometry> { [EN_MENU.Main] = Icon("M3,11 L12,4 L21,11 M5,10 V21 H10 V15 H14 V21 H19 V10"), [EN_MENU.Manual] = Icon("M7,12 V6 M10,12 V4 M13,12 V5 M16,13 V7 M7,12 L5,10 C4,9 3,10 4,12 L6,17 C7,20 9,22
+L000577 |     private static readonly IReadOnlyDictionary<EN_MENU, Geometry> Icons = new Dictionary<EN_MENU, Geometry> ⟦EOL⟧
+// 해설 L578: 구문 블록 경계입니다 · 소속 Icons.
+L000578 |     { ⟦EOL⟧
+// 해설 L579: 값을 대상에 대입합니다: [EN_MENU.Main] = Icon("M3,11 L12,4 L21,11 M5,10 V21 H10 V15 H14 V21 H19 V10") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M3,11 L12,4 L21,11 M5,10 V21 H10 V15 H14 V21 H19 V10")
+L000579 |         [EN_MENU.Main] = Icon("M3,11 L12,4 L21,11 M5,10 V21 H10 V15 H14 V21 H19 V10"), ⟦EOL⟧
+// 해설 L580: 값을 대상에 대입합니다: [EN_MENU.Manual] = Icon("M7,12 V6 M10,12 V4 M13,12 V5 M16,13 V7 M7,12 L5,10 C4,9 3,10 4,12 L6,17 C7,20 9,22 12,22 H14 C17,22 19,19 19,16 V10") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M7,12 V6 M10,12 V4 M13,12 V5 M16,13 V7 M7,12 L5,10 C4,9 3,10 4,12 L6,17 C7,20 9,22 12,22 H14 C17,22 19,19 19,16 V10")
+L000580 |         [EN_MENU.Manual] = Icon("M7,12 V6 M10,12 V4 M13,12 V5 M16,13 V7 M7,12 L5,10 C4,9 3,10 4,12 L6,17 C7,20 9,22 12,22 H14 C17,22 19,19 19,16 V10"), ⟦EOL⟧
+// 해설 L581: 값을 대상에 대입합니다: [EN_MENU.Recipe] = Icon("M6,4 H18 V20 H6 Z M9,8 H15 M9,12 H15 M9,16 H13") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M6,4 H18 V20 H6 Z M9,8 H15 M9,12 H15 M9,16 H13")
+L000581 |         [EN_MENU.Recipe] = Icon("M6,4 H18 V20 H6 Z M9,8 H15 M9,12 H15 M9,16 H13"), ⟦EOL⟧
+// 해설 L582: 값을 대상에 대입합니다: [EN_MENU.Setting] = Icon("M12,8 C14.2,8 16,9.8 16,12 C16,14.2 14.2,16 12,16 C9.8,16 8,14.2 8,12 C8,9.8 9.8,8 12,8 M12,2 V5 M12,19 V22 M2,12 H5 M19,12 H22 M4.9,4.9 L7,7 M17,17 L19.1,19.1 M19.1,4.9 L17,7 M7,17 L4.9,19.1") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M12,8 C14.2,8 16,9.8 16,12 C16,14.2 14.2,16 12,16 C9.8,16 8,14.2 8,12 C8,9.8 9.8,8 12,8 M12,2 V5 M12,19 V22 M2,12 H5 M19,12 H22 M4.9,4.9 L7,7 M17,17 L19.1,19.1 M19.1,4.9 L17,7 M7,17 L4.9,19.1")
+L000582 |         [EN_MENU.Setting] = Icon("M12,8 C14.2,8 16,9.8 16,12 C16,14.2 14.2,16 12,16 C9.8,16 8,14.2 8,12 C8,9.8 9.8,8 12,8 M12,2 V5 M12,19 V22 M2,12 H5 M19,12 H22 M4.9,4.9 L7,7 M17,17 L19.1,19.1 M19.1,4.9 L17,7 M7,17 L4.9,19.1"), ⟦EOL⟧
+// 해설 L583: 값을 대상에 대입합니다: [EN_MENU.Alarm] = Icon("M8,18 H16 M10,20 H14 M6,17 H18 L16,15 V10 C16,7.8 14.2,6 12,6 C9.8,6 8,7.8 8,10 V15 Z M10,6 C10,4.9 10.9,4 12,4 C13.1,4 14,4.9 14,6") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M8,18 H16 M10,20 H14 M6,17 H18 L16,15 V10 C16,7.8 14.2,6 12,6 C9.8,6 8,7.8 8,10 V15 Z M10,6 C10,4.9 10.9,4 12,4 C13.1,4 14,4.9 14,6")
+L000583 |         [EN_MENU.Alarm] = Icon("M8,18 H16 M10,20 H14 M6,17 H18 L16,15 V10 C16,7.8 14.2,6 12,6 C9.8,6 8,7.8 8,10 V15 Z M10,6 C10,4.9 10.9,4 12,4 C13.1,4 14,4.9 14,6"), ⟦EOL⟧
+// 해설 L584: 값을 대상에 대입합니다: [EN_MENU.Monitor] = Icon("M4,5 H20 V16 H4 Z M9,20 H15 M12,16 V20 M7,11 H10 L11.5,8 L14,14 L15,11 H17") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M4,5 H20 V16 H4 Z M9,20 H15 M12,16 V20 M7,11 H10 L11.5,8 L14,14 L15,11 H17")
+L000584 |         [EN_MENU.Monitor] = Icon("M4,5 H20 V16 H4 Z M9,20 H15 M12,16 V20 M7,11 H10 L11.5,8 L14,14 L15,11 H17"), ⟦EOL⟧
+// 해설 L585: 값을 대상에 대입합니다: [EN_MENU.Review] = Icon("M11,5 C14.3,5 17,7.7 17,11 C17,14.3 14.3,17 11,17 C7.7,17 5,14.3 5,11 C5,7.7 7.7,5 11,5 M15.5,15.5 L20,20 M11,7 V15 M7,11 H15") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M11,5 C14.3,5 17,7.7 17,11 C17,14.3 14.3,17 11,17 C7.7,17 5,14.3 5,11 C5,7.7 7.7,5 11,5 M15.5,15.5 L20,20 M11,7 V15 M7,11 H15")
+L000585 |         [EN_MENU.Review] = Icon("M11,5 C14.3,5 17,7.7 17,11 C17,14.3 14.3,17 11,17 C7.7,17 5,14.3 5,11 C5,7.7 7.7,5 11,5 M15.5,15.5 L20,20 M11,7 V15 M7,11 H15"), ⟦EOL⟧
+// 해설 L586: 값을 대상에 대입합니다: [EN_MENU.Correction] = Icon("M12,4 V8 M12,16 V20 M4,12 H8 M16,12 H20 M8.5,8.5 L6,6 M15.5,15.5 L18,18 M15.5,8.5 L18,6 M8.5,15.5 L6,18 M10,10 H14 V14 H10 Z") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M12,4 V8 M12,16 V20 M4,12 H8 M16,12 H20 M8.5,8.5 L6,6 M15.5,15.5 L18,18 M15.5,8.5 L18,6 M8.5,15.5 L6,18 M10,10 H14 V14 H10 Z")
+L000586 |         [EN_MENU.Correction] = Icon("M12,4 V8 M12,16 V20 M4,12 H8 M16,12 H20 M8.5,8.5 L6,6 M15.5,15.5 L18,18 M15.5,8.5 L18,6 M8.5,15.5 L6,18 M10,10 H14 V14 H10 Z"), ⟦EOL⟧
+// 해설 L587: 값을 대상에 대입합니다: [EN_MENU.Pm] = Icon("M15,4 C17,3 19,4 20,5 L17,8 L19,10 L16,13 L14,11 L7,18 C6,19 5,19 4,18 C3,17 3,16 4,15 L11,8 L9,6 L12,3 Z") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M15,4 C17,3 19,4 20,5 L17,8 L19,10 L16,13 L14,11 L7,18 C6,19 5,19 4,18 C3,17 3,16 4,15 L11,8 L9,6 L12,3 Z")
+L000587 |         [EN_MENU.Pm] = Icon("M15,4 C17,3 19,4 20,5 L17,8 L19,10 L16,13 L14,11 L7,18 C6,19 5,19 4,18 C3,17 3,16 4,15 L11,8 L9,6 L12,3 Z"), ⟦EOL⟧
+// 해설 L588: 값을 대상에 대입합니다: [EN_MENU.Exit] = Icon("M10,5 H5 V19 H10 M13,8 L18,12 L13,16 M18,12 H8") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Icon("M10,5 H5 V19 H10 M13,8 L18,12 L13,16 M18,12 H8")
+L000588 |         [EN_MENU.Exit] = Icon("M10,5 H5 V19 H10 M13,8 L18,12 L13,16 M18,12 H8") ⟦EOL⟧
+// 해설 L589: 구문 블록 경계입니다 · 소속 Icons.
+L000589 |     }; ⟦EOL⟧
+// 해설 L590: 선언·서명/매개변수·접근 조건입니다 · Geometry Drilling.UI.Menu.Menus.CMenuIcon.Get(Drilling.UI.Menu.Menus.EN_MENU)
+L000590 |     public static Geometry Get(EN_MENU menu) ⟦EOL⟧
+// 해설 L591: 구문 블록 경계입니다 · 소속 Get.
+L000591 |     { ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: Icons.TryGetValue(menu, out var geometry) / 조건에 따라 결과식을 선택합니다: Icons.TryGetValue(menu, out var geometry) ? geometry : Geometry.Empty / 호출자에게 값 또는 제어를 반환합니다: return Icons.TryGetValue(menu, out var geometry) ? geometry : Geometry.Empty;
+L000592 |         return Icons.TryGetValue(menu, out var geometry) ? geometry : Geometry.Empty; ⟦EOL⟧
+// 해설 L593: 구문 블록 경계입니다 · 소속 Get.
+L000593 |     } ⟦EOL⟧
+L000594 |  ⟦EOL⟧
+// 해설 L595: 선언·서명/매개변수·접근 조건입니다 · Geometry Drilling.UI.Menu.Menus.CMenuIcon.Icon(string)
+L000595 |     private static Geometry Icon(string data) ⟦EOL⟧
+// 해설 L596: 구문 블록 경계입니다 · 소속 Icon.
+L000596 |     { ⟦EOL⟧
+// 해설 L597: 함수·델리게이트 또는 객체 생성자를 호출합니다: Geometry.Parse(data) / 지역 변수를 선언합니다: var geometry = Geometry.Parse(data); / 변수의 초기값을 지정합니다: geometry = Geometry.Parse(data)
+L000597 |         var geometry = Geometry.Parse(data); ⟦EOL⟧
+// 해설 L598: 함수·델리게이트 또는 객체 생성자를 호출합니다: geometry.Freeze()
+L000598 |         geometry.Freeze(); ⟦EOL⟧
+// 해설 L599: 호출자에게 값 또는 제어를 반환합니다: return geometry;
+L000599 |         return geometry; ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 Icon.
+L000600 |     } ⟦EOL⟧
+// 해설 L601: 구문 블록 경계입니다.
+L000601 | } ⟦EOL⟧

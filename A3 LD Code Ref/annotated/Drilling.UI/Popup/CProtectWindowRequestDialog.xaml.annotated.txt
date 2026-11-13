@@ -1,0 +1,97 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CProtectWindowRequestDialog.xaml
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <Window x:Class="Drilling.UI.Popup.CProtectWindowRequestDialog"
+L000001 | <Window x:Class="Drilling.UI.Popup.CProtectWindowRequestDialog" ⟦EOL⟧
+// 해설 L2: XAML UI 구조·속성·리소스 선언입니다: xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+L000002 |         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ⟦EOL⟧
+// 해설 L3: XAML UI 구조·속성·리소스 선언입니다: xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+L000003 |         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ⟦EOL⟧
+// 해설 L4: XAML UI 구조·속성·리소스 선언입니다: xmlns:ui="clr-namespace:Drilling.UI"
+L000004 |         xmlns:ui="clr-namespace:Drilling.UI" ⟦EOL⟧
+// 해설 L5: XAML UI 구조·속성·리소스 선언입니다: Title="보호윈도우 교체 요청" Width="920" Height="430" ResizeMode="NoResize"
+L000005 |         Title="보호윈도우 교체 요청" Width="920" Height="430" ResizeMode="NoResize" ⟦EOL⟧
+// 해설 L6: XAML UI 구조·속성·리소스 선언입니다: WindowStartupLocation="CenterOwner" ShowInTaskbar="False" FontFamily="Segoe UI"
+L000006 |         WindowStartupLocation="CenterOwner" ShowInTaskbar="False" FontFamily="Segoe UI" ⟦EOL⟧
+// 해설 L7: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource PanelBackgroundBrush}" Foreground="{DynamicResource TextPrimaryBrush}">
+L000007 |         Background="{DynamicResource PanelBackgroundBrush}" Foreground="{DynamicResource TextPrimaryBrush}"> ⟦EOL⟧
+// 해설 L8: XAML UI 구조·속성·리소스 선언입니다: <Grid Margin="24">
+L000008 |     <Grid Margin="24"> ⟦EOL⟧
+// 해설 L9: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000009 |         <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L10: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="88"/><RowDefinition Height="Auto"/>
+L000010 |             <RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="88"/><RowDefinition Height="Auto"/> ⟦EOL⟧
+// 해설 L11: XAML 요소 범위를 닫습니다.
+L000011 |         </Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L12: XAML UI 구조·속성·리소스 선언입니다: <Grid Margin="0,0,0,14">
+L000012 |         <Grid Margin="0,0,0,14"> ⟦EOL⟧
+// 해설 L13: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="Protect Window" FontSize="22" FontWeight="SemiBold"/>
+L000013 |             <TextBlock Text="Protect Window" FontSize="22" FontWeight="SemiBold"/> ⟦EOL⟧
+// 해설 L14: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Border HorizontalAlignment="Right" Background="{Binding Connection.Color}" CornerRadius="3" Padding="12,4">
+L000014 |             <Border HorizontalAlignment="Right" Background="{Binding Connection.Color}" CornerRadius="3" Padding="12,4"> ⟦EOL⟧
+// 해설 L15: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding Connection.Text}" Foreground="White" FontSize="14" FontWeight="SemiBold"/>
+L000015 |                 <TextBlock Text="{Binding Connection.Text}" Foreground="White" FontSize="14" FontWeight="SemiBold"/> ⟦EOL⟧
+// 해설 L16: XAML 요소 범위를 닫습니다.
+L000016 |             </Border> ⟦EOL⟧
+// 해설 L17: XAML 요소 범위를 닫습니다.
+L000017 |         </Grid> ⟦EOL⟧
+// 해설 L18: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Row="1" x:Name="RequestBanner" Background="#288D54" CornerRadius="6">
+L000018 |         <Border Grid.Row="1" x:Name="RequestBanner" Background="#288D54" CornerRadius="6"> ⟦EOL⟧
+// 해설 L19: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000019 |             <Grid> ⟦EOL⟧
+// 해설 L20: XAML UI 구조·속성·리소스 선언입니다: <Border x:Name="RequestPulse" Background="#003310" Opacity="0" CornerRadius="6" ui:CSignalBlink.IsActive="True"/>
+L000020 |                 <Border x:Name="RequestPulse" Background="#003310" Opacity="0" CornerRadius="6" ui:CSignalBlink.IsActive="True"/> ⟦EOL⟧
+// 해설 L21: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="보호윈도우 교체 요청 중" Foreground="White" FontSize="48" FontWeight="Bold"
+L000021 |                 <TextBlock Text="보호윈도우 교체 요청 중" Foreground="White" FontSize="48" FontWeight="Bold" ⟦EOL⟧
+// 해설 L22: XAML UI 구조·속성·리소스 선언입니다: TextWrapping="Wrap" TextAlignment="Center" Margin="24"
+L000022 |                            TextWrapping="Wrap" TextAlignment="Center" Margin="24" ⟦EOL⟧
+// 해설 L23: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center" VerticalAlignment="Center"/>
+L000023 |                            HorizontalAlignment="Center" VerticalAlignment="Center"/> ⟦EOL⟧
+// 해설 L24: XAML 요소 범위를 닫습니다.
+L000024 |             </Grid> ⟦EOL⟧
+// 해설 L25: XAML 요소 범위를 닫습니다.
+L000025 |         </Border> ⟦EOL⟧
+// 해설 L26: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="2" Margin="0,14,0,14">
+L000026 |         <Grid Grid.Row="2" Margin="0,14,0,14"> ⟦EOL⟧
+// 해설 L27: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="1.2*"/></Grid.ColumnDefinitions>
+L000027 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="1.2*"/></Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L28: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="교체완료 신호상태" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center"/>
+L000028 |             <TextBlock Text="교체완료 신호상태" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center"/> ⟦EOL⟧
+// 해설 L29: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Border Grid.Column="1" Background="{Binding Complete.Color}" CornerRadius="5" Padding="14,7" ToolTip="{Binding Complete.Detail}">
+L000029 |             <Border Grid.Column="1" Background="{Binding Complete.Color}" CornerRadius="5" Padding="14,7" ToolTip="{Binding Complete.Detail}"> ⟦EOL⟧
+// 해설 L30: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock x:Name="CompletionText" Text="{Binding Complete.Text}" Foreground="White" FontSize="28" FontWeight="Bold"
+L000030 |                 <TextBlock x:Name="CompletionText" Text="{Binding Complete.Text}" Foreground="White" FontSize="28" FontWeight="Bold" ⟦EOL⟧
+// 해설 L31: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center" VerticalAlignment="Center"/>
+L000031 |                            HorizontalAlignment="Center" VerticalAlignment="Center"/> ⟦EOL⟧
+// 해설 L32: XAML 요소 범위를 닫습니다.
+L000032 |             </Border> ⟦EOL⟧
+// 해설 L33: XAML 요소 범위를 닫습니다.
+L000033 |         </Grid> ⟦EOL⟧
+// 해설 L34: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="3">
+L000034 |         <Grid Grid.Row="3"> ⟦EOL⟧
+// 해설 L35: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="130"/></Grid.ColumnDefinitions>
+L000035 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="130"/></Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L36: XAML UI 구조·속성·리소스 선언입니다: <StackPanel VerticalAlignment="Center">
+L000036 |             <StackPanel VerticalAlignment="Center"> ⟦EOL⟧
+// 해설 L37: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="요청 신호가 ON이면 창을 닫아도 1초 이내에 다시 표시됩니다." FontSize="14"/>
+L000037 |                 <TextBlock Text="요청 신호가 ON이면 창을 닫아도 1초 이내에 다시 표시됩니다." FontSize="14"/> ⟦EOL⟧
+// 해설 L38: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding Request.Text, StringFormat='교체요청 신호상태: {0}'}" Margin="0,4,0,0"
+L000038 |                 <TextBlock Text="{Binding Request.Text, StringFormat='교체요청 신호상태: {0}'}" Margin="0,4,0,0" ⟦EOL⟧
+// 해설 L39: XAML UI 구조·속성·리소스 선언입니다: FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}"/>
+L000039 |                            FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}"/> ⟦EOL⟧
+// 해설 L40: XAML 요소 범위를 닫습니다.
+L000040 |             </StackPanel> ⟦EOL⟧
+// 해설 L41: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: <Button Grid.Column="1" Content="닫기" Height="44" FontSize="18" FontWeight="SemiBold" Click="CloseClicked"
+L000041 |             <Button Grid.Column="1" Content="닫기" Height="44" FontSize="18" FontWeight="SemiBold" Click="CloseClicked" ⟦EOL⟧
+// 해설 L42: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource ButtonSecondaryBrush}" Foreground="{DynamicResource TextPrimaryBrush}"
+L000042 |                     Background="{DynamicResource ButtonSecondaryBrush}" Foreground="{DynamicResource TextPrimaryBrush}" ⟦EOL⟧
+// 해설 L43: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}"/>
+L000043 |                     BorderBrush="{DynamicResource PanelBorderBrush}"/> ⟦EOL⟧
+// 해설 L44: XAML 요소 범위를 닫습니다.
+L000044 |         </Grid> ⟦EOL⟧
+// 해설 L45: XAML 요소 범위를 닫습니다.
+L000045 |     </Grid> ⟦EOL⟧
+// 해설 L46: XAML 요소 범위를 닫습니다.
+L000046 | </Window> ⟦EOL⟧

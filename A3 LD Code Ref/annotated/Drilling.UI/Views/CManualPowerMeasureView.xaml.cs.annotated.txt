@@ -1,0 +1,120 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CManualPowerMeasureView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000005 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000006 | using Drilling.UI.Popup; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000008 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CManualPowerMeasureView : UserControl
+L000010 | public partial class CManualPowerMeasureView : UserControl ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CManualPowerMeasureView.CManualPowerMeasureView()
+L000012 |     public CManualPowerMeasureView() ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 .ctor.
+L000013 |     { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000014 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L15: 복합 대입 또는 이벤트 구독/해지 표현입니다: DataContextChanged += (_, _) => { var visibility = DataContext is CManualPowerMeasurePanel { IsReadOnly: true } ? Visibility.Visible : Visibility.Collapsed; AutoToleranceColumn.Visibility = visibility; AutoAttemptsColumn.Visibilit
+L000015 |         DataContextChanged += (_, _) => ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 .ctor.
+L000016 |         { ⟦EOL⟧
+// 해설 L17: 조건에 따라 결과식을 선택합니다: DataContext is CManualPowerMeasurePanel { IsReadOnly: true } ? Visibility.Visible : Visibility.Collapsed / 지역 변수를 선언합니다: var visibility = DataContext is CManualPowerMeasurePanel { IsReadOnly: true } ? Visibility.Visible : Visibility.Collapsed; / 변수의 초기값을 지정합니다: visibility = DataContext is CManualPowerMeasurePanel { IsReadOnly: true } ? Visibility.Visible : Visibility.Collapsed
+L000017 |             var visibility = DataContext is CManualPowerMeasurePanel { IsReadOnly: true } ? Visibility.Visible : Visibility.Collapsed; ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: AutoToleranceColumn.Visibility = visibility
+L000018 |             AutoToleranceColumn.Visibility = visibility; ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: AutoAttemptsColumn.Visibility = visibility
+L000019 |             AutoAttemptsColumn.Visibility = visibility; ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 .ctor.
+L000020 |         }; ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 .ctor.
+L000021 |     } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerMeasureView.OpenPowerMeasureInput(object, MouseButtonEventArgs)
+L000023 |     private void OpenPowerMeasureInput(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 OpenPowerMeasureInput.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 값을 대상에 대입합니다: e.Handled = true
+L000025 |         e.Handled = true; ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowPowerMeasureInput(sender)
+L000026 |         ShowPowerMeasureInput(sender); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 OpenPowerMeasureInput.
+L000027 |     } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerMeasureView.PowerMeasureInputKeyDown(object, KeyEventArgs)
+L000029 |     private void PowerMeasureInputKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 PowerMeasureInputKeyDown.
+L000030 |     { ⟦EOL⟧
+// 해설 L31: 조건에 따라 분기합니다: if (e.Key is not (Key.Enter or Key.Space)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000031 |         if (e.Key is not (Key.Enter or Key.Space)) return; ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: e.Handled = true
+L000032 |         e.Handled = true; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowPowerMeasureInput(sender)
+L000033 |         ShowPowerMeasureInput(sender); ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 PowerMeasureInputKeyDown.
+L000034 |     } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerMeasureView.ShowPowerMeasureInput(object)
+L000036 |     private void ShowPowerMeasureInput(object sender) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ShowPowerMeasureInput.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 조건에 따라 분기합니다: if (sender is not TextBox { DataContext: CPowerMeasureRow row } textBox || DataContext is not CManualPowerMeasurePanel { CanEdit: true } panel)
+L000038 |         if (sender is not TextBox { DataContext: CPowerMeasureRow row } textBox || ⟦EOL⟧
+// 해설 L39: 호출자에게 값 또는 제어를 반환합니다: return;
+L000039 |             DataContext is not CManualPowerMeasurePanel { CanEdit: true } panel) return; ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: textBox.GetBindingExpression(TextBox.TextProperty) / 지역 변수를 선언합니다: var binding = textBox.GetBindingExpression(TextBox.TextProperty); / 변수의 초기값을 지정합니다: binding = textBox.GetBindingExpression(TextBox.TextProperty)
+L000041 |         var binding = textBox.GetBindingExpression(TextBox.TextProperty); ⟦EOL⟧
+// 해설 L42: 조건에 따라 분기합니다: if (binding is null) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000042 |         if (binding is null) return; ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CPowerMeasureRow.Target) / 지역 변수를 선언합니다: var isPower = binding.ParentBinding.Path.Path == nameof(CPowerMeasureRow.Target); / 변수의 초기값을 지정합니다: isPower = binding.ParentBinding.Path.Path == nameof(CPowerMeasureRow.Target)
+L000043 |         var isPower = binding.ParentBinding.Path.Path == nameof(CPowerMeasureRow.Target); ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: panel.SelectedHead = row
+L000044 |         panel.SelectedHead = row; ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{row.HeadName} · {textBox.Tag}", textBox.Text, isPower ? EN_RECIPE_DATA_TYPE.Double : EN_RECIPE_DATA_TYPE.Int, 0, isPower ? double.MaxValue : int.MaxValue) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{row.HeadName} · {textBox.Tag}", textBox.Text, isPower ? EN_RECIPE_DATA_TYPE.Double : EN_RECIPE_DATA_TYPE.Int, 0, isPower ? double.MaxValue : int.MaxValue) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{r
+L000045 |         var dialog = new CValueInputDialog($"{row.HeadName} · {textBox.Tag}", textBox.Text, ⟦EOL⟧
+// 해설 L46: 조건에 따라 결과식을 선택합니다: isPower ? EN_RECIPE_DATA_TYPE.Double : EN_RECIPE_DATA_TYPE.Int
+L000046 |             isPower ? EN_RECIPE_DATA_TYPE.Double : EN_RECIPE_DATA_TYPE.Int, 0, ⟦EOL⟧
+// 해설 L47: 조건에 따라 결과식을 선택합니다: isPower ? double.MaxValue : int.MaxValue
+L000047 |             isPower ? double.MaxValue : int.MaxValue) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 ShowPowerMeasureInput.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000049 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 ShowPowerMeasureInput.
+L000050 |         }; ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true || !panel.CanEdit) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000051 |         if (dialog.ShowDialog() != true || !panel.CanEdit) return; ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: textBox.SetCurrentValue(TextBox.TextProperty, dialog.ResultValue)
+L000052 |         textBox.SetCurrentValue(TextBox.TextProperty, dialog.ResultValue); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: binding.UpdateSource()
+L000053 |         binding.UpdateSource(); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 ShowPowerMeasureInput.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerMeasureView.FitHeadRows(object, RoutedEventArgs)
+L000056 |     private void FitHeadRows(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 FitHeadRows.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 조건에 따라 분기합니다: if (sender is not DataGrid grid || grid.ActualHeight <= grid.ColumnHeaderHeight) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000058 |         if (sender is not DataGrid grid || grid.ActualHeight <= grid.ColumnHeaderHeight) return; ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: grid.RowHeight = Math.Clamp(Math.Floor((grid.ActualHeight - grid.ColumnHeaderHeight - 3) / 8), 20, 36) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(Math.Floor((grid.ActualHeight - grid.ColumnHeaderHeight - 3) / 8), 20, 36) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Floor((grid.ActualHeight - grid.ColumnHeaderHeight - 3) / 8)
+L000059 |         grid.RowHeight = Math.Clamp(Math.Floor((grid.ActualHeight - grid.ColumnHeaderHeight - 3) / 8), 20, 36); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 FitHeadRows.
+L000060 |     } ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다.
+L000061 | } ⟦EOL⟧

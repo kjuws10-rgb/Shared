@@ -1,0 +1,1842 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Motion/XPS/CXpsComm.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Motion/XPS/CXpsComm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs">Git 원본</a></p><h1>Drilling.Common/Motion/XPS/CXpsComm.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>fb8437e505770f0e968b5f9f4a04c1860f3f79bc3e030c29faa51327a33131c1</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>24,133 bytes / 622 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>모션 인터페이스·제어 명령을 정의하거나 전달합니다. 문서 생성 과정에서는 축이나 장비를 움직이지 않았습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/5a9c769138d0b7434886.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CXpsComm</td><td>ClassDeclaration</td><td>12–622</td><td>CXpsComm: CCommBase(data, option)</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_commLock</td><td>FieldDeclaration</td><td>L15–15</td><td>System.Threading.SemaphoreSlim Drilling.Common.Motion.CXpsComm._commLock</td></tr>
+<tr><td>_diagnosticLock</td><td>FieldDeclaration</td><td>L16–16</td><td>object Drilling.Common.Motion.CXpsComm._diagnosticLock</td></tr>
+<tr><td>_diagnosticSequence</td><td>FieldDeclaration</td><td>L17–17</td><td>long Drilling.Common.Motion.CXpsComm._diagnosticSequence</td></tr>
+<tr><td>_lastAppliedDiagnosticSequence</td><td>FieldDeclaration</td><td>L18–18</td><td>long Drilling.Common.Motion.CXpsComm._lastAppliedDiagnosticSequence</td></tr>
+<tr><td>_priorityStopGeneration</td><td>FieldDeclaration</td><td>L19–19</td><td>long Drilling.Common.Motion.CXpsComm._priorityStopGeneration</td></tr>
+<tr><td>_api</td><td>FieldDeclaration</td><td>L20–20</td><td>XPS? Drilling.Common.Motion.CXpsComm._api</td></tr>
+<tr><td>Connect</td><td>MethodDeclaration</td><td>L21–37</td><td>System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>Disconnect</td><td>MethodDeclaration</td><td>L39–51</td><td>System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L53–107</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Motion.CXpsComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ThrowIfPriorityStopOccurredCallback</td><td>LocalFunctionStatement</td><td>L63–66</td><td>void ThrowIfPriorityStopOccurredCallback()</td></tr>
+<tr><td>ConnectLocked</td><td>MethodDeclaration</td><td>L109–121</td><td>void Drilling.Common.Motion.CXpsComm.ConnectLocked()</td></tr>
+<tr><td>ExecuteXpsFunction</td><td>MethodDeclaration</td><td>L123–138</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteXpsFunction(XPS, string, System.Threading.CancellationToken, System.Action?)</td></tr>
+<tr><td>ExecuteAxisFunction</td><td>MethodDeclaration</td><td>L140–254</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Threading.CancellationToken, System.Action?)</td></tr>
+<tr><td>ExecuteIoFunction</td><td>MethodDeclaration</td><td>L256–281</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteIoFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>ExecuteRawCommand</td><td>MethodDeclaration</td><td>L283–302</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteRawCommand(XPS, string)</td></tr>
+<tr><td>ExecuteStatus</td><td>LocalFunctionStatement</td><td>L290–295</td><td>string ExecuteStatus(XPS)</td></tr>
+<tr><td>ExecuteSockets</td><td>LocalFunctionStatement</td><td>L297–301</td><td>string ExecuteSockets(XPS)</td></tr>
+<tr><td>CloseApi</td><td>MethodDeclaration</td><td>L304–323</td><td>void Drilling.Common.Motion.CXpsComm.CloseApi()</td></tr>
+<tr><td>CheckResult</td><td>MethodDeclaration</td><td>L325–344</td><td>void Drilling.Common.Motion.CXpsComm.CheckResult(XPS, int, string)</td></tr>
+<tr><td>ReadDouble</td><td>MethodDeclaration</td><td>L346–354</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string)</td></tr>
+<tr><td>ExecutePriorityStop</td><td>MethodDeclaration</td><td>L356–385</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Motion.CXpsComm.ExecutePriorityStop(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L359–362</td><td>string SelectValue()</td></tr>
+<tr><td>SelectAggregateexception</td><td>LocalFunctionStatement</td><td>L364–367</td><td>System.AggregateException? SelectAggregateexception(System.Threading.Tasks.Task&lt;string&gt;)</td></tr>
+<tr><td>BeginCommandDiagnostic</td><td>MethodDeclaration</td><td>L387–398</td><td>long Drilling.Common.Motion.CXpsComm.BeginCommandDiagnostic(string)</td></tr>
+<tr><td>CompletePrimaryCommand</td><td>MethodDeclaration</td><td>L400–413</td><td>void Drilling.Common.Motion.CXpsComm.CompletePrimaryCommand(long, string)</td></tr>
+<tr><td>FailPrimaryCommand</td><td>MethodDeclaration</td><td>L415–430</td><td>string Drilling.Common.Motion.CXpsComm.FailPrimaryCommand(long, System.Exception)</td></tr>
+<tr><td>CompletePriorityStop</td><td>MethodDeclaration</td><td>L432–444</td><td>void Drilling.Common.Motion.CXpsComm.CompletePriorityStop(long, string)</td></tr>
+<tr><td>FailPriorityStop</td><td>MethodDeclaration</td><td>L446–461</td><td>string Drilling.Common.Motion.CXpsComm.FailPriorityStop(long, System.Exception)</td></tr>
+<tr><td>CreateErrorResponse</td><td>MethodDeclaration</td><td>L463–466</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(System.Exception)</td></tr>
+<tr><td>CreateErrorResponse</td><td>MethodDeclaration</td><td>L468–472</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(string)</td></tr>
+<tr><td>ThrowIfPriorityStopOccurred</td><td>MethodDeclaration</td><td>L474–480</td><td>void Drilling.Common.Motion.CXpsComm.ThrowIfPriorityStopOccurred(long)</td></tr>
+<tr><td>SetPrimaryConnected</td><td>MethodDeclaration</td><td>L482–489</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryConnected()</td></tr>
+<tr><td>SetPrimaryState</td><td>MethodDeclaration</td><td>L491–497</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryState(Drilling.Common.Interface.EN_COMM_STATE)</td></tr>
+<tr><td>SetPrimaryError</td><td>MethodDeclaration</td><td>L499–505</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryError(System.Exception)</td></tr>
+<tr><td>ExecutePriorityStopCore</td><td>MethodDeclaration</td><td>L507–531</td><td>string Drilling.Common.Motion.CXpsComm.ExecutePriorityStopCore(string)</td></tr>
+<tr><td>IsPriorityStopCommand</td><td>MethodDeclaration</td><td>L533–543</td><td>bool Drilling.Common.Motion.CXpsComm.IsPriorityStopCommand(string)</td></tr>
+<tr><td>StopJogAndDisable</td><td>MethodDeclaration</td><td>L545–569</td><td>void Drilling.Common.Motion.CXpsComm.StopJogAndDisable(XPS, string)</td></tr>
+<tr><td>IsGroupJogging</td><td>MethodDeclaration</td><td>L571–576</td><td>bool Drilling.Common.Motion.CXpsComm.IsGroupJogging(XPS, string)</td></tr>
+<tr><td>ReadPositiveDouble</td><td>MethodDeclaration</td><td>L578–587</td><td>double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string)</td></tr>
+<tr><td>ReadRequiredFirst</td><td>MethodDeclaration</td><td>L589–597</td><td>double Drilling.Common.Motion.CXpsComm.ReadRequiredFirst(double[]?, string)</td></tr>
+<tr><td>ParseDigitalIoAddress</td><td>MethodDeclaration</td><td>L599–616</td><td>(string GpioName, int BitNo) Drilling.Common.Motion.CXpsComm.ParseDigitalIoAddress(string)</td></tr>
+<tr><td>SanitizeResponseText</td><td>MethodDeclaration</td><td>L618–621</td><td>string Drilling.Common.Motion.CXpsComm.SanitizeResponseText(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">FieldDeclaration <code>_commLock</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L15-L15">Drilling.Common/Motion/XPS/CXpsComm.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Motion.CXpsComm._commLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.SemaphoreSlim</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>new</td><td>resolved</td><td>System.Threading.SemaphoreSlim.SemaphoreSlim(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1)</td></tr>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _commLock = new(1, 1)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>_diagnosticLock</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L16-L16">Drilling.Common/Motion/XPS/CXpsComm.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Motion.CXpsComm._diagnosticLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _diagnosticLock = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_diagnosticSequence</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L17-L17">Drilling.Common/Motion/XPS/CXpsComm.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.Common.Motion.CXpsComm._diagnosticSequence</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>_lastAppliedDiagnosticSequence</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L18-L18">Drilling.Common/Motion/XPS/CXpsComm.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.Common.Motion.CXpsComm._lastAppliedDiagnosticSequence</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">FieldDeclaration <code>_priorityStopGeneration</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L19-L19">Drilling.Common/Motion/XPS/CXpsComm.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.Common.Motion.CXpsComm._priorityStopGeneration</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">FieldDeclaration <code>_api</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L20-L20">Drilling.Common/Motion/XPS/CXpsComm.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>XPS? Drilling.Common.Motion.CXpsComm._api</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>XPS?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">MethodDeclaration <code>Connect</code> · L21–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L21-L37">Drilling.Common/Motion/XPS/CXpsComm.cs:21–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>23</td><td>_commLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>26</td><td>ConnectLocked</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.ConnectLocked() · Drilling.Common/Motion/XPS/CXpsComm.cs:109</td></tr>
+<tr><td>30</td><td>CloseApi</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.CloseApi() · Drilling.Common/Motion/XPS/CXpsComm.cs:304</td></tr>
+<tr><td>31</td><td>SetPrimaryError</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryError(System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:499</td></tr>
+<tr><td>35</td><td>_commLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>await</td><td>비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>24</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()</td></tr>
+<tr><td>28</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryError(ex)</td></tr>
+<tr><td>33</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Connect&quot;]
+ N0[&quot;L24 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L28 catch&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L33 finally&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">MethodDeclaration <code>Disconnect</code> · L39–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L39-L51">Drilling.Common/Motion/XPS/CXpsComm.cs:39–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>41</td><td>_commLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>44</td><td>CloseApi</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.CloseApi() · Drilling.Common/Motion/XPS/CXpsComm.cs:304</td></tr>
+<tr><td>45</td><td>SetPrimaryState</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Motion/XPS/CXpsComm.cs:491</td></tr>
+<tr><td>49</td><td>_commLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>41</td><td>await</td><td>비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>42</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryState(EN_COMM_STATE.Offline)</td></tr>
+<tr><td>47</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Disconnect&quot;]
+ N0[&quot;L42 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L47 finally&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">MethodDeclaration <code>Execute</code> · L53–107</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L53-L107">Drilling.Common/Motion/XPS/CXpsComm.cs:53–107</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Motion.CXpsComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>55</td><td>Volatile.Read</td><td>resolved</td><td>long System.Threading.Volatile.Read(ref readonly long)</td></tr>
+<tr><td>56</td><td>IsPriorityStopCommand</td><td>resolved</td><td>bool Drilling.Common.Motion.CXpsComm.IsPriorityStopCommand(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:533</td></tr>
+<tr><td>58</td><td>Interlocked.Increment</td><td>resolved</td><td>long System.Threading.Interlocked.Increment(ref long)</td></tr>
+<tr><td>59</td><td>ExecutePriorityStop</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Motion.CXpsComm.ExecutePriorityStop(string, System.Threading.CancellationToken) · Drilling.Common/Motion/XPS/CXpsComm.cs:356</td></tr>
+<tr><td>62</td><td>_commLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>70</td><td>Volatile.Read</td><td>resolved</td><td>long System.Threading.Volatile.Read(ref readonly long)</td></tr>
+<tr><td>72</td><td>CreateErrorResponse</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:468</td></tr>
+<tr><td>75</td><td>BeginCommandDiagnostic</td><td>resolved</td><td>long Drilling.Common.Motion.CXpsComm.BeginCommandDiagnostic(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:387</td></tr>
+<tr><td>80</td><td>ConnectLocked</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.ConnectLocked() · Drilling.Common/Motion/XPS/CXpsComm.cs:109</td></tr>
+<tr><td>85</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>88</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>89</td><td>ThrowIfPriorityStopOccurred</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.ThrowIfPriorityStopOccurred(long) · Drilling.Common/Motion/XPS/CXpsComm.cs:474</td></tr>
+<tr><td>90</td><td>ExecuteXpsFunction</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>91</td><td>CompletePrimaryCommand</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.CompletePrimaryCommand(long, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:400</td></tr>
+<tr><td>100</td><td>FailPrimaryCommand</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.FailPrimaryCommand(long, System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:415</td></tr>
+<tr><td>105</td><td>_commLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration)</td></tr>
+<tr><td>55</td><td>local-declaration</td><td>지역 변수를 선언합니다: var observedStopGeneration = Volatile.Read(ref _priorityStopGeneration);</td></tr>
+<tr><td>55</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: observedStopGeneration = Volatile.Read(ref _priorityStopGeneration)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsPriorityStopCommand(function)</td></tr>
+<tr><td>56</td><td>if</td><td>조건에 따라 분기합니다: if (IsPriorityStopCommand(function))</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _priorityStopGeneration)</td></tr>
+<tr><td>59</td><td>await</td><td>비동기 완료를 기다립니다: await ExecutePriorityStop(function, cancellationToken)</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecutePriorityStop(function, cancellationToken)</td></tr>
+<tr><td>59</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return await ExecutePriorityStop(function, cancellationToken);</td></tr>
+<tr><td>62</td><td>await</td><td>비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>68</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration)</td></tr>
+<tr><td>70</td><td>if</td><td>조건에 따라 분기합니다: if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration))</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(&quot;XPS command invalidated by priority stop.&quot;)</td></tr>
+<tr><td>72</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CreateErrorResponse(&quot;XPS command invalidated by priority stop.&quot;);</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: BeginCommandDiagnostic(function)</td></tr>
+<tr><td>75</td><td>local-declaration</td><td>지역 변수를 선언합니다: var diagnosticSequence = BeginCommandDiagnostic(function);</td></tr>
+<tr><td>75</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: diagnosticSequence = BeginCommandDiagnostic(function)</td></tr>
+<tr><td>76</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>78</td><td>if</td><td>조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()</td></tr>
+<tr><td>83</td><td>if</td><td>조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS primary connection is offline.&quot;)</td></tr>
+<tr><td>85</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS primary connection is offline.&quot;);</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfPriorityStopOccurred(observedStopGeneration)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback)</td></tr>
+<tr><td>90</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback);</td></tr>
+<tr><td>90</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback)</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CompletePrimaryCommand(diagnosticSequence, response)</td></tr>
+<tr><td>92</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+<tr><td>94</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>96</td><td>throw</td><td>예외를 발생/전달합니다: throw;</td></tr>
+<tr><td>98</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex)</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FailPrimaryCommand(diagnosticSequence, ex)</td></tr>
+<tr><td>100</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return FailPrimaryCommand(diagnosticSequence, ex);</td></tr>
+<tr><td>103</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L56 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L68 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L70 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L76 try&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L78 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L83 if&quot;]
+ N3 --&gt;|포함| N5
+ N6[&quot;L94 catch&quot;]
+ N3 --&gt;|포함| N6
+ N7[&quot;L98 catch&quot;]
+ N3 --&gt;|포함| N7
+ N8[&quot;L103 finally&quot;]
+ N1 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L63">LocalFunctionStatement <code>ThrowIfPriorityStopOccurredCallback</code> · L63–66</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L63-L66">Drilling.Common/Motion/XPS/CXpsComm.cs:63–66</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void ThrowIfPriorityStopOccurredCallback()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>65</td><td>ThrowIfPriorityStopOccurred</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.ThrowIfPriorityStopOccurred(long) · Drilling.Common/Motion/XPS/CXpsComm.cs:474</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfPriorityStopOccurred(observedStopGeneration)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L109">MethodDeclaration <code>ConnectLocked</code> · L109–121</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L109-L121">Drilling.Common/Motion/XPS/CXpsComm.cs:109–121</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.ConnectLocked()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L26-L26">Drilling.Common/Motion/XPS/CXpsComm.cs:26–26</a></td><td>ConnectLocked</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L80-L80">Drilling.Common/Motion/XPS/CXpsComm.cs:80–80</a></td><td>ConnectLocked</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>111</td><td>CloseApi</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.CloseApi() · Drilling.Common/Motion/XPS/CXpsComm.cs:304</td></tr>
+<tr><td>112</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>114</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>117</td><td>new XPS</td><td>unresolved</td><td>None</td></tr>
+<tr><td>118</td><td>_api.OpenInstrument</td><td>unresolved</td><td>None</td></tr>
+<tr><td>119</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>120</td><td>SetPrimaryConnected</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryConnected() · Drilling.Common/Motion/XPS/CXpsComm.cs:482</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress)</td></tr>
+<tr><td>112</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port &lt;= 0)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS endpoint is invalid.&quot;)</td></tr>
+<tr><td>114</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS endpoint is invalid.&quot;);</td></tr>
+<tr><td>117</td><td>assignment</td><td>값을 대상에 대입합니다: _api = new XPS()</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new XPS()</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs)</td></tr>
+<tr><td>118</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs);</td></tr>
+<tr><td>118</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(_api, result, &quot;OpenInstrument&quot;)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryConnected()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ConnectLocked&quot;]
+ N0[&quot;L112 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L123">MethodDeclaration <code>ExecuteXpsFunction</code> · L123–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L123-L138">Drilling.Common/Motion/XPS/CXpsComm.cs:123–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteXpsFunction(XPS, string, System.Threading.CancellationToken, System.Action?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+<tr><td>validateCommandGeneration</td><td>System.Action?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L518-L518">Drilling.Common/Motion/XPS/CXpsComm.cs:518–518</a></td><td>ExecuteXpsFunction</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>125</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>126</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>127</td><td>function.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>128</td><td>tokens[0].Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>130</td><td>ExecuteRawCommand</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteRawCommand(XPS, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:283</td></tr>
+<tr><td>133</td><td>tokens[1].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>135</td><td>ExecuteAxisFunction</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Threading.CancellationToken, System.Action?) · Drilling.Common/Motion/XPS/CXpsComm.cs:140</td></tr>
+<tr><td>136</td><td>ExecuteIoFunction</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteIoFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;) · Drilling.Common/Motion/XPS/CXpsComm.cs:256</td></tr>
+<tr><td>137</td><td>ExecuteRawCommand</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteRawCommand(XPS, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:283</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)</td></tr>
+<tr><td>127</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tokens = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);</td></tr>
+<tr><td>127</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tokens = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals(&quot;XPS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>128</td><td>if</td><td>조건에 따라 분기합니다: if (tokens.Length &lt; 2 || !tokens[0].Equals(&quot;XPS&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRawCommand(api, function)</td></tr>
+<tr><td>130</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExecuteRawCommand(api, function);</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].ToUpperInvariant()</td></tr>
+<tr><td>133</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return tokens[1].ToUpperInvariant() switch { &quot;AXIS&quot; =&gt; ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration), &quot;IO&quot; =&gt; ExecuteIoFunction(api, tokens), _ =&gt; ExecuteRawCommand(api, function)};</td></tr>
+<tr><td>133</td><td>switch-expression</td><td>값별 결과식을 선택합니다: tokens[1].ToUpperInvariant() switch { &quot;AXIS&quot; =&gt; ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration), &quot;IO&quot; =&gt; ExecuteIoFunction(api, tokens), _ =&gt; ExecuteRawCommand(api, function)}</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteIoFunction(api, tokens)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRawCommand(api, function)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteXpsFunction&quot;]
+ N0[&quot;L128 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L133 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">MethodDeclaration <code>ExecuteAxisFunction</code> · L140–254</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L140-L254">Drilling.Common/Motion/XPS/CXpsComm.cs:140–254</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Threading.CancellationToken, System.Action?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>tokens</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+<tr><td>validateCommandGeneration</td><td>System.Action?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L135-L135">Drilling.Common/Motion/XPS/CXpsComm.cs:135–135</a></td><td>ExecuteAxisFunction</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>144</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>150</td><td>tokens[commandIndex].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>151</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>152</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>156</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>156</td><td>api.GroupMotionEnable</td><td>unresolved</td><td>None</td></tr>
+<tr><td>159</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>159</td><td>api.GroupMotionDisable</td><td>unresolved</td><td>None</td></tr>
+<tr><td>162</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>162</td><td>api.GroupInitialize</td><td>unresolved</td><td>None</td></tr>
+<tr><td>163</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>164</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>164</td><td>api.GroupHomeSearch</td><td>unresolved</td><td>None</td></tr>
+<tr><td>167</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>167</td><td>api.GroupMoveAbsolute</td><td>unresolved</td><td>None</td></tr>
+<tr><td>167</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:346</td></tr>
+<tr><td>170</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>170</td><td>api.GroupMoveRelative</td><td>unresolved</td><td>None</td></tr>
+<tr><td>170</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:346</td></tr>
+<tr><td>173</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>173</td><td>api.PositionerSGammaVelocityAndAccelerationSet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>173</td><td>ReadPositiveDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:578</td></tr>
+<tr><td>173</td><td>ReadPositiveDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:578</td></tr>
+<tr><td>176</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:346</td></tr>
+<tr><td>177</td><td>ReadPositiveDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:578</td></tr>
+<tr><td>178</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>180</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>185</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>186</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>186</td><td>api.GroupJogModeEnable</td><td>unresolved</td><td>None</td></tr>
+<tr><td>187</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>188</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>189</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>189</td><td>api.GroupJogParametersSet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>190</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>191</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>197</td><td>StopJogAndDisable</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.StopJogAndDisable(XPS, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:545</td></tr>
+<tr><td>201</td><td>new AggregateException</td><td>resolved</td><td>System.AggregateException.AggregateException(string?, params System.Exception[])</td></tr>
+<tr><td>209</td><td>StopJogAndDisable</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.StopJogAndDisable(XPS, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:545</td></tr>
+<tr><td>212</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>212</td><td>api.GroupMoveAbort</td><td>unresolved</td><td>None</td></tr>
+<tr><td>215</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>215</td><td>api.GroupInitialize</td><td>unresolved</td><td>None</td></tr>
+<tr><td>218</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>218</td><td>api.GroupPositionCurrentGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>219</td><td>ReadRequiredFirst</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>220</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>220</td><td>api.GroupStatusGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>221</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>221</td><td>api.GroupStatusStringGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>222</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>222</td><td>api.GroupMotionStatusGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>225</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>228</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>228</td><td>api.PositionerHardwareStatusGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>229</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>229</td><td>api.GroupVelocityCurrentGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>230</td><td>ReadRequiredFirst</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>231</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>231</td><td>api.GroupAccelerationCurrentGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>232</td><td>ReadRequiredFirst</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>233</td><td>string.Join</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>239</td><td>positionValue.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>241</td><td>SanitizeResponseText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>243</td><td>motionStatus[0].ToString</td><td>unresolved</td><td>None</td></tr>
+<tr><td>245</td><td>hardwareStatus.ToString</td><td>unresolved</td><td>None</td></tr>
+<tr><td>247</td><td>velocity.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>249</td><td>acceleration.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>252</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>142</td><td>if</td><td>조건에 따라 분기합니다: if (tokens.Count &lt; 5)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS axis command is invalid.&quot;)</td></tr>
+<tr><td>144</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS axis command is invalid.&quot;);</td></tr>
+<tr><td>147</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisName = tokens[3];</td></tr>
+<tr><td>147</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisName = tokens[3]</td></tr>
+<tr><td>148</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: tokens.Count &gt;= 6 ? tokens[4] : axisName</td></tr>
+<tr><td>148</td><td>local-declaration</td><td>지역 변수를 선언합니다: var groupName = tokens.Count &gt;= 6 ? tokens[4] : axisName;</td></tr>
+<tr><td>148</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: groupName = tokens.Count &gt;= 6 ? tokens[4] : axisName</td></tr>
+<tr><td>149</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: tokens.Count &gt;= 6 ? 5 : 4</td></tr>
+<tr><td>149</td><td>local-declaration</td><td>지역 변수를 선언합니다: var commandIndex = tokens.Count &gt;= 6 ? 5 : 4;</td></tr>
+<tr><td>149</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: commandIndex = tokens.Count &gt;= 6 ? 5 : 4</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].ToUpperInvariant()</td></tr>
+<tr><td>150</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = tokens[commandIndex].ToUpperInvariant();</td></tr>
+<tr><td>150</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = tokens[commandIndex].ToUpperInvariant()</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>153</td><td>switch</td><td>값에 따라 분기합니다: switch (command)</td></tr>
+<tr><td>155</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;SERVO_ON&quot;:</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionEnable(groupName, out var servoOnError), servoOnError)</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionEnable(groupName, out var servoOnError)</td></tr>
+<tr><td>157</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:SERVO_ON&quot;;</td></tr>
+<tr><td>158</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;SERVO_OFF&quot;:</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionDisable(groupName, out var servoOffError), servoOffError)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionDisable(groupName, out var servoOffError)</td></tr>
+<tr><td>160</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:SERVO_OFF&quot;;</td></tr>
+<tr><td>161</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;HOME&quot;:</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupInitialize(groupName, out var initializeError), initializeError)</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupInitialize(groupName, out var initializeError)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupHomeSearch(groupName, out var homeError), homeError)</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupHomeSearch(groupName, out var homeError)</td></tr>
+<tr><td>165</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:HOME&quot;;</td></tr>
+<tr><td>166</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;MOVE_ABS&quot;:</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbsolute(groupName, [ReadDouble(tokens, commandIndex + 1, &quot;MOVE_ABS&quot;)], 1, out var moveAbsError), moveAbsError)</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbsolute(groupName, [ReadDouble(tokens, commandIndex + 1, &quot;MOVE_ABS&quot;)], 1, out var moveAbsError)</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, &quot;MOVE_ABS&quot;)</td></tr>
+<tr><td>168</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:MOVE_ABS&quot;;</td></tr>
+<tr><td>169</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;MOVE_REL&quot;:</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveRelative(groupName, [ReadDouble(tokens, commandIndex + 1, &quot;MOVE_REL&quot;)], 1, out var moveRelError), moveRelError)</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveRelative(groupName, [ReadDouble(tokens, commandIndex + 1, &quot;MOVE_REL&quot;)], 1, out var moveRelError)</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, &quot;MOVE_REL&quot;)</td></tr>
+<tr><td>171</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:MOVE_REL&quot;;</td></tr>
+<tr><td>172</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;SET_PROFILE&quot;:</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.PositionerSGammaVelocityAndAccelerationSet(axisName, ReadPositiveDouble(tokens, commandIndex + 1, &quot;SET_PROFILE VELOCITY&quot;), ReadPositiveDouble(tokens, commandIndex + 2, &quot;SET_PROFILE ACCELERATION&quot;), ou…</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.PositionerSGammaVelocityAndAccelerationSet(axisName, ReadPositiveDouble(tokens, commandIndex + 1, &quot;SET_PROFILE VELOCITY&quot;), ReadPositiveDouble(tokens, commandIndex + 2, &quot;SET_PROFILE ACCELERATION&quot;), out var profileErro…</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPositiveDouble(tokens, commandIndex + 1, &quot;SET_PROFILE VELOCITY&quot;)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPositiveDouble(tokens, commandIndex + 2, &quot;SET_PROFILE ACCELERATION&quot;)</td></tr>
+<tr><td>174</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:SET_PROFILE&quot;;</td></tr>
+<tr><td>175</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;JOG&quot;:</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, &quot;JOG VELOCITY&quot;)</td></tr>
+<tr><td>176</td><td>local-declaration</td><td>지역 변수를 선언합니다: var jogVelocity = ReadDouble(tokens, commandIndex + 1, &quot;JOG VELOCITY&quot;);</td></tr>
+<tr><td>176</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: jogVelocity = ReadDouble(tokens, commandIndex + 1, &quot;JOG VELOCITY&quot;)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPositiveDouble(tokens, commandIndex + 2, &quot;JOG ACCELERATION&quot;)</td></tr>
+<tr><td>177</td><td>local-declaration</td><td>지역 변수를 선언합니다: var jogAcceleration = ReadPositiveDouble(tokens, commandIndex + 2, &quot;JOG ACCELERATION&quot;);</td></tr>
+<tr><td>177</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: jogAcceleration = ReadPositiveDouble(tokens, commandIndex + 2, &quot;JOG ACCELERATION&quot;)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(jogVelocity)</td></tr>
+<tr><td>178</td><td>if</td><td>조건에 따라 분기합니다: if (Math.Abs(jogVelocity) &lt;= double.Epsilon)</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS JOG velocity must not be zero.&quot;)</td></tr>
+<tr><td>180</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS JOG velocity must not be zero.&quot;);</td></tr>
+<tr><td>183</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupJogModeEnable(groupName, out var jogEnableError), jogEnableError)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogModeEnable(groupName, out var jogEnableError)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupJogParametersSet(groupName, [jogVelocity], [jogAcceleration], 1, out var jogSetError), jogSetError)</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogParametersSet(groupName, [jogVelocity], [jogAcceleration], 1, out var jogSetError)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>193</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception jogException)</td></tr>
+<tr><td>195</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopJogAndDisable(api, groupName)</td></tr>
+<tr><td>199</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception cleanupException)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException(&quot;XPS jog start and cleanup both failed.&quot;, jogException, cleanupException)</td></tr>
+<tr><td>201</td><td>throw</td><td>예외를 발생/전달합니다: throw new AggregateException(&quot;XPS jog start and cleanup both failed.&quot;, jogException, cleanupException);</td></tr>
+<tr><td>204</td><td>throw</td><td>예외를 발생/전달합니다: throw;</td></tr>
+<tr><td>207</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:JOG&quot;;</td></tr>
+<tr><td>208</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;JOG_STOP&quot;:</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopJogAndDisable(api, groupName)</td></tr>
+<tr><td>210</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:JOG_STOP&quot;;</td></tr>
+<tr><td>211</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;STOP&quot;:</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbort(groupName, out var stopError), stopError)</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbort(groupName, out var stopError)</td></tr>
+<tr><td>213</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:STOP&quot;;</td></tr>
+<tr><td>214</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;RESET_ALARM&quot;:</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupInitialize(groupName, out var resetError), resetError)</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupInitialize(groupName, out var resetError)</td></tr>
+<tr><td>216</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:AXIS:{axisName}:RESET_ALARM&quot;;</td></tr>
+<tr><td>217</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;READ&quot;:</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupPositionCurrentGet(groupName, out var position, 1, out var readError), readError)</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupPositionCurrentGet(groupName, out var position, 1, out var readError)</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(position, &quot;position&quot;)</td></tr>
+<tr><td>219</td><td>local-declaration</td><td>지역 변수를 선언합니다: var positionValue = ReadRequiredFirst(position, &quot;position&quot;);</td></tr>
+<tr><td>219</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: positionValue = ReadRequiredFirst(position, &quot;position&quot;)</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusGet(groupName, out var groupStatus, out var groupStatusError), groupStatusError)</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusGet(groupName, out var groupStatus, out var groupStatusError)</td></tr>
+<tr><td>221</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusStringGet(groupStatus, out var groupStatusText, out var groupStatusTextError), groupStatusTextError)</td></tr>
+<tr><td>221</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusStringGet(groupStatus, out var groupStatusText, out var groupStatusTextError)</td></tr>
+<tr><td>222</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionStatusGet(groupName, out var motionStatus, 1, out var motionStatusError), motionStatusError)</td></tr>
+<tr><td>222</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionStatusGet(groupName, out var motionStatus, 1, out var motionStatusError)</td></tr>
+<tr><td>223</td><td>if</td><td>조건에 따라 분기합니다: if (motionStatus.Length == 0)</td></tr>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS motion status response is empty.&quot;)</td></tr>
+<tr><td>225</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS motion status response is empty.&quot;);</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.PositionerHardwareStatusGet(axisName, out var hardwareStatus, out var hardwareStatusError), hardwareStatusError)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.PositionerHardwareStatusGet(axisName, out var hardwareStatus, out var hardwareStatusError)</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupVelocityCurrentGet(groupName, out var currentVelocity, 1, out var velocityError), velocityError)</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupVelocityCurrentGet(groupName, out var currentVelocity, 1, out var velocityError)</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(currentVelocity, &quot;velocity&quot;)</td></tr>
+<tr><td>230</td><td>local-declaration</td><td>지역 변수를 선언합니다: var velocity = ReadRequiredFirst(currentVelocity, &quot;velocity&quot;);</td></tr>
+<tr><td>230</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: velocity = ReadRequiredFirst(currentVelocity, &quot;velocity&quot;)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupAccelerationCurrentGet(groupName, out var currentAcceleration, 1, out var accelerationError), accelerationError)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupAccelerationCurrentGet(groupName, out var currentAcceleration, 1, out var accelerationError)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(currentAcceleration, &quot;acceleration&quot;)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var acceleration = ReadRequiredFirst(currentAcceleration, &quot;acceleration&quot;);</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: acceleration = ReadRequiredFirst(currentAcceleration, &quot;acceleration&quot;)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join( &quot;:&quot;, &quot;OK&quot;, &quot;AXIS&quot;, axisName, &quot;FPOS&quot;, positionValue.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture), &quot;GROUP_STATUS_TEXT&quot;, SanitizeResponseText(groupStatusText), &quot;MOTION_STATUS&quot;, motionStatus[0].ToString(CultureI…</td></tr>
+<tr><td>233</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return string.Join( &quot;:&quot;, &quot;OK&quot;, &quot;AXIS&quot;, axisName, &quot;FPOS&quot;, positionValue.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture), &quot;GROUP_STATUS_TEXT&quot;, SanitizeResponseText(groupStatusText), &quot;MOTION_STATUS&quot;, motionStatus[0].ToString(CultureInfo</td></tr>
+<tr><td>239</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: positionValue.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>241</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SanitizeResponseText(groupStatusText)</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: motionStatus[0].ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>245</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: hardwareStatus.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>247</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: velocity.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: acceleration.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>251</td><td>case</td><td>분기값/패턴의 구간입니다: default:</td></tr>
+<tr><td>252</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS axis command is unknown: {command}&quot;)</td></tr>
+<tr><td>252</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS axis command is unknown: {command}&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteAxisFunction&quot;]
+ N0[&quot;L142 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L153 switch&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L178 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L183 try&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L193 catch&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L195 try&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L199 catch&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L223 if&quot;]
+ N1 --&gt;|포함| N7</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L256">MethodDeclaration <code>ExecuteIoFunction</code> · L256–281</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L256-L281">Drilling.Common/Motion/XPS/CXpsComm.cs:256–281</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteIoFunction(XPS, System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>tokens</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L136-L136">Drilling.Common/Motion/XPS/CXpsComm.cs:136–136</a></td><td>ExecuteIoFunction</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>260</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>263</td><td>tokens[2].Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>263</td><td>tokens[2].Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>264</td><td>ParseDigitalIoAddress</td><td>resolved</td><td>(string GpioName, int BitNo) Drilling.Common.Motion.CXpsComm.ParseDigitalIoAddress(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:599</td></tr>
+<tr><td>265</td><td>tokens[3].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>269</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>269</td><td>api.GPIODigitalGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>275</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>279</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>279</td><td>api.GPIODigitalSet</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>258</td><td>if</td><td>조건에 따라 분기합니다: if (tokens.Count &lt; 4)</td></tr>
+<tr><td>260</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS IO command is invalid.&quot;)</td></tr>
+<tr><td>260</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS IO command is invalid.&quot;);</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim().ToUpperInvariant()</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim()</td></tr>
+<tr><td>263</td><td>local-declaration</td><td>지역 변수를 선언합니다: var address = tokens[2].Trim().ToUpperInvariant();</td></tr>
+<tr><td>263</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: address = tokens[2].Trim().ToUpperInvariant()</td></tr>
+<tr><td>264</td><td>assignment</td><td>값을 대상에 대입합니다: var(gpioName, bitNo) = ParseDigitalIoAddress(address)</td></tr>
+<tr><td>264</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDigitalIoAddress(address)</td></tr>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[3].ToUpperInvariant()</td></tr>
+<tr><td>265</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = tokens[3].ToUpperInvariant();</td></tr>
+<tr><td>265</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = tokens[3].ToUpperInvariant()</td></tr>
+<tr><td>266</td><td>local-declaration</td><td>지역 변수를 선언합니다: var mask = checked((ushort)(1 &lt;&lt; bitNo));</td></tr>
+<tr><td>266</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: mask = checked((ushort)(1 &lt;&lt; bitNo))</td></tr>
+<tr><td>267</td><td>if</td><td>조건에 따라 분기합니다: if (command == &quot;READ&quot;)</td></tr>
+<tr><td>269</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GPIODigitalGet(gpioName, out var value, out var readError), readError)</td></tr>
+<tr><td>269</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GPIODigitalGet(gpioName, out var value, out var readError)</td></tr>
+<tr><td>270</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: (value &amp; mask) != 0 ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+<tr><td>270</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:IO:{address}:{((value &amp; mask) != 0 ? &quot;ON&quot; : &quot;OFF&quot;)}&quot;;</td></tr>
+<tr><td>273</td><td>if</td><td>조건에 따라 분기합니다: if (command is not (&quot;ON&quot; or &quot;OFF&quot;))</td></tr>
+<tr><td>275</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS IO command is unknown: {command}&quot;)</td></tr>
+<tr><td>275</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS IO command is unknown: {command}&quot;);</td></tr>
+<tr><td>278</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: command == &quot;ON&quot; ? mask : (ushort)0</td></tr>
+<tr><td>278</td><td>local-declaration</td><td>지역 변수를 선언합니다: var output = command == &quot;ON&quot; ? mask : (ushort)0;</td></tr>
+<tr><td>278</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: output = command == &quot;ON&quot; ? mask : (ushort)0</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GPIODigitalSet(gpioName, mask, output, out var writeError), writeError)</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GPIODigitalSet(gpioName, mask, output, out var writeError)</td></tr>
+<tr><td>280</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:IO:{address}:{command}&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteIoFunction&quot;]
+ N0[&quot;L258 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L267 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L273 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L283">MethodDeclaration <code>ExecuteRawCommand</code> · L283–302</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L283-L302">Drilling.Common/Motion/XPS/CXpsComm.cs:283–302</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteRawCommand(XPS, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L130-L130">Drilling.Common/Motion/XPS/CXpsComm.cs:130–130</a></td><td>ExecuteRawCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L137-L137">Drilling.Common/Motion/XPS/CXpsComm.cs:137–137</a></td><td>ExecuteRawCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>285</td><td>function.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>285</td><td>function.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>287</td><td>ExecuteStatus</td><td>resolved</td><td>string ExecuteStatus(XPS) · Drilling.Common/Motion/XPS/CXpsComm.cs:290</td></tr>
+<tr><td>288</td><td>ExecuteSockets</td><td>resolved</td><td>string ExecuteSockets(XPS) · Drilling.Common/Motion/XPS/CXpsComm.cs:297</td></tr>
+<tr><td>289</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant()</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim()</td></tr>
+<tr><td>285</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return function.Trim().ToUpperInvariant() switch { &quot;STATUS&quot; =&gt; ExecuteStatus(api), &quot;SOCKETS&quot; =&gt; ExecuteSockets(api), _ =&gt; throw new InvalidOperationException($&quot;XPS raw command is not supported yet: {function}&quot;)};</td></tr>
+<tr><td>285</td><td>switch-expression</td><td>값별 결과식을 선택합니다: function.Trim().ToUpperInvariant() switch { &quot;STATUS&quot; =&gt; ExecuteStatus(api), &quot;SOCKETS&quot; =&gt; ExecuteSockets(api), _ =&gt; throw new InvalidOperationException($&quot;XPS raw command is not supported yet: {function}&quot;)}</td></tr>
+<tr><td>287</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteStatus(api)</td></tr>
+<tr><td>288</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSockets(api)</td></tr>
+<tr><td>289</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS raw command is not supported yet: {function}&quot;)</td></tr>
+<tr><td>289</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS raw command is not supported yet: {function}&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteRawCommand&quot;]
+ N0[&quot;L285 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">LocalFunctionStatement <code>ExecuteStatus</code> · L290–295</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L290-L295">Drilling.Common/Motion/XPS/CXpsComm.cs:290–295</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string ExecuteStatus(XPS)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>xps</td><td>XPS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L287-L287">Drilling.Common/Motion/XPS/CXpsComm.cs:287–287</a></td><td>ExecuteStatus</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>292</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>292</td><td>xps.ControllerStatusGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>293</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>293</td><td>xps.ControllerStatusStringGet</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.ControllerStatusGet(out var status, out var statusError), statusError)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xps.ControllerStatusGet(out var status, out var statusError)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.ControllerStatusStringGet(status, out var statusText, out var statusTextError), statusTextError)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xps.ControllerStatusStringGet(status, out var statusText, out var statusTextError)</td></tr>
+<tr><td>294</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:STATUS:{status}:{statusText}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L297">LocalFunctionStatement <code>ExecuteSockets</code> · L297–301</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L297-L301">Drilling.Common/Motion/XPS/CXpsComm.cs:297–301</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string ExecuteSockets(XPS)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>xps</td><td>XPS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L288-L288">Drilling.Common/Motion/XPS/CXpsComm.cs:288–288</a></td><td>ExecuteSockets</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>299</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>299</td><td>xps.SocketsStatusGet</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.SocketsStatusGet(out var result, out var socketError), socketError)</td></tr>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xps.SocketsStatusGet(out var result, out var socketError)</td></tr>
+<tr><td>300</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;OK:SOCKETS:{result}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L304">MethodDeclaration <code>CloseApi</code> · L304–323</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L304-L323">Drilling.Common/Motion/XPS/CXpsComm.cs:304–323</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.CloseApi()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L30-L30">Drilling.Common/Motion/XPS/CXpsComm.cs:30–30</a></td><td>CloseApi</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L44-L44">Drilling.Common/Motion/XPS/CXpsComm.cs:44–44</a></td><td>CloseApi</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L111-L111">Drilling.Common/Motion/XPS/CXpsComm.cs:111–111</a></td><td>CloseApi</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>313</td><td>_api.CloseInstrument</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>306</td><td>if</td><td>조건에 따라 분기합니다: if (_api is null)</td></tr>
+<tr><td>308</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>311</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _api.CloseInstrument()</td></tr>
+<tr><td>315</td><td>catch</td><td>지정 예외를 처리합니다: catch</td></tr>
+<tr><td>319</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>321</td><td>assignment</td><td>값을 대상에 대입합니다: _api = null</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CloseApi&quot;]
+ N0[&quot;L306 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L311 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L315 catch&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L319 finally&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L325">MethodDeclaration <code>CheckResult</code> · L325–344</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L325-L344">Drilling.Common/Motion/XPS/CXpsComm.cs:325–344</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.CheckResult(XPS, int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>result</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>detail</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>335</td><td>api.ErrorStringGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>342</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>343</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>327</td><td>if</td><td>조건에 따라 분기합니다: if (result == 0)</td></tr>
+<tr><td>329</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>332</td><td>local-declaration</td><td>지역 변수를 선언합니다: var error = &quot;&quot;;</td></tr>
+<tr><td>332</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: error = &quot;&quot;</td></tr>
+<tr><td>333</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>335</td><td>assignment</td><td>값을 대상에 대입합니다: _ = api.ErrorStringGet(result, out error, out _)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.ErrorStringGet(result, out error, out _)</td></tr>
+<tr><td>337</td><td>catch</td><td>지정 예외를 처리합니다: catch</td></tr>
+<tr><td>339</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>342</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(error)</td></tr>
+<tr><td>342</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(error) ? detail : error</td></tr>
+<tr><td>342</td><td>local-declaration</td><td>지역 변수를 선언합니다: var message = string.IsNullOrWhiteSpace(error) ? detail : error;</td></tr>
+<tr><td>342</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: message = string.IsNullOrWhiteSpace(error) ? detail : error</td></tr>
+<tr><td>343</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS command failed. Code={result}, Detail={message}&quot;)</td></tr>
+<tr><td>343</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS command failed. Code={result}, Detail={message}&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CheckResult&quot;]
+ N0[&quot;L327 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L333 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L337 catch&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L346">MethodDeclaration <code>ReadDouble</code> · L346–354</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L346-L354">Drilling.Common/Motion/XPS/CXpsComm.cs:346–354</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tokens</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L167-L167">Drilling.Common/Motion/XPS/CXpsComm.cs:167–167</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L170-L170">Drilling.Common/Motion/XPS/CXpsComm.cs:170–170</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L176-L176">Drilling.Common/Motion/XPS/CXpsComm.cs:176–176</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L580-L580">Drilling.Common/Motion/XPS/CXpsComm.cs:580–580</a></td><td>ReadDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>348</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>348</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>350</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>348</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>348</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result)</td></tr>
+<tr><td>348</td><td>if</td><td>조건에 따라 분기합니다: if (tokens.Count &lt;= index || !double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result))</td></tr>
+<tr><td>350</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS {command} parameter must be finite.&quot;)</td></tr>
+<tr><td>350</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS {command} parameter must be finite.&quot;);</td></tr>
+<tr><td>353</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadDouble&quot;]
+ N0[&quot;L348 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L356">MethodDeclaration <code>ExecutePriorityStop</code> · L356–385</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L356-L385">Drilling.Common/Motion/XPS/CXpsComm.cs:356–385</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Motion.CXpsComm.ExecutePriorityStop(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L59-L59">Drilling.Common/Motion/XPS/CXpsComm.cs:59–59</a></td><td>ExecutePriorityStop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>358</td><td>BeginCommandDiagnostic</td><td>resolved</td><td>long Drilling.Common.Motion.CXpsComm.BeginCommandDiagnostic(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:387</td></tr>
+<tr><td>371</td><td>Task.Factory.StartNew</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.TaskFactory.StartNew&lt;string&gt;(System.Func&lt;string&gt;, System.Threading.CancellationToken, System.Threading.Tasks.TaskCreationOptions, System.Threading.Tasks.TaskScheduler)</td></tr>
+<tr><td>372</td><td>stopTask.ContinueWith</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.AggregateException?&gt; System.Threading.Tasks.Task&lt;string&gt;.ContinueWith&lt;System.AggregateException?&gt;(System.Func&lt;System.Threading.Tasks.Task&lt;string&gt;, System.AggregateException?&gt;, System.Threading.CancellationToken, System.Threading.Tasks.TaskContinuationOptions, System.Threading.Tasks.TaskScheduler)</td></tr>
+<tr><td>373</td><td>stopTask.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.Task&lt;string&gt;.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>374</td><td>CompletePriorityStop</td><td>resolved</td><td>void Drilling.Common.Motion.CXpsComm.CompletePriorityStop(long, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:432</td></tr>
+<tr><td>379</td><td>FailPriorityStop</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.FailPriorityStop(long, System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:446</td></tr>
+<tr><td>379</td><td>new TimeoutException</td><td>resolved</td><td>System.TimeoutException.TimeoutException(string?, System.Exception?)</td></tr>
+<tr><td>383</td><td>FailPriorityStop</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.FailPriorityStop(long, System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:446</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: BeginCommandDiagnostic(function)</td></tr>
+<tr><td>358</td><td>local-declaration</td><td>지역 변수를 선언합니다: var diagnosticSequence = BeginCommandDiagnostic(function);</td></tr>
+<tr><td>358</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: diagnosticSequence = BeginCommandDiagnostic(function)</td></tr>
+<tr><td>369</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>371</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default)</td></tr>
+<tr><td>371</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stopTask = Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);</td></tr>
+<tr><td>371</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stopTask = Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default)</td></tr>
+<tr><td>372</td><td>assignment</td><td>값을 대상에 대입합니다: _ = stopTask.ContinueWith(SelectAggregateexception, CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default)</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stopTask.ContinueWith(SelectAggregateexception, CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default)</td></tr>
+<tr><td>373</td><td>await</td><td>비동기 완료를 기다립니다: await stopTask.WaitAsync(cancellationToken)</td></tr>
+<tr><td>373</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stopTask.WaitAsync(cancellationToken)</td></tr>
+<tr><td>373</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = await stopTask.WaitAsync(cancellationToken);</td></tr>
+<tr><td>373</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = await stopTask.WaitAsync(cancellationToken)</td></tr>
+<tr><td>374</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CompletePriorityStop(diagnosticSequence, response)</td></tr>
+<tr><td>375</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+<tr><td>377</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException exception) when (cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FailPriorityStop(diagnosticSequence, new TimeoutException($&quot;XPS priority stop timed out after {(Option.TimeoutMs &gt; 0 ? Option.TimeoutMs : 5000)} ms.&quot;, exception))</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($&quot;XPS priority stop timed out after {(Option.TimeoutMs &gt; 0 ? Option.TimeoutMs : 5000)} ms.&quot;, exception)</td></tr>
+<tr><td>379</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Option.TimeoutMs &gt; 0 ? Option.TimeoutMs : 5000</td></tr>
+<tr><td>379</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return FailPriorityStop(diagnosticSequence, new TimeoutException($&quot;XPS priority stop timed out after {(Option.TimeoutMs &gt; 0 ? Option.TimeoutMs : 5000)} ms.&quot;, exception));</td></tr>
+<tr><td>381</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex)</td></tr>
+<tr><td>383</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FailPriorityStop(diagnosticSequence, ex)</td></tr>
+<tr><td>383</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return FailPriorityStop(diagnosticSequence, ex);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecutePriorityStop&quot;]
+ N0[&quot;L369 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L377 catch&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L381 catch&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L359">LocalFunctionStatement <code>SelectValue</code> · L359–362</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L359-L362">Drilling.Common/Motion/XPS/CXpsComm.cs:359–362</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>361</td><td>ExecutePriorityStopCore</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecutePriorityStopCore(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:507</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>361</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecutePriorityStopCore(function)</td></tr>
+<tr><td>361</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExecutePriorityStopCore(function);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L364">LocalFunctionStatement <code>SelectAggregateexception</code> · L364–367</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L364-L367">Drilling.Common/Motion/XPS/CXpsComm.cs:364–367</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.AggregateException? SelectAggregateexception(System.Threading.Tasks.Task&lt;string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.AggregateException?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>task</td><td>System.Threading.Tasks.Task&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>366</td><td>assignment</td><td>값을 대상에 대입합니다: _ = task.Exception</td></tr>
+<tr><td>366</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _ = task.Exception;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L387">MethodDeclaration <code>BeginCommandDiagnostic</code> · L387–398</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L387-L398">Drilling.Common/Motion/XPS/CXpsComm.cs:387–398</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.Common.Motion.CXpsComm.BeginCommandDiagnostic(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L75-L75">Drilling.Common/Motion/XPS/CXpsComm.cs:75–75</a></td><td>BeginCommandDiagnostic</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L358-L358">Drilling.Common/Motion/XPS/CXpsComm.cs:358–358</a></td><td>BeginCommandDiagnostic</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>389</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>391</td><td>local-declaration</td><td>지역 변수를 선언합니다: var sequence = ++_diagnosticSequence;</td></tr>
+<tr><td>391</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: sequence = ++_diagnosticSequence</td></tr>
+<tr><td>392</td><td>assignment</td><td>값을 대상에 대입합니다: _lastAppliedDiagnosticSequence = sequence</td></tr>
+<tr><td>393</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = function</td></tr>
+<tr><td>394</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = &quot;&quot;</td></tr>
+<tr><td>395</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>396</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return sequence;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BeginCommandDiagnostic&quot;]
+ N0[&quot;L389 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L400">MethodDeclaration <code>CompletePrimaryCommand</code> · L400–413</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L400-L413">Drilling.Common/Motion/XPS/CXpsComm.cs:400–413</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.CompletePrimaryCommand(long, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sequence</td><td>long</td><td>None</td><td>False /</td></tr>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L91-L91">Drilling.Common/Motion/XPS/CXpsComm.cs:91–91</a></td><td>CompletePrimaryCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>411</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>402</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>404</td><td>if</td><td>조건에 따라 분기합니다: if (sequence &lt; _lastAppliedDiagnosticSequence)</td></tr>
+<tr><td>406</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>409</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = response</td></tr>
+<tr><td>410</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>411</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CompletePrimaryCommand&quot;]
+ N0[&quot;L402 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L404 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L415">MethodDeclaration <code>FailPrimaryCommand</code> · L415–430</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L415-L430">Drilling.Common/Motion/XPS/CXpsComm.cs:415–430</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.FailPrimaryCommand(long, System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sequence</td><td>long</td><td>None</td><td>False /</td></tr>
+<tr><td>exception</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L100-L100">Drilling.Common/Motion/XPS/CXpsComm.cs:100–100</a></td><td>FailPrimaryCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>417</td><td>CreateErrorResponse</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:463</td></tr>
+<tr><td>427</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>417</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception)</td></tr>
+<tr><td>417</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = CreateErrorResponse(exception);</td></tr>
+<tr><td>417</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = CreateErrorResponse(exception)</td></tr>
+<tr><td>418</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>420</td><td>if</td><td>조건에 따라 분기합니다: if (sequence &lt; _lastAppliedDiagnosticSequence)</td></tr>
+<tr><td>422</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+<tr><td>425</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = response</td></tr>
+<tr><td>426</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = exception.Message</td></tr>
+<tr><td>427</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)</td></tr>
+<tr><td>428</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FailPrimaryCommand&quot;]
+ N0[&quot;L418 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L420 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L432">MethodDeclaration <code>CompletePriorityStop</code> · L432–444</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L432-L444">Drilling.Common/Motion/XPS/CXpsComm.cs:432–444</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.CompletePriorityStop(long, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sequence</td><td>long</td><td>None</td><td>False /</td></tr>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L374-L374">Drilling.Common/Motion/XPS/CXpsComm.cs:374–374</a></td><td>CompletePriorityStop</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>434</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>436</td><td>if</td><td>조건에 따라 분기합니다: if (sequence &lt; _lastAppliedDiagnosticSequence)</td></tr>
+<tr><td>438</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>441</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = response</td></tr>
+<tr><td>442</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CompletePriorityStop&quot;]
+ N0[&quot;L434 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L436 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L446">MethodDeclaration <code>FailPriorityStop</code> · L446–461</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L446-L461">Drilling.Common/Motion/XPS/CXpsComm.cs:446–461</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.FailPriorityStop(long, System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sequence</td><td>long</td><td>None</td><td>False /</td></tr>
+<tr><td>exception</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L379-L379">Drilling.Common/Motion/XPS/CXpsComm.cs:379–379</a></td><td>FailPriorityStop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L383-L383">Drilling.Common/Motion/XPS/CXpsComm.cs:383–383</a></td><td>FailPriorityStop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>448</td><td>CreateErrorResponse</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(System.Exception) · Drilling.Common/Motion/XPS/CXpsComm.cs:463</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>448</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception)</td></tr>
+<tr><td>448</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = CreateErrorResponse(exception);</td></tr>
+<tr><td>448</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = CreateErrorResponse(exception)</td></tr>
+<tr><td>449</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>451</td><td>if</td><td>조건에 따라 분기합니다: if (sequence &lt; _lastAppliedDiagnosticSequence)</td></tr>
+<tr><td>453</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+<tr><td>456</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = response</td></tr>
+<tr><td>457</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = $&quot;XPS priority stop failed. {exception.Message}&quot;</td></tr>
+<tr><td>458</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>459</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return response;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FailPriorityStop&quot;]
+ N0[&quot;L449 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L451 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L463">MethodDeclaration <code>CreateErrorResponse</code> · L463–466</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L463-L466">Drilling.Common/Motion/XPS/CXpsComm.cs:463–466</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>exception</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L417-L417">Drilling.Common/Motion/XPS/CXpsComm.cs:417–417</a></td><td>CreateErrorResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L448-L448">Drilling.Common/Motion/XPS/CXpsComm.cs:448–448</a></td><td>CreateErrorResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>465</td><td>CreateErrorResponse</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:468</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>465</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception.Message)</td></tr>
+<tr><td>465</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CreateErrorResponse(exception.Message);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L468">MethodDeclaration <code>CreateErrorResponse</code> · L468–472</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L468-L472">Drilling.Common/Motion/XPS/CXpsComm.cs:468–472</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L72-L72">Drilling.Common/Motion/XPS/CXpsComm.cs:72–72</a></td><td>CreateErrorResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L465-L465">Drilling.Common/Motion/XPS/CXpsComm.cs:465–465</a></td><td>CreateErrorResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>470</td><td>SanitizeResponseText</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.SanitizeResponseText(string) · Drilling.Common/Motion/XPS/CXpsComm.cs:618</td></tr>
+<tr><td>471</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>470</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SanitizeResponseText(message)</td></tr>
+<tr><td>470</td><td>local-declaration</td><td>지역 변수를 선언합니다: var detail = SanitizeResponseText(message);</td></tr>
+<tr><td>470</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: detail = SanitizeResponseText(message)</td></tr>
+<tr><td>471</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(detail)</td></tr>
+<tr><td>471</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(detail) ? &quot;UNKNOWN&quot; : detail</td></tr>
+<tr><td>471</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;ERR:XPS:{(string.IsNullOrWhiteSpace(detail) ? &quot;UNKNOWN&quot; : detail)}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L474">MethodDeclaration <code>ThrowIfPriorityStopOccurred</code> · L474–480</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L474-L480">Drilling.Common/Motion/XPS/CXpsComm.cs:474–480</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.ThrowIfPriorityStopOccurred(long)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>observedStopGeneration</td><td>long</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L65-L65">Drilling.Common/Motion/XPS/CXpsComm.cs:65–65</a></td><td>ThrowIfPriorityStopOccurred</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L89-L89">Drilling.Common/Motion/XPS/CXpsComm.cs:89–89</a></td><td>ThrowIfPriorityStopOccurred</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>476</td><td>Volatile.Read</td><td>resolved</td><td>long System.Threading.Volatile.Read(ref readonly long)</td></tr>
+<tr><td>478</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>476</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration)</td></tr>
+<tr><td>476</td><td>if</td><td>조건에 따라 분기합니다: if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration))</td></tr>
+<tr><td>478</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS command invalidated by priority stop.&quot;)</td></tr>
+<tr><td>478</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS command invalidated by priority stop.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ThrowIfPriorityStopOccurred&quot;]
+ N0[&quot;L476 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L482">MethodDeclaration <code>SetPrimaryConnected</code> · L482–489</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L482-L489">Drilling.Common/Motion/XPS/CXpsComm.cs:482–489</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryConnected()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L120-L120">Drilling.Common/Motion/XPS/CXpsComm.cs:120–120</a></td><td>SetPrimaryConnected</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>487</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>484</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>486</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>487</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetPrimaryConnected&quot;]
+ N0[&quot;L484 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L491">MethodDeclaration <code>SetPrimaryState</code> · L491–497</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L491-L497">Drilling.Common/Motion/XPS/CXpsComm.cs:491–497</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryState(Drilling.Common.Interface.EN_COMM_STATE)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>state</td><td>Drilling.Common.Interface.EN_COMM_STATE</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L45-L45">Drilling.Common/Motion/XPS/CXpsComm.cs:45–45</a></td><td>SetPrimaryState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>495</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>493</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>495</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(state)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetPrimaryState&quot;]
+ N0[&quot;L493 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L499">MethodDeclaration <code>SetPrimaryError</code> · L499–505</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L499-L505">Drilling.Common/Motion/XPS/CXpsComm.cs:499–505</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.SetPrimaryError(System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>exception</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L31-L31">Drilling.Common/Motion/XPS/CXpsComm.cs:31–31</a></td><td>SetPrimaryError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>503</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetError(System.Exception) · Drilling.Common/Interface/CComm.cs:120</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>501</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)</td></tr>
+<tr><td>503</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(exception)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetPrimaryError&quot;]
+ N0[&quot;L501 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L507">MethodDeclaration <code>ExecutePriorityStopCore</code> · L507–531</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L507-L531">Drilling.Common/Motion/XPS/CXpsComm.cs:507–531</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.ExecutePriorityStopCore(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L361-L361">Drilling.Common/Motion/XPS/CXpsComm.cs:361–361</a></td><td>ExecutePriorityStopCore</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>509</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>511</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>514</td><td>new XPS</td><td>unresolved</td><td>None</td></tr>
+<tr><td>517</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>517</td><td>stopApi.OpenInstrument</td><td>unresolved</td><td>None</td></tr>
+<tr><td>518</td><td>ExecuteXpsFunction</td><td>resolved</td><td>string Drilling.Common.Motion.CXpsComm.ExecuteXpsFunction(XPS, string, System.Threading.CancellationToken, System.Action?) · Drilling.Common/Motion/XPS/CXpsComm.cs:123</td></tr>
+<tr><td>524</td><td>stopApi.CloseInstrument</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>509</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress)</td></tr>
+<tr><td>509</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port &lt;= 0)</td></tr>
+<tr><td>511</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;XPS endpoint is invalid.&quot;)</td></tr>
+<tr><td>511</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;XPS endpoint is invalid.&quot;);</td></tr>
+<tr><td>514</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new XPS()</td></tr>
+<tr><td>514</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stopApi = new XPS();</td></tr>
+<tr><td>514</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stopApi = new XPS()</td></tr>
+<tr><td>515</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>517</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(stopApi, stopApi.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs), &quot;OpenInstrument for priority stop&quot;)</td></tr>
+<tr><td>517</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stopApi.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs)</td></tr>
+<tr><td>518</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsFunction(stopApi, function, CancellationToken.None)</td></tr>
+<tr><td>518</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExecuteXpsFunction(stopApi, function, CancellationToken.None);</td></tr>
+<tr><td>520</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>522</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>524</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stopApi.CloseInstrument()</td></tr>
+<tr><td>526</td><td>catch</td><td>지정 예외를 처리합니다: catch</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecutePriorityStopCore&quot;]
+ N0[&quot;L509 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L515 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L520 finally&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L522 try&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L526 catch&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L533">MethodDeclaration <code>IsPriorityStopCommand</code> · L533–543</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L533-L543">Drilling.Common/Motion/XPS/CXpsComm.cs:533–543</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Motion.CXpsComm.IsPriorityStopCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L56-L56">Drilling.Common/Motion/XPS/CXpsComm.cs:56–56</a></td><td>IsPriorityStopCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>535</td><td>function.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>536</td><td>tokens[0].Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>536</td><td>tokens[1].Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>542</td><td>tokens[commandIndex].Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>542</td><td>tokens[commandIndex].Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>535</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)</td></tr>
+<tr><td>535</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tokens = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);</td></tr>
+<tr><td>535</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tokens = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)</td></tr>
+<tr><td>536</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals(&quot;XPS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>536</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].Equals(&quot;AXIS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>536</td><td>if</td><td>조건에 따라 분기합니다: if (tokens.Length &lt; 5 || !tokens[0].Equals(&quot;XPS&quot;, StringComparison.OrdinalIgnoreCase) || !tokens[1].Equals(&quot;AXIS&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>538</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>541</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: tokens.Length &gt;= 6 ? 5 : 4</td></tr>
+<tr><td>541</td><td>local-declaration</td><td>지역 변수를 선언합니다: var commandIndex = tokens.Length &gt;= 6 ? 5 : 4;</td></tr>
+<tr><td>541</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: commandIndex = tokens.Length &gt;= 6 ? 5 : 4</td></tr>
+<tr><td>542</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].Equals(&quot;JOG_STOP&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>542</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].Equals(&quot;STOP&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>542</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return tokens[commandIndex].Equals(&quot;JOG_STOP&quot;, StringComparison.OrdinalIgnoreCase) || tokens[commandIndex].Equals(&quot;STOP&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsPriorityStopCommand&quot;]
+ N0[&quot;L536 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L545">MethodDeclaration <code>StopJogAndDisable</code> · L545–569</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L545-L569">Drilling.Common/Motion/XPS/CXpsComm.cs:545–569</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Motion.CXpsComm.StopJogAndDisable(XPS, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>groupName</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L197-L197">Drilling.Common/Motion/XPS/CXpsComm.cs:197–197</a></td><td>StopJogAndDisable</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L209-L209">Drilling.Common/Motion/XPS/CXpsComm.cs:209–209</a></td><td>StopJogAndDisable</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>547</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>547</td><td>api.GroupMoveAbort</td><td>unresolved</td><td>None</td></tr>
+<tr><td>548</td><td>Stopwatch.GetTimestamp</td><td>resolved</td><td>long System.Diagnostics.Stopwatch.GetTimestamp()</td></tr>
+<tr><td>551</td><td>api.GroupJogModeDisable</td><td>unresolved</td><td>None</td></tr>
+<tr><td>557</td><td>IsGroupJogging</td><td>resolved</td><td>bool Drilling.Common.Motion.CXpsComm.IsGroupJogging(XPS, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:571</td></tr>
+<tr><td>562</td><td>Stopwatch.GetElapsedTime</td><td>resolved</td><td>System.TimeSpan System.Diagnostics.Stopwatch.GetElapsedTime(long)</td></tr>
+<tr><td>562</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(long)</td></tr>
+<tr><td>564</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>567</td><td>Thread.Sleep</td><td>resolved</td><td>void System.Threading.Thread.Sleep(int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>547</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbort(groupName, out var abortError), abortError)</td></tr>
+<tr><td>547</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbort(groupName, out var abortError)</td></tr>
+<tr><td>548</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp()</td></tr>
+<tr><td>548</td><td>local-declaration</td><td>지역 변수를 선언합니다: var startedAt = Stopwatch.GetTimestamp();</td></tr>
+<tr><td>548</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: startedAt = Stopwatch.GetTimestamp()</td></tr>
+<tr><td>549</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (true)</td></tr>
+<tr><td>551</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogModeDisable(groupName, out var disableError)</td></tr>
+<tr><td>551</td><td>local-declaration</td><td>지역 변수를 선언합니다: var disableResult = api.GroupJogModeDisable(groupName, out var disableError);</td></tr>
+<tr><td>551</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: disableResult = api.GroupJogModeDisable(groupName, out var disableError)</td></tr>
+<tr><td>552</td><td>if</td><td>조건에 따라 분기합니다: if (disableResult == 0)</td></tr>
+<tr><td>554</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>557</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsGroupJogging(api, groupName)</td></tr>
+<tr><td>557</td><td>if</td><td>조건에 따라 분기합니다: if (!IsGroupJogging(api, groupName))</td></tr>
+<tr><td>559</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>562</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(startedAt)</td></tr>
+<tr><td>562</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2)</td></tr>
+<tr><td>562</td><td>if</td><td>조건에 따라 분기합니다: if (Stopwatch.GetElapsedTime(startedAt) &gt;= TimeSpan.FromSeconds(2))</td></tr>
+<tr><td>564</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, disableResult, disableError)</td></tr>
+<tr><td>567</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(20)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;StopJogAndDisable&quot;]
+ N0[&quot;L549 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L552 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L557 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L562 if&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L571">MethodDeclaration <code>IsGroupJogging</code> · L571–576</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L571-L576">Drilling.Common/Motion/XPS/CXpsComm.cs:571–576</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Motion.CXpsComm.IsGroupJogging(XPS, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>api</td><td>XPS</td><td>None</td><td>False /</td></tr>
+<tr><td>groupName</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L557-L557">Drilling.Common/Motion/XPS/CXpsComm.cs:557–557</a></td><td>IsGroupJogging</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>573</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>573</td><td>api.GroupStatusGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>574</td><td>CheckResult</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>574</td><td>api.GroupStatusStringGet</td><td>unresolved</td><td>None</td></tr>
+<tr><td>575</td><td>statusText.Contains</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>573</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusGet(groupName, out var status, out var statusError), statusError)</td></tr>
+<tr><td>573</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusGet(groupName, out var status, out var statusError)</td></tr>
+<tr><td>574</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusStringGet(status, out var statusText, out var statusTextError), statusTextError)</td></tr>
+<tr><td>574</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusStringGet(status, out var statusText, out var statusTextError)</td></tr>
+<tr><td>575</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statusText.Contains(&quot;JOGGING&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>575</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return statusText.Contains(&quot;JOGGING&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L578">MethodDeclaration <code>ReadPositiveDouble</code> · L578–587</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L578-L587">Drilling.Common/Motion/XPS/CXpsComm.cs:578–587</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tokens</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173">Drilling.Common/Motion/XPS/CXpsComm.cs:173–173</a></td><td>ReadPositiveDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173">Drilling.Common/Motion/XPS/CXpsComm.cs:173–173</a></td><td>ReadPositiveDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L177-L177">Drilling.Common/Motion/XPS/CXpsComm.cs:177–177</a></td><td>ReadPositiveDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>580</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int, string) · Drilling.Common/Motion/XPS/CXpsComm.cs:346</td></tr>
+<tr><td>583</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>580</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, index, command)</td></tr>
+<tr><td>580</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = ReadDouble(tokens, index, command);</td></tr>
+<tr><td>580</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = ReadDouble(tokens, index, command)</td></tr>
+<tr><td>581</td><td>if</td><td>조건에 따라 분기합니다: if (value &lt;= 0.0)</td></tr>
+<tr><td>583</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS {command} must be greater than 0.&quot;)</td></tr>
+<tr><td>583</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS {command} must be greater than 0.&quot;);</td></tr>
+<tr><td>586</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadPositiveDouble&quot;]
+ N0[&quot;L581 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L589">MethodDeclaration <code>ReadRequiredFirst</code> · L589–597</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L589-L597">Drilling.Common/Motion/XPS/CXpsComm.cs:589–597</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Motion.CXpsComm.ReadRequiredFirst(double[]?, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>double[]?</td><td>None</td><td>False /</td></tr>
+<tr><td>valueName</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>591</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>593</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>591</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(values[0])</td></tr>
+<tr><td>591</td><td>if</td><td>조건에 따라 분기합니다: if (values is not { Length: &gt; 0 } || !double.IsFinite(values[0]))</td></tr>
+<tr><td>593</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS {valueName} status response is empty or non-finite.&quot;)</td></tr>
+<tr><td>593</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS {valueName} status response is empty or non-finite.&quot;);</td></tr>
+<tr><td>596</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return values[0];</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadRequiredFirst&quot;]
+ N0[&quot;L591 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L599">MethodDeclaration <code>ParseDigitalIoAddress</code> · L599–616</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L599-L616">Drilling.Common/Motion/XPS/CXpsComm.cs:599–616</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>(string GpioName, int BitNo) Drilling.Common.Motion.CXpsComm.ParseDigitalIoAddress(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>(string GpioName, int BitNo)</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>address</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L264-L264">Drilling.Common/Motion/XPS/CXpsComm.cs:264–264</a></td><td>ParseDigitalIoAddress</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>601</td><td>address.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>601</td><td>address.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>602</td><td>normalized.LastIndexOfAny</td><td>resolved</td><td>int string.LastIndexOfAny(char[])</td></tr>
+<tr><td>605</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>608</td><td>normalized[..separatorIndex].TrimEnd</td><td>resolved</td><td>string string.TrimEnd(char)</td></tr>
+<tr><td>609</td><td>normalized[(separatorIndex + 1)..].TrimEnd</td><td>resolved</td><td>string string.TrimEnd(char)</td></tr>
+<tr><td>610</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>610</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>612</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>601</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim().ToUpperInvariant()</td></tr>
+<tr><td>601</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim()</td></tr>
+<tr><td>601</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = address.Trim().ToUpperInvariant();</td></tr>
+<tr><td>601</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = address.Trim().ToUpperInvariant()</td></tr>
+<tr><td>602</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.LastIndexOfAny([&#x27;.&#x27;, &#x27;:&#x27;, &#x27;/&#x27;, &#x27;[&#x27;])</td></tr>
+<tr><td>602</td><td>local-declaration</td><td>지역 변수를 선언합니다: var separatorIndex = normalized.LastIndexOfAny([&#x27;.&#x27;, &#x27;:&#x27;, &#x27;/&#x27;, &#x27;[&#x27;]);</td></tr>
+<tr><td>602</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: separatorIndex = normalized.LastIndexOfAny([&#x27;.&#x27;, &#x27;:&#x27;, &#x27;/&#x27;, &#x27;[&#x27;])</td></tr>
+<tr><td>603</td><td>if</td><td>조건에 따라 분기합니다: if (separatorIndex &lt; 1)</td></tr>
+<tr><td>605</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS digital IO address is invalid: {address}. Use GPIOName.BitNo, for example GPIO1.0&quot;)</td></tr>
+<tr><td>605</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS digital IO address is invalid: {address}. Use GPIOName.BitNo, for example GPIO1.0&quot;);</td></tr>
+<tr><td>608</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized[..separatorIndex].TrimEnd(&#x27;]&#x27;)</td></tr>
+<tr><td>608</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gpioName = normalized[..separatorIndex].TrimEnd(&#x27;]&#x27;);</td></tr>
+<tr><td>608</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gpioName = normalized[..separatorIndex].TrimEnd(&#x27;]&#x27;)</td></tr>
+<tr><td>609</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized[(separatorIndex + 1)..].TrimEnd(&#x27;]&#x27;)</td></tr>
+<tr><td>609</td><td>local-declaration</td><td>지역 변수를 선언합니다: var bitText = normalized[(separatorIndex + 1)..].TrimEnd(&#x27;]&#x27;);</td></tr>
+<tr><td>609</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: bitText = normalized[(separatorIndex + 1)..].TrimEnd(&#x27;]&#x27;)</td></tr>
+<tr><td>610</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(gpioName)</td></tr>
+<tr><td>610</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(bitText, NumberStyles.Integer, CultureInfo.InvariantCulture, out var bitNo)</td></tr>
+<tr><td>610</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(gpioName) || !int.TryParse(bitText, NumberStyles.Integer, CultureInfo.InvariantCulture, out var bitNo) || bitNo &lt; 0 || bitNo &gt; 15)</td></tr>
+<tr><td>612</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;XPS digital IO address is invalid: {address}. Bit number must be 0~15.&quot;)</td></tr>
+<tr><td>612</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;XPS digital IO address is invalid: {address}. Bit number must be 0~15.&quot;);</td></tr>
+<tr><td>615</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (gpioName, bitNo);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ParseDigitalIoAddress&quot;]
+ N0[&quot;L603 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L610 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L618">MethodDeclaration <code>SanitizeResponseText</code> · L618–621</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L618-L621">Drilling.Common/Motion/XPS/CXpsComm.cs:618–621</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Motion.CXpsComm.SanitizeResponseText(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Motion.CXpsComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsComm.cs#L470-L470">Drilling.Common/Motion/XPS/CXpsComm.cs:470–470</a></td><td>SanitizeResponseText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>620</td><td>value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\n&quot;, &quot; &quot;, StringComparison.Ordinal).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>620</td><td>value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal).Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+<tr><td>620</td><td>value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+<tr><td>620</td><td>value.Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>620</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\n&quot;, &quot; &quot;, StringComparison.Ordinal).Trim()</td></tr>
+<tr><td>620</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\n&quot;, &quot; &quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>620</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>620</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>620</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Replace(&quot;:&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\r&quot;, &quot; &quot;, StringComparison.Ordinal).Replace(&quot;\n&quot;, &quot; &quot;, StringComparison.Ordinal).Trim();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Motion/XPS/CXpsComm.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

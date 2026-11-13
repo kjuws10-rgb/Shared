@@ -1,0 +1,581 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CApp.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CApp.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs">Git 원본</a></p><h1>Drilling.UI/CApp.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>9690a272cdb61d231b85decbd9bfaf354e81d09c7bbab7671264d5fc3e11a7ee</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>6,206 bytes / 180 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/cc7cc73a19ba72076588.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CApp</td><td>ClassDeclaration</td><td>9–180</td><td>CApp: Application</td></tr>
+<tr><td>MONITORINFO</td><td>StructDeclaration</td><td>163–170</td><td>MONITORINFO</td></tr>
+<tr><td>RECT</td><td>StructDeclaration</td><td>172–179</td><td>RECT</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>MonitorDefaultToNearest</td><td>FieldDeclaration</td><td>L11–11</td><td>uint Drilling.UI.CApp.MonitorDefaultToNearest</td></tr>
+<tr><td>_monitorFitTimer</td><td>FieldDeclaration</td><td>L12–12</td><td>DispatcherTimer Drilling.UI.CApp._monitorFitTimer</td></tr>
+<tr><td>_isFittingMainWindow</td><td>FieldDeclaration</td><td>L13–13</td><td>bool Drilling.UI.CApp._isFittingMainWindow</td></tr>
+<tr><td>_rootView</td><td>FieldDeclaration</td><td>L14–14</td><td>Drilling.UI.CRootView? Drilling.UI.CApp._rootView</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L15–21</td><td>Drilling.UI.CApp.CApp()</td></tr>
+<tr><td>OnStartup</td><td>MethodDeclaration</td><td>L23–45</td><td>void Drilling.UI.CApp.OnStartup(StartupEventArgs)</td></tr>
+<tr><td>OnExit</td><td>MethodDeclaration</td><td>L47–51</td><td>void Drilling.UI.CApp.OnExit(ExitEventArgs)</td></tr>
+<tr><td>RegisterExceptionHandlers</td><td>MethodDeclaration</td><td>L53–72</td><td>void Drilling.UI.CApp.RegisterExceptionHandlers()</td></tr>
+<tr><td>HandleUnhandledException</td><td>LocalFunctionStatement</td><td>L59–63</td><td>void HandleUnhandledException(object, System.UnhandledExceptionEventArgs)</td></tr>
+<tr><td>HandleUnobservedTaskException</td><td>LocalFunctionStatement</td><td>L66–69</td><td>void HandleUnobservedTaskException(object?, System.Threading.Tasks.UnobservedTaskExceptionEventArgs)</td></tr>
+<tr><td>ConfigureMainWindowBounds</td><td>MethodDeclaration</td><td>L74–93</td><td>void Drilling.UI.CApp.ConfigureMainWindowBounds(Window)</td></tr>
+<tr><td>ScheduleMainWindowFit</td><td>MethodDeclaration</td><td>L95–104</td><td>void Drilling.UI.CApp.ScheduleMainWindowFit(Window)</td></tr>
+<tr><td>FitMainWindowToCurrentMonitor</td><td>MethodDeclaration</td><td>L106–157</td><td>void Drilling.UI.CApp.FitMainWindowToCurrentMonitor(Window)</td></tr>
+<tr><td>MonitorFromWindow</td><td>MethodDeclaration</td><td>L159–160</td><td>nint Drilling.UI.CApp.MonitorFromWindow(nint, uint)</td></tr>
+<tr><td>GetMonitorInfo</td><td>MethodDeclaration</td><td>L161–162</td><td>bool Drilling.UI.CApp.GetMonitorInfo(nint, ref Drilling.UI.CApp.MONITORINFO)</td></tr>
+<tr><td>cbSize</td><td>FieldDeclaration</td><td>L166–166</td><td>int Drilling.UI.CApp.MONITORINFO.cbSize</td></tr>
+<tr><td>rcMonitor</td><td>FieldDeclaration</td><td>L167–167</td><td>Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcMonitor</td></tr>
+<tr><td>rcWork</td><td>FieldDeclaration</td><td>L168–168</td><td>Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcWork</td></tr>
+<tr><td>dwFlags</td><td>FieldDeclaration</td><td>L169–169</td><td>uint Drilling.UI.CApp.MONITORINFO.dwFlags</td></tr>
+<tr><td>Left</td><td>FieldDeclaration</td><td>L175–175</td><td>int Drilling.UI.CApp.RECT.Left</td></tr>
+<tr><td>Top</td><td>FieldDeclaration</td><td>L176–176</td><td>int Drilling.UI.CApp.RECT.Top</td></tr>
+<tr><td>Right</td><td>FieldDeclaration</td><td>L177–177</td><td>int Drilling.UI.CApp.RECT.Right</td></tr>
+<tr><td>Bottom</td><td>FieldDeclaration</td><td>L178–178</td><td>int Drilling.UI.CApp.RECT.Bottom</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L11">FieldDeclaration <code>MonitorDefaultToNearest</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L11-L11">Drilling.UI/CApp.xaml.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>uint Drilling.UI.CApp.MonitorDefaultToNearest</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>uint</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MonitorDefaultToNearest = 0x00000002</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_monitorFitTimer</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L12-L12">Drilling.UI/CApp.xaml.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DispatcherTimer Drilling.UI.CApp._monitorFitTimer</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DispatcherTimer</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>_isFittingMainWindow</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L13-L13">Drilling.UI/CApp.xaml.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.CApp._isFittingMainWindow</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_rootView</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L14-L14">Drilling.UI/CApp.xaml.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.CRootView? Drilling.UI.CApp._rootView</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.CRootView?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">ConstructorDeclaration <code>.ctor</code> · L15–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L15-L21">Drilling.UI/CApp.xaml.cs:15–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.CApp.CApp()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>17</td><td>new DispatcherTimer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>19</td><td>TimeSpan.FromMilliseconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromMilliseconds(long)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>assignment</td><td>값을 대상에 대입합니다: _monitorFitTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(450) }</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(450) }</td></tr>
+<tr><td>19</td><td>assignment</td><td>값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(450)</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(450)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">MethodDeclaration <code>OnStartup</code> · L23–45</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L23-L45">Drilling.UI/CApp.xaml.cs:23–45</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.OnStartup(StartupEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>e</td><td>StartupEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>25</td><td>RegisterExceptionHandlers</td><td>resolved</td><td>void Drilling.UI.CApp.RegisterExceptionHandlers() · Drilling.UI/CApp.xaml.cs:53</td></tr>
+<tr><td>28</td><td>base.OnStartup</td><td>unresolved</td><td>None</td></tr>
+<tr><td>29</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>30</td><td>LoadComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>30</td><td>new Uri</td><td>resolved</td><td>System.Uri.Uri(string, System.UriKind)</td></tr>
+<tr><td>31</td><td>CAppStartup.CreateMainViewModel</td><td>resolved</td><td>Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel() · Drilling.UI/CAppStartup.cs:14</td></tr>
+<tr><td>33</td><td>ConfigureMainWindowBounds</td><td>resolved</td><td>void Drilling.UI.CApp.ConfigureMainWindowBounds(Window) · Drilling.UI/CApp.xaml.cs:74</td></tr>
+<tr><td>35</td><td>window.Show</td><td>unresolved</td><td>None</td></tr>
+<tr><td>36</td><td>_rootView.StartProtectWindowRequestNotice</td><td>resolved</td><td>void Drilling.UI.CRootView.StartProtectWindowRequestNotice(Window) · Drilling.UI/CRootView.cs:2767</td></tr>
+<tr><td>37</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>41</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>42</td><td>MessageBox.Show</td><td>unresolved</td><td>None</td></tr>
+<tr><td>43</td><td>Shutdown</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterExceptionHandlers()</td></tr>
+<tr><td>26</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnStartup(e)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;PROGRAM_OPEN&quot;, &quot;Application startup started.&quot;)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadComponent(new Uri(&quot;CRootView.xaml&quot;, UriKind.Relative))</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Uri(&quot;CRootView.xaml&quot;, UriKind.Relative)</td></tr>
+<tr><td>30</td><td>local-declaration</td><td>지역 변수를 선언합니다: var window = (Window)LoadComponent(new Uri(&quot;CRootView.xaml&quot;, UriKind.Relative));</td></tr>
+<tr><td>30</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: window = (Window)LoadComponent(new Uri(&quot;CRootView.xaml&quot;, UriKind.Relative))</td></tr>
+<tr><td>31</td><td>assignment</td><td>값을 대상에 대입합니다: _rootView = CAppStartup.CreateMainViewModel()</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CAppStartup.CreateMainViewModel()</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: window.DataContext = _rootView</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConfigureMainWindowBounds(window)</td></tr>
+<tr><td>34</td><td>assignment</td><td>값을 대상에 대입합니다: MainWindow = window</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: window.Show()</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _rootView.StartProtectWindowRequestNotice(window)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;PROGRAM_OPEN&quot;, &quot;Main window opened.&quot;)</td></tr>
+<tr><td>39</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;PROGRAM_OPEN_FAILED&quot;, exception)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show($&quot;프로그램을 시작하지 못했습니다.{Environment.NewLine}{exception.Message}{Environment.NewLine}{Environment.NewLine}로그: {CProgramOpenLog.LogPath}&quot;, &quot;Laser Drilling&quot;, MessageBoxButton.OK, MessageBoxImage.Error)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Shutdown(-1)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnStartup&quot;]
+ N0[&quot;L26 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L39 catch&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L47">MethodDeclaration <code>OnExit</code> · L47–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L47-L51">Drilling.UI/CApp.xaml.cs:47–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.OnExit(ExitEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>e</td><td>ExitEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>49</td><td>.StopAutomationStatusAcquisition</td><td>resolved</td><td>void Drilling.UI.CRootView.StopAutomationStatusAcquisition() · Drilling.UI/CRootView.cs:248</td></tr>
+<tr><td>50</td><td>base.OnExit</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .StopAutomationStatusAcquisition()</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnExit(e)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">MethodDeclaration <code>RegisterExceptionHandlers</code> · L53–72</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L53-L72">Drilling.UI/CApp.xaml.cs:53–72</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.RegisterExceptionHandlers()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L25-L25">Drilling.UI/CApp.xaml.cs:25–25</a></td><td>RegisterExceptionHandlers</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>57</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>55</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: DispatcherUnhandledException += (_, args) =&gt; { CProgramOpenLog.Write(&quot;DISPATCHER_UNHANDLED&quot;, args.Exception); }</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;DISPATCHER_UNHANDLED&quot;, args.Exception)</td></tr>
+<tr><td>65</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: AppDomain.CurrentDomain.UnhandledException += HandleUnhandledException</td></tr>
+<tr><td>71</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: TaskScheduler.UnobservedTaskException += HandleUnobservedTaskException</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L59">LocalFunctionStatement <code>HandleUnhandledException</code> · L59–63</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L59-L63">Drilling.UI/CApp.xaml.cs:59–63</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void HandleUnhandledException(object, System.UnhandledExceptionEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>arg0</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>args</td><td>System.UnhandledExceptionEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>62</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>62</td><td>.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Exception.ToString()</td></tr>
+<tr><td>62</td><td>.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string? object.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>local-declaration</td><td>지역 변수를 선언합니다: var exception = args.ExceptionObject as Exception;</td></tr>
+<tr><td>61</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: exception = args.ExceptionObject as Exception</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;APPDOMAIN_UNHANDLED&quot;, exception?.ToString() ?? args.ExceptionObject?.ToString() ?? &quot;Unknown unhandled exception.&quot;)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L66">LocalFunctionStatement <code>HandleUnobservedTaskException</code> · L66–69</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L66-L69">Drilling.UI/CApp.xaml.cs:66–69</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void HandleUnobservedTaskException(object?, System.Threading.Tasks.UnobservedTaskExceptionEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>arg0</td><td>object?</td><td>None</td><td>False /</td></tr>
+<tr><td>args</td><td>System.Threading.Tasks.UnobservedTaskExceptionEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>68</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;TASK_UNOBSERVED&quot;, args.Exception)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">MethodDeclaration <code>ConfigureMainWindowBounds</code> · L74–93</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L74-L93">Drilling.UI/CApp.xaml.cs:74–93</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.ConfigureMainWindowBounds(Window)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>window</td><td>Window</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L33-L33">Drilling.UI/CApp.xaml.cs:33–33</a></td><td>ConfigureMainWindowBounds</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>_monitorFitTimer.Stop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>84</td><td>ScheduleMainWindowFit</td><td>resolved</td><td>void Drilling.UI.CApp.ScheduleMainWindowFit(Window) · Drilling.UI/CApp.xaml.cs:95</td></tr>
+<tr><td>88</td><td>FitMainWindowToCurrentMonitor</td><td>resolved</td><td>void Drilling.UI.CApp.FitMainWindowToCurrentMonitor(Window) · Drilling.UI/CApp.xaml.cs:106</td></tr>
+<tr><td>90</td><td>FitMainWindowToCurrentMonitor</td><td>resolved</td><td>void Drilling.UI.CApp.FitMainWindowToCurrentMonitor(Window) · Drilling.UI/CApp.xaml.cs:106</td></tr>
+<tr><td>91</td><td>ScheduleMainWindowFit</td><td>resolved</td><td>void Drilling.UI.CApp.ScheduleMainWindowFit(Window) · Drilling.UI/CApp.xaml.cs:95</td></tr>
+<tr><td>92</td><td>ScheduleMainWindowFit</td><td>resolved</td><td>void Drilling.UI.CApp.ScheduleMainWindowFit(Window) · Drilling.UI/CApp.xaml.cs:95</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: window.ResizeMode = ResizeMode.CanMinimize</td></tr>
+<tr><td>77</td><td>assignment</td><td>값을 대상에 대입합니다: window.WindowStartupLocation = WindowStartupLocation.CenterScreen</td></tr>
+<tr><td>78</td><td>assignment</td><td>값을 대상에 대입합니다: window.WindowState = WindowState.Maximized</td></tr>
+<tr><td>79</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: _monitorFitTimer.Tick += (_, _) =&gt; { _monitorFitTimer.Stop(); if (Mouse.LeftButton == MouseButtonState.Pressed) { ScheduleMainWindowFit(window); return; } FitMainWindowToCurrentMonitor(window); }</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Stop()</td></tr>
+<tr><td>82</td><td>if</td><td>조건에 따라 분기합니다: if (Mouse.LeftButton == MouseButtonState.Pressed)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window)</td></tr>
+<tr><td>85</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FitMainWindowToCurrentMonitor(window)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FitMainWindowToCurrentMonitor(window)</td></tr>
+<tr><td>90</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: window.SourceInitialized += (_, _) =&gt; FitMainWindowToCurrentMonitor(window)</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window)</td></tr>
+<tr><td>91</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: window.LocationChanged += (_, _) =&gt; ScheduleMainWindowFit(window)</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window)</td></tr>
+<tr><td>92</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: window.StateChanged += (_, _) =&gt; ScheduleMainWindowFit(window)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ConfigureMainWindowBounds&quot;]
+ N0[&quot;L82 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L95">MethodDeclaration <code>ScheduleMainWindowFit</code> · L95–104</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L95-L104">Drilling.UI/CApp.xaml.cs:95–104</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.ScheduleMainWindowFit(Window)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>window</td><td>Window</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L84-L84">Drilling.UI/CApp.xaml.cs:84–84</a></td><td>ScheduleMainWindowFit</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L91-L91">Drilling.UI/CApp.xaml.cs:91–91</a></td><td>ScheduleMainWindowFit</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L92-L92">Drilling.UI/CApp.xaml.cs:92–92</a></td><td>ScheduleMainWindowFit</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>102</td><td>_monitorFitTimer.Stop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>103</td><td>_monitorFitTimer.Start</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>97</td><td>if</td><td>조건에 따라 분기합니다: if (_isFittingMainWindow || window.WindowState == WindowState.Minimized)</td></tr>
+<tr><td>99</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Stop()</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Start()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ScheduleMainWindowFit&quot;]
+ N0[&quot;L97 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L106">MethodDeclaration <code>FitMainWindowToCurrentMonitor</code> · L106–157</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L106-L157">Drilling.UI/CApp.xaml.cs:106–157</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CApp.FitMainWindowToCurrentMonitor(Window)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>window</td><td>Window</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L88-L88">Drilling.UI/CApp.xaml.cs:88–88</a></td><td>FitMainWindowToCurrentMonitor</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L90-L90">Drilling.UI/CApp.xaml.cs:90–90</a></td><td>FitMainWindowToCurrentMonitor</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>113</td><td>new WindowInteropHelper</td><td>unresolved</td><td>None</td></tr>
+<tr><td>119</td><td>MonitorFromWindow</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>125</td><td>new MONITORINFO</td><td>resolved</td><td>Drilling.UI.CApp.MONITORINFO.MONITORINFO() · Drilling.UI/CApp.xaml.cs:164</td></tr>
+<tr><td>127</td><td>Marshal.SizeOf&lt;MONITORINFO&gt;</td><td>resolved</td><td>int System.Runtime.InteropServices.Marshal.SizeOf&lt;Drilling.UI.CApp.MONITORINFO&gt;()</td></tr>
+<tr><td>129</td><td>GetMonitorInfo</td><td>resolved</td><td>bool Drilling.UI.CApp.GetMonitorInfo(nint, ref Drilling.UI.CApp.MONITORINFO) · Drilling.UI/CApp.xaml.cs:162</td></tr>
+<tr><td>134</td><td>PresentationSource.FromVisual</td><td>unresolved</td><td>None</td></tr>
+<tr><td>141</td><td>transform.Value.Transform</td><td>unresolved</td><td>None</td></tr>
+<tr><td>141</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>142</td><td>transform.Value.Transform</td><td>unresolved</td><td>None</td></tr>
+<tr><td>142</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>149</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>150</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>108</td><td>if</td><td>조건에 따라 분기합니다: if (_isFittingMainWindow || window.WindowState == WindowState.Minimized)</td></tr>
+<tr><td>110</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new WindowInteropHelper(window)</td></tr>
+<tr><td>113</td><td>local-declaration</td><td>지역 변수를 선언합니다: var handle = new WindowInteropHelper(window).Handle;</td></tr>
+<tr><td>113</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: handle = new WindowInteropHelper(window).Handle</td></tr>
+<tr><td>114</td><td>if</td><td>조건에 따라 분기합니다: if (handle == IntPtr.Zero)</td></tr>
+<tr><td>116</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MonitorFromWindow(handle, MonitorDefaultToNearest)</td></tr>
+<tr><td>119</td><td>local-declaration</td><td>지역 변수를 선언합니다: var monitor = MonitorFromWindow(handle, MonitorDefaultToNearest);</td></tr>
+<tr><td>119</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: monitor = MonitorFromWindow(handle, MonitorDefaultToNearest)</td></tr>
+<tr><td>120</td><td>if</td><td>조건에 따라 분기합니다: if (monitor == IntPtr.Zero)</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new MONITORINFO { cbSize = Marshal.SizeOf&lt;MONITORINFO&gt;() }</td></tr>
+<tr><td>125</td><td>local-declaration</td><td>지역 변수를 선언합니다: var monitorInfo = new MONITORINFO { cbSize = Marshal.SizeOf&lt;MONITORINFO&gt;() };</td></tr>
+<tr><td>125</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: monitorInfo = new MONITORINFO { cbSize = Marshal.SizeOf&lt;MONITORINFO&gt;() }</td></tr>
+<tr><td>127</td><td>assignment</td><td>값을 대상에 대입합니다: cbSize = Marshal.SizeOf&lt;MONITORINFO&gt;()</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Marshal.SizeOf&lt;MONITORINFO&gt;()</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorInfo(monitor, ref monitorInfo)</td></tr>
+<tr><td>129</td><td>if</td><td>조건에 따라 분기합니다: if (!GetMonitorInfo(monitor, ref monitorInfo))</td></tr>
+<tr><td>131</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PresentationSource.FromVisual(window)</td></tr>
+<tr><td>134</td><td>local-declaration</td><td>지역 변수를 선언합니다: var source = PresentationSource.FromVisual(window);</td></tr>
+<tr><td>134</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: source = PresentationSource.FromVisual(window)</td></tr>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var transform = source?.CompositionTarget?.TransformFromDevice;</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: transform = source?.CompositionTarget?.TransformFromDevice</td></tr>
+<tr><td>136</td><td>if</td><td>조건에 따라 분기합니다: if (transform is null)</td></tr>
+<tr><td>138</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top))</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top)</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var topLeft = transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top));</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: topLeft = transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top))</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom))</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom)</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var bottomRight = transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom));</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: bottomRight = transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom))</td></tr>
+<tr><td>143</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>145</td><td>assignment</td><td>값을 대상에 대입합니다: _isFittingMainWindow = true</td></tr>
+<tr><td>146</td><td>assignment</td><td>값을 대상에 대입합니다: window.WindowState = WindowState.Normal</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: window.Left = topLeft.X</td></tr>
+<tr><td>148</td><td>assignment</td><td>값을 대상에 대입합니다: window.Top = topLeft.Y</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: window.Width = Math.Max(1, bottomRight.X - topLeft.X)</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, bottomRight.X - topLeft.X)</td></tr>
+<tr><td>150</td><td>assignment</td><td>값을 대상에 대입합니다: window.Height = Math.Max(1, bottomRight.Y - topLeft.Y)</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, bottomRight.Y - topLeft.Y)</td></tr>
+<tr><td>151</td><td>assignment</td><td>값을 대상에 대입합니다: window.WindowState = WindowState.Maximized</td></tr>
+<tr><td>153</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: _isFittingMainWindow = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FitMainWindowToCurrentMonitor&quot;]
+ N0[&quot;L108 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L114 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L120 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L129 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L136 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L143 try&quot;]
+ M --&gt;|포함| N5
+ N6[&quot;L153 finally&quot;]
+ N5 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L159">MethodDeclaration <code>MonitorFromWindow</code> · L159–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L159-L160">Drilling.UI/CApp.xaml.cs:159–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>nint Drilling.UI.CApp.MonitorFromWindow(nint, uint)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, extern</td></tr>
+<tr><td>반환/값 타입</td><td>nint</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>hwnd</td><td>nint</td><td>None</td><td>False /</td></tr>
+<tr><td>dwFlags</td><td>uint</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L161">MethodDeclaration <code>GetMonitorInfo</code> · L161–162</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L161-L162">Drilling.UI/CApp.xaml.cs:161–162</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.CApp.GetMonitorInfo(nint, ref Drilling.UI.CApp.MONITORINFO)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, extern</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>hMonitor</td><td>nint</td><td>None</td><td>False /</td></tr>
+<tr><td>lpmi</td><td>Drilling.UI.CApp.MONITORINFO</td><td>Ref</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L129-L129">Drilling.UI/CApp.xaml.cs:129–129</a></td><td>GetMonitorInfo</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L166">FieldDeclaration <code>cbSize</code> · L166–166</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L166-L166">Drilling.UI/CApp.xaml.cs:166–166</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CApp.MONITORINFO.cbSize</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.MONITORINFO</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L167">FieldDeclaration <code>rcMonitor</code> · L167–167</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L167-L167">Drilling.UI/CApp.xaml.cs:167–167</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcMonitor</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.CApp.RECT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.MONITORINFO</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L168">FieldDeclaration <code>rcWork</code> · L168–168</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L168-L168">Drilling.UI/CApp.xaml.cs:168–168</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcWork</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.CApp.RECT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.MONITORINFO</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L169">FieldDeclaration <code>dwFlags</code> · L169–169</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L169-L169">Drilling.UI/CApp.xaml.cs:169–169</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>uint Drilling.UI.CApp.MONITORINFO.dwFlags</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>uint</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.MONITORINFO</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L175">FieldDeclaration <code>Left</code> · L175–175</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L175-L175">Drilling.UI/CApp.xaml.cs:175–175</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CApp.RECT.Left</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.RECT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L176">FieldDeclaration <code>Top</code> · L176–176</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L176-L176">Drilling.UI/CApp.xaml.cs:176–176</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CApp.RECT.Top</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.RECT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L177">FieldDeclaration <code>Right</code> · L177–177</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L177-L177">Drilling.UI/CApp.xaml.cs:177–177</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CApp.RECT.Right</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.RECT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L178">FieldDeclaration <code>Bottom</code> · L178–178</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L178-L178">Drilling.UI/CApp.xaml.cs:178–178</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CApp.RECT.Bottom</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CApp.RECT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/CApp.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

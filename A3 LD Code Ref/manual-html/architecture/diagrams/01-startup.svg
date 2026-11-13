@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="390" viewBox="0 0 1040 390" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#426080"/></marker></defs>
+<rect width="1040" height="390" fill="#f7fafc"/>
+<text x="30" y="35" font-family="Malgun Gothic, sans-serif" font-size="20" font-weight="bold" fill="#153753">프로그램 시작과 객체 소유</text>
+<path d="M310 113 L370 113" fill="none" stroke="#426080" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M650 113 L710 113" fill="none" stroke="#426080" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M850 156 L170 245" fill="none" stroke="#426080" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M850 156 L510 245" fill="none" stroke="#426080" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M650 288 L710 288" fill="none" stroke="#426080" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="30" y="70" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="45" y="95" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">01</text>
+<text x="45" y="124" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">CApp.OnStartup</text>
+<rect x="370" y="70" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="385" y="95" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">02</text>
+<text x="385" y="124" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">CAppStartup 조립</text>
+<rect x="710" y="70" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="725" y="95" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">03</text>
+<text x="725" y="124" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">파일 어댑터·CManager</text>
+<rect x="30" y="245" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="45" y="270" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">04</text>
+<text x="45" y="299" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">비동기 Interface/Motion 초기화</text>
+<rect x="370" y="245" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="385" y="270" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">05</text>
+<text x="385" y="299" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">CRootView·Menu 생성</text>
+<rect x="710" y="245" width="280" height="86" rx="10" fill="white" stroke="#9eb5c9"/>
+<text x="725" y="270" font-family="Malgun Gothic,sans-serif" font-size="12" fill="#52748e">06</text>
+<text x="725" y="299" font-family="Malgun Gothic,sans-serif" font-size="15" fill="#12344c">창 표시·백그라운드 감시</text>
+<text x="30" y="370" font-family="Malgun Gothic,sans-serif" font-size="11" fill="#60788d">정적 소스 구조 요약 · 단계 번호는 설명 순서이며 실장비 신호 타이밍을 의미하지 않습니다.</text></svg>

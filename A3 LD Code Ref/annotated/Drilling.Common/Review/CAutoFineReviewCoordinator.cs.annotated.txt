@@ -1,0 +1,895 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Review/CAutoFineReviewCoordinator.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Review
+L000001 | namespace Drilling.Common.Review ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000003 |     using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface.Vision;
+L000004 |     using Drilling.Common.Interface.Vision; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Collections.ObjectModel;
+L000005 |     using System.Collections.ObjectModel; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000006 |     using System.Globalization; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000007 |     using Drilling.Common.Managers; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000009 |     /// <summary>Stage-handshake actions. No UI dependencies; only the next recipe load consumes the new offset file.</summary> ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public sealed class CAutoFineReviewCoordinator(
+L000010 |     public sealed class CAutoFineReviewCoordinator( ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 |         CReviewManager review,  ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 |         CReviewOffsetFileBase offsets,  ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 |         Func<CancellationToken, Task<ST_AUTO_REVIEW_INPUT>> capture,  ⟦EOL⟧
+// 해설 L14: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000014 |         Func<IReadOnlyList<ST_REVIEW_PLAN_POINT>, CancellationToken, Task<IReadOnlyList<ST_VISION_MARK_FIND>>>? simulationMeasurement = null, ⟦EOL⟧
+// 해설 L15: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000015 |         Action<CReviewOffsetDuplicateSourceException>? duplicateSourceDetected = null ⟦EOL⟧
+// 해설 L16: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000016 |     ) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN? Drilling.Common.Review.CAutoFineReviewCoordinator._prepared
+L000018 |         private ST_AUTO_FINE_PLAN? _prepared; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_FINE_REVIEW_SNAPSHOT? Drilling.Common.Review.CAutoFineReviewCoordinator._result
+L000019 |         private ST_FINE_REVIEW_SNAPSHOT? _result; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CAutoFineReviewCoordinator._saved
+L000020 |         private bool _saved; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _saveGate = new(1, 1)
+L000021 |         private readonly SemaphoreSlim _saveGate = new(1, 1); ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CAutoFineReviewCoordinator.Outcome
+L000022 |         public string Outcome { get; private set; } = "검사 대기"; ⟦EOL⟧
+// 해설 L23: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000023 |         // True only after all requested identities were validated and the diagnostic ⟦EOL⟧
+// 해설 L24: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000024 |         // result file was saved. Quality NG is still an inspection completion. ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CAutoFineReviewCoordinator.FollowUpInspectionCompleted
+L000025 |         public bool FollowUpInspectionCompleted => _prepared?.ZeroLineFollowUp == true ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CAutoFineReviewCoordinator.FollowUpInspectionCompleted
+L000026 |             && _result is { State: EN_REVIEW_SEQUENCE_STATE.Completed } result ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result.ResultFilePath)
+L000027 |             && result.ResultSaveError.Length == 0 && !string.IsNullOrWhiteSpace(result.ResultFilePath); ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.Prepare(System.Threading.CancellationToken)
+L000029 |         public async Task Prepare(CancellationToken token) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 Prepare.
+L000030 |         { ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: _prepared = null
+L000031 |             _prepared = null; ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: _result = null
+L000032 |             _result = null; ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: _saved = false
+L000033 |             _saved = false; ⟦EOL⟧
+// 해설 L34: 비동기 완료를 기다립니다: await capture(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: capture(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: capture(token) / 지역 변수를 선언합니다: var input = await capture(token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: input = await capture(token).ConfigureAwait(false)
+L000034 |             var input = await capture(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000035 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: _prepared = input.ZeroLineFollowUp ? review.CreateZeroLineFollowUpPlan(input, token) : review.CreateAutoFinePlan(input, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: review.CreateZeroLineFollowUpPlan(input, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: review.CreateAutoFinePlan(input, token) / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? review.CreateZeroLineFollowUpPlan(input, token) : review.CreateAutoFinePlan(input, token)
+L000036 |             _prepared = input.ZeroLineFollowUp ? review.CreateZeroLineFollowUpPlan(input, token) : review.CreateAutoFinePlan(input, token); ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: Outcome = input.ZeroLineFollowUp ? $"{input.GlassId} / {input.Recipe.Name} / 0선 FollowUp · 맨 위 Cell 가운데 행 · Beam 11 / IOF 1 Line · 재시도 없음 · 검사만 수행 / 보정 미적용 · 계획 확정" : $"{input.GlassId} / {input.Recipe.Name} / Beam 11 / {input.Opti / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? $"{input.GlassId} / {input.Recipe.Name} / 0선 FollowUp · 맨 위 Cell 가운데 행 · Beam 11 / IOF 1 Line · 재시도 없음 · 검사만 수행 / 보정 미적용 · 계획 확정" : $"{input.GlassId} / {input.Recipe.Name} / Beam 11 / {input.Options.Method
+L000037 |             Outcome = input.ZeroLineFollowUp ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.Prepare(System.Threading.CancellationToken)
+L000038 |                 ? $"{input.GlassId} / {input.Recipe.Name} / 0선 FollowUp · 맨 위 Cell 가운데 행 · Beam 11 / IOF 1 Line · 재시도 없음 · 검사만 수행 / 보정 미적용 · 계획 확정" ⟦EOL⟧
+// 해설 L39: 조건에 따라 결과식을 선택합니다: input.Options.ImmediateRetry ? "ON" : "OFF"
+L000039 |                 : $"{input.GlassId} / {input.Recipe.Name} / Beam 11 / {input.Options.Method} / {input.Options.LineCount} Line / " + $"즉시 재시도 {(input.Options.ImmediateRetry ? "ON" : "OFF")} / {input.Options.CountMismatchRetries}회 · 계획 확정"; ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_PLAN", Outcome)
+L000040 |             review.RecordAutoFineLog("AUTO_REVIEW_PLAN", Outcome); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Prepare.
+L000041 |         } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.Measure(System.Threading.CancellationToken)
+L000043 |         public async Task Measure(CancellationToken token) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 Measure.
+L000044 |         { ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 계획이 없습니다.") / 지역 변수를 선언합니다: var plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 계획이 없습니다.") / 변수의 초기값을 지정합니다: plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다.")
+L000045 |             var plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다."); ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: _result = null
+L000046 |             _result = null; ⟦EOL⟧
+// 해설 L47: 비동기 완료를 기다립니다: await review.StartFineCorrection(plan.Request, _ => { }, token, simulationMeasurement).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: review.StartFineCorrection(plan.Request, _ => { }, token, simulationMeasurement).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: review.StartFineCorrection(plan.Request, _ => { }, token, simulationMeasurement) / 지역 변수를 선언합니다: var result = await review.StartFineCorrection(plan.Request, _ => { }, token, simulationMeasurement).ConfigureAwait(false); / 변수의 초기값을 지정합니다: result = await re
+L000047 |             var result = await review.StartFineCorrection(plan.Request, _ => ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Measure.
+L000048 |             { ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.Measure(System.Threading.CancellationToken)
+L000049 |             }, token, simulationMeasurement).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000050 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L51: 조건에 따라 분기합니다: if (result.State != EN_REVIEW_SEQUENCE_STATE.Completed)
+L000051 |             if (result.State != EN_REVIEW_SEQUENCE_STATE.Completed) ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"AUTO Review가 정상 완료되지 않았습니다: {result.Message}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"AUTO Review가 정상 완료되지 않았습니다: {result.Message}");
+L000052 |                 throw new InvalidOperationException($"AUTO Review가 정상 완료되지 않았습니다: {result.Message}"); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result.ResultFilePath) / 조건에 따라 분기합니다: if (result.ResultSaveError.Length > 0 || string.IsNullOrWhiteSpace(result.ResultFilePath))
+L000053 |             if (result.ResultSaveError.Length > 0 || string.IsNullOrWhiteSpace(result.ResultFilePath)) ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException($"AUTO Review 결과 저장을 확인할 수 없습니다: {result.ResultSaveError}") / 예외를 발생/전달합니다: throw new IOException($"AUTO Review 결과 저장을 확인할 수 없습니다: {result.ResultSaveError}");
+L000054 |                 throw new IOException($"AUTO Review 결과 저장을 확인할 수 없습니다: {result.ResultSaveError}"); ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateMeasurements(plan, result) / 지역 변수를 선언합니다: var measured = ValidateMeasurements(plan, result); / 변수의 초기값을 지정합니다: measured = ValidateMeasurements(plan, result)
+L000055 |             var measured = ValidateMeasurements(plan, result); ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng) / 지역 변수를 선언합니다: var ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng); / 변수의 초기값을 지정합니다: ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng)
+L000056 |             var ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng); ⟦EOL⟧
+// 해설 L57: 조건에 따라 결과식을 선택합니다: plan.Request.Method == EN_FINE_INSPECTION_METHOD.Flying ? "IOF" : "PtoP" / 지역 변수를 선언합니다: var method = plan.Request.Method == EN_FINE_INSPECTION_METHOD.Flying ? "IOF" : "PtoP"; / 변수의 초기값을 지정합니다: method = plan.Request.Method == EN_FINE_INSPECTION_METHOD.Flying ? "IOF" : "PtoP"
+L000057 |             var method = plan.Request.Method == EN_FINE_INSPECTION_METHOD.Flying ? "IOF" : "PtoP"; ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_RESULT", $"FINE {method} 검사 결과 · {measured.Length:N0}개 검사 / OK {measured.Length - ng:N0} / NG {ng:N0} · Beam {ST_AUTO_REVIEW_OPTIONS.BeamNo}")
+L000058 |             review.RecordAutoFineLog("AUTO_REVIEW_RESULT", $"FINE {method} 검사 결과 · {measured.Length:N0}개 검사 / OK {measured.Length - ng:N0} / NG {ng:N0} · Beam {ST_AUTO_REVIEW_OPTIONS.BeamNo}"); ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (plan.ZeroLineFollowUp)
+L000059 |             if (plan.ZeroLineFollowUp) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Measure.
+L000060 |             { ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: Outcome = $"0선 FollowUp IOF 1 Line · 검사 {measured.Length:N0}개 완료 / OK {measured.Length - ng:N0} / NG {ng:N0}개 · 결과 저장 완료 / 보정 미적용"
+L000061 |                 Outcome = $"0선 FollowUp IOF 1 Line · 검사 {measured.Length:N0}개 완료 / OK {measured.Length - ng:N0} / NG {ng:N0}개 · 결과 저장 완료 / 보정 미적용"; ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: result = result with { Message = Outcome } / 값을 대상에 대입합니다: Message = Outcome
+L000062 |                 result = result with { Message = Outcome }; ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.FineMonitor.Publish(result)
+L000063 |                 review.FineMonitor.Publish(result); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("ZERO_LINE_FOLLOWUP_RESULT", Outcome)
+L000064 |                 review.RecordAutoFineLog("ZERO_LINE_FOLLOWUP_RESULT", Outcome); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 Measure.
+L000065 |             } ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: _result = result
+L000066 |             _result = result; ⟦EOL⟧
+// 해설 L67: 조건에 따라 분기합니다: if (ng > 0)
+L000067 |             if (ng > 0) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Measure.
+L000068 |             { ⟦EOL⟧
+// 해설 L69: 조건에 따라 분기합니다: if (!plan.ZeroLineFollowUp)
+L000069 |                 if (!plan.ZeroLineFollowUp) ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: Outcome = $"검사 {measured.Length:N0}개 완료 / NG {ng:N0}개 · 보정 전체 미적용 · 기존 Review Offset 유지"
+L000070 |                     Outcome = $"검사 {measured.Length:N0}개 완료 / NG {ng:N0}개 · 보정 전체 미적용 · 기존 Review Offset 유지"; ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_NG", Outcome)
+L000071 |                 review.RecordAutoFineLog("AUTO_REVIEW_NG", Outcome); ⟦EOL⟧
+// 해설 L72: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000072 |                 // Immediate retries are completed by StartFineCorrection. Any remaining NG, ⟦EOL⟧
+// 해설 L73: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000073 |                 // including when retry is OFF, fails REVIEW_MEASURE and triggers its CSV HEAVY. ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(Outcome) / 예외를 발생/전달합니다: throw new InvalidDataException(Outcome);
+L000074 |                 throw new InvalidDataException(Outcome); ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Measure.
+L000075 |             } ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Measure.
+L000076 |         } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.Save(System.Threading.CancellationToken)
+L000078 |         public async Task Save(CancellationToken token) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Save.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 비동기 완료를 기다립니다: await _saveGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _saveGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _saveGate.WaitAsync(token)
+L000080 |             await _saveGate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L81: 예외 처리 범위입니다: try
+L000081 |             try ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 Save.
+L000082 |             { ⟦EOL⟧
+// 해설 L83: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000083 |                 // A caller that waited for another save must recheck completion before reading offsets. ⟦EOL⟧
+// 해설 L84: 조건에 따라 분기합니다: if (_saved)
+L000084 |                 if (_saved) ⟦EOL⟧
+// 해설 L85: 호출자에게 값 또는 제어를 반환합니다: return;
+L000085 |                     return; ⟦EOL⟧
+// 해설 L86: 비동기 완료를 기다립니다: await SaveCore(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveCore(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveCore(token)
+L000086 |                 await SaveCore(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Save.
+L000087 |             } ⟦EOL⟧
+// 해설 L88: 종료 정리 구간입니다: finally
+L000088 |             finally ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Save.
+L000089 |             { ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: _saveGate.Release()
+L000090 |                 _saveGate.Release(); ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Save.
+L000091 |             } ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Save.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000094 |         private async Task SaveCore(CancellationToken token) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 SaveCore.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 계획이 없습니다.") / 지역 변수를 선언합니다: var plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 계획이 없습니다.") / 변수의 초기값을 지정합니다: plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다.")
+L000096 |             var plan = _prepared ?? throw new InvalidOperationException("AUTO Review 계획이 없습니다."); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 검사 결과가 없습니다.") / 지역 변수를 선언합니다: var result = _result ?? throw new InvalidOperationException("AUTO Review 검사 결과가 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 검사 결과가 없습니다.") / 변수의 초기값을 지정합니다: result = _result ?? throw new InvalidOperationException("AUTO Review 검사 결과가 없습니다.")
+L000097 |             var result = _result ?? throw new InvalidOperationException("AUTO Review 검사 결과가 없습니다."); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000098 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result.ResultFilePath) / 조건에 따라 분기합니다: if (result.State != EN_REVIEW_SEQUENCE_STATE.Completed || result.ResultSaveError.Length > 0 || string.IsNullOrWhiteSpace(result.ResultFilePath))
+L000099 |             if (result.State != EN_REVIEW_SEQUENCE_STATE.Completed || result.ResultSaveError.Length > 0 || string.IsNullOrWhiteSpace(result.ResultFilePath)) ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("정상 완료 및 결과 파일 저장이 확인된 검사만 보정에 사용할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("정상 완료 및 결과 파일 저장이 확인된 검사만 보정에 사용할 수 있습니다.");
+L000100 |                 throw new InvalidOperationException("정상 완료 및 결과 파일 저장이 확인된 검사만 보정에 사용할 수 있습니다."); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateMeasurements(plan, result) / 지역 변수를 선언합니다: var measured = ValidateMeasurements(plan, result); / 변수의 초기값을 지정합니다: measured = ValidateMeasurements(plan, result)
+L000101 |             var measured = ValidateMeasurements(plan, result); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng) / 지역 변수를 선언합니다: var ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng); / 변수의 초기값을 지정합니다: ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng)
+L000102 |             var ng = measured.Count(point => point.State == EN_REVIEW_POINT_STATE.Ng); ⟦EOL⟧
+// 해설 L103: 조건에 따라 분기합니다: if (ng > 0)
+L000103 |             if (ng > 0) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 SaveCore.
+L000104 |             { ⟦EOL⟧
+// 해설 L105: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000105 |                 // Inspection completion is different from a quality OK. Keep every old offset when any Shot is NG. ⟦EOL⟧
+// 해설 L106: 값을 대상에 대입합니다: Outcome = $"검사 {measured.Length:N0}개 완료 / NG {ng:N0}개 · 보정 전체 미적용 · 기존 Review Offset 유지"
+L000106 |                 Outcome = $"검사 {measured.Length:N0}개 완료 / NG {ng:N0}개 · 보정 전체 미적용 · 기존 Review Offset 유지"; ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_NG", Outcome)
+L000107 |                 review.RecordAutoFineLog("AUTO_REVIEW_NG", Outcome); ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(Outcome) / 예외를 발생/전달합니다: throw new InvalidDataException(Outcome);
+L000108 |                 throw new InvalidDataException(Outcome); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 SaveCore.
+L000109 |             } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 조건에 따라 분기합니다: if (plan.ZeroLineFollowUp)
+L000111 |             if (plan.ZeroLineFollowUp) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 SaveCore.
+L000112 |             { ⟦EOL⟧
+// 해설 L113: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000113 |                 // This diagnostic inspection must not even load the current offset file. ⟦EOL⟧
+// 해설 L114: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000114 |                 // Stage may complete the Review handshake after the result was saved/displayed. ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: _saved = true
+L000115 |                 _saved = true; ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: Outcome = $"0선 FollowUp IOF 1 Line · 전체 OK / {measured.Length:N0}개 결과 저장 완료 · 검사만 수행 / 기존 Review Offset 유지"
+L000116 |                 Outcome = $"0선 FollowUp IOF 1 Line · 전체 OK / {measured.Length:N0}개 결과 저장 완료 · 검사만 수행 / 기존 Review Offset 유지"; ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("ZERO_LINE_FOLLOWUP_COMPLETE", Outcome)
+L000117 |                 review.RecordAutoFineLog("ZERO_LINE_FOLLOWUP_COMPLETE", Outcome); ⟦EOL⟧
+// 해설 L118: 호출자에게 값 또는 제어를 반환합니다: return;
+L000118 |                 return; ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 SaveCore.
+L000119 |             } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CalculateFineOffsets(plan.OffsetTargets, measured, plan.Request.Plan.VisionFlipType) / 지역 변수를 선언합니다: var deltas = CReviewManager.CalculateFineOffsets(plan.OffsetTargets, measured, plan.Request.Plan.VisionFlipType); / 변수의 초기값을 지정합니다: deltas = CReviewManager.CalculateFineOffsets(plan.OffsetTargets, measured, plan.Request.Plan.VisionFlipType)
+L000121 |             var deltas = CReviewManager.CalculateFineOffsets(plan.OffsetTargets, measured, plan.Request.Plan.VisionFlipType); ⟦EOL⟧
+// 해설 L122: 비동기 완료를 기다립니다: await offsets.LoadLatest(plan.Request.Plan.RecipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsets.LoadLatest(plan.Request.Plan.RecipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsets.LoadLatest(plan.Request.Plan.RecipeId, token) / 지역 변수를 선언합니다: var latest = await offsets.LoadLatest(plan.Request.Plan.RecipeId, token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: latest = await offsets.LoadLatest(plan.Request.Plan.RecipeId, token).ConfigureAwait(false)
+L000122 |             var latest = await offsets.LoadLatest(plan.Request.Plan.RecipeId, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: latest.RecipeId.Equals(plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!latest.RecipeId.Equals(plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase))
+L000123 |             if (!latest.RecipeId.Equals(plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("기존 Review Offset의 Recipe ID가 일치하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("기존 Review Offset의 Recipe ID가 일치하지 않습니다.");
+L000124 |                 throw new InvalidDataException("기존 Review Offset의 Recipe ID가 일치하지 않습니다."); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: latest.Rows.ToDictionary(row => (row.CellId, Normalize(row.ShotId))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(row.ShotId) / 지역 변수를 선언합니다: var rows = latest.Rows.ToDictionary(row => (row.CellId, Normalize(row.ShotId))); / 변수의 초기값을 지정합니다: rows = latest.Rows.ToDictionary(row => (row.CellId, Normalize(row.ShotId)))
+L000125 |             var rows = latest.Rows.ToDictionary(row => (row.CellId, Normalize(row.ShotId))); ⟦EOL⟧
+// 해설 L126: 컬렉션 요소를 순회합니다: foreach (var delta in deltas)
+L000126 |             foreach (var delta in deltas) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 SaveCore.
+L000127 |             { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000128 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L129: 지역 변수를 선언합니다: var shot = delta.Shot; / 변수의 초기값을 지정합니다: shot = delta.Shot
+L000129 |                 var shot = delta.Shot; ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.PixelCountX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.PixelCountX) / 지역 변수를 선언합니다: var key = (shot.CellNo, Normalize(CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.PixelCountX))); / 변수의 초기값을 지정합니다: key = (shot.CellNo, Normalize(CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.PixelCountX)))
+L000130 |                 var key = (shot.CellNo, Normalize(CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.PixelCountX))); ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GetValueOrDefault(key) / 지역 변수를 선언합니다: var previous = rows.GetValueOrDefault(key); / 변수의 초기값을 지정합니다: previous = rows.GetValueOrDefault(key)
+L000131 |                 var previous = rows.GetValueOrDefault(key); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewOffsetData.ToDesign(plan.Parameters, shot.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate) / 조건에 따라 결과식을 선택합니다: previous is null ? (X: 0d, Y: 0d) : CReviewOffsetData.ToDesign(plan.Parameters, shot.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate) / 지역 변수를 선언합니다: var design = previous is null ? (X: 0d, Y: 0d) : CReviewOffsetData.ToDesign(plan.Parameters, shot.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignC
+L000132 |                 var design = previous is null ? (X: 0d, Y: 0d) : CReviewOffsetData.ToDesign(plan.Parameters, shot.HeadNo, previous.ReviewOffsetX, previous.ReviewOffsetY, previous.IsDesignCoordinate); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(design.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(design.Y) / 조건에 따라 분기합니다: if (!double.IsFinite(design.X) || !double.IsFinite(design.Y))
+L000133 |                 if (!double.IsFinite(design.X) || !double.IsFinite(design.Y)) ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("기존 Review Offset 값이 유효하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("기존 Review Offset 값이 유효하지 않습니다.");
+L000134 |                     throw new InvalidDataException("기존 Review Offset 값이 유효하지 않습니다."); ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: rows[key] = new(shot.CellNo, key.Item2, CAlignShotOffsetData.RoundValue(design.X + delta.X), CAlignShotOffsetData.RoundValue(design.Y + delta.Y)) { IsDesignCoordinate = true } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(shot.CellNo, key.Item2, CAlignShotOffsetData.RoundValue(design.X + delta.X), CAlignShotOffsetData.RoundValue(design.Y + delta.Y)) { IsDesignCoordinate = true } / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.RoundValue(design.X + delta.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.RoundValue(design.Y + delt
+L000135 |                 rows[key] = new(shot.CellNo, key.Item2, CAlignShotOffsetData.RoundValue(design.X + delta.X), CAlignShotOffsetData.RoundValue(design.Y + delta.Y)) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 SaveCore.
+L000136 |                 { ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: IsDesignCoordinate = true
+L000137 |                     IsDesignCoordinate = true ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 SaveCore.
+L000138 |                 }; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 SaveCore.
+L000139 |             } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: ST_REVIEW_OFFSET_FILE_DATA saved;
+L000141 |             ST_REVIEW_OFFSET_FILE_DATA saved; ⟦EOL⟧
+// 해설 L142: 예외 처리 범위입니다: try
+L000142 |             try ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 SaveCore.
+L000143 |             { ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: saved = await offsets.SaveNewFromSource( plan.Request.Plan.RecipeId, rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId).ToArray(), result.ResultFilePath, allowDuplicate: false, token).ConfigureAwait(false) / 비동기 완료를 기다립니다: await offsets.SaveNewFromSource( plan.Request.Plan.RecipeId, rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId).ToArray(), result.ResultFilePath, allowDuplicate: false, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsets.SaveNewFromSource( plan.Request.Plan.Rec
+L000144 |                 saved = await offsets.SaveNewFromSource( ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000145 |                     plan.Request.Plan.RecipeId, ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.OrderBy(row => row.CellId)
+L000146 |                     rows.Values.OrderBy(row => row.CellId).ThenBy(row => row.ShotId).ToArray(), ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000147 |                     result.ResultFilePath, ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000148 |                     allowDuplicate: false, ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000149 |                     token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 SaveCore.
+L000150 |             } ⟦EOL⟧
+// 해설 L151: 지정 예외를 처리합니다: catch (CReviewOffsetDuplicateSourceException duplicate)
+L000151 |             catch (CReviewOffsetDuplicateSourceException duplicate) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 SaveCore.
+L000152 |             { ⟦EOL⟧
+// 해설 L153: 지역 변수를 선언합니다: var existing = duplicate.ExistingApplication; / 변수의 초기값을 지정합니다: existing = duplicate.ExistingApplication
+L000153 |                 var existing = duplicate.ExistingApplication; ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: existing.AppliedAt.ToLocalTime() / 지역 변수를 선언합니다: var appliedAt = existing.AppliedAt.ToLocalTime(); / 변수의 초기값을 지정합니다: appliedAt = existing.AppliedAt.ToLocalTime()
+L000154 |                 var appliedAt = existing.AppliedAt.ToLocalTime(); ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: Outcome = $"{appliedAt:yyyy년 MM월 dd일} 이력에 동일한 Review Result가 있어 " + $"자동 Review Offset 적용을 NG 처리했습니다. Source={existing.SourceResultFile} / " + $"기존 Offset={existing.OffsetFile}"
+L000155 |                 Outcome = $"{appliedAt:yyyy년 MM월 dd일} 이력에 동일한 Review Result가 있어 " ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000156 |                     + $"자동 Review Offset 적용을 NG 처리했습니다. Source={existing.SourceResultFile} / " ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Review.CAutoFineReviewCoordinator.SaveCore(System.Threading.CancellationToken)
+L000157 |                     + $"기존 Offset={existing.OffsetFile}"; ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_OFFSET_DUPLICATE_SOURCE", Outcome)
+L000158 |                 review.RecordAutoFineLog("AUTO_REVIEW_OFFSET_DUPLICATE_SOURCE", Outcome); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(duplicate)
+L000159 |                 duplicateSourceDetected?.Invoke(duplicate); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(Outcome, duplicate) / 예외를 발생/전달합니다: throw new InvalidDataException(Outcome, duplicate);
+L000160 |                 throw new InvalidDataException(Outcome, duplicate); ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 SaveCore.
+L000161 |             } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 값을 대상에 대입합니다: _saved = true
+L000163 |             _saved = true; ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.FineMonitor.MarkOffsetSaved(result.RunId, saved.FileName)
+L000164 |             review.FineMonitor.MarkOffsetSaved(result.RunId, saved.FileName); ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: Outcome = $"전체 OK · {deltas.Count:N0} Shots FINE 누적 보정 저장 · 다음 Glass에 적용 / {saved.FileName}"
+L000165 |             Outcome = $"전체 OK · {deltas.Count:N0} Shots FINE 누적 보정 저장 · 다음 Glass에 적용 / {saved.FileName}"; ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: review.RecordAutoFineLog("AUTO_REVIEW_OFFSET_SAVED", Outcome)
+L000166 |             review.RecordAutoFineLog("AUTO_REVIEW_OFFSET_SAVED", Outcome); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 SaveCore.
+L000167 |         } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_PLAN_POINT[] Drilling.Common.Review.CAutoFineReviewCoordinator.ValidateMeasurements(Drilling.Common.Review.ST_AUTO_FINE_PLAN, Drilling.Common.Review.ST_FINE_REVIEW_SNAPSHOT)
+L000169 |         private static ST_REVIEW_PLAN_POINT[] ValidateMeasurements(ST_AUTO_FINE_PLAN plan, ST_FINE_REVIEW_SNAPSHOT result) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000170 |         { ⟦EOL⟧
+// 해설 L171: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000171 |             // Compare only the requested inspection rows. OffsetTargets intentionally also contains ⟦EOL⟧
+// 해설 L172: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000172 |             // unmeasured rows that receive per-column FINE interpolation after a complete OK inspection. ⟦EOL⟧
+// 해설 L173: 지역 변수를 선언합니다: var expected = plan.Request.Plan.Points; / 변수의 초기값을 지정합니다: expected = plan.Request.Plan.Points
+L000173 |             var expected = plan.Request.Plan.Points; ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Lines.SelectMany(line => line.Points).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Lines.SelectMany(line => line.Points) / 지역 변수를 선언합니다: var measured = result.Lines.SelectMany(line => line.Points).ToArray(); / 변수의 초기값을 지정합니다: measured = result.Lines.SelectMany(line => line.Points).ToArray()
+L000174 |             var measured = result.Lines.SelectMany(line => line.Points).ToArray(); ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Equals(result.RecipeId, plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!string.Equals(result.RecipeId, plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase))
+L000175 |             if (!string.Equals(result.RecipeId, plan.Request.Plan.RecipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 결과의 Recipe ID가 검사 계획과 일치하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 결과의 Recipe ID가 검사 계획과 일치하지 않습니다.");
+L000176 |                 throw new InvalidOperationException("AUTO Review 결과의 Recipe ID가 검사 계획과 일치하지 않습니다."); ⟦EOL⟧
+// 해설 L177: 조건에 따라 분기합니다: if (expected.Count == 0 || measured.Length != expected.Count)
+L000177 |             if (expected.Count == 0 || measured.Length != expected.Count) ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"AUTO Review 검사점 개수가 일치하지 않습니다: 계획 {expected.Count:N0}개 / 결과 {measured.Length:N0}개.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"AUTO Review 검사점 개수가 일치하지 않습니다: 계획 {expected.Count:N0}개 / 결과 {measured.Length:N0}개.");
+L000178 |                 throw new InvalidOperationException($"AUTO Review 검사점 개수가 일치하지 않습니다: 계획 {expected.Count:N0}개 / 결과 {measured.Length:N0}개."); ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<(string Key, int Head, int Cell, int Shot, int Beam)>() / 지역 변수를 선언합니다: var pending = new HashSet<(string Key, int Head, int Cell, int Shot, int Beam)>(); / 변수의 초기값을 지정합니다: pending = new HashSet<(string Key, int Head, int Cell, int Shot, int Beam)>()
+L000179 |             var pending = new HashSet<(string Key, int Head, int Cell, int Shot, int Beam)>(); ⟦EOL⟧
+// 해설 L180: 컬렉션 요소를 순회합니다: foreach (var point in expected)
+L000180 |             foreach (var point in expected) ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000181 |             { ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(point.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.Add(Identity(point)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Identity(point) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(point.ShotKey) || !pending.Add(Identity(point)))
+L000182 |                 if (string.IsNullOrWhiteSpace(point.ShotKey) || !pending.Add(Identity(point))) ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 검사 계획에 비어 있거나 중복된 검사점이 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 검사 계획에 비어 있거나 중복된 검사점이 있습니다.");
+L000183 |                     throw new InvalidOperationException("AUTO Review 검사 계획에 비어 있거나 중복된 검사점이 있습니다."); ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000184 |             } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 컬렉션 요소를 순회합니다: foreach (var point in measured)
+L000186 |             foreach (var point in measured) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000187 |             { ⟦EOL⟧
+// 해설 L188: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000188 |                 // Retry can reverse the acquisition order; identities, rather than array order, must match. ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(point.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.Remove(Identity(point)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Identity(point) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(point.ShotKey) || !pending.Remove(Identity(point)))
+L000189 |                 if (string.IsNullOrWhiteSpace(point.ShotKey) || !pending.Remove(Identity(point))) ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"AUTO Review 결과가 중복되었거나 검사 계획과 일치하지 않습니다: " + $"Head {point.HeadNo} / Cell {point.CellNo} / Shot {point.ShotNo} / {point.ShotKey} / Beam {point.BeamNo}.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"AUTO Review 결과가 중복되었거나 검사 계획과 일치하지 않습니다: " + $"Head {point.HeadNo} / Cell {point.CellNo} / Shot {point.ShotNo} / {point.ShotKey} / Beam {point.BeamNo}.");
+L000190 |                     throw new InvalidOperationException($"AUTO Review 결과가 중복되었거나 검사 계획과 일치하지 않습니다: " + $"Head {point.HeadNo} / Cell {point.CellNo} / Shot {point.ShotNo} / {point.ShotKey} / Beam {point.BeamNo}."); ⟦EOL⟧
+// 해설 L191: 조건에 따라 분기합니다: if (point.State is not (EN_REVIEW_POINT_STATE.Ok or EN_REVIEW_POINT_STATE.Ng))
+L000191 |                 if (point.State is not (EN_REVIEW_POINT_STATE.Ok or EN_REVIEW_POINT_STATE.Ng)) ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("미검사 또는 유효하지 않은 결과가 있어 Review COMPLETE 및 보정 저장을 진행할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("미검사 또는 유효하지 않은 결과가 있어 Review COMPLETE 및 보정 저장을 진행할 수 없습니다.");
+L000192 |                     throw new InvalidOperationException("미검사 또는 유효하지 않은 결과가 있어 Review COMPLETE 및 보정 저장을 진행할 수 없습니다."); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000193 |             } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 호출자에게 값 또는 제어를 반환합니다: return measured;
+L000195 |             return measured; ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ShotKey.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ShotKey.Trim()
+L000196 |             static (string Key, int Head, int Cell, int Shot, int Beam) Identity(ST_REVIEW_PLAN_POINT point) => (point.ShotKey.Trim().ToUpperInvariant(), point.HeadNo, point.CellNo, point.ShotNo, point.BeamNo); ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000197 |         } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim().Replace("-", "_", StringComparison.Ordinal).Replace(".", "_", StringComparison.Ordinal).ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim().Replace("-", "_", StringComparison.Ordinal).Replace(".", "_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim().Replace("-", "_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim()
+L000199 |         private static string Normalize(string text) => text.Trim().Replace("-", "_", StringComparison.Ordinal).Replace(".", "_", StringComparison.Ordinal).ToUpperInvariant(); ⟦EOL⟧
+// 해설 L200: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region AUTO FINE - 계획 생성
+L000200 | #region AUTO FINE - 계획 생성 ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000201 |         public static ST_AUTO_FINE_PLAN BuildPlan(ST_AUTO_REVIEW_INPUT input, IReadOnlyList<ST_SYSTEM_PARAMETER> settings) ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000202 |         { ⟦EOL⟧
+// 해설 L203: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000203 |             // A zero-line diagnostic is exactly one IOF acquisition, independent of ⟦EOL⟧
+// 해설 L204: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000204 |             // the operator's normal multi-line/PtoP/retry choices for later Review runs. ⟦EOL⟧
+// 해설 L205: 조건에 따라 분기합니다: if (input.ZeroLineFollowUp)
+L000205 |             if (input.ZeroLineFollowUp) ⟦EOL⟧
+// 해설 L206: 값을 대상에 대입합니다: input = input with { Options = new(1, EN_FINE_INSPECTION_METHOD.Flying, 1, false) } / 값을 대상에 대입합니다: Options = new(1, EN_FINE_INSPECTION_METHOD.Flying, 1, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, EN_FINE_INSPECTION_METHOD.Flying, 1, false)
+L000206 |                 input = input with { Options = new(1, EN_FINE_INSPECTION_METHOD.Flying, 1, false) }; ⟦EOL⟧
+// 해설 L207: 조건에 따라 분기합니다: if (input.Options.LineCount is not (1 or 3 or 5 or 7) || input.Options.Method is not (EN_FINE_INSPECTION_METHOD.Flying or EN_FINE_INSPECTION_METHOD.PtoP) || input.Options.CountMismatchRetries is < 1 or > 3)
+L000207 |             if (input.Options.LineCount is not (1 or 3 or 5 or 7) || input.Options.Method is not (EN_FINE_INSPECTION_METHOD.Flying or EN_FINE_INSPECTION_METHOD.PtoP) || input.Options.CountMismatchRetries is < 1 or > 3) ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 검사 방식 또는 라인 수가 올바르지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 검사 방식 또는 라인 수가 올바르지 않습니다.");
+L000208 |                 throw new InvalidOperationException("AUTO Review 검사 방식 또는 라인 수가 올바르지 않습니다."); ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: input.Recipe.Parameters.Where(item => item.Key.Length > 0).GroupBy(item => item.Key, StringComparer.OrdinalIgnoreCase).ToDictionary(group => group.Key, group => group.Last().Value, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: input.Recipe.Parameters.Where(item => item.Key.Length > 0).GroupBy(item => item.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: input.Recipe.Parameters.Where(item => item.Key.Length > 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Last() / 지역 변수를 선언합니다: var
+L000209 |             var parameters = input.Recipe.Parameters.Where(item => item.Key.Length > 0).GroupBy(item => item.Key, StringComparer.OrdinalIgnoreCase).ToDictionary(group => group.Key, group => group.Last().Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.Where(item => item.Key.Length > 0) / 컬렉션 요소를 순회합니다: foreach (var setting in settings.Where(item => item.Key.Length > 0))
+L000210 |             foreach (var setting in settings.Where(item => item.Key.Length > 0)) ⟦EOL⟧
+// 해설 L211: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000211 |                 // FollowUp inspects the same frozen Glass/Recipe/Head geometry that ⟦EOL⟧
+// 해설 L212: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000212 |                 // produced the zero-line result. Later settings only fill missing keys. ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.ContainsKey(setting.Key) / 조건에 따라 분기합니다: if (!input.ZeroLineFollowUp || !parameters.ContainsKey(setting.Key))
+L000213 |                 if (!input.ZeroLineFollowUp || !parameters.ContainsKey(setting.Key)) ⟦EOL⟧
+// 해설 L214: 값을 대상에 대입합니다: parameters[setting.Key] = setting.Value
+L000214 |                     parameters[setting.Key] = setting.Value; ⟦EOL⟧
+// 해설 L215: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000215 |             // Manual MOF Shift Offset must never affect AUTO inspection. ⟦EOL⟧
+// 해설 L216: 값을 대상에 대입합니다: parameters["SHIFT_OFFSET_X"] = "0.000000"
+L000216 |             parameters["SHIFT_OFFSET_X"] = "0.000000"; ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: parameters["SHIFT_OFFSET_Y"] = "0.000000"
+L000217 |             parameters["SHIFT_OFFSET_Y"] = "0.000000"; ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ReadOnlyDictionary<string, string>(parameters) / 지역 변수를 선언합니다: var frozen = new ReadOnlyDictionary<string, string>(parameters); / 변수의 초기값을 지정합니다: frozen = new ReadOnlyDictionary<string, string>(parameters)
+L000218 |             var frozen = new ReadOnlyDictionary<string, string>(parameters); ⟦EOL⟧
+// 해설 L219: 지역 변수를 선언합니다: var effectiveRecipe = input.Recipe with { Parameters = parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)).ToArray() }; / 변수의 초기값을 지정합니다: effectiveRecipe = input.Recipe with { Parameters = parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)).ToArray() }
+L000219 |             var effectiveRecipe = input.Recipe with ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000220 |             { ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: Parameters = parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)
+L000221 |                 Parameters = parameters.Select(pair => new ST_RECIPE_PARAMETER(pair.Key, pair.Value, "", "", pair.Value, Key: pair.Key)).ToArray() ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000222 |             }; ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CreateShotBeamPositionCalculator(effectiveRecipe, CScannerAxisTransform.ReadStageDirection(frozen)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(frozen) / 지역 변수를 선언합니다: var calculate = CReviewManager.CreateShotBeamPositionCalculator(effectiveRecipe, CScannerAxisTransform.ReadStageDirection(frozen)); / 변수의 초기값을 지정합니다: calculate = CReviewManager.CreateShotBeamPositionCalculator(effectiveRecipe, CScannerAxisTransform.ReadStageDirection(frozen))
+L000223 |             var calculate = CReviewManager.CreateShotBeamPositionCalculator(effectiveRecipe, CScannerAxisTransform.ReadStageDirection(frozen)); ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeShotMaskingPlan.Build(frozen) / 지역 변수를 선언합니다: var masking = CRecipeShotMaskingPlan.Build(frozen); / 변수의 초기값을 지정합니다: masking = CRecipeShotMaskingPlan.Build(frozen)
+L000224 |             var masking = CRecipeShotMaskingPlan.Build(frozen); ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: CShotCoordinatePlanBuilder.Build(frozen) / 지역 변수를 선언합니다: var shots = CShotCoordinatePlanBuilder.Build(frozen).Shots; / 변수의 초기값을 지정합니다: shots = CShotCoordinatePlanBuilder.Build(frozen).Shots
+L000225 |             var shots = CShotCoordinatePlanBuilder.Build(frozen).Shots; ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots.Select(shot => new ST_REVIEW_PLAN_POINT( shot.SequenceNo, shot.ShotKey, shot.HeadNo, shot.CellNo, shot.CellShotNo, shot.GroupCountX, shot.GroupCountY, shot.HeadNo > 0 && !masking.EvaluateShot(shot).ShouldSkipLaser,… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_PLAN_POINT( shot.SequenceNo, shot.ShotKey, shot.HeadNo, shot.CellNo, shot.CellShotNo, shot.GroupCountX, shot.GroupCountY, shot.HeadNo > 0 && !masking.EvaluateShot(shot).ShouldSkipLaser, shot.DesignX, shot.D… / 지역 변수를 선언합니다: var all = shots.Select(s
+L000226 |             var all = shots.Select(shot => new ST_REVIEW_PLAN_POINT( ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000227 |                 shot.SequenceNo,  ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000228 |                 shot.ShotKey,  ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000229 |                 shot.HeadNo,  ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000230 |                 shot.CellNo,  ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000231 |                 shot.CellShotNo,  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000232 |                 shot.GroupCountX,  ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000233 |                 shot.GroupCountY,  ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: masking.EvaluateShot(shot)
+L000234 |                 shot.HeadNo > 0 && !masking.EvaluateShot(shot).ShouldSkipLaser,  ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000235 |                 shot.DesignX,  ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000236 |                 shot.DesignY,  ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000237 |                 0,  ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000238 |                 0,  ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000239 |                 0,  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000240 |                 0,  ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000241 |                 EN_REVIEW_POINT_STATE.Ready,  ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000242 |                 "WAIT" ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: BeamNo = ST_AUTO_REVIEW_OPTIONS.BeamNo
+L000243 |             ) { BeamNo = ST_AUTO_REVIEW_OPTIONS.BeamNo }).ToArray(); ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: all.Where(point => point.Use).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: all.Where(point => point.Use) / 지역 변수를 선언합니다: var targets = all.Where(point => point.Use).ToArray(); / 변수의 초기값을 지정합니다: targets = all.Where(point => point.Use).ToArray()
+L000244 |             var targets = all.Where(point => point.Use).ToArray(); ⟦EOL⟧
+// 해설 L245: 조건에 따라 분기합니다: if (targets.Length == 0)
+L000245 |             if (targets.Length == 0) ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO Review 검사 대상 Shot이 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO Review 검사 대상 Shot이 없습니다.");
+L000246 |                 throw new InvalidOperationException("AUTO Review 검사 대상 Shot이 없습니다."); ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_PLAN( input.Recipe.Id, targets.Select(point => point.CellNo).Distinct().Count(), Tolerance("REVIEW_TOLERANCE_X"), Tolerance("REVIEW_TOLERANCE_Y"), CReviewManager.ParseVisionFlipType(parameters.GetValueOrDef… / 지역 변수를 선언합니다: var source = new ST_REVIEW_PLAN( input.Recipe.Id, targets.Select(point => point.CellNo).Distinct().Count(), Tolerance("REVIEW_TOLERANCE_X"), Tolerance("REVIEW_TOLERANCE_Y"), CReviewManager.ParseVisionFlipType(parameters.GetValueOr / 변수의 초기값을 지정합니다: source = new ST_REVIEW_PLA
+L000247 |             var source = new ST_REVIEW_PLAN( ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000248 |                 input.Recipe.Id,  ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(point => point.CellNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(point => point.CellNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(point => point.CellNo)
+L000249 |                 targets.Select(point => point.CellNo).Distinct().Count(),  ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: Tolerance("REVIEW_TOLERANCE_X")
+L000250 |                 Tolerance("REVIEW_TOLERANCE_X"),  ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: Tolerance("REVIEW_TOLERANCE_Y")
+L000251 |                 Tolerance("REVIEW_TOLERANCE_Y"),  ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.ParseVisionFlipType(parameters.GetValueOrDefault("VisionXFlip"), parameters.GetValueOrDefault("VisionYFlip"), parameters.GetValueOrDefault("VisionXyFlip")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.GetValueOrDefault("VisionXFlip") / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.GetValueOrDefault("VisionYFlip") / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.GetValueOrDefault("VisionXyFlip")
+L000252 |                 CReviewManager.ParseVisionFlipType(parameters.GetValueOrDefault("VisionXFlip"), parameters.GetValueOrDefault("VisionYFlip"), parameters.GetValueOrDefault("VisionXyFlip")),  ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000253 |                 DateTimeOffset.Now,  ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000254 |                 all ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000255 |             ); ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewRulePlanBuilder.Build(source, new(EN_REVIEW_CORRECTION_RULE.Fine, EN_REVIEW_CORRECTION_SCOPE.HeadCell, ST_AUTO_REVIEW_OPTIONS.BeamNo, "", EN_REVIEW_REFERENCE_LINE.First, input.Options.LineCount)).ShotKeys.ToHashSe… / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewRulePlanBuilder.Build(source, new(EN_REVIEW_CORRECTION_RULE.Fine, EN_REVIEW_CORRECTION_SCOPE.HeadCell, ST_AUTO_REVIEW_OPTIONS.BeamNo, "", EN_REVIEW_REFERENCE_LINE.First, input.Options.LineCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(EN_REVIEW_CORRECTION_RULE.
+L000256 |             var selected = CReviewRulePlanBuilder.Build(source, new(EN_REVIEW_CORRECTION_RULE.Fine, EN_REVIEW_CORRECTION_SCOPE.HeadCell, ST_AUTO_REVIEW_OPTIONS.BeamNo, "", EN_REVIEW_REFERENCE_LINE.First, input.Options.LineCount)).ShotKeys.ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindTopmostCells(frozen) / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? FindTopmostCells(frozen) : null / 지역 변수를 선언합니다: var topCells = input.ZeroLineFollowUp ? FindTopmostCells(frozen) : null; / 변수의 초기값을 지정합니다: topCells = input.ZeroLineFollowUp ? FindTopmostCells(frozen) : null
+L000257 |             var topCells = input.ZeroLineFollowUp ? FindTopmostCells(frozen) : null; ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: all.Select(point => point.CellNo).Distinct().ToDictionary(cell => cell, cell => CRecipeModelPixelCountReader.ReadCellModelType(parameters, cell)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: all.Select(point => point.CellNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: all.Select(point => point.CellNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadCellModelType(parameters, cell) / 지역 변수를 선언합니다: var models = all.Select(point => point.CellNo).Distinct().ToDictionary(cell => cell, cell => CRecipeModelPixelCountReade
+L000258 |             var models = all.Select(point => point.CellNo).Distinct().ToDictionary(cell => cell, cell => CRecipeModelPixelCountReader.ReadCellModelType(parameters, cell)); ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: models.Values.GroupBy(model => model).ToDictionary(group => group.Key, group => group.Count()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: models.Values.GroupBy(model => model) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Count() / 지역 변수를 선언합니다: var modelCounts = models.Values.GroupBy(model => model).ToDictionary(group => group.Key, group => group.Count()); / 변수의 초기값을 지정합니다: modelCounts = models.Values.GroupBy(model => model).ToDictionary(group => group.Key, group => group.Count())
+L000259 |             var modelCounts = models.Values.GroupBy(model => model).ToDictionary(group => group.Key, group => group.Count()); ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_FINE_REVIEW_LINE>() / 지역 변수를 선언합니다: var lines = new List<ST_FINE_REVIEW_LINE>(); / 변수의 초기값을 지정합니다: lines = new List<ST_FINE_REVIEW_LINE>()
+L000260 |             var lines = new List<ST_FINE_REVIEW_LINE>(); ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Where(point => selected.Contains(point.ShotKey) && (topCells is null || topCells.Contains(point.CellNo))).GroupBy(point => models[point.CellNo]).OrderByDescending(group => modelCounts[group.Key]).ThenBy(group => … / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Where(point => selected.Contains(point.ShotKey) && (topCells is null || topCells.Contains(point.CellNo))).GroupBy(point => models[point.CellNo]).OrderByDescending(group => modelCounts[group.Key]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Where(point => select
+L000261 |             foreach (var model in targets.Where(point => selected.Contains(point.ShotKey) && (topCells is null || topCells.Contains(point.CellNo))).GroupBy(point => models[point.CellNo]).OrderByDescending(group => modelCounts[group.Key]).ThenBy(group => group.Key)) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000262 |             { ⟦EOL⟧
+// 해설 L263: 지역 변수를 선언합니다: var row = 0; / 변수의 초기값을 지정합니다: row = 0
+L000263 |                 var row = 0; ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: model.GroupBy(point => Math.Round(point.DesignY, 6)).OrderBy(group => group.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: model.GroupBy(point => Math.Round(point.DesignY, 6)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(point.DesignY, 6) / 컬렉션 요소를 순회합니다: foreach (var line in model.GroupBy(point => Math.Round(point.DesignY, 6)).OrderBy(group => group.Key))
+L000264 |                 foreach (var line in model.GroupBy(point => Math.Round(point.DesignY, 6)).OrderBy(group => group.Key)) ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000265 |                 { ⟦EOL⟧
+// 해설 L266: 지역 변수를 선언합니다: var leftToRight = row++ % 2 == 0; / 변수의 초기값을 지정합니다: leftToRight = row++ % 2 == 0
+L000266 |                     var leftToRight = row++ % 2 == 0; ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: (leftToRight ? line.OrderBy(point => point.DesignX) : line.OrderByDescending(point => point.DesignX)).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo).Select(point => { var position = calculate(point, ST_AUTO_… / 함수·델리게이트 또는 객체 생성자를 호출합니다: (leftToRight ? line.OrderBy(point => point.DesignX) : line.OrderByDescending(point => point.DesignX)).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: (leftToRight ? line.OrderBy(point => point.DesignX) : line.OrderByDesce
+L000267 |                     var points = (leftToRight ? line.OrderBy(point => point.DesignX) : line.OrderByDescending(point => point.DesignX)).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo).Select(point => ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000268 |                     { ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: calculate(point, ST_AUTO_REVIEW_OPTIONS.BeamNo) / 지역 변수를 선언합니다: var position = calculate(point, ST_AUTO_REVIEW_OPTIONS.BeamNo); / 변수의 초기값을 지정합니다: position = calculate(point, ST_AUTO_REVIEW_OPTIONS.BeamNo)
+L000269 |                         var position = calculate(point, ST_AUTO_REVIEW_OPTIONS.BeamNo); ⟦EOL⟧
+// 해설 L270: 호출자에게 값 또는 제어를 반환합니다: return point with { ReviewTargetX = position.ReviewX, ReviewTargetY = position.StageY };
+L000270 |                         return point with ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000271 |                         { ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: ReviewTargetX = position.ReviewX
+L000272 |                             ReviewTargetX = position.ReviewX, ⟦EOL⟧
+// 해설 L273: 값을 대상에 대입합니다: ReviewTargetY = position.StageY
+L000273 |                             ReviewTargetY = position.StageY ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000274 |                         }; ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_AUTO_FINE_PLAN Drilling.Common.Review.CAutoFineReviewCoordinator.BuildPlan(Drilling.Common.Review.ST_AUTO_REVIEW_INPUT, System.Collections.Generic.IReadOnlyList<Drilling.Common.Manager
+L000275 |                     }).ToArray(); ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.Add(new($"B11:{model.Key}:{line.Key.ToString("R", CultureInfo.InvariantCulture)}", lines.Count + 1, model.Key, Array.AsReadOnly(points))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new($"B11:{model.Key}:{line.Key.ToString("R", CultureInfo.InvariantCulture)}", lines.Count + 1, model.Key, Array.AsReadOnly(points)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: line.Key.ToString("R", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(points)
+L000276 |                     lines.Add(new($"B11:{model.Key}:{line.Key.ToString("R", CultureInfo.InvariantCulture)}", lines.Count + 1, model.Key, Array.AsReadOnly(points))); ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000277 |                 } ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000278 |             } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 조건에 따라 분기합니다: if (lines.Count == 0)
+L000280 |             if (lines.Count == 0) ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AUTO FINE 검사 라인을 만들 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AUTO FINE 검사 라인을 만들 수 없습니다.");
+L000281 |                 throw new InvalidOperationException("AUTO FINE 검사 라인을 만들 수 없습니다."); ⟦EOL⟧
+// 해설 L282: 조건에 따라 분기합니다: if (input.ZeroLineFollowUp)
+L000282 |             if (input.ZeroLineFollowUp) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000283 |             { ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points).OrderBy(point => point.DesignX).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points).OrderBy(point => point.DesignX).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points).OrderBy(point => point.DesignX).ThenBy(point => point.CellNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points).OrderBy(point => p
+L000284 |                 var points = lines.SelectMany(line => line.Points).OrderBy(point => point.DesignX).ThenBy(point => point.CellNo).ThenBy(point => point.ShotNo).ToArray(); ⟦EOL⟧
+// 해설 L285: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000285 |                 // Different middle-row heights cannot be silently expanded to multiple ⟦EOL⟧
+// 해설 L286: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000286 |                 // acquisitions or replaced with PtoP when the request is one IOF line. ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Max(point => point.ReviewTargetY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Min(point => point.ReviewTargetY) / 조건에 따라 분기합니다: if (points.Max(point => point.ReviewTargetY) - points.Min(point => point.ReviewTargetY) > .0005 || points.Max(point => point.DesignY) - points.Min(point => point.DesignY) > .000001)
+L000287 |                 if (points.Max(point => point.ReviewTargetY) - points.Min(point => point.ReviewTargetY) > .0005 ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Max(point => point.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Min(point => point.DesignY)
+L000288 |                     || points.Max(point => point.DesignY) - points.Min(point => point.DesignY) > .000001) ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("맨 위 Cell들의 가운데 행이 서로 다른 Y 위치여서 0선 FollowUp IOF 한 줄을 만들 수 없습니다. Cell 배치와 Beam 좌표를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("맨 위 Cell들의 가운데 행이 서로 다른 Y 위치여서 0선 FollowUp IOF 한 줄을 만들 수 없습니다. Cell 배치와 Beam 좌표를 확인해 주세요.");
+L000289 |                     throw new InvalidOperationException("맨 위 Cell들의 가운데 행이 서로 다른 Y 위치여서 0선 FollowUp IOF 한 줄을 만들 수 없습니다. Cell 배치와 Beam 좌표를 확인해 주세요."); ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.Select(line => line.ModelNo).Distinct().ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.Select(line => line.ModelNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.Select(line => line.ModelNo) / 지역 변수를 선언합니다: var modelNos = lines.Select(line => line.ModelNo).Distinct().ToArray(); / 변수의 초기값을 지정합니다: modelNos = lines.Select(line => line.ModelNo).Distinct().ToArray()
+L000290 |                 var modelNos = lines.Select(line => line.ModelNo).Distinct().ToArray(); ⟦EOL⟧
+// 해설 L291: 값을 대상에 대입합니다: lines = [new("ZERO_FOLLOWUP:TOP_MIDDLE:B11", 1, modelNos.Length == 1 ? modelNos[0] : 0, Array.AsReadOnly(points))] / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ZERO_FOLLOWUP:TOP_MIDDLE:B11", 1, modelNos.Length == 1 ? modelNos[0] : 0, Array.AsReadOnly(points)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(points) / 조건에 따라 결과식을 선택합니다: modelNos.Length == 1 ? modelNos[0] : 0
+L000291 |                 lines = [new("ZERO_FOLLOWUP:TOP_MIDDLE:B11", 1, modelNos.Length == 1 ? modelNos[0] : 0, Array.AsReadOnly(points))]; ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000292 |             } ⟦EOL⟧
+// 해설 L293: 지역 변수를 선언합니다: var plan = source with { Points = Array.AsReadOnly(lines.SelectMany(line => line.Points).ToArray()), InspectionMethod = input.ZeroLineFollowUp ? "IOF" : source.InspectionMethod }; / 변수의 초기값을 지정합니다: plan = source with { Points = Array.AsReadOnly(lines.SelectMany(line => line.Points).ToArray()), InspectionMethod = input.ZeroLineFollowUp ? "IOF" : source.InspectionMethod }
+L000293 |             var plan = source with ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000294 |             { ⟦EOL⟧
+// 해설 L295: 값을 대상에 대입합니다: Points = Array.AsReadOnly(lines.SelectMany(line => line.Points).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(lines.SelectMany(line => line.Points).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.SelectMany(line => line.Points)
+L000295 |                 Points = Array.AsReadOnly(lines.SelectMany(line => line.Points).ToArray()), ⟦EOL⟧
+// 해설 L296: 값을 대상에 대입합니다: InspectionMethod = input.ZeroLineFollowUp ? "IOF" : source.InspectionMethod / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? "IOF" : source.InspectionMethod
+L000296 |                 InspectionMethod = input.ZeroLineFollowUp ? "IOF" : source.InspectionMethod ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000297 |             }; ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_FINE_REVIEW_REQUEST(plan, lines.AsReadOnly(), input.Options.Method) { StopOnNgLine = false, CountMismatchRetries = input.ZeroLineFollowUp ? 0 : input.Options.CountMismatchRetries, ImmediateRetry = input.Options.Im… / 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.AsReadOnly() / 지역 변수를 선언합니다: var request = new ST_FINE_REVIEW_REQUEST(plan, lines.AsReadOnly(), input.Options.Method) { StopOnNgLine = false, CountMismatchRetries = input.ZeroLineFollowUp ? 0 : input.Options.CountMismatchRetries, ImmediateRetry = input.Opt
+L000298 |             var request = new ST_FINE_REVIEW_REQUEST(plan, lines.AsReadOnly(), input.Options.Method) ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000299 |             { ⟦EOL⟧
+// 해설 L300: 값을 대상에 대입합니다: StopOnNgLine = false
+L000300 |                 StopOnNgLine = false, ⟦EOL⟧
+// 해설 L301: 값을 대상에 대입합니다: CountMismatchRetries = input.ZeroLineFollowUp ? 0 : input.Options.CountMismatchRetries / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? 0 : input.Options.CountMismatchRetries
+L000301 |                 CountMismatchRetries = input.ZeroLineFollowUp ? 0 : input.Options.CountMismatchRetries, ⟦EOL⟧
+// 해설 L302: 값을 대상에 대입합니다: ImmediateRetry = input.Options.ImmediateRetry
+L000302 |                 ImmediateRetry = input.Options.ImmediateRetry, ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: Context = new(input.Recipe.Name, input.GlassId, "AUTO", input.Options.LineCount, frozen) { ZeroLineFollowUp = input.ZeroLineFollowUp, ZeroLineRunId = input.ZeroLineRunId, ZeroLineSavedAt = input.ZeroLineSavedAt } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(input.Recipe.Name, input.GlassId, "AUTO", input.Options.LineCount, frozen) { ZeroLineFollowUp = input.ZeroLineFollowUp, ZeroLineRunId = input.ZeroLineRunId, ZeroLineSavedAt = input.ZeroLineSavedAt }
+L000303 |                 Context = new(input.Recipe.Name, input.GlassId, "AUTO", input.Options.LineCount, frozen) ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000304 |                 { ⟦EOL⟧
+// 해설 L305: 값을 대상에 대입합니다: ZeroLineFollowUp = input.ZeroLineFollowUp
+L000305 |                     ZeroLineFollowUp = input.ZeroLineFollowUp, ⟦EOL⟧
+// 해설 L306: 값을 대상에 대입합니다: ZeroLineRunId = input.ZeroLineRunId
+L000306 |                     ZeroLineRunId = input.ZeroLineRunId, ⟦EOL⟧
+// 해설 L307: 값을 대상에 대입합니다: ZeroLineSavedAt = input.ZeroLineSavedAt
+L000307 |                     ZeroLineSavedAt = input.ZeroLineSavedAt ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000308 |                 } ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000309 |             }; ⟦EOL⟧
+// 해설 L310: 값을 대상에 대입합니다: ZeroLineFollowUp = input.ZeroLineFollowUp / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(request, input.ZeroLineFollowUp ? Array.Empty<ST_REVIEW_PLAN_POINT>() : Array.AsReadOnly(targets), frozen) { ZeroLineFollowUp = input.ZeroLineFollowUp } / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<ST_REVIEW_PLAN_POINT>() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(targets) / 조건에 따라 결과식을 선택합니다: input.ZeroLineFollowUp ? Array.Empty<ST_REVIEW_PLAN_POINT>() : Array.AsReadOnly(targets) / 호출자에게 값 또는 제어를 반환합니다: return new(request, input.ZeroLineFollowUp ?
+L000310 |             return new(request, input.ZeroLineFollowUp ? Array.Empty<ST_REVIEW_PLAN_POINT>() : Array.AsReadOnly(targets), frozen) { ZeroLineFollowUp = input.ZeroLineFollowUp }; ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parameters.GetValueOrDefault(key, "0.03"), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.GetValueOrDefault(key, "0.03") / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{key} 설정을 확인해 주세요.") / 조건에 따라 결과식을 선택합니다: double.TryParse(parameters.GetValueOrDefault(key, "0.03"), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0
+L000311 |             double Tolerance(string key) => double.TryParse(parameters.GetValueOrDefault(key, "0.03"), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : throw new InvalidOperationException($"{key} 설정을 확인해 주세요."); ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 BuildPlan.
+L000312 |         } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.HashSet<int> Drilling.Common.Review.CAutoFineReviewCoordinator.FindTopmostCells(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000314 |         private static HashSet<int> FindTopmostCells(IReadOnlyDictionary<string, string> parameters) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 FindTopmostCells.
+L000315 |         { ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parameters.GetValueOrDefault(key), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.GetValueOrDefault(key) / 조건에 따라 결과식을 선택합니다: double.TryParse(parameters.GetValueOrDefault(key), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? value : fallback
+L000316 |             double Read(string key, double fallback = 0) => double.TryParse(parameters.GetValueOrDefault(key), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? value : fallback; ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<(int Cell, double MinimumY)>() / 지역 변수를 선언합니다: var ranges = new List<(int Cell, double MinimumY)>(); / 변수의 초기값을 지정합니다: ranges = new List<(int Cell, double MinimumY)>()
+L000317 |             var ranges = new List<(int Cell, double MinimumY)>(); ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("MAX_CELL_NUMBER") / 지역 변수를 선언합니다: var cellCount = (int)Read("MAX_CELL_NUMBER"); / 변수의 초기값을 지정합니다: cellCount = (int)Read("MAX_CELL_NUMBER")
+L000318 |             var cellCount = (int)Read("MAX_CELL_NUMBER"); ⟦EOL⟧
+// 해설 L319: 초기화·조건·증감이 있는 반복입니다: for (var cellNo = 1; cellNo <= cellCount; cellNo++) / 변수의 초기값을 지정합니다: cellNo = 1
+L000319 |             for (var cellNo = 1; cellNo <= cellCount; cellNo++) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 FindTopmostCells.
+L000320 |             { ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadPatternForCell(parameters, cellNo) / 지역 변수를 선언합니다: var pattern = CRecipeModelPixelCountReader.ReadPatternForCell(parameters, cellNo); / 변수의 초기값을 지정합니다: pattern = CRecipeModelPixelCountReader.ReadPatternForCell(parameters, cellNo)
+L000321 |                 var pattern = CRecipeModelPixelCountReader.ReadPatternForCell(parameters, cellNo); ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_DEFINITION(cellNo, Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X"), Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y"), Read($"CELL{cellNo}_ROTATION"), Read("PIXEL_SIZE", .09), pattern.PixelCountX, pattern.PixelCo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read($"CELL{cellNo}_ROTATION") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("PIXEL_SIZE", .09) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(
+L000322 |                 var definition = new ST_CELL_PATTERN_DEFINITION(cellNo, Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X"), Read($"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y"), Read($"CELL{cellNo}_ROTATION"), Read("PIXEL_SIZE", .09), pattern.PixelCountX, pattern.PixelCountY, pattern.ProcessPitch, (int)Read("SPLITED_BEAM_COUNT", 1), Read("AK_MARGIN_X"), Read("AK_MARGIN_Y")); ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.Calculate(definition, includeShotCenters: false) / 지역 변수를 선언합니다: var layout = CCellPatternCalculator.Calculate(definition, includeShotCenters: false); / 변수의 초기값을 지정합니다: layout = CCellPatternCalculator.Calculate(definition, includeShotCenters: false)
+L000323 |                 var layout = CCellPatternCalculator.Calculate(definition, includeShotCenters: false); ⟦EOL⟧
+// 해설 L324: 조건에 따라 분기합니다: if (!layout.IsValid)
+L000324 |                 if (!layout.IsValid) ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(layout.ValidationMessage) / 예외를 발생/전달합니다: throw new InvalidOperationException(layout.ValidationMessage);
+L000325 |                     throw new InvalidOperationException(layout.ValidationMessage); ⟦EOL⟧
+// 해설 L326: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000326 |                 // Four corners suffice for a rotated rectangular Shot lattice. Geometry ⟦EOL⟧
+// 해설 L327: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000327 |                 // includes masked/inactive points, so exclusions cannot select a lower Cell row. ⟦EOL⟧
+// 해설 L328: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { (0, 0), (layout.GroupCountX - 1, 0), (0, layout.GroupCountY - 1), (layout.GroupCountX - 1, layout.GroupCountY - 1) } .Min(corner => CCellPatternCalculator.CalculateShotCenter(definition, corner.Item1, corner.Item… / 지역 변수를 선언합니다: var minimumY = new[] { (0, 0), (layout.GroupCountX - 1, 0), (0, layout.GroupCountY - 1), (layout.GroupCountX - 1, layout.GroupCountY - 1) } .Min(corner => CCellPatternCalculator.CalculateShotCenter(definition, corner.Item1, corner / 변수의 초기값을 지정합니다: minimumY = new[] { (0, 0),
+L000328 |                 var minimumY = new[] { (0, 0), (layout.GroupCountX - 1, 0), (0, layout.GroupCountY - 1), (layout.GroupCountX - 1, layout.GroupCountY - 1) } ⟦EOL⟧
+// 해설 L329: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.CalculateShotCenter(definition, corner.Item1, corner.Item2, layout)
+L000329 |                     .Min(corner => CCellPatternCalculator.CalculateShotCenter(definition, corner.Item1, corner.Item2, layout).DesignY); ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: ranges.Add((cellNo, minimumY))
+L000330 |                 ranges.Add((cellNo, minimumY)); ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 FindTopmostCells.
+L000331 |             } ⟦EOL⟧
+// 해설 L332: 조건에 따라 분기합니다: if (ranges.Count == 0)
+L000332 |             if (ranges.Count == 0) ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("0선 FollowUp의 Cell 배치를 확인할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("0선 FollowUp의 Cell 배치를 확인할 수 없습니다.");
+L000333 |                 throw new InvalidOperationException("0선 FollowUp의 Cell 배치를 확인할 수 없습니다."); ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: ranges.Min(range => range.MinimumY) / 지역 변수를 선언합니다: var firstY = ranges.Min(range => range.MinimumY); / 변수의 초기값을 지정합니다: firstY = ranges.Min(range => range.MinimumY)
+L000334 |             var firstY = ranges.Min(range => range.MinimumY); ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: ranges.Where(range => Math.Abs(range.MinimumY - firstY) <= .000001).Select(range => range.Cell).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ranges.Where(range => Math.Abs(range.MinimumY - firstY) <= .000001).Select(range => range.Cell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ranges.Where(range => Math.Abs(range.MinimumY - firstY) <= .000001) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(range.MinimumY - firstY) / 호출자에게 값 또는 제어를 반환합니다: return ranges.Where(range => Math.Abs(range.MinimumY - firstY) <= .000001).Select(range => range
+L000335 |             return ranges.Where(range => Math.Abs(range.MinimumY - firstY) <= .000001).Select(range => range.Cell).ToHashSet(); ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 FindTopmostCells.
+L000336 |         } ⟦EOL⟧
+// 해설 L337: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000337 | #endregion ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다.
+L000338 |     } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 타입의 구조/상속 선언입니다: public sealed record ST_AUTO_REVIEW_OPTIONS(int LineCount = 1, EN_FINE_INSPECTION_METHOD Method = EN_FINE_INSPECTION_METHOD.Flying, int CountMismatchRetries = 1, bool ImmediateRetry = false)
+L000340 |     public sealed record ST_AUTO_REVIEW_OPTIONS(int LineCount = 1, EN_FINE_INSPECTION_METHOD Method = EN_FINE_INSPECTION_METHOD.Flying, int CountMismatchRetries = 1, bool ImmediateRetry = false) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다.
+L000341 |     { ⟦EOL⟧
+// 해설 L342: 변수의 초기값을 지정합니다: BeamNo = 11
+L000342 |         public const int BeamNo = 11; ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다.
+L000343 |     } ⟦EOL⟧
+L000344 |  ⟦EOL⟧
+// 해설 L345: 타입의 구조/상속 선언입니다: public sealed record ST_AUTO_REVIEW_INPUT(ST_RECIPE_DEFINITION Recipe, string GlassId, ST_AUTO_REVIEW_OPTIONS Options)
+L000345 |     public sealed record ST_AUTO_REVIEW_INPUT(ST_RECIPE_DEFINITION Recipe, string GlassId, ST_AUTO_REVIEW_OPTIONS Options) ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다.
+L000346 |     { ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.ST_AUTO_REVIEW_INPUT.ZeroLineFollowUp
+L000347 |         public bool ZeroLineFollowUp { get; init; } ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · System.Guid? Drilling.Common.Review.ST_AUTO_REVIEW_INPUT.ZeroLineRunId
+L000348 |         public Guid? ZeroLineRunId { get; init; } ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Review.ST_AUTO_REVIEW_INPUT.ZeroLineSavedAt
+L000349 |         public DateTimeOffset? ZeroLineSavedAt { get; init; } ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다.
+L000350 |     } ⟦EOL⟧
+// 해설 L351: 타입의 구조/상속 선언입니다: public sealed record ST_AUTO_FINE_PLAN(ST_FINE_REVIEW_REQUEST Request, IReadOnlyList<ST_REVIEW_PLAN_POINT> OffsetTargets, IReadOnlyDictionary<string, string> Parameters)
+L000351 |     public sealed record ST_AUTO_FINE_PLAN(ST_FINE_REVIEW_REQUEST Request, IReadOnlyList<ST_REVIEW_PLAN_POINT> OffsetTargets, IReadOnlyDictionary<string, string> Parameters) ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다.
+L000352 |     { ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.ST_AUTO_FINE_PLAN.ZeroLineFollowUp
+L000353 |         public bool ZeroLineFollowUp { get; init; } ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다.
+L000354 |     } ⟦EOL⟧
+// 해설 L355: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000355 |     /// <summary>Frozen run metadata. AUTO supplies its glass ID and Run Option choices when it starts FINE.</summary> ⟦EOL⟧
+// 해설 L356: 타입의 구조/상속 선언입니다: public sealed record ST_FINE_REVIEW_CONTEXT(string RecipeName, string GlassId, string Origin, int LinesPerCell, IReadOnlyDictionary<string, string> Parameters)
+L000356 |     public sealed record ST_FINE_REVIEW_CONTEXT(string RecipeName, string GlassId, string Origin, int LinesPerCell, IReadOnlyDictionary<string, string> Parameters) ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다.
+L000357 |     { ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.ST_FINE_REVIEW_CONTEXT.ZeroLineFollowUp
+L000358 |         public bool ZeroLineFollowUp { get; init; } ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · System.Guid? Drilling.Common.Review.ST_FINE_REVIEW_CONTEXT.ZeroLineRunId
+L000359 |         public Guid? ZeroLineRunId { get; init; } ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Review.ST_FINE_REVIEW_CONTEXT.ZeroLineSavedAt
+L000360 |         public DateTimeOffset? ZeroLineSavedAt { get; init; } ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다.
+L000361 |     } ⟦EOL⟧
+// 해설 L362: 타입의 구조/상속 선언입니다: public sealed record ST_FINE_REVIEW_MONITOR(
+L000362 |     public sealed record ST_FINE_REVIEW_MONITOR( ⟦EOL⟧
+// 해설 L363: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000363 |         Guid RunId,  ⟦EOL⟧
+// 해설 L364: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000364 |         long Revision,  ⟦EOL⟧
+// 해설 L365: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000365 |         ST_FINE_REVIEW_REQUEST Request,  ⟦EOL⟧
+// 해설 L366: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000366 |         ST_FINE_REVIEW_SNAPSHOT Progress,  ⟦EOL⟧
+// 해설 L367: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000367 |         int StageDeviceNo,  ⟦EOL⟧
+// 해설 L368: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000368 |         DateTimeOffset StartedAt,  ⟦EOL⟧
+// 해설 L369: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000369 |         string OffsetFile = "" ⟦EOL⟧
+// 해설 L370: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000370 |     ); ⟦EOL⟧
+// 해설 L371: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000371 |     /// <summary>Latest immutable FINE snapshot only. No device I/O, disk reads, UI callbacks or queued frames.</summary> ⟦EOL⟧
+// 해설 L372: 타입의 구조/상속 선언입니다: public sealed class CFineReviewMonitorStore
+L000372 |     public sealed class CFineReviewMonitorStore ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다.
+L000373 |     { ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _gate = new()
+L000374 |         private readonly object _gate = new(); ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_FINE_REVIEW_MONITOR? Drilling.Common.Review.CFineReviewMonitorStore._latest
+L000375 |         private ST_FINE_REVIEW_MONITOR? _latest; ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Review.CFineReviewMonitorStore._revision
+L000376 |         private long _revision; ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_FINE_REVIEW_MONITOR? Drilling.Common.Review.CFineReviewMonitorStore.GetSnapshot()
+L000377 |         public ST_FINE_REVIEW_MONITOR? GetSnapshot() ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000378 |         { ⟦EOL⟧
+// 해설 L379: 공유 상태의 임계 구역에 진입합니다: lock (_gate)
+L000379 |             lock (_gate) ⟦EOL⟧
+// 해설 L380: 호출자에게 값 또는 제어를 반환합니다: return _latest;
+L000380 |                 return _latest; ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000381 |         } ⟦EOL⟧
+L000382 |  ⟦EOL⟧
+// 해설 L383: 선언·서명/매개변수·접근 조건입니다 · System.Guid Drilling.Common.Review.CFineReviewMonitorStore.Begin(Drilling.Common.Review.ST_FINE_REVIEW_REQUEST, int)
+L000383 |         internal Guid Begin(ST_FINE_REVIEW_REQUEST request, int stageDeviceNo) ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 Begin.
+L000384 |         { ⟦EOL⟧
+// 해설 L385: 공유 상태의 임계 구역에 진입합니다: lock (_gate)
+L000385 |             lock (_gate) ⟦EOL⟧
+// 해설 L386: 조건에 따라 분기합니다: if (_latest is { } staged && staged.RunId == request.PreparedMonitorRunId && staged.Progress.State == EN_REVIEW_SEQUENCE_STATE.Idle)
+L000386 |                 if (_latest is { } staged && staged.RunId == request.PreparedMonitorRunId && staged.Progress.State == EN_REVIEW_SEQUENCE_STATE.Idle) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 Begin.
+L000387 |                 { ⟦EOL⟧
+// 해설 L388: 값을 대상에 대입합니다: _latest = staged with { Revision = ++_revision, Progress = staged.Progress with { State = EN_REVIEW_SEQUENCE_STATE.Running, Message = "FINE 검사 시작" } }
+L000388 |                     _latest = staged with ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 Begin.
+L000389 |                     { ⟦EOL⟧
+// 해설 L390: 값을 대상에 대입합니다: Revision = ++_revision
+L000390 |                         Revision = ++_revision, ⟦EOL⟧
+// 해설 L391: 값을 대상에 대입합니다: Progress = staged.Progress with { State = EN_REVIEW_SEQUENCE_STATE.Running, Message = "FINE 검사 시작" }
+L000391 |                         Progress = staged.Progress with ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 Begin.
+L000392 |                         { ⟦EOL⟧
+// 해설 L393: 값을 대상에 대입합니다: State = EN_REVIEW_SEQUENCE_STATE.Running
+L000393 |                             State = EN_REVIEW_SEQUENCE_STATE.Running, ⟦EOL⟧
+// 해설 L394: 값을 대상에 대입합니다: Message = "FINE 검사 시작"
+L000394 |                             Message = "FINE 검사 시작" ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 Begin.
+L000395 |                         } ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 Begin.
+L000396 |                     }; ⟦EOL⟧
+// 해설 L397: 호출자에게 값 또는 제어를 반환합니다: return staged.RunId;
+L000397 |                     return staged.RunId; ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 Begin.
+L000398 |                 } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: Replace(request, stageDeviceNo, EN_REVIEW_SEQUENCE_STATE.Running, "검사 준비 중") / 호출자에게 값 또는 제어를 반환합니다: return Replace(request, stageDeviceNo, EN_REVIEW_SEQUENCE_STATE.Running, "검사 준비 중");
+L000400 |             return Replace(request, stageDeviceNo, EN_REVIEW_SEQUENCE_STATE.Running, "검사 준비 중"); ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 Begin.
+L000401 |         } ⟦EOL⟧
+L000402 |  ⟦EOL⟧
+// 해설 L403: 함수·델리게이트 또는 객체 생성자를 호출합니다: Replace(request, stageDeviceNo, EN_REVIEW_SEQUENCE_STATE.Idle, "검사 계획 확정 · Stage Review START 대기")
+L000403 |         internal Guid Stage(ST_FINE_REVIEW_REQUEST request, int stageDeviceNo) => Replace(request, stageDeviceNo, EN_REVIEW_SEQUENCE_STATE.Idle, "검사 계획 확정 · Stage Review START 대기"); ⟦EOL⟧
+// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · System.Guid Drilling.Common.Review.CFineReviewMonitorStore.Replace(Drilling.Common.Review.ST_FINE_REVIEW_REQUEST, int, Drilling.Common.Review.EN_REVIEW_SEQUENCE_STATE, string)
+L000404 |         private Guid Replace(ST_FINE_REVIEW_REQUEST request, int stageDeviceNo, EN_REVIEW_SEQUENCE_STATE state, string message) ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 Replace.
+L000405 |         { ⟦EOL⟧
+// 해설 L406: 지역 변수를 선언합니다: var context = request.Context; / 변수의 초기값을 지정합니다: context = request.Context
+L000406 |             var context = request.Context; ⟦EOL⟧
+// 해설 L407: 조건에 따라 분기합니다: if (context is not null)
+L000407 |             if (context is not null) ⟦EOL⟧
+// 해설 L408: 값을 대상에 대입합니다: request = request with { Context = context with { Parameters = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)) } }
+L000408 |                 request = request with ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 Replace.
+L000409 |                 { ⟦EOL⟧
+// 해설 L410: 값을 대상에 대입합니다: Context = context with { Parameters = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)) }
+L000410 |                     Context = context with ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 Replace.
+L000411 |                     { ⟦EOL⟧
+// 해설 L412: 값을 대상에 대입합니다: Parameters = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ReadOnlyDictionary<string, string>(new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)
+L000412 |                         Parameters = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>(context.Parameters, StringComparer.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 Replace.
+L000413 |                     } ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 Replace.
+L000414 |                 }; ⟦EOL⟧
+// 해설 L415: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000415 |             // Copy collection containers once. Published line/point records are immutable and reused between revisions. ⟦EOL⟧
+// 해설 L416: 값을 대상에 대입합니다: request = request with { Plan = request.Plan with { Points = Array.AsReadOnly(request.Plan.Points.ToArray()) }, Lines = Array.AsReadOnly(request.Lines.Select(line => line with { Points = Array.AsReadOnly(line.Points.ToArray()) }).
+L000416 |             request = request with ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 Replace.
+L000417 |             { ⟦EOL⟧
+// 해설 L418: 값을 대상에 대입합니다: Plan = request.Plan with { Points = Array.AsReadOnly(request.Plan.Points.ToArray()) }
+L000418 |                 Plan = request.Plan with ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 Replace.
+L000419 |                 { ⟦EOL⟧
+// 해설 L420: 값을 대상에 대입합니다: Points = Array.AsReadOnly(request.Plan.Points.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(request.Plan.Points.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: request.Plan.Points.ToArray()
+L000420 |                     Points = Array.AsReadOnly(request.Plan.Points.ToArray()) ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · System.Guid Drilling.Common.Review.CFineReviewMonitorStore.Replace(Drilling.Common.Review.ST_FINE_REVIEW_REQUEST, int, Drilling.Common.Review.EN_REVIEW_SEQUENCE_STATE, string)
+L000421 |                 }, ⟦EOL⟧
+// 해설 L422: 값을 대상에 대입합니다: Lines = Array.AsReadOnly(request.Lines.Select(line => line with { Points = Array.AsReadOnly(line.Points.ToArray()) }).ToArray()) / 값을 대상에 대입합니다: Points = Array.AsReadOnly(line.Points.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(request.Lines.Select(line => line with { Points = Array.AsReadOnly(line.Points.ToArray()) }).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: request.Lines.Select(line => line with { Points = Array.AsReadOnly(line.Points.ToArray()) }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: request.Lines.Select(
+L000422 |                 Lines = Array.AsReadOnly(request.Lines.Select(line => line with { Points = Array.AsReadOnly(line.Points.ToArray()) }).ToArray()) ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 Replace.
+L000423 |             }; ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var id = Guid.NewGuid(); / 변수의 초기값을 지정합니다: id = Guid.NewGuid()
+L000424 |             var id = Guid.NewGuid(); ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_FINE_REVIEW_SNAPSHOT(request.Plan.RecipeId, request.Lines, state, message) { RunId = id } / 지역 변수를 선언합니다: var initial = new ST_FINE_REVIEW_SNAPSHOT(request.Plan.RecipeId, request.Lines, state, message) { RunId = id }; / 변수의 초기값을 지정합니다: initial = new ST_FINE_REVIEW_SNAPSHOT(request.Plan.RecipeId, request.Lines, state, message) { RunId = id }
+L000425 |             var initial = new ST_FINE_REVIEW_SNAPSHOT(request.Plan.RecipeId, request.Lines, state, message) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 Replace.
+L000426 |             { ⟦EOL⟧
+// 해설 L427: 값을 대상에 대입합니다: RunId = id
+L000427 |                 RunId = id ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 Replace.
+L000428 |             }; ⟦EOL⟧
+// 해설 L429: 공유 상태의 임계 구역에 진입합니다: lock (_gate)
+L000429 |             lock (_gate) ⟦EOL⟧
+// 해설 L430: 값을 대상에 대입합니다: _latest = new(id, ++_revision, request, initial, stageDeviceNo, DateTimeOffset.Now) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(id, ++_revision, request, initial, stageDeviceNo, DateTimeOffset.Now)
+L000430 |                 _latest = new(id, ++_revision, request, initial, stageDeviceNo, DateTimeOffset.Now); ⟦EOL⟧
+// 해설 L431: 호출자에게 값 또는 제어를 반환합니다: return id;
+L000431 |             return id; ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 Replace.
+L000432 |         } ⟦EOL⟧
+L000433 |  ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Review.CFineReviewMonitorStore.Publish(Drilling.Common.Review.ST_FINE_REVIEW_SNAPSHOT)
+L000434 |         internal void Publish(ST_FINE_REVIEW_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 Publish.
+L000435 |         { ⟦EOL⟧
+// 해설 L436: 공유 상태의 임계 구역에 진입합니다: lock (_gate)
+L000436 |             lock (_gate) ⟦EOL⟧
+// 해설 L437: 조건에 따라 분기합니다: if (_latest is { } latest && latest.RunId == snapshot.RunId)
+L000437 |                 if (_latest is { } latest && latest.RunId == snapshot.RunId) ⟦EOL⟧
+// 해설 L438: 값을 대상에 대입합니다: _latest = latest with { Revision = ++_revision, Progress = snapshot }
+L000438 |                     _latest = latest with ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 Publish.
+L000439 |                     { ⟦EOL⟧
+// 해설 L440: 값을 대상에 대입합니다: Revision = ++_revision
+L000440 |                         Revision = ++_revision, ⟦EOL⟧
+// 해설 L441: 값을 대상에 대입합니다: Progress = snapshot
+L000441 |                         Progress = snapshot ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 Publish.
+L000442 |                     }; ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 Publish.
+L000443 |         } ⟦EOL⟧
+L000444 |  ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Review.CFineReviewMonitorStore.MarkOffsetSaved(System.Guid, string)
+L000445 |         public void MarkOffsetSaved(Guid runId, string file) ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 MarkOffsetSaved.
+L000446 |         { ⟦EOL⟧
+// 해설 L447: 공유 상태의 임계 구역에 진입합니다: lock (_gate)
+L000447 |             lock (_gate) ⟦EOL⟧
+// 해설 L448: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(file) / 조건에 따라 분기합니다: if (_latest is { } latest && latest.RunId == runId && !string.IsNullOrWhiteSpace(file))
+L000448 |                 if (_latest is { } latest && latest.RunId == runId && !string.IsNullOrWhiteSpace(file)) ⟦EOL⟧
+// 해설 L449: 값을 대상에 대입합니다: _latest = latest with { Revision = ++_revision, OffsetFile = file }
+L000449 |                     _latest = latest with ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 MarkOffsetSaved.
+L000450 |                     { ⟦EOL⟧
+// 해설 L451: 값을 대상에 대입합니다: Revision = ++_revision
+L000451 |                         Revision = ++_revision, ⟦EOL⟧
+// 해설 L452: 값을 대상에 대입합니다: OffsetFile = file
+L000452 |                         OffsetFile = file ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 MarkOffsetSaved.
+L000453 |                     }; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 MarkOffsetSaved.
+L000454 |         } ⟦EOL⟧
+// 해설 L455: 구문 블록 경계입니다.
+L000455 |     } ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다.
+L000456 | } ⟦EOL⟧

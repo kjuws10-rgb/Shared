@@ -1,0 +1,298 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CDefaultOffsetView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000003 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000004 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Correction;
+L000005 | using Drilling.Common.Correction; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000006 | using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000007 | using System.Globalization; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000009 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public partial class CDefaultOffsetView : UserControl
+L000011 | public partial class CDefaultOffsetView : UserControl ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register(nameof(IsCompact), typeof(bool), typeof(CDefaultOffsetView), new PropertyMetadata(false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsCompact) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false) / 변수의 초기값을 지정합니다: IsCompactProperty = DependencyProperty.Register(nameof(IsCompact), typeof(bool), typeof(CDefaultOffsetView), new PropertyMetadata(false))
+L000013 |     public static readonly DependencyProperty IsCompactProperty = DependencyProperty.Register(nameof(IsCompact), typeof(bool), typeof(CDefaultOffsetView), new PropertyMetadata(false)); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(IsCompactProperty) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(IsCompactProperty, value)
+L000014 |     public bool IsCompact { get => (bool)GetValue(IsCompactProperty); private set => SetValue(IsCompactProperty, value); } ⟦EOL⟧
+// 해설 L15: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000015 |     // Display existing shared snapshots only while this workspace is visible. ⟦EOL⟧
+// 해설 L16: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000016 |     // No communication read, motion command, worker or file polling is started here. ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(500) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(500) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(500) / 변수의 초기값을 지정합니다: _display = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(500) }
+L000017 |     private readonly DispatcherTimer _display = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(500) }; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CDefaultOffsetView.CDefaultOffsetView()
+L000018 |     public CDefaultOffsetView() ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 .ctor.
+L000019 |     { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000020 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshFeedback() / 복합 대입 또는 이벤트 구독/해지 표현입니다: _display.Tick += (_, _) => RefreshFeedback()
+L000021 |         _display.Tick += (_, _) => RefreshFeedback(); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateDisplay() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => UpdateDisplay()
+L000022 |         Loaded += (_, _) => UpdateDisplay(); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: _display.Stop() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Unloaded += (_, _) => _display.Stop()
+L000023 |         Unloaded += (_, _) => _display.Stop(); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateDisplay() / 복합 대입 또는 이벤트 구독/해지 표현입니다: IsVisibleChanged += (_, _) => UpdateDisplay()
+L000024 |         IsVisibleChanged += (_, _) => UpdateDisplay(); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateDisplay() / 복합 대입 또는 이벤트 구독/해지 표현입니다: DataContextChanged += (_, _) => UpdateDisplay()
+L000025 |         DataContextChanged += (_, _) => UpdateDisplay(); ⟦EOL⟧
+// 해설 L26: 복합 대입 또는 이벤트 구독/해지 표현입니다: SizeChanged += (_, _) => { IsCompact = ActualHeight < 690; RecipeRow.Height = new GridLength(IsCompact ? 40 : 48); ProgressRow.Height = new GridLength(IsCompact ? 50 : 62); PositionRow.Height = new GridLength(IsCompact ? 92 : 94);
+L000026 |         SizeChanged += (_, _) => ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 .ctor.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 값을 대상에 대입합니다: IsCompact = ActualHeight < 690
+L000028 |             IsCompact = ActualHeight < 690; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: RecipeRow.Height = new GridLength(IsCompact ? 40 : 48) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 40 : 48) / 조건에 따라 결과식을 선택합니다: IsCompact ? 40 : 48
+L000029 |             RecipeRow.Height = new GridLength(IsCompact ? 40 : 48); ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: ProgressRow.Height = new GridLength(IsCompact ? 50 : 62) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 50 : 62) / 조건에 따라 결과식을 선택합니다: IsCompact ? 50 : 62
+L000030 |             ProgressRow.Height = new GridLength(IsCompact ? 50 : 62); ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: PositionRow.Height = new GridLength(IsCompact ? 92 : 94) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 92 : 94) / 조건에 따라 결과식을 선택합니다: IsCompact ? 92 : 94
+L000031 |             PositionRow.Height = new GridLength(IsCompact ? 92 : 94); ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: ActionRow.Height = new GridLength(IsCompact ? 104 : 118) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 104 : 118) / 조건에 따라 결과식을 선택합니다: IsCompact ? 104 : 118
+L000032 |             ActionRow.Height = new GridLength(IsCompact ? 104 : 118); ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: ApplyRow.Height = new GridLength(IsCompact ? 52 : 62) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 52 : 62) / 조건에 따라 결과식을 선택합니다: IsCompact ? 52 : 62
+L000033 |             ApplyRow.Height = new GridLength(IsCompact ? 52 : 62); ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: ResultTitleRow.Height = new GridLength(IsCompact ? 24 : 34) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(IsCompact ? 24 : 34) / 조건에 따라 결과식을 선택합니다: IsCompact ? 24 : 34
+L000034 |             ResultTitleRow.Height = new GridLength(IsCompact ? 24 : 34); ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: DefaultHeadResults.ColumnHeaderHeight = IsCompact ? 28 : 38 / 조건에 따라 결과식을 선택합니다: IsCompact ? 28 : 38
+L000035 |             DefaultHeadResults.ColumnHeaderHeight = IsCompact ? 28 : 38; ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 .ctor.
+L000036 |         }; ⟦EOL⟧
+// 해설 L37: 복합 대입 또는 이벤트 구독/해지 표현입니다: DefaultHeadResults.SizeChanged += (_, _) => { var height = Math.Clamp((DefaultHeadResults.ActualHeight - DefaultHeadResults.ColumnHeaderHeight - 2) / 8, 26, 52); if (Math.Abs(DefaultHeadResults.RowHeight - height) > .1) DefaultHea
+L000037 |         DefaultHeadResults.SizeChanged += (_, _) => ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 .ctor.
+L000038 |         { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((DefaultHeadResults.ActualHeight - DefaultHeadResults.ColumnHeaderHeight - 2) / 8, 26, 52) / 지역 변수를 선언합니다: var height = Math.Clamp((DefaultHeadResults.ActualHeight - DefaultHeadResults.ColumnHeaderHeight - 2) / 8, 26, 52); / 변수의 초기값을 지정합니다: height = Math.Clamp((DefaultHeadResults.ActualHeight - DefaultHeadResults.ColumnHeaderHeight - 2) / 8, 26, 52)
+L000039 |             var height = Math.Clamp((DefaultHeadResults.ActualHeight - DefaultHeadResults.ColumnHeaderHeight - 2) / 8, 26, 52); ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: DefaultHeadResults.RowHeight = height / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(DefaultHeadResults.RowHeight - height) / 조건에 따라 분기합니다: if (Math.Abs(DefaultHeadResults.RowHeight - height) > .1)
+L000040 |             if (Math.Abs(DefaultHeadResults.RowHeight - height) > .1) DefaultHeadResults.RowHeight = height; ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, DefaultHeadResults.ActualWidth - 2) / 지역 변수를 선언합니다: var width = Math.Max(0, DefaultHeadResults.ActualWidth - 2); / 변수의 초기값을 지정합니다: width = Math.Max(0, DefaultHeadResults.ActualWidth - 2)
+L000041 |             var width = Math.Max(0, DefaultHeadResults.ActualWidth - 2); ⟦EOL⟧
+// 해설 L42: 지역 변수를 선언합니다: double[] weights = [.6, .8, 1.1, 1.1, 1.2, 1.2, 1.1]; / 변수의 초기값을 지정합니다: weights = [.6, .8, 1.1, 1.1, 1.2, 1.2, 1.1]
+L000042 |             double[] weights = [.6, .8, 1.1, 1.1, 1.2, 1.2, 1.1]; ⟦EOL⟧
+// 해설 L43: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < weights.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000043 |             for (var index = 0; index < weights.Length; index++) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 .ctor.
+L000044 |             { ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Floor(width * weights[index] / weights.Sum()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: weights.Sum() / 지역 변수를 선언합니다: var pixels = Math.Floor(width * weights[index] / weights.Sum()); / 변수의 초기값을 지정합니다: pixels = Math.Floor(width * weights[index] / weights.Sum())
+L000045 |                 var pixels = Math.Floor(width * weights[index] / weights.Sum()); ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(DefaultHeadResults.Columns[index].ActualWidth - pixels) / 조건에 따라 분기합니다: if (Math.Abs(DefaultHeadResults.Columns[index].ActualWidth - pixels) > .5)
+L000046 |                 if (Math.Abs(DefaultHeadResults.Columns[index].ActualWidth - pixels) > .5) ⟦EOL⟧
+// 해설 L47: 값을 대상에 대입합니다: DefaultHeadResults.Columns[index].Width = new DataGridLength(pixels) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DataGridLength(pixels)
+L000047 |                     DefaultHeadResults.Columns[index].Width = new DataGridLength(pixels); ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 .ctor.
+L000048 |             } ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 .ctor.
+L000049 |         }; ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 .ctor.
+L000050 |     } ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CDefaultOffsetView.UpdateDisplay()
+L000051 |     private void UpdateDisplay() ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 UpdateDisplay.
+L000052 |     { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshFeedback() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _display.Start() / 조건에 따라 분기합니다: if (IsLoaded && IsVisible)
+L000053 |         if (IsLoaded && IsVisible) { RefreshFeedback(); _display.Start(); } ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: _display.Stop() / 앞 조건이 거짓인 경로입니다: else
+L000054 |         else _display.Stop(); ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 UpdateDisplay.
+L000055 |     } ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: .RefreshFeedback()
+L000056 |     private void RefreshFeedback() => (DataContext as CDefaultOffsetPanel)?.RefreshFeedback(); ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000058 |     // A setup-session editor, not an equipment poller. Default values themselves ⟦EOL⟧
+// 해설 L59: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000059 |     // continue to be persisted exclusively in the current recipe. ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IR
+L000060 |     public static (ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? EditConditions(ST_DEFAULT_OFFSET_OPTIONS current, IReadOnlyList<int> models, int currentModel, IReadOnlyDictionary<int, ST_DEFAULT_HEAD_GEOMETRY> geometries) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 EditConditions.
+L000061 |     { ⟦EOL⟧
+// 해설 L62: 지역 변수를 선언합니다: var owner = Application.Current?.MainWindow; / 변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow
+L000062 |         var owner = Application.Current?.MainWindow; ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: Title = "Default CENTER 측정 조건" / 값을 대상에 대입합니다: Width = 760 / 값을 대상에 대입합니다: Height = 790 / 값을 대상에 대입합니다: MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40) / 값을 대상에 대입합니다: ResizeMode = ResizeMode.NoResize / 값을 대상에 대입합니다: WindowStartupLocation = WindowStartupLocation.CenterOwner / 값을 대상에 대입합니다: Owner = owner / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Window { Title = "Default CENTER 측정 조건", Width = 760, Height = 790, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, Win
+L000063 |         var dialog = new Window { Title = "Default CENTER 측정 조건", Width = 760, Height = 790, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.CenterOwner, Owner = owner }; ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.SetResourceReference(BackgroundProperty, "GridBackgroundBrush")
+L000064 |         dialog.SetResourceReference(BackgroundProperty, "GridBackgroundBrush"); ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.SetResourceReference(ForegroundProperty, "TextPrimaryBrush")
+L000065 |         dialog.SetResourceReference(ForegroundProperty, "TextPrimaryBrush"); ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: Margin = new Thickness(20) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Grid { Margin = new Thickness(20) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(20) / 지역 변수를 선언합니다: var layout = new Grid { Margin = new Thickness(20) }; / 변수의 초기값을 지정합니다: layout = new Grid { Margin = new Thickness(20) }
+L000066 |         var layout = new Grid { Margin = new Thickness(20) }; ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.SetResourceReference(BackgroundProperty, "GridBackgroundBrush")
+L000067 |         layout.SetResourceReference(BackgroundProperty, "GridBackgroundBrush"); ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: Width = new GridLength(1, GridUnitType.Star) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = new GridLength(1, GridUnitType.Star) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)
+L000068 |         layout.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) }); ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: Width = new GridLength(160) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.ColumnDefinitions.Add(new() { Width = new GridLength(160) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = new GridLength(160) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(160)
+L000069 |         layout.ColumnDefinitions.Add(new() { Width = new GridLength(160) }); ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: Height = new GridLength(43) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(43) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(43) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(43)
+L000070 |         layout.RowDefinitions.Add(new() { Height = new GridLength(43) }); ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: Text = "검사 기준 모델 (Recipe-Process-Cell)" / 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: FontSize = 15 / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(new TextBlock { Text = "검사 기준 모델 (Recipe-Process-Cell)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "검사 기준 모델 (Recipe-Process-Cell)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }
+L000071 |         layout.Children.Add(new TextBlock { Text = "검사 기준 모델 (Recipe-Process-Cell)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }); ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: Name = "DefaultModel" / 값을 대상에 대입합니다: ItemsSource = models / 값을 대상에 대입합니다: SelectedItem = currentModel / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) / 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ComboBox { Name = "DefaultModel", ItemsSource = models, SelectedItem = currentModel, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) / 지역
+L000072 |         var model = new ComboBox { Name = "DefaultModel", ItemsSource = models, SelectedItem = currentModel, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center }; ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(model, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(model)
+L000073 |         Grid.SetColumn(model, 1); layout.Children.Add(model); ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: Height = new GridLength(43) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(43) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(43) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(43)
+L000074 |         layout.RowDefinitions.Add(new() { Height = new GridLength(43) }); ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: Text = "가공할 Stage Y 위치 (mm)" / 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: FontSize = 15 / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "가공할 Stage Y 위치 (mm)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } / 지역 변수를 선언합니다: var stageLabel = new TextBlock { Text = "가공할 Stage Y 위치 (mm)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; / 변수의 초기값을 지정합니다: stageLabel = new TextBlock { Text = "가공할 Stage Y 위치 (mm)", VerticalAlignment = VerticalAlignment.Center, Font
+L000075 |         var stageLabel = new TextBlock { Text = "가공할 Stage Y 위치 (mm)", VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(stageLabel, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(stageLabel)
+L000076 |         Grid.SetRow(stageLabel, 1); layout.Children.Add(stageLabel); ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: Name = "DefaultStageY" / 값을 대상에 대입합니다: Text = current.TestStageY.ToString("0.#####", CultureInfo.InvariantCulture) / 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) / 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultStageY", Text = current.TestStageY.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlig
+L000077 |         var input = new TextBox { Name = "DefaultStageY", Text = current.TestStageY.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15, Padding = new Thickness(6,0,6,0) }; ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(input, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(input, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(input)
+L000078 |         Grid.SetRow(input, 1); Grid.SetColumn(input, 1); layout.Children.Add(input); ⟦EOL⟧
+// 해설 L79: 지역 변수를 선언합니다: var machiningModes = new[] { "샷 가공", "십자 가공" }; / 변수의 초기값을 지정합니다: machiningModes = new[] { "샷 가공", "십자 가공" }
+L000079 |         var machiningModes = new[] { "샷 가공", "십자 가공" }; ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: Name = "DefaultMachiningMode" / 값을 대상에 대입합니다: ItemsSource = machiningModes / 값을 대상에 대입합니다: SelectedIndex = (int)current.MachiningMode / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) / 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Cent
+L000080 |         var machining = new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center }; ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: Name = "DefaultCrossSize" / 값을 대상에 대입합니다: Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture) / 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) / 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) / 값을 대상에 대입합니다: IsEnabled = current.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.In
+L000081 |         var crossSize = new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15, Padding = new Thickness(6,0,6,0), IsEnabled = current.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross }; ⟦EOL⟧
+// 해설 L82: 값을 대상에 대입합니다: Name = "DefaultVisionMethod" / 값을 대상에 대입합니다: Text = current.VisionDescription / 값을 대상에 대입합니다: IsReadOnly = true / 값을 대상에 대입합니다: Focusable = false / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) / 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,
+L000082 |         var vision = new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, Padding = new Thickness(6,0,6,0) }; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · void UpdateMachiningMode()
+L000083 |         void UpdateMachiningMode() ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 UpdateMachiningMode.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 지역 변수를 선언합니다: var cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross; / 변수의 초기값을 지정합니다: cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross
+L000085 |             var cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross; ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: crossSize.IsEnabled = cross
+L000086 |             crossSize.IsEnabled = cross; ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: vision.Text = cross ? "Mark Find Setting Single" : "Mark Find Single" / 조건에 따라 결과식을 선택합니다: cross ? "Mark Find Setting Single" : "Mark Find Single"
+L000087 |             vision.Text = cross ? "Mark Find Setting Single" : "Mark Find Single"; ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 UpdateMachiningMode.
+L000088 |         } ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMachiningMode() / 복합 대입 또는 이벤트 구독/해지 표현입니다: machining.SelectionChanged += (_, _) => UpdateMachiningMode()
+L000089 |         machining.SelectionChanged += (_, _) => UpdateMachiningMode(); ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void AddInputRow(int, string, Control)
+L000090 |         void AddInputRow(int row, string label, Control control) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 AddInputRow.
+L000091 |         { ⟦EOL⟧
+// 해설 L92: 값을 대상에 대입합니다: Height = new GridLength(43) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(43) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(43) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(43)
+L000092 |             layout.RowDefinitions.Add(new() { Height = new GridLength(43) }); ⟦EOL⟧
+// 해설 L93: 값을 대상에 대입합니다: Text = label / 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: FontSize = 15 / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } / 지역 변수를 선언합니다: var title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; / 변수의 초기값을 지정합니다: title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }
+L000093 |             var title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(title, row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(title)
+L000094 |             Grid.SetRow(title, row); layout.Children.Add(title); ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(control, row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(control, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(control)
+L000095 |             Grid.SetRow(control, row); Grid.SetColumn(control, 1); layout.Children.Add(control); ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 AddInputRow.
+L000096 |         } ⟦EOL⟧
+// 해설 L97: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000097 |         // The vision protocol names are longer than the numeric inputs. ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: layout.ColumnDefinitions[1].Width = new GridLength(230) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(230)
+L000098 |         layout.ColumnDefinitions[1].Width = new GridLength(230); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(2, "가공 방식", machining)
+L000099 |         AddInputRow(2, "가공 방식", machining); ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(3, "십자 가로·세로 전체 길이 (mm)", crossSize)
+L000100 |         AddInputRow(3, "십자 가로·세로 전체 길이 (mm)", crossSize); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(4, "비전 검사 방식 (자동)", vision)
+L000101 |         AddInputRow(4, "비전 검사 방식 (자동)", vision); ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: Height = new GridLength(1, GridUnitType.Star) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(1, GridUnitType.Star) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(1, GridUnitType.Star) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)
+L000102 |         layout.RowDefinitions.Add(new() { Height = new GridLength(1, GridUnitType.Star) }); ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: Margin = new Thickness(0,14,0,12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StackPanel { Margin = new Thickness(0,14,0,12) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,14,0,12) / 지역 변수를 선언합니다: var reference = new StackPanel { Margin = new Thickness(0,14,0,12) }; / 변수의 초기값을 지정합니다: reference = new StackPanel { Margin = new Thickness(0,14,0,12) }
+L000103 |         var reference = new StackPanel { Margin = new Thickness(0,14,0,12) }; ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: Text = "자동 계산 · 설정값 (읽기 전용)" / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: FontWeight = FontWeights.Bold / 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickn
+L000104 |         reference.Children.Add(new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) }); ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)" / 값을 대상에 대입합니다: FontSize = 14 / 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)", FontSize = 14, Margin = new Thickness(0,0,0,6) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)", FontSize = 14, Margin = new Thickness(0,0,0,6)
+L000105 |         reference.Children.Add(new TextBlock { Text = $"기판 중앙 Review X   {current.BoardCenterX:0.000} mm   (Recipe-Process-Scan)", FontSize = 14, Margin = new Thickness(0,0,0,6) }); ⟦EOL⟧
+// 해설 L106: 값을 대상에 대입합니다: Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)" / 값을 대상에 대입합니다: FontSize = 14 / 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,10) / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thic
+L000106 |         reference.Children.Add(new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차   {current.Tolerance:0.000} mm   (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) }); ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: Text = "헤드별 설정 (Setting-Common-Scanner)" / 값을 대상에 대입합니다: FontSize = 13 / 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,6)
+L000107 |         reference.Children.Add(new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) }); ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Grid() / 지역 변수를 선언합니다: var fields = new Grid(); / 변수의 초기값을 지정합니다: fields = new Grid()
+L000108 |         var fields = new Grid(); ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: Width = width / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(70) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.ColumnDefinitions.Add(new() { Width = width }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = width } / 컬렉션 요소를 순회합니다: foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) })
+L000109 |         foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) }) fields.ColumnDefinitions.Add(new() { Width = width }); ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · void AddFieldRow(int, params string[])
+L000110 |         void AddFieldRow(int row, params string[] values) ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 AddFieldRow.
+L000111 |         { ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: Height = new GridLength(27) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.RowDefinitions.Add(new() { Height = new GridLength(27) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(27) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(27)
+L000112 |             fields.RowDefinitions.Add(new() { Height = new GridLength(27) }); ⟦EOL⟧
+// 해설 L113: 초기화·조건·증감이 있는 반복입니다: for (var col = 0; col < values.Length; col++) / 변수의 초기값을 지정합니다: col = 0
+L000113 |             for (var col = 0; col < values.Length; col++) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 AddFieldRow.
+L000114 |             { ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: Text = values[col] / 값을 대상에 대입합니다: FontSize = 13 / 값을 대상에 대입합니다: FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal / 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center / 값을 대상에 대입합니다: TextAlignment = TextAlignment.Center / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center } / 조건에 따라 결과식을 선택합니다: row == 0 ? FontWeights.Bold : FontWe
+L000115 |                 var text = new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center }; ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: BorderBrush = System.Windows.Media.Brushes.LightSlateGray / 값을 대상에 대입합니다: BorderThickness = new Thickness(0,0,0,1) / 값을 대상에 대입합니다: Child = text / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,1) / 지역 변수를 선언합니다: var cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text }; / 변수의 초기값을 지정합니
+L000116 |                 var cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text }; ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(cell, row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(cell, col) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Children.Add(cell)
+L000117 |                 Grid.SetRow(cell, row); Grid.SetColumn(cell, col); fields.Children.Add(cell); ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 AddFieldRow.
+L000118 |             } ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 AddFieldRow.
+L000119 |         } ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)")
+L000120 |         AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)"); ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: geometries.OrderBy(p => p.Key) / 컬렉션 요소를 순회합니다: foreach (var item in geometries.OrderBy(p => p.Key))
+L000121 |         foreach (var item in geometries.OrderBy(p => p.Key)) ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(fields.RowDefinitions.Count, $"H{item.Key:00}", (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture), (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture), item.V… / 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Value.DoeAngle.ToString("0.###", CultureInfo.In
+L000122 |             AddFieldRow(fields.RowDefinitions.Count, $"H{item.Key:00}", (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture), (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture), item.Value.DoeAngle.ToString("0.###", CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(fields)
+L000123 |         reference.Children.Add(fields); ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사하고, 샷 가공은 Mark Find Single로 DOE 16빔을 검사합니다.\n십자 속도는 Head별 Recipe Jump Speed, 샷 가공은 Shot Count를 사용합니다.\nField는 전체 폭·높이입니다. Y=55 mm이면 / 값을 대상에 대입합니다: TextWrapping = TextWrapping.Wrap / 값을 대상에 대입합니다: Margin = new Thickness(0,10,0,0) / 값을 대상에 대입합니다: FontSize = 13 / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사
+L000124 |         reference.Children.Add(new TextBlock { Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사하고, 샷 가공은 Mark Find Single로 DOE 16빔을 검사합니다.\n십자 속도는 Head별 Recipe Jump Speed, 샷 가공은 Shot Count를 사용합니다.\nField는 전체 폭·높이입니다. Y=55 mm이면 중심 기준 ±27.5 mm입니다.\n허용오차는 Recipe의 Review Tolerance X/Y 중 작은 값입니다.\n각 Head는 입력한 Stage Y 위치에서 가공합니다.", TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0,10,0,0), FontSize = 13 }); ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: Content = reference / 값을 대상에 대입합니다: VerticalScrollBarVisibility = ScrollBarVisibility.Auto / 값을 대상에 대입합니다: HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled } / 지역 변수를 선언합니다: var referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = Scro
+L000125 |         var referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled }; ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(referenceScroll, 5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(referenceScroll, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(referenceScroll)
+L000126 |         Grid.SetRow(referenceScroll, 5); Grid.SetColumnSpan(referenceScroll, 2); layout.Children.Add(referenceScroll); ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: Height = new GridLength(44) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(44) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(44) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(44)
+L000127 |         layout.RowDefinitions.Add(new() { Height = new GridLength(44) }); ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: Columns = 2 / 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 } / 지역 변수를 선언합니다: var buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 }; / 변수의 초기값을 지정합니다: buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 }
+L000128 |         var buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 }; ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryFindResource("SecondaryButton") / 지역 변수를 선언합니다: var buttonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style; / 변수의 초기값을 지정합니다: buttonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style
+L000129 |         var buttonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style; ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: Content = "조건 적용" / 값을 대상에 대입합니다: Style = buttonStyle / 값을 대상에 대입합니다: Height = double.NaN / 값을 대상에 대입합니다: FontSize = 15 / 값을 대상에 대입합니다: Margin = new Thickness(0,0,6,0) / 값을 대상에 대입합니다: Content = "취소" / 값을 대상에 대입합니다: Margin = new Thickness(6,0,0,0) / 값을 대상에 대입합니다: IsCancel = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "조건 적용", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,6,0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { C
+L000130 |         var save = new Button { Content = "조건 적용", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) }; var cancel = new Button { Content = "취소", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true }; ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(save) / 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(cancel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(buttons, 6) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(buttons, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(buttons)
+L000131 |         buttons.Children.Add(save); buttons.Children.Add(cancel); Grid.SetRow(buttons, 6); Grid.SetColumnSpan(buttons, 2); layout.Children.Add(buttons); ⟦EOL⟧
+// 해설 L132: 지역 변수를 선언합니다: (ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? result = null; / 변수의 초기값을 지정합니다: result = null
+L000132 |         (ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? result = null; ⟦EOL⟧
+// 해설 L133: 복합 대입 또는 이벤트 구독/해지 표현입니다: save.Click += (_, _) => { if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) || !double.IsFinite(stageY)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입
+L000133 |         save.Click += (_, _) => ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 EditConditions.
+L000134 |         { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입력해 주세요.") / 조건에 따라 분기합니다: if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) || !double.IsFinite(stageY)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000135 |             if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) || !double.IsFinite(stageY)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입력해 주세요."); return; } ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: models.Contains(selectedModel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "검사 기준 모델을 선택해 주세요.") / 조건에 따라 분기합니다: if (model.SelectedItem is not int selectedModel || !models.Contains(selectedModel)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000136 |             if (model.SelectedItem is not int selectedModel || !models.Contains(selectedModel)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "검사 기준 모델을 선택해 주세요."); return; } ⟦EOL⟧
+// 해설 L137: 지역 변수를 선언합니다: var shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex; / 변수의 초기값을 지정합니다: shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex
+L000137 |             var shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex; ⟦EOL⟧
+// 해설 L138: 지역 변수를 선언합니다: var size = current.CrossSize; / 변수의 초기값을 지정합니다: size = current.CrossSize
+L000138 |             var size = current.CrossSize; ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(size) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "십자 전체 길이에 0보다 큰 유한한 mm 값을 입력해 주세요.") / 조건에 따라 분기합니다: if (shape == EN_DEFAULT_MACHINING_MODE.Cross && (!double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) || !double.IsFinite(size) || size <= 0)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000139 |             if (shape == EN_DEFAULT_MACHINING_MODE.Cross && (!double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) || !double.IsFinite(size) || size <= 0)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "십자 전체 길이에 0보다 큰 유한한 mm 값을 입력해 주세요."); return; } ⟦EOL⟧
+// 해설 L140: 값을 대상에 대입합니다: TestStageY = stageY / 값을 대상에 대입합니다: MachiningMode = shape / 값을 대상에 대입합니다: CrossSize = size / 지역 변수를 선언합니다: var options = current with { TestStageY = stageY, MachiningMode = shape, CrossSize = size }; / 변수의 초기값을 지정합니다: options = current with { TestStageY = stageY, MachiningMode = shape, CrossSize = size }
+L000140 |             var options = current with { TestStageY = stageY, MachiningMode = shape, CrossSize = size }; ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: CDefaultOffsetCalibration.ValidateOptions(options) / 예외 처리 범위입니다: try
+L000141 |             try { CDefaultOffsetCalibration.ValidateOptions(options); } ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", error.Message) / 지정 예외를 처리합니다: catch (InvalidOperationException error) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000142 |             catch (InvalidOperationException error) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", error.Message); return; } ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: result = (options, selectedModel) / 값을 대상에 대입합니다: dialog.DialogResult = true
+L000143 |             result = (options, selectedModel); dialog.DialogResult = true; ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 EditConditions.
+L000144 |         }; ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: dialog.Content = layout
+L000145 |         dialog.Content = layout; ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 결과식을 선택합니다: dialog.ShowDialog() == true ? result : null / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true ? result : null;
+L000146 |         return dialog.ShowDialog() == true ? result : null; ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 EditConditions.
+L000147 |     } ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다.
+L000148 | } ⟦EOL⟧

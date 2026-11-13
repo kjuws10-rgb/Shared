@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "a3-code-reference/1",
+  "generatorVersion": "1.0.0",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "generatedAt": "2026-11-13T05:07:55.765467+00:00",
+  "coverage": {
+    "trackedFiles": 571,
+    "filePages": 571,
+    "byKind": {
+      "build_or_reference": 8,
+      "data_schema": 239,
+      "code": 312,
+      "binary_reference": 12
+    },
+    "csharpFiles": 148,
+    "typeCount": 876,
+    "memberCount": 15282,
+    "callSites": 39483,
+    "sourceLines": 1540514,
+    "annotatedFiles": 320,
+    "ragRecords": 27483,
+    "annotatedSourceLines": 514087,
+    "ragUniqueAnnotatedSourceLines": 514087
+  },
+  "semanticScope": {
+    "syntax": "All Git-tracked C# files parsed with Roslyn; inactive conditional-compilation branches are reported separately as disabled text.",
+    "semantic": "One metadata-only compilation with .NET runtime reference assemblies. WPF, project-specific build settings and vendor SDK references are not loaded. This is not an equipment build or execution.",
+    "calls": "resolved means a symbol binding in this partial compilation, not proof of a runtime implementation. Virtual/interface/delegate/reflection/XAML event routing may require runtime/configuration analysis.",
+    "sourceWrites": false,
+    "vendorAssembliesLoaded": false,
+    "compilationErrorsAreDocumentationLimitations": true,
+    "standardImplicitUsingsSynthesized": true,
+    "implicitUsingEvidence": [
+      {
+        "path": "Drilling.Common/Drilling.Common.csproj",
+        "implicitUsings": true
+      },
+      {
+        "path": "Drilling.File/Drilling.File.csproj",
+        "implicitUsings": true
+      },
+      {
+        "path": "Drilling.UI/Drilling.UI.csproj",
+        "implicitUsings": true
+      }
+    ],
+    "projectBoundaries": "Source declarations are combined into one compilation. Project-reference accessibility and exact target-framework overload selection are not build-verified."
+  },
+  "syntaxSummary": {
+    "trackedFiles": 571,
+    "csharpFiles": 148,
+    "sourceLines": 113350,
+    "types": 876,
+    "members": 15282,
+    "calls": 39483,
+    "operations": 89146,
+    "callResolution": {
+      "resolved": 35705,
+      "unresolved": 3201,
+      "candidate": 577
+    },
+    "compilationDiagnostics": {
+      "Error": 3787,
+      "Hidden": 423,
+      "Warning": 3
+    },
+    "diagnosticCodes": [
+      {
+        "code": "CS0246",
+        "count": 1959
+      },
+      {
+        "code": "CS0103",
+        "count": 1393
+      },
+      {
+        "code": "CS8019",
+        "count": 404
+      },
+      {
+        "code": "CS1061",
+        "count": 186
+      },
+      {
+        "code": "CS0234",
+        "count": 150
+      },
+      {
+        "code": "CS0117",
+        "count": 60
+      },
+      {
+        "code": "CS8933",
+        "count": 13
+      },
+      {
+        "code": "CS1503",
+        "count": 13
+      },
+      {
+        "code": "CS0165",
+        "count": 11
+      },
+      {
+        "code": "CS1069",
+        "count": 9
+      },
+      {
+        "code": "CS9335",
+        "count": 6
+      },
+      {
+        "code": "CS0403",
+        "count": 3
+      },
+      {
+        "code": "CS0029",
+        "count": 1
+      },
+      {
+        "code": "CS7036",
+        "count": 1
+      },
+      {
+        "code": "CS8602",
+        "count": 1
+      },
+      {
+        "code": "CS8604",
+        "count": 1
+      },
+      {
+        "code": "CS0019",
+        "count": 1
+      },
+      {
+        "code": "CS8619",
+        "count": 1
+      }
+    ]
+  },
+  "originalSourceModified": false,
+  "detailedReview": "Agent-authored and cross-checked static tracing chapters cover selected critical domains; generated per-file/member/line explanations are structural analysis, not human semantic certification",
+  "build": "Equipment project not built/executed by documentation generator",
+  "operationalRecords": "CSV record bodies omitted; schema and definitions only",
+  "binaryPolicy": "names/path/size/SHA only; no code load or decompilation",
+  "validation": {
+    "status": "passed",
+    "staticReport": "validation/static-validation.json",
+    "browserReport": "validation/browser-validation.json",
+    "crosscheckReports": [
+      "validation/architecture-crosscheck.json",
+      "validation/review-crosscheck.json"
+    ],
+    "extractorReport": "validation/extractor-regression-validation.json",
+    "equipmentBuild": "not_run",
+    "equipmentExecution": "not_run",
+    "modelInferenceAccuracy": "not_tested_in_this_documentation_task",
+    "gitDiffCheck": "passed"
+  },
+  "architectureBaseline": {
+    "sharedPath": "20261112_085708_SW아키텍쳐분석/README.md",
+    "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e"
+  },
+  "recurringUpdate": {
+    "automationId": "a3",
+    "timezone": "Asia/Seoul",
+    "schedule": "Daily 09:00; update only when source changed or reference baseline missing/incomplete",
+    "independentReferenceBaseline": true
+  },
+  "documentNormalization": "UTF-8/LF, document trailing whitespace and EOF blank lines normalized; original source-line trailing whitespace is preserved before EOL marker and validated by full restoration"
+}

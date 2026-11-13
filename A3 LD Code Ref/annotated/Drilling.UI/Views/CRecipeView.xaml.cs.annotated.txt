@@ -1,0 +1,1039 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CRecipeView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System;
+L000001 | using System; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls.Primitives;
+L000004 | using System.Windows.Controls.Primitives; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000005 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000006 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media.Media3D;
+L000007 | using System.Windows.Media.Media3D; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000008 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000009 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000010 | using Drilling.UI.Popup; ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000012 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: public partial class CRecipeView : UserControl
+L000013 | public partial class CRecipeView : UserControl ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: PreviewZoomMinimum = 1.0
+L000015 |     private const double PreviewZoomMinimum = 1.0; ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: PreviewZoomMaximum = 4.0
+L000016 |     private const double PreviewZoomMaximum = 4.0; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: PreviewZoomStep = 0.2
+L000017 |     private const double PreviewZoomStep = 0.2; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CRecipeView._isRecipePreviewDragging
+L000018 |     private bool _isRecipePreviewDragging; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Views.CRecipeView._recipePreviewDragStart
+L000019 |     private Point _recipePreviewDragStart; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Views.CRecipeView._recipePreviewDragStartX
+L000020 |     private double _recipePreviewDragStartX; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Views.CRecipeView._recipePreviewDragStartY
+L000021 |     private double _recipePreviewDragStartY; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CRecipeView._isHistoryExpanded
+L000022 |     private bool _isHistoryExpanded; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CRecipeView.CRecipeView()
+L000023 |     public CRecipeView() ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 .ctor.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000025 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 .ctor.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ToggleHistory_Click(object, RoutedEventArgs)
+L000028 |     private void ToggleHistory_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 ToggleHistory_Click.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: _isHistoryExpanded = !_isHistoryExpanded
+L000030 |         _isHistoryExpanded = !_isHistoryExpanded; ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: RecipeFilesPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible
+L000031 |         RecipeFilesPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: RecipeEditorPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible
+L000032 |         RecipeEditorPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(HistoryPanel, _isHistoryExpanded ? 0 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 0 : 1
+L000033 |         Grid.SetRow(HistoryPanel, _isHistoryExpanded ? 0 : 1); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(HistoryPanel, _isHistoryExpanded ? 0 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 0 : 1
+L000034 |         Grid.SetColumn(HistoryPanel, _isHistoryExpanded ? 0 : 1); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRowSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 2 : 1
+L000035 |         Grid.SetRowSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1); ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 2 : 1
+L000036 |         Grid.SetColumnSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1); ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: HistoryPanel.Margin = _isHistoryExpanded ? new Thickness(0) : new Thickness(12, 12, 0, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(12, 12, 0, 0) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? new Thickness(0) : new Thickness(12, 12, 0, 0)
+L000037 |         HistoryPanel.Margin = _isHistoryExpanded ? new Thickness(0) : new Thickness(12, 12, 0, 0); ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: HistoryExpandButton.Content = _isHistoryExpanded ? "COLLAPSE" : "EXPAND" / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? "COLLAPSE" : "EXPAND"
+L000038 |         HistoryExpandButton.Content = _isHistoryExpanded ? "COLLAPSE" : "EXPAND"; ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: e.Handled = true
+L000039 |         e.Handled = true; ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 ToggleHistory_Click.
+L000040 |     } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000042 |     private void RecipePreview_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000043 |     { ⟦EOL⟧
+// 해설 L44: 조건에 따라 분기합니다: if (sender is not FrameworkElement preview || preview.ActualWidth <= 0 || preview.ActualHeight <= 0)
+L000044 |         if (sender is not FrameworkElement preview || preview.ActualWidth <= 0 || preview.ActualHeight <= 0) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 호출자에게 값 또는 제어를 반환합니다: return;
+L000046 |             return; ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 지역 변수를 선언합니다: var currentScale = RecipePreviewScaleTransform.ScaleX; / 변수의 초기값을 지정합니다: currentScale = RecipePreviewScaleTransform.ScaleX
+L000049 |         var currentScale = RecipePreviewScaleTransform.ScaleX; ⟦EOL⟧
+// 해설 L50: 조건에 따라 결과식을 선택합니다: e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep / 지역 변수를 선언합니다: var requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep); / 변수의 초기값을 지정합니다: requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep)
+L000050 |         var requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep); ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum) / 지역 변수를 선언합니다: var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum); / 변수의 초기값을 지정합니다: nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)
+L000051 |         var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(nextScale - currentScale) / 조건에 따라 분기합니다: if (Math.Abs(nextScale - currentScale) < double.Epsilon)
+L000052 |         if (Math.Abs(nextScale - currentScale) < double.Epsilon) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000053 |         { ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: e.Handled = true
+L000054 |             e.Handled = true; ⟦EOL⟧
+// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return;
+L000055 |             return; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000056 |         } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview) / 지역 변수를 선언합니다: var pointer = e.GetPosition(preview); / 변수의 초기값을 지정합니다: pointer = e.GetPosition(preview)
+L000058 |         var pointer = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L59: 지역 변수를 선언합니다: var currentOrigin = RecipePreviewZoomContent.RenderTransformOrigin; / 변수의 초기값을 지정합니다: currentOrigin = RecipePreviewZoomContent.RenderTransformOrigin
+L000059 |         var currentOrigin = RecipePreviewZoomContent.RenderTransformOrigin; ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0) / 지역 변수를 선언합니다: var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)); / 변수의 초기값을 지정합니다: nextOrigin = new Point(Math.Clamp(pointer.X / previe
+L000060 |         var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)); ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X) / 지역 변수를 선언합니다: var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X); / 변수의 초기값을 지정합니다: nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.Actu
+L000061 |         var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X); ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y) / 지역 변수를 선언합니다: var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y); / 변수의 초기값을 지정합니다: nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.
+L000062 |         var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y); ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: RecipePreviewZoomContent.RenderTransformOrigin = nextOrigin
+L000063 |         RecipePreviewZoomContent.RenderTransformOrigin = nextOrigin; ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleX = nextScale
+L000064 |         RecipePreviewScaleTransform.ScaleX = nextScale; ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleY = nextScale
+L000065 |         RecipePreviewScaleTransform.ScaleY = nextScale; ⟦EOL⟧
+// 해설 L66: 조건에 따라 분기합니다: if (nextScale <= PreviewZoomMinimum)
+L000066 |         if (nextScale <= PreviewZoomMinimum) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000067 |         { ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = 0
+L000068 |             RecipePreviewTranslateTransform.X = 0; ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = 0
+L000069 |             RecipePreviewTranslateTransform.Y = 0; ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000070 |         } ⟦EOL⟧
+// 해설 L71: 앞 조건이 거짓인 경로입니다: else
+L000071 |         else ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000072 |         { ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = nextTranslationX
+L000073 |             RecipePreviewTranslateTransform.X = nextTranslationX; ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = nextTranslationY
+L000074 |             RecipePreviewTranslateTransform.Y = nextTranslationY; ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampRecipePreviewTranslation(preview)
+L000075 |             ClampRecipePreviewTranslation(preview); ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000076 |         } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: e.Handled = true
+L000078 |         e.Handled = true; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseWheel.
+L000079 |     } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Views.CRecipeView.GetPreviewZoomTranslation(double, double, double, double, double, double)
+L000081 |     private static double GetPreviewZoomTranslation(double pointer, double currentScale, double nextScale, double currentOrigin, double nextOrigin, double currentTranslation) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 GetPreviewZoomTranslation.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: var contentCoordinate = (pointer - ((1.0 - currentScale) * currentOrigin) - currentTranslation) / currentScale; / 변수의 초기값을 지정합니다: contentCoordinate = (pointer - ((1.0 - currentScale) * currentOrigin) - currentTranslation) / currentScale
+L000083 |         var contentCoordinate = (pointer - ((1.0 - currentScale) * currentOrigin) - currentTranslation) / currentScale; ⟦EOL⟧
+// 해설 L84: 호출자에게 값 또는 제어를 반환합니다: return pointer - (nextScale * contentCoordinate) - ((1.0 - nextScale) * nextOrigin);
+L000084 |         return pointer - (nextScale * contentCoordinate) - ((1.0 - nextScale) * nextOrigin); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 GetPreviewZoomTranslation.
+L000085 |     } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonDown(object, MouseButtonEventArgs)
+L000087 |     private void RecipePreview_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000088 |     { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindAncestor<ButtonBase>(e.OriginalSource as DependencyObject) / 조건에 따라 분기합니다: if (sender is not FrameworkElement preview || RecipePreviewScaleTransform.ScaleX <= PreviewZoomMinimum || FindAncestor<ButtonBase>(e.OriginalSource as DependencyObject) is not null)
+L000089 |         if (sender is not FrameworkElement preview || RecipePreviewScaleTransform.ScaleX <= PreviewZoomMinimum || FindAncestor<ButtonBase>(e.OriginalSource as DependencyObject) is not null) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000090 |         { ⟦EOL⟧
+// 해설 L91: 호출자에게 값 또는 제어를 반환합니다: return;
+L000091 |             return; ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: preview.CaptureMouse() / 조건에 따라 분기합니다: if (!preview.CaptureMouse())
+L000094 |         if (!preview.CaptureMouse()) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 호출자에게 값 또는 제어를 반환합니다: return;
+L000096 |             return; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000097 |         } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _isRecipePreviewDragging = true
+L000099 |         _isRecipePreviewDragging = true; ⟦EOL⟧
+// 해설 L100: 값을 대상에 대입합니다: _recipePreviewDragStart = e.GetPosition(preview) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)
+L000100 |         _recipePreviewDragStart = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: _recipePreviewDragStartX = RecipePreviewTranslateTransform.X
+L000101 |         _recipePreviewDragStartX = RecipePreviewTranslateTransform.X; ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: _recipePreviewDragStartY = RecipePreviewTranslateTransform.Y
+L000102 |         _recipePreviewDragStartY = RecipePreviewTranslateTransform.Y; ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: preview.Cursor = Cursors.SizeAll
+L000103 |         preview.Cursor = Cursors.SizeAll; ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: e.Handled = true
+L000104 |         e.Handled = true; ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonDown.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseMove(object, MouseEventArgs)
+L000107 |     private void RecipePreview_PreviewMouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseMove.
+L000108 |     { ⟦EOL⟧
+// 해설 L109: 조건에 따라 분기합니다: if (!_isRecipePreviewDragging || sender is not FrameworkElement preview)
+L000109 |         if (!_isRecipePreviewDragging || sender is not FrameworkElement preview) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseMove.
+L000110 |         { ⟦EOL⟧
+// 해설 L111: 호출자에게 값 또는 제어를 반환합니다: return;
+L000111 |             return; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseMove.
+L000112 |         } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview) / 지역 변수를 선언합니다: var current = e.GetPosition(preview); / 변수의 초기값을 지정합니다: current = e.GetPosition(preview)
+L000114 |         var current = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = _recipePreviewDragStartX + current.X - _recipePreviewDragStart.X
+L000115 |         RecipePreviewTranslateTransform.X = _recipePreviewDragStartX + current.X - _recipePreviewDragStart.X; ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = _recipePreviewDragStartY + current.Y - _recipePreviewDragStart.Y
+L000116 |         RecipePreviewTranslateTransform.Y = _recipePreviewDragStartY + current.Y - _recipePreviewDragStart.Y; ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampRecipePreviewTranslation(preview)
+L000117 |         ClampRecipePreviewTranslation(preview); ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: e.Handled = true
+L000118 |         e.Handled = true; ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseMove.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonUp(object, MouseButtonEventArgs)
+L000121 |     private void RecipePreview_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonUp.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 조건에 따라 분기합니다: if (!_isRecipePreviewDragging || sender is not FrameworkElement preview)
+L000123 |         if (!_isRecipePreviewDragging || sender is not FrameworkElement preview) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonUp.
+L000124 |         { ⟦EOL⟧
+// 해설 L125: 호출자에게 값 또는 제어를 반환합니다: return;
+L000125 |             return; ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonUp.
+L000126 |         } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(preview)
+L000128 |         EndRecipePreviewDrag(preview); ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: e.Handled = true
+L000129 |         e.Handled = true; ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseLeftButtonUp.
+L000130 |     } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)
+L000132 |     private void RecipePreview_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseRightButtonDown.
+L000133 |     { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()
+L000134 |         HideRecipePreviewHoverTip(); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(RecipePreviewViewport)
+L000135 |         EndRecipePreviewDrag(RecipePreviewViewport); ⟦EOL⟧
+// 해설 L136: 조건에 따라 분기합니다: if (RecipePreviewViewport.ContextMenu is not { } contextMenu)
+L000136 |         if (RecipePreviewViewport.ContextMenu is not { } contextMenu) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseRightButtonDown.
+L000137 |         { ⟦EOL⟧
+// 해설 L138: 호출자에게 값 또는 제어를 반환합니다: return;
+L000138 |             return; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseRightButtonDown.
+L000139 |         } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 값을 대상에 대입합니다: contextMenu.PlacementTarget = RecipePreviewViewport
+L000141 |         contextMenu.PlacementTarget = RecipePreviewViewport; ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: contextMenu.IsOpen = true
+L000142 |         contextMenu.IsOpen = true; ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: e.Handled = true
+L000143 |         e.Handled = true; ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 RecipePreview_PreviewMouseRightButtonDown.
+L000144 |     } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreview_LostMouseCapture(object, MouseEventArgs)
+L000146 |     private void RecipePreview_LostMouseCapture(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 RecipePreview_LostMouseCapture.
+L000147 |     { ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (sender is FrameworkElement preview)
+L000148 |         if (sender is FrameworkElement preview) ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 RecipePreview_LostMouseCapture.
+L000149 |         { ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(preview)
+L000150 |             EndRecipePreviewDrag(preview); ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 RecipePreview_LostMouseCapture.
+L000151 |         } ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 RecipePreview_LostMouseCapture.
+L000152 |     } ⟦EOL⟧
+L000153 |  ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipePreviewResize_Click(object, RoutedEventArgs)
+L000154 |     private void RecipePreviewResize_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 RecipePreviewResize_Click.
+L000155 |     { ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResetRecipePreviewZoom()
+L000156 |         ResetRecipePreviewZoom(); ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: e.Handled = true
+L000157 |         e.Handled = true; ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 RecipePreviewResize_Click.
+L000158 |     } ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000160 |     private void CellShotMap_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000161 |     { ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (sender is not FrameworkElement preview || preview.ActualWidth <= 0 || preview.ActualHeight <= 0)
+L000162 |         if (sender is not FrameworkElement preview || preview.ActualWidth <= 0 || preview.ActualHeight <= 0) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 호출자에게 값 또는 제어를 반환합니다: return;
+L000164 |             return; ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000165 |         } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 지역 변수를 선언합니다: var currentScale = CellShotMapScaleTransform.ScaleX; / 변수의 초기값을 지정합니다: currentScale = CellShotMapScaleTransform.ScaleX
+L000167 |         var currentScale = CellShotMapScaleTransform.ScaleX; ⟦EOL⟧
+// 해설 L168: 조건에 따라 결과식을 선택합니다: e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep / 지역 변수를 선언합니다: var requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep); / 변수의 초기값을 지정합니다: requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep)
+L000168 |         var requestedScale = currentScale + (e.Delta > 0 ? PreviewZoomStep : -PreviewZoomStep); ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum) / 지역 변수를 선언합니다: var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum); / 변수의 초기값을 지정합니다: nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)
+L000169 |         var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum); ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(nextScale - currentScale) / 조건에 따라 분기합니다: if (Math.Abs(nextScale - currentScale) < double.Epsilon)
+L000170 |         if (Math.Abs(nextScale - currentScale) < double.Epsilon) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000171 |         { ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: e.Handled = true
+L000172 |             e.Handled = true; ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return;
+L000173 |             return; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000174 |         } ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview) / 지역 변수를 선언합니다: var pointer = e.GetPosition(preview); / 변수의 초기값을 지정합니다: pointer = e.GetPosition(preview)
+L000176 |         var pointer = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L177: 지역 변수를 선언합니다: var currentOrigin = CellShotMapZoomContent.RenderTransformOrigin; / 변수의 초기값을 지정합니다: currentOrigin = CellShotMapZoomContent.RenderTransformOrigin
+L000177 |         var currentOrigin = CellShotMapZoomContent.RenderTransformOrigin; ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0) / 지역 변수를 선언합니다: var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)); / 변수의 초기값을 지정합니다: nextOrigin = new Point(Math.Clamp(pointer.X / previe
+L000178 |         var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)); ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X) / 지역 변수를 선언합니다: var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X); / 변수의 초기값을 지정합니다: nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWi
+L000179 |         var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X); ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y) / 지역 변수를 선언합니다: var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y); / 변수의 초기값을 지정합니다: nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.Actu
+L000180 |         var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y); ⟦EOL⟧
+// 해설 L181: 값을 대상에 대입합니다: CellShotMapZoomContent.RenderTransformOrigin = nextOrigin
+L000181 |         CellShotMapZoomContent.RenderTransformOrigin = nextOrigin; ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleX = nextScale
+L000182 |         CellShotMapScaleTransform.ScaleX = nextScale; ⟦EOL⟧
+// 해설 L183: 값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleY = nextScale
+L000183 |         CellShotMapScaleTransform.ScaleY = nextScale; ⟦EOL⟧
+// 해설 L184: 조건에 따라 분기합니다: if (nextScale <= PreviewZoomMinimum)
+L000184 |         if (nextScale <= PreviewZoomMinimum) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 값을 대상에 대입합니다: CellShotMapTranslateTransform.X = 0
+L000186 |             CellShotMapTranslateTransform.X = 0; ⟦EOL⟧
+// 해설 L187: 값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = 0
+L000187 |             CellShotMapTranslateTransform.Y = 0; ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000188 |         } ⟦EOL⟧
+// 해설 L189: 앞 조건이 거짓인 경로입니다: else
+L000189 |         else ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000190 |         { ⟦EOL⟧
+// 해설 L191: 값을 대상에 대입합니다: CellShotMapTranslateTransform.X = nextTranslationX
+L000191 |             CellShotMapTranslateTransform.X = nextTranslationX; ⟦EOL⟧
+// 해설 L192: 값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = nextTranslationY
+L000192 |             CellShotMapTranslateTransform.Y = nextTranslationY; ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampCellShotMapTranslation(preview)
+L000193 |             ClampCellShotMapTranslation(preview); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000194 |         } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 값을 대상에 대입합니다: e.Handled = true
+L000196 |         e.Handled = true; ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseWheel.
+L000197 |     } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)
+L000199 |     private void CellShotMap_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseRightButtonDown.
+L000200 |     { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()
+L000201 |         HideCellShotMapHoverTip(); ⟦EOL⟧
+// 해설 L202: 조건에 따라 분기합니다: if (CellShotMapViewport.ContextMenu is not { } contextMenu)
+L000202 |         if (CellShotMapViewport.ContextMenu is not { } contextMenu) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseRightButtonDown.
+L000203 |         { ⟦EOL⟧
+// 해설 L204: 호출자에게 값 또는 제어를 반환합니다: return;
+L000204 |             return; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseRightButtonDown.
+L000205 |         } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 값을 대상에 대입합니다: contextMenu.PlacementTarget = CellShotMapViewport
+L000207 |         contextMenu.PlacementTarget = CellShotMapViewport; ⟦EOL⟧
+// 해설 L208: 값을 대상에 대입합니다: contextMenu.IsOpen = true
+L000208 |         contextMenu.IsOpen = true; ⟦EOL⟧
+// 해설 L209: 값을 대상에 대입합니다: e.Handled = true
+L000209 |         e.Handled = true; ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 CellShotMap_PreviewMouseRightButtonDown.
+L000210 |     } ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellShotMapResize_Click(object, RoutedEventArgs)
+L000212 |     private void CellShotMapResize_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 CellShotMapResize_Click.
+L000213 |     { ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResetCellShotMapZoom()
+L000214 |         ResetCellShotMapZoom(); ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: e.Handled = true
+L000215 |         e.Handled = true; ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 CellShotMapResize_Click.
+L000216 |     } ⟦EOL⟧
+L000217 |  ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.EndRecipePreviewDrag(FrameworkElement)
+L000218 |     private void EndRecipePreviewDrag(FrameworkElement preview) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 EndRecipePreviewDrag.
+L000219 |     { ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: _isRecipePreviewDragging = false
+L000220 |         _isRecipePreviewDragging = false; ⟦EOL⟧
+// 해설 L221: 조건에 따라 분기합니다: if (Mouse.Captured == preview)
+L000221 |         if (Mouse.Captured == preview) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 EndRecipePreviewDrag.
+L000222 |         { ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: preview.ReleaseMouseCapture()
+L000223 |             preview.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 EndRecipePreviewDrag.
+L000224 |         } ⟦EOL⟧
+L000225 |  ⟦EOL⟧
+// 해설 L226: 값을 대상에 대입합니다: preview.Cursor = Cursors.Hand
+L000226 |         preview.Cursor = Cursors.Hand; ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 EndRecipePreviewDrag.
+L000227 |     } ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ClampRecipePreviewTranslation(FrameworkElement)
+L000229 |     private void ClampRecipePreviewTranslation(FrameworkElement preview) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 ClampRecipePreviewTranslation.
+L000230 |     { ⟦EOL⟧
+// 해설 L231: 지역 변수를 선언합니다: var scale = RecipePreviewScaleTransform.ScaleX; / 변수의 초기값을 지정합니다: scale = RecipePreviewScaleTransform.ScaleX
+L000231 |         var scale = RecipePreviewScaleTransform.ScaleX; ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, scale - PreviewZoomMinimum) / 지역 변수를 선언합니다: var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); / 변수의 초기값을 지정합니다: overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum)
+L000232 |         var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); ⟦EOL⟧
+// 해설 L233: 지역 변수를 선언합니다: var origin = RecipePreviewZoomContent.RenderTransformOrigin; / 변수의 초기값을 지정합니다: origin = RecipePreviewZoomContent.RenderTransformOrigin
+L000233 |         var origin = RecipePreviewZoomContent.RenderTransformOrigin; ⟦EOL⟧
+// 해설 L234: 지역 변수를 선언합니다: var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; / 변수의 초기값을 지정합니다: minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio
+L000234 |         var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; ⟦EOL⟧
+// 해설 L235: 지역 변수를 선언합니다: var maxX = preview.ActualWidth * origin.X * overflowRatio; / 변수의 초기값을 지정합니다: maxX = preview.ActualWidth * origin.X * overflowRatio
+L000235 |         var maxX = preview.ActualWidth * origin.X * overflowRatio; ⟦EOL⟧
+// 해설 L236: 지역 변수를 선언합니다: var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; / 변수의 초기값을 지정합니다: minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio
+L000236 |         var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; ⟦EOL⟧
+// 해설 L237: 지역 변수를 선언합니다: var maxY = preview.ActualHeight * origin.Y * overflowRatio; / 변수의 초기값을 지정합니다: maxY = preview.ActualHeight * origin.Y * overflowRatio
+L000237 |         var maxY = preview.ActualHeight * origin.Y * overflowRatio; ⟦EOL⟧
+// 해설 L238: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = Math.Clamp(RecipePreviewTranslateTransform.X, minX, maxX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(RecipePreviewTranslateTransform.X, minX, maxX)
+L000238 |         RecipePreviewTranslateTransform.X = Math.Clamp(RecipePreviewTranslateTransform.X, minX, maxX); ⟦EOL⟧
+// 해설 L239: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = Math.Clamp(RecipePreviewTranslateTransform.Y, minY, maxY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(RecipePreviewTranslateTransform.Y, minY, maxY)
+L000239 |         RecipePreviewTranslateTransform.Y = Math.Clamp(RecipePreviewTranslateTransform.Y, minY, maxY); ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ClampRecipePreviewTranslation.
+L000240 |     } ⟦EOL⟧
+L000241 |  ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ClampCellShotMapTranslation(FrameworkElement)
+L000242 |     private void ClampCellShotMapTranslation(FrameworkElement preview) ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 ClampCellShotMapTranslation.
+L000243 |     { ⟦EOL⟧
+// 해설 L244: 지역 변수를 선언합니다: var scale = CellShotMapScaleTransform.ScaleX; / 변수의 초기값을 지정합니다: scale = CellShotMapScaleTransform.ScaleX
+L000244 |         var scale = CellShotMapScaleTransform.ScaleX; ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, scale - PreviewZoomMinimum) / 지역 변수를 선언합니다: var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); / 변수의 초기값을 지정합니다: overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum)
+L000245 |         var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); ⟦EOL⟧
+// 해설 L246: 지역 변수를 선언합니다: var origin = CellShotMapZoomContent.RenderTransformOrigin; / 변수의 초기값을 지정합니다: origin = CellShotMapZoomContent.RenderTransformOrigin
+L000246 |         var origin = CellShotMapZoomContent.RenderTransformOrigin; ⟦EOL⟧
+// 해설 L247: 지역 변수를 선언합니다: var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; / 변수의 초기값을 지정합니다: minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio
+L000247 |         var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; ⟦EOL⟧
+// 해설 L248: 지역 변수를 선언합니다: var maxX = preview.ActualWidth * origin.X * overflowRatio; / 변수의 초기값을 지정합니다: maxX = preview.ActualWidth * origin.X * overflowRatio
+L000248 |         var maxX = preview.ActualWidth * origin.X * overflowRatio; ⟦EOL⟧
+// 해설 L249: 지역 변수를 선언합니다: var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; / 변수의 초기값을 지정합니다: minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio
+L000249 |         var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; ⟦EOL⟧
+// 해설 L250: 지역 변수를 선언합니다: var maxY = preview.ActualHeight * origin.Y * overflowRatio; / 변수의 초기값을 지정합니다: maxY = preview.ActualHeight * origin.Y * overflowRatio
+L000250 |         var maxY = preview.ActualHeight * origin.Y * overflowRatio; ⟦EOL⟧
+// 해설 L251: 값을 대상에 대입합니다: CellShotMapTranslateTransform.X = Math.Clamp(CellShotMapTranslateTransform.X, minX, maxX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(CellShotMapTranslateTransform.X, minX, maxX)
+L000251 |         CellShotMapTranslateTransform.X = Math.Clamp(CellShotMapTranslateTransform.X, minX, maxX); ⟦EOL⟧
+// 해설 L252: 값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = Math.Clamp(CellShotMapTranslateTransform.Y, minY, maxY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(CellShotMapTranslateTransform.Y, minY, maxY)
+L000252 |         CellShotMapTranslateTransform.Y = Math.Clamp(CellShotMapTranslateTransform.Y, minY, maxY); ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 ClampCellShotMapTranslation.
+L000253 |     } ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ResetRecipePreviewZoom()
+L000255 |     private void ResetRecipePreviewZoom() ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ResetRecipePreviewZoom.
+L000256 |     { ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()
+L000257 |         HideRecipePreviewHoverTip(); ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(RecipePreviewViewport)
+L000258 |         EndRecipePreviewDrag(RecipePreviewViewport); ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleX = PreviewZoomMinimum
+L000259 |         RecipePreviewScaleTransform.ScaleX = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L260: 값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleY = PreviewZoomMinimum
+L000260 |         RecipePreviewScaleTransform.ScaleY = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L261: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = 0
+L000261 |         RecipePreviewTranslateTransform.X = 0; ⟦EOL⟧
+// 해설 L262: 값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = 0
+L000262 |         RecipePreviewTranslateTransform.Y = 0; ⟦EOL⟧
+// 해설 L263: 값을 대상에 대입합니다: RecipePreviewZoomContent.RenderTransformOrigin = new Point(0.5, 0.5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(0.5, 0.5)
+L000263 |         RecipePreviewZoomContent.RenderTransformOrigin = new Point(0.5, 0.5); ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 ResetRecipePreviewZoom.
+L000264 |     } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ResetCellShotMapZoom()
+L000266 |     private void ResetCellShotMapZoom() ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 ResetCellShotMapZoom.
+L000267 |     { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()
+L000268 |         HideCellShotMapHoverTip(); ⟦EOL⟧
+// 해설 L269: 값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleX = PreviewZoomMinimum
+L000269 |         CellShotMapScaleTransform.ScaleX = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L270: 값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleY = PreviewZoomMinimum
+L000270 |         CellShotMapScaleTransform.ScaleY = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: CellShotMapTranslateTransform.X = 0
+L000271 |         CellShotMapTranslateTransform.X = 0; ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = 0
+L000272 |         CellShotMapTranslateTransform.Y = 0; ⟦EOL⟧
+// 해설 L273: 값을 대상에 대입합니다: CellShotMapZoomContent.RenderTransformOrigin = new Point(0.5, 0.5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(0.5, 0.5)
+L000273 |         CellShotMapZoomContent.RenderTransformOrigin = new Point(0.5, 0.5); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ResetCellShotMapZoom.
+L000274 |     } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellContentScrollViewer_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000276 |     private void CellContentScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 CellContentScrollViewer_PreviewMouseWheel.
+L000277 |     { ⟦EOL⟧
+// 해설 L278: 조건에 따라 분기합니다: if (sender is not ScrollViewer scrollViewer)
+L000278 |         if (sender is not ScrollViewer scrollViewer) ⟦EOL⟧
+// 해설 L279: 호출자에게 값 또는 제어를 반환합니다: return;
+L000279 |             return; ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 지역 변수를 선언합니다: var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; / 변수의 초기값을 지정합니다: canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0
+L000281 |         var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; ⟦EOL⟧
+// 해설 L282: 지역 변수를 선언합니다: var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; / 변수의 초기값을 지정합니다: canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight
+L000282 |         var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; ⟦EOL⟧
+// 해설 L283: 조건에 따라 분기합니다: if (!canScrollUp && !canScrollDown)
+L000283 |         if (!canScrollUp && !canScrollDown) ⟦EOL⟧
+// 해설 L284: 호출자에게 값 또는 제어를 반환합니다: return;
+L000284 |             return; ⟦EOL⟧
+L000285 |  ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0))
+L000286 |         scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0)); ⟦EOL⟧
+// 해설 L287: 값을 대상에 대입합니다: e.Handled = true
+L000287 |         e.Handled = true; ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 CellContentScrollViewer_PreviewMouseWheel.
+L000288 |     } ⟦EOL⟧
+L000289 |  ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.ToggleCellPlacement_Click(object, RoutedEventArgs)
+L000290 |     private void ToggleCellPlacement_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000291 |     { ⟦EOL⟧
+// 해설 L292: 조건에 따라 분기합니다: if (DataContext is CRootView root && root.CurrentScreen.Recipe is CMenuRecipe recipe)
+L000292 |         if (DataContext is CRootView root && root.CurrentScreen.Recipe is CMenuRecipe recipe) ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000293 |         { ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.ToggleCellPlacementExpanded()
+L000294 |             recipe.ToggleCellPlacementExpanded(); ⟦EOL⟧
+// 해설 L295: 값을 대상에 대입합니다: CellParameterPanel.Visibility = recipe.IsCellPlacementExpanded ? Visibility.Collapsed : Visibility.Visible / 조건에 따라 결과식을 선택합니다: recipe.IsCellPlacementExpanded ? Visibility.Collapsed : Visibility.Visible
+L000295 |             CellParameterPanel.Visibility = recipe.IsCellPlacementExpanded ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L296: 조건에 따라 분기합니다: if (sender is Button button)
+L000296 |             if (sender is Button button) ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000297 |             { ⟦EOL⟧
+// 해설 L298: 값을 대상에 대입합니다: button.Content = recipe.CellPlacementExpandButtonText
+L000298 |                 button.Content = recipe.CellPlacementExpandButtonText; ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000299 |             } ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000300 |         } ⟦EOL⟧
+L000301 |  ⟦EOL⟧
+// 해설 L302: 값을 대상에 대입합니다: e.Handled = true
+L000302 |         e.Handled = true; ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 ToggleCellPlacement_Click.
+L000303 |     } ⟦EOL⟧
+L000304 |  ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellPlacementWizard_Click(object, RoutedEventArgs)
+L000305 |     private void OpenCellPlacementWizard_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000306 |     { ⟦EOL⟧
+// 해설 L307: 값을 대상에 대입합니다: e.Handled = true
+L000307 |         e.Handled = true; ⟦EOL⟧
+// 해설 L308: 조건에 따라 분기합니다: if (DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)
+L000308 |         if (DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe) ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000309 |         { ⟦EOL⟧
+// 해설 L310: 호출자에게 값 또는 제어를 반환합니다: return;
+L000310 |             return; ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000311 |         } ⟦EOL⟧
+L000312 |  ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe() / 조건에 따라 분기합니다: if (!CanEditCurrentRecipe())
+L000313 |         if (!CanEditCurrentRecipe()) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000314 |         { ⟦EOL⟧
+// 해설 L315: 호출자에게 값 또는 제어를 반환합니다: return;
+L000315 |             return; ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000316 |         } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.CreateCellPlacementWizardContext() / 지역 변수를 선언합니다: var dialog = new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) }
+L000318 |         var dialog = new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000319 |         { ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000320 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000321 |         }; ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000322 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000323 |         { ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.ApplyCellPlacementWizard(dialog.Result)
+L000324 |             recipe.ApplyCellPlacementWizard(dialog.Result); ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000325 |         } ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 OpenCellPlacementWizard_Click.
+L000326 |     } ⟦EOL⟧
+L000327 |  ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenManagedItemInput(object, RoutedEventArgs)
+L000328 |     private void OpenManagedItemInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 OpenManagedItemInput.
+L000329 |     { ⟦EOL⟧
+// 해설 L330: 조건에 따라 분기합니다: if (sender is not FrameworkElement { Tag: ST_RECIPE_PARAMETER_EDITOR_ITEM item })
+L000330 |         if (sender is not FrameworkElement { Tag: ST_RECIPE_PARAMETER_EDITOR_ITEM item }) ⟦EOL⟧
+// 해설 L331: 호출자에게 값 또는 제어를 반환합니다: return;
+L000331 |             return; ⟦EOL⟧
+// 해설 L332: 값을 대상에 대입합니다: e.Handled = true
+L000332 |         e.Handled = true; ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe() / 조건에 따라 분기합니다: if (!CanEditCurrentRecipe())
+L000333 |         if (!CanEditCurrentRecipe()) ⟦EOL⟧
+// 해설 L334: 호출자에게 값 또는 제어를 반환합니다: return;
+L000334 |             return; ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) }
+L000335 |         var dialog = new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 OpenManagedItemInput.
+L000336 |         { ⟦EOL⟧
+// 해설 L337: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000337 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 OpenManagedItemInput.
+L000338 |         }; ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000339 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L340: 값을 대상에 대입합니다: item.Value = dialog.ResultValue
+L000340 |             item.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 OpenManagedItemInput.
+L000341 |     } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000343 |     private void OpenCellOverviewInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000344 |     { ⟦EOL⟧
+// 해설 L345: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_RECIPE_CELL_OVERVIEW_ROW row, Tag: string field })
+L000345 |         if (sender is not FrameworkElement { DataContext: ST_RECIPE_CELL_OVERVIEW_ROW row, Tag: string field }) ⟦EOL⟧
+// 해설 L346: 호출자에게 값 또는 제어를 반환합니다: return;
+L000346 |             return; ⟦EOL⟧
+// 해설 L347: 값을 대상에 대입합니다: e.Handled = true
+L000347 |         e.Handled = true; ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe() / 조건에 따라 분기합니다: if (!CanEditCurrentRecipe())
+L000348 |         if (!CanEditCurrentRecipe()) ⟦EOL⟧
+// 해설 L349: 호출자에게 값 또는 제어를 반환합니다: return;
+L000349 |             return; ⟦EOL⟧
+// 해설 L350: 지역 변수를 선언합니다: var value = field switch { "FirstX" => row.FirstX, "FirstY" => row.FirstY, "Rotation" => row.Rotation, _ => "" }; / 값별 결과식을 선택합니다: field switch { "FirstX" => row.FirstX, "FirstY" => row.FirstY, "Rotation" => row.Rotation, _ => "" } / 변수의 초기값을 지정합니다: value = field switch { "FirstX" => row.FirstX, "FirstY" => row.FirstY, "Rotation" => row.Rotation, _ => "" }
+L000350 |         var value = field switch ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000351 |         { ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000352 |             "FirstX" => row.FirstX, ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000353 |             "FirstY" => row.FirstY, ⟦EOL⟧
+// 해설 L354: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000354 |             "Rotation" => row.Rotation, ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000355 |             _ => "" ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000356 |         }; ⟦EOL⟧
+// 해설 L357: 지역 변수를 선언합니다: var parameterName = field switch { "FirstX" => "ALIGN_TO_1ST_PIXEL_X", "FirstY" => "ALIGN_TO_1ST_PIXEL_Y", "Rotation" => "ROTATION", _ => "" }; / 값별 결과식을 선택합니다: field switch { "FirstX" => "ALIGN_TO_1ST_PIXEL_X", "FirstY" => "ALIGN_TO_1ST_PIXEL_Y", "Rotation" => "ROTATION", _ => "" } / 변수의 초기값을 지정합니다: parameterName = field switch { "FirstX" => "ALIGN_TO_1ST_PIXEL_X", "FirstY" => "ALIGN_TO_1ST_PIXEL_Y", "Rotation" => "ROTATION", _ => "" }
+L000357 |         var parameterName = field switch ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000358 |         { ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000359 |             "FirstX" => "ALIGN_TO_1ST_PIXEL_X", ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000360 |             "FirstY" => "ALIGN_TO_1ST_PIXEL_Y", ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000361 |             "Rotation" => "ROTATION", ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)
+L000362 |             _ => "" ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000363 |         }; ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.GetItem(parameterName) / 지역 변수를 선언합니다: var item = row.GetItem(parameterName); / 변수의 초기값을 지정합니다: item = row.GetItem(parameterName)
+L000364 |         var item = row.GetItem(parameterName); ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Ma
+L000365 |         var dialog = new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000366 |         { ⟦EOL⟧
+// 해설 L367: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000367 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000368 |         }; ⟦EOL⟧
+// 해설 L369: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000369 |         if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L370: 호출자에게 값 또는 제어를 반환합니다: return;
+L000370 |             return; ⟦EOL⟧
+// 해설 L371: 값에 따라 분기합니다: switch (field)
+L000371 |         switch (field) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000372 |         { ⟦EOL⟧
+// 해설 L373: 분기값/패턴의 구간입니다: case "FirstX":
+L000373 |             case "FirstX": ⟦EOL⟧
+// 해설 L374: 값을 대상에 대입합니다: row.FirstX = dialog.ResultValue
+L000374 |                 row.FirstX = dialog.ResultValue; ⟦EOL⟧
+// 해설 L375: 해당 반복/분기 구간을 종료합니다: break;
+L000375 |                 break; ⟦EOL⟧
+// 해설 L376: 분기값/패턴의 구간입니다: case "FirstY":
+L000376 |             case "FirstY": ⟦EOL⟧
+// 해설 L377: 값을 대상에 대입합니다: row.FirstY = dialog.ResultValue
+L000377 |                 row.FirstY = dialog.ResultValue; ⟦EOL⟧
+// 해설 L378: 해당 반복/분기 구간을 종료합니다: break;
+L000378 |                 break; ⟦EOL⟧
+// 해설 L379: 분기값/패턴의 구간입니다: case "Rotation":
+L000379 |             case "Rotation": ⟦EOL⟧
+// 해설 L380: 값을 대상에 대입합니다: row.Rotation = dialog.ResultValue
+L000380 |                 row.Rotation = dialog.ResultValue; ⟦EOL⟧
+// 해설 L381: 해당 반복/분기 구간을 종료합니다: break;
+L000381 |                 break; ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000382 |         } ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 OpenCellOverviewInput.
+L000383 |     } ⟦EOL⟧
+L000384 |  ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.OpenShotGroupOffsetInput(object, RoutedEventArgs)
+L000385 |     private void OpenShotGroupOffsetInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 OpenShotGroupOffsetInput.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 조건에 따라 분기합니다: if (sender is not FrameworkElement { Tag: ST_SHOT_GROUP_EDITOR_ROW row } element)
+L000387 |         if (sender is not FrameworkElement { Tag: ST_SHOT_GROUP_EDITOR_ROW row } element) ⟦EOL⟧
+// 해설 L388: 호출자에게 값 또는 제어를 반환합니다: return;
+L000388 |             return; ⟦EOL⟧
+// 해설 L389: 지역 변수를 선언합니다: var field = element.Uid; / 변수의 초기값을 지정합니다: field = element.Uid
+L000389 |         var field = element.Uid; ⟦EOL⟧
+// 해설 L390: 값을 대상에 대입합니다: e.Handled = true
+L000390 |         e.Handled = true; ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe() / 조건에 따라 분기합니다: if (!CanEditCurrentRecipe())
+L000391 |         if (!CanEditCurrentRecipe()) ⟦EOL⟧
+// 해설 L392: 호출자에게 값 또는 제어를 반환합니다: return;
+L000392 |             return; ⟦EOL⟧
+// 해설 L393: 조건에 따라 결과식을 선택합니다: field == "OffsetX" ? row.OffsetX : row.OffsetY / 지역 변수를 선언합니다: var value = field == "OffsetX" ? row.OffsetX : row.OffsetY; / 변수의 초기값을 지정합니다: value = field == "OffsetX" ? row.OffsetX : row.OffsetY
+L000393 |         var value = field == "OffsetX" ? row.OffsetX : row.OffsetY; ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }
+L000394 |         var dialog = new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 OpenShotGroupOffsetInput.
+L000395 |         { ⟦EOL⟧
+// 해설 L396: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000396 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 OpenShotGroupOffsetInput.
+L000397 |         }; ⟦EOL⟧
+// 해설 L398: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000398 |         if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L399: 호출자에게 값 또는 제어를 반환합니다: return;
+L000399 |             return; ⟦EOL⟧
+// 해설 L400: 조건에 따라 분기합니다: if (field == "OffsetX")
+L000400 |         if (field == "OffsetX") ⟦EOL⟧
+// 해설 L401: 값을 대상에 대입합니다: row.OffsetX = dialog.ResultValue
+L000401 |             row.OffsetX = dialog.ResultValue; ⟦EOL⟧
+// 해설 L402: 앞 조건이 거짓인 경로입니다: else
+L000402 |         else ⟦EOL⟧
+// 해설 L403: 값을 대상에 대입합니다: row.OffsetY = dialog.ResultValue
+L000403 |             row.OffsetY = dialog.ResultValue; ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 OpenShotGroupOffsetInput.
+L000404 |     } ⟦EOL⟧
+L000405 |  ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe()
+L000406 |     private bool CanEditCurrentRecipe() ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 CanEditCurrentRecipe.
+L000407 |     { ⟦EOL⟧
+// 해설 L408: 호출자에게 값 또는 제어를 반환합니다: return DataContext is CRootView root && root.CurrentScreen.Recipe?.IsViewRecipeSelected == true;
+L000408 |         return DataContext is CRootView root && root.CurrentScreen.Recipe?.IsViewRecipeSelected == true; ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 CanEditCurrentRecipe.
+L000409 |     } ⟦EOL⟧
+L000410 |  ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.SelectShotGroupFromMap(object, MouseButtonEventArgs)
+L000411 |     private void SelectShotGroupFromMap(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 SelectShotGroupFromMap.
+L000412 |     { ⟦EOL⟧
+// 해설 L413: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)
+L000413 |         if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe) ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 SelectShotGroupFromMap.
+L000414 |         { ⟦EOL⟧
+// 해설 L415: 호출자에게 값 또는 제어를 반환합니다: return;
+L000415 |             return; ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 SelectShotGroupFromMap.
+L000416 |         } ⟦EOL⟧
+L000417 |  ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map) / 지역 변수를 선언합니다: var point = e.GetPosition(map); / 변수의 초기값을 지정합니다: point = e.GetPosition(map)
+L000418 |         var point = e.GetPosition(map); ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.SelectShotGroupAt(point.X, point.Y)
+L000419 |         recipe.SelectShotGroupAt(point.X, point.Y); ⟦EOL⟧
+// 해설 L420: 값을 대상에 대입합니다: e.Handled = true
+L000420 |         e.Handled = true; ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 SelectShotGroupFromMap.
+L000421 |     } ⟦EOL⟧
+L000422 |  ⟦EOL⟧
+// 해설 L423: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000423 |     private void CellPreviewLabel_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000424 |     { ⟦EOL⟧
+// 해설 L425: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })
+L000425 |         if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000426 |         { ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()
+L000427 |             HideRecipePreviewHoverTip(); ⟦EOL⟧
+// 해설 L428: 호출자에게 값 또는 제어를 반환합니다: return;
+L000428 |             return; ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000429 |         } ⟦EOL⟧
+L000430 |  ⟦EOL⟧
+// 해설 L431: 값을 대상에 대입합니다: RecipePreviewHoverTipText.Text = label.DisplayText
+L000431 |         RecipePreviewHoverTipText.Text = label.DisplayText; ⟦EOL⟧
+// 해설 L432: 값을 대상에 대입합니다: RecipePreviewHoverTip.Visibility = Visibility.Visible
+L000432 |         RecipePreviewHoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionRecipePreviewHoverTip(e.GetPosition(RecipePreviewViewport)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(RecipePreviewViewport)
+L000433 |         PositionRecipePreviewHoverTip(e.GetPosition(RecipePreviewViewport)); ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000434 |     } ⟦EOL⟧
+L000435 |  ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseLeave(object, MouseEventArgs)
+L000436 |     private void CellPreviewLabel_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseLeave.
+L000437 |     { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()
+L000438 |         HideRecipePreviewHoverTip(); ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseLeave.
+L000439 |     } ⟦EOL⟧
+L000440 |  ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.PositionRecipePreviewHoverTip(Point)
+L000441 |     private void PositionRecipePreviewHoverTip(Point pointer) ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000442 |     { ⟦EOL⟧
+// 해설 L443: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000443 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L444: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000444 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L445: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000445 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecipePreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000446 |         RecipePreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L447: 지역 변수를 선언합니다: var tipSize = RecipePreviewHoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = RecipePreviewHoverTip.DesiredSize
+L000447 |         var tipSize = RecipePreviewHoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L448: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000448 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L449: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000449 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L450: 조건에 따라 분기합니다: if (RecipePreviewViewport.ActualWidth > 0)
+L000450 |         if (RecipePreviewViewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000451 |         { ⟦EOL⟧
+// 해설 L452: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin)
+L000452 |             x = Math.Clamp(x, margin, Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000453 |         } ⟦EOL⟧
+L000454 |  ⟦EOL⟧
+// 해설 L455: 조건에 따라 분기합니다: if (RecipePreviewViewport.ActualHeight > 0)
+L000455 |         if (RecipePreviewViewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000456 |         { ⟦EOL⟧
+// 해설 L457: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin)
+L000457 |             y = Math.Clamp(y, margin, Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000458 |         } ⟦EOL⟧
+L000459 |  ⟦EOL⟧
+// 해설 L460: 값을 대상에 대입합니다: RecipePreviewHoverTipTranslateTransform.X = x
+L000460 |         RecipePreviewHoverTipTranslateTransform.X = x; ⟦EOL⟧
+// 해설 L461: 값을 대상에 대입합니다: RecipePreviewHoverTipTranslateTransform.Y = y
+L000461 |         RecipePreviewHoverTipTranslateTransform.Y = y; ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 PositionRecipePreviewHoverTip.
+L000462 |     } ⟦EOL⟧
+L000463 |  ⟦EOL⟧
+// 해설 L464: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip()
+L000464 |     private void HideRecipePreviewHoverTip() ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 HideRecipePreviewHoverTip.
+L000465 |     { ⟦EOL⟧
+// 해설 L466: 값을 대상에 대입합니다: RecipePreviewHoverTip.Visibility = Visibility.Collapsed
+L000466 |         RecipePreviewHoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L467: 값을 대상에 대입합니다: RecipePreviewHoverTipText.Text = ""
+L000467 |         RecipePreviewHoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L468: 구문 블록 경계입니다 · 소속 HideRecipePreviewHoverTip.
+L000468 |     } ⟦EOL⟧
+L000469 |  ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseMove(object, MouseEventArgs)
+L000470 |     private void CellShotMapSurface_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000471 |     { ⟦EOL⟧
+// 해설 L472: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)
+L000472 |         if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe) ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000473 |         { ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()
+L000474 |             HideCellShotMapHoverTip(); ⟦EOL⟧
+// 해설 L475: 호출자에게 값 또는 제어를 반환합니다: return;
+L000475 |             return; ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000476 |         } ⟦EOL⟧
+L000477 |  ⟦EOL⟧
+// 해설 L478: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map) / 지역 변수를 선언합니다: var point = e.GetPosition(map); / 변수의 초기값을 지정합니다: point = e.GetPosition(map)
+L000478 |         var point = e.GetPosition(map); ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GetShotGroupNameAt(point.X, point.Y) / 지역 변수를 선언합니다: var shotName = recipe.GetShotGroupNameAt(point.X, point.Y); / 변수의 초기값을 지정합니다: shotName = recipe.GetShotGroupNameAt(point.X, point.Y)
+L000479 |         var shotName = recipe.GetShotGroupNameAt(point.X, point.Y); ⟦EOL⟧
+// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(shotName) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(shotName))
+L000480 |         if (string.IsNullOrWhiteSpace(shotName)) ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000481 |         { ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()
+L000482 |             HideCellShotMapHoverTip(); ⟦EOL⟧
+// 해설 L483: 호출자에게 값 또는 제어를 반환합니다: return;
+L000483 |             return; ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000484 |         } ⟦EOL⟧
+L000485 |  ⟦EOL⟧
+// 해설 L486: 값을 대상에 대입합니다: CellShotMapHoverTipText.Text = shotName
+L000486 |         CellShotMapHoverTipText.Text = shotName; ⟦EOL⟧
+// 해설 L487: 값을 대상에 대입합니다: CellShotMapHoverTip.Visibility = Visibility.Visible
+L000487 |         CellShotMapHoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionCellShotMapHoverTip(e.GetPosition(CellShotMapViewport)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(CellShotMapViewport)
+L000488 |         PositionCellShotMapHoverTip(e.GetPosition(CellShotMapViewport)); ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseMove.
+L000489 |     } ⟦EOL⟧
+L000490 |  ⟦EOL⟧
+// 해설 L491: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseLeave(object, MouseEventArgs)
+L000491 |     private void CellShotMapSurface_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseLeave.
+L000492 |     { ⟦EOL⟧
+// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()
+L000493 |         HideCellShotMapHoverTip(); ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 CellShotMapSurface_MouseLeave.
+L000494 |     } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.PositionCellShotMapHoverTip(Point)
+L000496 |     private void PositionCellShotMapHoverTip(Point pointer) ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000497 |     { ⟦EOL⟧
+// 해설 L498: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000498 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L499: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000499 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L500: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000500 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L501: 함수·델리게이트 또는 객체 생성자를 호출합니다: CellShotMapHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000501 |         CellShotMapHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L502: 지역 변수를 선언합니다: var tipSize = CellShotMapHoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = CellShotMapHoverTip.DesiredSize
+L000502 |         var tipSize = CellShotMapHoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L503: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000503 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L504: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000504 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L505: 조건에 따라 분기합니다: if (CellShotMapViewport.ActualWidth > 0)
+L000505 |         if (CellShotMapViewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000506 |         { ⟦EOL⟧
+// 해설 L507: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin)
+L000507 |             x = Math.Clamp(x, margin, Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000508 |         } ⟦EOL⟧
+L000509 |  ⟦EOL⟧
+// 해설 L510: 조건에 따라 분기합니다: if (CellShotMapViewport.ActualHeight > 0)
+L000510 |         if (CellShotMapViewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000511 |         { ⟦EOL⟧
+// 해설 L512: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin)
+L000512 |             y = Math.Clamp(y, margin, Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000513 |         } ⟦EOL⟧
+L000514 |  ⟦EOL⟧
+// 해설 L515: 값을 대상에 대입합니다: CellShotMapHoverTipTranslateTransform.X = x
+L000515 |         CellShotMapHoverTipTranslateTransform.X = x; ⟦EOL⟧
+// 해설 L516: 값을 대상에 대입합니다: CellShotMapHoverTipTranslateTransform.Y = y
+L000516 |         CellShotMapHoverTipTranslateTransform.Y = y; ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 PositionCellShotMapHoverTip.
+L000517 |     } ⟦EOL⟧
+L000518 |  ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip()
+L000519 |     private void HideCellShotMapHoverTip() ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 HideCellShotMapHoverTip.
+L000520 |     { ⟦EOL⟧
+// 해설 L521: 값을 대상에 대입합니다: CellShotMapHoverTip.Visibility = Visibility.Collapsed
+L000521 |         CellShotMapHoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L522: 값을 대상에 대입합니다: CellShotMapHoverTipText.Text = ""
+L000522 |         CellShotMapHoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 HideCellShotMapHoverTip.
+L000523 |     } ⟦EOL⟧
+L000524 |  ⟦EOL⟧
+// 해설 L525: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CRecipeView.RecipeView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000525 |     private void RecipeView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L526: 구문 블록 경계입니다 · 소속 RecipeView_IsVisibleChanged.
+L000526 |     { ⟦EOL⟧
+// 해설 L527: 조건에 따라 분기합니다: if (e.NewValue is false)
+L000527 |         if (e.NewValue is false) ⟦EOL⟧
+// 해설 L528: 구문 블록 경계입니다 · 소속 RecipeView_IsVisibleChanged.
+L000528 |         { ⟦EOL⟧
+// 해설 L529: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResetRecipePreviewZoom()
+L000529 |             ResetRecipePreviewZoom(); ⟦EOL⟧
+// 해설 L530: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResetCellShotMapZoom()
+L000530 |             ResetCellShotMapZoom(); ⟦EOL⟧
+// 해설 L531: 구문 블록 경계입니다 · 소속 RecipeView_IsVisibleChanged.
+L000531 |         } ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 RecipeView_IsVisibleChanged.
+L000532 |     } ⟦EOL⟧
+L000533 |  ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CRecipeView.FindAncestor<T>(DependencyObject?)
+L000534 |     private static T? FindAncestor<T>(DependencyObject? source) ⟦EOL⟧
+// 해설 L535: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CRecipeView.FindAncestor<T>(DependencyObject?)
+L000535 |         where T : DependencyObject ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000536 |     { ⟦EOL⟧
+// 해설 L537: 조건을 먼저 확인하며 반복합니다: while (source is not null)
+L000537 |         while (source is not null) ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000538 |         { ⟦EOL⟧
+// 해설 L539: 조건에 따라 분기합니다: if (source is T match)
+L000539 |             if (source is T match) ⟦EOL⟧
+// 해설 L540: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000540 |             { ⟦EOL⟧
+// 해설 L541: 호출자에게 값 또는 제어를 반환합니다: return match;
+L000541 |                 return match; ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000542 |             } ⟦EOL⟧
+L000543 |  ⟦EOL⟧
+// 해설 L544: 값을 대상에 대입합니다: source = source is Visual || source is Visual3D ? VisualTreeHelper.GetParent(source) : null / 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source) / 조건에 따라 결과식을 선택합니다: source is Visual || source is Visual3D ? VisualTreeHelper.GetParent(source) : null
+L000544 |             source = source is Visual || source is Visual3D ? VisualTreeHelper.GetParent(source) : null; ⟦EOL⟧
+// 해설 L545: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000545 |         } ⟦EOL⟧
+L000546 |  ⟦EOL⟧
+// 해설 L547: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000547 |         return null; ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000548 |     } ⟦EOL⟧
+// 해설 L549: 구문 블록 경계입니다.
+L000549 | } ⟦EOL⟧

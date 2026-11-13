@@ -1,0 +1,1185 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/InterLock/CInterLockManager.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/InterLock/CInterLockManager.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs">Git 원본</a></p><h1>Drilling.Common/InterLock/CInterLockManager.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>6eb5679e2bedbc38cfd134f78abbba4eaca1cf263a4d13751f7a0561d9e5c149</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>17,250 bytes / 278 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/9b8cdb355066a6804291.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CInterLockManager</td><td>ClassDeclaration</td><td>13–251</td><td>CInterLockManager</td></tr>
+<tr><td>ST_INTERLOCK_CHECK</td><td>RecordDeclaration</td><td>108–108</td><td>ST_INTERLOCK_CHECK</td></tr>
+<tr><td>EN_INTERLOCK_TARGET</td><td>EnumDeclaration</td><td>253–260</td><td>EN_INTERLOCK_TARGET</td></tr>
+<tr><td>EN_INTERLOCK_LEVEL</td><td>EnumDeclaration</td><td>262–267</td><td>EN_INTERLOCK_LEVEL</td></tr>
+<tr><td>ST_INTERLOCK_ITEM</td><td>RecordDeclaration</td><td>269–274</td><td>ST_INTERLOCK_ITEM</td></tr>
+<tr><td>ST_INTERLOCK_RULE</td><td>RecordDeclaration</td><td>276–276</td><td>ST_INTERLOCK_RULE</td></tr>
+<tr><td>ST_INTERLOCK_SUMMARY</td><td>RecordDeclaration</td><td>277–277</td><td>ST_INTERLOCK_SUMMARY</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Rules</td><td>FieldDeclaration</td><td>L15–27</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE&gt; Drilling.Common.InterLock.CInterLockManager.Rules</td></tr>
+<tr><td>Evaluate</td><td>MethodDeclaration</td><td>L28–69</td><td>Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY Drilling.Common.InterLock.CInterLockManager.Evaluate(Drilling.Common.Managers.ST_DEVICE_STATUS)</td></tr>
+<tr><td>EvaluateInterlockRule</td><td>LocalFunctionStatement</td><td>L30–33</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK EvaluateInterlockRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE)</td></tr>
+<tr><td>SelectInterlockItem</td><td>LocalFunctionStatement</td><td>L36–42</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM SelectInterlockItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>IsAlarmOn</td><td>LocalFunctionStatement</td><td>L45–48</td><td>bool IsAlarmOn(Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS)</td></tr>
+<tr><td>MatchesItem</td><td>LocalFunctionStatement</td><td>L59–62</td><td>bool MatchesItem(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>EvaluateRule</td><td>MethodDeclaration</td><td>L71–86</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK Drilling.Common.InterLock.CInterLockManager.EvaluateRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.Managers.ST_DEVICE_STATUS)</td></tr>
+<tr><td>MatchesItem</td><td>LocalFunctionStatement</td><td>L73–76</td><td>bool MatchesItem(Drilling.Common.Motion.ST_IO_STATUS)</td></tr>
+<tr><td>IsTargetOk</td><td>MethodDeclaration</td><td>L88–101</td><td>bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;, Drilling.Common.InterLock.EN_INTERLOCK_TARGET)</td></tr>
+<tr><td>ShouldIncludeItem</td><td>LocalFunctionStatement</td><td>L90–93</td><td>bool ShouldIncludeItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>IsIsOk</td><td>LocalFunctionStatement</td><td>L95–98</td><td>bool IsIsOk(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>Rule</td><td>MethodDeclaration</td><td>L103–106</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET)</td></tr>
+<tr><td>EvaluateHeadUse</td><td>MethodDeclaration</td><td>L110–121</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?)</td></tr>
+<tr><td>EvaluateDoeZ</td><td>MethodDeclaration</td><td>L124–166</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateDoeZ(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Func&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt;&gt;)</td></tr>
+<tr><td>Add</td><td>LocalFunctionStatement</td><td>L132–132</td><td>void Add(bool, string, string)</td></tr>
+<tr><td>ReadDoeZNumber</td><td>MethodDeclaration</td><td>L168–172</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadDoeZNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double)</td></tr>
+<tr><td>OpticPositionTolerance</td><td>FieldDeclaration</td><td>L176–176</td><td>double Drilling.Common.InterLock.CInterLockManager.OpticPositionTolerance</td></tr>
+<tr><td>EvaluateOptics</td><td>MethodDeclaration</td><td>L177–241</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt;&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_BET_STATUS&gt;&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT&gt;)</td></tr>
+<tr><td>Add</td><td>LocalFunctionStatement</td><td>L191–191</td><td>void Add(string, bool, string, string)</td></tr>
+<tr><td>Registered</td><td>LocalFunctionStatement</td><td>L192–192</td><td>bool Registered(Drilling.Common.Interface.EN_EQP_MODULE)</td></tr>
+<tr><td>ReadOpticNumber</td><td>MethodDeclaration</td><td>L243–247</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double)</td></tr>
+<tr><td>NearOpticPosition</td><td>MethodDeclaration</td><td>L249–249</td><td>bool Drilling.Common.InterLock.CInterLockManager.NearOpticPosition(double, double)</td></tr>
+<tr><td>None</td><td>EnumMemberDeclaration</td><td>L256–256</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.None</td></tr>
+<tr><td>AutoRun</td><td>EnumMemberDeclaration</td><td>L257–257</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.AutoRun</td></tr>
+<tr><td>ManualMove</td><td>EnumMemberDeclaration</td><td>L258–258</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.ManualMove</td></tr>
+<tr><td>LaserOn</td><td>EnumMemberDeclaration</td><td>L259–259</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.LaserOn</td></tr>
+<tr><td>Ok</td><td>EnumMemberDeclaration</td><td>L264–264</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Ok</td></tr>
+<tr><td>Warn</td><td>EnumMemberDeclaration</td><td>L265–265</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Warn</td></tr>
+<tr><td>Error</td><td>EnumMemberDeclaration</td><td>L266–266</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Error</td></tr>
+<tr><td>Group</td><td>PropertyDeclaration</td><td>L271–271</td><td>string Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group</td></tr>
+<tr><td>get_Group</td><td>GetAccessorDeclaration</td><td>L271–271</td><td>string Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group.get</td></tr>
+<tr><td>set_Group</td><td>InitAccessorDeclaration</td><td>L271–271</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group.init</td></tr>
+<tr><td>BlocksAutoRun</td><td>PropertyDeclaration</td><td>L272–272</td><td>bool Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun</td></tr>
+<tr><td>get_BlocksAutoRun</td><td>GetAccessorDeclaration</td><td>L272–272</td><td>bool Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun.get</td></tr>
+<tr><td>set_BlocksAutoRun</td><td>InitAccessorDeclaration</td><td>L272–272</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun.init</td></tr>
+<tr><td>HeadNo</td><td>PropertyDeclaration</td><td>L273–273</td><td>int? Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo</td></tr>
+<tr><td>get_HeadNo</td><td>GetAccessorDeclaration</td><td>L273–273</td><td>int? Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo.get</td></tr>
+<tr><td>set_HeadNo</td><td>InitAccessorDeclaration</td><td>L273–273</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo.init</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">FieldDeclaration <code>Rules</code> · L15–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L15-L27">Drilling.Common/InterLock/CInterLockManager.cs:15–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE&gt; Drilling.Common.InterLock.CInterLockManager.Rules</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>17</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>18</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>19</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>20</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>21</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>22</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>23</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>24</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>25</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+<tr><td>26</td><td>Rule</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:103</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: Rules = [ Rule(&quot;Door&quot;, &quot;DOOR_LOCK_SENSOR&quot;, true, &quot;Closed&quot;, &quot;Door is open&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn), Rule(&quot;EMS&quot;, &quot;EMS&quot;, true, &quot;Normal&quot;, &quot;</td></tr>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Door&quot;, &quot;DOOR_LOCK_SENSOR&quot;, true, &quot;Closed&quot;, &quot;Door is open&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;EMS&quot;, &quot;EMS&quot;, true, &quot;Normal&quot;, &quot;Emergency stop is active&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Key Switch&quot;, &quot;KEY_SWITCH_AUTO&quot;, true, &quot;AUTO&quot;, &quot;Key switch is not AUTO&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Laser Shutter&quot;, &quot;LASER_SHUTTER_CLOSED&quot;, true, &quot;SAFE&quot;, &quot;Laser shutter is not closed&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Leak Sensor&quot;, &quot;LEAK_SENSOR&quot;, true, &quot;OK&quot;, &quot;Leak sensor is active&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Smoke Temp&quot;, &quot;SMOKE_TEMP&quot;, true, &quot;OK&quot;, &quot;Smoke or over temperature input is active&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;PM Lock&quot;, &quot;PM_LOCK&quot;, true, &quot;READY&quot;, &quot;PM lock is active&quot;, EN_INTERLOCK_LEVEL.Error, EN_INTERLOCK_TARGET.AutoRun | EN_INTERLOCK_TARGET.ManualMove | EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Scanner Ready&quot;, &quot;SCANNER_READY&quot;, true, &quot;READY&quot;, &quot;Scanner ready signal is off&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Vision Ready&quot;, &quot;VISION_READY&quot;, true, &quot;READY&quot;, &quot;Vision ready signal is off&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Panel In Position&quot;, &quot;PANEL_IN_POSITION&quot;, true, &quot;OK&quot;, &quot;Panel is not in position&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rule(&quot;Vacuum Check&quot;, &quot;VACUUM_CHECK&quot;, true, &quot;OK&quot;, &quot;Vacuum check is off&quot;, EN_INTERLOCK_LEVEL.Warn, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>Evaluate</code> · L28–69</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L28-L69">Drilling.Common/InterLock/CInterLockManager.cs:28–69</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY Drilling.Common.InterLock.CInterLockManager.Evaluate(Drilling.Common.Managers.ST_DEVICE_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>status</td><td>Drilling.Common.Managers.ST_DEVICE_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L423-L423">Drilling.Common/Alarm/CAlarmManager.cs:423–423</a></td><td>interLocks.Evaluate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1372-L1372">Drilling.Common/Station/CStationProcess.cs:1372–1372</a></td><td>_interLockManager.Evaluate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4555-L4555">Drilling.UI/Menu/Menus/CMenuMonitor.cs:4555–4555</a></td><td>_interLockManager.Evaluate</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>35</td><td>Rules.Select(EvaluateInterlockRule).ToArray</td><td>resolved</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;.ToArray&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;()</td></tr>
+<tr><td>35</td><td>Rules.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE&gt;.Select&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;(System.Func&lt;Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;)</td></tr>
+<tr><td>44</td><td>checks.Select(SelectInterlockItem).ToList</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.ToList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>44</td><td>checks.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;.Select&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK, Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;(System.Func&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK, Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;)</td></tr>
+<tr><td>50</td><td>status.Motors.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS&gt;.Any&lt;Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS&gt;(System.Func&lt;Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS, bool&gt;)</td></tr>
+<tr><td>53</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>54</td><td>items.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Add(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>54</td><td>new ST_INTERLOCK_ITEM</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+<tr><td>58</td><td>items.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Add(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>58</td><td>new ST_INTERLOCK_ITEM</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+<tr><td>64</td><td>items.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Any&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;(System.Func&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM, bool&gt;)</td></tr>
+<tr><td>65</td><td>IsTargetOk</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:88</td></tr>
+<tr><td>66</td><td>IsTargetOk</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:88</td></tr>
+<tr><td>67</td><td>IsTargetOk</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:88</td></tr>
+<tr><td>68</td><td>new ST_INTERLOCK_SUMMARY</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY.ST_INTERLOCK_SUMMARY(bool, bool, bool, bool, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;) · Drilling.Common/InterLock/CInterLockManager.cs:277</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rules.Select(EvaluateInterlockRule).ToArray()</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rules.Select(EvaluateInterlockRule)</td></tr>
+<tr><td>35</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray()</td></tr>
+<tr><td>35</td><td>local-declaration</td><td>지역 변수를 선언합니다: ST_INTERLOCK_CHECK[] checks = status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray();</td></tr>
+<tr><td>35</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: checks = status.Io.Count == 0 ? [] : Rules.Select(EvaluateInterlockRule).ToArray()</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Select(SelectInterlockItem).ToList()</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Select(SelectInterlockItem)</td></tr>
+<tr><td>44</td><td>local-declaration</td><td>지역 변수를 선언합니다: var items = checks.Select(SelectInterlockItem).ToList();</td></tr>
+<tr><td>44</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: items = checks.Select(SelectInterlockItem).ToList()</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.Motors.Any(IsAlarmOn)</td></tr>
+<tr><td>50</td><td>local-declaration</td><td>지역 변수를 선언합니다: var motionOk = !status.Motors.Any(IsAlarmOn);</td></tr>
+<tr><td>50</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: motionOk = !status.Motors.Any(IsAlarmOn)</td></tr>
+<tr><td>51</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in status.Motors)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.Name)</td></tr>
+<tr><td>53</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name</td></tr>
+<tr><td>53</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisName = string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name;</td></tr>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisName = string.IsNullOrWhiteSpace(axis.Name) ? axis.AxisId : axis.Name</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: Group = &quot;MOTION&quot;</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = axis.AlarmOn</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_INTERLOCK_ITEM(axisName, axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok, axis.AlarmOn ? &quot;ALARM&quot; : &quot;READY&quot;, $&quot;{axis.AxisId}: Alarm {(axis.AlarmOn ? &quot;ON&quot; : &quot;OFF&quot;)}&quot;) { Group = &quot;MOTION&quot;, Bl…</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(axisName, axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok, axis.AlarmOn ? &quot;ALARM&quot; : &quot;READY&quot;, $&quot;{axis.AxisId}: Alarm {(axis.AlarmOn ? &quot;ON&quot; : &quot;OFF&quot;)}&quot;) { Group = &quot;MOTION&quot;, BlocksAutoRu…</td></tr>
+<tr><td>54</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: axis.AlarmOn ? EN_INTERLOCK_LEVEL.Error : EN_INTERLOCK_LEVEL.Ok</td></tr>
+<tr><td>54</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: axis.AlarmOn ? &quot;ALARM&quot; : &quot;READY&quot;</td></tr>
+<tr><td>54</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: axis.AlarmOn ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+<tr><td>57</td><td>local-declaration</td><td>지역 변수를 선언합니다: var betOk = !status.Bet.AlarmOn;</td></tr>
+<tr><td>57</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: betOk = !status.Bet.AlarmOn</td></tr>
+<tr><td>58</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = !betOk</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_INTERLOCK_ITEM(&quot;BET&quot;, betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn, betOk ? &quot;READY&quot; : &quot;ALARM&quot;, betOk ? &quot;Beam expander normal&quot; : &quot;Beam expander alarm is active&quot;) { BlocksAutoRun = !betOk })</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(&quot;BET&quot;, betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn, betOk ? &quot;READY&quot; : &quot;ALARM&quot;, betOk ? &quot;Beam expander normal&quot; : &quot;Beam expander alarm is active&quot;) { BlocksAutoRun = !betOk }</td></tr>
+<tr><td>58</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: betOk ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Warn</td></tr>
+<tr><td>58</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: betOk ? &quot;READY&quot; : &quot;ALARM&quot;</td></tr>
+<tr><td>58</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: betOk ? &quot;Beam expander normal&quot; : &quot;Beam expander alarm is active&quot;</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: items.Any(MatchesItem)</td></tr>
+<tr><td>64</td><td>local-declaration</td><td>지역 변수를 선언합니다: var hasError = items.Any(MatchesItem);</td></tr>
+<tr><td>64</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: hasError = items.Any(MatchesItem)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>65</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canAutoRun = IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) &amp;&amp; motionOk &amp;&amp; betOk;</td></tr>
+<tr><td>65</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canAutoRun = IsTargetOk(checks, EN_INTERLOCK_TARGET.AutoRun) &amp;&amp; motionOk &amp;&amp; betOk</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove)</td></tr>
+<tr><td>66</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canManualMove = IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) &amp;&amp; motionOk;</td></tr>
+<tr><td>66</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canManualMove = IsTargetOk(checks, EN_INTERLOCK_TARGET.ManualMove) &amp;&amp; motionOk</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>67</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canLaserOn = IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn);</td></tr>
+<tr><td>67</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canLaserOn = IsTargetOk(checks, EN_INTERLOCK_TARGET.LaserOn)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_SUMMARY(canAutoRun, canManualMove, canLaserOn, hasError, items)</td></tr>
+<tr><td>68</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_SUMMARY(canAutoRun, canManualMove, canLaserOn, hasError, items);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Evaluate&quot;]
+ N0[&quot;L51 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">LocalFunctionStatement <code>EvaluateInterlockRule</code> · L30–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L30-L33">Drilling.Common/InterLock/CInterLockManager.cs:30–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK EvaluateInterlockRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>rule</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>EvaluateRule</td><td>resolved</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK Drilling.Common.InterLock.CInterLockManager.EvaluateRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.Managers.ST_DEVICE_STATUS) · Drilling.Common/InterLock/CInterLockManager.cs:71</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EvaluateRule(rule, status)</td></tr>
+<tr><td>32</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EvaluateRule(rule, status);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">LocalFunctionStatement <code>SelectInterlockItem</code> · L36–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L36-L42">Drilling.Common/InterLock/CInterLockManager.cs:36–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM SelectInterlockItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>check</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>40</td><td>check.Rule.Targets.HasFlag</td><td>resolved</td><td>bool System.Enum.HasFlag(System.Enum)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>38</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return check.Item with { BlocksAutoRun = !check.IsOk &amp;&amp; check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun) };</td></tr>
+<tr><td>40</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = !check.IsOk &amp;&amp; check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: check.Rule.Targets.HasFlag(EN_INTERLOCK_TARGET.AutoRun)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L45">LocalFunctionStatement <code>IsAlarmOn</code> · L45–48</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L45-L48">Drilling.Common/InterLock/CInterLockManager.cs:45–48</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool IsAlarmOn(Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>axis</td><td>Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return axis.AlarmOn;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L59">LocalFunctionStatement <code>MatchesItem</code> · L59–62</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L59-L62">Drilling.Common/InterLock/CInterLockManager.cs:59–62</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesItem(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>item</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return item.Level == EN_INTERLOCK_LEVEL.Error;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L71">MethodDeclaration <code>EvaluateRule</code> · L71–86</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L71-L86">Drilling.Common/InterLock/CInterLockManager.cs:71–86</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK Drilling.Common.InterLock.CInterLockManager.EvaluateRule(Drilling.Common.InterLock.ST_INTERLOCK_RULE, Drilling.Common.Managers.ST_DEVICE_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>rule</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE</td><td>None</td><td>False /</td></tr>
+<tr><td>status</td><td>Drilling.Common.Managers.ST_DEVICE_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L32-L32">Drilling.Common/InterLock/CInterLockManager.cs:32–32</a></td><td>EvaluateRule</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>78</td><td>status.Io.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Motion.ST_IO_STATUS? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Motion.ST_IO_STATUS&gt;.FirstOrDefault&lt;Drilling.Common.Motion.ST_IO_STATUS&gt;(System.Func&lt;Drilling.Common.Motion.ST_IO_STATUS, bool&gt;)</td></tr>
+<tr><td>81</td><td>new ST_INTERLOCK_CHECK</td><td>resolved</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK.ST_INTERLOCK_CHECK(Drilling.Common.InterLock.ST_INTERLOCK_RULE, bool, Drilling.Common.InterLock.ST_INTERLOCK_ITEM) · Drilling.Common/InterLock/CInterLockManager.cs:108</td></tr>
+<tr><td>81</td><td>new ST_INTERLOCK_ITEM</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+<tr><td>85</td><td>new ST_INTERLOCK_CHECK</td><td>resolved</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK.ST_INTERLOCK_CHECK(Drilling.Common.InterLock.ST_INTERLOCK_RULE, bool, Drilling.Common.InterLock.ST_INTERLOCK_ITEM) · Drilling.Common/InterLock/CInterLockManager.cs:108</td></tr>
+<tr><td>85</td><td>new ST_INTERLOCK_ITEM</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.Io.FirstOrDefault(MatchesItem)</td></tr>
+<tr><td>78</td><td>local-declaration</td><td>지역 변수를 선언합니다: var io = status.Io.FirstOrDefault(MatchesItem);</td></tr>
+<tr><td>78</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: io = status.Io.FirstOrDefault(MatchesItem)</td></tr>
+<tr><td>79</td><td>if</td><td>조건에 따라 분기합니다: if (io is null)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_CHECK(rule, false, new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, &quot;UNKNOWN&quot;, $&quot;{rule.IoId} is not registered&quot;))</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, &quot;UNKNOWN&quot;, $&quot;{rule.IoId} is not registered&quot;)</td></tr>
+<tr><td>81</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_CHECK(rule, false, new ST_INTERLOCK_ITEM(rule.Signal, EN_INTERLOCK_LEVEL.Warn, &quot;UNKNOWN&quot;, $&quot;{rule.IoId} is not registered&quot;));</td></tr>
+<tr><td>84</td><td>local-declaration</td><td>지역 변수를 선언합니다: var isOk = io.IsOn == rule.ExpectedOn;</td></tr>
+<tr><td>84</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: isOk = io.IsOn == rule.ExpectedOn</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_CHECK(rule, isOk, new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? &quot;ON&quot; : &quot;OFF&quot;), isOk ? io.Name : rule.NgDetail))</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? &quot;ON&quot; : &quot;OFF&quot;), isOk ? io.Name : rule.NgDetail)</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isOk ? rule.OkState : (io.IsOn ? &quot;ON&quot; : &quot;OFF&quot;)</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: io.IsOn ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isOk ? io.Name : rule.NgDetail</td></tr>
+<tr><td>85</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_CHECK(rule, isOk, new ST_INTERLOCK_ITEM(rule.Signal, isOk ? EN_INTERLOCK_LEVEL.Ok : rule.NgLevel, isOk ? rule.OkState : (io.IsOn ? &quot;ON&quot; : &quot;OFF&quot;), isOk ? io.Name : rule.NgDetail));</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EvaluateRule&quot;]
+ N0[&quot;L79 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L73">LocalFunctionStatement <code>MatchesItem</code> · L73–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L73-L76">Drilling.Common/InterLock/CInterLockManager.cs:73–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesItem(Drilling.Common.Motion.ST_IO_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>channel</td><td>Drilling.Common.Motion.ST_IO_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>75</td><td>channel.Id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>75</td><td>channel.Address.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: channel.Id.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: channel.Address.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>75</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return channel.Id.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase) || channel.Address.Equals(rule.IoId, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L88">MethodDeclaration <code>IsTargetOk</code> · L88–101</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L88-L101">Drilling.Common/InterLock/CInterLockManager.cs:88–101</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.CInterLockManager.IsTargetOk(System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;, Drilling.Common.InterLock.EN_INTERLOCK_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>checks</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>target</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L65-L65">Drilling.Common/InterLock/CInterLockManager.cs:65–65</a></td><td>IsTargetOk</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L66-L66">Drilling.Common/InterLock/CInterLockManager.cs:66–66</a></td><td>IsTargetOk</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L67-L67">Drilling.Common/InterLock/CInterLockManager.cs:67–67</a></td><td>IsTargetOk</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>100</td><td>checks.Where(ShouldIncludeItem).All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;.All&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;(System.Func&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK, bool&gt;)</td></tr>
+<tr><td>100</td><td>checks.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;.Where&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK&gt;(System.Func&lt;Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Where(ShouldIncludeItem).All(IsIsOk)</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: checks.Where(ShouldIncludeItem)</td></tr>
+<tr><td>100</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return checks.Where(ShouldIncludeItem).All(IsIsOk);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L90">LocalFunctionStatement <code>ShouldIncludeItem</code> · L90–93</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L90-L93">Drilling.Common/InterLock/CInterLockManager.cs:90–93</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool ShouldIncludeItem(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>check</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>92</td><td>check.Rule.Targets.HasFlag</td><td>resolved</td><td>bool System.Enum.HasFlag(System.Enum)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: check.Rule.Targets.HasFlag(target)</td></tr>
+<tr><td>92</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return check.Rule.Targets.HasFlag(target);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L95">LocalFunctionStatement <code>IsIsOk</code> · L95–98</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L95-L98">Drilling.Common/InterLock/CInterLockManager.cs:95–98</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool IsIsOk(Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>check</td><td>Drilling.Common.InterLock.CInterLockManager.ST_INTERLOCK_CHECK</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>97</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return check.IsOk;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L103">MethodDeclaration <code>Rule</code> · L103–106</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L103-L106">Drilling.Common/InterLock/CInterLockManager.cs:103–106</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE Drilling.Common.InterLock.CInterLockManager.Rule(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>signal</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>ioId</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>expectedOn</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>okState</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>ngDetail</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>ngLevel</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td><td>None</td><td>False /</td></tr>
+<tr><td>targets</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L16-L16">Drilling.Common/InterLock/CInterLockManager.cs:16–16</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L17-L17">Drilling.Common/InterLock/CInterLockManager.cs:17–17</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L18-L18">Drilling.Common/InterLock/CInterLockManager.cs:18–18</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L19-L19">Drilling.Common/InterLock/CInterLockManager.cs:19–19</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L20-L20">Drilling.Common/InterLock/CInterLockManager.cs:20–20</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L21-L21">Drilling.Common/InterLock/CInterLockManager.cs:21–21</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L22-L22">Drilling.Common/InterLock/CInterLockManager.cs:22–22</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L23-L23">Drilling.Common/InterLock/CInterLockManager.cs:23–23</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L24-L24">Drilling.Common/InterLock/CInterLockManager.cs:24–24</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L25-L25">Drilling.Common/InterLock/CInterLockManager.cs:25–25</a></td><td>Rule</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L26-L26">Drilling.Common/InterLock/CInterLockManager.cs:26–26</a></td><td>Rule</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>105</td><td>new ST_INTERLOCK_RULE</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_RULE.ST_INTERLOCK_RULE(string, string, bool, string, string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, Drilling.Common.InterLock.EN_INTERLOCK_TARGET) · Drilling.Common/InterLock/CInterLockManager.cs:276</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_RULE(signal, ioId, expectedOn, okState, ngDetail, ngLevel, targets)</td></tr>
+<tr><td>105</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_RULE(signal, ioId, expectedOn, okState, ngDetail, ngLevel, targets);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L110">MethodDeclaration <code>EvaluateHeadUse</code> · L110–121</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L110-L121">Drilling.Common/InterLock/CInterLockManager.cs:110–121</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L270-L270">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:270–270</a></td><td>CInterLockManager.EvaluateHeadUse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1386-L1386">Drilling.Common/Station/CStationProcess.cs:1386–1386</a></td><td>CInterLockManager.EvaluateHeadUse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>110</td><td>Enumerable.Range(1, 8).Select(head =&gt; { var key = $&quot;H{head:00}_USE&quot;; var value = parameters?.GetValueOrDefault(key)?.Trim(); var enabled = value?.ToUpperInvariant()is &quot;ON&quot; or &quot;TRUE&quot; or &quot;1&quot; or &quot;YES&quot;; var state = enabled ? &quot;USE&quot; : string.IsNullOrWhiteSpace(value) ? &quot;NOT CONFIGURED&quot; : &quot;NOT USE&quot;; return new ST_INTERLOCK_ITEM($&quot;H{head:00} USE&quot;, enabled …</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.ToArray&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>110</td><td>Enumerable.Range(1, 8).Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Select&lt;int, Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;(System.Func&lt;int, Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;)</td></tr>
+<tr><td>110</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>113</td><td>.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
+<tr><td>113</td><td>.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>114</td><td>.ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>115</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>116</td><td>new ST_INTERLOCK_ITEM</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+<tr><td>116</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(head =&gt; { var key = $&quot;H{head:00}_USE&quot;; var value = parameters?.GetValueOrDefault(key)?.Trim(); var enabled = value?.ToUpperInvariant()is &quot;ON&quot; or &quot;TRUE&quot; or &quot;1&quot; or &quot;YES&quot;; var state = enabled ?…</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(head =&gt; { var key = $&quot;H{head:00}_USE&quot;; var value = parameters?.GetValueOrDefault(key)?.Trim(); var enabled = value?.ToUpperInvariant()is &quot;ON&quot; or &quot;TRUE&quot; or &quot;1&quot; or &quot;YES&quot;; var state = enabled ?…</td></tr>
+<tr><td>112</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = $&quot;H{head:00}_USE&quot;;</td></tr>
+<tr><td>112</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = $&quot;H{head:00}_USE&quot;</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .GetValueOrDefault(key)</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim()</td></tr>
+<tr><td>113</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = parameters?.GetValueOrDefault(key)?.Trim();</td></tr>
+<tr><td>113</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = parameters?.GetValueOrDefault(key)?.Trim()</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToUpperInvariant()</td></tr>
+<tr><td>114</td><td>local-declaration</td><td>지역 변수를 선언합니다: var enabled = value?.ToUpperInvariant()is &quot;ON&quot; or &quot;TRUE&quot; or &quot;1&quot; or &quot;YES&quot;;</td></tr>
+<tr><td>114</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: enabled = value?.ToUpperInvariant()is &quot;ON&quot; or &quot;TRUE&quot; or &quot;1&quot; or &quot;YES&quot;</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>115</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: enabled ? &quot;USE&quot; : string.IsNullOrWhiteSpace(value) ? &quot;NOT CONFIGURED&quot; : &quot;NOT USE&quot;</td></tr>
+<tr><td>115</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? &quot;NOT CONFIGURED&quot; : &quot;NOT USE&quot;</td></tr>
+<tr><td>115</td><td>local-declaration</td><td>지역 변수를 선언합니다: var state = enabled ? &quot;USE&quot; : string.IsNullOrWhiteSpace(value) ? &quot;NOT CONFIGURED&quot; : &quot;NOT USE&quot;;</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: state = enabled ? &quot;USE&quot; : string.IsNullOrWhiteSpace(value) ? &quot;NOT CONFIGURED&quot; : &quot;NOT USE&quot;</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>116</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error</td></tr>
+<tr><td>116</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? &quot;미설정&quot; : value</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERLOCK_ITEM($&quot;H{head:00} USE&quot;, enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, $&quot;{key} = {(string.IsNullOrWhiteSpace(value) ? &quot;미설정&quot; : value)}. AUTO는 HEAD 1~8이 모두 USE여야 합니다.&quot;) { HeadNo = head,…</td></tr>
+<tr><td>116</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_INTERLOCK_ITEM($&quot;H{head:00} USE&quot;, enabled ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, $&quot;{key} = {(string.IsNullOrWhiteSpace(value) ? &quot;미설정&quot; : value)}. AUTO는 HEAD 1~8이 모두 USE여야 합니다.&quot;) { HeadNo = head, Bl</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: HeadNo = head</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = !enabled</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L124">MethodDeclaration <code>EvaluateDoeZ</code> · L124–166</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L124-L166">Drilling.Common/InterLock/CInterLockManager.cs:124–166</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateDoeZ(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Func&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>readSnapshot</td><td>System.Func&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375">Drilling.Common/Station/CStationProcess.cs:1375–1375</a></td><td>CInterLockManager.EvaluateDoeZ</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>126</td><td>new List&lt;ST_INTERLOCK_ITEM&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.List()</td></tr>
+<tr><td>129</td><td>CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING System.Collections.Generic.IEnumerable&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.FirstOrDefault&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;(System.Func&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, bool&gt;)</td></tr>
+<tr><td>129</td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:29</td></tr>
+<tr><td>133</td><td>string.IsNullOrEmpty</td><td>resolved</td><td>bool string.IsNullOrEmpty(string?)</td></tr>
+<tr><td>135</td><td>Add</td><td>resolved</td><td>void Add(bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:132</td></tr>
+<tr><td>139</td><td>ReadDoeZNumber</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadDoeZNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double) · Drilling.Common/InterLock/CInterLockManager.cs:168</td></tr>
+<tr><td>141</td><td>Add</td><td>resolved</td><td>void Add(bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:132</td></tr>
+<tr><td>145</td><td>ReadDoeZNumber</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadDoeZNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double) · Drilling.Common/InterLock/CInterLockManager.cs:168</td></tr>
+<tr><td>147</td><td>Add</td><td>resolved</td><td>void Add(bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:132</td></tr>
+<tr><td>151</td><td>readSnapshot</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt; System.Func&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt;&gt;.Invoke(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING)</td></tr>
+<tr><td>152</td><td>Stopwatch.GetElapsedTime</td><td>resolved</td><td>System.TimeSpan System.Diagnostics.Stopwatch.GetElapsedTime(long)</td></tr>
+<tr><td>153</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(long)</td></tr>
+<tr><td>156</td><td>Add</td><td>resolved</td><td>void Add(bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:132</td></tr>
+<tr><td>161</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>161</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>162</td><td>Add</td><td>resolved</td><td>void Add(bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:132</td></tr>
+<tr><td>162</td><td>FormattableString.Invariant</td><td>resolved</td><td>string System.FormattableString.Invariant(System.FormattableString)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>126</td><td>local-declaration</td><td>지역 변수를 선언합니다: var items = new List&lt;ST_INTERLOCK_ITEM&gt;();</td></tr>
+<tr><td>126</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: items = new List&lt;ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>127</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: head = 1</td></tr>
+<tr><td>127</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var head = 1; head &lt;= 8; head++)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis =&gt; axis.AxisName == &quot;Z&quot; &amp;&amp; axis.IsUsed)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head)</td></tr>
+<tr><td>129</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axis = CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis =&gt; axis.AxisName == &quot;Z&quot; &amp;&amp; axis.IsUsed);</td></tr>
+<tr><td>129</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axis = CScannerAxisConfiguration.BuildAxisDefinitions(parameters, head).FirstOrDefault(axis =&gt; axis.AxisName == &quot;Z&quot; &amp;&amp; axis.IsUsed)</td></tr>
+<tr><td>130</td><td>if</td><td>조건에 따라 분기합니다: if (axis.HeadNo == 0)</td></tr>
+<tr><td>131</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError)</td></tr>
+<tr><td>133</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrEmpty(axis.ConfigurationError))</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, &quot;AXIS NG&quot;, axis.ConfigurationError)</td></tr>
+<tr><td>136</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoeZNumber(parameters, $&quot;H{head:00}_DOE_Z_POSITION&quot;, out var target)</td></tr>
+<tr><td>139</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadDoeZNumber(parameters, $&quot;H{head:00}_DOE_Z_POSITION&quot;, out var target))</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, &quot;TARGET NG&quot;, &quot;Recipe의 DOE Z 목표 위치를 확인해 주세요.&quot;)</td></tr>
+<tr><td>142</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoeZNumber(parameters, &quot;DOE_Z_TOLERANCE&quot;, out var tolerance)</td></tr>
+<tr><td>145</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadDoeZNumber(parameters, &quot;DOE_Z_TOLERANCE&quot;, out var tolerance) || tolerance &lt; 0)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, &quot;SETTING NG&quot;, &quot;Setting의 DOE Z Tolerance는 0 이상의 유한한 값이어야 합니다.&quot;)</td></tr>
+<tr><td>148</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: readSnapshot(axis)</td></tr>
+<tr><td>151</td><td>local-declaration</td><td>지역 변수를 선언합니다: var snapshot = readSnapshot(axis);</td></tr>
+<tr><td>151</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: snapshot = readSnapshot(axis)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp)</td></tr>
+<tr><td>152</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: snapshot.CollectedTimestamp &gt; 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt</td></tr>
+<tr><td>152</td><td>local-declaration</td><td>지역 변수를 선언합니다: var age = snapshot.CollectedTimestamp &gt; 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt;</td></tr>
+<tr><td>152</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: age = snapshot.CollectedTimestamp &gt; 0 ? Stopwatch.GetElapsedTime(snapshot.CollectedTimestamp) : DateTimeOffset.UtcNow - snapshot.UpdatedAt</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)</td></tr>
+<tr><td>153</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fresh = snapshot.UpdatedAt != default &amp;&amp; age &gt;= TimeSpan.Zero &amp;&amp; age &lt;= TimeSpan.FromSeconds(5);</td></tr>
+<tr><td>153</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fresh = snapshot.UpdatedAt != default &amp;&amp; age &gt;= TimeSpan.Zero &amp;&amp; age &lt;= TimeSpan.FromSeconds(5)</td></tr>
+<tr><td>154</td><td>if</td><td>조건에 따라 분기합니다: if (snapshot.State != &quot;OK&quot; || snapshot.Value is not { } status || !fresh)</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(false, snapshot.State == &quot;OK&quot; ? &quot;STALE&quot; : snapshot.State, $&quot;{axis.AxisReference}: 유효한 현재 위치 스냅샷이 필요합니다. {snapshot.Detail}&quot;)</td></tr>
+<tr><td>156</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: snapshot.State == &quot;OK&quot; ? &quot;STALE&quot; : snapshot.State</td></tr>
+<tr><td>157</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>160</td><td>local-declaration</td><td>지역 변수를 선언합니다: var position = status.PositionFeedback;</td></tr>
+<tr><td>160</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: position = status.PositionFeedback</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(position)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(position - target)</td></tr>
+<tr><td>161</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ready = double.IsFinite(position) &amp;&amp; Math.Abs(position - target) &lt;= tolerance + 1e-9;</td></tr>
+<tr><td>161</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ready = double.IsFinite(position) &amp;&amp; Math.Abs(position - target) &lt;= tolerance + 1e-9</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(ready, ready ? &quot;OK&quot; : &quot;POSITION NG&quot;, FormattableString.Invariant($&quot;{axis.AxisReference}: Current {position:0.######} mm / Recipe {target:0.######} mm; Tolerance ±{tolerance:0.######} mm&quot;))</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($&quot;{axis.AxisReference}: Current {position:0.######} mm / Recipe {target:0.######} mm; Tolerance ±{tolerance:0.######} mm&quot;)</td></tr>
+<tr><td>162</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ready ? &quot;OK&quot; : &quot;POSITION NG&quot;</td></tr>
+<tr><td>165</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return items;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EvaluateDoeZ&quot;]
+ N0[&quot;L127 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L130 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L133 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L139 if&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L145 if&quot;]
+ N0 --&gt;|포함| N4
+ N5[&quot;L154 if&quot;]
+ N0 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L132">LocalFunctionStatement <code>Add</code> · L132–132</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L132-L132">Drilling.Common/InterLock/CInterLockManager.cs:132–132</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Add(bool, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>ready</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>state</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>detail</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L135-L135">Drilling.Common/InterLock/CInterLockManager.cs:135–135</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L141-L141">Drilling.Common/InterLock/CInterLockManager.cs:141–141</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L147-L147">Drilling.Common/InterLock/CInterLockManager.cs:147–147</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L156-L156">Drilling.Common/InterLock/CInterLockManager.cs:156–156</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L162-L162">Drilling.Common/InterLock/CInterLockManager.cs:162–162</a></td><td>Add</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>132</td><td>items.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Add(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>132</td><td>new</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: Group = &quot;HEAD&quot;</td></tr>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: HeadNo = head</td></tr>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = !ready</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new(&quot;DOE Z Position&quot;, ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, detail) { Group = &quot;HEAD&quot;, HeadNo = head, BlocksAutoRun = !ready })</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;DOE Z Position&quot;, ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, state, detail) { Group = &quot;HEAD&quot;, HeadNo = head, BlocksAutoRun = !ready }</td></tr>
+<tr><td>132</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L168">MethodDeclaration <code>ReadDoeZNumber</code> · L168–172</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L168-L172">Drilling.Common/InterLock/CInterLockManager.cs:168–172</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadDoeZNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L139-L139">Drilling.Common/InterLock/CInterLockManager.cs:139–139</a></td><td>ReadDoeZNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L145-L145">Drilling.Common/InterLock/CInterLockManager.cs:145–145</a></td><td>ReadDoeZNumber</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>171</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>171</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>171</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>170</td><td>assignment</td><td>값을 대상에 대입합니다: value = 0</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var text)</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value)</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>171</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue(key, out var text) &amp;&amp; double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) &amp;&amp; double.IsFinite(value);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L176">FieldDeclaration <code>OpticPositionTolerance</code> · L176–176</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L176-L176">Drilling.Common/InterLock/CInterLockManager.cs:176–176</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.InterLock.CInterLockManager.OpticPositionTolerance</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>176</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: OpticPositionTolerance = 0.01</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L177">MethodDeclaration <code>EvaluateOptics</code> · L177–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L177-L241">Drilling.Common/InterLock/CInterLockManager.cs:177–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateOptics(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt;&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_BET_STATUS&gt;&gt;, System.Func&lt;int, Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>devices</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>laser</td><td>System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>bet</td><td>System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_BET_STATUS&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>attenuator</td><td>System.Func&lt;int, Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375">Drilling.Common/Station/CStationProcess.cs:1375–1375</a></td><td>CInterLockManager.EvaluateOptics</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>185</td><td>new List&lt;ST_INTERLOCK_ITEM&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.List()</td></tr>
+<tr><td>188</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>188</td><td>use.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>188</td><td>use.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>193</td><td>Registered</td><td>resolved</td><td>bool Registered(Drilling.Common.Interface.EN_EQP_MODULE) · Drilling.Common/InterLock/CInterLockManager.cs:192</td></tr>
+<tr><td>195</td><td>laser</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt; System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt;&gt;.Invoke(int)</td></tr>
+<tr><td>198</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>199</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>200</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>203</td><td>Registered</td><td>resolved</td><td>bool Registered(Drilling.Common.Interface.EN_EQP_MODULE) · Drilling.Common/InterLock/CInterLockManager.cs:192</td></tr>
+<tr><td>205</td><td>ReadOpticNumber</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double) · Drilling.Common/InterLock/CInterLockManager.cs:243</td></tr>
+<tr><td>205</td><td>ReadOpticNumber</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double) · Drilling.Common/InterLock/CInterLockManager.cs:243</td></tr>
+<tr><td>206</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>209</td><td>bet</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_BET_STATUS&gt; System.Func&lt;int, Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_BET_STATUS&gt;&gt;.Invoke(int)</td></tr>
+<tr><td>211</td><td>NearOpticPosition</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.NearOpticPosition(double, double) · Drilling.Common/InterLock/CInterLockManager.cs:249</td></tr>
+<tr><td>211</td><td>NearOpticPosition</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.NearOpticPosition(double, double) · Drilling.Common/InterLock/CInterLockManager.cs:249</td></tr>
+<tr><td>212</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>215</td><td>FormattableString.Invariant</td><td>resolved</td><td>string System.FormattableString.Invariant(System.FormattableString)</td></tr>
+<tr><td>221</td><td>Registered</td><td>resolved</td><td>bool Registered(Drilling.Common.Interface.EN_EQP_MODULE) · Drilling.Common/InterLock/CInterLockManager.cs:192</td></tr>
+<tr><td>223</td><td>ReadOpticNumber</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double) · Drilling.Common/InterLock/CInterLockManager.cs:243</td></tr>
+<tr><td>224</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>227</td><td>attenuator</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT System.Func&lt;int, Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT&gt;.Invoke(int)</td></tr>
+<tr><td>229</td><td>status.IsFresh</td><td>resolved</td><td>bool Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT.IsFresh(System.TimeSpan) · Drilling.Common/Interface/CInterfaceManager.cs:2495</td></tr>
+<tr><td>229</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(long)</td></tr>
+<tr><td>229</td><td>current.CommandState.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>229</td><td>current.CommandState.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>229</td><td>NearOpticPosition</td><td>resolved</td><td>bool Drilling.Common.InterLock.CInterLockManager.NearOpticPosition(double, double) · Drilling.Common/InterLock/CInterLockManager.cs:249</td></tr>
+<tr><td>230</td><td>Add</td><td>resolved</td><td>void Add(string, bool, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:191</td></tr>
+<tr><td>233</td><td>FormattableString.Invariant</td><td>resolved</td><td>string System.FormattableString.Invariant(System.FormattableString)</td></tr>
+<tr><td>234</td><td>status.IsFresh</td><td>resolved</td><td>bool Drilling.Common.Interface.ST_ATTENUATOR_STATUS_SNAPSHOT.IsFresh(System.TimeSpan) · Drilling.Common/Interface/CInterfaceManager.cs:2495</td></tr>
+<tr><td>234</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(long)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>185</td><td>local-declaration</td><td>지역 변수를 선언합니다: var items = new List&lt;ST_INTERLOCK_ITEM&gt;();</td></tr>
+<tr><td>185</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: items = new List&lt;ST_INTERLOCK_ITEM&gt;()</td></tr>
+<tr><td>186</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: head = 1</td></tr>
+<tr><td>186</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var head = 1; head &lt;= 8; head++)</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue($&quot;H{head:00}_USE&quot;, out var use)</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: use.Trim().ToUpperInvariant()</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: use.Trim()</td></tr>
+<tr><td>188</td><td>if</td><td>조건에 따라 분기합니다: if (parameters.TryGetValue($&quot;H{head:00}_USE&quot;, out var use) &amp;&amp; use.Trim().ToUpperInvariant()is &quot;OFF&quot; or &quot;FALSE&quot; or &quot;0&quot; or &quot;NO&quot;)</td></tr>
+<tr><td>189</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>190</td><td>local-declaration</td><td>지역 변수를 선언합니다: var name = $&quot;H{head:00}&quot;;</td></tr>
+<tr><td>190</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: name = $&quot;H{head:00}&quot;</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.TalonLaser)</td></tr>
+<tr><td>193</td><td>if</td><td>조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.TalonLaser))</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: laser(head - 1)</td></tr>
+<tr><td>195</td><td>local-declaration</td><td>지역 변수를 선언합니다: var laserStatus = laser(head - 1);</td></tr>
+<tr><td>195</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: laserStatus = laser(head - 1)</td></tr>
+<tr><td>196</td><td>local-declaration</td><td>지역 변수를 선언합니다: var laserValid = laserStatus is { State: &quot;OK&quot;, Value: not null };</td></tr>
+<tr><td>196</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: laserValid = laserStatus is { State: &quot;OK&quot;, Value: not null }</td></tr>
+<tr><td>197</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = laserStatus.Value;</td></tr>
+<tr><td>197</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = laserStatus.Value</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(&quot;Laser ON&quot;, laserValid &amp;&amp; value!.PowerOn, laserValid ? $&quot;Laser={(value!.PowerOn ? &quot;ON&quot; : &quot;OFF&quot;)}&quot; : laserStatus.Detail, laserValid ? &quot;OFF&quot; : laserStatus.State)</td></tr>
+<tr><td>198</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? $&quot;Laser={(value!.PowerOn ? &quot;ON&quot; : &quot;OFF&quot;)}&quot; : laserStatus.Detail</td></tr>
+<tr><td>198</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value!.PowerOn ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+<tr><td>198</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? &quot;OFF&quot; : laserStatus.State</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(&quot;Laser Gate&quot;, laserValid &amp;&amp; value!.GateOn, laserValid ? $&quot;Gate={(value!.GateOn ? &quot;OPEN&quot; : &quot;CLOSE&quot;)}&quot; : laserStatus.Detail, laserValid ? &quot;CLOSE&quot; : laserStatus.State)</td></tr>
+<tr><td>199</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? $&quot;Gate={(value!.GateOn ? &quot;OPEN&quot; : &quot;CLOSE&quot;)}&quot; : laserStatus.Detail</td></tr>
+<tr><td>199</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value!.GateOn ? &quot;OPEN&quot; : &quot;CLOSE&quot;</td></tr>
+<tr><td>199</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? &quot;CLOSE&quot; : laserStatus.State</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(&quot;Laser Shutter&quot;, laserValid &amp;&amp; value!.ShutterOpen, laserValid ? $&quot;Shutter={(value!.ShutterOpen ? &quot;OPEN&quot; : &quot;CLOSE&quot;)}&quot; : laserStatus.Detail, laserValid ? &quot;CLOSE&quot; : laserStatus.State)</td></tr>
+<tr><td>200</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? $&quot;Shutter={(value!.ShutterOpen ? &quot;OPEN&quot; : &quot;CLOSE&quot;)}&quot; : laserStatus.Detail</td></tr>
+<tr><td>200</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value!.ShutterOpen ? &quot;OPEN&quot; : &quot;CLOSE&quot;</td></tr>
+<tr><td>200</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: laserValid ? &quot;CLOSE&quot; : laserStatus.State</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.Bet)</td></tr>
+<tr><td>203</td><td>if</td><td>조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.Bet))</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $&quot;{name}_BET_MAGNIFICATION&quot;, out var targetMag)</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $&quot;{name}_BET_DIVERGENCE&quot;, out var targetDiv)</td></tr>
+<tr><td>205</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadOpticNumber(parameters, $&quot;{name}_BET_MAGNIFICATION&quot;, out var targetMag) || !ReadOpticNumber(parameters, $&quot;{name}_BET_DIVERGENCE&quot;, out var targetDiv))</td></tr>
+<tr><td>206</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(&quot;BET Position&quot;, false, &quot;레시피의 BET MAG/DIV 목표값을 확인해 주세요.&quot;, &quot;TARGET NG&quot;)</td></tr>
+<tr><td>207</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: bet(head - 1)</td></tr>
+<tr><td>209</td><td>local-declaration</td><td>지역 변수를 선언합니다: var status = bet(head - 1);</td></tr>
+<tr><td>209</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: status = bet(head - 1)</td></tr>
+<tr><td>210</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = status.Value;</td></tr>
+<tr><td>210</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = status.Value</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentMagnification, targetMag)</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentDivergence, targetDiv)</td></tr>
+<tr><td>211</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ready = status.State == &quot;OK&quot; &amp;&amp; current is { CommOk: true, AlarmOn: false, IsMoving: false, LastError: EN_BET_ERROR.Ok } &amp;&amp; NearOpticPosition(current.CurrentMagnification, targetMag) &amp;&amp; NearOpticPosition(current.CurrentDiverge</td></tr>
+<tr><td>211</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ready = status.State == &quot;OK&quot; &amp;&amp; current is { CommOk: true, AlarmOn: false, IsMoving: false, LastError: EN_BET_ERROR.Ok } &amp;&amp; NearOpticPosition(current.CurrentMagnification, targetMag) &amp;&amp; NearOpticPosition(current.CurrentDivergence,</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add( &quot;BET Position&quot;, ready, current is null ? status.Detail : FormattableString.Invariant($&quot;MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0…</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($&quot;MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0.###}; Tolerance ±{OpticPositionTolerance}; Moving={current.Is…</td></tr>
+<tr><td>215</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current is null ? status.Detail : FormattableString.Invariant($&quot;MAG {current.CurrentMagnification:0.###} / Recipe {targetMag:0.###}, DIV {current.CurrentDivergence:0.###} / Recipe {targetDiv:0.###}; Tolerance ±{OpticPositionTolera</td></tr>
+<tr><td>216</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status.State == &quot;OK&quot; ? &quot;POS NG&quot; : status.State</td></tr>
+<tr><td>221</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Registered(EN_EQP_MODULE.Attenuator)</td></tr>
+<tr><td>221</td><td>if</td><td>조건에 따라 분기합니다: if (Registered(EN_EQP_MODULE.Attenuator))</td></tr>
+<tr><td>223</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadOpticNumber(parameters, $&quot;{name}_ATTENUATOR_POSITION&quot;, out var targetAtt)</td></tr>
+<tr><td>223</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadOpticNumber(parameters, $&quot;{name}_ATTENUATOR_POSITION&quot;, out var targetAtt))</td></tr>
+<tr><td>224</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add(&quot;ATT Position&quot;, false, &quot;레시피의 ATT 목표각도를 확인해 주세요.&quot;, &quot;TARGET NG&quot;)</td></tr>
+<tr><td>225</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: attenuator(head - 1)</td></tr>
+<tr><td>227</td><td>local-declaration</td><td>지역 변수를 선언합니다: var status = attenuator(head - 1);</td></tr>
+<tr><td>227</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: status = attenuator(head - 1)</td></tr>
+<tr><td>228</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = status?.Value;</td></tr>
+<tr><td>228</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = status?.Value</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.IsFresh(TimeSpan.FromSeconds(2))</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2)</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.CommandState.Trim().ToUpperInvariant()</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.CommandState.Trim()</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NearOpticPosition(current.CurrentPosition, targetAtt)</td></tr>
+<tr><td>229</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ready = status is { IsValid: true, IsInPosition: true } &amp;&amp; status.IsFresh(TimeSpan.FromSeconds(2)) &amp;&amp; current is not null &amp;&amp; current.CommandState.Trim().ToUpperInvariant()is not (&quot;MOVING&quot; or &quot;HOMING&quot; or &quot;BUSY&quot;) &amp;&amp; NearOpticPos</td></tr>
+<tr><td>229</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ready = status is { IsValid: true, IsInPosition: true } &amp;&amp; status.IsFresh(TimeSpan.FromSeconds(2)) &amp;&amp; current is not null &amp;&amp; current.CommandState.Trim().ToUpperInvariant()is not (&quot;MOVING&quot; or &quot;HOMING&quot; or &quot;BUSY&quot;) &amp;&amp; NearOpticPositio</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Add( &quot;ATT Position&quot;, ready, current is null ? status?.Detail ?? &quot;ATT가 등록되지 않았습니다.&quot; : FormattableString.Invariant($&quot;Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}…</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($&quot;Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}°; InPosition={status!.IsInPosition}, State={current.CommandState}&quot;)</td></tr>
+<tr><td>233</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current is null ? status?.Detail ?? &quot;ATT가 등록되지 않았습니다.&quot; : FormattableString.Invariant($&quot;Current {current.CurrentPosition:0.###}° / Recipe {targetAtt:0.###}°; Tolerance ±{OpticPositionTolerance}°; InPosition={status!.IsInPosition},</td></tr>
+<tr><td>234</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.IsFresh(TimeSpan.FromSeconds(2))</td></tr>
+<tr><td>234</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2)</td></tr>
+<tr><td>234</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status is { IsValid: true } &amp;&amp; !status.IsFresh(TimeSpan.FromSeconds(2)) ? &quot;STALE&quot; : status is { IsValid: true } ? &quot;POS NG&quot; : status?.State ?? &quot;N/C&quot;</td></tr>
+<tr><td>234</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status is { IsValid: true } ? &quot;POS NG&quot; : status?.State ?? &quot;N/C&quot;</td></tr>
+<tr><td>240</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return items;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EvaluateOptics&quot;]
+ N0[&quot;L186 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L188 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L193 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L203 if&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L205 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L207 else&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L221 if&quot;]
+ N0 --&gt;|포함| N6
+ N7[&quot;L223 if&quot;]
+ N6 --&gt;|포함| N7
+ N8[&quot;L225 else&quot;]
+ N7 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L191">LocalFunctionStatement <code>Add</code> · L191–191</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L191-L191">Drilling.Common/InterLock/CInterLockManager.cs:191–191</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Add(string, bool, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>signal</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>ready</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>detail</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>state</td><td>string</td><td>None</td><td>True / &quot;NOT READY&quot;</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L198-L198">Drilling.Common/InterLock/CInterLockManager.cs:198–198</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L199-L199">Drilling.Common/InterLock/CInterLockManager.cs:199–199</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L200-L200">Drilling.Common/InterLock/CInterLockManager.cs:200–200</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L206-L206">Drilling.Common/InterLock/CInterLockManager.cs:206–206</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L212-L217">Drilling.Common/InterLock/CInterLockManager.cs:212–217</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L224-L224">Drilling.Common/InterLock/CInterLockManager.cs:224–224</a></td><td>Add</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L230-L235">Drilling.Common/InterLock/CInterLockManager.cs:230–235</a></td><td>Add</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>191</td><td>items.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Add(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
+<tr><td>191</td><td>new</td><td>resolved</td><td>Drilling.Common.InterLock.ST_INTERLOCK_ITEM.ST_INTERLOCK_ITEM(string, Drilling.Common.InterLock.EN_INTERLOCK_LEVEL, string, string) · Drilling.Common/InterLock/CInterLockManager.cs:269</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>191</td><td>assignment</td><td>값을 대상에 대입합니다: HeadNo = head</td></tr>
+<tr><td>191</td><td>assignment</td><td>값을 대상에 대입합니다: BlocksAutoRun = !ready</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new($&quot;{name} {signal}&quot;, ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, ready ? &quot;READY&quot; : state, detail) { HeadNo = head, BlocksAutoRun = !ready })</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new($&quot;{name} {signal}&quot;, ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error, ready ? &quot;READY&quot; : state, detail) { HeadNo = head, BlocksAutoRun = !ready }</td></tr>
+<tr><td>191</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ready ? EN_INTERLOCK_LEVEL.Ok : EN_INTERLOCK_LEVEL.Error</td></tr>
+<tr><td>191</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ready ? &quot;READY&quot; : state</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L192">LocalFunctionStatement <code>Registered</code> · L192–192</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L192-L192">Drilling.Common/InterLock/CInterLockManager.cs:192–192</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Registered(Drilling.Common.Interface.EN_EQP_MODULE)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>module</td><td>Drilling.Common.Interface.EN_EQP_MODULE</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L193-L193">Drilling.Common/InterLock/CInterLockManager.cs:193–193</a></td><td>Registered</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L203-L203">Drilling.Common/InterLock/CInterLockManager.cs:203–203</a></td><td>Registered</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L221-L221">Drilling.Common/InterLock/CInterLockManager.cs:221–221</a></td><td>Registered</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>192</td><td>devices.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;.Any&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;(System.Func&lt;Drilling.Common.Interface.ST_INTERFACE_DATA, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: devices.Any(device =&gt; device.Device == module &amp;&amp; device.Number == head - 1)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">MethodDeclaration <code>ReadOpticNumber</code> · L243–247</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L243-L247">Drilling.Common/InterLock/CInterLockManager.cs:243–247</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.CInterLockManager.ReadOpticNumber(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205">Drilling.Common/InterLock/CInterLockManager.cs:205–205</a></td><td>ReadOpticNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205">Drilling.Common/InterLock/CInterLockManager.cs:205–205</a></td><td>ReadOpticNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L223-L223">Drilling.Common/InterLock/CInterLockManager.cs:223–223</a></td><td>ReadOpticNumber</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>246</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>246</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>246</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>245</td><td>assignment</td><td>값을 대상에 대입합니다: value = 0</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var text)</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value)</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>246</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue(key, out var text) &amp;&amp; double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) &amp;&amp; double.IsFinite(value);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L249">MethodDeclaration <code>NearOpticPosition</code> · L249–249</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L249-L249">Drilling.Common/InterLock/CInterLockManager.cs:249–249</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.CInterLockManager.NearOpticPosition(double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.CInterLockManager</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>current</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>target</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211">Drilling.Common/InterLock/CInterLockManager.cs:211–211</a></td><td>NearOpticPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211">Drilling.Common/InterLock/CInterLockManager.cs:211–211</a></td><td>NearOpticPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L229-L229">Drilling.Common/InterLock/CInterLockManager.cs:229–229</a></td><td>NearOpticPosition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>249</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>249</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(current)</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(current - target)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L256">EnumMemberDeclaration <code>None</code> · L256–256</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L256-L256">Drilling.Common/InterLock/CInterLockManager.cs:256–256</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.None</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">EnumMemberDeclaration <code>AutoRun</code> · L257–257</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L257-L257">Drilling.Common/InterLock/CInterLockManager.cs:257–257</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.AutoRun</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L258">EnumMemberDeclaration <code>ManualMove</code> · L258–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L258-L258">Drilling.Common/InterLock/CInterLockManager.cs:258–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.ManualMove</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L259">EnumMemberDeclaration <code>LaserOn</code> · L259–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L259-L259">Drilling.Common/InterLock/CInterLockManager.cs:259–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET.LaserOn</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_TARGET</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">EnumMemberDeclaration <code>Ok</code> · L264–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L264-L264">Drilling.Common/InterLock/CInterLockManager.cs:264–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Ok</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L265">EnumMemberDeclaration <code>Warn</code> · L265–265</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L265-L265">Drilling.Common/InterLock/CInterLockManager.cs:265–265</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Warn</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L266">EnumMemberDeclaration <code>Error</code> · L266–266</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L266-L266">Drilling.Common/InterLock/CInterLockManager.cs:266–266</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL.Error</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.EN_INTERLOCK_LEVEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">PropertyDeclaration <code>Group</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271">Drilling.Common/InterLock/CInterLockManager.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">GetAccessorDeclaration <code>get_Group</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271">Drilling.Common/InterLock/CInterLockManager.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">InitAccessorDeclaration <code>set_Group</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271">Drilling.Common/InterLock/CInterLockManager.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.Group.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">PropertyDeclaration <code>BlocksAutoRun</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272">Drilling.Common/InterLock/CInterLockManager.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">GetAccessorDeclaration <code>get_BlocksAutoRun</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272">Drilling.Common/InterLock/CInterLockManager.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">InitAccessorDeclaration <code>set_BlocksAutoRun</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272">Drilling.Common/InterLock/CInterLockManager.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.BlocksAutoRun.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">PropertyDeclaration <code>HeadNo</code> · L273–273</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273">Drilling.Common/InterLock/CInterLockManager.cs:273–273</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int? Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">GetAccessorDeclaration <code>get_HeadNo</code> · L273–273</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273">Drilling.Common/InterLock/CInterLockManager.cs:273–273</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int? Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">InitAccessorDeclaration <code>set_HeadNo</code> · L273–273</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273">Drilling.Common/InterLock/CInterLockManager.cs:273–273</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.InterLock.ST_INTERLOCK_ITEM.HeadNo.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.InterLock.ST_INTERLOCK_ITEM</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/InterLock/CInterLockManager.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

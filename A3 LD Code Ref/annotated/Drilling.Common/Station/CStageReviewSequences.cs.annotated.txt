@@ -1,0 +1,1846 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Station/CStageReviewSequences.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Collections.Concurrent;
+L000001 | using System.Collections.Concurrent; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000002 | using System.Diagnostics; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 | using System.Globalization; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000005 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000006 | using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000007 | using Drilling.Common.Alarm; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Station;
+L000009 | namespace Drilling.Common.Station; ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 | /// <summary>One shared Process Move / IOF implementation. UI observes Actions and cached signals only.</summary> ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed partial class CStageReviewSequences(CInterfaceManager interfaces, TimeSpan? signalTimeout = null)
+L000011 | public sealed partial class CStageReviewSequences(CInterfaceManager interfaces, TimeSpan? signalTimeout = null) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: MoveAble = "HANDSHAKE_STG_REVIEW_ABLE_SDC" / 변수의 초기값을 지정합니다: MoveComplete = "HANDSHAKE_STG_REVIEW_COMPLETE_SDC"
+L000013 |     public const string MoveAble = "HANDSHAKE_STG_REVIEW_ABLE_SDC", MoveComplete = "HANDSHAKE_STG_REVIEW_COMPLETE_SDC"; ⟦EOL⟧
+// 해설 L14: 변수의 초기값을 지정합니다: MoveStart = "HANDSHAKE_PRC_REVIEW_MOVE_START" / 변수의 초기값을 지정합니다: MoveAck = "HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING"
+L000014 |     public const string MoveStart = "HANDSHAKE_PRC_REVIEW_MOVE_START", MoveAck = "HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING"; ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: MoveStop = "PROCESS_REVIEW_STOP_SIGNAL"
+L000015 |     public const string MoveStop = "PROCESS_REVIEW_STOP_SIGNAL"; ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: PermitX = "IPS_REVIEW_CONTROL_MODE_X" / 변수의 초기값을 지정합니다: PermitY = "IPS_REVIEW_CONTROL_MODE_Y"
+L000016 |     public const string PermitX = "IPS_REVIEW_CONTROL_MODE_X", PermitY = "IPS_REVIEW_CONTROL_MODE_Y"; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: IofStart = "HANDSHAKE_PRC_IOF_START_REQUEST" / 변수의 초기값을 지정합니다: IofComplete = "HANDSHAKE_STG_IOF_COMPLETE"
+L000017 |     public const string IofStart = "HANDSHAKE_PRC_IOF_START_REQUEST", IofComplete = "HANDSHAKE_STG_IOF_COMPLETE"; ⟦EOL⟧
+// 해설 L18: 변수의 초기값을 지정합니다: IofAck = "HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE" / 변수의 초기값을 지정합니다: IofRead = "IPS_IOF_READ_COMPLETE" / 변수의 초기값을 지정합니다: IofRun = "IPS_IOF_BUFFER_RUN_COMPLETE"
+L000018 |     public const string IofAck = "HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE", IofRead = "IPS_IOF_READ_COMPLETE", IofRun = "IPS_IOF_BUFFER_RUN_COMPLETE"; ⟦EOL⟧
+// 해설 L19: 변수의 초기값을 지정합니다: MoveActions = ["MOVE_TARGETS", "MOVE_SETTLE", "MOVE_RELEASE", "MOVE_XREADY"]
+L000019 |     public static readonly string[] MoveActions = ["MOVE_TARGETS", "MOVE_SETTLE", "MOVE_RELEASE", "MOVE_XREADY"]; ⟦EOL⟧
+// 해설 L20: 변수의 초기값을 지정합니다: IofActions = ["IOF_PLAN", "IOF_SIGNALS_CLEAR"]
+L000020 |     public static readonly string[] IofActions = ["IOF_PLAN", "IOF_SIGNALS_CLEAR"]; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000021 |     public CSequenceActionStatusStore Actions { get; } = new(); ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Action<Drilling.Common.Alarm.CSequenceFailureException>? Drilling.Common.Station.CStageReviewSequences.Failed
+L000022 |     public event Action<CSequenceFailureException>? Failed; ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: failure.Publish(Failed)
+L000023 |     internal void ReportFailure(CSequenceFailureException failure) => failure.Publish(Failed); ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _owners = new()
+L000025 |     private readonly ConcurrentDictionary<int, byte> _owners = new(); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _cleanupFailures = new()
+L000026 |     private readonly ConcurrentDictionary<int, byte> _cleanupFailures = new(); ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _failedSessions = new()
+L000027 |     private readonly ConcurrentDictionary<int, Session> _failedSessions = new(); ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _recovery = new(1, 1)
+L000028 |     private readonly SemaphoreSlim _recovery = new(1, 1); ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _moveStops = new()
+L000029 |     private readonly ConcurrentDictionary<int, CancellationTokenSource> _moveStops = new(); ⟦EOL⟧
+// 해설 L30: 변수의 초기값을 지정합니다: _automaticReplies = 1
+L000030 |     private int _automaticReplies = 1; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Station.CStageReviewSequences._event
+L000031 |     private long _event; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STAGE_IOF_PLAN? Drilling.Common.Station.CStageReviewSequences._lastPlan
+L000032 |     private ST_STAGE_IOF_PLAN? _lastPlan; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Station.CStageReviewSequences._zeroSegments
+L000033 |     private int _zeroSegments; ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _zeroSegments)
+L000034 |     public int SimulatedZeroLineCompletedSegments => Volatile.Read(ref _zeroSegments); ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.SetSimulatedZeroLineCompletedSegments(int)
+L000036 |     public void SetSimulatedZeroLineCompletedSegments(int count) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 SetSimulatedZeroLineCompletedSegments.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 지역 변수를 선언합니다: var plan = LastIofPlan; / 변수의 초기값을 지정합니다: plan = LastIofPlan
+L000038 |         var plan = LastIofPlan; ⟦EOL⟧
+// 해설 L39: 조건에 따라 분기합니다: if (plan is not { ZeroLine: true } || count < 0 || count > plan.Points.Count)
+L000039 |         if (plan is not { ZeroLine: true } || count < 0 || count > plan.Points.Count) ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("준비된 0선 계획의 0~N 범위만 입력할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("준비된 0선 계획의 0~N 범위만 입력할 수 있습니다.");
+L000040 |             throw new InvalidOperationException("준비된 0선 계획의 0~N 범위만 입력할 수 있습니다."); ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.Single(item => item.Id == "IOF_SETTING") / 지역 변수를 선언합니다: var row = interfaces.Melsec.Map.Single(item => item.Id == "IOF_SETTING"); / 변수의 초기값을 지정합니다: row = interfaces.Melsec.Map.Single(item => item.Id == "IOF_SETTING")
+L000041 |         var row = interfaces.Melsec.Map.Single(item => item.Id == "IOF_SETTING"); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo) / 조건에 따라 분기합니다: if (!interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo))
+L000042 |         if (!interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)) ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC 시뮬레이션에서만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC 시뮬레이션에서만 변경할 수 있습니다.");
+L000043 |             throw new InvalidOperationException("MELSEC 시뮬레이션에서만 변경할 수 있습니다."); ⟦EOL⟧
+// 해설 L44: 조건에 따라 분기합니다: if (count < SimulatedZeroLineCompletedSegments)
+L000044 |         if (count < SimulatedZeroLineCompletedSegments) ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("완료 구간 수는 같은 실행 중 줄일 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("완료 구간 수는 같은 실행 중 줄일 수 없습니다.");
+L000045 |             throw new InvalidOperationException("완료 구간 수는 같은 실행 중 줄일 수 없습니다."); ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _zeroSegments, count)
+L000046 |         Volatile.Write(ref _zeroSegments, count); ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 SetSimulatedZeroLineCompletedSegments.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.ClearZeroLineSimulation()
+L000049 |     public void ClearZeroLineSimulation() ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 ClearZeroLineSimulation.
+L000050 |     { ⟦EOL⟧
+// 해설 L51: 조건에 따라 분기합니다: if (IsActive)
+L000051 |         if (IsActive) ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage Buffer 사용 중에는 초기화할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage Buffer 사용 중에는 초기화할 수 없습니다.");
+L000052 |             throw new InvalidOperationException("Stage Buffer 사용 중에는 초기화할 수 없습니다."); ⟦EOL⟧
+// 해설 L53: 조건에 따라 분기합니다: if (LastIofPlan is { ZeroLine: true })
+L000053 |         if (LastIofPlan is { ZeroLine: true }) ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _lastPlan, null)
+L000054 |             Volatile.Write(ref _lastPlan, null); ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _zeroSegments, 0)
+L000055 |         Volatile.Write(ref _zeroSegments, 0); ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 ClearZeroLineSimulation.
+L000056 |     } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · System.Action<Drilling.Common.Station.ST_STAGE_FLOW_EVENT>? Drilling.Common.Station.CStageReviewSequences.Trace
+L000058 |     public event Action<ST_STAGE_FLOW_EVENT>? Trace; ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.IsActive
+L000059 |     public bool IsActive => !_owners.IsEmpty; ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: _moveStops.ContainsKey(deviceNo)
+L000060 |     public bool HasActiveMove(int deviceNo) => _moveStops.ContainsKey(deviceNo); ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owners.Keys.Any(device => !_failedSessions.TryGetValue(device, out var session) || !session.IsDisposed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _failedSessions.TryGetValue(device, out var session)
+L000061 |     public bool HasRunningSession => _owners.Keys.Any(device => !_failedSessions.TryGetValue(device, out var session) || !session.IsDisposed); ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000063 |     /// <summary>Retry failed cleanup only after its original worker has disposed its session.</summary> ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.RecoverIdleCleanup(System.Threading.CancellationToken)
+L000064 |     public async Task RecoverIdleCleanup(CancellationToken token = default) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000065 |     { ⟦EOL⟧
+// 해설 L66: 비동기 완료를 기다립니다: await _recovery.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recovery.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recovery.WaitAsync(token)
+L000066 |         await _recovery.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L67: 예외 처리 범위입니다: try
+L000067 |         try ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000068 |         { ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: _failedSessions.ToArray() / 컬렉션 요소를 순회합니다: foreach (var (device, failed) in _failedSessions.ToArray()) { if (!failed.IsDisposed || HasActiveMove(device)) throw new InvalidOperationException("Stage 정리 작업이 아직 실행 중입니다."); var session = new Session(this, interfaces, device, ()
+L000069 |             foreach (var (device, failed) in _failedSessions.ToArray()) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: HasActiveMove(device) / 조건에 따라 분기합니다: if (!failed.IsDisposed || HasActiveMove(device))
+L000071 |                 if (!failed.IsDisposed || HasActiveMove(device)) ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage 정리 작업이 아직 실행 중입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage 정리 작업이 아직 실행 중입니다.");
+L000072 |                     throw new InvalidOperationException("Stage 정리 작업이 아직 실행 중입니다."); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Session(this, interfaces, device, () => false, AutomaticSimulationReplies, false, false) / 지역 변수를 선언합니다: var session = new Session(this, interfaces, device, () => false, AutomaticSimulationReplies, false, false); / 변수의 초기값을 지정합니다: session = new Session(this, interfaces, device, () => false, AutomaticSimulationReplies, false, false)
+L000073 |                 var session = new Session(this, interfaces, device, () => false, AutomaticSimulationReplies, false, false); ⟦EOL⟧
+// 해설 L74: 비동기 완료를 기다립니다: await session.RecoverStoppedOutputs(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.RecoverStoppedOutputs(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.RecoverStoppedOutputs(token) / 예외 처리 범위입니다: try
+L000074 |                 try { await session.RecoverStoppedOutputs(token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Dispose() / 종료 정리 구간입니다: finally
+L000075 |                 finally { session.Dispose(); } // Retain the failed owner until this recovery session is disposed. ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: _failedSessions.TryRemove(device, out _)
+L000076 |                 _failedSessions.TryRemove(device, out _); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cleanupFailures.TryRemove(device, out _)
+L000077 |                 _cleanupFailures.TryRemove(device, out _); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owners.TryRemove(device, out _)
+L000078 |                 _owners.TryRemove(device, out _); ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000079 |             } ⟦EOL⟧
+// 해설 L80: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000080 |             // Also recover a STOP retained by a previous application version. Never write over a live owner. ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.Where(row => row.Use && row.Id == MoveStop).Select(row => row.DeviceNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.Where(row => row.Use && row.Id == MoveStop).Select(row => row.DeviceNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.Where(row => row.Use && row.Id == MoveStop) / 컬렉션 요소를 순회합니다: foreach (var device in interfaces.Melsec.Map.Where(row => row.Use && row.Id == MoveStop).Select(row => row.DeviceNo).Distinct())
+L000081 |             foreach (var device in interfaces.Melsec.Map.Where(row => row.Use && row.Id == MoveStop).Select(row => row.DeviceNo).Distinct()) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000082 |             { ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: Open(device) / 정리할 자원을 선언합니다: using var session = Open(device); / 변수의 초기값을 지정합니다: session = Open(device)
+L000083 |                 using var session = Open(device); ⟦EOL⟧
+// 해설 L84: 비동기 완료를 기다립니다: await session.RecoverRetainedStop(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.RecoverRetainedStop(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.RecoverRetainedStop(token) / 예외 처리 범위입니다: try
+L000084 |                 try { await session.RecoverRetainedStop(token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L85: 지정 예외를 처리합니다: catch
+L000085 |                 catch ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000086 |                 { ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: _cleanupFailures[device] = 0
+L000087 |                     _cleanupFailures[device] = 0; ⟦EOL⟧
+// 해설 L88: 값을 대상에 대입합니다: _failedSessions[device] = session
+L000088 |                     _failedSessions[device] = session; ⟦EOL⟧
+// 해설 L89: 예외를 발생/전달합니다: throw;
+L000089 |                     throw; ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000090 |                 } ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000091 |             } ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000092 |         } ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recovery.Release() / 종료 정리 구간입니다: finally
+L000093 |         finally { _recovery.Release(); } ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 RecoverIdleCleanup.
+L000094 |     } ⟦EOL⟧
+L000095 |  ⟦EOL⟧
+// 해설 L96: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000096 |     /// <summary>Operator Stage STOP cancels the owned move and its normal STOP/IO cleanup.</summary> ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.RequestMoveStop(int)
+L000097 |     public void RequestMoveStop(int deviceNo) ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 RequestMoveStop.
+L000098 |     { ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: _moveStops.TryGetValue(deviceNo, out var stop) / 조건에 따라 분기합니다: if (_moveStops.TryGetValue(deviceNo, out var stop))
+L000099 |         if (_moveStops.TryGetValue(deviceNo, out var stop)) ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Cancel() / 예외 처리 범위입니다: try
+L000100 |             try { stop.Cancel(); } ⟦EOL⟧
+// 해설 L101: 지정 예외를 처리합니다: catch (ObjectDisposedException)
+L000101 |             catch (ObjectDisposedException) { } // The move may have just finished. ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 RequestMoveStop.
+L000102 |     } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.AutomaticSimulationReplies
+L000104 |     public bool AutomaticSimulationReplies ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 AutomaticSimulationReplies.
+L000105 |     { ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _automaticReplies)
+L000106 |         get => Volatile.Read(ref _automaticReplies) == 1; ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.AutomaticSimulationReplies.set
+L000107 |         set ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 set_AutomaticSimulationReplies.
+L000108 |         { ⟦EOL⟧
+// 해설 L109: 조건에 따라 분기합니다: if (IsActive)
+L000109 |             if (IsActive) ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Process Move / IOF 동작을 정지한 뒤 자동 응답을 변경해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Process Move / IOF 동작을 정지한 뒤 자동 응답을 변경해 주세요.");
+L000110 |                 throw new InvalidOperationException("Process Move / IOF 동작을 정지한 뒤 자동 응답을 변경해 주세요."); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _automaticReplies, value ? 1 : 0) / 조건에 따라 결과식을 선택합니다: value ? 1 : 0
+L000111 |             Volatile.Write(ref _automaticReplies, value ? 1 : 0); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 set_AutomaticSimulationReplies.
+L000112 |         } ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 AutomaticSimulationReplies.
+L000113 |     } ⟦EOL⟧
+L000114 |  ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _lastPlan)
+L000115 |     public ST_STAGE_IOF_PLAN? LastIofPlan => Volatile.Read(ref _lastPlan); ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(30) / 변수의 초기값을 지정합니다: _signalTimeout = signalTimeout ?? TimeSpan.FromSeconds(30)
+L000117 |     private readonly TimeSpan _signalTimeout = signalTimeout ?? TimeSpan.FromSeconds(30); ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.ValidateMoveReadiness(int)
+L000118 |     public void ValidateMoveReadiness(int deviceNo) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ValidateMoveReadiness.
+L000119 |     { ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo); / 변수의 초기값을 지정합니다: device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo)
+L000120 |         var device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo); ⟦EOL⟧
+// 해설 L121: 조건에 따라 분기합니다: if (device?.IsSimulation == true)
+L000121 |         if (device?.IsSimulation == true) ⟦EOL⟧
+// 해설 L122: 호출자에게 값 또는 제어를 반환합니다: return;
+L000122 |             return; ⟦EOL⟧
+// 해설 L123: 조건에 따라 분기합니다: if (device?.ConnectionState != EN_COMM_STATE.Online)
+L000123 |         if (device?.ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다.");
+L000124 |             throw new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L125: 지역 변수를 선언합니다: var map = interfaces.Melsec.Map; / 변수의 초기값을 지정합니다: map = interfaces.Melsec.Map
+L000125 |         var map = interfaces.Melsec.Map; ⟦EOL⟧
+// 해설 L126: 지역 변수를 선언합니다: var inputs = new[] { MoveAble, MoveComplete, "MOTOR_STAGE_Y_BUSY", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_CUR_POS", "MOTOR_CAMERA_X_CUR_POS" }; / 변수의 초기값을 지정합니다: inputs = new[] { MoveAble, MoveComplete, "MOTOR_STAGE_Y_BUSY", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_CUR_POS", "MOTOR_CAMERA_X_CUR_POS" }
+L000126 |         var inputs = new[] { MoveAble, MoveComplete, "MOTOR_STAGE_Y_BUSY", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_CUR_POS", "MOTOR_CAMERA_X_CUR_POS" }; ⟦EOL⟧
+// 해설 L127: 지역 변수를 선언합니다: var outputs = new[] { MoveStart, MoveAck, "PROCESS_REVIEW_STOP_SIGNAL", "PROCESS_REVIEW_CONTROL_MODE", "PROCESS_REVIEW_COMMAND_POSITION_X", "PROCESS_REVIEW_COMMAND_POSITION_Y", "PROCESS_REVIEW_COMMAND_SPEED_X", "PROCESS_REVIEW_COM / 변수의 초기값을 지정합니다: outputs = new[] { MoveStart, MoveAck, "PROCESS_REVIEW_STOP_SIGNAL", "PROCESS_REVIEW_CONTROL_MODE", "PROCESS_REVIEW_COMMAND_POSITION_X", "PROCESS_REVIEW_COMMAND_POSITION_Y", "PROCESS_REVIEW_COMMAND_SPEED_X", "PROCESS_REVIEW_COMMAND
+L000127 |         var outputs = new[] { MoveStart, MoveAck, "PROCESS_REVIEW_STOP_SIGNAL", "PROCESS_REVIEW_CONTROL_MODE", "PROCESS_REVIEW_COMMAND_POSITION_X", "PROCESS_REVIEW_COMMAND_POSITION_Y", "PROCESS_REVIEW_COMMAND_SPEED_X", "PROCESS_REVIEW_COMMAND_SPEED_Y" }; ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: inputs.Concat(outputs) / 컬렉션 요소를 순회합니다: foreach (var id in inputs.Concat(outputs))
+L000128 |         foreach (var id in inputs.Concat(outputs)) ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 ValidateMoveReadiness.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: inputs.Contains(id) / 지역 변수를 선언합니다: var input = inputs.Contains(id); / 변수의 초기값을 지정합니다: input = inputs.Contains(id)
+L000130 |             var input = inputs.Contains(id); ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(id, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var row = map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: row = map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
+L000131 |             var row = map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_CUR_POS", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_COMMAND_POSITION_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_COMMAND_SPEED_", StringComparison.Ordinal) / 지역 변수를 선언합니다: var coordinate = id.Contains("_CUR_POS", StringComparison.Ordinal) || id.Contains("_COMMAND_POSITION_", StringComparison.Ordinal) || id.Contains("_COMMAND_SPEED_", StringComparison.Ordinal); / 변수의 초기값을 지정합니다: coordinate = id.Contains("_CUR_POS", StringComparison.Ordinal)
+L000132 |             var coordinate = id.Contains("_CUR_POS", StringComparison.Ordinal) || id.Contains("_COMMAND_POSITION_", StringComparison.Ordinal) || id.Contains("_COMMAND_SPEED_", StringComparison.Ordinal); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(row.Address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (row is null || row.DeviceNo != deviceNo || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) || row.Direction != (input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DI…)
+L000133 |             if (row is null || row.DeviceNo != deviceNo || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L134: 조건에 따라 결과식을 선택합니다: input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DIRECTION.Out
+L000134 |                 || row.Direction != (input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DIRECTION.Out) ⟦EOL⟧
+// 해설 L135: 조건에 따라 결과식을 선택합니다: input ? row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) : row.Access != EN_MELSEC_ACCESS.ReadWrite
+L000135 |                 || (input ? row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) : row.Access != EN_MELSEC_ACCESS.ReadWrite) ⟦EOL⟧
+// 해설 L136: 조건에 따라 결과식을 선택합니다: coordinate ? row.DataType != EN_MELSEC_DATA_TYPE.Double : row.DataType is not (EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord)
+L000136 |                 || (coordinate ? row.DataType != EN_MELSEC_DATA_TYPE.Double : row.DataType is not (EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord))) ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"실제 Process Move 맵의 장치·주소·입출력·자료형을 확인해 주세요: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"실제 Process Move 맵의 장치·주소·입출력·자료형을 확인해 주세요: {id}");
+L000137 |                 throw new InvalidOperationException($"실제 Process Move 맵의 장치·주소·입출력·자료형을 확인해 주세요: {id}"); ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 ValidateMoveReadiness.
+L000138 |         } ⟦EOL⟧
+// 해설 L139: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000139 |         // Preparation validates routing only; it never sends a move or starts a poller. ⟦EOL⟧
+// 해설 L140: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000140 |         // Session.Move freshly verifies permission, previous signals, Busy and position before/after START. ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 ValidateMoveReadiness.
+L000141 |     } ⟦EOL⟧
+L000142 |  ⟦EOL⟧
+// 해설 L143: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.ValidateIofReadiness(int, int)
+L000143 |     public void ValidateIofReadiness(int deviceNo, int pointCount = 0) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 ValidateIofReadiness.
+L000144 |     { ⟦EOL⟧
+// 해설 L145: 조건에 따라 분기합니다: if (pointCount < 0 || pointCount > 500)
+L000145 |         if (pointCount < 0 || pointCount > 500) ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(pointCount), "IOF 한 라인의 촬영 좌표는 최대 500개입니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(pointCount) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(pointCount), "IOF 한 라인의 촬영 좌표는 최대 500개입니다.");
+L000146 |             throw new ArgumentOutOfRangeException(nameof(pointCount), "IOF 한 라인의 촬영 좌표는 최대 500개입니다."); ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo); / 변수의 초기값을 지정합니다: device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo)
+L000147 |         var device = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == deviceNo); ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (device?.IsSimulation == true)
+L000148 |         if (device?.IsSimulation == true) ⟦EOL⟧
+// 해설 L149: 호출자에게 값 또는 제어를 반환합니다: return;
+L000149 |             return; ⟦EOL⟧
+// 해설 L150: 조건에 따라 분기합니다: if (device?.ConnectionState != EN_COMM_STATE.Online)
+L000150 |         if (device?.ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다.");
+L000151 |             throw new InvalidOperationException($"MELSEC_{deviceNo}가 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L152: 컬렉션 요소를 순회합니다: foreach (var id in new[] { IofStart, IofAck, IofComplete, "IOF_SETTING", "IOF_TRIGGER_POINT_COUNT", "IOF_TRIGGER_ZERO_POINT_COUNT", "IOF_POS_ARRAY_1" })
+L000152 |         foreach (var id in new[] { IofStart, IofAck, IofComplete, "IOF_SETTING", "IOF_TRIGGER_POINT_COUNT", "IOF_TRIGGER_ZERO_POINT_COUNT", "IOF_POS_ARRAY_1" }) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 ValidateIofReadiness.
+L000153 |         { ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(id, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var row = interfaces.Melsec.Map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: row = interfaces.Melsec.Map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
+L000154 |             var row = interfaces.Melsec.Map.SingleOrDefault(item => item.Use && item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L155: 지역 변수를 선언합니다: var input = id == IofComplete; / 변수의 초기값을 지정합니다: input = id == IofComplete
+L000155 |             var input = id == IofComplete; ⟦EOL⟧
+// 해설 L156: 지역 변수를 선언합니다: var array = id == "IOF_POS_ARRAY_1"; / 변수의 초기값을 지정합니다: array = id == "IOF_POS_ARRAY_1"
+L000156 |             var array = id == "IOF_POS_ARRAY_1"; ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(row.Address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (row is null || row.DeviceNo != deviceNo || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) || row.Direction != (input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DI…)
+L000157 |             if (row is null || row.DeviceNo != deviceNo || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L158: 조건에 따라 결과식을 선택합니다: input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DIRECTION.Out
+L000158 |                 || row.Direction != (input ? EN_MELSEC_DIRECTION.In : EN_MELSEC_DIRECTION.Out) ⟦EOL⟧
+// 해설 L159: 조건에 따라 결과식을 선택합니다: input ? row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) : row.Access != EN_MELSEC_ACCESS.ReadWrite
+L000159 |                 || (input ? row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) : row.Access != EN_MELSEC_ACCESS.ReadWrite) ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.GetDoubleArrayCapacity(id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, pointCount) / 조건에 따라 결과식을 선택합니다: array ? row.DataType != EN_MELSEC_DATA_TYPE.Double || interfaces.Melsec.GetDoubleArrayCapacity(id) < Math.Max(1, pointCount) : row.DataType is not (EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord)
+L000160 |                 || (array ? row.DataType != EN_MELSEC_DATA_TYPE.Double || interfaces.Melsec.GetDoubleArrayCapacity(id) < Math.Max(1, pointCount) : row.DataType is not (EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord))) ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"IOF 맵의 장치·주소·입출력·자료형·저장 크기를 확인해 주세요: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"IOF 맵의 장치·주소·입출력·자료형·저장 크기를 확인해 주세요: {id}");
+L000161 |                 throw new InvalidOperationException($"IOF 맵의 장치·주소·입출력·자료형·저장 크기를 확인해 주세요: {id}"); ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 ValidateIofReadiness.
+L000162 |         } ⟦EOL⟧
+// 해설 L163: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000163 |         // WC138/WC13A are observable progress only. Stage confirms buffer ⟦EOL⟧
+// 해설 L164: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000164 |         // readiness with WC13C, then Process acknowledges with W823A. ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 ValidateIofReadiness.
+L000165 |     } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000167 |     /// <summary>Manual ABS/REL uses the same permission, START, completion and release transaction as AUTO.</summary> ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.MoveManualAxis(int, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double, System.Threading.CancellationToken)
+L000168 |     public async Task MoveManualAxis(int deviceNo, EN_MANUAL_STAGE_AXIS axis, double value, bool relative, double speed, CancellationToken token) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 MoveManualAxis.
+L000169 |     { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(axis) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(speed) / 조건에 따라 분기합니다: if (!Enum.IsDefined(axis) || !double.IsFinite(value) || !double.IsFinite(speed) || speed <= 0)
+L000170 |         if (!Enum.IsDefined(axis) || !double.IsFinite(value) || !double.IsFinite(speed) || speed <= 0) ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("수동 이동 축·위치·속도를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("수동 이동 축·위치·속도를 확인해 주세요.");
+L000171 |             throw new ArgumentException("수동 이동 축·위치·속도를 확인해 주세요."); ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateMoveReadiness(deviceNo)
+L000172 |         ValidateMoveReadiness(deviceNo); ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: Open(deviceNo) / 정리할 자원을 선언합니다: using var session = Open(deviceNo); / 변수의 초기값을 지정합니다: session = Open(deviceNo)
+L000173 |         using var session = Open(deviceNo); ⟦EOL⟧
+// 해설 L174: 비동기 완료를 기다립니다: await session.MoveAxis(axis, value, relative, speed, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAxis(axis, value, relative, speed, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAxis(axis, value, relative, speed, token)
+L000174 |         await session.MoveAxis(axis, value, relative, speed, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 MoveManualAxis.
+L000175 |     } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStageReviewSequences.Session Drilling.Common.Station.CStageReviewSequences.Open(int, System.Func<bool>?, bool, bool)
+L000177 |     public Session Open(int deviceNo, Func<bool>? stopRequested = null, bool reviewXOnly = false, bool stageBufferOwner = false) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 Open.
+L000178 |     { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cleanupFailures.ContainsKey(deviceNo) / 조건에 따라 분기합니다: if (_cleanupFailures.ContainsKey(deviceNo))
+L000179 |         if (_cleanupFailures.ContainsKey(deviceNo)) ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage 공통 시퀀스 정리가 실패했습니다. RESET에서 정지 및 STOP/요청/응답 OFF를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage 공통 시퀀스 정리가 실패했습니다. RESET에서 정지 및 STOP/요청/응답 OFF를 확인해 주세요.");
+L000180 |             throw new InvalidOperationException("Stage 공통 시퀀스 정리가 실패했습니다. RESET에서 정지 및 STOP/요청/응답 OFF를 확인해 주세요."); ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owners.TryAdd(deviceNo, 0) / 조건에 따라 분기합니다: if (!_owners.TryAdd(deviceNo, 0))
+L000182 |         if (!_owners.TryAdd(deviceNo, 0)) ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage Process Move / IOF가 이미 사용 중입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage Process Move / IOF가 이미 사용 중입니다.");
+L000183 |             throw new InvalidOperationException("Stage Process Move / IOF가 이미 사용 중입니다."); ⟦EOL⟧
+// 해설 L184: 예외 처리 범위입니다: try
+L000184 |         try ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Open.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(this, interfaces, deviceNo, stopRequested ?? (() => false), AutomaticSimulationReplies, reviewXOnly, stageBufferOwner) / 호출자에게 값 또는 제어를 반환합니다: return new(this, interfaces, deviceNo, stopRequested ?? (() => false), AutomaticSimulationReplies, reviewXOnly, stageBufferOwner);
+L000186 |             return new(this, interfaces, deviceNo, stopRequested ?? (() => false), AutomaticSimulationReplies, reviewXOnly, stageBufferOwner); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Open.
+L000187 |         } ⟦EOL⟧
+// 해설 L188: 지정 예외를 처리합니다: catch
+L000188 |         catch ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 Open.
+L000189 |         { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owners.TryRemove(deviceNo, out _)
+L000190 |             _owners.TryRemove(deviceNo, out _); ⟦EOL⟧
+// 해설 L191: 예외를 발생/전달합니다: throw;
+L000191 |             throw; ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 Open.
+L000192 |         } ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 Open.
+L000193 |     } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Publish(int, string, double?, string)
+L000195 |     private void Publish(int device, string phase, double? value = null, string detail = "") ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 Publish.
+L000196 |     { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_STAGE_FLOW_EVENT(Interlocked.Increment(ref _event), device, phase, value) { Detail = detail } / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _event) / 지역 변수를 선언합니다: var item = new ST_STAGE_FLOW_EVENT(Interlocked.Increment(ref _event), device, phase, value) { Detail = detail }; / 변수의 초기값을 지정합니다: item = new ST_STAGE_FLOW_EVENT(Interlocked.Increment(ref _event), device, phase, value) { Detail = detail }
+L000197 |         var item = new ST_STAGE_FLOW_EVENT(Interlocked.Increment(ref _event), device, phase, value) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Publish.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 값을 대상에 대입합니다: Detail = detail
+L000199 |             Detail = detail ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Publish.
+L000200 |         }; ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: .GetInvocationList() / 컬렉션 요소를 순회합니다: foreach (var subscriber in Trace?.GetInvocationList() ?? [])
+L000201 |         foreach (var subscriber in Trace?.GetInvocationList() ?? []) ⟦EOL⟧
+// 해설 L202: 예외 처리 범위입니다: try
+L000202 |             try ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 Publish.
+L000203 |             { ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: ((Action<ST_STAGE_FLOW_EVENT>)subscriber)(item)
+L000204 |                 ((Action<ST_STAGE_FLOW_EVENT>)subscriber)(item); ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 Publish.
+L000205 |             } ⟦EOL⟧
+// 해설 L206: 지정 예외를 처리합니다: catch (Exception error)
+L000206 |             catch (Exception error) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Publish.
+L000207 |             { ⟦EOL⟧
+// 해설 L208: 예외 처리 범위입니다: try
+L000208 |                 try ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 Publish.
+L000209 |                 { ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError(error.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: error.ToString()
+L000210 |                     System.Diagnostics.Trace.TraceError(error.ToString()); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 Publish.
+L000211 |                 } ⟦EOL⟧
+// 해설 L212: 지정 예외를 처리합니다: catch
+L000212 |                 catch ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 Publish.
+L000213 |                 { ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 Publish.
+L000214 |                 } ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 Publish.
+L000215 |             } ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 Publish.
+L000216 |     } ⟦EOL⟧
+L000217 |  ⟦EOL⟧
+// 해설 L218: 타입의 구조/상속 선언입니다: public sealed partial class Session : IDisposable
+L000218 |     public sealed partial class Session : IDisposable ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다.
+L000219 |     { ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStageReviewSequences Drilling.Common.Station.CStageReviewSequences.Session._owner
+L000220 |         private readonly CStageReviewSequences _owner; ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager Drilling.Common.Station.CStageReviewSequences.Session._interfaces
+L000221 |         private readonly CInterfaceManager _interfaces; ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Station.CStageReviewSequences.Session._device
+L000222 |         private readonly int _device; ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · System.Func<bool> Drilling.Common.Station.CStageReviewSequences.Session._stopRequested
+L000223 |         private readonly Func<bool> _stopRequested; ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session._simulation
+L000224 |         private readonly bool _simulation, _automatic, _reviewXOnly, _stageBufferOwner; ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CManualStageMotionSimulation? Drilling.Common.Station.CStageReviewSequences.Session._motion
+L000225 |         private readonly CManualStageMotionSimulation? _motion; ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CManualStageMotionSimulation.MotionLease? Drilling.Common.Station.CStageReviewSequences.Session._lease
+L000226 |         private readonly CManualStageMotionSimulation.MotionLease? _lease; ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _operation = new(1, 1)
+L000227 |         private readonly SemaphoreSlim _operation = new(1, 1); ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session._disposed
+L000228 |         private volatile bool _disposed; ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session._moveOwned
+L000229 |         private bool _moveOwned, _iofOwned; ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STAGE_MOVE_MODE Drilling.Common.Station.CStageReviewSequences.Session._moveMode
+L000230 |         private EN_STAGE_MOVE_MODE _moveMode; ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session.IsDisposed
+L000231 |         internal bool IsDisposed => _disposed; ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · System.Guid Drilling.Common.Station.CStageReviewSequences.Session._iofPlanId
+L000232 |         private Guid _iofPlanId; ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session._iofStartConfirmed
+L000233 |         private bool _iofStartConfirmed, _iofAckConfirmed; ⟦EOL⟧
+// 해설 L234: 변수의 초기값을 지정합니다: _scenario = "PROCESS_MOVE"
+L000234 |         private string _scenario = "PROCESS_MOVE"; ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid().ToString("N") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 변수의 초기값을 지정합니다: _traceSession = Guid.NewGuid().ToString("N")
+L000235 |         private readonly string _traceSession = Guid.NewGuid().ToString("N"); ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Publish(_device, phase, value, $"Flow={_traceSession}; Simulation={_simulation}; {detail}")
+L000236 |         private void Record(string phase, string detail = "", double? value = null) => _owner.Publish(_device, phase, value, $"Flow={_traceSession}; Simulation={_simulation}; {detail}"); ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Station.CStageReviewSequences.Session.IsSimulation
+L000237 |         public bool IsSimulation => _simulation; ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: Feedback("MOTOR_CAMERA_X_CUR_POS")
+L000238 |         public double CurrentX => Feedback("MOTOR_CAMERA_X_CUR_POS"); ⟦EOL⟧
+// 해설 L239: 함수·델리게이트 또는 객체 생성자를 호출합니다: Feedback("MOTOR_STAGE_Y_CUR_POS")
+L000239 |         public double CurrentY => Feedback("MOTOR_STAGE_Y_CUR_POS"); ⟦EOL⟧
+L000240 |  ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStageReviewSequences.Session.Session(Drilling.Common.Station.CStageReviewSequences, Drilling.Common.Interface.CInterfaceManager, int, System.Func<bool>, bool, bool, bool)
+L000241 |         internal Session(CStageReviewSequences owner, CInterfaceManager interfaces, int device, Func<bool> stop, bool automatic, bool reviewXOnly, bool stageBufferOwner) ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 .ctor.
+L000242 |         { ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: _owner = owner
+L000243 |             _owner = owner; ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: _interfaces = interfaces
+L000244 |             _interfaces = interfaces; ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: _device = device
+L000245 |             _device = device; ⟦EOL⟧
+// 해설 L246: 값을 대상에 대입합니다: _stopRequested = stop
+L000246 |             _stopRequested = stop; ⟦EOL⟧
+// 해설 L247: 값을 대상에 대입합니다: _automatic = automatic
+L000247 |             _automatic = automatic; ⟦EOL⟧
+// 해설 L248: 값을 대상에 대입합니다: _reviewXOnly = reviewXOnly
+L000248 |             _reviewXOnly = reviewXOnly; ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: _stageBufferOwner = stageBufferOwner
+L000249 |             _stageBufferOwner = stageBufferOwner; ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var state = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == device); / 변수의 초기값을 지정합니다: state = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == device)
+L000250 |             var state = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == device); ⟦EOL⟧
+// 해설 L251: 값을 대상에 대입합니다: _simulation = state?.IsSimulation ?? (interfaces.Devices.Count == 0 && interfaces.IsSimulation)
+L000251 |             _simulation = state?.IsSimulation ?? (interfaces.Devices.Count == 0 && interfaces.IsSimulation); ⟦EOL⟧
+// 해설 L252: 조건에 따라 분기합니다: if (!_simulation && state?.ConnectionState != EN_COMM_STATE.Online)
+L000252 |             if (!_simulation && state?.ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{device}가 연결되어 있지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{device}가 연결되어 있지 않습니다.");
+L000253 |                 throw new InvalidOperationException($"MELSEC_{device}가 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L254: 조건에 따라 분기합니다: if (_simulation)
+L000254 |             if (_simulation) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 .ctor.
+L000255 |             { ⟦EOL⟧
+// 해설 L256: 값을 대상에 대입합니다: _motion = interfaces.GetStageMotionSimulation(device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetStageMotionSimulation(device)
+L000256 |                 _motion = interfaces.GetStageMotionSimulation(device); ⟦EOL⟧
+// 해설 L257: 값을 대상에 대입합니다: _lease = _motion.AcquireExclusiveMotion(allowStageYMoving: reviewXOnly || stageBufferOwner) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _motion.AcquireExclusiveMotion(allowStageYMoving: reviewXOnly || stageBufferOwner)
+L000257 |                 _lease = _motion.AcquireExclusiveMotion(allowStageYMoving: reviewXOnly || stageBufferOwner); ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 .ctor.
+L000258 |             } ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 .ctor.
+L000259 |         } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.Check(System.Threading.CancellationToken, bool)
+L000261 |         private void Check(CancellationToken token, bool cleanup = false) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 Check.
+L000262 |         { ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: ObjectDisposedException.ThrowIf(_disposed, this)
+L000263 |             ObjectDisposedException.ThrowIf(_disposed, this); ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000264 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopRequested() / 조건에 따라 분기합니다: if (!cleanup && _stopRequested())
+L000265 |             if (!cleanup && _stopRequested()) ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: new OperationCanceledException("Review Stop") / 예외를 발생/전달합니다: throw new OperationCanceledException("Review Stop");
+L000266 |                 throw new OperationCanceledException("Review Stop"); ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == _device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var state = _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == _device); / 변수의 초기값을 지정합니다: state = _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == _device)
+L000267 |             var state = _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).SingleOrDefault(item => item.Number == _device); ⟦EOL⟧
+// 해설 L268: 조건에 따라 분기합니다: if (state is not null && (state.IsSimulation != _simulation || !_simulation && state.ConnectionState != EN_COMM_STATE.Online))
+L000268 |             if (state is not null && (state.IsSimulation != _simulation || !_simulation && state.ConnectionState != EN_COMM_STATE.Online)) ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage 동작 중 MELSEC 모드 또는 연결 상태가 변경되었습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage 동작 중 MELSEC 모드 또는 연결 상태가 변경되었습니다.");
+L000269 |                 throw new InvalidOperationException("Stage 동작 중 MELSEC 모드 또는 연결 상태가 변경되었습니다."); ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 Check.
+L000270 |         } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_MELSEC_MAP_DATA Drilling.Common.Station.CStageReviewSequences.Session.Route(string)
+L000272 |         private ST_MELSEC_MAP_DATA Route(string id) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 Route.
+L000273 |         { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetMapData(id) / 지역 변수를 선언합니다: var row = _interfaces.Melsec.GetMapData(id); / 변수의 초기값을 지정합니다: row = _interfaces.Melsec.GetMapData(id)
+L000274 |             var row = _interfaces.Melsec.GetMapData(id); ⟦EOL⟧
+// 해설 L275: 조건에 따라 분기합니다: if (!row.Use || row.DeviceNo != _device)
+L000275 |             if (!row.Use || row.DeviceNo != _device) ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 공통 시퀀스 맵을 확인해 주세요: {id} / MELSEC_{_device}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 공통 시퀀스 맵을 확인해 주세요: {id} / MELSEC_{_device}");
+L000276 |                 throw new InvalidOperationException($"Stage 공통 시퀀스 맵을 확인해 주세요: {id} / MELSEC_{_device}"); ⟦EOL⟧
+// 해설 L277: 호출자에게 값 또는 제어를 반환합니다: return row;
+L000277 |             return row; ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 Route.
+L000278 |         } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Station.CStageReviewSequences.Session.Value(string)
+L000280 |         private double Value(string id) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 Value.
+L000281 |         { ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id)
+L000282 |             Route(id); ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedValue(id) / 지역 변수를 선언합니다: var sample = _interfaces.Melsec.GetCachedValue(id); / 변수의 초기값을 지정합니다: sample = _interfaces.Melsec.GetCachedValue(id)
+L000283 |             var sample = _interfaces.Melsec.GetCachedValue(id); ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (sample?.IsValid != true || sample.Value is null)
+L000284 |             if (sample?.IsValid != true || sample.Value is null) ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 신호가 유효하지 않습니다: {Describe(id)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 신호가 유효하지 않습니다: {Describe(id)}");
+L000285 |                 throw new InvalidOperationException($"Stage 신호가 유효하지 않습니다: {Describe(id)}"); ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture)
+L000286 |             var result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result) / 조건에 따라 분기합니다: if (!double.IsFinite(result))
+L000287 |             if (!double.IsFinite(result)) ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 값이 유효하지 않습니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 값이 유효하지 않습니다: {id}");
+L000288 |                 throw new InvalidOperationException($"Stage 값이 유효하지 않습니다: {id}"); ⟦EOL⟧
+// 해설 L289: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000289 |             return result; ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 Value.
+L000290 |         } ⟦EOL⟧
+L000291 |  ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.GetStageMotionSimulationFeedback(_device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(id) / 조건에 따라 결과식을 선택합니다: _simulation ? _interfaces.GetStageMotionSimulationFeedback(_device)[id] : Value(id)
+L000292 |         private double Feedback(string id) => _simulation ? _interfaces.GetStageMotionSimulationFeedback(_device)[id] : Value(id); ⟦EOL⟧
+L000293 |  ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.CStageReviewSequences.Session.Describe(string)
+L000294 |         private string Describe(string id) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 Describe.
+L000295 |         { ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id) / 지역 변수를 선언합니다: var row = Route(id); / 변수의 초기값을 지정합니다: row = Route(id)
+L000296 |             var row = Route(id); ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedValue(id) / 지역 변수를 선언합니다: var sample = _interfaces.Melsec.GetCachedValue(id); / 변수의 초기값을 지정합니다: sample = _interfaces.Melsec.GetCachedValue(id)
+L000297 |             var sample = _interfaces.Melsec.GetCachedValue(id); ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"{id}; Address={row.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(sample?.UpdatedAt is { } at ? (DateTimeOffset.UtcNow - at).TotalMillisecond… / 조건에 따라 결과식을 선택합니다: sample?.UpdatedAt is { } at ? (DateTimeOffset.UtcNow - at).TotalMilliseconds : (double?)null / 호출자에게 값 또는 제어를 반환합니다: return FormattableString.Invariant($"{id}; Address={row.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(s
+L000298 |             return FormattableString.Invariant($"{id}; Address={row.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(sample?.UpdatedAt is { } at ? (DateTimeOffset.UtcNow - at).TotalMilliseconds : (double?)null):F0}; Cycle={sample?.ReadCycleNo}; Error={sample?.ErrorMessage}; DriverReadCode={_interfaces.Melsec.LastReadReturnCode}; DriverReadFailures={_interfaces.Melsec.ConsecutiveReadFailureCount}"); ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 Describe.
+L000299 |         } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.RefreshInputs(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken, bool)
+L000301 |         private async Task RefreshInputs(IEnumerable<string> ids, CancellationToken token, bool cleanup = false) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000302 |         { ⟦EOL⟧
+// 해설 L303: 비동기 완료를 기다립니다: await Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => { Check(token, cleanup); Route(id); // A fresh central-poller read can recover Pending/Stale, but must not hide a known I/O failure. var before = / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => { Check(token, cleanup); Route(id); // A fresh central-poller read can recover Pending/Stale, but must not hide a known I/O failure. var befo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Distinct(S
+L000303 |             await Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000304 |             { ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token, cleanup)
+L000305 |                 Check(token, cleanup); ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id)
+L000306 |                 Route(id); ⟦EOL⟧
+// 해설 L307: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000307 |                 // A fresh central-poller read can recover Pending/Stale, but must not hide a known I/O failure. ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedValue(id) / 지역 변수를 선언합니다: var before = _interfaces.Melsec.GetCachedValue(id); / 변수의 초기값을 지정합니다: before = _interfaces.Melsec.GetCachedValue(id)
+L000308 |                 var before = _interfaces.Melsec.GetCachedValue(id); ⟦EOL⟧
+// 해설 L309: 조건에 따라 분기합니다: if (before?.State is EN_MELSEC_CACHE_STATE.Error or EN_MELSEC_CACHE_STATE.Offline)
+L000309 |                 if (before?.State is EN_MELSEC_CACHE_STATE.Error or EN_MELSEC_CACHE_STATE.Offline) ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Stage 입력 수신 오류: " + Describe(id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 예외를 발생/전달합니다: throw new IOException("Stage 입력 수신 오류: " + Describe(id));
+L000310 |                     throw new IOException("Stage 입력 수신 오류: " + Describe(id)); ⟦EOL⟧
+// 해설 L311: 조건에 따라 분기합니다: if (before?.IsValid != true)
+L000311 |                 if (before?.IsValid != true) ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("SIGNAL_REFRESH_REQUIRED", Describe(id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id)
+L000312 |                     Record("SIGNAL_REFRESH_REQUIRED", Describe(id)); ⟦EOL⟧
+// 해설 L313: 예외 처리 범위입니다: try
+L000313 |                 try ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000314 |                 { ⟦EOL⟧
+// 해설 L315: 비동기 완료를 기다립니다: await _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, token)
+L000315 |                     await _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token, cleanup)
+L000316 |                     Check(token, cleanup); ⟦EOL⟧
+// 해설 L317: 값을 대상에 대입합니다: _ = Value(id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(id)
+L000317 |                     _ = Value(id); ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000318 |                 } ⟦EOL⟧
+// 해설 L319: 지정 예외를 처리합니다: catch (Exception error) when (error is not OperationCanceledException)
+L000319 |                 catch (Exception error) when (error is not OperationCanceledException) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000320 |                 { ⟦EOL⟧
+// 해설 L321: 조건에 따라 분기합니다: if (error is TimeoutException)
+L000321 |                     if (error is TimeoutException) ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Stage 입력 갱신 시간 초과: " + Describe(id), error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 예외를 발생/전달합니다: throw new TimeoutException("Stage 입력 갱신 시간 초과: " + Describe(id), error);
+L000322 |                         throw new TimeoutException("Stage 입력 갱신 시간 초과: " + Describe(id), error); ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Stage 입력 갱신 실패: " + Describe(id), error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 예외를 발생/전달합니다: throw new IOException("Stage 입력 갱신 실패: " + Describe(id), error);
+L000323 |                     throw new IOException("Stage 입력 갱신 실패: " + Describe(id), error); ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000324 |                 } ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.RefreshInputs(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken, bool)
+L000325 |             })).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 RefreshInputs.
+L000326 |         } ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Write(string, double, System.Threading.CancellationToken, bool)
+L000327 |         private async Task Write(string id, double value, CancellationToken token, bool cleanup = false) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 Write.
+L000328 |         { ⟦EOL⟧
+// 해설 L329: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token, cleanup)
+L000329 |             Check(token, cleanup); ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id) / 지역 변수를 선언합니다: var row = Route(id); / 변수의 초기값을 지정합니다: row = Route(id)
+L000330 |             var row = Route(id); ⟦EOL⟧
+// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.StartNew() / 지역 변수를 선언합니다: var clock = Stopwatch.StartNew(); / 변수의 초기값을 지정합니다: clock = Stopwatch.StartNew()
+L000331 |             var clock = Stopwatch.StartNew(); ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("OUTPUT_REQUEST", FormattableString.Invariant($"{id}; Address={row.Address}; Logical={value}; ReadScale={row.ReadScale}; WriteScale={row.WriteScale}; Cleanup={cleanup}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"{id}; Address={row.Address}; Logical={value}; ReadScale={row.ReadScale}; WriteScale={row.WriteScale}; Cleanup={cleanup}")
+L000332 |             Record("OUTPUT_REQUEST", FormattableString.Invariant($"{id}; Address={row.Address}; Logical={value}; ReadScale={row.ReadScale}; WriteScale={row.WriteScale}; Cleanup={cleanup}")); ⟦EOL⟧
+// 해설 L333: 조건에 따라 분기합니다: if (row.Direction != EN_MELSEC_DIRECTION.Out || row.Access != EN_MELSEC_ACCESS.ReadWrite)
+L000333 |             if (row.Direction != EN_MELSEC_DIRECTION.Out || row.Access != EN_MELSEC_ACCESS.ReadWrite) ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("가공 PC 출력 항목이 아닙니다: " + id) / 예외를 발생/전달합니다: throw new InvalidOperationException("가공 PC 출력 항목이 아닙니다: " + id);
+L000334 |                 throw new InvalidOperationException("가공 PC 출력 항목이 아닙니다: " + id); ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000335 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000336 |             limit.CancelAfter(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L337: 예외 처리 범위입니다: try
+L000337 |             try ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 Write.
+L000338 |             { ⟦EOL⟧
+// 해설 L339: 비동기 완료를 기다립니다: await Task.Run(() => { if (row.DataType == EN_MELSEC_DATA_TYPE.Double) _interfaces.Melsec.WriteDouble(id, value, limit.Token); else _interfaces.Melsec.WriteWord(id, checked((int)value), limit.Token); }, limit.Token).ConfigureAwait / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { if (row.DataType == EN_MELSEC_DATA_TYPE.Double) _interfaces.Melsec.WriteDouble(id, value, limit.Token); else _interfaces.Melsec.WriteWord(id, checked((int)value), limit.Token); }, limit.Token).ConfigureA… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =>
+L000339 |                 await Task.Run(() => ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 Write.
+L000340 |                 { ⟦EOL⟧
+// 해설 L341: 조건에 따라 분기합니다: if (row.DataType == EN_MELSEC_DATA_TYPE.Double)
+L000341 |                     if (row.DataType == EN_MELSEC_DATA_TYPE.Double) ⟦EOL⟧
+// 해설 L342: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.WriteDouble(id, value, limit.Token)
+L000342 |                         _interfaces.Melsec.WriteDouble(id, value, limit.Token); ⟦EOL⟧
+// 해설 L343: 앞 조건이 거짓인 경로입니다: else
+L000343 |                     else ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.WriteWord(id, checked((int)value), limit.Token)
+L000344 |                         _interfaces.Melsec.WriteWord(id, checked((int)value), limit.Token); ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Write(string, double, System.Threading.CancellationToken, bool)
+L000345 |                 }, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("OUTPUT_SENT", $"{id}; ElapsedMs={clock.ElapsedMilliseconds}")
+L000346 |                 Record("OUTPUT_SENT", $"{id}; ElapsedMs={clock.ElapsedMilliseconds}"); ⟦EOL⟧
+// 해설 L347: 비동기 완료를 기다립니다: await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token) / 지역 변수를 선언합니다: var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false)
+L000347 |                 var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) - value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1e-8, Math.Abs(row.ReadScale) / 2 + 1e-9) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(row.ReadScale) / 조건에 따라 분기합니다: if (!sample.IsValid || sample.Value is null || Math.Abs(Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) - value) > Math.Max(1e-8, Math.Abs(row.ReadScale) / 2 + 1e-9))
+L000348 |                 if (!sample.IsValid || sample.Value is null || Math.Abs(Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) - value) > Math.Max(1e-8, Math.Abs(row.ReadScale) / 2 + 1e-9)) ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Stage 출력 읽기 확인 실패: " + id) / 예외를 발생/전달합니다: throw new IOException("Stage 출력 읽기 확인 실패: " + id);
+L000349 |                     throw new IOException("Stage 출력 읽기 확인 실패: " + id); ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(id, $"OUTPUT_CONFIRMED; Address={row.Address}; ElapsedMs={clock.ElapsedMilliseconds}; SampleAt={sample.UpdatedAt:O}", value)
+L000350 |                 Record(id, $"OUTPUT_CONFIRMED; Address={row.Address}; ElapsedMs={clock.ElapsedMilliseconds}; SampleAt={sample.UpdatedAt:O}", value); ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 Write.
+L000351 |             } ⟦EOL⟧
+// 해설 L352: 지정 예외를 처리합니다: catch (OperationCanceledException) when (!token.IsCancellationRequested && limit.IsCancellationRequested)
+L000352 |             catch (OperationCanceledException)when (!token.IsCancellationRequested && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 Write.
+L000353 |             { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("OUTPUT_FAILED", $"{id}; Timeout; ElapsedMs={clock.ElapsedMilliseconds}")
+L000354 |                 Record("OUTPUT_FAILED", $"{id}; Timeout; ElapsedMs={clock.ElapsedMilliseconds}"); ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Stage 출력 확인 시간 초과: " + id) / 지역 변수를 선언합니다: var failure = new TimeoutException("Stage 출력 확인 시간 초과: " + id); / 변수의 초기값을 지정합니다: failure = new TimeoutException("Stage 출력 확인 시간 초과: " + id)
+L000355 |                 var failure = new TimeoutException("Stage 출력 확인 시간 초과: " + id); ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Signal(_scenario, id, true, failure) / 조건에 따라 분기합니다: if (id is MoveStart or MoveAck or IofStart or IofAck) / 예외를 발생/전달합니다: throw CSequenceFailureException.Signal(_scenario, id, true, failure);
+L000356 |                 if (id is MoveStart or MoveAck or IofStart or IofAck) throw CSequenceFailureException.Signal(_scenario, id, true, failure); ⟦EOL⟧
+// 해설 L357: 예외를 발생/전달합니다: throw failure;
+L000357 |                 throw failure; ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 Write.
+L000358 |             } ⟦EOL⟧
+// 해설 L359: 지정 예외를 처리합니다: catch (Exception error)
+L000359 |             catch (Exception error) ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 Write.
+L000360 |             { ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("OUTPUT_FAILED", $"{id}; ElapsedMs={clock.ElapsedMilliseconds}; {error}")
+L000361 |                 Record("OUTPUT_FAILED", $"{id}; ElapsedMs={clock.ElapsedMilliseconds}; {error}"); ⟦EOL⟧
+// 해설 L362: 조건에 따라 분기합니다: if (error is OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000362 |                 if (error is OperationCanceledException) throw; ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error) / 조건에 따라 분기합니다: if (id is MoveStart or MoveAck or IofStart or IofAck) / 예외를 발생/전달합니다: throw CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error);
+L000363 |                 if (id is MoveStart or MoveAck or IofStart or IofAck) throw CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error); ⟦EOL⟧
+// 해설 L364: 예외를 발생/전달합니다: throw;
+L000364 |                 throw; ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 Write.
+L000365 |             } ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 Write.
+L000366 |         } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Stage(string, int, System.Threading.CancellationToken)
+L000368 |         private async Task Stage(string id, int value, CancellationToken token) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 Stage.
+L000369 |         { ⟦EOL⟧
+// 해설 L370: 조건에 따라 분기합니다: if (!_simulation || !_automatic)
+L000370 |             if (!_simulation || !_automatic) ⟦EOL⟧
+// 해설 L371: 호출자에게 값 또는 제어를 반환합니다: return;
+L000371 |                 return; ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id)
+L000372 |             Route(id); ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.SetStageFlowSimulationValue(id, value)
+L000373 |             _interfaces.Melsec.SetStageFlowSimulationValue(id, value); ⟦EOL⟧
+// 해설 L374: 비동기 완료를 기다립니다: await _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, token)
+L000374 |             await _interfaces.Melsec.RefreshCachedValueAsync(id, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(id, "SIMULATED_STAGE_REPLY", value)
+L000375 |             Record(id, "SIMULATED_STAGE_REPLY", value); ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 Stage.
+L000376 |         } ⟦EOL⟧
+L000377 |  ⟦EOL⟧
+// 해설 L378: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000378 |         // Read the existing cache only: diagnostics must not add SDK reads or alter peer signals. ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.RecordIofSnapshot(string, string)
+L000379 |         private void RecordIofSnapshot(string phase, string reason) ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000380 |         { ⟦EOL⟧
+// 해설 L381: 예외 처리 범위입니다: try
+L000381 |             try ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000382 |             { ⟦EOL⟧
+// 해설 L383: 지역 변수를 선언합니다: var ids = new[] { IofStart, IofAck, IofComplete, IofRead, IofRun, "IOF_SETTING", "IOF_TRIGGER_POINT_COUNT", "IOF_TRIGGER_ZERO_POINT_COUNT", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY" }; / 변수의 초기값을 지정합니다: ids = new[] { IofStart, IofAck, IofComplete, IofRead, IofRun, "IOF_SETTING", "IOF_TRIGGER_POINT_COUNT", "IOF_TRIGGER_ZERO_POINT_COUNT", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY" }
+L000383 |                 var ids = new[] { IofStart, IofAck, IofComplete, IofRead, IofRun, "IOF_SETTING", "IOF_TRIGGER_POINT_COUNT", "IOF_TRIGGER_ZERO_POINT_COUNT", "MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY" }; ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedSnapshot(ids, out var map) / 지역 변수를 선언합니다: var values = _interfaces.Melsec.GetCachedSnapshot(ids, out var map); / 변수의 초기값을 지정합니다: values = _interfaces.Melsec.GetCachedSnapshot(ids, out var map)
+L000384 |                 var values = _interfaces.Melsec.GetCachedSnapshot(ids, out var map); ⟦EOL⟧
+// 해설 L385: 지역 변수를 선언합니다: var now = DateTimeOffset.UtcNow; / 변수의 초기값을 지정합니다: now = DateTimeOffset.UtcNow
+L000385 |                 var now = DateTimeOffset.UtcNow; ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Select(id => { var row = map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); var sample = values.GetValueOrDefault(id); // The cache stores scaled values, not raw received words. Labe… / 지역 변수를 선언합니다: var signals = ids.Select(id => { var row = map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); var sample = values.GetValueOrDefault(id); // The cache stores scaled values, not raw received words.  / 변수의 초기값을 지정합니다: signals = ids.Select(id =>
+L000386 |                 var signals = ids.Select(id => ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000387 |                 { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(id, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var row = map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: row = map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
+L000388 |                     var row = map.SingleOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.GetValueOrDefault(id) / 지역 변수를 선언합니다: var sample = values.GetValueOrDefault(id); / 변수의 초기값을 지정합니다: sample = values.GetValueOrDefault(id)
+L000389 |                     var sample = values.GetValueOrDefault(id); ⟦EOL⟧
+// 해설 L390: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000390 |                     // The cache stores scaled values, not raw received words. Label the inverse as derived. ⟦EOL⟧
+// 해설 L391: 조건에 따라 결과식을 선택합니다: sample?.Value is not null && row is { ReadScale: not 0 } ? Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / row.ReadScale : (double?)null / 지역 변수를 선언합니다: var rawDerived = sample?.Value is not null && row is { ReadScale: not 0 } ? Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / row.ReadScale : (double?)null; / 변수의 초기값을 지정합니다: rawDerived = sample?.Value is not null && row is { ReadScale: not 0 } ? Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / row.ReadScale : (double?)null
+L000391 |                     var rawDerived = sample?.Value is not null && row is { ReadScale: not 0 } ⟦EOL⟧
+// 해설 L392: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture)
+L000392 |                         ? Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / row.ReadScale : (double?)null; ⟦EOL⟧
+// 해설 L393: 조건에 따라 결과식을 선택합니다: sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null / 지역 변수를 선언합니다: var age = sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null; / 변수의 초기값을 지정합니다: age = sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null
+L000393 |                     var age = sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null; ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"{id}[Address={row?.Address}; Type={row?.DataType}; Length={row?.Length}; ReadScale={row?.ReadScale}; WriteScale={row?.WriteScale}; Value={sample?.Value}; RawDerived={rawDerived}; State={samp… / 호출자에게 값 또는 제어를 반환합니다: return FormattableString.Invariant($"{id}[Address={row?.Address}; Type={row?.DataType}; Length={row?.Length}; ReadScale={row?.ReadScale}; WriteScale={row?.WriteScale}; Value={sample?.Value}; RawDerived={rawDerived}; State={sample?
+L000394 |                     return FormattableString.Invariant($"{id}[Address={row?.Address}; Type={row?.DataType}; Length={row?.Length}; ReadScale={row?.ReadScale}; WriteScale={row?.WriteScale}; Value={sample?.Value}; RawDerived={rawDerived}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={age:F0}; Cycle={sample?.ReadCycleNo}; Error={sample?.ErrorMessage}]"); ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.RecordIofSnapshot(string, string)
+L000395 |                 }); ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("IOF_SNAPSHOT", $"Plan={_iofPlanId}; Phase={phase}; Reason={reason}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}; DriverLastReadAt={_interfaces.Melsec.LastSuccessfulReadAt:O}; DriverReadCo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", signals)
+L000396 |                 Record("IOF_SNAPSHOT", $"Plan={_iofPlanId}; Phase={phase}; Reason={reason}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}; DriverLastReadAt={_interfaces.Melsec.LastSuccessfulReadAt:O}; DriverReadCode={_interfaces.Melsec.LastReadReturnCode}; DriverReadFailures={_interfaces.Melsec.ConsecutiveReadFailureCount}; " + string.Join(" | ", signals)); ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000397 |             } ⟦EOL⟧
+// 해설 L398: 지정 예외를 처리합니다: catch (Exception error)
+L000398 |             catch (Exception error) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000399 |             { ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("IOF_DIAGNOSTIC_FAILED", $"Plan={_iofPlanId}; Phase={phase}; Reason={reason}; {error.Message}")
+L000400 |                 Record("IOF_DIAGNOSTIC_FAILED", $"Plan={_iofPlanId}; Phase={phase}; Reason={reason}; {error.Message}"); ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000401 |             } ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 RecordIofSnapshot.
+L000402 |         } ⟦EOL⟧
+L000403 |  ⟦EOL⟧
+// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Wait(string, int, System.Threading.CancellationToken, System.TimeSpan?, string?)
+L000404 |         private async Task Wait(string id, int expected, CancellationToken token, TimeSpan? timeout = null, string? iofPhase = null) ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 Wait.
+L000405 |         { ⟦EOL⟧
+// 해설 L406: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.StartNew() / 지역 변수를 선언합니다: var clock = Stopwatch.StartNew(); / 변수의 초기값을 지정합니다: clock = Stopwatch.StartNew()
+L000406 |             var clock = Stopwatch.StartNew(); ⟦EOL⟧
+// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000407 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L408: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(timeout ?? _owner._signalTimeout)
+L000408 |             limit.CancelAfter(timeout ?? _owner._signalTimeout); ⟦EOL⟧
+// 해설 L409: 지역 변수를 선언합니다: double? previous = null; / 변수의 초기값을 지정합니다: previous = null
+L000409 |             double? previous = null; ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 지역 변수를 선언합니다: var nextDiagnostic = TimeSpan.FromSeconds(5); / 변수의 초기값을 지정합니다: nextDiagnostic = TimeSpan.FromSeconds(5)
+L000410 |             var nextDiagnostic = TimeSpan.FromSeconds(5); ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("WAIT_BEGIN", $"{id}; Expected={expected}; TimeoutMs={(timeout ?? _owner._signalTimeout).TotalMilliseconds}; IofPhase={iofPhase}")
+L000411 |             Record("WAIT_BEGIN", $"{id}; Expected={expected}; TimeoutMs={(timeout ?? _owner._signalTimeout).TotalMilliseconds}; IofPhase={iofPhase}"); ⟦EOL⟧
+// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecordIofSnapshot(iofPhase, "WAIT_BEGIN") / 조건에 따라 분기합니다: if (iofPhase is not null)
+L000412 |             if (iofPhase is not null) RecordIofSnapshot(iofPhase, "WAIT_BEGIN"); ⟦EOL⟧
+// 해설 L413: 예외 처리 범위입니다: try
+L000413 |             try ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 Wait.
+L000414 |             { ⟦EOL⟧
+// 해설 L415: 조건을 먼저 확인하며 반복합니다: while (true)
+L000415 |                 while (true) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 Wait.
+L000416 |                 { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(limit.Token)
+L000417 |                     Check(limit.Token); ⟦EOL⟧
+// 해설 L418: 비동기 완료를 기다립니다: await RefreshInputs([id], limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs([id], limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs([id], limit.Token)
+L000418 |                     await RefreshInputs([id], limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(id) / 지역 변수를 선언합니다: var number = Value(id); / 변수의 초기값을 지정합니다: number = Value(id)
+L000419 |                     var number = Value(id); ⟦EOL⟧
+// 해설 L420: 조건에 따라 분기합니다: if (previous != number)
+L000420 |                     if (previous != number) ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 Wait.
+L000421 |                     { ⟦EOL⟧
+// 해설 L422: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("SIGNAL_OBSERVED", $"{id}; Address={Route(id).Address}", number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id)
+L000422 |                         Record("SIGNAL_OBSERVED", $"{id}; Address={Route(id).Address}", number); ⟦EOL⟧
+// 해설 L423: 값을 대상에 대입합니다: previous = number
+L000423 |                         previous = number; ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 Wait.
+L000424 |                     } ⟦EOL⟧
+L000425 |  ⟦EOL⟧
+// 해설 L426: 조건에 따라 분기합니다: if (number is not (0 or 1))
+L000426 |                     if (number is not (0 or 1)) ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Stage 신호는 READ_SCALE 적용 후 0/1이어야 합니다: " + id) / 예외를 발생/전달합니다: throw new InvalidDataException("Stage 신호는 READ_SCALE 적용 후 0/1이어야 합니다: " + id);
+L000427 |                         throw new InvalidDataException("Stage 신호는 READ_SCALE 적용 후 0/1이어야 합니다: " + id); ⟦EOL⟧
+// 해설 L428: 조건에 따라 분기합니다: if (number == expected)
+L000428 |                     if (number == expected) ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 Wait.
+L000429 |                     { ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("WAIT_MATCH", $"{id}; Expected={expected}; ElapsedMs={clock.ElapsedMilliseconds}; IofPhase={iofPhase}")
+L000430 |                         Record("WAIT_MATCH", $"{id}; Expected={expected}; ElapsedMs={clock.ElapsedMilliseconds}; IofPhase={iofPhase}"); ⟦EOL⟧
+// 해설 L431: 호출자에게 값 또는 제어를 반환합니다: return;
+L000431 |                         return; ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 Wait.
+L000432 |                     } ⟦EOL⟧
+L000433 |  ⟦EOL⟧
+// 해설 L434: 조건에 따라 분기합니다: if (clock.Elapsed > (timeout ?? _owner._signalTimeout))
+L000434 |                     if (clock.Elapsed > (timeout ?? _owner._signalTimeout)) ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; Actual={number}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}") / 예외를 발생/전달합니다: throw new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; Actual={number}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}");
+L000435 |                         throw new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; Actual={number}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}"); ⟦EOL⟧
+// 해설 L436: 조건에 따라 분기합니다: if (iofPhase is not null && clock.Elapsed >= nextDiagnostic)
+L000436 |                     if (iofPhase is not null && clock.Elapsed >= nextDiagnostic) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 Wait.
+L000437 |                     { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecordIofSnapshot(iofPhase, $"WAITING; ElapsedMs={clock.ElapsedMilliseconds}")
+L000438 |                         RecordIofSnapshot(iofPhase, $"WAITING; ElapsedMs={clock.ElapsedMilliseconds}"); ⟦EOL⟧
+// 해설 L439: 값을 대상에 대입합니다: nextDiagnostic = clock.Elapsed + TimeSpan.FromSeconds(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000439 |                         nextDiagnostic = clock.Elapsed + TimeSpan.FromSeconds(5); ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 Wait.
+L000440 |                     } ⟦EOL⟧
+// 해설 L441: 비동기 완료를 기다립니다: await Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token)
+L000441 |                     await Task.Delay(20, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 Wait.
+L000442 |                 } ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 Wait.
+L000443 |             } ⟦EOL⟧
+// 해설 L444: 지정 예외를 처리합니다: catch (Exception error)
+L000444 |             catch (Exception error) ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 Wait.
+L000445 |             { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopRequested() / 조건에 따라 분기합니다: if (error is OperationCanceledException && !token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested)
+L000446 |                 if (error is OperationCanceledException && !token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L447: 값을 대상에 대입합니다: error = new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}; {Describe(id)}", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}; {Describe(id)}", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id)
+L000447 |                     error = new TimeoutException($"Stage 신호 대기 시간 초과: {id}={expected}; IofPhase={iofPhase}; StartConfirmed={_iofStartConfirmed}; AckConfirmed={_iofAckConfirmed}; {Describe(id)}", error); ⟦EOL⟧
+// 해설 L448: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecordIofSnapshot(iofPhase, error is OperationCanceledException ? "WAIT_CANCELED" : "WAIT_FAILED") / 조건에 따라 결과식을 선택합니다: error is OperationCanceledException ? "WAIT_CANCELED" : "WAIT_FAILED" / 조건에 따라 분기합니다: if (iofPhase is not null)
+L000448 |                 if (iofPhase is not null) RecordIofSnapshot(iofPhase, error is OperationCanceledException ? "WAIT_CANCELED" : "WAIT_FAILED"); ⟦EOL⟧
+// 해설 L449: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("WAIT_FAILED", $"{Describe(id)}; Expected={expected}; Actual={previous}; IofPhase={iofPhase}; ElapsedMs={clock.ElapsedMilliseconds}; {error}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id)
+L000449 |                 Record("WAIT_FAILED", $"{Describe(id)}; Expected={expected}; Actual={previous}; IofPhase={iofPhase}; ElapsedMs={clock.ElapsedMilliseconds}; {error}"); ⟦EOL⟧
+// 해설 L450: 조건에 따라 분기합니다: if (error is OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000450 |                 if (error is OperationCanceledException) throw; ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error) / 예외를 발생/전달합니다: throw CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error);
+L000451 |                 throw CSequenceFailureException.Signal(_scenario, id, error is TimeoutException, error); ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 Wait.
+L000452 |             } ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 Wait.
+L000453 |         } ⟦EOL⟧
+L000454 |  ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Step(string, System.Func<System.Threading.Tasks.Task>)
+L000455 |         private async Task Step(string id, Func<Task> work) ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 Step.
+L000456 |         { ⟦EOL⟧
+// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.StartNew() / 지역 변수를 선언합니다: var clock = Stopwatch.StartNew(); / 변수의 초기값을 지정합니다: clock = Stopwatch.StartNew()
+L000457 |             var clock = Stopwatch.StartNew(); ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(id + ":RUNNING")
+L000458 |             Record(id + ":RUNNING"); ⟦EOL⟧
+// 해설 L459: 예외 처리 범위입니다: try
+L000459 |             try ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 Step.
+L000460 |             { ⟦EOL⟧
+// 해설 L461: 비동기 완료를 기다립니다: await _owner.Actions.RunAsync(id, work).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Actions.RunAsync(id, work).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Actions.RunAsync(id, work)
+L000461 |                 await _owner.Actions.RunAsync(id, work).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(id + ":DONE", $"ElapsedMs={clock.ElapsedMilliseconds}")
+L000462 |                 Record(id + ":DONE", $"ElapsedMs={clock.ElapsedMilliseconds}"); ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다 · 소속 Step.
+L000463 |             } ⟦EOL⟧
+// 해설 L464: 지정 예외를 처리합니다: catch (Exception error)
+L000464 |             catch (Exception error) ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 Step.
+L000465 |             { ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(id + (error is OperationCanceledException ? ":CANCELED" : ":FAILED"), $"ElapsedMs={clock.ElapsedMilliseconds}; {error}") / 조건에 따라 결과식을 선택합니다: error is OperationCanceledException ? ":CANCELED" : ":FAILED"
+L000466 |                 Record(id + (error is OperationCanceledException ? ":CANCELED" : ":FAILED"), $"ElapsedMs={clock.ElapsedMilliseconds}; {error}"); ⟦EOL⟧
+// 해설 L467: 조건에 따라 분기합니다: if (error is OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000467 |                 if (error is OperationCanceledException) throw; ⟦EOL⟧
+// 해설 L468: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Action(id, error) / 지역 변수를 선언합니다: var failure = CSequenceFailureException.Action(id, error); / 변수의 초기값을 지정합니다: failure = CSequenceFailureException.Action(id, error)
+L000468 |                 var failure = CSequenceFailureException.Action(id, error); ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.ReportFailure(failure)
+L000469 |                 _owner.ReportFailure(failure); ⟦EOL⟧
+// 해설 L470: 예외를 발생/전달합니다: throw failure;
+L000470 |                 throw failure; ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 Step.
+L000471 |             } ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 Step.
+L000472 |         } ⟦EOL⟧
+L000473 |  ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.InitialRead(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+L000474 |         private async Task InitialRead(IEnumerable<string> ids, CancellationToken token) ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 InitialRead.
+L000475 |         { ⟦EOL⟧
+// 해설 L476: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000476 |             // Simulation remains usable before an explicit connection; initialize only its owning simulated device. ⟦EOL⟧
+// 해설 L477: 조건에 따라 분기합니다: if (_simulation && !_interfaces.Melsec.IsRunning)
+L000477 |             if (_simulation && !_interfaces.Melsec.IsRunning) ⟦EOL⟧
+// 해설 L478: 비동기 완료를 기다립니다: await _interfaces.Connect(EN_EQP_MODULE.Melsec, _device, cancellationToken: token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Connect(EN_EQP_MODULE.Melsec, _device, cancellationToken: token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Connect(EN_EQP_MODULE.Melsec, _device, cancellationToken: token)
+L000478 |                 await _interfaces.Connect(EN_EQP_MODULE.Melsec, _device, cancellationToken: token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000479 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000480 |             limit.CancelAfter(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L481: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000481 |             // Register all refreshes together: IDs in one polling block share one fresh read. ⟦EOL⟧
+// 해설 L482: 비동기 완료를 기다립니다: await Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => { Check(token); Route(id); var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); Record("SIGNAL_I / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => { Check(token); Route(id); var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); Record("SIGN… / 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Distinct(S
+L000482 |             await Task.WhenAll(ids.Distinct(StringComparer.OrdinalIgnoreCase).Select(async id => ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다 · 소속 InitialRead.
+L000483 |             { ⟦EOL⟧
+// 해설 L484: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token)
+L000484 |                 Check(token); ⟦EOL⟧
+// 해설 L485: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id)
+L000485 |                 Route(id); ⟦EOL⟧
+// 해설 L486: 비동기 완료를 기다립니다: await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token) / 지역 변수를 선언합니다: var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false)
+L000486 |                 var sample = await _interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("SIGNAL_INITIAL", $"{id}; Address={Route(id).Address}; State={sample.State}; Value={Convert.ToString(sample.Value, CultureInfo.InvariantCulture)}; SampleAt={sample.UpdatedAt:O}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToString(sample.Value, CultureInfo.InvariantCulture)
+L000487 |                 Record("SIGNAL_INITIAL", $"{id}; Address={Route(id).Address}; State={sample.State}; Value={Convert.ToString(sample.Value, CultureInfo.InvariantCulture)}; SampleAt={sample.UpdatedAt:O}"); ⟦EOL⟧
+// 해설 L488: 조건에 따라 분기합니다: if (!sample.IsValid)
+L000488 |                 if (!sample.IsValid) ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Stage 초기 상태 읽기 실패: " + id) / 예외를 발생/전달합니다: throw new IOException("Stage 초기 상태 읽기 실패: " + id);
+L000489 |                     throw new IOException("Stage 초기 상태 읽기 실패: " + id); ⟦EOL⟧
+// 해설 L490: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.InitialRead(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+L000490 |             })).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 InitialRead.
+L000491 |         } ⟦EOL⟧
+L000492 |  ⟦EOL⟧
+// 해설 L493: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.Stop()
+L000493 |         public void Stop() ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 Stop.
+L000494 |         { ⟦EOL⟧
+// 해설 L495: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop(EN_MANUAL_STAGE_AXIS.ReviewX)
+L000495 |             _motion?.Stop(EN_MANUAL_STAGE_AXIS.ReviewX); ⟦EOL⟧
+// 해설 L496: 조건에 따라 분기합니다: if (!_reviewXOnly && !_stageBufferOwner)
+L000496 |             if (!_reviewXOnly && !_stageBufferOwner) ⟦EOL⟧
+// 해설 L497: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop(EN_MANUAL_STAGE_AXIS.StageY)
+L000497 |                 _motion?.Stop(EN_MANUAL_STAGE_AXIS.StageY); ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 Stop.
+L000498 |         } ⟦EOL⟧
+L000499 |  ⟦EOL⟧
+// 해설 L500: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.Dispose()
+L000500 |         public void Dispose() ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 Dispose.
+L000501 |         { ⟦EOL⟧
+// 해설 L502: 조건에 따라 분기합니다: if (_disposed)
+L000502 |             if (_disposed) ⟦EOL⟧
+// 해설 L503: 호출자에게 값 또는 제어를 반환합니다: return;
+L000503 |                 return; ⟦EOL⟧
+// 해설 L504: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()
+L000504 |             Stop(); ⟦EOL⟧
+// 해설 L505: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000505 |             _lease?.Dispose(); ⟦EOL⟧
+// 해설 L506: 값을 대상에 대입합니다: _disposed = true
+L000506 |             _disposed = true; ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner._cleanupFailures.ContainsKey(_device) / 조건에 따라 분기합니다: if (!_owner._cleanupFailures.ContainsKey(_device))
+L000507 |             if (!_owner._cleanupFailures.ContainsKey(_device)) ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner._owners.TryRemove(_device, out _)
+L000508 |                 _owner._owners.TryRemove(_device, out _); ⟦EOL⟧
+// 해설 L509: 구문 블록 경계입니다 · 소속 Dispose.
+L000509 |         } ⟦EOL⟧
+L000510 |  ⟦EOL⟧
+// 해설 L511: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.MoveAxis(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double, System.Threading.CancellationToken)
+L000511 |         internal async Task MoveAxis(EN_MANUAL_STAGE_AXIS axis, double value, bool relative, double speed, CancellationToken token) ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 MoveAxis.
+L000512 |         { ⟦EOL⟧
+// 해설 L513: 조건에 따라 결과식을 선택합니다: axis == EN_MANUAL_STAGE_AXIS.ReviewX ? EN_STAGE_MOVE_MODE.ReviewX : EN_STAGE_MOVE_MODE.StageY / 지역 변수를 선언합니다: var mode = axis == EN_MANUAL_STAGE_AXIS.ReviewX ? EN_STAGE_MOVE_MODE.ReviewX : EN_STAGE_MOVE_MODE.StageY; / 변수의 초기값을 지정합니다: mode = axis == EN_MANUAL_STAGE_AXIS.ReviewX ? EN_STAGE_MOVE_MODE.ReviewX : EN_STAGE_MOVE_MODE.StageY
+L000513 |             var mode = axis == EN_MANUAL_STAGE_AXIS.ReviewX ? EN_STAGE_MOVE_MODE.ReviewX : EN_STAGE_MOVE_MODE.StageY; ⟦EOL⟧
+// 해설 L514: 비동기 완료를 기다립니다: await InitialRead(["MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY"], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead(["MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY"], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead(["MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY"], token)
+L000514 |             await InitialRead(["MOTOR_CAMERA_X_BUSY", "MOTOR_STAGE_Y_BUSY"], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L515: 비동기 완료를 기다립니다: await WaitStopped(token, mode).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, mode).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, mode)
+L000515 |             await WaitStopped(token, mode).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L516: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000516 |             // Resolve REL from fresh hardware feedback while holding the common motion ownership. ⟦EOL⟧
+// 해설 L517: 비동기 완료를 기다립니다: await InitialRead(["MOTOR_CAMERA_X_CUR_POS", "MOTOR_STAGE_Y_CUR_POS"], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead(["MOTOR_CAMERA_X_CUR_POS", "MOTOR_STAGE_Y_CUR_POS"], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead(["MOTOR_CAMERA_X_CUR_POS", "MOTOR_STAGE_Y_CUR_POS"], token)
+L000517 |             await InitialRead(["MOTOR_CAMERA_X_CUR_POS", "MOTOR_STAGE_Y_CUR_POS"], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L518: 지역 변수를 선언합니다: var x = CurrentX; / 변수의 초기값을 지정합니다: x = CurrentX
+L000518 |             var x = CurrentX; ⟦EOL⟧
+// 해설 L519: 지역 변수를 선언합니다: var y = CurrentY; / 변수의 초기값을 지정합니다: y = CurrentY
+L000519 |             var y = CurrentY; ⟦EOL⟧
+// 해설 L520: 조건에 따라 결과식을 선택합니다: relative ? (axis == EN_MANUAL_STAGE_AXIS.ReviewX ? x : y) + value : value / 조건에 따라 결과식을 선택합니다: axis == EN_MANUAL_STAGE_AXIS.ReviewX ? x : y / 지역 변수를 선언합니다: var target = relative ? (axis == EN_MANUAL_STAGE_AXIS.ReviewX ? x : y) + value : value; / 변수의 초기값을 지정합니다: target = relative ? (axis == EN_MANUAL_STAGE_AXIS.ReviewX ? x : y) + value : value
+L000520 |             var target = relative ? (axis == EN_MANUAL_STAGE_AXIS.ReviewX ? x : y) + value : value; ⟦EOL⟧
+// 해설 L521: 비동기 완료를 기다립니다: await Move(new(axis == EN_MANUAL_STAGE_AXIS.ReviewX ? target : x, axis == EN_MANUAL_STAGE_AXIS.StageY ? target : y, speed, speed, Mode: mode), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Move(new(axis == EN_MANUAL_STAGE_AXIS.ReviewX ? target : x, axis == EN_MANUAL_STAGE_AXIS.StageY ? target : y, speed, speed, Mode: mode), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Move(new(axis == EN_MANUAL_STAGE_AXIS.ReviewX ? target : x, axis == EN_MANUAL_STAGE_AXIS.StageY ? target : y, speed, speed, Mode:
+L000521 |             await Move(new(axis == EN_MANUAL_STAGE_AXIS.ReviewX ? target : x, ⟦EOL⟧
+// 해설 L522: 조건에 따라 결과식을 선택합니다: axis == EN_MANUAL_STAGE_AXIS.StageY ? target : y
+L000522 |                 axis == EN_MANUAL_STAGE_AXIS.StageY ? target : y, speed, speed, ⟦EOL⟧
+// 해설 L523: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.MoveAxis(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double, System.Threading.CancellationToken)
+L000523 |                 Mode: mode), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다 · 소속 MoveAxis.
+L000524 |         } ⟦EOL⟧
+L000525 |  ⟦EOL⟧
+// 해설 L526: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Station.CStageReviewSequences.Session.ReadStationaryPosition(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, System.Threading.CancellationToken)
+L000526 |         public async Task<double> ReadStationaryPosition(EN_MANUAL_STAGE_AXIS axis, CancellationToken token) ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 ReadStationaryPosition.
+L000527 |         { ⟦EOL⟧
+// 해설 L528: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(axis) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(axis)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(axis) / 조건에 따라 분기합니다: if (!Enum.IsDefined(axis)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(axis));
+L000528 |             if (!Enum.IsDefined(axis)) throw new ArgumentOutOfRangeException(nameof(axis)); ⟦EOL⟧
+// 해설 L529: 지역 변수를 선언합니다: var stageY = axis == EN_MANUAL_STAGE_AXIS.StageY; / 변수의 초기값을 지정합니다: stageY = axis == EN_MANUAL_STAGE_AXIS.StageY
+L000529 |             var stageY = axis == EN_MANUAL_STAGE_AXIS.StageY; ⟦EOL⟧
+// 해설 L530: 조건에 따라 결과식을 선택합니다: stageY ? "MOTOR_STAGE_Y_BUSY" : "MOTOR_CAMERA_X_BUSY" / 지역 변수를 선언합니다: var busy = stageY ? "MOTOR_STAGE_Y_BUSY" : "MOTOR_CAMERA_X_BUSY"; / 변수의 초기값을 지정합니다: busy = stageY ? "MOTOR_STAGE_Y_BUSY" : "MOTOR_CAMERA_X_BUSY"
+L000530 |             var busy = stageY ? "MOTOR_STAGE_Y_BUSY" : "MOTOR_CAMERA_X_BUSY"; ⟦EOL⟧
+// 해설 L531: 조건에 따라 결과식을 선택합니다: stageY ? "MOTOR_STAGE_Y_CUR_POS" : "MOTOR_CAMERA_X_CUR_POS" / 지역 변수를 선언합니다: var position = stageY ? "MOTOR_STAGE_Y_CUR_POS" : "MOTOR_CAMERA_X_CUR_POS"; / 변수의 초기값을 지정합니다: position = stageY ? "MOTOR_STAGE_Y_CUR_POS" : "MOTOR_CAMERA_X_CUR_POS"
+L000531 |             var position = stageY ? "MOTOR_STAGE_Y_CUR_POS" : "MOTOR_CAMERA_X_CUR_POS"; ⟦EOL⟧
+// 해설 L532: 비동기 완료를 기다립니다: await InitialRead([busy], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([busy], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([busy], token)
+L000532 |             await InitialRead([busy], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L533: 비동기 완료를 기다립니다: await WaitStopped(token, stageY ? EN_STAGE_MOVE_MODE.StageY : EN_STAGE_MOVE_MODE.ReviewX).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, stageY ? EN_STAGE_MOVE_MODE.StageY : EN_STAGE_MOVE_MODE.ReviewX).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, stageY ? EN_STAGE_MOVE_MODE.StageY : EN_STAGE_MOVE_MODE.ReviewX) / 조건에 따라 결과식을 선택합니다: stageY ? EN_STAGE_MOVE_MODE.StageY : EN_STAGE_MOVE_MODE.ReviewX
+L000533 |             await WaitStopped(token, stageY ? EN_STAGE_MOVE_MODE.StageY : EN_STAGE_MOVE_MODE.ReviewX).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L534: 비동기 완료를 기다립니다: await InitialRead([position], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([position], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([position], token)
+L000534 |             await InitialRead([position], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L535: 조건에 따라 결과식을 선택합니다: stageY ? CurrentY : CurrentX / 호출자에게 값 또는 제어를 반환합니다: return stageY ? CurrentY : CurrentX;
+L000535 |             return stageY ? CurrentY : CurrentX; ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다 · 소속 ReadStationaryPosition.
+L000536 |         } ⟦EOL⟧
+L000537 |  ⟦EOL⟧
+// 해설 L538: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000538 |         public async Task Move(ST_STAGE_MOVE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 Move.
+L000539 |         { ⟦EOL⟧
+// 해설 L540: 값을 대상에 대입합니다: _scenario = "PROCESS_MOVE"
+L000540 |             _scenario = "PROCESS_MOVE"; ⟦EOL⟧
+// 해설 L541: 조건에 따라 분기합니다: if ((_reviewXOnly || _stageBufferOwner) && target.Mode != EN_STAGE_MOVE_MODE.ReviewX)
+L000541 |             if ((_reviewXOnly || _stageBufferOwner) && target.Mode != EN_STAGE_MOVE_MODE.ReviewX) ⟦EOL⟧
+// 해설 L542: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Review X 선대기/0선 소유자는 Main Y를 이동할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Review X 선대기/0선 소유자는 Main Y를 이동할 수 없습니다.");
+L000542 |                 throw new InvalidOperationException("Review X 선대기/0선 소유자는 Main Y를 이동할 수 없습니다."); ⟦EOL⟧
+// 해설 L543: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { target.X, target.Y, target.SpeedX, target.SpeedY, target.AccelerationX }.Any(value => !double.IsFinite(value)) / 조건에 따라 분기합니다: if (new[] { target.X, target.Y, target.SpeedX, target.SpeedY, target.AccelerationX }.Any(value => !double.IsFinite(value)) || target.SpeedX <= 0 || target.SpeedY <= 0 || target.AccelerationX <= 0 || !Enum.IsDefined(target.Mo…)
+L000543 |             if (new[] ⟦EOL⟧
+// 해설 L544: 구문 블록 경계입니다 · 소속 Move.
+L000544 |             { ⟦EOL⟧
+// 해설 L545: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000545 |                 target.X, ⟦EOL⟧
+// 해설 L546: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000546 |                 target.Y, ⟦EOL⟧
+// 해설 L547: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000547 |                 target.SpeedX, ⟦EOL⟧
+// 해설 L548: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000548 |                 target.SpeedY, ⟦EOL⟧
+// 해설 L549: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000549 |                 target.AccelerationX ⟦EOL⟧
+// 해설 L550: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(target.Mode)
+L000550 |             }.Any(value => !double.IsFinite(value)) || target.SpeedX <= 0 || target.SpeedY <= 0 || target.AccelerationX <= 0 || !Enum.IsDefined(target.Mode)) ⟦EOL⟧
+// 해설 L551: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("Stage 목표 위치·속도·가속도·모드를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("Stage 목표 위치·속도·가속도·모드를 확인해 주세요.");
+L000551 |                 throw new ArgumentException("Stage 목표 위치·속도·가속도·모드를 확인해 주세요."); ⟦EOL⟧
+// 해설 L552: 비동기 완료를 기다립니다: await _operation.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.WaitAsync(token)
+L000552 |             await _operation.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L553: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var stop = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: stop = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000553 |             using var stop = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L554: 값을 대상에 대입합니다: _owner._moveStops[_device] = stop
+L000554 |             _owner._moveStops[_device] = stop; ⟦EOL⟧
+// 해설 L555: 값을 대상에 대입합니다: token = stop.Token
+L000555 |             token = stop.Token; ⟦EOL⟧
+// 해설 L556: 값을 대상에 대입합니다: _moveMode = target.Mode
+L000556 |             _moveMode = target.Mode; ⟦EOL⟧
+// 해설 L557: 예외 처리 범위입니다: try
+L000557 |             try ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 Move.
+L000558 |             { ⟦EOL⟧
+// 해설 L559: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token)
+L000559 |                 Check(token); ⟦EOL⟧
+// 해설 L560: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Actions.ResetToWaiting(MoveActions)
+L000560 |                 _owner.Actions.ResetToWaiting(MoveActions); ⟦EOL⟧
+// 해설 L561: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("MOVE_PLAN", FormattableString.Invariant($"Mode={target.Mode}; TargetX={target.X}; TargetY={target.Y}; SpeedX={target.SpeedX}; SpeedY={target.SpeedY}; AccX={target.AccelerationX}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"Mode={target.Mode}; TargetX={target.X}; TargetY={target.Y}; SpeedX={target.SpeedX}; SpeedY={target.SpeedY}; AccX={target.AccelerationX}")
+L000561 |                 Record("MOVE_PLAN", FormattableString.Invariant($"Mode={target.Mode}; TargetX={target.X}; TargetY={target.Y}; SpeedX={target.SpeedX}; SpeedY={target.SpeedY}; AccX={target.AccelerationX}")); ⟦EOL⟧
+// 해설 L562: 비동기 완료를 기다립니다: await Step("MOVE_TARGETS", async () => { await InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token).ConfigureAwait(false); await WaitStopped(token, target.Mode).ConfigureAwait(false); // Never start over an old peer co / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("MOVE_TARGETS", async () => { await InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token).ConfigureAwait(false); await WaitStopped(token, target.Mode).ConfigureAwait(false); // Never start over an old pee…
+L000562 |                 await Step("MOVE_TARGETS", async () => ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 Move.
+L000563 |                 { ⟦EOL⟧
+// 해설 L564: 비동기 완료를 기다립니다: await InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token)
+L000564 |                     await InitialRead([MoveStart, MoveAck, MoveComplete, MoveAble], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L565: 비동기 완료를 기다립니다: await WaitStopped(token, target.Mode).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, target.Mode).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token, target.Mode)
+L000565 |                     await WaitStopped(token, target.Mode).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L566: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000566 |                     // Never start over an old peer completion or unacknowledged request. ⟦EOL⟧
+// 해설 L567: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(MoveStart) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(MoveAck) / 조건에 따라 분기합니다: if (Value(MoveStart) != 0 || Value(MoveAck) != 0)
+L000567 |                     if (Value(MoveStart) != 0 || Value(MoveAck) != 0) ⟦EOL⟧
+// 해설 L568: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이전 SDC 이동 요청/응답이 복귀되지 않았습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("이전 SDC 이동 요청/응답이 복귀되지 않았습니다.");
+L000568 |                         throw new InvalidOperationException("이전 SDC 이동 요청/응답이 복귀되지 않았습니다."); ⟦EOL⟧
+// 해설 L569: 비동기 완료를 기다립니다: await Stage(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, token)
+L000569 |                     await Stage(MoveComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L570: 비동기 완료를 기다립니다: await Wait(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 0, token)
+L000570 |                     await Wait(MoveComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L571: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_STOP_SIGNAL", 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_STOP_SIGNAL", 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_STOP_SIGNAL", 0, token)
+L000571 |                     await Write("PROCESS_REVIEW_STOP_SIGNAL", 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L572: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_CONTROL_MODE", (int)target.Mode, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_CONTROL_MODE", (int)target.Mode, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_CONTROL_MODE", (int)target.Mode, token)
+L000572 |                     await Write("PROCESS_REVIEW_CONTROL_MODE", (int)target.Mode, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L573: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_COMMAND_POSITION_X", target.X, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_POSITION_X", target.X, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_POSITION_X", target.X, token)
+L000573 |                     await Write("PROCESS_REVIEW_COMMAND_POSITION_X", target.X, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L574: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_COMMAND_POSITION_Y", target.Y, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_POSITION_Y", target.Y, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_POSITION_Y", target.Y, token)
+L000574 |                     await Write("PROCESS_REVIEW_COMMAND_POSITION_Y", target.Y, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L575: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_COMMAND_SPEED_X", target.SpeedX, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_SPEED_X", target.SpeedX, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_SPEED_X", target.SpeedX, token)
+L000575 |                     await Write("PROCESS_REVIEW_COMMAND_SPEED_X", target.SpeedX, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L576: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_COMMAND_SPEED_Y", target.SpeedY, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_SPEED_Y", target.SpeedY, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_COMMAND_SPEED_Y", target.SpeedY, token)
+L000576 |                     await Write("PROCESS_REVIEW_COMMAND_SPEED_Y", target.SpeedY, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L577: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000577 |                 }).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L578: 비동기 완료를 기다립니다: await Step("MOVE_SETTLE", async () => { await Stage(MoveAble, 1, token).ConfigureAwait(false); // Spec 0.08 (PROCESS_REVIEW_MOVE_START, row 193) and the // Review scenario define WC124 -> W8029 -> WC128 -> W8021. // WC120/WC122 de / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("MOVE_SETTLE", async () => { await Stage(MoveAble, 1, token).ConfigureAwait(false); // Spec 0.08 (PROCESS_REVIEW_MOVE_START, row 193) and the // Review scenario define WC124 -> W8029 -> WC128 -> W8021. // WC120/WC12…
+L000578 |                 await Step("MOVE_SETTLE", async () => ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다 · 소속 Move.
+L000579 |                 { ⟦EOL⟧
+// 해설 L580: 비동기 완료를 기다립니다: await Stage(MoveAble, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveAble, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveAble, 1, token)
+L000580 |                     await Stage(MoveAble, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L581: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000581 |                     // Spec 0.08 (PROCESS_REVIEW_MOVE_START, row 193) and the ⟦EOL⟧
+// 해설 L582: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000582 |                     // Review scenario define WC124 -> W8029 -> WC128 -> W8021. ⟦EOL⟧
+// 해설 L583: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000583 |                     // WC120/WC122 describe axis control availability, but are not ⟦EOL⟧
+// 해설 L584: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000584 |                     // additional gates of this Process Move transaction. In the ⟦EOL⟧
+// 해설 L585: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000585 |                     // field WC120 can remain OFF even when WC124 permits XY. ⟦EOL⟧
+// 해설 L586: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000586 |                     // The requested axes are selected with W801B; Busy/position, ⟦EOL⟧
+// 해설 L587: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000587 |                     // old handshake reset and WC124 are still verified. ⟦EOL⟧
+// 해설 L588: 비동기 완료를 기다립니다: await Wait(MoveAble, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveAble, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveAble, 1, token)
+L000588 |                     await Wait(MoveAble, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L589: 값을 대상에 대입합니다: _moveOwned = true
+L000589 |                     _moveOwned = true; ⟦EOL⟧
+// 해설 L590: 비동기 완료를 기다립니다: await Write(MoveStart, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 1, token)
+L000590 |                     await Write(MoveStart, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L591: 조건에 따라 분기합니다: if (_simulation)
+L000591 |                     if (_simulation) ⟦EOL⟧
+// 해설 L592: 구문 블록 경계입니다 · 소속 Move.
+L000592 |                     { ⟦EOL⟧
+// 해설 L593: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000593 |                         // Even with manual peer signals, the shared physical-motion preview runs. ⟦EOL⟧
+// 해설 L594: 조건에 따라 분기합니다: if (target.Mode != EN_STAGE_MOVE_MODE.ReviewX)
+L000594 |                         if (target.Mode != EN_STAGE_MOVE_MODE.ReviewX) ⟦EOL⟧
+// 해설 L595: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lease!.Move(EN_MANUAL_STAGE_AXIS.StageY, target.Y, target.SpeedY)
+L000595 |                             _lease!.Move(EN_MANUAL_STAGE_AXIS.StageY, target.Y, target.SpeedY); ⟦EOL⟧
+// 해설 L596: 조건에 따라 분기합니다: if (target.Mode != EN_STAGE_MOVE_MODE.StageY)
+L000596 |                         if (target.Mode != EN_STAGE_MOVE_MODE.StageY) ⟦EOL⟧
+// 해설 L597: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lease!.Move(EN_MANUAL_STAGE_AXIS.ReviewX, target.X, target.SpeedX, target.AccelerationX)
+L000597 |                             _lease!.Move(EN_MANUAL_STAGE_AXIS.ReviewX, target.X, target.SpeedX, target.AccelerationX); ⟦EOL⟧
+// 해설 L598: 비동기 완료를 기다립니다: await WaitArrival(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitArrival(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitArrival(target, token)
+L000598 |                         await WaitArrival(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L599: 비동기 완료를 기다립니다: await Stage(MoveComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 1, token)
+L000599 |                         await Stage(MoveComplete, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 Move.
+L000600 |                     } ⟦EOL⟧
+L000601 |  ⟦EOL⟧
+// 해설 L602: 비동기 완료를 기다립니다: await Wait(MoveComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 1, token)
+L000602 |                     await Wait(MoveComplete, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L603: 비동기 완료를 기다립니다: await WaitArrival(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitArrival(target, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitArrival(target, token)
+L000603 |                     await WaitArrival(target, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L604: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000604 |                     // Describe the completed validation without reading/validating an unused axis for logging. ⟦EOL⟧
+// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("MOVE_ARRIVAL_CONFIRMED", FormattableString.Invariant($"TargetX={target.X}; TargetY={target.Y}; Mode={target.Mode}; PositionTolerance=0.0005; Busy=0 on participating axes")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"TargetX={target.X}; TargetY={target.Y}; Mode={target.Mode}; PositionTolerance=0.0005; Busy=0 on participating axes")
+L000605 |                     Record("MOVE_ARRIVAL_CONFIRMED", FormattableString.Invariant($"TargetX={target.X}; TargetY={target.Y}; Mode={target.Mode}; PositionTolerance=0.0005; Busy=0 on participating axes")); ⟦EOL⟧
+// 해설 L606: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000606 |                 }).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L607: 비동기 완료를 기다립니다: await Step("MOVE_RELEASE", async () => { await Write(MoveStart, 0, token).ConfigureAwait(false); await Write(MoveAck, 1, token).ConfigureAwait(false); await Stage(MoveComplete, 0, token).ConfigureAwait(false); await Wait(MoveCompl / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("MOVE_RELEASE", async () => { await Write(MoveStart, 0, token).ConfigureAwait(false); await Write(MoveAck, 1, token).ConfigureAwait(false); await Stage(MoveComplete, 0, token).ConfigureAwait(false); await Wait(MoveC…
+L000607 |                 await Step("MOVE_RELEASE", async () => ⟦EOL⟧
+// 해설 L608: 구문 블록 경계입니다 · 소속 Move.
+L000608 |                 { ⟦EOL⟧
+// 해설 L609: 비동기 완료를 기다립니다: await Write(MoveStart, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, token)
+L000609 |                     await Write(MoveStart, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L610: 비동기 완료를 기다립니다: await Write(MoveAck, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 1, token)
+L000610 |                     await Write(MoveAck, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L611: 비동기 완료를 기다립니다: await Stage(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, token)
+L000611 |                     await Stage(MoveComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L612: 비동기 완료를 기다립니다: await Wait(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(MoveComplete, 0, token)
+L000612 |                     await Wait(MoveComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L613: 비동기 완료를 기다립니다: await Write(MoveAck, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, token)
+L000613 |                     await Write(MoveAck, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L614: 값을 대상에 대입합니다: _moveOwned = false
+L000614 |                     _moveOwned = false; ⟦EOL⟧
+// 해설 L615: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Move(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000615 |                 }).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L616: 비동기 완료를 기다립니다: await Step("MOVE_XREADY", () => Task.CompletedTask).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("MOVE_XREADY", () => Task.CompletedTask).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("MOVE_XREADY", () => Task.CompletedTask)
+L000616 |                 await Step("MOVE_XREADY", () => Task.CompletedTask).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L617: 구문 블록 경계입니다 · 소속 Move.
+L000617 |             } ⟦EOL⟧
+// 해설 L618: 지정 예외를 처리합니다: catch (Exception error)
+L000618 |             catch (Exception error) ⟦EOL⟧
+// 해설 L619: 구문 블록 경계입니다 · 소속 Move.
+L000619 |             { ⟦EOL⟧
+// 해설 L620: 비동기 완료를 기다립니다: await Abort(move: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Abort(move: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Abort(move: true)
+L000620 |                 await Abort(move: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L621: 조건에 따라 분기합니다: if (error is OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000621 |                 if (error is OperationCanceledException) throw; ⟦EOL⟧
+// 해설 L622: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Action("MOVE_TARGETS", error) / 지역 변수를 선언합니다: var failure = CSequenceFailureException.Action("MOVE_TARGETS", error); / 변수의 초기값을 지정합니다: failure = CSequenceFailureException.Action("MOVE_TARGETS", error)
+L000622 |                 var failure = CSequenceFailureException.Action("MOVE_TARGETS", error); ⟦EOL⟧
+// 해설 L623: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.ReportFailure(failure)
+L000623 |                 _owner.ReportFailure(failure); ⟦EOL⟧
+// 해설 L624: 예외를 발생/전달합니다: throw failure;
+L000624 |                 throw failure; ⟦EOL⟧
+// 해설 L625: 구문 블록 경계입니다 · 소속 Move.
+L000625 |             } ⟦EOL⟧
+// 해설 L626: 종료 정리 구간입니다: finally
+L000626 |             finally ⟦EOL⟧
+// 해설 L627: 구문 블록 경계입니다 · 소속 Move.
+L000627 |             { ⟦EOL⟧
+// 해설 L628: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner._moveStops.TryRemove(_device, out _)
+L000628 |                 _owner._moveStops.TryRemove(_device, out _); ⟦EOL⟧
+// 해설 L629: 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.Release()
+L000629 |                 _operation.Release(); ⟦EOL⟧
+// 해설 L630: 구문 블록 경계입니다 · 소속 Move.
+L000630 |             } ⟦EOL⟧
+// 해설 L631: 구문 블록 경계입니다 · 소속 Move.
+L000631 |         } ⟦EOL⟧
+L000632 |  ⟦EOL⟧
+// 해설 L633: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.Common.Station.CStageReviewSequences.Session.FeedbackIds(Drilling.Common.Station.EN_STAGE_MOVE_MODE, bool)
+L000633 |         private static string[] FeedbackIds(EN_STAGE_MOVE_MODE mode, bool positions = false) => ⟦EOL⟧
+// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: (mode == EN_STAGE_MOVE_MODE.ReviewX ? Array.Empty<string>() : new[] { "MOTOR_STAGE_Y_BUSY" }.Concat(positions ? ["MOTOR_STAGE_Y_CUR_POS"] : [])) .Concat(mode == EN_STAGE_MOVE_MODE.StageY ? Array.Empty<string>() : new[] {… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<string>() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "MOTOR_STAGE_Y_BUSY" }.Concat(positions ? ["MOTOR_STAGE_Y_CUR_POS"] : []) / 조건에 따라 결과식을 선택합니다: mode == EN_STAGE_MOVE_MODE.ReviewX ? Array.Empty<string>() : new[] { "MOTOR_STAGE_Y_BUSY" }.Concat(positions
+L000634 |             (mode == EN_STAGE_MOVE_MODE.ReviewX ? Array.Empty<string>() : new[] { "MOTOR_STAGE_Y_BUSY" }.Concat(positions ? ["MOTOR_STAGE_Y_CUR_POS"] : [])) ⟦EOL⟧
+// 해설 L635: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<string>() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "MOTOR_CAMERA_X_BUSY" }.Concat(positions ? ["MOTOR_CAMERA_X_CUR_POS"] : []) / 조건에 따라 결과식을 선택합니다: mode == EN_STAGE_MOVE_MODE.StageY ? Array.Empty<string>() : new[] { "MOTOR_CAMERA_X_BUSY" }.Concat(positions ? ["MOTOR_CAMERA_X_CUR_POS"] : []) / 조건에 따라 결과식을 선택합니다: positions ? ["MOTOR_CAMERA_X_CUR_POS"] : []
+L000635 |             .Concat(mode == EN_STAGE_MOVE_MODE.StageY ? Array.Empty<string>() : new[] { "MOTOR_CAMERA_X_BUSY" }.Concat(positions ? ["MOTOR_CAMERA_X_CUR_POS"] : [])).ToArray(); ⟦EOL⟧
+L000636 |  ⟦EOL⟧
+// 해설 L637: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.WaitStopped(System.Threading.CancellationToken, Drilling.Common.Station.EN_STAGE_MOVE_MODE, bool)
+L000637 |         private async Task WaitStopped(CancellationToken token, EN_STAGE_MOVE_MODE mode = EN_STAGE_MOVE_MODE.XY, bool cleanup = false) ⟦EOL⟧
+// 해설 L638: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000638 |         { ⟦EOL⟧
+// 해설 L639: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000639 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L640: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(_owner._signalTimeout)
+L000640 |             limit.CancelAfter(_owner._signalTimeout); ⟦EOL⟧
+// 해설 L641: 예외 처리 범위입니다: try
+L000641 |             try ⟦EOL⟧
+// 해설 L642: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000642 |             { ⟦EOL⟧
+// 해설 L643: 조건을 먼저 확인하며 반복합니다: while (true)
+L000643 |                 while (true) ⟦EOL⟧
+// 해설 L644: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000644 |                 { ⟦EOL⟧
+// 해설 L645: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(limit.Token, cleanup)
+L000645 |                     Check(limit.Token, cleanup); ⟦EOL⟧
+// 해설 L646: 비동기 완료를 기다립니다: await RefreshInputs(FeedbackIds(mode), limit.Token, cleanup).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(FeedbackIds(mode), limit.Token, cleanup).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(FeedbackIds(mode), limit.Token, cleanup) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(mode) / 조건에 따라 분기합니다: if (!_simulation)
+L000646 |                     if (!_simulation) await RefreshInputs(FeedbackIds(mode), limit.Token, cleanup).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L647: 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(mode).Select(Feedback).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(mode).Select(Feedback) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(mode) / 지역 변수를 선언합니다: var busy = FeedbackIds(mode).Select(Feedback).ToArray(); / 변수의 초기값을 지정합니다: busy = FeedbackIds(mode).Select(Feedback).ToArray()
+L000647 |                     var busy = FeedbackIds(mode).Select(Feedback).ToArray(); ⟦EOL⟧
+// 해설 L648: 함수·델리게이트 또는 객체 생성자를 호출합니다: busy.All(value => value == 0) / 조건에 따라 분기합니다: if (busy.All(value => value == 0)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000648 |                     if (busy.All(value => value == 0)) return; ⟦EOL⟧
+// 해설 L649: 비동기 완료를 기다립니다: await Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token)
+L000649 |                     await Task.Delay(20, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L650: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000650 |                 } ⟦EOL⟧
+// 해설 L651: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000651 |             } ⟦EOL⟧
+// 해설 L652: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopRequested() / 지정 예외를 처리합니다: catch (OperationCanceledException error) when (!token.IsCancellationRequested && !(!cleanup && _stopRequested()) && limit.IsCancellationRequested)
+L000652 |             catch (OperationCanceledException error) when (!token.IsCancellationRequested && !(!cleanup && _stopRequested()) && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Stage / Review 정지 확인 시간 초과", error) / 예외를 발생/전달합니다: throw new TimeoutException("Stage / Review 정지 확인 시간 초과", error);
+L000653 |             { throw new TimeoutException("Stage / Review 정지 확인 시간 초과", error); } ⟦EOL⟧
+// 해설 L654: 구문 블록 경계입니다 · 소속 WaitStopped.
+L000654 |         } ⟦EOL⟧
+L000655 |  ⟦EOL⟧
+// 해설 L656: 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitArrival(target, token)
+L000656 |         internal Task VerifyArrival(ST_STAGE_MOVE_TARGET target, CancellationToken token) => WaitArrival(target, token); ⟦EOL⟧
+L000657 |  ⟦EOL⟧
+// 해설 L658: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.WaitArrival(Drilling.Common.Station.ST_STAGE_MOVE_TARGET, System.Threading.CancellationToken)
+L000658 |         private async Task WaitArrival(ST_STAGE_MOVE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L659: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000659 |         { ⟦EOL⟧
+// 해설 L660: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000660 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L661: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(_owner._signalTimeout)
+L000661 |             limit.CancelAfter(_owner._signalTimeout); ⟦EOL⟧
+// 해설 L662: 예외 처리 범위입니다: try
+L000662 |             try ⟦EOL⟧
+// 해설 L663: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000663 |             { ⟦EOL⟧
+// 해설 L664: 조건을 먼저 확인하며 반복합니다: while (true)
+L000664 |                 while (true) ⟦EOL⟧
+// 해설 L665: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000665 |                 { ⟦EOL⟧
+// 해설 L666: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(limit.Token)
+L000666 |                     Check(limit.Token); ⟦EOL⟧
+// 해설 L667: 비동기 완료를 기다립니다: await RefreshInputs(FeedbackIds(target.Mode, positions: true), limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(FeedbackIds(target.Mode, positions: true), limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(FeedbackIds(target.Mode, positions: true), limit.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(target.Mode, positions: true) / 조건에 따라 분기합니다: if (!_simulation)
+L000667 |                     if (!_simulation) await RefreshInputs(FeedbackIds(target.Mode, positions: true), limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L668: 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(target.Mode).Select(Feedback).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(target.Mode).Select(Feedback) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FeedbackIds(target.Mode) / 지역 변수를 선언합니다: var busy = FeedbackIds(target.Mode).Select(Feedback).ToArray(); / 변수의 초기값을 지정합니다: busy = FeedbackIds(target.Mode).Select(Feedback).ToArray()
+L000668 |                     var busy = FeedbackIds(target.Mode).Select(Feedback).ToArray(); ⟦EOL⟧
+// 해설 L669: 함수·델리게이트 또는 객체 생성자를 호출합니다: busy.All(value => value == 0) / 조건에 따라 분기합니다: if (busy.All(value => value == 0))
+L000669 |                     if (busy.All(value => value == 0)) ⟦EOL⟧
+// 해설 L670: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000670 |                     { ⟦EOL⟧
+// 해설 L671: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(CurrentY - target.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(CurrentX - target.X) / 조건에 따라 분기합니다: if ((target.Mode != EN_STAGE_MOVE_MODE.ReviewX && Math.Abs(CurrentY - target.Y) > .0005) || (target.Mode != EN_STAGE_MOVE_MODE.StageY && Math.Abs(CurrentX - target.X) > .0005))
+L000671 |                         if ((target.Mode != EN_STAGE_MOVE_MODE.ReviewX && Math.Abs(CurrentY - target.Y) > .0005) || (target.Mode != EN_STAGE_MOVE_MODE.StageY && Math.Abs(CurrentX - target.X) > .0005)) ⟦EOL⟧
+// 해설 L672: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage / Review가 목표 위치에 도착하기 전에 정지되었습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage / Review가 목표 위치에 도착하기 전에 정지되었습니다.");
+L000672 |                             throw new InvalidOperationException("Stage / Review가 목표 위치에 도착하기 전에 정지되었습니다."); ⟦EOL⟧
+// 해설 L673: 호출자에게 값 또는 제어를 반환합니다: return;
+L000673 |                         return; ⟦EOL⟧
+// 해설 L674: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000674 |                     } ⟦EOL⟧
+// 해설 L675: 비동기 완료를 기다립니다: await Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token)
+L000675 |                     await Task.Delay(20, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L676: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000676 |                 } ⟦EOL⟧
+// 해설 L677: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000677 |             } ⟦EOL⟧
+// 해설 L678: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopRequested() / 지정 예외를 처리합니다: catch (OperationCanceledException error) when (!token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested)
+L000678 |             catch (OperationCanceledException error) when (!token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L679: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Stage / Review 도착 확인 시간 초과", error) / 예외를 발생/전달합니다: throw new TimeoutException("Stage / Review 도착 확인 시간 초과", error);
+L000679 |             { throw new TimeoutException("Stage / Review 도착 확인 시간 초과", error); } ⟦EOL⟧
+// 해설 L680: 구문 블록 경계입니다 · 소속 WaitArrival.
+L000680 |         } ⟦EOL⟧
+L000681 |  ⟦EOL⟧
+// 해설 L682: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.Abort(bool)
+L000682 |         private async Task Abort(bool move) ⟦EOL⟧
+// 해설 L683: 구문 블록 경계입니다 · 소속 Abort.
+L000683 |         { ⟦EOL⟧
+// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("CLEANUP_BEGIN", $"Move={move}; MoveOwned={_moveOwned}; IofOwned={_iofOwned}")
+L000684 |             Record("CLEANUP_BEGIN", $"Move={move}; MoveOwned={_moveOwned}; IofOwned={_iofOwned}"); ⟦EOL⟧
+// 해설 L685: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()
+L000685 |             Stop(); ⟦EOL⟧
+// 해설 L686: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource(TimeSpan.FromSeconds(3)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(3) / 정리할 자원을 선언합니다: using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(3)); / 변수의 초기값을 지정합니다: cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(3))
+L000686 |             using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(3)); ⟦EOL⟧
+// 해설 L687: 예외 처리 범위입니다: try
+L000687 |             try ⟦EOL⟧
+// 해설 L688: 구문 블록 경계입니다 · 소속 Abort.
+L000688 |             { ⟦EOL⟧
+// 해설 L689: 조건에 따라 분기합니다: if (move && _moveOwned)
+L000689 |                 if (move && _moveOwned) ⟦EOL⟧
+// 해설 L690: 구문 블록 경계입니다 · 소속 Abort.
+L000690 |                 { ⟦EOL⟧
+// 해설 L691: 비동기 완료를 기다립니다: await Write("PROCESS_REVIEW_STOP_SIGNAL", 1, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_STOP_SIGNAL", 1, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("PROCESS_REVIEW_STOP_SIGNAL", 1, cleanup.Token, cleanup: true)
+L000691 |                     await Write("PROCESS_REVIEW_STOP_SIGNAL", 1, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L692: 비동기 완료를 기다립니다: await Write(MoveStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, cleanup.Token, cleanup: true)
+L000692 |                     await Write(MoveStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L693: 비동기 완료를 기다립니다: await Write(MoveAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, cleanup.Token, cleanup: true)
+L000693 |                     await Write(MoveAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L694: 비동기 완료를 기다립니다: await Stage(MoveComplete, 0, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(MoveComplete, 0, cleanup.Token)
+L000694 |                     await Stage(MoveComplete, 0, cleanup.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L695: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000695 |                     // STOP must remain asserted until fresh feedback confirms the commanded axes stopped. ⟦EOL⟧
+// 해설 L696: 비동기 완료를 기다립니다: await WaitStopped(cleanup.Token, _moveMode, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(cleanup.Token, _moveMode, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(cleanup.Token, _moveMode, cleanup: true)
+L000696 |                     await WaitStopped(cleanup.Token, _moveMode, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L697: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("MOVE_STOP_CONFIRMED", $"Mode={_moveMode}; Busy=0; releasing STOP")
+L000697 |                     Record("MOVE_STOP_CONFIRMED", $"Mode={_moveMode}; Busy=0; releasing STOP"); ⟦EOL⟧
+// 해설 L698: 비동기 완료를 기다립니다: await Write(MoveStop, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStop, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStop, 0, cleanup.Token, cleanup: true)
+L000698 |                     await Write(MoveStop, 0, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L699: 값을 대상에 대입합니다: _moveOwned = false
+L000699 |                     _moveOwned = false; ⟦EOL⟧
+// 해설 L700: 구문 블록 경계입니다 · 소속 Abort.
+L000700 |                 } ⟦EOL⟧
+L000701 |  ⟦EOL⟧
+// 해설 L702: 조건에 따라 분기합니다: if (!move && _iofOwned)
+L000702 |                 if (!move && _iofOwned) ⟦EOL⟧
+// 해설 L703: 구문 블록 경계입니다 · 소속 Abort.
+L000703 |                 { ⟦EOL⟧
+// 해설 L704: 비동기 완료를 기다립니다: await Write(IofStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, cleanup.Token, cleanup: true)
+L000704 |                     await Write(IofStart, 0, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L705: 비동기 완료를 기다립니다: await Write(IofAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, cleanup.Token, cleanup: true)
+L000705 |                     await Write(IofAck, 0, cleanup.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L706: 비동기 완료를 기다립니다: await Stage(IofComplete, 0, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, cleanup.Token)
+L000706 |                     await Stage(IofComplete, 0, cleanup.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L707: 값을 대상에 대입합니다: _iofOwned = false
+L000707 |                     _iofOwned = false; ⟦EOL⟧
+// 해설 L708: 구문 블록 경계입니다 · 소속 Abort.
+L000708 |                 } ⟦EOL⟧
+// 해설 L709: 구문 블록 경계입니다 · 소속 Abort.
+L000709 |             } ⟦EOL⟧
+// 해설 L710: 지정 예외를 처리합니다: catch (Exception error)
+L000710 |             catch (Exception error) ⟦EOL⟧
+// 해설 L711: 구문 블록 경계입니다 · 소속 Abort.
+L000711 |             { ⟦EOL⟧
+// 해설 L712: 값을 대상에 대입합니다: _owner._cleanupFailures[_device] = 0
+L000712 |                 _owner._cleanupFailures[_device] = 0; ⟦EOL⟧
+// 해설 L713: 값을 대상에 대입합니다: _owner._failedSessions[_device] = this
+L000713 |                 _owner._failedSessions[_device] = this; ⟦EOL⟧
+// 해설 L714: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Actions.SetError(move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR", "Stage 정리 실패: " + error.Message) / 조건에 따라 결과식을 선택합니다: move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR"
+L000714 |                 _owner.Actions.SetError(move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR", "Stage 정리 실패: " + error.Message); ⟦EOL⟧
+// 해설 L715: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.ReportFailure(CSequenceFailureException.Action(move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR", error)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Action(move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR", error) / 조건에 따라 결과식을 선택합니다: move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR"
+L000715 |                 _owner.ReportFailure(CSequenceFailureException.Action(move ? "MOVE_RELEASE" : "IOF_SIGNALS_CLEAR", error)); ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("CLEANUP_ERROR", error.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: error.ToString()
+L000716 |                 Record("CLEANUP_ERROR", error.ToString()); ⟦EOL⟧
+// 해설 L717: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError(error.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: error.ToString()
+L000717 |                 System.Diagnostics.Trace.TraceError(error.ToString()); ⟦EOL⟧
+// 해설 L718: 구문 블록 경계입니다 · 소속 Abort.
+L000718 |             } ⟦EOL⟧
+// 해설 L719: 구문 블록 경계입니다 · 소속 Abort.
+L000719 |         } ⟦EOL⟧
+L000720 |  ⟦EOL⟧
+// 해설 L721: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.RecoverStoppedOutputs(System.Threading.CancellationToken)
+L000721 |         internal async Task RecoverStoppedOutputs(CancellationToken token) ⟦EOL⟧
+// 해설 L722: 구문 블록 경계입니다 · 소속 RecoverStoppedOutputs.
+L000722 |         { ⟦EOL⟧
+// 해설 L723: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000723 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L724: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000724 |             limit.CancelAfter(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L725: 비동기 완료를 기다립니다: await Write(MoveStart, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStart, 0, limit.Token, cleanup: true)
+L000725 |             await Write(MoveStart, 0, limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L726: 비동기 완료를 기다립니다: await Write(MoveAck, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveAck, 0, limit.Token, cleanup: true)
+L000726 |             await Write(MoveAck, 0, limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L727: 비동기 완료를 기다립니다: await Write(IofStart, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, limit.Token, cleanup: true)
+L000727 |             await Write(IofStart, 0, limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L728: 비동기 완료를 기다립니다: await Write(IofAck, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, limit.Token, cleanup: true)
+L000728 |             await Write(IofAck, 0, limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L729: 비동기 완료를 기다립니다: await WaitStopped(limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(limit.Token, cleanup: true)
+L000729 |             await WaitStopped(limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L730: 비동기 완료를 기다립니다: await Write(MoveStop, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStop, 0, limit.Token, cleanup: true).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(MoveStop, 0, limit.Token, cleanup: true)
+L000730 |             await Write(MoveStop, 0, limit.Token, cleanup: true).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L731: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("MOVE_STOP_RECOVERED", "Disposed failed owner; fresh XY Busy=0; STOP/START/ACK/IOF outputs OFF confirmed")
+L000731 |             Record("MOVE_STOP_RECOVERED", "Disposed failed owner; fresh XY Busy=0; STOP/START/ACK/IOF outputs OFF confirmed"); ⟦EOL⟧
+// 해설 L732: 구문 블록 경계입니다 · 소속 RecoverStoppedOutputs.
+L000732 |         } ⟦EOL⟧
+L000733 |  ⟦EOL⟧
+// 해설 L734: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.RecoverRetainedStop(System.Threading.CancellationToken)
+L000734 |         internal async Task RecoverRetainedStop(CancellationToken token) ⟦EOL⟧
+// 해설 L735: 구문 블록 경계입니다 · 소속 RecoverRetainedStop.
+L000735 |         { ⟦EOL⟧
+// 해설 L736: 비동기 완료를 기다립니다: await InitialRead([MoveStop], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([MoveStop], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([MoveStop], token)
+L000736 |             await InitialRead([MoveStop], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L737: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(MoveStop) / 지역 변수를 선언합니다: var stop = Value(MoveStop); / 변수의 초기값을 지정합니다: stop = Value(MoveStop)
+L000737 |             var stop = Value(MoveStop); ⟦EOL⟧
+// 해설 L738: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review STOP은 0/1이어야 합니다.") / 조건에 따라 분기합니다: if (stop is not (0 or 1)) / 예외를 발생/전달합니다: throw new InvalidDataException("Review STOP은 0/1이어야 합니다.");
+L000738 |             if (stop is not (0 or 1)) throw new InvalidDataException("Review STOP은 0/1이어야 합니다."); ⟦EOL⟧
+// 해설 L739: 비동기 완료를 기다립니다: await RecoverStoppedOutputs(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RecoverStoppedOutputs(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RecoverStoppedOutputs(token) / 조건에 따라 분기합니다: if (stop == 1)
+L000739 |             if (stop == 1) await RecoverStoppedOutputs(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L740: 구문 블록 경계입니다 · 소속 RecoverRetainedStop.
+L000740 |         } ⟦EOL⟧
+L000741 |  ⟦EOL⟧
+// 해설 L742: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Station.ST_STAGE_IOF_PLAN> Drilling.Common.Station.CStageReviewSequences.Session.PrepareIof(System.Collections.Generic.IReadOnlyList<Drilling.Common.Station.ST_STAGE_
+L000742 |         public async Task<ST_STAGE_IOF_PLAN> PrepareIof(IReadOnlyList<ST_STAGE_IOF_POINT> points, bool zeroLine, CancellationToken token) ⟦EOL⟧
+// 해설 L743: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000743 |         { ⟦EOL⟧
+// 해설 L744: 값을 대상에 대입합니다: _scenario = "IOF"
+L000744 |             _scenario = "IOF"; ⟦EOL⟧
+// 해설 L745: 조건에 따라 분기합니다: if (_reviewXOnly)
+L000745 |             if (_reviewXOnly) ⟦EOL⟧
+// 해설 L746: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Review X 선대기 소유자는 IOF Buffer를 갱신할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Review X 선대기 소유자는 IOF Buffer를 갱신할 수 없습니다.");
+L000746 |                 throw new InvalidOperationException("Review X 선대기 소유자는 IOF Buffer를 갱신할 수 없습니다."); ⟦EOL⟧
+// 해설 L747: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Any(point => !double.IsFinite(point.X) || !double.IsFinite(point.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.Y) / 조건에 따라 분기합니다: if (points.Count == 0 || points.Any(point => !double.IsFinite(point.X) || !double.IsFinite(point.Y)))
+L000747 |             if (points.Count == 0 || points.Any(point => !double.IsFinite(point.X) || !double.IsFinite(point.Y))) ⟦EOL⟧
+// 해설 L748: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("IOF 촬영 위치를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("IOF 촬영 위치를 확인해 주세요.");
+L000748 |                 throw new ArgumentException("IOF 촬영 위치를 확인해 주세요."); ⟦EOL⟧
+// 해설 L749: 조건에 따라 분기합니다: if (zeroLine && points.Count is not (2 or 4))
+L000749 |             if (zeroLine && points.Count is not (2 or 4)) ⟦EOL⟧
+// 해설 L750: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("0선방어 촬영 개수는 2 또는 4개여야 합니다.") / 예외를 발생/전달합니다: throw new ArgumentException("0선방어 촬영 개수는 2 또는 4개여야 합니다.");
+L000750 |                 throw new ArgumentException("0선방어 촬영 개수는 2 또는 4개여야 합니다."); ⟦EOL⟧
+// 해설 L751: 조건에 따라 분기합니다: if (points.Count > 500)
+L000751 |             if (points.Count > 500) ⟦EOL⟧
+// 해설 L752: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("IOF 한 라인의 촬영 좌표는 최대 500개입니다. (W8300~W86E7)") / 예외를 발생/전달합니다: throw new ArgumentException("IOF 한 라인의 촬영 좌표는 최대 500개입니다. (W8300~W86E7)");
+L000752 |                 throw new ArgumentException("IOF 한 라인의 촬영 좌표는 최대 500개입니다. (W8300~W86E7)"); ⟦EOL⟧
+// 해설 L753: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000753 |             // 2026-11-03 Stage contract: write ordered coordinates, request W8238, ⟦EOL⟧
+// 해설 L754: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000754 |             // wait for WC13C, acknowledge W823A. Keep real and simulated paths equal. ⟦EOL⟧
+// 해설 L755: 조건에 따라 분기합니다: if (!_simulation)
+L000755 |             if (!_simulation) ⟦EOL⟧
+// 해설 L756: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.ValidateIofReadiness(_device, points.Count)
+L000756 |                 _owner.ValidateIofReadiness(_device, points.Count); ⟦EOL⟧
+// 해설 L757: 비동기 완료를 기다립니다: await _operation.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.WaitAsync(token)
+L000757 |             await _operation.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L758: 예외 처리 범위입니다: try
+L000758 |             try ⟦EOL⟧
+// 해설 L759: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000759 |             { ⟦EOL⟧
+// 해설 L760: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token)
+L000760 |                 Check(token); ⟦EOL⟧
+// 해설 L761: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Actions.ResetToWaiting(IofActions)
+L000761 |                 _owner.Actions.ResetToWaiting(IofActions); ⟦EOL⟧
+// 해설 L762: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_STAGE_IOF_PLAN(Guid.NewGuid(), zeroLine, Array.AsReadOnly(points.ToArray())) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(points.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.ToArray() / 지역 변수를 선언합니다: var plan = new ST_STAGE_IOF_PLAN(Guid.NewGuid(), zeroLine, Array.AsReadOnly(points.ToArray())); / 변수의 초기값을 지정합니다: plan = new ST_STAGE_IOF_PLAN(Guid.NewGuid(), zeroLine, Array.AsReadOnly(points.ToArray()))
+L000762 |                 var plan = new ST_STAGE_IOF_PLAN(Guid.NewGuid(), zeroLine, Array.AsReadOnly(points.ToArray())); ⟦EOL⟧
+// 해설 L763: 값을 대상에 대입합니다: _iofPlanId = plan.Id
+L000763 |                 _iofPlanId = plan.Id; ⟦EOL⟧
+// 해설 L764: 값을 대상에 대입합니다: _iofStartConfirmed = _iofAckConfirmed = false / 값을 대상에 대입합니다: _iofAckConfirmed = false
+L000764 |                 _iofStartConfirmed = _iofAckConfirmed = false; ⟦EOL⟧
+// 해설 L765: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("IOF_PLAN_CAPTURED", $"Plan={plan.Id}; ZeroLine={zeroLine}; Count={points.Count}; Points=" + string.Join(";", points.Select((point, index) => FormattableString.Invariant($"{index + 1}:X={point.X},Y={point.Y}")))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(";", points.Select((point, index) => FormattableString.Invariant($"{index + 1}:X={point.X},Y={point.Y}"))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select((point, index) => FormattableString.Invariant($"{index + 1}:X={point.X},Y={point.Y}")) / 함수·델리게이트 또는 객
+L000765 |                 Record("IOF_PLAN_CAPTURED", $"Plan={plan.Id}; ZeroLine={zeroLine}; Count={points.Count}; Points=" + string.Join(";", points.Select((point, index) => FormattableString.Invariant($"{index + 1}:X={point.X},Y={point.Y}")))); ⟦EOL⟧
+// 해설 L766: 비동기 완료를 기다립니다: await Step("IOF_PLAN", async () => { await InitialRead([IofStart, IofAck, IofComplete], token).ConfigureAwait(false); await WaitStopped(token).ConfigureAwait(false); if (Value(IofStart) != 0 || Value(IofAck) != 0) throw new Invali / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("IOF_PLAN", async () => { await InitialRead([IofStart, IofAck, IofComplete], token).ConfigureAwait(false); await WaitStopped(token).ConfigureAwait(false); if (Value(IofStart) != 0 || Value(IofAck) != 0) throw new In…
+L000766 |                 await Step("IOF_PLAN", async () => ⟦EOL⟧
+// 해설 L767: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000767 |                 { ⟦EOL⟧
+// 해설 L768: 비동기 완료를 기다립니다: await InitialRead([IofStart, IofAck, IofComplete], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([IofStart, IofAck, IofComplete], token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitialRead([IofStart, IofAck, IofComplete], token)
+L000768 |                     await InitialRead([IofStart, IofAck, IofComplete], token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L769: 비동기 완료를 기다립니다: await WaitStopped(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitStopped(token)
+L000769 |                     await WaitStopped(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L770: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(IofStart) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(IofAck) / 조건에 따라 분기합니다: if (Value(IofStart) != 0 || Value(IofAck) != 0)
+L000770 |                     if (Value(IofStart) != 0 || Value(IofAck) != 0) ⟦EOL⟧
+// 해설 L771: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이전 IOF 요청/응답이 복귀되지 않았습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("이전 IOF 요청/응답이 복귀되지 않았습니다.");
+L000771 |                         throw new InvalidOperationException("이전 IOF 요청/응답이 복귀되지 않았습니다."); ⟦EOL⟧
+// 해설 L772: 비동기 완료를 기다립니다: await Stage(IofComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, token)
+L000772 |                     await Stage(IofComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L773: 비동기 완료를 기다립니다: await Stage(IofRead, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRead, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRead, 0, token)
+L000773 |                     await Stage(IofRead, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L774: 비동기 완료를 기다립니다: await Stage(IofRun, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRun, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRun, 0, token)
+L000774 |                     await Stage(IofRun, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L775: 비동기 완료를 기다립니다: await Wait(IofComplete, 0, token, iofPhase: "INITIAL_COMPLETE_OFF").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 0, token, iofPhase: "INITIAL_COMPLETE_OFF").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 0, token, iofPhase: "INITIAL_COMPLETE_OFF")
+L000775 |                     await Wait(IofComplete, 0, token, iofPhase: "INITIAL_COMPLETE_OFF").ConfigureAwait(false); ⟦EOL⟧
+// 해설 L776: 비동기 완료를 기다립니다: await Write("IOF_SETTING", zeroLine ? 1 : 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("IOF_SETTING", zeroLine ? 1 : 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write("IOF_SETTING", zeroLine ? 1 : 0, token) / 조건에 따라 결과식을 선택합니다: zeroLine ? 1 : 0
+L000776 |                     await Write("IOF_SETTING", zeroLine ? 1 : 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L777: 비동기 완료를 기다립니다: await Write(zeroLine ? "IOF_TRIGGER_ZERO_POINT_COUNT" : "IOF_TRIGGER_POINT_COUNT", points.Count, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(zeroLine ? "IOF_TRIGGER_ZERO_POINT_COUNT" : "IOF_TRIGGER_POINT_COUNT", points.Count, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(zeroLine ? "IOF_TRIGGER_ZERO_POINT_COUNT" : "IOF_TRIGGER_POINT_COUNT", points.Count, token) / 조건에 따라 결과식을 선택합니다: zeroLine ? "IOF_TRIGGER_ZERO_POINT_COUNT" : "IOF_TRIGGER_POINT_COUNT"
+L000777 |                     await Write(zeroLine ? "IOF_TRIGGER_ZERO_POINT_COUNT" : "IOF_TRIGGER_POINT_COUNT", points.Count, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L778: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000778 |                     // Stage contract confirmed on 2026-11-03: zero-line sends Y ⟦EOL⟧
+// 해설 L779: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000779 |                     // only, NOT the old document's packed [Y...][X...] layout. ⟦EOL⟧
+// 해설 L780: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000780 |                     // Reverse attempts supply their reversed X order unchanged. ⟦EOL⟧
+// 해설 L781: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000781 |                     { ⟦EOL⟧
+// 해설 L782: 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p => zeroLine ? p.Y : p.X).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select(p => zeroLine ? p.Y : p.X) / 조건에 따라 결과식을 선택합니다: zeroLine ? p.Y : p.X / 지역 변수를 선언합니다: var packed = points.Select(p => zeroLine ? p.Y : p.X).ToArray(); / 변수의 초기값을 지정합니다: packed = points.Select(p => zeroLine ? p.Y : p.X).ToArray()
+L000782 |                         var packed = points.Select(p => zeroLine ? p.Y : p.X).ToArray(); ⟦EOL⟧
+// 해설 L783: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route("IOF_POS_ARRAY_1") / 지역 변수를 선언합니다: var buffer = Route("IOF_POS_ARRAY_1"); / 변수의 초기값을 지정합니다: buffer = Route("IOF_POS_ARRAY_1")
+L000783 |                         var buffer = Route("IOF_POS_ARRAY_1"); ⟦EOL⟧
+// 해설 L784: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetDoubleArrayCapacity(buffer.Id) / 조건에 따라 분기합니다: if (buffer.DataType != EN_MELSEC_DATA_TYPE.Double || packed.Length > _interfaces.Melsec.GetDoubleArrayCapacity(buffer.Id))
+L000784 |                         if (buffer.DataType != EN_MELSEC_DATA_TYPE.Double || packed.Length > _interfaces.Melsec.GetDoubleArrayCapacity(buffer.Id)) ⟦EOL⟧
+// 해설 L785: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("IOF 좌표 배열 맵의 자료형·저장 크기를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("IOF 좌표 배열 맵의 자료형·저장 크기를 확인해 주세요.");
+L000785 |                             throw new InvalidOperationException("IOF 좌표 배열 맵의 자료형·저장 크기를 확인해 주세요."); ⟦EOL⟧
+// 해설 L786: 비동기 완료를 기다립니다: await Task.Run(() => _interfaces.Melsec.WriteDoubleArray("IOF_POS_ARRAY_1", packed, token), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _interfaces.Melsec.WriteDoubleArray("IOF_POS_ARRAY_1", packed, token), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _interfaces.Melsec.WriteDoubleArray("IOF_POS_ARRAY_1", packed, token), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.WriteDoubleArray("IOF_POS_ARRAY_1", packed, token)
+L000786 |                         await Task.Run(() => _interfaces.Melsec.WriteDoubleArray("IOF_POS_ARRAY_1", packed, token), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L787: 비동기 완료를 기다립니다: await Task.Run(() => _interfaces.Melsec.ReadDoubleArray("IOF_POS_ARRAY_1", packed.Length, token), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _interfaces.Melsec.ReadDoubleArray("IOF_POS_ARRAY_1", packed.Length, token), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => _interfaces.Melsec.ReadDoubleArray("IOF_POS_ARRAY_1", packed.Length, token), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.ReadDoubleArray("IOF_POS_ARRAY_1", packed.Length, token) / 지역 변수를 선언합니다:
+L000787 |                         var readback = await Task.Run(() => _interfaces.Melsec.ReadDoubleArray("IOF_POS_ARRAY_1", packed.Length, token), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L788: 함수·델리게이트 또는 객체 생성자를 호출합니다: readback.Zip(packed).Any(pair => Math.Abs(pair.First - pair.Second) > .000051) / 함수·델리게이트 또는 객체 생성자를 호출합니다: readback.Zip(packed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(pair.First - pair.Second) / 조건에 따라 분기합니다: if (readback.Count != packed.Length || readback.Zip(packed).Any(pair => Math.Abs(pair.First - pair.Second) > .000051))
+L000788 |                         if (readback.Count != packed.Length || readback.Zip(packed).Any(pair => Math.Abs(pair.First - pair.Second) > .000051)) ⟦EOL⟧
+// 해설 L789: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("IOF 좌표 배열 읽기 확인 실패") / 예외를 발생/전달합니다: throw new IOException("IOF 좌표 배열 읽기 확인 실패");
+L000789 |                             throw new IOException("IOF 좌표 배열 읽기 확인 실패"); ⟦EOL⟧
+// 해설 L790: 조건에 따라 분기합니다: if (zeroLine)
+L000790 |                         if (zeroLine) ⟦EOL⟧
+// 해설 L791: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _owner._zeroSegments, 0)
+L000791 |                             Volatile.Write(ref _owner._zeroSegments, 0); ⟦EOL⟧
+// 해설 L792: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000792 |                     } ⟦EOL⟧
+L000793 |  ⟦EOL⟧
+// 해설 L794: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _owner._lastPlan, plan)
+L000794 |                     Volatile.Write(ref _owner._lastPlan, plan); ⟦EOL⟧
+// 해설 L795: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.Publish(_device, "IOF_COORDINATES_READY", points.Count)
+L000795 |                     _owner.Publish(_device, "IOF_COORDINATES_READY", points.Count); ⟦EOL⟧
+// 해설 L796: 값을 대상에 대입합니다: _iofOwned = true
+L000796 |                     _iofOwned = true; ⟦EOL⟧
+// 해설 L797: 비동기 완료를 기다립니다: await Write(IofStart, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 1, token)
+L000797 |                     await Write(IofStart, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L798: 값을 대상에 대입합니다: _iofStartConfirmed = true
+L000798 |                     _iofStartConfirmed = true; ⟦EOL⟧
+// 해설 L799: 비동기 완료를 기다립니다: await Stage(IofRead, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRead, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRead, 1, token)
+L000799 |                     await Stage(IofRead, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L800: 비동기 완료를 기다립니다: await Stage(IofRun, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRun, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofRun, 1, token)
+L000800 |                     await Stage(IofRun, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L801: 비동기 완료를 기다립니다: await Stage(IofComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 1, token)
+L000801 |                     await Stage(IofComplete, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L802: 비동기 완료를 기다립니다: await Wait(IofComplete, 1, token, iofPhase: "REQUEST_COMPLETE_ON").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 1, token, iofPhase: "REQUEST_COMPLETE_ON").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 1, token, iofPhase: "REQUEST_COMPLETE_ON")
+L000802 |                     await Wait(IofComplete, 1, token, iofPhase: "REQUEST_COMPLETE_ON").ConfigureAwait(false); ⟦EOL⟧
+// 해설 L803: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Station.ST_STAGE_IOF_PLAN> Drilling.Common.Station.CStageReviewSequences.Session.PrepareIof(System.Collections.Generic.IReadOnlyList<Drilling.Common.Station.ST_STAGE_
+L000803 |                 }).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L804: 비동기 완료를 기다립니다: await Step("IOF_SIGNALS_CLEAR", async () => { // Release START before ACK: Stage clears COMPLETE only after both conditions. await Write(IofStart, 0, token).ConfigureAwait(false); await Write(IofAck, 1, token).ConfigureAwait(false / 함수·델리게이트 또는 객체 생성자를 호출합니다: Step("IOF_SIGNALS_CLEAR", async () => { // Release START before ACK: Stage clears COMPLETE only after both conditions. await Write(IofStart, 0, token).ConfigureAwait(false); await Write(IofAck, 1, token).ConfigureAwait(f…
+L000804 |                 await Step("IOF_SIGNALS_CLEAR", async () => ⟦EOL⟧
+// 해설 L805: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000805 |                 { ⟦EOL⟧
+// 해설 L806: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000806 |                     // Release START before ACK: Stage clears COMPLETE only after both conditions. ⟦EOL⟧
+// 해설 L807: 비동기 완료를 기다립니다: await Write(IofStart, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofStart, 0, token)
+L000807 |                     await Write(IofStart, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L808: 비동기 완료를 기다립니다: await Write(IofAck, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 1, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 1, token)
+L000808 |                     await Write(IofAck, 1, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L809: 값을 대상에 대입합니다: _iofAckConfirmed = true
+L000809 |                     _iofAckConfirmed = true; ⟦EOL⟧
+// 해설 L810: 비동기 완료를 기다립니다: await Stage(IofComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stage(IofComplete, 0, token)
+L000810 |                     await Stage(IofComplete, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L811: 비동기 완료를 기다립니다: await Wait(IofComplete, 0, token, iofPhase: "ACK_COMPLETE_OFF").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 0, token, iofPhase: "ACK_COMPLETE_OFF").ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Wait(IofComplete, 0, token, iofPhase: "ACK_COMPLETE_OFF")
+L000811 |                     await Wait(IofComplete, 0, token, iofPhase: "ACK_COMPLETE_OFF").ConfigureAwait(false); ⟦EOL⟧
+// 해설 L812: 비동기 완료를 기다립니다: await Write(IofAck, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(IofAck, 0, token)
+L000812 |                     await Write(IofAck, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L813: 값을 대상에 대입합니다: _iofOwned = false
+L000813 |                     _iofOwned = false; ⟦EOL⟧
+// 해설 L814: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Station.ST_STAGE_IOF_PLAN> Drilling.Common.Station.CStageReviewSequences.Session.PrepareIof(System.Collections.Generic.IReadOnlyList<Drilling.Common.Station.ST_STAGE_
+L000814 |                 }).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L815: 호출자에게 값 또는 제어를 반환합니다: return plan;
+L000815 |                 return plan; ⟦EOL⟧
+// 해설 L816: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000816 |             } ⟦EOL⟧
+// 해설 L817: 지정 예외를 처리합니다: catch (Exception error)
+L000817 |             catch (Exception error) ⟦EOL⟧
+// 해설 L818: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000818 |             { ⟦EOL⟧
+// 해설 L819: 비동기 완료를 기다립니다: await Abort(move: false).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Abort(move: false).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Abort(move: false)
+L000819 |                 await Abort(move: false).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L820: 조건에 따라 분기합니다: if (error is OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000820 |                 if (error is OperationCanceledException) throw; ⟦EOL⟧
+// 해설 L821: 함수·델리게이트 또는 객체 생성자를 호출합니다: CSequenceFailureException.Action("IOF_PLAN", error) / 지역 변수를 선언합니다: var failure = CSequenceFailureException.Action("IOF_PLAN", error); / 변수의 초기값을 지정합니다: failure = CSequenceFailureException.Action("IOF_PLAN", error)
+L000821 |                 var failure = CSequenceFailureException.Action("IOF_PLAN", error); ⟦EOL⟧
+// 해설 L822: 함수·델리게이트 또는 객체 생성자를 호출합니다: _owner.ReportFailure(failure)
+L000822 |                 _owner.ReportFailure(failure); ⟦EOL⟧
+// 해설 L823: 예외를 발생/전달합니다: throw failure;
+L000823 |                 throw failure; ⟦EOL⟧
+// 해설 L824: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000824 |             } ⟦EOL⟧
+// 해설 L825: 종료 정리 구간입니다: finally
+L000825 |             finally ⟦EOL⟧
+// 해설 L826: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000826 |             { ⟦EOL⟧
+// 해설 L827: 함수·델리게이트 또는 객체 생성자를 호출합니다: _operation.Release()
+L000827 |                 _operation.Release(); ⟦EOL⟧
+// 해설 L828: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000828 |             } ⟦EOL⟧
+// 해설 L829: 구문 블록 경계입니다 · 소속 PrepareIof.
+L000829 |         } ⟦EOL⟧
+L000830 |  ⟦EOL⟧
+// 해설 L831: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.InitializeZeroLineReadyY(double)
+L000831 |         public void InitializeZeroLineReadyY(double position) ⟦EOL⟧
+// 해설 L832: 구문 블록 경계입니다 · 소속 InitializeZeroLineReadyY.
+L000832 |         { ⟦EOL⟧
+// 해설 L833: 조건에 따라 분기합니다: if (!_simulation || !_stageBufferOwner)
+L000833 |             if (!_simulation || !_stageBufferOwner) ⟦EOL⟧
+// 해설 L834: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("0선 Stage 시뮬레이션 소유권이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("0선 Stage 시뮬레이션 소유권이 필요합니다.");
+L000834 |                 throw new InvalidOperationException("0선 Stage 시뮬레이션 소유권이 필요합니다."); ⟦EOL⟧
+// 해설 L835: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lease!.SetReportedPosition(EN_MANUAL_STAGE_AXIS.StageY, position)
+L000835 |             _lease!.SetReportedPosition(EN_MANUAL_STAGE_AXIS.StageY, position); ⟦EOL⟧
+// 해설 L836: 구문 블록 경계입니다 · 소속 InitializeZeroLineReadyY.
+L000836 |         } ⟦EOL⟧
+L000837 |  ⟦EOL⟧
+// 해설 L838: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000838 |         /// <summary> ⟦EOL⟧
+// 해설 L839: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000839 |         /// Starts the Stage-owned scan only in automatic simulation. Real Stage ⟦EOL⟧
+// 해설 L840: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000840 |         /// travel and triggers are owned by the PLC after IOF preparation; this ⟦EOL⟧
+// 해설 L841: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000841 |         /// method neither moves Review X nor compares individual capture positions. ⟦EOL⟧
+// 해설 L842: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000842 |         /// </summary> ⟦EOL⟧
+// 해설 L843: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Station.CStageReviewSequences.Session.BeginZeroLineSimulation(Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN, System.Threading.CancellationToken)
+L000843 |         public void BeginZeroLineSimulation(ST_ZERO_LINE_CYCLE_PLAN plan, CancellationToken token) ⟦EOL⟧
+// 해설 L844: 구문 블록 경계입니다 · 소속 BeginZeroLineSimulation.
+L000844 |         { ⟦EOL⟧
+// 해설 L845: 조건에 따라 분기합니다: if (!_stageBufferOwner)
+L000845 |             if (!_stageBufferOwner) ⟦EOL⟧
+// 해설 L846: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다.");
+L000846 |                 throw new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다."); ⟦EOL⟧
+// 해설 L847: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(token)
+L000847 |             Check(token); ⟦EOL⟧
+// 해설 L848: 조건에 따라 분기합니다: if (_simulation && _automatic)
+L000848 |             if (_simulation && _automatic) ⟦EOL⟧
+// 해설 L849: 구문 블록 경계입니다 · 소속 BeginZeroLineSimulation.
+L000849 |             { ⟦EOL⟧
+// 해설 L850: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000850 |                 // Stop one MELSEC coordinate unit beyond the threshold in SIM only. ⟦EOL⟧
+// 해설 L851: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000851 |                 // A strict passed-target check must not stall at an exact virtual endpoint. ⟦EOL⟧
+// 해설 L852: 지역 변수를 선언합니다: var simulatedEndY = plan.Motion.StageStartY + plan.Motion.StageDirection * (plan.Motion.StageStroke + .0001); / 변수의 초기값을 지정합니다: simulatedEndY = plan.Motion.StageStartY + plan.Motion.StageDirection * (plan.Motion.StageStroke + .0001)
+L000852 |                 var simulatedEndY = plan.Motion.StageStartY + plan.Motion.StageDirection * (plan.Motion.StageStroke + .0001); ⟦EOL⟧
+// 해설 L853: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lease!.Move(EN_MANUAL_STAGE_AXIS.StageY, simulatedEndY, plan.Motion.StageSpeed, plan.Motion.StageAcceleration)
+L000853 |                 _lease!.Move(EN_MANUAL_STAGE_AXIS.StageY, simulatedEndY, plan.Motion.StageSpeed, plan.Motion.StageAcceleration); ⟦EOL⟧
+// 해설 L854: 구문 블록 경계입니다 · 소속 BeginZeroLineSimulation.
+L000854 |             } ⟦EOL⟧
+// 해설 L855: 구문 블록 경계입니다 · 소속 BeginZeroLineSimulation.
+L000855 |         } ⟦EOL⟧
+L000856 |  ⟦EOL⟧
+// 해설 L857: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000857 |         /// <summary>After machining, wait for a stop beyond the target in the scan direction.</summary> ⟦EOL⟧
+// 해설 L858: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Station.CStageReviewSequences.Session.WaitZeroLineEndPosition(Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN, System.Threading.CancellationToken)
+L000858 |         public async Task WaitZeroLineEndPosition(ST_ZERO_LINE_CYCLE_PLAN plan, CancellationToken token) ⟦EOL⟧
+// 해설 L859: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000859 |         { ⟦EOL⟧
+// 해설 L860: 조건에 따라 분기합니다: if (!_stageBufferOwner)
+L000860 |             if (!_stageBufferOwner) ⟦EOL⟧
+// 해설 L861: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다.");
+L000861 |                 throw new InvalidOperationException("0선 Stage Buffer 소유권이 필요합니다."); ⟦EOL⟧
+// 해설 L862: 지역 변수를 선언합니다: var endY = plan.Motion.StageStartY + plan.Motion.StageDirection * plan.Motion.StageStroke; / 변수의 초기값을 지정합니다: endY = plan.Motion.StageStartY + plan.Motion.StageDirection * plan.Motion.StageStroke
+L000862 |             var endY = plan.Motion.StageStartY + plan.Motion.StageDirection * plan.Motion.StageStroke; ⟦EOL⟧
+// 해설 L863: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(endY) / 조건에 따라 분기합니다: if (!double.IsFinite(endY))
+L000863 |             if (!double.IsFinite(endY)) ⟦EOL⟧
+// 해설 L864: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("0선 Stage Y 가공 완료 위치가 유효하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("0선 Stage Y 가공 완료 위치가 유효하지 않습니다.");
+L000864 |                 throw new InvalidDataException("0선 Stage Y 가공 완료 위치가 유효하지 않습니다."); ⟦EOL⟧
+// 해설 L865: 지역 변수를 선언합니다: var direction = plan.Motion.StageDirection; / 변수의 초기값을 지정합니다: direction = plan.Motion.StageDirection
+L000865 |             var direction = plan.Motion.StageDirection; ⟦EOL⟧
+// 해설 L866: 조건에 따라 분기합니다: if (direction is not (-1 or 1))
+L000866 |             if (direction is not (-1 or 1)) ⟦EOL⟧
+// 해설 L867: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("0선 Stage Y 가공 방향은 -1 또는 +1이어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("0선 Stage Y 가공 방향은 -1 또는 +1이어야 합니다.");
+L000867 |                 throw new InvalidDataException("0선 Stage Y 가공 방향은 -1 또는 +1이어야 합니다."); ⟦EOL⟧
+// 해설 L868: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.StartNew() / 지역 변수를 선언합니다: var clock = Stopwatch.StartNew(); / 변수의 초기값을 지정합니다: clock = Stopwatch.StartNew()
+L000868 |             var clock = Stopwatch.StartNew(); ⟦EOL⟧
+// 해설 L869: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000869 |             using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L870: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(_owner._signalTimeout)
+L000870 |             limit.CancelAfter(_owner._signalTimeout); ⟦EOL⟧
+// 해설 L871: 지역 변수를 선언합니다: var ids = new[] { "MOTOR_STAGE_Y_CUR_POS", "MOTOR_STAGE_Y_BUSY" }; / 변수의 초기값을 지정합니다: ids = new[] { "MOTOR_STAGE_Y_CUR_POS", "MOTOR_STAGE_Y_BUSY" }
+L000871 |             var ids = new[] { "MOTOR_STAGE_Y_CUR_POS", "MOTOR_STAGE_Y_BUSY" }; ⟦EOL⟧
+// 해설 L872: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"Direction={direction}; TargetY={endY}; ElapsedMs={clock.ElapsedMilliseconds}; ")
+L000872 |             string Evidence() => FormattableString.Invariant($"Direction={direction}; TargetY={endY}; ElapsedMs={clock.ElapsedMilliseconds}; ") ⟦EOL⟧
+// 해설 L873: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", ids.Select(id => { try { return Describe(id); } catch (Exception error) { return $"{id}; DiagnosticUnavailable={error.Message}"; } })) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Select(id => { try { return Describe(id); } catch (Exception error) { return $"{id}; DiagnosticUnavailable={error.Message}"; } })
+L000873 |                 + string.Join(" | ", ids.Select(id => ⟦EOL⟧
+// 해설 L874: 구문 블록 경계입니다 · 소속 Evidence.
+L000874 |                 { ⟦EOL⟧
+// 해설 L875: 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 호출자에게 값 또는 제어를 반환합니다: return Describe(id); / 예외 처리 범위입니다: try
+L000875 |                     try { return Describe(id); } ⟦EOL⟧
+// 해설 L876: 지정 예외를 처리합니다: catch (Exception error) / 호출자에게 값 또는 제어를 반환합니다: return $"{id}; DiagnosticUnavailable={error.Message}";
+L000876 |                     catch (Exception error) { return $"{id}; DiagnosticUnavailable={error.Message}"; } ⟦EOL⟧
+// 해설 L877: 선언·서명/매개변수·접근 조건입니다 · string Evidence()
+L000877 |                 })); ⟦EOL⟧
+// 해설 L878: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("ZERO_LINE_STAGE_END_WAIT", FormattableString.Invariant($"TargetY={endY}; Direction={direction}; Required=PassedTarget AND Busy=0")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"TargetY={endY}; Direction={direction}; Required=PassedTarget AND Busy=0")
+L000878 |             Record("ZERO_LINE_STAGE_END_WAIT", FormattableString.Invariant($"TargetY={endY}; Direction={direction}; Required=PassedTarget AND Busy=0")); ⟦EOL⟧
+// 해설 L879: 예외 처리 범위입니다: try
+L000879 |             try ⟦EOL⟧
+// 해설 L880: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000880 |             { ⟦EOL⟧
+// 해설 L881: 조건을 먼저 확인하며 반복합니다: while (true)
+L000881 |                 while (true) ⟦EOL⟧
+// 해설 L882: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000882 |                 { ⟦EOL⟧
+// 해설 L883: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(limit.Token)
+L000883 |                     Check(limit.Token); ⟦EOL⟧
+// 해설 L884: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000884 |                     // This gate needs a new central-poller frame, just like motion arrival. ⟦EOL⟧
+// 해설 L885: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000885 |                     // Do not turn a transient Pending/Stale cache into a results failure. ⟦EOL⟧
+// 해설 L886: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000886 |                     // Both inputs share a block; requesting them together avoids separate I/O. ⟦EOL⟧
+// 해설 L887: 조건에 따라 분기합니다: if (!_simulation)
+L000887 |                     if (!_simulation) ⟦EOL⟧
+// 해설 L888: 비동기 완료를 기다립니다: await RefreshInputs(ids, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(ids, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInputs(ids, limit.Token)
+L000888 |                         await RefreshInputs(ids, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L889: 함수·델리게이트 또는 객체 생성자를 호출합니다: Check(limit.Token)
+L000889 |                     Check(limit.Token); ⟦EOL⟧
+// 해설 L890: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedSnapshot(ids, out _) / 조건에 따라 결과식을 선택합니다: _simulation ? null : _interfaces.Melsec.GetCachedSnapshot(ids, out _) / 지역 변수를 선언합니다: var values = _simulation ? null : _interfaces.Melsec.GetCachedSnapshot(ids, out _); / 변수의 초기값을 지정합니다: values = _simulation ? null : _interfaces.Melsec.GetCachedSnapshot(ids, out _)
+L000890 |                     var values = _simulation ? null : _interfaces.Melsec.GetCachedSnapshot(ids, out _); ⟦EOL⟧
+// 해설 L891: 함수·델리게이트 또는 객체 생성자를 호출합니다: ZeroLineFeedback(ids[0], values) / 지역 변수를 선언합니다: var y = ZeroLineFeedback(ids[0], values); / 변수의 초기값을 지정합니다: y = ZeroLineFeedback(ids[0], values)
+L000891 |                     var y = ZeroLineFeedback(ids[0], values); ⟦EOL⟧
+// 해설 L892: 함수·델리게이트 또는 객체 생성자를 호출합니다: ZeroLineFeedback(ids[1], values) / 지역 변수를 선언합니다: var busy = ZeroLineFeedback(ids[1], values); / 변수의 초기값을 지정합니다: busy = ZeroLineFeedback(ids[1], values)
+L000892 |                     var busy = ZeroLineFeedback(ids[1], values); ⟦EOL⟧
+// 해설 L893: 조건에 따라 결과식을 선택합니다: direction < 0 ? y < endY : y > endY / 지역 변수를 선언합니다: var passedTarget = direction < 0 ? y < endY : y > endY; / 변수의 초기값을 지정합니다: passedTarget = direction < 0 ? y < endY : y > endY
+L000893 |                     var passedTarget = direction < 0 ? y < endY : y > endY; ⟦EOL⟧
+// 해설 L894: 조건에 따라 분기합니다: if (passedTarget && busy == 0)
+L000894 |                     if (passedTarget && busy == 0) ⟦EOL⟧
+// 해설 L895: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000895 |                     { ⟦EOL⟧
+// 해설 L896: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("ZERO_LINE_STAGE_END_STOPPED", FormattableString.Invariant($"TargetY={endY}; ActualY={y}; Direction={direction}; PassedTarget=True; Busy={busy}; ElapsedMs={clock.ElapsedMilliseconds}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"TargetY={endY}; ActualY={y}; Direction={direction}; PassedTarget=True; Busy={busy}; ElapsedMs={clock.ElapsedMilliseconds}")
+L000896 |                         Record("ZERO_LINE_STAGE_END_STOPPED", FormattableString.Invariant($"TargetY={endY}; ActualY={y}; Direction={direction}; PassedTarget=True; Busy={busy}; ElapsedMs={clock.ElapsedMilliseconds}")); ⟦EOL⟧
+// 해설 L897: 호출자에게 값 또는 제어를 반환합니다: return;
+L000897 |                         return; ⟦EOL⟧
+// 해설 L898: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000898 |                     } ⟦EOL⟧
+// 해설 L899: 비동기 완료를 기다립니다: await Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20, limit.Token)
+L000899 |                     await Task.Delay(20, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L900: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000900 |                 } ⟦EOL⟧
+// 해설 L901: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000901 |             } ⟦EOL⟧
+// 해설 L902: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopRequested() / 지정 예외를 처리합니다: catch (OperationCanceledException error) when (!token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested)
+L000902 |             catch (OperationCanceledException error) when (!token.IsCancellationRequested && !_stopRequested() && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L903: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000903 |             { ⟦EOL⟧
+// 해설 L904: 함수·델리게이트 또는 객체 생성자를 호출합니다: Evidence() / 지역 변수를 선언합니다: var detail = "0선 Stage Y 목표 통과 후 정지 대기 시간 초과: " + Evidence(); / 변수의 초기값을 지정합니다: detail = "0선 Stage Y 목표 통과 후 정지 대기 시간 초과: " + Evidence()
+L000904 |                 var detail = "0선 Stage Y 목표 통과 후 정지 대기 시간 초과: " + Evidence(); ⟦EOL⟧
+// 해설 L905: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record("ZERO_LINE_STAGE_END_FAILED", detail)
+L000905 |                 Record("ZERO_LINE_STAGE_END_FAILED", detail); ⟦EOL⟧
+// 해설 L906: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException(detail, error) / 예외를 발생/전달합니다: throw new TimeoutException(detail, error);
+L000906 |                 throw new TimeoutException(detail, error); ⟦EOL⟧
+// 해설 L907: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000907 |             } ⟦EOL⟧
+// 해설 L908: 지정 예외를 처리합니다: catch (Exception error)
+L000908 |             catch (Exception error) ⟦EOL⟧
+// 해설 L909: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000909 |             { ⟦EOL⟧
+// 해설 L910: 함수·델리게이트 또는 객체 생성자를 호출합니다: Record(error is OperationCanceledException ? "ZERO_LINE_STAGE_END_CANCELED" : "ZERO_LINE_STAGE_END_FAILED", Evidence() + "; " + error.Message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Evidence() / 조건에 따라 결과식을 선택합니다: error is OperationCanceledException ? "ZERO_LINE_STAGE_END_CANCELED" : "ZERO_LINE_STAGE_END_FAILED"
+L000910 |                 Record(error is OperationCanceledException ? "ZERO_LINE_STAGE_END_CANCELED" : "ZERO_LINE_STAGE_END_FAILED", Evidence() + "; " + error.Message); ⟦EOL⟧
+// 해설 L911: 예외를 발생/전달합니다: throw;
+L000911 |                 throw; ⟦EOL⟧
+// 해설 L912: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000912 |             } ⟦EOL⟧
+// 해설 L913: 구문 블록 경계입니다 · 소속 WaitZeroLineEndPosition.
+L000913 |         } ⟦EOL⟧
+L000914 |  ⟦EOL⟧
+// 해설 L915: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Station.CStageReviewSequences.Session.ZeroLineFeedback(string, System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE>?)
+L000915 |         private double ZeroLineFeedback(string id, IReadOnlyDictionary<string, ST_MELSEC_CACHED_VALUE>? values = null) ⟦EOL⟧
+// 해설 L916: 구문 블록 경계입니다 · 소속 ZeroLineFeedback.
+L000916 |         { ⟦EOL⟧
+// 해설 L917: 조건에 따라 분기합니다: if (_simulation)
+L000917 |             if (_simulation) ⟦EOL⟧
+// 해설 L918: 함수·델리게이트 또는 객체 생성자를 호출합니다: Feedback(id) / 호출자에게 값 또는 제어를 반환합니다: return Feedback(id);
+L000918 |                 return Feedback(id); ⟦EOL⟧
+// 해설 L919: 함수·델리게이트 또는 객체 생성자를 호출합니다: Route(id) / 지역 변수를 선언합니다: var row = Route(id); / 변수의 초기값을 지정합니다: row = Route(id)
+L000919 |             var row = Route(id); ⟦EOL⟧
+// 해설 L920: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaces.Melsec.GetCachedValue(id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.GetValueOrDefault(id) / 조건에 따라 결과식을 선택합니다: values is null ? _interfaces.Melsec.GetCachedValue(id) : values.GetValueOrDefault(id) / 지역 변수를 선언합니다: var sample = values is null ? _interfaces.Melsec.GetCachedValue(id) : values.GetValueOrDefault(id); / 변수의 초기값을 지정합니다: sample = values is null ? _interfaces.Melsec.GetCachedValue(id) : values.GetValueOrDefault(id)
+L000920 |             var sample = values is null ? _interfaces.Melsec.GetCachedValue(id) : values.GetValueOrDefault(id); ⟦EOL⟧
+// 해설 L921: 조건에 따라 분기합니다: if (row.Direction != EN_MELSEC_DIRECTION.In || row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgn…)
+L000921 |             if (row.Direction != EN_MELSEC_DIRECTION.In || row.Access is not (EN_MELSEC_ACCESS.Read or EN_MELSEC_ACCESS.ReadWrite) ⟦EOL⟧
+// 해설 L922: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(row.Address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase)
+L000922 |                 || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L923: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2)
+L000923 |                 || sample is not { IsValid: true, Value: not null, UpdatedAt: not null } || DateTimeOffset.UtcNow - sample.UpdatedAt > TimeSpan.FromSeconds(2)) ⟦EOL⟧
+// 해설 L924: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("0선 위치/상태의 유효한 최신 MELSEC 입력 스냅샷이 필요합니다: " + Describe(id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Describe(id) / 예외를 발생/전달합니다: throw new InvalidOperationException("0선 위치/상태의 유효한 최신 MELSEC 입력 스냅샷이 필요합니다: " + Describe(id));
+L000924 |                 throw new InvalidOperationException("0선 위치/상태의 유효한 최신 MELSEC 입력 스냅샷이 필요합니다: " + Describe(id)); ⟦EOL⟧
+// 해설 L925: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture)
+L000925 |             var result = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L926: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result) / 조건에 따라 분기합니다: if (!double.IsFinite(result))
+L000926 |             if (!double.IsFinite(result)) ⟦EOL⟧
+// 해설 L927: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("0선 위치/상태 값이 유효하지 않습니다: " + id) / 예외를 발생/전달합니다: throw new InvalidDataException("0선 위치/상태 값이 유효하지 않습니다: " + id);
+L000927 |                 throw new InvalidDataException("0선 위치/상태 값이 유효하지 않습니다: " + id); ⟦EOL⟧
+// 해설 L928: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000928 |             return result; ⟦EOL⟧
+// 해설 L929: 구문 블록 경계입니다 · 소속 ZeroLineFeedback.
+L000929 |         } ⟦EOL⟧
+L000930 |  ⟦EOL⟧
+// 해설 L931: 구문 블록 경계입니다.
+L000931 |     } ⟦EOL⟧
+// 해설 L932: 구문 블록 경계입니다.
+L000932 | } ⟦EOL⟧
+L000933 |  ⟦EOL⟧
+// 해설 L934: 타입의 구조/상속 선언입니다: public enum EN_STAGE_MOVE_MODE
+L000934 | public enum EN_STAGE_MOVE_MODE ⟦EOL⟧
+// 해설 L935: 구문 블록 경계입니다.
+L000935 | { ⟦EOL⟧
+// 해설 L936: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STAGE_MOVE_MODE.XY
+L000936 |     XY, ⟦EOL⟧
+// 해설 L937: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STAGE_MOVE_MODE.ReviewX
+L000937 |     ReviewX, ⟦EOL⟧
+// 해설 L938: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.EN_STAGE_MOVE_MODE.StageY
+L000938 |     StageY ⟦EOL⟧
+// 해설 L939: 구문 블록 경계입니다.
+L000939 | } ⟦EOL⟧
+L000940 |  ⟦EOL⟧
+// 해설 L941: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_MOVE_TARGET(double X, double Y, double SpeedX, double SpeedY, double AccelerationX = 150, EN_STAGE_MOVE_MODE Mode = EN_STAGE_MOVE_MODE.XY);
+L000941 | public sealed record ST_STAGE_MOVE_TARGET(double X, double Y, double SpeedX, double SpeedY, double AccelerationX = 150, EN_STAGE_MOVE_MODE Mode = EN_STAGE_MOVE_MODE.XY); ⟦EOL⟧
+// 해설 L942: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_IOF_POINT(double X, double Y);
+L000942 | public sealed record ST_STAGE_IOF_POINT(double X, double Y); ⟦EOL⟧
+// 해설 L943: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_IOF_PLAN(Guid Id, bool ZeroLine, IReadOnlyList<ST_STAGE_IOF_POINT> Points);
+L000943 | public sealed record ST_STAGE_IOF_PLAN(Guid Id, bool ZeroLine, IReadOnlyList<ST_STAGE_IOF_POINT> Points); ⟦EOL⟧
+// 해설 L944: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_FLOW_EVENT(long Number, int DeviceNo, string Phase, double? Value = null)
+L000944 | public sealed record ST_STAGE_FLOW_EVENT(long Number, int DeviceNo, string Phase, double? Value = null) ⟦EOL⟧
+// 해설 L945: 구문 블록 경계입니다.
+L000945 | { ⟦EOL⟧
+// 해설 L946: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Station.ST_STAGE_FLOW_EVENT.Detail
+L000946 |     public string Detail { get; init; } = ""; ⟦EOL⟧
+// 해설 L947: 구문 블록 경계입니다.
+L000947 | } ⟦EOL⟧

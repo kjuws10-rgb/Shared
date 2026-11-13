@@ -1,0 +1,1791 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>b75bcb130de52c566f7614c506f2f4dbee49d2c4c9a2146420c8d1a76599698f</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>20,622 bytes / 419 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/bec50c285295630a9224.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CMelsecStageSimulationDialog</td><td>ClassDeclaration</td><td>15–47</td><td>CMelsecStageSimulationDialog: Window</td></tr>
+<tr><td>CMelsecStageSimulationPanel</td><td>ClassDeclaration</td><td>49–232</td><td>CMelsecStageSimulationPanel: INotifyPropertyChanged</td></tr>
+<tr><td>CMelsecStageSimulationRow</td><td>ClassDeclaration</td><td>234–418</td><td>CMelsecStageSimulationRow: INotifyPropertyChanged</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_timer</td><td>FieldDeclaration</td><td>L17–17</td><td>DispatcherTimer Drilling.UI.Popup.CMelsecStageSimulationDialog._timer</td></tr>
+<tr><td>Panel</td><td>PropertyDeclaration</td><td>L18–18</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel Drilling.UI.Popup.CMelsecStageSimulationDialog.Panel</td></tr>
+<tr><td>get_Panel</td><td>GetAccessorDeclaration</td><td>L18–18</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel Drilling.UI.Popup.CMelsecStageSimulationDialog.Panel.get</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L20–42</td><td>Drilling.UI.Popup.CMelsecStageSimulationDialog.CMelsecStageSimulationDialog(Drilling.Common.Interface.CInterfaceManager, System.Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt;&gt;?)</td></tr>
+<tr><td>RefreshSnapshot</td><td>MethodDeclaration</td><td>L45–45</td><td>void Drilling.UI.Popup.CMelsecStageSimulationDialog.RefreshSnapshot(object?, System.EventArgs)</td></tr>
+<tr><td>CloseClicked</td><td>MethodDeclaration</td><td>L46–46</td><td>void Drilling.UI.Popup.CMelsecStageSimulationDialog.CloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>_map</td><td>FieldDeclaration</td><td>L51–51</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel._map</td></tr>
+<tr><td>_connectionText</td><td>FieldDeclaration</td><td>L52–52</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._connectionText</td></tr>
+<tr><td>_lastCanChangeReplies</td><td>FieldDeclaration</td><td>L53–53</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanChangeReplies</td></tr>
+<tr><td>_lastAutomaticReplies</td><td>FieldDeclaration</td><td>L53–53</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastAutomaticReplies</td></tr>
+<tr><td>_lastCanSetZeroSegments</td><td>FieldDeclaration</td><td>L53–53</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanSetZeroSegments</td></tr>
+<tr><td>_zeroSegmentInput</td><td>FieldDeclaration</td><td>L54–54</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._zeroSegmentInput</td></tr>
+<tr><td>_lastZeroSegmentState</td><td>FieldDeclaration</td><td>L54–54</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._lastZeroSegmentState</td></tr>
+<tr><td>_setZeroSegments</td><td>FieldDeclaration</td><td>L55–55</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CMelsecStageSimulationPanel._setZeroSegments</td></tr>
+<tr><td>_seedMeasurements</td><td>FieldDeclaration</td><td>L56–56</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CMelsecStageSimulationPanel._seedMeasurements</td></tr>
+<tr><td>_seeding</td><td>FieldDeclaration</td><td>L57–57</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._seeding</td></tr>
+<tr><td>_lastCanSeed</td><td>FieldDeclaration</td><td>L57–57</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanSeed</td></tr>
+<tr><td>_measurementStatus</td><td>FieldDeclaration</td><td>L58–58</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._measurementStatus</td></tr>
+<tr><td>MeasurementStatus</td><td>PropertyDeclaration</td><td>L59–59</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.MeasurementStatus</td></tr>
+<tr><td>CanSeedMeasurements</td><td>PropertyDeclaration</td><td>L60–61</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanSeedMeasurements</td></tr>
+<tr><td>SeedMeasurementsCommand</td><td>PropertyDeclaration</td><td>L62–87</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationPanel.SeedMeasurementsCommand</td></tr>
+<tr><td>ZeroSegmentInput</td><td>PropertyDeclaration</td><td>L89–99</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput</td></tr>
+<tr><td>get_ZeroSegmentInput</td><td>GetAccessorDeclaration</td><td>L91–91</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput.get</td></tr>
+<tr><td>set_ZeroSegmentInput</td><td>SetAccessorDeclaration</td><td>L92–98</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput.set</td></tr>
+<tr><td>ZeroSegmentState</td><td>PropertyDeclaration</td><td>L101–101</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentState</td></tr>
+<tr><td>CanSetZeroSegments</td><td>PropertyDeclaration</td><td>L102–102</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanSetZeroSegments</td></tr>
+<tr><td>SetZeroSegmentsCommand</td><td>PropertyDeclaration</td><td>L103–115</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationPanel.SetZeroSegmentsCommand</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L117–117</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationPanel.PropertyChanged</td></tr>
+<tr><td>Rows</td><td>PropertyDeclaration</td><td>L118–118</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel.Rows</td></tr>
+<tr><td>get_Rows</td><td>GetAccessorDeclaration</td><td>L118–118</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel.Rows.get</td></tr>
+<tr><td>ConnectionText</td><td>PropertyDeclaration</td><td>L119–119</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ConnectionText</td></tr>
+<tr><td>CanChangeAutomaticReplies</td><td>PropertyDeclaration</td><td>L120–120</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanChangeAutomaticReplies</td></tr>
+<tr><td>AutomaticReplies</td><td>PropertyDeclaration</td><td>L122–141</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies</td></tr>
+<tr><td>get_AutomaticReplies</td><td>GetAccessorDeclaration</td><td>L124–124</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies.get</td></tr>
+<tr><td>set_AutomaticReplies</td><td>SetAccessorDeclaration</td><td>L125–140</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies.set</td></tr>
+<tr><td>Refresh</td><td>MethodDeclaration</td><td>L143–215</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh()</td></tr>
+<tr><td>ScenarioOrder</td><td>MethodDeclaration</td><td>L217–230</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)</td></tr>
+<tr><td>SignalOrder</td><td>MethodDeclaration</td><td>L231–231</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.SignalOrder(string)</td></tr>
+<tr><td>_canSet</td><td>FieldDeclaration</td><td>L236–236</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow._canSet</td></tr>
+<tr><td>_currentValue</td><td>FieldDeclaration</td><td>L237–237</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow._currentValue</td></tr>
+<tr><td>_inputValue</td><td>FieldDeclaration</td><td>L238–238</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow._inputValue</td></tr>
+<tr><td>_readScale</td><td>FieldDeclaration</td><td>L239–239</td><td>double Drilling.UI.Popup.CMelsecStageSimulationRow._readScale</td></tr>
+<tr><td>_stateBrush</td><td>FieldDeclaration</td><td>L240–240</td><td>Brush Drilling.UI.Popup.CMelsecStageSimulationRow._stateBrush</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L241–241</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationRow.PropertyChanged</td></tr>
+<tr><td>Id</td><td>PropertyDeclaration</td><td>L242–242</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Id</td></tr>
+<tr><td>get_Id</td><td>GetAccessorDeclaration</td><td>L242–242</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Id.get</td></tr>
+<tr><td>DeviceNo</td><td>PropertyDeclaration</td><td>L243–243</td><td>int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo</td></tr>
+<tr><td>get_DeviceNo</td><td>GetAccessorDeclaration</td><td>L243–243</td><td>int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo.get</td></tr>
+<tr><td>Scenario</td><td>PropertyDeclaration</td><td>L244–244</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario</td></tr>
+<tr><td>get_Scenario</td><td>GetAccessorDeclaration</td><td>L244–244</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario.get</td></tr>
+<tr><td>Name</td><td>PropertyDeclaration</td><td>L245–245</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Name</td></tr>
+<tr><td>get_Name</td><td>GetAccessorDeclaration</td><td>L245–245</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Name.get</td></tr>
+<tr><td>Address</td><td>PropertyDeclaration</td><td>L246–246</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Address</td></tr>
+<tr><td>get_Address</td><td>GetAccessorDeclaration</td><td>L246–246</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Address.get</td></tr>
+<tr><td>Description</td><td>PropertyDeclaration</td><td>L247–247</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Description</td></tr>
+<tr><td>get_Description</td><td>GetAccessorDeclaration</td><td>L247–247</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Description.get</td></tr>
+<tr><td>CurrentValue</td><td>PropertyDeclaration</td><td>L248–248</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.CurrentValue</td></tr>
+<tr><td>StateBrush</td><td>PropertyDeclaration</td><td>L249–249</td><td>Brush Drilling.UI.Popup.CMelsecStageSimulationRow.StateBrush</td></tr>
+<tr><td>CanSet</td><td>PropertyDeclaration</td><td>L250–250</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.CanSet</td></tr>
+<tr><td>IsNumeric</td><td>PropertyDeclaration</td><td>L251–251</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric</td></tr>
+<tr><td>get_IsNumeric</td><td>GetAccessorDeclaration</td><td>L251–251</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric.get</td></tr>
+<tr><td>IsCount</td><td>PropertyDeclaration</td><td>L252–252</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount</td></tr>
+<tr><td>get_IsCount</td><td>GetAccessorDeclaration</td><td>L252–252</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount.get</td></tr>
+<tr><td>IsMeasurement</td><td>PropertyDeclaration</td><td>L253–253</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement</td></tr>
+<tr><td>get_IsMeasurement</td><td>GetAccessorDeclaration</td><td>L253–253</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement.get</td></tr>
+<tr><td>InputHint</td><td>PropertyDeclaration</td><td>L254–254</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputHint</td></tr>
+<tr><td>IsAlignBusyWord</td><td>PropertyDeclaration</td><td>L255–255</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord</td></tr>
+<tr><td>get_IsAlignBusyWord</td><td>GetAccessorDeclaration</td><td>L255–255</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord.get</td></tr>
+<tr><td>InputValue</td><td>PropertyDeclaration</td><td>L257–267</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue</td></tr>
+<tr><td>get_InputValue</td><td>GetAccessorDeclaration</td><td>L259–259</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.get</td></tr>
+<tr><td>set_InputValue</td><td>SetAccessorDeclaration</td><td>L260–266</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.set</td></tr>
+<tr><td>SetOnCommand</td><td>PropertyDeclaration</td><td>L269–269</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand</td></tr>
+<tr><td>get_SetOnCommand</td><td>GetAccessorDeclaration</td><td>L269–269</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand.get</td></tr>
+<tr><td>SetOffCommand</td><td>PropertyDeclaration</td><td>L270–270</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand</td></tr>
+<tr><td>get_SetOffCommand</td><td>GetAccessorDeclaration</td><td>L270–270</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand.get</td></tr>
+<tr><td>SetValueCommand</td><td>PropertyDeclaration</td><td>L271–271</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand</td></tr>
+<tr><td>get_SetValueCommand</td><td>GetAccessorDeclaration</td><td>L271–271</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand.get</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L273–357</td><td>Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action&lt;int&gt;, System.Action&lt;string&gt;?, System.Action&lt;double&gt;?)</td></tr>
+<tr><td>Set</td><td>LocalFunctionStatement</td><td>L317–329</td><td>void Set(int)</td></tr>
+<tr><td>Refresh</td><td>MethodDeclaration</td><td>L359–415</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)</td></tr>
+<tr><td>Changed</td><td>MethodDeclaration</td><td>L417–417</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L17">FieldDeclaration <code>_timer</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L17-L17">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DispatcherTimer Drilling.UI.Popup.CMelsecStageSimulationDialog._timer</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DispatcherTimer</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">PropertyDeclaration <code>Panel</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel Drilling.UI.Popup.CMelsecStageSimulationDialog.Panel</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">GetAccessorDeclaration <code>get_Panel</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel Drilling.UI.Popup.CMelsecStageSimulationDialog.Panel.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">ConstructorDeclaration <code>.ctor</code> · L20–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L20-L42">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:20–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CMelsecStageSimulationDialog.CMelsecStageSimulationDialog(Drilling.Common.Interface.CInterfaceManager, System.Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt;&gt;?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>interfaces</td><td>Drilling.Common.Interface.CInterfaceManager</td><td>None</td><td>False /</td></tr>
+<tr><td>readRecipe</td><td>System.Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt;&gt;?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2935-L2938">Drilling.UI/CRootView.cs:2935–2938</a></td><td>new CMelsecStageSimulationDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>22</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>23</td><td>new</td><td>resolved</td><td>Drilling.UI.Popup.CMelsecStageSimulationPanel.CMelsecStageSimulationPanel(Drilling.Common.Interface.CInterfaceManager, System.Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt;&gt;?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:49</td></tr>
+<tr><td>25</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>26</td><td>new</td><td>unresolved</td><td>None</td></tr>
+<tr><td>28</td><td>TimeSpan.FromMilliseconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromMilliseconds(long)</td></tr>
+<tr><td>33</td><td>Panel.Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh() · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143</td></tr>
+<tr><td>34</td><td>_timer.Start</td><td>unresolved</td><td>None</td></tr>
+<tr><td>38</td><td>_timer.Stop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>41</td><td>Panel.Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh() · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>23</td><td>assignment</td><td>값을 대상에 대입합니다: Panel = new(interfaces, readRecipe)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(interfaces, readRecipe)</td></tr>
+<tr><td>24</td><td>assignment</td><td>값을 대상에 대입합니다: DataContext = Panel</td></tr>
+<tr><td>25</td><td>assignment</td><td>값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height * 0.9)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height * 0.9)</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: _timer = new(DispatcherPriority.Background, Dispatcher) { Interval = TimeSpan.FromMilliseconds(500) }</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background, Dispatcher) { Interval = TimeSpan.FromMilliseconds(500) }</td></tr>
+<tr><td>28</td><td>assignment</td><td>값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(500)</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(500)</td></tr>
+<tr><td>30</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick += RefreshSnapshot</td></tr>
+<tr><td>31</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) =&gt; { Panel.Refresh(); _timer.Start(); }</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Panel.Refresh()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Start()</td></tr>
+<tr><td>36</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: Closed += (_, _) =&gt; { _timer.Stop(); _timer.Tick -= RefreshSnapshot; }</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Stop()</td></tr>
+<tr><td>39</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick -= RefreshSnapshot</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Panel.Refresh()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L45">MethodDeclaration <code>RefreshSnapshot</code> · L45–45</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationDialog.RefreshSnapshot(object?, System.EventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object?</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>System.EventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>45</td><td>Panel.Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh() · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Panel.Refresh()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L46">MethodDeclaration <code>CloseClicked</code> · L46–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L46-L46">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:46–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationDialog.CloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>46</td><td>Close</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Close()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L51">FieldDeclaration <code>_map</code> · L51–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L51-L51">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:51–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel._map</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>51</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _map = []</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L52">FieldDeclaration <code>_connectionText</code> · L52–52</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L52-L52">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:52–52</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._connectionText</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>52</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _connectionText = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">FieldDeclaration <code>_lastCanChangeReplies</code> · L53–53</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanChangeReplies</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _lastCanChangeReplies = true</td></tr>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _lastAutomaticReplies = true</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">FieldDeclaration <code>_lastAutomaticReplies</code> · L53–53</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastAutomaticReplies</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">FieldDeclaration <code>_lastCanSetZeroSegments</code> · L53–53</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanSetZeroSegments</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L54">FieldDeclaration <code>_zeroSegmentInput</code> · L54–54</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._zeroSegmentInput</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>54</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _zeroSegmentInput = &quot;0&quot;</td></tr>
+<tr><td>54</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _lastZeroSegmentState = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L54">FieldDeclaration <code>_lastZeroSegmentState</code> · L54–54</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._lastZeroSegmentState</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L55">FieldDeclaration <code>_setZeroSegments</code> · L55–55</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L55-L55">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:55–55</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CMelsecStageSimulationPanel._setZeroSegments</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L56">FieldDeclaration <code>_seedMeasurements</code> · L56–56</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L56-L56">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:56–56</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CMelsecStageSimulationPanel._seedMeasurements</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L57">FieldDeclaration <code>_seeding</code> · L57–57</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._seeding</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L57">FieldDeclaration <code>_lastCanSeed</code> · L57–57</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel._lastCanSeed</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L58">FieldDeclaration <code>_measurementStatus</code> · L58–58</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:58–58</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel._measurementStatus</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>58</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _measurementStatus = &quot;Distortion 측정값: mm 단위로 입력하세요. BASE 복사 후 일부 값만 바꿔서 시험할 수 있습니다.&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L59">PropertyDeclaration <code>MeasurementStatus</code> · L59–59</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L59-L59">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:59–59</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.MeasurementStatus</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L60">PropertyDeclaration <code>CanSeedMeasurements</code> · L60–61</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L60-L61">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:60–61</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanSeedMeasurements</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>61</td><td>Rows.Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.Count&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;(System.Func&lt;Drilling.UI.Popup.CMelsecStageSimulationRow, bool&gt;)</td></tr>
+<tr><td>61</td><td>Rows.Where(row =&gt; row.IsMeasurement).All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.All&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;(System.Func&lt;Drilling.UI.Popup.CMelsecStageSimulationRow, bool&gt;)</td></tr>
+<tr><td>61</td><td>Rows.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.Where&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;(System.Func&lt;Drilling.UI.Popup.CMelsecStageSimulationRow, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row =&gt; row.IsMeasurement)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Where(row =&gt; row.IsMeasurement).All(row =&gt; row.CanSet)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Where(row =&gt; row.IsMeasurement)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L62">PropertyDeclaration <code>SeedMeasurementsCommand</code> · L62–87</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L62-L87">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:62–87</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationPanel.SeedMeasurementsCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>62</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>65</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>68</td><td>readRecipe!</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt; System.Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION?&gt;&gt;.Invoke(System.Threading.CancellationToken)</td></tr>
+<tr><td>68</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>69</td><td>new Dictionary&lt;string, double&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, double&gt;.Dictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>74</td><td>recipe.Parameters.SingleOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.SingleOrDefault&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER, bool&gt;)</td></tr>
+<tr><td>74</td><td>p.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>75</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>75</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>76</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>77</td><td>CAlignDistortionCycle.ResultId</td><td>resolved</td><td>string Drilling.Common.Correction.CAlignDistortionCycle.ResultId(string) · Drilling.Common/Correction/CAlignInterpolation.cs:237</td></tr>
+<tr><td>79</td><td>interfaces.Melsec.SetDistortionMeasurementSimulationValues</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValues(System.Collections.Generic.IReadOnlyDictionary&lt;string, double&gt;) · Drilling.Common/Interface/Melsec/CMelsec.cs:3062</td></tr>
+<tr><td>80</td><td>Rows.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.Where&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;(System.Func&lt;Drilling.UI.Popup.CMelsecStageSimulationRow, bool&gt;)</td></tr>
+<tr><td>80</td><td>values[row.Id].ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>82</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>82</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>82</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>83</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh() · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143</td></tr>
+<tr><td>85</td><td>CRecipeConfirmDialog.ShowWarning</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86</td></tr>
+<tr><td>86</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>62</td><td>assignment</td><td>값을 대상에 대입합니다: _seedMeasurements ??= new(async _ =&gt; { if (!CanSeedMeasurements) return; _seeding = true; _seedMeasurements?.NotifyCanExecuteChanged(); try { var recipe = await readRecipe!(CancellationToken.None) ?? throw new InvalidOperationExce</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ =&gt; { if (!CanSeedMeasurements) return; _seeding = true; _seedMeasurements?.NotifyCanExecuteChanged(); try { var recipe = await readRecipe!(CancellationToken.None) ?? throw new InvalidOperationException(&quot;선택된 R…</td></tr>
+<tr><td>64</td><td>if</td><td>조건에 따라 분기합니다: if (!CanSeedMeasurements)</td></tr>
+<tr><td>64</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: _seeding = true</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+<tr><td>66</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>68</td><td>await</td><td>비동기 완료를 기다립니다: await readRecipe!(CancellationToken.None)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: readRecipe!(CancellationToken.None)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;선택된 Recipe가 없습니다.&quot;)</td></tr>
+<tr><td>68</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipe = await readRecipe!(CancellationToken.None) ?? throw new InvalidOperationException(&quot;선택된 Recipe가 없습니다.&quot;);</td></tr>
+<tr><td>68</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;선택된 Recipe가 없습니다.&quot;)</td></tr>
+<tr><td>68</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipe = await readRecipe!(CancellationToken.None) ?? throw new InvalidOperationException(&quot;선택된 Recipe가 없습니다.&quot;)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, double&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>69</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = new Dictionary&lt;string, double&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>69</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = new Dictionary&lt;string, double&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>70</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; 10; index++)</td></tr>
+<tr><td>71</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in new[] { &quot;X&quot;, &quot;Y&quot; })</td></tr>
+<tr><td>73</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: index &lt; 4 ? &quot;AK&quot; + (index + 1) : &quot;DK&quot; + (index - 3)</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = $&quot;ALIGNBASE_{(index &lt; 4 ? &quot;AK&quot; + (index + 1) : &quot;DK&quot; + (index - 3))}_{axis}&quot;;</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = $&quot;ALIGNBASE_{(index &lt; 4 ? &quot;AK&quot; + (index + 1) : &quot;DK&quot; + (index - 3))}_{axis}&quot;</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.SingleOrDefault(p =&gt; p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>74</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = recipe.Parameters.SingleOrDefault(p =&gt; p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value;</td></tr>
+<tr><td>74</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = recipe.Parameters.SingleOrDefault(p =&gt; p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>75</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;Recipe {recipe.Name}의 {key} 값을 확인하세요.&quot;)</td></tr>
+<tr><td>76</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;Recipe {recipe.Name}의 {key} 값을 확인하세요.&quot;);</td></tr>
+<tr><td>77</td><td>assignment</td><td>값을 대상에 대입합니다: values[CAlignDistortionCycle.ResultId(key)] = value</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignDistortionCycle.ResultId(key)</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetDistortionMeasurementSimulationValues(values)</td></tr>
+<tr><td>80</td><td>assignment</td><td>값을 대상에 대입합니다: row.InputValue = values[row.Id].ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Where(row =&gt; row.IsMeasurement)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values[row.Id].ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>80</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var row in Rows.Where(row =&gt; row.IsMeasurement))</td></tr>
+<tr><td>81</td><td>assignment</td><td>값을 대상에 대입합니다: _measurementStatus = $&quot;Recipe {recipe.Name} BASE → 시뮬레이션 측정값 20개 반영 완료 (mm)&quot;</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(MeasurementStatus)))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(MeasurementStatus))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(MeasurementStatus)</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning(&quot;Distortion 시뮬 측정값&quot;, error.Message)</td></tr>
+<tr><td>85</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>86</td><td>assignment</td><td>값을 대상에 대입합니다: _seeding = false</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+<tr><td>86</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SeedMeasurementsCommand&quot;]
+ N0[&quot;L64 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L66 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L70 for&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L71 foreach&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L75 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L80 foreach&quot;]
+ N1 --&gt;|포함| N5
+ N6[&quot;L85 catch&quot;]
+ N1 --&gt;|포함| N6
+ N7[&quot;L86 finally&quot;]
+ N1 --&gt;|포함| N7</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L89">PropertyDeclaration <code>ZeroSegmentInput</code> · L89–99</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L89-L99">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:89–99</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L91">GetAccessorDeclaration <code>get_ZeroSegmentInput</code> · L91–91</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L91-L91">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:91–91</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L92">SetAccessorDeclaration <code>set_ZeroSegmentInput</code> · L92–98</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L92-L98">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:92–98</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentInput.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>97</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>97</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>97</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>94</td><td>if</td><td>조건에 따라 분기합니다: if (_zeroSegmentInput == value)</td></tr>
+<tr><td>95</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>96</td><td>assignment</td><td>값을 대상에 대입합니다: _zeroSegmentInput = value</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(ZeroSegmentInput)))</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(ZeroSegmentInput))</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ZeroSegmentInput)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;set_ZeroSegmentInput&quot;]
+ N0[&quot;L94 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L101">PropertyDeclaration <code>ZeroSegmentState</code> · L101–101</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L101-L101">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:101–101</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ZeroSegmentState</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>101</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: interfaces.StageReviewSequences.LastIofPlan is { ZeroLine: true } plan ? $&quot;{interfaces.StageReviewSequences.SimulatedZeroLineCompletedSegments} / {plan.Points.Count} 구간 완료&quot; : &quot;0선 계획 없음&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L102">PropertyDeclaration <code>CanSetZeroSegments</code> · L102–102</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L102-L102">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:102–102</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanSetZeroSegments</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>102</td><td>interfaces.IsSimul</td><td>resolved</td><td>bool Drilling.Common.Interface.CInterfaceManager.IsSimul(Drilling.Common.Interface.EN_EQP_MODULE, int) · Drilling.Common/Interface/CInterfaceManager.cs:343</td></tr>
+<tr><td>102</td><td>interfaces.Melsec.Map.Single</td><td>resolved</td><td>Drilling.Common.Interface.ST_MELSEC_MAP_DATA System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.Single&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.IsSimul(EN_EQP_MODULE.Melsec, interfaces.Melsec.Map.Single(row =&gt; row.Id == &quot;IOF_SETTING&quot;).DeviceNo)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.Map.Single(row =&gt; row.Id == &quot;IOF_SETTING&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L103">PropertyDeclaration <code>SetZeroSegmentsCommand</code> · L103–115</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L103-L115">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:103–115</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationPanel.SetZeroSegmentsCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>103</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>107</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>108</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>109</td><td>interfaces.StageReviewSequences.SetSimulatedZeroLineCompletedSegments</td><td>resolved</td><td>void Drilling.Common.Station.CStageReviewSequences.SetSimulatedZeroLineCompletedSegments(int) · Drilling.Common/Station/CStageReviewSequences.cs:36</td></tr>
+<tr><td>113</td><td>CRecipeConfirmDialog.ShowWarning</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>103</td><td>assignment</td><td>값을 대상에 대입합니다: _setZeroSegments ??= new(_ =&gt; { try { if (!int.TryParse(ZeroSegmentInput, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number)) throw new InvalidOperationException(&quot;0~N의 정수를 입력해 주세요.&quot;); interfaces.StageReviewSequenc</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ =&gt; { try { if (!int.TryParse(ZeroSegmentInput, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number)) throw new InvalidOperationException(&quot;0~N의 정수를 입력해 주세요.&quot;); interfaces.StageReviewSequences.SetSimul…</td></tr>
+<tr><td>105</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(ZeroSegmentInput, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number)</td></tr>
+<tr><td>107</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(ZeroSegmentInput, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number))</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;0~N의 정수를 입력해 주세요.&quot;)</td></tr>
+<tr><td>108</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;0~N의 정수를 입력해 주세요.&quot;);</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.StageReviewSequences.SetSimulatedZeroLineCompletedSegments(number)</td></tr>
+<tr><td>111</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning(&quot;0선 촬영구간&quot;, error.Message)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetZeroSegmentsCommand&quot;]
+ N0[&quot;L105 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L107 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L111 catch&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L117">EventFieldDeclaration <code>PropertyChanged</code> · L117–117</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L117-L117">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:117–117</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationPanel.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L118">PropertyDeclaration <code>Rows</code> · L118–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel.Rows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L118">GetAccessorDeclaration <code>get_Rows</code> · L118–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt; Drilling.UI.Popup.CMelsecStageSimulationPanel.Rows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L119">PropertyDeclaration <code>ConnectionText</code> · L119–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L119-L119">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:119–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationPanel.ConnectionText</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L120">PropertyDeclaration <code>CanChangeAutomaticReplies</code> · L120–120</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L120-L120">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:120–120</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.CanChangeAutomaticReplies</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L122">PropertyDeclaration <code>AutomaticReplies</code> · L122–141</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L122-L141">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:122–141</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L124">GetAccessorDeclaration <code>get_AutomaticReplies</code> · L124–124</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L124-L124">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:124–124</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L125">SetAccessorDeclaration <code>set_AutomaticReplies</code> · L125–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L125-L140">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:125–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.AutomaticReplies.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>135</td><td>CRecipeConfirmDialog.ShowWarning</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86</td></tr>
+<tr><td>139</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>139</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>139</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>127</td><td>if</td><td>조건에 따라 분기합니다: if (value == AutomaticReplies)</td></tr>
+<tr><td>128</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>129</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: interfaces.StageReviewSequences.AutomaticSimulationReplies = value</td></tr>
+<tr><td>133</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning(&quot;Stage 자동 응답&quot;, error.Message)</td></tr>
+<tr><td>138</td><td>assignment</td><td>값을 대상에 대입합니다: _lastAutomaticReplies = AutomaticReplies</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(AutomaticReplies)))</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(AutomaticReplies))</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(AutomaticReplies)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;set_AutomaticReplies&quot;]
+ N0[&quot;L127 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L129 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L133 catch&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L143">MethodDeclaration <code>Refresh</code> · L143–215</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L143-L215">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143–215</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:33–33</a></td><td>Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L41-L41">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:41–41</a></td><td>Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45</a></td><td>Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:83–83</a></td><td>Refresh</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>148</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>148</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>148</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>154</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>154</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>154</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>155</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>158</td><td>interfaces.Melsec.GetCachedSnapshot</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt; Drilling.Common.Interface.CMelsec.GetCachedSnapshot(out System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;) · Drilling.Common/Interface/Melsec/CMelsec.cs:2538</td></tr>
+<tr><td>159</td><td>map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row =&gt; ScenarioOrder(row.Group)).ThenBy(row =&gt; row.DeviceNo).ThenBy(row =&gt; SignalOrder(row…</td><td>resolved</td><td>Drilling.Common.Interface.ST_MELSEC_MAP_DATA[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.ToArray&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;()</td></tr>
+<tr><td>159</td><td>map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row =&gt; ScenarioOrder(row.Group)).ThenBy(row =&gt; row.DeviceNo).ThenBy(row =&gt; SignalOrder(row…</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.ThenBy&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string&gt;)</td></tr>
+<tr><td>159</td><td>map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row =&gt; ScenarioOrder(row.Group)).ThenBy(row =&gt; row.DeviceNo).ThenBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.ThenBy&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;)</td></tr>
+<tr><td>159</td><td>map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row =&gt; ScenarioOrder(row.Group)).ThenBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.ThenBy&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;)</td></tr>
+<tr><td>159</td><td>map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.OrderBy&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;)</td></tr>
+<tr><td>159</td><td>map.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.Where&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, bool&gt;)</td></tr>
+<tr><td>159</td><td>CMelsec.IsStageFlowSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3091</td></tr>
+<tr><td>159</td><td>CMelsec.IsStageSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3128</td></tr>
+<tr><td>159</td><td>CMelsec.IsStageAlignSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129</td></tr>
+<tr><td>159</td><td>CMelsec.IsStageProtectWindowSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3108</td></tr>
+<tr><td>159</td><td>CMelsec.IsDistortionMeasurementSimulationValue</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3059</td></tr>
+<tr><td>159</td><td>ScenarioOrder</td><td>resolved</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:217</td></tr>
+<tr><td>159</td><td>SignalOrder</td><td>resolved</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.SignalOrder(string) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:231</td></tr>
+<tr><td>160</td><td>_map.SequenceEqual</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.SequenceEqual&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;)</td></tr>
+<tr><td>163</td><td>Rows.Clear</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.Clear()</td></tr>
+<tr><td>165</td><td>Rows.Add</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Popup.CMelsecStageSimulationRow&gt;.Add(Drilling.UI.Popup.CMelsecStageSimulationRow)</td></tr>
+<tr><td>165</td><td>new</td><td>resolved</td><td>Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action&lt;int&gt;, System.Action&lt;string&gt;?, System.Action&lt;double&gt;?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:273</td></tr>
+<tr><td>167</td><td>CMelsec.IsStageAlignSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129</td></tr>
+<tr><td>168</td><td>interfaces.Melsec.SetStageAlignSimulationValue</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetStageAlignSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3131</td></tr>
+<tr><td>169</td><td>CMelsec.IsStageProtectWindowSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3108</td></tr>
+<tr><td>170</td><td>interfaces.Melsec.SetStageProtectWindowSimulationValue</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetStageProtectWindowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3110</td></tr>
+<tr><td>171</td><td>CMelsec.IsStageFlowSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3091</td></tr>
+<tr><td>172</td><td>interfaces.Melsec.SetStageFlowSimulationValue</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetStageFlowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3092</td></tr>
+<tr><td>174</td><td>interfaces.Melsec.SetStageSimulationSignal</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetStageSimulationSignal(string, bool) · Drilling.Common/Interface/Melsec/CMelsec.cs:3152</td></tr>
+<tr><td>175</td><td>interfaces.Melsec.SetDistortionMeasurementSimulationValue</td><td>resolved</td><td>void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValue(string, double) · Drilling.Common/Interface/Melsec/CMelsec.cs:3061</td></tr>
+<tr><td>178</td><td>interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS&gt;.ToDictionary&lt;Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int&gt;)</td></tr>
+<tr><td>178</td><td>interfaces.GetInterfaceCommunicationList</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS&gt; Drilling.Common.Interface.CInterfaceManager.GetInterfaceCommunicationList(Drilling.Common.Interface.EN_EQP_MODULE?) · Drilling.Common/Interface/CInterfaceManager.cs:472</td></tr>
+<tr><td>179</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+<tr><td>179</td><td>signals.Select(row =&gt; row.DeviceNo).Distinct().Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Select&lt;int, string&gt;(System.Func&lt;int, string&gt;)</td></tr>
+<tr><td>179</td><td>signals.Select(row =&gt; row.DeviceNo).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
+<tr><td>179</td><td>signals.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;.Select&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int&gt;)</td></tr>
+<tr><td>181</td><td>connections.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS&gt;.TryGetValue(int, out Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)</td></tr>
+<tr><td>181</td><td>status.ConnectionState.ToString().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>181</td><td>status.ConnectionState.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Enum.ToString()</td></tr>
+<tr><td>189</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>189</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>189</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>194</td><td>values.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt;.TryGetValue(string, out Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE)</td></tr>
+<tr><td>195</td><td>row.Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:359</td></tr>
+<tr><td>195</td><td>interfaces.IsSimul</td><td>resolved</td><td>bool Drilling.Common.Interface.CInterfaceManager.IsSimul(Drilling.Common.Interface.EN_EQP_MODULE, int) · Drilling.Common/Interface/CInterfaceManager.cs:343</td></tr>
+<tr><td>201</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>201</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>201</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>202</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>207</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>207</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>207</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>213</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>213</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>213</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>145</td><td>if</td><td>조건에 따라 분기합니다: if (_lastZeroSegmentState != ZeroSegmentState)</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: _lastZeroSegmentState = ZeroSegmentState</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(ZeroSegmentState)))</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(ZeroSegmentState))</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ZeroSegmentState)</td></tr>
+<tr><td>151</td><td>if</td><td>조건에 따라 분기합니다: if (_lastCanSetZeroSegments != CanSetZeroSegments)</td></tr>
+<tr><td>153</td><td>assignment</td><td>값을 대상에 대입합니다: _lastCanSetZeroSegments = CanSetZeroSegments</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanSetZeroSegments)))</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanSetZeroSegments))</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSetZeroSegments)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.GetCachedSnapshot(out var map)</td></tr>
+<tr><td>158</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = interfaces.Melsec.GetCachedSnapshot(out var map);</td></tr>
+<tr><td>158</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = interfaces.Melsec.GetCachedSnapshot(out var map)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM…</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(row)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageSimulationSignal(row)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(row)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageProtectWindowSimulationSignal(row)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsDistortionMeasurementSimulationValue(row)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ScenarioOrder(row.Group)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SignalOrder(row.Id)</td></tr>
+<tr><td>159</td><td>local-declaration</td><td>지역 변수를 선언합니다: var signals = map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistort</td></tr>
+<tr><td>159</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: signals = map.Where(row =&gt; CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _map.SequenceEqual(signals)</td></tr>
+<tr><td>160</td><td>if</td><td>조건에 따라 분기합니다: if (!_map.SequenceEqual(signals))</td></tr>
+<tr><td>162</td><td>assignment</td><td>값을 대상에 대입합니다: _map = signals</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Clear()</td></tr>
+<tr><td>164</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var signal in signals)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Add(new(signal, value =&gt; { if (CMelsec.IsStageAlignSimulationSignal(signal)) interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) interface…</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(signal, value =&gt; { if (CMelsec.IsStageAlignSimulationSignal(signal)) interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) interfaces.Melsec.…</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(signal)</td></tr>
+<tr><td>167</td><td>if</td><td>조건에 따라 분기합니다: if (CMelsec.IsStageAlignSimulationSignal(signal))</td></tr>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value)</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageProtectWindowSimulationSignal(signal)</td></tr>
+<tr><td>169</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>169</td><td>if</td><td>조건에 따라 분기합니다: if (CMelsec.IsStageProtectWindowSimulationSignal(signal))</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageProtectWindowSimulationValue(signal.Id, value)</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(signal)</td></tr>
+<tr><td>171</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>171</td><td>if</td><td>조건에 따라 분기합니다: if (CMelsec.IsStageFlowSimulationSignal(signal))</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageFlowSimulationValue(signal.Id, value)</td></tr>
+<tr><td>173</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageSimulationSignal(signal.Id, value == 1)</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetDistortionMeasurementSimulationValue(signal.Id, value)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row =&gt; row.Number)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec)</td></tr>
+<tr><td>178</td><td>local-declaration</td><td>지역 변수를 선언합니다: var connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row =&gt; row.Number);</td></tr>
+<tr><td>178</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row =&gt; row.Number)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Select(row =&gt; row.DeviceNo).Distinct()</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Select(row =&gt; row.DeviceNo)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot; | &quot;, signals.Select(row =&gt; row.DeviceNo).Distinct().Select(number =&gt; { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().To…</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Select(row =&gt; row.DeviceNo).Distinct().Select(number =&gt; { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpperInvariant() : …</td></tr>
+<tr><td>179</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = string.Join(&quot; | &quot;, signals.Select(row =&gt; row.DeviceNo).Distinct().Select(number =&gt; { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().T</td></tr>
+<tr><td>179</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = string.Join(&quot; | &quot;, signals.Select(row =&gt; row.DeviceNo).Distinct().Select(number =&gt; { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpp</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: connections.TryGetValue(number, out var status)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString().ToUpperInvariant()</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString()</td></tr>
+<tr><td>181</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpperInvariant() : &quot;OFFLINE&quot;</td></tr>
+<tr><td>181</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpperInvariant()</td></tr>
+<tr><td>181</td><td>local-declaration</td><td>지역 변수를 선언합니다: var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpperInvariant() : &quot;OFFLINE&quot;;</td></tr>
+<tr><td>181</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? &quot;SIMULATION&quot; : status.ConnectionState.ToString().ToUpperInvariant() : &quot;OFFLINE&quot;</td></tr>
+<tr><td>182</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;MELSEC_{number} : {state}&quot;;</td></tr>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (text.Length == 0)</td></tr>
+<tr><td>185</td><td>assignment</td><td>값을 대상에 대입합니다: text = &quot;등록된 Stage 수신 신호가 없습니다.&quot;</td></tr>
+<tr><td>186</td><td>if</td><td>조건에 따라 분기합니다: if (_connectionText != text)</td></tr>
+<tr><td>188</td><td>assignment</td><td>값을 대상에 대입합니다: _connectionText = text</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(ConnectionText)))</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(ConnectionText))</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ConnectionText)</td></tr>
+<tr><td>192</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var row in Rows)</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(row.Id, out var sample)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Refresh(sample, interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo))</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)</td></tr>
+<tr><td>198</td><td>if</td><td>조건에 따라 분기합니다: if (_lastCanSeed != CanSeedMeasurements)</td></tr>
+<tr><td>200</td><td>assignment</td><td>값을 대상에 대입합니다: _lastCanSeed = CanSeedMeasurements</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanSeedMeasurements)))</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanSeedMeasurements))</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSeedMeasurements)</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+<tr><td>204</td><td>if</td><td>조건에 따라 분기합니다: if (_lastCanChangeReplies != CanChangeAutomaticReplies)</td></tr>
+<tr><td>206</td><td>assignment</td><td>값을 대상에 대입합니다: _lastCanChangeReplies = CanChangeAutomaticReplies</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanChangeAutomaticReplies)))</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanChangeAutomaticReplies))</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanChangeAutomaticReplies)</td></tr>
+<tr><td>210</td><td>if</td><td>조건에 따라 분기합니다: if (_lastAutomaticReplies != AutomaticReplies)</td></tr>
+<tr><td>212</td><td>assignment</td><td>값을 대상에 대입합니다: _lastAutomaticReplies = AutomaticReplies</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(AutomaticReplies)))</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(AutomaticReplies))</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(AutomaticReplies)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Refresh&quot;]
+ N0[&quot;L145 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L151 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L160 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L164 foreach&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L167 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L169 else&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L169 if&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L171 else&quot;]
+ N5 --&gt;|포함| N7
+ N8[&quot;L171 if&quot;]
+ N5 --&gt;|포함| N8
+ N9[&quot;L173 else&quot;]
+ N7 --&gt;|포함| N9
+ N10[&quot;L184 if&quot;]
+ M --&gt;|포함| N10
+ N11[&quot;L186 if&quot;]
+ M --&gt;|포함| N11
+ N12[&quot;L192 foreach&quot;]
+ M --&gt;|포함| N12
+ N13[&quot;L198 if&quot;]
+ M --&gt;|포함| N13
+ N14[&quot;L204 if&quot;]
+ M --&gt;|포함| N14
+ N15[&quot;L210 if&quot;]
+ M --&gt;|포함| N15</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L217">MethodDeclaration <code>ScenarioOrder</code> · L217–230</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L217-L230">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:217–230</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>group</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159</a></td><td>ScenarioOrder</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>217</td><td>group.ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToUpperInvariant()</td></tr>
+<tr><td>217</td><td>switch-expression</td><td>값별 결과식을 선택합니다: group.ToUpperInvariant() switch { &quot;DISTORTION&quot; =&gt; -2, &quot;VISION_DISTORTION_DATA&quot; =&gt; -1, &quot;IF_DOREADY&quot; =&gt; 0, &quot;IF_PROCESS&quot; =&gt; 1, &quot;IF_REVIEW&quot; =&gt; 2, &quot;IF_TOP_POWERMETER&quot; =&gt; 3, &quot;IF_PROCESS_MOVE&quot; =&gt; 4, &quot;IF_IOF&quot; =&gt; 5, &quot;IF_ALIGN&quot; =&gt; 6, &quot;IF_PT</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ScenarioOrder&quot;]
+ N0[&quot;L217 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L231">MethodDeclaration <code>SignalOrder</code> · L231–231</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L231-L231">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:231–231</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CMelsecStageSimulationPanel.SignalOrder(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>id</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159</a></td><td>SignalOrder</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>231</td><td>id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>231</td><td>id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>231</td><td>id.Contains</td><td>resolved</td><td>bool string.Contains(string, System.StringComparison)</td></tr>
+<tr><td>231</td><td>id.Contains</td><td>resolved</td><td>bool string.Contains(string, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals(&quot;SDC_DO_ALIGN_STATUS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals(&quot;SDC_DO_ALIGN_COMPLETE&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains(&quot;_ABLE&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains(&quot;_START&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>231</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: id.Equals(&quot;SDC_DO_ALIGN_STATUS&quot;, StringComparison.OrdinalIgnoreCase) ? 0 : id.Equals(&quot;SDC_DO_ALIGN_COMPLETE&quot;, StringComparison.OrdinalIgnoreCase) ? 1 : id.Contains(&quot;_ABLE&quot;, StringComparison.OrdinalIgnoreCase) ? 0 : id.Contains(&quot;_S</td></tr>
+<tr><td>231</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: id.Equals(&quot;SDC_DO_ALIGN_COMPLETE&quot;, StringComparison.OrdinalIgnoreCase) ? 1 : id.Contains(&quot;_ABLE&quot;, StringComparison.OrdinalIgnoreCase) ? 0 : id.Contains(&quot;_START&quot;, StringComparison.OrdinalIgnoreCase) ? 1 : 2</td></tr>
+<tr><td>231</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: id.Contains(&quot;_ABLE&quot;, StringComparison.OrdinalIgnoreCase) ? 0 : id.Contains(&quot;_START&quot;, StringComparison.OrdinalIgnoreCase) ? 1 : 2</td></tr>
+<tr><td>231</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: id.Contains(&quot;_START&quot;, StringComparison.OrdinalIgnoreCase) ? 1 : 2</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">FieldDeclaration <code>_canSet</code> · L236–236</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L236-L236">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:236–236</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow._canSet</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L237">FieldDeclaration <code>_currentValue</code> · L237–237</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L237-L237">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:237–237</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow._currentValue</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>237</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _currentValue = &quot;—&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L238">FieldDeclaration <code>_inputValue</code> · L238–238</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L238-L238">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:238–238</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow._inputValue</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L239">FieldDeclaration <code>_readScale</code> · L239–239</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L239-L239">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:239–239</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CMelsecStageSimulationRow._readScale</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">FieldDeclaration <code>_stateBrush</code> · L240–240</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L240-L240">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:240–240</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Brush Drilling.UI.Popup.CMelsecStageSimulationRow._stateBrush</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Brush</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>240</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _stateBrush = Brushes.Gray</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L241">EventFieldDeclaration <code>PropertyChanged</code> · L241–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L241-L241">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:241–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationRow.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L242">PropertyDeclaration <code>Id</code> · L242–242</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Id</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L242">GetAccessorDeclaration <code>get_Id</code> · L242–242</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Id.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">PropertyDeclaration <code>DeviceNo</code> · L243–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">GetAccessorDeclaration <code>get_DeviceNo</code> · L243–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L244">PropertyDeclaration <code>Scenario</code> · L244–244</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L244">GetAccessorDeclaration <code>get_Scenario</code> · L244–244</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L245">PropertyDeclaration <code>Name</code> · L245–245</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Name</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L245">GetAccessorDeclaration <code>get_Name</code> · L245–245</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Name.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L246">PropertyDeclaration <code>Address</code> · L246–246</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Address</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L246">GetAccessorDeclaration <code>get_Address</code> · L246–246</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Address.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L247">PropertyDeclaration <code>Description</code> · L247–247</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Description</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L247">GetAccessorDeclaration <code>get_Description</code> · L247–247</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.Description.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L248">PropertyDeclaration <code>CurrentValue</code> · L248–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L248-L248">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:248–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.CurrentValue</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L249">PropertyDeclaration <code>StateBrush</code> · L249–249</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L249-L249">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:249–249</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Brush Drilling.UI.Popup.CMelsecStageSimulationRow.StateBrush</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Brush</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">PropertyDeclaration <code>CanSet</code> · L250–250</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L250-L250">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:250–250</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.CanSet</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L251">PropertyDeclaration <code>IsNumeric</code> · L251–251</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L251">GetAccessorDeclaration <code>get_IsNumeric</code> · L251–251</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L252">PropertyDeclaration <code>IsCount</code> · L252–252</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L252">GetAccessorDeclaration <code>get_IsCount</code> · L252–252</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L253">PropertyDeclaration <code>IsMeasurement</code> · L253–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L253">GetAccessorDeclaration <code>get_IsMeasurement</code> · L253–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L254">PropertyDeclaration <code>InputHint</code> · L254–254</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L254-L254">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:254–254</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputHint</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>254</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsMeasurement ? &quot;mm 단위의 부호 포함 숫자 (소수 입력 가능)&quot; : &quot;원시 정수: 0~65535&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">PropertyDeclaration <code>IsAlignBusyWord</code> · L255–255</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">GetAccessorDeclaration <code>get_IsAlignBusyWord</code> · L255–255</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">PropertyDeclaration <code>InputValue</code> · L257–267</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L257-L267">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:257–267</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L259">GetAccessorDeclaration <code>get_InputValue</code> · L259–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L259-L259">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:259–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">SetAccessorDeclaration <code>set_InputValue</code> · L260–266</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L260-L266">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:260–266</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>265</td><td>Changed</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>262</td><td>if</td><td>조건에 따라 분기합니다: if (_inputValue == value)</td></tr>
+<tr><td>263</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>264</td><td>assignment</td><td>값을 대상에 대입합니다: _inputValue = value</td></tr>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Changed()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;set_InputValue&quot;]
+ N0[&quot;L262 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L269">PropertyDeclaration <code>SetOnCommand</code> · L269–269</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L269">GetAccessorDeclaration <code>get_SetOnCommand</code> · L269–269</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L270">PropertyDeclaration <code>SetOffCommand</code> · L270–270</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L270">GetAccessorDeclaration <code>get_SetOffCommand</code> · L270–270</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">PropertyDeclaration <code>SetValueCommand</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">GetAccessorDeclaration <code>get_SetValueCommand</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">ConstructorDeclaration <code>.ctor</code> · L273–357</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L273-L357">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:273–357</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action&lt;int&gt;, System.Action&lt;string&gt;?, System.Action&lt;double&gt;?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>data</td><td>Drilling.Common.Interface.ST_MELSEC_MAP_DATA</td><td>None</td><td>False /</td></tr>
+<tr><td>set</td><td>System.Action&lt;int&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>showWarning</td><td>System.Action&lt;string&gt;?</td><td>None</td><td>True / null</td></tr>
+<tr><td>setMeasurement</td><td>System.Action&lt;double&gt;?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L165-L175">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:165–175</a></td><td>new</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>276</td><td>CMelsec.IsDistortionMeasurementSimulationValue</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3059</td></tr>
+<tr><td>278</td><td>data.Group.ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>292</td><td>data.Id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>293</td><td>data.Id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>307</td><td>data.Id.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>307</td><td>int.Parse</td><td>resolved</td><td>int int.Parse(System.ReadOnlySpan&lt;char&gt;, System.IFormatProvider?)</td></tr>
+<tr><td>307</td><td>parts[1].AsSpan</td><td>resolved</td><td>System.ReadOnlySpan&lt;char&gt; string?.AsSpan(int)</td></tr>
+<tr><td>308</td><td>int.Parse</td><td>resolved</td><td>int int.Parse(System.ReadOnlySpan&lt;char&gt;, System.IFormatProvider?)</td></tr>
+<tr><td>308</td><td>parts[2].AsSpan</td><td>resolved</td><td>System.ReadOnlySpan&lt;char&gt; string?.AsSpan(int, int)</td></tr>
+<tr><td>311</td><td>CMelsec.IsSimulationOnlyRoute</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsSimulationOnlyRoute(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3055</td></tr>
+<tr><td>313</td><td>CMelsec.IsStageAlignSimulationSignal</td><td>resolved</td><td>bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129</td></tr>
+<tr><td>316</td><td>CRecipeConfirmDialog.ShowWarning</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86</td></tr>
+<tr><td>331</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>331</td><td>Set</td><td>resolved</td><td>void Set(int) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317</td></tr>
+<tr><td>332</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>332</td><td>Set</td><td>resolved</td><td>void Set(int) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317</td></tr>
+<tr><td>333</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>341</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>341</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>342</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>343</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>344</td><td>setMeasurement</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;double&gt;.Invoke(double)</td></tr>
+<tr><td>346</td><td>warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+<tr><td>349</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>351</td><td>warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+<tr><td>355</td><td>Set</td><td>resolved</td><td>void Set(int) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>275</td><td>assignment</td><td>값을 대상에 대입합니다: Id = data.Id</td></tr>
+<tr><td>276</td><td>assignment</td><td>값을 대상에 대입합니다: IsMeasurement = CMelsec.IsDistortionMeasurementSimulationValue(data)</td></tr>
+<tr><td>276</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsDistortionMeasurementSimulationValue(data)</td></tr>
+<tr><td>277</td><td>assignment</td><td>값을 대상에 대입합니다: DeviceNo = data.DeviceNo</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Group.ToUpperInvariant()</td></tr>
+<tr><td>278</td><td>assignment</td><td>값을 대상에 대입합니다: Scenario = data.Group.ToUpperInvariant() switch { &quot;DISTORTION&quot; =&gt; &quot;Distortion&quot;, &quot;VISION_DISTORTION_DATA&quot; =&gt; &quot;Distortion Data&quot;, &quot;IF_DOREADY&quot; =&gt; &quot;DoReady&quot;, &quot;IF_PROCESS&quot; =&gt; &quot;Process&quot;, &quot;IF_REVIEW&quot; =&gt; &quot;Review&quot;, &quot;IF_TOP_POWERMETER&quot; =&gt; &quot;</td></tr>
+<tr><td>278</td><td>switch-expression</td><td>값별 결과식을 선택합니다: data.Group.ToUpperInvariant() switch { &quot;DISTORTION&quot; =&gt; &quot;Distortion&quot;, &quot;VISION_DISTORTION_DATA&quot; =&gt; &quot;Distortion Data&quot;, &quot;IF_DOREADY&quot; =&gt; &quot;DoReady&quot;, &quot;IF_PROCESS&quot; =&gt; &quot;Process&quot;, &quot;IF_REVIEW&quot; =&gt; &quot;Review&quot;, &quot;IF_TOP_POWERMETER&quot; =&gt; &quot;TPM&quot;, &quot;IF_P</td></tr>
+<tr><td>292</td><td>assignment</td><td>값을 대상에 대입합니다: IsCount = data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>293</td><td>assignment</td><td>값을 대상에 대입합니다: IsAlignBusyWord = data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>294</td><td>assignment</td><td>값을 대상에 대입합니다: Name = data.Id switch { &quot;IPS_REVIEW_CONTROL_MODE_X&quot; =&gt; &quot;Review X Permit&quot;, &quot;IPS_REVIEW_CONTROL_MODE_Y&quot; =&gt; &quot;Stage Y Permit&quot;, &quot;IPS_IOF_READ_COMPLETE&quot; =&gt; &quot;IOF Read Done&quot;, &quot;IPS_IOF_BUFFER_RUN_COMPLETE&quot; =&gt; &quot;IOF Buffer Done&quot;, CMelsec.Sta</td></tr>
+<tr><td>294</td><td>switch-expression</td><td>값별 결과식을 선택합니다: data.Id switch { &quot;IPS_REVIEW_CONTROL_MODE_X&quot; =&gt; &quot;Review X Permit&quot;, &quot;IPS_REVIEW_CONTROL_MODE_Y&quot; =&gt; &quot;Stage Y Permit&quot;, &quot;IPS_IOF_READ_COMPLETE&quot; =&gt; &quot;IOF Read Done&quot;, &quot;IPS_IOF_BUFFER_RUN_COMPLETE&quot; =&gt; &quot;IOF Buffer Done&quot;, CMelsec.StageAlign</td></tr>
+<tr><td>305</td><td>if</td><td>조건에 따라 분기합니다: if (IsMeasurement)</td></tr>
+<tr><td>307</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Split(&#x27;_&#x27;)</td></tr>
+<tr><td>307</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture)</td></tr>
+<tr><td>307</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].AsSpan(3)</td></tr>
+<tr><td>307</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parts = data.Id.Split(&#x27;_&#x27;);</td></tr>
+<tr><td>307</td><td>local-declaration</td><td>지역 변수를 선언합니다: var position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture);</td></tr>
+<tr><td>307</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parts = data.Id.Split(&#x27;_&#x27;)</td></tr>
+<tr><td>307</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture)</td></tr>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture)</td></tr>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parts[2].AsSpan(3, 1)</td></tr>
+<tr><td>308</td><td>local-declaration</td><td>지역 변수를 선언합니다: var camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture);</td></tr>
+<tr><td>308</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axis = data.Id[^1];</td></tr>
+<tr><td>308</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture)</td></tr>
+<tr><td>308</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axis = data.Id[^1]</td></tr>
+<tr><td>309</td><td>assignment</td><td>값을 대상에 대입합니다: Name = position == 0 ? $&quot;AK{camera} {axis} (mm)&quot; : $&quot;Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)&quot;</td></tr>
+<tr><td>309</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: position == 0 ? $&quot;AK{camera} {axis} (mm)&quot; : $&quot;Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)&quot;</td></tr>
+<tr><td>309</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: camera == 2 ? 1 : 2</td></tr>
+<tr><td>311</td><td>assignment</td><td>값을 대상에 대입합니다: Address = CMelsec.IsSimulationOnlyRoute(data) ? $&quot;MELSEC_{data.DeviceNo} / SIM ONLY&quot; : $&quot;MELSEC_{data.DeviceNo} / {data.Address}&quot;</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsSimulationOnlyRoute(data)</td></tr>
+<tr><td>311</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: CMelsec.IsSimulationOnlyRoute(data) ? $&quot;MELSEC_{data.DeviceNo} / SIM ONLY&quot; : $&quot;MELSEC_{data.DeviceNo} / {data.Address}&quot;</td></tr>
+<tr><td>312</td><td>assignment</td><td>값을 대상에 대입합니다: Description = data.Description</td></tr>
+<tr><td>313</td><td>assignment</td><td>값을 대상에 대입합니다: IsNumeric = CMelsec.IsStageAlignSimulationSignal(data) || IsCount || IsMeasurement</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(data)</td></tr>
+<tr><td>314</td><td>assignment</td><td>값을 대상에 대입합니다: _inputValue = IsMeasurement ? &quot;0&quot; : IsAlignBusyWord ? &quot;2&quot; : IsNumeric &amp;&amp; !IsCount ? &quot;10000&quot; : &quot;0&quot;</td></tr>
+<tr><td>314</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsMeasurement ? &quot;0&quot; : IsAlignBusyWord ? &quot;2&quot; : IsNumeric &amp;&amp; !IsCount ? &quot;10000&quot; : &quot;0&quot;</td></tr>
+<tr><td>314</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsAlignBusyWord ? &quot;2&quot; : IsNumeric &amp;&amp; !IsCount ? &quot;10000&quot; : &quot;0&quot;</td></tr>
+<tr><td>314</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsNumeric &amp;&amp; !IsCount ? &quot;10000&quot; : &quot;0&quot;</td></tr>
+<tr><td>315</td><td>assignment</td><td>값을 대상에 대입합니다: _readScale = data.ReadScale</td></tr>
+<tr><td>316</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning(&quot;Stage 신호 변경 실패&quot;, message)</td></tr>
+<tr><td>316</td><td>local-declaration</td><td>지역 변수를 선언합니다: var warn = showWarning ?? (message =&gt; CRecipeConfirmDialog.ShowWarning(&quot;Stage 신호 변경 실패&quot;, message));</td></tr>
+<tr><td>316</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: warn = showWarning ?? (message =&gt; CRecipeConfirmDialog.ShowWarning(&quot;Stage 신호 변경 실패&quot;, message))</td></tr>
+<tr><td>331</td><td>assignment</td><td>값을 대상에 대입합니다: SetOnCommand = new(_ =&gt; Set(1), _ =&gt; _canSet &amp;&amp; !IsNumeric)</td></tr>
+<tr><td>331</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ =&gt; Set(1), _ =&gt; _canSet &amp;&amp; !IsNumeric)</td></tr>
+<tr><td>331</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Set(1)</td></tr>
+<tr><td>332</td><td>assignment</td><td>값을 대상에 대입합니다: SetOffCommand = new(_ =&gt; Set(0), _ =&gt; _canSet &amp;&amp; !IsNumeric)</td></tr>
+<tr><td>332</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ =&gt; Set(0), _ =&gt; _canSet &amp;&amp; !IsNumeric)</td></tr>
+<tr><td>332</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Set(0)</td></tr>
+<tr><td>333</td><td>assignment</td><td>값을 대상에 대입합니다: SetValueCommand = new(_ =&gt; { if (!_canSet || !IsNumeric) return; if (IsMeasurement) { try { if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) throw new InvalidO</td></tr>
+<tr><td>333</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ =&gt; { if (!_canSet || !IsNumeric) return; if (IsMeasurement) { try { if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) throw new InvalidOperation…</td></tr>
+<tr><td>335</td><td>if</td><td>조건에 따라 분기합니다: if (!_canSet || !IsNumeric)</td></tr>
+<tr><td>336</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>337</td><td>if</td><td>조건에 따라 분기합니다: if (IsMeasurement)</td></tr>
+<tr><td>339</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm)</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(mm)</td></tr>
+<tr><td>341</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm))</td></tr>
+<tr><td>342</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.&quot;)</td></tr>
+<tr><td>342</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.&quot;);</td></tr>
+<tr><td>343</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;측정값 입력이 연결되어 있지 않습니다.&quot;)</td></tr>
+<tr><td>343</td><td>if</td><td>조건에 따라 분기합니다: if (setMeasurement is null)</td></tr>
+<tr><td>343</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;측정값 입력이 연결되어 있지 않습니다.&quot;);</td></tr>
+<tr><td>344</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: setMeasurement(mm)</td></tr>
+<tr><td>346</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: warn(error.Message)</td></tr>
+<tr><td>346</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>347</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>349</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>349</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) || value is &lt; 0 or &gt; ushort.MaxValue)</td></tr>
+<tr><td>351</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: warn(&quot;0~65535의 원시 정수를 입력하세요.&quot;)</td></tr>
+<tr><td>352</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Set(value)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L278 switch-expression&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L294 switch-expression&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L305 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L335 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L337 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L339 try&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L341 if&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L343 if&quot;]
+ N5 --&gt;|포함| N7
+ N8[&quot;L346 catch&quot;]
+ N5 --&gt;|포함| N8
+ N9[&quot;L349 if&quot;]
+ M --&gt;|포함| N9</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">LocalFunctionStatement <code>Set</code> · L317–329</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L317-L329">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317–329</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Set(int)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L331-L331">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:331–331</a></td><td>Set</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L332-L332">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:332–332</a></td><td>Set</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L355-L355">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:355–355</a></td><td>Set</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>323</td><td>set</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;int&gt;.Invoke(int)</td></tr>
+<tr><td>327</td><td>warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>319</td><td>if</td><td>조건에 따라 분기합니다: if (!_canSet)</td></tr>
+<tr><td>320</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>321</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>323</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: set(value)</td></tr>
+<tr><td>325</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception)</td></tr>
+<tr><td>327</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: warn(exception.Message)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Set&quot;]
+ N0[&quot;L319 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L321 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L325 catch&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L359">MethodDeclaration <code>Refresh</code> · L359–415</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L359-L415">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:359–415</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sample</td><td>Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L195-L195">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:195–195</a></td><td>row.Refresh</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>364</td><td>Changed</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417</td></tr>
+<tr><td>364</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>365</td><td>SetOnCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>366</td><td>SetOffCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>367</td><td>SetValueCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>370</td><td>Convert.ToString</td><td>resolved</td><td>string? System.Convert.ToString(object?, System.IFormatProvider?)</td></tr>
+<tr><td>387</td><td>Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>387</td><td>Convert.ToDouble</td><td>resolved</td><td>double System.Convert.ToDouble(object?, System.IFormatProvider?)</td></tr>
+<tr><td>392</td><td>Convert.ToDouble</td><td>resolved</td><td>double System.Convert.ToDouble(object?, System.IFormatProvider?)</td></tr>
+<tr><td>394</td><td>scaled.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>394</td><td>rawValue.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>394</td><td>scaled.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>407</td><td>Changed</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417</td></tr>
+<tr><td>407</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>413</td><td>Changed</td><td>resolved</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417</td></tr>
+<tr><td>413</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>361</td><td>if</td><td>조건에 따라 분기합니다: if (_canSet != simulation)</td></tr>
+<tr><td>363</td><td>assignment</td><td>값을 대상에 대입합니다: _canSet = simulation</td></tr>
+<tr><td>364</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CanSet))</td></tr>
+<tr><td>364</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSet)</td></tr>
+<tr><td>365</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetOnCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>366</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>367</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetValueCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>370</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture)</td></tr>
+<tr><td>370</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null</td></tr>
+<tr><td>370</td><td>local-declaration</td><td>지역 변수를 선언합니다: var raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null;</td></tr>
+<tr><td>370</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null</td></tr>
+<tr><td>371</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = raw switch { &quot;1&quot; =&gt; &quot;ON (1)&quot;, &quot;0&quot; =&gt; &quot;OFF (0)&quot;, null =&gt; &quot;—&quot;, _ =&gt; raw };</td></tr>
+<tr><td>371</td><td>switch-expression</td><td>값별 결과식을 선택합니다: raw switch { &quot;1&quot; =&gt; &quot;ON (1)&quot;, &quot;0&quot; =&gt; &quot;OFF (0)&quot;, null =&gt; &quot;—&quot;, _ =&gt; raw }</td></tr>
+<tr><td>371</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = raw switch { &quot;1&quot; =&gt; &quot;ON (1)&quot;, &quot;0&quot; =&gt; &quot;OFF (0)&quot;, null =&gt; &quot;—&quot;, _ =&gt; raw }</td></tr>
+<tr><td>378</td><td>local-declaration</td><td>지역 변수를 선언합니다: var brush = raw switch { &quot;1&quot; =&gt; Brushes.ForestGreen, &quot;0&quot; =&gt; Brushes.DarkGoldenrod, null =&gt; Brushes.Gray, _ =&gt; Brushes.Firebrick };</td></tr>
+<tr><td>378</td><td>switch-expression</td><td>값별 결과식을 선택합니다: raw switch { &quot;1&quot; =&gt; Brushes.ForestGreen, &quot;0&quot; =&gt; Brushes.DarkGoldenrod, null =&gt; Brushes.Gray, _ =&gt; Brushes.Firebrick }</td></tr>
+<tr><td>378</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: brush = raw switch { &quot;1&quot; =&gt; Brushes.ForestGreen, &quot;0&quot; =&gt; Brushes.DarkGoldenrod, null =&gt; Brushes.Gray, _ =&gt; Brushes.Firebrick }</td></tr>
+<tr><td>385</td><td>if</td><td>조건에 따라 분기합니다: if (IsMeasurement &amp;&amp; raw is not null)</td></tr>
+<tr><td>387</td><td>assignment</td><td>값을 대상에 대입합니다: text = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString(&quot;0.####&quot;, CultureInfo.InvariantCulture) + &quot; mm&quot;</td></tr>
+<tr><td>387</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString(&quot;0.####&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>387</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>388</td><td>assignment</td><td>값을 대상에 대입합니다: brush = Brushes.SteelBlue</td></tr>
+<tr><td>390</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>390</td><td>if</td><td>조건에 따라 분기합니다: if (IsNumeric &amp;&amp; raw is not null)</td></tr>
+<tr><td>392</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>392</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture);</td></tr>
+<tr><td>392</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>393</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rawValue = scaled / _readScale;</td></tr>
+<tr><td>393</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rawValue = scaled / _readScale</td></tr>
+<tr><td>394</td><td>assignment</td><td>값을 대상에 대입합니다: text = IsCount ? scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture) : $&quot;{rawValue.ToString(&quot;0&quot;, CultureInfo.InvariantCulture)} → {scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture)}&quot;</td></tr>
+<tr><td>394</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>394</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: rawValue.ToString(&quot;0&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>394</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>394</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsCount ? scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture) : $&quot;{rawValue.ToString(&quot;0&quot;, CultureInfo.InvariantCulture)} → {scaled.ToString(&quot;0.########&quot;, CultureInfo.InvariantCulture)}&quot;</td></tr>
+<tr><td>395</td><td>assignment</td><td>값을 대상에 대입합니다: brush = IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick</td></tr>
+<tr><td>395</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick</td></tr>
+<tr><td>395</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick</td></tr>
+<tr><td>396</td><td>if</td><td>조건에 따라 분기합니다: if (IsAlignBusyWord)</td></tr>
+<tr><td>398</td><td>local-declaration</td><td>지역 변수를 선언합니다: var active = ((int)rawValue &amp; 2) != 0;</td></tr>
+<tr><td>398</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: active = ((int)rawValue &amp; 2) != 0</td></tr>
+<tr><td>399</td><td>assignment</td><td>값을 대상에 대입합니다: text = $&quot;{rawValue:0} · ALIGN {(active ? &quot;ON&quot; : &quot;OFF&quot;)}&quot;</td></tr>
+<tr><td>399</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: active ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+<tr><td>400</td><td>assignment</td><td>값을 대상에 대입합니다: brush = active ? Brushes.ForestGreen : Brushes.DarkGoldenrod</td></tr>
+<tr><td>400</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: active ? Brushes.ForestGreen : Brushes.DarkGoldenrod</td></tr>
+<tr><td>404</td><td>if</td><td>조건에 따라 분기합니다: if (_currentValue != text)</td></tr>
+<tr><td>406</td><td>assignment</td><td>값을 대상에 대입합니다: _currentValue = text</td></tr>
+<tr><td>407</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CurrentValue))</td></tr>
+<tr><td>407</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CurrentValue)</td></tr>
+<tr><td>410</td><td>if</td><td>조건에 따라 분기합니다: if (_stateBrush != brush)</td></tr>
+<tr><td>412</td><td>assignment</td><td>값을 대상에 대입합니다: _stateBrush = brush</td></tr>
+<tr><td>413</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(StateBrush))</td></tr>
+<tr><td>413</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StateBrush)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Refresh&quot;]
+ N0[&quot;L361 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L371 switch-expression&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L378 switch-expression&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L385 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L390 else&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L390 if&quot;]
+ N3 --&gt;|포함| N5
+ N6[&quot;L396 if&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L404 if&quot;]
+ M --&gt;|포함| N7
+ N8[&quot;L410 if&quot;]
+ M --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L417">MethodDeclaration <code>Changed</code> · L417–417</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L417-L417">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417–417</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CMelsecStageSimulationRow.Changed(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CMelsecStageSimulationRow</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L265-L265">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:265–265</a></td><td>Changed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L364-L364">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:364–364</a></td><td>Changed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L407-L407">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:407–407</a></td><td>Changed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L413-L413">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:413–413</a></td><td>Changed</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>417</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>417</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>417</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name))</td></tr>
+<tr><td>417</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

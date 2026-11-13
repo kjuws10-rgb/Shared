@@ -1,0 +1,1689 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Correction/CDefaultOffsetCalibration.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Correction/CDefaultOffsetCalibration.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs">Git 원본</a></p><h1>Drilling.Common/Correction/CDefaultOffsetCalibration.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>7e55224d03de3996247d9d9f084d6914c12af1754ffa20fb4dfb0361e5350456</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>19,684 bytes / 267 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>보정 계산·설정·원본/적용값의 관계를 다루는 계층입니다. 값의 좌표계와 단위는 호출부의 근거를 따릅니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/5e521d6324662617f045.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CDefaultOffsetCalibration</td><td>ClassDeclaration</td><td>12–230</td><td>CDefaultOffsetCalibration</td></tr>
+<tr><td>EN_DEFAULT_MACHINING_MODE</td><td>EnumDeclaration</td><td>232–232</td><td>EN_DEFAULT_MACHINING_MODE</td></tr>
+<tr><td>ST_DEFAULT_OFFSET_OPTIONS</td><td>RecordDeclaration</td><td>233–250</td><td>ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+<tr><td>ST_DEFAULT_HEAD_GEOMETRY</td><td>RecordDeclaration</td><td>251–251</td><td>ST_DEFAULT_HEAD_GEOMETRY</td></tr>
+<tr><td>ST_DEFAULT_PREVIEW_POINT</td><td>RecordDeclaration</td><td>252–252</td><td>ST_DEFAULT_PREVIEW_POINT</td></tr>
+<tr><td>ST_DEFAULT_OFFSET_MARK</td><td>RecordDeclaration</td><td>253–253</td><td>ST_DEFAULT_OFFSET_MARK</td></tr>
+<tr><td>ST_DEFAULT_OFFSET_FIT</td><td>RecordDeclaration</td><td>254–254</td><td>ST_DEFAULT_OFFSET_FIT</td></tr>
+<tr><td>ST_DEFAULT_OFFSET_HEAD_RESULT</td><td>RecordDeclaration</td><td>255–266</td><td>ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+<tr><td>ST_DEFAULT_OFFSET_LOG</td><td>RecordDeclaration</td><td>267–267</td><td>ST_DEFAULT_OFFSET_LOG</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Parameters</td><td>MethodDeclaration</td><td>L14–20</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.Parameters(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>Number</td><td>MethodDeclaration</td><td>L22–27</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string)</td></tr>
+<tr><td>Conditions</td><td>MethodDeclaration</td><td>L31–39</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Drilling.Common.Correction.CDefaultOffsetCalibration.Conditions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, double?)</td></tr>
+<tr><td>HeadGeometry</td><td>MethodDeclaration</td><td>L41–51</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY Drilling.Common.Correction.CDefaultOffsetCalibration.HeadGeometry(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>PredictCenter</td><td>MethodDeclaration</td><td>L53–70</td><td>Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT Drilling.Common.Correction.CDefaultOffsetCalibration.PredictCenter(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, double)</td></tr>
+<tr><td>FitsField</td><td>MethodDeclaration</td><td>L74–78</td><td>bool Drilling.Common.Correction.CDefaultOffsetCalibration.FitsField(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, double, double)</td></tr>
+<tr><td>ValidateOptions</td><td>MethodDeclaration</td><td>L80–88</td><td>void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)</td></tr>
+<tr><td>CenterScannerTargets</td><td>MethodDeclaration</td><td>L92–105</td><td>System.Collections.Generic.IReadOnlyList&lt;(double X, double Y)&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)</td></tr>
+<tr><td>Pitch</td><td>MethodDeclaration</td><td>L107–114</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Pitch(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>Slot</td><td>MethodDeclaration</td><td>L116–123</td><td>(double X, double Y) Drilling.Common.Correction.CDefaultOffsetCalibration.Slot(int, double, double)</td></tr>
+<tr><td>Fit</td><td>MethodDeclaration</td><td>L125–160</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;, double, double, double)</td></tr>
+<tr><td>Coefficient</td><td>LocalFunctionStatement</td><td>L138–138</td><td>double Coefficient(bool, bool)</td></tr>
+<tr><td>FitCross</td><td>MethodDeclaration</td><td>L162–170</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.FitCross(Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK)</td></tr>
+<tr><td>WithHeadReference</td><td>MethodDeclaration</td><td>L175–201</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT Drilling.Common.Correction.CDefaultOffsetCalibration.WithHeadReference(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT)</td></tr>
+<tr><td>ActiveHeads</td><td>MethodDeclaration</td><td>L203–204</td><td>int[] Drilling.Common.Correction.CDefaultOffsetCalibration.ActiveHeads(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>Recommend</td><td>MethodDeclaration</td><td>L206–229</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.Recommend(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Collections.Generic.IReadOnlyCollection&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt;, System.Collections.Generic.IReadOnlyCollection&lt;int&gt;?)</td></tr>
+<tr><td>Shot</td><td>EnumMemberDeclaration</td><td>L232–232</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Shot</td></tr>
+<tr><td>Cross</td><td>EnumMemberDeclaration</td><td>L232–232</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Cross</td></tr>
+<tr><td>MachiningMode</td><td>PropertyDeclaration</td><td>L235–235</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode</td></tr>
+<tr><td>get_MachiningMode</td><td>GetAccessorDeclaration</td><td>L235–235</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode.get</td></tr>
+<tr><td>set_MachiningMode</td><td>InitAccessorDeclaration</td><td>L235–235</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode.init</td></tr>
+<tr><td>CrossSize</td><td>PropertyDeclaration</td><td>L236–236</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize</td></tr>
+<tr><td>get_CrossSize</td><td>GetAccessorDeclaration</td><td>L236–236</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize.get</td></tr>
+<tr><td>set_CrossSize</td><td>InitAccessorDeclaration</td><td>L236–236</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize.init</td></tr>
+<tr><td>VisionMethod</td><td>PropertyDeclaration</td><td>L240–242</td><td>Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod</td></tr>
+<tr><td>InspectionPointCount</td><td>PropertyDeclaration</td><td>L243–243</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionPointCount</td></tr>
+<tr><td>InspectionDescription</td><td>PropertyDeclaration</td><td>L244–246</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription</td></tr>
+<tr><td>MachiningDescription</td><td>PropertyDeclaration</td><td>L247–248</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningDescription</td></tr>
+<tr><td>VisionDescription</td><td>PropertyDeclaration</td><td>L249–249</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionDescription</td></tr>
+<tr><td>Model</td><td>PropertyDeclaration</td><td>L257–257</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model</td></tr>
+<tr><td>get_Model</td><td>GetAccessorDeclaration</td><td>L257–257</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model.get</td></tr>
+<tr><td>set_Model</td><td>InitAccessorDeclaration</td><td>L257–257</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model.init</td></tr>
+<tr><td>ReferenceCell</td><td>PropertyDeclaration</td><td>L258–258</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell</td></tr>
+<tr><td>get_ReferenceCell</td><td>GetAccessorDeclaration</td><td>L258–258</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell.get</td></tr>
+<tr><td>set_ReferenceCell</td><td>InitAccessorDeclaration</td><td>L258–258</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell.init</td></tr>
+<tr><td>Geometry</td><td>PropertyDeclaration</td><td>L259–259</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry</td></tr>
+<tr><td>get_Geometry</td><td>GetAccessorDeclaration</td><td>L259–259</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry.get</td></tr>
+<tr><td>set_Geometry</td><td>InitAccessorDeclaration</td><td>L259–259</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry.init</td></tr>
+<tr><td>TargetReviewX</td><td>PropertyDeclaration</td><td>L260–260</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX</td></tr>
+<tr><td>get_TargetReviewX</td><td>GetAccessorDeclaration</td><td>L260–260</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX.get</td></tr>
+<tr><td>set_TargetReviewX</td><td>InitAccessorDeclaration</td><td>L260–260</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX.init</td></tr>
+<tr><td>TargetStageY</td><td>PropertyDeclaration</td><td>L261–261</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY</td></tr>
+<tr><td>get_TargetStageY</td><td>GetAccessorDeclaration</td><td>L261–261</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY.get</td></tr>
+<tr><td>set_TargetStageY</td><td>InitAccessorDeclaration</td><td>L261–261</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY.init</td></tr>
+<tr><td>CenterReviewX</td><td>PropertyDeclaration</td><td>L262–262</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX</td></tr>
+<tr><td>get_CenterReviewX</td><td>GetAccessorDeclaration</td><td>L262–262</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX.get</td></tr>
+<tr><td>set_CenterReviewX</td><td>InitAccessorDeclaration</td><td>L262–262</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX.init</td></tr>
+<tr><td>CenterStageY</td><td>PropertyDeclaration</td><td>L263–263</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY</td></tr>
+<tr><td>get_CenterStageY</td><td>GetAccessorDeclaration</td><td>L263–263</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY.get</td></tr>
+<tr><td>set_CenterStageY</td><td>InitAccessorDeclaration</td><td>L263–263</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY.init</td></tr>
+<tr><td>CenterErrorX</td><td>PropertyDeclaration</td><td>L264–264</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX</td></tr>
+<tr><td>get_CenterErrorX</td><td>GetAccessorDeclaration</td><td>L264–264</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX.get</td></tr>
+<tr><td>set_CenterErrorX</td><td>InitAccessorDeclaration</td><td>L264–264</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX.init</td></tr>
+<tr><td>CenterErrorY</td><td>PropertyDeclaration</td><td>L265–265</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY</td></tr>
+<tr><td>get_CenterErrorY</td><td>GetAccessorDeclaration</td><td>L265–265</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY.get</td></tr>
+<tr><td>set_CenterErrorY</td><td>InitAccessorDeclaration</td><td>L265–265</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY.init</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L14">MethodDeclaration <code>Parameters</code> · L14–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L14-L20">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:14–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.Parameters(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>recipe</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>settings</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3130-L3130">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3130–3130</a></td><td>CDefaultOffsetCalibration.Parameters</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3405-L3405">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3405–3405</a></td><td>CDefaultOffsetCalibration.Parameters</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3775-L3775">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3775–3775</a></td><td>CDefaultOffsetCalibration.Parameters</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>new Dictionary&lt;string, string&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>16</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>17</td><td>assignment</td><td>값을 대상에 대입합니다: values[p.Key] = p.Value</td></tr>
+<tr><td>17</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var p in settings)</td></tr>
+<tr><td>18</td><td>assignment</td><td>값을 대상에 대입합니다: values[p.Key] = p.Value</td></tr>
+<tr><td>18</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var p in recipe.Parameters)</td></tr>
+<tr><td>19</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return values;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Parameters&quot;]
+ N0[&quot;L17 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L18 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">MethodDeclaration <code>Number</code> · L22–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L22-L27">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L33-L33">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:33–33</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L33-L33">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:33–33</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L33-L33">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:33–33</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L34-L34">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:34–34</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L35-L35">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:35–35</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L35-L35">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:35–35</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L45-L45">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:45–45</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L46-L46">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:46–46</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L47-L47">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:47–47</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L57-L57">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:57–57</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L59-L59">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:59–59</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L60-L60">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:60–60</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L60-L60">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:60–60</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L64-L64">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:64–64</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L64-L64">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:64–64</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L65-L65">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:65–65</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L65-L65">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:65–65</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L65-L65">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:65–65</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L65-L65">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:65–65</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L66-L66">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:66–66</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L67-L67">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:67–67</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L67-L67">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:67–67</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L95-L95">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:95–95</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L96-L96">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:96–96</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L109-L109">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:109–109</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L111-L111">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:111–111</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L184-L184">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:184–184</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L184-L184">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:184–184</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L184-L184">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:184–184</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L185-L185">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:185–185</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L187-L187">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:187–187</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L188-L188">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:188–188</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L188-L188">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:188–188</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L223-L223">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:223–223</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3450-L3450">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3450–3450</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3538-L3538">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3538–3538</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3566-L3566">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3566–3566</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3585-L3585">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3585–3585</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3677-L3677">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3677–3677</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3727-L3727">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3727–3727</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3727-L3727">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3727–3727</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3727-L3727">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3727–3727</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3732-L3732">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3732–3732</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3732-L3732">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3732–3732</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3732-L3732">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3732–3732</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3732-L3732">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3732–3732</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3733-L3733">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3733–3733</a></td><td>CDefaultOffsetCalibration.Number</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>24</td><td>values.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>24</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>24</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>25</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var number)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(number)</td></tr>
+<tr><td>24</td><td>if</td><td>조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text) || !double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;Default 측정 설정을 확인해 주세요: {key}&quot;)</td></tr>
+<tr><td>25</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;Default 측정 설정을 확인해 주세요: {key}&quot;);</td></tr>
+<tr><td>26</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return number;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Number&quot;]
+ N0[&quot;L24 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">MethodDeclaration <code>Conditions</code> · L31–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L31-L39">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:31–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Drilling.Common.Correction.CDefaultOffsetCalibration.Conditions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, double?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>testStageY</td><td>double?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3294-L3294">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3294–3294</a></td><td>CDefaultOffsetCalibration.Conditions</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>33</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>33</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>33</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>34</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>35</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>35</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>35</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>36</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>36</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>36</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>37</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>38</td><td>new</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.ST_DEFAULT_OFFSET_OPTIONS(double, double, double) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:233</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;GLASS_SIZE_X&quot;)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;AK_MARGIN_X&quot;)</td></tr>
+<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var center = Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;) + Number(values, &quot;GLASS_SIZE_X&quot;) / 2 - Number(values, &quot;AK_MARGIN_X&quot;);</td></tr>
+<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: center = Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;) + Number(values, &quot;GLASS_SIZE_X&quot;) / 2 - Number(values, &quot;AK_MARGIN_X&quot;)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;STAGE_START_POS_Y&quot;)</td></tr>
+<tr><td>34</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stageY = testStageY ?? Number(values, &quot;STAGE_START_POS_Y&quot;);</td></tr>
+<tr><td>34</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stageY = testStageY ?? Number(values, &quot;STAGE_START_POS_Y&quot;)</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Number(values, &quot;REVIEW_TOLERANCE_X&quot;), Number(values, &quot;REVIEW_TOLERANCE_Y&quot;))</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_TOLERANCE_X&quot;)</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_TOLERANCE_Y&quot;)</td></tr>
+<tr><td>35</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tolerance = Math.Min(Number(values, &quot;REVIEW_TOLERANCE_X&quot;), Number(values, &quot;REVIEW_TOLERANCE_Y&quot;));</td></tr>
+<tr><td>35</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tolerance = Math.Min(Number(values, &quot;REVIEW_TOLERANCE_X&quot;), Number(values, &quot;REVIEW_TOLERANCE_Y&quot;))</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(center)</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY)</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(tolerance)</td></tr>
+<tr><td>36</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(center) || !double.IsFinite(stageY) || !double.IsFinite(tolerance) || tolerance &lt;= 0)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.&quot;)</td></tr>
+<tr><td>37</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.&quot;);</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(center, stageY, tolerance)</td></tr>
+<tr><td>38</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(center, stageY, tolerance);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Conditions&quot;]
+ N0[&quot;L36 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">MethodDeclaration <code>HeadGeometry</code> · L41–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L41-L51">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:41–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY Drilling.Common.Correction.CDefaultOffsetCalibration.HeadGeometry(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L76-L76">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:76–76</a></td><td>HeadGeometry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3137-L3137">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3137–3137</a></td><td>CDefaultOffsetCalibration.HeadGeometry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3578-L3578">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3578–3578</a></td><td>CDefaultOffsetCalibration.HeadGeometry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3737-L3737">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3737–3737</a></td><td>CDefaultOffsetCalibration.HeadGeometry</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>43</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>43</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>45</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>46</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>47</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>48</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>50</td><td>new</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY.ST_DEFAULT_HEAD_GEOMETRY(double, double, double) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:251</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head))</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head)</td></tr>
+<tr><td>43</td><td>if</td><td>조건에 따라 분기합니다: if (head is &lt; 1 or &gt; 8)</td></tr>
+<tr><td>43</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));</td></tr>
+<tr><td>44</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{head:00}_&quot;;</td></tr>
+<tr><td>44</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{head:00}_&quot;</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + &quot;SCAN_FIELD_WIDTH_X&quot;)</td></tr>
+<tr><td>45</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = Number(values, prefix + &quot;SCAN_FIELD_WIDTH_X&quot;);</td></tr>
+<tr><td>45</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = Number(values, prefix + &quot;SCAN_FIELD_WIDTH_X&quot;)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + &quot;SCAN_FIELD_HEIGHT_Y&quot;)</td></tr>
+<tr><td>46</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = Number(values, prefix + &quot;SCAN_FIELD_HEIGHT_Y&quot;);</td></tr>
+<tr><td>46</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = Number(values, prefix + &quot;SCAN_FIELD_HEIGHT_Y&quot;)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + &quot;DOE_ROTATION_ANGLE&quot;)</td></tr>
+<tr><td>47</td><td>local-declaration</td><td>지역 변수를 선언합니다: var angle = Number(values, prefix + &quot;DOE_ROTATION_ANGLE&quot;);</td></tr>
+<tr><td>47</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: angle = Number(values, prefix + &quot;DOE_ROTATION_ANGLE&quot;)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.&quot;)</td></tr>
+<tr><td>48</td><td>if</td><td>조건에 따라 분기합니다: if (x &lt;= 0 || y &lt;= 0)</td></tr>
+<tr><td>48</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.&quot;);</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(x / 2, y / 2, angle)</td></tr>
+<tr><td>50</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(x / 2, y / 2, angle);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;HeadGeometry&quot;]
+ N0[&quot;L43 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L48 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">MethodDeclaration <code>PredictCenter</code> · L53–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L53-L70">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:53–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT Drilling.Common.Correction.CDefaultOffsetCalibration.PredictCenter(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>stageY</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4564-L4565">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4564–4565</a></td><td>CDefaultOffsetCalibration.PredictCenter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>55</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>55</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>56</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>56</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>56</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>58</td><td>CScannerAxisTransform.ReadStageDirection</td><td>resolved</td><td>double Drilling.Common.Recipe.CScannerAxisTransform.ReadStageDirection(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1233</td></tr>
+<tr><td>59</td><td>values.ContainsKey</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.ContainsKey(string)</td></tr>
+<tr><td>59</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>60</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>60</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>64</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>64</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>65</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>65</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>65</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>65</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>66</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>67</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>67</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>68</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>68</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>68</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>69</td><td>new</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT.ST_DEFAULT_PREVIEW_POINT(int, double, double, double, bool) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:252</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head))</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head)</td></tr>
+<tr><td>55</td><td>if</td><td>조건에 따라 분기합니다: if (head is &lt; 1 or &gt; 8)</td></tr>
+<tr><td>55</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(stageY))</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(stageY)</td></tr>
+<tr><td>56</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(stageY))</td></tr>
+<tr><td>56</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(stageY));</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;STAGE_START_POS_Y&quot;)</td></tr>
+<tr><td>57</td><td>local-declaration</td><td>지역 변수를 선언합니다: var start = Number(values, &quot;STAGE_START_POS_Y&quot;);</td></tr>
+<tr><td>57</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: start = Number(values, &quot;STAGE_START_POS_Y&quot;)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values)</td></tr>
+<tr><td>58</td><td>local-declaration</td><td>지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values);</td></tr>
+<tr><td>58</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($&quot;H{head:00}_AK_POSITION_Y&quot;)</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{head:00}_AK_POSITION_Y&quot;)</td></tr>
+<tr><td>59</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: values.ContainsKey($&quot;H{head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0)</td></tr>
+<tr><td>59</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gap = values.ContainsKey($&quot;H{head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0);</td></tr>
+<tr><td>59</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gap = values.ContainsKey($&quot;H{head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0)</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;)</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;HeadGapY&quot;)</td></tr>
+<tr><td>60</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;AK_MARGIN_Y&quot;)</td></tr>
+<tr><td>64</td><td>local-declaration</td><td>지역 변수를 선언합니다: var yAtStart = (start - direction * gap - Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;)) / direction + Number(values, &quot;AK_MARGIN_Y&quot;);</td></tr>
+<tr><td>64</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: yAtStart = (start - direction * gap - Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;)) / direction + Number(values, &quot;AK_MARGIN_Y&quot;)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;AK_MARGIN_X&quot;)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;H01_AK_POSITION_X&quot;)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;HeadGapX&quot;)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;)</td></tr>
+<tr><td>65</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = Number(values, &quot;AK_MARGIN_X&quot;) + Number(values, &quot;H01_AK_POSITION_X&quot;) + (head - 1) * Number(values, &quot;HeadGapX&quot;) + Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;);</td></tr>
+<tr><td>65</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = Number(values, &quot;AK_MARGIN_X&quot;) + Number(values, &quot;H01_AK_POSITION_X&quot;) + (head - 1) * Number(values, &quot;HeadGapX&quot;) + Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;)</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;)</td></tr>
+<tr><td>66</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = yAtStart + (stageY - start) / direction + Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;);</td></tr>
+<tr><td>66</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = yAtStart + (stageY - start) / direction + Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;GLASS_SIZE_X&quot;)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;GLASS_SIZE_Y&quot;)</td></tr>
+<tr><td>67</td><td>local-declaration</td><td>지역 변수를 선언합니다: var width = Number(values, &quot;GLASS_SIZE_X&quot;);</td></tr>
+<tr><td>67</td><td>local-declaration</td><td>지역 변수를 선언합니다: var height = Number(values, &quot;GLASS_SIZE_Y&quot;);</td></tr>
+<tr><td>67</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: width = Number(values, &quot;GLASS_SIZE_X&quot;)</td></tr>
+<tr><td>67</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: height = Number(values, &quot;GLASS_SIZE_Y&quot;)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.&quot;)</td></tr>
+<tr><td>68</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(x) || !double.IsFinite(y) || width &lt;= 0 || height &lt;= 0)</td></tr>
+<tr><td>68</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.&quot;);</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(head, stageY, x, y, x &gt;= 0 &amp;&amp; x &lt;= width &amp;&amp; y &gt;= 0 &amp;&amp; y &lt;= height)</td></tr>
+<tr><td>69</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(head, stageY, x, y, x &gt;= 0 &amp;&amp; x &lt;= width &amp;&amp; y &gt;= 0 &amp;&amp; y &lt;= height);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PredictCenter&quot;]
+ N0[&quot;L55 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L56 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L68 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">MethodDeclaration <code>FitsField</code> · L74–78</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L74-L78">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:74–78</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Correction.CDefaultOffsetCalibration.FitsField(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>x</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>y</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L102-L102">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:102–102</a></td><td>FitsField</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>76</td><td>HeadGeometry</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY Drilling.Common.Correction.CDefaultOffsetCalibration.HeadGeometry(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:41</td></tr>
+<tr><td>77</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>77</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>77</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>77</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HeadGeometry(values, head)</td></tr>
+<tr><td>76</td><td>local-declaration</td><td>지역 변수를 선언합니다: var field = HeadGeometry(values, head);</td></tr>
+<tr><td>76</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: field = HeadGeometry(values, head)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(x)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(y)</td></tr>
+<tr><td>77</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.IsFinite(x) &amp;&amp; double.IsFinite(y) &amp;&amp; Math.Abs(x) &lt;= field.FieldHalfX &amp;&amp; Math.Abs(y) &lt;= field.FieldHalfY;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L80">MethodDeclaration <code>ValidateOptions</code> · L80–88</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L80-L88">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:80–88</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>options</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L94-L94">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:94–94</a></td><td>ValidateOptions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3425-L3425">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3425–3425</a></td><td>CDefaultOffsetCalibration.ValidateOptions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L141-L141">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:141–141</a></td><td>CDefaultOffsetCalibration.ValidateOptions</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>82</td><td>new[] { options.BoardCenterX, options.TestStageY, options.Tolerance }.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;double&gt;.Any&lt;double&gt;(System.Func&lt;double, bool&gt;)</td></tr>
+<tr><td>82</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>83</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>84</td><td>Enum.IsDefined</td><td>resolved</td><td>bool System.Enum.IsDefined&lt;Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE&gt;(Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE)</td></tr>
+<tr><td>85</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>86</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>87</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v =&gt; !double.IsFinite(v))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v)</td></tr>
+<tr><td>82</td><td>if</td><td>조건에 따라 분기합니다: if (new[] { options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v =&gt; !double.IsFinite(v)) || options.Tolerance &lt;= 0)</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.&quot;)</td></tr>
+<tr><td>83</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.&quot;);</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(options.MachiningMode)</td></tr>
+<tr><td>84</td><td>if</td><td>조건에 따라 분기합니다: if (!Enum.IsDefined(options.MachiningMode))</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;Default 가공 방식을 확인해 주세요.&quot;)</td></tr>
+<tr><td>85</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;Default 가공 방식을 확인해 주세요.&quot;);</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(options.CrossSize)</td></tr>
+<tr><td>86</td><td>if</td><td>조건에 따라 분기합니다: if (options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross &amp;&amp; (!double.IsFinite(options.CrossSize) || options.CrossSize &lt;= 0))</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.&quot;)</td></tr>
+<tr><td>87</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateOptions&quot;]
+ N0[&quot;L82 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L84 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L86 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L92">MethodDeclaration <code>CenterScannerTargets</code> · L92–105</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L92-L105">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:92–105</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;(double X, double Y)&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;(double X, double Y)&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>options</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3454-L3454">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3454–3454</a></td><td>CDefaultOffsetCalibration.CenterScannerTargets</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3588-L3588">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3588–3588</a></td><td>CDefaultOffsetCalibration.CenterScannerTargets</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3676-L3676">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3676–3676</a></td><td>CDefaultOffsetCalibration.CenterScannerTargets</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>94</td><td>ValidateOptions</td><td>resolved</td><td>void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:80</td></tr>
+<tr><td>95</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>96</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>97</td><td>CScannerAxisTransform.Read</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SCANNER_AXIS_TRANSFORM Drilling.Common.Recipe.CScannerAxisTransform.Read(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1239</td></tr>
+<tr><td>101</td><td>design.Select(p =&gt; transform.Apply(p.X, -p.Y)).ToArray</td><td>resolved</td><td>(double X, double Y)[] System.Collections.Generic.IEnumerable&lt;(double X, double Y)&gt;.ToArray&lt;(double X, double Y)&gt;()</td></tr>
+<tr><td>101</td><td>design.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;(double X, double Y)&gt; System.Collections.Generic.IEnumerable&lt;(double X, double Y)&gt;.Select&lt;(double X, double Y), (double X, double Y)&gt;(System.Func&lt;(double X, double Y), (double X, double Y)&gt;)</td></tr>
+<tr><td>101</td><td>transform.Apply</td><td>resolved</td><td>(double X, double Y) Drilling.Common.Recipe.ST_SCANNER_AXIS_TRANSFORM.Apply(double, double) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1210</td></tr>
+<tr><td>102</td><td>targets.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;(double X, double Y)&gt;.Any&lt;(double X, double Y)&gt;(System.Func&lt;(double X, double Y), bool&gt;)</td></tr>
+<tr><td>102</td><td>FitsField</td><td>resolved</td><td>bool Drilling.Common.Correction.CDefaultOffsetCalibration.FitsField(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, double, double) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:74</td></tr>
+<tr><td>103</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;)</td></tr>
+<tr><td>95</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;);</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_X&quot;)</td></tr>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;)</td></tr>
+<tr><td>96</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;);</td></tr>
+<tr><td>96</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = Number(values, $&quot;H{head:00}_DEFAULT_OFFSET_Y&quot;)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.Read(values, head)</td></tr>
+<tr><td>97</td><td>local-declaration</td><td>지역 변수를 선언합니다: var transform = CScannerAxisTransform.Read(values, head);</td></tr>
+<tr><td>97</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: transform = CScannerAxisTransform.Read(values, head)</td></tr>
+<tr><td>98</td><td>local-declaration</td><td>지역 변수를 선언합니다: var half = options.CrossSize / 2;</td></tr>
+<tr><td>98</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: half = options.CrossSize / 2</td></tr>
+<tr><td>99</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]</td></tr>
+<tr><td>99</td><td>local-declaration</td><td>지역 변수를 선언합니다: (double X, double Y)[] design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)];</td></tr>
+<tr><td>99</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p =&gt; transform.Apply(p.X, -p.Y)).ToArray()</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p =&gt; transform.Apply(p.X, -p.Y))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Apply(p.X, -p.Y)</td></tr>
+<tr><td>101</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targets = design.Select(p =&gt; transform.Apply(p.X, -p.Y)).ToArray();</td></tr>
+<tr><td>101</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targets = design.Select(p =&gt; transform.Apply(p.X, -p.Y)).ToArray()</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(p =&gt; !FitsField(values, head, p.X, p.Y))</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FitsField(values, head, p.X, p.Y)</td></tr>
+<tr><td>102</td><td>if</td><td>조건에 따라 분기합니다: if (targets.Any(p =&gt; !FitsField(values, head, p.X, p.Y)))</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.&quot;)</td></tr>
+<tr><td>103</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.&quot;);</td></tr>
+<tr><td>104</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return targets;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CenterScannerTargets&quot;]
+ N0[&quot;L102 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L107">MethodDeclaration <code>Pitch</code> · L107–114</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L107-L114">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:107–114</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Pitch(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>model</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3144-L3144">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3144–3144</a></td><td>CDefaultOffsetCalibration.Pitch</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>109</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>109</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>110</td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:455</td></tr>
+<tr><td>111</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>112</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>112</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;SPLITED_BEAM_COUNT&quot;)</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;Default 측정은 현재 4×4, 총 16빔만 지원합니다.&quot;)</td></tr>
+<tr><td>109</td><td>if</td><td>조건에 따라 분기합니다: if (Number(values, &quot;SPLITED_BEAM_COUNT&quot;) != 4)</td></tr>
+<tr><td>109</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;Default 측정은 현재 4×4, 총 16빔만 지원합니다.&quot;);</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadPatternForModel(values, model)</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model);</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;PIXEL_SIZE&quot;)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pitch = Number(values, &quot;PIXEL_SIZE&quot;) * pattern.ProcessPitch / 4;</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pitch = Number(values, &quot;PIXEL_SIZE&quot;) * pattern.ProcessPitch / 4</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch)</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;DOE 빔 간격은 0보다 커야 합니다.&quot;)</td></tr>
+<tr><td>112</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(pitch) || pitch &lt;= 0)</td></tr>
+<tr><td>112</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;DOE 빔 간격은 0보다 커야 합니다.&quot;);</td></tr>
+<tr><td>113</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return pitch;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Pitch&quot;]
+ N0[&quot;L109 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L112 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L116">MethodDeclaration <code>Slot</code> · L116–123</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L116-L123">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:116–123</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>(double X, double Y) Drilling.Common.Correction.CDefaultOffsetCalibration.Slot(int, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>(double X, double Y)</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>beam</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>pitch</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3753-L3753">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3753–3753</a></td><td>CDefaultOffsetCalibration.Slot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4663-L4663">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4663–4663</a></td><td>CDefaultOffsetCalibration.Slot</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>118</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>118</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>118</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>122</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>122</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>122</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>122</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;16빔 슬롯 설정 오류&quot;)</td></tr>
+<tr><td>118</td><td>if</td><td>조건에 따라 분기합니다: if (beam is &lt; 1 or &gt; 16 || !double.IsFinite(pitch) || pitch &lt;= 0 || !double.IsFinite(angle))</td></tr>
+<tr><td>118</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;16빔 슬롯 설정 오류&quot;);</td></tr>
+<tr><td>119</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = ((beam - 1) % 4 - 1.5) * pitch;</td></tr>
+<tr><td>119</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = ((beam - 1) % 4 - 1.5) * pitch</td></tr>
+<tr><td>120</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = ((beam - 1) / 4 - 1.5) * pitch;</td></tr>
+<tr><td>120</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = ((beam - 1) / 4 - 1.5) * pitch</td></tr>
+<tr><td>121</td><td>local-declaration</td><td>지역 변수를 선언합니다: var radians = angle * Math.PI / 180;</td></tr>
+<tr><td>121</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: radians = angle * Math.PI / 180</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (x * Math.Cos(radians) - y * Math.Sin(radians), x * Math.Sin(radians) + y * Math.Cos(radians));</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Slot&quot;]
+ N0[&quot;L118 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L125">MethodDeclaration <code>Fit</code> · L125–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L125-L160">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:125–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;, double, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>marks</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>pitch</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>residualTolerance</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3758-L3758">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3758–3758</a></td><td>CDefaultOffsetCalibration.Fit</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>127</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>128</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>129</td><td>marks.Select(m =&gt; m.Beam).Order().SequenceEqual</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;int&gt;.SequenceEqual&lt;int&gt;(System.Collections.Generic.IEnumerable&lt;int&gt;)</td></tr>
+<tr><td>129</td><td>marks.Select(m =&gt; m.Beam).Order</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Order&lt;int&gt;()</td></tr>
+<tr><td>129</td><td>marks.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Select&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, int&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, int&gt;)</td></tr>
+<tr><td>129</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>130</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>131</td><td>marks.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Any&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, bool&gt;)</td></tr>
+<tr><td>131</td><td>new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;double&gt;.Any&lt;double&gt;(System.Func&lt;double, bool&gt;)</td></tr>
+<tr><td>131</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>132</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>135</td><td>marks.Average</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Average&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+<tr><td>135</td><td>marks.Average</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Average&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+<tr><td>136</td><td>Enumerable.Range(1, 16).Sum</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;int&gt;.Sum&lt;int&gt;(System.Func&lt;int, double&gt;)</td></tr>
+<tr><td>136</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>136</td><td>Math.Pow</td><td>resolved</td><td>double System.Math.Pow(double, double)</td></tr>
+<tr><td>137</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>137</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>139</td><td>Coefficient</td><td>resolved</td><td>double Coefficient(bool, bool) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:138</td></tr>
+<tr><td>139</td><td>Coefficient</td><td>resolved</td><td>double Coefficient(bool, bool) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:138</td></tr>
+<tr><td>140</td><td>Coefficient</td><td>resolved</td><td>double Coefficient(bool, bool) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:138</td></tr>
+<tr><td>140</td><td>Coefficient</td><td>resolved</td><td>double Coefficient(bool, bool) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:138</td></tr>
+<tr><td>141</td><td>Math.Sqrt</td><td>resolved</td><td>double System.Math.Sqrt(double)</td></tr>
+<tr><td>141</td><td>Math.Sqrt</td><td>resolved</td><td>double System.Math.Sqrt(double)</td></tr>
+<tr><td>143</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>143</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>143</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>143</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>146</td><td>Enumerable.Range(1, 16).Max</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;int&gt;.Max&lt;int&gt;(System.Func&lt;int, double&gt;)</td></tr>
+<tr><td>146</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>149</td><td>Math.Sqrt</td><td>resolved</td><td>double System.Math.Sqrt(double)</td></tr>
+<tr><td>149</td><td>Math.Pow</td><td>resolved</td><td>double System.Math.Pow(double, double)</td></tr>
+<tr><td>149</td><td>Math.Pow</td><td>resolved</td><td>double System.Math.Pow(double, double)</td></tr>
+<tr><td>151</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>151</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>151</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>152</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>153</td><td>marks.Max</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Max&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+<tr><td>156</td><td>Math.Sqrt</td><td>resolved</td><td>double System.Math.Sqrt(double)</td></tr>
+<tr><td>156</td><td>Math.Pow</td><td>resolved</td><td>double System.Math.Pow(double, double)</td></tr>
+<tr><td>156</td><td>Math.Pow</td><td>resolved</td><td>double System.Math.Pow(double, double)</td></tr>
+<tr><td>158</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>158</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>159</td><td>new</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT.ST_DEFAULT_OFFSET_FIT(double, double, double, double, double) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:254</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residualTolerance)</td></tr>
+<tr><td>127</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(residualTolerance) || residualTolerance &lt;= 0)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;중심 위치·Beam 간격 허용오차를 확인해 주세요.&quot;)</td></tr>
+<tr><td>128</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;중심 위치·Beam 간격 허용오차를 확인해 주세요.&quot;);</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m =&gt; m.Beam).Order().SequenceEqual(Enumerable.Range(1, 16))</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m =&gt; m.Beam).Order()</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m =&gt; m.Beam)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16)</td></tr>
+<tr><td>129</td><td>if</td><td>조건에 따라 분기합니다: if (marks.Count != 16 || !marks.Select(m =&gt; m.Beam).Order().SequenceEqual(Enumerable.Range(1, 16)))</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;서로 다른 16개 빔이 모두 측정되어야 합니다.&quot;)</td></tr>
+<tr><td>130</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;서로 다른 16개 빔이 모두 측정되어야 합니다.&quot;);</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Any(m =&gt; m.Judge != &quot;OK&quot; || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v =&gt; !double.IsFinite(v)))</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v =&gt; !double.IsFinite(v))</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v)</td></tr>
+<tr><td>131</td><td>if</td><td>조건에 따라 분기합니다: if (marks.Any(m =&gt; m.Judge != &quot;OK&quot; || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v =&gt; !double.IsFinite(v))))</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.&quot;)</td></tr>
+<tr><td>132</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.&quot;);</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m =&gt; m.X)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m =&gt; m.Y)</td></tr>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cx = marks.Average(m =&gt; m.X);</td></tr>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cy = marks.Average(m =&gt; m.Y);</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cx = marks.Average(m =&gt; m.X)</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cy = marks.Average(m =&gt; m.Y)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16).Sum(b =&gt; Math.Pow(((b - 1) % 4 - 1.5) * pitch, 2))</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(((b - 1) % 4 - 1.5) * pitch, 2)</td></tr>
+<tr><td>136</td><td>local-declaration</td><td>지역 변수를 선언합니다: var square = Enumerable.Range(1, 16).Sum(b =&gt; Math.Pow(((b - 1) % 4 - 1.5) * pitch, 2));</td></tr>
+<tr><td>136</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: square = Enumerable.Range(1, 16).Sum(b =&gt; Math.Pow(((b - 1) % 4 - 1.5) * pitch, 2))</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(square)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;DOE 격자 크기를 확인해 주세요.&quot;)</td></tr>
+<tr><td>137</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(square) || square &lt;= 0)</td></tr>
+<tr><td>137</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;DOE 격자 크기를 확인해 주세요.&quot;);</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, true)</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, false)</td></tr>
+<tr><td>139</td><td>local-declaration</td><td>지역 변수를 선언합니다: var a = Coefficient(true, true);</td></tr>
+<tr><td>139</td><td>local-declaration</td><td>지역 변수를 선언합니다: var b = Coefficient(true, false);</td></tr>
+<tr><td>139</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: a = Coefficient(true, true)</td></tr>
+<tr><td>139</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: b = Coefficient(true, false)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, true)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, false)</td></tr>
+<tr><td>140</td><td>local-declaration</td><td>지역 변수를 선언합니다: var c = Coefficient(false, true);</td></tr>
+<tr><td>140</td><td>local-declaration</td><td>지역 변수를 선언합니다: var d = Coefficient(false, false);</td></tr>
+<tr><td>140</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: c = Coefficient(false, true)</td></tr>
+<tr><td>140</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: d = Coefficient(false, false)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(a * a + c * c)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(b * b + d * d)</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var px = pitch * Math.Sqrt(a * a + c * c);</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var py = pitch * Math.Sqrt(b * b + d * d);</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: px = pitch * Math.Sqrt(a * a + c * c)</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: py = pitch * Math.Sqrt(b * b + d * d)</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var radians = angle * Math.PI / 180;</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: radians = angle * Math.PI / 180</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>143</td><td>local-declaration</td><td>지역 변수를 선언합니다: var expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) };</td></tr>
+<tr><td>143</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16).Max(beam =&gt; { var u = ((beam - 1) % 4 - 1.5) * pitch; var v = ((beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2…</td></tr>
+<tr><td>146</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gridError = Enumerable.Range(1, 16).Max(beam =&gt; { var u = ((beam - 1) % 4 - 1.5) * pitch; var v = ((beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expe</td></tr>
+<tr><td>146</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gridError = Enumerable.Range(1, 16).Max(beam =&gt; { var u = ((beam - 1) % 4 - 1.5) * pitch; var v = ((beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected</td></tr>
+<tr><td>148</td><td>local-declaration</td><td>지역 변수를 선언합니다: var u = ((beam - 1) % 4 - 1.5) * pitch;</td></tr>
+<tr><td>148</td><td>local-declaration</td><td>지역 변수를 선언합니다: var v = ((beam - 1) / 4 - 1.5) * pitch;</td></tr>
+<tr><td>148</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: u = ((beam - 1) % 4 - 1.5) * pitch</td></tr>
+<tr><td>148</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: v = ((beam - 1) / 4 - 1.5) * pitch</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2))</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2)</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2)</td></tr>
+<tr><td>149</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2));</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(px)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(py)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(gridError)</td></tr>
+<tr><td>151</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(px) || !double.IsFinite(py) || !double.IsFinite(gridError) || gridError &gt; residualTolerance)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.&quot;)</td></tr>
+<tr><td>152</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.&quot;);</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Max(m =&gt; { var u = ((m.Beam - 1) % 4 - 1.5) * pitch; var v = ((m.Beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); })</td></tr>
+<tr><td>153</td><td>local-declaration</td><td>지역 변수를 선언합니다: var residual = marks.Max(m =&gt; { var u = ((m.Beam - 1) % 4 - 1.5) * pitch; var v = ((m.Beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); });</td></tr>
+<tr><td>153</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: residual = marks.Max(m =&gt; { var u = ((m.Beam - 1) % 4 - 1.5) * pitch; var v = ((m.Beam - 1) / 4 - 1.5) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); })</td></tr>
+<tr><td>155</td><td>local-declaration</td><td>지역 변수를 선언합니다: var u = ((m.Beam - 1) % 4 - 1.5) * pitch;</td></tr>
+<tr><td>155</td><td>local-declaration</td><td>지역 변수를 선언합니다: var v = ((m.Beam - 1) / 4 - 1.5) * pitch;</td></tr>
+<tr><td>155</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: u = ((m.Beam - 1) % 4 - 1.5) * pitch</td></tr>
+<tr><td>155</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: v = ((m.Beam - 1) / 4 - 1.5) * pitch</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2))</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.X - cx - a * u - b * v, 2)</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.Y - cy - c * u - d * v, 2)</td></tr>
+<tr><td>156</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2));</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residual)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;16빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.&quot;)</td></tr>
+<tr><td>158</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(residual) || residual &gt; residualTolerance)</td></tr>
+<tr><td>158</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;16빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.&quot;);</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(cx, cy, residual, px, py)</td></tr>
+<tr><td>159</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(cx, cy, residual, px, py);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Fit&quot;]
+ N0[&quot;L127 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L129 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L131 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L137 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L151 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L158 if&quot;]
+ M --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L138">LocalFunctionStatement <code>Coefficient</code> · L138–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L138-L138">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:138–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Coefficient(bool, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>x</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>column</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L139-L139">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:139–139</a></td><td>Coefficient</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L139-L139">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:139–139</a></td><td>Coefficient</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L140-L140">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:140–140</a></td><td>Coefficient</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L140-L140">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:140–140</a></td><td>Coefficient</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>138</td><td>marks.Sum</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Sum&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Sum(m =&gt; ((column ? (m.Beam - 1) % 4 : (m.Beam - 1) / 4) - 1.5) * pitch * (x ? m.X - cx : m.Y - cy))</td></tr>
+<tr><td>138</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: column ? (m.Beam - 1) % 4 : (m.Beam - 1) / 4</td></tr>
+<tr><td>138</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: x ? m.X - cx : m.Y - cy</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L162">MethodDeclaration <code>FitCross</code> · L162–170</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L162-L170">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:162–170</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.FitCross(Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>mark</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3746-L3746">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3746–3746</a></td><td>CDefaultOffsetCalibration.FitCross</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>165</td><td>new[] { mark.X, mark.Y, mark.RawX, mark.RawY, mark.CorrectionX, mark.CorrectionY, mark.EncoderX, mark.EncoderY }.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;double&gt;.Any&lt;double&gt;(System.Func&lt;double, bool&gt;)</td></tr>
+<tr><td>165</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>166</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>169</td><td>new</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT.ST_DEFAULT_OFFSET_FIT(double, double, double, double, double) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:254</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>164</td><td>if</td><td>조건에 따라 분기합니다: if (mark.Beam != 0 || mark.Judge != &quot;OK&quot; || new[] { mark.X, mark.Y, mark.RawX, mark.RawY, mark.CorrectionX, mark.CorrectionY, mark.EncoderX, mark.EncoderY }.Any(v =&gt; !double.IsFinite(v)))</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { mark.X, mark.Y, mark.RawX, mark.RawY, mark.CorrectionX, mark.CorrectionY, mark.EncoderX, mark.EncoderY }.Any(v =&gt; !double.IsFinite(v))</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v)</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;유효한 십자 중심 측정값이 필요합니다.&quot;)</td></tr>
+<tr><td>166</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;유효한 십자 중심 측정값이 필요합니다.&quot;);</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(mark.X, mark.Y, 0, 0, 0)</td></tr>
+<tr><td>169</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(mark.X, mark.Y, 0, 0, 0);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FitCross&quot;]
+ N0[&quot;L164 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L175">MethodDeclaration <code>WithHeadReference</code> · L175–201</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L175-L201">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175–201</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT Drilling.Common.Correction.CDefaultOffsetCalibration.WithHeadReference(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>result</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L217-L217">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:217–217</a></td><td>WithHeadReference</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3760-L3762">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3760–3762</a></td><td>CDefaultOffsetCalibration.WithHeadReference</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>179</td><td>result.Marks.Select(m =&gt; m.Beam).Order().SequenceEqual</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;int&gt;.SequenceEqual&lt;int&gt;(System.Collections.Generic.IEnumerable&lt;int&gt;)</td></tr>
+<tr><td>179</td><td>result.Marks.Select(m =&gt; m.Beam).Order</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Order&lt;int&gt;()</td></tr>
+<tr><td>179</td><td>result.Marks.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Select&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, int&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, int&gt;)</td></tr>
+<tr><td>179</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>180</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>181</td><td>result.Marks.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Any&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, bool&gt;)</td></tr>
+<tr><td>181</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>181</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>182</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>182</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>183</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>184</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>184</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>184</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>185</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>186</td><td>CScannerAxisTransform.ReadStageDirection</td><td>resolved</td><td>double Drilling.Common.Recipe.CScannerAxisTransform.ReadStageDirection(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1233</td></tr>
+<tr><td>187</td><td>values.ContainsKey</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.ContainsKey(string)</td></tr>
+<tr><td>187</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>188</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>188</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>194</td><td>result.Marks.Average</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Average&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+<tr><td>195</td><td>result.Marks.Average</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;.Average&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK, double&gt;)</td></tr>
+<tr><td>196</td><td>new[] { targetX, targetY, actualX, actualY }.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;double&gt;.Any&lt;double&gt;(System.Func&lt;double, bool&gt;)</td></tr>
+<tr><td>196</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>197</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>177</td><td>local-declaration</td><td>지역 변수를 선언합니다: var isCrossMeasurement = result.Marks.Count == 1 &amp;&amp; result.Marks[0].Beam == 0;</td></tr>
+<tr><td>177</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: isCrossMeasurement = result.Marks.Count == 1 &amp;&amp; result.Marks[0].Beam == 0</td></tr>
+<tr><td>178</td><td>local-declaration</td><td>지역 변수를 선언합니다: var isShotMeasurement = result.Marks.Count == 16 &amp;&amp; result.Marks.Select(m =&gt; m.Beam).Order().SequenceEqual(Enumerable.Range(1, 16));</td></tr>
+<tr><td>178</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: isShotMeasurement = result.Marks.Count == 16 &amp;&amp; result.Marks.Select(m =&gt; m.Beam).Order().SequenceEqual(Enumerable.Range(1, 16))</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m =&gt; m.Beam).Order().SequenceEqual(Enumerable.Range(1, 16))</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m =&gt; m.Beam).Order()</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m =&gt; m.Beam)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16)</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result.Q)</td></tr>
+<tr><td>180</td><td>if</td><td>조건에 따라 분기합니다: if (result.Head is &lt; 1 or &gt; 8 || !double.IsFinite(result.Q) || !(isCrossMeasurement || isShotMeasurement) || result.Marks.Any(m =&gt; !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.Correction…)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderX)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderY)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Any(m =&gt; !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.CorrectionX) || !double.IsFinite(m.CorrectionY))</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionX)</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionY)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;Head 중심 계산에 유효한 십자 중심 또는 16빔 측정 좌표가 필요합니다.&quot;)</td></tr>
+<tr><td>183</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;Head 중심 계산에 유효한 십자 중심 또는 16빔 측정 좌표가 필요합니다.&quot;);</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;)</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;GLASS_SIZE_X&quot;)</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;AK_MARGIN_X&quot;)</td></tr>
+<tr><td>184</td><td>local-declaration</td><td>지역 변수를 선언합니다: var boardCenter = Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;) + Number(values, &quot;GLASS_SIZE_X&quot;) / 2 - Number(values, &quot;AK_MARGIN_X&quot;);</td></tr>
+<tr><td>184</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: boardCenter = Number(values, &quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;) + Number(values, &quot;GLASS_SIZE_X&quot;) / 2 - Number(values, &quot;AK_MARGIN_X&quot;)</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;HeadGapX&quot;)</td></tr>
+<tr><td>185</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targetX = boardCenter + (result.Head - 4.5) * Number(values, &quot;HeadGapX&quot;);</td></tr>
+<tr><td>185</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targetX = boardCenter + (result.Head - 4.5) * Number(values, &quot;HeadGapX&quot;)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values)</td></tr>
+<tr><td>186</td><td>local-declaration</td><td>지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values);</td></tr>
+<tr><td>186</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($&quot;H{result.Head:00}_AK_POSITION_Y&quot;)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $&quot;H{result.Head:00}_AK_POSITION_Y&quot;)</td></tr>
+<tr><td>187</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: values.ContainsKey($&quot;H{result.Head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{result.Head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (result.Head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0)</td></tr>
+<tr><td>187</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gapY = values.ContainsKey($&quot;H{result.Head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{result.Head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (result.Head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0);</td></tr>
+<tr><td>187</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gapY = values.ContainsKey($&quot;H{result.Head:00}_AK_POSITION_Y&quot;) ? Number(values, $&quot;H{result.Head:00}_AK_POSITION_Y&quot;) : Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;) + (result.Head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0)</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;REVIEW_TO_HEAD1_GAP_Y&quot;)</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, &quot;HeadGapY&quot;)</td></tr>
+<tr><td>188</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result.Head % 2 == 0 ? Number(values, &quot;HeadGapY&quot;) : 0</td></tr>
+<tr><td>189</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targetY = result.Q - direction * gapY;</td></tr>
+<tr><td>189</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targetY = result.Q - direction * gapY</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m =&gt; m.EncoderX - m.CorrectionX)</td></tr>
+<tr><td>194</td><td>local-declaration</td><td>지역 변수를 선언합니다: var actualX = result.Marks.Average(m =&gt; m.EncoderX - m.CorrectionX);</td></tr>
+<tr><td>194</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: actualX = result.Marks.Average(m =&gt; m.EncoderX - m.CorrectionX)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m =&gt; m.EncoderY - direction * m.CorrectionY)</td></tr>
+<tr><td>195</td><td>local-declaration</td><td>지역 변수를 선언합니다: var actualY = result.Marks.Average(m =&gt; m.EncoderY - direction * m.CorrectionY);</td></tr>
+<tr><td>195</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: actualY = result.Marks.Average(m =&gt; m.EncoderY - direction * m.CorrectionY)</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { targetX, targetY, actualX, actualY }.Any(v =&gt; !double.IsFinite(v))</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v)</td></tr>
+<tr><td>196</td><td>if</td><td>조건에 따라 분기합니다: if (new[] { targetX, targetY, actualX, actualY }.Any(v =&gt; !double.IsFinite(v)))</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.&quot;)</td></tr>
+<tr><td>197</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.&quot;);</td></tr>
+<tr><td>198</td><td>assignment</td><td>값을 대상에 대입합니다: TargetReviewX = targetX</td></tr>
+<tr><td>198</td><td>assignment</td><td>값을 대상에 대입합니다: TargetStageY = targetY</td></tr>
+<tr><td>198</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result with { TargetReviewX = targetX, TargetStageY = targetY, CenterReviewX = actualX, CenterStageY = actualY, CenterErrorX = actualX - targetX, CenterErrorY = (actualY - targetY) / direction };</td></tr>
+<tr><td>199</td><td>assignment</td><td>값을 대상에 대입합니다: CenterReviewX = actualX</td></tr>
+<tr><td>199</td><td>assignment</td><td>값을 대상에 대입합니다: CenterStageY = actualY</td></tr>
+<tr><td>200</td><td>assignment</td><td>값을 대상에 대입합니다: CenterErrorX = actualX - targetX</td></tr>
+<tr><td>200</td><td>assignment</td><td>값을 대상에 대입합니다: CenterErrorY = (actualY - targetY) / direction</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WithHeadReference&quot;]
+ N0[&quot;L180 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L196 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L203">MethodDeclaration <code>ActiveHeads</code> · L203–204</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L203-L204">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:203–204</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int[] Drilling.Common.Correction.CDefaultOffsetCalibration.ActiveHeads(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>int[]</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L208-L208">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:208–208</a></td><td>ActiveHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3165-L3165">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3165–3165</a></td><td>CDefaultOffsetCalibration.ActiveHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3184-L3184">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3184–3184</a></td><td>CDefaultOffsetCalibration.ActiveHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3298-L3298">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3298–3298</a></td><td>CDefaultOffsetCalibration.ActiveHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3782-L3782">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3782–3782</a></td><td>CDefaultOffsetCalibration.ActiveHeads</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>204</td><td>Enumerable.Range(1, 8).Where(h =&gt; CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray</td><td>resolved</td><td>int[] System.Collections.Generic.IEnumerable&lt;int&gt;.ToArray&lt;int&gt;()</td></tr>
+<tr><td>204</td><td>Enumerable.Range(1, 8).Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Where&lt;int&gt;(System.Func&lt;int, bool&gt;)</td></tr>
+<tr><td>204</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>204</td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:166</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h =&gt; CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray()</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h =&gt; CScannerAxisConfiguration.IsHeadEnabled(values, h))</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(values, h)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L206">MethodDeclaration <code>Recommend</code> · L206–229</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L206-L229">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:206–229</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Correction.CDefaultOffsetCalibration.Recommend(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Collections.Generic.IReadOnlyCollection&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt;, System.Collections.Generic.IReadOnlyCollection&lt;int&gt;?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.CDefaultOffsetCalibration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>values</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>results</td><td>System.Collections.Generic.IReadOnlyCollection&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>targetHeads</td><td>System.Collections.Generic.IReadOnlyCollection&lt;int&gt;?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3154-L3154">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3154–3154</a></td><td>CDefaultOffsetCalibration.Recommend</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3334-L3334">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3334–3334</a></td><td>CDefaultOffsetCalibration.Recommend</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>208</td><td>ActiveHeads(values).ToHashSet</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.ToHashSet&lt;int&gt;()</td></tr>
+<tr><td>208</td><td>ActiveHeads</td><td>resolved</td><td>int[] Drilling.Common.Correction.CDefaultOffsetCalibration.ActiveHeads(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:203</td></tr>
+<tr><td>209</td><td>(targetHeads ?? active).Order().ToArray</td><td>resolved</td><td>int[] System.Collections.Generic.IEnumerable&lt;int&gt;.ToArray&lt;int&gt;()</td></tr>
+<tr><td>209</td><td>(targetHeads ?? active).Order</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Order&lt;int&gt;()</td></tr>
+<tr><td>210</td><td>targets.Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;int&gt;.Count&lt;int&gt;()</td></tr>
+<tr><td>210</td><td>targets.Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
+<tr><td>210</td><td>targets.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;int&gt;.Any&lt;int&gt;(System.Func&lt;int, bool&gt;)</td></tr>
+<tr><td>210</td><td>active.Contains</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;int&gt;.Contains(int)</td></tr>
+<tr><td>211</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>212</td><td>results.Select(r =&gt; r.Head).Order().SequenceEqual</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;int&gt;.SequenceEqual&lt;int&gt;(System.Collections.Generic.IEnumerable&lt;int&gt;)</td></tr>
+<tr><td>212</td><td>results.Select(r =&gt; r.Head).Order</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Order&lt;int&gt;()</td></tr>
+<tr><td>212</td><td>results.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT&gt;.Select&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT, int&gt;(System.Func&lt;Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT, int&gt;)</td></tr>
+<tr><td>213</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>214</td><td>new Dictionary&lt;string, string&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>217</td><td>WithHeadReference</td><td>resolved</td><td>Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT Drilling.Common.Correction.CDefaultOffsetCalibration.WithHeadReference(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175</td></tr>
+<tr><td>223</td><td>Math.Round</td><td>resolved</td><td>double System.Math.Round(double, int, System.MidpointRounding)</td></tr>
+<tr><td>223</td><td>Number</td><td>resolved</td><td>double Drilling.Common.Correction.CDefaultOffsetCalibration.Number(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22</td></tr>
+<tr><td>224</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>224</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>224</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>225</td><td>next.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values).ToHashSet()</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values)</td></tr>
+<tr><td>208</td><td>local-declaration</td><td>지역 변수를 선언합니다: var active = ActiveHeads(values).ToHashSet();</td></tr>
+<tr><td>208</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: active = ActiveHeads(values).ToHashSet()</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order().ToArray()</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order()</td></tr>
+<tr><td>209</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targets = (targetHeads ?? active).Order().ToArray();</td></tr>
+<tr><td>209</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targets = (targetHeads ?? active).Order().ToArray()</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct().Count()</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct()</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(h =&gt; !active.Contains(h))</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: active.Contains(h)</td></tr>
+<tr><td>210</td><td>if</td><td>조건에 따라 분기합니다: if (targets.Length == 0 || targets.Distinct().Count() != targets.Length || targets.Any(h =&gt; !active.Contains(h)))</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;USE인 가공 대상 Head를 확인해 주세요.&quot;)</td></tr>
+<tr><td>211</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;USE인 가공 대상 Head를 확인해 주세요.&quot;);</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r =&gt; r.Head).Order().SequenceEqual(targets)</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r =&gt; r.Head).Order()</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r =&gt; r.Head)</td></tr>
+<tr><td>212</td><td>if</td><td>조건에 따라 분기합니다: if (results.Count != targets.Length || !results.Select(r =&gt; r.Head).Order().SequenceEqual(targets))</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.&quot;)</td></tr>
+<tr><td>213</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.&quot;);</td></tr>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>214</td><td>local-declaration</td><td>지역 변수를 선언합니다: var changes = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>214</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: changes = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>215</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var r in results)</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WithHeadReference(values, r)</td></tr>
+<tr><td>217</td><td>local-declaration</td><td>지역 변수를 선언합니다: var center = WithHeadReference(values, r);</td></tr>
+<tr><td>217</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: center = WithHeadReference(values, r)</td></tr>
+<tr><td>220</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var (axis, error) in new[] { (&quot;X&quot;, center.CenterErrorX), (&quot;Y&quot;, center.CenterErrorY) }) { var key = $&quot;H{r.Head:00}_DEFAULT_OFFSET_{axis}&quot;; var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero</td></tr>
+<tr><td>222</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = $&quot;H{r.Head:00}_DEFAULT_OFFSET_{axis}&quot;;</td></tr>
+<tr><td>222</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = $&quot;H{r.Head:00}_DEFAULT_OFFSET_{axis}&quot;</td></tr>
+<tr><td>223</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero)</td></tr>
+<tr><td>223</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, key)</td></tr>
+<tr><td>223</td><td>local-declaration</td><td>지역 변수를 선언합니다: var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero);</td></tr>
+<tr><td>223</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero)</td></tr>
+<tr><td>224</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(next)</td></tr>
+<tr><td>224</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(next)</td></tr>
+<tr><td>224</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.&quot;)</td></tr>
+<tr><td>224</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(next) || Math.Abs(next) &gt; 100)</td></tr>
+<tr><td>224</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.&quot;);</td></tr>
+<tr><td>225</td><td>assignment</td><td>값을 대상에 대입합니다: changes[key] = next.ToString(&quot;0.00000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: next.ToString(&quot;0.00000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>228</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return changes;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Recommend&quot;]
+ N0[&quot;L210 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L212 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L215 foreach&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L220 foreach&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L224 if&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L232">EnumMemberDeclaration <code>Shot</code> · L232–232</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L232-L232">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:232–232</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Shot</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L232">EnumMemberDeclaration <code>Cross</code> · L232–232</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L232-L232">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:232–232</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Cross</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L235">PropertyDeclaration <code>MachiningMode</code> · L235–235</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L235-L235">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:235–235</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L235">GetAccessorDeclaration <code>get_MachiningMode</code> · L235–235</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L235-L235">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:235–235</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L235">InitAccessorDeclaration <code>set_MachiningMode</code> · L235–235</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L235-L235">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:235–235</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">PropertyDeclaration <code>CrossSize</code> · L236–236</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L236-L236">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:236–236</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">GetAccessorDeclaration <code>get_CrossSize</code> · L236–236</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L236-L236">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:236–236</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">InitAccessorDeclaration <code>set_CrossSize</code> · L236–236</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L236-L236">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:236–236</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">PropertyDeclaration <code>VisionMethod</code> · L240–242</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L240-L242">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:240–242</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.EN_ONE_SHOT_METHOD</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>240</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle : EN_ONE_SHOT_METHOD.MarkFindSingle</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">PropertyDeclaration <code>InspectionPointCount</code> · L243–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L243-L243">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:243–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionPointCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>243</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? 1 : 16</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L244">PropertyDeclaration <code>InspectionDescription</code> · L244–246</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L244-L246">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:244–246</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>244</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? &quot;십자 중심 1회 측정&quot; : &quot;DOE 16빔 측정&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L247">PropertyDeclaration <code>MachiningDescription</code> · L247–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L247-L248">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:247–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningDescription</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>248</td><td>CrossSize.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>247</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? $&quot;십자 가공 · 전체 길이 {CrossSize.ToString(&quot;0.#####&quot;, CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용&quot; : &quot;샷 가공 · Head Shot Count 사용&quot;</td></tr>
+<tr><td>248</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CrossSize.ToString(&quot;0.#####&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L249">PropertyDeclaration <code>VisionDescription</code> · L249–249</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L249-L249">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:249–249</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionDescription</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>249</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? &quot;Mark Find Setting Single&quot; : &quot;Mark Find Single&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">PropertyDeclaration <code>Model</code> · L257–257</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L257-L257">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:257–257</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">GetAccessorDeclaration <code>get_Model</code> · L257–257</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L257-L257">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:257–257</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">InitAccessorDeclaration <code>set_Model</code> · L257–257</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L257-L257">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:257–257</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L258">PropertyDeclaration <code>ReferenceCell</code> · L258–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L258-L258">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:258–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L258">GetAccessorDeclaration <code>get_ReferenceCell</code> · L258–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L258-L258">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:258–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L258">InitAccessorDeclaration <code>set_ReferenceCell</code> · L258–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L258-L258">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:258–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L259">PropertyDeclaration <code>Geometry</code> · L259–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L259-L259">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:259–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L259">GetAccessorDeclaration <code>get_Geometry</code> · L259–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L259-L259">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:259–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L259">InitAccessorDeclaration <code>set_Geometry</code> · L259–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L259-L259">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:259–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">PropertyDeclaration <code>TargetReviewX</code> · L260–260</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L260-L260">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:260–260</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">GetAccessorDeclaration <code>get_TargetReviewX</code> · L260–260</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L260-L260">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:260–260</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">InitAccessorDeclaration <code>set_TargetReviewX</code> · L260–260</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L260-L260">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:260–260</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L261">PropertyDeclaration <code>TargetStageY</code> · L261–261</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L261-L261">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:261–261</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L261">GetAccessorDeclaration <code>get_TargetStageY</code> · L261–261</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L261-L261">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:261–261</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L261">InitAccessorDeclaration <code>set_TargetStageY</code> · L261–261</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L261-L261">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:261–261</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L262">PropertyDeclaration <code>CenterReviewX</code> · L262–262</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L262-L262">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:262–262</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L262">GetAccessorDeclaration <code>get_CenterReviewX</code> · L262–262</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L262-L262">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:262–262</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L262">InitAccessorDeclaration <code>set_CenterReviewX</code> · L262–262</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L262-L262">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:262–262</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L263">PropertyDeclaration <code>CenterStageY</code> · L263–263</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L263-L263">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:263–263</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L263">GetAccessorDeclaration <code>get_CenterStageY</code> · L263–263</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L263-L263">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:263–263</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L263">InitAccessorDeclaration <code>set_CenterStageY</code> · L263–263</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L263-L263">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:263–263</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">PropertyDeclaration <code>CenterErrorX</code> · L264–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L264-L264">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:264–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">GetAccessorDeclaration <code>get_CenterErrorX</code> · L264–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L264-L264">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:264–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">InitAccessorDeclaration <code>set_CenterErrorX</code> · L264–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L264-L264">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:264–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L265">PropertyDeclaration <code>CenterErrorY</code> · L265–265</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L265-L265">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:265–265</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L265">GetAccessorDeclaration <code>get_CenterErrorY</code> · L265–265</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L265-L265">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:265–265</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L265">InitAccessorDeclaration <code>set_CenterErrorY</code> · L265–265</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L265-L265">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:265–265</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Correction/CDefaultOffsetCalibration.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

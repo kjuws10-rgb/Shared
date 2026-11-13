@@ -1,0 +1,905 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CInterfaceFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000001 | using Drilling.Common.Log; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000003 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000005 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000006 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000007 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000008 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000009 | using Drilling.File.Parser; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000011 | namespace Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L12: 타입의 구조/상속 선언입니다: public sealed class CInterfaceFile(string configRoot) : CInterfaceFileBase
+L000012 | public sealed class CInterfaceFile(string configRoot) : CInterfaceFileBase ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다.
+L000013 | { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(configRoot) / 변수의 초기값을 지정합니다: _logManager = new(configRoot)
+L000014 |     private readonly CLogManager _logManager = new(configRoot); ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: FieldNames = ["TYPE", "DEVICE", "NUMBER", "NICKNAME", "SYSTEM_SECTION", "AUTOCONNECTION", "SIMUL", "ARG1", "ARG2", "ARG3", "ARG4", "ARG5"]
+L000015 |     private static readonly IReadOnlyList<string> FieldNames = ["TYPE", "DEVICE", "NUMBER", "NICKNAME", "SYSTEM_SECTION", "AUTOCONNECTION", "SIMUL", "ARG1", "ARG2", "ARG3", "ARG4", "ARG5"]; ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: Headers = ["TYPE", "DEVICE", "NUMBER", "NICKNAME", "SYSTEM_SECTION", "AUTOCONNECTION", "SIMUL", "ARG1", "ARG2", "ARG3", "ARG4", "ARG5"]
+L000016 |     private static readonly IReadOnlyList<string> Headers = ["TYPE", "DEVICE", "NUMBER", "NICKNAME", "SYSTEM_SECTION", "AUTOCONNECTION", "SIMUL", "ARG1", "ARG2", "ARG3", "ARG4", "ARG5"]; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: RequiredHeaderGroups = [ ["TYPE"], ["DEVICE"], ["NUMBER", "NO"], ["NICKNAME"], ["SYSTEM_SECTION", "SYSTEM SECTION", "SECTION"], ["AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"], ["SIMUL", "SIMULATION", "SIM_MODE", "SIM MOD
+L000017 |     private static readonly IReadOnlyList<IReadOnlyList<string>> RequiredHeaderGroups = [ ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000018 |         ["TYPE"],  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000019 |         ["DEVICE"],  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000020 |         ["NUMBER", "NO"],  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000021 |         ["NICKNAME"],  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000022 |         ["SYSTEM_SECTION", "SYSTEM SECTION", "SECTION"],  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000023 |         ["AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"],  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000024 |         ["SIMUL", "SIMULATION", "SIM_MODE", "SIM MODE"],  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000025 |         ["ARG1"],  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000026 |         ["ARG2"],  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000027 |         ["ARG3"],  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000028 |         ["ARG4"],  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000029 |         ["ARG5"] ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CInterfaceFile.RequiredHeaderGroups
+L000030 |     ]; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.File.JHMI.CInterfaceFile.LoadAll(System.Threading.CancellationToken)
+L000031 |     public override IReadOnlyList<ST_INTERFACE_DATA> LoadAll(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 LoadAll.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000033 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceRows() / 지역 변수를 선언합니다: var loadedRows = LoadInterfaceRows(); / 변수의 초기값을 지정합니다: loadedRows = LoadInterfaceRows()
+L000034 |         var loadedRows = LoadInterfaceRows(); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(loadedRows)
+L000035 |         Validate(loadedRows); ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000036 |         global::Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 SelectDevice.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return data.Device;
+L000038 |             return data.Device; ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 SelectDevice.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000041 |         int SelectNumber(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 호출자에게 값 또는 제어를 반환합니다: return data.Number;
+L000043 |             return data.Number; ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000044 |         } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000046 |         string SelectNickName(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000047 |         { ⟦EOL⟧
+// 해설 L48: 호출자에게 값 또는 제어를 반환합니다: return data.NickName;
+L000048 |             return data.NickName; ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000049 |         } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: loadedRows.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: loadedRows.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: loadedRows.OrderBy(SelectDevice).ThenBy(SelectNumber) / 함수·델리게이트 또는 객체 생성자를 호출합니다: loadedRows.OrderBy(SelectDevice) / 호출자에게 값 또는 제어를 반환합니다: return loadedRows.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName,
+L000051 |         return loadedRows.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 LoadAll.
+L000052 |     } ⟦EOL⟧
+L000053 |  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.SaveAll(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken)
+L000054 |     public override void SaveAll(IReadOnlyList<ST_INTERFACE_DATA> interfaces, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 SaveAll.
+L000055 |     { ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000056 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(interfaces)
+L000057 |         Validate(interfaces); ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceRows() / 지역 변수를 선언합니다: var oldRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: oldRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase)
+L000058 |         var oldRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000059 |         global::Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 SelectDevice.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return data.Device;
+L000061 |             return data.Device; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 SelectDevice.
+L000062 |         } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000064 |         int SelectNumber(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 호출자에게 값 또는 제어를 반환합니다: return data.Number;
+L000066 |             return data.Number; ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 SelectNumber.
+L000067 |         } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000069 |         string SelectNickName(global::Drilling.Common.Interface.ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 호출자에게 값 또는 제어를 반환합니다: return data.NickName;
+L000071 |             return data.NickName; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 SelectNickName.
+L000072 |         } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(ToRow).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(ToRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber) /
+L000074 |         var rows = interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(ToRow).ToArray(); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(GetInterfacePath(), Headers, rows) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfacePath()
+L000075 |         CCsvParser.Write(GetInterfacePath(), Headers, rows); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateSavedRows(interfaces)
+L000076 |         ValidateSavedRows(interfaces); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteModifyLog(oldRows, interfaces)
+L000077 |         WriteModifyLog(oldRows, interfaces); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteSettingSave(EN_SETTING_TAB.Interface)
+L000078 |         _logManager.WriteSettingSave(EN_SETTING_TAB.Interface); ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 SaveAll.
+L000079 |     } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.File.JHMI.CInterfaceFile.LoadInterfaceRows()
+L000081 |     private IReadOnlyList<ST_INTERFACE_DATA> LoadInterfaceRows() ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 LoadInterfaceRows.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(GetInterfacePath(), "JHMI_INTERFACE", RequiredHeaderGroups) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfacePath()
+L000083 |         CCsvParser.ValidateRequiredHeaders(GetInterfacePath(), "JHMI_INTERFACE", RequiredHeaderGroups); ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_INTERFACE_DATA SelectItem(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000084 |         global::Drilling.Common.Interface.ST_INTERFACE_DATA SelectItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row, int index) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 SelectItem.
+L000085 |         { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: Parse(row, index + 2) / 호출자에게 값 또는 제어를 반환합니다: return Parse(row, index + 2);
+L000086 |             return Parse(row, index + 2); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 SelectItem.
+L000087 |         } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetInterfacePath()).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetInterfacePath()).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetInterfacePath()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfacePath() / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Read(GetInterfacePath()).Select(SelectItem).ToArray();
+L000089 |         return CCsvParser.Read(GetInterfacePath()).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 LoadInterfaceRows.
+L000090 |     } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_INTERFACE_DATA Drilling.File.JHMI.CInterfaceFile.Parse(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000092 |     private ST_INTERFACE_DATA Parse(IReadOnlyDictionary<string, string> row, int rowNo) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Parse.
+L000093 |     { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERFACE_DATA( ParseInterfaceType(RequireText(row, rowNo, "TYPE", "InterfaceType")), ParseDevice(RequireText(row, rowNo, "DEVICE", "Device")), ReadRequiredInt(RequireText(row, rowNo, "NUMBER", "NO"), rowNo, "NUMB… / 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERFACE_DATA( ParseInterfaceType(RequireText(row, rowNo, "TYPE", "InterfaceType")), ParseDevice(RequireText(row, rowNo, "DEVICE", "Device")), ReadRequiredInt(RequireText(row, rowNo, "NUMBER", "NO"), rowNo, "NUMBER"
+L000094 |         return new ST_INTERFACE_DATA( ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInterfaceType(RequireText(row, rowNo, "TYPE", "InterfaceType")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "TYPE", "InterfaceType")
+L000095 |             ParseInterfaceType(RequireText(row, rowNo, "TYPE", "InterfaceType")),  ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(RequireText(row, rowNo, "DEVICE", "Device")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "DEVICE", "Device")
+L000096 |             ParseDevice(RequireText(row, rowNo, "DEVICE", "Device")),  ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredInt(RequireText(row, rowNo, "NUMBER", "NO"), rowNo, "NUMBER") / 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "NUMBER", "NO")
+L000097 |             ReadRequiredInt(RequireText(row, rowNo, "NUMBER", "NO"), rowNo, "NUMBER"),  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "NICKNAME", "NickName")
+L000098 |             RequireText(row, rowNo, "NICKNAME", "NickName"),  ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "SYSTEM_SECTION", "SYSTEM SECTION", "SECTION")
+L000099 |             RequireText(row, rowNo, "SYSTEM_SECTION", "SYSTEM SECTION", "SECTION"),  ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredBool(RequireText(row, rowNo, "AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"), rowNo, "AUTOCONNECTION") / 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION")
+L000100 |             ReadRequiredBool(RequireText(row, rowNo, "AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"), rowNo, "AUTOCONNECTION"),  ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredBool(RequireText(row, rowNo, "SIMUL", "SIMULATION", "SIM_MODE", "SIM MODE"), rowNo, "SIMUL") / 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row, rowNo, "SIMUL", "SIMULATION", "SIM_MODE", "SIM MODE")
+L000101 |             ReadRequiredBool(RequireText(row, rowNo, "SIMUL", "SIMULATION", "SIM_MODE", "SIM MODE"), rowNo, "SIMUL"),  ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadArguments(row)
+L000102 |             ReadArguments(row),  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.GetExtra(row, Headers)
+L000103 |             CCsvParser.GetExtra(row, Headers) ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_INTERFACE_DATA Drilling.File.JHMI.CInterfaceFile.Parse(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000104 |         ); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 Parse.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.GetInterfacePath()
+L000107 |     private string GetInterfacePath() ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 GetInterfacePath.
+L000108 |     { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "JHMI_INTERFACE.csv") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(configRoot, "JHMI_INTERFACE.csv");
+L000109 |         return Path.Combine(configRoot, "JHMI_INTERFACE.csv"); ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 GetInterfacePath.
+L000110 |     } ⟦EOL⟧
+L000111 |  ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CInterfaceFile.ReadArguments(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000112 |     private static IReadOnlyList<string> ReadArguments(IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 ReadArguments.
+L000113 |     { ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(int)
+L000114 |         string SelectItem(int index) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 SelectItem.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, $"ARG{index}").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, $"ARG{index}") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, $"ARG{index}").Trim();
+L000116 |             return CCsvParser.Get(row, $"ARG{index}").Trim(); ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 SelectItem.
+L000117 |         } ⟦EOL⟧
+L000118 |  ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 5).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 5).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 5) / 호출자에게 값 또는 제어를 반환합니다: return Enumerable.Range(1, 5).Select(SelectItem).ToArray();
+L000119 |         return Enumerable.Range(1, 5).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 ReadArguments.
+L000120 |     } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CInterfaceFile.ToRow(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000122 |     private static IReadOnlyDictionary<string, string> ToRow(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 ToRow.
+L000123 |     { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) / 지역 변수를 선언합니다: var arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); / 변수의 초기값을 지정합니다: arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray()
+L000124 |         var arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(data.Extra, StringComparer.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: data.Extra is null ? new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) : new Dictionary<string, string>(data.Extra, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var row = data.Extra is null ? new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) : new Dictionary<string, string>(data.Extra,
+L000125 |         var row = data.Extra is null ? new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) : new Dictionary<string, string>(data.Extra, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L126: 값을 대상에 대입합니다: row["TYPE"] = InterfaceTypeText(data.InterfaceType) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceTypeText(data.InterfaceType)
+L000126 |         row["TYPE"] = InterfaceTypeText(data.InterfaceType); ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: row["DEVICE"] = DeviceText(data.Device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(data.Device)
+L000127 |         row["DEVICE"] = DeviceText(data.Device); ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: row["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Number.ToString(CultureInfo.InvariantCulture)
+L000128 |         row["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: row["NICKNAME"] = data.NickName
+L000129 |         row["NICKNAME"] = data.NickName; ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: row["SYSTEM_SECTION"] = data.SystemSection
+L000130 |         row["SYSTEM_SECTION"] = data.SystemSection; ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: row["AUTOCONNECTION"] = data.AutoConnection ? "1" : "0" / 조건에 따라 결과식을 선택합니다: data.AutoConnection ? "1" : "0"
+L000131 |         row["AUTOCONNECTION"] = data.AutoConnection ? "1" : "0"; ⟦EOL⟧
+// 해설 L132: 값을 대상에 대입합니다: row["SIMUL"] = data.IsSimulation ? "1" : "0" / 조건에 따라 결과식을 선택합니다: data.IsSimulation ? "1" : "0"
+L000132 |         row["SIMUL"] = data.IsSimulation ? "1" : "0"; ⟦EOL⟧
+// 해설 L133: 값을 대상에 대입합니다: row["ARG1"] = arguments[0]
+L000133 |         row["ARG1"] = arguments[0]; ⟦EOL⟧
+// 해설 L134: 값을 대상에 대입합니다: row["ARG2"] = arguments[1]
+L000134 |         row["ARG2"] = arguments[1]; ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: row["ARG3"] = arguments[2]
+L000135 |         row["ARG3"] = arguments[2]; ⟦EOL⟧
+// 해설 L136: 값을 대상에 대입합니다: row["ARG4"] = arguments[3]
+L000136 |         row["ARG4"] = arguments[3]; ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: row["ARG5"] = arguments[4]
+L000137 |         row["ARG5"] = arguments[4]; ⟦EOL⟧
+// 해설 L138: 호출자에게 값 또는 제어를 반환합니다: return row;
+L000138 |         return row; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ToRow.
+L000139 |     } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.Validate(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>)
+L000141 |     private static void Validate(IReadOnlyList<ST_INTERFACE_DATA> interfaces) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Validate.
+L000142 |     { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var deviceNumbers = new HashSet<string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: deviceNumbers = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+L000143 |         var deviceNumbers = new HashSet<string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L144: 컬렉션 요소를 순회합니다: foreach (var data in interfaces)
+L000144 |         foreach (var data in interfaces) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 Validate.
+L000145 |         { ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(data.NickName) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(data.NickName))
+L000146 |             if (string.IsNullOrWhiteSpace(data.NickName)) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 Validate.
+L000147 |             { ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("JHMI_INTERFACE validation failed. NICKNAME cannot be empty.") / 예외를 발생/전달합니다: throw new InvalidDataException("JHMI_INTERFACE validation failed. NICKNAME cannot be empty.");
+L000148 |                 throw new InvalidDataException("JHMI_INTERFACE validation failed. NICKNAME cannot be empty."); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 Validate.
+L000149 |             } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: deviceNumbers.Add(CreateInterfaceKey(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInterfaceKey(data) / 조건에 따라 분기합니다: if (!deviceNumbers.Add(CreateInterfaceKey(data)))
+L000151 |             if (!deviceNumbers.Add(CreateInterfaceKey(data))) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 Validate.
+L000152 |             { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. Duplicated DEVICE/NUMBER: {FormatInterfaceLabel(data)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(data) / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. Duplicated DEVICE/NUMBER: {FormatInterfaceLabel(data)}");
+L000153 |                 throw new InvalidDataException($"JHMI_INTERFACE validation failed. Duplicated DEVICE/NUMBER: {FormatInterfaceLabel(data)}"); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Validate.
+L000154 |             } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 조건에 따라 분기합니다: if (data.Number < 0)
+L000156 |             if (data.Number < 0) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 Validate.
+L000157 |             { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. NUMBER cannot be negative: {FormatInterfaceLabel(data)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(data) / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. NUMBER cannot be negative: {FormatInterfaceLabel(data)}");
+L000158 |                 throw new InvalidDataException($"JHMI_INTERFACE validation failed. NUMBER cannot be negative: {FormatInterfaceLabel(data)}"); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Validate.
+L000159 |             } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 조건에 따라 분기합니다: if (data.Arguments.Count > 5)
+L000161 |             if (data.Arguments.Count > 5) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Validate.
+L000162 |             { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. ARG count must be 5 or less: {FormatInterfaceLabel(data)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(data) / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. ARG count must be 5 or less: {FormatInterfaceLabel(data)}");
+L000163 |                 throw new InvalidDataException($"JHMI_INTERFACE validation failed. ARG count must be 5 or less: {FormatInterfaceLabel(data)}"); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 Validate.
+L000164 |             } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateConnectionArguments(data)
+L000166 |             ValidateConnectionArguments(data); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 Validate.
+L000167 |         } ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 Validate.
+L000168 |     } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.ValidateConnectionArguments(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000170 |     private static void ValidateConnectionArguments(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000171 |     { ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(string)
+L000172 |         string SelectItem(string argument) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 SelectItem.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: argument.Trim() / 호출자에게 값 또는 제어를 반환합니다: return argument.Trim();
+L000174 |             return argument.Trim(); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 SelectItem.
+L000175 |         } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) / 지역 변수를 선언합니다: var args = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).Select(SelectItem).ToArra
+L000177 |         var args = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (data.IsSimulation)
+L000178 |         if (data.IsSimulation) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 호출자에게 값 또는 제어를 반환합니다: return;
+L000180 |             return; ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000181 |         } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 값에 따라 분기합니다: switch (data.InterfaceType)
+L000183 |         switch (data.InterfaceType) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000184 |         { ⟦EOL⟧
+// 해설 L185: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.Serial:
+L000185 |             case EN_INTERFACE_TYPE.Serial: ⟦EOL⟧
+// 해설 L186: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.ModbusSerial:
+L000186 |             case EN_INTERFACE_TYPE.ModbusSerial: ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireArgument(data, args[0], "ARG1/COM_PORT")
+L000187 |                 RequireArgument(data, args[0], "ARG1/COM_PORT"); ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[1], "ARG2/BAUD")
+L000188 |                 RequirePositiveInt(data, args[1], "ARG2/BAUD"); ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateParity(data, args[2])
+L000189 |                 ValidateParity(data, args[2]); ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[3], "ARG4/DATA_BITS")
+L000190 |                 RequirePositiveInt(data, args[3], "ARG4/DATA_BITS"); ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateStopBits(data, args[4])
+L000191 |                 ValidateStopBits(data, args[4]); ⟦EOL⟧
+// 해설 L192: 해당 반복/분기 구간을 종료합니다: break;
+L000192 |                 break; ⟦EOL⟧
+// 해설 L193: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.SocketClient:
+L000193 |             case EN_INTERFACE_TYPE.SocketClient: ⟦EOL⟧
+// 해설 L194: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.SocketClientUdp:
+L000194 |             case EN_INTERFACE_TYPE.SocketClientUdp: ⟦EOL⟧
+// 해설 L195: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.ModbusTcp:
+L000195 |             case EN_INTERFACE_TYPE.ModbusTcp: ⟦EOL⟧
+// 해설 L196: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.AcsNet:
+L000196 |             case EN_INTERFACE_TYPE.AcsNet: ⟦EOL⟧
+// 해설 L197: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.XpsNet:
+L000197 |             case EN_INTERFACE_TYPE.XpsNet: ⟦EOL⟧
+// 해설 L198: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.Automation1Net:
+L000198 |             case EN_INTERFACE_TYPE.Automation1Net: ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireArgument(data, args[1], "ARG2/REMOTE_IP")
+L000199 |                 RequireArgument(data, args[1], "ARG2/REMOTE_IP"); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[2], "ARG3/PORT")
+L000200 |                 RequirePositiveInt(data, args[2], "ARG3/PORT"); ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS")
+L000201 |                 RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS"); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT")
+L000202 |                 RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT"); ⟦EOL⟧
+// 해설 L203: 해당 반복/분기 구간을 종료합니다: break;
+L000203 |                 break; ⟦EOL⟧
+// 해설 L204: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.SocketServer:
+L000204 |             case EN_INTERFACE_TYPE.SocketServer: ⟦EOL⟧
+// 해설 L205: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.SocketServerUdp:
+L000205 |             case EN_INTERFACE_TYPE.SocketServerUdp: ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[2], "ARG3/PORT")
+L000206 |                 RequirePositiveInt(data, args[2], "ARG3/PORT"); ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS")
+L000207 |                 RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS"); ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT")
+L000208 |                 RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT"); ⟦EOL⟧
+// 해설 L209: 해당 반복/분기 구간을 종료합니다: break;
+L000209 |                 break; ⟦EOL⟧
+// 해설 L210: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.PicoMotor:
+L000210 |             case EN_INTERFACE_TYPE.PicoMotor: ⟦EOL⟧
+// 해설 L211: 해당 반복/분기 구간을 종료합니다: break;
+L000211 |                 break; ⟦EOL⟧
+// 해설 L212: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.MelsecNet:
+L000212 |             case EN_INTERFACE_TYPE.MelsecNet: ⟦EOL⟧
+// 해설 L213: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000213 |                 // Persist the user's connection arguments. Connection failures are handled as OFFLINE. ⟦EOL⟧
+// 해설 L214: 해당 반복/분기 구간을 종료합니다: break;
+L000214 |                 break; ⟦EOL⟧
+// 해설 L215: 분기값/패턴의 구간입니다: case EN_INTERFACE_TYPE.OpcUa:
+L000215 |             case EN_INTERFACE_TYPE.OpcUa: ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireArgument(data, args[0], "ARG1/ENDPOINT")
+L000216 |                 RequireArgument(data, args[0], "ARG1/ENDPOINT"); ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS")
+L000217 |                 RequirePositiveInt(data, args[3], "ARG4/TIMEOUT_MS"); ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT")
+L000218 |                 RequirePositiveInt(data, args[4], "ARG5/RETRY_COUNT"); ⟦EOL⟧
+// 해설 L219: 해당 반복/분기 구간을 종료합니다: break;
+L000219 |                 break; ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000220 |         } ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ValidateConnectionArguments.
+L000221 |     } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.ValidateSavedRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>)
+L000223 |     private void ValidateSavedRows(IReadOnlyList<ST_INTERFACE_DATA> expectedRows) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000224 |     { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceRows() / 지역 변수를 선언합니다: var actualRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: actualRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase)
+L000225 |         var actualRows = LoadInterfaceRows().ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L226: 컬렉션 요소를 순회합니다: foreach (var expected in expectedRows)
+L000226 |         foreach (var expected in expectedRows) ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000227 |         { ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: actualRows.TryGetValue(CreateInterfaceKey(expected), out var actual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInterfaceKey(expected) / 조건에 따라 분기합니다: if (!actualRows.TryGetValue(CreateInterfaceKey(expected), out var actual))
+L000228 |             if (!actualRows.TryGetValue(CreateInterfaceKey(expected), out var actual)) ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000229 |             { ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. Missing row: {FormatInterfaceLabel(expected)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(expected) / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. Missing row: {FormatInterfaceLabel(expected)}");
+L000230 |                 throw new InvalidDataException($"JHMI_INTERFACE validation failed. Missing row: {FormatInterfaceLabel(expected)}"); ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000231 |             } ⟦EOL⟧
+L000232 |  ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildComparisonText(actual).Equals(BuildComparisonText(expected), StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildComparisonText(actual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildComparisonText(expected) / 조건에 따라 분기합니다: if (!BuildComparisonText(actual).Equals(BuildComparisonText(expected), StringComparison.Ordinal))
+L000233 |             if (!BuildComparisonText(actual).Equals(BuildComparisonText(expected), StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000234 |             { ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. Value mismatch: {FormatInterfaceLabel(expected)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(expected) / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. Value mismatch: {FormatInterfaceLabel(expected)}");
+L000235 |                 throw new InvalidDataException($"JHMI_INTERFACE validation failed. Value mismatch: {FormatInterfaceLabel(expected)}"); ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000236 |             } ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000237 |         } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ValidateSavedRows.
+L000238 |     } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.WriteModifyLog(System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Collections.Generic.IReadOnlyList<Drilling.Commo
+L000240 |     private void WriteModifyLog(IReadOnlyDictionary<string, ST_INTERFACE_DATA> oldRows, IReadOnlyList<ST_INTERFACE_DATA> newRows) ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000241 |     { ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: newRows.ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var newMap = newRows.ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: newMap = newRows.ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase)
+L000242 |         var newMap = newRows.ToDictionary(CreateInterfaceKey, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L243: 컬렉션 요소를 순회합니다: foreach (var row in newRows)
+L000243 |         foreach (var row in newRows) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000244 |         { ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInterfaceKey(row) / 지역 변수를 선언합니다: var key = CreateInterfaceKey(row); / 변수의 초기값을 지정합니다: key = CreateInterfaceKey(row)
+L000245 |             var key = CreateInterfaceKey(row); ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(row) / 지역 변수를 선언합니다: var label = FormatInterfaceLabel(row); / 변수의 초기값을 지정합니다: label = FormatInterfaceLabel(row)
+L000246 |             var label = FormatInterfaceLabel(row); ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: oldRows.TryGetValue(key, out var oldRow) / 조건에 따라 분기합니다: if (!oldRows.TryGetValue(key, out var oldRow))
+L000247 |             if (!oldRows.TryGetValue(key, out var oldRow)) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000248 |             { ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{label}.ROW", "-", "CREATED")
+L000249 |                 _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{label}.ROW", "-", "CREATED"); ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteFieldModifyLog(label, CreateEmptyFieldMap(), CreateFieldMap(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateEmptyFieldMap() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFieldMap(row)
+L000250 |                 WriteFieldModifyLog(label, CreateEmptyFieldMap(), CreateFieldMap(row)); ⟦EOL⟧
+// 해설 L251: 다음 반복으로 진행합니다: continue;
+L000251 |                 continue; ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000252 |             } ⟦EOL⟧
+L000253 |  ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteFieldModifyLog(label, CreateFieldMap(oldRow), CreateFieldMap(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFieldMap(oldRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFieldMap(row)
+L000254 |             WriteFieldModifyLog(label, CreateFieldMap(oldRow), CreateFieldMap(row)); ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000255 |         } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000257 |         bool ShouldIncludeItem(global::Drilling.Common.Interface.ST_INTERFACE_DATA row) ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000258 |         { ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: newMap.ContainsKey(CreateInterfaceKey(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInterfaceKey(row) / 호출자에게 값 또는 제어를 반환합니다: return !newMap.ContainsKey(CreateInterfaceKey(row));
+L000259 |             return !newMap.ContainsKey(CreateInterfaceKey(row)); ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000260 |         } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: oldRows.Values.Where(ShouldIncludeItem) / 컬렉션 요소를 순회합니다: foreach (var oldRow in oldRows.Values.Where(ShouldIncludeItem))
+L000262 |         foreach (var oldRow in oldRows.Values.Where(ShouldIncludeItem)) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000263 |         { ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{FormatInterfaceLabel(oldRow)}.ROW", "EXIST", "DELETED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatInterfaceLabel(oldRow)
+L000264 |             _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{FormatInterfaceLabel(oldRow)}.ROW", "EXIST", "DELETED"); ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000265 |         } ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 WriteModifyLog.
+L000266 |     } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.WriteFieldModifyLog(string, System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000268 |     private void WriteFieldModifyLog(string interfaceLabel, IReadOnlyDictionary<string, string> oldFields, IReadOnlyDictionary<string, string> newFields) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000269 |     { ⟦EOL⟧
+// 해설 L270: 컬렉션 요소를 순회합니다: foreach (var fieldName in FieldNames)
+L000270 |         foreach (var fieldName in FieldNames) ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000271 |         { ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: oldFields.TryGetValue(fieldName, out var oldFieldValue) / 조건에 따라 결과식을 선택합니다: oldFields.TryGetValue(fieldName, out var oldFieldValue) ? oldFieldValue : "" / 지역 변수를 선언합니다: var oldValue = oldFields.TryGetValue(fieldName, out var oldFieldValue) ? oldFieldValue : ""; / 변수의 초기값을 지정합니다: oldValue = oldFields.TryGetValue(fieldName, out var oldFieldValue) ? oldFieldValue : ""
+L000272 |             var oldValue = oldFields.TryGetValue(fieldName, out var oldFieldValue) ? oldFieldValue : ""; ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: newFields.TryGetValue(fieldName, out var newFieldValue) / 조건에 따라 결과식을 선택합니다: newFields.TryGetValue(fieldName, out var newFieldValue) ? newFieldValue : "" / 지역 변수를 선언합니다: var newValue = newFields.TryGetValue(fieldName, out var newFieldValue) ? newFieldValue : ""; / 변수의 초기값을 지정합니다: newValue = newFields.TryGetValue(fieldName, out var newFieldValue) ? newFieldValue : ""
+L000273 |             var newValue = newFields.TryGetValue(fieldName, out var newFieldValue) ? newFieldValue : ""; ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: oldValue.Equals(newValue, StringComparison.Ordinal) / 조건에 따라 분기합니다: if (oldValue.Equals(newValue, StringComparison.Ordinal))
+L000274 |             if (oldValue.Equals(newValue, StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000275 |             { ⟦EOL⟧
+// 해설 L276: 다음 반복으로 진행합니다: continue;
+L000276 |                 continue; ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000277 |             } ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{interfaceLabel}.{fieldName}", oldValue, newValue)
+L000279 |             _logManager.WriteSettingModify(EN_SETTING_TAB.Interface, $"{interfaceLabel}.{fieldName}", oldValue, newValue); ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000280 |         } ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 WriteFieldModifyLog.
+L000281 |     } ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CInterfaceFile.CreateEmptyFieldMap()
+L000283 |     private static IReadOnlyDictionary<string, string> CreateEmptyFieldMap() ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 CreateEmptyFieldMap.
+L000284 |     { ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · string SelectFieldName(string)
+L000285 |         string SelectFieldName(string fieldName) ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 SelectFieldName.
+L000286 |         { ⟦EOL⟧
+// 해설 L287: 호출자에게 값 또는 제어를 반환합니다: return fieldName;
+L000287 |             return fieldName; ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 SelectFieldName.
+L000288 |         } ⟦EOL⟧
+L000289 |  ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(string)
+L000290 |         string SelectValue(string arg0) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 SelectValue.
+L000291 |         { ⟦EOL⟧
+// 해설 L292: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000292 |             return ""; ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 SelectValue.
+L000293 |         } ⟦EOL⟧
+L000294 |  ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: FieldNames.ToDictionary(SelectFieldName, SelectValue, StringComparer.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return FieldNames.ToDictionary(SelectFieldName, SelectValue, StringComparer.OrdinalIgnoreCase);
+L000295 |         return FieldNames.ToDictionary(SelectFieldName, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 CreateEmptyFieldMap.
+L000296 |     } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CInterfaceFile.CreateFieldMap(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000298 |     private static IReadOnlyDictionary<string, string> CreateFieldMap(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 CreateFieldMap.
+L000299 |     { ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) / 지역 변수를 선언합니다: var arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); / 변수의 초기값을 지정합니다: arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray()
+L000300 |         var arguments = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = InterfaceTypeText(data.InterfaceType), ["DEVICE"] = DeviceText(data.Device), ["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture), … / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = InterfaceTypeText(data.InterfaceType), ["DEVICE"] = DeviceText(data.Device), ["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture), ["N
+L000301 |         return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 CreateFieldMap.
+L000302 |         { ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: ["TYPE"] = InterfaceTypeText(data.InterfaceType) / 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceTypeText(data.InterfaceType)
+L000303 |             ["TYPE"] = InterfaceTypeText(data.InterfaceType), ⟦EOL⟧
+// 해설 L304: 값을 대상에 대입합니다: ["DEVICE"] = DeviceText(data.Device) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(data.Device)
+L000304 |             ["DEVICE"] = DeviceText(data.Device), ⟦EOL⟧
+// 해설 L305: 값을 대상에 대입합니다: ["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Number.ToString(CultureInfo.InvariantCulture)
+L000305 |             ["NUMBER"] = data.Number.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L306: 값을 대상에 대입합니다: ["NICKNAME"] = data.NickName
+L000306 |             ["NICKNAME"] = data.NickName, ⟦EOL⟧
+// 해설 L307: 값을 대상에 대입합니다: ["SYSTEM_SECTION"] = data.SystemSection
+L000307 |             ["SYSTEM_SECTION"] = data.SystemSection, ⟦EOL⟧
+// 해설 L308: 값을 대상에 대입합니다: ["AUTOCONNECTION"] = data.AutoConnection ? "1" : "0" / 조건에 따라 결과식을 선택합니다: data.AutoConnection ? "1" : "0"
+L000308 |             ["AUTOCONNECTION"] = data.AutoConnection ? "1" : "0", ⟦EOL⟧
+// 해설 L309: 값을 대상에 대입합니다: ["SIMUL"] = data.IsSimulation ? "1" : "0" / 조건에 따라 결과식을 선택합니다: data.IsSimulation ? "1" : "0"
+L000309 |             ["SIMUL"] = data.IsSimulation ? "1" : "0", ⟦EOL⟧
+// 해설 L310: 값을 대상에 대입합니다: ["ARG1"] = arguments[0]
+L000310 |             ["ARG1"] = arguments[0], ⟦EOL⟧
+// 해설 L311: 값을 대상에 대입합니다: ["ARG2"] = arguments[1]
+L000311 |             ["ARG2"] = arguments[1], ⟦EOL⟧
+// 해설 L312: 값을 대상에 대입합니다: ["ARG3"] = arguments[2]
+L000312 |             ["ARG3"] = arguments[2], ⟦EOL⟧
+// 해설 L313: 값을 대상에 대입합니다: ["ARG4"] = arguments[3]
+L000313 |             ["ARG4"] = arguments[3], ⟦EOL⟧
+// 해설 L314: 값을 대상에 대입합니다: ["ARG5"] = arguments[4]
+L000314 |             ["ARG5"] = arguments[4] ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 CreateFieldMap.
+L000315 |         }; ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 CreateFieldMap.
+L000316 |     } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.BuildComparisonText(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000318 |     private static string BuildComparisonText(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 BuildComparisonText.
+L000319 |     { ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Arguments.Concat(Enumerable.Repeat("", 5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) / 지역 변수를 선언합니다: var args = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5); / 변수의 초기값을 지정합니다: args = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5)
+L000320 |         var args = data.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5); ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join( "|", InterfaceTypeText(data.InterfaceType), DeviceText(data.Device), data.Number.ToString(CultureInfo.InvariantCulture), data.NickName, data.SystemSection, data.AutoConnection ? "1" : "0", data.IsSimulation … / 호출자에게 값 또는 제어를 반환합니다: return string.Join( "|", InterfaceTypeText(data.InterfaceType), DeviceText(data.Device), data.Number.ToString(CultureInfo.InvariantCulture), data.NickName, data.SystemSection, data.AutoConnection ? "1" : "0", data.IsSimulation ? "
+L000321 |         return string.Join( ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.BuildComparisonText(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000322 |             "|",  ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceTypeText(data.InterfaceType)
+L000323 |             InterfaceTypeText(data.InterfaceType),  ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(data.Device)
+L000324 |             DeviceText(data.Device),  ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Number.ToString(CultureInfo.InvariantCulture)
+L000325 |             data.Number.ToString(CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.BuildComparisonText(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000326 |             data.NickName,  ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.BuildComparisonText(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000327 |             data.SystemSection,  ⟦EOL⟧
+// 해설 L328: 조건에 따라 결과식을 선택합니다: data.AutoConnection ? "1" : "0"
+L000328 |             data.AutoConnection ? "1" : "0",  ⟦EOL⟧
+// 해설 L329: 조건에 따라 결과식을 선택합니다: data.IsSimulation ? "1" : "0"
+L000329 |             data.IsSimulation ? "1" : "0",  ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("|", args)
+L000330 |             string.Join("|", args) ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.BuildComparisonText(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000331 |         ); ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 BuildComparisonText.
+L000332 |     } ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.CreateInterfaceKey(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000334 |     private static string CreateInterfaceKey(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 CreateInterfaceKey.
+L000335 |     { ⟦EOL⟧
+// 해설 L336: 호출자에게 값 또는 제어를 반환합니다: return $"{data.Device}:{data.Number}";
+L000336 |         return $"{data.Device}:{data.Number}"; ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 CreateInterfaceKey.
+L000337 |     } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.FormatInterfaceLabel(Drilling.Common.Interface.ST_INTERFACE_DATA)
+L000339 |     private static string FormatInterfaceLabel(ST_INTERFACE_DATA data) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 FormatInterfaceLabel.
+L000340 |     { ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(data.Device) / 호출자에게 값 또는 제어를 반환합니다: return $"{DeviceText(data.Device)}[{data.Number}]/{data.NickName}";
+L000341 |         return $"{DeviceText(data.Device)}[{data.Number}]/{data.NickName}"; ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 FormatInterfaceLabel.
+L000342 |     } ⟦EOL⟧
+L000343 |  ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000344 |     private static EN_INTERFACE_TYPE ParseInterfaceType(string value) ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 ParseInterfaceType.
+L000345 |     { ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(value) switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" => EN_INTERFACE_ / 값별 결과식을 선택합니다: Normalize(value) switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" => EN_INTERFACE_T
+L000346 |         return Normalize(value) switch ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 ParseInterfaceType.
+L000347 |         { ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000348 |             "OPCUA" => EN_INTERFACE_TYPE.OpcUa, ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000349 |             "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000350 |             "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000351 |             "SERIAL" => EN_INTERFACE_TYPE.Serial, ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000352 |             "SOCKET_C" => EN_INTERFACE_TYPE.SocketClient, ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000353 |             "SOCKET_S" => EN_INTERFACE_TYPE.SocketServer, ⟦EOL⟧
+// 해설 L354: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000354 |             "SOCKET_C_UDP" => EN_INTERFACE_TYPE.SocketClientUdp, ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000355 |             "SOCKET_S_UDP" => EN_INTERFACE_TYPE.SocketServerUdp, ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000356 |             "ACS_NET" or "ACS" => EN_INTERFACE_TYPE.AcsNet, ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000357 |             "XPS_NET" or "XPS" or "NEWPORT_XPS" => EN_INTERFACE_TYPE.XpsNet, ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000358 |             "AUTOMATION1_NET" or "AUTOMATION1" or "A1_NET" or "AEROTECH_AUTOMATION1" => EN_INTERFACE_TYPE.Automation1Net, ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000359 |             "PICOMOTOR" or "PICO_MOTOR" or "PICO" => EN_INTERFACE_TYPE.PicoMotor, ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.File.JHMI.CInterfaceFile.ParseInterfaceType(string)
+L000360 |             "MELSEC_NET" or "MELSECNET" or "MNET" => EN_INTERFACE_TYPE.MelsecNet, ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. Unknown TYPE: {value}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. Unknown TYPE: {value}")
+L000361 |             _ => throw new InvalidDataException($"JHMI_INTERFACE validation failed. Unknown TYPE: {value}")}; ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 ParseInterfaceType.
+L000362 |     } ⟦EOL⟧
+L000363 |  ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000364 |     private static string InterfaceTypeText(EN_INTERFACE_TYPE type) ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 InterfaceTypeText.
+L000365 |     { ⟦EOL⟧
+// 해설 L366: 호출자에게 값 또는 제어를 반환합니다: return type switch { EN_INTERFACE_TYPE.OpcUa => "OPCUA", EN_INTERFACE_TYPE.ModbusSerial => "MODBUS_SERIAL", EN_INTERFACE_TYPE.ModbusTcp => "MODBUS_TCP", EN_INTERFACE_TYPE.Serial => "SERIAL", EN_INTERFACE_TYPE.SocketClient => "SOCK / 값별 결과식을 선택합니다: type switch { EN_INTERFACE_TYPE.OpcUa => "OPCUA", EN_INTERFACE_TYPE.ModbusSerial => "MODBUS_SERIAL", EN_INTERFACE_TYPE.ModbusTcp => "MODBUS_TCP", EN_INTERFACE_TYPE.Serial => "SERIAL", EN_INTERFACE_TYPE.SocketClient => "SOCKET_C",
+L000366 |         return type switch ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 InterfaceTypeText.
+L000367 |         { ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000368 |             EN_INTERFACE_TYPE.OpcUa => "OPCUA", ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000369 |             EN_INTERFACE_TYPE.ModbusSerial => "MODBUS_SERIAL", ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000370 |             EN_INTERFACE_TYPE.ModbusTcp => "MODBUS_TCP", ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000371 |             EN_INTERFACE_TYPE.Serial => "SERIAL", ⟦EOL⟧
+// 해설 L372: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000372 |             EN_INTERFACE_TYPE.SocketClient => "SOCKET_C", ⟦EOL⟧
+// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000373 |             EN_INTERFACE_TYPE.SocketServer => "SOCKET_S", ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000374 |             EN_INTERFACE_TYPE.SocketClientUdp => "SOCKET_C_UDP", ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000375 |             EN_INTERFACE_TYPE.SocketServerUdp => "SOCKET_S_UDP", ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000376 |             EN_INTERFACE_TYPE.AcsNet => "ACS_NET", ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000377 |             EN_INTERFACE_TYPE.XpsNet => "XPS_NET", ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000378 |             EN_INTERFACE_TYPE.Automation1Net => "AUTOMATION1_NET", ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000379 |             EN_INTERFACE_TYPE.PicoMotor => "PICOMOTOR", ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000380 |             EN_INTERFACE_TYPE.MelsecNet => "MELSEC_NET", ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE)
+L000381 |             _ => "SOCKET_C" ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 InterfaceTypeText.
+L000382 |         }; ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 InterfaceTypeText.
+L000383 |     } ⟦EOL⟧
+L000384 |  ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000385 |     private static EN_EQP_MODULE ParseDevice(string value) ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 ParseDevice.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(value) switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODULE.Automation1,  / 값별 결과식을 선택합니다: Normalize(value) switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODULE.Automation1, "
+L000387 |         return Normalize(value) switch ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 ParseDevice.
+L000388 |         { ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000389 |             "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000390 |             "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000391 |             "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODULE.Automation1, ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000392 |             "MOTION" or "SCANNER" => EN_EQP_MODULE.Motion, ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000393 |             "TALON" or "TALON_LASER" or "LASER" => EN_EQP_MODULE.TalonLaser, ⟦EOL⟧
+// 해설 L394: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000394 |             "CONEX_AGP" or "ATTENUATOR" => EN_EQP_MODULE.Attenuator, ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000395 |             "BEAM_EXPANDER" or "BET" => EN_EQP_MODULE.Bet, ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000396 |             "POWER_METER" or "POWERMETER" or "POWERMAX" => EN_EQP_MODULE.PowerMeter, ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000397 |             "PICO_MOTOR" or "PICOMOTOR" or "PICO" => EN_EQP_MODULE.PicoMotor, ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_EQP_MODULE Drilling.File.JHMI.CInterfaceFile.ParseDevice(string)
+L000398 |             "MELSEC" or "PLC" => EN_EQP_MODULE.Melsec, ⟦EOL⟧
+// 해설 L399: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Unknown interface device: {value}") / 예외를 발생/전달합니다: throw new InvalidDataException($"Unknown interface device: {value}")
+L000399 |             _ => throw new InvalidDataException($"Unknown interface device: {value}")}; ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 ParseDevice.
+L000400 |     } ⟦EOL⟧
+L000401 |  ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000402 |     private static string DeviceText(EN_EQP_MODULE module) ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 DeviceText.
+L000403 |     { ⟦EOL⟧
+// 해설 L404: 호출자에게 값 또는 제어를 반환합니다: return module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_M / 값별 결과식을 선택합니다: module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_MODULE.A
+L000404 |         return module switch ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 DeviceText.
+L000405 |         { ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000406 |             EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000407 |             EN_EQP_MODULE.Vision => "WONIK_VISION", ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000408 |             EN_EQP_MODULE.Automation1 => "AUTOMATION1", ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000409 |             EN_EQP_MODULE.Motion => "MOTION", ⟦EOL⟧
+// 해설 L410: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000410 |             EN_EQP_MODULE.TalonLaser => "TALON", ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000411 |             EN_EQP_MODULE.Attenuator => "CONEX_AGP", ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000412 |             EN_EQP_MODULE.Bet => "BEAM_EXPANDER", ⟦EOL⟧
+// 해설 L413: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000413 |             EN_EQP_MODULE.PowerMeter => "POWER_METER", ⟦EOL⟧
+// 해설 L414: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000414 |             EN_EQP_MODULE.PicoMotor => "PICO_MOTOR", ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE)
+L000415 |             EN_EQP_MODULE.Melsec => "MELSEC", ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString()
+L000416 |             _ => module.ToString().ToUpperInvariant()}; ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 DeviceText.
+L000417 |     } ⟦EOL⟧
+L000418 |  ⟦EOL⟧
+// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.RequireText(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, params string[])
+L000419 |     private static string RequireText(IReadOnlyDictionary<string, string> row, int rowNo, params string[] names) ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 RequireText.
+L000420 |     { ⟦EOL⟧
+// 해설 L421: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText(row, "JHMI_INTERFACE", rowNo, names) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.RequireText(row, "JHMI_INTERFACE", rowNo, names);
+L000421 |         return CCsvParser.RequireText(row, "JHMI_INTERFACE", rowNo, names); ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 RequireText.
+L000422 |     } ⟦EOL⟧
+L000423 |  ⟦EOL⟧
+// 해설 L424: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.JHMI.CInterfaceFile.ReadRequiredBool(string, int, string)
+L000424 |     private static bool ReadRequiredBool(string value, int rowNo, string fieldName) ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 ReadRequiredBool.
+L000425 |     { ⟦EOL⟧
+// 해설 L426: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadRequiredBool(value, "JHMI_INTERFACE", rowNo, fieldName) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.ReadRequiredBool(value, "JHMI_INTERFACE", rowNo, fieldName);
+L000426 |         return CCsvParser.ReadRequiredBool(value, "JHMI_INTERFACE", rowNo, fieldName); ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 ReadRequiredBool.
+L000427 |     } ⟦EOL⟧
+L000428 |  ⟦EOL⟧
+// 해설 L429: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CInterfaceFile.ReadRequiredInt(string, int, string)
+L000429 |     private static int ReadRequiredInt(string value, int rowNo, string fieldName) ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000430 |     { ⟦EOL⟧
+// 해설 L431: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadRequiredInt(value, "JHMI_INTERFACE", rowNo, fieldName) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.ReadRequiredInt(value, "JHMI_INTERFACE", rowNo, fieldName);
+L000431 |         return CCsvParser.ReadRequiredInt(value, "JHMI_INTERFACE", rowNo, fieldName); ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000432 |     } ⟦EOL⟧
+L000433 |  ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.RequireArgument(Drilling.Common.Interface.ST_INTERFACE_DATA, string, string)
+L000434 |     private static void RequireArgument(ST_INTERFACE_DATA data, string value, string fieldName) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 RequireArgument.
+L000435 |     { ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000436 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 RequireArgument.
+L000437 |         { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} cannot be empty in ONLINE mode.") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} cannot be empty in ONLINE mode.");
+L000438 |             throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} cannot be empty in ONLINE mode."); ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 RequireArgument.
+L000439 |         } ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 RequireArgument.
+L000440 |     } ⟦EOL⟧
+L000441 |  ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.RequirePositiveInt(Drilling.Common.Interface.ST_INTERFACE_DATA, string, string)
+L000442 |     private static void RequirePositiveInt(ST_INTERFACE_DATA data, string value, string fieldName) ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 RequirePositiveInt.
+L000443 |     { ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || result <= 0)
+L000444 |         if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || result <= 0) ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 RequirePositiveInt.
+L000445 |         { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} must be a positive integer in ONLINE mode.") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} must be a positive integer in ONLINE mode.");
+L000446 |             throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/{fieldName} must be a positive integer in ONLINE mode."); ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 RequirePositiveInt.
+L000447 |         } ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 RequirePositiveInt.
+L000448 |     } ⟦EOL⟧
+L000449 |  ⟦EOL⟧
+// 해설 L450: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.ValidateParity(Drilling.Common.Interface.ST_INTERFACE_DATA, string)
+L000450 |     private static void ValidateParity(ST_INTERFACE_DATA data, string value) ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 ValidateParity.
+L000451 |     { ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value) / 지역 변수를 선언합니다: var normalized = Normalize(value); / 변수의 초기값을 지정합니다: normalized = Normalize(value)
+L000452 |         var normalized = Normalize(value); ⟦EOL⟧
+// 해설 L453: 조건에 따라 분기합니다: if (normalized is "" or "NONE" or "ODD" or "EVEN" or "MARK" or "SPACE")
+L000453 |         if (normalized is "" or "NONE" or "ODD" or "EVEN" or "MARK" or "SPACE") ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 ValidateParity.
+L000454 |         { ⟦EOL⟧
+// 해설 L455: 호출자에게 값 또는 제어를 반환합니다: return;
+L000455 |             return; ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 ValidateParity.
+L000456 |         } ⟦EOL⟧
+L000457 |  ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG3/PARITY is invalid: {value}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG3/PARITY is invalid: {value}");
+L000458 |         throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG3/PARITY is invalid: {value}"); ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 ValidateParity.
+L000459 |     } ⟦EOL⟧
+L000460 |  ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CInterfaceFile.ValidateStopBits(Drilling.Common.Interface.ST_INTERFACE_DATA, string)
+L000461 |     private static void ValidateStopBits(ST_INTERFACE_DATA data, string value) ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 ValidateStopBits.
+L000462 |     { ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value).Replace("_", "", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value) / 지역 변수를 선언합니다: var normalized = Normalize(value).Replace("_", "", StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: normalized = Normalize(value).Replace("_", "", StringComparison.OrdinalIgnoreCase)
+L000463 |         var normalized = Normalize(value).Replace("_", "", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L464: 조건에 따라 분기합니다: if (normalized is "ONE" or "TWO" or "ONEPOINTFIVE" or "1" or "2" or "1.5")
+L000464 |         if (normalized is "ONE" or "TWO" or "ONEPOINTFIVE" or "1" or "2" or "1.5") ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 ValidateStopBits.
+L000465 |         { ⟦EOL⟧
+// 해설 L466: 호출자에게 값 또는 제어를 반환합니다: return;
+L000466 |             return; ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 ValidateStopBits.
+L000467 |         } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG5/STOP_BITS is invalid: {value}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG5/STOP_BITS is invalid: {value}");
+L000469 |         throw new InvalidDataException($"JHMI_INTERFACE validation failed. {data.NickName}/ARG5/STOP_BITS is invalid: {value}"); ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 ValidateStopBits.
+L000470 |     } ⟦EOL⟧
+L000471 |  ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CInterfaceFile.Normalize(string)
+L000472 |     private static string Normalize(string value) ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 Normalize.
+L000473 |     { ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant();
+L000474 |         return value.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 Normalize.
+L000475 |     } ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다.
+L000476 | } ⟦EOL⟧

@@ -1,0 +1,783 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Serial/CSerialComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000001 | using System.IO; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO.Ports;
+L000002 | using System.IO.Ports; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000003 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000006 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000008 | using Drilling.Common.Station; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000010 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 | [CCommType("Serial")] ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("ModbusSerial")] ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: internal class CSerialComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000013 | internal class CSerialComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: MaxAutoReconnectAttempts = 3
+L000015 |     private const int MaxAutoReconnectAttempts = 3; ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 변수의 초기값을 지정합니다: AutoReconnectInterval = TimeSpan.FromSeconds(5)
+L000016 |     private static readonly TimeSpan AutoReconnectInterval = TimeSpan.FromSeconds(5); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _reconnectPolicyLock = new()
+L000017 |     private readonly object _reconnectPolicyLock = new(); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _serialPortLifecycleLock = new()
+L000018 |     private readonly object _serialPortLifecycleLock = new(); ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CSerialComm._autoReconnectAttempts
+L000019 |     private int _autoReconnectAttempts; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CSerialComm._initialConnectAttempted
+L000020 |     private bool _initialConnectAttempted; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CSerialComm._connectInProgress
+L000021 |     private bool _connectInProgress; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CSerialComm._autoReconnectSuppressed
+L000022 |     private bool _autoReconnectSuppressed; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.TaskCompletionSource<bool>? Drilling.Common.Interface.CSerialComm._connectAttemptCompletion
+L000023 |     private TaskCompletionSource<bool>? _connectAttemptCompletion; ⟦EOL⟧
+// 해설 L24: 변수의 초기값을 지정합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue
+L000024 |     private DateTimeOffset _nextAutoReconnectAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · SerialPort? Drilling.Common.Interface.CSerialComm.SerialPort
+L000025 |     protected SerialPort? SerialPort; ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: SerialLock = new(1, 1)
+L000026 |     protected readonly SemaphoreSlim SerialLock = new(1, 1); ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.ConfigureSerialPort(SerialPort)
+L000028 |     protected virtual void ConfigureSerialPort(SerialPort serialPort) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 ConfigureSerialPort.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 ConfigureSerialPort.
+L000030 |     } ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken)
+L000032 |     public override async Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 Connect.
+L000033 |     { ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000034 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryBeginConnectAttempt(out var activeConnectAttempt) / 조건에 따라 분기합니다: if (!TryBeginConnectAttempt(out var activeConnectAttempt))
+L000035 |         if (!TryBeginConnectAttempt(out var activeConnectAttempt)) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Connect.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 조건에 따라 분기합니다: if (activeConnectAttempt is not null)
+L000037 |             if (activeConnectAttempt is not null) ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 Connect.
+L000038 |             { ⟦EOL⟧
+// 해설 L39: 비동기 완료를 기다립니다: await activeConnectAttempt.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: activeConnectAttempt.WaitAsync(cancellationToken)
+L000039 |                 await activeConnectAttempt.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 Connect.
+L000040 |             } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 호출자에게 값 또는 제어를 반환합니다: return;
+L000042 |             return; ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 Connect.
+L000043 |         } ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 예외 처리 범위입니다: try
+L000045 |         try ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Connect.
+L000046 |         { ⟦EOL⟧
+// 해설 L47: 공유 상태의 임계 구역에 진입합니다: lock (_serialPortLifecycleLock)
+L000047 |             lock (_serialPortLifecycleLock) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Connect.
+L000048 |             { ⟦EOL⟧
+// 해설 L49: 조건에 따라 분기합니다: if (SerialPort is { IsOpen: true } && ConnectionState == EN_COMM_STATE.Online)
+L000049 |                 if (SerialPort is { IsOpen: true } && ConnectionState == EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 Connect.
+L000050 |                 { ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectSuccess()
+L000051 |                     RegisterConnectSuccess(); ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: LastError = ""
+L000052 |                     LastError = ""; ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return;
+L000053 |                     return; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 Connect.
+L000054 |                 } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000056 |                 CloseSerialPort(); ⟦EOL⟧
+// 해설 L57: 예외 처리 범위입니다: try
+L000057 |                 try ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 Connect.
+L000058 |                 { ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.SerialPort) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.SerialPort) || Option.BaudRate <= 0)
+L000059 |                     if (string.IsNullOrWhiteSpace(Option.SerialPort) || Option.BaudRate <= 0) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Connect.
+L000060 |                     { ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError("Serial port option is invalid.")
+L000061 |                         SetError("Serial port option is invalid."); ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return;
+L000062 |                         return; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Connect.
+L000063 |                     } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) { Handshake = ParseHandshake(Option.Handshake), ReadTimeout = Math.Max(500, Option.TimeoutMs… / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseParity(Option.Parity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseStopBits(Option.StopBits) / 지역 변수를 선언합니다: var serialPort = new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) { Handshake =
+L000065 |                     var serialPort = new SerialPort(Option.SerialPort, Option.BaudRate, ParseParity(Option.Parity), Option.DataBits, ParseStopBits(Option.StopBits)) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 Connect.
+L000066 |                     { ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: Handshake = ParseHandshake(Option.Handshake) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseHandshake(Option.Handshake)
+L000067 |                         Handshake = ParseHandshake(Option.Handshake), ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: ReadTimeout = Math.Max(500, Option.TimeoutMs) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(500, Option.TimeoutMs)
+L000068 |                         ReadTimeout = Math.Max(500, Option.TimeoutMs), ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: WriteTimeout = Math.Max(500, Option.TimeoutMs) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(500, Option.TimeoutMs)
+L000069 |                         WriteTimeout = Math.Max(500, Option.TimeoutMs), ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: NewLine = CommandNewLine
+L000070 |                         NewLine = CommandNewLine ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Connect.
+L000071 |                     }; ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConfigureSerialPort(serialPort)
+L000072 |                     ConfigureSerialPort(serialPort); ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: SerialPort = serialPort
+L000073 |                     SerialPort = serialPort; ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Open()
+L000074 |                     SerialPort.Open(); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectSuccess()
+L000075 |                     RegisterConnectSuccess(); ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: LastError = ""
+L000076 |                     LastError = ""; ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000077 |                     SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Connect.
+L000078 |                 } ⟦EOL⟧
+// 해설 L79: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or ArgumentException or InvalidOperationException)
+L000079 |                 catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or ArgumentException or InvalidOperationException) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 Connect.
+L000080 |                 { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000081 |                     CloseSerialPort(); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000082 |                     SetError(ex); ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Connect.
+L000083 |                 } ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Connect.
+L000084 |             } ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Connect.
+L000085 |         } ⟦EOL⟧
+// 해설 L86: 종료 정리 구간입니다: finally
+L000086 |         finally ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Connect.
+L000087 |         { ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: CompleteConnectAttempt()
+L000088 |             CompleteConnectAttempt(); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Connect.
+L000089 |         } ⟦EOL⟧
+L000090 |  ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Connect.
+L000091 |     } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.ResetAutoReconnectPolicy()
+L000093 |     public override void ResetAutoReconnectPolicy() ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000094 |     { ⟦EOL⟧
+// 해설 L95: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000095 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: _autoReconnectAttempts = 0
+L000097 |             _autoReconnectAttempts = 0; ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: _initialConnectAttempted = false
+L000098 |             _initialConnectAttempted = false; ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue
+L000099 |             _nextAutoReconnectAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L100: 값을 대상에 대입합니다: _autoReconnectSuppressed = false
+L000100 |             _autoReconnectSuppressed = false; ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000101 |         } ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000102 |     } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.SuppressAutoReconnect()
+L000104 |     public override void SuppressAutoReconnect() ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000105 |     { ⟦EOL⟧
+// 해설 L106: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000106 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000107 |         { ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: _autoReconnectAttempts = MaxAutoReconnectAttempts
+L000108 |             _autoReconnectAttempts = MaxAutoReconnectAttempts; ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: _initialConnectAttempted = true
+L000109 |             _initialConnectAttempted = true; ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MaxValue
+L000110 |             _nextAutoReconnectAt = DateTimeOffset.MaxValue; ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: _autoReconnectSuppressed = true
+L000111 |             _autoReconnectSuppressed = true; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000112 |         } ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000113 |     } ⟦EOL⟧
+L000114 |  ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CSerialComm.TryBeginConnectAttempt(out System.Threading.Tasks.Task?)
+L000115 |     private bool TryBeginConnectAttempt(out Task? activeConnectAttempt) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000116 |     { ⟦EOL⟧
+// 해설 L117: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000117 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 조건에 따라 분기합니다: if (_connectInProgress)
+L000119 |             if (_connectInProgress) ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000120 |             { ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: activeConnectAttempt = _connectAttemptCompletion?.Task
+L000121 |                 activeConnectAttempt = _connectAttemptCompletion?.Task; ⟦EOL⟧
+// 해설 L122: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000122 |                 return false; ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000123 |             } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: activeConnectAttempt = null
+L000125 |             activeConnectAttempt = null; ⟦EOL⟧
+// 해설 L126: 조건에 따라 분기합니다: if (_autoReconnectSuppressed)
+L000126 |             if (_autoReconnectSuppressed) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000127 |             { ⟦EOL⟧
+// 해설 L128: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000128 |                 return false; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000129 |             } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 조건에 따라 분기합니다: if (!_initialConnectAttempted)
+L000131 |             if (!_initialConnectAttempted) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000132 |             { ⟦EOL⟧
+// 해설 L133: 값을 대상에 대입합니다: _initialConnectAttempted = true
+L000133 |                 _initialConnectAttempted = true; ⟦EOL⟧
+// 해설 L134: 값을 대상에 대입합니다: _connectInProgress = true
+L000134 |                 _connectInProgress = true; ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: _connectAttemptCompletion = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously)
+L000135 |                 _connectAttemptCompletion = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously); ⟦EOL⟧
+// 해설 L136: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000136 |                 return true; ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000137 |             } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 조건에 따라 분기합니다: if (_autoReconnectAttempts >= MaxAutoReconnectAttempts || DateTimeOffset.Now < _nextAutoReconnectAt)
+L000139 |             if (_autoReconnectAttempts >= MaxAutoReconnectAttempts || DateTimeOffset.Now < _nextAutoReconnectAt) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000140 |             { ⟦EOL⟧
+// 해설 L141: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000141 |                 return false; ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000142 |             } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CSerialComm.TryBeginConnectAttempt(out System.Threading.Tasks.Task?)
+L000144 |             _autoReconnectAttempts++; ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: _connectInProgress = true
+L000145 |             _connectInProgress = true; ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: _connectAttemptCompletion = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously)
+L000146 |             _connectAttemptCompletion = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously); ⟦EOL⟧
+// 해설 L147: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000147 |             return true; ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000148 |         } ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 TryBeginConnectAttempt.
+L000149 |     } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.CompleteConnectAttempt()
+L000151 |     private void CompleteConnectAttempt() ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 CompleteConnectAttempt.
+L000152 |     { ⟦EOL⟧
+// 해설 L153: 지역 변수를 선언합니다: TaskCompletionSource<bool>? completion;
+L000153 |         TaskCompletionSource<bool>? completion; ⟦EOL⟧
+// 해설 L154: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000154 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 CompleteConnectAttempt.
+L000155 |         { ⟦EOL⟧
+// 해설 L156: 값을 대상에 대입합니다: _connectInProgress = false
+L000156 |             _connectInProgress = false; ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: completion = _connectAttemptCompletion
+L000157 |             completion = _connectAttemptCompletion; ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: _connectAttemptCompletion = null
+L000158 |             _connectAttemptCompletion = null; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 CompleteConnectAttempt.
+L000159 |         } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TrySetResult(true)
+L000161 |         completion?.TrySetResult(true); ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 CompleteConnectAttempt.
+L000162 |     } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.RegisterConnectSuccess()
+L000164 |     private void RegisterConnectSuccess() ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 RegisterConnectSuccess.
+L000165 |     { ⟦EOL⟧
+// 해설 L166: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000166 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 RegisterConnectSuccess.
+L000167 |         { ⟦EOL⟧
+// 해설 L168: 값을 대상에 대입합니다: _autoReconnectAttempts = 0
+L000168 |             _autoReconnectAttempts = 0; ⟦EOL⟧
+// 해설 L169: 값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.MinValue
+L000169 |             _nextAutoReconnectAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 RegisterConnectSuccess.
+L000170 |         } ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 RegisterConnectSuccess.
+L000171 |     } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.RegisterConnectFailure()
+L000173 |     private void RegisterConnectFailure() ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 RegisterConnectFailure.
+L000174 |     { ⟦EOL⟧
+// 해설 L175: 공유 상태의 임계 구역에 진입합니다: lock (_reconnectPolicyLock)
+L000175 |         lock (_reconnectPolicyLock) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 RegisterConnectFailure.
+L000176 |         { ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: _nextAutoReconnectAt = DateTimeOffset.Now.Add(AutoReconnectInterval) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.Now.Add(AutoReconnectInterval)
+L000177 |             _nextAutoReconnectAt = DateTimeOffset.Now.Add(AutoReconnectInterval); ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 RegisterConnectFailure.
+L000178 |         } ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 RegisterConnectFailure.
+L000179 |     } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Disconnect(System.Threading.CancellationToken)
+L000181 |     public override Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 Disconnect.
+L000182 |     { ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000183 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L184: 공유 상태의 임계 구역에 진입합니다: lock (_serialPortLifecycleLock)
+L000184 |         lock (_serialPortLifecycleLock) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Disconnect.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000186 |             CloseSerialPort(); ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000187 |             SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 Disconnect.
+L000188 |         } ⟦EOL⟧
+// 해설 L189: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000189 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 Disconnect.
+L000190 |     } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.SetError(System.Exception)
+L000192 |     protected new void SetError(Exception ex) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 SetError.
+L000193 |     { ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.SetError(ex)
+L000194 |         base.SetError(ex); ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectFailure()
+L000195 |         RegisterConnectFailure(); ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000196 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 SetError.
+L000197 |     } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.SetError(string)
+L000199 |     protected new void SetError(string message) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 SetError.
+L000200 |     { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.SetError(message)
+L000201 |         base.SetError(message); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterConnectFailure()
+L000202 |         RegisterConnectFailure(); ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000203 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 SetError.
+L000204 |     } ⟦EOL⟧
+L000205 |  ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.SetResponseState(string)
+L000206 |     protected void SetResponseState(string response) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 SetResponseState.
+L000207 |     { ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("ERR:-1", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (response.StartsWith("ERR:-1", StringComparison.OrdinalIgnoreCase))
+L000208 |         if (response.StartsWith("ERR:-1", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 SetResponseState.
+L000209 |         { ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(response)
+L000210 |             SetError(response); ⟦EOL⟧
+// 해설 L211: 호출자에게 값 또는 제어를 반환합니다: return;
+L000211 |             return; ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 SetResponseState.
+L000212 |         } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000214 |         SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 SetResponseState.
+L000215 |     } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CSerialComm.Execute(string, System.Threading.CancellationToken)
+L000217 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 Execute.
+L000218 |     { ⟦EOL⟧
+// 해설 L219: 비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)
+L000219 |         await SerialLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L220: 예외 처리 범위입니다: try
+L000220 |         try ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Execute.
+L000221 |         { ⟦EOL⟧
+// 해설 L222: 비동기 완료를 기다립니다: await ExecuteSerial(function, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSerial(function, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return await ExecuteSerial(function, cancellationToken);
+L000222 |             return await ExecuteSerial(function, cancellationToken); ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 Execute.
+L000223 |         } ⟦EOL⟧
+// 해설 L224: 종료 정리 구간입니다: finally
+L000224 |         finally ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 Execute.
+L000225 |         { ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()
+L000226 |             SerialLock.Release(); ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 Execute.
+L000227 |         } ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 Execute.
+L000228 |     } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CSerialComm.ExecuteSerial(string, System.Threading.CancellationToken)
+L000230 |     private async Task<string> ExecuteSerial(string function, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000231 |     { ⟦EOL⟧
+// 해설 L232: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000232 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000233 |         { ⟦EOL⟧
+// 해설 L234: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000234 |             await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000235 |         } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000237 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000238 |         { ⟦EOL⟧
+// 해설 L239: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000239 |             return ""; ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000240 |         } ⟦EOL⟧
+L000241 |  ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: LastSent = FormatCommand(function) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommand(function)
+L000242 |         LastSent = FormatCommand(function); ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000244 |         // 로컬 함수 내부의 예외 처리 강화 ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · string? ifCallback()
+L000245 |         string? ifCallback() ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 ifCallback.
+L000246 |         { ⟦EOL⟧
+// 해설 L247: 조건에 따라 분기합니다: if (this is CTalonLaser)
+L000247 |             if (this is CTalonLaser) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 ifCallback.
+L000248 |             { ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: SerialPort.NewLine = "\n"
+L000249 |                 SerialPort.NewLine = "\n"; ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(LastSent + "\r")
+L000250 |                 SerialPort.Write(LastSent + "\r"); ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 ifCallback.
+L000251 |             } ⟦EOL⟧
+// 해설 L252: 앞 조건이 거짓인 경로입니다: else
+L000252 |             else ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 ifCallback.
+L000253 |             { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.WriteLine(LastSent)
+L000254 |                 SerialPort.WriteLine(LastSent); ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 ifCallback.
+L000255 |             } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 예외 처리 범위입니다: try
+L000257 |             try ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ifCallback.
+L000258 |             { ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine() / 호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadLine().Trim();
+L000259 |                 return SerialPort.ReadLine().Trim(); ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 ifCallback.
+L000261 |             } ⟦EOL⟧
+// 해설 L262: 지정 예외를 처리합니다: catch (TimeoutException)
+L000262 |             catch (TimeoutException) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 ifCallback.
+L000263 |             { ⟦EOL⟧
+// 해설 L264: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000264 |                 // ReadExisting 호출 시 발생할 수 있는 2차 예외 방어 ⟦EOL⟧
+// 해설 L265: 예외 처리 범위입니다: try
+L000265 |                 try ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 ifCallback.
+L000266 |                 { ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting() / 호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadExisting().Trim();
+L000267 |                     return SerialPort.ReadExisting().Trim(); ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 ifCallback.
+L000268 |                 } ⟦EOL⟧
+// 해설 L269: 지정 예외를 처리합니다: catch
+L000269 |                 catch ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 ifCallback.
+L000270 |                 { ⟦EOL⟧
+// 해설 L271: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000271 |                     return ""; ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 ifCallback.
+L000272 |                 } ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 ifCallback.
+L000273 |             } ⟦EOL⟧
+// 해설 L274: 지정 예외를 처리합니다: catch (Exception)
+L000274 |             catch (Exception) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 ifCallback.
+L000275 |             { ⟦EOL⟧
+// 해설 L276: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000276 |                 // 타임아웃 외에 포트 단선/폐쇄 등 모든 예외를 안전하게 던짐 ⟦EOL⟧
+// 해설 L277: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000277 |                 // 이 예외는 외부 try-catch에서 잡힙니다. ⟦EOL⟧
+// 해설 L278: 예외를 발생/전달합니다: throw;
+L000278 |                 throw; ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 ifCallback.
+L000279 |             } ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 ifCallback.
+L000280 |         } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 예외 처리 범위입니다: try
+L000282 |         try ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000284 |             // 취소 토큰 전달 ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000285 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 값을 대상에 대입합니다: LastReceived = await Task.Run(ifCallback, cancellationToken) ?? "" / 비동기 완료를 기다립니다: await Task.Run(ifCallback, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(ifCallback, cancellationToken)
+L000287 |             LastReceived = await Task.Run(ifCallback, cancellationToken) ?? ""; ⟦EOL⟧
+// 해설 L288: 값을 대상에 대입합니다: LastError = string.IsNullOrWhiteSpace(LastReceived) ? "Serial response timeout." : "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(LastReceived) ? "Serial response timeout." : ""
+L000288 |             LastError = string.IsNullOrWhiteSpace(LastReceived) ? "Serial response timeout." : ""; ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastError) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(LastError))
+L000289 |             if (!string.IsNullOrWhiteSpace(LastError)) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000290 |             { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(LastError)
+L000291 |                 SetError(LastError); ⟦EOL⟧
+// 해설 L292: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000292 |                 return ""; ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000293 |             } ⟦EOL⟧
+L000294 |  ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000295 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L296: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000296 |             return LastReceived; ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000297 |         } ⟦EOL⟧
+// 해설 L298: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or TimeoutException or ObjectDisposedException or OperationCanceledException)
+L000298 |         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or TimeoutException or ObjectDisposedException or OperationCanceledException) ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000299 |         { ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000300 |             CloseSerialPort(); ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000301 |             SetError(ex); ⟦EOL⟧
+// 해설 L302: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000302 |             return ""; ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000303 |         } ⟦EOL⟧
+// 해설 L304: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000304 |         // if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L305: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000305 |         // { ⟦EOL⟧
+// 해설 L306: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000306 |         //     await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L307: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000307 |         // } ⟦EOL⟧
+// 해설 L308: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000308 |         // ⟦EOL⟧
+// 해설 L309: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000309 |         // if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L310: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000310 |         // { ⟦EOL⟧
+// 해설 L311: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000311 |         //     return ""; ⟦EOL⟧
+// 해설 L312: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000312 |         // } ⟦EOL⟧
+// 해설 L313: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000313 |         // ⟦EOL⟧
+// 해설 L314: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000314 |         // LastSent = FormatCommand(function); ⟦EOL⟧
+// 해설 L315: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000315 |         // string? ifCallback() ⟦EOL⟧
+// 해설 L316: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000316 |         // { ⟦EOL⟧
+// 해설 L317: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000317 |         //     SerialPort.WriteLine(LastSent); ⟦EOL⟧
+// 해설 L318: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000318 |         //     try ⟦EOL⟧
+// 해설 L319: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000319 |         //     { ⟦EOL⟧
+// 해설 L320: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000320 |         //         //return ""; ⟦EOL⟧
+// 해설 L321: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000321 |         //         return SerialPort.ReadExisting().Trim(); ⟦EOL⟧
+// 해설 L322: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000322 |         //      } ⟦EOL⟧
+// 해설 L323: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000323 |         //     catch (TimeoutException) ⟦EOL⟧
+// 해설 L324: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000324 |         //     { ⟦EOL⟧
+// 해설 L325: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000325 |         //         return SerialPort.ReadExisting().Trim(); ⟦EOL⟧
+// 해설 L326: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000326 |         //     } ⟦EOL⟧
+// 해설 L327: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000327 |         // } ⟦EOL⟧
+// 해설 L328: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000328 |         // ⟦EOL⟧
+// 해설 L329: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000329 |         // try ⟦EOL⟧
+// 해설 L330: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000330 |         // { ⟦EOL⟧
+// 해설 L331: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000331 |         //     LastReceived = await Task.Run(ifCallback, cancellationToken) ?? ""; ⟦EOL⟧
+// 해설 L332: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000332 |         //     LastError = string.IsNullOrWhiteSpace(LastReceived) ? "Serial response timeout." : ""; ⟦EOL⟧
+// 해설 L333: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000333 |         //     if (!string.IsNullOrWhiteSpace(LastError)) ⟦EOL⟧
+// 해설 L334: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000334 |         //     { ⟦EOL⟧
+// 해설 L335: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000335 |         //         SetError(LastError); ⟦EOL⟧
+// 해설 L336: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000336 |         //         return ""; ⟦EOL⟧
+// 해설 L337: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000337 |         //     } ⟦EOL⟧
+// 해설 L338: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000338 |         // ⟦EOL⟧
+// 해설 L339: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000339 |         //     SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L340: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000340 |         //     return LastReceived; ⟦EOL⟧
+// 해설 L341: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000341 |         // } ⟦EOL⟧
+// 해설 L342: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000342 |         // catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or TimeoutException or ObjectDisposedException) ⟦EOL⟧
+// 해설 L343: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000343 |         // { ⟦EOL⟧
+// 해설 L344: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000344 |         //     CloseSerialPort(); ⟦EOL⟧
+// 해설 L345: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000345 |         //     SetError(ex); ⟦EOL⟧
+// 해설 L346: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000346 |         //     return ""; ⟦EOL⟧
+// 해설 L347: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000347 |         // } ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다 · 소속 ExecuteSerial.
+L000348 |     } ⟦EOL⟧
+L000349 |  ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CSerialComm.CommandNewLine
+L000350 |     protected virtual string CommandNewLine ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000351 |     { ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CSerialComm.CommandNewLine.get
+L000352 |         get ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000353 |         { ⟦EOL⟧
+// 해설 L354: 호출자에게 값 또는 제어를 반환합니다: return "\r\n";
+L000354 |             return "\r\n"; ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000355 |         } ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000356 |     } ⟦EOL⟧
+L000357 |  ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CSerialComm.FormatCommand(string)
+L000358 |     protected virtual string FormatCommand(string function) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000359 |     { ⟦EOL⟧
+// 해설 L360: 호출자에게 값 또는 제어를 반환합니다: return function;
+L000360 |         return function; ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000361 |     } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CSerialComm.CloseSerialPort()
+L000363 |     protected void CloseSerialPort() ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000364 |     { ⟦EOL⟧
+// 해설 L365: 조건에 따라 분기합니다: if (SerialPort is null)
+L000365 |         if (SerialPort is null) ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000366 |         { ⟦EOL⟧
+// 해설 L367: 호출자에게 값 또는 제어를 반환합니다: return;
+L000367 |             return; ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000368 |         } ⟦EOL⟧
+L000369 |  ⟦EOL⟧
+// 해설 L370: 예외 처리 범위입니다: try
+L000370 |         try ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000371 |         { ⟦EOL⟧
+// 해설 L372: 조건에 따라 분기합니다: if (SerialPort.IsOpen)
+L000372 |             if (SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000373 |             { ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Close()
+L000374 |                 SerialPort.Close(); ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000375 |             } ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000376 |         } ⟦EOL⟧
+// 해설 L377: 종료 정리 구간입니다: finally
+L000377 |         finally ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000378 |         { ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Dispose()
+L000379 |             SerialPort.Dispose(); ⟦EOL⟧
+// 해설 L380: 값을 대상에 대입합니다: SerialPort = null
+L000380 |             SerialPort = null; ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000381 |         } ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 CloseSerialPort.
+L000382 |     } ⟦EOL⟧
+L000383 |  ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · Parity Drilling.Common.Interface.CSerialComm.ParseParity(string)
+L000384 |     private static Parity ParseParity(string value) ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 ParseParity.
+L000385 |     { ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<Parity>(NormalizeEnumValue(value), ignoreCase: true, out var parity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value) / 조건에 따라 결과식을 선택합니다: Enum.TryParse<Parity>(NormalizeEnumValue(value), ignoreCase: true, out var parity) ? parity : Parity.None / 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<Parity>(NormalizeEnumValue(value), ignoreCase: true, out var parity) ? parity : Parity.None;
+L000386 |         return Enum.TryParse<Parity>(NormalizeEnumValue(value), ignoreCase: true, out var parity) ? parity : Parity.None; ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 ParseParity.
+L000387 |     } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · StopBits Drilling.Common.Interface.CSerialComm.ParseStopBits(string)
+L000389 |     private static StopBits ParseStopBits(string value) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 ParseStopBits.
+L000390 |     { ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<StopBits>(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value) / 조건에 따라 결과식을 선택합니다: Enum.TryParse<StopBits>(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) ? stopBits : StopBits.One / 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<StopBits>(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) ? stopBits : StopBits.One;
+L000391 |         return Enum.TryParse<StopBits>(NormalizeEnumValue(value), ignoreCase: true, out var stopBits) ? stopBits : StopBits.One; ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 ParseStopBits.
+L000392 |     } ⟦EOL⟧
+L000393 |  ⟦EOL⟧
+// 해설 L394: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000394 |     private static Handshake ParseHandshake(string value) ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 ParseHandshake.
+L000395 |     { ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeEnumValue(value) / 호출자에게 값 또는 제어를 반환합니다: return NormalizeEnumValue(value) switch { "" or "NONE" or "NO" or "OFF" => Handshake.None, "XONXOFF" or "XONOFF" => Handshake.XOnXOff, "REQUESTTOSEND" or "RTSCTS" => Handshake.RequestToSend, "REQUESTTOSENDXONXOFF" or "RTSCTSXONXOF / 값별 결과식을 선택합니다: NormalizeEnumValue(value) switch { "" or "NONE" or "NO" or "OFF" => Handshake.None, "XONXOFF" or "XONOFF" => Handshake.XOnXOff, "REQUESTTOSEND" or "RTSCTS" => Handshake.RequestToSend, "REQUESTTOSENDXONXOFF" or "RTSC
+L000396 |         return NormalizeEnumValue(value) switch ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 ParseHandshake.
+L000397 |         { ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000398 |             "" or "NONE" or "NO" or "OFF" => Handshake.None, ⟦EOL⟧
+// 해설 L399: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000399 |             "XONXOFF" or "XONOFF" => Handshake.XOnXOff, ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000400 |             "REQUESTTOSEND" or "RTSCTS" => Handshake.RequestToSend, ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000401 |             "REQUESTTOSENDXONXOFF" or "RTSCTSXONXOFF" => Handshake.RequestToSendXOnXOff, ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · Handshake Drilling.Common.Interface.CSerialComm.ParseHandshake(string)
+L000402 |             _ => Handshake.None ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 ParseHandshake.
+L000403 |         }; ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 ParseHandshake.
+L000404 |     } ⟦EOL⟧
+L000405 |  ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CSerialComm.NormalizeEnumValue(string)
+L000406 |     private static string NormalizeEnumValue(string value) ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 NormalizeEnumValue.
+L000407 |     { ⟦EOL⟧
+// 해설 L408: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase).Replace("/", "", StringComparison.OrdinalIgnoreCase).Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase).Replace("/", "", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase) / 함수·델
+L000408 |         return value.Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase).Replace("/", "", StringComparison.OrdinalIgnoreCase).Trim(); ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 NormalizeEnumValue.
+L000409 |     } ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다.
+L000410 | } ⟦EOL⟧

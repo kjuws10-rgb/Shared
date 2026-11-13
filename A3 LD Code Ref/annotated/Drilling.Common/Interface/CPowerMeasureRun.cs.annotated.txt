@@ -1,0 +1,837 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/CPowerMeasureRun.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Automation;
+L000002 | using Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000003 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000004 | using Drilling.Common.Station; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000006 | namespace Drilling.Common.Interface; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_MEASURE_REPORT(string RecipeId, string Origin, DateTimeOffset StartedAt, DateTimeOffset FinishedAt, ST_POWER_MEASURE_SNAPSHOT Snapshot, IReadOnlyDictionary<int, bool> Sim
+L000008 | public sealed record ST_POWER_MEASURE_REPORT(string RecipeId, string Origin, DateTimeOffset StartedAt, DateTimeOffset FinishedAt, ST_POWER_MEASURE_SNAPSHOT Snapshot, IReadOnlyDictionary<int, bool> Simulation); ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 | /// <summary>Shared Manual/AUTO transaction. Prepare every route before emission; never moves Stage Y.</summary> ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CPowerMeasureRun(CManager manager, ST_RECIPE_DEFINITION recipe,
+L000011 | public sealed class CPowerMeasureRun(CManager manager, ST_RECIPE_DEFINITION recipe, ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 |     IReadOnlyList<ST_POWER_MEASURE_TARGET> targets, bool automatic, ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 |     Func<int, bool, IPowerMeasureTable> tables, Action<ST_POWER_MEASURE_REPORT> saveReport) : IAsyncDisposable, IPowerMeasureTable ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(manager, recipe, targets) / 변수의 초기값을 지정합니다: _session = new(manager, recipe, targets)
+L000015 |     private readonly CPowerMeasureDeviceSession _session = new(manager, recipe, targets); ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: _started = DateTimeOffset.Now
+L000016 |     private readonly DateTimeOffset _started = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _gate = new(1, 1)
+L000017 |     private readonly SemaphoreSlim _gate = new(1, 1); ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPowerMeasureRun._prepared
+L000018 |     private bool _prepared, _measured, _saved, _reported, _released; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT? Drilling.Common.Interface.CPowerMeasureRun._result
+L000019 |     private ST_POWER_MEASURE_SNAPSHOT? _result; ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(head => { var toleranceKey = $"H{head:00}_TPM_TOLERANCE_W"; var attemptsKey = $"H{head:00}_TPM_MAX_ATTEMPTS"; // Older Setting documents use the common keys. Read that fallback only when a H… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)
+L000020 |     public static IReadOnlyList<ST_POWER_MEASURE_TARGET> AutoTargets(CSettingManager settings) => Enumerable.Range(1, 8).Select(head => ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 AutoTargets.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 지역 변수를 선언합니다: var toleranceKey = $"H{head:00}_TPM_TOLERANCE_W"; / 변수의 초기값을 지정합니다: toleranceKey = $"H{head:00}_TPM_TOLERANCE_W"
+L000022 |         var toleranceKey = $"H{head:00}_TPM_TOLERANCE_W"; ⟦EOL⟧
+// 해설 L23: 지역 변수를 선언합니다: var attemptsKey = $"H{head:00}_TPM_MAX_ATTEMPTS"; / 변수의 초기값을 지정합니다: attemptsKey = $"H{head:00}_TPM_MAX_ATTEMPTS"
+L000023 |         var attemptsKey = $"H{head:00}_TPM_MAX_ATTEMPTS"; ⟦EOL⟧
+// 해설 L24: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000024 |         // Older Setting documents use the common keys. Read that fallback only when a Head key is absent. ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, toleranceKey)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.GetValue(EN_SETTING_TAB.Option, toleranceKey) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, toleranceKey)) ? Number(settings, "TPM_TOLERANCE_W", .01) : Number(settings, toleranceKey, .01) / 지역 변수를 선언합니다: var tolerance = string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, toleranceKey)) ? Number(settings, "TPM_TOLERANCE_W", .01) : Numb
+L000025 |         var tolerance = string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, toleranceKey)) ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(settings, "TPM_TOLERANCE_W", .01) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(settings, toleranceKey, .01)
+L000026 |             ? Number(settings, "TPM_TOLERANCE_W", .01) : Number(settings, toleranceKey, .01); ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, attemptsKey)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.GetValue(EN_SETTING_TAB.Option, attemptsKey) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, attemptsKey)) ? Integer(settings, "TPM_MAX_ATTEMPTS", 12) : Integer(settings, attemptsKey, 12) / 지역 변수를 선언합니다: var attempts = string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, attemptsKey)) ? Integer(settings, "TPM_MAX_ATTEMPTS", 12) : Integer(
+L000027 |         var attempts = string.IsNullOrWhiteSpace(settings.GetValue(EN_SETTING_TAB.Option, attemptsKey)) ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, "TPM_MAX_ATTEMPTS", 12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, attemptsKey, 12)
+L000028 |             ? Integer(settings, "TPM_MAX_ATTEMPTS", 12) : Integer(settings, attemptsKey, 12); ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_POWER_MEASURE_TARGET(head, head - 1, Number(settings, $"H{head:00}_TPM_TARGET_POWER_W", 1.2), new("FINE", Integer(settings, $"H{head:00}_TPM_SETTLE_TIME_MS", 300), Integer(settings, $"H{head:00}_TPM_MEASURE_COUNT"… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(settings, $"H{head:00}_TPM_TARGET_POWER_W", 1.2) / 호출자에게 값 또는 제어를 반환합니다: return new ST_POWER_MEASURE_TARGET(head, head - 1, Number(settings, $"H{head:00}_TPM_TARGET_POWER_W", 1.2), new("FINE", Integer(settings, $"H{head:00}_TPM_SETTLE_TIME_MS", 300), Inte
+L000029 |         return new ST_POWER_MEASURE_TARGET(head, head - 1, Number(settings, $"H{head:00}_TPM_TARGET_POWER_W", 1.2), ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("FINE", Integer(settings, $"H{head:00}_TPM_SETTLE_TIME_MS", 300), Integer(settings, $"H{head:00}_TPM_MEASURE_COUNT", 1), Integer(settings, $"H{head:00}_TPM_INTERVAL_MS", 100)) { ToleranceW = tolerance, MaximumAttempt… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, $"H{head:00}_TPM_SETTLE_TIME_MS", 300) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, $"H{head:00}_TPM_MEASURE_COUNT", 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, $"H{head:00}_TPM_INTERVAL_MS", 100)
+L000030 |             new("FINE", Integer(settings, $"H{head:00}_TPM_SETTLE_TIME_MS", 300), Integer(settings, $"H{head:00}_TPM_MEASURE_COUNT", 1), Integer(settings, $"H{head:00}_TPM_INTERVAL_MS", 100)) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 AutoTargets.
+L000031 |             { ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: ToleranceW = tolerance / 값을 대상에 대입합니다: MaximumAttempts = attempts
+L000032 |                 ToleranceW = tolerance, MaximumAttempts = attempts, ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: CoolingTimeMs = Integer(settings, "TPM_COOLING_TIME_MS", 100) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Integer(settings, "TPM_COOLING_TIME_MS", 100)
+L000033 |                 CoolingTimeMs = Integer(settings, "TPM_COOLING_TIME_MS", 100) ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_TARGET> Drilling.Common.Interface.CPowerMeasureRun.AutoTargets(Drilling.Common.Managers.CSettingManager)
+L000034 |             }); ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_POWER_MEASURE_TARGET> Drilling.Common.Interface.CPowerMeasureRun.AutoTargets(Drilling.Common.Managers.CSettingManager)
+L000035 |     }).ToArray(); ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeasureRun.Number(Drilling.Common.Managers.CSettingManager, string, double)
+L000036 |     internal static double Number(CSettingManager settings, string key, double fallback) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 Number.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.GetValue(EN_SETTING_TAB.Option, key, fallback.ToString("R", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fallback.ToString("R", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var text = settings.GetValue(EN_SETTING_TAB.Option, key, fallback.ToString("R", CultureInfo.InvariantCulture)); / 변수의 초기값을 지정합니다: text = settings.GetValue(EN_SETTING_TAB.Option, key, fallback.ToString("R", CultureInfo.InvariantCulture))
+L000038 |         var text = settings.GetValue(EN_SETTING_TAB.Option, key, fallback.ToString("R", CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 결과식을 선택합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ? value : throw new InvalidOperationException($"PowerMeter 설정 오류: {key}={text}") / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) &
+L000039 |         return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0 ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"PowerMeter 설정 오류: {key}={text}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"PowerMeter 설정 오류: {key}={text}")
+L000040 |             ? value : throw new InvalidOperationException($"PowerMeter 설정 오류: {key}={text}"); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Number.
+L000041 |     } ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPowerMeasureRun.Integer(Drilling.Common.Managers.CSettingManager, string, int)
+L000042 |     internal static int Integer(CSettingManager settings, string key, int fallback) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 Integer.
+L000043 |     { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(settings, key, fallback) / 지역 변수를 선언합니다: var value = Number(settings, key, fallback); / 변수의 초기값을 지정합니다: value = Number(settings, key, fallback)
+L000044 |         var value = Number(settings, key, fallback); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"정수 설정이 필요합니다: {key}") / 조건에 따라 결과식을 선택합니다: value == Math.Truncate(value) && value <= int.MaxValue ? (int)value : throw new InvalidOperationException($"정수 설정이 필요합니다: {key}") / 호출자에게 값 또는 제어를 반환합니다: return value == Math.Truncate(value) && value <= int.MaxValue ? (int)value : throw new InvalidOperationException($"정수 설정이 필요합니다: {key}"); / 예외를 발생/전달합니다: throw new InvalidOperationException($"정수 설정이 필요합니다: {key}")
+L000045 |         return value == Math.Truncate(value) && value <= int.MaxValue ? (int)value : throw new InvalidOperationException($"정수 설정이 필요합니다: {key}"); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Integer.
+L000046 |     } ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Prepare(System.Threading.CancellationToken)
+L000047 |     public async Task Prepare(CancellationToken token) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Prepare.
+L000048 |     { ⟦EOL⟧
+// 해설 L49: 비동기 완료를 기다립니다: await _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token)
+L000049 |         await _gate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L50: 예외 처리 범위입니다: try
+L000050 |         try ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Prepare.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이미 준비되었거나 종료된 PowerMeasure입니다.") / 조건에 따라 분기합니다: if (_prepared || _released) / 예외를 발생/전달합니다: throw new InvalidOperationException("이미 준비되었거나 종료된 PowerMeasure입니다.");
+L000052 |             if (_prepared || _released) throw new InvalidOperationException("이미 준비되었거나 종료된 PowerMeasure입니다."); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPowerMeasureService.ValidateTargets(targets)
+L000053 |             CPowerMeasureService.ValidateTargets(targets); ⟦EOL⟧
+// 해설 L54: 비동기 완료를 기다립니다: await _session.PrepareAll(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.PrepareAll(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.PrepareAll(token)
+L000054 |             await _session.PrepareAll(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: _prepared = true
+L000055 |             _prepared = true; ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log("PREPARED", $"Recipe={recipe.Id}; Heads={string.Join(',', targets.Select(t => t.HeadNo))}; Stage Y=0; CENTER(0,0)") / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(',', targets.Select(t => t.HeadNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.HeadNo)
+L000056 |             Log("PREPARED", $"Recipe={recipe.Id}; Heads={string.Join(',', targets.Select(t => t.HeadNo))}; Stage Y=0; CENTER(0,0)"); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 Prepare.
+L000057 |         } ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() / 종료 정리 구간입니다: finally
+L000058 |         finally { _gate.Release(); } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 Prepare.
+L000059 |     } ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Measure(System.Threading.CancellationToken)
+L000060 |     public async Task Measure(CancellationToken token) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Measure.
+L000061 |     { ⟦EOL⟧
+// 해설 L62: 비동기 완료를 기다립니다: await _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token)
+L000062 |         await _gate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L63: 예외 처리 범위입니다: try
+L000063 |         try ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 Measure.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeasure 준비 상태를 확인해 주세요.") / 조건에 따라 분기합니다: if (!_prepared || _released || _measured) / 예외를 발생/전달합니다: throw new InvalidOperationException("PowerMeasure 준비 상태를 확인해 주세요.");
+L000065 |             if (!_prepared || _released || _measured) throw new InvalidOperationException("PowerMeasure 준비 상태를 확인해 주세요."); ⟦EOL⟧
+// 해설 L66: 비동기 완료를 기다립니다: await _session.CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.CheckStageReady(token)
+L000066 |             await _session.CheckStageReady(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var guard = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: guard = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000067 |             using var guard = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L68: 지역 변수를 선언합니다: Exception? stageError = null; / 변수의 초기값을 지정합니다: stageError = null
+L000068 |             Exception? stageError = null; ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(async () => { try { while (true) { await Task.Delay(100, guard.Token).ConfigureAwait(false); _session.EnsureStageReady(); } } catch (OperationCanceledException) when (guard.IsCancellationRequested) { } catch (Ex… / 지역 변수를 선언합니다: var watching = Task.Run(async () => { try { while (true) { await Task.Delay(100, guard.Token).ConfigureAwait(false); _session.EnsureStageReady(); } } catch (OperationCanceledException) when (guard.IsCancellationRequested) { } catc / 변수의 초기값을 지정합니다: watching = Task.Run(async
+L000069 |             var watching = Task.Run(async () => ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 Measure.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 비동기 완료를 기다립니다: await Task.Delay(100, guard.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, guard.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, guard.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.EnsureStageReady() / 예외 처리 범위입니다: try / 조건을 먼저 확인하며 반복합니다: while (true)
+L000071 |                 try { while (true) { await Task.Delay(100, guard.Token).ConfigureAwait(false); _session.EnsureStageReady(); } } ⟦EOL⟧
+// 해설 L72: 지정 예외를 처리합니다: catch (OperationCanceledException) when (guard.IsCancellationRequested)
+L000072 |                 catch (OperationCanceledException) when (guard.IsCancellationRequested) { } ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.CompareExchange(ref stageError, error, null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: guard.Cancel() / 지정 예외를 처리합니다: catch (Exception error)
+L000073 |                 catch (Exception error) { Interlocked.CompareExchange(ref stageError, error, null); guard.Cancel(); } ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Measure(System.Threading.CancellationToken)
+L000074 |             }); ⟦EOL⟧
+// 해설 L75: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000075 |             // Keep the central Stage frame current without suspending the strict ⟦EOL⟧
+// 해설 L76: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000076 |             // watchdog above while a requested read is waiting for transport. ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(async () => { try { await _session.MaintainStageFeedback(guard.Token).ConfigureAwait(false); } catch (OperationCanceledException) when (guard.IsCancellationRequested) { } catch (Exception error) { Interlocked.Co… / 지역 변수를 선언합니다: var refreshing = Task.Run(async () => { try { await _session.MaintainStageFeedback(guard.Token).ConfigureAwait(false); } catch (OperationCanceledException) when (guard.IsCancellationRequested) { } catch (Exception error) { Interlo / 변수의 초기값을 지정합니다: refreshing = Task.Run(asyn
+L000077 |             var refreshing = Task.Run(async () => ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Measure.
+L000078 |             { ⟦EOL⟧
+// 해설 L79: 비동기 완료를 기다립니다: await _session.MaintainStageFeedback(guard.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.MaintainStageFeedback(guard.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.MaintainStageFeedback(guard.Token) / 예외 처리 범위입니다: try
+L000079 |                 try { await _session.MaintainStageFeedback(guard.Token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L80: 지정 예외를 처리합니다: catch (OperationCanceledException) when (guard.IsCancellationRequested)
+L000080 |                 catch (OperationCanceledException) when (guard.IsCancellationRequested) { } ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.CompareExchange(ref stageError, error, null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: guard.Cancel() / 지정 예외를 처리합니다: catch (Exception error)
+L000081 |                 catch (Exception error) { Interlocked.CompareExchange(ref stageError, error, null); guard.Cancel(); } ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Measure(System.Threading.CancellationToken)
+L000082 |             }); ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: var started = false; / 변수의 초기값을 지정합니다: started = false
+L000083 |             var started = false; ⟦EOL⟧
+// 해설 L84: 예외 처리 범위입니다: try
+L000084 |             try ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Measure.
+L000085 |             { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.PowerMeasure.Start(targets, _session, this, guard.Token, automatic ? "AUTO TPM" : "MANUAL") / 조건에 따라 결과식을 선택합니다: automatic ? "AUTO TPM" : "MANUAL" / 지역 변수를 선언합니다: var operation = manager.PowerMeasure.Start(targets, _session, this, guard.Token, automatic ? "AUTO TPM" : "MANUAL"); / 변수의 초기값을 지정합니다: operation = manager.PowerMeasure.Start(targets, _session, this, guard.Token, automatic ? "AUTO TPM" : "MANUAL")
+L000086 |                 var operation = manager.PowerMeasure.Start(targets, _session, this, guard.Token, automatic ? "AUTO TPM" : "MANUAL"); ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: started = true
+L000087 |                 started = true; ⟦EOL⟧
+// 해설 L88: 비동기 완료를 기다립니다: await operation.ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: operation.ConfigureAwait(false)
+L000088 |                 await operation.ConfigureAwait(false); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Measure.
+L000089 |             } ⟦EOL⟧
+// 해설 L90: 지정 예외를 처리합니다: catch (OperationCanceledException) when (stageError is not null && !token.IsCancellationRequested)
+L000090 |             catch (OperationCanceledException) when (stageError is not null && !token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Measure.
+L000091 |             { ⟦EOL⟧
+// 해설 L92: 예외를 발생/전달합니다: throw stageError;
+L000092 |                 throw stageError; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Measure.
+L000093 |             } ⟦EOL⟧
+// 해설 L94: 종료 정리 구간입니다: finally
+L000094 |             finally ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Measure.
+L000095 |             { ⟦EOL⟧
+// 해설 L96: 비동기 완료를 기다립니다: await Task.WhenAll(watching, refreshing).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: guard.Cancel() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(watching, refreshing).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(watching, refreshing)
+L000096 |                 guard.Cancel(); await Task.WhenAll(watching, refreshing).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: _result = manager.PowerMeasure.GetSnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.PowerMeasure.GetSnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Report() / 조건에 따라 분기합니다: if (started)
+L000097 |                 if (started) { _result = manager.PowerMeasure.GetSnapshot(); Report(); } ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 Measure.
+L000098 |             } ⟦EOL⟧
+// 해설 L99: 조건에 따라 분기합니다: if (stageError is not null) / 예외를 발생/전달합니다: throw stageError;
+L000099 |             if (stageError is not null) throw stageError; ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000100 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: _result!.Heads.Where(h => h.State != "OK").ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _result!.Heads.Where(h => h.State != "OK") / 지역 변수를 선언합니다: var failed = _result!.Heads.Where(h => h.State != "OK").ToArray(); / 변수의 초기값을 지정합니다: failed = _result!.Heads.Where(h => h.State != "OK").ToArray()
+L000101 |             var failed = _result!.Heads.Where(h => h.State != "OK").ToArray(); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(string.Join("\n", failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.State} / {h.Message}"))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("\n", failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.State} / {h.Message}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.State} / {h.Message}") / 조건에 따라 분기합니다: if (failed.Length > 0) / 예외를 발생/전달합니다: throw new InvalidOperationException(string.Join("\n", failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.Stat
+L000102 |             if (failed.Length > 0) throw new InvalidOperationException(string.Join("\n", failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.State} / {h.Message}"))); ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: _measured = true
+L000103 |             _measured = true; ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log("MEASURED", $"{_result.Heads.Count} Heads OK")
+L000104 |             Log("MEASURED", $"{_result.Heads.Count} Heads OK"); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 Measure.
+L000105 |         } ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log("FAILED", error.Message) / 지정 예외를 처리합니다: catch (Exception error) / 조건에 따라 분기합니다: if (error is not OperationCanceledException) / 예외를 발생/전달합니다: throw;
+L000106 |         catch (Exception error) { if (error is not OperationCanceledException) Log("FAILED", error.Message); throw; } ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() / 종료 정리 구간입니다: finally
+L000107 |         finally { _gate.Release(); } ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 Measure.
+L000108 |     } ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Save(System.Threading.CancellationToken)
+L000109 |     public async Task Save(CancellationToken token) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 Save.
+L000110 |     { ⟦EOL⟧
+// 해설 L111: 비동기 완료를 기다립니다: await _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync(token)
+L000111 |         await _gate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L112: 예외 처리 범위입니다: try
+L000112 |         try ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 Save.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 조건에 따라 분기합니다: if (_saved) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000114 |             if (_saved) return; ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("정상 완료된 파워 측정 결과가 없습니다.") / 조건에 따라 분기합니다: if (!_measured || _result is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("정상 완료된 파워 측정 결과가 없습니다.");
+L000115 |             if (!_measured || _result is null) throw new InvalidOperationException("정상 완료된 파워 측정 결과가 없습니다."); ⟦EOL⟧
+// 해설 L116: 비동기 완료를 기다립니다: await manager.Recipe().SavePowerMeasureAngles(recipe.Id, _result.Heads.ToDictionary(h => h.Target.HeadNo, h => h.Angle!.Value), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Recipe().SavePowerMeasureAngles(recipe.Id, _result.Heads.ToDictionary(h => h.Target.HeadNo, h => h.Angle!.Value), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Recipe().SavePowerMeasureAngles(recipe.Id, _result.Heads.ToDictionary(h => h.Target.HeadNo, h => h.Angle!.Value), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: m
+L000116 |             await manager.Recipe().SavePowerMeasureAngles(recipe.Id, _result.Heads.ToDictionary(h => h.Target.HeadNo, h => h.Angle!.Value), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: _saved = true
+L000117 |             _saved = true; ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log("SAVED", $"Recipe ATT 각도 저장 완료: {recipe.Id}")
+L000118 |             Log("SAVED", $"Recipe ATT 각도 저장 완료: {recipe.Id}"); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 Save.
+L000119 |         } ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() / 종료 정리 구간입니다: finally
+L000120 |         finally { _gate.Release(); } ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 Save.
+L000121 |     } ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Execute(System.Threading.CancellationToken)
+L000122 |     public async Task Execute(CancellationToken token) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 Execute.
+L000123 |     { ⟦EOL⟧
+// 해설 L124: 비동기 완료를 기다립니다: await Prepare(token).ConfigureAwait(false) / 비동기 완료를 기다립니다: await Measure(token).ConfigureAwait(false) / 비동기 완료를 기다립니다: await Save(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Prepare(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Prepare(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Measure(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Measure(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Save(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Save(token) / 예외 처리 범위입니다: try
+L000124 |         try { await Prepare(token).ConfigureAwait(false); await Measure(token).ConfigureAwait(false); await Save(token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L125: 비동기 완료를 기다립니다: await DisposeAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DisposeAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DisposeAsync() / 종료 정리 구간입니다: finally
+L000125 |         finally { await DisposeAsync().ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 Execute.
+L000126 |     } ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureRun.DisposeAsync()
+L000127 |     public async ValueTask DisposeAsync() ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000128 |     { ⟦EOL⟧
+// 해설 L129: 비동기 완료를 기다립니다: await _gate.WaitAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync()
+L000129 |         await _gate.WaitAsync().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L130: 예외 처리 범위입니다: try
+L000130 |         try ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000131 |         { ⟦EOL⟧
+// 해설 L132: 조건에 따라 분기합니다: if (_released) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000132 |             if (_released) return; ⟦EOL⟧
+// 해설 L133: 비동기 완료를 기다립니다: await _session.DisposeAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.DisposeAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.DisposeAsync()
+L000133 |             await _session.DisposeAsync().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L134: 값을 대상에 대입합니다: _released = true
+L000134 |             _released = true; ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: Report() / 조건에 따라 분기합니다: if (_result is not null && !_reported)
+L000135 |             if (_result is not null && !_reported) Report(); ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000136 |         } ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() / 종료 정리 구간입니다: finally
+L000137 |         finally { _gate.Release(); } ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000138 |     } ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeasureRun.Report()
+L000139 |     private void Report() ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 Report.
+L000140 |     { ⟦EOL⟧
+// 해설 L141: 조건에 따라 분기합니다: if (_reported || _result is null) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000141 |         if (_reported || _result is null) return; ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: saveReport(new(recipe.Id, automatic ? "AUTO" : "MANUAL", _started, DateTimeOffset.Now, _result, targets.ToDictionary(t => t.HeadNo, t => _session.IsSimulation(t.HeadNo)))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(recipe.Id, automatic ? "AUTO" : "MANUAL", _started, DateTimeOffset.Now, _result, targets.ToDictionary(t => t.HeadNo, t => _session.IsSimulation(t.HeadNo))) / 조건에 따라 결과식을 선택합니다: automatic ? "AUTO" : "MANUAL"
+L000142 |         saveReport(new(recipe.Id, automatic ? "AUTO" : "MANUAL", _started, DateTimeOffset.Now, _result, ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.ToDictionary(t => t.HeadNo, t => _session.IsSimulation(t.HeadNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.IsSimulation(t.HeadNo)
+L000143 |             targets.ToDictionary(t => t.HeadNo, t => _session.IsSimulation(t.HeadNo)))); ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: _reported = true
+L000144 |         _reported = true; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 Report.
+L000145 |     } ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Log().WriteStationState("POWERMEASURE", state, "TPM", message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Log() / 지정 예외를 처리합니다: catch  / 예외 처리 범위입니다: try
+L000146 |     private void Log(string state, string message) { try { manager.Log().WriteStationState("POWERMEASURE", state, "TPM", message); } catch { } } ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: tables(headNo, _session.IsSimulation(headNo)).FindStart(headNo, power, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: tables(headNo, _session.IsSimulation(headNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.IsSimulation(headNo)
+L000147 |     public ST_POWER_MEASURE_START FindStart(int headNo, double power, CancellationToken token) => tables(headNo, _session.IsSimulation(headNo)).FindStart(headNo, power, token); ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: tables(headNo, _session.IsSimulation(headNo)).SaveMeasurement(headNo, angle, measuredPower, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: tables(headNo, _session.IsSimulation(headNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _session.IsSimulation(headNo)
+L000148 |     public void SaveMeasurement(int headNo, double angle, double measuredPower, CancellationToken token) => tables(headNo, _session.IsSimulation(headNo)).SaveMeasurement(headNo, angle, measuredPower, token); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다.
+L000149 | } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 타입의 구조/상속 선언입니다: internal sealed class CPowerMeasureDeviceSession(CManager manager, ST_RECIPE_DEFINITION recipe, IReadOnlyList<ST_POWER_MEASURE_TARGET> targets) : IPowerMeasureSession, IAsyncDisposable
+L000151 | internal sealed class CPowerMeasureDeviceSession(CManager manager, ST_RECIPE_DEFINITION recipe, IReadOnlyList<ST_POWER_MEASURE_TARGET> targets) : IPowerMeasureSession, IAsyncDisposable ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다.
+L000152 | { ⟦EOL⟧
+// 해설 L153: 타입의 구조/상속 선언입니다: private sealed record Route(ST_SCANNER_AXIS_SETTING X, ST_SCANNER_AXIS_SETTING Y, int Task, double Frequency, double Speed);
+L000153 |     private sealed record Route(ST_SCANNER_AXIS_SETTING X, ST_SCANNER_AXIS_SETTING Y, int Task, double Frequency, double Speed); ⟦EOL⟧
+// 해설 L154: 변수의 초기값을 지정합니다: _routes = []
+L000154 |     private readonly Dictionary<int, Route> _routes = []; ⟦EOL⟧
+// 해설 L155: 변수의 초기값을 지정합니다: _attenuators = []
+L000155 |     private readonly Dictionary<int, CAttenuatorPositioningService> _attenuators = []; ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _emissionGate = new(1, 1)
+L000156 |     private readonly SemaphoreSlim _emissionGate = new(1, 1); ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _emitting = new()
+L000157 |     private readonly System.Collections.Concurrent.ConcurrentDictionary<int, byte> _emitting = new(); ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPowerMeasureDeviceSession._flagMayBeOn
+L000158 |     private bool _flagMayBeOn; ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStageReviewSequences.Session? Drilling.Common.Interface.CPowerMeasureDeviceSession._stage
+L000159 |     private CStageReviewSequences.Session? _stage; ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPowerMeasureDeviceSession._stageDevice
+L000160 |     private int _stageDevice; ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPowerMeasureRun.Number(manager.Setting(), "TPM_STAGE_Y_TOLERANCE_MM", .03) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting()
+L000161 |     private double StageTolerance => CPowerMeasureRun.Number(manager.Setting(), "TPM_STAGE_Y_TOLERANCE_MM", .03); ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(CPowerMeasureRun.Integer(manager.Setting(), "TPM_OPERATION_TIMEOUT_MS", 30000), 100, 120000) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPowerMeasureRun.Integer(manager.Setting(), "TPM_OPERATION_TIMEOUT_MS", 30000) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting()
+L000162 |     private int TimeoutMs => Math.Clamp(CPowerMeasureRun.Integer(manager.Setting(), "TPM_OPERATION_TIMEOUT_MS", 30000), 100, 120000); ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Interface()
+L000163 |     private CInterfaceManager Interfaces => manager.Interface(); ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Automation()
+L000164 |     private CAutomationManager Automation => manager.Automation(); ⟦EOL⟧
+// 해설 L165: 변수의 초기값을 지정합니다: StageFeedbackIds = ["MOTOR_STAGE_Y_CUR_POS", "MOTOR_STAGE_Y_BUSY"]
+L000165 |     private static readonly string[] StageFeedbackIds = ["MOTOR_STAGE_Y_CUR_POS", "MOTOR_STAGE_Y_BUSY"]; ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetInterfaceCommunicationList(module).Any(d => d.Number == no && d.IsSimulation) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetInterfaceCommunicationList(module)
+L000166 |     private bool Sim(EN_EQP_MODULE module, int no) => Interfaces.GetInterfaceCommunicationList(module).Any(d => d.Number == no && d.IsSimulation); ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: Sim(EN_EQP_MODULE.PowerMeter, head - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Sim(EN_EQP_MODULE.Attenuator, head - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.IsSimul(_routes[head].X.AutomationNo)
+L000167 |     public bool IsSimulation(int head) => Sim(EN_EQP_MODULE.PowerMeter, head - 1) || Sim(EN_EQP_MODULE.Attenuator, head - 1) || Automation.IsSimul(_routes[head].X.AutomationNo); ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeasureDeviceSession.Connected(Drilling.Common.Interface.EN_EQP_MODULE, int)
+L000168 |     private void Connected(EN_EQP_MODULE module, int no) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Connected.
+L000169 |     { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetInterfaceCommunicationList(module).FirstOrDefault(d => d.Number == no) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetInterfaceCommunicationList(module) / 지역 변수를 선언합니다: var device = Interfaces.GetInterfaceCommunicationList(module).FirstOrDefault(d => d.Number == no); / 변수의 초기값을 지정합니다: device = Interfaces.GetInterfaceCommunicationList(module).FirstOrDefault(d => d.Number == no)
+L000170 |         var device = Interfaces.GetInterfaceCommunicationList(module).FirstOrDefault(d => d.Number == no); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{module} {no}: 연결되어 있지 않습니다.") / 조건에 따라 분기합니다: if (device is null || (!device.IsSimulation && device.ConnectionState != EN_COMM_STATE.Online)) / 예외를 발생/전달합니다: throw new InvalidOperationException($"{module} {no}: 연결되어 있지 않습니다.");
+L000171 |         if (device is null || (!device.IsSimulation && device.ConnectionState != EN_COMM_STATE.Online)) throw new InvalidOperationException($"{module} {no}: 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Connected.
+L000172 |     } ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · (System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Values, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Map) Dril
+L000173 |     private (IReadOnlyDictionary<string, ST_MELSEC_CACHED_VALUE> Values, IReadOnlyList<ST_MELSEC_MAP_DATA> Map) StageSnapshot() ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 StageSnapshot.
+L000174 |     { ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Alarm().CurAlarm.Any(a => a.Severity == Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Alarm() / 조건에 따라 분기합니다: if (manager.Alarm().CurAlarm.Any(a => a.Severity == Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical))
+L000175 |         if (manager.Alarm().CurAlarm.Any(a => a.Severity == Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical)) ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("HEAVY 알람을 RESET한 후 파워 측정을 시작해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("HEAVY 알람을 RESET한 후 파워 측정을 시작해 주세요.");
+L000176 |             throw new InvalidOperationException("HEAVY 알람을 RESET한 후 파워 측정을 시작해 주세요."); ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out var map) / 지역 변수를 선언합니다: var values = Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out var map); / 변수의 초기값을 지정합니다: values = Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out var map)
+L000177 |         var values = Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out var map); ⟦EOL⟧
+// 해설 L178: 컬렉션 요소를 순회합니다: foreach (var id in StageFeedbackIds)
+L000178 |         foreach (var id in StageFeedbackIds) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 StageSnapshot.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.FirstOrDefault(r => r.Use && r.Id == id && r.Direction == EN_MELSEC_DIRECTION.In && r.Access != EN_MELSEC_ACCESS.Write && !string.IsNullOrWhiteSpace(r.Address) && !r.Address.Equals("UNASSIGNED", StringComparison.Ordi… / 지역 변수를 선언합니다: var row = map.FirstOrDefault(r => r.Use && r.Id == id && r.Direction == EN_MELSEC_DIRECTION.In && r.Access != EN_MELSEC_ACCESS.Write && !string.IsNullOrWhiteSpace(r.Address) && !r.Address.Equals("UNASSIGNED", StringComparison.Ordi / 변수의 초기값을 지정합니다: row = map.FirstOrDefault(r
+L000180 |             var row = map.FirstOrDefault(r => r.Use && r.Id == id && r.Direction == EN_MELSEC_DIRECTION.In && r.Access != EN_MELSEC_ACCESS.Write ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(r.Address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: r.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase)
+L000181 |                 && !string.IsNullOrWhiteSpace(r.Address) && !r.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage Y 입력 맵이 없습니다: {id}") / 조건에 따라 분기합니다: if (row is null) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage Y 입력 맵이 없습니다: {id}");
+L000182 |             if (row is null) throw new InvalidOperationException($"Stage Y 입력 맵이 없습니다: {id}"); ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.Melsec, row.DeviceNo)
+L000183 |             Connected(EN_EQP_MODULE.Melsec, row.DeviceNo); ⟦EOL⟧
+// 해설 L184: 값을 대상에 대입합니다: _stageDevice = row.DeviceNo / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.EndsWith("CUR_POS") / 조건에 따라 분기합니다: if (id.EndsWith("CUR_POS"))
+L000184 |             if (id.EndsWith("CUR_POS")) _stageDevice = row.DeviceNo; ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage Y 위치와 BUSY는 같은 MELSEC 장치의 입력이어야 합니다.") / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (row.DeviceNo != _stageDevice) / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage Y 위치와 BUSY는 같은 MELSEC 장치의 입력이어야 합니다.");
+L000185 |             else if (row.DeviceNo != _stageDevice) throw new InvalidOperationException("Stage Y 위치와 BUSY는 같은 MELSEC 장치의 입력이어야 합니다."); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 StageSnapshot.
+L000186 |         } ⟦EOL⟧
+// 해설 L187: 호출자에게 값 또는 제어를 반환합니다: return (values, map);
+L000187 |         return (values, map); ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 StageSnapshot.
+L000188 |     } ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeasureDeviceSession.StageEvidence(System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE>?, System.Collections.Generic.IR
+L000189 |     private string StageEvidence(IReadOnlyDictionary<string, ST_MELSEC_CACHED_VALUE>? values = null, IReadOnlyList<ST_MELSEC_MAP_DATA>? map = null) ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 StageEvidence.
+L000190 |     { ⟦EOL⟧
+// 해설 L191: 예외 처리 범위입니다: try
+L000191 |         try ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 StageEvidence.
+L000192 |         { ⟦EOL⟧
+// 해설 L193: 조건에 따라 분기합니다: if (values is null || map is null)
+L000193 |             if (values is null || map is null) ⟦EOL⟧
+// 해설 L194: 값을 대상에 대입합니다: values = Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out map) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out map)
+L000194 |                 values = Interfaces.Melsec.GetCachedSnapshot(StageFeedbackIds, out map); ⟦EOL⟧
+// 해설 L195: 지역 변수를 선언합니다: var now = DateTimeOffset.UtcNow; / 변수의 초기값을 지정합니다: now = DateTimeOffset.UtcNow
+L000195 |             var now = DateTimeOffset.UtcNow; ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", StageFeedbackIds.Select(id => { var row = map.FirstOrDefault(r => r.Id == id); var sample = values.GetValueOrDefault(id); return FormattableString.Invariant($"{id}; Address={row?.Address}; Value={sampl… / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageFeedbackIds.Select(id => { var row = map.FirstOrDefault(r => r.Id == id); var sample = values.GetValueOrDefault(id); return FormattableString.Invariant($"{id}; Address={row?.Address}; Value={sample?.Value}; State={s… / 호출자에게 값 또는 제어를 반환합니다: return string.Jo
+L000196 |             return string.Join(" | ", StageFeedbackIds.Select(id => ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 StageEvidence.
+L000197 |             { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.FirstOrDefault(r => r.Id == id) / 지역 변수를 선언합니다: var row = map.FirstOrDefault(r => r.Id == id); / 변수의 초기값을 지정합니다: row = map.FirstOrDefault(r => r.Id == id)
+L000198 |                 var row = map.FirstOrDefault(r => r.Id == id); ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.GetValueOrDefault(id) / 지역 변수를 선언합니다: var sample = values.GetValueOrDefault(id); / 변수의 초기값을 지정합니다: sample = values.GetValueOrDefault(id)
+L000199 |                 var sample = values.GetValueOrDefault(id); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"{id}; Address={row?.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null… / 조건에 따라 결과식을 선택합니다: sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null / 호출자에게 값 또는 제어를 반환합니다: return FormattableString.Invariant($"{id}; Address={row?.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(sample?.UpdatedAt
+L000200 |                 return FormattableString.Invariant($"{id}; Address={row?.Address}; Value={sample?.Value}; State={sample?.State}; SampleAt={sample?.UpdatedAt:O}; AgeMs={(sample?.UpdatedAt is { } at ? (now - at).TotalMilliseconds : (double?)null):F0}; Cycle={sample?.ReadCycleNo}; Error={sample?.ErrorMessage}"); ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeasureDeviceSession.StageEvidence(System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE>?, System.Collections.Generic.IR
+L000201 |             })) + $"; DriverReadCode={Interfaces.Melsec.LastReadReturnCode}; DriverReadFailures={Interfaces.Melsec.ConsecutiveReadFailureCount}"; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 StageEvidence.
+L000202 |         } ⟦EOL⟧
+// 해설 L203: 지정 예외를 처리합니다: catch (Exception error) / 호출자에게 값 또는 제어를 반환합니다: return "Stage diagnostic unavailable: " + error.Message;
+L000203 |         catch (Exception error) { return "Stage diagnostic unavailable: " + error.Message; } ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 StageEvidence.
+L000204 |     } ⟦EOL⟧
+// 해설 L205: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000205 |     // Safety checks during emission remain synchronous and fail closed on stale input. ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeasureDeviceSession.EnsureStageReady()
+L000206 |     public void EnsureStageReady() ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 EnsureStageReady.
+L000207 |     { ⟦EOL⟧
+// 해설 L208: 값을 대상에 대입합니다: var (values, map) = StageSnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageSnapshot()
+L000208 |         var (values, map) = StageSnapshot(); ⟦EOL⟧
+// 해설 L209: 컬렉션 요소를 순회합니다: foreach (var id in StageFeedbackIds)
+L000209 |         foreach (var id in StageFeedbackIds) ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 EnsureStageReady.
+L000210 |         { ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(id, out var sample) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 조건에 따라 분기합니다: if (!values.TryGetValue(id, out var sample) || !sample.IsValid || sample.Value is null || sample.UpdatedAt is null || DateTimeOffset.Now - sample.UpdatedAt > TimeSpan.FromSeconds(2))
+L000211 |             if (!values.TryGetValue(id, out var sample) || !sample.IsValid || sample.Value is null || sample.UpdatedAt is null || DateTimeOffset.Now - sample.UpdatedAt > TimeSpan.FromSeconds(2)) ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage Y의 유효한 현재 위치/BUSY 스냅샷이 필요합니다. " + StageEvidence(values, map)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageEvidence(values, map) / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage Y의 유효한 현재 위치/BUSY 스냅샷이 필요합니다. " + StageEvidence(values, map));
+L000212 |                 throw new InvalidOperationException("Stage Y의 유효한 현재 위치/BUSY 스냅샷이 필요합니다. " + StageEvidence(values, map)); ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var number = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: number = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture)
+L000213 |             var number = Convert.ToDouble(sample.Value, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.EndsWith("BUSY") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(number) / 조건에 따라 결과식을 선택합니다: id.EndsWith("BUSY") ? number != 0 : Math.Abs(number) > StageTolerance / 조건에 따라 분기합니다: if (!double.IsFinite(number) || (id.EndsWith("BUSY") ? number != 0 : Math.Abs(number) > StageTolerance))
+L000214 |             if (!double.IsFinite(number) || (id.EndsWith("BUSY") ? number != 0 : Math.Abs(number) > StageTolerance)) ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage Y가 0 mm에서 정지한 상태여야 합니다. {id}={number:0.####}; " + StageEvidence(values, map)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageEvidence(values, map) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage Y가 0 mm에서 정지한 상태여야 합니다. {id}={number:0.####}; " + StageEvidence(values, map));
+L000215 |                 throw new InvalidOperationException($"Stage Y가 0 mm에서 정지한 상태여야 합니다. {id}={number:0.####}; " + StageEvidence(values, map)); ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 EnsureStageReady.
+L000216 |         } ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 EnsureStageReady.
+L000217 |     } ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.CheckStageReady(System.Threading.CancellationToken)
+L000218 |     public async Task CheckStageReady(CancellationToken token) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 CheckStageReady.
+L000219 |     { ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000220 |         token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: var (values, map) = StageSnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageSnapshot()
+L000221 |         var (values, map) = StageSnapshot(); ⟦EOL⟧
+// 해설 L222: 컬렉션 요소를 순회합니다: foreach (var id in StageFeedbackIds)
+L000222 |         foreach (var id in StageFeedbackIds) ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.GetValueOrDefault(id) / 조건에 따라 분기합니다: if (values.GetValueOrDefault(id)?.State is EN_MELSEC_CACHE_STATE.Error or EN_MELSEC_CACHE_STATE.Offline)
+L000223 |             if (values.GetValueOrDefault(id)?.State is EN_MELSEC_CACHE_STATE.Error or EN_MELSEC_CACHE_STATE.Offline) ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("TPM Stage Y 입력 수신 오류: " + StageEvidence(values, map)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageEvidence(values, map) / 예외를 발생/전달합니다: throw new IOException("TPM Stage Y 입력 수신 오류: " + StageEvidence(values, map));
+L000224 |                 throw new IOException("TPM Stage Y 입력 수신 오류: " + StageEvidence(values, map)); ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000225 |         using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeoutMs)
+L000226 |         limit.CancelAfter(TimeoutMs); ⟦EOL⟧
+// 해설 L227: 예외 처리 범위입니다: try
+L000227 |         try ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 CheckStageReady.
+L000228 |         { ⟦EOL⟧
+// 해설 L229: 비동기 완료를 기다립니다: await Task.WhenAll(StageFeedbackIds.Select(id => Interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token))).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(StageFeedbackIds.Select(id => Interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token))).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(StageFeedbackIds.Select(id => Interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageFeedbackIds.Select(id => Interfaces.Melsec.RefreshCachedValueAsync(id,
+L000229 |             await Task.WhenAll(StageFeedbackIds.Select(id => Interfaces.Melsec.RefreshCachedValueAsync(id, limit.Token))).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.Token.ThrowIfCancellationRequested()
+L000230 |             limit.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureStageReady()
+L000231 |             EnsureStageReady(); ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 CheckStageReady.
+L000232 |         } ⟦EOL⟧
+// 해설 L233: 지정 예외를 처리합니다: catch (OperationCanceledException error) when (!token.IsCancellationRequested && limit.IsCancellationRequested)
+L000233 |         catch (OperationCanceledException error) when (!token.IsCancellationRequested && limit.IsCancellationRequested) ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("TPM Stage Y 최신 입력 확인 시간 초과: " + StageEvidence(), error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageEvidence() / 예외를 발생/전달합니다: throw new TimeoutException("TPM Stage Y 최신 입력 확인 시간 초과: " + StageEvidence(), error);
+L000234 |         { throw new TimeoutException("TPM Stage Y 최신 입력 확인 시간 초과: " + StageEvidence(), error); } ⟦EOL⟧
+// 해설 L235: 지정 예외를 처리합니다: catch (IOException error)
+L000235 |         catch (IOException error) ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("TPM Stage Y 최신 입력 확인 실패: " + StageEvidence(), error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: StageEvidence() / 예외를 발생/전달합니다: throw new IOException("TPM Stage Y 최신 입력 확인 실패: " + StageEvidence(), error);
+L000236 |         { throw new IOException("TPM Stage Y 최신 입력 확인 실패: " + StageEvidence(), error); } ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 CheckStageReady.
+L000237 |     } ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.MaintainStageFeedback(System.Threading.CancellationToken)
+L000238 |     internal async Task MaintainStageFeedback(CancellationToken token) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 MaintainStageFeedback.
+L000239 |     { ⟦EOL⟧
+// 해설 L240: 조건을 먼저 확인하며 반복합니다: while (true)
+L000240 |         while (true) ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 MaintainStageFeedback.
+L000241 |         { ⟦EOL⟧
+// 해설 L242: 비동기 완료를 기다립니다: await CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token)
+L000242 |             await CheckStageReady(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L243: 비동기 완료를 기다립니다: await Task.Delay(100, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token)
+L000243 |             await Task.Delay(100, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 MaintainStageFeedback.
+L000244 |         } ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 MaintainStageFeedback.
+L000245 |     } ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.PrepareAll(System.Threading.CancellationToken)
+L000246 |     public async Task PrepareAll(CancellationToken token) ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000247 |     { ⟦EOL⟧
+// 해설 L248: 비동기 완료를 기다립니다: await CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token)
+L000248 |         await CheckStageReady(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.PowerMeasure.GetSnapshot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeasure가 이미 실행 중입니다.") / 조건에 따라 분기합니다: if (manager.PowerMeasure.GetSnapshot().IsRunning) / 예외를 발생/전달합니다: throw new InvalidOperationException("PowerMeasure가 이미 실행 중입니다.");
+L000249 |         if (manager.PowerMeasure.GetSnapshot().IsRunning) throw new InvalidOperationException("PowerMeasure가 이미 실행 중입니다."); ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.HeadNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.HeadNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.HeadNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.PowerMeterNo).Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.PowerMeterNo).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(t => t.PowerMeterNo) / 조건에 따라 분기합니다: if (targets.Count == 0 || targets.Select(t => t.HeadNo).Distinct().Count() != targets.Count ||
+L000250 |         if (targets.Count == 0 || targets.Select(t => t.HeadNo).Distinct().Count() != targets.Count || targets.Select(t => t.PowerMeterNo).Distinct().Count() != targets.Count) ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("중복 없는 Head 및 전용 센서가 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("중복 없는 Head 및 전용 센서가 필요합니다.");
+L000251 |             throw new InvalidOperationException("중복 없는 Head 및 전용 센서가 필요합니다."); ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting().LoadSection(EN_SETTING_TAB.Option) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting() / 지역 변수를 선언합니다: var settings = manager.Setting().LoadSection(EN_SETTING_TAB.Option); / 변수의 초기값을 지정합니다: settings = manager.Setting().LoadSection(EN_SETTING_TAB.Option)
+L000252 |         var settings = manager.Setting().LoadSection(EN_SETTING_TAB.Option); ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var parameters = recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: parameters = recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000253 |         var parameters = recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L254: 컬렉션 요소를 순회합니다: foreach (var target in targets)
+L000254 |         foreach (var target in targets) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000255 |         { ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(target.TargetPower) / 조건에 따라 분기합니다: if (target.HeadNo is < 1 or > 8 || target.PowerMeterNo != target.HeadNo - 1 || !double.IsFinite(target.TargetPower) || target.TargetPower <= 0)
+L000256 |             if (target.HeadNo is < 1 or > 8 || target.PowerMeterNo != target.HeadNo - 1 || !double.IsFinite(target.TargetPower) || target.TargetPower <= 0) ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Head별 전용 PowerMeter 및 목표 W를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Head별 전용 PowerMeter 및 목표 W를 확인해 주세요.");
+L000257 |                 throw new InvalidOperationException("Head별 전용 PowerMeter 및 목표 W를 확인해 주세요."); ⟦EOL⟧
+// 해설 L258: 지역 변수를 선언합니다: var head = target.HeadNo; / 변수의 초기값을 지정합니다: head = target.HeadNo
+L000258 |             var head = target.HeadNo; ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(settings, head) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Head USE가 필요합니다.") / 조건에 따라 분기합니다: if (!CScannerAxisConfiguration.IsHeadEnabled(settings, head)) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Head USE가 필요합니다.");
+L000259 |             if (!CScannerAxisConfiguration.IsHeadEnabled(settings, head)) throw new InvalidOperationException($"HEAD {head:00}: Head USE가 필요합니다."); ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.Attenuator, head - 1)
+L000260 |             Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo); Connected(EN_EQP_MODULE.Attenuator, head - 1); ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(settings, head) / 지역 변수를 선언합니다: var axes = CScannerAxisConfiguration.BuildAxisDefinitions(settings, head); / 변수의 초기값을 지정합니다: axes = CScannerAxisConfiguration.BuildAxisDefinitions(settings, head)
+L000261 |             var axes = CScannerAxisConfiguration.BuildAxisDefinitions(settings, head); ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.FirstOrDefault(a => a.AxisName == "X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: axes.FirstOrDefault(a => a.AxisName == "Y") / 지역 변수를 선언합니다: var x = axes.FirstOrDefault(a => a.AxisName == "X"); / 지역 변수를 선언합니다: var y = axes.FirstOrDefault(a => a.AxisName == "Y"); / 변수의 초기값을 지정합니다: x = axes.FirstOrDefault(a => a.AxisName == "X") / 변수의 초기값을 지정합니다: y = axes.FirstOrDefault(a => a.AxisName == "Y")
+L000262 |             var x = axes.FirstOrDefault(a => a.AxisName == "X"); var y = axes.FirstOrDefault(a => a.AxisName == "Y"); ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(x.AxisReference) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(y.AxisReference) / 조건에 따라 분기합니다: if (!x.IsUsed || !y.IsUsed || string.IsNullOrWhiteSpace(x.AxisReference) || string.IsNullOrWhiteSpace(y.AxisReference) || x.ConfigurationError.Length > 0 || y.ConfigurationError.Length > 0)
+L000263 |             if (!x.IsUsed || !y.IsUsed || string.IsNullOrWhiteSpace(x.AxisReference) || string.IsNullOrWhiteSpace(y.AxisReference) || x.ConfigurationError.Length > 0 || y.ConfigurationError.Length > 0) ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Scanner X/Y 설정을 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Scanner X/Y 설정을 확인해 주세요.");
+L000264 |                 throw new InvalidOperationException($"HEAD {head:00}: Scanner X/Y 설정을 확인해 주세요."); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.IsSimul(x.AutomationNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.IsConnect(x.AutomationNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation {x.AutomationNo}: OFFLINE") / 조건에 따라 분기합니다: if (!Automation.IsSimul(x.AutomationNo) && !Automation.IsConnect(x.AutomationNo)) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation {x.AutomationNo}: OFFLINE");
+L000265 |             if (!Automation.IsSimul(x.AutomationNo) && !Automation.IsConnect(x.AutomationNo)) throw new InvalidOperationException($"Automation {x.AutomationNo}: OFFLINE"); ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(settings.Single(p => p.Key == $"H{head:00}_AUTOMATION_TASK_NO").Value, CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.Single(p => p.Key == $"H{head:00}_AUTOMATION_TASK_NO") / 지역 변수를 선언합니다: int task = int.Parse(settings.Single(p => p.Key == $"H{head:00}_AUTOMATION_TASK_NO").Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: task = int.Parse(settings.Single(p => p.Key == $"H{head:00}_AUTOMATION_TASK_NO").Value, CultureInfo.InvariantCulture)
+L000266 |             int task = int.Parse(settings.Single(p => p.Key == $"H{head:00}_AUTOMATION_TASK_NO").Value, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.Parse(parameters[$"H{head:00}_LASER_FREQUENCY"], CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var freq = double.Parse(parameters[$"H{head:00}_LASER_FREQUENCY"], CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: freq = double.Parse(parameters[$"H{head:00}_LASER_FREQUENCY"], CultureInfo.InvariantCulture)
+L000267 |             var freq = double.Parse(parameters[$"H{head:00}_LASER_FREQUENCY"], CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(freq) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Recipe Frequency 오류") / 조건에 따라 분기합니다: if (!double.IsFinite(freq) || freq <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Recipe Frequency 오류");
+L000268 |             if (!double.IsFinite(freq) || freq <= 0) throw new InvalidOperationException($"HEAD {head:00}: Recipe Frequency 오류"); ⟦EOL⟧
+// 해설 L269: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000269 |             // Recipe and ManualMove both use mm/sec for scanner Jump Speed. ⟦EOL⟧
+// 해설 L270: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue($"H{head:00}_SCANNER_JUMP_SPEED", out var speedText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.Parse(speedText, CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: parameters.TryGetValue($"H{head:00}_SCANNER_JUMP_SPEED", out var speedText) ? double.Parse(speedText, CultureInfo.InvariantCulture) : 1500 / 지역 변수를 선언합니다: var speed = parameters.TryGetValue($"H{head:00}_SCANNER_JUMP_SPEED", out var speedText) ? double.Parse(speedText, CultureInfo.InvariantCulture) : 1500; / 변수의 초기값을 지정합니다: speed =
+L000270 |             var speed = parameters.TryGetValue($"H{head:00}_SCANNER_JUMP_SPEED", out var speedText) ? double.Parse(speedText, CultureInfo.InvariantCulture) : 1500; ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(speed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Jump Speed 오류") / 조건에 따라 분기합니다: if (!double.IsFinite(speed) || speed <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Jump Speed 오류");
+L000271 |             if (!double.IsFinite(speed) || speed <= 0) throw new InvalidOperationException($"HEAD {head:00}: Jump Speed 오류"); ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.Add(head, new(x, y, task, freq, speed)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(x, y, task, freq, speed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _attenuators.Add(head, new(Interfaces)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(Interfaces)
+L000272 |             _routes.Add(head, new(x, y, task, freq, speed)); _attenuators.Add(head, new(Interfaces)); ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.SetPowerMeterSimulationAttenuator(target.PowerMeterNo, head - 1)
+L000273 |             Interfaces.SetPowerMeterSimulationAttenuator(target.PowerMeterNo, head - 1); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000274 |         } ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.Values.GroupBy(r => (r.X.AutomationNo, r.Task)).Any(g => g.Count() > 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.Values.GroupBy(r => (r.X.AutomationNo, r.Task)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: g.Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.Values.SelectMany(r => new[] { r.X, r.Y }).GroupBy(a => (a.AutomationNo, a.AxisReference.ToUpperInvariant())).Any(g => g.Count() > 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.Values.SelectMany(r => new[] { r.X, r.Y }).GroupBy(a => (a.AutomationNo, a.AxisReference.ToUpperInvar
+L000275 |         if (_routes.Values.GroupBy(r => (r.X.AutomationNo, r.Task)).Any(g => g.Count() > 1) || _routes.Values.SelectMany(r => new[] { r.X, r.Y }).GroupBy(a => (a.AutomationNo, a.AxisReference.ToUpperInvariant())).Any(g => g.Count() > 1)) ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Head 간 Automation Task 또는 Scanner 축이 중복되었습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Head 간 Automation Task 또는 Scanner 축이 중복되었습니다.");
+L000276 |             throw new InvalidOperationException("Head 간 Automation Task 또는 Scanner 축이 중복되었습니다."); ⟦EOL⟧
+// 해설 L277: 값을 대상에 대입합니다: _stage = Interfaces.StageReviewSequences.Open(_stageDevice) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.StageReviewSequences.Open(_stageDevice)
+L000277 |         _stage = Interfaces.StageReviewSequences.Open(_stageDevice); ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeoutMs) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000278 |         using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); limit.CancelAfter(TimeoutMs); ⟦EOL⟧
+// 해설 L279: 예외 처리 범위입니다: try
+L000279 |         try ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000280 |         { ⟦EOL⟧
+// 해설 L281: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000281 |             // Check every Head before CENTER commands or illumination. ⟦EOL⟧
+// 해설 L282: 비동기 완료를 기다립니다: await Task.WhenAll(targets.Select(async target => { var route = _routes[target.HeadNo]; while (true) { limit.Token.ThrowIfCancellationRequested(); var status = Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationNo);  / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(async target => { var route = _routes[target.HeadNo]; while (true) { limit.Token.ThrowIfCancellationRequested(); var status = Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationN… / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select
+L000282 |             await Task.WhenAll(targets.Select(async target => ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000283 |             { ⟦EOL⟧
+// 해설 L284: 지역 변수를 선언합니다: var route = _routes[target.HeadNo]; / 변수의 초기값을 지정합니다: route = _routes[target.HeadNo]
+L000284 |                 var route = _routes[target.HeadNo]; ⟦EOL⟧
+// 해설 L285: 조건을 먼저 확인하며 반복합니다: while (true)
+L000285 |                 while (true) ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000286 |                 { ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.Token.ThrowIfCancellationRequested()
+L000287 |                     limit.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationNo) / 지역 변수를 선언합니다: var status = Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationNo); / 변수의 초기값을 지정합니다: status = Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationNo)
+L000288 |                     var status = Automation.StatusSnapshots.GetTask(route.Task, route.X.AutomationNo); ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.IsFresh(TimeSpan.FromSeconds(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 조건에 따라 분기합니다: if (status.IsFresh(TimeSpan.FromSeconds(2)) && status.Value is { } value)
+L000289 |                     if (status.IsFresh(TimeSpan.FromSeconds(2)) && status.Value is { } value) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000290 |                     { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Split(':') / 지역 변수를 선언합니다: var parts = value.Split(':'); / 변수의 초기값을 지정합니다: parts = value.Split(':')
+L000291 |                         var parts = value.Split(':'); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {target.HeadNo:00}: Task 실행 중 또는 오류 ({value})") / 조건에 따라 분기합니다: if (parts.Length < 4 || parts[0] != "OK" || parts[3] is not ("Idle" or "Stopped" or "ProgramComplete" or "QueueComplete")) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {target.HeadNo:00}: Task 실행 중 또는 오류 ({value})");
+L000292 |                         if (parts.Length < 4 || parts[0] != "OK" || parts[3] is not ("Idle" or "Stopped" or "ProgramComplete" or "QueueComplete")) throw new InvalidOperationException($"HEAD {target.HeadNo:00}: Task 실행 중 또는 오류 ({value})"); ⟦EOL⟧
+// 해설 L293: 해당 반복/분기 구간을 종료합니다: break;
+L000293 |                         break; ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000294 |                     } ⟦EOL⟧
+// 해설 L295: 비동기 완료를 기다립니다: await Task.Delay(50, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, limit.Token)
+L000295 |                     await Task.Delay(50, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000296 |                 } ⟦EOL⟧
+// 해설 L297: 비동기 완료를 기다립니다: await GetAttenuatorPosition(target, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAttenuatorPosition(target, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAttenuatorPosition(target, limit.Token)
+L000297 |                 await GetAttenuatorPosition(target, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L298: 비동기 완료를 기다립니다: await WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitLaserReady(target.HeadNo, limit.Token)
+L000298 |                 await WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.PrepareAll(System.Threading.CancellationToken)
+L000299 |             })).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L300: 비동기 완료를 기다립니다: await Task.WhenAll(targets.Select(async target => { var r = _routes[target.HeadNo]; await Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false); await new / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(async target => { var r = _routes[target.HeadNo]; await Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false); await… / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select
+L000300 |             await Task.WhenAll(targets.Select(async target => ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000301 |             { ⟦EOL⟧
+// 해설 L302: 지역 변수를 선언합니다: var r = _routes[target.HeadNo]; / 변수의 초기값을 지정합니다: r = _routes[target.HeadNo]
+L000302 |                 var r = _routes[target.HeadNo]; ⟦EOL⟧
+// 해설 L303: 비동기 완료를 기다립니다: await Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token)
+L000303 |                 await Automation.ConfigurePowerMeasurement(r.X.AxisReference, r.Frequency, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L304: 비동기 완료를 기다립니다: await new CAutomationPositioningService(Automation).MoveAndWait(new[] { r.X, r.Y }.Select(a => new ST_AUTOMATION_ABSOLUTE_MOVE_TARGET($"HEAD {target.HeadNo:00} {a.AxisName}", a.AutomationNo, a.AxisReference, a.AioNo, a.ReadExtende / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAutomationPositioningService(Automation).MoveAndWait(new[] { r.X, r.Y }.Select(a => new ST_AUTOMATION_ABSOLUTE_MOVE_TARGET($"HEAD {target.HeadNo:00} {a.AxisName}", a.AutomationNo, a.AxisReference, a.AioNo, a.ReadExt… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAutomatio
+L000304 |                 await new CAutomationPositioningService(Automation).MoveAndWait(new[] { r.X, r.Y }.Select(a => new ST_AUTOMATION_ABSOLUTE_MOVE_TARGET($"HEAD {target.HeadNo:00} {a.AxisName}", a.AutomationNo, a.AxisReference, a.AioNo, a.ReadExtendedStatus, 0, r.Speed)).ToArray(), limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.PrepareAll(System.Threading.CancellationToken)
+L000305 |             })).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000306 |         } ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("PowerMeasure 장치 준비 시간 초과") / 지정 예외를 처리합니다: catch (OperationCanceledException) when (!token.IsCancellationRequested) / 예외를 발생/전달합니다: throw new TimeoutException("PowerMeasure 장치 준비 시간 초과");
+L000307 |         catch (OperationCanceledException) when (!token.IsCancellationRequested) { throw new TimeoutException("PowerMeasure 장치 준비 시간 초과"); } ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 PrepareAll.
+L000308 |     } ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.WaitLaserReady(int, System.Threading.CancellationToken)
+L000309 |     private async Task WaitLaserReady(int head, CancellationToken token) ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000310 |     { ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetInterfaceList(EN_EQP_MODULE.TalonLaser) / 지역 변수를 선언합니다: var lasers = Interfaces.GetInterfaceList(EN_EQP_MODULE.TalonLaser); / 변수의 초기값을 지정합니다: lasers = Interfaces.GetInterfaceList(EN_EQP_MODULE.TalonLaser)
+L000311 |         var lasers = Interfaces.GetInterfaceList(EN_EQP_MODULE.TalonLaser); ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: lasers.FirstOrDefault(d => d.Number == head - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Laser 설정이 없습니다.") / 조건에 따라 결과식을 선택합니다: lasers.Count == 1 ? lasers[0] : null / 지역 변수를 선언합니다: var laser = lasers.FirstOrDefault(d => d.Number == head - 1) ?? (lasers.Count == 1 ? lasers[0] : null) ?? throw new InvalidOperationException($"HEAD {head:00}: Laser 설정이 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Laser 설정이 없습니다.") / 변수의 초기값을 지정합니다: laser = la
+L000312 |         var laser = lasers.FirstOrDefault(d => d.Number == head - 1) ?? (lasers.Count == 1 ? lasers[0] : null) ?? throw new InvalidOperationException($"HEAD {head:00}: Laser 설정이 없습니다."); ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.TalonLaser, laser.Number)
+L000313 |         Connected(EN_EQP_MODULE.TalonLaser, laser.Number); ⟦EOL⟧
+// 해설 L314: 조건을 먼저 확인하며 반복합니다: while (true)
+L000314 |         while (true) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000315 |         { ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000316 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.OpticSnapshots.GetLaser(laser.Number) / 지역 변수를 선언합니다: var snapshot = Interfaces.OpticSnapshots.GetLaser(laser.Number); / 변수의 초기값을 지정합니다: snapshot = Interfaces.OpticSnapshots.GetLaser(laser.Number)
+L000317 |             var snapshot = Interfaces.OpticSnapshots.GetLaser(laser.Number); ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 조건에 따라 분기합니다: if (snapshot.State == "OK" && snapshot.Value is { } value && DateTimeOffset.Now - snapshot.UpdatedAt <= TimeSpan.FromSeconds(2))
+L000318 |             if (snapshot.State == "OK" && snapshot.Value is { } value && DateTimeOffset.Now - snapshot.UpdatedAt <= TimeSpan.FromSeconds(2)) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000319 |             { ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}: Laser ON / Gate ON / Shutter OPEN이 필요합니다.") / 조건에 따라 분기합니다: if (!value.PowerOn || !value.GateOn || !value.ShutterOpen) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}: Laser ON / Gate ON / Shutter OPEN이 필요합니다.");
+L000320 |                 if (!value.PowerOn || !value.GateOn || !value.ShutterOpen) throw new InvalidOperationException($"HEAD {head:00}: Laser ON / Gate ON / Shutter OPEN이 필요합니다."); ⟦EOL⟧
+// 해설 L321: 호출자에게 값 또는 제어를 반환합니다: return;
+L000321 |                 return; ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000322 |             } ⟦EOL⟧
+// 해설 L323: 비동기 완료를 기다립니다: await Task.Delay(50, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, token)
+L000323 |             await Task.Delay(50, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000324 |         } ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 WaitLaserReady.
+L000325 |     } ⟦EOL⟧
+// 해설 L326: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token)
+L000326 |     public Task Prepare(ST_POWER_MEASURE_TARGET target, CancellationToken token) => CheckStageReady(token); ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.CPowerMeasureDeviceSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000327 |     public async Task<double> GetAttenuatorPosition(ST_POWER_MEASURE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000328 |     { ⟦EOL⟧
+// 해설 L329: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000329 |         using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeoutMs)
+L000330 |         limit.CancelAfter(TimeoutMs); ⟦EOL⟧
+// 해설 L331: 예외 처리 범위입니다: try
+L000331 |         try ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000332 |         { ⟦EOL⟧
+// 해설 L333: 조건을 먼저 확인하며 반복합니다: while (true)
+L000333 |         while (true) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000334 |         { ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.Token.ThrowIfCancellationRequested() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.Attenuator, target.HeadNo - 1)
+L000335 |             limit.Token.ThrowIfCancellationRequested(); Connected(EN_EQP_MODULE.Attenuator, target.HeadNo - 1); ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.AttenuatorSnapshots.GetSnapshot(target.HeadNo - 1) / 지역 변수를 선언합니다: var snapshot = Interfaces.AttenuatorSnapshots.GetSnapshot(target.HeadNo - 1); / 변수의 초기값을 지정합니다: snapshot = Interfaces.AttenuatorSnapshots.GetSnapshot(target.HeadNo - 1)
+L000336 |             var snapshot = Interfaces.AttenuatorSnapshots.GetSnapshot(target.HeadNo - 1); ⟦EOL⟧
+// 해설 L337: 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.IsFresh(TimeSpan.FromSeconds(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value.CurrentPosition) / 조건에 따라 분기합니다: if (snapshot.IsFresh(TimeSpan.FromSeconds(2)) && snapshot.Value is { CommOk: true } value && snapshot.IsInPosition && double.IsFinite(value.CurrentPosition)) / 호출자에게 값 또는 제어를 반환합니다: return value.CurrentPosition;
+L000337 |             if (snapshot.IsFresh(TimeSpan.FromSeconds(2)) && snapshot.Value is { CommOk: true } value && snapshot.IsInPosition && double.IsFinite(value.CurrentPosition)) return value.CurrentPosition; ⟦EOL⟧
+// 해설 L338: 비동기 완료를 기다립니다: await Task.Delay(50, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, limit.Token)
+L000338 |             await Task.Delay(50, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000339 |         } ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000340 |         } ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"HEAD {target.HeadNo:00}: ATT 현재 위치 스냅샷 확인 시간 초과") / 지정 예외를 처리합니다: catch (OperationCanceledException) when (!token.IsCancellationRequested) / 예외를 발생/전달합니다: throw new TimeoutException($"HEAD {target.HeadNo:00}: ATT 현재 위치 스냅샷 확인 시간 초과");
+L000341 |         catch (OperationCanceledException) when (!token.IsCancellationRequested) { throw new TimeoutException($"HEAD {target.HeadNo:00}: ATT 현재 위치 스냅샷 확인 시간 초과"); } ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 GetAttenuatorPosition.
+L000342 |     } ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)
+L000343 |     public async Task MoveAttenuator(ST_POWER_MEASURE_TARGET target, double angle, CancellationToken token) ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 MoveAttenuator.
+L000344 |     { ⟦EOL⟧
+// 해설 L345: 비동기 완료를 기다립니다: await EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EndMeasurement(target)
+L000345 |         await EndMeasurement(target).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L346: 비동기 완료를 기다립니다: await CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token)
+L000346 |         await CheckStageReady(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeoutMs) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000347 |         using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); limit.CancelAfter(TimeoutMs); ⟦EOL⟧
+// 해설 L348: 비동기 완료를 기다립니다: await _attenuators[target.HeadNo].MoveAndWaitAsync([new(target.HeadNo, angle)], limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _attenuators[target.HeadNo].MoveAndWaitAsync([new(target.HeadNo, angle)], limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _attenuators[target.HeadNo].MoveAndWaitAsync([new(target.HeadNo, angle)], limit.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(target.HeadNo, angle) / 예외 처리 범위입니다: try
+L000348 |         try { await _attenuators[target.HeadNo].MoveAndWaitAsync([new(target.HeadNo, angle)], limit.Token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"HEAD {target.HeadNo:00}: ATT 이동 시간 초과") / 지정 예외를 처리합니다: catch (OperationCanceledException) when (!token.IsCancellationRequested) / 예외를 발생/전달합니다: throw new TimeoutException($"HEAD {target.HeadNo:00}: ATT 이동 시간 초과");
+L000349 |         catch (OperationCanceledException) when (!token.IsCancellationRequested) { throw new TimeoutException($"HEAD {target.HeadNo:00}: ATT 이동 시간 초과"); } ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 MoveAttenuator.
+L000350 |     } ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000351 |     public async Task BeginMeasurement(ST_POWER_MEASURE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다 · 소속 BeginMeasurement.
+L000352 |     { ⟦EOL⟧
+// 해설 L353: 비동기 완료를 기다립니다: await CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckStageReady(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo)
+L000353 |         await CheckStageReady(token).ConfigureAwait(false); Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo); ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(TimeoutMs) / 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); / 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(token)
+L000354 |         using var limit = CancellationTokenSource.CreateLinkedTokenSource(token); limit.CancelAfter(TimeoutMs); ⟦EOL⟧
+// 해설 L355: 비동기 완료를 기다립니다: await WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitLaserReady(target.HeadNo, limit.Token)
+L000355 |         await WaitLaserReady(target.HeadNo, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L356: 지역 변수를 선언합니다: var r = _routes[target.HeadNo]; / 변수의 초기값을 지정합니다: r = _routes[target.HeadNo]
+L000356 |         var r = _routes[target.HeadNo]; ⟦EOL⟧
+// 해설 L357: 비동기 완료를 기다립니다: await _emissionGate.WaitAsync(limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.WaitAsync(limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.WaitAsync(limit.Token)
+L000357 |         await _emissionGate.WaitAsync(limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L358: 예외 처리 범위입니다: try
+L000358 |         try ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 BeginMeasurement.
+L000359 |         { ⟦EOL⟧
+// 해설 L360: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000360 |             // Laser/other-Head gate waits may outlive the fresh frame acquired above. ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureStageReady()
+L000361 |             EnsureStageReady(); ⟦EOL⟧
+// 해설 L362: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000362 |             // Reserve before ON so an ambiguous command failure still forces OFF during cleanup. ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: _emitting.TryAdd(target.HeadNo, 0)
+L000363 |             _emitting.TryAdd(target.HeadNo, 0); ⟦EOL⟧
+// 해설 L364: 비동기 완료를 기다립니다: await Automation.SetGalvoLaserOutput(r.X.AxisReference, true, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.SetGalvoLaserOutput(r.X.AxisReference, true, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.SetGalvoLaserOutput(r.X.AxisReference, true, r.Task, r.X.AutomationNo, limit.Token)
+L000364 |             await Automation.SetGalvoLaserOutput(r.X.AxisReference, true, r.Task, r.X.AutomationNo, limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L365: 값을 대상에 대입합니다: _flagMayBeOn = true
+L000365 |             _flagMayBeOn = true; ⟦EOL⟧
+// 해설 L366: 비동기 완료를 기다립니다: await Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 1, limit.Token), limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 1, limit.Token), limit.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 1, limit.Token), limit.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 1, limit.
+L000366 |             await Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 1, limit.Token), limit.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 BeginMeasurement.
+L000367 |         } ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.Release() / 종료 정리 구간입니다: finally
+L000368 |         finally { _emissionGate.Release(); } ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 BeginMeasurement.
+L000369 |     } ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000370 |     public async Task EndMeasurement(ST_POWER_MEASURE_TARGET target) ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000371 |     { ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: _routes.TryGetValue(target.HeadNo, out var r) / 조건에 따라 분기합니다: if (!_routes.TryGetValue(target.HeadNo, out var r)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000372 |         if (!_routes.TryGetValue(target.HeadNo, out var r)) return; ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 정리할 자원을 선언합니다: using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(5)); / 변수의 초기값을 지정합니다: cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(5))
+L000373 |         using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L374: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000374 |         // OFF commands on independent controllers must not wait behind another Head's transport. ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: _emitting.ContainsKey(target.HeadNo) / 조건에 따라 분기합니다: if (_emitting.ContainsKey(target.HeadNo))
+L000375 |         if (_emitting.ContainsKey(target.HeadNo)) ⟦EOL⟧
+// 해설 L376: 비동기 완료를 기다립니다: await Automation.SetGalvoLaserOutput(r.X.AxisReference, false, r.Task, r.X.AutomationNo, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.SetGalvoLaserOutput(r.X.AxisReference, false, r.Task, r.X.AutomationNo, cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Automation.SetGalvoLaserOutput(r.X.AxisReference, false, r.Task, r.X.AutomationNo, cleanup.Token)
+L000376 |             await Automation.SetGalvoLaserOutput(r.X.AxisReference, false, r.Task, r.X.AutomationNo, cleanup.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L377: 비동기 완료를 기다립니다: await _emissionGate.WaitAsync(cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.WaitAsync(cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.WaitAsync(cleanup.Token)
+L000377 |         await _emissionGate.WaitAsync(cleanup.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L378: 예외 처리 범위입니다: try
+L000378 |         try ⟦EOL⟧
+// 해설 L379: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000379 |         { ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: _emitting.TryRemove(target.HeadNo, out _)
+L000380 |             _emitting.TryRemove(target.HeadNo, out _); ⟦EOL⟧
+// 해설 L381: 조건에 따라 분기합니다: if (_emitting.Count == 0 && _flagMayBeOn)
+L000381 |             if (_emitting.Count == 0 && _flagMayBeOn) ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000382 |             { ⟦EOL⟧
+// 해설 L383: 비동기 완료를 기다립니다: await Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 0, cleanup.Token), cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 0, cleanup.Token), cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 0, cleanup.Token), cleanup.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON
+L000383 |                 await Task.Run(() => Interfaces.Melsec.WriteWord("PROCESS_SEQUENCE_TPM_LASER_ON", 0, cleanup.Token), cleanup.Token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L384: 값을 대상에 대입합니다: _flagMayBeOn = false
+L000384 |                 _flagMayBeOn = false; ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000385 |             } ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000386 |         } ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: _emissionGate.Release() / 종료 정리 구간입니다: finally
+L000387 |         finally { _emissionGate.Release(); } ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 EndMeasurement.
+L000388 |     } ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<double> Drilling.Common.Interface.CPowerMeasureDeviceSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)
+L000389 |     public async Task<double> ReadPower(ST_POWER_MEASURE_TARGET target, CancellationToken token) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 ReadPower.
+L000390 |     { ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureStageReady() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo)
+L000391 |         EnsureStageReady(); Connected(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo); ⟦EOL⟧
+// 해설 L392: 비동기 완료를 기다립니다: await Interfaces.ExecutePowerMeterCommand(target.PowerMeterNo, EN_POWER_METER_COMMAND.ReadPower, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.ExecutePowerMeterCommand(target.PowerMeterNo, EN_POWER_METER_COMMAND.ReadPower, 0, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.ExecutePowerMeterCommand(target.PowerMeterNo, EN_POWER_METER_COMMAND.ReadPower, 0, token) / 지역 변수를 선언합니다: var result = await Interfaces.ExecutePowerMeterCommand(target.PowerMeterNo, EN_POWER_METER_COMMAND
+L000392 |         var result = await Interfaces.ExecutePowerMeterCommand(target.PowerMeterNo, EN_POWER_METER_COMMAND.ReadPower, 0, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L393: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(result.Message) / 조건에 따라 분기합니다: if (!result.IsSuccess) / 예외를 발생/전달합니다: throw new InvalidOperationException(result.Message);
+L000393 |         if (!result.IsSuccess) throw new InvalidOperationException(result.Message); ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: Sim(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo) / 조건에 따라 분기합니다: if (!Sim(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo))
+L000394 |         if (!Sim(EN_EQP_MODULE.PowerMeter, target.PowerMeterNo)) ⟦EOL⟧
+// 해설 L395: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPowerMeter.TryReadPower(result.Message, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeter가 유효한 W 값을 응답하지 않았습니다.") / 조건에 따라 결과식을 선택합니다: CPowerMeter.TryReadPower(result.Message, out var value) ? value : throw new InvalidOperationException("PowerMeter가 유효한 W 값을 응답하지 않았습니다.") / 호출자에게 값 또는 제어를 반환합니다: return CPowerMeter.TryReadPower(result.Message, out var value) ? value : throw new InvalidOperationException("PowerMeter가 유효한 W 값을 응답하지 않았습니다."); / 예외를 발생/전달합니다: throw new Invalid
+L000395 |             return CPowerMeter.TryReadPower(result.Message, out var value) ? value : throw new InvalidOperationException("PowerMeter가 유효한 W 값을 응답하지 않았습니다."); ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interfaces.GetPowerMeterStatus(target.PowerMeterNo, token) / 지역 변수를 선언합니다: var status = Interfaces.GetPowerMeterStatus(target.PowerMeterNo, token); / 변수의 초기값을 지정합니다: status = Interfaces.GetPowerMeterStatus(target.PowerMeterNo, token)
+L000396 |         var status = Interfaces.GetPowerMeterStatus(target.PowerMeterNo, token); ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.MeasuredPower) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PowerMeter 측정값 오류") / 조건에 따라 분기합니다: if (status.LastError != EN_POWER_METER_ERROR.Ok || !double.IsFinite(status.MeasuredPower)) / 예외를 발생/전달합니다: throw new InvalidOperationException("PowerMeter 측정값 오류");
+L000397 |         if (status.LastError != EN_POWER_METER_ERROR.Ok || !double.IsFinite(status.MeasuredPower)) throw new InvalidOperationException("PowerMeter 측정값 오류"); ⟦EOL⟧
+// 해설 L398: 호출자에게 값 또는 제어를 반환합니다: return status.MeasuredPower;
+L000398 |         return status.MeasuredPower; ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 ReadPower.
+L000399 |     } ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)
+L000400 |     public async Task Finish(ST_POWER_MEASURE_TARGET target) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 Finish.
+L000401 |     { ⟦EOL⟧
+// 해설 L402: 지역 변수를 선언합니다: Exception? failure = null; / 변수의 초기값을 지정합니다: failure = null
+L000402 |         Exception? failure = null; ⟦EOL⟧
+// 해설 L403: 비동기 완료를 기다립니다: await EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EndMeasurement(target).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EndMeasurement(target) / 예외 처리 범위입니다: try
+L000403 |         try { await EndMeasurement(target).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L404: 값을 대상에 대입합니다: failure = error / 지정 예외를 처리합니다: catch (Exception error)
+L000404 |         catch (Exception error) { failure = error; } ⟦EOL⟧
+// 해설 L405: 함수·델리게이트 또는 객체 생성자를 호출합니다: _attenuators.TryGetValue(target.HeadNo, out var mover) / 조건에 따라 분기합니다: if (_attenuators.TryGetValue(target.HeadNo, out var mover) && mover.HasPendingStops)
+L000405 |         if (_attenuators.TryGetValue(target.HeadNo, out var mover) && mover.HasPendingStops) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 Finish.
+L000406 |         { ⟦EOL⟧
+// 해설 L407: 비동기 완료를 기다립니다: await mover.StopPendingAsync(cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: mover.StopPendingAsync(cleanup.Token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: mover.StopPendingAsync(cleanup.Token) / 예외 처리 범위입니다: try / 정리할 자원을 선언합니다: using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(5)); / 변수의 초기값을 지정합니다: cleanup = new CancellationTokenSource(Ti
+L000407 |             try { using var cleanup = new CancellationTokenSource(TimeSpan.FromSeconds(5)); await mover.StopPendingAsync(cleanup.Token).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L408: 값을 대상에 대입합니다: failure = failure is null ? error : new AggregateException(failure, error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException(failure, error) / 지정 예외를 처리합니다: catch (Exception error) / 조건에 따라 결과식을 선택합니다: failure is null ? error : new AggregateException(failure, error)
+L000408 |             catch (Exception error) { failure = failure is null ? error : new AggregateException(failure, error); } ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 Finish.
+L000409 |         } ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {target.HeadNo:00}: 종료 처리 실패 / {failure.Message}", failure) / 조건에 따라 분기합니다: if (failure is not null) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {target.HeadNo:00}: 종료 처리 실패 / {failure.Message}", failure);
+L000410 |         if (failure is not null) throw new InvalidOperationException($"HEAD {target.HeadNo:00}: 종료 처리 실패 / {failure.Message}", failure); ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 Finish.
+L000411 |     } ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureDeviceSession.DisposeAsync()
+L000412 |     public async ValueTask DisposeAsync() ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000413 |     { ⟦EOL⟧
+// 해설 L414: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000414 |         // Retain the Stage lease if OFF/cleanup cannot be confirmed. A later release can retry. ⟦EOL⟧
+// 해설 L415: 비동기 완료를 기다립니다: await Task.WhenAll(targets.Select(Finish)).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(Finish)).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(Finish)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(Finish)
+L000415 |         await Task.WhenAll(targets.Select(Finish)).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L416: 값을 대상에 대입합니다: _stage = null / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000416 |         _stage?.Dispose(); _stage = null; ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 DisposeAsync.
+L000417 |     } ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다.
+L000418 | } ⟦EOL⟧

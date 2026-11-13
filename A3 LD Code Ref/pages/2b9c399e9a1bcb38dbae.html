@@ -1,0 +1,1629 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/CPowerMeasureService.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/CPowerMeasureService.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs">Git 원본</a></p><h1>Drilling.Common/Interface/CPowerMeasureService.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>fd1a44a492d7ace7af5cfcd31bd66022e4c8879bcfbd728537f55e48f8308ab0</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>18,436 bytes / 349 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/2b9c399e9a1bcb38dbae.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CPowerMeasureService</td><td>ClassDeclaration</td><td>4–265</td><td>CPowerMeasureService: IAsyncDisposable</td></tr>
+<tr><td>ST_POWER_MEASURE_TARGET</td><td>RecordDeclaration</td><td>267–267</td><td>ST_POWER_MEASURE_TARGET</td></tr>
+<tr><td>ST_POWER_MEASURE_OPTIONS</td><td>RecordDeclaration</td><td>268–285</td><td>ST_POWER_MEASURE_OPTIONS</td></tr>
+<tr><td>ST_POWER_MEASURE_SAMPLE</td><td>RecordDeclaration</td><td>287–287</td><td>ST_POWER_MEASURE_SAMPLE</td></tr>
+<tr><td>ST_POWER_MEASURE_HEAD</td><td>RecordDeclaration</td><td>288–293</td><td>ST_POWER_MEASURE_HEAD</td></tr>
+<tr><td>ST_POWER_MEASURE_SNAPSHOT</td><td>RecordDeclaration</td><td>295–298</td><td>ST_POWER_MEASURE_SNAPSHOT</td></tr>
+<tr><td>IPowerMeasureSession</td><td>InterfaceDeclaration</td><td>300–311</td><td>IPowerMeasureSession</td></tr>
+<tr><td>CPowerMeasureSimulationSession</td><td>ClassDeclaration</td><td>314–340</td><td>CPowerMeasureSimulationSession: IPowerMeasureSession</td></tr>
+<tr><td>ST_POWER_MEASURE_START</td><td>RecordDeclaration</td><td>342–342</td><td>ST_POWER_MEASURE_START</td></tr>
+<tr><td>IPowerMeasureTable</td><td>InterfaceDeclaration</td><td>344–348</td><td>IPowerMeasureTable</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_sync</td><td>FieldDeclaration</td><td>L6–6</td><td>object Drilling.Common.Interface.CPowerMeasureService._sync</td></tr>
+<tr><td>_heads</td><td>FieldDeclaration</td><td>L7–7</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt; Drilling.Common.Interface.CPowerMeasureService._heads</td></tr>
+<tr><td>_cancellation</td><td>FieldDeclaration</td><td>L8–8</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Interface.CPowerMeasureService._cancellation</td></tr>
+<tr><td>_completion</td><td>FieldDeclaration</td><td>L9–9</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService._completion</td></tr>
+<tr><td>_stageState</td><td>FieldDeclaration</td><td>L10–10</td><td>string Drilling.Common.Interface.CPowerMeasureService._stageState</td></tr>
+<tr><td>_origin</td><td>FieldDeclaration</td><td>L11–11</td><td>string Drilling.Common.Interface.CPowerMeasureService._origin</td></tr>
+<tr><td>GetSnapshot</td><td>MethodDeclaration</td><td>L12–16</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT Drilling.Common.Interface.CPowerMeasureService.GetSnapshot()</td></tr>
+<tr><td>ValidateTargets</td><td>MethodDeclaration</td><td>L18–29</td><td>void Drilling.Common.Interface.CPowerMeasureService.ValidateTargets(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;)</td></tr>
+<tr><td>Start</td><td>MethodDeclaration</td><td>L30–47</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Start(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationToken, string)</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L49–56</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Stop()</td></tr>
+<tr><td>DisposeAsync</td><td>MethodDeclaration</td><td>L58–58</td><td>System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureService.DisposeAsync()</td></tr>
+<tr><td>RunBatch</td><td>MethodDeclaration</td><td>L59–102</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.RunBatch(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[], Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationTokenSource)</td></tr>
+<tr><td>RunHead</td><td>MethodDeclaration</td><td>L104–228</td><td>System.Threading.Tasks.Task&lt;bool&gt; Drilling.Common.Interface.CPowerMeasureService.RunHead(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationToken)</td></tr>
+<tr><td>State</td><td>LocalFunctionStatement</td><td>L227–227</td><td>void State(string, string)</td></tr>
+<tr><td>NextAngle</td><td>MethodDeclaration</td><td>L230–258</td><td>double Drilling.Common.Interface.CPowerMeasureService.NextAngle(System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;, double)</td></tr>
+<tr><td>Update</td><td>MethodDeclaration</td><td>L260–264</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;)</td></tr>
+<tr><td>ToleranceW</td><td>PropertyDeclaration</td><td>L270–270</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW</td></tr>
+<tr><td>get_ToleranceW</td><td>GetAccessorDeclaration</td><td>L270–270</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW.get</td></tr>
+<tr><td>set_ToleranceW</td><td>InitAccessorDeclaration</td><td>L270–270</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW.init</td></tr>
+<tr><td>MaximumAttempts</td><td>PropertyDeclaration</td><td>L271–271</td><td>int? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts</td></tr>
+<tr><td>get_MaximumAttempts</td><td>GetAccessorDeclaration</td><td>L271–271</td><td>int? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts.get</td></tr>
+<tr><td>set_MaximumAttempts</td><td>InitAccessorDeclaration</td><td>L271–271</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts.init</td></tr>
+<tr><td>CoolingTimeMs</td><td>PropertyDeclaration</td><td>L272–272</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs</td></tr>
+<tr><td>get_CoolingTimeMs</td><td>GetAccessorDeclaration</td><td>L272–272</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs.get</td></tr>
+<tr><td>set_CoolingTimeMs</td><td>InitAccessorDeclaration</td><td>L272–272</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs.init</td></tr>
+<tr><td>Tolerance</td><td>PropertyDeclaration</td><td>L273–278</td><td>double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance</td></tr>
+<tr><td>MaxAttempts</td><td>PropertyDeclaration</td><td>L279–284</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts</td></tr>
+<tr><td>InitialAngle</td><td>PropertyDeclaration</td><td>L290–290</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle</td></tr>
+<tr><td>get_InitialAngle</td><td>GetAccessorDeclaration</td><td>L290–290</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle.get</td></tr>
+<tr><td>set_InitialAngle</td><td>InitAccessorDeclaration</td><td>L290–290</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle.init</td></tr>
+<tr><td>StartDetail</td><td>PropertyDeclaration</td><td>L291–291</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail</td></tr>
+<tr><td>get_StartDetail</td><td>GetAccessorDeclaration</td><td>L291–291</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail.get</td></tr>
+<tr><td>set_StartDetail</td><td>InitAccessorDeclaration</td><td>L291–291</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail.init</td></tr>
+<tr><td>TableState</td><td>PropertyDeclaration</td><td>L292–292</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState</td></tr>
+<tr><td>get_TableState</td><td>GetAccessorDeclaration</td><td>L292–292</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState.get</td></tr>
+<tr><td>set_TableState</td><td>InitAccessorDeclaration</td><td>L292–292</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState.init</td></tr>
+<tr><td>Origin</td><td>PropertyDeclaration</td><td>L297–297</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin</td></tr>
+<tr><td>get_Origin</td><td>GetAccessorDeclaration</td><td>L297–297</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin.get</td></tr>
+<tr><td>set_Origin</td><td>InitAccessorDeclaration</td><td>L297–297</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin.init</td></tr>
+<tr><td>CheckStageReady</td><td>MethodDeclaration</td><td>L302–302</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.CheckStageReady(System.Threading.CancellationToken)</td></tr>
+<tr><td>Prepare</td><td>MethodDeclaration</td><td>L303–303</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>GetAttenuatorPosition</td><td>MethodDeclaration</td><td>L305–305</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>MoveAttenuator</td><td>MethodDeclaration</td><td>L306–306</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>BeginMeasurement</td><td>MethodDeclaration</td><td>L307–307</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>EndMeasurement</td><td>MethodDeclaration</td><td>L308–308</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>ReadPower</td><td>MethodDeclaration</td><td>L309–309</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>Finish</td><td>MethodDeclaration</td><td>L310–310</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>_angles</td><td>FieldDeclaration</td><td>L316–316</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession._angles</td></tr>
+<tr><td>CheckStageReady</td><td>MethodDeclaration</td><td>L317–317</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.CheckStageReady(System.Threading.CancellationToken)</td></tr>
+<tr><td>BeginMeasurement</td><td>MethodDeclaration</td><td>L318–318</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>EndMeasurement</td><td>MethodDeclaration</td><td>L319–319</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>Prepare</td><td>MethodDeclaration</td><td>L320–320</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>GetAttenuatorPosition</td><td>MethodDeclaration</td><td>L321–325</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>MoveAttenuator</td><td>MethodDeclaration</td><td>L327–331</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadPower</td><td>MethodDeclaration</td><td>L333–337</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>Finish</td><td>MethodDeclaration</td><td>L339–339</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>FindStart</td><td>MethodDeclaration</td><td>L346–346</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.Common.Interface.IPowerMeasureTable.FindStart(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>SaveMeasurement</td><td>MethodDeclaration</td><td>L347–347</td><td>void Drilling.Common.Interface.IPowerMeasureTable.SaveMeasurement(int, double, double, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L6">FieldDeclaration <code>_sync</code> · L6–6</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L6-L6">Drilling.Common/Interface/CPowerMeasureService.cs:6–6</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Interface.CPowerMeasureService._sync</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>6</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>6</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>6</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _sync = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L7">FieldDeclaration <code>_heads</code> · L7–7</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L7-L7">Drilling.Common/Interface/CPowerMeasureService.cs:7–7</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt; Drilling.Common.Interface.CPowerMeasureService._heads</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>7</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _heads = []</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L8">FieldDeclaration <code>_cancellation</code> · L8–8</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L8-L8">Drilling.Common/Interface/CPowerMeasureService.cs:8–8</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Interface.CPowerMeasureService._cancellation</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.CancellationTokenSource?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L9">FieldDeclaration <code>_completion</code> · L9–9</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L9-L9">Drilling.Common/Interface/CPowerMeasureService.cs:9–9</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService._completion</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>9</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _completion = Task.CompletedTask</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L10">FieldDeclaration <code>_stageState</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L10-L10">Drilling.Common/Interface/CPowerMeasureService.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CPowerMeasureService._stageState</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _stageState = &quot;IDLE&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>_origin</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L11-L11">Drilling.Common/Interface/CPowerMeasureService.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CPowerMeasureService._origin</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _origin = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">MethodDeclaration <code>GetSnapshot</code> · L12–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L12-L16">Drilling.Common/Interface/CPowerMeasureService.cs:12–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT Drilling.Common.Interface.CPowerMeasureService.GetSnapshot()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L97-L97">Drilling.Common/Interface/CPowerMeasureRun.cs:97–97</a></td><td>manager.PowerMeasure.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L249-L249">Drilling.Common/Interface/CPowerMeasureRun.cs:249–249</a></td><td>manager.PowerMeasure.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L30-L30">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:30–30</a></td><td>_service.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L136-L136">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:136–136</a></td><td>_service.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L189-L189">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:189–189</a></td><td>_service.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L727-L727">Drilling.UI/Menu/Menus/CMenuMain.cs:727–727</a></td><td>.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L843-L843">Drilling.UI/Menu/Menus/CMenuMain.cs:843–843</a></td><td>.GetSnapshot</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.ST_POWER_MEASURE_SNAPSHOT(bool, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;, string) · Drilling.Common/Interface/CPowerMeasureService.cs:295</td></tr>
+<tr><td>15</td><td>_heads.Values.OrderBy(h =&gt; h.Target.HeadNo).ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_HEAD[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;.ToArray&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;()</td></tr>
+<tr><td>15</td><td>_heads.Values.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;.OrderBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, int&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>15</td><td>assignment</td><td>값을 대상에 대입합니다: Origin = _origin</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_cancellation is not null, _heads.Values.OrderBy(h =&gt; h.Target.HeadNo).ToArray(), _stageState) { Origin = _origin }</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.Values.OrderBy(h =&gt; h.Target.HeadNo).ToArray()</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.Values.OrderBy(h =&gt; h.Target.HeadNo)</td></tr>
+<tr><td>15</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(_cancellation is not null, _heads.Values.OrderBy(h =&gt; h.Target.HeadNo).ToArray(), _stageState) { Origin = _origin };</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetSnapshot&quot;]
+ N0[&quot;L14 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">MethodDeclaration <code>ValidateTargets</code> · L18–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L18-L29">Drilling.Common/Interface/CPowerMeasureService.cs:18–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureService.ValidateTargets(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>targets</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L53-L53">Drilling.Common/Interface/CPowerMeasureRun.cs:53–53</a></td><td>CPowerMeasureService.ValidateTargets</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L32-L32">Drilling.Common/Interface/CPowerMeasureService.cs:32–32</a></td><td>ValidateTargets</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>20</td><td>targets.OrderBy(h =&gt; h.HeadNo).ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.ToArray&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;()</td></tr>
+<tr><td>20</td><td>targets.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.OrderBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;)</td></tr>
+<tr><td>21</td><td>batch.Select(h =&gt; h.HeadNo).Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;int&gt;.Count&lt;int&gt;()</td></tr>
+<tr><td>21</td><td>batch.Select(h =&gt; h.HeadNo).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
+<tr><td>21</td><td>batch.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Select&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;)</td></tr>
+<tr><td>21</td><td>batch.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Any&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, bool&gt;)</td></tr>
+<tr><td>21</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>22</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>23</td><td>batch.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Any&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, bool&gt;)</td></tr>
+<tr><td>24</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>25</td><td>batch.Select(h =&gt; h.PowerMeterNo).Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;int&gt;.Count&lt;int&gt;()</td></tr>
+<tr><td>25</td><td>batch.Select(h =&gt; h.PowerMeterNo).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
+<tr><td>25</td><td>batch.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Select&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;)</td></tr>
+<tr><td>26</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+<tr><td>27</td><td>batch.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Any&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, bool&gt;)</td></tr>
+<tr><td>27</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>28</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h =&gt; h.HeadNo).ToArray()</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h =&gt; h.HeadNo)</td></tr>
+<tr><td>20</td><td>local-declaration</td><td>지역 변수를 선언합니다: var batch = targets.OrderBy(h =&gt; h.HeadNo).ToArray();</td></tr>
+<tr><td>20</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: batch = targets.OrderBy(h =&gt; h.HeadNo).ToArray()</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.HeadNo).Distinct().Count()</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.HeadNo).Distinct()</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.HeadNo)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h =&gt; h.HeadNo is &lt; 1 or &gt; 8 || h.PowerMeterNo &lt; 0 || !double.IsFinite(h.TargetPower) || h.TargetPower &lt;= 0)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(h.TargetPower)</td></tr>
+<tr><td>21</td><td>if</td><td>조건에 따라 분기합니다: if (batch.Length == 0 || batch.Select(h =&gt; h.HeadNo).Distinct().Count() != batch.Length || batch.Any(h =&gt; h.HeadNo is &lt; 1 or &gt; 8 || h.PowerMeterNo &lt; 0 || !double.IsFinite(h.TargetPower) || h.TargetPower &lt;= 0))</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;Head, PowerMeter 및 0보다 큰 Target Power를 확인해 주세요.&quot;)</td></tr>
+<tr><td>22</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;Head, PowerMeter 및 0보다 큰 Target Power를 확인해 주세요.&quot;);</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h =&gt; h.Options is not { } options || options.Mode is not (&quot;ROUGH&quot; or &quot;FINE&quot; or &quot;DETAIL&quot;) || options.SettleTimeMs is &lt; 0 or &gt; 60000 || options.MeasureCount is &lt; 1 or &gt; 1000 || options.MeasureIntervalMs is &lt; 0 or…</td></tr>
+<tr><td>23</td><td>if</td><td>조건에 따라 분기합니다: if (batch.Any(h =&gt; h.Options is not { } options || options.Mode is not (&quot;ROUGH&quot; or &quot;FINE&quot; or &quot;DETAIL&quot;) || options.SettleTimeMs is &lt; 0 or &gt; 60000 || options.MeasureCount is &lt; 1 or &gt; 1000 || options.MeasureIntervalMs is &lt; 0 or…)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;측정 모드, 안정화 시간, 측정 횟수 및 간격을 확인해 주세요.&quot;)</td></tr>
+<tr><td>24</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;측정 모드, 안정화 시간, 측정 횟수 및 간격을 확인해 주세요.&quot;);</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.PowerMeterNo).Distinct().Count()</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.PowerMeterNo).Distinct()</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Select(h =&gt; h.PowerMeterNo)</td></tr>
+<tr><td>25</td><td>if</td><td>조건에 따라 분기합니다: if (batch.Select(h =&gt; h.PowerMeterNo).Distinct().Count() != batch.Length)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;각 Head에는 서로 다른 전용 PowerMeter가 필요합니다.&quot;)</td></tr>
+<tr><td>26</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;각 Head에는 서로 다른 전용 PowerMeter가 필요합니다.&quot;);</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.Any(h =&gt; !double.IsFinite(h.Options.Tolerance) || h.Options.Tolerance &lt; 0 || h.Options.MaxAttempts is &lt; 1 or &gt; 100 || h.Options.CoolingTimeMs is &lt; 0 or &gt; 60000)</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(h.Options.Tolerance)</td></tr>
+<tr><td>27</td><td>if</td><td>조건에 따라 분기합니다: if (batch.Any(h =&gt; !double.IsFinite(h.Options.Tolerance) || h.Options.Tolerance &lt; 0 || h.Options.MaxAttempts is &lt; 1 or &gt; 100 || h.Options.CoolingTimeMs is &lt; 0 or &gt; 60000))</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException(&quot;허용오차, 최대 시도 횟수 및 냉각 시간을 확인해 주세요.&quot;)</td></tr>
+<tr><td>28</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException(&quot;허용오차, 최대 시도 횟수 및 냉각 시간을 확인해 주세요.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateTargets&quot;]
+ N0[&quot;L21 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L23 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L25 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L27 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">MethodDeclaration <code>Start</code> · L30–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L30-L47">Drilling.Common/Interface/CPowerMeasureService.cs:30–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Start(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationToken, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>targets</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>session</td><td>Drilling.Common.Interface.IPowerMeasureSession</td><td>None</td><td>False /</td></tr>
+<tr><td>table</td><td>Drilling.Common.Interface.IPowerMeasureTable?</td><td>None</td><td>True / null</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+<tr><td>origin</td><td>string</td><td>None</td><td>True / &quot;MANUAL&quot;</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L86-L86">Drilling.Common/Interface/CPowerMeasureRun.cs:86–86</a></td><td>manager.PowerMeasure.Start</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>ValidateTargets</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.ValidateTargets(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:18</td></tr>
+<tr><td>33</td><td>targets.OrderBy(h =&gt; h.HeadNo).ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.ToArray&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;()</td></tr>
+<tr><td>33</td><td>targets.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.OrderBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;)</td></tr>
+<tr><td>34</td><td>ArgumentNullException.ThrowIfNull</td><td>resolved</td><td>void System.ArgumentNullException.ThrowIfNull(object?, string?)</td></tr>
+<tr><td>38</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>39</td><td>CancellationTokenSource.CreateLinkedTokenSource</td><td>resolved</td><td>System.Threading.CancellationTokenSource System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken)</td></tr>
+<tr><td>43</td><td>batch.ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.ToDictionary&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, int&gt;, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;)</td></tr>
+<tr><td>43</td><td>new ST_POWER_MEASURE_HEAD</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.ST_POWER_MEASURE_HEAD(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, string, double?, double?, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:288</td></tr>
+<tr><td>44</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func&lt;System.Threading.Tasks.Task?&gt;)</td></tr>
+<tr><td>44</td><td>RunBatch</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.RunBatch(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[], Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationTokenSource) · Drilling.Common/Interface/CPowerMeasureService.cs:59</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTargets(targets)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h =&gt; h.HeadNo).ToArray()</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.OrderBy(h =&gt; h.HeadNo)</td></tr>
+<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var batch = targets.OrderBy(h =&gt; h.HeadNo).ToArray();</td></tr>
+<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: batch = targets.OrderBy(h =&gt; h.HeadNo).ToArray()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(session)</td></tr>
+<tr><td>35</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>37</td><td>if</td><td>조건에 따라 분기합니다: if (_cancellation is not null)</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;PowerMeasure가 이미 진행 중입니다.&quot;)</td></tr>
+<tr><td>38</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;PowerMeasure가 이미 진행 중입니다.&quot;);</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(token)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cancellation = CancellationTokenSource.CreateLinkedTokenSource(token);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cancellation = CancellationTokenSource.CreateLinkedTokenSource(token)</td></tr>
+<tr><td>40</td><td>assignment</td><td>값을 대상에 대입합니다: _cancellation = cancellation</td></tr>
+<tr><td>41</td><td>assignment</td><td>값을 대상에 대입합니다: _origin = origin</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: _stageState = &quot;CHECKING&quot;</td></tr>
+<tr><td>43</td><td>assignment</td><td>값을 대상에 대입합니다: _heads = batch.ToDictionary(h =&gt; h.HeadNo, h =&gt; new ST_POWER_MEASURE_HEAD(h, &quot;WAITING&quot;, null, null, &quot;측정 준비&quot;, []))</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: batch.ToDictionary(h =&gt; h.HeadNo, h =&gt; new ST_POWER_MEASURE_HEAD(h, &quot;WAITING&quot;, null, null, &quot;측정 준비&quot;, []))</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_POWER_MEASURE_HEAD(h, &quot;WAITING&quot;, null, null, &quot;측정 준비&quot;, [])</td></tr>
+<tr><td>44</td><td>assignment</td><td>값을 대상에 대입합니다: _completion = Task.Run(() =&gt; RunBatch(batch, session, table, cancellation))</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =&gt; RunBatch(batch, session, table, cancellation))</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RunBatch(batch, session, table, cancellation)</td></tr>
+<tr><td>45</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _completion;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Start&quot;]
+ N0[&quot;L35 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L37 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">MethodDeclaration <code>Stop</code> · L49–56</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L49-L56">Drilling.Common/Interface/CPowerMeasureService.cs:49–56</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Stop()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L58-L58">Drilling.Common/Interface/CPowerMeasureService.cs:58–58</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L201-L201">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:201–201</a></td><td>_service.Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>.Cancel</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Cancel()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>51</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()</td></tr>
+<tr><td>54</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _completion;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Stop&quot;]
+ N0[&quot;L51 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L58">MethodDeclaration <code>DisposeAsync</code> · L58–58</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L58-L58">Drilling.Common/Interface/CPowerMeasureService.cs:58–58</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureService.DisposeAsync()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.ValueTask</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L234-L234">Drilling.Common/Managers/CManager.cs:234–234</a></td><td>PowerMeasure.DisposeAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>58</td><td>Stop().ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>58</td><td>Stop</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.Stop() · Drilling.Common/Interface/CPowerMeasureService.cs:49</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>58</td><td>await</td><td>비동기 완료를 기다립니다: await Stop().ConfigureAwait(false)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop().ConfigureAwait(false)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L59">MethodDeclaration <code>RunBatch</code> · L59–102</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L59-L102">Drilling.Common/Interface/CPowerMeasureService.cs:59–102</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureService.RunBatch(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[], Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationTokenSource)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>targets</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET[]</td><td>None</td><td>False /</td></tr>
+<tr><td>session</td><td>Drilling.Common.Interface.IPowerMeasureSession</td><td>None</td><td>False /</td></tr>
+<tr><td>table</td><td>Drilling.Common.Interface.IPowerMeasureTable?</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellation</td><td>System.Threading.CancellationTokenSource</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L44-L44">Drilling.Common/Interface/CPowerMeasureService.cs:44–44</a></td><td>RunBatch</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>63</td><td>session.CheckStageReady(cancellation.Token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>63</td><td>session.CheckStageReady</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.CheckStageReady(System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:302</td></tr>
+<tr><td>64</td><td>cancellation.Token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>67</td><td>Task.WhenAll(targets.Select(target =&gt; RunHead(target, session, table, cancellation.Token))).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;bool[]&gt; System.Threading.Tasks.Task&lt;bool[]&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>67</td><td>Task.WhenAll</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;bool[]&gt; System.Threading.Tasks.Task.WhenAll&lt;bool&gt;(System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&lt;bool&gt;&gt;)</td></tr>
+<tr><td>67</td><td>targets.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&lt;bool&gt;&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;.Select&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.Tasks.Task&lt;bool&gt;&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.Tasks.Task&lt;bool&gt;&gt;)</td></tr>
+<tr><td>67</td><td>RunHead</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;bool&gt; Drilling.Common.Interface.CPowerMeasureService.RunHead(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:104</td></tr>
+<tr><td>79</td><td>_heads.ToArray</td><td>resolved</td><td>System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;[] System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;&gt;.ToArray&lt;System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;&gt;()</td></tr>
+<tr><td>91</td><td>_heads.ToArray</td><td>resolved</td><td>System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;[] System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;&gt;.ToArray&lt;System.Collections.Generic.KeyValuePair&lt;int, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;&gt;()</td></tr>
+<tr><td>99</td><td>cancellation.Dispose</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Dispose()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>63</td><td>await</td><td>비동기 완료를 기다립니다: await session.CheckStageReady(cancellation.Token).ConfigureAwait(false)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.CheckStageReady(cancellation.Token).ConfigureAwait(false)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.CheckStageReady(cancellation.Token)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>65</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: _stageState = &quot;COMPLETE&quot;</td></tr>
+<tr><td>67</td><td>await</td><td>비동기 완료를 기다립니다: await Task.WhenAll(targets.Select(target =&gt; RunHead(target, session, table, cancellation.Token))).ConfigureAwait(false)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(target =&gt; RunHead(target, session, table, cancellation.Token))).ConfigureAwait(false)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(targets.Select(target =&gt; RunHead(target, session, table, cancellation.Token)))</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(target =&gt; RunHead(target, session, table, cancellation.Token))</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RunHead(target, session, table, cancellation.Token)</td></tr>
+<tr><td>69</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellation.IsCancellationRequested)</td></tr>
+<tr><td>71</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: _stageState = &quot;STOPPED&quot;</td></tr>
+<tr><td>74</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>76</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>78</td><td>assignment</td><td>값을 대상에 대입합니다: _stageState = &quot;ERROR&quot;</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.ToArray()</td></tr>
+<tr><td>79</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var(head, state)in _heads.ToArray()) if (state.State == &quot;WAITING&quot;) _heads[head] = state with { State = &quot;ERROR&quot;, Message = $&quot;측정 준비 실패: {error.Message}&quot;};</td></tr>
+<tr><td>80</td><td>if</td><td>조건에 따라 분기합니다: if (state.State == &quot;WAITING&quot;)</td></tr>
+<tr><td>81</td><td>assignment</td><td>값을 대상에 대입합니다: _heads[head] = state with { State = &quot;ERROR&quot;, Message = $&quot;측정 준비 실패: {error.Message}&quot;}</td></tr>
+<tr><td>83</td><td>assignment</td><td>값을 대상에 대입합니다: State = &quot;ERROR&quot;</td></tr>
+<tr><td>84</td><td>assignment</td><td>값을 대상에 대입합니다: Message = $&quot;측정 준비 실패: {error.Message}&quot;</td></tr>
+<tr><td>87</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>89</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _heads.ToArray()</td></tr>
+<tr><td>91</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var(head, state)in _heads.ToArray()) if (state.State == &quot;WAITING&quot;) _heads[head] = state with { State = &quot;STOPPED&quot;, Message = &quot;대기 작업 취소&quot; };</td></tr>
+<tr><td>92</td><td>if</td><td>조건에 따라 분기합니다: if (state.State == &quot;WAITING&quot;)</td></tr>
+<tr><td>93</td><td>assignment</td><td>값을 대상에 대입합니다: _heads[head] = state with { State = &quot;STOPPED&quot;, Message = &quot;대기 작업 취소&quot; }</td></tr>
+<tr><td>95</td><td>assignment</td><td>값을 대상에 대입합니다: State = &quot;STOPPED&quot;</td></tr>
+<tr><td>96</td><td>assignment</td><td>값을 대상에 대입합니다: Message = &quot;대기 작업 취소&quot;</td></tr>
+<tr><td>98</td><td>assignment</td><td>값을 대상에 대입합니다: _cancellation = null</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Dispose()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RunBatch&quot;]
+ N0[&quot;L61 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L65 lock&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L69 catch&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L71 lock&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L74 catch&quot;]
+ N0 --&gt;|포함| N4
+ N5[&quot;L76 lock&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L79 foreach&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L80 if&quot;]
+ N6 --&gt;|포함| N7
+ N8[&quot;L87 finally&quot;]
+ N0 --&gt;|포함| N8
+ N9[&quot;L89 lock&quot;]
+ N8 --&gt;|포함| N9
+ N10[&quot;L91 foreach&quot;]
+ N9 --&gt;|포함| N10
+ N11[&quot;L92 if&quot;]
+ N10 --&gt;|포함| N11</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L104">MethodDeclaration <code>RunHead</code> · L104–228</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L104-L228">Drilling.Common/Interface/CPowerMeasureService.cs:104–228</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;bool&gt; Drilling.Common.Interface.CPowerMeasureService.RunHead(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, Drilling.Common.Interface.IPowerMeasureSession, Drilling.Common.Interface.IPowerMeasureTable?, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;bool&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>session</td><td>Drilling.Common.Interface.IPowerMeasureSession</td><td>None</td><td>False /</td></tr>
+<tr><td>table</td><td>Drilling.Common.Interface.IPowerMeasureTable?</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L67-L67">Drilling.Common/Interface/CPowerMeasureService.cs:67–67</a></td><td>RunHead</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>107</td><td>new List&lt;ST_POWER_MEASURE_SAMPLE&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.List()</td></tr>
+<tr><td>112</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>113</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>114</td><td>session.Prepare(target, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>114</td><td>session.Prepare</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:303</td></tr>
+<tr><td>115</td><td>.FindStart</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.Common.Interface.IPowerMeasureTable.FindStart(int, double, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:346</td></tr>
+<tr><td>115</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START.ST_POWER_MEASURE_START(double?, string) · Drilling.Common/Interface/CPowerMeasureService.cs:342</td></tr>
+<tr><td>116</td><td>session.GetAttenuatorPosition(target, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;double&gt; System.Threading.Tasks.Task&lt;double&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>116</td><td>session.GetAttenuatorPosition</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:305</td></tr>
+<tr><td>117</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>118</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>119</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+<tr><td>122</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>126</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>127</td><td>session.MoveAttenuator(target, angle, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>127</td><td>session.MoveAttenuator</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:306</td></tr>
+<tr><td>128</td><td>session.GetAttenuatorPosition(target, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;double&gt; System.Threading.Tasks.Task&lt;double&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>128</td><td>session.GetAttenuatorPosition</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:305</td></tr>
+<tr><td>131</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+<tr><td>132</td><td>new List&lt;double&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;double&gt;.List()</td></tr>
+<tr><td>133</td><td>session.BeginMeasurement(target, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>133</td><td>session.BeginMeasurement</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:307</td></tr>
+<tr><td>136</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>137</td><td>Task.Delay(options.SettleTimeMs, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>137</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+<tr><td>140</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>141</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>142</td><td>session.ReadPower(target, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;double&gt; System.Threading.Tasks.Task&lt;double&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>142</td><td>session.ReadPower</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:309</td></tr>
+<tr><td>143</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>144</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>145</td><td>values.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;double&gt;.Add(double)</td></tr>
+<tr><td>147</td><td>Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>147</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+<tr><td>151</td><td>session.EndMeasurement(target).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>151</td><td>session.EndMeasurement</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET) · Drilling.Common/Interface/CPowerMeasureService.cs:308</td></tr>
+<tr><td>154</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>155</td><td>Task.Delay(options.CoolingTimeMs, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>155</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+<tr><td>157</td><td>values.Average</td><td>resolved</td><td>double System.Collections.Generic.IEnumerable&lt;double&gt;.Average()</td></tr>
+<tr><td>159</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>160</td><td>samples.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.Add(Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE)</td></tr>
+<tr><td>160</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE.ST_POWER_MEASURE_SAMPLE(int, double, double, double, string) · Drilling.Common/Interface/CPowerMeasureService.cs:287</td></tr>
+<tr><td>161</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+<tr><td>161</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Array.AsReadOnly&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE[])</td></tr>
+<tr><td>161</td><td>samples.ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE[] System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.ToArray()</td></tr>
+<tr><td>162</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>166</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>172</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>176</td><td>NextAngle</td><td>resolved</td><td>double Drilling.Common.Interface.CPowerMeasureService.NextAngle(System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;, double) · Drilling.Common/Interface/CPowerMeasureService.cs:230</td></tr>
+<tr><td>181</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>185</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>191</td><td>session.Finish(target).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>191</td><td>session.Finish</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET) · Drilling.Common/Interface/CPowerMeasureService.cs:310</td></tr>
+<tr><td>195</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>204</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>207</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>209</td><td>table.SaveMeasurement</td><td>resolved · 동적 구현 선택 가능</td><td>void Drilling.Common.Interface.IPowerMeasureTable.SaveMeasurement(int, double, double, System.Threading.CancellationToken) · Drilling.Common/Interface/CPowerMeasureService.cs:347</td></tr>
+<tr><td>210</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+<tr><td>213</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>217</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+<tr><td>221</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+<tr><td>222</td><td>State</td><td>resolved</td><td>void State(string, string) · Drilling.Common/Interface/CPowerMeasureService.cs:227</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>106</td><td>local-declaration</td><td>지역 변수를 선언합니다: var options = target.Options;</td></tr>
+<tr><td>106</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: options = target.Options</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_POWER_MEASURE_SAMPLE&gt;()</td></tr>
+<tr><td>107</td><td>local-declaration</td><td>지역 변수를 선언합니다: var samples = new List&lt;ST_POWER_MEASURE_SAMPLE&gt;();</td></tr>
+<tr><td>107</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: samples = new List&lt;ST_POWER_MEASURE_SAMPLE&gt;()</td></tr>
+<tr><td>108</td><td>local-declaration</td><td>지역 변수를 선언합니다: var clean = true;</td></tr>
+<tr><td>108</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: clean = true</td></tr>
+<tr><td>109</td><td>local-declaration</td><td>지역 변수를 선언합니다: var reachedTarget = false;</td></tr>
+<tr><td>109</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: reachedTarget = false</td></tr>
+<tr><td>110</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;POSITIONING&quot;, &quot;Head 측정 위치 이동&quot;)</td></tr>
+<tr><td>114</td><td>await</td><td>비동기 완료를 기다립니다: await session.Prepare(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.Prepare(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.Prepare(target, token)</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .FindStart(target.HeadNo, target.TargetPower, token)</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, &quot;PowerTable 값 없음&quot;)</td></tr>
+<tr><td>115</td><td>local-declaration</td><td>지역 변수를 선언합니다: var start = table?.FindStart(target.HeadNo, target.TargetPower, token) ?? new(null, &quot;PowerTable 값 없음&quot;);</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: start = table?.FindStart(target.HeadNo, target.TargetPower, token) ?? new(null, &quot;PowerTable 값 없음&quot;)</td></tr>
+<tr><td>116</td><td>await</td><td>비동기 완료를 기다립니다: await session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token)</td></tr>
+<tr><td>116</td><td>local-declaration</td><td>지역 변수를 선언합니다: var angle = start.Angle ?? await session.GetAttenuatorPosition(target, token).ConfigureAwait(false);</td></tr>
+<tr><td>116</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: angle = start.Angle ?? await session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle)</td></tr>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(angle) || angle is &lt; 0 or &gt; 360)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;유효한 현재 ATT 위치를 확인할 수 없습니다.&quot;)</td></tr>
+<tr><td>118</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;유효한 현재 ATT 위치를 확인할 수 없습니다.&quot;);</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: InitialAngle = angle</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: StartDetail = start.Angle.HasValue ? $&quot;PowerTable 보간/조회 → {angle:0.####}°&quot; : $&quot;현재 ATT {angle:0.####}°에서 측정 ({start.Detail})&quot;</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { InitialAngle = angle, StartDetail = start.Angle.HasValue ? $&quot;PowerTable 보간/조회 → {angle:0.####}°&quot; : $&quot;현재 ATT {angle:0.####}°에서 측정 ({start.Detail})&quot; })</td></tr>
+<tr><td>119</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: start.Angle.HasValue ? $&quot;PowerTable 보간/조회 → {angle:0.####}°&quot; : $&quot;현재 ATT {angle:0.####}°에서 측정 ({start.Detail})&quot;</td></tr>
+<tr><td>120</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: attempt = 1</td></tr>
+<tr><td>120</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var attempt = 1; attempt &lt;= options.MaxAttempts; attempt++)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>124</td><td>if</td><td>조건에 따라 분기합니다: if (attempt &gt; 1 || start.Angle.HasValue)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;MOVING&quot;, $&quot;ATT {angle:0.####}° 이동&quot;)</td></tr>
+<tr><td>127</td><td>await</td><td>비동기 완료를 기다립니다: await session.MoveAttenuator(target, angle, token).ConfigureAwait(false)</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAttenuator(target, angle, token).ConfigureAwait(false)</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.MoveAttenuator(target, angle, token)</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: angle = await session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>128</td><td>await</td><td>비동기 완료를 기다립니다: await session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAttenuatorPosition(target, token)</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: Angle = angle</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { Angle = angle })</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;double&gt;()</td></tr>
+<tr><td>132</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = new List&lt;double&gt;();</td></tr>
+<tr><td>132</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = new List&lt;double&gt;()</td></tr>
+<tr><td>133</td><td>await</td><td>비동기 완료를 기다립니다: await session.BeginMeasurement(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.BeginMeasurement(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.BeginMeasurement(target, token)</td></tr>
+<tr><td>134</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;SETTLING&quot;, &quot;레이저 출사 · 안정화 대기&quot;)</td></tr>
+<tr><td>137</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Delay(options.SettleTimeMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.SettleTimeMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.SettleTimeMs, token)</td></tr>
+<tr><td>138</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: i = 0</td></tr>
+<tr><td>138</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var i = 0; i &lt; options.MeasureCount; i++)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;MEASURING&quot;, $&quot;Attempt {attempt} · Sample {i + 1}/{options.MeasureCount}&quot;)</td></tr>
+<tr><td>142</td><td>await</td><td>비동기 완료를 기다립니다: await session.ReadPower(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.ReadPower(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.ReadPower(target, token)</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = await session.ReadPower(target, token).ConfigureAwait(false);</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = await session.ReadPower(target, token).ConfigureAwait(false)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>143</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(value) || value &lt; 0)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;유효하지 않은 파워 측정값입니다.&quot;)</td></tr>
+<tr><td>144</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;유효하지 않은 파워 측정값입니다.&quot;);</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add(value)</td></tr>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (i + 1 &lt; options.MeasureCount)</td></tr>
+<tr><td>147</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.MeasureIntervalMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.MeasureIntervalMs, token)</td></tr>
+<tr><td>151</td><td>await</td><td>비동기 완료를 기다립니다: await session.EndMeasurement(target).ConfigureAwait(false)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.EndMeasurement(target).ConfigureAwait(false)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.EndMeasurement(target)</td></tr>
+<tr><td>151</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>152</td><td>if</td><td>조건에 따라 분기합니다: if (options.CoolingTimeMs &gt; 0)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;COOLING&quot;, &quot;레이저 OFF · 냉각 대기&quot;)</td></tr>
+<tr><td>155</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Delay(options.CoolingTimeMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.CoolingTimeMs, token).ConfigureAwait(false)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(options.CoolingTimeMs, token)</td></tr>
+<tr><td>157</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values.Average()</td></tr>
+<tr><td>157</td><td>local-declaration</td><td>지역 변수를 선언합니다: var power = values.Average();</td></tr>
+<tr><td>157</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: power = values.Average()</td></tr>
+<tr><td>158</td><td>local-declaration</td><td>지역 변수를 선언합니다: var error = power - target.TargetPower;</td></tr>
+<tr><td>158</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: error = power - target.TargetPower</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(error)</td></tr>
+<tr><td>159</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(error) &lt;= options.Tolerance ? &quot;OK&quot; : error &lt; 0 ? &quot;LOW&quot; : &quot;HIGH&quot;</td></tr>
+<tr><td>159</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: error &lt; 0 ? &quot;LOW&quot; : &quot;HIGH&quot;</td></tr>
+<tr><td>159</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = Math.Abs(error) &lt;= options.Tolerance ? &quot;OK&quot; : error &lt; 0 ? &quot;LOW&quot; : &quot;HIGH&quot;;</td></tr>
+<tr><td>159</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = Math.Abs(error) &lt;= options.Tolerance ? &quot;OK&quot; : error &lt; 0 ? &quot;LOW&quot; : &quot;HIGH&quot;</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Add(new(attempt, angle, power, error, result))</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(attempt, angle, power, error, result)</td></tr>
+<tr><td>161</td><td>assignment</td><td>값을 대상에 대입합니다: Power = power</td></tr>
+<tr><td>161</td><td>assignment</td><td>값을 대상에 대입합니다: Samples = Array.AsReadOnly(samples.ToArray())</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { Power = power, Samples = Array.AsReadOnly(samples.ToArray()) })</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(samples.ToArray())</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.ToArray()</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>163</td><td>if</td><td>조건에 따라 분기합니다: if (result == &quot;OK&quot;)</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: reachedTarget = true</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;FINISHING&quot;, &quot;목표 출력 도달 · 종료 처리 중&quot;)</td></tr>
+<tr><td>167</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>170</td><td>if</td><td>조건에 따라 분기합니다: if (attempt == options.MaxAttempts)</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;NG&quot;, &quot;최대 시도 횟수 내 목표 출력에 도달하지 못했습니다.&quot;)</td></tr>
+<tr><td>173</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>176</td><td>assignment</td><td>값을 대상에 대입합니다: angle = NextAngle(samples, target.TargetPower)</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NextAngle(samples, target.TargetPower)</td></tr>
+<tr><td>179</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;STOPPED&quot;, &quot;측정 중지&quot;)</td></tr>
+<tr><td>183</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;ERROR&quot;, error.Message)</td></tr>
+<tr><td>187</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>189</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>191</td><td>await</td><td>비동기 완료를 기다립니다: await session.Finish(target).ConfigureAwait(false)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.Finish(target).ConfigureAwait(false)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: session.Finish(target)</td></tr>
+<tr><td>193</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;ERROR&quot;, $&quot;측정 종료 처리 실패: {error.Message}&quot;)</td></tr>
+<tr><td>196</td><td>assignment</td><td>값을 대상에 대입합니다: clean = false</td></tr>
+<tr><td>200</td><td>if</td><td>조건에 따라 분기합니다: if (reachedTarget &amp;&amp; clean)</td></tr>
+<tr><td>202</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>205</td><td>if</td><td>조건에 따라 분기합니다: if (table is not null)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;SAVING&quot;, &quot;PowerTable 업데이트 중&quot;)</td></tr>
+<tr><td>208</td><td>local-declaration</td><td>지역 변수를 선언합니다: var sample = samples[^1];</td></tr>
+<tr><td>208</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: sample = samples[^1]</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: table.SaveMeasurement(target.HeadNo, sample.Angle, sample.Power, token)</td></tr>
+<tr><td>210</td><td>assignment</td><td>값을 대상에 대입합니다: TableState = &quot;UPDATED&quot;</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { TableState = &quot;UPDATED&quot; })</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;OK&quot;, table is null ? &quot;목표 출력 도달&quot; : &quot;목표 출력 도달 · PowerTable 업데이트 완료&quot;)</td></tr>
+<tr><td>213</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: table is null ? &quot;목표 출력 도달&quot; : &quot;목표 출력 도달 · PowerTable 업데이트 완료&quot;</td></tr>
+<tr><td>215</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;STOPPED&quot;, &quot;측정 중지 · PowerTable 저장 취소&quot;)</td></tr>
+<tr><td>219</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>221</td><td>assignment</td><td>값을 대상에 대입합니다: TableState = &quot;ERROR&quot;</td></tr>
+<tr><td>221</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { TableState = &quot;ERROR&quot; })</td></tr>
+<tr><td>222</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: State(&quot;ERROR&quot;, $&quot;목표 출력 도달 / PowerTable 저장 실패: {error.Message}&quot;)</td></tr>
+<tr><td>226</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return clean;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RunHead&quot;]
+ N0[&quot;L110 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L117 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L120 for&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L124 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L134 try&quot;]
+ N2 --&gt;|포함| N4
+ N5[&quot;L138 for&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L143 if&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L146 if&quot;]
+ N5 --&gt;|포함| N7
+ N8[&quot;L151 finally&quot;]
+ N4 --&gt;|포함| N8
+ N9[&quot;L152 if&quot;]
+ N2 --&gt;|포함| N9
+ N10[&quot;L163 if&quot;]
+ N2 --&gt;|포함| N10
+ N11[&quot;L170 if&quot;]
+ N2 --&gt;|포함| N11
+ N12[&quot;L179 catch&quot;]
+ N0 --&gt;|포함| N12
+ N13[&quot;L183 catch&quot;]
+ N0 --&gt;|포함| N13
+ N14[&quot;L187 finally&quot;]
+ N0 --&gt;|포함| N14
+ N15[&quot;L189 try&quot;]
+ N14 --&gt;|포함| N15
+ N16[&quot;L193 catch&quot;]
+ N15 --&gt;|포함| N16
+ N17[&quot;L200 if&quot;]
+ M --&gt;|포함| N17
+ N18[&quot;L202 try&quot;]
+ N17 --&gt;|포함| N18
+ N19[&quot;L205 if&quot;]
+ N18 --&gt;|포함| N19
+ N20[&quot;L215 catch&quot;]
+ N18 --&gt;|포함| N20
+ N21[&quot;L219 catch&quot;]
+ N18 --&gt;|포함| N21</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L227">LocalFunctionStatement <code>State</code> · L227–227</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L227-L227">Drilling.Common/Interface/CPowerMeasureService.cs:227–227</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void State(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>state</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L113-L113">Drilling.Common/Interface/CPowerMeasureService.cs:113–113</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L126-L126">Drilling.Common/Interface/CPowerMeasureService.cs:126–126</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L136-L136">Drilling.Common/Interface/CPowerMeasureService.cs:136–136</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L141-L141">Drilling.Common/Interface/CPowerMeasureService.cs:141–141</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L154-L154">Drilling.Common/Interface/CPowerMeasureService.cs:154–154</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L166-L166">Drilling.Common/Interface/CPowerMeasureService.cs:166–166</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L172-L172">Drilling.Common/Interface/CPowerMeasureService.cs:172–172</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L181-L181">Drilling.Common/Interface/CPowerMeasureService.cs:181–181</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L185-L185">Drilling.Common/Interface/CPowerMeasureService.cs:185–185</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L195-L195">Drilling.Common/Interface/CPowerMeasureService.cs:195–195</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L207-L207">Drilling.Common/Interface/CPowerMeasureService.cs:207–207</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L213-L213">Drilling.Common/Interface/CPowerMeasureService.cs:213–213</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L217-L217">Drilling.Common/Interface/CPowerMeasureService.cs:217–217</a></td><td>State</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L222-L222">Drilling.Common/Interface/CPowerMeasureService.cs:222–222</a></td><td>State</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>227</td><td>Update</td><td>resolved</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;) · Drilling.Common/Interface/CPowerMeasureService.cs:260</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>227</td><td>assignment</td><td>값을 대상에 대입합니다: State = state</td></tr>
+<tr><td>227</td><td>assignment</td><td>값을 대상에 대입합니다: Message = message</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Update(target.HeadNo, h =&gt; h with { State = state, Message = message })</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L230">MethodDeclaration <code>NextAngle</code> · L230–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L230-L258">Drilling.Common/Interface/CPowerMeasureService.cs:230–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CPowerMeasureService.NextAngle(System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>samples</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>target</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L176-L176">Drilling.Common/Interface/CPowerMeasureService.cs:176–176</a></td><td>NextAngle</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>samples.Where(s =&gt; s.Power &lt; target).OrderByDescending(s =&gt; s.Power).FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.FirstOrDefault&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;()</td></tr>
+<tr><td>232</td><td>samples.Where(s =&gt; s.Power &lt; target).OrderByDescending</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.OrderByDescending&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;)</td></tr>
+<tr><td>232</td><td>samples.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.Where&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, bool&gt;)</td></tr>
+<tr><td>233</td><td>samples.Where(s =&gt; s.Power &gt; target).OrderBy(s =&gt; s.Power).FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.FirstOrDefault&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;()</td></tr>
+<tr><td>233</td><td>samples.Where(s =&gt; s.Power &gt; target).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.OrderBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;)</td></tr>
+<tr><td>233</td><td>samples.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.Where&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, bool&gt;)</td></tr>
+<tr><td>235</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>236</td><td>samples.MinBy</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.MinBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;)</td></tr>
+<tr><td>236</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>237</td><td>samples.Where(s =&gt; s.Angle != best.Angle &amp;&amp; Math.Abs(s.Power - best.Power) &gt; 1e-9).MinBy</td><td>resolved</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.MinBy&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, double&gt;)</td></tr>
+<tr><td>237</td><td>samples.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.Where&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, bool&gt;)</td></tr>
+<tr><td>237</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>237</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>241</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>242</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>242</td><td>samples.All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.All&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, bool&gt;)</td></tr>
+<tr><td>242</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>250</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>251</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>255</td><td>samples.All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;.All&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;(System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE, bool&gt;)</td></tr>
+<tr><td>255</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &lt; target).OrderByDescending(s =&gt; s.Power).FirstOrDefault()</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &lt; target).OrderByDescending(s =&gt; s.Power)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &lt; target)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var below = samples.Where(s =&gt; s.Power &lt; target).OrderByDescending(s =&gt; s.Power).FirstOrDefault();</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: below = samples.Where(s =&gt; s.Power &lt; target).OrderByDescending(s =&gt; s.Power).FirstOrDefault()</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &gt; target).OrderBy(s =&gt; s.Power).FirstOrDefault()</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &gt; target).OrderBy(s =&gt; s.Power)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Power &gt; target)</td></tr>
+<tr><td>233</td><td>local-declaration</td><td>지역 변수를 선언합니다: var above = samples.Where(s =&gt; s.Power &gt; target).OrderBy(s =&gt; s.Power).FirstOrDefault();</td></tr>
+<tr><td>233</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: above = samples.Where(s =&gt; s.Power &gt; target).OrderBy(s =&gt; s.Power).FirstOrDefault()</td></tr>
+<tr><td>234</td><td>if</td><td>조건에 따라 분기합니다: if (below is not null &amp;&amp; above is not null)</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(below.Angle + (target - below.Power) * (above.Angle - below.Angle) / (above.Power - below.Power), 0, 360)</td></tr>
+<tr><td>235</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(below.Angle + (target - below.Power) * (above.Angle - below.Angle) / (above.Power - below.Power), 0, 360);</td></tr>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.MinBy(s =&gt; Math.Abs(s.Error))</td></tr>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Error)</td></tr>
+<tr><td>236</td><td>local-declaration</td><td>지역 변수를 선언합니다: var best = samples.MinBy(s =&gt; Math.Abs(s.Error))!;</td></tr>
+<tr><td>236</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: best = samples.MinBy(s =&gt; Math.Abs(s.Error))!</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Angle != best.Angle &amp;&amp; Math.Abs(s.Power - best.Power) &gt; 1e-9).MinBy(s =&gt; Math.Abs(s.Angle - best.Angle))</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Where(s =&gt; s.Angle != best.Angle &amp;&amp; Math.Abs(s.Power - best.Power) &gt; 1e-9)</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Power - best.Power)</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - best.Angle)</td></tr>
+<tr><td>237</td><td>local-declaration</td><td>지역 변수를 선언합니다: var other = samples.Where(s =&gt; s.Angle != best.Angle &amp;&amp; Math.Abs(s.Power - best.Power) &gt; 1e-9).MinBy(s =&gt; Math.Abs(s.Angle - best.Angle));</td></tr>
+<tr><td>237</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: other = samples.Where(s =&gt; s.Angle != best.Angle &amp;&amp; Math.Abs(s.Power - best.Power) &gt; 1e-9).MinBy(s =&gt; Math.Abs(s.Angle - best.Angle))</td></tr>
+<tr><td>238</td><td>if</td><td>조건에 따라 분기합니다: if (other is not null)</td></tr>
+<tr><td>241</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360)</td></tr>
+<tr><td>241</td><td>local-declaration</td><td>지역 변수를 선언합니다: var estimate = Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360);</td></tr>
+<tr><td>241</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: estimate = Math.Clamp(best.Angle + (target - best.Power) * (other.Angle - best.Angle) / (other.Power - best.Power), 0, 360)</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(estimate)</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.All(s =&gt; Math.Abs(s.Angle - estimate) &gt; 0.000001)</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - estimate)</td></tr>
+<tr><td>242</td><td>if</td><td>조건에 따라 분기합니다: if (double.IsFinite(estimate) &amp;&amp; samples.All(s =&gt; Math.Abs(s.Angle - estimate) &gt; 0.000001))</td></tr>
+<tr><td>243</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return estimate;</td></tr>
+<tr><td>247</td><td>assignment</td><td>값을 대상에 대입합니다: step *= 2</td></tr>
+<tr><td>247</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: step = 10.0</td></tr>
+<tr><td>247</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var step = 10.0; step &lt;= 640; step *= 2)</td></tr>
+<tr><td>248</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var candidate in new[] { Math.Clamp(best.Angle + step, 0, 360), Math.Clamp(best.Angle - step, 0, 360) })</td></tr>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle + step, 0, 360)</td></tr>
+<tr><td>251</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(best.Angle - step, 0, 360)</td></tr>
+<tr><td>255</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.All(s =&gt; Math.Abs(s.Angle - candidate) &gt; 0.000001)</td></tr>
+<tr><td>255</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(s.Angle - candidate)</td></tr>
+<tr><td>255</td><td>if</td><td>조건에 따라 분기합니다: if (samples.All(s =&gt; Math.Abs(s.Angle - candidate) &gt; 0.000001))</td></tr>
+<tr><td>256</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return candidate;</td></tr>
+<tr><td>257</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return best.Angle;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NextAngle&quot;]
+ N0[&quot;L234 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L238 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L242 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L247 for&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L248 foreach&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L255 if&quot;]
+ N4 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">MethodDeclaration <code>Update</code> · L260–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L260-L264">Drilling.Common/Interface/CPowerMeasureService.cs:260–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureService.Update(int, System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureService</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>update</td><td>System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L119-L119">Drilling.Common/Interface/CPowerMeasureService.cs:119–119</a></td><td>Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L131-L131">Drilling.Common/Interface/CPowerMeasureService.cs:131–131</a></td><td>Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L161-L161">Drilling.Common/Interface/CPowerMeasureService.cs:161–161</a></td><td>Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L210-L210">Drilling.Common/Interface/CPowerMeasureService.cs:210–210</a></td><td>Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L221-L221">Drilling.Common/Interface/CPowerMeasureService.cs:221–221</a></td><td>Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L227-L227">Drilling.Common/Interface/CPowerMeasureService.cs:227–227</a></td><td>Update</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>263</td><td>update</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_HEAD System.Func&lt;Drilling.Common.Interface.ST_POWER_MEASURE_HEAD, Drilling.Common.Interface.ST_POWER_MEASURE_HEAD&gt;.Invoke(Drilling.Common.Interface.ST_POWER_MEASURE_HEAD)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>262</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>263</td><td>assignment</td><td>값을 대상에 대입합니다: _heads[headNo] = update(_heads[headNo])</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: update(_heads[headNo])</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Update&quot;]
+ N0[&quot;L262 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L270">PropertyDeclaration <code>ToleranceW</code> · L270–270</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L270-L270">Drilling.Common/Interface/CPowerMeasureService.cs:270–270</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L270">GetAccessorDeclaration <code>get_ToleranceW</code> · L270–270</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L270-L270">Drilling.Common/Interface/CPowerMeasureService.cs:270–270</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L270">InitAccessorDeclaration <code>set_ToleranceW</code> · L270–270</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L270-L270">Drilling.Common/Interface/CPowerMeasureService.cs:270–270</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.ToleranceW.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">PropertyDeclaration <code>MaximumAttempts</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L271-L271">Drilling.Common/Interface/CPowerMeasureService.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">GetAccessorDeclaration <code>get_MaximumAttempts</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L271-L271">Drilling.Common/Interface/CPowerMeasureService.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int? Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">InitAccessorDeclaration <code>set_MaximumAttempts</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L271-L271">Drilling.Common/Interface/CPowerMeasureService.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaximumAttempts.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">PropertyDeclaration <code>CoolingTimeMs</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L272-L272">Drilling.Common/Interface/CPowerMeasureService.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">GetAccessorDeclaration <code>get_CoolingTimeMs</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L272-L272">Drilling.Common/Interface/CPowerMeasureService.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">InitAccessorDeclaration <code>set_CoolingTimeMs</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L272-L272">Drilling.Common/Interface/CPowerMeasureService.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.CoolingTimeMs.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">PropertyDeclaration <code>Tolerance</code> · L273–278</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L273-L278">Drilling.Common/Interface/CPowerMeasureService.cs:273–278</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.Tolerance</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>273</td><td>switch-expression</td><td>값별 결과식을 선택합니다: Mode switch { &quot;ROUGH&quot; =&gt; 0.05, &quot;DETAIL&quot; =&gt; 0.003, _ =&gt; 0.01 }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Tolerance&quot;]
+ N0[&quot;L273 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L279">PropertyDeclaration <code>MaxAttempts</code> · L279–284</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L279-L284">Drilling.Common/Interface/CPowerMeasureService.cs:279–284</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS.MaxAttempts</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_OPTIONS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>279</td><td>switch-expression</td><td>값별 결과식을 선택합니다: Mode switch { &quot;ROUGH&quot; =&gt; 8, &quot;DETAIL&quot; =&gt; 18, _ =&gt; 12 }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;MaxAttempts&quot;]
+ N0[&quot;L279 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">PropertyDeclaration <code>InitialAngle</code> · L290–290</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L290-L290">Drilling.Common/Interface/CPowerMeasureService.cs:290–290</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">GetAccessorDeclaration <code>get_InitialAngle</code> · L290–290</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L290-L290">Drilling.Common/Interface/CPowerMeasureService.cs:290–290</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">InitAccessorDeclaration <code>set_InitialAngle</code> · L290–290</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L290-L290">Drilling.Common/Interface/CPowerMeasureService.cs:290–290</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.InitialAngle.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">PropertyDeclaration <code>StartDetail</code> · L291–291</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L291-L291">Drilling.Common/Interface/CPowerMeasureService.cs:291–291</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">GetAccessorDeclaration <code>get_StartDetail</code> · L291–291</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L291-L291">Drilling.Common/Interface/CPowerMeasureService.cs:291–291</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">InitAccessorDeclaration <code>set_StartDetail</code> · L291–291</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L291-L291">Drilling.Common/Interface/CPowerMeasureService.cs:291–291</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.StartDetail.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L292">PropertyDeclaration <code>TableState</code> · L292–292</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L292-L292">Drilling.Common/Interface/CPowerMeasureService.cs:292–292</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L292">GetAccessorDeclaration <code>get_TableState</code> · L292–292</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L292-L292">Drilling.Common/Interface/CPowerMeasureService.cs:292–292</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L292">InitAccessorDeclaration <code>set_TableState</code> · L292–292</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L292-L292">Drilling.Common/Interface/CPowerMeasureService.cs:292–292</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_HEAD.TableState.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_HEAD</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L297">PropertyDeclaration <code>Origin</code> · L297–297</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L297-L297">Drilling.Common/Interface/CPowerMeasureService.cs:297–297</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L297">GetAccessorDeclaration <code>get_Origin</code> · L297–297</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L297-L297">Drilling.Common/Interface/CPowerMeasureService.cs:297–297</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L297">InitAccessorDeclaration <code>set_Origin</code> · L297–297</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L297-L297">Drilling.Common/Interface/CPowerMeasureService.cs:297–297</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT.Origin.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L302">MethodDeclaration <code>CheckStageReady</code> · L302–302</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L302-L302">Drilling.Common/Interface/CPowerMeasureService.cs:302–302</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.CheckStageReady(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L63-L63">Drilling.Common/Interface/CPowerMeasureService.cs:63–63</a></td><td>session.CheckStageReady</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L303">MethodDeclaration <code>Prepare</code> · L303–303</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L303-L303">Drilling.Common/Interface/CPowerMeasureService.cs:303–303</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L114-L114">Drilling.Common/Interface/CPowerMeasureService.cs:114–114</a></td><td>session.Prepare</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L305">MethodDeclaration <code>GetAttenuatorPosition</code> · L305–305</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L305-L305">Drilling.Common/Interface/CPowerMeasureService.cs:305–305</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;double&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L116-L116">Drilling.Common/Interface/CPowerMeasureService.cs:116–116</a></td><td>session.GetAttenuatorPosition</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L128-L128">Drilling.Common/Interface/CPowerMeasureService.cs:128–128</a></td><td>session.GetAttenuatorPosition</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L306">MethodDeclaration <code>MoveAttenuator</code> · L306–306</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L306-L306">Drilling.Common/Interface/CPowerMeasureService.cs:306–306</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L127-L127">Drilling.Common/Interface/CPowerMeasureService.cs:127–127</a></td><td>session.MoveAttenuator</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L307">MethodDeclaration <code>BeginMeasurement</code> · L307–307</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L307-L307">Drilling.Common/Interface/CPowerMeasureService.cs:307–307</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L133-L133">Drilling.Common/Interface/CPowerMeasureService.cs:133–133</a></td><td>session.BeginMeasurement</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L308">MethodDeclaration <code>EndMeasurement</code> · L308–308</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L308-L308">Drilling.Common/Interface/CPowerMeasureService.cs:308–308</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L151-L151">Drilling.Common/Interface/CPowerMeasureService.cs:151–151</a></td><td>session.EndMeasurement</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L309">MethodDeclaration <code>ReadPower</code> · L309–309</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L309-L309">Drilling.Common/Interface/CPowerMeasureService.cs:309–309</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.IPowerMeasureSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;double&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L142-L142">Drilling.Common/Interface/CPowerMeasureService.cs:142–142</a></td><td>session.ReadPower</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L310">MethodDeclaration <code>Finish</code> · L310–310</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L310-L310">Drilling.Common/Interface/CPowerMeasureService.cs:310–310</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.IPowerMeasureSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L191-L191">Drilling.Common/Interface/CPowerMeasureService.cs:191–191</a></td><td>session.Finish</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L316">FieldDeclaration <code>_angles</code> · L316–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L316-L316">Drilling.Common/Interface/CPowerMeasureService.cs:316–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession._angles</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, double&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>316</td><td>new</td><td>resolved</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, double&gt;.ConcurrentDictionary()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>316</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>316</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _angles = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">MethodDeclaration <code>CheckStageReady</code> · L317–317</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L317-L317">Drilling.Common/Interface/CPowerMeasureService.cs:317–317</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.CheckStageReady(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>317</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>317</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(10, token)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L318">MethodDeclaration <code>BeginMeasurement</code> · L318–318</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L318-L318">Drilling.Common/Interface/CPowerMeasureService.cs:318–318</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L319">MethodDeclaration <code>EndMeasurement</code> · L319–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L319-L319">Drilling.Common/Interface/CPowerMeasureService.cs:319–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L320">MethodDeclaration <code>Prepare</code> · L320–320</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L320-L320">Drilling.Common/Interface/CPowerMeasureService.cs:320–320</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>320</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>320</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(150, token)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L321">MethodDeclaration <code>GetAttenuatorPosition</code> · L321–325</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L321-L325">Drilling.Common/Interface/CPowerMeasureService.cs:321–325</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;double&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>323</td><td>token.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>324</td><td>Task.FromResult</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;double&gt; System.Threading.Tasks.Task.FromResult&lt;double&gt;(double)</td></tr>
+<tr><td>324</td><td>_angles.GetOrAdd</td><td>resolved</td><td>double System.Collections.Concurrent.ConcurrentDictionary&lt;int, double&gt;.GetOrAdd(int, double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>323</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(_angles.GetOrAdd(target.HeadNo, 55.0))</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _angles.GetOrAdd(target.HeadNo, 55.0)</td></tr>
+<tr><td>324</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(_angles.GetOrAdd(target.HeadNo, 55.0));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L327">MethodDeclaration <code>MoveAttenuator</code> · L327–331</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L327-L331">Drilling.Common/Interface/CPowerMeasureService.cs:327–331</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>329</td><td>Task.Delay(220, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>329</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>329</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Delay(220, token).ConfigureAwait(false)</td></tr>
+<tr><td>329</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(220, token).ConfigureAwait(false)</td></tr>
+<tr><td>329</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(220, token)</td></tr>
+<tr><td>330</td><td>assignment</td><td>값을 대상에 대입합니다: _angles[target.HeadNo] = angle</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L333">MethodDeclaration <code>ReadPower</code> · L333–337</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L333-L337">Drilling.Common/Interface/CPowerMeasureService.cs:333–337</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureSimulationSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;double&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>335</td><td>Task.Delay(100, token).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>335</td><td>Task.Delay</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int, System.Threading.CancellationToken)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>335</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Delay(100, token).ConfigureAwait(false)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token).ConfigureAwait(false)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(100, token)</td></tr>
+<tr><td>336</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _angles[target.HeadNo] / 360 * (3.0 + target.HeadNo * 0.12);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L339">MethodDeclaration <code>Finish</code> · L339–339</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L339-L339">Drilling.Common/Interface/CPowerMeasureService.cs:339–339</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureSimulationSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CPowerMeasureSimulationSession</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_TARGET</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L346">MethodDeclaration <code>FindStart</code> · L346–346</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L346-L346">Drilling.Common/Interface/CPowerMeasureService.cs:346–346</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.Common.Interface.IPowerMeasureTable.FindStart(int, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureTable</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>targetPower</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147">Drilling.Common/Interface/CPowerMeasureRun.cs:147–147</a></td><td>tables(headNo, _session.IsSimulation(headNo)).FindStart</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L115-L115">Drilling.Common/Interface/CPowerMeasureService.cs:115–115</a></td><td>.FindStart</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L347">MethodDeclaration <code>SaveMeasurement</code> · L347–347</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L347-L347">Drilling.Common/Interface/CPowerMeasureService.cs:347–347</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.IPowerMeasureTable.SaveMeasurement(int, double, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.IPowerMeasureTable</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>angle</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>measuredPower</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>token</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148">Drilling.Common/Interface/CPowerMeasureRun.cs:148–148</a></td><td>tables(headNo, _session.IsSimulation(headNo)).SaveMeasurement</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureService.cs#L209-L209">Drilling.Common/Interface/CPowerMeasureService.cs:209–209</a></td><td>table.SaveMeasurement</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/CPowerMeasureService.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

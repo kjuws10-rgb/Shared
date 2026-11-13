@@ -1,0 +1,334 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/Correction/CAlignOffsetLogFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Correction;
+L000002 | using Drilling.Common.Correction; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000003 | using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000004 | using Drilling.File.Parser; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.Correction;
+L000006 | namespace Drilling.File.Correction; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public sealed class CDefaultOffsetLogFile(string configRoot)
+L000008 | public sealed class CDefaultOffsetLogFile(string configRoot) ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { var safeName = string.Concat(data.Recipe.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c)); if (safeName is "" or "." or "..") throw new IOException("Default 결과의 레시피명을 확인해 주세요."); var di…
+L000010 |     public Task<string> Save(ST_DEFAULT_OFFSET_LOG data, CancellationToken token = default) => Task.Run(() => ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 Save.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Concat(data.Recipe.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Recipe.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars().Contains(c) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars() / 조건에 따라 결과식을 선택합니다: Path.GetInvalidFileNameChars().Contains(c) ? '_' : c / 지역 변수를 선언합니다: var safeName = string.Concat(data.Recipe.Select(c => Path.GetInvalidFileNameChars().Contain
+L000012 |         var safeName = string.Concat(data.Recipe.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c)); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Default 결과의 레시피명을 확인해 주세요.") / 조건에 따라 분기합니다: if (safeName is "" or "." or "..") / 예외를 발생/전달합니다: throw new IOException("Default 결과의 레시피명을 확인해 주세요.");
+L000013 |         if (safeName is "" or "." or "..") throw new IOException("Default 결과의 레시피명을 확인해 주세요."); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "DefaultOffset", safeName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(Path.GetFullPath(configRoot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot) / 지역 변수를 선언합니다: var directory = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "DefaultOffset", safeName); / 변수의 초기값을 지정합니다: directory = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "DefaultOffse
+L000014 |         var directory = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "DefaultOffset", safeName); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $"{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var path = Path.Combine(directory, $"{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv"); / 변수의 초기값을 지정합니다: path = Path.Combine(directory, $"{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv")
+L000015 |         var path = Path.Combine(directory, $"{data.Time:yyMMdd_HHmmss_fff}_{data.Action}_{Guid.NewGuid():N}.csv"); ⟦EOL⟧
+// 해설 L16: 지역 변수를 선언합니다: var temporary = path + ".tmp"; / 변수의 초기값을 지정합니다: temporary = path + ".tmp"
+L000016 |         var temporary = path + ".tmp"; ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: v.ToString("R", CultureInfo.InvariantCulture)
+L000017 |         string F(double v) => v.ToString("R", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L18: 예외 처리 범위입니다: try
+L000018 |         try ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 Save.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 지역 변수를 선언합니다: string[] headers = ["SESSION", "RECIPE", "ACTION", "TIME", "MODE", "HEAD", "TEST_ID", "Q", "R", "AUTOMATION_SIMULATION", "STAGE_SIMULATION", "VISION_SIMULATION", "BEAM", "MARK_X", "MARK_Y", "RECV_TARGET_HOLE_X", "RECV_TARGET_HOLE_ / 변수의 초기값을 지정합니다: headers = ["SESSION", "RECIPE", "ACTION", "TIME", "MODE", "HEAD", "TEST_ID", "Q", "R", "AUTOMATION_SIMULATION", "STAGE_SIMULATION", "VISION_SIMULATION", "BEAM", "MARK_X", "MARK_Y", "RECV_TARGET_HOLE_X", "RECV_TARGET_HOLE_Y", "VISI
+L000020 |             string[] headers = ["SESSION", "RECIPE", "ACTION", "TIME", "MODE", "HEAD", "TEST_ID", "Q", "R", "AUTOMATION_SIMULATION", "STAGE_SIMULATION", "VISION_SIMULATION", "BEAM", "MARK_X", "MARK_Y", "RECV_TARGET_HOLE_X", "RECV_TARGET_HOLE_Y", "VISION_FLIP_X", "VISION_FLIP_Y", "ENCODER_X", "ENCODER_Y", "CAPTURE_STARTED_AT", "JUDGE", "CENTER_ERROR_X", "CENTER_ERROR_Y", "RESIDUAL", "PITCH_X", "PITCH_Y", "BEFORE_X", "BEFORE_Y", "AFTER_X", "AFTER_Y", "BOARD_CENTER_X", "TEST_STAGE_Y", "TOLERANCE", "FIELD_HALF_X", "FIELD_HALF_Y", "DOE_ANGLE", "MODEL", "VISION_REFERENCE_CELL", "TARGET_REVIEW_X", "TARGET_STAGE_Y", "CENTER_REVIEW_X", "CENTER_STAGE_Y", "FIT_CENTER_X", "FIT_CENTER_Y", "MACHINING_MODE", "CROSS_FULL_SIZE_MM", "VISION_METHOD"]; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporary, headers, Rows().Select(row => (IReadOnlyDictionary<string, string>)headers.Zip(row).ToDictionary(p => p.First, p => p.Second))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows().Select(row => (IReadOnlyDictionary<string, string>)headers.Zip(row).ToDictionary(p => p.First, p => p.Second)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows() / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Zip(row).ToDictionary(p => p.First, p => p.Second) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Zip(row)
+L000021 |             CCsvParser.Write(temporary, headers, Rows().Select(row => (IReadOnlyDictionary<string, string>)headers.Zip(row).ToDictionary(p => p.First, p => p.Second))); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000022 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporary, path)
+L000023 |             System.IO.File.Move(temporary, path); ⟦EOL⟧
+// 해설 L24: 호출자에게 값 또는 제어를 반환합니다: return path;
+L000024 |             return path; ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Save.
+L000025 |         } ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporary) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporary) / 종료 정리 구간입니다: finally / 조건에 따라 분기합니다: if (System.IO.File.Exists(temporary))
+L000026 |         finally { if (System.IO.File.Exists(temporary)) System.IO.File.Delete(temporary); } ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyList<string>> Rows()
+L000027 |         IEnumerable<IReadOnlyList<string>> Rows() ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 Rows.
+L000028 |         { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Results.OrderBy(r => r.Head) / 컬렉션 요소를 순회합니다: foreach (var result in data.Results.OrderBy(r => r.Head))
+L000029 |             foreach (var result in data.Results.OrderBy(r => r.Head)) ⟦EOL⟧
+// 해설 L30: 컬렉션 요소를 순회합니다: foreach (var mark in result.Marks)
+L000030 |             foreach (var mark in result.Marks) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Rows.
+L000031 |             { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000032 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L33: 지역 변수를 선언합니다: var prefix = $"H{result.Head:00}_DEFAULT_OFFSET_"; / 변수의 초기값을 지정합니다: prefix = $"H{result.Head:00}_DEFAULT_OFFSET_"
+L000033 |                 var prefix = $"H{result.Head:00}_DEFAULT_OFFSET_"; ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.SessionId.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Time.ToString("O") / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Head.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.TestId.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.Q) / 함수·델리게이트 또는 객체 생성자를 호출합니다: F(result.R) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.AutomationSimulation.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.StageSimulation.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.VisionSimulation.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: mark.Beam.ToString() /
+L000034 |                 yield return new[] { data.SessionId.ToString(), data.Recipe, data.Action, data.Time.ToString("O"), "SETUP_CENTER", result.Head.ToString(), result.TestId.ToString(), F(result.Q), F(result.R), result.AutomationSimulation.ToString(), result.StageSimulation.ToString(), result.VisionSimulation.ToString(), mark.Beam.ToString(), F(mark.X), F(mark.Y), F(mark.RawX), F(mark.RawY), F(mark.CorrectionX), F(mark.CorrectionY), F(mark.EncoderX), F(mark.EncoderY), mark.CapturedAt.ToString("O"), mark.Judge, F(result.CenterErrorX), F(result.CenterErrorY), F(result.Fit.Residual), F(result.Fit.PitchX), F(result.Fit.PitchY), data.Before.GetValueOrDefault(prefix + "X", ""), data.Before.GetValueOrDefault(prefix + "Y", ""), data.After.GetValueOrDefault(prefix + "X", ""), data.After.GetValueOrDefault(prefix + "Y", ""), F(data.Options.BoardCenterX), F(data.Options.TestStageY), F(data.Options.Tolerance), result.Geometry is { } fieldX ? F(fieldX.FieldHalfX) : "", result.Geometry is { } fieldY ? F(fieldY.FieldHalfY) : "", result.Geometry is { } doe ? F(doe.DoeAngle) : "", result.Model.ToString(CultureInfo.InvariantCulture), result.ReferenceCell.ToString(CultureInfo.InvariantCulture), F(result.TargetReviewX), F(result.TargetStageY), F(result.CenterReviewX), F(result.CenterStageY), F(result.Fit.X), F(result.Fit.Y), data.Options.MachiningMode.ToString(), F(data.Options.CrossSize), data.Options.VisionMethod.ToString() }; ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 Rows.
+L000035 |             } ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Rows.
+L000036 |         } ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.File.Correction.CDefaultOffsetLogFile.Save(Drilling.Common.Correction.ST_DEFAULT_OFFSET_LOG, System.Threading.CancellationToken)
+L000037 |     }, token); ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다.
+L000038 | } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 타입의 구조/상속 선언입니다: public sealed class CAlignOffsetLogFile(string configRoot) : CAlignOffsetLogFileBase
+L000040 | public sealed class CAlignOffsetLogFile(string configRoot) : CAlignOffsetLogFileBase ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다.
+L000041 | { ⟦EOL⟧
+// 해설 L42: 변수의 초기값을 지정합니다: Headers = [ "RECIPE_NAME", "ACTION", "ALGORITHM", "APPLIED_AT", "LAST_LOAD_TIME", "SOURCE", "ROW_TYPE", "KEY_NAME", "INCLUDED", "CELL_NO", "SHOT_NAME", "DESIGN_X_MM", "DESIGN_Y_MM", "BASE_X_MM", "BASE_Y_MM", "LAST_LOAD_X_MM", "LAS
+L000042 |     private static readonly string[] Headers = ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000043 |     [ ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000045 |         "RECIPE_NAME",  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000046 |         "ACTION",  ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000047 |         "ALGORITHM",  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000048 |         "APPLIED_AT",  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000049 |         "LAST_LOAD_TIME",  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000050 |         "SOURCE",  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000051 |         "ROW_TYPE",  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000052 |         "KEY_NAME",  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000053 |         "INCLUDED", ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000055 |         "CELL_NO",  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000056 |         "SHOT_NAME",  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000057 |         "DESIGN_X_MM",  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000058 |         "DESIGN_Y_MM",  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000059 |         "BASE_X_MM",  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000060 |         "BASE_Y_MM",  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000061 |         "LAST_LOAD_X_MM",  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000062 |         "LAST_LOAD_Y_MM", ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000064 |         "BASE_LOAD_X_MM",  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000065 |         "BASE_LOAD_Y_MM",  ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000066 |         "OFFSET_X_MM",  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000067 |         "OFFSET_Y_MM",  ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000068 |         "TOLERANCE_MM",  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000069 |         "APPLY_STATUS", ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000071 |         "CALCULATED_OFFSET_X_MM",  ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000072 |         "CALCULATED_OFFSET_Y_MM" ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Correction.CAlignOffsetLogFile.Headers
+L000074 |     ]; ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "AlignOffset") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(Path.GetFullPath(configRoot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot)
+L000076 |     public string RootPath { get; } = Path.Combine(Directory.GetParent(Path.GetFullPath(configRoot))!.FullName, "Data", "AlignOffset"); ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.File.Correction.CAlignOffsetLogFile.Save(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)
+L000078 |     public override Task<string> Save(ST_ALIGN_OFFSET_LOG entry, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => SaveCore(entry, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveCore(entry, cancellationToken)
+L000079 |         => Task.Run(() => SaveCore(entry, cancellationToken), cancellationToken); ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SaveCore(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)
+L000081 |     private string SaveCore(ST_ALIGN_OFFSET_LOG entry, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 SaveCore.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000083 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(RootPath, SafeRecipeName(entry.RecipeName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SafeRecipeName(entry.RecipeName) / 지역 변수를 선언합니다: var directory = Path.Combine(RootPath, SafeRecipeName(entry.RecipeName)); / 변수의 초기값을 지정합니다: directory = Path.Combine(RootPath, SafeRecipeName(entry.RecipeName))
+L000084 |         var directory = Path.Combine(RootPath, SafeRecipeName(entry.RecipeName)); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ChangedAt.ToString("yyMMdd_HHmmss", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var name = entry.ChangedAt.ToString("yyMMdd_HHmmss", CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: name = entry.ChangedAt.ToString("yyMMdd_HHmmss", CultureInfo.InvariantCulture)
+L000085 |         var name = entry.ChangedAt.ToString("yyMMdd_HHmmss", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, name + ".csv") / 지역 변수를 선언합니다: var path = Path.Combine(directory, name + ".csv"); / 변수의 초기값을 지정합니다: path = Path.Combine(directory, name + ".csv")
+L000086 |         var path = Path.Combine(directory, name + ".csv"); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $".{Guid.NewGuid():N}.tmp") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var temporaryPath = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); / 변수의 초기값을 지정합니다: temporaryPath = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp")
+L000087 |         var temporaryPath = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: (entry.CalculatedOffsets.Count > 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot => (shot.CellNo, shot.ShotName)) / 조건에 따라 결과식을 선택합니다: entry.CalculatedOffsets.Count > 0 ? entry.CalculatedOffsets : entry.Shots / 지역 변수를 선언합니다: var calculated = (entry.CalculatedOffsets.Count > 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot => (shot.CellNo, shot.ShotName)); / 변수의 초기값을 지정합니다: calculated = (entry.CalculatedOffsets.Count > 0 ? entry.CalculatedOffsets : entry.Shots) .ToDictionary(shot =>
+L000088 |         var calculated = (entry.CalculatedOffsets.Count > 0 ? entry.CalculatedOffsets : entry.Shots) ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SaveCore(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)
+L000089 |             .ToDictionary(shot => (shot.CellNo, shot.ShotName)); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ExcludedOffsets.Select(shot => (shot.CellNo, shot.ShotName)).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ExcludedOffsets.Select(shot => (shot.CellNo, shot.ShotName)) / 지역 변수를 선언합니다: var excluded = entry.ExcludedOffsets.Select(shot => (shot.CellNo, shot.ShotName)).ToHashSet(); / 변수의 초기값을 지정합니다: excluded = entry.ExcludedOffsets.Select(shot => (shot.CellNo, shot.ShotName)).ToHashSet()
+L000090 |         var excluded = entry.ExcludedOffsets.Select(shot => (shot.CellNo, shot.ShotName)).ToHashSet(); ⟦EOL⟧
+// 해설 L91: 예외 처리 범위입니다: try
+L000091 |         try ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 SaveCore.
+L000092 |         { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, Headers, Rows()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows()
+L000093 |             CCsvParser.Write(temporaryPath, Headers, Rows()); ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000094 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L95: 초기화·조건·증감이 있는 반복입니다: for (var duplicate = 1; ; duplicate++) / 변수의 초기값을 지정합니다: duplicate = 1
+L000095 |             for (var duplicate = 1; ; duplicate++) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 SaveCore.
+L000096 |             { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, path) / 호출자에게 값 또는 제어를 반환합니다: return path; / 예외 처리 범위입니다: try
+L000097 |                 try { System.IO.File.Move(temporaryPath, path); return path; } ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 지정 예외를 처리합니다: catch (IOException) when (System.IO.File.Exists(path))
+L000098 |                 catch (IOException) when (System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 SaveCore.
+L000099 |                 { ⟦EOL⟧
+// 해설 L100: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000100 |                     // Keep every operation when two saves occur within the same second. ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: path = Path.Combine(directory, $"{name}_{duplicate}.csv") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $"{name}_{duplicate}.csv")
+L000101 |                     path = Path.Combine(directory, $"{name}_{duplicate}.csv"); ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 SaveCore.
+L000102 |                 } ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 SaveCore.
+L000103 |             } ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 SaveCore.
+L000104 |         } ⟦EOL⟧
+// 해설 L105: 종료 정리 구간입니다: finally
+L000105 |         finally ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 SaveCore.
+L000106 |         { ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporaryPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporaryPath) / 조건에 따라 분기합니다: if (System.IO.File.Exists(temporaryPath))
+L000107 |             if (System.IO.File.Exists(temporaryPath)) System.IO.File.Delete(temporaryPath); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 SaveCore.
+L000108 |         } ⟦EOL⟧
+L000109 |  ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Rows()
+L000110 |         IEnumerable<IReadOnlyDictionary<string, string>> Rows() ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 Rows.
+L000111 |         { ⟦EOL⟧
+// 해설 L112: 컬렉션 요소를 순회합니다: foreach (var key in entry.Keys)
+L000112 |             foreach (var key in entry.Keys) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 Rows.
+L000113 |             { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000114 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommonRow("KEY", key.DesignX, key.DesignY, key.OffsetX, key.OffsetY) / 지역 변수를 선언합니다: var row = CommonRow("KEY", key.DesignX, key.DesignY, key.OffsetX, key.OffsetY); / 변수의 초기값을 지정합니다: row = CommonRow("KEY", key.DesignX, key.DesignY, key.OffsetX, key.OffsetY)
+L000115 |                 var row = CommonRow("KEY", key.DesignX, key.DesignY, key.OffsetX, key.OffsetY); ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: row["KEY_NAME"] = key.Name
+L000116 |                 row["KEY_NAME"] = key.Name; ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: row["INCLUDED"] = key.Included ? "1" : "0" / 조건에 따라 결과식을 선택합니다: key.Included ? "1" : "0"
+L000117 |                 row["INCLUDED"] = key.Included ? "1" : "0"; ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: row["BASE_X_MM"] = Number(key.BaseX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseX)
+L000118 |                 row["BASE_X_MM"] = Number(key.BaseX); ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: row["BASE_Y_MM"] = Number(key.BaseY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseY)
+L000119 |                 row["BASE_Y_MM"] = Number(key.BaseY); ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: row["LAST_LOAD_X_MM"] = Number(key.LastLoadX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.LastLoadX)
+L000120 |                 row["LAST_LOAD_X_MM"] = Number(key.LastLoadX); ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: row["LAST_LOAD_Y_MM"] = Number(key.LastLoadY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.LastLoadY)
+L000121 |                 row["LAST_LOAD_Y_MM"] = Number(key.LastLoadY); ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: row["BASE_LOAD_X_MM"] = Number(key.BaseX - key.LastLoadX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseX - key.LastLoadX)
+L000122 |                 row["BASE_LOAD_X_MM"] = Number(key.BaseX - key.LastLoadX); ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: row["BASE_LOAD_Y_MM"] = Number(key.BaseY - key.LastLoadY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(key.BaseY - key.LastLoadY)
+L000123 |                 row["BASE_LOAD_Y_MM"] = Number(key.BaseY - key.LastLoadY); ⟦EOL⟧
+// 해설 L124: 열거값/종료를 전달합니다: yield return row;
+L000124 |                 yield return row; ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 Rows.
+L000125 |             } ⟦EOL⟧
+// 해설 L126: 컬렉션 요소를 순회합니다: foreach (var shot in entry.Shots)
+L000126 |             foreach (var shot in entry.Shots) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 Rows.
+L000127 |             { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000128 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommonRow("SHOT", shot.DesignX, shot.DesignY, shot.X, shot.Y) / 지역 변수를 선언합니다: var row = CommonRow("SHOT", shot.DesignX, shot.DesignY, shot.X, shot.Y); / 변수의 초기값을 지정합니다: row = CommonRow("SHOT", shot.DesignX, shot.DesignY, shot.X, shot.Y)
+L000129 |                 var row = CommonRow("SHOT", shot.DesignX, shot.DesignY, shot.X, shot.Y); ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: row["CELL_NO"] = shot.CellNo.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: shot.CellNo.ToString(CultureInfo.InvariantCulture)
+L000130 |                 row["CELL_NO"] = shot.CellNo.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: row["SHOT_NAME"] = shot.ShotName
+L000131 |                 row["SHOT_NAME"] = shot.ShotName; ⟦EOL⟧
+// 해설 L132: 값을 대상에 대입합니다: row["APPLY_STATUS"] = entry.IsInit ? "INIT" : excluded.Contains((shot.CellNo, shot.ShotName)) ? "EXCLUDED_KEEP" : "APPLIED" / 함수·델리게이트 또는 객체 생성자를 호출합니다: excluded.Contains((shot.CellNo, shot.ShotName)) / 조건에 따라 결과식을 선택합니다: entry.IsInit ? "INIT" : excluded.Contains((shot.CellNo, shot.ShotName)) ? "EXCLUDED_KEEP" : "APPLIED" / 조건에 따라 결과식을 선택합니다: excluded.Contains((shot.CellNo, shot.ShotName)) ? "EXCLUDED_KEEP" : "APPLIED"
+L000132 |                 row["APPLY_STATUS"] = entry.IsInit ? "INIT" : excluded.Contains((shot.CellNo, shot.ShotName)) ? "EXCLUDED_KEEP" : "APPLIED"; ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: calculated.TryGetValue((shot.CellNo, shot.ShotName), out var result) / 조건에 따라 분기합니다: if (calculated.TryGetValue((shot.CellNo, shot.ShotName), out var result))
+L000133 |                 if (calculated.TryGetValue((shot.CellNo, shot.ShotName), out var result)) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 Rows.
+L000134 |                 { ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: row["CALCULATED_OFFSET_X_MM"] = Number(result.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(result.X)
+L000135 |                     row["CALCULATED_OFFSET_X_MM"] = Number(result.X); ⟦EOL⟧
+// 해설 L136: 값을 대상에 대입합니다: row["CALCULATED_OFFSET_Y_MM"] = Number(result.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(result.Y)
+L000136 |                     row["CALCULATED_OFFSET_Y_MM"] = Number(result.Y); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Rows.
+L000137 |                 } ⟦EOL⟧
+// 해설 L138: 열거값/종료를 전달합니다: yield return row;
+L000138 |                 yield return row; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 Rows.
+L000139 |             } ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 Rows.
+L000140 |         } ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { ["RECIPE_NAME"] = entry.RecipeName, ["ACTION"] = entry.IsInit ? "Init" : "Apply", ["ALGORITHM"] = entry.IsInit ? "" : CAlignInterpolation.AlgorithmName, ["APPLIED_AT"] = entry.ChangedAt.ToString("O", CultureInfo.…
+L000142 |         Dictionary<string, string> CommonRow(string type, double x, double y, double? offsetX, double? offsetY) => new() ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 CommonRow.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: ["RECIPE_NAME"] = entry.RecipeName
+L000144 |             ["RECIPE_NAME"] = entry.RecipeName, ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: ["ACTION"] = entry.IsInit ? "Init" : "Apply" / 조건에 따라 결과식을 선택합니다: entry.IsInit ? "Init" : "Apply"
+L000145 |             ["ACTION"] = entry.IsInit ? "Init" : "Apply", ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: ["ALGORITHM"] = entry.IsInit ? "" : CAlignInterpolation.AlgorithmName / 조건에 따라 결과식을 선택합니다: entry.IsInit ? "" : CAlignInterpolation.AlgorithmName
+L000146 |             ["ALGORITHM"] = entry.IsInit ? "" : CAlignInterpolation.AlgorithmName, ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: ["APPLIED_AT"] = entry.ChangedAt.ToString("O", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ChangedAt.ToString("O", CultureInfo.InvariantCulture)
+L000147 |             ["APPLIED_AT"] = entry.ChangedAt.ToString("O", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: ["LAST_LOAD_TIME"] = entry.LastLoadedAt?.ToString("O", CultureInfo.InvariantCulture) ?? "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("O", CultureInfo.InvariantCulture)
+L000148 |             ["LAST_LOAD_TIME"] = entry.LastLoadedAt?.ToString("O", CultureInfo.InvariantCulture) ?? "", ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: ["SOURCE"] = entry.LastLoadedAt is null ? "NOT_LOADED" : entry.IsSimulation ? "SIMULATION" : "MELSEC" / 조건에 따라 결과식을 선택합니다: entry.LastLoadedAt is null ? "NOT_LOADED" : entry.IsSimulation ? "SIMULATION" : "MELSEC" / 조건에 따라 결과식을 선택합니다: entry.IsSimulation ? "SIMULATION" : "MELSEC"
+L000149 |             ["SOURCE"] = entry.LastLoadedAt is null ? "NOT_LOADED" : entry.IsSimulation ? "SIMULATION" : "MELSEC", ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: ["TOLERANCE_MM"] = Number(entry.Tolerance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(entry.Tolerance)
+L000150 |             ["TOLERANCE_MM"] = Number(entry.Tolerance), ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: ["ROW_TYPE"] = type
+L000151 |             ["ROW_TYPE"] = type, ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: ["DESIGN_X_MM"] = Number(x) / 값을 대상에 대입합니다: ["DESIGN_Y_MM"] = Number(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(y)
+L000152 |             ["DESIGN_X_MM"] = Number(x), ["DESIGN_Y_MM"] = Number(y), ⟦EOL⟧
+// 해설 L153: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000153 |             // These are the persisted design-coordinate offsets, without head-direction conversion. ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: ["OFFSET_X_MM"] = Number(offsetX) / 값을 대상에 대입합니다: ["OFFSET_Y_MM"] = Number(offsetY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(offsetX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(offsetY)
+L000154 |             ["OFFSET_X_MM"] = Number(offsetX), ["OFFSET_Y_MM"] = Number(offsetY) ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 CommonRow.
+L000155 |         }; ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 SaveCore.
+L000156 |     } ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.FormatValue(number) / 조건에 따라 결과식을 선택합니다: value is { } number ? CAlignShotOffsetData.FormatValue(number) : ""
+L000158 |     private static string Number(double? value) => value is { } number ? CAlignShotOffsetData.FormatValue(number) : ""; ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)
+L000160 |     private static string SafeRecipeName(string name) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 SafeRecipeName.
+L000161 |     { ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars() / 지역 변수를 선언합니다: var invalid = Path.GetInvalidFileNameChars(); / 변수의 초기값을 지정합니다: invalid = Path.GetInvalidFileNameChars()
+L000162 |         var invalid = Path.GetInvalidFileNameChars(); ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character => invalid.Contains(character) || char.IsControl(character) ? '_' : character).ToArray()) .Trim().TrimEnd('.') / 함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character => invalid.Contains(character) || char.IsControl(character) ? '_' : character).ToArray()) .Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new string(name.Select(character => invalid.Contains(character) || char.IsControl(character) ? '_' : character).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Select(character => inv
+L000163 |         var result = new string(name.Select(character => invalid.Contains(character) || char.IsControl(character) ? '_' : character).ToArray()) ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)
+L000164 |             .Trim().TrimEnd('.'); ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Align Offset 로그의 레시피명이 없습니다.") / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(result)) / 예외를 발생/전달합니다: throw new InvalidDataException("Align Offset 로그의 레시피명이 없습니다.");
+L000165 |         if (string.IsNullOrWhiteSpace(result)) throw new InvalidDataException("Align Offset 로그의 레시피명이 없습니다."); ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Split('.')[0].ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Split('.') / 조건에 따라 분기합니다: if (result.Split('.')[0].ToUpperInvariant() is "CON" or "PRN" or "AUX" or "NUL" or "COM1" or "COM2" or "COM3" or "COM4" or "COM5" or "COM6" or "COM7" or "COM8" or "COM9" or "LPT1" or "LPT2" or "LPT3" or "LPT4" or "LPT5" or "…)
+L000166 |         if (result.Split('.')[0].ToUpperInvariant() is "CON" or "PRN" or "AUX" or "NUL" or ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)
+L000167 |             "COM1" or "COM2" or "COM3" or "COM4" or "COM5" or "COM6" or "COM7" or "COM8" or "COM9" or ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Correction.CAlignOffsetLogFile.SafeRecipeName(string)
+L000168 |             "LPT1" or "LPT2" or "LPT3" or "LPT4" or "LPT5" or "LPT6" or "LPT7" or "LPT8" or "LPT9") ⟦EOL⟧
+// 해설 L169: 값을 대상에 대입합니다: result = "_" + result
+L000169 |             result = "_" + result; ⟦EOL⟧
+// 해설 L170: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000170 |         return result; ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 SafeRecipeName.
+L000171 |     } ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다.
+L000172 | } ⟦EOL⟧

@@ -1,0 +1,504 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/JHMI/CBETFile.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/JHMI/CBETFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs">Git 원본</a></p><h1>Drilling.File/JHMI/CBETFile.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>b44f86162fa4efb0ad73a858a5d29f19cc0776602e15b77f12a7b6e4aa4d3268</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>4,228 bytes / 108 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/4369e9893f112eb27183.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CBETFile</td><td>ClassDeclaration</td><td>11–108</td><td>CBETFile: CBETFileBase</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Headers</td><td>FieldDeclaration</td><td>L13–13</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CBETFile.Headers</td></tr>
+<tr><td>Load</td><td>MethodDeclaration</td><td>L14–19</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;&gt; Drilling.File.JHMI.CBETFile.Load(System.Threading.CancellationToken)</td></tr>
+<tr><td>Save</td><td>MethodDeclaration</td><td>L21–26</td><td>System.Threading.Tasks.Task Drilling.File.JHMI.CBETFile.Save(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>EnsureFiles</td><td>MethodDeclaration</td><td>L28–34</td><td>void Drilling.File.JHMI.CBETFile.EnsureFiles()</td></tr>
+<tr><td>ReadTable</td><td>MethodDeclaration</td><td>L36–54</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.ReadTable(string)</td></tr>
+<tr><td>ShouldIncludeItem</td><td>LocalFunctionStatement</td><td>L38–41</td><td>bool ShouldIncludeItem(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>BuildBet</td><td>LocalFunctionStatement</td><td>L43–46</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA BuildBet(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>SelectIndex</td><td>LocalFunctionStatement</td><td>L48–51</td><td>int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>WriteTable</td><td>MethodDeclaration</td><td>L56–77</td><td>void Drilling.File.JHMI.CBETFile.WriteTable(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;)</td></tr>
+<tr><td>SelectIndex</td><td>LocalFunctionStatement</td><td>L58–61</td><td>int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>BuildBetTableRow</td><td>LocalFunctionStatement</td><td>L63–73</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; BuildBetTableRow(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>CreateDefaultTable</td><td>MethodDeclaration</td><td>L79–82</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.CreateDefaultTable()</td></tr>
+<tr><td>ReadMotorStep</td><td>MethodDeclaration</td><td>L84–92</td><td>int Drilling.File.JHMI.CBETFile.ReadMotorStep(string)</td></tr>
+<tr><td>GetFormPath</td><td>MethodDeclaration</td><td>L94–97</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath()</td></tr>
+<tr><td>ReadInt</td><td>MethodDeclaration</td><td>L99–102</td><td>int Drilling.File.JHMI.CBETFile.ReadInt(string, int)</td></tr>
+<tr><td>ReadDouble</td><td>MethodDeclaration</td><td>L104–107</td><td>double Drilling.File.JHMI.CBETFile.ReadDouble(string, double)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L13">FieldDeclaration <code>Headers</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L13-L13">Drilling.File/JHMI/CBETFile.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CBETFile.Headers</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: Headers = [&quot;INDEX&quot;, &quot;DESCRIPTION&quot;, &quot;DIV&quot;, &quot;MAG&quot;, &quot;SPOTSIZE&quot;]</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">MethodDeclaration <code>Load</code> · L14–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L14-L19">Drilling.File/JHMI/CBETFile.cs:14–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;&gt; Drilling.File.JHMI.CBETFile.Load(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>17</td><td>EnsureFiles</td><td>resolved</td><td>void Drilling.File.JHMI.CBETFile.EnsureFiles() · Drilling.File/JHMI/CBETFile.cs:28</td></tr>
+<tr><td>18</td><td>Task.FromResult&lt;IReadOnlyList&lt;ST_BET_TABLE_DATA&gt;&gt;</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;&gt; System.Threading.Tasks.Task.FromResult&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;&gt;(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;)</td></tr>
+<tr><td>18</td><td>ReadTable</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.ReadTable(string) · Drilling.File/JHMI/CBETFile.cs:36</td></tr>
+<tr><td>18</td><td>GetFormPath</td><td>resolved</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath() · Drilling.File/JHMI/CBETFile.cs:94</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureFiles()</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult&lt;IReadOnlyList&lt;ST_BET_TABLE_DATA&gt;&gt;(ReadTable(GetFormPath()))</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTable(GetFormPath())</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath()</td></tr>
+<tr><td>18</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.FromResult&lt;IReadOnlyList&lt;ST_BET_TABLE_DATA&gt;&gt;(ReadTable(GetFormPath()));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">MethodDeclaration <code>Save</code> · L21–26</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L21-L26">Drilling.File/JHMI/CBETFile.cs:21–26</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.File.JHMI.CBETFile.Save(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>table</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>23</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>24</td><td>WriteTable</td><td>resolved</td><td>void Drilling.File.JHMI.CBETFile.WriteTable(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;) · Drilling.File/JHMI/CBETFile.cs:56</td></tr>
+<tr><td>24</td><td>GetFormPath</td><td>resolved</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath() · Drilling.File/JHMI/CBETFile.cs:94</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WriteTable(GetFormPath(), table)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath()</td></tr>
+<tr><td>25</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>EnsureFiles</code> · L28–34</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L28-L34">Drilling.File/JHMI/CBETFile.cs:28–34</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CBETFile.EnsureFiles()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L17-L17">Drilling.File/JHMI/CBETFile.cs:17–17</a></td><td>EnsureFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>30</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>30</td><td>GetFormPath</td><td>resolved</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath() · Drilling.File/JHMI/CBETFile.cs:94</td></tr>
+<tr><td>32</td><td>WriteTable</td><td>resolved</td><td>void Drilling.File.JHMI.CBETFile.WriteTable(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;) · Drilling.File/JHMI/CBETFile.cs:56</td></tr>
+<tr><td>32</td><td>GetFormPath</td><td>resolved</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath() · Drilling.File/JHMI/CBETFile.cs:94</td></tr>
+<tr><td>32</td><td>CreateDefaultTable</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.CreateDefaultTable() · Drilling.File/JHMI/CBETFile.cs:79</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(GetFormPath())</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath()</td></tr>
+<tr><td>30</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(GetFormPath()))</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WriteTable(GetFormPath(), CreateDefaultTable())</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath()</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDefaultTable()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EnsureFiles&quot;]
+ N0[&quot;L30 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">MethodDeclaration <code>ReadTable</code> · L36–54</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L36-L54">Drilling.File/JHMI/CBETFile.cs:36–54</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.ReadTable(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L18-L18">Drilling.File/JHMI/CBETFile.cs:18–18</a></td><td>ReadTable</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex).ToList</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;.ToList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;()</td></tr>
+<tr><td>53</td><td>CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;.OrderBy&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, int&gt;)</td></tr>
+<tr><td>53</td><td>CCsvParser.Read(path).Where(ShouldIncludeItem).Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;.Select&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;(System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;)</td></tr>
+<tr><td>53</td><td>CCsvParser.Read(path).Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;.Where&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;(System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool&gt;)</td></tr>
+<tr><td>53</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex).ToList()</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path)</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex).ToList();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">LocalFunctionStatement <code>ShouldIncludeItem</code> · L38–41</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L38-L41">Drilling.File/JHMI/CBETFile.cs:38–41</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool ShouldIncludeItem(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>40</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>40</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, &quot;INDEX&quot;))</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;INDEX&quot;)</td></tr>
+<tr><td>40</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, &quot;INDEX&quot;));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L43">LocalFunctionStatement <code>BuildBet</code> · L43–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L43-L46">Drilling.File/JHMI/CBETFile.cs:43–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA BuildBet(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>order</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>45</td><td>new ST_BET_TABLE_DATA</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+<tr><td>45</td><td>ReadInt</td><td>resolved</td><td>int Drilling.File.JHMI.CBETFile.ReadInt(string, int) · Drilling.File/JHMI/CBETFile.cs:99</td></tr>
+<tr><td>45</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>45</td><td>ReadMotorStep</td><td>resolved</td><td>int Drilling.File.JHMI.CBETFile.ReadMotorStep(string) · Drilling.File/JHMI/CBETFile.cs:84</td></tr>
+<tr><td>45</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>45</td><td>ReadMotorStep</td><td>resolved</td><td>int Drilling.File.JHMI.CBETFile.ReadMotorStep(string) · Drilling.File/JHMI/CBETFile.cs:84</td></tr>
+<tr><td>45</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>45</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_BET_TABLE_DATA(ReadInt(CCsvParser.Get(row, &quot;INDEX&quot;), order), ReadMotorStep(CCsvParser.Get(row, &quot;MAG&quot;)), ReadMotorStep(CCsvParser.Get(row, &quot;DIV&quot;)), CCsvParser.Get(row, &quot;DESCRIPTION&quot;))</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(CCsvParser.Get(row, &quot;INDEX&quot;), order)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;INDEX&quot;)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotorStep(CCsvParser.Get(row, &quot;MAG&quot;))</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;MAG&quot;)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotorStep(CCsvParser.Get(row, &quot;DIV&quot;))</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;DIV&quot;)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;DESCRIPTION&quot;)</td></tr>
+<tr><td>45</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_BET_TABLE_DATA(ReadInt(CCsvParser.Get(row, &quot;INDEX&quot;), order), ReadMotorStep(CCsvParser.Get(row, &quot;MAG&quot;)), ReadMotorStep(CCsvParser.Get(row, &quot;DIV&quot;)), CCsvParser.Get(row, &quot;DESCRIPTION&quot;));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L48">LocalFunctionStatement <code>SelectIndex</code> · L48–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L48-L51">Drilling.File/JHMI/CBETFile.cs:48–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>50</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return row.Index;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L56">MethodDeclaration <code>WriteTable</code> · L56–77</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L56-L77">Drilling.File/JHMI/CBETFile.cs:56–77</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CBETFile.WriteTable(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>table</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L24-L24">Drilling.File/JHMI/CBETFile.cs:24–24</a></td><td>WriteTable</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L32-L32">Drilling.File/JHMI/CBETFile.cs:32–32</a></td><td>WriteTable</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>75</td><td>table.OrderBy(SelectIndex).Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.Dictionary&lt;string, string&gt;&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;.Select&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, System.Collections.Generic.Dictionary&lt;string, string&gt;&gt;(System.Func&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, System.Collections.Generic.Dictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>75</td><td>table.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;.OrderBy&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA, int&gt;)</td></tr>
+<tr><td>76</td><td>CCsvParser.Write</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:58</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: table.OrderBy(SelectIndex).Select(BuildBetTableRow)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: table.OrderBy(SelectIndex)</td></tr>
+<tr><td>75</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = table.OrderBy(SelectIndex).Select(BuildBetTableRow);</td></tr>
+<tr><td>75</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = table.OrderBy(SelectIndex).Select(BuildBetTableRow)</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(path, Headers, rows)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L58">LocalFunctionStatement <code>SelectIndex</code> · L58–61</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L58-L61">Drilling.File/JHMI/CBETFile.cs:58–61</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>60</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return row.Index;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L63">LocalFunctionStatement <code>BuildBetTableRow</code> · L63–73</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L63-L73">Drilling.File/JHMI/CBETFile.cs:63–73</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; BuildBetTableRow(Drilling.Common.Interface.ST_BET_TABLE_DATA)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>65</td><td>new Dictionary&lt;string, string&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary()</td></tr>
+<tr><td>67</td><td>row.Index.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>69</td><td>row.Divergence.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>70</td><td>row.Magnification.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>71</td><td>row.SpotSize.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, string&gt; { [&quot;INDEX&quot;] = row.Index.ToString(CultureInfo.InvariantCulture), [&quot;DESCRIPTION&quot;] = row.Description, [&quot;DIV&quot;] = row.Divergence.ToString(CultureInfo.InvariantCulture), [&quot;MAG&quot;] = row.Magnificati…</td></tr>
+<tr><td>65</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new Dictionary&lt;string, string&gt; { [&quot;INDEX&quot;] = row.Index.ToString(CultureInfo.InvariantCulture), [&quot;DESCRIPTION&quot;] = row.Description, [&quot;DIV&quot;] = row.Divergence.ToString(CultureInfo.InvariantCulture), [&quot;MAG&quot;] = row.Magnification.</td></tr>
+<tr><td>67</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;INDEX&quot;] = row.Index.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Index.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>68</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;DESCRIPTION&quot;] = row.Description</td></tr>
+<tr><td>69</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;DIV&quot;] = row.Divergence.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Divergence.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>70</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;MAG&quot;] = row.Magnification.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Magnification.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>71</td><td>assignment</td><td>값을 대상에 대입합니다: [&quot;SPOTSIZE&quot;] = row.SpotSize.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.SpotSize.ToString(&quot;F6&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">MethodDeclaration <code>CreateDefaultTable</code> · L79–82</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L79-L82">Drilling.File/JHMI/CBETFile.cs:79–82</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt; Drilling.File.JHMI.CBETFile.CreateDefaultTable()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_BET_TABLE_DATA&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L32-L32">Drilling.File/JHMI/CBETFile.cs:32–32</a></td><td>CreateDefaultTable</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+<tr><td>81</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+<tr><td>81</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+<tr><td>81</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+<tr><td>81</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_BET_TABLE_DATA.ST_BET_TABLE_DATA(int, int, int, string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:465</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 1020, 1626, &quot;2times&quot;)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 2351, 1118, &quot;3times&quot;)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(2, 3014, 1278, &quot;4times&quot;)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(3, 3410, 1706, &quot;5times&quot;)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(4, 3673, 2267, &quot;6times&quot;)</td></tr>
+<tr><td>81</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return[new(0, 1020, 1626, &quot;2times&quot;), new(1, 2351, 1118, &quot;3times&quot;), new(2, 3014, 1278, &quot;4times&quot;), new(3, 3410, 1706, &quot;5times&quot;), new(4, 3673, 2267, &quot;6times&quot;)];</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L84">MethodDeclaration <code>ReadMotorStep</code> · L84–92</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L84-L92">Drilling.File/JHMI/CBETFile.cs:84–92</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.File.JHMI.CBETFile.ReadMotorStep(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>ReadMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>ReadMotorStep</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>86</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>91</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>91</td><td>Math.Round</td><td>resolved</td><td>double System.Math.Round(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed)</td></tr>
+<tr><td>86</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed))</td></tr>
+<tr><td>88</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return 0;</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)Math.Round(parsed), 0, 4500)</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(parsed)</td></tr>
+<tr><td>91</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Clamp((int)Math.Round(parsed), 0, 4500);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadMotorStep&quot;]
+ N0[&quot;L86 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L94">MethodDeclaration <code>GetFormPath</code> · L94–97</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L94-L97">Drilling.File/JHMI/CBETFile.cs:94–97</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.JHMI.CBETFile.GetFormPath()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L18-L18">Drilling.File/JHMI/CBETFile.cs:18–18</a></td><td>GetFormPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L24-L24">Drilling.File/JHMI/CBETFile.cs:24–24</a></td><td>GetFormPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L30-L30">Drilling.File/JHMI/CBETFile.cs:30–30</a></td><td>GetFormPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L32-L32">Drilling.File/JHMI/CBETFile.cs:32–32</a></td><td>GetFormPath</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>96</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, &quot;JHMI_BET.csv&quot;)</td></tr>
+<tr><td>96</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.Combine(configRoot, &quot;JHMI_BET.csv&quot;);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L99">MethodDeclaration <code>ReadInt</code> · L99–102</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L99-L102">Drilling.File/JHMI/CBETFile.cs:99–102</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.File.JHMI.CBETFile.ReadInt(string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>ReadInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>101</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>101</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue</td></tr>
+<tr><td>101</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L104">MethodDeclaration <code>ReadDouble</code> · L104–107</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CBETFile.cs#L104-L107">Drilling.File/JHMI/CBETFile.cs:104–107</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.File.JHMI.CBETFile.ReadDouble(string, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CBETFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>106</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>106</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue</td></tr>
+<tr><td>106</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.File/JHMI/CBETFile.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

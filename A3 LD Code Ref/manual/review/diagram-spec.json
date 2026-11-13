@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "diagrams": [
+    {
+      "id": "review-01",
+      "title": "Review 계획과 좌표계",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "01_Review_계획과_좌표계.md",
+      "nodes": [
+        {
+          "id": "recipe",
+          "label": "Recipe와 Setting"
+        },
+        {
+          "id": "process",
+          "label": "가공 Shot과 Head 배정"
+        },
+        {
+          "id": "mask",
+          "label": "Masking 판정"
+        },
+        {
+          "id": "sample",
+          "label": "검사점 선택"
+        },
+        {
+          "id": "target",
+          "label": "카메라 X와 Stage Y"
+        },
+        {
+          "id": "stage",
+          "label": "Stage와 IOF"
+        },
+        {
+          "id": "vision",
+          "label": "Vision 식별자 요청"
+        },
+        {
+          "id": "error",
+          "label": "픽셀에서 mm 오차"
+        },
+        {
+          "id": "result",
+          "label": "판정과 저장"
+        }
+      ],
+      "edges": [
+        {
+          "from": "recipe",
+          "to": "process"
+        },
+        {
+          "from": "process",
+          "to": "mask"
+        },
+        {
+          "from": "mask",
+          "to": "sample"
+        },
+        {
+          "from": "sample",
+          "to": "target"
+        },
+        {
+          "from": "target",
+          "to": "stage"
+        },
+        {
+          "from": "sample",
+          "to": "vision"
+        },
+        {
+          "from": "vision",
+          "to": "error"
+        },
+        {
+          "from": "error",
+          "to": "result"
+        }
+      ]
+    },
+    {
+      "id": "review-02",
+      "title": "Masking과 Sampling",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "02_Masking_Sampling_IOF.md",
+      "nodes": [
+        {
+          "id": "design",
+          "label": "설계 footprint"
+        },
+        {
+          "id": "mask",
+          "label": "Masking과 CHESS"
+        },
+        {
+          "id": "use",
+          "label": "사용 가능 Shot"
+        },
+        {
+          "id": "sample",
+          "label": "Cell별 줄 선택"
+        },
+        {
+          "id": "buffer",
+          "label": "순서 고정 Buffer"
+        },
+        {
+          "id": "iof",
+          "label": "IOF 배열과 Handshake"
+        },
+        {
+          "id": "count",
+          "label": "결과 Count 검증"
+        }
+      ],
+      "edges": [
+        {
+          "from": "design",
+          "to": "mask"
+        },
+        {
+          "from": "mask",
+          "to": "use"
+        },
+        {
+          "from": "use",
+          "to": "sample"
+        },
+        {
+          "from": "sample",
+          "to": "buffer"
+        },
+        {
+          "from": "buffer",
+          "to": "iof"
+        },
+        {
+          "from": "iof",
+          "to": "count"
+        }
+      ]
+    },
+    {
+      "id": "review-03",
+      "title": "Vision 통신",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "03_Vision_패킷과_단위.md",
+      "nodes": [
+        {
+          "id": "point",
+          "label": "검사점 식별자"
+        },
+        {
+          "id": "packet",
+          "label": "1001 바이너리"
+        },
+        {
+          "id": "tcp",
+          "label": "UniqueId TCP 대기"
+        },
+        {
+          "id": "done",
+          "label": "1002 Count"
+        },
+        {
+          "id": "recv",
+          "label": "1003 결과"
+        },
+        {
+          "id": "mm",
+          "label": "픽셀 차이 mm"
+        },
+        {
+          "id": "flip",
+          "label": "Flip과 Tolerance"
+        },
+        {
+          "id": "save",
+          "label": "결과 저장"
+        }
+      ],
+      "edges": [
+        {
+          "from": "point",
+          "to": "packet"
+        },
+        {
+          "from": "packet",
+          "to": "tcp"
+        },
+        {
+          "from": "tcp",
+          "to": "done"
+        },
+        {
+          "from": "done",
+          "to": "recv"
+        },
+        {
+          "from": "recv",
+          "to": "mm"
+        },
+        {
+          "from": "mm",
+          "to": "flip"
+        },
+        {
+          "from": "flip",
+          "to": "save"
+        }
+      ]
+    },
+    {
+      "id": "review-04",
+      "title": "Review Offset 적용과 원복",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "04_ReviewOffset_적용과_롤백.md",
+      "nodes": [
+        {
+          "id": "result",
+          "label": "검사 결과"
+        },
+        {
+          "id": "valid",
+          "label": "전체 OK 검증"
+        },
+        {
+          "id": "interp",
+          "label": "열별 Y 보간"
+        },
+        {
+          "id": "design",
+          "label": "기존값 DESIGN 환산"
+        },
+        {
+          "id": "sum",
+          "label": "기존값과 Delta"
+        },
+        {
+          "id": "save",
+          "label": "새 Snapshot과 이력"
+        },
+        {
+          "id": "prepare",
+          "label": "다음 가공 병합"
+        },
+        {
+          "id": "rollback",
+          "label": "최신본 Rollback"
+        },
+        {
+          "id": "prev",
+          "label": "이전 활성본"
+        }
+      ],
+      "edges": [
+        {
+          "from": "result",
+          "to": "valid"
+        },
+        {
+          "from": "valid",
+          "to": "interp"
+        },
+        {
+          "from": "interp",
+          "to": "design"
+        },
+        {
+          "from": "design",
+          "to": "sum"
+        },
+        {
+          "from": "sum",
+          "to": "save"
+        },
+        {
+          "from": "save",
+          "to": "prepare"
+        },
+        {
+          "from": "save",
+          "to": "rollback"
+        },
+        {
+          "from": "rollback",
+          "to": "prev"
+        }
+      ]
+    },
+    {
+      "id": "review-05",
+      "title": "결과 Revision과 Product",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "05_결과_Revision_Product_연결.md",
+      "nodes": [
+        {
+          "id": "glass",
+          "label": "Glass와 Recipe"
+        },
+        {
+          "id": "product",
+          "label": "Product 진행"
+        },
+        {
+          "id": "measure",
+          "label": "Review 측정"
+        },
+        {
+          "id": "base",
+          "label": "BASE CSV"
+        },
+        {
+          "id": "retry",
+          "label": "선택 Shot 재검사"
+        },
+        {
+          "id": "revision",
+          "label": "새 REINSP CSV"
+        },
+        {
+          "id": "offset",
+          "label": "별도 Offset 적용"
+        }
+      ],
+      "edges": [
+        {
+          "from": "glass",
+          "to": "product"
+        },
+        {
+          "from": "glass",
+          "to": "measure"
+        },
+        {
+          "from": "measure",
+          "to": "base"
+        },
+        {
+          "from": "base",
+          "to": "retry"
+        },
+        {
+          "from": "retry",
+          "to": "revision"
+        },
+        {
+          "from": "revision",
+          "to": "offset"
+        },
+        {
+          "from": "measure",
+          "to": "product"
+        }
+      ]
+    },
+    {
+      "id": "review-06",
+      "title": "Default 중심 보정",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "nodes": [
+        {
+          "id": "center",
+          "label": "설정 중앙과 Head 간격"
+        },
+        {
+          "id": "target",
+          "label": "고정 목표 중심"
+        },
+        {
+          "id": "fire",
+          "label": "가공과 예상위치 이동"
+        },
+        {
+          "id": "measure",
+          "label": "중심 측정"
+        },
+        {
+          "id": "error",
+          "label": "목표와 실측 오차"
+        },
+        {
+          "id": "recommend",
+          "label": "현재 Default에서 오차 차감"
+        },
+        {
+          "id": "apply",
+          "label": "값 적용"
+        },
+        {
+          "id": "verify",
+          "label": "새 가공 재검증"
+        },
+        {
+          "id": "next",
+          "label": "다음 쌍"
+        },
+        {
+          "id": "restore",
+          "label": "실패 쌍 원복"
+        }
+      ],
+      "edges": [
+        {
+          "from": "center",
+          "to": "target"
+        },
+        {
+          "from": "fire",
+          "to": "measure"
+        },
+        {
+          "from": "target",
+          "to": "error"
+        },
+        {
+          "from": "measure",
+          "to": "error"
+        },
+        {
+          "from": "error",
+          "to": "recommend"
+        },
+        {
+          "from": "recommend",
+          "to": "apply"
+        },
+        {
+          "from": "apply",
+          "to": "verify"
+        },
+        {
+          "from": "verify",
+          "to": "next"
+        },
+        {
+          "from": "verify",
+          "to": "restore"
+        }
+      ]
+    },
+    {
+      "id": "review-07",
+      "title": "자동 시퀀스 경계",
+      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "chapter": "07_Align_Distortion_윈도우_복구.md",
+      "nodes": [
+        {
+          "id": "request",
+          "label": "Distortion 요청"
+        },
+        {
+          "id": "prepare",
+          "label": "조건 동결과 기록"
+        },
+        {
+          "id": "complete",
+          "label": "Stage 완료"
+        },
+        {
+          "id": "load",
+          "label": "AK와 DK mm 수신"
+        },
+        {
+          "id": "calc",
+          "label": "Base-LastLoad와 Tolerance"
+        },
+        {
+          "id": "save",
+          "label": "Align 저장과 Handshake"
+        },
+        {
+          "id": "ready",
+          "label": "다음 DoReady 재생성"
+        },
+        {
+          "id": "task",
+          "label": "가공 Task 완료"
+        },
+        {
+          "id": "count",
+          "label": "윈도우 사용매수 확정"
+        },
+        {
+          "id": "handover",
+          "label": "Stage 인계 Count 저장"
+        },
+        {
+          "id": "off",
+          "label": "교체 요청 OFF"
+        },
+        {
+          "id": "follow",
+          "label": "ZeroLine 후속 미완료"
+        },
+        {
+          "id": "block",
+          "label": "다음 준비 차단"
+        }
+      ],
+      "edges": [
+        {
+          "from": "request",
+          "to": "prepare"
+        },
+        {
+          "from": "prepare",
+          "to": "complete"
+        },
+        {
+          "from": "complete",
+          "to": "load"
+        },
+        {
+          "from": "load",
+          "to": "calc"
+        },
+        {
+          "from": "calc",
+          "to": "save"
+        },
+        {
+          "from": "save",
+          "to": "ready"
+        },
+        {
+          "from": "task",
+          "to": "count"
+        },
+        {
+          "from": "count",
+          "to": "handover"
+        },
+        {
+          "from": "handover",
+          "to": "off"
+        },
+        {
+          "from": "follow",
+          "to": "block"
+        }
+      ]
+    }
+  ]
+}

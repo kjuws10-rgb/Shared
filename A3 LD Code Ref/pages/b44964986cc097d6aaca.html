@@ -1,0 +1,2081 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>efec9cad32b02c68f4007a4491772b41960b0e3fbf4856c0aa2bdb373be73e55</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>15,344 bytes / 300 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/b44964986cc097d6aaca.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CManualStageMoveOperation</td><td>ClassDeclaration</td><td>12–63</td><td>CManualStageMoveOperation</td></tr>
+<tr><td>CManualPowerStagePanel</td><td>ClassDeclaration</td><td>65–267</td><td>CManualPowerStagePanel: INotifyPropertyChanged</td></tr>
+<tr><td>CManualPowerStageAxis</td><td>ClassDeclaration</td><td>269–300</td><td>CManualPowerStageAxis: INotifyPropertyChanged</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_sync</td><td>FieldDeclaration</td><td>L16–16</td><td>object Drilling.UI.Menu.Menus.CManualStageMoveOperation._sync</td></tr>
+<tr><td>_cancellation</td><td>FieldDeclaration</td><td>L17–17</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CManualStageMoveOperation._cancellation</td></tr>
+<tr><td>_completion</td><td>FieldDeclaration</td><td>L18–18</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualStageMoveOperation._completion</td></tr>
+<tr><td>Changed</td><td>EventFieldDeclaration</td><td>L19–19</td><td>System.Action? Drilling.UI.Menu.Menus.CManualStageMoveOperation.Changed</td></tr>
+<tr><td>IsRunning</td><td>PropertyDeclaration</td><td>L20–20</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsRunning</td></tr>
+<tr><td>get_IsRunning</td><td>GetAccessorDeclaration</td><td>L20–20</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsRunning.get</td></tr>
+<tr><td>IsStopping</td><td>PropertyDeclaration</td><td>L21–21</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsStopping</td></tr>
+<tr><td>get_IsStopping</td><td>GetAccessorDeclaration</td><td>L21–21</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsStopping.get</td></tr>
+<tr><td>CanStop</td><td>PropertyDeclaration</td><td>L22–22</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.CanStop</td></tr>
+<tr><td>Move</td><td>MethodDeclaration</td><td>L24–47</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.Move(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double)</td></tr>
+<tr><td>StopAsync</td><td>MethodDeclaration</td><td>L49–49</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync()</td></tr>
+<tr><td>StopAsync</td><td>MethodDeclaration</td><td>L50–60</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync(bool)</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L61–61</td><td>void Drilling.UI.Menu.Menus.CManualStageMoveOperation.Stop()</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L62–62</td><td>void Drilling.UI.Menu.Menus.CManualStageMoveOperation.Stop(bool)</td></tr>
+<tr><td>_readCachedStatus</td><td>FieldDeclaration</td><td>L67–67</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._readCachedStatus</td></tr>
+<tr><td>_readConnectionState</td><td>FieldDeclaration</td><td>L68–68</td><td>System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._readConnectionState</td></tr>
+<tr><td>_confirm</td><td>FieldDeclaration</td><td>L69–69</td><td>System.Func&lt;string, bool&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirm</td></tr>
+<tr><td>_warn</td><td>FieldDeclaration</td><td>L70–70</td><td>System.Action&lt;string&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._warn</td></tr>
+<tr><td>_simulation</td><td>FieldDeclaration</td><td>L71–71</td><td>Drilling.Common.Motion.CManualStageMotionSimulation Drilling.UI.Menu.Menus.CManualPowerStagePanel._simulation</td></tr>
+<tr><td>_stageMove</td><td>FieldDeclaration</td><td>L72–72</td><td>Drilling.UI.Menu.Menus.CManualStageMoveOperation? Drilling.UI.Menu.Menus.CManualPowerStagePanel._stageMove</td></tr>
+<tr><td>_animation</td><td>FieldDeclaration</td><td>L73–73</td><td>DispatcherTimer Drilling.UI.Menu.Menus.CManualPowerStagePanel._animation</td></tr>
+<tr><td>_connectionState</td><td>FieldDeclaration</td><td>L74–74</td><td>Drilling.Common.Interface.EN_COMM_STATE Drilling.UI.Menu.Menus.CManualPowerStagePanel._connectionState</td></tr>
+<tr><td>_active</td><td>FieldDeclaration</td><td>L75–75</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._active</td></tr>
+<tr><td>_activeViews</td><td>FieldDeclaration</td><td>L76–76</td><td>System.Collections.Generic.HashSet&lt;object&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._activeViews</td></tr>
+<tr><td>_measurementRunning</td><td>FieldDeclaration</td><td>L77–77</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._measurementRunning</td></tr>
+<tr><td>_confirming</td><td>FieldDeclaration</td><td>L78–78</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirming</td></tr>
+<tr><td>_generation</td><td>FieldDeclaration</td><td>L79–79</td><td>int Drilling.UI.Menu.Menus.CManualPowerStagePanel._generation</td></tr>
+<tr><td>_reserved</td><td>FieldDeclaration</td><td>L80–80</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._reserved</td></tr>
+<tr><td>_sharedMoveRunning</td><td>FieldDeclaration</td><td>L81–81</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._sharedMoveRunning</td></tr>
+<tr><td>_motionMessage</td><td>FieldDeclaration</td><td>L82–82</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel._motionMessage</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L83–83</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStagePanel.PropertyChanged</td></tr>
+<tr><td>Axes</td><td>PropertyDeclaration</td><td>L84–84</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel.Axes</td></tr>
+<tr><td>get_Axes</td><td>GetAccessorDeclaration</td><td>L84–84</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel.Axes.get</td></tr>
+<tr><td>StopCommand</td><td>PropertyDeclaration</td><td>L85–85</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStagePanel.StopCommand</td></tr>
+<tr><td>get_StopCommand</td><td>GetAccessorDeclaration</td><td>L85–85</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStagePanel.StopCommand.get</td></tr>
+<tr><td>MoveAllowed</td><td>PropertyDeclaration</td><td>L86–86</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed</td></tr>
+<tr><td>get_MoveAllowed</td><td>GetAccessorDeclaration</td><td>L86–86</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed.get</td></tr>
+<tr><td>set_MoveAllowed</td><td>SetAccessorDeclaration</td><td>L86–86</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed.set</td></tr>
+<tr><td>Mode</td><td>PropertyDeclaration</td><td>L87–87</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel.Mode</td></tr>
+<tr><td>ModeBackground</td><td>PropertyDeclaration</td><td>L88–93</td><td>Brush Drilling.UI.Menu.Menus.CManualPowerStagePanel.ModeBackground</td></tr>
+<tr><td>IsSimulation</td><td>PropertyDeclaration</td><td>L94–94</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.IsSimulation</td></tr>
+<tr><td>CanMove</td><td>PropertyDeclaration</td><td>L95–96</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanMove</td></tr>
+<tr><td>CanJog</td><td>PropertyDeclaration</td><td>L97–97</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanJog</td></tr>
+<tr><td>CanStop</td><td>PropertyDeclaration</td><td>L98–98</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanStop</td></tr>
+<tr><td>CanEdit</td><td>PropertyDeclaration</td><td>L99–99</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanEdit</td></tr>
+<tr><td>StatusText</td><td>PropertyDeclaration</td><td>L100–107</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel.StatusText</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L109–131</td><td>Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;, System.Action&lt;string&gt;, System.Func&lt;string, bool&gt;, Drilling.Common.Motion.CManualStageMotionSimulation?, System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;?, Drilling.UI.Menu.Menus.CManualStageMoveOperation?)</td></tr>
+<tr><td>SetViewActive</td><td>MethodDeclaration</td><td>L135–140</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetViewActive(object, bool)</td></tr>
+<tr><td>SetActive</td><td>MethodDeclaration</td><td>L142–154</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetActive(bool)</td></tr>
+<tr><td>SetMeasurementRunning</td><td>MethodDeclaration</td><td>L156–162</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetMeasurementRunning(bool)</td></tr>
+<tr><td>Refresh</td><td>MethodDeclaration</td><td>L164–188</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh()</td></tr>
+<tr><td>RefreshSimulation</td><td>MethodDeclaration</td><td>L190–201</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation()</td></tr>
+<tr><td>Move</td><td>MethodDeclaration</td><td>L203–232</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerStagePanel.Move(Drilling.UI.Menu.Menus.CManualPowerStageAxis, bool)</td></tr>
+<tr><td>StartJog</td><td>MethodDeclaration</td><td>L234–248</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L250–258</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool)</td></tr>
+<tr><td>UpdateCommands</td><td>MethodDeclaration</td><td>L260–265</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands()</td></tr>
+<tr><td>Notify</td><td>MethodDeclaration</td><td>L266–266</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?)</td></tr>
+<tr><td>_absolute</td><td>FieldDeclaration</td><td>L271–271</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._absolute</td></tr>
+<tr><td>_relative</td><td>FieldDeclaration</td><td>L271–271</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._relative</td></tr>
+<tr><td>_absoluteSpeed</td><td>FieldDeclaration</td><td>L272–272</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._absoluteSpeed</td></tr>
+<tr><td>_relativeSpeed</td><td>FieldDeclaration</td><td>L272–272</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._relativeSpeed</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L273–273</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStageAxis.PropertyChanged</td></tr>
+<tr><td>Axis</td><td>PropertyDeclaration</td><td>L274–274</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS Drilling.UI.Menu.Menus.CManualPowerStageAxis.Axis</td></tr>
+<tr><td>get_Axis</td><td>GetAccessorDeclaration</td><td>L274–274</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS Drilling.UI.Menu.Menus.CManualPowerStageAxis.Axis.get</td></tr>
+<tr><td>Name</td><td>PropertyDeclaration</td><td>L275–275</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Name</td></tr>
+<tr><td>get_Name</td><td>GetAccessorDeclaration</td><td>L275–275</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Name.get</td></tr>
+<tr><td>SnapshotName</td><td>PropertyDeclaration</td><td>L276–276</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SnapshotName</td></tr>
+<tr><td>get_SnapshotName</td><td>GetAccessorDeclaration</td><td>L276–276</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SnapshotName.get</td></tr>
+<tr><td>Absolute</td><td>PropertyDeclaration</td><td>L277–277</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute</td></tr>
+<tr><td>get_Absolute</td><td>GetAccessorDeclaration</td><td>L277–277</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute.get</td></tr>
+<tr><td>set_Absolute</td><td>SetAccessorDeclaration</td><td>L277–277</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute.set</td></tr>
+<tr><td>Relative</td><td>PropertyDeclaration</td><td>L278–278</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative</td></tr>
+<tr><td>get_Relative</td><td>GetAccessorDeclaration</td><td>L278–278</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative.get</td></tr>
+<tr><td>set_Relative</td><td>SetAccessorDeclaration</td><td>L278–278</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative.set</td></tr>
+<tr><td>AbsoluteSpeed</td><td>PropertyDeclaration</td><td>L279–279</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed</td></tr>
+<tr><td>get_AbsoluteSpeed</td><td>GetAccessorDeclaration</td><td>L279–279</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed.get</td></tr>
+<tr><td>set_AbsoluteSpeed</td><td>SetAccessorDeclaration</td><td>L279–279</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed.set</td></tr>
+<tr><td>RelativeSpeed</td><td>PropertyDeclaration</td><td>L280–280</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed</td></tr>
+<tr><td>get_RelativeSpeed</td><td>GetAccessorDeclaration</td><td>L280–280</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed.get</td></tr>
+<tr><td>set_RelativeSpeed</td><td>SetAccessorDeclaration</td><td>L280–280</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed.set</td></tr>
+<tr><td>Position</td><td>PropertyDeclaration</td><td>L281–281</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position</td></tr>
+<tr><td>get_Position</td><td>GetAccessorDeclaration</td><td>L281–281</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position.get</td></tr>
+<tr><td>set_Position</td><td>SetAccessorDeclaration</td><td>L281–281</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position.set</td></tr>
+<tr><td>Speed</td><td>PropertyDeclaration</td><td>L282–282</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed</td></tr>
+<tr><td>get_Speed</td><td>GetAccessorDeclaration</td><td>L282–282</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed.get</td></tr>
+<tr><td>set_Speed</td><td>SetAccessorDeclaration</td><td>L282–282</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed.set</td></tr>
+<tr><td>PositionMessage</td><td>PropertyDeclaration</td><td>L283–283</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage</td></tr>
+<tr><td>get_PositionMessage</td><td>GetAccessorDeclaration</td><td>L283–283</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage.get</td></tr>
+<tr><td>set_PositionMessage</td><td>SetAccessorDeclaration</td><td>L283–283</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage.set</td></tr>
+<tr><td>SpeedMessage</td><td>PropertyDeclaration</td><td>L284–284</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage</td></tr>
+<tr><td>get_SpeedMessage</td><td>GetAccessorDeclaration</td><td>L284–284</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage.get</td></tr>
+<tr><td>set_SpeedMessage</td><td>SetAccessorDeclaration</td><td>L284–284</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage.set</td></tr>
+<tr><td>AbsoluteCommand</td><td>PropertyDeclaration</td><td>L285–285</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteCommand</td></tr>
+<tr><td>get_AbsoluteCommand</td><td>GetAccessorDeclaration</td><td>L285–285</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteCommand.get</td></tr>
+<tr><td>RelativeCommand</td><td>PropertyDeclaration</td><td>L286–286</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeCommand</td></tr>
+<tr><td>get_RelativeCommand</td><td>GetAccessorDeclaration</td><td>L286–286</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeCommand.get</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L287–292</td><td>Drilling.UI.Menu.Menus.CManualPowerStageAxis.CManualPowerStageAxis(Drilling.UI.Menu.Menus.CManualPowerStagePanel, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, string, string)</td></tr>
+<tr><td>SetFeedback</td><td>MethodDeclaration</td><td>L293–298</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string)</td></tr>
+<tr><td>Notify</td><td>MethodDeclaration</td><td>L299–299</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L16">FieldDeclaration <code>_sync</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L16-L16">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.UI.Menu.Menus.CManualStageMoveOperation._sync</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _sync = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_cancellation</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L17-L17">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CManualStageMoveOperation._cancellation</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.CancellationTokenSource?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>_completion</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L18-L18">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualStageMoveOperation._completion</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">EventFieldDeclaration <code>Changed</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L19-L19">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Action? Drilling.UI.Menu.Menus.CManualStageMoveOperation.Changed</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.Action?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">PropertyDeclaration <code>IsRunning</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L20-L20">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsRunning</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">GetAccessorDeclaration <code>get_IsRunning</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L20-L20">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsRunning.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>20</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _cancellation is not null;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_IsRunning&quot;]
+ N0[&quot;L20 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">PropertyDeclaration <code>IsStopping</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L21-L21">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsStopping</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">GetAccessorDeclaration <code>get_IsStopping</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L21-L21">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.IsStopping.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>21</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _cancellation?.IsCancellationRequested == true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_IsStopping&quot;]
+ N0[&quot;L21 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">PropertyDeclaration <code>CanStop</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L22-L22">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualStageMoveOperation.CanStop</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>22</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;bool&gt;.Invoke()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L24">MethodDeclaration <code>Move</code> · L24–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L24-L47">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:24–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.Move(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>axis</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>relative</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>speed</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L225-L225">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:225–225</a></td><td>_stageMove.Move</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3924-L3924">Drilling.UI/Menu/Menus/CMenuManual.cs:3924–3924</a></td><td>ManualStageMoveOperation.Move</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7470-L7470">Drilling.UI/Menu/Menus/CMenuManual.cs:7470–7470</a></td><td>_stageMove.Move</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>31</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>32</td><td>new</td><td>resolved</td><td>System.Threading.CancellationTokenSource.CancellationTokenSource()</td></tr>
+<tr><td>33</td><td>new</td><td>resolved</td><td>System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;.TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)</td></tr>
+<tr><td>37</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>38</td><td>move</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task System.Func&lt;Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double, System.Threading.CancellationToken, System.Threading.Tasks.Task&gt;.Invoke(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double, System.Threading.CancellationToken)</td></tr>
+<tr><td>43</td><td>cancellation.Dispose</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Dispose()</td></tr>
+<tr><td>44</td><td>completion.TrySetResult</td><td>resolved</td><td>bool System.Threading.Tasks.TaskCompletionSource&lt;bool&gt;.TrySetResult(bool)</td></tr>
+<tr><td>45</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>26</td><td>local-declaration</td><td>지역 변수를 선언합니다: CancellationTokenSource cancellation;</td></tr>
+<tr><td>27</td><td>local-declaration</td><td>지역 변수를 선언합니다: TaskCompletionSource&lt;bool&gt; completion;</td></tr>
+<tr><td>28</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>30</td><td>if</td><td>조건에 따라 분기합니다: if (_cancellation is not null)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;수동 Stage/Review 이동 또는 정리 작업이 진행 중입니다.&quot;)</td></tr>
+<tr><td>31</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;수동 Stage/Review 이동 또는 정리 작업이 진행 중입니다.&quot;);</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: _cancellation = cancellation = new()</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: cancellation = new()</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>33</td><td>assignment</td><td>값을 대상에 대입합니다: _completion = completion = new(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>33</td><td>assignment</td><td>값을 대상에 대입합니다: completion = new(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(TaskCreationOptions.RunContinuationsAsynchronously)</td></tr>
+<tr><td>35</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>38</td><td>await</td><td>비동기 완료를 기다립니다: await move(axis, value, relative, speed, cancellation.Token)</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: move(axis, value, relative, speed, cancellation.Token)</td></tr>
+<tr><td>40</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: _cancellation = null</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: _completion = null</td></tr>
+<tr><td>42</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellation.Dispose()</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: completion.TrySetResult(true)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Move&quot;]
+ N0[&quot;L28 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L30 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L35 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L40 finally&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L42 lock&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">MethodDeclaration <code>StopAsync</code> · L49–49</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L49-L49">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:49–49</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L61-L61">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:61–61</a></td><td>StopAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>49</td><td>StopAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:50</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync(false)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L50">MethodDeclaration <code>StopAsync</code> · L50–60</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L50-L60">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:50–60</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>includeSharedMove</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L49-L49">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:49–49</a></td><td>StopAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:62–62</a></td><td>StopAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>55</td><td>.Cancel</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Cancel()</td></tr>
+<tr><td>57</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+<tr><td>58</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>52</td><td>local-declaration</td><td>지역 변수를 선언합니다: CancellationTokenSource? cancellation;</td></tr>
+<tr><td>53</td><td>local-declaration</td><td>지역 변수를 선언합니다: Task completion;</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: cancellation = _cancellation</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: completion = _completion?.Task ?? Task.CompletedTask</td></tr>
+<tr><td>54</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()</td></tr>
+<tr><td>55</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>56</td><td>catch</td><td>지정 예외를 처리합니다: catch (ObjectDisposedException)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>57</td><td>if</td><td>조건에 따라 분기합니다: if (includeSharedMove)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>59</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return completion;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;StopAsync&quot;]
+ N0[&quot;L54 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L55 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L56 catch&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L57 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L61">MethodDeclaration <code>Stop</code> · L61–61</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L61-L61">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:61–61</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualStageMoveOperation.Stop()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L442-L442">Drilling.UI/Menu/Menus/CMenuManual.cs:442–442</a></td><td>.Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>61</td><td>StopAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:49</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>61</td><td>assignment</td><td>값을 대상에 대입합니다: _ = StopAsync()</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L62">MethodDeclaration <code>Stop</code> · L62–62</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:62–62</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualStageMoveOperation.Stop(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualStageMoveOperation</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>includeSharedMove</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L253-L253">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:253–253</a></td><td>.Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3947-L3947">Drilling.UI/Menu/Menus/CMenuManual.cs:3947–3947</a></td><td>ManualStageMoveOperation.Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7495-L7495">Drilling.UI/Menu/Menus/CMenuManual.cs:7495–7495</a></td><td>.Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>62</td><td>StopAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.StopAsync(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:50</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>62</td><td>assignment</td><td>값을 대상에 대입합니다: _ = StopAsync(includeSharedMove)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopAsync(includeSharedMove)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L67">FieldDeclaration <code>_readCachedStatus</code> · L67–67</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L67-L67">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:67–67</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._readCachedStatus</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L68">FieldDeclaration <code>_readConnectionState</code> · L68–68</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L68-L68">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:68–68</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._readConnectionState</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L69">FieldDeclaration <code>_confirm</code> · L69–69</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L69-L69">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:69–69</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;string, bool&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirm</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;string, bool&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L70">FieldDeclaration <code>_warn</code> · L70–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L70-L70">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:70–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Action&lt;string&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._warn</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Action&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L71">FieldDeclaration <code>_simulation</code> · L71–71</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L71-L71">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:71–71</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Motion.CManualStageMotionSimulation Drilling.UI.Menu.Menus.CManualPowerStagePanel._simulation</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Motion.CManualStageMotionSimulation</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L72">FieldDeclaration <code>_stageMove</code> · L72–72</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L72-L72">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:72–72</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualStageMoveOperation? Drilling.UI.Menu.Menus.CManualPowerStagePanel._stageMove</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.Menus.CManualStageMoveOperation?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L73">FieldDeclaration <code>_animation</code> · L73–73</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L73-L73">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:73–73</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DispatcherTimer Drilling.UI.Menu.Menus.CManualPowerStagePanel._animation</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DispatcherTimer</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">FieldDeclaration <code>_connectionState</code> · L74–74</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L74-L74">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:74–74</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_COMM_STATE Drilling.UI.Menu.Menus.CManualPowerStagePanel._connectionState</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_COMM_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>74</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _connectionState = EN_COMM_STATE.Offline</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L75">FieldDeclaration <code>_active</code> · L75–75</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L75-L75">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:75–75</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._active</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">FieldDeclaration <code>_activeViews</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L76-L76">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.HashSet&lt;object&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel._activeViews</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.HashSet&lt;object&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>76</td><td>new</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;object&gt;.HashSet(System.Collections.Generic.IEqualityComparer&lt;object&gt;?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReferenceEqualityComparer.Instance)</td></tr>
+<tr><td>76</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _activeViews = new(ReferenceEqualityComparer.Instance)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L77">FieldDeclaration <code>_measurementRunning</code> · L77–77</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L77-L77">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:77–77</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._measurementRunning</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L78">FieldDeclaration <code>_confirming</code> · L78–78</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L78-L78">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:78–78</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._confirming</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">FieldDeclaration <code>_generation</code> · L79–79</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L79-L79">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:79–79</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CManualPowerStagePanel._generation</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L80">FieldDeclaration <code>_reserved</code> · L80–80</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L80-L80">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:80–80</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._reserved</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">FieldDeclaration <code>_sharedMoveRunning</code> · L81–81</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L81-L81">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:81–81</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel._sharedMoveRunning</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L82">FieldDeclaration <code>_motionMessage</code> · L82–82</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L82-L82">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:82–82</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel._motionMessage</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>82</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _motionMessage = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L83">EventFieldDeclaration <code>PropertyChanged</code> · L83–83</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L83-L83">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:83–83</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStagePanel.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L84">PropertyDeclaration <code>Axes</code> · L84–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L84-L84">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:84–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel.Axes</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L84">GetAccessorDeclaration <code>get_Axes</code> · L84–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L84-L84">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:84–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt; Drilling.UI.Menu.Menus.CManualPowerStagePanel.Axes.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CManualPowerStageAxis&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L85">PropertyDeclaration <code>StopCommand</code> · L85–85</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L85-L85">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:85–85</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStagePanel.StopCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L85">GetAccessorDeclaration <code>get_StopCommand</code> · L85–85</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L85-L85">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:85–85</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStagePanel.StopCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">PropertyDeclaration <code>MoveAllowed</code> · L86–86</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L86-L86">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:86–86</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;bool&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">GetAccessorDeclaration <code>get_MoveAllowed</code> · L86–86</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L86-L86">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:86–86</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;bool&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">SetAccessorDeclaration <code>set_MoveAllowed</code> · L86–86</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L86-L86">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:86–86</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.MoveAllowed.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Func&lt;bool&gt;?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L87">PropertyDeclaration <code>Mode</code> · L87–87</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L87-L87">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:87–87</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel.Mode</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>87</td><td>switch-expression</td><td>값별 결과식을 선택합니다: _connectionState switch { EN_COMM_STATE.Simulation =&gt; &quot;SIMULATION&quot;, EN_COMM_STATE.Online =&gt; &quot;MELSEC ONLINE&quot;, _ =&gt; &quot;MELSEC OFFLINE&quot; }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Mode&quot;]
+ N0[&quot;L87 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L88">PropertyDeclaration <code>ModeBackground</code> · L88–93</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L88-L93">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:88–93</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Brush Drilling.UI.Menu.Menus.CManualPowerStagePanel.ModeBackground</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Brush</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>88</td><td>switch-expression</td><td>값별 결과식을 선택합니다: _connectionState switch { EN_COMM_STATE.Simulation =&gt; CStatusBrush.Simul, EN_COMM_STATE.Online =&gt; CStatusBrush.Online, _ =&gt; CStatusBrush.Offline }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ModeBackground&quot;]
+ N0[&quot;L88 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L94">PropertyDeclaration <code>IsSimulation</code> · L94–94</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L94-L94">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:94–94</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.IsSimulation</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L95">PropertyDeclaration <code>CanMove</code> · L95–96</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L95-L96">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:95–96</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanMove</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L97">PropertyDeclaration <code>CanJog</code> · L97–97</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L97-L97">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:97–97</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanJog</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L98">PropertyDeclaration <code>CanStop</code> · L98–98</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L98-L98">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:98–98</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanStop</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L99">PropertyDeclaration <code>CanEdit</code> · L99–99</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L99-L99">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:99–99</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.CanEdit</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L100">PropertyDeclaration <code>StatusText</code> · L100–107</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L100-L107">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:100–107</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStagePanel.StatusText</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>100</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _connectionState == EN_COMM_STATE.Offline ? &quot;MELSEC 연결 대기&quot; : _stageMove?.IsStopping == true ? &quot;STOPPING · 이동 신호 정리 대기&quot; : _stageMove?.CanStop == true ? &quot;Process Move · 허가/이동/완료 확인 중&quot; : _measurementRunning ? &quot;PowerMeasure 진행 중 · 수동</td></tr>
+<tr><td>101</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _stageMove?.IsStopping == true ? &quot;STOPPING · 이동 신호 정리 대기&quot; : _stageMove?.CanStop == true ? &quot;Process Move · 허가/이동/완료 확인 중&quot; : _measurementRunning ? &quot;PowerMeasure 진행 중 · 수동 이동 차단&quot; : _motionMessage.Length &gt; 0 ? _motionMessage : !IsSimu</td></tr>
+<tr><td>102</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _stageMove?.CanStop == true ? &quot;Process Move · 허가/이동/완료 확인 중&quot; : _measurementRunning ? &quot;PowerMeasure 진행 중 · 수동 이동 차단&quot; : _motionMessage.Length &gt; 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? &quot;현재값 표시 · 실제 이동 연결 대기&quot; : &quot;MEL</td></tr>
+<tr><td>103</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _measurementRunning ? &quot;PowerMeasure 진행 중 · 수동 이동 차단&quot; : _motionMessage.Length &gt; 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? &quot;현재값 표시 · 실제 이동 연결 대기&quot; : &quot;MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원&quot;) : _simulation.IsRe</td></tr>
+<tr><td>104</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _motionMessage.Length &gt; 0 ? _motionMessage : !IsSimulation ? (_stageMove is null ? &quot;현재값 표시 · 실제 이동 연결 대기&quot; : &quot;MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원&quot;) : _simulation.IsReserved ? &quot;SIMULATION · MOF 진행 중&quot; : &quot;SIMULATION · JOG 속도</td></tr>
+<tr><td>105</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _stageMove is null ? &quot;현재값 표시 · 실제 이동 연결 대기&quot; : &quot;MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원&quot;</td></tr>
+<tr><td>105</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: !IsSimulation ? (_stageMove is null ? &quot;현재값 표시 · 실제 이동 연결 대기&quot; : &quot;MELSEC · ABS/REL 공통 Process Move · 실제 JOG 미지원&quot;) : _simulation.IsReserved ? &quot;SIMULATION · MOF 진행 중&quot; : &quot;SIMULATION · JOG 속도 5 mm/sec&quot;</td></tr>
+<tr><td>106</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _simulation.IsReserved ? &quot;SIMULATION · MOF 진행 중&quot; : &quot;SIMULATION · JOG 속도 5 mm/sec&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L109">ConstructorDeclaration <code>.ctor</code> · L109–131</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L109-L131">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:109–131</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualPowerStagePanel.CManualPowerStagePanel(System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;, System.Action&lt;string&gt;, System.Func&lt;string, bool&gt;, Drilling.Common.Motion.CManualStageMotionSimulation?, System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;?, Drilling.UI.Menu.Menus.CManualStageMoveOperation?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>readCachedStatus</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>warn</td><td>System.Action&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>confirm</td><td>System.Func&lt;string, bool&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>Drilling.Common.Motion.CManualStageMotionSimulation?</td><td>None</td><td>True / null</td></tr>
+<tr><td>readConnectionState</td><td>System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;?</td><td>None</td><td>True / null</td></tr>
+<tr><td>stageMove</td><td>Drilling.UI.Menu.Menus.CManualStageMoveOperation?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L89-L89">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:89–89</a></td><td>new</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>122</td><td>new</td><td>resolved</td><td>Drilling.Common.Motion.CManualStageMotionSimulation.CManualStageMotionSimulation(System.Func&lt;double&gt;?) · Drilling.Common/Motion/CMotionManager.cs:1186</td></tr>
+<tr><td>125</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CManualPowerStageAxis.CManualPowerStageAxis(Drilling.UI.Menu.Menus.CManualPowerStagePanel, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, string, string) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:287</td></tr>
+<tr><td>125</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CManualPowerStageAxis.CManualPowerStageAxis(Drilling.UI.Menu.Menus.CManualPowerStagePanel, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, string, string) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:287</td></tr>
+<tr><td>126</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>126</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:250</td></tr>
+<tr><td>128</td><td>new</td><td>unresolved</td><td>None</td></tr>
+<tr><td>128</td><td>TimeSpan.FromMilliseconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromMilliseconds(long)</td></tr>
+<tr><td>129</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+<tr><td>130</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>120</td><td>assignment</td><td>값을 대상에 대입합니다: _readCachedStatus = readCachedStatus</td></tr>
+<tr><td>120</td><td>assignment</td><td>값을 대상에 대입합니다: _warn = warn</td></tr>
+<tr><td>120</td><td>assignment</td><td>값을 대상에 대입합니다: _confirm = confirm</td></tr>
+<tr><td>121</td><td>assignment</td><td>값을 대상에 대입합니다: _readConnectionState = readConnectionState ?? (() =&gt; EN_COMM_STATE.Offline)</td></tr>
+<tr><td>122</td><td>assignment</td><td>값을 대상에 대입합니다: _simulation = simulation ?? new()</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>123</td><td>assignment</td><td>값을 대상에 대입합니다: _stageMove = stageMove</td></tr>
+<tr><td>124</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: _stageMove.Changed += UpdateCommands</td></tr>
+<tr><td>124</td><td>if</td><td>조건에 따라 분기합니다: if (_stageMove is not null)</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: Axes = [new(this, EN_MANUAL_STAGE_AXIS.StageY, &quot;Stage Y&quot;, &quot;Stage Y&quot;), new(this, EN_MANUAL_STAGE_AXIS.ReviewX, &quot;Review X&quot;, &quot;Review X&quot;)]</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(this, EN_MANUAL_STAGE_AXIS.StageY, &quot;Stage Y&quot;, &quot;Stage Y&quot;)</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(this, EN_MANUAL_STAGE_AXIS.ReviewX, &quot;Review X&quot;, &quot;Review X&quot;)</td></tr>
+<tr><td>126</td><td>assignment</td><td>값을 대상에 대입합니다: StopCommand = new(_ =&gt; Stop(includeSharedMove: true), _ =&gt; CanStop)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ =&gt; Stop(includeSharedMove: true), _ =&gt; CanStop)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(includeSharedMove: true)</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: _animation = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) }</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(100)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) }</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(100)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>129</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: _animation.Tick += (_, _) =&gt; Refresh()</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L124 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L135">MethodDeclaration <code>SetViewActive</code> · L135–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L135-L140">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:135–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetViewActive(object, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>view</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>active</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L27-L27">Drilling.UI/Views/CManualPowerStageView.xaml.cs:27–27</a></td><td>.SetViewActive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L39-L39">Drilling.UI/Views/CManualPowerStageView.xaml.cs:39–39</a></td><td>.SetViewActive</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>137</td><td>_activeViews.Add</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;object&gt;.Add(object)</td></tr>
+<tr><td>138</td><td>_activeViews.Remove</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;object&gt;.Remove(object)</td></tr>
+<tr><td>139</td><td>SetActive</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetActive(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:142</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _activeViews.Add(view)</td></tr>
+<tr><td>137</td><td>if</td><td>조건에 따라 분기합니다: if (active)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _activeViews.Remove(view)</td></tr>
+<tr><td>138</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetActive(_activeViews.Count &gt; 0)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetViewActive&quot;]
+ N0[&quot;L137 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L138 else&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L142">MethodDeclaration <code>SetActive</code> · L142–154</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L142-L154">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:142–154</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetActive(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>active</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L139-L139">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:139–139</a></td><td>SetActive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L445-L445">Drilling.UI/Menu/Menus/CMenuManual.cs:445–445</a></td><td>.StageMotion.SetActive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6211-L6211">Drilling.UI/Menu/Menus/CMenuManual.cs:6211–6211</a></td><td>.StageMotion.SetActive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6415-L6415">Drilling.UI/Menu/Menus/CMenuManual.cs:6415–6415</a></td><td>.StageMotion.SetActive</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>151</td><td>_simulation.StopJog</td><td>resolved</td><td>void Drilling.Common.Motion.CManualStageMotionSimulation.StopJog() · Drilling.Common/Motion/CMotionManager.cs:1286</td></tr>
+<tr><td>153</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>153</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>144</td><td>if</td><td>조건에 따라 분기합니다: if (_active == active)</td></tr>
+<tr><td>144</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>145</td><td>assignment</td><td>값을 대상에 대입합니다: _active = active</td></tr>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (!active)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.StopJog()</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetActive&quot;]
+ N0[&quot;L144 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L146 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L156">MethodDeclaration <code>SetMeasurementRunning</code> · L156–162</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L156-L162">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:156–162</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.SetMeasurementRunning(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>running</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L211-L211">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:211–211</a></td><td>StageMotion.SetMeasurementRunning</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>160</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:250</td></tr>
+<tr><td>161</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>158</td><td>if</td><td>조건에 따라 분기합니다: if (_measurementRunning == running)</td></tr>
+<tr><td>158</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>159</td><td>assignment</td><td>값을 대상에 대입합니다: _measurementRunning = running</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()</td></tr>
+<tr><td>160</td><td>if</td><td>조건에 따라 분기합니다: if (running)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetMeasurementRunning&quot;]
+ N0[&quot;L158 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L160 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L164">MethodDeclaration <code>Refresh</code> · L164–188</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L164-L188">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164–188</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L135-L135">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:135–135</a></td><td>StageMotion.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L129-L129">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:129–129</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L130-L130">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:130–130</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L153-L153">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:153–153</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L206-L206">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:206–206</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L219-L219">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:219–219</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:231–231</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L237-L237">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:237–237</a></td><td>Refresh</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>167</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>168</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>169</td><td>_readConnectionState</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Interface.EN_COMM_STATE System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;.Invoke()</td></tr>
+<tr><td>172</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:250</td></tr>
+<tr><td>173</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>173</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>173</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>173</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>173</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>173</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>173</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>175</td><td>RefreshSimulation</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:190</td></tr>
+<tr><td>178</td><td>axis.SetFeedback</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:293</td></tr>
+<tr><td>181</td><td>_readCachedStatus</td><td>resolved · 동적 구현 선택 가능</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt; System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;.Invoke()</td></tr>
+<tr><td>184</td><td>snapshot.FirstOrDefault</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM? System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;.FirstOrDefault&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;(System.Func&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM, bool&gt;)</td></tr>
+<tr><td>185</td><td>axis.SetFeedback</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:293</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>166</td><td>if</td><td>조건에 따라 분기합니다: if (_sharedMoveRunning != (_stageMove?.CanStop == true))</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: _sharedMoveRunning = _stageMove?.CanStop == true</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>168</td><td>assignment</td><td>값을 대상에 대입합니다: _reserved = _simulation.IsReserved</td></tr>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>168</td><td>if</td><td>조건에 따라 분기합니다: if (_reserved != _simulation.IsReserved)</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _readConnectionState()</td></tr>
+<tr><td>169</td><td>local-declaration</td><td>지역 변수를 선언합니다: var connectionState = _readConnectionState();</td></tr>
+<tr><td>169</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: connectionState = _readConnectionState()</td></tr>
+<tr><td>170</td><td>if</td><td>조건에 따라 분기합니다: if (connectionState != _connectionState)</td></tr>
+<tr><td>172</td><td>assignment</td><td>값을 대상에 대입합니다: _connectionState = connectionState</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop()</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Mode))</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Mode)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ModeBackground))</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModeBackground)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsSimulation))</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSimulation)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation()</td></tr>
+<tr><td>175</td><td>if</td><td>조건에 따라 분기합니다: if (IsSimulation)</td></tr>
+<tr><td>175</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>176</td><td>if</td><td>조건에 따라 분기합니다: if (_connectionState == EN_COMM_STATE.Offline)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback(&quot;—&quot;, &quot;—&quot;, &quot;MELSEC 연결 안 됨&quot;, &quot;MELSEC 연결 안 됨&quot;)</td></tr>
+<tr><td>178</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in Axes)</td></tr>
+<tr><td>179</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _readCachedStatus()</td></tr>
+<tr><td>181</td><td>local-declaration</td><td>지역 변수를 선언합니다: var snapshot = _readCachedStatus();</td></tr>
+<tr><td>181</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: snapshot = _readCachedStatus()</td></tr>
+<tr><td>182</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in Axes)</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.FirstOrDefault(item =&gt; item.Name == axis.SnapshotName)</td></tr>
+<tr><td>184</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = snapshot.FirstOrDefault(item =&gt; item.Name == axis.SnapshotName);</td></tr>
+<tr><td>184</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = snapshot.FirstOrDefault(item =&gt; item.Name == axis.SnapshotName)</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback(value?.Position ?? &quot;—&quot;, value?.Speed ?? &quot;—&quot;, value?.PositionMessage ?? &quot;현재 위치 미설정&quot;, value?.SpeedMessage ?? &quot;현재 속도 미설정&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Refresh&quot;]
+ N0[&quot;L166 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L168 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L170 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L175 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L176 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L178 foreach&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L182 foreach&quot;]
+ M --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L190">MethodDeclaration <code>RefreshSimulation</code> · L190–201</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L190-L201">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:190–201</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L175-L175">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:175–175</a></td><td>RefreshSimulation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:246–246</a></td><td>RefreshSimulation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L256-L256">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:256–256</a></td><td>RefreshSimulation</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>192</td><td>_animation.Stop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>193</td><td>_simulation.GetSnapshot</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS&gt; Drilling.Common.Motion.CManualStageMotionSimulation.GetSnapshot() · Drilling.Common/Motion/CMotionManager.cs:1218</td></tr>
+<tr><td>196</td><td>snapshot.Single</td><td>resolved</td><td>Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS System.Collections.Generic.IEnumerable&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS&gt;.Single&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS&gt;(System.Func&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS, bool&gt;)</td></tr>
+<tr><td>197</td><td>axis.SetFeedback</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:293</td></tr>
+<tr><td>197</td><td>value.Position.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>197</td><td>value.Speed.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>200</td><td>snapshot.All</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS&gt;.All&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS&gt;(System.Func&lt;Drilling.Common.Motion.ST_MANUAL_STAGE_SIMULATION_AXIS, bool&gt;)</td></tr>
+<tr><td>200</td><td>_animation.Stop</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop()</td></tr>
+<tr><td>192</td><td>if</td><td>조건에 따라 분기합니다: if (!IsSimulation)</td></tr>
+<tr><td>192</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.GetSnapshot()</td></tr>
+<tr><td>193</td><td>local-declaration</td><td>지역 변수를 선언합니다: var snapshot = _simulation.GetSnapshot();</td></tr>
+<tr><td>193</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: snapshot = _simulation.GetSnapshot()</td></tr>
+<tr><td>194</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in Axes)</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Single(item =&gt; item.Axis == axis.Axis)</td></tr>
+<tr><td>196</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = snapshot.Single(item =&gt; item.Axis == axis.Axis);</td></tr>
+<tr><td>196</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = snapshot.Single(item =&gt; item.Axis == axis.Axis)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Speed.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axis.SetFeedback(value.Position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture), value.Speed.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture), &quot;시뮬레이션 위치 (실장비 값 아님)&quot;, &quot;시뮬레이션 속도 (실장비 값 아님)&quot;)</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.All(axis =&gt; axis.Speed == 0)</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop()</td></tr>
+<tr><td>200</td><td>if</td><td>조건에 따라 분기합니다: if (snapshot.All(axis =&gt; axis.Speed == 0) &amp;&amp; _stageMove?.IsRunning != true)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RefreshSimulation&quot;]
+ N0[&quot;L192 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L194 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L200 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L203">MethodDeclaration <code>Move</code> · L203–232</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L203-L232">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:203–232</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerStagePanel.Move(Drilling.UI.Menu.Menus.CManualPowerStageAxis, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>axis</td><td>Drilling.UI.Menu.Menus.CManualPowerStageAxis</td><td>None</td><td>False /</td></tr>
+<tr><td>relative</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L290-L290">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:290–290</a></td><td>panel.Move</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L291-L291">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:291–291</a></td><td>panel.Move</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>205</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;bool&gt;.Invoke()</td></tr>
+<tr><td>206</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+<tr><td>209</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>209</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>210</td><td>_warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+<tr><td>212</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>212</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>213</td><td>_warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+<tr><td>215</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>217</td><td>_confirm</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;string, bool&gt;.Invoke(string)</td></tr>
+<tr><td>218</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+<tr><td>219</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+<tr><td>220</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;bool&gt;.Invoke()</td></tr>
+<tr><td>224</td><td>_animation.Start</td><td>unresolved</td><td>None</td></tr>
+<tr><td>225</td><td>_stageMove.Move</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualStageMoveOperation.Move(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:24</td></tr>
+<tr><td>226</td><td>_simulation.Move</td><td>resolved</td><td>void Drilling.Common.Motion.CManualStageMotionSimulation.Move(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, double, bool, double) · Drilling.Common/Motion/CMotionManager.cs:1227</td></tr>
+<tr><td>230</td><td>_warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+<tr><td>231</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+<tr><td>231</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>205</td><td>if</td><td>조건에 따라 분기합니다: if (MoveAllowed?.Invoke() == false)</td></tr>
+<tr><td>205</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>206</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>207</td><td>if</td><td>조건에 따라 분기합니다: if (!CanMove)</td></tr>
+<tr><td>207</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>208</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: relative ? axis.Relative : axis.Absolute</td></tr>
+<tr><td>208</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = relative ? axis.Relative : axis.Absolute;</td></tr>
+<tr><td>208</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = relative ? axis.Relative : axis.Absolute</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>209</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _warn($&quot;{axis.Name}: 올바른 이동값을 입력해 주세요.&quot;)</td></tr>
+<tr><td>210</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>211</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: relative ? axis.RelativeSpeed : axis.AbsoluteSpeed</td></tr>
+<tr><td>211</td><td>local-declaration</td><td>지역 변수를 선언합니다: var speedText = relative ? axis.RelativeSpeed : axis.AbsoluteSpeed;</td></tr>
+<tr><td>211</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: speedText = relative ? axis.RelativeSpeed : axis.AbsoluteSpeed</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(speedText, NumberStyles.Float, CultureInfo.InvariantCulture, out var speed)</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(speed)</td></tr>
+<tr><td>212</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(speedText, NumberStyles.Float, CultureInfo.InvariantCulture, out var speed) || !double.IsFinite(speed) || speed &lt;= 0)</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _warn($&quot;{axis.Name}: 이동 속도는 0보다 큰 숫자로 입력해 주세요. (mm/sec)&quot;)</td></tr>
+<tr><td>213</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>214</td><td>local-declaration</td><td>지역 변수를 선언합니다: var generation = _generation;</td></tr>
+<tr><td>214</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: generation = _generation</td></tr>
+<tr><td>215</td><td>assignment</td><td>값을 대상에 대입합니다: _confirming = true</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>216</td><td>local-declaration</td><td>지역 변수를 선언합니다: bool accepted;</td></tr>
+<tr><td>217</td><td>assignment</td><td>값을 대상에 대입합니다: accepted = _confirm($&quot;[{(IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC REAL&quot;)}] {axis.Name}\n{(relative ? &quot;REL 이동 거리&quot; : &quot;ABS 목표 위치&quot;)}: {value:G} mm\n이동 속도: {speed:G} mm/sec\n\n이동하시겠습니까?&quot;)</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _confirm($&quot;[{(IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC REAL&quot;)}] {axis.Name}\n{(relative ? &quot;REL 이동 거리&quot; : &quot;ABS 목표 위치&quot;)}: {value:G} mm\n이동 속도: {speed:G} mm/sec\n\n이동하시겠습니까?&quot;)</td></tr>
+<tr><td>217</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsSimulation ? &quot;SIMULATION&quot; : &quot;MELSEC REAL&quot;</td></tr>
+<tr><td>217</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: relative ? &quot;REL 이동 거리&quot; : &quot;ABS 목표 위치&quot;</td></tr>
+<tr><td>217</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>218</td><td>assignment</td><td>값을 대상에 대입합니다: _confirming = false</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>218</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>220</td><td>if</td><td>조건에 따라 분기합니다: if (!accepted || !CanMove || generation != _generation || MoveAllowed?.Invoke() == false)</td></tr>
+<tr><td>220</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>221</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>223</td><td>assignment</td><td>값을 대상에 대입합니다: _motionMessage = &quot;&quot;</td></tr>
+<tr><td>224</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Start()</td></tr>
+<tr><td>224</td><td>if</td><td>조건에 따라 분기합니다: if (IsSimulation)</td></tr>
+<tr><td>225</td><td>await</td><td>비동기 완료를 기다립니다: await _stageMove.Move(axis.Axis, value, relative, speed)</td></tr>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _stageMove.Move(axis.Axis, value, relative, speed)</td></tr>
+<tr><td>225</td><td>if</td><td>조건에 따라 분기합니다: if (_stageMove is not null)</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.Move(axis.Axis, value, relative, speed)</td></tr>
+<tr><td>226</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>227</td><td>assignment</td><td>값을 대상에 대입합니다: _motionMessage = IsSimulation ? &quot;SIMULATION · 이동 완료&quot; : &quot;MELSEC · 이동 완료&quot;</td></tr>
+<tr><td>227</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsSimulation ? &quot;SIMULATION · 이동 완료&quot; : &quot;MELSEC · 이동 완료&quot;</td></tr>
+<tr><td>229</td><td>assignment</td><td>값을 대상에 대입합니다: _motionMessage = &quot;이동 중지 · 공통 시퀀스 정리 상태를 확인하세요.&quot;</td></tr>
+<tr><td>229</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException)</td></tr>
+<tr><td>230</td><td>assignment</td><td>값을 대상에 대입합니다: _motionMessage = error.Message</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(error.Message)</td></tr>
+<tr><td>230</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+<tr><td>231</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Move&quot;]
+ N0[&quot;L205 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L207 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L209 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L212 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L217 try&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L218 finally&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L220 if&quot;]
+ M --&gt;|포함| N6
+ N7[&quot;L221 try&quot;]
+ M --&gt;|포함| N7
+ N8[&quot;L224 if&quot;]
+ N7 --&gt;|포함| N8
+ N9[&quot;L225 if&quot;]
+ N7 --&gt;|포함| N9
+ N10[&quot;L226 else&quot;]
+ N9 --&gt;|포함| N10
+ N11[&quot;L229 catch&quot;]
+ N7 --&gt;|포함| N11
+ N12[&quot;L230 catch&quot;]
+ N7 --&gt;|포함| N12
+ N13[&quot;L231 finally&quot;]
+ N7 --&gt;|포함| N13</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L234">MethodDeclaration <code>StartJog</code> · L234–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L234-L248">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:234–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerStagePanel.StartJog(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>direction</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>236</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;bool&gt;.Invoke()</td></tr>
+<tr><td>237</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Refresh() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:164</td></tr>
+<tr><td>246</td><td>_simulation.StartJog</td><td>resolved</td><td>void Drilling.Common.Motion.CManualStageMotionSimulation.StartJog(Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, int) · Drilling.Common/Motion/CMotionManager.cs:1252</td></tr>
+<tr><td>246</td><td>_animation.Start</td><td>unresolved</td><td>None</td></tr>
+<tr><td>246</td><td>RefreshSimulation</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:190</td></tr>
+<tr><td>247</td><td>_warn</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string&gt;.Invoke(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()</td></tr>
+<tr><td>236</td><td>if</td><td>조건에 따라 분기합니다: if (MoveAllowed?.Invoke() == false)</td></tr>
+<tr><td>236</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>238</td><td>if</td><td>조건에 따라 분기합니다: if (!CanJog)</td></tr>
+<tr><td>238</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>239</td><td>local-declaration</td><td>지역 변수를 선언합니다: var target = direction switch { &quot;Y+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, 1), &quot;Y-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, -1), &quot;X-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, -1), &quot;X+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, 1), _ =&gt; (EN_MANUAL_STAGE_AXIS</td></tr>
+<tr><td>239</td><td>switch-expression</td><td>값별 결과식을 선택합니다: direction switch { &quot;Y+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, 1), &quot;Y-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, -1), &quot;X-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, -1), &quot;X+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, 1), _ =&gt; (EN_MANUAL_STAGE_AXIS.StageY, 0) }</td></tr>
+<tr><td>239</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: target = direction switch { &quot;Y+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, 1), &quot;Y-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.StageY, -1), &quot;X-&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, -1), &quot;X+&quot; =&gt; (EN_MANUAL_STAGE_AXIS.ReviewX, 1), _ =&gt; (EN_MANUAL_STAGE_AXIS.Sta</td></tr>
+<tr><td>245</td><td>if</td><td>조건에 따라 분기합니다: if (target.Item2 == 0)</td></tr>
+<tr><td>245</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.StartJog(target.Item1, target.Item2)</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Start()</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation()</td></tr>
+<tr><td>246</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>246</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>247</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _warn(error.Message)</td></tr>
+<tr><td>247</td><td>catch</td><td>지정 예외를 처리합니다: catch (InvalidOperationException error)</td></tr>
+<tr><td>247</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;StartJog&quot;]
+ N0[&quot;L236 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L238 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L239 switch-expression&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L245 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L246 try&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L247 catch&quot;]
+ N4 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">MethodDeclaration <code>Stop</code> · L250–258</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L250-L258">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:250–258</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Stop(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>includeSharedMove</td><td>bool</td><td>None</td><td>True / false</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L126-L126">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:126–126</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L160-L160">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:160–160</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L172-L172">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:172–172</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L444-L444">Drilling.UI/Menu/Menus/CMenuManual.cs:444–444</a></td><td>.StageMotion.Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6360-L6360">Drilling.UI/Menu/Menus/CMenuManual.cs:6360–6360</a></td><td>.StageMotion.Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L92-L92">Drilling.UI/Views/CManualPowerStageView.xaml.cs:92–92</a></td><td>.Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>253</td><td>.Stop</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualStageMoveOperation.Stop(bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:62</td></tr>
+<tr><td>254</td><td>_simulation.Stop</td><td>resolved</td><td>void Drilling.Common.Motion.CManualStageMotionSimulation.Stop() · Drilling.Common/Motion/CMotionManager.cs:1272</td></tr>
+<tr><td>255</td><td>_animation.Stop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>256</td><td>RefreshSimulation</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.RefreshSimulation() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:190</td></tr>
+<tr><td>257</td><td>UpdateCommands</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands() · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>253</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop(includeSharedMove)</td></tr>
+<tr><td>254</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _simulation.Stop()</td></tr>
+<tr><td>254</td><td>if</td><td>조건에 따라 분기합니다: if (_stageMove?.IsRunning != true &amp;&amp; !_simulation.IsReserved)</td></tr>
+<tr><td>255</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _animation.Stop()</td></tr>
+<tr><td>256</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSimulation()</td></tr>
+<tr><td>256</td><td>if</td><td>조건에 따라 분기합니다: if (IsSimulation)</td></tr>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCommands()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Stop&quot;]
+ N0[&quot;L254 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L256 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L260">MethodDeclaration <code>UpdateCommands</code> · L260–265</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L260-L265">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:260–265</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.UpdateCommands()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L153-L153">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:153–153</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L161-L161">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:161–161</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L167-L167">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:167–167</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L168-L168">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:168–168</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:173–173</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L215-L215">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:215–215</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L218-L218">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:218–218</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:231–231</a></td><td>UpdateCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L257-L257">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:257–257</a></td><td>UpdateCommands</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>262</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>262</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>262</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>262</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>262</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>262</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>262</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>262</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>262</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266</td></tr>
+<tr><td>262</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>263</td><td>axis.AbsoluteCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>263</td><td>axis.RelativeCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>264</td><td>StopCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanMove))</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanMove)</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanJog))</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanJog)</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanStop))</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanStop)</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEdit))</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEdit)</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText))</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axis.AbsoluteCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axis.RelativeCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>263</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var axis in Axes)</td></tr>
+<tr><td>264</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopCommand.NotifyCanExecuteChanged()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;UpdateCommands&quot;]
+ N0[&quot;L263 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L266">MethodDeclaration <code>Notify</code> · L266–266</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L266-L266">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:266–266</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStagePanel.Notify(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStagePanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:173–173</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:173–173</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:173–173</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>266</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>266</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>266</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name))</td></tr>
+<tr><td>266</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">FieldDeclaration <code>_absolute</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L271-L271">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._absolute</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>271</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _absolute = &quot;0.000&quot;</td></tr>
+<tr><td>271</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _relative = &quot;0.000&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">FieldDeclaration <code>_relative</code> · L271–271</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L271-L271">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:271–271</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._relative</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">FieldDeclaration <code>_absoluteSpeed</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L272-L272">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._absoluteSpeed</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>272</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _absoluteSpeed = &quot;5.000&quot;</td></tr>
+<tr><td>272</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _relativeSpeed = &quot;5.000&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L272">FieldDeclaration <code>_relativeSpeed</code> · L272–272</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L272-L272">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:272–272</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis._relativeSpeed</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L273">EventFieldDeclaration <code>PropertyChanged</code> · L273–273</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L273-L273">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:273–273</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerStageAxis.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L274">PropertyDeclaration <code>Axis</code> · L274–274</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L274-L274">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:274–274</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS Drilling.UI.Menu.Menus.CManualPowerStageAxis.Axis</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L274">GetAccessorDeclaration <code>get_Axis</code> · L274–274</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L274-L274">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:274–274</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS Drilling.UI.Menu.Menus.CManualPowerStageAxis.Axis.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L275">PropertyDeclaration <code>Name</code> · L275–275</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L275-L275">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:275–275</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Name</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L275">GetAccessorDeclaration <code>get_Name</code> · L275–275</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L275-L275">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:275–275</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Name.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L276">PropertyDeclaration <code>SnapshotName</code> · L276–276</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L276-L276">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:276–276</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SnapshotName</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L276">GetAccessorDeclaration <code>get_SnapshotName</code> · L276–276</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L276-L276">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:276–276</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SnapshotName.get</td></tr>
+<tr><td>접근/수식자</td><td>Internal / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L277">PropertyDeclaration <code>Absolute</code> · L277–277</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L277-L277">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:277–277</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L277">GetAccessorDeclaration <code>get_Absolute</code> · L277–277</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L277-L277">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:277–277</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L277">SetAccessorDeclaration <code>set_Absolute</code> · L277–277</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L277-L277">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:277–277</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Absolute.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>277</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>277</td><td>assignment</td><td>값을 대상에 대입합니다: _absolute = value</td></tr>
+<tr><td>277</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L278">PropertyDeclaration <code>Relative</code> · L278–278</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L278-L278">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:278–278</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L278">GetAccessorDeclaration <code>get_Relative</code> · L278–278</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L278-L278">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:278–278</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L278">SetAccessorDeclaration <code>set_Relative</code> · L278–278</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L278-L278">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:278–278</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Relative.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>278</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>278</td><td>assignment</td><td>값을 대상에 대입합니다: _relative = value</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L279">PropertyDeclaration <code>AbsoluteSpeed</code> · L279–279</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L279-L279">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:279–279</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L279">GetAccessorDeclaration <code>get_AbsoluteSpeed</code> · L279–279</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L279-L279">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:279–279</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L279">SetAccessorDeclaration <code>set_AbsoluteSpeed</code> · L279–279</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L279-L279">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:279–279</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteSpeed.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>279</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>279</td><td>assignment</td><td>값을 대상에 대입합니다: _absoluteSpeed = value</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L280">PropertyDeclaration <code>RelativeSpeed</code> · L280–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L280-L280">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:280–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L280">GetAccessorDeclaration <code>get_RelativeSpeed</code> · L280–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L280-L280">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:280–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L280">SetAccessorDeclaration <code>set_RelativeSpeed</code> · L280–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L280-L280">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:280–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeSpeed.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>280</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>280</td><td>assignment</td><td>값을 대상에 대입합니다: _relativeSpeed = value</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L281">PropertyDeclaration <code>Position</code> · L281–281</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L281-L281">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:281–281</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L281">GetAccessorDeclaration <code>get_Position</code> · L281–281</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L281-L281">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:281–281</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L281">SetAccessorDeclaration <code>set_Position</code> · L281–281</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L281-L281">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:281–281</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Position.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">PropertyDeclaration <code>Speed</code> · L282–282</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L282-L282">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:282–282</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">GetAccessorDeclaration <code>get_Speed</code> · L282–282</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L282-L282">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:282–282</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">SetAccessorDeclaration <code>set_Speed</code> · L282–282</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L282-L282">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:282–282</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Speed.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L283">PropertyDeclaration <code>PositionMessage</code> · L283–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L283-L283">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:283–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L283">GetAccessorDeclaration <code>get_PositionMessage</code> · L283–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L283-L283">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:283–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L283">SetAccessorDeclaration <code>set_PositionMessage</code> · L283–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L283-L283">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:283–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.PositionMessage.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L284">PropertyDeclaration <code>SpeedMessage</code> · L284–284</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:284–284</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L284">GetAccessorDeclaration <code>get_SpeedMessage</code> · L284–284</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:284–284</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L284">SetAccessorDeclaration <code>set_SpeedMessage</code> · L284–284</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:284–284</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SpeedMessage.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L285">PropertyDeclaration <code>AbsoluteCommand</code> · L285–285</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L285-L285">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:285–285</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L285">GetAccessorDeclaration <code>get_AbsoluteCommand</code> · L285–285</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L285-L285">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:285–285</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.AbsoluteCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L286">PropertyDeclaration <code>RelativeCommand</code> · L286–286</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L286-L286">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:286–286</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L286">GetAccessorDeclaration <code>get_RelativeCommand</code> · L286–286</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L286-L286">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:286–286</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerStageAxis.RelativeCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L287">ConstructorDeclaration <code>.ctor</code> · L287–292</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L287-L292">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:287–292</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualPowerStageAxis.CManualPowerStageAxis(Drilling.UI.Menu.Menus.CManualPowerStagePanel, Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>panel</td><td>Drilling.UI.Menu.Menus.CManualPowerStagePanel</td><td>None</td><td>False /</td></tr>
+<tr><td>axis</td><td>Drilling.Common.Motion.EN_MANUAL_STAGE_AXIS</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>snapshotName</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L125-L125">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:125–125</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L125-L125">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:125–125</a></td><td>new</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>290</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>290</td><td>panel.Move</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerStagePanel.Move(Drilling.UI.Menu.Menus.CManualPowerStageAxis, bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:203</td></tr>
+<tr><td>291</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>291</td><td>panel.Move</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerStagePanel.Move(Drilling.UI.Menu.Menus.CManualPowerStageAxis, bool) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:203</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>289</td><td>assignment</td><td>값을 대상에 대입합니다: Axis = axis</td></tr>
+<tr><td>289</td><td>assignment</td><td>값을 대상에 대입합니다: Name = name</td></tr>
+<tr><td>289</td><td>assignment</td><td>값을 대상에 대입합니다: SnapshotName = snapshotName</td></tr>
+<tr><td>290</td><td>assignment</td><td>값을 대상에 대입합니다: AbsoluteCommand = new(async _ =&gt; await panel.Move(this, false), _ =&gt; panel.CanMove)</td></tr>
+<tr><td>290</td><td>await</td><td>비동기 완료를 기다립니다: await panel.Move(this, false)</td></tr>
+<tr><td>290</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ =&gt; await panel.Move(this, false), _ =&gt; panel.CanMove)</td></tr>
+<tr><td>290</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Move(this, false)</td></tr>
+<tr><td>291</td><td>assignment</td><td>값을 대상에 대입합니다: RelativeCommand = new(async _ =&gt; await panel.Move(this, true), _ =&gt; panel.CanMove)</td></tr>
+<tr><td>291</td><td>await</td><td>비동기 완료를 기다립니다: await panel.Move(this, true)</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ =&gt; await panel.Move(this, true), _ =&gt; panel.CanMove)</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Move(this, true)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L293">MethodDeclaration <code>SetFeedback</code> · L293–298</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L293-L298">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:293–298</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.SetFeedback(string, string, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>position</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>speed</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>positionMessage</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>speedMessage</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L178-L178">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:178–178</a></td><td>axis.SetFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L185-L186">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:185–186</a></td><td>axis.SetFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L197-L198">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:197–198</a></td><td>axis.SetFeedback</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>297</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?) · Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>295</td><td>if</td><td>조건에 따라 분기합니다: if (Position == position &amp;&amp; Speed == speed &amp;&amp; PositionMessage == positionMessage &amp;&amp; SpeedMessage == speedMessage)</td></tr>
+<tr><td>295</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>296</td><td>assignment</td><td>값을 대상에 대입합니다: Position = position</td></tr>
+<tr><td>296</td><td>assignment</td><td>값을 대상에 대입합니다: Speed = speed</td></tr>
+<tr><td>296</td><td>assignment</td><td>값을 대상에 대입합니다: PositionMessage = positionMessage</td></tr>
+<tr><td>296</td><td>assignment</td><td>값을 대상에 대입합니다: SpeedMessage = speedMessage</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Position)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Speed)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(PositionMessage)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SpeedMessage)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name)</td></tr>
+<tr><td>297</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(Position), nameof(Speed), nameof(PositionMessage), nameof(SpeedMessage) })</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetFeedback&quot;]
+ N0[&quot;L295 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L297 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L299">MethodDeclaration <code>Notify</code> · L299–299</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L299-L299">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:299–299</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerStageAxis.Notify(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CManualPowerStageAxis</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L277-L277">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:277–277</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L278-L278">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:278–278</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L279-L279">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:279–279</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L280-L280">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:280–280</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L297-L297">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:297–297</a></td><td>Notify</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>299</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>299</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name))</td></tr>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

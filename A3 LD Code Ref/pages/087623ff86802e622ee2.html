@@ -1,0 +1,331 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CSignalBlink.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CSignalBlink.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs">Git 원본</a></p><h1>Drilling.UI/CSignalBlink.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>ef65f7a39d9a9b3b61ec94acf6d473c4a53b6a86e10302d4d5c85b81d03aa325</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>2,333 bytes / 43 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/087623ff86802e622ee2.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CSignalBlink</td><td>ClassDeclaration</td><td>7–43</td><td>CSignalBlink</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>IsActiveProperty</td><td>FieldDeclaration</td><td>L9–10</td><td>DependencyProperty Drilling.UI.CSignalBlink.IsActiveProperty</td></tr>
+<tr><td>IsHookedProperty</td><td>FieldDeclaration</td><td>L11–12</td><td>DependencyProperty Drilling.UI.CSignalBlink.IsHookedProperty</td></tr>
+<tr><td>GetIsActive</td><td>MethodDeclaration</td><td>L13–13</td><td>bool Drilling.UI.CSignalBlink.GetIsActive(DependencyObject)</td></tr>
+<tr><td>SetIsActive</td><td>MethodDeclaration</td><td>L14–14</td><td>void Drilling.UI.CSignalBlink.SetIsActive(DependencyObject, bool)</td></tr>
+<tr><td>ActiveChanged</td><td>MethodDeclaration</td><td>L16–27</td><td>void Drilling.UI.CSignalBlink.ActiveChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>Loaded</td><td>MethodDeclaration</td><td>L28–29</td><td>void Drilling.UI.CSignalBlink.Loaded(object, RoutedEventArgs)</td></tr>
+<tr><td>Unloaded</td><td>MethodDeclaration</td><td>L30–30</td><td>void Drilling.UI.CSignalBlink.Unloaded(object, RoutedEventArgs)</td></tr>
+<tr><td>VisibilityChanged</td><td>MethodDeclaration</td><td>L31–35</td><td>void Drilling.UI.CSignalBlink.VisibilityChanged(object, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>Start</td><td>MethodDeclaration</td><td>L36–37</td><td>void Drilling.UI.CSignalBlink.Start(FrameworkElement)</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L38–42</td><td>void Drilling.UI.CSignalBlink.Stop(FrameworkElement)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L9">FieldDeclaration <code>IsActiveProperty</code> · L9–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L9-L10">Drilling.UI/CSignalBlink.cs:9–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CSignalBlink.IsActiveProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>9</td><td>DependencyProperty.RegisterAttached</td><td>unresolved</td><td>None</td></tr>
+<tr><td>10</td><td>new PropertyMetadata</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>9</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached( &quot;IsActive&quot;, typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false, ActiveChanged))</td></tr>
+<tr><td>9</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: IsActiveProperty = DependencyProperty.RegisterAttached( &quot;IsActive&quot;, typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false, ActiveChanged))</td></tr>
+<tr><td>10</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false, ActiveChanged)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>IsHookedProperty</code> · L11–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L11-L12">Drilling.UI/CSignalBlink.cs:11–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CSignalBlink.IsHookedProperty</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>11</td><td>DependencyProperty.RegisterAttached</td><td>unresolved</td><td>None</td></tr>
+<tr><td>12</td><td>new PropertyMetadata</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached( &quot;IsHooked&quot;, typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false))</td></tr>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: IsHookedProperty = DependencyProperty.RegisterAttached( &quot;IsHooked&quot;, typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false))</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">MethodDeclaration <code>GetIsActive</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L13-L13">Drilling.UI/CSignalBlink.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.CSignalBlink.GetIsActive(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>13</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(IsActiveProperty)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">MethodDeclaration <code>SetIsActive</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L14-L14">Drilling.UI/CSignalBlink.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.SetIsActive(DependencyObject, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(IsActiveProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">MethodDeclaration <code>ActiveChanged</code> · L16–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L16-L27">Drilling.UI/CSignalBlink.cs:16–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.ActiveChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>DependencyPropertyChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>19</td><td>element.GetValue</td><td>unresolved</td><td>None</td></tr>
+<tr><td>21</td><td>element.SetValue</td><td>unresolved</td><td>None</td></tr>
+<tr><td>26</td><td>Start</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Start(FrameworkElement) · Drilling.UI/CSignalBlink.cs:36</td></tr>
+<tr><td>26</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Stop(FrameworkElement) · Drilling.UI/CSignalBlink.cs:38</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>18</td><td>if</td><td>조건에 따라 분기합니다: if (target is not FrameworkElement element)</td></tr>
+<tr><td>18</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.GetValue(IsHookedProperty)</td></tr>
+<tr><td>19</td><td>if</td><td>조건에 따라 분기합니다: if (!(bool)element.GetValue(IsHookedProperty))</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetValue(IsHookedProperty, true)</td></tr>
+<tr><td>22</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded += Loaded</td></tr>
+<tr><td>23</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded += Unloaded</td></tr>
+<tr><td>24</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.IsVisibleChanged += VisibilityChanged</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Start(element)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(element)</td></tr>
+<tr><td>26</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>26</td><td>if</td><td>조건에 따라 분기합니다: if ((bool)e.NewValue)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ActiveChanged&quot;]
+ N0[&quot;L18 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L19 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L26 else&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L26 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>Loaded</code> · L28–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L28-L29">Drilling.UI/CSignalBlink.cs:28–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.Loaded(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>29</td><td>GetIsActive</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>29</td><td>Start</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Start(FrameworkElement) · Drilling.UI/CSignalBlink.cs:36</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetIsActive((FrameworkElement)sender)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Start((FrameworkElement)sender)</td></tr>
+<tr><td>29</td><td>if</td><td>조건에 따라 분기합니다: if (GetIsActive((FrameworkElement)sender))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Loaded&quot;]
+ N0[&quot;L29 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">MethodDeclaration <code>Unloaded</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L30-L30">Drilling.UI/CSignalBlink.cs:30–30</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.Unloaded(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>30</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Stop(FrameworkElement) · Drilling.UI/CSignalBlink.cs:38</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop((FrameworkElement)sender)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">MethodDeclaration <code>VisibilityChanged</code> · L31–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L31-L35">Drilling.UI/CSignalBlink.cs:31–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.VisibilityChanged(object, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>DependencyPropertyChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>34</td><td>GetIsActive</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>34</td><td>Start</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Start(FrameworkElement) · Drilling.UI/CSignalBlink.cs:36</td></tr>
+<tr><td>34</td><td>Stop</td><td>resolved</td><td>void Drilling.UI.CSignalBlink.Stop(FrameworkElement) · Drilling.UI/CSignalBlink.cs:38</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var element = (FrameworkElement)sender;</td></tr>
+<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: element = (FrameworkElement)sender</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetIsActive(element)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Start(element)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(element)</td></tr>
+<tr><td>34</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>34</td><td>if</td><td>조건에 따라 분기합니다: if ((bool)e.NewValue &amp;&amp; GetIsActive(element))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;VisibilityChanged&quot;]
+ N0[&quot;L34 else&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L34 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">MethodDeclaration <code>Start</code> · L36–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L36-L37">Drilling.UI/CSignalBlink.cs:36–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.Start(FrameworkElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>element</td><td>FrameworkElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L26-L26">Drilling.UI/CSignalBlink.cs:26–26</a></td><td>Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L29-L29">Drilling.UI/CSignalBlink.cs:29–29</a></td><td>Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L34-L34">Drilling.UI/CSignalBlink.cs:34–34</a></td><td>Start</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>36</td><td>element.BeginAnimation</td><td>unresolved</td><td>None</td></tr>
+<tr><td>37</td><td>new DoubleAnimation</td><td>unresolved</td><td>None</td></tr>
+<tr><td>37</td><td>TimeSpan.FromSeconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromSeconds(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.BeginAnimation(UIElement.OpacityProperty, new DoubleAnimation(0, 0.6, TimeSpan.FromSeconds(0.5)) { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever })</td></tr>
+<tr><td>37</td><td>assignment</td><td>값을 대상에 대입합니다: AutoReverse = true</td></tr>
+<tr><td>37</td><td>assignment</td><td>값을 대상에 대입합니다: RepeatBehavior = RepeatBehavior.Forever</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DoubleAnimation(0, 0.6, TimeSpan.FromSeconds(0.5)) { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever }</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(0.5)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">MethodDeclaration <code>Stop</code> · L38–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L38-L42">Drilling.UI/CSignalBlink.cs:38–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CSignalBlink.Stop(FrameworkElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CSignalBlink</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>element</td><td>FrameworkElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L26-L26">Drilling.UI/CSignalBlink.cs:26–26</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L30-L30">Drilling.UI/CSignalBlink.cs:30–30</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L34-L34">Drilling.UI/CSignalBlink.cs:34–34</a></td><td>Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>40</td><td>element.BeginAnimation</td><td>unresolved</td><td>None</td></tr>
+<tr><td>41</td><td>element.SetCurrentValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.BeginAnimation(UIElement.OpacityProperty, null)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.OpacityProperty, 0d)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/CSignalBlink.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

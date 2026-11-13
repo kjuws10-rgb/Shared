@@ -1,0 +1,242 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CSettingView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000005 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000006 | using Drilling.UI.Popup; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000008 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CSettingView : UserControl
+L000009 | public partial class CSettingView : UserControl ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CSettingView._isHistoryExpanded
+L000011 |     private bool _isHistoryExpanded; ⟦EOL⟧
+L000012 |  ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CSettingView.CSettingView()
+L000013 |     public CSettingView() ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 .ctor.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000015 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 .ctor.
+L000016 |     } ⟦EOL⟧
+L000017 |  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.ToggleHistory_Click(object, RoutedEventArgs)
+L000018 |     private void ToggleHistory_Click(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 ToggleHistory_Click.
+L000019 |     { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommitSettingGridEdits(sender, e)
+L000020 |         CommitSettingGridEdits(sender, e); ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: _isHistoryExpanded = !_isHistoryExpanded
+L000021 |         _isHistoryExpanded = !_isHistoryExpanded; ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: SettingEditorPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible
+L000022 |         SettingEditorPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(HistoryPanel, _isHistoryExpanded ? 0 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 0 : 1
+L000023 |         Grid.SetRow(HistoryPanel, _isHistoryExpanded ? 0 : 1); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRowSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 2 : 1
+L000024 |         Grid.SetRowSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1); ⟦EOL⟧
+// 해설 L25: 값을 대상에 대입합니다: HistoryPanel.Margin = _isHistoryExpanded ? new Thickness(0) : new Thickness(0, 12, 0, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0, 12, 0, 0) / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? new Thickness(0) : new Thickness(0, 12, 0, 0)
+L000025 |         HistoryPanel.Margin = _isHistoryExpanded ? new Thickness(0) : new Thickness(0, 12, 0, 0); ⟦EOL⟧
+// 해설 L26: 값을 대상에 대입합니다: HistoryExpandButton.Content = _isHistoryExpanded ? "COLLAPSE" : "EXPAND" / 조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? "COLLAPSE" : "EXPAND"
+L000026 |         HistoryExpandButton.Content = _isHistoryExpanded ? "COLLAPSE" : "EXPAND"; ⟦EOL⟧
+// 해설 L27: 값을 대상에 대입합니다: e.Handled = true
+L000027 |         e.Handled = true; ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 ToggleHistory_Click.
+L000028 |     } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.CommitSettingGridEdits(object, RoutedEventArgs)
+L000030 |     private void CommitSettingGridEdits(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 CommitSettingGridEdits.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 조건에 따라 분기합니다: if (Keyboard.FocusedElement is TextBox textBox)
+L000032 |         if (Keyboard.FocusedElement is TextBox textBox) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 CommitSettingGridEdits.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: textBox.GetBindingExpression(TextBox.TextProperty) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .UpdateSource()
+L000034 |             textBox.GetBindingExpression(TextBox.TextProperty)?.UpdateSource(); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 CommitSettingGridEdits.
+L000035 |         } ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keyboard.ClearFocus()
+L000037 |         Keyboard.ClearFocus(); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommitGridEdit(ParameterGrid)
+L000038 |         CommitGridEdit(ParameterGrid); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommitGridEdit(InterfaceGrid)
+L000039 |         CommitGridEdit(InterfaceGrid); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 CommitSettingGridEdits.
+L000040 |     } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.CommitGridEdit(DataGrid)
+L000042 |     private static void CommitGridEdit(DataGrid grid) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 CommitGridEdit.
+L000043 |     { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: grid.CommitEdit(DataGridEditingUnit.Cell, true)
+L000044 |         grid.CommitEdit(DataGridEditingUnit.Cell, true); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: grid.CommitEdit(DataGridEditingUnit.Row, true)
+L000045 |         grid.CommitEdit(DataGridEditingUnit.Row, true); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 CommitGridEdit.
+L000046 |     } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenParameterValueInput(object, RoutedEventArgs)
+L000048 |     private void OpenParameterValueInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000049 |     { ⟦EOL⟧
+// 해설 L50: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_SYSTEM_PARAMETER_ROW row })
+L000050 |         if (sender is not FrameworkElement { DataContext: ST_SYSTEM_PARAMETER_ROW row }) ⟦EOL⟧
+// 해설 L51: 호출자에게 값 또는 제어를 반환합니다: return;
+L000051 |             return; ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: e.Handled = true
+L000052 |         e.Handled = true; ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, row.DataType, row.Min, row.Max) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, row.Min, row.Max) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, row.Min, row.Max) { Owner = Window.GetWindow(this) }
+L000053 |         var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, row.Min, row.Max) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000054 |         { ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000055 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000056 |         }; ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000057 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000058 |         { ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000059 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommitGridEdit(ParameterGrid)
+L000060 |             CommitGridEdit(ParameterGrid); ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000061 |         } ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 OpenParameterValueInput.
+L000062 |     } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000064 |     private void OpenInterfaceValueInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000065 |     { ⟦EOL⟧
+// 해설 L66: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_SETTING_INTERFACE_ROW row, Tag: string field } button)
+L000066 |         if (sender is not Button { DataContext: ST_SETTING_INTERFACE_ROW row, Tag: string field } button) ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return;
+L000067 |             return; ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: e.Handled = true
+L000068 |         e.Handled = true; ⟦EOL⟧
+// 해설 L69: 지역 변수를 선언합니다: var currentValue = field switch { "DEVICE" => row.Device, "NUMBER" => row.Number, "NICKNAME" => row.NickName, "SYSTEM_SECTION" => row.SystemSection, "ARG1" => row.Arg1, "ARG2" => row.Arg2, "ARG3" => row.Arg3, "ARG4" => row.Arg4, " / 값별 결과식을 선택합니다: field switch { "DEVICE" => row.Device, "NUMBER" => row.Number, "NICKNAME" => row.NickName, "SYSTEM_SECTION" => row.SystemSection, "ARG1" => row.Arg1, "ARG2" => row.Arg2, "ARG3" => row.Arg3, "ARG4" => row.Arg4, "ARG5" => row.Arg5,  / 변수의 초기값을 지정합니다: currentValue = field switch {
+L000069 |         var currentValue = field switch ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000071 |             "DEVICE" => row.Device, ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000072 |             "NUMBER" => row.Number, ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000073 |             "NICKNAME" => row.NickName, ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000074 |             "SYSTEM_SECTION" => row.SystemSection, ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000075 |             "ARG1" => row.Arg1, ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000076 |             "ARG2" => row.Arg2, ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000077 |             "ARG3" => row.Arg3, ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000078 |             "ARG4" => row.Arg4, ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000079 |             "ARG5" => row.Arg5, ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSettingView.OpenInterfaceValueInput(object, RoutedEventArgs)
+L000080 |             _ => "" ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000081 |         }; ⟦EOL⟧
+// 해설 L82: 조건에 따라 결과식을 선택합니다: field == "NUMBER" ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.String / 지역 변수를 선언합니다: var dataType = field == "NUMBER" ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.String; / 변수의 초기값을 지정합니다: dataType = field == "NUMBER" ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.String
+L000082 |         var dataType = field == "NUMBER" ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.String; ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, currentValue, dataType, 0, int.MaxValue) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, currentValue, dataType, 0, int.MaxValue) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, currentValue, dataType, 0, int.MaxValue) { Owner = Window.GetWindow(this) }
+L000083 |         var dialog = new CValueInputDialog(field, currentValue, dataType, 0, int.MaxValue) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000085 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000086 |         }; ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000087 |         if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L88: 호출자에게 값 또는 제어를 반환합니다: return;
+L000088 |             return; ⟦EOL⟧
+// 해설 L89: 값에 따라 분기합니다: switch (field)
+L000089 |         switch (field) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000090 |         { ⟦EOL⟧
+// 해설 L91: 분기값/패턴의 구간입니다: case "DEVICE":
+L000091 |             case "DEVICE": ⟦EOL⟧
+// 해설 L92: 값을 대상에 대입합니다: row.Device = dialog.ResultValue
+L000092 |                 row.Device = dialog.ResultValue; ⟦EOL⟧
+// 해설 L93: 해당 반복/분기 구간을 종료합니다: break;
+L000093 |                 break; ⟦EOL⟧
+// 해설 L94: 분기값/패턴의 구간입니다: case "NUMBER":
+L000094 |             case "NUMBER": ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: row.Number = dialog.ResultValue
+L000095 |                 row.Number = dialog.ResultValue; ⟦EOL⟧
+// 해설 L96: 해당 반복/분기 구간을 종료합니다: break;
+L000096 |                 break; ⟦EOL⟧
+// 해설 L97: 분기값/패턴의 구간입니다: case "NICKNAME":
+L000097 |             case "NICKNAME": ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: row.NickName = dialog.ResultValue
+L000098 |                 row.NickName = dialog.ResultValue; ⟦EOL⟧
+// 해설 L99: 해당 반복/분기 구간을 종료합니다: break;
+L000099 |                 break; ⟦EOL⟧
+// 해설 L100: 분기값/패턴의 구간입니다: case "SYSTEM_SECTION":
+L000100 |             case "SYSTEM_SECTION": ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: row.SystemSection = dialog.ResultValue
+L000101 |                 row.SystemSection = dialog.ResultValue; ⟦EOL⟧
+// 해설 L102: 해당 반복/분기 구간을 종료합니다: break;
+L000102 |                 break; ⟦EOL⟧
+// 해설 L103: 분기값/패턴의 구간입니다: case "ARG1":
+L000103 |             case "ARG1": ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: row.Arg1 = dialog.ResultValue
+L000104 |                 row.Arg1 = dialog.ResultValue; ⟦EOL⟧
+// 해설 L105: 해당 반복/분기 구간을 종료합니다: break;
+L000105 |                 break; ⟦EOL⟧
+// 해설 L106: 분기값/패턴의 구간입니다: case "ARG2":
+L000106 |             case "ARG2": ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: row.Arg2 = dialog.ResultValue
+L000107 |                 row.Arg2 = dialog.ResultValue; ⟦EOL⟧
+// 해설 L108: 해당 반복/분기 구간을 종료합니다: break;
+L000108 |                 break; ⟦EOL⟧
+// 해설 L109: 분기값/패턴의 구간입니다: case "ARG3":
+L000109 |             case "ARG3": ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: row.Arg3 = dialog.ResultValue
+L000110 |                 row.Arg3 = dialog.ResultValue; ⟦EOL⟧
+// 해설 L111: 해당 반복/분기 구간을 종료합니다: break;
+L000111 |                 break; ⟦EOL⟧
+// 해설 L112: 분기값/패턴의 구간입니다: case "ARG4":
+L000112 |             case "ARG4": ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: row.Arg4 = dialog.ResultValue
+L000113 |                 row.Arg4 = dialog.ResultValue; ⟦EOL⟧
+// 해설 L114: 해당 반복/분기 구간을 종료합니다: break;
+L000114 |                 break; ⟦EOL⟧
+// 해설 L115: 분기값/패턴의 구간입니다: case "ARG5":
+L000115 |             case "ARG5": ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: row.Arg5 = dialog.ResultValue
+L000116 |                 row.Arg5 = dialog.ResultValue; ⟦EOL⟧
+// 해설 L117: 해당 반복/분기 구간을 종료합니다: break;
+L000117 |                 break; ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000118 |         } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000120 |         button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommitGridEdit(InterfaceGrid)
+L000121 |         CommitGridEdit(InterfaceGrid); ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 OpenInterfaceValueInput.
+L000122 |     } ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다.
+L000123 | } ⟦EOL⟧

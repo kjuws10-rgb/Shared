@@ -1,0 +1,653 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface
+L000001 | namespace Drilling.Common.Interface ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 |     using System.Globalization; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000004 |     using System.Text; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Text.RegularExpressions;
+L000005 |     using System.Text.RegularExpressions; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000006 |     using System.Diagnostics; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public sealed partial class CMelsec
+L000008 |     public sealed partial class CMelsec ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 |     { ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 |         // Diagnostic observations only. They neither publish feedback nor request I/O. ⟦EOL⟧
+// 해설 L11: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000011 |         // Both collections are protected by _pollLock; the logger runs outside it. ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: _pollLogSamples = new(StringComparer.OrdinalIgnoreCase)
+L000012 |         private readonly Dictionary<string, MelsecLogSample> _pollLogSamples = new(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _pendingMelsecLogs = new()
+L000013 |         private readonly Queue<MelsecLogEntry> _pendingMelsecLogs = new(); ⟦EOL⟧
+// 해설 L14: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000014 |         // Updated only on the single MELSEC worker. Summaries distinguish SDK I/O ⟦EOL⟧
+// 해설 L15: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000015 |         // time, command queue waiting and control-feedback sampling gaps. ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _melsecTimingPeaks = new()
+L000016 |         private readonly Dictionary<string, (double Milliseconds, string Id)> _melsecTimingPeaks = new(); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp() / 변수의 초기값을 지정합니다: _melsecTimingReportedAt = Stopwatch.GetTimestamp()
+L000017 |         private long _melsecTimingReportedAt = Stopwatch.GetTimestamp(); ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.RecordMelsecTiming(string, double, string)
+L000019 |         private void RecordMelsecTiming(string kind, double milliseconds, string id) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 RecordMelsecTiming.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 조건에 따라 결과식을 선택합니다: kind == "CONTROL_POLL_GAP" ? 500 : kind == "REQUEST_QUEUE" ? 100 : 50 / 조건에 따라 결과식을 선택합니다: kind == "REQUEST_QUEUE" ? 100 : 50 / 조건에 따라 분기합니다: if (_logManager is null || milliseconds < (kind == "CONTROL_POLL_GAP" ? 500 : kind == "REQUEST_QUEUE" ? 100 : 50))
+L000021 |             if (_logManager is null || milliseconds < (kind == "CONTROL_POLL_GAP" ? 500 : kind == "REQUEST_QUEUE" ? 100 : 50)) ⟦EOL⟧
+// 해설 L22: 호출자에게 값 또는 제어를 반환합니다: return;
+L000022 |                 return; ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: _melsecTimingPeaks.TryGetValue(kind, out var old) / 조건에 따라 분기합니다: if (!_melsecTimingPeaks.TryGetValue(kind, out var old) || milliseconds > old.Milliseconds)
+L000023 |             if (!_melsecTimingPeaks.TryGetValue(kind, out var old) || milliseconds > old.Milliseconds) ⟦EOL⟧
+// 해설 L24: 값을 대상에 대입합니다: _melsecTimingPeaks[kind] = (milliseconds, id)
+L000024 |                 _melsecTimingPeaks[kind] = (milliseconds, id); ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 RecordMelsecTiming.
+L000025 |         } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.PublishMelsecTimings()
+L000027 |         private void PublishMelsecTimings() ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 PublishMelsecTimings.
+L000028 |         { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(_melsecTimingReportedAt) / 조건에 따라 분기합니다: if (_logManager is null || Stopwatch.GetElapsedTime(_melsecTimingReportedAt).TotalSeconds < 5)
+L000029 |             if (_logManager is null || Stopwatch.GetElapsedTime(_melsecTimingReportedAt).TotalSeconds < 5) ⟦EOL⟧
+// 해설 L30: 호출자에게 값 또는 제어를 반환합니다: return;
+L000030 |                 return; ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: _melsecTimingReportedAt = Stopwatch.GetTimestamp() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp()
+L000031 |             _melsecTimingReportedAt = Stopwatch.GetTimestamp(); ⟦EOL⟧
+// 해설 L32: 컬렉션 요소를 순회합니다: foreach (var pair in _melsecTimingPeaks)
+L000032 |             foreach (var pair in _melsecTimingPeaks) ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteInterfaceCommand(EN_EQP_MODULE.Melsec, "MELSEC_CONTROL", "[MELSEC][지연 진단] " + pair.Key, FormattableString.Invariant($"최근 5초 최대={pair.Value.Milliseconds:0.0} ms | ID={pair.Value.Id}"))
+L000033 |                 _logManager.WriteInterfaceCommand(EN_EQP_MODULE.Melsec, "MELSEC_CONTROL", "[MELSEC][지연 진단] " + pair.Key, ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormattableString.Invariant($"최근 5초 최대={pair.Value.Milliseconds:0.0} ms | ID={pair.Value.Id}")
+L000034 |                     FormattableString.Invariant($"최근 5초 최대={pair.Value.Milliseconds:0.0} ms | ID={pair.Value.Id}")); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: _melsecTimingPeaks.Clear()
+L000035 |             _melsecTimingPeaks.Clear(); ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 PublishMelsecTimings.
+L000036 |         } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 타입의 구조/상속 선언입니다: private sealed record MelsecLogSample(ushort[]? Words, EN_MELSEC_CACHE_STATE Quality, string Error);
+L000038 |         private sealed record MelsecLogSample(ushort[]? Words, EN_MELSEC_CACHE_STATE Quality, string Error); ⟦EOL⟧
+// 해설 L39: 타입의 구조/상속 선언입니다: private sealed record MelsecLogEntry(ST_MELSEC_MAP_DATA Data, ST_MELSEC_ADDRESS Address,
+L000039 |         private sealed record MelsecLogEntry(ST_MELSEC_MAP_DATA Data, ST_MELSEC_ADDRESS Address, ⟦EOL⟧
+// 해설 L40: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000040 |             ushort[]? Words, string Operation, string Source, string Result, ⟦EOL⟧
+// 해설 L41: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000041 |             EN_MELSEC_CACHE_STATE Quality, DateTimeOffset ObservedAt, ⟦EOL⟧
+// 해설 L42: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000042 |             EN_MELSEC_CACHE_STATE? PreviousQuality = null, string Detail = ""); ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.QueuePollReadLog(Drilling.Common.Interface.CMelsec.PollItem, ushort[], int, Drilling.Common.Interface.EN_MELSEC_CACHE_STATE, System.DateTimeOffset)
+L000044 |         private void QueuePollReadLog(PollItem item, ushort[] blockWords, int blockStart, EN_MELSEC_CACHE_STATE previousQuality, DateTimeOffset observedAt) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 QueuePollReadLog.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 조건에 따라 분기합니다: if (_logManager is null)
+L000046 |             if (_logManager is null) ⟦EOL⟧
+// 해설 L47: 호출자에게 값 또는 제어를 반환합니다: return;
+L000047 |                 return; ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: blockWords.AsSpan(item.Address.Number - blockStart, item.WordCount) / 지역 변수를 선언합니다: var raw = blockWords.AsSpan(item.Address.Number - blockStart, item.WordCount); / 변수의 초기값을 지정합니다: raw = blockWords.AsSpan(item.Address.Number - blockStart, item.WordCount)
+L000048 |             var raw = blockWords.AsSpan(item.Address.Number - blockStart, item.WordCount); ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(item.Data.Id) / 지역 변수를 선언합니다: var id = NormalizeId(item.Data.Id); / 변수의 초기값을 지정합니다: id = NormalizeId(item.Data.Id)
+L000049 |             var id = NormalizeId(item.Data.Id); ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollLogSamples.TryGetValue(id, out var previous) / 조건에 따라 분기합니다: if (_pollLogSamples.TryGetValue(id, out var previous) && previous.Quality == EN_MELSEC_CACHE_STATE.Valid && previousQuality == EN_MELSEC_CACHE_STATE.Valid && previous.Words is { } oldWords && raw.SequenceEqual(oldWords))
+L000050 |             if (_pollLogSamples.TryGetValue(id, out var previous) && previous.Quality == EN_MELSEC_CACHE_STATE.Valid ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: raw.SequenceEqual(oldWords)
+L000051 |                 && previousQuality == EN_MELSEC_CACHE_STATE.Valid && previous.Words is { } oldWords && raw.SequenceEqual(oldWords)) ⟦EOL⟧
+// 해설 L52: 호출자에게 값 또는 제어를 반환합니다: return;
+L000052 |                 return; ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: raw.ToArray() / 지역 변수를 선언합니다: var words = raw.ToArray(); / 변수의 초기값을 지정합니다: words = raw.ToArray()
+L000053 |             var words = raw.ToArray(); ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: _pollLogSamples[id] = new(words, EN_MELSEC_CACHE_STATE.Valid, "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(words, EN_MELSEC_CACHE_STATE.Valid, "")
+L000054 |             _pollLogSamples[id] = new(words, EN_MELSEC_CACHE_STATE.Valid, ""); ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pendingMelsecLogs.Enqueue(new(item.Data, item.Address, words, "READ", "POLL", "RECEIVED", EN_MELSEC_CACHE_STATE.Valid, observedAt, previousQuality)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(item.Data, item.Address, words, "READ", "POLL", "RECEIVED", EN_MELSEC_CACHE_STATE.Valid, observedAt, previousQuality)
+L000055 |             _pendingMelsecLogs.Enqueue(new(item.Data, item.Address, words, "READ", "POLL", "RECEIVED", ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.QueuePollReadLog(Drilling.Common.Interface.CMelsec.PollItem, ushort[], int, Drilling.Common.Interface.EN_MELSEC_CACHE_STATE, System.DateTimeOffset)
+L000056 |                 EN_MELSEC_CACHE_STATE.Valid, observedAt, previousQuality)); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 QueuePollReadLog.
+L000057 |         } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.QueuePollQualityLog(Drilling.Common.Interface.CMelsec.PollItem, Drilling.Common.Interface.EN_MELSEC_CACHE_STATE, string)
+L000059 |         private void QueuePollQualityLog(PollItem item, EN_MELSEC_CACHE_STATE quality, string message) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 QueuePollQualityLog.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 조건에 따라 분기합니다: if (_logManager is null)
+L000061 |             if (_logManager is null) ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return;
+L000062 |                 return; ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(item.Data.Id) / 지역 변수를 선언합니다: var id = NormalizeId(item.Data.Id); / 변수의 초기값을 지정합니다: id = NormalizeId(item.Data.Id)
+L000063 |             var id = NormalizeId(item.Data.Id); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollLogSamples.TryGetValue(id, out var previous)
+L000064 |             _pollLogSamples.TryGetValue(id, out var previous); ⟦EOL⟧
+// 해설 L65: 조건에 따라 분기합니다: if (previous is not null && previous.Quality == quality && previous.Error == message)
+L000065 |             if (previous is not null && previous.Quality == quality && previous.Error == message) ⟦EOL⟧
+// 해설 L66: 호출자에게 값 또는 제어를 반환합니다: return;
+L000066 |                 return; ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: _pollLogSamples[id] = new(null, quality, message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null, quality, message)
+L000067 |             _pollLogSamples[id] = new(null, quality, message); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pendingMelsecLogs.Enqueue(new(item.Data, item.Address, null, "READ", "POLL", quality == EN_MELSEC_CACHE_STATE.Pending ? "WAITING_FOR_READ" : "UNAVAILABLE", quality, DateTimeOffset.UtcNow, previous?.Quality, message)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(item.Data, item.Address, null, "READ", "POLL", quality == EN_MELSEC_CACHE_STATE.Pending ? "WAITING_FOR_READ" : "UNAVAILABLE", quality, DateTimeOffset.UtcNow, previous?.Quality, message)
+L000068 |             _pendingMelsecLogs.Enqueue(new(item.Data, item.Address, null, "READ", "POLL", ⟦EOL⟧
+// 해설 L69: 조건에 따라 결과식을 선택합니다: quality == EN_MELSEC_CACHE_STATE.Pending ? "WAITING_FOR_READ" : "UNAVAILABLE"
+L000069 |                 quality == EN_MELSEC_CACHE_STATE.Pending ? "WAITING_FOR_READ" : "UNAVAILABLE", ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.QueuePollQualityLog(Drilling.Common.Interface.CMelsec.PollItem, Drilling.Common.Interface.EN_MELSEC_CACHE_STATE, string)
+L000070 |                 quality, DateTimeOffset.UtcNow, previous?.Quality, message)); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 QueuePollQualityLog.
+L000071 |         } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.FlushMelsecLogs()
+L000073 |         private void FlushMelsecLogs() ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 FlushMelsecLogs.
+L000074 |         { ⟦EOL⟧
+// 해설 L75: 지역 변수를 선언합니다: MelsecLogEntry[] entries;
+L000075 |             MelsecLogEntry[] entries; ⟦EOL⟧
+// 해설 L76: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L000076 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 FlushMelsecLogs.
+L000077 |             { ⟦EOL⟧
+// 해설 L78: 조건에 따라 분기합니다: if (_pendingMelsecLogs.Count == 0)
+L000078 |                 if (_pendingMelsecLogs.Count == 0) ⟦EOL⟧
+// 해설 L79: 호출자에게 값 또는 제어를 반환합니다: return;
+L000079 |                     return; ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: entries = _pendingMelsecLogs.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _pendingMelsecLogs.ToArray()
+L000080 |                 entries = _pendingMelsecLogs.ToArray(); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pendingMelsecLogs.Clear()
+L000081 |                 _pendingMelsecLogs.Clear(); ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 FlushMelsecLogs.
+L000082 |             } ⟦EOL⟧
+// 해설 L83: 컬렉션 요소를 순회합니다: foreach (var entry in entries)
+L000083 |             foreach (var entry in entries) ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMelsecLog(entry)
+L000084 |                 WriteMelsecLog(entry); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 FlushMelsecLogs.
+L000085 |         } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.WriteTransferLog(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, System.Collections.Generic.IReadOnlyList<ushort>, strin
+L000087 |         private void WriteTransferLog(ST_MELSEC_MAP_DATA data, ST_MELSEC_ADDRESS address, IReadOnlyList<ushort> words, ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.WriteTransferLog(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, System.Collections.Generic.IReadOnlyList<ushort>, strin
+L000088 |             string operation, string source, string result) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 WriteTransferLog.
+L000089 |         { ⟦EOL⟧
+// 해설 L90: 조건에 따라 분기합니다: if (_logManager is not null)
+L000090 |             if (_logManager is not null) ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMelsecLog(new(data, address, words.ToArray(), operation, source, result, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(data, address, words.ToArray(), operation, source, result, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: words.ToArray()
+L000091 |                 WriteMelsecLog(new(data, address, words.ToArray(), operation, source, result, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow)); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 WriteTransferLog.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.WriteMelsecLog(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000094 |         private void WriteMelsecLog(MelsecLogEntry entry) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 조건에 따라 분기합니다: if (_logManager is null)
+L000096 |             if (_logManager is null) ⟦EOL⟧
+// 해설 L97: 호출자에게 값 또는 제어를 반환합니다: return;
+L000097 |                 return; ⟦EOL⟧
+// 해설 L98: 예외 처리 범위입니다: try
+L000098 |             try ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000099 |             { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceData(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo) / 지역 변수를 선언합니다: var nickname = _interfaceManager.GetInterfaceData(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo)?.NickName ?? "MELSEC_" + entry.Data.DeviceNo.ToString(CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: nickname = _interfaceManager.GetInterfaceData(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo)?.NickName ?? "MELSEC_" + entry.Data.DeviceNo.ToString(CultureInfo.InvariantCulture)
+L000100 |                 var nickname = _interfaceManager.GetInterfaceData(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo)?.NickName ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.Data.DeviceNo.ToString(CultureInfo.InvariantCulture)
+L000101 |                     ?? "MELSEC_" + entry.Data.DeviceNo.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L102: 조건에 따라 결과식을 선택합니다: entry.Data.DataType is EN_MELSEC_DATA_TYPE.Bit or EN_MELSEC_DATA_TYPE.Word ? 1 : entry.Data.Length / 지역 변수를 선언합니다: var wordCount = entry.Words?.Length ?? (entry.Data.DataType is EN_MELSEC_DATA_TYPE.Bit or EN_MELSEC_DATA_TYPE.Word ? 1 : entry.Data.Length); / 변수의 초기값을 지정합니다: wordCount = entry.Words?.Length ?? (entry.Data.DataType is EN_MELSEC_DATA_TYPE.Bit or EN_MELSEC_DATA_TYPE.Word ? 1 : entry.Data.Length)
+L000102 |                 var wordCount = entry.Words?.Length ?? (entry.Data.DataType is EN_MELSEC_DATA_TYPE.Bit or EN_MELSEC_DATA_TYPE.Word ? 1 : entry.Data.Length); ⟦EOL⟧
+// 해설 L103: 지역 변수를 선언합니다: var array = entry.Source == "ARRAY"; / 변수의 초기값을 지정합니다: array = entry.Source == "ARRAY"
+L000103 |                 var array = entry.Source == "ARRAY"; ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogHeader(entry.Data, entry.Operation, entry.Address, wordCount, entry.Words is { } raw ? BriefMelsecLogValue(entry.Data, entry.Address, raw, array) : "미수신") / 지역 변수를 선언합니다: var header = FormatMelsecLogHeader(entry.Data, entry.Operation, entry.Address, wordCount, entry.Words is { } raw ? BriefMelsecLogValue(entry.Data, entry.Address, raw, array) : "미수신"); / 변수의 초기값을 지정합니다: header = FormatMelsecLogHeader(entry.Data, entry.Operation, entry.Address, wordCount, entry.Words is { } raw ? BriefMelsecLog
+L000104 |                 var header = FormatMelsecLogHeader(entry.Data, entry.Operation, entry.Address, wordCount, ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: BriefMelsecLogValue(entry.Data, entry.Address, raw, array) / 조건에 따라 결과식을 선택합니다: entry.Words is { } raw ? BriefMelsecLogValue(entry.Data, entry.Address, raw, array) : "미수신"
+L000105 |                     entry.Words is { } raw ? BriefMelsecLogValue(entry.Data, entry.Address, raw, array) : "미수신"); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogResult(entry) / 지역 변수를 선언합니다: var detail = DescribeMelsecLogResult(entry) + " | 품질=" + (entry.Operation == "WRITE" ? "수신판정 아님(쓰기)" : DescribeMelsecLogQuality(entry.Quality)); / 변수의 초기값을 지정합니다: detail = DescribeMelsecLogResult(entry) + " | 품질=" + (entry.Operation == "WRITE" ? "수신판정 아님(쓰기)" : DescribeMelsecLogQuality(entry.Quality))
+L000106 |                 var detail = DescribeMelsecLogResult(entry) + " | 품질=" ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogQuality(entry.Quality) / 조건에 따라 결과식을 선택합니다: entry.Operation == "WRITE" ? "수신판정 아님(쓰기)" : DescribeMelsecLogQuality(entry.Quality)
+L000107 |                     + (entry.Operation == "WRITE" ? "수신판정 아님(쓰기)" : DescribeMelsecLogQuality(entry.Quality)); ⟦EOL⟧
+// 해설 L108: 조건에 따라 분기합니다: if (entry.PreviousQuality is { } previous && previous != entry.Quality)
+L000108 |                 if (entry.PreviousQuality is { } previous && previous != entry.Quality) ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogQuality(previous) / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += " | 직전 품질=" + DescribeMelsecLogQuality(previous)
+L000109 |                     detail += " | 직전 품질=" + DescribeMelsecLogQuality(previous); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime() / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += entry.Operation == "WRITE" ? " | 전송시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) : entry.Words is not null ? " | 수신시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.Invar / 조건에 따라 결과식을 선택합니다: entry.Operation == "WRITE" ? " | 전송시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo
+L000110 |                 detail += entry.Operation == "WRITE" ? " | 전송시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime() / 조건에 따라 결과식을 선택합니다: entry.Words is not null ? " | 수신시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) : " | 수신시각=없음 | 관측시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture)
+L000111 |                     : entry.Words is not null ? " | 수신시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.ObservedAt.ToLocalTime()
+L000112 |                     : " | 수신시각=없음 | 관측시각=" + entry.ObservedAt.ToLocalTime().ToString("O", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogType(entry.Data.DataType) / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += Environment.NewLine + " 자료형=" + DescribeMelsecLogType(entry.Data.DataType) + " | 맵=" + entry.Data.DataType.ToString().ToUpperInvariant() + " | 크기=" + wordCount.ToString(CultureInfo.InvariantCulture) + "WORD/" + (wordCoun
+L000113 |                 detail += Environment.NewLine + "  자료형=" + DescribeMelsecLogType(entry.Data.DataType) ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.Data.DataType.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.Data.DataType.ToString()
+L000114 |                     + " | 맵=" + entry.Data.DataType.ToString().ToUpperInvariant() ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: wordCount.ToString(CultureInfo.InvariantCulture)
+L000115 |                     + " | 크기=" + wordCount.ToString(CultureInfo.InvariantCulture) + "WORD/" ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: (wordCount * sizeof(short)).ToString(CultureInfo.InvariantCulture)
+L000116 |                     + (wordCount * sizeof(short)).ToString(CultureInfo.InvariantCulture) + "byte" ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogSource(entry.Source)
+L000117 |                     + " | 경로=" + DescribeMelsecLogSource(entry.Source) ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.IsSimul(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo) / 조건에 따라 결과식을 선택합니다: _interfaceManager.IsSimul(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo) ? "시뮬레이션(SIMULATION)" : "실장비(REAL)"
+L000118 |                     + " | 모드=" + (_interfaceManager.IsSimul(EN_EQP_MODULE.Melsec, entry.Data.DeviceNo) ? "시뮬레이션(SIMULATION)" : "실장비(REAL)"); ⟦EOL⟧
+// 해설 L119: 조건에 따라 분기합니다: if (entry.Operation == "WRITE")
+L000119 |                 if (entry.Operation == "WRITE") ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.Data.WriteScale.ToString("R", CultureInfo.InvariantCulture) / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += " | 쓰기계수=" + entry.Data.WriteScale.ToString("R", CultureInfo.InvariantCulture)
+L000120 |                     detail += " | 쓰기계수=" + entry.Data.WriteScale.ToString("R", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L121: 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += Environment.NewLine + " "
+L000121 |                 detail += Environment.NewLine + "  "; ⟦EOL⟧
+// 해설 L122: 조건에 따라 분기합니다: if (entry.Words is { } words)
+L000122 |                 if (entry.Words is { } words) ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogWords(entry.Data, entry.Address, words, array) / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += FormatMelsecLogWords(entry.Data, entry.Address, words, array)
+L000123 |                     detail += FormatMelsecLogWords(entry.Data, entry.Address, words, array); ⟦EOL⟧
+// 해설 L124: 앞 조건이 거짓인 경로입니다: else
+L000124 |                 else ⟦EOL⟧
+// 해설 L125: 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += "RAW=N/A | 값=미수신"
+L000125 |                     detail += "RAW=N/A | 값=미수신"; ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeMelsecLogDetail(entry.Detail) / 지역 변수를 선언합니다: var cause = DescribeMelsecLogDetail(entry.Detail); / 변수의 초기값을 지정합니다: cause = DescribeMelsecLogDetail(entry.Detail)
+L000126 |                 var cause = DescribeMelsecLogDetail(entry.Detail); ⟦EOL⟧
+// 해설 L127: 조건에 따라 분기합니다: if (cause.Length > 0)
+L000127 |                 if (cause.Length > 0) ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: EscapeMelsecLogText(cause) / 복합 대입 또는 이벤트 구독/해지 표현입니다: detail += Environment.NewLine + " 원인=" + EscapeMelsecLogText(cause)
+L000128 |                     detail += Environment.NewLine + "  원인=" + EscapeMelsecLogText(cause); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.WriteInterfaceCommand(EN_EQP_MODULE.Melsec, nickname, header, detail, "")
+L000129 |                 _logManager.WriteInterfaceCommand(EN_EQP_MODULE.Melsec, nickname, header, detail, ""); ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000130 |             } ⟦EOL⟧
+// 해설 L131: 지정 예외를 처리합니다: catch (Exception exception)
+L000131 |             catch (Exception exception) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000132 |             { ⟦EOL⟧
+// 해설 L133: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000133 |                 // A diagnostic writer must never turn a successful PLC read into a communication failure. ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine("MELSEC diagnostic log failed: " + exception.Message)
+L000134 |                 System.Diagnostics.Debug.WriteLine("MELSEC diagnostic log failed: " + exception.Message); ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000135 |             } ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 WriteMelsecLog.
+L000136 |         } ⟦EOL⟧
+L000137 |  ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.BuildMelsecLogHeader(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, int)
+L000138 |         private static string BuildMelsecLogHeader(ST_MELSEC_MAP_DATA data, string operation, ST_MELSEC_ADDRESS address, int wordCount) ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogHeader(data, operation, address, wordCount, null)
+L000139 |             => FormatMelsecLogHeader(data, operation, address, wordCount, null); ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogHeader(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, int, string?)
+L000141 |         private static string FormatMelsecLogHeader(ST_MELSEC_MAP_DATA data, string operation, ST_MELSEC_ADDRESS address, int wordCount, string? value) ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveMelsecLogArea(data) / 값별 결과식을 선택합니다: ResolveMelsecLogArea(data) switch { "PROCESS" => "가공(PROCESS)", "STAGE" => "Stage(물류)", "VISION" => "Vision(비전)", "OPTIC" => "광학(OPTIC)", _ => "미분류(UNKNOWN)" }
+L000142 |             => "[MELSEC][" + (ResolveMelsecLogArea(data) switch ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 FormatMelsecLogHeader.
+L000143 |             { ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogHeader(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, int, string?)
+L000144 |                 "PROCESS" => "가공(PROCESS)", "STAGE" => "Stage(물류)", "VISION" => "Vision(비전)", ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogHeader(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, int, string?)
+L000145 |                 "OPTIC" => "광학(OPTIC)", _ => "미분류(UNKNOWN)" ⟦EOL⟧
+// 해설 L146: 값별 결과식을 선택합니다: operation switch { "WRITE" => "쓰기", "READBACK" => "쓰기 후 읽기", "READ" => "읽기", _ => operation }
+L000146 |             }) + "][" + (operation switch { "WRITE" => "쓰기", "READBACK" => "쓰기 후 읽기", "READ" => "읽기", _ => operation }) ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogAddress(address) / 조건에 따라 결과식을 선택합니다: value is null ? "" : " | 값=" + value
+L000147 |                 + "] " + FormatMelsecLogAddress(address) + (value is null ? "" : " | 값=" + value) ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: wordCount.ToString(CultureInfo.InvariantCulture)
+L000148 |                 + " | ID=" + data.Id + " | " + wordCount.ToString(CultureInfo.InvariantCulture) + "WORD"; ⟦EOL⟧
+L000149 |  ⟦EOL⟧
+// 해설 L150: 값별 결과식을 선택합니다: type switch { EN_MELSEC_DATA_TYPE.DWord or EN_MELSEC_DATA_TYPE.Double => "S32(부호 있는 32비트, 2WORD씩)", EN_MELSEC_DATA_TYPE.Word => "U16(부호 없는 16비트, 1WORD)", EN_MELSEC_DATA_TYPE.Float => "F32(실수, 2WORD씩)", EN_MELSEC_DATA_TYPE.Bit => "
+L000150 |         private static string DescribeMelsecLogType(EN_MELSEC_DATA_TYPE type) => type switch ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 DescribeMelsecLogType.
+L000151 |         { ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogType(Drilling.Common.Interface.EN_MELSEC_DATA_TYPE)
+L000152 |             EN_MELSEC_DATA_TYPE.DWord or EN_MELSEC_DATA_TYPE.Double => "S32(부호 있는 32비트, 2WORD씩)", ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogType(Drilling.Common.Interface.EN_MELSEC_DATA_TYPE)
+L000153 |             EN_MELSEC_DATA_TYPE.Word => "U16(부호 없는 16비트, 1WORD)", ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogType(Drilling.Common.Interface.EN_MELSEC_DATA_TYPE)
+L000154 |             EN_MELSEC_DATA_TYPE.Float => "F32(실수, 2WORD씩)", ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogType(Drilling.Common.Interface.EN_MELSEC_DATA_TYPE)
+L000155 |             EN_MELSEC_DATA_TYPE.Bit => "BIT(1WORD 안의 지정 비트)", _ => "ASCII 문자열" ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 DescribeMelsecLogType.
+L000156 |         }; ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 값별 결과식을 선택합니다: quality switch { EN_MELSEC_CACHE_STATE.Valid => "정상(VALID)", EN_MELSEC_CACHE_STATE.Pending => "읽기 대기(PENDING)", EN_MELSEC_CACHE_STATE.Stale => "최근 수신 없음(STALE)", EN_MELSEC_CACHE_STATE.Error => "수신 오류(ERROR)", EN_MELSEC_CACHE_STATE
+L000158 |         private static string DescribeMelsecLogQuality(EN_MELSEC_CACHE_STATE quality) => quality switch ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 DescribeMelsecLogQuality.
+L000159 |         { ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogQuality(Drilling.Common.Interface.EN_MELSEC_CACHE_STATE)
+L000160 |             EN_MELSEC_CACHE_STATE.Valid => "정상(VALID)", EN_MELSEC_CACHE_STATE.Pending => "읽기 대기(PENDING)", ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogQuality(Drilling.Common.Interface.EN_MELSEC_CACHE_STATE)
+L000161 |             EN_MELSEC_CACHE_STATE.Stale => "최근 수신 없음(STALE)", EN_MELSEC_CACHE_STATE.Error => "수신 오류(ERROR)", ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: quality.ToString()
+L000162 |             EN_MELSEC_CACHE_STATE.Offline => "통신 불가(OFFLINE)", _ => quality.ToString() ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 DescribeMelsecLogQuality.
+L000163 |         }; ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 값별 결과식을 선택합니다: source switch { "POLL" => "중앙 폴링(POLL)", "DIRECT" => "일반 요청(DIRECT)", "WRITE_CONFIRM" => "쓰기 후 확인(WRITE_CONFIRM)", "ARRAY" => "배열 처리(ARRAY)", _ => source }
+L000165 |         private static string DescribeMelsecLogSource(string source) => source switch ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 DescribeMelsecLogSource.
+L000166 |         { ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogSource(string)
+L000167 |             "POLL" => "중앙 폴링(POLL)", "DIRECT" => "일반 요청(DIRECT)", ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogSource(string)
+L000168 |             "WRITE_CONFIRM" => "쓰기 후 확인(WRITE_CONFIRM)", "ARRAY" => "배열 처리(ARRAY)", _ => source ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 DescribeMelsecLogSource.
+L000169 |         }; ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 값별 결과식을 선택합니다: entry.Result switch { "WRITE_ACCEPTED" => "쓰기 전송 완료(상대 동작 완료 아님)", "READBACK_RECEIVED" => "쓰기 후 값 수신(일치 여부는 별도 확인)", "RECEIVED" => "값 수신 완료", "WAITING_FOR_READ" when entry.Detail == "Waiting for feedback after write." => "쓰기 후 읽기
+L000171 |         private static string DescribeMelsecLogResult(MelsecLogEntry entry) => entry.Result switch ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 DescribeMelsecLogResult.
+L000172 |         { ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogResult(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000173 |             "WRITE_ACCEPTED" => "쓰기 전송 완료(상대 동작 완료 아님)", ⟦EOL⟧
+// 해설 L174: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogResult(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000174 |             "READBACK_RECEIVED" => "쓰기 후 값 수신(일치 여부는 별도 확인)", ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogResult(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000175 |             "RECEIVED" => "값 수신 완료", ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogResult(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000176 |             "WAITING_FOR_READ" when entry.Detail == "Waiting for feedback after write." => "쓰기 후 읽기 대기", ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogResult(Drilling.Common.Interface.CMelsec.MelsecLogEntry)
+L000177 |             "WAITING_FOR_READ" => "값 수신 대기", "UNAVAILABLE" => "값을 확인할 수 없음", _ => entry.Result ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 DescribeMelsecLogResult.
+L000178 |         }; ⟦EOL⟧
+L000179 |  ⟦EOL⟧
+// 해설 L180: 값별 결과식을 선택합니다: detail switch { "Waiting for feedback after write." or "Waiting for MELSEC feedback." => "", "MELSEC communication is stopped." => "MELSEC 통신이 중지되었습니다.", "MELSEC communication line is not open." => "MELSEC 통신 채널이 열리지 않았습니다.", "MEL
+L000180 |         private static string DescribeMelsecLogDetail(string detail) => detail switch ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 DescribeMelsecLogDetail.
+L000181 |         { ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string)
+L000182 |             "Waiting for feedback after write." or "Waiting for MELSEC feedback." => "", ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string)
+L000183 |             "MELSEC communication is stopped." => "MELSEC 통신이 중지되었습니다.", ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string)
+L000184 |             "MELSEC communication line is not open." => "MELSEC 통신 채널이 열리지 않았습니다.", ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string)
+L000185 |             "MELSEC feedback has not been updated within its polling interval." => "정해진 수신 시간 안에 새 데이터가 들어오지 않았습니다.", ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string)
+L000186 |             _ => detail // Keep native error codes and unrecognized diagnostic evidence verbatim. ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 DescribeMelsecLogDetail.
+L000187 |         }; ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000189 |         private static string ResolveMelsecLogArea(ST_MELSEC_MAP_DATA data) ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 ResolveMelsecLogArea.
+L000190 |         { ⟦EOL⟧
+// 해설 L191: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000191 |             // The loaded map has no AREA column. Use the document section named by ⟦EOL⟧
+// 해설 L192: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000192 |             // its description, never an address prefix or the direction alone. ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: Regex.Match(data.Description ?? "", @"^Spec\s+[0-9.]+\s+(?:legacy;.*?Spec\s+[0-9.]+\s+)?(?:Config_Map\s+Word\s+Detail\s*\((?<owner>가공|물류|비전|광학|Optic)\)|(?<owner>가공|물류|비전|광학|Optic)(?:\s|$))", RegexOptions.IgnoreCase | Reg… / 지역 변수를 선언합니다: var section = Regex.Match(data.Description ?? "", @"^Spec\s+[0-9.]+\s+(?:legacy;.*?Spec\s+[0-9.]+\s+)?(?:Config_Map\s+Word\s+Detail\s*\((?<owner>가공|물류|비전|광학|Optic)\)|(?<owner>가공|물류|비전|광학|Optic)(?:\s|$))", RegexOptions.IgnoreCase | / 변수의 초기값을 지정합니다: section = Regex.Match(data
+L000193 |             var section = Regex.Match(data.Description ?? "", @"^Spec\s+[0-9.]+\s+(?:legacy;.*?Spec\s+[0-9.]+\s+)?(?:Config_Map\s+Word\s+Detail\s*\((?<owner>가공|물류|비전|광학|Optic)\)|(?<owner>가공|물류|비전|광학|Optic)(?:\s|$))", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant); ⟦EOL⟧
+// 해설 L194: 조건에 따라 분기합니다: if (section.Success)
+L000194 |             if (section.Success) ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: section.Groups["owner"].Value.ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return section.Groups["owner"].Value.ToUpperInvariant() switch { "가공" => "PROCESS", "물류" => "STAGE", "비전" => "VISION", "광학" or "OPTIC" => "OPTIC", _ => "UNKNOWN" }; / 값별 결과식을 선택합니다: section.Groups["owner"].Value.ToUpperInvariant() switch { "가공" => "PROCESS", "물류" => "STAGE", "비전" => "VISION", "광학" or "OPTIC" => "OPTIC", _ => "UNKNOWN" }
+L000195 |                 return section.Groups["owner"].Value.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 ResolveMelsecLogArea.
+L000196 |                 { ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000197 |                     "가공" => "PROCESS", ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000198 |                     "물류" => "STAGE", ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000199 |                     "비전" => "VISION", ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000200 |                     "광학" or "OPTIC" => "OPTIC", ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.ResolveMelsecLogArea(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L000201 |                     _ => "UNKNOWN" ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 ResolveMelsecLogArea.
+L000202 |                 }; ⟦EOL⟧
+// 해설 L203: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000203 |             // Explicit protocol aliases whose ownership is defined in the driver. ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) || data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison.OrdinalIgnoreCase))
+L000204 |             if (data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison.OrdinalIgnoreCase)
+L000205 |                 || data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L206: 호출자에게 값 또는 제어를 반환합니다: return "PROCESS";
+L000206 |                 return "PROCESS"; ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) || data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase))
+L000207 |             if (data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)
+L000208 |                 || data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L209: 호출자에게 값 또는 제어를 반환합니다: return "STAGE";
+L000209 |                 return "STAGE"; ⟦EOL⟧
+// 해설 L210: 호출자에게 값 또는 제어를 반환합니다: return "UNKNOWN";
+L000210 |             return "UNKNOWN"; ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 ResolveMelsecLogArea.
+L000211 |         } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogWords(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, ushort[], bool)
+L000213 |         private static string FormatMelsecLogWords(ST_MELSEC_MAP_DATA data, ST_MELSEC_ADDRESS address, ushort[] words, bool array) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000214 |         { ⟦EOL⟧
+// 해설 L215: 조건에 따라 분기합니다: if (words.Length == 0)
+L000215 |             if (words.Length == 0) ⟦EOL⟧
+// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return "RAW=N/A | 값=미수신";
+L000216 |                 return "RAW=N/A | 값=미수신"; ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.ReadScale.ToString("R", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var scale = data.ReadScale.ToString("R", CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: scale = data.ReadScale.ToString("R", CultureInfo.InvariantCulture)
+L000217 |             var scale = data.ReadScale.ToString("R", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L218: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.String)
+L000218 |             if (data.DataType == EN_MELSEC_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000219 |             { ⟦EOL⟧
+// 해설 L220: 지역 변수를 선언합니다: var bytes = new byte[words.Length * 2]; / 변수의 초기값을 지정합니다: bytes = new byte[words.Length * 2]
+L000220 |                 var bytes = new byte[words.Length * 2]; ⟦EOL⟧
+// 해설 L221: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < words.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000221 |                 for (var index = 0; index < words.Length; index++) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000222 |                 { ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: bytes[index * 2] = (byte)words[index]
+L000223 |                     bytes[index * 2] = (byte)words[index]; ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: bytes[index * 2 + 1] = (byte)(words[index] >> 8)
+L000224 |                     bytes[index * 2 + 1] = (byte)(words[index] >> 8); ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000225 |                 } ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ') / 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.ASCII.GetString(bytes) / 호출자에게 값 또는 제어를 반환합니다: return "값=\"" + EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')) + "\" | RAW(U16)=[" + string.Join(",", words.Select(word => word.ToString(CultureInfo.InvariantCulture))) + "] | 인코딩=ASCII";
+L000226 |                 return "값=\"" + EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')) ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", words.Select(word => word.ToString(CultureInfo.InvariantCulture))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: words.Select(word => word.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: word.ToString(CultureInfo.InvariantCulture)
+L000227 |                     + "\" | RAW(U16)=[" + string.Join(",", words.Select(word => word.ToString(CultureInfo.InvariantCulture))) + "] | 인코딩=ASCII"; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000228 |             } ⟦EOL⟧
+// 해설 L229: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.Bit)
+L000229 |             if (data.DataType == EN_MELSEC_DATA_TYPE.Bit) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 지역 변수를 선언합니다: var bit = address.BitIndex!.Value; / 변수의 초기값을 지정합니다: bit = address.BitIndex!.Value
+L000231 |                 var bit = address.BitIndex!.Value; ⟦EOL⟧
+// 해설 L232: 조건에 따라 결과식을 선택합니다: (words[0] & (1 << bit)) != 0 ? "1(ON)" : "0(OFF)" / 호출자에게 값 또는 제어를 반환합니다: return "값=" + ((words[0] & (1 << bit)) != 0 ? "1(ON)" : "0(OFF)") + " | RAW=" + words[0].ToString(CultureInfo.InvariantCulture) + "(U16) | BIT=" + bit.ToString(CultureInfo.InvariantCulture);
+L000232 |                 return "값=" + ((words[0] & (1 << bit)) != 0 ? "1(ON)" : "0(OFF)") + " | RAW=" ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: words[0].ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: bit.ToString(CultureInfo.InvariantCulture)
+L000233 |                     + words[0].ToString(CultureInfo.InvariantCulture) + "(U16) | BIT=" + bit.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000234 |             } ⟦EOL⟧
+// 해설 L235: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.Word)
+L000235 |             if (data.DataType == EN_MELSEC_DATA_TYPE.Word) ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(words[0] * data.ReadScale) / 호출자에게 값 또는 제어를 반환합니다: return "값=" + FormatMelsecLogNumber(words[0] * data.ReadScale) + FormatMelsecLogSignalState(data, words[0] * data.ReadScale) + " | RAW=" + words[0].ToString(CultureInfo.InvariantCulture) + "(U16) | 읽기계수=" + scale;
+L000236 |                 return "값=" + FormatMelsecLogNumber(words[0] * data.ReadScale) ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogSignalState(data, words[0] * data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: words[0].ToString(CultureInfo.InvariantCulture)
+L000237 |                     + FormatMelsecLogSignalState(data, words[0] * data.ReadScale) + " | RAW=" + words[0].ToString(CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogWords(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, ushort[], bool)
+L000238 |                     + "(U16) | 읽기계수=" + scale; ⟦EOL⟧
+// 해설 L239: 조건에 따라 분기합니다: if (words.Length < 2)
+L000239 |             if (words.Length < 2) ⟦EOL⟧
+// 해설 L240: 호출자에게 값 또는 제어를 반환합니다: return "RAW=N/A | 값=미수신 | 원인=2WORD 수신값이 완성되지 않음";
+L000240 |                 return "RAW=N/A | 값=미수신 | 원인=2WORD 수신값이 완성되지 않음"; ⟦EOL⟧
+// 해설 L241: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.Float)
+L000241 |             if (data.DataType == EN_MELSEC_DATA_TYPE.Float) ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(WordsToFloat(words) * data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToFloat(words) / 호출자에게 값 또는 제어를 반환합니다: return "값=" + FormatMelsecLogNumber(WordsToFloat(words) * data.ReadScale) + " | RAW=" + WordsToInt32(words).ToString(CultureInfo.InvariantCulture) + "(S32 비트) | 실수원본=" + WordsToFloat(words).ToString("G9", CultureInfo.InvariantCult
+L000242 |                 return "값=" + FormatMelsecLogNumber(WordsToFloat(words) * data.ReadScale) ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words)
+L000243 |                     + " | RAW=" + WordsToInt32(words).ToString(CultureInfo.InvariantCulture) + "(S32 비트) | 실수원본=" ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToFloat(words).ToString("G9", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToFloat(words)
+L000244 |                     + WordsToFloat(words).ToString("G9", CultureInfo.InvariantCulture) + "(F32) | 읽기계수=" + scale; ⟦EOL⟧
+// 해설 L245: 조건에 따라 분기합니다: if (!array)
+L000245 |             if (!array) ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(WordsToInt32(words) * data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words) / 호출자에게 값 또는 제어를 반환합니다: return "값=" + FormatMelsecLogNumber(WordsToInt32(words) * data.ReadScale) + FormatMelsecLogSignalState(data, WordsToInt32(words) * data.ReadScale) + " | RAW=" + WordsToInt32(words).ToString(CultureInfo.InvariantCulture) + "(S32) |
+L000246 |                 return "값=" + FormatMelsecLogNumber(WordsToInt32(words) * data.ReadScale) ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogSignalState(data, WordsToInt32(words) * data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words)
+L000247 |                     + FormatMelsecLogSignalState(data, WordsToInt32(words) * data.ReadScale) + " | RAW=" ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words)
+L000248 |                     + WordsToInt32(words).ToString(CultureInfo.InvariantCulture) + "(S32) | 읽기계수=" + scale ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", words.Skip(2).Select(word => word.ToString(CultureInfo.InvariantCulture))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: words.Skip(2).Select(word => word.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: words.Skip(2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: word.ToString(CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: words.Length > 2 ? " | 추가 RAW(U16)=[" + string.Join(",", words.Skip(2).Select(word => word.ToString(CultureInfo.InvariantCulture))) + "]" : ""
+L000249 |                     + (words.Length > 2 ? " | 추가 RAW(U16)=[" + string.Join(",", words.Skip(2).Select(word => word.ToString(CultureInfo.InvariantCulture))) + "]" : ""); ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder("개수=").Append((words.Length / 2).ToString(CultureInfo.InvariantCulture)) .Append(" | 읽기계수=").Append(scale).Append(" | 각 RAW는 S32/2WORD") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder("개수=").Append((words.Length / 2).ToString(CultureInfo.InvariantCulture)) .Append(" | 읽기계수=").Append(scale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder("개수=").Append((words.Length / 2).ToString(CultureInfo.InvariantCulture)) .Append(" | 읽기계수=") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder("개수=").Append((wo
+L000251 |             var result = new StringBuilder("개수=").Append((words.Length / 2).ToString(CultureInfo.InvariantCulture)) ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogWords(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, ushort[], bool)
+L000252 |                 .Append(" | 읽기계수=").Append(scale).Append(" | 각 RAW는 S32/2WORD"); ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseAddress(data.Address) / 지역 변수를 선언합니다: var firstIndex = (address.Number - ParseAddress(data.Address).Number) / 2 + 1; / 변수의 초기값을 지정합니다: firstIndex = (address.Number - ParseAddress(data.Address).Number) / 2 + 1
+L000253 |             var firstIndex = (address.Number - ParseAddress(data.Address).Number) / 2 + 1; ⟦EOL⟧
+// 해설 L254: 복합 대입 또는 이벤트 구독/해지 표현입니다: offset += 2 / 초기화·조건·증감이 있는 반복입니다: for (var offset = 0; offset + 1 < words.Length; offset += 2) / 변수의 초기값을 지정합니다: offset = 0
+L000254 |             for (var offset = 0; offset + 1 < words.Length; offset += 2) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000255 |             { ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append(Environment.NewLine).Append(" ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append(Environment.NewLine)
+L000256 |                 result.Append(Environment.NewLine).Append("  "); ⟦EOL⟧
+// 해설 L257: 지역 변수를 선언합니다: var raw = unchecked((int)(words[offset] | ((uint)words[offset + 1] << 16))); / 변수의 초기값을 지정합니다: raw = unchecked((int)(words[offset] | ((uint)words[offset + 1] << 16)))
+L000257 |                 var raw = unchecked((int)(words[offset] | ((uint)words[offset + 1] << 16))); ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append('[').Append((firstIndex + offset / 2).ToString(CultureInfo.InvariantCulture)).Append("] ") .Append(FormatMelsecLogAddress(address with { Number = address.Number + offset })) .Append(" | 값=").Append(FormatMe… / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append('[').Append((firstIndex + offset / 2).ToString(CultureInfo.InvariantCulture)).Append("] ") .Append(FormatMelsecLogAddress(address with { Number = address.Number + offset })) .Append(" | 값=") / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append('[').Append((f
+L000258 |                 result.Append('[').Append((firstIndex + offset / 2).ToString(CultureInfo.InvariantCulture)).Append("] ") ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: Number = address.Number + offset / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogAddress(address with { Number = address.Number + offset })
+L000259 |                     .Append(FormatMelsecLogAddress(address with { Number = address.Number + offset })) ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(raw * data.ReadScale)
+L000260 |                     .Append(" | 값=").Append(FormatMelsecLogNumber(raw * data.ReadScale)) ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: raw.ToString(CultureInfo.InvariantCulture)
+L000261 |                     .Append(" | RAW=").Append(raw.ToString(CultureInfo.InvariantCulture)).Append("(S32)"); ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000262 |             } ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ToString() / 호출자에게 값 또는 제어를 반환합니다: return result.ToString();
+L000263 |             return result.ToString(); ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 FormatMelsecLogWords.
+L000264 |         } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogSignalState(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, double)
+L000266 |         private static string FormatMelsecLogSignalState(ST_MELSEC_MAP_DATA data, double value) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 FormatMelsecLogSignalState.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var onOffSignal = data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) || data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) || data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison. / 변수의 초기값을 지정합니다: onOffSignal = data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) || data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) || data.Id.E
+L000268 |             var onOffSignal = data.Id.StartsWith("HANDSHAKE_PRC_", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase)
+L000269 |                 || data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L270: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison.OrdinalIgnoreCase)
+L000270 |                 || data.Id.Equals("SDC_REVIEW_RETRY_REQUEST", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L271: 조건에 따라 결과식을 선택합니다: onOffSignal && value is 0 or 1 ? (value == 1 ? "(ON)" : "(OFF)") : "" / 조건에 따라 결과식을 선택합니다: value == 1 ? "(ON)" : "(OFF)" / 호출자에게 값 또는 제어를 반환합니다: return onOffSignal && value is 0 or 1 ? (value == 1 ? "(ON)" : "(OFF)") : "";
+L000271 |             return onOffSignal && value is 0 or 1 ? (value == 1 ? "(ON)" : "(OFF)") : ""; ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 FormatMelsecLogSignalState.
+L000272 |         } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogNumber(double)
+L000274 |         private static string FormatMelsecLogNumber(double value) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 FormatMelsecLogNumber.
+L000275 |         { ⟦EOL⟧
+// 해설 L276: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000276 |             // Display only: keep wire RAW and the actual decoded cache value untouched. ⟦EOL⟧
+// 해설 L277: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000277 |             // G15 removes binary tails without rounding tiny nonzero values to zero. ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("G15", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var compact = value.ToString("G15", CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: compact = value.ToString("G15", CultureInfo.InvariantCulture)
+L000278 |             var compact = value.ToString("G15", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(compact, NumberStyles.Float, CultureInfo.InvariantCulture, out var shown) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(shown) / 조건에 따라 결과식을 선택합니다: double.IsFinite(value) && (!double.TryParse(compact, NumberStyles.Float, CultureInfo.InvariantCulture, out var shown) || !double.IsFinite(shown)) ? value.ToString("R", CultureInfo.InvariantCulture) : compact / 호출자에게 값 또는 제어를 반환합니다: return double.IsFinite(value) && (!double.TryParse(compact, Number
+L000279 |             return double.IsFinite(value) && (!double.TryParse(compact, NumberStyles.Float, CultureInfo.InvariantCulture, out var shown) || !double.IsFinite(shown)) ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("R", CultureInfo.InvariantCulture)
+L000280 |                 ? value.ToString("R", CultureInfo.InvariantCulture) : compact; ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 FormatMelsecLogNumber.
+L000281 |         } ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.BriefMelsecLogValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, ushort[], bool)
+L000283 |         private static string BriefMelsecLogValue(ST_MELSEC_MAP_DATA data, ST_MELSEC_ADDRESS address, ushort[] words, bool array) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000284 |         { ⟦EOL⟧
+// 해설 L285: 조건에 따라 분기합니다: if (words.Length == 0)
+L000285 |             if (words.Length == 0) ⟦EOL⟧
+// 해설 L286: 호출자에게 값 또는 제어를 반환합니다: return "미수신";
+L000286 |                 return "미수신"; ⟦EOL⟧
+// 해설 L287: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.String)
+L000287 |             if (data.DataType == EN_MELSEC_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000288 |             { ⟦EOL⟧
+// 해설 L289: 지역 변수를 선언합니다: var bytes = new byte[words.Length * 2]; / 변수의 초기값을 지정합니다: bytes = new byte[words.Length * 2]
+L000289 |                 var bytes = new byte[words.Length * 2]; ⟦EOL⟧
+// 해설 L290: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < words.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000290 |                 for (var index = 0; index < words.Length; index++) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000291 |                 { ⟦EOL⟧
+// 해설 L292: 값을 대상에 대입합니다: bytes[index * 2] = (byte)words[index]
+L000292 |                     bytes[index * 2] = (byte)words[index]; ⟦EOL⟧
+// 해설 L293: 값을 대상에 대입합니다: bytes[index * 2 + 1] = (byte)(words[index] >> 8)
+L000293 |                     bytes[index * 2 + 1] = (byte)(words[index] >> 8); ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000294 |                 } ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ') / 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.ASCII.GetString(bytes) / 지역 변수를 선언합니다: var text = EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')); / 변수의 초기값을 지정합니다: text = EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' '))
+L000295 |                 var text = EscapeMelsecLogText(Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ')); ⟦EOL⟧
+// 해설 L296: 조건에 따라 결과식을 선택합니다: text.Length > 64 ? text[..64] + "…(전체 값은 아래)" : text / 호출자에게 값 또는 제어를 반환합니다: return "\"" + (text.Length > 64 ? text[..64] + "…(전체 값은 아래)" : text) + "\"";
+L000296 |                 return "\"" + (text.Length > 64 ? text[..64] + "…(전체 값은 아래)" : text) + "\""; ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000297 |             } ⟦EOL⟧
+// 해설 L298: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.Bit)
+L000298 |             if (data.DataType == EN_MELSEC_DATA_TYPE.Bit) ⟦EOL⟧
+// 해설 L299: 조건에 따라 결과식을 선택합니다: (words[0] & (1 << address.BitIndex!.Value)) != 0 ? "1(ON)" : "0(OFF)" / 호출자에게 값 또는 제어를 반환합니다: return (words[0] & (1 << address.BitIndex!.Value)) != 0 ? "1(ON)" : "0(OFF)";
+L000299 |                 return (words[0] & (1 << address.BitIndex!.Value)) != 0 ? "1(ON)" : "0(OFF)"; ⟦EOL⟧
+// 해설 L300: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.Word)
+L000300 |             if (data.DataType == EN_MELSEC_DATA_TYPE.Word) ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(words[0] * data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogSignalState(data, words[0] * data.ReadScale) / 호출자에게 값 또는 제어를 반환합니다: return FormatMelsecLogNumber(words[0] * data.ReadScale) + FormatMelsecLogSignalState(data, words[0] * data.ReadScale);
+L000301 |                 return FormatMelsecLogNumber(words[0] * data.ReadScale) + FormatMelsecLogSignalState(data, words[0] * data.ReadScale); ⟦EOL⟧
+// 해설 L302: 조건에 따라 분기합니다: if (words.Length < 2)
+L000302 |             if (words.Length < 2) ⟦EOL⟧
+// 해설 L303: 호출자에게 값 또는 제어를 반환합니다: return "미수신";
+L000303 |                 return "미수신"; ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToFloat(words) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(words) / 조건에 따라 결과식을 선택합니다: data.DataType == EN_MELSEC_DATA_TYPE.Float ? WordsToFloat(words) * data.ReadScale : WordsToInt32(words) * data.ReadScale / 지역 변수를 선언합니다: var first = data.DataType == EN_MELSEC_DATA_TYPE.Float ? WordsToFloat(words) * data.ReadScale : WordsToInt32(words) * data.ReadScale; / 변수의 초기값을 지정합니다: first = data.DataType == EN_MELSEC_DATA_TYPE.Float ? WordsToFloat(words) * data.ReadScale : WordsToInt32(words) * data.ReadScale
+L000304 |             var first = data.DataType == EN_MELSEC_DATA_TYPE.Float ? WordsToFloat(words) * data.ReadScale : WordsToInt32(words) * data.ReadScale; ⟦EOL⟧
+// 해설 L305: 조건에 따라 분기합니다: if (!array)
+L000305 |             if (!array) ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(first) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogSignalState(data, first) / 호출자에게 값 또는 제어를 반환합니다: return FormatMelsecLogNumber(first) + FormatMelsecLogSignalState(data, first);
+L000306 |                 return FormatMelsecLogNumber(first) + FormatMelsecLogSignalState(data, first); ⟦EOL⟧
+// 해설 L307: 지역 변수를 선언합니다: var last = unchecked((int)(words[^2] | ((uint)words[^1] << 16))) * data.ReadScale; / 변수의 초기값을 지정합니다: last = unchecked((int)(words[^2] | ((uint)words[^1] << 16))) * data.ReadScale
+L000307 |             var last = unchecked((int)(words[^2] | ((uint)words[^1] << 16))) * data.ReadScale; ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: (words.Length / 2).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(first) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecLogNumber(last) / 호출자에게 값 또는 제어를 반환합니다: return (words.Length / 2).ToString(CultureInfo.InvariantCulture) + "개(" + FormatMelsecLogNumber(first) + " → " + FormatMelsecLogNumber(last) + ")";
+L000308 |             return (words.Length / 2).ToString(CultureInfo.InvariantCulture) + "개(" + FormatMelsecLogNumber(first) + " → " + FormatMelsecLogNumber(last) + ")"; ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 BriefMelsecLogValue.
+L000309 |         } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.FormatMelsecLogAddress(Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS)
+L000311 |         private static string FormatMelsecLogAddress(ST_MELSEC_ADDRESS address) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 FormatMelsecLogAddress.
+L000312 |         { ⟦EOL⟧
+// 해설 L313: 지역 변수를 선언합니다: var hexadecimal = address.Device is "W" or "SW" or "B" or "SB" or "X" or "Y"; / 변수의 초기값을 지정합니다: hexadecimal = address.Device is "W" or "SW" or "B" or "SB" or "X" or "Y"
+L000313 |             var hexadecimal = address.Device is "W" or "SW" or "B" or "SB" or "X" or "Y"; ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.Number.ToString(hexadecimal ? "X" : "D", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: hexadecimal ? "X" : "D" / 호출자에게 값 또는 제어를 반환합니다: return address.Device + address.Number.ToString(hexadecimal ? "X" : "D", CultureInfo.InvariantCulture) + (address.BitIndex is { } bit ? "." + bit.ToString("X", CultureInfo.InvariantCulture) : "");
+L000314 |             return address.Device + address.Number.ToString(hexadecimal ? "X" : "D", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: bit.ToString("X", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: address.BitIndex is { } bit ? "." + bit.ToString("X", CultureInfo.InvariantCulture) : ""
+L000315 |                 + (address.BitIndex is { } bit ? "." + bit.ToString("X", CultureInfo.InvariantCulture) : ""); ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 FormatMelsecLogAddress.
+L000316 |         } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000318 |         private static string EscapeMelsecLogText(string text) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 EscapeMelsecLogText.
+L000319 |         { ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder(text.Length) / 지역 변수를 선언합니다: var result = new StringBuilder(text.Length); / 변수의 초기값을 지정합니다: result = new StringBuilder(text.Length)
+L000320 |             var result = new StringBuilder(text.Length); ⟦EOL⟧
+// 해설 L321: 컬렉션 요소를 순회합니다: foreach (var value in text)
+L000321 |             foreach (var value in text) ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Append(value switch { '\\' => "\\\\", '"' => "\\\"", '\r' => "\\r", '\n' => "\\n", '\t' => "\\t", '\0' => "\\0", _ when char.IsControl(value) => "\\u" + ((int)value).ToString("X4", CultureInfo.InvariantCulture), _… / 값별 결과식을 선택합니다: value switch { '\\' => "\\\\", '"' => "\\\"", '\r' => "\\r", '\n' => "\\n", '\t' => "\\t", '\0' => "\\0", _ when char.IsControl(value) => "\\u" + ((int)value).ToString("X4", CultureInfo.InvariantCulture), _ => value.ToString() }
+L000322 |                 result.Append(value switch ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 EscapeMelsecLogText.
+L000323 |                 { ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000324 |                     '\\' => "\\\\", ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000325 |                     '"' => "\\\"", ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000326 |                     '\r' => "\\r", ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000327 |                     '\n' => "\\n", ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000328 |                     '\t' => "\\t", ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000329 |                     '\0' => "\\0", ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsControl(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ((int)value).ToString("X4", CultureInfo.InvariantCulture)
+L000330 |                     _ when char.IsControl(value) => "\\u" + ((int)value).ToString("X4", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000331 |                     _ => value.ToString() ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string)
+L000332 |                 }); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ToString() / 호출자에게 값 또는 제어를 반환합니다: return result.ToString();
+L000333 |             return result.ToString(); ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 EscapeMelsecLogText.
+L000334 |         } ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다.
+L000335 |     } ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다.
+L000336 | } ⟦EOL⟧

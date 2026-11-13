@@ -1,0 +1,1884 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
+L000001 | namespace Drilling.UI.Menu.Menus ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000003 |     using System.ComponentModel; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000004 |     using System.Globalization; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000005 |     using System.IO; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000006 |     using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000007 |     using System.Windows.Media; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000008 |     using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000009 |     using Drilling.UI.Popup; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed partial class CMenuCorrection
+L000011 |     public sealed partial class CMenuCorrection ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: public sealed partial class CReviewDataPanel
+L000013 |         public sealed partial class CReviewDataPanel ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 |         { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 16) / 변수의 초기값을 지정합니다: ReinspectionBeamNumbers = Enumerable.Range(1, 16).ToArray()
+L000015 |             private static readonly IReadOnlyList<int> ReinspectionBeamNumbers = Enumerable.Range(1, 16).ToArray(); ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isReinspectionMode
+L000016 |             private bool _isReinspectionMode; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: _reinspectionShots = []
+L000017 |             private IReadOnlyList<ST_REVIEW_DATA_REINSPECTION_ITEM> _reinspectionShots = []; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._selectedReinspectionShot
+L000018 |             private ST_REVIEW_DATA_REINSPECTION_ITEM? _selectedReinspectionShot; ⟦EOL⟧
+// 해설 L19: 변수의 초기값을 지정합니다: _reinspectionStatusText = "NO SHOTS ADDED"
+L000019 |             private string _reinspectionStatusText = "NO SHOTS ADDED"; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._reinspectionCancellation
+L000020 |             private CancellationTokenSource? _reinspectionCancellation; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._reinspectionSaveCancellation
+L000021 |             private CancellationTokenSource? _reinspectionSaveCancellation; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isReinspectionRunning
+L000022 |             private bool _isReinspectionRunning; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isReinspectionSaving
+L000023 |             private bool _isReinspectionSaving; ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._hasUnsavedReinspectionMeasurements
+L000024 |             private bool _hasUnsavedReinspectionMeasurements; ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsReinspectionMode
+L000026 |             public bool IsReinspectionMode => _isReinspectionMode; ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsReinspectionRunning
+L000027 |             public bool IsReinspectionRunning => _isReinspectionRunning; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsReinspectionSaving
+L000028 |             public bool IsReinspectionSaving => _isReinspectionSaving; ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ResultType.Equals("BEAM_INSPECTION", StringComparison.OrdinalIgnoreCase)
+L000029 |             public bool IsBeamInspectionResult => _loadedCatalog?.ResultType.Equals("BEAM_INSPECTION", StringComparison.OrdinalIgnoreCase) == true; ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanEditReinspectionList
+L000030 |             public bool CanEditReinspectionList => _isReinspectionMode && !_isReinspectionRunning && !_isReinspectionSaving; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionShots
+L000031 |             public IReadOnlyList<ST_REVIEW_DATA_REINSPECTION_ITEM> ReinspectionShots => _reinspectionShots; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<int> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionBeamOptions
+L000032 |             public IReadOnlyList<int> ReinspectionBeamOptions => ReinspectionBeamNumbers; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionSummary
+L000033 |             public string ReinspectionSummary => $"{_reinspectionShots.Count:N0} SHOTS"; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionStatusText
+L000034 |             public string ReinspectionStatusText => _reinspectionStatusText; ⟦EOL⟧
+// 해설 L35: 조건에 따라 결과식을 선택합니다: IsBeamInspectionResult ? "BEAM INSPECTION 결과는 전용 16-Beam 검사 구조이므로 RE-INSPECTION MODE를 사용할 수 없습니다." : _hasLoadedData ? "선택한 BASE 검사 결과의 분류와 형식을 유지한 채 Shot을 재검사합니다." : "먼저 검사 결과를 DATA LOAD 하세요."
+L000035 |             public string ReinspectionAvailabilityText => IsBeamInspectionResult ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionAvailabilityText
+L000036 |                 ? "BEAM INSPECTION 결과는 전용 16-Beam 검사 구조이므로 RE-INSPECTION MODE를 사용할 수 없습니다." ⟦EOL⟧
+// 해설 L37: 조건에 따라 결과식을 선택합니다: _hasLoadedData ? "선택한 BASE 검사 결과의 분류와 형식을 유지한 채 Shot을 재검사합니다." : "먼저 검사 결과를 DATA LOAD 하세요."
+L000037 |                 : _hasLoadedData ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionAvailabilityText
+L000038 |                     ? "선택한 BASE 검사 결과의 분류와 형식을 유지한 채 Shot을 재검사합니다." ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionAvailabilityText
+L000039 |                     : "먼저 검사 결과를 DATA LOAD 하세요."; ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleReinspection
+L000040 |             public bool CanToggleReinspection => _hasLoadedData ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleReinspection
+L000041 |                 && !_isDataLoading ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleReinspection
+L000042 |                 && !_isReinspectionRunning ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleReinspection
+L000043 |                 && !_isReinspectionSaving ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleReinspection
+L000044 |                 && !IsBeamInspectionResult; ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddReinspectionShot
+L000045 |             public bool CanAddReinspectionShot => _isReinspectionMode ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddReinspectionShot
+L000046 |                 && _hasLoadedData ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddReinspectionShot
+L000047 |                 && !_isReinspectionRunning ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddReinspectionShot
+L000048 |                 && !_isReinspectionSaving ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(_selectedShotKey)
+L000049 |                 && !string.IsNullOrWhiteSpace(_selectedShotKey); ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddSelectedReinspectionShots
+L000050 |             public bool CanAddSelectedReinspectionShots => _isReinspectionMode ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddSelectedReinspectionShots
+L000051 |                 && _hasLoadedData ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddSelectedReinspectionShots
+L000052 |                 && !_isReinspectionRunning ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddSelectedReinspectionShots
+L000053 |                 && !_isReinspectionSaving ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Any(row => row.IsReinspectionSelected)
+L000054 |                 && _allRows.Any(row => row.IsReinspectionSelected); ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddNgReinspectionShots
+L000055 |             public bool CanAddNgReinspectionShots => _isReinspectionMode ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddNgReinspectionShots
+L000056 |                 && _hasLoadedData ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddNgReinspectionShots
+L000057 |                 && !_isReinspectionRunning ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanAddNgReinspectionShots
+L000058 |                 && !_isReinspectionSaving ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Any(IsNgResultRow)
+L000059 |                 && _allRows.Any(IsNgResultRow); ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanDeleteReinspectionShot
+L000060 |             public bool CanDeleteReinspectionShot => CanEditReinspectionList && _selectedReinspectionShot is not null; ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanClearReinspectionShots
+L000061 |             public bool CanClearReinspectionShots => CanEditReinspectionList && _reinspectionShots.Count > 0; ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanMoveToReinspectionShot
+L000062 |             public bool CanMoveToReinspectionShot => _isReinspectionMode && !_isReinspectionRunning && !_isReinspectionSaving && _selectedReinspectionShot is not null; ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanInspectReinspectionShot
+L000063 |             public bool CanInspectReinspectionShot => CanMoveToReinspectionShot; ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanInspectAllReinspectionShots
+L000064 |             public bool CanInspectAllReinspectionShots => _isReinspectionMode && !_isReinspectionRunning && !_isReinspectionSaving && _reinspectionShots.Count > 0; ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanStopReinspection
+L000065 |             public bool CanStopReinspection => _isReinspectionRunning; ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000066 |             public bool CanSaveReinspectionResult => _isReinspectionMode ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000067 |                 && !_isReinspectionRunning ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000068 |                 && !_isReinspectionSaving ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000069 |                 && _loadedResultFile is not null ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000070 |                 && !IsBeamInspectionResult ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanSaveReinspectionResult
+L000071 |                 && _hasUnsavedReinspectionMeasurements ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots.Any(item => item.HasCompletedMeasurement)
+L000072 |                 && _reinspectionShots.Any(item => item.HasCompletedMeasurement); ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedReinspectionShot
+L000074 |             public ST_REVIEW_DATA_REINSPECTION_ITEM? SelectedReinspectionShot ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 SelectedReinspectionShot.
+L000075 |             { ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedReinspectionShot.get
+L000076 |                 get => _selectedReinspectionShot; ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedReinspectionShot.set
+L000077 |                 set ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 set_SelectedReinspectionShot.
+L000078 |                 { ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_selectedReinspectionShot, value) / 조건에 따라 분기합니다: if (ReferenceEquals(_selectedReinspectionShot, value))
+L000079 |                     if (ReferenceEquals(_selectedReinspectionShot, value)) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 set_SelectedReinspectionShot.
+L000080 |                     { ⟦EOL⟧
+// 해설 L81: 호출자에게 값 또는 제어를 반환합니다: return;
+L000081 |                         return; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 set_SelectedReinspectionShot.
+L000082 |                     } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: _selectedReinspectionShot = value
+L000084 |                     _selectedReinspectionShot = value; ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedReinspectionShot)
+L000085 |                     Notify(nameof(SelectedReinspectionShot)); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000086 |                     NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 set_SelectedReinspectionShot.
+L000087 |                 } ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 SelectedReinspectionShot.
+L000088 |             } ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleReinspectionCommand
+L000090 |             public CButtonCommand ToggleReinspectionCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionShotCommand
+L000091 |             public CButtonCommand AddReinspectionShotCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedReinspectionShotsCommand
+L000092 |             public CButtonCommand AddSelectedReinspectionShotsCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgReinspectionShotsCommand
+L000093 |             public CButtonCommand AddNgReinspectionShotsCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShotCommand
+L000094 |             public CButtonCommand DeleteReinspectionShotCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearReinspectionShotsCommand
+L000095 |             public CButtonCommand ClearReinspectionShotsCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.MoveToReinspectionShotCommand
+L000096 |             public CButtonCommand MoveToReinspectionShotCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.MoveAndInspectReinspectionShotCommand
+L000097 |             public CButtonCommand MoveAndInspectReinspectionShotCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InspectAllReinspectionShotsCommand
+L000098 |             public CButtonCommand InspectAllReinspectionShotsCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StopReinspectionCommand
+L000099 |             public CButtonCommand StopReinspectionCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResultCommand
+L000100 |             public CButtonCommand SaveReinspectionResultCommand { get; private set; } = null!; ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeReinspectionCommands()
+L000102 |             private void InitializeReinspectionCommands() ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 InitializeReinspectionCommands.
+L000103 |             { ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: ToggleReinspectionCommand = new CButtonCommand(ToggleReinspection, _ => CanToggleReinspection) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ToggleReinspection, _ => CanToggleReinspection)
+L000104 |                 ToggleReinspectionCommand = new CButtonCommand(ToggleReinspection, _ => CanToggleReinspection); ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: AddReinspectionShotCommand = new CButtonCommand(AddReinspectionShot, _ => CanAddReinspectionShot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddReinspectionShot, _ => CanAddReinspectionShot)
+L000105 |                 AddReinspectionShotCommand = new CButtonCommand(AddReinspectionShot, _ => CanAddReinspectionShot); ⟦EOL⟧
+// 해설 L106: 값을 대상에 대입합니다: AddSelectedReinspectionShotsCommand = new CButtonCommand(AddSelectedReinspectionShots, _ => CanAddSelectedReinspectionShots) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddSelectedReinspectionShots, _ => CanAddSelectedReinspectionShots)
+L000106 |                 AddSelectedReinspectionShotsCommand = new CButtonCommand(AddSelectedReinspectionShots, _ => CanAddSelectedReinspectionShots); ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: AddNgReinspectionShotsCommand = new CButtonCommand(AddNgReinspectionShots, _ => CanAddNgReinspectionShots) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddNgReinspectionShots, _ => CanAddNgReinspectionShots)
+L000107 |                 AddNgReinspectionShotsCommand = new CButtonCommand(AddNgReinspectionShots, _ => CanAddNgReinspectionShots); ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: DeleteReinspectionShotCommand = new CButtonCommand(DeleteReinspectionShot, _ => CanDeleteReinspectionShot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(DeleteReinspectionShot, _ => CanDeleteReinspectionShot)
+L000108 |                 DeleteReinspectionShotCommand = new CButtonCommand(DeleteReinspectionShot, _ => CanDeleteReinspectionShot); ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: ClearReinspectionShotsCommand = new CButtonCommand(ClearReinspectionShots, _ => CanClearReinspectionShots) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ClearReinspectionShots, _ => CanClearReinspectionShots)
+L000109 |                 ClearReinspectionShotsCommand = new CButtonCommand(ClearReinspectionShots, _ => CanClearReinspectionShots); ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: MoveToReinspectionShotCommand = new CButtonCommand(MoveToReinspectionShot, _ => CanMoveToReinspectionShot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(MoveToReinspectionShot, _ => CanMoveToReinspectionShot)
+L000110 |                 MoveToReinspectionShotCommand = new CButtonCommand(MoveToReinspectionShot, _ => CanMoveToReinspectionShot); ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: MoveAndInspectReinspectionShotCommand = new CButtonCommand(MoveAndInspectReinspectionShot, _ => CanInspectReinspectionShot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(MoveAndInspectReinspectionShot, _ => CanInspectReinspectionShot)
+L000111 |                 MoveAndInspectReinspectionShotCommand = new CButtonCommand(MoveAndInspectReinspectionShot, _ => CanInspectReinspectionShot); ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: InspectAllReinspectionShotsCommand = new CButtonCommand(InspectAllReinspectionShots, _ => CanInspectAllReinspectionShots) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(InspectAllReinspectionShots, _ => CanInspectAllReinspectionShots)
+L000112 |                 InspectAllReinspectionShotsCommand = new CButtonCommand(InspectAllReinspectionShots, _ => CanInspectAllReinspectionShots); ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: StopReinspectionCommand = new CButtonCommand(StopReinspection, _ => CanStopReinspection) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(StopReinspection, _ => CanStopReinspection)
+L000113 |                 StopReinspectionCommand = new CButtonCommand(StopReinspection, _ => CanStopReinspection); ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: SaveReinspectionResultCommand = new CButtonCommand(SaveReinspectionResult, _ => CanSaveReinspectionResult) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SaveReinspectionResult, _ => CanSaveReinspectionResult)
+L000114 |                 SaveReinspectionResultCommand = new CButtonCommand(SaveReinspectionResult, _ => CanSaveReinspectionResult); ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 InitializeReinspectionCommands.
+L000115 |             } ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleReinspection(object?)
+L000117 |             private void ToggleReinspection(object? parameter) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000118 |             { ⟦EOL⟧
+// 해설 L119: 조건에 따라 분기합니다: if (!CanToggleReinspection)
+L000119 |                 if (!CanToggleReinspection) ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000120 |                 { ⟦EOL⟧
+// 해설 L121: 호출자에게 값 또는 제어를 반환합니다: return;
+L000121 |                     return; ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000122 |                 } ⟦EOL⟧
+L000123 |  ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: _isReinspectionMode = !_isReinspectionMode
+L000124 |                 _isReinspectionMode = !_isReinspectionMode; ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: _reinspectionStatusText = _isReinspectionMode ? (_reinspectionShots.Count == 0 ? "NO SHOTS ADDED" : "RE-INSPECTION LIST READY") : "RE-INSPECTION CLOSED" / 조건에 따라 결과식을 선택합니다: _isReinspectionMode ? (_reinspectionShots.Count == 0 ? "NO SHOTS ADDED" : "RE-INSPECTION LIST READY") : "RE-INSPECTION CLOSED"
+L000125 |                 _reinspectionStatusText = _isReinspectionMode ⟦EOL⟧
+// 해설 L126: 조건에 따라 결과식을 선택합니다: _reinspectionShots.Count == 0 ? "NO SHOTS ADDED" : "RE-INSPECTION LIST READY"
+L000126 |                     ? (_reinspectionShots.Count == 0 ? "NO SHOTS ADDED" : "RE-INSPECTION LIST READY") ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleReinspection(object?)
+L000127 |                     : "RE-INSPECTION CLOSED"; ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionMode)
+L000128 |                 Notify(nameof(IsReinspectionMode)); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000129 |                 Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L130: 조건에 따라 분기합니다: if (_isReinspectionMode)
+L000130 |                 if (_isReinspectionMode) ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000131 |                 { ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshGlassPreview()
+L000132 |                     RefreshGlassPreview(); ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000133 |                 } ⟦EOL⟧
+// 해설 L134: 앞 조건이 거짓인 경로입니다: else
+L000134 |                 else ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000135 |                 { ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: Camera.Clear()
+L000136 |                     Camera.Clear(); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000137 |                 } ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000138 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ToggleReinspection.
+L000139 |             } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionShot(object?)
+L000141 |             private void AddReinspectionShot(object? parameter) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 조건에 따라 분기합니다: if (!CanAddReinspectionShot || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots))
+L000143 |                 if (!CanAddReinspectionShot ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: _shotsByCell.TryGetValue(_selectedCellNo, out var shots)
+L000144 |                     || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots)) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000145 |                 { ⟦EOL⟧
+// 해설 L146: 호출자에게 값 또는 제어를 반환합니다: return;
+L000146 |                     return; ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000147 |                 } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots.FirstOrDefault(item => item.ShotKey.Equals(_selectedShotKey, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ShotKey.Equals(_selectedShotKey, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var shot = shots.FirstOrDefault(item => item.ShotKey.Equals(_selectedShotKey, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: shot = shots.FirstOrDefault(item => item.ShotKey.Equals(_selectedShotKey, StringComparison.OrdinalIgnoreCase))
+L000149 |                 var shot = shots.FirstOrDefault(item => item.ShotKey.Equals(_selectedShotKey, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L150: 조건에 따라 분기합니다: if (shot is null)
+L000150 |                 if (shot is null) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000151 |                 { ⟦EOL⟧
+// 해설 L152: 호출자에게 값 또는 제어를 반환합니다: return;
+L000152 |                     return; ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000153 |                 } ⟦EOL⟧
+L000154 |  ⟦EOL⟧
+// 해설 L155: 조건에 따라 결과식을 선택합니다: SelectedRow?.CellNo == shot.CellNo && SelectedRow.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase) ? SelectedRow : Rows.FirstOrDefault(row => row.CellNo == shot.CellNo && row.ShotKey.Equals(shot.ShotKey, StringComp / 지역 변수를 선언합니다: var sourceRow = SelectedRow?.CellNo == shot.CellNo && SelectedRow.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase) ? SelectedRow : Rows.FirstOrDefault(row => row.CellNo == shot.CellNo && row.ShotKey.Equals(shot.Sho / 변수의 초기값을 지정합니다: sourceRow = SelectedRow?.
+L000155 |                 var sourceRow = SelectedRow?.CellNo == shot.CellNo ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectedRow.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase)
+L000156 |                     && SelectedRow.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionShot(object?)
+L000157 |                     ? SelectedRow ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.FirstOrDefault(row => row.CellNo == shot.CellNo && row.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase))
+L000158 |                     : Rows.FirstOrDefault(row => ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionShot(object?)
+L000159 |                         row.CellNo == shot.CellNo ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase)
+L000160 |                         && row.ShotKey.Equals(shot.ShotKey, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeBeamNo(sourceRow?.BeamNo ?? 1) / 지역 변수를 선언합니다: var beamNo = NormalizeBeamNo(sourceRow?.BeamNo ?? 1); / 변수의 초기값을 지정합니다: beamNo = NormalizeBeamNo(sourceRow?.BeamNo ?? 1)
+L000161 |                 var beamNo = NormalizeBeamNo(sourceRow?.BeamNo ?? 1); ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindReinspectionShot(shot.CellNo, shot.ShotKey) / 지역 변수를 선언합니다: var existing = FindReinspectionShot(shot.CellNo, shot.ShotKey); / 변수의 초기값을 지정합니다: existing = FindReinspectionShot(shot.CellNo, shot.ShotKey)
+L000162 |                 var existing = FindReinspectionShot(shot.CellNo, shot.ShotKey); ⟦EOL⟧
+// 해설 L163: 조건에 따라 분기합니다: if (existing is not null)
+L000163 |                 if (existing is not null) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000164 |                 { ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: _selectedReinspectionShot = existing
+L000165 |                     _selectedReinspectionShot = existing; ⟦EOL⟧
+// 해설 L166: 값을 대상에 대입합니다: _reinspectionStatusText = $"{existing.Cell} / {existing.ShotName} / BEAM {existing.BeamNo} ALREADY ADDED"
+L000166 |                     _reinspectionStatusText = $"{existing.Cell} / {existing.ShotName} / BEAM {existing.BeamNo} ALREADY ADDED"; ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedReinspectionShot)
+L000167 |                     Notify(nameof(SelectedReinspectionShot)); ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000168 |                     Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000169 |                     NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L170: 호출자에게 값 또는 제어를 반환합니다: return;
+L000170 |                     return; ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000171 |                 } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateReinspectionItem(shot, sourceRow, beamNo, _reinspectionShots.Count + 1) / 지역 변수를 선언합니다: var item = CreateReinspectionItem(shot, sourceRow, beamNo, _reinspectionShots.Count + 1); / 변수의 초기값을 지정합니다: item = CreateReinspectionItem(shot, sourceRow, beamNo, _reinspectionShots.Count + 1)
+L000173 |                 var item = CreateReinspectionItem(shot, sourceRow, beamNo, _reinspectionShots.Count + 1); ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 값을 대상에 대입합니다: _reinspectionShots = [.. _reinspectionShots, item]
+L000175 |                 _reinspectionShots = [.. _reinspectionShots, item]; ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: _selectedReinspectionShot = item
+L000176 |                 _selectedReinspectionShot = item; ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: _reinspectionStatusText = $"{item.Cell} / {item.ShotName} / BEAM {item.BeamNo} ADDED"
+L000177 |                 _reinspectionStatusText = $"{item.Cell} / {item.ShotName} / BEAM {item.BeamNo} ADDED"; ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionListState()
+L000178 |                 NotifyReinspectionListState(); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 AddReinspectionShot.
+L000179 |             } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedReinspectionShots(object?)
+L000181 |             private void AddSelectedReinspectionShots(object? parameter) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 AddSelectedReinspectionShots.
+L000182 |             { ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddReinspectionRows( _allRows.Where(row => row.IsReinspectionSelected), "SELECTED")
+L000183 |                 AddReinspectionRows( ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsReinspectionSelected)
+L000184 |                     _allRows.Where(row => row.IsReinspectionSelected), ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedReinspectionShots(object?)
+L000185 |                     "SELECTED"); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 AddSelectedReinspectionShots.
+L000186 |             } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgReinspectionShots(object?)
+L000188 |             private void AddNgReinspectionShots(object? parameter) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 AddNgReinspectionShots.
+L000189 |             { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddReinspectionRows( _allRows.Where(IsNgResultRow), "NG")
+L000190 |                 AddReinspectionRows( ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(IsNgResultRow)
+L000191 |                     _allRows.Where(IsNgResultRow), ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgReinspectionShots(object?)
+L000192 |                     "NG"); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 AddNgReinspectionShots.
+L000193 |             } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000195 |             private void AddReinspectionRows( ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000196 |                 IEnumerable<ST_REVIEW_DATA_GRID_ROW> candidates, ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000197 |                 string sourceName) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000198 |             { ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.ToArray() / 지역 변수를 선언합니다: var rows = candidates.ToArray(); / 변수의 초기값을 지정합니다: rows = candidates.ToArray()
+L000199 |                 var rows = candidates.ToArray(); ⟦EOL⟧
+// 해설 L200: 조건에 따라 분기합니다: if (rows.Length == 0)
+L000200 |                 if (rows.Length == 0) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000201 |                 { ⟦EOL⟧
+// 해설 L202: 값을 대상에 대입합니다: _reinspectionStatusText = $"NO {sourceName} SHOTS FOUND"
+L000202 |                     _reinspectionStatusText = $"NO {sourceName} SHOTS FOUND"; ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000203 |                     Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L204: 호출자에게 값 또는 제어를 반환합니다: return;
+L000204 |                     return; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000205 |                 } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots.ToList() / 지역 변수를 선언합니다: var items = _reinspectionShots.ToList(); / 변수의 초기값을 지정합니다: items = _reinspectionShots.ToList()
+L000207 |                 var items = _reinspectionShots.ToList(); ⟦EOL⟧
+// 해설 L208: 지역 변수를 선언합니다: var originalCount = items.Count; / 변수의 초기값을 지정합니다: originalCount = items.Count
+L000208 |                 var originalCount = items.Count; ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>( items.Select(item => BuildReinspectionKey(item.CellNo, item.ShotKey)), StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var keys = new HashSet<string>( items.Select(item => BuildReinspectionKey(item.CellNo, item.ShotKey)), StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: keys = new HashSet<string>( items.Select(item => BuildReinspectionKey(item.CellNo, item.ShotKey)), StringComparer.OrdinalIgnoreCase)
+L000209 |                 var keys = new HashSet<string>( ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Select(item => BuildReinspectionKey(item.CellNo, item.ShotKey)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildReinspectionKey(item.CellNo, item.ShotKey)
+L000210 |                     items.Select(item => BuildReinspectionKey(item.CellNo, item.ShotKey)), ⟦EOL⟧
+// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000211 |                     StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L212: 지역 변수를 선언합니다: ST_REVIEW_DATA_REINSPECTION_ITEM? lastAdded = null; / 변수의 초기값을 지정합니다: lastAdded = null
+L000212 |                 ST_REVIEW_DATA_REINSPECTION_ITEM? lastAdded = null; ⟦EOL⟧
+// 해설 L213: 지역 변수를 선언합니다: var duplicateCount = 0; / 변수의 초기값을 지정합니다: duplicateCount = 0
+L000213 |                 var duplicateCount = 0; ⟦EOL⟧
+// 해설 L214: 지역 변수를 선언합니다: var skippedCount = 0; / 변수의 초기값을 지정합니다: skippedCount = 0
+L000214 |                 var skippedCount = 0; ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 컬렉션 요소를 순회합니다: foreach (var row in rows)
+L000216 |                 foreach (var row in rows) ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000217 |                 { ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindShot(row.CellNo, row.ShotKey) / 지역 변수를 선언합니다: var shot = FindShot(row.CellNo, row.ShotKey); / 변수의 초기값을 지정합니다: shot = FindShot(row.CellNo, row.ShotKey)
+L000218 |                     var shot = FindShot(row.CellNo, row.ShotKey); ⟦EOL⟧
+// 해설 L219: 조건에 따라 분기합니다: if (shot is null)
+L000219 |                     if (shot is null) ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000220 |                     { ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000221 |                         skippedCount++; ⟦EOL⟧
+// 해설 L222: 다음 반복으로 진행합니다: continue;
+L000222 |                         continue; ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000223 |                     } ⟦EOL⟧
+L000224 |  ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeBeamNo(row.BeamNo) / 지역 변수를 선언합니다: var beamNo = NormalizeBeamNo(row.BeamNo); / 변수의 초기값을 지정합니다: beamNo = NormalizeBeamNo(row.BeamNo)
+L000225 |                     var beamNo = NormalizeBeamNo(row.BeamNo); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildReinspectionKey(row.CellNo, row.ShotKey) / 지역 변수를 선언합니다: var key = BuildReinspectionKey(row.CellNo, row.ShotKey); / 변수의 초기값을 지정합니다: key = BuildReinspectionKey(row.CellNo, row.ShotKey)
+L000226 |                     var key = BuildReinspectionKey(row.CellNo, row.ShotKey); ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Add(key) / 조건에 따라 분기합니다: if (!keys.Add(key))
+L000227 |                     if (!keys.Add(key)) ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000228 |                     { ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddReinspectionRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000229 |                         duplicateCount++; ⟦EOL⟧
+// 해설 L230: 다음 반복으로 진행합니다: continue;
+L000230 |                         continue; ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000231 |                     } ⟦EOL⟧
+L000232 |  ⟦EOL⟧
+// 해설 L233: 값을 대상에 대입합니다: lastAdded = CreateReinspectionItem(shot, row, beamNo, items.Count + 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateReinspectionItem(shot, row, beamNo, items.Count + 1)
+L000233 |                     lastAdded = CreateReinspectionItem(shot, row, beamNo, items.Count + 1); ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(lastAdded)
+L000234 |                     items.Add(lastAdded); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000235 |                 } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 값을 대상에 대입합니다: _reinspectionShots = items.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: items.ToArray()
+L000237 |                 _reinspectionShots = items.ToArray(); ⟦EOL⟧
+// 해설 L238: 조건에 따라 분기합니다: if (lastAdded is not null)
+L000238 |                 if (lastAdded is not null) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000239 |                 { ⟦EOL⟧
+// 해설 L240: 값을 대상에 대입합니다: _selectedReinspectionShot = lastAdded
+L000240 |                     _selectedReinspectionShot = lastAdded; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000241 |                 } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 지역 변수를 선언합니다: var addedCount = items.Count - originalCount; / 변수의 초기값을 지정합니다: addedCount = items.Count - originalCount
+L000243 |                 var addedCount = items.Count - originalCount; ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: _reinspectionStatusText = $"{sourceName}: {addedCount:N0} ADDED / {duplicateCount:N0} DUPLICATE / {skippedCount:N0} SKIPPED"
+L000244 |                 _reinspectionStatusText = $"{sourceName}: {addedCount:N0} ADDED / {duplicateCount:N0} DUPLICATE / {skippedCount:N0} SKIPPED"; ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionListState()
+L000245 |                 NotifyReinspectionListState(); ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 AddReinspectionRows.
+L000246 |             } ⟦EOL⟧
+L000247 |  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShot(object?)
+L000248 |             private void DeleteReinspectionShot(object? parameter) ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000249 |             { ⟦EOL⟧
+// 해설 L250: 조건에 따라 분기합니다: if (!CanDeleteReinspectionShot || _selectedReinspectionShot is not { } selected)
+L000250 |                 if (!CanDeleteReinspectionShot || _selectedReinspectionShot is not { } selected) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000251 |                 { ⟦EOL⟧
+// 해설 L252: 호출자에게 값 또는 제어를 반환합니다: return;
+L000252 |                     return; ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000253 |                 } ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Select((item, index) => (item, index)) .First(pair => ReferenceEquals(pair.item, selected)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Select((item, index) => (item, index)) / 지역 변수를 선언합니다: var selectedIndex = _reinspectionShots .Select((item, index) => (item, index)) .First(pair => ReferenceEquals(pair.item, selected)) .index; / 변수의 초기값을 지정합니다: selectedIndex = _reinspectionShots .Select((item, index) => (item, index)) .First(pair => ReferenceEquals(pair.item, selected)) .index
+L000255 |                 var selectedIndex = _reinspectionShots ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShot(object?)
+L000256 |                     .Select((item, index) => (item, index)) ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(pair.item, selected)
+L000257 |                     .First(pair => ReferenceEquals(pair.item, selected)) ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShot(object?)
+L000258 |                     .index; ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Where(item => !ReferenceEquals(item, selected)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Where(item => !ReferenceEquals(item, selected)) / 지역 변수를 선언합니다: var remaining = _reinspectionShots .Where(item => !ReferenceEquals(item, selected)) .ToArray(); / 변수의 초기값을 지정합니다: remaining = _reinspectionShots .Where(item => !ReferenceEquals(item, selected)) .ToArray()
+L000259 |                 var remaining = _reinspectionShots ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(item, selected)
+L000260 |                     .Where(item => !ReferenceEquals(item, selected)) ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShot(object?)
+L000261 |                     .ToArray(); ⟦EOL⟧
+// 해설 L262: 복합 대입 또는 이벤트 구독/해지 표현입니다: selected.PropertyChanged -= ReinspectionItemPropertyChanged
+L000262 |                 selected.PropertyChanged -= ReinspectionItemPropertyChanged; ⟦EOL⟧
+// 해설 L263: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < remaining.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000263 |                 for (var index = 0; index < remaining.Length; index++) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000264 |                 { ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: remaining[index].Renumber(index + 1)
+L000265 |                     remaining[index].Renumber(index + 1); ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000266 |                 } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 값을 대상에 대입합니다: _reinspectionShots = remaining
+L000268 |                 _reinspectionShots = remaining; ⟦EOL⟧
+// 해설 L269: 값을 대상에 대입합니다: _selectedReinspectionShot = remaining.Length == 0 ? null : remaining[Math.Min(selectedIndex, remaining.Length - 1)] / 조건에 따라 결과식을 선택합니다: remaining.Length == 0 ? null : remaining[Math.Min(selectedIndex, remaining.Length - 1)]
+L000269 |                 _selectedReinspectionShot = remaining.Length == 0 ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.DeleteReinspectionShot(object?)
+L000270 |                     ? null ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(selectedIndex, remaining.Length - 1)
+L000271 |                     : remaining[Math.Min(selectedIndex, remaining.Length - 1)]; ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: _reinspectionStatusText = $"{selected.Cell} / {selected.ShotName} DELETED"
+L000272 |                 _reinspectionStatusText = $"{selected.Cell} / {selected.ShotName} DELETED"; ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionListState()
+L000273 |                 NotifyReinspectionListState(); ⟦EOL⟧
+// 해설 L274: 조건에 따라 분기합니다: if (_selectedReinspectionShot is not null)
+L000274 |                 if (_selectedReinspectionShot is not null) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000275 |                 { ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: FocusReinspectionShot(_selectedReinspectionShot)
+L000276 |                     FocusReinspectionShot(_selectedReinspectionShot); ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000277 |                 } ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 DeleteReinspectionShot.
+L000278 |             } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearReinspectionShots(object?)
+L000280 |             private void ClearReinspectionShots(object? parameter) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ClearReinspectionShots.
+L000281 |             { ⟦EOL⟧
+// 해설 L282: 조건에 따라 분기합니다: if (!CanClearReinspectionShots)
+L000282 |                 if (!CanClearReinspectionShots) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ClearReinspectionShots.
+L000283 |                 { ⟦EOL⟧
+// 해설 L284: 호출자에게 값 또는 제어를 반환합니다: return;
+L000284 |                     return; ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 ClearReinspectionShots.
+L000285 |                 } ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: UntrackReinspectionItems(_reinspectionShots)
+L000287 |                 UntrackReinspectionItems(_reinspectionShots); ⟦EOL⟧
+// 해설 L288: 값을 대상에 대입합니다: _reinspectionShots = []
+L000288 |                 _reinspectionShots = []; ⟦EOL⟧
+// 해설 L289: 값을 대상에 대입합니다: _selectedReinspectionShot = null
+L000289 |                 _selectedReinspectionShot = null; ⟦EOL⟧
+// 해설 L290: 값을 대상에 대입합니다: _reinspectionStatusText = "NO SHOTS ADDED"
+L000290 |                 _reinspectionStatusText = "NO SHOTS ADDED"; ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionListState()
+L000291 |                 NotifyReinspectionListState(); ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 ClearReinspectionShots.
+L000292 |             } ⟦EOL⟧
+L000293 |  ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.MoveToReinspectionShot(object?)
+L000294 |             private async void MoveToReinspectionShot(object? parameter) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 MoveToReinspectionShot.
+L000295 |             { ⟦EOL⟧
+// 해설 L296: 조건에 따라 분기합니다: if (!CanMoveToReinspectionShot || _selectedReinspectionShot is not { } item)
+L000296 |                 if (!CanMoveToReinspectionShot || _selectedReinspectionShot is not { } item) ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 MoveToReinspectionShot.
+L000297 |                 { ⟦EOL⟧
+// 해설 L298: 호출자에게 값 또는 제어를 반환합니다: return;
+L000298 |                     return; ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 MoveToReinspectionShot.
+L000299 |                 } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 비동기 완료를 기다립니다: await RunReinspection([item], EN_ONE_SHOT_ACTION.Move, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunReinspection([item], EN_ONE_SHOT_ACTION.Move, false)
+L000301 |                 await RunReinspection([item], EN_ONE_SHOT_ACTION.Move, false); ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 MoveToReinspectionShot.
+L000302 |             } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.MoveAndInspectReinspectionShot(object?)
+L000304 |             private async void MoveAndInspectReinspectionShot(object? parameter) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 MoveAndInspectReinspectionShot.
+L000305 |             { ⟦EOL⟧
+// 해설 L306: 조건에 따라 분기합니다: if (!CanInspectReinspectionShot || _selectedReinspectionShot is not { } item)
+L000306 |                 if (!CanInspectReinspectionShot || _selectedReinspectionShot is not { } item) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 MoveAndInspectReinspectionShot.
+L000307 |                 { ⟦EOL⟧
+// 해설 L308: 호출자에게 값 또는 제어를 반환합니다: return;
+L000308 |                     return; ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 MoveAndInspectReinspectionShot.
+L000309 |                 } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 비동기 완료를 기다립니다: await RunReinspection([item], EN_ONE_SHOT_ACTION.MoveAndInspection, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunReinspection([item], EN_ONE_SHOT_ACTION.MoveAndInspection, false)
+L000311 |                 await RunReinspection([item], EN_ONE_SHOT_ACTION.MoveAndInspection, false); ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 MoveAndInspectReinspectionShot.
+L000312 |             } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InspectAllReinspectionShots(object?)
+L000314 |             private async void InspectAllReinspectionShots(object? parameter) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 InspectAllReinspectionShots.
+L000315 |             { ⟦EOL⟧
+// 해설 L316: 조건에 따라 분기합니다: if (!CanInspectAllReinspectionShots)
+L000316 |                 if (!CanInspectAllReinspectionShots) ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 InspectAllReinspectionShots.
+L000317 |                 { ⟦EOL⟧
+// 해설 L318: 호출자에게 값 또는 제어를 반환합니다: return;
+L000318 |                     return; ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 InspectAllReinspectionShots.
+L000319 |                 } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 비동기 완료를 기다립니다: await RunReinspection(_reinspectionShots.ToArray(), EN_ONE_SHOT_ACTION.MoveAndInspection, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunReinspection(_reinspectionShots.ToArray(), EN_ONE_SHOT_ACTION.MoveAndInspection, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots.ToArray()
+L000321 |                 await RunReinspection(_reinspectionShots.ToArray(), EN_ONE_SHOT_ACTION.MoveAndInspection, true); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 InspectAllReinspectionShots.
+L000322 |             } ⟦EOL⟧
+L000323 |  ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StopReinspection(object?)
+L000324 |             private void StopReinspection(object? parameter) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 StopReinspection.
+L000325 |             { ⟦EOL⟧
+// 해설 L326: 조건에 따라 분기합니다: if (!CanStopReinspection)
+L000326 |                 if (!CanStopReinspection) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 StopReinspection.
+L000327 |                 { ⟦EOL⟧
+// 해설 L328: 호출자에게 값 또는 제어를 반환합니다: return;
+L000328 |                     return; ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 StopReinspection.
+L000329 |                 } ⟦EOL⟧
+L000330 |  ⟦EOL⟧
+// 해설 L331: 값을 대상에 대입합니다: _reinspectionStatusText = "RE-INSPECTION STOP REQUESTED"
+L000331 |                 _reinspectionStatusText = "RE-INSPECTION STOP REQUESTED"; ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000332 |                 Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000333 |                 _reinspectionCancellation?.Cancel(); ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.Stop()
+L000334 |                 _reviewManager.Stop(); ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 StopReinspection.
+L000335 |             } ⟦EOL⟧
+L000336 |  ⟦EOL⟧
+// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000337 |             private async void SaveReinspectionResult(object? parameter) ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000338 |             { ⟦EOL⟧
+// 해설 L339: 조건에 따라 분기합니다: if (!CanSaveReinspectionResult || _loadedResultFile is not { } source)
+L000339 |                 if (!CanSaveReinspectionResult || _loadedResultFile is not { } source) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000340 |                 { ⟦EOL⟧
+// 해설 L341: 호출자에게 값 또는 제어를 반환합니다: return;
+L000341 |                     return; ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000342 |                 } ⟦EOL⟧
+L000343 |  ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Where(item => item.HasCompletedMeasurement) .Select(item => new ST_REVIEW_REINSPECTION_UPDATE( item.CellNo, item.ShotKey, item.ShotName, item.SourceBeamNo, item.BeamNo, item.RawResultX!.Value, item.Ra… / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots .Where(item => item.HasCompletedMeasurement) / 지역 변수를 선언합니다: var updates = _reinspectionShots .Where(item => item.HasCompletedMeasurement) .Select(item => new ST_REVIEW_REINSPECTION_UPDATE( item.CellNo, item.ShotKey, item.ShotName, item.Source
+L000344 |                 var updates = _reinspectionShots ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000345 |                     .Where(item => item.HasCompletedMeasurement) ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_REINSPECTION_UPDATE( item.CellNo, item.ShotKey, item.ShotName, item.SourceBeamNo, item.BeamNo, item.RawResultX!.Value, item.RawResultY!.Value, item.ResultX!.Value, item.ResultY!.Value, item.State)
+L000346 |                     .Select(item => new ST_REVIEW_REINSPECTION_UPDATE( ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000347 |                         item.CellNo, ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000348 |                         item.ShotKey, ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000349 |                         item.ShotName, ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000350 |                         item.SourceBeamNo, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000351 |                         item.BeamNo, ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000352 |                         item.RawResultX!.Value, ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000353 |                         item.RawResultY!.Value, ⟦EOL⟧
+// 해설 L354: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000354 |                         item.ResultX!.Value, ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000355 |                         item.ResultY!.Value, ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000356 |                         item.State)) ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000357 |                     .ToArray(); ⟦EOL⟧
+// 해설 L358: 조건에 따라 분기합니다: if (updates.Length == 0)
+L000358 |                 if (updates.Length == 0) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000359 |                 { ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "재검사 결과 저장 불가", "OK 또는 NG로 완료된 재검사 Shot이 없습니다.")
+L000360 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000361 |                         "재검사 결과 저장 불가", ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000362 |                         "OK 또는 NG로 완료된 재검사 Shot이 없습니다."); ⟦EOL⟧
+// 해설 L363: 호출자에게 값 또는 제어를 반환합니다: return;
+L000363 |                     return; ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000364 |                 } ⟦EOL⟧
+L000365 |  ⟦EOL⟧
+// 해설 L366: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation( "재검사 결과 저장", $"BASE 결과: {source.FileName}\n" + $"갱신 Shot: {updates.Length:N0}개\n\n" + "재검사 결과를 새 파일로 저장하시겠습니까?", "저장") / 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation( "재검사 결과 저장", $"BASE 결과: {source.FileName}\n" + $"갱신 Shot: {updates.Length:N0}개\n\n" + "재검사 결과를 새 파일로 저장하시겠습니까?", "저장"))
+L000366 |                 if (!CRecipeConfirmDialog.ShowConfirmation( ⟦EOL⟧
+// 해설 L367: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000367 |                         "재검사 결과 저장", ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000368 |                         $"BASE 결과: {source.FileName}\n" ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000369 |                         + $"갱신 Shot: {updates.Length:N0}개\n\n" ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000370 |                         + "재검사 결과를 새 파일로 저장하시겠습니까?", ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000371 |                         "저장")) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000372 |                 { ⟦EOL⟧
+// 해설 L373: 호출자에게 값 또는 제어를 반환합니다: return;
+L000373 |                     return; ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000374 |                 } ⟦EOL⟧
+L000375 |  ⟦EOL⟧
+// 해설 L376: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000376 |                 _reinspectionSaveCancellation?.Cancel(); ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000377 |                 _reinspectionSaveCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: _reinspectionSaveCancellation = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
+L000378 |                 _reinspectionSaveCancellation = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L379: 지역 변수를 선언합니다: var cancellationToken = _reinspectionSaveCancellation.Token; / 변수의 초기값을 지정합니다: cancellationToken = _reinspectionSaveCancellation.Token
+L000379 |                 var cancellationToken = _reinspectionSaveCancellation.Token; ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetReinspectionSaving(true)
+L000380 |                 SetReinspectionSaving(true); ⟦EOL⟧
+// 해설 L381: 값을 대상에 대입합니다: _reinspectionStatusText = $"SAVE RESULT - BASE {(_loadedCatalog?.ResultType ?? "RESULT")} / {updates.Length:N0} SHOTS"
+L000381 |                 _reinspectionStatusText = $"SAVE RESULT - BASE {(_loadedCatalog?.ResultType ?? "RESULT")} / {updates.Length:N0} SHOTS"; ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000382 |                 Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L383: 지역 변수를 선언합니다: string? savedPath = null; / 변수의 초기값을 지정합니다: savedPath = null
+L000383 |                 string? savedPath = null; ⟦EOL⟧
+// 해설 L384: 예외 처리 범위입니다: try
+L000384 |                 try ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000385 |                 { ⟦EOL⟧
+// 해설 L386: 지역 변수를 선언합니다: var savedAt = DateTimeOffset.Now; / 변수의 초기값을 지정합니다: savedAt = DateTimeOffset.Now
+L000386 |                     var savedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L387: 값을 대상에 대입합니다: savedPath = await Task.Run( async () => await _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken).ConfigureAwait(false), cancellationToken) / 비동기 완료를 기다립니다: await Task.Run( async () => await _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken).ConfigureAwait(false), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run( async () => await _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken).ConfigureAwait(false)
+L000387 |                     savedPath = await Task.Run( ⟦EOL⟧
+// 해설 L388: 비동기 완료를 기다립니다: await _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveReinspectionRevision( source, updates, savedAt, cancellationToken)
+L000388 |                         async () => await _reviewResultFile.SaveReinspectionRevision( ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000389 |                             source, ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000390 |                             updates, ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000391 |                             savedAt, ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000392 |                             cancellationToken).ConfigureAwait(false), ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000393 |                         cancellationToken); ⟦EOL⟧
+// 해설 L394: 값을 대상에 대입합니다: _hasUnsavedReinspectionMeasurements = false
+L000394 |                     _hasUnsavedReinspectionMeasurements = false; ⟦EOL⟧
+// 해설 L395: 값을 대상에 대입합니다: _reinspectionStatusText = $"SAVE RESULT COMPLETED - {Path.GetFileName(savedPath)}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
+L000395 |                     _reinspectionStatusText = $"SAVE RESULT COMPLETED - {Path.GetFileName(savedPath)}"; ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Re-inspection result saved from BASE {_loadedCatalog?.ResultType ?? "RESULT"}: {savedPath}")
+L000396 |                     _statusReporter($"Re-inspection result saved from BASE {_loadedCatalog?.ResultType ?? "RESULT"}: {savedPath}"); ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000397 |                 } ⟦EOL⟧
+// 해설 L398: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+L000398 |                 catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000399 |                 { ⟦EOL⟧
+// 해설 L400: 값을 대상에 대입합니다: _reinspectionStatusText = "SAVE RESULT CANCELED"
+L000400 |                     _reinspectionStatusText = "SAVE RESULT CANCELED"; ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_reinspectionStatusText)
+L000401 |                     _statusReporter(_reinspectionStatusText); ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000402 |                 } ⟦EOL⟧
+// 해설 L403: 지정 예외를 처리합니다: catch (Exception exception)
+L000403 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000404 |                 { ⟦EOL⟧
+// 해설 L405: 값을 대상에 대입합니다: _reinspectionStatusText = $"SAVE RESULT FAILED - {exception.Message}"
+L000405 |                     _reinspectionStatusText = $"SAVE RESULT FAILED - {exception.Message}"; ⟦EOL⟧
+// 해설 L406: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_reinspectionStatusText)
+L000406 |                     _statusReporter(_reinspectionStatusText); ⟦EOL⟧
+// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "재검사 결과 저장 실패", exception.Message)
+L000407 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000408 |                         "재검사 결과 저장 실패", ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000409 |                         exception.Message); ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000410 |                 } ⟦EOL⟧
+// 해설 L411: 종료 정리 구간입니다: finally
+L000411 |                 finally ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000412 |                 { ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000413 |                     _reinspectionSaveCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L414: 값을 대상에 대입합니다: _reinspectionSaveCancellation = null
+L000414 |                     _reinspectionSaveCancellation = null; ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetReinspectionSaving(false)
+L000415 |                     SetReinspectionSaving(false); ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000416 |                     Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000417 |                 } ⟦EOL⟧
+L000418 |  ⟦EOL⟧
+L000419 |  ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(savedPath) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(savedPath))
+L000420 |                 if (string.IsNullOrWhiteSpace(savedPath)) ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000421 |                 { ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return;
+L000422 |                     return; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000423 |                 } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "재검사 결과 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?") / 지역 변수를 선언합니다: var shouldLoad = CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "재검사 결과 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?"); / 변수의 초기값을 지정합니다: shouldLoad = CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "재검사 결과 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?")
+L000425 |                 var shouldLoad = CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( ⟦EOL⟧
+// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000426 |                     "재검사 결과 저장 완료", ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
+L000427 |                     $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?"); ⟦EOL⟧
+// 해설 L428: 조건에 따라 분기합니다: if (!shouldLoad)
+L000428 |                 if (!shouldLoad) ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000429 |                 { ⟦EOL⟧
+// 해설 L430: 호출자에게 값 또는 제어를 반환합니다: return;
+L000430 |                     return; ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000431 |                 } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 비동기 완료를 기다립니다: await Refresh(CancellationToken.None, savedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(CancellationToken.None, savedPath)
+L000433 |                 await Refresh(CancellationToken.None, savedPath); ⟦EOL⟧
+// 해설 L434: 조건에 따라 분기합니다: if (_selectedNode?.Result is not { } savedResult || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase))
+L000434 |                 if (_selectedNode?.Result is not { } savedResult ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)
+L000435 |                     || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000436 |                 { ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "재검사 결과 LOAD 실패", "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요.")
+L000437 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000438 |                         "재검사 결과 LOAD 실패", ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveReinspectionResult(object?)
+L000439 |                         "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요."); ⟦EOL⟧
+// 해설 L440: 호출자에게 값 또는 제어를 반환합니다: return;
+L000440 |                     return; ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000441 |                 } ⟦EOL⟧
+L000442 |  ⟦EOL⟧
+// 해설 L443: 비동기 완료를 기다립니다: await LoadSelectedData() / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSelectedData()
+L000443 |                 await LoadSelectedData(); ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 SaveReinspectionResult.
+L000444 |             } ⟦EOL⟧
+L000445 |  ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000446 |             private async Task RunReinspection( ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000447 |                 IReadOnlyList<ST_REVIEW_DATA_REINSPECTION_ITEM> items, ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000448 |                 EN_ONE_SHOT_ACTION action, ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000449 |                 bool isBatch) ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000450 |             { ⟦EOL⟧
+// 해설 L451: 조건에 따라 분기합니다: if (_isReinspectionRunning || items.Count == 0)
+L000451 |                 if (_isReinspectionRunning || items.Count == 0) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000452 |                 { ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return;
+L000453 |                     return; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000454 |                 } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000456 |                 _reinspectionCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L457: 값을 대상에 대입합니다: _reinspectionCancellation = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
+L000457 |                 _reinspectionCancellation = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L458: 지역 변수를 선언합니다: var token = _reinspectionCancellation.Token; / 변수의 초기값을 지정합니다: token = _reinspectionCancellation.Token
+L000458 |                 var token = _reinspectionCancellation.Token; ⟦EOL⟧
+// 해설 L459: 지역 변수를 선언합니다: ST_REVIEW_DATA_REINSPECTION_ITEM? activeItem = null; / 변수의 초기값을 지정합니다: activeItem = null
+L000459 |                 ST_REVIEW_DATA_REINSPECTION_ITEM? activeItem = null; ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetReinspectionRunning(true)
+L000460 |                 SetReinspectionRunning(true); ⟦EOL⟧
+// 해설 L461: 예외 처리 범위입니다: try
+L000461 |                 try ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000462 |                 { ⟦EOL⟧
+// 해설 L463: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < items.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000463 |                     for (var index = 0; index < items.Count; index++) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000464 |                     { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000465 |                         token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L466: 값을 대상에 대입합니다: activeItem = items[index]
+L000466 |                         activeItem = items[index]; ⟦EOL⟧
+// 해설 L467: 값을 대상에 대입합니다: SelectedReinspectionShot = activeItem
+L000467 |                         SelectedReinspectionShot = activeItem; ⟦EOL⟧
+// 해설 L468: 함수·델리게이트 또는 객체 생성자를 호출합니다: FocusReinspectionShot(activeItem)
+L000468 |                         FocusReinspectionShot(activeItem); ⟦EOL⟧
+// 해설 L469: 값을 대상에 대입합니다: _reinspectionStatusText = isBatch ? $"RE-INSPECTION {index + 1:N0} / {items.Count:N0} - {activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo}" : $"{activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo} / 조건에 따라 결과식을 선택합니다: isBatch ? $"RE-INSPECTION {index + 1:N0} / {items.Count:N0} - {activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo}" : $"{activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo}"
+L000469 |                         _reinspectionStatusText = isBatch ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000470 |                             ? $"RE-INSPECTION {index + 1:N0} / {items.Count:N0} - {activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo}" ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000471 |                             : $"{activeItem.Cell} / {activeItem.ShotName} / BEAM {activeItem.BeamNo}"; ⟦EOL⟧
+// 해설 L472: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000472 |                         Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L473: 비동기 완료를 기다립니다: await ExecuteReinspectionItem(activeItem, action, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteReinspectionItem(activeItem, action, token)
+L000473 |                         await ExecuteReinspectionItem(activeItem, action, token); ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000474 |                     } ⟦EOL⟧
+L000475 |  ⟦EOL⟧
+// 해설 L476: 값을 대상에 대입합니다: _reinspectionStatusText = action == EN_ONE_SHOT_ACTION.Move ? "MOVE TO SHOT COMPLETED" : $"RE-INSPECTION COMPLETED - {items.Count:N0} SHOTS" / 조건에 따라 결과식을 선택합니다: action == EN_ONE_SHOT_ACTION.Move ? "MOVE TO SHOT COMPLETED" : $"RE-INSPECTION COMPLETED - {items.Count:N0} SHOTS"
+L000476 |                     _reinspectionStatusText = action == EN_ONE_SHOT_ACTION.Move ⟦EOL⟧
+// 해설 L477: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000477 |                         ? "MOVE TO SHOT COMPLETED" ⟦EOL⟧
+// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RunReinspection(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_IT
+L000478 |                         : $"RE-INSPECTION COMPLETED - {items.Count:N0} SHOTS"; ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_reinspectionStatusText)
+L000479 |                     _statusReporter(_reinspectionStatusText); ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000480 |                 } ⟦EOL⟧
+// 해설 L481: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000481 |                 catch (OperationCanceledException) when (token.IsCancellationRequested) ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000482 |                 { ⟦EOL⟧
+// 해설 L483: 조건에 따라 분기합니다: if (activeItem is not null && action != EN_ONE_SHOT_ACTION.Move)
+L000483 |                     if (activeItem is not null && action != EN_ONE_SHOT_ACTION.Move) ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000484 |                     { ⟦EOL⟧
+// 해설 L485: 값을 대상에 대입합니다: activeItem.State = "STOPPED"
+L000485 |                         activeItem.State = "STOPPED"; ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000486 |                     } ⟦EOL⟧
+L000487 |  ⟦EOL⟧
+// 해설 L488: 값을 대상에 대입합니다: _reinspectionStatusText = "RE-INSPECTION STOPPED"
+L000488 |                     _reinspectionStatusText = "RE-INSPECTION STOPPED"; ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_reinspectionStatusText)
+L000489 |                     _statusReporter(_reinspectionStatusText); ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000490 |                 } ⟦EOL⟧
+// 해설 L491: 지정 예외를 처리합니다: catch (Exception exception)
+L000491 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000492 |                 { ⟦EOL⟧
+// 해설 L493: 조건에 따라 분기합니다: if (activeItem is not null && action != EN_ONE_SHOT_ACTION.Move)
+L000493 |                     if (activeItem is not null && action != EN_ONE_SHOT_ACTION.Move) ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000494 |                     { ⟦EOL⟧
+// 해설 L495: 값을 대상에 대입합니다: activeItem.State = "FAILED"
+L000495 |                         activeItem.State = "FAILED"; ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000496 |                     } ⟦EOL⟧
+L000497 |  ⟦EOL⟧
+// 해설 L498: 값을 대상에 대입합니다: _reinspectionStatusText = $"RE-INSPECTION FAILED - {exception.Message}"
+L000498 |                     _reinspectionStatusText = $"RE-INSPECTION FAILED - {exception.Message}"; ⟦EOL⟧
+// 해설 L499: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_reinspectionStatusText)
+L000499 |                     _statusReporter(_reinspectionStatusText); ⟦EOL⟧
+// 해설 L500: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000500 |                 } ⟦EOL⟧
+// 해설 L501: 종료 정리 구간입니다: finally
+L000501 |                 finally ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000502 |                 { ⟦EOL⟧
+// 해설 L503: 컬렉션 요소를 순회합니다: foreach (var item in items)
+L000503 |                     foreach (var item in items) ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000504 |                     { ⟦EOL⟧
+// 해설 L505: 값을 대상에 대입합니다: item.IsRunning = false
+L000505 |                         item.IsRunning = false; ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000506 |                     } ⟦EOL⟧
+L000507 |  ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000508 |                     _reinspectionCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L509: 값을 대상에 대입합니다: _reinspectionCancellation = null
+L000509 |                     _reinspectionCancellation = null; ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetReinspectionRunning(false)
+L000510 |                     SetReinspectionRunning(false); ⟦EOL⟧
+// 해설 L511: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000511 |                     Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000512 |                 } ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 RunReinspection.
+L000513 |             } ⟦EOL⟧
+L000514 |  ⟦EOL⟧
+// 해설 L515: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000515 |             private async Task ExecuteReinspectionItem( ⟦EOL⟧
+// 해설 L516: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000516 |                 ST_REVIEW_DATA_REINSPECTION_ITEM item, ⟦EOL⟧
+// 해설 L517: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000517 |                 EN_ONE_SHOT_ACTION action, ⟦EOL⟧
+// 해설 L518: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000518 |                 CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L519: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000519 |             { ⟦EOL⟧
+// 해설 L520: 조건에 따라 분기합니다: if (_loadedRecipe is null || _loadedResultFile is null)
+L000520 |                 if (_loadedRecipe is null || _loadedResultFile is null) ⟦EOL⟧
+// 해설 L521: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000521 |                 { ⟦EOL⟧
+// 해설 L522: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("불러온 Review Data 또는 Recipe가 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("불러온 Review Data 또는 Recipe가 없습니다.");
+L000522 |                     throw new InvalidOperationException("불러온 Review Data 또는 Recipe가 없습니다."); ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000523 |                 } ⟦EOL⟧
+L000524 |  ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.CreatePlan( _loadedRecipe, [item.ShotKey], item.BeamNo, _loadedResultFile.ShiftOffsetX, _loadedResultFile.ShiftOffsetY) / 지역 변수를 선언합니다: var plan = _reviewManager.CreatePlan( _loadedRecipe, [item.ShotKey], item.BeamNo, _loadedResultFile.ShiftOffsetX, _loadedResultFile.ShiftOffsetY); / 변수의 초기값을 지정합니다: plan = _reviewManager.CreatePlan( _loadedRecipe, [item.ShotKey], item.BeamNo, _loadedResultFile.ShiftOffsetX, _loadedResultFile.ShiftOffsetY)
+L000525 |                 var plan = _reviewManager.CreatePlan( ⟦EOL⟧
+// 해설 L526: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000526 |                     _loadedRecipe, ⟦EOL⟧
+// 해설 L527: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000527 |                     [item.ShotKey], ⟦EOL⟧
+// 해설 L528: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000528 |                     item.BeamNo, ⟦EOL⟧
+// 해설 L529: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000529 |                     _loadedResultFile.ShiftOffsetX, ⟦EOL⟧
+// 해설 L530: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000530 |                     _loadedResultFile.ShiftOffsetY); ⟦EOL⟧
+// 해설 L531: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)) / 지역 변수를 선언합니다: var point = plan.Points.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)) ?? throw new InvalidOperationException($"{item.Cell} / {item.ShotNa / 변수의 초기값을 지정합니다: point = plan.Points.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.Shot
+L000531 |                 var point = plan.Points.FirstOrDefault(candidate => ⟦EOL⟧
+// 해설 L532: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000532 |                     candidate.CellNo == item.CellNo ⟦EOL⟧
+// 해설 L533: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)
+L000533 |                     && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L534: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{item.Cell} / {item.ShotName}의 검사 좌표를 생성할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{item.Cell} / {item.ShotName}의 검사 좌표를 생성할 수 없습니다.")
+L000534 |                     ?? throw new InvalidOperationException($"{item.Cell} / {item.ShotName}의 검사 좌표를 생성할 수 없습니다."); ⟦EOL⟧
+L000535 |  ⟦EOL⟧
+// 해설 L536: 값을 대상에 대입합니다: item.IsRunning = true
+L000536 |                 item.IsRunning = true; ⟦EOL⟧
+// 해설 L537: 조건에 따라 분기합니다: if (action != EN_ONE_SHOT_ACTION.Move)
+L000537 |                 if (action != EN_ONE_SHOT_ACTION.Move) ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000538 |                 { ⟦EOL⟧
+// 해설 L539: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.BeginInspection()
+L000539 |                     item.BeginInspection(); ⟦EOL⟧
+// 해설 L540: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000540 |                 } ⟦EOL⟧
+L000541 |  ⟦EOL⟧
+// 해설 L542: 선언·서명/매개변수·접근 조건입니다 · void ReportProgress(string)
+L000542 |                 void ReportProgress(string message) ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 ReportProgress.
+L000543 |                 { ⟦EOL⟧
+// 해설 L544: 값을 대상에 대입합니다: _reinspectionStatusText = $"{item.Cell} / {item.ShotName} / BEAM {item.BeamNo} - {message}"
+L000544 |                     _reinspectionStatusText = $"{item.Cell} / {item.ShotName} / BEAM {item.BeamNo} - {message}"; ⟦EOL⟧
+// 해설 L545: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000545 |                     Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L546: 함수·델리게이트 또는 객체 생성자를 호출합니다: message.Contains("이동 완료", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (message.Contains("이동 완료", StringComparison.Ordinal))
+L000546 |                     if (message.Contains("이동 완료", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 ReportProgress.
+L000547 |                     { ⟦EOL⟧
+// 해설 L548: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateReinspectionCamera(point, "SIMULATION")
+L000548 |                         UpdateReinspectionCamera(point, "SIMULATION"); ⟦EOL⟧
+// 해설 L549: 구문 블록 경계입니다 · 소속 ReportProgress.
+L000549 |                     } ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 ReportProgress.
+L000550 |                 } ⟦EOL⟧
+L000551 |  ⟦EOL⟧
+// 해설 L552: 비동기 완료를 기다립니다: await _reviewManager.ExecuteOneShot( plan, point, action, EN_ONE_SHOT_METHOD.MarkFindSingle, ReportProgress, cancellationToken, saveResult: false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.ExecuteOneShot( plan, point, action, EN_ONE_SHOT_METHOD.MarkFindSingle, ReportProgress, cancellationToken, saveResult: false) / 지역 변수를 선언합니다: var result = await _reviewManager.ExecuteOneShot( plan, point, action, EN_ONE_SHOT_METHOD.MarkFindSingle, ReportProgress, cancellationToken, saveResult: false); / 변수의 초기값을 지정합니다: result = awai
+L000552 |                 var result = await _reviewManager.ExecuteOneShot( ⟦EOL⟧
+// 해설 L553: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000553 |                     plan, ⟦EOL⟧
+// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000554 |                     point, ⟦EOL⟧
+// 해설 L555: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000555 |                     action, ⟦EOL⟧
+// 해설 L556: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000556 |                     EN_ONE_SHOT_METHOD.MarkFindSingle, ⟦EOL⟧
+// 해설 L557: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000557 |                     ReportProgress, ⟦EOL⟧
+// 해설 L558: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000558 |                     cancellationToken, ⟦EOL⟧
+// 해설 L559: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000559 |                     saveResult: false); ⟦EOL⟧
+// 해설 L560: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateReinspectionCamera(result.Point, result.IsStageSimulation ? "SIMULATION" : "ONLINE") / 조건에 따라 결과식을 선택합니다: result.IsStageSimulation ? "SIMULATION" : "ONLINE"
+L000560 |                 UpdateReinspectionCamera(result.Point, result.IsStageSimulation ? "SIMULATION" : "ONLINE"); ⟦EOL⟧
+// 해설 L561: 조건에 따라 분기합니다: if (action == EN_ONE_SHOT_ACTION.Move)
+L000561 |                 if (action == EN_ONE_SHOT_ACTION.Move) ⟦EOL⟧
+// 해설 L562: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000562 |                 { ⟦EOL⟧
+// 해설 L563: 값을 대상에 대입합니다: item.IsRunning = false
+L000563 |                     item.IsRunning = false; ⟦EOL⟧
+// 해설 L564: 호출자에게 값 또는 제어를 반환합니다: return;
+L000564 |                     return; ⟦EOL⟧
+// 해설 L565: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000565 |                 } ⟦EOL⟧
+L000566 |  ⟦EOL⟧
+// 해설 L567: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.VisionErrorToStageOffset( result.Point.ErrorX, result.Point.ErrorY, plan.VisionFlipType) / 지역 변수를 선언합니다: var converted = CReviewManager.VisionErrorToStageOffset( result.Point.ErrorX, result.Point.ErrorY, plan.VisionFlipType); / 변수의 초기값을 지정합니다: converted = CReviewManager.VisionErrorToStageOffset( result.Point.ErrorX, result.Point.ErrorY, plan.VisionFlipType)
+L000567 |                 var converted = CReviewManager.VisionErrorToStageOffset( ⟦EOL⟧
+// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000568 |                     result.Point.ErrorX, ⟦EOL⟧
+// 해설 L569: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000569 |                     result.Point.ErrorY, ⟦EOL⟧
+// 해설 L570: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000570 |                     plan.VisionFlipType); ⟦EOL⟧
+// 해설 L571: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Point.Judge.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Point.Judge.Trim() / 지역 변수를 선언합니다: var state = result.Point.Judge.Trim().ToUpperInvariant() switch { "OK" => "OK", "NG" => "NG", _ => throw new InvalidDataException($"Vision 재검사 판정이 OK/NG가 아닙니다. Judge={result.Point.Judge}") }; / 값별 결과식을 선택합니다: result.Point.Judge.Trim().ToUpperInvariant() switch { "OK" => "OK", "NG" => "NG", _ => throw new InvalidDataException($"Vision 재검사 판정이 OK/NG가 아닙니다. Judge={result.Point.Judge}") } / 변수의 초기값
+L000571 |                 var state = result.Point.Judge.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L572: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000572 |                 { ⟦EOL⟧
+// 해설 L573: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000573 |                     "OK" => "OK", ⟦EOL⟧
+// 해설 L574: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000574 |                     "NG" => "NG", ⟦EOL⟧
+// 해설 L575: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision 재검사 판정이 OK/NG가 아닙니다. Judge={result.Point.Judge}") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision 재검사 판정이 OK/NG가 아닙니다. Judge={result.Point.Judge}")
+L000575 |                     _ => throw new InvalidDataException($"Vision 재검사 판정이 OK/NG가 아닙니다. Judge={result.Point.Judge}") ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000576 |                 }; ⟦EOL⟧
+// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ApplyMeasurement( result.Point.ErrorX, result.Point.ErrorY, converted.X, converted.Y, state)
+L000577 |                 item.ApplyMeasurement( ⟦EOL⟧
+// 해설 L578: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000578 |                     result.Point.ErrorX, ⟦EOL⟧
+// 해설 L579: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000579 |                     result.Point.ErrorY, ⟦EOL⟧
+// 해설 L580: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000580 |                     converted.X, ⟦EOL⟧
+// 해설 L581: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000581 |                     converted.Y, ⟦EOL⟧
+// 해설 L582: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExecuteReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM, Drilling.Common.Review.EN_ONE
+L000582 |                     state); ⟦EOL⟧
+// 해설 L583: 값을 대상에 대입합니다: item.IsRunning = false
+L000583 |                 item.IsRunning = false; ⟦EOL⟧
+// 해설 L584: 구문 블록 경계입니다 · 소속 ExecuteReinspectionItem.
+L000584 |             } ⟦EOL⟧
+L000585 |  ⟦EOL⟧
+// 해설 L586: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.UpdateReinspectionCamera(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, string)
+L000586 |             private void UpdateReinspectionCamera(ST_REVIEW_PLAN_POINT point, string mode) ⟦EOL⟧
+// 해설 L587: 구문 블록 경계입니다 · 소속 UpdateReinspectionCamera.
+L000587 |             { ⟦EOL⟧
+// 해설 L588: 함수·델리게이트 또는 객체 생성자를 호출합니다: Camera.UpdateFeedback( point.ReviewTargetY.ToString("R", CultureInfo.InvariantCulture), point.ReviewTargetX.ToString("R", CultureInfo.InvariantCulture), mode)
+L000588 |                 Camera.UpdateFeedback( ⟦EOL⟧
+// 해설 L589: 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ReviewTargetY.ToString("R", CultureInfo.InvariantCulture)
+L000589 |                     point.ReviewTargetY.ToString("R", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L590: 함수·델리게이트 또는 객체 생성자를 호출합니다: point.ReviewTargetX.ToString("R", CultureInfo.InvariantCulture)
+L000590 |                     point.ReviewTargetX.ToString("R", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L591: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.UpdateReinspectionCamera(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, string)
+L000591 |                     mode); ⟦EOL⟧
+// 해설 L592: 구문 블록 경계입니다 · 소속 UpdateReinspectionCamera.
+L000592 |             } ⟦EOL⟧
+L000593 |  ⟦EOL⟧
+// 해설 L594: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetReinspectionRunning(bool)
+L000594 |             private void SetReinspectionRunning(bool value) ⟦EOL⟧
+// 해설 L595: 구문 블록 경계입니다 · 소속 SetReinspectionRunning.
+L000595 |             { ⟦EOL⟧
+// 해설 L596: 조건에 따라 분기합니다: if (_isReinspectionRunning == value)
+L000596 |                 if (_isReinspectionRunning == value) ⟦EOL⟧
+// 해설 L597: 구문 블록 경계입니다 · 소속 SetReinspectionRunning.
+L000597 |                 { ⟦EOL⟧
+// 해설 L598: 호출자에게 값 또는 제어를 반환합니다: return;
+L000598 |                     return; ⟦EOL⟧
+// 해설 L599: 구문 블록 경계입니다 · 소속 SetReinspectionRunning.
+L000599 |                 } ⟦EOL⟧
+L000600 |  ⟦EOL⟧
+// 해설 L601: 값을 대상에 대입합니다: _isReinspectionRunning = value
+L000601 |                 _isReinspectionRunning = value; ⟦EOL⟧
+// 해설 L602: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionRunning)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionRunning)
+L000602 |                 Notify(nameof(IsReinspectionRunning)); ⟦EOL⟧
+// 해설 L603: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEditReinspectionList)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEditReinspectionList)
+L000603 |                 Notify(nameof(CanEditReinspectionList)); ⟦EOL⟧
+// 해설 L604: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000604 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L605: 구문 블록 경계입니다 · 소속 SetReinspectionRunning.
+L000605 |             } ⟦EOL⟧
+L000606 |  ⟦EOL⟧
+// 해설 L607: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetReinspectionSaving(bool)
+L000607 |             private void SetReinspectionSaving(bool value) ⟦EOL⟧
+// 해설 L608: 구문 블록 경계입니다 · 소속 SetReinspectionSaving.
+L000608 |             { ⟦EOL⟧
+// 해설 L609: 조건에 따라 분기합니다: if (_isReinspectionSaving == value)
+L000609 |                 if (_isReinspectionSaving == value) ⟦EOL⟧
+// 해설 L610: 구문 블록 경계입니다 · 소속 SetReinspectionSaving.
+L000610 |                 { ⟦EOL⟧
+// 해설 L611: 호출자에게 값 또는 제어를 반환합니다: return;
+L000611 |                     return; ⟦EOL⟧
+// 해설 L612: 구문 블록 경계입니다 · 소속 SetReinspectionSaving.
+L000612 |                 } ⟦EOL⟧
+L000613 |  ⟦EOL⟧
+// 해설 L614: 값을 대상에 대입합니다: _isReinspectionSaving = value
+L000614 |                 _isReinspectionSaving = value; ⟦EOL⟧
+// 해설 L615: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionSaving)
+L000615 |                 Notify(nameof(IsReinspectionSaving)); ⟦EOL⟧
+// 해설 L616: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEditReinspectionList)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEditReinspectionList)
+L000616 |                 Notify(nameof(CanEditReinspectionList)); ⟦EOL⟧
+// 해설 L617: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000617 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L618: 구문 블록 경계입니다 · 소속 SetReinspectionSaving.
+L000618 |             } ⟦EOL⟧
+L000619 |  ⟦EOL⟧
+// 해설 L620: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetReinspectionRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool)
+L000620 |             public void SetReinspectionRowSelection(ST_REVIEW_DATA_GRID_ROW row, bool isSelected) ⟦EOL⟧
+// 해설 L621: 구문 블록 경계입니다 · 소속 SetReinspectionRowSelection.
+L000621 |             { ⟦EOL⟧
+// 해설 L622: 값을 대상에 대입합니다: row.IsReinspectionSelected = isSelected
+L000622 |                 row.IsReinspectionSelected = isSelected; ⟦EOL⟧
+// 해설 L623: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000623 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L624: 구문 블록 경계입니다 · 소속 SetReinspectionRowSelection.
+L000624 |             } ⟦EOL⟧
+L000625 |  ⟦EOL⟧
+// 해설 L626: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectReinspectionShot(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM)
+L000626 |             public void SelectReinspectionShot(ST_REVIEW_DATA_REINSPECTION_ITEM item) ⟦EOL⟧
+// 해설 L627: 구문 블록 경계입니다 · 소속 SelectReinspectionShot.
+L000627 |             { ⟦EOL⟧
+// 해설 L628: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots.Contains(item) / 조건에 따라 분기합니다: if (!_isReinspectionMode || !_reinspectionShots.Contains(item))
+L000628 |                 if (!_isReinspectionMode || !_reinspectionShots.Contains(item)) ⟦EOL⟧
+// 해설 L629: 구문 블록 경계입니다 · 소속 SelectReinspectionShot.
+L000629 |                 { ⟦EOL⟧
+// 해설 L630: 호출자에게 값 또는 제어를 반환합니다: return;
+L000630 |                     return; ⟦EOL⟧
+// 해설 L631: 구문 블록 경계입니다 · 소속 SelectReinspectionShot.
+L000631 |                 } ⟦EOL⟧
+L000632 |  ⟦EOL⟧
+// 해설 L633: 값을 대상에 대입합니다: SelectedReinspectionShot = item
+L000633 |                 SelectedReinspectionShot = item; ⟦EOL⟧
+// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: FocusReinspectionShot(item)
+L000634 |                 FocusReinspectionShot(item); ⟦EOL⟧
+// 해설 L635: 구문 블록 경계입니다 · 소속 SelectReinspectionShot.
+L000635 |             } ⟦EOL⟧
+L000636 |  ⟦EOL⟧
+// 해설 L637: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FocusReinspectionShot(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM)
+L000637 |             private void FocusReinspectionShot(ST_REVIEW_DATA_REINSPECTION_ITEM item) ⟦EOL⟧
+// 해설 L638: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000638 |             { ⟦EOL⟧
+// 해설 L639: 조건에 따라 분기합니다: if (!_hasLoadedData)
+L000639 |                 if (!_hasLoadedData) ⟦EOL⟧
+// 해설 L640: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000640 |                 { ⟦EOL⟧
+// 해설 L641: 호출자에게 값 또는 제어를 반환합니다: return;
+L000641 |                     return; ⟦EOL⟧
+// 해설 L642: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000642 |                 } ⟦EOL⟧
+L000643 |  ⟦EOL⟧
+// 해설 L644: 조건에 따라 분기합니다: if (_selectedCellNo != item.CellNo)
+L000644 |                 if (_selectedCellNo != item.CellNo) ⟦EOL⟧
+// 해설 L645: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000645 |                 { ⟦EOL⟧
+// 해설 L646: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyCellSelection(item.CellNo)
+L000646 |                     ApplyCellSelection(item.CellNo); ⟦EOL⟧
+// 해설 L647: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000647 |                 } ⟦EOL⟧
+L000648 |  ⟦EOL⟧
+// 해설 L649: 지역 변수를 선언합니다: var row = item.SourceRow ?? Rows.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: row = item.SourceRow ?? Rows.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase))
+L000649 |                 var row = item.SourceRow ⟦EOL⟧
+// 해설 L650: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.FirstOrDefault(candidate => candidate.CellNo == item.CellNo && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase))
+L000650 |                     ?? Rows.FirstOrDefault(candidate => ⟦EOL⟧
+// 해설 L651: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FocusReinspectionShot(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM)
+L000651 |                         candidate.CellNo == item.CellNo ⟦EOL⟧
+// 해설 L652: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)
+L000652 |                         && candidate.ShotKey.Equals(item.ShotKey, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyShotSelection(item.ShotKey, row)
+L000653 |                 ApplyShotSelection(item.ShotKey, row); ⟦EOL⟧
+// 해설 L654: 구문 블록 경계입니다 · 소속 FocusReinspectionShot.
+L000654 |             } ⟦EOL⟧
+L000655 |  ⟦EOL⟧
+// 해설 L656: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResetReinspectionState()
+L000656 |             private void ResetReinspectionState() ⟦EOL⟧
+// 해설 L657: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000657 |             { ⟦EOL⟧
+// 해설 L658: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000658 |                 _reinspectionCancellation?.Cancel(); ⟦EOL⟧
+// 해설 L659: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000659 |                 _reinspectionSaveCancellation?.Cancel(); ⟦EOL⟧
+// 해설 L660: 조건에 따라 분기합니다: if (_isReinspectionRunning)
+L000660 |                 if (_isReinspectionRunning) ⟦EOL⟧
+// 해설 L661: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000661 |                 { ⟦EOL⟧
+// 해설 L662: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewManager.Stop()
+L000662 |                     _reviewManager.Stop(); ⟦EOL⟧
+// 해설 L663: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000663 |                 } ⟦EOL⟧
+L000664 |  ⟦EOL⟧
+// 해설 L665: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000665 |                 _reinspectionCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L666: 값을 대상에 대입합니다: _reinspectionCancellation = null
+L000666 |                 _reinspectionCancellation = null; ⟦EOL⟧
+// 해설 L667: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000667 |                 _reinspectionSaveCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L668: 값을 대상에 대입합니다: _reinspectionSaveCancellation = null
+L000668 |                 _reinspectionSaveCancellation = null; ⟦EOL⟧
+// 해설 L669: 값을 대상에 대입합니다: _isReinspectionRunning = false
+L000669 |                 _isReinspectionRunning = false; ⟦EOL⟧
+// 해설 L670: 값을 대상에 대입합니다: _isReinspectionSaving = false
+L000670 |                 _isReinspectionSaving = false; ⟦EOL⟧
+// 해설 L671: 값을 대상에 대입합니다: _hasUnsavedReinspectionMeasurements = false
+L000671 |                 _hasUnsavedReinspectionMeasurements = false; ⟦EOL⟧
+// 해설 L672: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
+L000672 |                 foreach (var row in _allRows) ⟦EOL⟧
+// 해설 L673: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000673 |                 { ⟦EOL⟧
+// 해설 L674: 값을 대상에 대입합니다: row.IsReinspectionSelected = false
+L000674 |                     row.IsReinspectionSelected = false; ⟦EOL⟧
+// 해설 L675: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000675 |                 } ⟦EOL⟧
+L000676 |  ⟦EOL⟧
+// 해설 L677: 값을 대상에 대입합니다: _isReinspectionMode = false
+L000677 |                 _isReinspectionMode = false; ⟦EOL⟧
+// 해설 L678: 함수·델리게이트 또는 객체 생성자를 호출합니다: UntrackReinspectionItems(_reinspectionShots)
+L000678 |                 UntrackReinspectionItems(_reinspectionShots); ⟦EOL⟧
+// 해설 L679: 값을 대상에 대입합니다: _reinspectionShots = []
+L000679 |                 _reinspectionShots = []; ⟦EOL⟧
+// 해설 L680: 값을 대상에 대입합니다: _selectedReinspectionShot = null
+L000680 |                 _selectedReinspectionShot = null; ⟦EOL⟧
+// 해설 L681: 값을 대상에 대입합니다: _reinspectionStatusText = "NO SHOTS ADDED"
+L000681 |                 _reinspectionStatusText = "NO SHOTS ADDED"; ⟦EOL⟧
+// 해설 L682: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionMode)
+L000682 |                 Notify(nameof(IsReinspectionMode)); ⟦EOL⟧
+// 해설 L683: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionRunning)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionRunning)
+L000683 |                 Notify(nameof(IsReinspectionRunning)); ⟦EOL⟧
+// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsReinspectionSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsReinspectionSaving)
+L000684 |                 Notify(nameof(IsReinspectionSaving)); ⟦EOL⟧
+// 해설 L685: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEditReinspectionList)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEditReinspectionList)
+L000685 |                 Notify(nameof(CanEditReinspectionList)); ⟦EOL⟧
+// 해설 L686: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionListState()
+L000686 |                 NotifyReinspectionListState(); ⟦EOL⟧
+// 해설 L687: 구문 블록 경계입니다 · 소속 ResetReinspectionState.
+L000687 |             } ⟦EOL⟧
+L000688 |  ⟦EOL⟧
+// 해설 L689: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyReinspectionListState()
+L000689 |             private void NotifyReinspectionListState() ⟦EOL⟧
+// 해설 L690: 구문 블록 경계입니다 · 소속 NotifyReinspectionListState.
+L000690 |             { ⟦EOL⟧
+// 해설 L691: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionShots)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionShots)
+L000691 |                 Notify(nameof(ReinspectionShots)); ⟦EOL⟧
+// 해설 L692: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionSummary)
+L000692 |                 Notify(nameof(ReinspectionSummary)); ⟦EOL⟧
+// 해설 L693: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedReinspectionShot)
+L000693 |                 Notify(nameof(SelectedReinspectionShot)); ⟦EOL⟧
+// 해설 L694: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionStatusText)
+L000694 |                 Notify(nameof(ReinspectionStatusText)); ⟦EOL⟧
+// 해설 L695: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000695 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L696: 구문 블록 경계입니다 · 소속 NotifyReinspectionListState.
+L000696 |             } ⟦EOL⟧
+L000697 |  ⟦EOL⟧
+// 해설 L698: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyReinspectionCommandState()
+L000698 |             private void NotifyReinspectionCommandState() ⟦EOL⟧
+// 해설 L699: 구문 블록 경계입니다 · 소속 NotifyReinspectionCommandState.
+L000699 |             { ⟦EOL⟧
+// 해설 L700: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanToggleReinspection)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanToggleReinspection)
+L000700 |                 Notify(nameof(CanToggleReinspection)); ⟦EOL⟧
+// 해설 L701: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddReinspectionShot)
+L000701 |                 Notify(nameof(CanAddReinspectionShot)); ⟦EOL⟧
+// 해설 L702: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddSelectedReinspectionShots)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddSelectedReinspectionShots)
+L000702 |                 Notify(nameof(CanAddSelectedReinspectionShots)); ⟦EOL⟧
+// 해설 L703: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddNgReinspectionShots)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddNgReinspectionShots)
+L000703 |                 Notify(nameof(CanAddNgReinspectionShots)); ⟦EOL⟧
+// 해설 L704: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanDeleteReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanDeleteReinspectionShot)
+L000704 |                 Notify(nameof(CanDeleteReinspectionShot)); ⟦EOL⟧
+// 해설 L705: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanClearReinspectionShots)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanClearReinspectionShots)
+L000705 |                 Notify(nameof(CanClearReinspectionShots)); ⟦EOL⟧
+// 해설 L706: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanMoveToReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanMoveToReinspectionShot)
+L000706 |                 Notify(nameof(CanMoveToReinspectionShot)); ⟦EOL⟧
+// 해설 L707: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanInspectReinspectionShot)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanInspectReinspectionShot)
+L000707 |                 Notify(nameof(CanInspectReinspectionShot)); ⟦EOL⟧
+// 해설 L708: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanInspectAllReinspectionShots)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanInspectAllReinspectionShots)
+L000708 |                 Notify(nameof(CanInspectAllReinspectionShots)); ⟦EOL⟧
+// 해설 L709: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanStopReinspection)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanStopReinspection)
+L000709 |                 Notify(nameof(CanStopReinspection)); ⟦EOL⟧
+// 해설 L710: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanSaveReinspectionResult)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSaveReinspectionResult)
+L000710 |                 Notify(nameof(CanSaveReinspectionResult)); ⟦EOL⟧
+// 해설 L711: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsBeamInspectionResult)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBeamInspectionResult)
+L000711 |                 Notify(nameof(IsBeamInspectionResult)); ⟦EOL⟧
+// 해설 L712: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ReinspectionAvailabilityText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReinspectionAvailabilityText)
+L000712 |                 Notify(nameof(ReinspectionAvailabilityText)); ⟦EOL⟧
+// 해설 L713: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000713 |                 ToggleReinspectionCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L714: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000714 |                 AddReinspectionShotCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L715: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000715 |                 AddSelectedReinspectionShotsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000716 |                 AddNgReinspectionShotsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L717: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000717 |                 DeleteReinspectionShotCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L718: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000718 |                 ClearReinspectionShotsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L719: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000719 |                 MoveToReinspectionShotCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L720: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000720 |                 MoveAndInspectReinspectionShotCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L721: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000721 |                 InspectAllReinspectionShotsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L722: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000722 |                 StopReinspectionCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L723: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000723 |                 SaveReinspectionResultCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L724: 구문 블록 경계입니다 · 소속 NotifyReinspectionCommandState.
+L000724 |             } ⟦EOL⟧
+L000725 |  ⟦EOL⟧
+// 해설 L726: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindReinspectionShot(int, string)
+L000726 |             private ST_REVIEW_DATA_REINSPECTION_ITEM? FindReinspectionShot( ⟦EOL⟧
+// 해설 L727: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindReinspectionShot(int, string)
+L000727 |                 int cellNo, ⟦EOL⟧
+// 해설 L728: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindReinspectionShot(int, string)
+L000728 |                 string shotKey) ⟦EOL⟧
+// 해설 L729: 구문 블록 경계입니다 · 소속 FindReinspectionShot.
+L000729 |             { ⟦EOL⟧
+// 해설 L730: 함수·델리게이트 또는 객체 생성자를 호출합니다: _reinspectionShots.FirstOrDefault(item => item.CellNo == cellNo && item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) / 호출자에게 값 또는 제어를 반환합니다: return _reinspectionShots.FirstOrDefault(item => item.CellNo == cellNo && item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase));
+L000730 |                 return _reinspectionShots.FirstOrDefault(item => ⟦EOL⟧
+// 해설 L731: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindReinspectionShot(int, string)
+L000731 |                     item.CellNo == cellNo ⟦EOL⟧
+// 해설 L732: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)
+L000732 |                     && item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L733: 구문 블록 경계입니다 · 소속 FindReinspectionShot.
+L000733 |             } ⟦EOL⟧
+L000734 |  ⟦EOL⟧
+// 해설 L735: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_POSITION? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindShot(int, string)
+L000735 |             private ST_REVIEW_DATA_SHOT_POSITION? FindShot(int cellNo, string shotKey) ⟦EOL⟧
+// 해설 L736: 구문 블록 경계입니다 · 소속 FindShot.
+L000736 |             { ⟦EOL⟧
+// 해설 L737: 함수·델리게이트 또는 객체 생성자를 호출합니다: _shotsByCell.TryGetValue(cellNo, out var shots) / 조건에 따라 결과식을 선택합니다: _shotsByCell.TryGetValue(cellNo, out var shots) ? shots.FirstOrDefault(item => item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) : null / 호출자에게 값 또는 제어를 반환합니다: return _shotsByCell.TryGetValue(cellNo, out var shots) ? shots.FirstOrDefault(item => item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) : null;
+L000737 |                 return _shotsByCell.TryGetValue(cellNo, out var shots) ⟦EOL⟧
+// 해설 L738: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots.FirstOrDefault(item => item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)
+L000738 |                     ? shots.FirstOrDefault(item => item.ShotKey.Equals(shotKey, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L739: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_POSITION? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.FindShot(int, string)
+L000739 |                     : null; ⟦EOL⟧
+// 해설 L740: 구문 블록 경계입니다 · 소속 FindShot.
+L000740 |             } ⟦EOL⟧
+L000741 |  ⟦EOL⟧
+// 해설 L742: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000742 |             private ST_REVIEW_DATA_REINSPECTION_ITEM CreateReinspectionItem( ⟦EOL⟧
+// 해설 L743: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000743 |                 ST_REVIEW_DATA_SHOT_POSITION shot, ⟦EOL⟧
+// 해설 L744: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000744 |                 ST_REVIEW_DATA_GRID_ROW? sourceRow, ⟦EOL⟧
+// 해설 L745: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000745 |                 int beamNo, ⟦EOL⟧
+// 해설 L746: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000746 |                 int sequence) ⟦EOL⟧
+// 해설 L747: 구문 블록 경계입니다 · 소속 CreateReinspectionItem.
+L000747 |             { ⟦EOL⟧
+// 해설 L748: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_REINSPECTION_ITEM( sequence, sourceRow?.HeadNo ?? shot.HeadNo, shot.CellNo, CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.GroupCountX), beamNo, shot.ShotKey, sourceRow) / 지역 변수를 선언합니다: var item = new ST_REVIEW_DATA_REINSPECTION_ITEM( sequence, sourceRow?.HeadNo ?? shot.HeadNo, shot.CellNo, CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.GroupCountX), beamNo, shot.ShotKey, sourceRow); / 변수의 초기값을 지정합니다: item = new ST_REVIEW_DATA_REINSPECTION_ITEM( sequence, sourceRow?.HeadN
+L000748 |                 var item = new ST_REVIEW_DATA_REINSPECTION_ITEM( ⟦EOL⟧
+// 해설 L749: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000749 |                     sequence, ⟦EOL⟧
+// 해설 L750: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000750 |                     sourceRow?.HeadNo ?? shot.HeadNo, ⟦EOL⟧
+// 해설 L751: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000751 |                     shot.CellNo, ⟦EOL⟧
+// 해설 L752: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.GroupCountX)
+L000752 |                     CReviewShotNameFormatter.ToMatrixName(shot.ShotNo, shot.GroupCountX), ⟦EOL⟧
+// 해설 L753: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000753 |                     beamNo, ⟦EOL⟧
+// 해설 L754: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000754 |                     shot.ShotKey, ⟦EOL⟧
+// 해설 L755: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateReinspectionItem(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_SHOT_
+L000755 |                     sourceRow); ⟦EOL⟧
+// 해설 L756: 복합 대입 또는 이벤트 구독/해지 표현입니다: item.PropertyChanged += ReinspectionItemPropertyChanged
+L000756 |                 item.PropertyChanged += ReinspectionItemPropertyChanged; ⟦EOL⟧
+// 해설 L757: 호출자에게 값 또는 제어를 반환합니다: return item;
+L000757 |                 return item; ⟦EOL⟧
+// 해설 L758: 구문 블록 경계입니다 · 소속 CreateReinspectionItem.
+L000758 |             } ⟦EOL⟧
+L000759 |  ⟦EOL⟧
+// 해설 L760: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionItemPropertyChanged(object?, System.ComponentModel.PropertyChangedEventArgs)
+L000760 |             private void ReinspectionItemPropertyChanged(object? sender, PropertyChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L761: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000761 |             { ⟦EOL⟧
+// 해설 L762: 조건에 따라 분기합니다: if (sender is ST_REVIEW_DATA_REINSPECTION_ITEM item && item.HasCompletedMeasurement)
+L000762 |                 if (sender is ST_REVIEW_DATA_REINSPECTION_ITEM item ⟦EOL⟧
+// 해설 L763: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReinspectionItemPropertyChanged(object?, System.ComponentModel.PropertyChangedEventArgs)
+L000763 |                     && item.HasCompletedMeasurement) ⟦EOL⟧
+// 해설 L764: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000764 |                 { ⟦EOL⟧
+// 해설 L765: 값을 대상에 대입합니다: _hasUnsavedReinspectionMeasurements = true
+L000765 |                     _hasUnsavedReinspectionMeasurements = true; ⟦EOL⟧
+// 해설 L766: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000766 |                 } ⟦EOL⟧
+L000767 |  ⟦EOL⟧
+// 해설 L768: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo) / 조건에 따라 분기합니다: if (eventArgs.PropertyName is nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo) or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX) or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY) or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM…)
+L000768 |                 if (eventArgs.PropertyName is nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo) ⟦EOL⟧
+// 해설 L769: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX)
+L000769 |                     or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX) ⟦EOL⟧
+// 해설 L770: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY)
+L000770 |                     or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY) ⟦EOL⟧
+// 해설 L771: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.State)
+L000771 |                     or nameof(ST_REVIEW_DATA_REINSPECTION_ITEM.State)) ⟦EOL⟧
+// 해설 L772: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000772 |                 { ⟦EOL⟧
+// 해설 L773: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000773 |                     NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L774: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000774 |                 } ⟦EOL⟧
+// 해설 L775: 구문 블록 경계입니다 · 소속 ReinspectionItemPropertyChanged.
+L000775 |             } ⟦EOL⟧
+L000776 |  ⟦EOL⟧
+// 해설 L777: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.UntrackReinspectionItems(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM>)
+L000777 |             private void UntrackReinspectionItems(IEnumerable<ST_REVIEW_DATA_REINSPECTION_ITEM> items) ⟦EOL⟧
+// 해설 L778: 구문 블록 경계입니다 · 소속 UntrackReinspectionItems.
+L000778 |             { ⟦EOL⟧
+// 해설 L779: 컬렉션 요소를 순회합니다: foreach (var item in items)
+L000779 |                 foreach (var item in items) ⟦EOL⟧
+// 해설 L780: 구문 블록 경계입니다 · 소속 UntrackReinspectionItems.
+L000780 |                 { ⟦EOL⟧
+// 해설 L781: 복합 대입 또는 이벤트 구독/해지 표현입니다: item.PropertyChanged -= ReinspectionItemPropertyChanged
+L000781 |                     item.PropertyChanged -= ReinspectionItemPropertyChanged; ⟦EOL⟧
+// 해설 L782: 구문 블록 경계입니다 · 소속 UntrackReinspectionItems.
+L000782 |                 } ⟦EOL⟧
+// 해설 L783: 구문 블록 경계입니다 · 소속 UntrackReinspectionItems.
+L000783 |             } ⟦EOL⟧
+L000784 |  ⟦EOL⟧
+// 해설 L785: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NormalizeBeamNo(int)
+L000785 |             private static int NormalizeBeamNo(int beamNo) ⟦EOL⟧
+// 해설 L786: 구문 블록 경계입니다 · 소속 NormalizeBeamNo.
+L000786 |             { ⟦EOL⟧
+// 해설 L787: 조건에 따라 결과식을 선택합니다: beamNo is >= 1 and <= 16 ? beamNo : 1 / 호출자에게 값 또는 제어를 반환합니다: return beamNo is >= 1 and <= 16 ? beamNo : 1;
+L000787 |                 return beamNo is >= 1 and <= 16 ? beamNo : 1; ⟦EOL⟧
+// 해설 L788: 구문 블록 경계입니다 · 소속 NormalizeBeamNo.
+L000788 |             } ⟦EOL⟧
+L000789 |  ⟦EOL⟧
+// 해설 L790: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsNgResultRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW)
+L000790 |             private static bool IsNgResultRow(ST_REVIEW_DATA_GRID_ROW row) ⟦EOL⟧
+// 해설 L791: 구문 블록 경계입니다 · 소속 IsNgResultRow.
+L000791 |             { ⟦EOL⟧
+// 해설 L792: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase);
+L000792 |                 return row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L793: 구문 블록 경계입니다 · 소속 IsNgResultRow.
+L000793 |             } ⟦EOL⟧
+L000794 |  ⟦EOL⟧
+// 해설 L795: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildReinspectionKey(int, string)
+L000795 |             private static string BuildReinspectionKey(int cellNo, string shotKey) ⟦EOL⟧
+// 해설 L796: 구문 블록 경계입니다 · 소속 BuildReinspectionKey.
+L000796 |             { ⟦EOL⟧
+// 해설 L797: 호출자에게 값 또는 제어를 반환합니다: return $"{cellNo}:{shotKey}";
+L000797 |                 return $"{cellNo}:{shotKey}"; ⟦EOL⟧
+// 해설 L798: 구문 블록 경계입니다 · 소속 BuildReinspectionKey.
+L000798 |             } ⟦EOL⟧
+// 해설 L799: 구문 블록 경계입니다.
+L000799 |         } ⟦EOL⟧
+L000800 |  ⟦EOL⟧
+// 해설 L801: 타입의 구조/상속 선언입니다: public sealed class ST_REVIEW_DATA_REINSPECTION_ITEM : INotifyPropertyChanged
+L000801 |         public sealed class ST_REVIEW_DATA_REINSPECTION_ITEM : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L802: 구문 블록 경계입니다.
+L000802 |         { ⟦EOL⟧
+// 해설 L803: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._sequence
+L000803 |             private int _sequence; ⟦EOL⟧
+// 해설 L804: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._beamNo
+L000804 |             private int _beamNo; ⟦EOL⟧
+// 해설 L805: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._rawResultX
+L000805 |             private double? _rawResultX; ⟦EOL⟧
+// 해설 L806: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._rawResultY
+L000806 |             private double? _rawResultY; ⟦EOL⟧
+// 해설 L807: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._resultX
+L000807 |             private double? _resultX; ⟦EOL⟧
+// 해설 L808: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._resultY
+L000808 |             private double? _resultY; ⟦EOL⟧
+// 해설 L809: 변수의 초기값을 지정합니다: _state = "WAIT"
+L000809 |             private string _state = "WAIT"; ⟦EOL⟧
+// 해설 L810: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM._isRunning
+L000810 |             private bool _isRunning; ⟦EOL⟧
+L000811 |  ⟦EOL⟧
+// 해설 L812: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000812 |             public ST_REVIEW_DATA_REINSPECTION_ITEM( ⟦EOL⟧
+// 해설 L813: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000813 |                 int sequence, ⟦EOL⟧
+// 해설 L814: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000814 |                 int headNo, ⟦EOL⟧
+// 해설 L815: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000815 |                 int cellNo, ⟦EOL⟧
+// 해설 L816: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000816 |                 string shotName, ⟦EOL⟧
+// 해설 L817: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000817 |                 int beamNo, ⟦EOL⟧
+// 해설 L818: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000818 |                 string shotKey, ⟦EOL⟧
+// 해설 L819: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ST_REVIEW_DATA_REINSPECTION_ITEM(int, int, int, string, int, string, Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW?)
+L000819 |                 ST_REVIEW_DATA_GRID_ROW? sourceRow) ⟦EOL⟧
+// 해설 L820: 구문 블록 경계입니다 · 소속 .ctor.
+L000820 |             { ⟦EOL⟧
+// 해설 L821: 값을 대상에 대입합니다: _sequence = sequence
+L000821 |                 _sequence = sequence; ⟦EOL⟧
+// 해설 L822: 값을 대상에 대입합니다: HeadNo = headNo
+L000822 |                 HeadNo = headNo; ⟦EOL⟧
+// 해설 L823: 값을 대상에 대입합니다: CellNo = cellNo
+L000823 |                 CellNo = cellNo; ⟦EOL⟧
+// 해설 L824: 값을 대상에 대입합니다: ShotName = shotName
+L000824 |                 ShotName = shotName; ⟦EOL⟧
+// 해설 L825: 값을 대상에 대입합니다: _beamNo = beamNo
+L000825 |                 _beamNo = beamNo; ⟦EOL⟧
+// 해설 L826: 값을 대상에 대입합니다: ShotKey = shotKey
+L000826 |                 ShotKey = shotKey; ⟦EOL⟧
+// 해설 L827: 값을 대상에 대입합니다: SourceRow = sourceRow
+L000827 |                 SourceRow = sourceRow; ⟦EOL⟧
+// 해설 L828: 값을 대상에 대입합니다: SourceBeamNo = sourceRow?.BeamNo ?? beamNo
+L000828 |                 SourceBeamNo = sourceRow?.BeamNo ?? beamNo; ⟦EOL⟧
+// 해설 L829: 구문 블록 경계입니다 · 소속 .ctor.
+L000829 |             } ⟦EOL⟧
+L000830 |  ⟦EOL⟧
+// 해설 L831: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.PropertyChanged
+L000831 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+L000832 |  ⟦EOL⟧
+// 해설 L833: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.Sequence
+L000833 |             public int Sequence => _sequence; ⟦EOL⟧
+// 해설 L834: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.HeadNo
+L000834 |             public int HeadNo { get; } ⟦EOL⟧
+// 해설 L835: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.CellNo
+L000835 |             public int CellNo { get; } ⟦EOL⟧
+// 해설 L836: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ShotName
+L000836 |             public string ShotName { get; } ⟦EOL⟧
+// 해설 L837: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.SourceBeamNo
+L000837 |             public int SourceBeamNo { get; } ⟦EOL⟧
+// 해설 L838: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo
+L000838 |             public int BeamNo ⟦EOL⟧
+// 해설 L839: 구문 블록 경계입니다 · 소속 BeamNo.
+L000839 |             { ⟦EOL⟧
+// 해설 L840: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo.get
+L000840 |                 get => _beamNo; ⟦EOL⟧
+// 해설 L841: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.BeamNo.set
+L000841 |                 set ⟦EOL⟧
+// 해설 L842: 구문 블록 경계입니다 · 소속 set_BeamNo.
+L000842 |                 { ⟦EOL⟧
+// 해설 L843: 조건에 따라 분기합니다: if (_beamNo == value)
+L000843 |                     if (_beamNo == value) ⟦EOL⟧
+// 해설 L844: 구문 블록 경계입니다 · 소속 set_BeamNo.
+L000844 |                     { ⟦EOL⟧
+// 해설 L845: 호출자에게 값 또는 제어를 반환합니다: return;
+L000845 |                         return; ⟦EOL⟧
+// 해설 L846: 구문 블록 경계입니다 · 소속 set_BeamNo.
+L000846 |                     } ⟦EOL⟧
+L000847 |  ⟦EOL⟧
+// 해설 L848: 값을 대상에 대입합니다: _beamNo = value
+L000848 |                     _beamNo = value; ⟦EOL⟧
+// 해설 L849: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000849 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L850: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClearMeasurement()
+L000850 |                     ClearMeasurement(); ⟦EOL⟧
+// 해설 L851: 구문 블록 경계입니다 · 소속 set_BeamNo.
+L000851 |                 } ⟦EOL⟧
+// 해설 L852: 구문 블록 경계입니다 · 소속 BeamNo.
+L000852 |             } ⟦EOL⟧
+L000853 |  ⟦EOL⟧
+// 해설 L854: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX
+L000854 |             public double? ResultX ⟦EOL⟧
+// 해설 L855: 구문 블록 경계입니다 · 소속 ResultX.
+L000855 |             { ⟦EOL⟧
+// 해설 L856: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX.get
+L000856 |                 get => _resultX; ⟦EOL⟧
+// 해설 L857: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultX.set
+L000857 |                 set ⟦EOL⟧
+// 해설 L858: 구문 블록 경계입니다 · 소속 set_ResultX.
+L000858 |                 { ⟦EOL⟧
+// 해설 L859: 조건에 따라 분기합니다: if (_resultX == value)
+L000859 |                     if (_resultX == value) ⟦EOL⟧
+// 해설 L860: 구문 블록 경계입니다 · 소속 set_ResultX.
+L000860 |                     { ⟦EOL⟧
+// 해설 L861: 호출자에게 값 또는 제어를 반환합니다: return;
+L000861 |                         return; ⟦EOL⟧
+// 해설 L862: 구문 블록 경계입니다 · 소속 set_ResultX.
+L000862 |                     } ⟦EOL⟧
+L000863 |  ⟦EOL⟧
+// 해설 L864: 값을 대상에 대입합니다: _resultX = value
+L000864 |                     _resultX = value; ⟦EOL⟧
+// 해설 L865: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000865 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L866: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ResultXText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultXText)
+L000866 |                     OnPropertyChanged(nameof(ResultXText)); ⟦EOL⟧
+// 해설 L867: 구문 블록 경계입니다 · 소속 set_ResultX.
+L000867 |                 } ⟦EOL⟧
+// 해설 L868: 구문 블록 경계입니다 · 소속 ResultX.
+L000868 |             } ⟦EOL⟧
+L000869 |  ⟦EOL⟧
+// 해설 L870: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY
+L000870 |             public double? ResultY ⟦EOL⟧
+// 해설 L871: 구문 블록 경계입니다 · 소속 ResultY.
+L000871 |             { ⟦EOL⟧
+// 해설 L872: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY.get
+L000872 |                 get => _resultY; ⟦EOL⟧
+// 해설 L873: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ResultY.set
+L000873 |                 set ⟦EOL⟧
+// 해설 L874: 구문 블록 경계입니다 · 소속 set_ResultY.
+L000874 |                 { ⟦EOL⟧
+// 해설 L875: 조건에 따라 분기합니다: if (_resultY == value)
+L000875 |                     if (_resultY == value) ⟦EOL⟧
+// 해설 L876: 구문 블록 경계입니다 · 소속 set_ResultY.
+L000876 |                     { ⟦EOL⟧
+// 해설 L877: 호출자에게 값 또는 제어를 반환합니다: return;
+L000877 |                         return; ⟦EOL⟧
+// 해설 L878: 구문 블록 경계입니다 · 소속 set_ResultY.
+L000878 |                     } ⟦EOL⟧
+L000879 |  ⟦EOL⟧
+// 해설 L880: 값을 대상에 대입합니다: _resultY = value
+L000880 |                     _resultY = value; ⟦EOL⟧
+// 해설 L881: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000881 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L882: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ResultYText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultYText)
+L000882 |                     OnPropertyChanged(nameof(ResultYText)); ⟦EOL⟧
+// 해설 L883: 구문 블록 경계입니다 · 소속 set_ResultY.
+L000883 |                 } ⟦EOL⟧
+// 해설 L884: 구문 블록 경계입니다 · 소속 ResultY.
+L000884 |             } ⟦EOL⟧
+L000885 |  ⟦EOL⟧
+// 해설 L886: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.State
+L000886 |             public string State ⟦EOL⟧
+// 해설 L887: 구문 블록 경계입니다 · 소속 State.
+L000887 |             { ⟦EOL⟧
+// 해설 L888: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.State.get
+L000888 |                 get => _state; ⟦EOL⟧
+// 해설 L889: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.State.set
+L000889 |                 set ⟦EOL⟧
+// 해설 L890: 구문 블록 경계입니다 · 소속 set_State.
+L000890 |                 { ⟦EOL⟧
+// 해설 L891: 함수·델리게이트 또는 객체 생성자를 호출합니다: _state.Equals(value, StringComparison.Ordinal) / 조건에 따라 분기합니다: if (_state.Equals(value, StringComparison.Ordinal))
+L000891 |                     if (_state.Equals(value, StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L892: 구문 블록 경계입니다 · 소속 set_State.
+L000892 |                     { ⟦EOL⟧
+// 해설 L893: 호출자에게 값 또는 제어를 반환합니다: return;
+L000893 |                         return; ⟦EOL⟧
+// 해설 L894: 구문 블록 경계입니다 · 소속 set_State.
+L000894 |                     } ⟦EOL⟧
+L000895 |  ⟦EOL⟧
+// 해설 L896: 값을 대상에 대입합니다: _state = value
+L000896 |                     _state = value; ⟦EOL⟧
+// 해설 L897: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000897 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L898: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ResultBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultBrush)
+L000898 |                     OnPropertyChanged(nameof(ResultBrush)); ⟦EOL⟧
+// 해설 L899: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(StateBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StateBrush)
+L000899 |                     OnPropertyChanged(nameof(StateBrush)); ⟦EOL⟧
+// 해설 L900: 구문 블록 경계입니다 · 소속 set_State.
+L000900 |                 } ⟦EOL⟧
+// 해설 L901: 구문 블록 경계입니다 · 소속 State.
+L000901 |             } ⟦EOL⟧
+L000902 |  ⟦EOL⟧
+// 해설 L903: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.IsRunning
+L000903 |             public bool IsRunning ⟦EOL⟧
+// 해설 L904: 구문 블록 경계입니다 · 소속 IsRunning.
+L000904 |             { ⟦EOL⟧
+// 해설 L905: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.IsRunning.get
+L000905 |                 get => _isRunning; ⟦EOL⟧
+// 해설 L906: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.IsRunning.set
+L000906 |                 set ⟦EOL⟧
+// 해설 L907: 구문 블록 경계입니다 · 소속 set_IsRunning.
+L000907 |                 { ⟦EOL⟧
+// 해설 L908: 조건에 따라 분기합니다: if (_isRunning == value)
+L000908 |                     if (_isRunning == value) ⟦EOL⟧
+// 해설 L909: 구문 블록 경계입니다 · 소속 set_IsRunning.
+L000909 |                     { ⟦EOL⟧
+// 해설 L910: 호출자에게 값 또는 제어를 반환합니다: return;
+L000910 |                         return; ⟦EOL⟧
+// 해설 L911: 구문 블록 경계입니다 · 소속 set_IsRunning.
+L000911 |                     } ⟦EOL⟧
+L000912 |  ⟦EOL⟧
+// 해설 L913: 값을 대상에 대입합니다: _isRunning = value
+L000913 |                     _isRunning = value; ⟦EOL⟧
+// 해설 L914: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000914 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L915: 구문 블록 경계입니다 · 소속 set_IsRunning.
+L000915 |                 } ⟦EOL⟧
+// 해설 L916: 구문 블록 경계입니다 · 소속 IsRunning.
+L000916 |             } ⟦EOL⟧
+L000917 |  ⟦EOL⟧
+// 해설 L918: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ShotKey
+L000918 |             public string ShotKey { get; } ⟦EOL⟧
+// 해설 L919: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.SourceRow
+L000919 |             public ST_REVIEW_DATA_GRID_ROW? SourceRow { get; } ⟦EOL⟧
+// 해설 L920: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.RawResultX
+L000920 |             internal double? RawResultX => _rawResultX; ⟦EOL⟧
+// 해설 L921: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.RawResultY
+L000921 |             internal double? RawResultY => _rawResultY; ⟦EOL⟧
+// 해설 L922: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.HasCompletedMeasurement
+L000922 |             internal bool HasCompletedMeasurement => RawResultX.HasValue ⟦EOL⟧
+// 해설 L923: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.HasCompletedMeasurement
+L000923 |                 && RawResultY.HasValue ⟦EOL⟧
+// 해설 L924: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.HasCompletedMeasurement
+L000924 |                 && ResultX.HasValue ⟦EOL⟧
+// 해설 L925: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.HasCompletedMeasurement
+L000925 |                 && ResultY.HasValue ⟦EOL⟧
+// 해설 L926: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(RawResultX.Value)
+L000926 |                 && double.IsFinite(RawResultX.Value) ⟦EOL⟧
+// 해설 L927: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(RawResultY.Value)
+L000927 |                 && double.IsFinite(RawResultY.Value) ⟦EOL⟧
+// 해설 L928: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ResultX.Value)
+L000928 |                 && double.IsFinite(ResultX.Value) ⟦EOL⟧
+// 해설 L929: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ResultY.Value)
+L000929 |                 && double.IsFinite(ResultY.Value) ⟦EOL⟧
+// 해설 L930: 함수·델리게이트 또는 객체 생성자를 호출합니다: State.Equals("OK", StringComparison.OrdinalIgnoreCase)
+L000930 |                 && (State.Equals("OK", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L931: 함수·델리게이트 또는 객체 생성자를 호출합니다: State.Equals("NG", StringComparison.OrdinalIgnoreCase)
+L000931 |                     || State.Equals("NG", StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L932: 함수·델리게이트 또는 객체 생성자를 호출합니다: Sequence.ToString("D2", CultureInfo.InvariantCulture)
+L000932 |             public string No => Sequence.ToString("D2", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L933: 조건에 따라 결과식을 선택합니다: HeadNo > 0 ? $"H{HeadNo:00}" : "-"
+L000933 |             public string Head => HeadNo > 0 ? $"H{HeadNo:00}" : "-"; ⟦EOL⟧
+// 해설 L934: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.Cell
+L000934 |             public string Cell => $"CELL{CellNo:00}"; ⟦EOL⟧
+// 해설 L935: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("F3", CultureInfo.InvariantCulture)
+L000935 |             public string ResultXText => ResultX?.ToString("F3", CultureInfo.InvariantCulture) ?? "-"; ⟦EOL⟧
+// 해설 L936: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("F3", CultureInfo.InvariantCulture)
+L000936 |             public string ResultYText => ResultY?.ToString("F3", CultureInfo.InvariantCulture) ?? "-"; ⟦EOL⟧
+// 해설 L937: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(State)
+L000937 |             public Brush ResultBrush => CStatusBrush.ForDisplayState(State); ⟦EOL⟧
+// 해설 L938: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(State)
+L000938 |             public Brush StateBrush => CStatusBrush.ForDisplayState(State); ⟦EOL⟧
+L000939 |  ⟦EOL⟧
+// 해설 L940: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ClearMeasurement()
+L000940 |             internal void ClearMeasurement() ⟦EOL⟧
+// 해설 L941: 구문 블록 경계입니다 · 소속 ClearMeasurement.
+L000941 |             { ⟦EOL⟧
+// 해설 L942: 값을 대상에 대입합니다: _rawResultX = null
+L000942 |                 _rawResultX = null; ⟦EOL⟧
+// 해설 L943: 값을 대상에 대입합니다: _rawResultY = null
+L000943 |                 _rawResultY = null; ⟦EOL⟧
+// 해설 L944: 값을 대상에 대입합니다: ResultX = null
+L000944 |                 ResultX = null; ⟦EOL⟧
+// 해설 L945: 값을 대상에 대입합니다: ResultY = null
+L000945 |                 ResultY = null; ⟦EOL⟧
+// 해설 L946: 값을 대상에 대입합니다: State = "WAIT"
+L000946 |                 State = "WAIT"; ⟦EOL⟧
+// 해설 L947: 구문 블록 경계입니다 · 소속 ClearMeasurement.
+L000947 |             } ⟦EOL⟧
+L000948 |  ⟦EOL⟧
+// 해설 L949: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.BeginInspection()
+L000949 |             internal void BeginInspection() ⟦EOL⟧
+// 해설 L950: 구문 블록 경계입니다 · 소속 BeginInspection.
+L000950 |             { ⟦EOL⟧
+// 해설 L951: 값을 대상에 대입합니다: _rawResultX = null
+L000951 |                 _rawResultX = null; ⟦EOL⟧
+// 해설 L952: 값을 대상에 대입합니다: _rawResultY = null
+L000952 |                 _rawResultY = null; ⟦EOL⟧
+// 해설 L953: 값을 대상에 대입합니다: ResultX = null
+L000953 |                 ResultX = null; ⟦EOL⟧
+// 해설 L954: 값을 대상에 대입합니다: ResultY = null
+L000954 |                 ResultY = null; ⟦EOL⟧
+// 해설 L955: 값을 대상에 대입합니다: State = "RUNNING"
+L000955 |                 State = "RUNNING"; ⟦EOL⟧
+// 해설 L956: 구문 블록 경계입니다 · 소속 BeginInspection.
+L000956 |             } ⟦EOL⟧
+L000957 |  ⟦EOL⟧
+// 해설 L958: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000958 |             internal void ApplyMeasurement( ⟦EOL⟧
+// 해설 L959: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000959 |                 double rawResultX, ⟦EOL⟧
+// 해설 L960: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000960 |                 double rawResultY, ⟦EOL⟧
+// 해설 L961: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000961 |                 double resultX, ⟦EOL⟧
+// 해설 L962: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000962 |                 double resultY, ⟦EOL⟧
+// 해설 L963: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.ApplyMeasurement(double, double, double, double, string)
+L000963 |                 string state) ⟦EOL⟧
+// 해설 L964: 구문 블록 경계입니다 · 소속 ApplyMeasurement.
+L000964 |             { ⟦EOL⟧
+// 해설 L965: 값을 대상에 대입합니다: _rawResultX = rawResultX
+L000965 |                 _rawResultX = rawResultX; ⟦EOL⟧
+// 해설 L966: 값을 대상에 대입합니다: _rawResultY = rawResultY
+L000966 |                 _rawResultY = rawResultY; ⟦EOL⟧
+// 해설 L967: 값을 대상에 대입합니다: ResultX = resultX
+L000967 |                 ResultX = resultX; ⟦EOL⟧
+// 해설 L968: 값을 대상에 대입합니다: ResultY = resultY
+L000968 |                 ResultY = resultY; ⟦EOL⟧
+// 해설 L969: 값을 대상에 대입합니다: State = state
+L000969 |                 State = state; ⟦EOL⟧
+// 해설 L970: 구문 블록 경계입니다 · 소속 ApplyMeasurement.
+L000970 |             } ⟦EOL⟧
+L000971 |  ⟦EOL⟧
+// 해설 L972: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.Renumber(int)
+L000972 |             internal void Renumber(int sequence) ⟦EOL⟧
+// 해설 L973: 구문 블록 경계입니다 · 소속 Renumber.
+L000973 |             { ⟦EOL⟧
+// 해설 L974: 조건에 따라 분기합니다: if (_sequence == sequence)
+L000974 |                 if (_sequence == sequence) ⟦EOL⟧
+// 해설 L975: 구문 블록 경계입니다 · 소속 Renumber.
+L000975 |                 { ⟦EOL⟧
+// 해설 L976: 호출자에게 값 또는 제어를 반환합니다: return;
+L000976 |                     return; ⟦EOL⟧
+// 해설 L977: 구문 블록 경계입니다 · 소속 Renumber.
+L000977 |                 } ⟦EOL⟧
+L000978 |  ⟦EOL⟧
+// 해설 L979: 값을 대상에 대입합니다: _sequence = sequence
+L000979 |                 _sequence = sequence; ⟦EOL⟧
+// 해설 L980: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(Sequence)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Sequence)
+L000980 |                 OnPropertyChanged(nameof(Sequence)); ⟦EOL⟧
+// 해설 L981: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(No)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(No)
+L000981 |                 OnPropertyChanged(nameof(No)); ⟦EOL⟧
+// 해설 L982: 구문 블록 경계입니다 · 소속 Renumber.
+L000982 |             } ⟦EOL⟧
+L000983 |  ⟦EOL⟧
+// 해설 L984: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM.OnPropertyChanged(string?)
+L000984 |             private void OnPropertyChanged([CallerMemberName] string? propertyName = null) ⟦EOL⟧
+// 해설 L985: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000985 |             { ⟦EOL⟧
+// 해설 L986: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
+L000986 |                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
+// 해설 L987: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000987 |             } ⟦EOL⟧
+// 해설 L988: 구문 블록 경계입니다.
+L000988 |         } ⟦EOL⟧
+// 해설 L989: 구문 블록 경계입니다.
+L000989 |     } ⟦EOL⟧
+// 해설 L990: 구문 블록 경계입니다.
+L000990 | } ⟦EOL⟧

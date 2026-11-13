@@ -1,0 +1,446 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Automation;
+L000002 | using Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000003 | using Drilling.Common.Managers; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000005 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L6: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000006 | // Presentation adapter only: no timer, thread, or device reads. ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: internal sealed class CScannerStatusSnapshotReader(CAutomationManager automationManager)
+L000007 | internal sealed class CScannerStatusSnapshotReader(CAutomationManager automationManager) ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _snapshotLock = new()
+L000009 |     private readonly object _snapshotLock = new(); ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: _snapshot = []
+L000010 |     private IReadOnlyList<ST_SCANNER_AXIS_STATUS_ITEM> _snapshot = []; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: _axisDefinitions = []
+L000011 |     private IReadOnlyList<ST_SCANNER_AXIS_SETTING> _axisDefinitions = []; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: _selectedHeadNo = 1
+L000012 |     private int _selectedHeadNo = 1; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SelectHead(int)
+L000013 |     public void SelectHead(int headNo) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 SelectHead.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo) / 지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo); / 변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)
+L000015 |         var normalizedHeadNo = NormalizeHeadNo(headNo); ⟦EOL⟧
+// 해설 L16: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000016 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 SelectHead.
+L000017 |         { ⟦EOL⟧
+// 해설 L18: 조건에 따라 분기합니다: if (_selectedHeadNo == normalizedHeadNo)
+L000018 |             if (_selectedHeadNo == normalizedHeadNo) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 SelectHead.
+L000019 |             { ⟦EOL⟧
+// 해설 L20: 호출자에게 값 또는 제어를 반환합니다: return;
+L000020 |                 return; ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 SelectHead.
+L000021 |             } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 값을 대상에 대입합니다: _selectedHeadNo = normalizedHeadNo
+L000023 |             _selectedHeadNo = normalizedHeadNo; ⟦EOL⟧
+// 해설 L24: 값을 대상에 대입합니다: _axisDefinitions = []
+L000024 |             _axisDefinitions = []; ⟦EOL⟧
+// 해설 L25: 값을 대상에 대입합니다: _snapshot = []
+L000025 |             _snapshot = []; ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 SelectHead.
+L000026 |         } ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 SelectHead.
+L000027 |     } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SelectHead(int, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000029 |     public void SelectHead(int headNo, IReadOnlyDictionary<string, string> parameters) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 SelectHead.
+L000030 |     { ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo) / 지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo); / 변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)
+L000031 |         var normalizedHeadNo = NormalizeHeadNo(headNo); ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildAxisDefinitions(parameters, normalizedHeadNo) / 지역 변수를 선언합니다: var axisDefinitions = BuildAxisDefinitions(parameters, normalizedHeadNo); / 변수의 초기값을 지정합니다: axisDefinitions = BuildAxisDefinitions(parameters, normalizedHeadNo)
+L000032 |         var axisDefinitions = BuildAxisDefinitions(parameters, normalizedHeadNo); ⟦EOL⟧
+// 해설 L33: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000033 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 SelectHead.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSameAxisDefinitions(_axisDefinitions, axisDefinitions) / 조건에 따라 분기합니다: if (_selectedHeadNo == normalizedHeadNo && IsSameAxisDefinitions(_axisDefinitions, axisDefinitions))
+L000035 |             if (_selectedHeadNo == normalizedHeadNo && IsSameAxisDefinitions(_axisDefinitions, axisDefinitions)) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 SelectHead.
+L000036 |             { ⟦EOL⟧
+// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return;
+L000037 |                 return; ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 SelectHead.
+L000038 |             } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: _selectedHeadNo = normalizedHeadNo
+L000040 |             _selectedHeadNo = normalizedHeadNo; ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: _axisDefinitions = axisDefinitions
+L000041 |             _axisDefinitions = axisDefinitions; ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _snapshot = []
+L000042 |             _snapshot = []; ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 SelectHead.
+L000043 |         } ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 SelectHead.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM> Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.GetSnapshot()
+L000046 |     public IReadOnlyList<ST_SCANNER_AXIS_STATUS_ITEM> GetSnapshot() ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSnapshot(CancellationToken.None)
+L000048 |         RefreshSnapshot(CancellationToken.None); ⟦EOL⟧
+// 해설 L49: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock) / 호출자에게 값 또는 제어를 반환합니다: return _snapshot;
+L000049 |         lock (_snapshotLock) return _snapshot; ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000050 |     } ⟦EOL⟧
+L000051 |  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.RefreshSnapshot(System.Threading.CancellationToken)
+L000052 |     private void RefreshSnapshot(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000053 |     { ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPollingContext() / 지역 변수를 선언합니다: var context = ReadPollingContext(); / 변수의 초기값을 지정합니다: context = ReadPollingContext()
+L000054 |         var context = ReadPollingContext(); ⟦EOL⟧
+// 해설 L55: 예외 처리 범위입니다: try
+L000055 |         try ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCANNER_AXIS_STATUS_ITEM>(context.AxisDefinitions.Count) / 지역 변수를 선언합니다: var items = new List<ST_SCANNER_AXIS_STATUS_ITEM>(context.AxisDefinitions.Count); / 변수의 초기값을 지정합니다: items = new List<ST_SCANNER_AXIS_STATUS_ITEM>(context.AxisDefinitions.Count)
+L000057 |             var items = new List<ST_SCANNER_AXIS_STATUS_ITEM>(context.AxisDefinitions.Count); ⟦EOL⟧
+// 해설 L58: 컬렉션 요소를 순회합니다: foreach (var axis in context.AxisDefinitions)
+L000058 |             foreach (var axis in context.AxisDefinitions) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000059 |             { ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000060 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(BuildScannerAxisStatusItem(axis, cancellationToken)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildScannerAxisStatusItem(axis, cancellationToken)
+L000061 |                 items.Add(BuildScannerAxisStatusItem(axis, cancellationToken)); ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000062 |             } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSnapshot(context.HeadNo, items)
+L000064 |             SetSnapshot(context.HeadNo, items); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000065 |         } ⟦EOL⟧
+// 해설 L66: 지정 예외를 처리합니다: catch (Exception exception) when (exception is not OperationCanceledException)
+L000066 |         catch (Exception exception)when (exception is not OperationCanceledException) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000067 |         { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSnapshot(context.HeadNo, CreatePollingErrorSnapshot(exception.Message)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreatePollingErrorSnapshot(exception.Message)
+L000068 |             SetSnapshot(context.HeadNo, CreatePollingErrorSnapshot(exception.Message)); ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000069 |         } ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000070 |     } ⟦EOL⟧
+L000071 |  ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000072 |     private ST_SCANNER_AXIS_STATUS_ITEM BuildScannerAxisStatusItem(ST_SCANNER_AXIS_SETTING axis, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000073 |     { ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.AxisReference.Trim() / 지역 변수를 선언합니다: var axisReference = axis.AxisReference.Trim(); / 변수의 초기값을 지정합니다: axisReference = axis.AxisReference.Trim()
+L000074 |         var axisReference = axis.AxisReference.Trim(); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axisReference) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(axisReference) ? "-" : axisReference / 지역 변수를 선언합니다: var displayAxisReference = string.IsNullOrWhiteSpace(axisReference) ? "-" : axisReference; / 변수의 초기값을 지정합니다: displayAxisReference = string.IsNullOrWhiteSpace(axisReference) ? "-" : axisReference
+L000075 |         var displayAxisReference = string.IsNullOrWhiteSpace(axisReference) ? "-" : axisReference; ⟦EOL⟧
+// 해설 L76: 지역 변수를 선언합니다: var automationLabel = $"#{axis.AutomationNo}"; / 변수의 초기값을 지정합니다: automationLabel = $"#{axis.AutomationNo}"
+L000076 |         var automationLabel = $"#{axis.AutomationNo}"; ⟦EOL⟧
+// 해설 L77: 조건에 따라 분기합니다: if (!axis.IsUsed)
+L000077 |         if (!axis.IsUsed) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000078 |         { ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, "Z NOT USE", "NOT USE", "-", "-", "-", "-", "-", "-", "-", "NOT USE", "Scanner Z axis is not used.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, "Z NOT USE", "NOT USE", "-", "-", "-", "-", "-", "-", "-", "NOT USE", "Scanner Z axis is not used.");
+L000079 |             return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, "Z NOT USE", "NOT USE", "-", "-", "-", "-", "-", "-", "-", "NOT USE", "Scanner Z axis is not used."); ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000080 |         } ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.ConfigurationError) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(axis.ConfigurationError))
+L000082 |         if (!string.IsNullOrWhiteSpace(axis.ConfigurationError)) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000083 |         { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "NOT CONFIGURED", "-", "-", "-", "-", "-", "NO", "-", "NOT CONFIGURED", axis.ConfigurationError) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "NOT CONFIGURED", "-", "-", "-", "-", "-", "NO", "-", "NOT CONFIGURED", axis.ConfigurationError);
+L000084 |             return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "NOT CONFIGURED", "-", "-", "-", "-", "-", "NO", "-", "NOT CONFIGURED", axis.ConfigurationError); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000085 |         } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 예외 처리 범위입니다: try
+L000087 |         try ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000088 |         { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: automationManager.IsSimul(axis.AutomationNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: automationManager.IsConnect(axis.AutomationNo) / 조건에 따라 분기합니다: if (!automationManager.IsSimul(axis.AutomationNo) && !automationManager.IsConnect(axis.AutomationNo))
+L000089 |             if (!automationManager.IsSimul(axis.AutomationNo) && !automationManager.IsConnect(axis.AutomationNo)) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000090 |             { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "OFFLINE", "-", "-", "-", "-", "-", "-", "-", "OFFLINE", "Automation not connected.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "OFFLINE", "-", "-", "-", "-", "-", "-", "-", "OFFLINE", "Automation not connected.");
+L000091 |                 return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "OFFLINE", "-", "-", "-", "-", "-", "-", "-", "OFFLINE", "Automation not connected."); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000092 |             } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: automationManager.StatusSnapshots.GetAxis(axisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) / 지역 변수를 선언합니다: var snapshot = automationManager.StatusSnapshots.GetAxis(axisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); / 변수의 초기값을 지정합니다: snapshot = automationManager.StatusSnapshots.GetAxis(axisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus)
+L000094 |             var snapshot = automationManager.StatusSnapshots.GetAxis(axisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); ⟦EOL⟧
+// 해설 L95: 조건에 따라 분기합니다: if (snapshot.Value is not { } status)
+L000095 |             if (snapshot.Value is not { } status) ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, snapshot.State, "-", "-", "-", "-", "-", "-", "-", snapshot.State, snapshot.Detail) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, snapshot.State, "-", "-", "-", "-", "-", "-", "-", snapshot.State, snapshot.Detail);
+L000096 |                 return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, snapshot.State, "-", "-", "-", "-", "-", "-", "-", snapshot.State, snapshot.Detail); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM( $"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, status.Able ? "ABLE" : "DISABLE", FormatScannerPosition(status.PositionFeedback), FormatExtendedScannerPosition… / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM( $"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, status.Able ? "ABLE" : "DISABLE", FormatScannerPosition(status.PositionFeedback), FormatExtendedScannerPosition(st
+L000097 |             return new ST_SCANNER_AXIS_STATUS_ITEM( ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000098 |                 $"H{axis.HeadNo:00}",  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000099 |                 automationLabel,  ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000100 |                 axis.AxisName,  ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000101 |                 displayAxisReference,  ⟦EOL⟧
+// 해설 L102: 조건에 따라 결과식을 선택합니다: status.Able ? "ABLE" : "DISABLE"
+L000102 |                 status.Able ? "ABLE" : "DISABLE",  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatScannerPosition(status.PositionFeedback)
+L000103 |                 FormatScannerPosition(status.PositionFeedback),  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatExtendedScannerPosition(status.AuxiliaryFeedback, axis.ReadExtendedStatus)
+L000104 |                 FormatExtendedScannerPosition(status.AuxiliaryFeedback, axis.ReadExtendedStatus),  ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatExtendedScannerValue(status.CurrentFeedback, axis.ReadExtendedStatus)
+L000105 |                 FormatExtendedScannerValue(status.CurrentFeedback, axis.ReadExtendedStatus),  ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatExtendedScannerValue(status.GalvoLaserOutputRaw, axis.ReadExtendedStatus)
+L000106 |                 FormatExtendedScannerValue(status.GalvoLaserOutputRaw, axis.ReadExtendedStatus),  ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatExtendedScannerTemperature(status.MotorTemperature, axis.ReadExtendedStatus)
+L000107 |                 FormatExtendedScannerTemperature(status.MotorTemperature, axis.ReadExtendedStatus),  ⟦EOL⟧
+// 해설 L108: 조건에 따라 결과식을 선택합니다: status.HomeDone ? "OK" : "NO"
+L000108 |                 status.HomeDone ? "OK" : "NO",  ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatFault(status.Fault)
+L000109 |                 FormatFault(status.Fault),  ⟦EOL⟧
+// 해설 L110: 조건에 따라 결과식을 선택합니다: status.HasError ? "ERROR" : "OK"
+L000110 |                 status.HasError ? "ERROR" : "OK",  ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(status.RawResponse) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(status.RawResponse) ? "-" : status.RawResponse
+L000111 |                 string.IsNullOrWhiteSpace(status.RawResponse) ? "-" : status.RawResponse ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.Cancellatio
+L000112 |             ); ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000113 |         } ⟦EOL⟧
+// 해설 L114: 지정 예외를 처리합니다: catch (Exception exception) when (exception is not OperationCanceledException)
+L000114 |         catch (Exception exception)when (exception is not OperationCanceledException) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", exception.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", exception.Message);
+L000116 |             return new ST_SCANNER_AXIS_STATUS_ITEM($"H{axis.HeadNo:00}", automationLabel, axis.AxisName, displayAxisReference, "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", exception.Message); ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000117 |         } ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 BuildScannerAxisStatusItem.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList<Dri
+L000120 |     internal static IReadOnlyList<ST_SCANNER_AXIS_SETTING> BuildAxisDefinitions(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo) ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(settings, headNo)
+L000121 |         => CScannerAxisConfiguration.BuildAxisDefinitions(settings, headNo); ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictiona
+L000123 |     internal static IReadOnlyList<ST_SCANNER_AXIS_SETTING> BuildAxisDefinitions(IReadOnlyDictionary<string, string> parameters, int headNo) ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(parameters, headNo)
+L000124 |         => CScannerAxisConfiguration.BuildAxisDefinitions(parameters, headNo); ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<int> Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>,
+L000126 |     internal static IReadOnlyList<int> BuildEnabledHeadNumbers(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headCount = 8) ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildEnabledHeadNumbers(settings, headCount)
+L000127 |         => CScannerAxisConfiguration.BuildEnabledHeadNumbers(settings, headCount); ⟦EOL⟧
+L000128 |  ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsHeadEnabled(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int)
+L000129 |     internal static bool IsHeadEnabled(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo) ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(settings, headNo)
+L000130 |         => CScannerAxisConfiguration.IsHeadEnabled(settings, headNo); ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000132 |     internal static bool IsHeadEnabled(IReadOnlyDictionary<string, string> parameters, int headNo) ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(parameters, headNo)
+L000133 |         => CScannerAxisConfiguration.IsHeadEnabled(parameters, headNo); ⟦EOL⟧
+L000134 |  ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM> Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.CreatePollingErrorSnapshot(string)
+L000135 |     private static IReadOnlyList<ST_SCANNER_AXIS_STATUS_ITEM> CreatePollingErrorSnapshot(string message) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 CreatePollingErrorSnapshot.
+L000136 |     { ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_STATUS_ITEM("-", "-", "-", "-", "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", string.IsNullOrWhiteSpace(message) ? "Scanner status polling failed." : message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(message) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(message) ? "Scanner status polling failed." : message / 호출자에게 값 또는 제어를 반환합니다: return[new ST_SCANNER_AXIS_STATUS_ITEM("-", "-", "-", "-", "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", string.IsNullOrWhiteSpace(
+L000137 |         return[new ST_SCANNER_AXIS_STATUS_ITEM("-", "-", "-", "-", "ERROR", "-", "-", "-", "-", "-", "-", "-", "ERROR", string.IsNullOrWhiteSpace(message) ? "Scanner status polling failed." : message)]; ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 CreatePollingErrorSnapshot.
+L000138 |     } ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SetSnapshot(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM>)
+L000140 |     private void SetSnapshot(IReadOnlyList<ST_SCANNER_AXIS_STATUS_ITEM> snapshot) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000141 |     { ⟦EOL⟧
+// 해설 L142: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000142 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: _snapshot = snapshot
+L000144 |             _snapshot = snapshot; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000145 |         } ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000146 |     } ⟦EOL⟧
+L000147 |  ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SetSnapshot(int, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM>)
+L000148 |     private void SetSnapshot(int headNo, IReadOnlyList<ST_SCANNER_AXIS_STATUS_ITEM> snapshot) ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000149 |     { ⟦EOL⟧
+// 해설 L150: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000150 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000151 |         { ⟦EOL⟧
+// 해설 L152: 조건에 따라 분기합니다: if (_selectedHeadNo != headNo)
+L000152 |             if (_selectedHeadNo != headNo) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000153 |             { ⟦EOL⟧
+// 해설 L154: 호출자에게 값 또는 제어를 반환합니다: return;
+L000154 |                 return; ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000155 |             } ⟦EOL⟧
+L000156 |  ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: _snapshot = snapshot
+L000157 |             _snapshot = snapshot; ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000158 |         } ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 SetSnapshot.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.ST_SCANNER_STATUS_POLLING_CONTEXT Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.ReadPollingContext()
+L000161 |     private ST_SCANNER_STATUS_POLLING_CONTEXT ReadPollingContext() ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 ReadPollingContext.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000163 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 ReadPollingContext.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_STATUS_POLLING_CONTEXT(_selectedHeadNo, _axisDefinitions) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_STATUS_POLLING_CONTEXT(_selectedHeadNo, _axisDefinitions);
+L000165 |             return new ST_SCANNER_STATUS_POLLING_CONTEXT(_selectedHeadNo, _axisDefinitions); ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 ReadPollingContext.
+L000166 |         } ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 ReadPollingContext.
+L000167 |     } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsSameAxisDefinitions(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING>, System.Collections.Generic.IReadOnlyL
+L000169 |     private static bool IsSameAxisDefinitions(IReadOnlyList<ST_SCANNER_AXIS_SETTING> left, IReadOnlyList<ST_SCANNER_AXIS_SETTING> right) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000170 |     { ⟦EOL⟧
+// 해설 L171: 조건에 따라 분기합니다: if (left.Count != right.Count)
+L000171 |         if (left.Count != right.Count) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000172 |         { ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000173 |             return false; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000174 |         } ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < left.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000176 |         for (var index = 0; index < left.Count; index++) ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000177 |         { ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: left[index].Equals(right[index]) / 조건에 따라 분기합니다: if (!left[index].Equals(right[index]))
+L000178 |             if (!left[index].Equals(right[index])) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000179 |             { ⟦EOL⟧
+// 해설 L180: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000180 |                 return false; ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000181 |             } ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000182 |         } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000184 |         return true; ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 IsSameAxisDefinitions.
+L000185 |     } ⟦EOL⟧
+L000186 |  ⟦EOL⟧
+// 해설 L187: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.NormalizeHeadNo(int)
+L000187 |     private static int NormalizeHeadNo(int headNo) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 NormalizeHeadNo.
+L000188 |     { ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(headNo, 1, 8) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(headNo, 1, 8);
+L000189 |         return Math.Clamp(headNo, 1, 8); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 NormalizeHeadNo.
+L000190 |     } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerPosition(double)
+L000192 |     private static string FormatScannerPosition(double value) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 FormatScannerPosition.
+L000193 |     { ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!double.IsFinite(value))
+L000194 |         if (!double.IsFinite(value)) ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 FormatScannerPosition.
+L000195 |         { ⟦EOL⟧
+// 해설 L196: 호출자에게 값 또는 제어를 반환합니다: return "-";
+L000196 |             return "-"; ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 FormatScannerPosition.
+L000197 |         } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("F3", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("F3", CultureInfo.InvariantCulture);
+L000199 |         return value.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 FormatScannerPosition.
+L000200 |     } ⟦EOL⟧
+L000201 |  ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerPosition(double, bool)
+L000202 |     private static string FormatExtendedScannerPosition(double value, bool readExtendedStatus) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 FormatExtendedScannerPosition.
+L000203 |     { ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatScannerPosition(value) / 조건에 따라 결과식을 선택합니다: readExtendedStatus ? FormatScannerPosition(value) : "-" / 호출자에게 값 또는 제어를 반환합니다: return readExtendedStatus ? FormatScannerPosition(value) : "-";
+L000204 |         return readExtendedStatus ? FormatScannerPosition(value) : "-"; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 FormatExtendedScannerPosition.
+L000205 |     } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerValue(double)
+L000207 |     private static string FormatScannerValue(double value) ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 FormatScannerValue.
+L000208 |     { ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!double.IsFinite(value))
+L000209 |         if (!double.IsFinite(value)) ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 FormatScannerValue.
+L000210 |         { ⟦EOL⟧
+// 해설 L211: 호출자에게 값 또는 제어를 반환합니다: return "-";
+L000211 |             return "-"; ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 FormatScannerValue.
+L000212 |         } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("F3", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("F3", CultureInfo.InvariantCulture);
+L000214 |         return value.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 FormatScannerValue.
+L000215 |     } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerValue(double, bool)
+L000217 |     private static string FormatExtendedScannerValue(double value, bool readExtendedStatus) ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 FormatExtendedScannerValue.
+L000218 |     { ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatScannerValue(value) / 조건에 따라 결과식을 선택합니다: readExtendedStatus ? FormatScannerValue(value) : "-" / 호출자에게 값 또는 제어를 반환합니다: return readExtendedStatus ? FormatScannerValue(value) : "-";
+L000219 |         return readExtendedStatus ? FormatScannerValue(value) : "-"; ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 FormatExtendedScannerValue.
+L000220 |     } ⟦EOL⟧
+L000221 |  ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerTemperature(double)
+L000222 |     private static string FormatScannerTemperature(double value) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 FormatScannerTemperature.
+L000223 |     { ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: CGalvoTemperature.FormatCelsius(value) / 호출자에게 값 또는 제어를 반환합니다: return CGalvoTemperature.FormatCelsius(value);
+L000224 |         return CGalvoTemperature.FormatCelsius(value); ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 FormatScannerTemperature.
+L000225 |     } ⟦EOL⟧
+L000226 |  ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerTemperature(double, bool)
+L000227 |     private static string FormatExtendedScannerTemperature(double value, bool readExtendedStatus) ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 FormatExtendedScannerTemperature.
+L000228 |     { ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatScannerTemperature(value) / 조건에 따라 결과식을 선택합니다: readExtendedStatus ? FormatScannerTemperature(value) : "-" / 호출자에게 값 또는 제어를 반환합니다: return readExtendedStatus ? FormatScannerTemperature(value) : "-";
+L000229 |         return readExtendedStatus ? FormatScannerTemperature(value) : "-"; ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 FormatExtendedScannerTemperature.
+L000230 |     } ⟦EOL⟧
+L000231 |  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatFault(string)
+L000232 |     private static string FormatFault(string value) ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 FormatFault.
+L000233 |     { ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? "-" : value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? "-" : value.Trim();
+L000234 |         return string.IsNullOrWhiteSpace(value) ? "-" : value.Trim(); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 FormatFault.
+L000235 |     } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 타입의 구조/상속 선언입니다: private readonly record struct ST_SCANNER_STATUS_POLLING_CONTEXT(int HeadNo, IReadOnlyList<ST_SCANNER_AXIS_SETTING> AxisDefinitions);
+L000237 |     private readonly record struct ST_SCANNER_STATUS_POLLING_CONTEXT(int HeadNo, IReadOnlyList<ST_SCANNER_AXIS_SETTING> AxisDefinitions); ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다.
+L000238 | } ⟦EOL⟧

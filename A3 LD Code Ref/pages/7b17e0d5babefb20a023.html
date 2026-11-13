@@ -1,0 +1,854 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CPreviewCoordinateBehavior.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CPreviewCoordinateBehavior.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs">Git 원본</a></p><h1>Drilling.UI/CPreviewCoordinateBehavior.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>766dbce15e8dd64b80d342370294b0a2c29c27a5aa3e538ba51b6814d8b85b13</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>6,336 bytes / 161 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/7b17e0d5babefb20a023.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CPreviewCoordinateBehavior</td><td>ClassDeclaration</td><td>6–161</td><td>CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>PositionXProperty</td><td>FieldDeclaration</td><td>L8–8</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionXProperty</td></tr>
+<tr><td>PositionYProperty</td><td>FieldDeclaration</td><td>L9–9</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionYProperty</td></tr>
+<tr><td>ContainerWidthProperty</td><td>FieldDeclaration</td><td>L10–10</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerWidthProperty</td></tr>
+<tr><td>ContainerHeightProperty</td><td>FieldDeclaration</td><td>L11–11</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerHeightProperty</td></tr>
+<tr><td>DesignWidthProperty</td><td>FieldDeclaration</td><td>L12–12</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignWidthProperty</td></tr>
+<tr><td>DesignHeightProperty</td><td>FieldDeclaration</td><td>L13–13</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignHeightProperty</td></tr>
+<tr><td>ElementWidthProperty</td><td>FieldDeclaration</td><td>L14–14</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementWidthProperty</td></tr>
+<tr><td>ElementHeightProperty</td><td>FieldDeclaration</td><td>L15–15</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementHeightProperty</td></tr>
+<tr><td>UseStretchScaleProperty</td><td>FieldDeclaration</td><td>L16–16</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.UseStretchScaleProperty</td></tr>
+<tr><td>GetPositionX</td><td>MethodDeclaration</td><td>L17–20</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionX(DependencyObject)</td></tr>
+<tr><td>SetPositionX</td><td>MethodDeclaration</td><td>L22–25</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionX(DependencyObject, object?)</td></tr>
+<tr><td>GetPositionY</td><td>MethodDeclaration</td><td>L27–30</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionY(DependencyObject)</td></tr>
+<tr><td>SetPositionY</td><td>MethodDeclaration</td><td>L32–35</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionY(DependencyObject, object?)</td></tr>
+<tr><td>GetContainerWidth</td><td>MethodDeclaration</td><td>L37–40</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerWidth(DependencyObject)</td></tr>
+<tr><td>SetContainerWidth</td><td>MethodDeclaration</td><td>L42–45</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerWidth(DependencyObject, object?)</td></tr>
+<tr><td>GetContainerHeight</td><td>MethodDeclaration</td><td>L47–50</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerHeight(DependencyObject)</td></tr>
+<tr><td>SetContainerHeight</td><td>MethodDeclaration</td><td>L52–55</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerHeight(DependencyObject, object?)</td></tr>
+<tr><td>GetDesignWidth</td><td>MethodDeclaration</td><td>L57–60</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignWidth(DependencyObject)</td></tr>
+<tr><td>SetDesignWidth</td><td>MethodDeclaration</td><td>L62–65</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignWidth(DependencyObject, object?)</td></tr>
+<tr><td>GetDesignHeight</td><td>MethodDeclaration</td><td>L67–70</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignHeight(DependencyObject)</td></tr>
+<tr><td>SetDesignHeight</td><td>MethodDeclaration</td><td>L72–75</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignHeight(DependencyObject, object?)</td></tr>
+<tr><td>GetElementWidth</td><td>MethodDeclaration</td><td>L77–80</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementWidth(DependencyObject)</td></tr>
+<tr><td>SetElementWidth</td><td>MethodDeclaration</td><td>L82–85</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementWidth(DependencyObject, object?)</td></tr>
+<tr><td>GetElementHeight</td><td>MethodDeclaration</td><td>L87–90</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementHeight(DependencyObject)</td></tr>
+<tr><td>SetElementHeight</td><td>MethodDeclaration</td><td>L92–95</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementHeight(DependencyObject, object?)</td></tr>
+<tr><td>GetUseStretchScale</td><td>MethodDeclaration</td><td>L97–100</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.GetUseStretchScale(DependencyObject)</td></tr>
+<tr><td>SetUseStretchScale</td><td>MethodDeclaration</td><td>L102–105</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetUseStretchScale(DependencyObject, bool)</td></tr>
+<tr><td>CreateInputProperty</td><td>MethodDeclaration</td><td>L107–110</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string)</td></tr>
+<tr><td>OnInputChanged</td><td>MethodDeclaration</td><td>L112–118</td><td>void Drilling.UI.CPreviewCoordinateBehavior.OnInputChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>UpdateCoordinates</td><td>MethodDeclaration</td><td>L120–149</td><td>void Drilling.UI.CPreviewCoordinateBehavior.UpdateCoordinates(ContentPresenter)</td></tr>
+<tr><td>TryDouble</td><td>MethodDeclaration</td><td>L151–160</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L8">FieldDeclaration <code>PositionXProperty</code> · L8–8</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionXProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>8</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>8</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;PositionX&quot;)</td></tr>
+<tr><td>8</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PositionXProperty = CreateInputProperty(&quot;PositionX&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L9">FieldDeclaration <code>PositionYProperty</code> · L9–9</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionYProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>9</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>9</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;PositionY&quot;)</td></tr>
+<tr><td>9</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PositionYProperty = CreateInputProperty(&quot;PositionY&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L10">FieldDeclaration <code>ContainerWidthProperty</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerWidthProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>10</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;ContainerWidth&quot;)</td></tr>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ContainerWidthProperty = CreateInputProperty(&quot;ContainerWidth&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>ContainerHeightProperty</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerHeightProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>11</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;ContainerHeight&quot;)</td></tr>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ContainerHeightProperty = CreateInputProperty(&quot;ContainerHeight&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>DesignWidthProperty</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignWidthProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>12</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;DesignWidth&quot;)</td></tr>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DesignWidthProperty = CreateInputProperty(&quot;DesignWidth&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>DesignHeightProperty</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignHeightProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>13</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;DesignHeight&quot;)</td></tr>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DesignHeightProperty = CreateInputProperty(&quot;DesignHeight&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>ElementWidthProperty</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementWidthProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;ElementWidth&quot;)</td></tr>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ElementWidthProperty = CreateInputProperty(&quot;ElementWidth&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>ElementHeightProperty</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementHeightProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>CreateInputProperty</td><td>resolved</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string) · Drilling.UI/CPreviewCoordinateBehavior.cs:107</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty(&quot;ElementHeight&quot;)</td></tr>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ElementHeightProperty = CreateInputProperty(&quot;ElementHeight&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>UseStretchScaleProperty</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L16-L16">Drilling.UI/CPreviewCoordinateBehavior.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.UseStretchScaleProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>DependencyProperty.RegisterAttached</td><td>unresolved</td><td>None</td></tr>
+<tr><td>16</td><td>new PropertyMetadata</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached(&quot;UseStretchScale&quot;, typeof(bool), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(false, OnInputChanged))</td></tr>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false, OnInputChanged)</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: UseStretchScaleProperty = DependencyProperty.RegisterAttached(&quot;UseStretchScale&quot;, typeof(bool), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(false, OnInputChanged))</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">MethodDeclaration <code>GetPositionX</code> · L17–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L17-L20">Drilling.UI/CPreviewCoordinateBehavior.cs:17–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionX(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>19</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(PositionXProperty)</td></tr>
+<tr><td>19</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(PositionXProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">MethodDeclaration <code>SetPositionX</code> · L22–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L22-L25">Drilling.UI/CPreviewCoordinateBehavior.cs:22–25</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionX(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>24</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(PositionXProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">MethodDeclaration <code>GetPositionY</code> · L27–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L27-L30">Drilling.UI/CPreviewCoordinateBehavior.cs:27–30</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionY(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>29</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(PositionYProperty)</td></tr>
+<tr><td>29</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(PositionYProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">MethodDeclaration <code>SetPositionY</code> · L32–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L32-L35">Drilling.UI/CPreviewCoordinateBehavior.cs:32–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionY(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>34</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(PositionYProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">MethodDeclaration <code>GetContainerWidth</code> · L37–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L37-L40">Drilling.UI/CPreviewCoordinateBehavior.cs:37–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerWidth(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>39</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ContainerWidthProperty)</td></tr>
+<tr><td>39</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ContainerWidthProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">MethodDeclaration <code>SetContainerWidth</code> · L42–45</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L42-L45">Drilling.UI/CPreviewCoordinateBehavior.cs:42–45</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerWidth(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>44</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ContainerWidthProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L47">MethodDeclaration <code>GetContainerHeight</code> · L47–50</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L47-L50">Drilling.UI/CPreviewCoordinateBehavior.cs:47–50</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerHeight(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>49</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ContainerHeightProperty)</td></tr>
+<tr><td>49</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ContainerHeightProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L52">MethodDeclaration <code>SetContainerHeight</code> · L52–55</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L52-L55">Drilling.UI/CPreviewCoordinateBehavior.cs:52–55</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerHeight(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>54</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ContainerHeightProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L57">MethodDeclaration <code>GetDesignWidth</code> · L57–60</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L57-L60">Drilling.UI/CPreviewCoordinateBehavior.cs:57–60</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignWidth(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>59</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(DesignWidthProperty)</td></tr>
+<tr><td>59</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(DesignWidthProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L62">MethodDeclaration <code>SetDesignWidth</code> · L62–65</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L62-L65">Drilling.UI/CPreviewCoordinateBehavior.cs:62–65</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignWidth(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>64</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(DesignWidthProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L67">MethodDeclaration <code>GetDesignHeight</code> · L67–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L67-L70">Drilling.UI/CPreviewCoordinateBehavior.cs:67–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignHeight(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>69</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(DesignHeightProperty)</td></tr>
+<tr><td>69</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(DesignHeightProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L72">MethodDeclaration <code>SetDesignHeight</code> · L72–75</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L72-L75">Drilling.UI/CPreviewCoordinateBehavior.cs:72–75</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignHeight(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>74</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(DesignHeightProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L77">MethodDeclaration <code>GetElementWidth</code> · L77–80</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L77-L80">Drilling.UI/CPreviewCoordinateBehavior.cs:77–80</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementWidth(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>79</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ElementWidthProperty)</td></tr>
+<tr><td>79</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ElementWidthProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L82">MethodDeclaration <code>SetElementWidth</code> · L82–85</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L82-L85">Drilling.UI/CPreviewCoordinateBehavior.cs:82–85</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementWidth(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>84</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ElementWidthProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L87">MethodDeclaration <code>GetElementHeight</code> · L87–90</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L87-L90">Drilling.UI/CPreviewCoordinateBehavior.cs:87–90</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementHeight(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>object?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>89</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ElementHeightProperty)</td></tr>
+<tr><td>89</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ElementHeightProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L92">MethodDeclaration <code>SetElementHeight</code> · L92–95</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L92-L95">Drilling.UI/CPreviewCoordinateBehavior.cs:92–95</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementHeight(DependencyObject, object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>94</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ElementHeightProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L97">MethodDeclaration <code>GetUseStretchScale</code> · L97–100</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L97-L100">Drilling.UI/CPreviewCoordinateBehavior.cs:97–100</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.GetUseStretchScale(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>99</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(UseStretchScaleProperty)</td></tr>
+<tr><td>99</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (bool)target.GetValue(UseStretchScaleProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L102">MethodDeclaration <code>SetUseStretchScale</code> · L102–105</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L102-L105">Drilling.UI/CPreviewCoordinateBehavior.cs:102–105</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetUseStretchScale(DependencyObject, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>104</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(UseStretchScaleProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L107">MethodDeclaration <code>CreateInputProperty</code> · L107–110</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L107-L110">Drilling.UI/CPreviewCoordinateBehavior.cs:107–110</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></td><td>CreateInputProperty</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>109</td><td>DependencyProperty.RegisterAttached</td><td>unresolved</td><td>None</td></tr>
+<tr><td>109</td><td>new PropertyMetadata</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached(name, typeof(object), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(null, OnInputChanged))</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(null, OnInputChanged)</td></tr>
+<tr><td>109</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return DependencyProperty.RegisterAttached(name, typeof(object), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(null, OnInputChanged));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L112">MethodDeclaration <code>OnInputChanged</code> · L112–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L112-L118">Drilling.UI/CPreviewCoordinateBehavior.cs:112–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.OnInputChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>DependencyPropertyChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>116</td><td>UpdateCoordinates</td><td>resolved</td><td>void Drilling.UI.CPreviewCoordinateBehavior.UpdateCoordinates(ContentPresenter) · Drilling.UI/CPreviewCoordinateBehavior.cs:120</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>114</td><td>if</td><td>조건에 따라 분기합니다: if (target is ContentPresenter presenter)</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCoordinates(presenter)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnInputChanged&quot;]
+ N0[&quot;L114 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L120">MethodDeclaration <code>UpdateCoordinates</code> · L120–149</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L120-L149">Drilling.UI/CPreviewCoordinateBehavior.cs:120–149</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.UpdateCoordinates(ContentPresenter)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>presenter</td><td>ContentPresenter</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L116-L116">Drilling.UI/CPreviewCoordinateBehavior.cs:116–116</a></td><td>UpdateCoordinates</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetPositionX</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetPositionY</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetContainerWidth</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetContainerHeight</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetDesignWidth</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetDesignHeight</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetElementWidth</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>122</td><td>TryDouble</td><td>resolved</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double) · Drilling.UI/CPreviewCoordinateBehavior.cs:151</td></tr>
+<tr><td>122</td><td>GetElementHeight</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>124</td><td>Canvas.SetLeft</td><td>unresolved</td><td>None</td></tr>
+<tr><td>125</td><td>Canvas.SetTop</td><td>unresolved</td><td>None</td></tr>
+<tr><td>131</td><td>GetUseStretchScale</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>140</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>147</td><td>Canvas.SetLeft</td><td>unresolved</td><td>None</td></tr>
+<tr><td>148</td><td>Canvas.SetTop</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetPositionX(presenter), out var positionX)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPositionX(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetPositionY(presenter), out var positionY)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPositionY(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetContainerWidth(presenter), out var actualWidth)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetContainerWidth(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetContainerHeight(presenter), out var actualHeight)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetContainerHeight(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetDesignWidth(presenter), out var designWidth)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDesignWidth(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetDesignHeight(presenter), out var designHeight)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDesignHeight(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetElementWidth(presenter), out var elementWidth)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetElementWidth(presenter)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetElementHeight(presenter), out var elementHeight)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetElementHeight(presenter)</td></tr>
+<tr><td>122</td><td>if</td><td>조건에 따라 분기합니다: if (!TryDouble(GetPositionX(presenter), out var positionX) || !TryDouble(GetPositionY(presenter), out var positionY) || !TryDouble(GetContainerWidth(presenter), out var actualWidth) || !TryDouble(GetContainerHeight(presenter…)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(presenter, 0.0)</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(presenter, 0.0)</td></tr>
+<tr><td>126</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>129</td><td>local-declaration</td><td>지역 변수를 선언합니다: double left;</td></tr>
+<tr><td>130</td><td>local-declaration</td><td>지역 변수를 선언합니다: double top;</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetUseStretchScale(presenter)</td></tr>
+<tr><td>131</td><td>if</td><td>조건에 따라 분기합니다: if (GetUseStretchScale(presenter))</td></tr>
+<tr><td>133</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleX = actualWidth / designWidth;</td></tr>
+<tr><td>133</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleX = actualWidth / designWidth</td></tr>
+<tr><td>134</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleY = actualHeight / designHeight;</td></tr>
+<tr><td>134</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleY = actualHeight / designHeight</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: left = (positionX * scaleX) - (elementWidth / 2.0)</td></tr>
+<tr><td>136</td><td>assignment</td><td>값을 대상에 대입합니다: top = (positionY * scaleY) - (elementHeight / 2.0)</td></tr>
+<tr><td>138</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(actualWidth / designWidth, actualHeight / designHeight)</td></tr>
+<tr><td>140</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scale = Math.Min(actualWidth / designWidth, actualHeight / designHeight);</td></tr>
+<tr><td>140</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scale = Math.Min(actualWidth / designWidth, actualHeight / designHeight)</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var offsetX = (actualWidth - (designWidth * scale)) / 2.0;</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetX = (actualWidth - (designWidth * scale)) / 2.0</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var offsetY = (actualHeight - (designHeight * scale)) / 2.0;</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetY = (actualHeight - (designHeight * scale)) / 2.0</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: left = offsetX + (positionX * scale) - (elementWidth / 2.0)</td></tr>
+<tr><td>144</td><td>assignment</td><td>값을 대상에 대입합니다: top = offsetY + (positionY * scale) - (elementHeight / 2.0)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(presenter, left)</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(presenter, top)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;UpdateCoordinates&quot;]
+ N0[&quot;L122 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L131 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L138 else&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L151">MethodDeclaration <code>TryDouble</code> · L151–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L151-L160">Drilling.UI/CPreviewCoordinateBehavior.cs:151–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CPreviewCoordinateBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+<tr><td>result</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>159</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>159</td><td>.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string? object.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>153</td><td>if</td><td>조건에 따라 분기합니다: if (value is double number)</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: result = number</td></tr>
+<tr><td>156</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out result)</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()</td></tr>
+<tr><td>159</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out result);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryDouble&quot;]
+ N0[&quot;L153 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/CPreviewCoordinateBehavior.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

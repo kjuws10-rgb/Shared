@@ -1,0 +1,937 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Recipe/CCellPatternCalculator.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Recipe
+L000001 | namespace Drilling.Common.Recipe ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 |     using System.Globalization; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입의 구조/상속 선언입니다: public static class CCellPatternCalculator
+L000005 |     public static class CCellPatternCalculator ⟦EOL⟧
+// 해설 L6: 구문 블록 경계입니다.
+L000006 |     { ⟦EOL⟧
+// 해설 L7: 변수의 초기값을 지정합니다: MinCellCount = 1
+L000007 |         public const int MinCellCount = 1; ⟦EOL⟧
+// 해설 L8: 변수의 초기값을 지정합니다: MaxTotalShotGroupCount = 500_000
+L000008 |         public const int MaxTotalShotGroupCount = 500_000; ⟦EOL⟧
+// 해설 L9: 변수의 초기값을 지정합니다: MaxGroupCountPerCell = MaxTotalShotGroupCount
+L000009 |         public const int MaxGroupCountPerCell = MaxTotalShotGroupCount; ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 |         // Review preview helpers are deliberately derived from the existing ⟦EOL⟧
+// 해설 L11: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000011 |         // layout calculation so they cannot change Recipe process geometry. ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: MaximumPreviewPointsPerCell = 6_000
+L000012 |         public const int MaximumPreviewPointsPerCell = 6_000; ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: MinimumPreviewPointSize = 2.0
+L000013 |         public const double MinimumPreviewPointSize = 2.0; ⟦EOL⟧
+// 해설 L14: 변수의 초기값을 지정합니다: MaximumPreviewPointSize = 8.0
+L000014 |         public const double MaximumPreviewPointSize = 8.0; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.CCellPatternCalculator.IsSupportedSplitBeamCount(int)
+L000015 |         public static bool IsSupportedSplitBeamCount(int splitBeamCount) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 IsSupportedSplitBeamCount.
+L000016 |         { ⟦EOL⟧
+// 해설 L17: 호출자에게 값 또는 제어를 반환합니다: return splitBeamCount is 1 or 4;
+L000017 |             return splitBeamCount is 1 or 4; ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 IsSupportedSplitBeamCount.
+L000018 |         } ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(layout.GroupPitchMillimeters * scale, MinimumPreviewPointSize, MaximumPreviewPointSize)
+L000020 |         public static double CalculatePreviewPointSize(ST_CELL_PATTERN_LAYOUT layout, double scale) => Math.Clamp(layout.GroupPitchMillimeters * scale, MinimumPreviewPointSize, MaximumPreviewPointSize); ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewSampleStep(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, double)
+L000021 |         public static int CalculatePreviewSampleStep(ST_CELL_PATTERN_LAYOUT layout, double scale) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 CalculatePreviewSampleStep.
+L000022 |         { ⟦EOL⟧
+// 해설 L23: 지역 변수를 선언합니다: var total = (long)layout.GroupCountX * layout.GroupCountY; / 변수의 초기값을 지정합니다: total = (long)layout.GroupCountX * layout.GroupCountY
+L000023 |             var total = (long)layout.GroupCountX * layout.GroupCountY; ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(total / (double)MaximumPreviewPointsPerCell) / 조건에 따라 결과식을 선택합니다: total <= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell)) / 지역 변수를 선언합니다: var countStep = total <= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell)); / 변수의 초기값을 지정합니다: countStep = total <= MaximumPreviewPointsPerCell ? 1 :
+L000024 |             var countStep = total <= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell)); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.000001, layout.GroupPitchMillimeters * scale) / 조건에 따라 결과식을 선택합니다: layout.GroupPitchMillimeters * scale >= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale)) / 지역 변수를 선언합니다: var pixelStep = layout.GroupPitchMillimeters * scale >= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale)); / 변수의 초기값을 지정합니다: pixelStep = la
+L000025 |             var pixelStep = layout.GroupPitchMillimeters * scale >= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale)); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Math.Max(countStep, pixelStep)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(countStep, pixelStep) / 호출자에게 값 또는 제어를 반환합니다: return Math.Max(1, Math.Max(countStep, pixelStep));
+L000026 |             return Math.Max(1, Math.Max(countStep, pixelStep)); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 CalculatePreviewSampleStep.
+L000027 |         } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, layout.BeamHalfSpanMillimeters)
+L000029 |         public static double CalculatePreviewBeamHalfSpan(ST_CELL_PATTERN_LAYOUT layout, int splitBeamCount) => Math.Max(0.0, layout.BeamHalfSpanMillimeters); ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, out int, out string)
+L000030 |         public static bool TryParseCellCount(string? text, out int cellCount, out string validationMessage) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000031 |         { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseCellCount(text, MinCellCount, null, out cellCount, out validationMessage) / 호출자에게 값 또는 제어를 반환합니다: return TryParseCellCount(text, MinCellCount, null, out cellCount, out validationMessage);
+L000032 |             return TryParseCellCount(text, MinCellCount, null, out cellCount, out validationMessage); ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000033 |         } ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, int, int?, out int, out string)
+L000035 |         public static bool TryParseCellCount(string? text, int minimum, int? maximum, out int cellCount, out string validationMessage) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var normalized = text?.Trim() ?? ""; / 변수의 초기값을 지정합니다: normalized = text?.Trim() ?? ""
+L000037 |             var normalized = text?.Trim() ?? ""; ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: cellCount = 0
+L000038 |             cellCount = 0; ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: validationMessage = ""
+L000039 |             validationMessage = ""; ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(MinCellCount, minimum) / 지역 변수를 선언합니다: var effectiveMinimum = Math.Max(MinCellCount, minimum); / 변수의 초기값을 지정합니다: effectiveMinimum = Math.Max(MinCellCount, minimum)
+L000040 |             var effectiveMinimum = Math.Max(MinCellCount, minimum); ⟦EOL⟧
+// 해설 L41: 조건에 따라 결과식을 선택합니다: maximum is { } value && value >= effectiveMinimum ? value : (int? )null / 지역 변수를 선언합니다: var effectiveMaximum = maximum is { } value && value >= effectiveMinimum ? value : (int? )null; / 변수의 초기값을 지정합니다: effectiveMaximum = maximum is { } value && value >= effectiveMinimum ? value : (int? )null
+L000041 |             var effectiveMaximum = maximum is { } value && value >= effectiveMinimum ? value : (int? )null; ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue) / 조건에 따라 분기합니다: if (int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue))
+L000042 |             if (int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue)) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000043 |             { ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: cellCount = intValue
+L000044 |                 cellCount = intValue; ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000045 |             } ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(doubleValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(doubleValue) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) && double.IsFinite(doubleValue) && doubleValue >= int.MinValue && doubleValue <= int.MaxValue && doubleValue == Math.Trun…)
+L000046 |             else if (double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) && double.IsFinite(doubleValue) && doubleValue >= int.MinValue && doubleValue <= int.MaxValue && doubleValue == Math.Truncate(doubleValue)) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000047 |             { ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: cellCount = checked((int)doubleValue)
+L000048 |                 cellCount = checked((int)doubleValue); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000049 |             } ⟦EOL⟧
+// 해설 L50: 앞 조건이 거짓인 경로입니다: else
+L000050 |             else ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000051 |             { ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: validationMessage = effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be an integer between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {FormatCurrentValue(normalized)}" : $"MAX_CELL_NUMBER must be an integer  / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCurrentValue(normalized) / 조건에 따라 결과식을 선택합니다: effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be an integer between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {FormatCurrentValue(normalized)}" : $"MAX_CELL_NUMBER must be an integer grea
+L000052 |                 validationMessage = effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be an integer between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {FormatCurrentValue(normalized)}" : $"MAX_CELL_NUMBER must be an integer greater than or equal to {effectiveMinimum}. Current value: {FormatCurrentValue(normalized)}"; ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000053 |                 return false; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000054 |             } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (cellCount < effectiveMinimum || effectiveMaximum.HasValue && cellCount > effectiveMaximum.Value)
+L000056 |             if (cellCount < effectiveMinimum || effectiveMaximum.HasValue && cellCount > effectiveMaximum.Value) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000057 |             { ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: validationMessage = effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {cellCount}" : $"MAX_CELL_NUMBER must be greater than or equal to {effectiveMinimum} / 조건에 따라 결과식을 선택합니다: effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {cellCount}" : $"MAX_CELL_NUMBER must be greater than or equal to {effectiveMinimum}. Current value: {ce
+L000058 |                 validationMessage = effectiveMaximum.HasValue ? $"MAX_CELL_NUMBER must be between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {cellCount}" : $"MAX_CELL_NUMBER must be greater than or equal to {effectiveMinimum}. Current value: {cellCount}"; ⟦EOL⟧
+// 해설 L59: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000059 |                 return false; ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000060 |             } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000062 |             return true; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 TryParseCellCount.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: Calculate(input, includeShotCenters: true)
+L000065 |         public static ST_CELL_PATTERN_LAYOUT Calculate(ST_CELL_PATTERN_DEFINITION input) => Calculate(input, includeShotCenters: true); ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000066 |         public static ST_CELL_PATTERN_LAYOUT Calculate(ST_CELL_PATTERN_DEFINITION input, bool includeShotCenters) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 Calculate.
+L000067 |         { ⟦EOL⟧
+// 해설 L68: 조건에 따라 분기합니다: if (input.CellNo <= 0)
+L000068 |             if (input.CellNo <= 0) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Calculate.
+L000069 |             { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid("Cell number must be greater than zero.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid("Cell number must be greater than zero.");
+L000070 |                 return Invalid("Cell number must be greater than zero."); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Calculate.
+L000071 |             } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.FirstTargetX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.FirstTargetY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.RotationDegrees) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.PixelSizeMillimeters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.OriginX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.OriginY) / 조건에 따라 분기합니다: if (!double.IsFinite(input.FirstTargetX) || !double.IsFinite(input.FirstTargetY) || !double.IsFinite(input.RotationDegrees) || !double.
+L000073 |             if (!double.IsFinite(input.FirstTargetX) || !double.IsFinite(input.FirstTargetY) || !double.IsFinite(input.RotationDegrees) || !double.IsFinite(input.PixelSizeMillimeters) || !double.IsFinite(input.OriginX) || !double.IsFinite(input.OriginY)) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 Calculate.
+L000074 |             { ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($"Cell{input.CellNo}: Shot group coordinates must be finite values.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid($"Cell{input.CellNo}: Shot group coordinates must be finite values.");
+L000075 |                 return Invalid($"Cell{input.CellNo}: Shot group coordinates must be finite values."); ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Calculate.
+L000076 |             } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 조건에 따라 분기합니다: if (input.PixelSizeMillimeters <= 0.0)
+L000078 |             if (input.PixelSizeMillimeters <= 0.0) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Calculate.
+L000079 |             { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($"Cell{input.CellNo}: Pixel Size must be greater than zero.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid($"Cell{input.CellNo}: Pixel Size must be greater than zero.");
+L000080 |                 return Invalid($"Cell{input.CellNo}: Pixel Size must be greater than zero."); ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 Calculate.
+L000081 |             } ⟦EOL⟧
+L000082 |  ⟦EOL⟧
+// 해설 L83: 조건에 따라 분기합니다: if (input.PixelCountX <= 0 || input.PixelCountY <= 0)
+L000083 |             if (input.PixelCountX <= 0 || input.PixelCountY <= 0) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Calculate.
+L000084 |             { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($"Cell{input.CellNo}: Pixel Count X/Y must be greater than zero.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid($"Cell{input.CellNo}: Pixel Count X/Y must be greater than zero.");
+L000085 |                 return Invalid($"Cell{input.CellNo}: Pixel Count X/Y must be greater than zero."); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Calculate.
+L000086 |             } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 조건에 따라 분기합니다: if (input.ProcessPitch <= 0)
+L000088 |             if (input.ProcessPitch <= 0) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Calculate.
+L000089 |             { ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($"Cell{input.CellNo}: Process Pitch must be greater than zero.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid($"Cell{input.CellNo}: Process Pitch must be greater than zero.");
+L000090 |                 return Invalid($"Cell{input.CellNo}: Process Pitch must be greater than zero."); ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Calculate.
+L000091 |             } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSupportedSplitBeamCount(input.SplitBeamCount) / 조건에 따라 분기합니다: if (!IsSupportedSplitBeamCount(input.SplitBeamCount))
+L000093 |             if (!IsSupportedSplitBeamCount(input.SplitBeamCount)) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Calculate.
+L000094 |             { ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($"Cell{input.CellNo}: DOE Beam Count must be either 1 or 4.") / 호출자에게 값 또는 제어를 반환합니다: return Invalid($"Cell{input.CellNo}: DOE Beam Count must be either 1 or 4.");
+L000095 |                 return Invalid($"Cell{input.CellNo}: DOE Beam Count must be either 1 or 4."); ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Calculate.
+L000096 |             } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 지역 변수를 선언합니다: var targetCountX = input.PixelCountX / input.ProcessPitch; / 변수의 초기값을 지정합니다: targetCountX = input.PixelCountX / input.ProcessPitch
+L000098 |             var targetCountX = input.PixelCountX / input.ProcessPitch; ⟦EOL⟧
+// 해설 L99: 지역 변수를 선언합니다: var targetCountY = input.PixelCountY / input.ProcessPitch; / 변수의 초기값을 지정합니다: targetCountY = input.PixelCountY / input.ProcessPitch
+L000099 |             var targetCountY = input.PixelCountY / input.ProcessPitch; ⟦EOL⟧
+// 해설 L100: 지역 변수를 선언합니다: var groupCountX = targetCountX; / 변수의 초기값을 지정합니다: groupCountX = targetCountX
+L000100 |             var groupCountX = targetCountX; ⟦EOL⟧
+// 해설 L101: 지역 변수를 선언합니다: var groupCountY = targetCountY; / 변수의 초기값을 지정합니다: groupCountY = targetCountY
+L000101 |             var groupCountY = targetCountY; ⟦EOL⟧
+// 해설 L102: 지역 변수를 선언합니다: var processedTargetCountX = targetCountX; / 변수의 초기값을 지정합니다: processedTargetCountX = targetCountX
+L000102 |             var processedTargetCountX = targetCountX; ⟦EOL⟧
+// 해설 L103: 지역 변수를 선언합니다: var processedTargetCountY = targetCountY; / 변수의 초기값을 지정합니다: processedTargetCountY = targetCountY
+L000103 |             var processedTargetCountY = targetCountY; ⟦EOL⟧
+// 해설 L104: 지역 변수를 선언합니다: var processedPixelCountX = targetCountX * input.ProcessPitch; / 변수의 초기값을 지정합니다: processedPixelCountX = targetCountX * input.ProcessPitch
+L000104 |             var processedPixelCountX = targetCountX * input.ProcessPitch; ⟦EOL⟧
+// 해설 L105: 지역 변수를 선언합니다: var processedPixelCountY = targetCountY * input.ProcessPitch; / 변수의 초기값을 지정합니다: processedPixelCountY = targetCountY * input.ProcessPitch
+L000105 |             var processedPixelCountY = targetCountY * input.ProcessPitch; ⟦EOL⟧
+// 해설 L106: 지역 변수를 선언합니다: var excludedTargetCountX = input.PixelCountX - processedPixelCountX; / 변수의 초기값을 지정합니다: excludedTargetCountX = input.PixelCountX - processedPixelCountX
+L000106 |             var excludedTargetCountX = input.PixelCountX - processedPixelCountX; ⟦EOL⟧
+// 해설 L107: 지역 변수를 선언합니다: var excludedTargetCountY = input.PixelCountY - processedPixelCountY; / 변수의 초기값을 지정합니다: excludedTargetCountY = input.PixelCountY - processedPixelCountY
+L000107 |             var excludedTargetCountY = input.PixelCountY - processedPixelCountY; ⟦EOL⟧
+// 해설 L108: 조건에 따라 분기합니다: if (groupCountX <= 0 || groupCountY <= 0)
+L000108 |             if (groupCountX <= 0 || groupCountY <= 0) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 Calculate.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $"Cell{input.CellNo}: Pixel Count {input.PixelCountX} x {input.PixelCountY} does not contain a process pitch interval {input.ProcessPitch}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTarget… / 호출자에게 값 또는 제어를 반환합니다: return Invalid( $"Cell{input.CellNo}: Pixel Count {input.PixelCountX} x {input.PixelCountY} does not contain a process pitch interval {input.ProcessPitch}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCou
+L000110 |                 return Invalid( ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000111 |                     $"Cell{input.CellNo}: Pixel Count {input.PixelCountX} x {input.PixelCountY} does not contain a process pitch interval {input.ProcessPitch}.",  ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000112 |                     targetCountX,  ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000113 |                     targetCountY,  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000114 |                     groupCountX,  ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000115 |                     groupCountY,  ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000116 |                     processedTargetCountX,  ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000117 |                     processedTargetCountY,  ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000118 |                     excludedTargetCountX,  ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000119 |                     excludedTargetCountY ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000120 |                 ); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 Calculate.
+L000121 |             } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 지역 변수를 선언합니다: var groupCount = (long)groupCountX * groupCountY; / 변수의 초기값을 지정합니다: groupCount = (long)groupCountX * groupCountY
+L000123 |             var groupCount = (long)groupCountX * groupCountY; ⟦EOL⟧
+// 해설 L124: 조건에 따라 분기합니다: if (groupCount > MaxGroupCountPerCell)
+L000124 |             if (groupCount > MaxGroupCountPerCell) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 Calculate.
+L000125 |             { ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $"Cell{input.CellNo}: Shot Group Count {groupCount:N0} exceeds the limit " + $"{MaxGroupCountPerCell:N0}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, exc… / 호출자에게 값 또는 제어를 반환합니다: return Invalid( $"Cell{input.CellNo}: Shot Group Count {groupCount:N0} exceeds the limit " + $"{MaxGroupCountPerCell:N0}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, exclud
+L000126 |                 return Invalid( ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000127 |                     $"Cell{input.CellNo}: Shot Group Count {groupCount:N0} exceeds the limit " + $"{MaxGroupCountPerCell:N0}.",  ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000128 |                     targetCountX,  ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000129 |                     targetCountY,  ⟦EOL⟧
+// 해설 L130: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000130 |                     groupCountX,  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000131 |                     groupCountY,  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000132 |                     processedTargetCountX,  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000133 |                     processedTargetCountY,  ⟦EOL⟧
+// 해설 L134: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000134 |                     excludedTargetCountX,  ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000135 |                     excludedTargetCountY ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000136 |                 ); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Calculate.
+L000137 |             } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 지역 변수를 선언합니다: var targetPitchMillimeters = input.PixelSizeMillimeters * input.ProcessPitch; / 변수의 초기값을 지정합니다: targetPitchMillimeters = input.PixelSizeMillimeters * input.ProcessPitch
+L000139 |             var targetPitchMillimeters = input.PixelSizeMillimeters * input.ProcessPitch; ⟦EOL⟧
+// 해설 L140: 지역 변수를 선언합니다: var groupPitchMillimeters = targetPitchMillimeters; / 변수의 초기값을 지정합니다: groupPitchMillimeters = targetPitchMillimeters
+L000140 |             var groupPitchMillimeters = targetPitchMillimeters; ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: var beamPitchMillimeters = targetPitchMillimeters / input.SplitBeamCount; / 변수의 초기값을 지정합니다: beamPitchMillimeters = targetPitchMillimeters / input.SplitBeamCount
+L000141 |             var beamPitchMillimeters = targetPitchMillimeters / input.SplitBeamCount; ⟦EOL⟧
+// 해설 L142: 지역 변수를 선언합니다: var beamHalfSpanMillimeters = beamPitchMillimeters * (input.SplitBeamCount - 1) / 2.0; / 변수의 초기값을 지정합니다: beamHalfSpanMillimeters = beamPitchMillimeters * (input.SplitBeamCount - 1) / 2.0
+L000142 |             var beamHalfSpanMillimeters = beamPitchMillimeters * (input.SplitBeamCount - 1) / 2.0; ⟦EOL⟧
+// 해설 L143: 지역 변수를 선언합니다: var radians = input.RotationDegrees * Math.PI / 180.0; / 변수의 초기값을 지정합니다: radians = input.RotationDegrees * Math.PI / 180.0
+L000143 |             var radians = input.RotationDegrees * Math.PI / 180.0; ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 지역 변수를 선언합니다: var cos = Math.Cos(radians); / 변수의 초기값을 지정합니다: cos = Math.Cos(radians)
+L000144 |             var cos = Math.Cos(radians); ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 지역 변수를 선언합니다: var sin = Math.Sin(radians); / 변수의 초기값을 지정합니다: sin = Math.Sin(radians)
+L000145 |             var sin = Math.Sin(radians); ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(targetPitchMillimeters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(groupPitchMillimeters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamPitchMillimeters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamHalfSpanMillimeters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(radians) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(cos) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(sin) / 조건에 따라 분기합니다: if (!double.IsFinite(targetPitchMillimeters) || !double.IsFinite(groupPitchMillimeters) || !double
+L000146 |             if (!double.IsFinite(targetPitchMillimeters) || !double.IsFinite(groupPitchMillimeters) || !double.IsFinite(beamPitchMillimeters) || !double.IsFinite(beamHalfSpanMillimeters) || !double.IsFinite(radians) || !double.IsFinite(cos) || !double.IsFinite(sin)) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 Calculate.
+L000147 |             { ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $"Cell{input.CellNo}: Shot group pitch or rotation calculation produced a non-finite value.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, excludedTargetCou… / 호출자에게 값 또는 제어를 반환합니다: return Invalid( $"Cell{input.CellNo}: Shot group pitch or rotation calculation produced a non-finite value.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, excludedTargetCountX
+L000148 |                 return Invalid( ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000149 |                     $"Cell{input.CellNo}: Shot group pitch or rotation calculation produced a non-finite value.",  ⟦EOL⟧
+// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000150 |                     targetCountX,  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000151 |                     targetCountY,  ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000152 |                     groupCountX,  ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000153 |                     groupCountY,  ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000154 |                     processedTargetCountX,  ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000155 |                     processedTargetCountY,  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000156 |                     excludedTargetCountX,  ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000157 |                     excludedTargetCountY ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000158 |                 ); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Calculate.
+L000159 |             } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 조건에 따라 분기합니다: if (!includeShotCenters)
+L000161 |             if (!includeShotCenters) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Calculate.
+L000162 |             { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTa… / 호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTarge
+L000163 |                 return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 Calculate.
+L000164 |                 { ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX
+L000165 |                     ProcessedTargetCountX = processedTargetCountX, ⟦EOL⟧
+// 해설 L166: 값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY
+L000166 |                     ProcessedTargetCountY = processedTargetCountY, ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX
+L000167 |                     ExcludedTargetCountX = excludedTargetCountX, ⟦EOL⟧
+// 해설 L168: 값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY
+L000168 |                     ExcludedTargetCountY = excludedTargetCountY, ⟦EOL⟧
+// 해설 L169: 값을 대상에 대입합니다: PixelCountX = input.PixelCountX
+L000169 |                     PixelCountX = input.PixelCountX, ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: PixelCountY = input.PixelCountY
+L000170 |                     PixelCountY = input.PixelCountY, ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: ProcessedPixelCountX = processedPixelCountX
+L000171 |                     ProcessedPixelCountX = processedPixelCountX, ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: ProcessedPixelCountY = processedPixelCountY
+L000172 |                     ProcessedPixelCountY = processedPixelCountY, ⟦EOL⟧
+// 해설 L173: 값을 대상에 대입합니다: BeamPitchMillimeters = beamPitchMillimeters
+L000173 |                     BeamPitchMillimeters = beamPitchMillimeters, ⟦EOL⟧
+// 해설 L174: 값을 대상에 대입합니다: BeamHalfSpanMillimeters = beamHalfSpanMillimeters
+L000174 |                     BeamHalfSpanMillimeters = beamHalfSpanMillimeters ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 Calculate.
+L000175 |                 }; ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 Calculate.
+L000176 |             } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SHOT_GROUP_CENTER>((int)groupCount) / 조건에 따라 결과식을 선택합니다: includeShotCenters ? new List<ST_SHOT_GROUP_CENTER>((int)groupCount) : null / 지역 변수를 선언합니다: var shotCenters = includeShotCenters ? new List<ST_SHOT_GROUP_CENTER>((int)groupCount) : null; / 변수의 초기값을 지정합니다: shotCenters = includeShotCenters ? new List<ST_SHOT_GROUP_CENTER>((int)groupCount) : null
+L000178 |             var shotCenters = includeShotCenters ? new List<ST_SHOT_GROUP_CENTER>((int)groupCount) : null; ⟦EOL⟧
+// 해설 L179: 지역 변수를 선언합니다: var cellShotNo = 1; / 변수의 초기값을 지정합니다: cellShotNo = 1
+L000179 |             var cellShotNo = 1; ⟦EOL⟧
+// 해설 L180: 초기화·조건·증감이 있는 반복입니다: for (var row = 0; row < groupCountY; row++) / 변수의 초기값을 지정합니다: row = 0
+L000180 |             for (var row = 0; row < groupCountY; row++) ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 Calculate.
+L000181 |             { ⟦EOL⟧
+// 해설 L182: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < groupCountX; column++) / 변수의 초기값을 지정합니다: column = 0
+L000182 |                 for (var column = 0; column < groupCountX; column++) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 Calculate.
+L000183 |                 { ⟦EOL⟧
+// 해설 L184: 지역 변수를 선언합니다: var firstTargetColumn = column * input.ProcessPitch; / 변수의 초기값을 지정합니다: firstTargetColumn = column * input.ProcessPitch
+L000184 |                     var firstTargetColumn = column * input.ProcessPitch; ⟦EOL⟧
+// 해설 L185: 지역 변수를 선언합니다: var firstTargetRow = row * input.ProcessPitch; / 변수의 초기값을 지정합니다: firstTargetRow = row * input.ProcessPitch
+L000185 |                     var firstTargetRow = row * input.ProcessPitch; ⟦EOL⟧
+// 해설 L186: 지역 변수를 선언합니다: var localX = (column * targetPitchMillimeters) + beamHalfSpanMillimeters; / 변수의 초기값을 지정합니다: localX = (column * targetPitchMillimeters) + beamHalfSpanMillimeters
+L000186 |                     var localX = (column * targetPitchMillimeters) + beamHalfSpanMillimeters; ⟦EOL⟧
+// 해설 L187: 지역 변수를 선언합니다: var localY = (row * targetPitchMillimeters) + beamHalfSpanMillimeters; / 변수의 초기값을 지정합니다: localY = (row * targetPitchMillimeters) + beamHalfSpanMillimeters
+L000187 |                     var localY = (row * targetPitchMillimeters) + beamHalfSpanMillimeters; ⟦EOL⟧
+// 해설 L188: 지역 변수를 선언합니다: var x = input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin); / 변수의 초기값을 지정합니다: x = input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin)
+L000188 |                     var x = input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin); ⟦EOL⟧
+// 해설 L189: 지역 변수를 선언합니다: var y = input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos); / 변수의 초기값을 지정합니다: y = input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos)
+L000189 |                     var y = input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos); ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(localX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(localY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 조건에 따라 분기합니다: if (!double.IsFinite(localX) || !double.IsFinite(localY) || !double.IsFinite(x) || !double.IsFinite(y))
+L000190 |                     if (!double.IsFinite(localX) || !double.IsFinite(localY) || !double.IsFinite(x) || !double.IsFinite(y)) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 Calculate.
+L000191 |                     { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $"Cell{input.CellNo}: Shot group coordinate calculation produced a non-finite value " + $"at column {column}, row {row}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTa… / 호출자에게 값 또는 제어를 반환합니다: return Invalid( $"Cell{input.CellNo}: Shot group coordinate calculation produced a non-finite value " + $"at column {column}, row {row}.", targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTarge
+L000192 |                         return Invalid( ⟦EOL⟧
+// 해설 L193: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000193 |                             $"Cell{input.CellNo}: Shot group coordinate calculation produced a non-finite value " + $"at column {column}, row {row}.",  ⟦EOL⟧
+// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000194 |                             targetCountX,  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000195 |                             targetCountY,  ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000196 |                             groupCountX,  ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000197 |                             groupCountY,  ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000198 |                             processedTargetCountX,  ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000199 |                             processedTargetCountY,  ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000200 |                             excludedTargetCountX,  ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000201 |                             excludedTargetCountY ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)
+L000202 |                         ); ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 Calculate.
+L000203 |                     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Add(new ST_SHOT_GROUP_CENTER(input.CellNo, cellShotNo++, column, row, firstTargetColumn, firstTargetRow, x, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SHOT_GROUP_CENTER(input.CellNo, cellShotNo++, column, row, firstTargetColumn, firstTargetRow, x, y)
+L000205 |                     shotCenters?.Add(new ST_SHOT_GROUP_CENTER(input.CellNo, cellShotNo++, column, row, firstTargetColumn, firstTargetRow, x, y)); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 Calculate.
+L000206 |                 } ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Calculate.
+L000207 |             } ⟦EOL⟧
+L000208 |  ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT(shotCenters ?? [], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCount… / 호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT(shotCenters ?? [], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY =
+L000209 |             return new ST_CELL_PATTERN_LAYOUT(shotCenters ?? [], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, "") ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 Calculate.
+L000210 |             { ⟦EOL⟧
+// 해설 L211: 값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX
+L000211 |                 ProcessedTargetCountX = processedTargetCountX, ⟦EOL⟧
+// 해설 L212: 값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY
+L000212 |                 ProcessedTargetCountY = processedTargetCountY, ⟦EOL⟧
+// 해설 L213: 값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX
+L000213 |                 ExcludedTargetCountX = excludedTargetCountX, ⟦EOL⟧
+// 해설 L214: 값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY
+L000214 |                 ExcludedTargetCountY = excludedTargetCountY, ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: PixelCountX = input.PixelCountX
+L000215 |                 PixelCountX = input.PixelCountX, ⟦EOL⟧
+// 해설 L216: 값을 대상에 대입합니다: PixelCountY = input.PixelCountY
+L000216 |                 PixelCountY = input.PixelCountY, ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: ProcessedPixelCountX = processedPixelCountX
+L000217 |                 ProcessedPixelCountX = processedPixelCountX, ⟦EOL⟧
+// 해설 L218: 값을 대상에 대입합니다: ProcessedPixelCountY = processedPixelCountY
+L000218 |                 ProcessedPixelCountY = processedPixelCountY, ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: BeamPitchMillimeters = beamPitchMillimeters
+L000219 |                 BeamPitchMillimeters = beamPitchMillimeters, ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: BeamHalfSpanMillimeters = beamHalfSpanMillimeters
+L000220 |                 BeamHalfSpanMillimeters = beamHalfSpanMillimeters ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Calculate.
+L000221 |             }; ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 Calculate.
+L000222 |         } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000224 |         public static ST_SHOT_GROUP_CENTER CalculateShotCenter(ST_CELL_PATTERN_DEFINITION input, int column, int row, ST_CELL_PATTERN_LAYOUT layout) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 CalculateShotCenter.
+L000225 |         { ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(input)
+L000226 |             ArgumentNullException.ThrowIfNull(input); ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(layout)
+L000227 |             ArgumentNullException.ThrowIfNull(layout); ⟦EOL⟧
+// 해설 L228: 조건에 따라 분기합니다: if (column < 0 || column >= layout.GroupCountX || row < 0 || row >= layout.GroupCountY)
+L000228 |             if (column < 0 || column >= layout.GroupCountX || row < 0 || row >= layout.GroupCountY) ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 CalculateShotCenter.
+L000229 |             { ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(column), "Shot group row or column is outside the layout.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(column) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(column), "Shot group row or column is outside the layout.");
+L000230 |                 throw new ArgumentOutOfRangeException(nameof(column), "Shot group row or column is outside the layout."); ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 CalculateShotCenter.
+L000231 |             } ⟦EOL⟧
+L000232 |  ⟦EOL⟧
+// 해설 L233: 지역 변수를 선언합니다: var radians = input.RotationDegrees * Math.PI / 180.0; / 변수의 초기값을 지정합니다: radians = input.RotationDegrees * Math.PI / 180.0
+L000233 |             var radians = input.RotationDegrees * Math.PI / 180.0; ⟦EOL⟧
+// 해설 L234: 지역 변수를 선언합니다: var localX = (column * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters; / 변수의 초기값을 지정합니다: localX = (column * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters
+L000234 |             var localX = (column * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters; ⟦EOL⟧
+// 해설 L235: 지역 변수를 선언합니다: var localY = (row * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters; / 변수의 초기값을 지정합니다: localY = (row * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters
+L000235 |             var localY = (row * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters; ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 지역 변수를 선언합니다: var cos = Math.Cos(radians); / 변수의 초기값을 지정합니다: cos = Math.Cos(radians)
+L000236 |             var cos = Math.Cos(radians); ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 지역 변수를 선언합니다: var sin = Math.Sin(radians); / 변수의 초기값을 지정합니다: sin = Math.Sin(radians)
+L000237 |             var sin = Math.Sin(radians); ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SHOT_GROUP_CENTER( input.CellNo, (row * layout.GroupCountX) + column + 1, column, row, column * input.ProcessPitch, row * input.ProcessPitch, input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin), i… / 호출자에게 값 또는 제어를 반환합니다: return new ST_SHOT_GROUP_CENTER( input.CellNo, (row * layout.GroupCountX) + column + 1, column, row, column * input.ProcessPitch, row * input.ProcessPitch, input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin), inpu
+L000238 |             return new ST_SHOT_GROUP_CENTER( ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000239 |                 input.CellNo,  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000240 |                 (row * layout.GroupCountX) + column + 1,  ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000241 |                 column,  ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000242 |                 row,  ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000243 |                 column * input.ProcessPitch,  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000244 |                 row * input.ProcessPitch,  ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000245 |                 input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin),  ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000246 |                 input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos) ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_
+L000247 |             ); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 CalculateShotCenter.
+L000248 |         } ⟦EOL⟧
+L000249 |  ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000250 |         private static ST_CELL_PATTERN_LAYOUT Invalid( ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000251 |             string message,  ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000252 |             int targetCountX = 0,  ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000253 |             int targetCountY = 0,  ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000254 |             int groupCountX = 0,  ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000255 |             int groupCountY = 0,  ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000256 |             int processedTargetCountX = 0,  ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000257 |             int processedTargetCountY = 0,  ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000258 |             int excludedTargetCountX = 0,  ⟦EOL⟧
+// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000259 |             int excludedTargetCountY = 0 ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)
+L000260 |         ) ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 Invalid.
+L000261 |         { ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, 0.0, 0.0, message) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTargetCountY, ExcludedTargetCountX… / 호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, 0.0, 0.0, message) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTargetCountY, ExcludedTargetCountX =
+L000262 |             return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, 0.0, 0.0, message) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 Invalid.
+L000263 |             { ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX
+L000264 |                 ProcessedTargetCountX = processedTargetCountX, ⟦EOL⟧
+// 해설 L265: 값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY
+L000265 |                 ProcessedTargetCountY = processedTargetCountY, ⟦EOL⟧
+// 해설 L266: 값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX
+L000266 |                 ExcludedTargetCountX = excludedTargetCountX, ⟦EOL⟧
+// 해설 L267: 값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY
+L000267 |                 ExcludedTargetCountY = excludedTargetCountY ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 Invalid.
+L000268 |             }; ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 Invalid.
+L000269 |         } ⟦EOL⟧
+L000270 |  ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Recipe.CCellPatternCalculator.FormatCurrentValue(string)
+L000271 |         private static string FormatCurrentValue(string value) ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 FormatCurrentValue.
+L000272 |         { ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? "(empty)" : value / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? "(empty)" : value;
+L000273 |             return string.IsNullOrWhiteSpace(value) ? "(empty)" : value; ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 FormatCurrentValue.
+L000274 |         } ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다.
+L000275 |     } ⟦EOL⟧
+L000276 |  ⟦EOL⟧
+// 해설 L277: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PATTERN_DEFINITION(
+L000277 |     public sealed record ST_CELL_PATTERN_DEFINITION( ⟦EOL⟧
+// 해설 L278: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000278 |         int CellNo,  ⟦EOL⟧
+// 해설 L279: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000279 |         double FirstTargetX,  ⟦EOL⟧
+// 해설 L280: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000280 |         double FirstTargetY,  ⟦EOL⟧
+// 해설 L281: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000281 |         double RotationDegrees,  ⟦EOL⟧
+// 해설 L282: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000282 |         double PixelSizeMillimeters,  ⟦EOL⟧
+// 해설 L283: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000283 |         int PixelCountX,  ⟦EOL⟧
+// 해설 L284: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000284 |         int PixelCountY,  ⟦EOL⟧
+// 해설 L285: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000285 |         int ProcessPitch,  ⟦EOL⟧
+// 해설 L286: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000286 |         int SplitBeamCount,  ⟦EOL⟧
+// 해설 L287: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000287 |         double OriginX = 0.0,  ⟦EOL⟧
+// 해설 L288: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000288 |         double OriginY = 0.0 ⟦EOL⟧
+// 해설 L289: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000289 |     ); ⟦EOL⟧
+// 해설 L290: 타입의 구조/상속 선언입니다: public sealed record ST_SHOT_GROUP_CENTER(int CellNo, int CellShotNo, int GroupColumn, int GroupRow, int FirstTargetColumn, int FirstTargetRow, double DesignX, double DesignY);
+L000290 |     public sealed record ST_SHOT_GROUP_CENTER(int CellNo, int CellShotNo, int GroupColumn, int GroupRow, int FirstTargetColumn, int FirstTargetRow, double DesignX, double DesignY); ⟦EOL⟧
+// 해설 L291: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PATTERN_LAYOUT(
+L000291 |     public sealed record ST_CELL_PATTERN_LAYOUT( ⟦EOL⟧
+// 해설 L292: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000292 |         IReadOnlyList<ST_SHOT_GROUP_CENTER> ShotCenters,  ⟦EOL⟧
+// 해설 L293: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000293 |         int TargetCountX,  ⟦EOL⟧
+// 해설 L294: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000294 |         int TargetCountY,  ⟦EOL⟧
+// 해설 L295: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000295 |         int GroupCountX,  ⟦EOL⟧
+// 해설 L296: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000296 |         int GroupCountY,  ⟦EOL⟧
+// 해설 L297: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000297 |         double TargetPitchMillimeters,  ⟦EOL⟧
+// 해설 L298: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000298 |         double GroupPitchMillimeters,  ⟦EOL⟧
+// 해설 L299: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000299 |         string ValidationMessage ⟦EOL⟧
+// 해설 L300: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000300 |     ) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다.
+L000301 |     { ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid
+L000302 |         public bool IsValid ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 IsValid.
+L000303 |         { ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid.get
+L000304 |             get ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 get_IsValid.
+L000305 |             { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(ValidationMessage) / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(ValidationMessage);
+L000306 |                 return string.IsNullOrWhiteSpace(ValidationMessage); ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 get_IsValid.
+L000307 |             } ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 IsValid.
+L000308 |         } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX
+L000310 |         public int ProcessedTargetCountX { get; init; } ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY
+L000311 |         public int ProcessedTargetCountY { get; init; } ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX
+L000312 |         public int ExcludedTargetCountX { get; init; } ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY
+L000313 |         public int ExcludedTargetCountY { get; init; } ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX
+L000314 |         public int PixelCountX { get; init; } ⟦EOL⟧
+// 해설 L315: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY
+L000315 |         public int PixelCountY { get; init; } ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX
+L000316 |         public int ProcessedPixelCountX { get; init; } ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY
+L000317 |         public int ProcessedPixelCountY { get; init; } ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters
+L000318 |         public double BeamPitchMillimeters { get; init; } ⟦EOL⟧
+// 해설 L319: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters
+L000319 |         public double BeamHalfSpanMillimeters { get; init; } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets
+L000321 |         public bool HasExcludedTargets ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 HasExcludedTargets.
+L000322 |         { ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets.get
+L000323 |             get ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 get_HasExcludedTargets.
+L000324 |             { ⟦EOL⟧
+// 해설 L325: 호출자에게 값 또는 제어를 반환합니다: return ExcludedTargetCountX > 0 || ExcludedTargetCountY > 0;
+L000325 |                 return ExcludedTargetCountX > 0 || ExcludedTargetCountY > 0; ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 get_HasExcludedTargets.
+L000326 |             } ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 HasExcludedTargets.
+L000327 |         } ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다.
+L000328 |     } ⟦EOL⟧
+L000329 |  ⟦EOL⟧
+// 해설 L330: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_CELL_PATTERN_ENTRY(ST_CELL_PATTERN_DEFINITION Definition, ST_CELL_PATTERN_LAYOUT Layout, int StartIndex, int Count);
+L000330 |     public sealed record ST_RECIPE_CELL_PATTERN_ENTRY(ST_CELL_PATTERN_DEFINITION Definition, ST_CELL_PATTERN_LAYOUT Layout, int StartIndex, int Count); ⟦EOL⟧
+// 해설 L331: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000331 |     /// <summary> ⟦EOL⟧
+// 해설 L332: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000332 |     /// Lazily maps Review points to the current Recipe cell layout.  It does not ⟦EOL⟧
+// 해설 L333: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000333 |     /// persist or alter Recipe data; it only prevents large Review plans from ⟦EOL⟧
+// 해설 L334: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000334 |     /// materializing duplicate point lists. ⟦EOL⟧
+// 해설 L335: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000335 |     /// </summary> ⟦EOL⟧
+// 해설 L336: 타입의 구조/상속 선언입니다: public sealed class CRecipeCellPatternCatalog
+L000336 |     public sealed class CRecipeCellPatternCatalog ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다.
+L000337 |     { ⟦EOL⟧
+// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY> Drilling.Common.Recipe.CRecipeCellPatternCatalog._cells
+L000338 |         private readonly IReadOnlyList<ST_RECIPE_CELL_PATTERN_ENTRY> _cells; ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.CRecipeCellPatternCatalog.CRecipeCellPatternCatalog(System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY>, int)
+L000339 |         private CRecipeCellPatternCatalog(IReadOnlyList<ST_RECIPE_CELL_PATTERN_ENTRY> cells, int count) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 .ctor.
+L000340 |         { ⟦EOL⟧
+// 해설 L341: 값을 대상에 대입합니다: _cells = cells
+L000341 |             _cells = cells; ⟦EOL⟧
+// 해설 L342: 값을 대상에 대입합니다: Count = count
+L000342 |             Count = count; ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 .ctor.
+L000343 |         } ⟦EOL⟧
+L000344 |  ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CRecipeCellPatternCatalog.Count
+L000345 |         public int Count { get; } ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CRecipeCellPatternCatalog.CellCount
+L000346 |         public int CellCount => _cells.Count; ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY> Drilling.Common.Recipe.CRecipeCellPatternCatalog.Cells
+L000347 |         public IReadOnlyList<ST_RECIPE_CELL_PATTERN_ENTRY> Cells => _cells; ⟦EOL⟧
+L000348 |  ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.CRecipeCellPatternCatalog Drilling.Common.Recipe.CRecipeCellPatternCatalog.Create(System.Collections.Generic.IEnumerable<Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION>)
+L000349 |         public static CRecipeCellPatternCatalog Create(IEnumerable<ST_CELL_PATTERN_DEFINITION> definitions) ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 Create.
+L000350 |         { ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(definitions)
+L000351 |             ArgumentNullException.ThrowIfNull(definitions); ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_RECIPE_CELL_PATTERN_ENTRY>() / 지역 변수를 선언합니다: var cells = new List<ST_RECIPE_CELL_PATTERN_ENTRY>(); / 변수의 초기값을 지정합니다: cells = new List<ST_RECIPE_CELL_PATTERN_ENTRY>()
+L000352 |             var cells = new List<ST_RECIPE_CELL_PATTERN_ENTRY>(); ⟦EOL⟧
+// 해설 L353: 지역 변수를 선언합니다: var totalCount = 0; / 변수의 초기값을 지정합니다: totalCount = 0
+L000353 |             var totalCount = 0; ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.OrderBy(item => item.CellNo) / 컬렉션 요소를 순회합니다: foreach (var definition in definitions.OrderBy(item => item.CellNo))
+L000354 |             foreach (var definition in definitions.OrderBy(item => item.CellNo)) ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 Create.
+L000355 |             { ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.Calculate(definition) / 지역 변수를 선언합니다: var layout = CCellPatternCalculator.Calculate(definition); / 변수의 초기값을 지정합니다: layout = CCellPatternCalculator.Calculate(definition)
+L000356 |                 var layout = CCellPatternCalculator.Calculate(definition); ⟦EOL⟧
+// 해설 L357: 조건에 따라 분기합니다: if (!layout.IsValid)
+L000357 |                 if (!layout.IsValid) ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 Create.
+L000358 |                 { ⟦EOL⟧
+// 해설 L359: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(layout.ValidationMessage) / 예외를 발생/전달합니다: throw new InvalidOperationException(layout.ValidationMessage);
+L000359 |                     throw new InvalidOperationException(layout.ValidationMessage); ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 Create.
+L000360 |                 } ⟦EOL⟧
+L000361 |  ⟦EOL⟧
+// 해설 L362: 지역 변수를 선언합니다: var cellCount = checked(layout.GroupCountX * layout.GroupCountY); / 변수의 초기값을 지정합니다: cellCount = checked(layout.GroupCountX * layout.GroupCountY)
+L000362 |                 var cellCount = checked(layout.GroupCountX * layout.GroupCountY); ⟦EOL⟧
+// 해설 L363: 조건에 따라 분기합니다: if (cellCount > int.MaxValue - totalCount)
+L000363 |                 if (cellCount > int.MaxValue - totalCount) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 Create.
+L000364 |                 { ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Recipe Cell point count {(long)totalCount + cellCount:N0} exceeds the supported list size.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Recipe Cell point count {(long)totalCount + cellCount:N0} exceeds the supported list size.");
+L000365 |                     throw new InvalidOperationException($"Recipe Cell point count {(long)totalCount + cellCount:N0} exceeds the supported list size."); ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 Create.
+L000366 |                 } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: cells.Add(new ST_RECIPE_CELL_PATTERN_ENTRY(definition, layout, totalCount, cellCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_CELL_PATTERN_ENTRY(definition, layout, totalCount, cellCount)
+L000368 |                 cells.Add(new ST_RECIPE_CELL_PATTERN_ENTRY(definition, layout, totalCount, cellCount)); ⟦EOL⟧
+// 해설 L369: 복합 대입 또는 이벤트 구독/해지 표현입니다: totalCount += cellCount
+L000369 |                 totalCount += cellCount; ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 Create.
+L000370 |             } ⟦EOL⟧
+L000371 |  ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeCellPatternCatalog(cells, totalCount) / 호출자에게 값 또는 제어를 반환합니다: return new CRecipeCellPatternCatalog(cells, totalCount);
+L000372 |             return new CRecipeCellPatternCatalog(cells, totalCount); ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 Create.
+L000373 |         } ⟦EOL⟧
+L000374 |  ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cells.FirstOrDefault(cell => cell.Definition.CellNo == cellNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(cellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(cellNo) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(cellNo))
+L000375 |         public ST_RECIPE_CELL_PATTERN_ENTRY GetCell(int cellNo) => _cells.FirstOrDefault(cell => cell.Definition.CellNo == cellNo) ?? throw new ArgumentOutOfRangeException(nameof(cellNo)); ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(int)
+L000376 |         public ST_SHOT_GROUP_CENTER GetShotCenter(int index) ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000377 |         { ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: var(cell, pointIndex) = Resolve(index) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Resolve(index)
+L000378 |             var(cell, pointIndex) = Resolve(index); ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetShotCenter(cell, pointIndex) / 호출자에게 값 또는 제어를 반환합니다: return GetShotCenter(cell, pointIndex);
+L000379 |             return GetShotCenter(cell, pointIndex); ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000380 |         } ⟦EOL⟧
+L000381 |  ⟦EOL⟧
+// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY, int)
+L000382 |         public static ST_SHOT_GROUP_CENTER GetShotCenter(ST_RECIPE_CELL_PATTERN_ENTRY cell, int pointIndex) ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000383 |         { ⟦EOL⟧
+// 해설 L384: 조건에 따라 분기합니다: if ((uint)pointIndex >= (uint)cell.Count)
+L000384 |             if ((uint)pointIndex >= (uint)cell.Count) ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000385 |             { ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(pointIndex)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(pointIndex) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(pointIndex));
+L000386 |                 throw new ArgumentOutOfRangeException(nameof(pointIndex)); ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000387 |             } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.CalculateShotCenter(cell.Definition, pointIndex % cell.Layout.GroupCountX, pointIndex / cell.Layout.GroupCountX, cell.Layout) / 호출자에게 값 또는 제어를 반환합니다: return CCellPatternCalculator.CalculateShotCenter(cell.Definition, pointIndex % cell.Layout.GroupCountX, pointIndex / cell.Layout.GroupCountX, cell.Layout);
+L000389 |             return CCellPatternCalculator.CalculateShotCenter(cell.Definition, pointIndex % cell.Layout.GroupCountX, pointIndex / cell.Layout.GroupCountX, cell.Layout); ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 GetShotCenter.
+L000390 |         } ⟦EOL⟧
+L000391 |  ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · (Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex) Drilling.Common.Recipe.CRecipeCellPatternCatalog.Resolve(int)
+L000392 |         public (ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex) Resolve(int index) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 Resolve.
+L000393 |         { ⟦EOL⟧
+// 해설 L394: 조건에 따라 분기합니다: if ((uint)index >= (uint)Count)
+L000394 |             if ((uint)index >= (uint)Count) ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 Resolve.
+L000395 |             { ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(index) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(index));
+L000396 |                 throw new ArgumentOutOfRangeException(nameof(index)); ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 Resolve.
+L000397 |             } ⟦EOL⟧
+L000398 |  ⟦EOL⟧
+// 해설 L399: 지역 변수를 선언합니다: var low = 0; / 변수의 초기값을 지정합니다: low = 0
+L000399 |             var low = 0; ⟦EOL⟧
+// 해설 L400: 지역 변수를 선언합니다: var high = _cells.Count - 1; / 변수의 초기값을 지정합니다: high = _cells.Count - 1
+L000400 |             var high = _cells.Count - 1; ⟦EOL⟧
+// 해설 L401: 조건을 먼저 확인하며 반복합니다: while (low <= high)
+L000401 |             while (low <= high) ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 Resolve.
+L000402 |             { ⟦EOL⟧
+// 해설 L403: 지역 변수를 선언합니다: var middle = low + ((high - low) / 2); / 변수의 초기값을 지정합니다: middle = low + ((high - low) / 2)
+L000403 |                 var middle = low + ((high - low) / 2); ⟦EOL⟧
+// 해설 L404: 지역 변수를 선언합니다: var cell = _cells[middle]; / 변수의 초기값을 지정합니다: cell = _cells[middle]
+L000404 |                 var cell = _cells[middle]; ⟦EOL⟧
+// 해설 L405: 조건에 따라 분기합니다: if (index < cell.StartIndex)
+L000405 |                 if (index < cell.StartIndex) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 Resolve.
+L000406 |                 { ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: high = middle - 1
+L000407 |                     high = middle - 1; ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 Resolve.
+L000408 |                 } ⟦EOL⟧
+// 해설 L409: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (index >= cell.StartIndex + cell.Count)
+L000409 |                 else if (index >= cell.StartIndex + cell.Count) ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 Resolve.
+L000410 |                 { ⟦EOL⟧
+// 해설 L411: 값을 대상에 대입합니다: low = middle + 1
+L000411 |                     low = middle + 1; ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 Resolve.
+L000412 |                 } ⟦EOL⟧
+// 해설 L413: 앞 조건이 거짓인 경로입니다: else
+L000413 |                 else ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 Resolve.
+L000414 |                 { ⟦EOL⟧
+// 해설 L415: 호출자에게 값 또는 제어를 반환합니다: return (cell, index - cell.StartIndex);
+L000415 |                     return (cell, index - cell.StartIndex); ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 Resolve.
+L000416 |                 } ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 Resolve.
+L000417 |             } ⟦EOL⟧
+L000418 |  ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(index) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(index));
+L000419 |             throw new ArgumentOutOfRangeException(nameof(index)); ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 Resolve.
+L000420 |         } ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다.
+L000421 |     } ⟦EOL⟧
+L000422 |  ⟦EOL⟧
+// 해설 L423: 타입의 구조/상속 선언입니다: public readonly record struct ST_RECIPE_MODEL_PIXEL_COUNT(int PixelCountX, int PixelCountY);
+L000423 |     public readonly record struct ST_RECIPE_MODEL_PIXEL_COUNT(int PixelCountX, int PixelCountY); ⟦EOL⟧
+// 해설 L424: 타입의 구조/상속 선언입니다: public readonly record struct ST_RECIPE_MODEL_PATTERN(int PixelCountX, int PixelCountY, int ProcessPitch, int Chess, int ChessType);
+L000424 |     public readonly record struct ST_RECIPE_MODEL_PATTERN(int PixelCountX, int PixelCountY, int ProcessPitch, int Chess, int ChessType); ⟦EOL⟧
+// 해설 L425: 타입의 구조/상속 선언입니다: public static class CRecipeModelPixelCountReader
+L000425 |     public static class CRecipeModelPixelCountReader ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다.
+L000426 |     { ⟦EOL⟧
+// 해설 L427: 변수의 초기값을 지정합니다: MaximumCellModelTypeCount = 5
+L000427 |         public const int MaximumCellModelTypeCount = 5; ⟦EOL⟧
+// 해설 L428: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadModelTypeCount(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000428 |         public static int ReadModelTypeCount(IReadOnlyDictionary<string, string> parameters) ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 ReadModelTypeCount.
+L000429 |         { ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, "CELL_MODEL_TYPE_COUNT"), 1, MaximumCellModelTypeCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, "CELL_MODEL_TYPE_COUNT") / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(ReadInt(parameters, 1, "CELL_MODEL_TYPE_COUNT"), 1, MaximumCellModelTypeCount);
+L000430 |             return Math.Clamp(ReadInt(parameters, 1, "CELL_MODEL_TYPE_COUNT"), 1, MaximumCellModelTypeCount); ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 ReadModelTypeCount.
+L000431 |         } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadCellModelType(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, int)
+L000433 |         public static int ReadCellModelType(IReadOnlyDictionary<string, string> parameters, int cellNo, int modelTypeCount = 0) ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 ReadCellModelType.
+L000434 |         { ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(modelTypeCount, MaximumCellModelTypeCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModelTypeCount(parameters) / 조건에 따라 결과식을 선택합니다: modelTypeCount > 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters) / 지역 변수를 선언합니다: var maximum = modelTypeCount > 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters); / 변수의 초기값을 지정합니다: maximum = modelTypeCount > 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters)
+L000435 |             var maximum = modelTypeCount > 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters); ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $"CELL{cellNo}_MODEL_TYPE"), 1, Math.Max(1, maximum)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $"CELL{cellNo}_MODEL_TYPE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, maximum) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(ReadInt(parameters, 1, $"CELL{cellNo}_MODEL_TYPE"), 1, Math.Max(1, maximum));
+L000436 |             return Math.Clamp(ReadInt(parameters, 1, $"CELL{cellNo}_MODEL_TYPE"), 1, Math.Max(1, maximum)); ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 ReadCellModelType.
+L000437 |         } ⟦EOL⟧
+L000438 |  ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForCell(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000439 |         public static ST_RECIPE_MODEL_PIXEL_COUNT ReadForCell(IReadOnlyDictionary<string, string> parameters, int cellNo) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 ReadForCell.
+L000440 |         { ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadForModel(parameters, ReadCellModelType(parameters, cellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCellModelType(parameters, cellNo) / 호출자에게 값 또는 제어를 반환합니다: return ReadForModel(parameters, ReadCellModelType(parameters, cellNo));
+L000441 |             return ReadForModel(parameters, ReadCellModelType(parameters, cellNo)); ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 ReadForCell.
+L000442 |         } ⟦EOL⟧
+L000443 |  ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForCell(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000444 |         public static ST_RECIPE_MODEL_PATTERN ReadPatternForCell(IReadOnlyDictionary<string, string> parameters, int cellNo) ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 ReadPatternForCell.
+L000445 |         { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPatternForModel(parameters, ReadCellModelType(parameters, cellNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCellModelType(parameters, cellNo) / 호출자에게 값 또는 제어를 반환합니다: return ReadPatternForModel(parameters, ReadCellModelType(parameters, cellNo));
+L000446 |             return ReadPatternForModel(parameters, ReadCellModelType(parameters, cellNo)); ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 ReadPatternForCell.
+L000447 |         } ⟦EOL⟧
+L000448 |  ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForModel(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000449 |         public static ST_RECIPE_MODEL_PIXEL_COUNT ReadForModel(IReadOnlyDictionary<string, string> parameters, int modelType) ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 ReadForModel.
+L000450 |         { ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(modelType, 1, MaximumCellModelTypeCount) / 지역 변수를 선언합니다: var prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"; / 변수의 초기값을 지정합니다: prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"
+L000451 |             var prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"; ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_MODEL_PIXEL_COUNT(ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"), ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y") / 호출자에게 값 또는 제어를 반환합니다: return new ST_RECIPE_MODEL_PIXEL_COUNT(ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"), ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y"));
+L000452 |             return new ST_RECIPE_MODEL_PIXEL_COUNT(ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"), ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y")); ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 ReadForModel.
+L000453 |         } ⟦EOL⟧
+L000454 |  ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000455 |         public static ST_RECIPE_MODEL_PATTERN ReadPatternForModel(IReadOnlyDictionary<string, string> parameters, int modelType) ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 ReadPatternForModel.
+L000456 |         { ⟦EOL⟧
+// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(modelType, 1, MaximumCellModelTypeCount) / 지역 변수를 선언합니다: var prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"; / 변수의 초기값을 지정합니다: prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"
+L000457 |             var prefix = $"MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_"; ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_MODEL_PATTERN( ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"), ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y"), ReadInt(parameters, 1, $"{prefix}PITCH"), Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHE… / 호출자에게 값 또는 제어를 반환합니다: return new ST_RECIPE_MODEL_PATTERN( ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"), ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y"), ReadInt(parameters, 1, $"{prefix}PITCH"), Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHESS"
+L000458 |             return new ST_RECIPE_MODEL_PATTERN( ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X")
+L000459 |                 ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_X"),  ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y")
+L000460 |                 ReadInt(parameters, 0, $"{prefix}NUM_OF_PIXEL_Y"),  ⟦EOL⟧
+// 해설 L461: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $"{prefix}PITCH")
+L000461 |                 ReadInt(parameters, 1, $"{prefix}PITCH"),  ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHESS"), 1, 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $"{prefix}CHESS")
+L000462 |                 Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHESS"), 1, 4),  ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHESS_TYPE"), 0, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $"{prefix}CHESS_TYPE")
+L000463 |                 Math.Clamp(ReadInt(parameters, 1, $"{prefix}CHESS_TYPE"), 0, 1) ⟦EOL⟧
+// 해설 L464: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000464 |             ); ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 ReadPatternForModel.
+L000465 |         } ⟦EOL⟧
+L000466 |  ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, params string[])
+L000467 |         private static int ReadInt(IReadOnlyDictionary<string, string> parameters, int defaultValue, params string[] keys) ⟦EOL⟧
+// 해설 L468: 구문 블록 경계입니다 · 소속 ReadInt.
+L000468 |         { ⟦EOL⟧
+// 해설 L469: 컬렉션 요소를 순회합니다: foreach (var key in keys)
+L000469 |             foreach (var key in keys) ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 ReadInt.
+L000470 |             { ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 조건에 따라 분기합니다: if (!parameters.TryGetValue(key, out var value))
+L000471 |                 if (!parameters.TryGetValue(key, out var value)) ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 ReadInt.
+L000472 |                 { ⟦EOL⟧
+// 해설 L473: 다음 반복으로 진행합니다: continue;
+L000473 |                     continue; ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 ReadInt.
+L000474 |                 } ⟦EOL⟧
+L000475 |  ⟦EOL⟧
+// 해설 L476: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intResult) / 조건에 따라 분기합니다: if (int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intResult))
+L000476 |                 if (int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intResult)) ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 ReadInt.
+L000477 |                 { ⟦EOL⟧
+// 해설 L478: 호출자에게 값 또는 제어를 반환합니다: return intResult;
+L000478 |                     return intResult; ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 ReadInt.
+L000479 |                 } ⟦EOL⟧
+L000480 |  ⟦EOL⟧
+// 해설 L481: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleResult) / 조건에 따라 분기합니다: if (double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleResult))
+L000481 |                 if (double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleResult)) ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 ReadInt.
+L000482 |                 { ⟦EOL⟧
+// 해설 L483: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(doubleResult) / 호출자에게 값 또는 제어를 반환합니다: return (int)Math.Round(doubleResult);
+L000483 |                     return (int)Math.Round(doubleResult); ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 ReadInt.
+L000484 |                 } ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 ReadInt.
+L000485 |             } ⟦EOL⟧
+L000486 |  ⟦EOL⟧
+// 해설 L487: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000487 |             return defaultValue; ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 ReadInt.
+L000488 |         } ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다.
+L000489 |     } ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다.
+L000490 | } ⟦EOL⟧

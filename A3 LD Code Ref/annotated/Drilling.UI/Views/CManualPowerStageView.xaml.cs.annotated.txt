@@ -1,0 +1,190 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CManualPowerStageView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000005 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000006 | using Drilling.UI.Popup; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000008 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CManualPowerStageView : UserControl
+L000010 | public partial class CManualPowerStageView : UserControl ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Window? Drilling.UI.Views.CManualPowerStageView._window
+L000012 |     private Window? _window; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Button? Drilling.UI.Views.CManualPowerStageView._heldJog
+L000013 |     private Button? _heldJog; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CManualPowerStagePanel? Drilling.UI.Views.CManualPowerStageView.Panel
+L000014 |     private CManualPowerStagePanel? Panel => DataContext as CManualPowerStagePanel; ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000015 |     public CManualPowerStageView() => InitializeComponent(); ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.ViewLoaded(object, RoutedEventArgs)
+L000017 |     private void ViewLoaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 ViewLoaded.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: _window = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000019 |         _window = Window.GetWindow(this); ⟦EOL⟧
+// 해설 L20: 복합 대입 또는 이벤트 구독/해지 표현입니다: _window.Deactivated += WindowDeactivated / 조건에 따라 분기합니다: if (_window is not null)
+L000020 |         if (_window is not null) _window.Deactivated += WindowDeactivated; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetViewActive(this, IsVisible)
+L000021 |         Panel?.SetViewActive(this, IsVisible); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 ViewLoaded.
+L000022 |     } ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.ViewUnloaded(object, RoutedEventArgs)
+L000023 |     private void ViewUnloaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 ViewUnloaded.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000025 |         // Releasing a held JOG stops it. Tab/view lifetime alone must not cancel ⟦EOL⟧
+// 해설 L26: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000026 |         // an accepted ABS/REL move or deactivate a visible sibling's shared panel. ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetViewActive(this, false)
+L000027 |         ReleaseJog(); Panel?.SetViewActive(this, false); ⟦EOL⟧
+// 해설 L28: 복합 대입 또는 이벤트 구독/해지 표현입니다: _window.Deactivated -= WindowDeactivated / 조건에 따라 분기합니다: if (_window is not null)
+L000028 |         if (_window is not null) _window.Deactivated -= WindowDeactivated; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: _window = null
+L000029 |         _window = null; ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 ViewUnloaded.
+L000030 |     } ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.ViewVisibilityChanged(object, DependencyPropertyChangedEventArgs)
+L000031 |     private void ViewVisibilityChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 ViewVisibilityChanged.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog() / 조건에 따라 분기합니다: if (!IsVisible)
+L000033 |         if (!IsVisible) ReleaseJog(); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetViewActive(this, IsLoaded && IsVisible)
+L000034 |         Panel?.SetViewActive(this, IsLoaded && IsVisible); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 ViewVisibilityChanged.
+L000035 |     } ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.ViewDataContextChanged(object, DependencyPropertyChangedEventArgs)
+L000036 |     private void ViewDataContextChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ViewDataContextChanged.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000038 |         ReleaseJog(); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetViewActive(this, false)
+L000039 |         (e.OldValue as CManualPowerStagePanel)?.SetViewActive(this, false); ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: .SetViewActive(this, IsLoaded && IsVisible)
+L000040 |         Panel?.SetViewActive(this, IsLoaded && IsVisible); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ViewDataContextChanged.
+L000041 |     } ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000042 |     private void WindowDeactivated(object? sender, EventArgs e) => ReleaseJog(); ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.OpenPositionInput(object, RoutedEventArgs)
+L000044 |     private void OpenPositionInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 OpenPositionInput.
+L000045 |     { ⟦EOL⟧
+// 해설 L46: 조건에 따라 분기합니다: if (sender is not Button { DataContext: CManualPowerStageAxis axis } button || Panel is not { CanEdit: true }) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000046 |         if (sender is not Button { DataContext: CManualPowerStageAxis axis } button || Panel is not { CanEdit: true }) return; ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 지역 변수를 선언합니다: var tag = button.Tag?.ToString(); / 변수의 초기값을 지정합니다: tag = button.Tag?.ToString()
+L000047 |         var tag = button.Tag?.ToString(); ⟦EOL⟧
+// 해설 L48: 지역 변수를 선언합니다: var relative = tag is "REL" or "REL_SPEED"; / 변수의 초기값을 지정합니다: relative = tag is "REL" or "REL_SPEED"
+L000048 |         var relative = tag is "REL" or "REL_SPEED"; ⟦EOL⟧
+// 해설 L49: 지역 변수를 선언합니다: var speed = tag is "ABS_SPEED" or "REL_SPEED"; / 변수의 초기값을 지정합니다: speed = tag is "ABS_SPEED" or "REL_SPEED"
+L000049 |         var speed = tag is "ABS_SPEED" or "REL_SPEED"; ⟦EOL⟧
+// 해설 L50: 조건에 따라 결과식을 선택합니다: speed ? (relative ? axis.RelativeSpeed : axis.AbsoluteSpeed) : (relative ? axis.Relative : axis.Absolute) / 조건에 따라 결과식을 선택합니다: relative ? axis.RelativeSpeed : axis.AbsoluteSpeed / 조건에 따라 결과식을 선택합니다: relative ? axis.Relative : axis.Absolute / 지역 변수를 선언합니다: var current = speed ? (relative ? axis.RelativeSpeed : axis.AbsoluteSpeed) : (relative ? axis.Relative : axis.Absolute); / 변수의 초기값을 지정합니다: current = speed ? (relative ? axis.RelativeSpeed : axis.AbsoluteSpeed) : (relative ? axis.Relative : axis.Absolute)
+L000050 |         var current = speed ? (relative ? axis.RelativeSpeed : axis.AbsoluteSpeed) : (relative ? axis.Relative : axis.Absolute); ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{axis.Name} {(relative ? "REL" : "ABS")} {(speed ? "Speed (mm/sec)" : "(mm)")}", current, EN_RECIPE_DATA_TYPE.Double, speed ? double.Epsilon : -double.MaxValue, double.MaxValue) { Owner = Window.G… / 조건에 따라 결과식을 선택합니다: relative ? "REL" : "ABS" / 조건에 따라 결과식을 선택합니다: speed ? "Speed (mm/sec)" : "(mm)" / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{axis.Name} {(relative ? "REL" : "ABS")} {(speed ? "Speed (mm/sec)" : "(mm)")}", current, EN_RECIPE_DATA_TYPE.Double, speed ? double.Epsi
+L000051 |         var dialog = new CValueInputDialog($"{axis.Name} {(relative ? "REL" : "ABS")} {(speed ? "Speed (mm/sec)" : "(mm)")}", ⟦EOL⟧
+// 해설 L52: 조건에 따라 결과식을 선택합니다: speed ? double.Epsilon : -double.MaxValue
+L000052 |             current, EN_RECIPE_DATA_TYPE.Double, speed ? double.Epsilon : -double.MaxValue, double.MaxValue) ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000053 |         { Owner = Window.GetWindow(this) }; ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true || Panel?.CanEdit != true) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000054 |         if (dialog.ShowDialog() != true || Panel?.CanEdit != true) return; ⟦EOL⟧
+// 해설 L55: 조건에 따라 분기합니다: if (speed)
+L000055 |         if (speed) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 OpenPositionInput.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 값을 대상에 대입합니다: axis.RelativeSpeed = dialog.ResultValue / 값을 대상에 대입합니다: axis.AbsoluteSpeed = dialog.ResultValue / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (relative)
+L000057 |             if (relative) axis.RelativeSpeed = dialog.ResultValue; else axis.AbsoluteSpeed = dialog.ResultValue; ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 OpenPositionInput.
+L000058 |         } ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: axis.Relative = dialog.ResultValue / 값을 대상에 대입합니다: axis.Absolute = dialog.ResultValue / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (relative)
+L000059 |         else if (relative) axis.Relative = dialog.ResultValue; else axis.Absolute = dialog.ResultValue; ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 OpenPositionInput.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.JogMouseDown(object, MouseButtonEventArgs)
+L000062 |     private void JogMouseDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 JogMouseDown.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: e.Handled = true
+L000064 |         e.Handled = true; ⟦EOL⟧
+// 해설 L65: 조건에 따라 분기합니다: if (sender is not Button button || _heldJog is not null || Panel?.CanJog != true) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000065 |         if (sender is not Button button || _heldJog is not null || Panel?.CanJog != true) return; ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.Focus()
+L000066 |         button.Focus(); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.CaptureMouse() / 조건에 따라 분기합니다: if (!button.CaptureMouse()) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000067 |         if (!button.CaptureMouse()) return; ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: _heldJog = button
+L000068 |         _heldJog = button; ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: Panel.StartJog(button.Tag?.ToString() ?? "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog() / 조건에 따라 분기합니다: if (Panel.StartJog(button.Tag?.ToString() ?? "") != true)
+L000069 |         if (Panel.StartJog(button.Tag?.ToString() ?? "") != true) ReleaseJog(); ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 JogMouseDown.
+L000070 |     } ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: e.Handled = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000071 |     private void JogMouseUp(object sender, MouseButtonEventArgs e) { e.Handled = true; ReleaseJog(); } ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000072 |     private void JogLostCapture(object sender, MouseEventArgs e) => ReleaseJog(); ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.JogKeyDown(object, KeyEventArgs)
+L000073 |     private void JogKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 JogKeyDown.
+L000074 |     { ⟦EOL⟧
+// 해설 L75: 조건에 따라 분기합니다: if (e.Key is not (Key.Space or Key.Enter)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000075 |         if (e.Key is not (Key.Space or Key.Enter)) return; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: e.Handled = true
+L000076 |         e.Handled = true; ⟦EOL⟧
+// 해설 L77: 조건에 따라 분기합니다: if (e.IsRepeat || _heldJog is not null || sender is not Button button || Panel?.CanJog != true) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000077 |         if (e.IsRepeat || _heldJog is not null || sender is not Button button || Panel?.CanJog != true) return; ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: _heldJog = button
+L000078 |         _heldJog = button; ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: Panel.StartJog(button.Tag?.ToString() ?? "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog() / 조건에 따라 분기합니다: if (Panel.StartJog(button.Tag?.ToString() ?? "") != true)
+L000079 |         if (Panel.StartJog(button.Tag?.ToString() ?? "") != true) ReleaseJog(); ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 JogKeyDown.
+L000080 |     } ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.JogKeyUp(object, KeyEventArgs)
+L000081 |     private void JogKeyUp(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 JogKeyUp.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 조건에 따라 분기합니다: if (e.Key is not (Key.Space or Key.Enter)) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000083 |         if (e.Key is not (Key.Space or Key.Enter)) return; ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: e.Handled = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000084 |         e.Handled = true; ReleaseJog(); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 JogKeyUp.
+L000085 |     } ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReleaseJog()
+L000086 |     private void JogLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e) => ReleaseJog(); ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualPowerStageView.ReleaseJog()
+L000087 |     private void ReleaseJog() ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 ReleaseJog.
+L000088 |     { ⟦EOL⟧
+// 해설 L89: 지역 변수를 선언합니다: var button = _heldJog; / 변수의 초기값을 지정합니다: button = _heldJog
+L000089 |         var button = _heldJog; ⟦EOL⟧
+// 해설 L90: 조건에 따라 분기합니다: if (button is null) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000090 |         if (button is null) return; ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: _heldJog = null
+L000091 |         _heldJog = null; ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop()
+L000092 |         Panel?.Stop(); ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.ReleaseMouseCapture() / 조건에 따라 분기합니다: if (button.IsMouseCaptured)
+L000093 |         if (button.IsMouseCaptured) button.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 ReleaseJog.
+L000094 |     } ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다.
+L000095 | } ⟦EOL⟧

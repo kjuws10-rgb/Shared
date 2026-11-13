@@ -1,0 +1,489 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
+L000001 | namespace Drilling.UI.Menu.Menus ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Collections.ObjectModel;
+L000003 |     using System.Collections.ObjectModel; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000004 |     using System.ComponentModel; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000005 |     using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000006 |     using System.IO; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000007 |     using Drilling.Common.Log; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public sealed class CMonitorLogViewerPanel : INotifyPropertyChanged
+L000009 |     public sealed class CMonitorLogViewerPanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._logDirectory
+L000011 |         private readonly string _logDirectory; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope
+L000012 |         private readonly CLogFileScope _fileScope; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · string? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._lastOpenedDirectory
+L000013 |         private string? _lastOpenedDirectory; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readCts
+L000014 |         private CancellationTokenSource? _readCts; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · long Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readVersion
+L000015 |         private long _readVersion; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._initializeTask
+L000016 |         private Task? _initializeTask; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._isTreeBusy
+L000017 |         private bool _isTreeBusy; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.CMonitorLogViewerPanel(string)
+L000018 |         public CMonitorLogViewerPanel(string logDirectory) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 .ctor.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 값을 대상에 대입합니다: _fileScope = new CLogFileScope(logDirectory) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogFileScope(logDirectory)
+L000020 |             _fileScope = new CLogFileScope(logDirectory); ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: _logDirectory = _fileScope.RootDirectory
+L000021 |             _logDirectory = _fileScope.RootDirectory; ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: TreeRoots = [new CLogTreeNode(_logDirectory, "Log", true) { IsExpanded = true } ] / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogTreeNode(_logDirectory, "Log", true) { IsExpanded = true }
+L000022 |             TreeRoots = [new CLogTreeNode(_logDirectory, "Log", true) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 .ctor.
+L000023 |             { ⟦EOL⟧
+// 해설 L24: 값을 대상에 대입합니다: IsExpanded = true
+L000024 |                 IsExpanded = true ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 .ctor.
+L000025 |             } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.CMonitorLogViewerPanel(string)
+L000027 |             ]; ⟦EOL⟧
+// 해설 L28: 값을 대상에 대입합니다: RefreshTreeCommand = new(async _ => await RefreshTreeAsync(), _ => !IsTreeBusy) / 비동기 완료를 기다립니다: await RefreshTreeAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await RefreshTreeAsync(), _ => !IsTreeBusy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeAsync()
+L000028 |             RefreshTreeCommand = new(async _ => await RefreshTreeAsync(), _ => !IsTreeBusy); ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 .ctor.
+L000029 |         } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.PropertyChanged
+L000031 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.OpenDirectory
+L000032 |         public string OpenDirectory => _lastOpenedDirectory ?? _logDirectory; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath
+L000033 |         public string FilePath { get; private set; } = ""; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text
+L000034 |         public string Text { get; private set; } = ""; ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status
+L000035 |         public string Status { get; private set; } = "왼쪽 트리에서 로그 파일을 선택해 주세요."; ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus
+L000036 |         public string TreeStatus { get; private set; } = "폴더를 펼친 뒤 파일을 선택하세요."; ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CLogTreeNode> Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeRoots
+L000037 |         public IReadOnlyList<CLogTreeNode> TreeRoots { get; } ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsTreeBusy
+L000038 |         public bool IsTreeBusy => _isTreeBusy; ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy
+L000039 |         public bool IsBusy { get; private set; } ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress
+L000040 |         public double LoadProgress { get; private set; } ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText
+L000041 |         public string LoadProgressText { get; private set; } = "0% · 로그 파일 준비 중"; ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeCommand
+L000042 |         public CButtonCommand RefreshTreeCommand { get; } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: _initializeTask ??= ExpandDirectoryAsync(TreeRoots[0]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandDirectoryAsync(TreeRoots[0])
+L000044 |         public Task InitializeAsync() => _initializeTask ??= ExpandDirectoryAsync(TreeRoots[0]); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectoryAsync(node, false)
+L000045 |         public Task ExpandDirectoryAsync(CLogTreeNode node) => EnsureDirectoryAsync(node, false); ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadFileAsync(node.Path) / 조건에 따라 결과식을 선택합니다: node is { IsDirectory: false, IsPlaceholder: false } ? LoadFileAsync(node.Path) : Task.CompletedTask
+L000046 |         public Task SelectNodeAsync(CLogTreeNode? node) => node is { IsDirectory: false, IsPlaceholder: false } ? LoadFileAsync(node.Path) : Task.CompletedTask; ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.EnsureDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode, bool)
+L000047 |         private Task EnsureDirectoryAsync(CLogTreeNode node, bool refresh) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 EnsureDirectoryAsync.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 조건에 따라 분기합니다: if (!node.IsDirectory || (!refresh && node.IsLoaded))
+L000049 |             if (!node.IsDirectory || (!refresh && node.IsLoaded)) ⟦EOL⟧
+// 해설 L50: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000050 |                 return Task.CompletedTask; ⟦EOL⟧
+// 해설 L51: 조건에 따라 분기합니다: if (node.LoadingTask is { IsCompleted: false } pending)
+L000051 |             if (node.LoadingTask is { IsCompleted: false } pending) ⟦EOL⟧
+// 해설 L52: 호출자에게 값 또는 제어를 반환합니다: return pending;
+L000052 |                 return pending; ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: node.LoadingTask = ReadDirectoryAsync(node) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDirectoryAsync(node) / 호출자에게 값 또는 제어를 반환합니다: return node.LoadingTask = ReadDirectoryAsync(node);
+L000053 |             return node.LoadingTask = ReadDirectoryAsync(node); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 EnsureDirectoryAsync.
+L000054 |         } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ReadDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode)
+L000056 |         private async Task ReadDirectoryAsync(CLogTreeNode node) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 예외 처리 범위입니다: try
+L000058 |             try ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000059 |             { ⟦EOL⟧
+// 해설 L60: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000060 |                 // One level only, on expansion or explicit refresh. Never scan the entire Log tree. ⟦EOL⟧
+// 해설 L61: 비동기 완료를 기다립니다: await Task.Run(() => new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info  / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => i… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryI
+L000061 |                 var entries = await Task.Run(() => new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo || CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderByDescending(info => info.IsDirectory).ThenBy(info => info.Name, StringComparer.OrdinalIgnoreCase).ToArray()); ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child => !child.IsPlaceholder).ToDictionary(child => child.Path, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child => !child.IsPlaceholder) / 지역 변수를 선언합니다: var existing = node.Children.Where(child => !child.IsPlaceholder).ToDictionary(child => child.Path, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: existing = node.Children.Where(child => !child.IsPlaceholder).ToDictionary(child => child.Path, StringComparer.OrdinalIgnoreCase)
+L000062 |                 var existing = node.Children.Where(child => !child.IsPlaceholder).ToDictionary(child => child.Path, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Select(entry => existing.TryGetValue(entry.FullName, out var child) && child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Select(entry => existing.TryGetValue(entry.FullName, out var child) && child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: existing.TryGetValue(entry.FullName, out var child) / 함수·델리
+L000063 |                 var children = entries.Select(entry => existing.TryGetValue(entry.FullName, out var child) && child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray(); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.ToHashSet() / 지역 변수를 선언합니다: var present = node.Children.ToHashSet(); / 변수의 초기값을 지정합니다: present = node.Children.ToHashSet()
+L000064 |                 var present = node.Children.ToHashSet(); ⟦EOL⟧
+// 해설 L65: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000065 |                 // Keep unchanged containers/selection/expansion when refreshing a directory. ⟦EOL⟧
+// 해설 L66: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < children.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000066 |                 for (var index = 0; index < children.Length; index++) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000067 |                 { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(node.Children[index], children[index]) / 조건에 따라 분기합니다: if (index < node.Children.Count && ReferenceEquals(node.Children[index], children[index]))
+L000068 |                     if (index < node.Children.Count && ReferenceEquals(node.Children[index], children[index])) ⟦EOL⟧
+// 해설 L69: 다음 반복으로 진행합니다: continue;
+L000069 |                         continue; ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: present.Contains(children[index]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.IndexOf(children[index]) / 조건에 따라 결과식을 선택합니다: present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1 / 지역 변수를 선언합니다: var previous = present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1; / 변수의 초기값을 지정합니다: previous = present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1
+L000070 |                     var previous = present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1; ⟦EOL⟧
+// 해설 L71: 조건에 따라 분기합니다: if (previous >= 0)
+L000071 |                     if (previous >= 0) ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Move(previous, index)
+L000072 |                         node.Children.Move(previous, index); ⟦EOL⟧
+// 해설 L73: 앞 조건이 거짓인 경로입니다: else
+L000073 |                     else ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Insert(index, children[index])
+L000074 |                         node.Children.Insert(index, children[index]); ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000075 |                 } ⟦EOL⟧
+L000076 |  ⟦EOL⟧
+// 해설 L77: 조건을 먼저 확인하며 반복합니다: while (node.Children.Count > children.Length)
+L000077 |                 while (node.Children.Count > children.Length) ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.RemoveAt(node.Children.Count - 1)
+L000078 |                     node.Children.RemoveAt(node.Children.Count - 1); ⟦EOL⟧
+// 해설 L79: 값을 대상에 대입합니다: node.IsLoaded = true
+L000079 |                 node.IsLoaded = true; ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.SetError("")
+L000080 |                 node.SetError(""); ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: TreeStatus = "파일을 선택하면 오른쪽에 내용이 표시됩니다."
+L000081 |                 TreeStatus = "파일을 선택하면 오른쪽에 내용이 표시됩니다."; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000082 |             } ⟦EOL⟧
+// 해설 L83: 지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException)
+L000083 |             catch (Exception exception)when (exception is IOException or UnauthorizedAccessException or ArgumentException) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000084 |             { ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: node.IsLoaded = false
+L000085 |                 node.IsLoaded = false; ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.SetError(exception.Message)
+L000086 |                 node.SetError(exception.Message); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Clear()
+L000087 |                 node.Children.Clear(); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Add(CLogTreeNode.Placeholder("조회 실패 · 다시 펼쳐서 재시도")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CLogTreeNode.Placeholder("조회 실패 · 다시 펼쳐서 재시도")
+L000088 |                 node.Children.Add(CLogTreeNode.Placeholder("조회 실패 · 다시 펼쳐서 재시도")); ⟦EOL⟧
+// 해설 L89: 값을 대상에 대입합니다: TreeStatus = $"폴더를 읽지 못했습니다: {exception.Message}"
+L000089 |                 TreeStatus = $"폴더를 읽지 못했습니다: {exception.Message}"; ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000090 |             } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(TreeStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(TreeStatus)
+L000092 |             Notify(nameof(TreeStatus)); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ReadDirectoryAsync.
+L000093 |         } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeAsync()
+L000095 |         public async Task RefreshTreeAsync() ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 조건에 따라 분기합니다: if (_isTreeBusy)
+L000097 |             if (_isTreeBusy) ⟦EOL⟧
+// 해설 L98: 호출자에게 값 또는 제어를 반환합니다: return;
+L000098 |                 return; ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _isTreeBusy = true
+L000099 |             _isTreeBusy = true; ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsTreeBusy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsTreeBusy)
+L000100 |             Notify(nameof(IsTreeBusy)); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeCommand.NotifyCanExecuteChanged()
+L000101 |             RefreshTreeCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L102: 예외 처리 범위입니다: try
+L000102 |             try ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000103 |             { ⟦EOL⟧
+// 해설 L104: 비동기 완료를 기다립니다: await RefreshExpandedAsync(TreeRoots[0]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshExpandedAsync(TreeRoots[0])
+L000104 |                 await RefreshExpandedAsync(TreeRoots[0]); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000105 |             } ⟦EOL⟧
+// 해설 L106: 종료 정리 구간입니다: finally
+L000106 |             finally ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000107 |             { ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: _isTreeBusy = false
+L000108 |                 _isTreeBusy = false; ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsTreeBusy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsTreeBusy)
+L000109 |                 Notify(nameof(IsTreeBusy)); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeCommand.NotifyCanExecuteChanged()
+L000110 |                 RefreshTreeCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000111 |             } ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 RefreshTreeAsync.
+L000112 |         } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshExpandedAsync(Drilling.UI.Menu.Menus.CLogTreeNode)
+L000114 |         private async Task RefreshExpandedAsync(CLogTreeNode node) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 RefreshExpandedAsync.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 비동기 완료를 기다립니다: await EnsureDirectoryAsync(node, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectoryAsync(node, true)
+L000116 |             await EnsureDirectoryAsync(node, true); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child => child.IsDirectory && child.IsExpanded).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child => child.IsDirectory && child.IsExpanded) / 컬렉션 요소를 순회합니다: foreach (var child in node.Children.Where(child => child.IsDirectory && child.IsExpanded).ToArray())
+L000117 |             foreach (var child in node.Children.Where(child => child.IsDirectory && child.IsExpanded).ToArray()) ⟦EOL⟧
+// 해설 L118: 비동기 완료를 기다립니다: await RefreshExpandedAsync(child) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshExpandedAsync(child)
+L000118 |                 await RefreshExpandedAsync(child); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 RefreshExpandedAsync.
+L000119 |         } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadFileAsync(string)
+L000121 |         public async Task LoadFileAsync(string path) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000122 |         { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000123 |             _readCts?.Cancel(); ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource() / 지역 변수를 선언합니다: var cts = new CancellationTokenSource(); / 변수의 초기값을 지정합니다: cts = new CancellationTokenSource()
+L000124 |             var cts = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: _readCts = cts
+L000125 |             _readCts = cts; ⟦EOL⟧
+// 해설 L126: 지역 변수를 선언합니다: var version = ++_readVersion; / 변수의 초기값을 지정합니다: version = ++_readVersion
+L000126 |             var version = ++_readVersion; ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: FilePath = ""
+L000127 |             FilePath = ""; ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: Text = ""
+L000128 |             Text = ""; ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: IsBusy = true
+L000129 |             IsBusy = true; ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: LoadProgress = 0.0
+L000130 |             LoadProgress = 0.0; ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: LoadProgressText = "0% · 로그 파일 준비 중"
+L000131 |             LoadProgressText = "0% · 로그 파일 준비 중"; ⟦EOL⟧
+// 해설 L132: 값을 대상에 대입합니다: Status = "로그를 읽고 있습니다..."
+L000132 |             Status = "로그를 읽고 있습니다..."; ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyView()
+L000133 |             NotifyView(); ⟦EOL⟧
+// 해설 L134: 예외 처리 범위입니다: try
+L000134 |             try ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000135 |             { ⟦EOL⟧
+// 해설 L136: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000136 |                 // Read/decode off the UI thread. Cancel an old selection; only publish the latest file. ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Progress<double>(value => { if (version != _readVersion || !IsBusy) return; LoadProgress = Math.Clamp(value, 0.0, 100.0); LoadProgressText = $"{LoadProgress:0}% · 로그 파일 읽는 중"; Notify(nameof(LoadProgress)); Notify(nam… / 지역 변수를 선언합니다: var progress = new Progress<double>(value => { if (version != _readVersion || !IsBusy) return; LoadProgress = Math.Clamp(value, 0.0, 100.0); LoadProgressText = $"{LoadProgress:0}% · 로그 파일 읽는 중"; Notify(nameof(LoadProgress)); Notif / 변수의 초기값을 지정합니다: progress = new Progress<do
+L000137 |                 var progress = new Progress<double>(value => ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000138 |                 { ⟦EOL⟧
+// 해설 L139: 조건에 따라 분기합니다: if (version != _readVersion || !IsBusy)
+L000139 |                     if (version != _readVersion || !IsBusy) ⟦EOL⟧
+// 해설 L140: 호출자에게 값 또는 제어를 반환합니다: return;
+L000140 |                         return; ⟦EOL⟧
+// 해설 L141: 값을 대상에 대입합니다: LoadProgress = Math.Clamp(value, 0.0, 100.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(value, 0.0, 100.0)
+L000141 |                     LoadProgress = Math.Clamp(value, 0.0, 100.0); ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: LoadProgressText = $"{LoadProgress:0}% · 로그 파일 읽는 중"
+L000142 |                     LoadProgressText = $"{LoadProgress:0}% · 로그 파일 읽는 중"; ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(LoadProgress)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgress)
+L000143 |                     Notify(nameof(LoadProgress)); ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(LoadProgressText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgressText)
+L000144 |                     Notify(nameof(LoadProgressText)); ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadFileAsync(string)
+L000145 |                 }); ⟦EOL⟧
+// 해설 L146: 비동기 완료를 기다립니다: await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileScope.ResolveFile(path) / 지역 변수를 선언합니다: var file = await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token); / 변수의 초기값을 지정합니다: file = await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token)
+L000146 |                 var file = await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token); ⟦EOL⟧
+// 해설 L147: 조건에 따라 분기합니다: if (version != _readVersion)
+L000147 |                 if (version != _readVersion) ⟦EOL⟧
+// 해설 L148: 호출자에게 값 또는 제어를 반환합니다: return;
+L000148 |                     return; ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: FilePath = Path.GetFullPath(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path)
+L000149 |                 FilePath = Path.GetFullPath(path); ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: _lastOpenedDirectory = Path.GetDirectoryName(FilePath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(FilePath)
+L000150 |                 _lastOpenedDirectory = Path.GetDirectoryName(FilePath); ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: Text = file.Text
+L000151 |                 Text = file.Text; ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: LoadProgress = 100.0
+L000152 |                 LoadProgress = 100.0; ⟦EOL⟧
+// 해설 L153: 값을 대상에 대입합니다: LoadProgressText = "100% · 로그 표시 완료"
+L000153 |                 LoadProgressText = "100% · 로그 표시 완료"; ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: Status = Text.Length == 0 ? "내용이 없는 파일입니다." : $"{file.FileLength / 1024.0:N1} KB · 읽기 전용 · 전체 내용" / 조건에 따라 결과식을 선택합니다: Text.Length == 0 ? "내용이 없는 파일입니다." : $"{file.FileLength / 1024.0:N1} KB · 읽기 전용 · 전체 내용"
+L000154 |                 Status = Text.Length == 0 ? "내용이 없는 파일입니다." : $"{file.FileLength / 1024.0:N1} KB · 읽기 전용 · 전체 내용"; ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000155 |             } ⟦EOL⟧
+// 해설 L156: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cts.IsCancellationRequested)
+L000156 |             catch (OperationCanceledException) when (cts.IsCancellationRequested) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000157 |             { ⟦EOL⟧
+// 해설 L158: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000158 |                 // A different file was selected while this read was in progress. ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000159 |             } ⟦EOL⟧
+// 해설 L160: 지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException)
+L000160 |             catch (Exception exception)when (exception is IOException or UnauthorizedAccessException or ArgumentException) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000161 |             { ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (version != _readVersion)
+L000162 |                 if (version != _readVersion) ⟦EOL⟧
+// 해설 L163: 호출자에게 값 또는 제어를 반환합니다: return;
+L000163 |                     return; ⟦EOL⟧
+// 해설 L164: 값을 대상에 대입합니다: Status = $"로그를 읽지 못했습니다: {exception.Message}"
+L000164 |                 Status = $"로그를 읽지 못했습니다: {exception.Message}"; ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000165 |             } ⟦EOL⟧
+// 해설 L166: 종료 정리 구간입니다: finally
+L000166 |             finally ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000167 |             { ⟦EOL⟧
+// 해설 L168: 조건에 따라 분기합니다: if (version == _readVersion)
+L000168 |                 if (version == _readVersion) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000169 |                 { ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: _readCts = null
+L000170 |                     _readCts = null; ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: IsBusy = false
+L000171 |                     IsBusy = false; ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyView()
+L000172 |                     NotifyView(); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000173 |                 } ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: cts.Dispose()
+L000174 |                 cts.Dispose(); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000175 |             } ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 LoadFileAsync.
+L000176 |         } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView()
+L000178 |         private void NotifyView() ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 NotifyView.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 컬렉션 요소를 순회합니다: foreach (var property in new[] { nameof(FilePath), nameof(Text), nameof(Status), nameof(IsBusy), nameof(LoadProgress), nameof(LoadProgressText) })
+L000180 |             foreach (var property in new[] ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 NotifyView.
+L000181 |             { ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(FilePath)
+L000182 |                 nameof(FilePath), ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Text)
+L000183 |                 nameof(Text), ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000184 |                 nameof(Status), ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)
+L000185 |                 nameof(IsBusy), ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgress)
+L000186 |                 nameof(LoadProgress), ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgressText)
+L000187 |                 nameof(LoadProgressText) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 NotifyView.
+L000188 |             } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView()
+L000190 |             ) ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(property)
+L000191 |                 Notify(property); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 NotifyView.
+L000192 |         } ⟦EOL⟧
+L000193 |  ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(property)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(property)
+L000194 |         private void Notify([CallerMemberName] string? property = null) => PropertyChanged?.Invoke(this, new(property)); ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다.
+L000195 |     } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 타입의 구조/상속 선언입니다: public sealed class CLogTreeNode : INotifyPropertyChanged
+L000197 |     public sealed class CLogTreeNode : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다.
+L000198 |     { ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode._isExpanded
+L000199 |         private bool _isExpanded; ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode._isSelected
+L000200 |         private bool _isSelected; ⟦EOL⟧
+// 해설 L201: 변수의 초기값을 지정합니다: _error = ""
+L000201 |         private string _error = ""; ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool)
+L000202 |         internal CLogTreeNode(string path, string name, bool isDirectory, bool isPlaceholder = false) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 .ctor.
+L000203 |         { ⟦EOL⟧
+// 해설 L204: 값을 대상에 대입합니다: Path = path
+L000204 |             Path = path; ⟦EOL⟧
+// 해설 L205: 값을 대상에 대입합니다: Name = name
+L000205 |             Name = name; ⟦EOL⟧
+// 해설 L206: 값을 대상에 대입합니다: IsDirectory = isDirectory
+L000206 |             IsDirectory = isDirectory; ⟦EOL⟧
+// 해설 L207: 값을 대상에 대입합니다: IsPlaceholder = isPlaceholder
+L000207 |             IsPlaceholder = isPlaceholder; ⟦EOL⟧
+// 해설 L208: 조건에 따라 분기합니다: if (isDirectory)
+L000208 |             if (isDirectory) ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: Children.Add(Placeholder("펼쳐서 보기")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Placeholder("펼쳐서 보기")
+L000209 |                 Children.Add(Placeholder("펼쳐서 보기")); ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 .ctor.
+L000210 |         } ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CLogTreeNode.PropertyChanged
+L000212 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CLogTreeNode.Path
+L000213 |         public string Path { get; } ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CLogTreeNode.Name
+L000214 |         public string Name { get; } ⟦EOL⟧
+// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsDirectory
+L000215 |         public bool IsDirectory { get; } ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsPlaceholder
+L000216 |         public bool IsPlaceholder { get; } ⟦EOL⟧
+// 해설 L217: 조건에 따라 결과식을 선택합니다: _error.Length == 0 ? Path : _error
+L000217 |         public string ToolTip => _error.Length == 0 ? Path : _error; ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · System.Collections.ObjectModel.ObservableCollection<Drilling.UI.Menu.Menus.CLogTreeNode> Drilling.UI.Menu.Menus.CLogTreeNode.Children
+L000218 |         public ObservableCollection<CLogTreeNode> Children { get; } = []; ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded
+L000220 |         public bool IsExpanded ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 IsExpanded.
+L000221 |         { ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.get
+L000222 |             get => _isExpanded; ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.set
+L000223 |             set ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 set_IsExpanded.
+L000224 |             { ⟦EOL⟧
+// 해설 L225: 값을 대상에 대입합니다: _isExpanded = value
+L000225 |                 _isExpanded = value; ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000226 |                 Notify(); ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 set_IsExpanded.
+L000227 |             } ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 IsExpanded.
+L000228 |         } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected
+L000230 |         public bool IsSelected ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 IsSelected.
+L000231 |         { ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.get
+L000232 |             get => _isSelected; ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.set
+L000233 |             set ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000234 |             { ⟦EOL⟧
+// 해설 L235: 값을 대상에 대입합니다: _isSelected = value
+L000235 |                 _isSelected = value; ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000236 |                 Notify(); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000237 |             } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 IsSelected.
+L000238 |         } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded
+L000240 |         public bool IsLoaded { get; internal set; } ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask
+L000241 |         internal Task? LoadingTask { get; set; } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string)
+L000243 |         internal void SetError(string error) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 SetError.
+L000244 |         { ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: _error = error
+L000245 |             _error = error; ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ToolTip)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ToolTip)
+L000246 |             Notify(nameof(ToolTip)); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 SetError.
+L000247 |         } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("", name, false, true)
+L000249 |         internal static CLogTreeNode Placeholder(string name) => new("", name, false, true); ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000250 |         private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다.
+L000251 |     } ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다.
+L000252 | } ⟦EOL⟧

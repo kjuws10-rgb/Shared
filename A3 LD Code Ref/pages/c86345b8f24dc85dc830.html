@@ -1,0 +1,1076 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Serial/CTalonLaser.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Serial/CTalonLaser.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Serial/CTalonLaser.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>73f3a2de798fff48de0f67ee34d85c2d2e068b13c8b9d797ce3d2b75ebce48db</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>14,445 bytes / 390 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/c86345b8f24dc85dc830.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CTalonLaser</td><td>ClassDeclaration</td><td>11–324</td><td>CTalonLaser: CSerialComm(data, option)</td></tr>
+<tr><td>EN_TALON_COMMAND</td><td>EnumDeclaration</td><td>326–356</td><td>EN_TALON_COMMAND</td></tr>
+<tr><td>EN_TALON_ERROR</td><td>EnumDeclaration</td><td>358–365</td><td>EN_TALON_ERROR</td></tr>
+<tr><td>ST_LASER_STATUS</td><td>RecordDeclaration</td><td>367–367</td><td>ST_LASER_STATUS</td></tr>
+<tr><td>ST_TALON_STATUS</td><td>RecordDeclaration</td><td>368–390</td><td>ST_TALON_STATUS</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>CommandNewLine</td><td>PropertyDeclaration</td><td>L15–21</td><td>string Drilling.Common.Interface.CTalonLaser.CommandNewLine</td></tr>
+<tr><td>get_CommandNewLine</td><td>GetAccessorDeclaration</td><td>L17–20</td><td>string Drilling.Common.Interface.CTalonLaser.CommandNewLine.get</td></tr>
+<tr><td>FormatCommand</td><td>MethodDeclaration</td><td>L23–26</td><td>string Drilling.Common.Interface.CTalonLaser.FormatCommand(string)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L28–88</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CTalonLaser.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ExpectsResponse</td><td>MethodDeclaration</td><td>L90–93</td><td>bool Drilling.Common.Interface.CTalonLaser.ExpectsResponse(Drilling.Common.Interface.EN_TALON_COMMAND)</td></tr>
+<tr><td>Build</td><td>MethodDeclaration</td><td>L95–129</td><td>string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)</td></tr>
+<tr><td>IsValidResponse</td><td>MethodDeclaration</td><td>L131–134</td><td>bool Drilling.Common.Interface.CTalonLaser.IsValidResponse(string)</td></tr>
+<tr><td>Apply</td><td>MethodDeclaration</td><td>L136–263</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)</td></tr>
+<tr><td>CreateSimulationResponse</td><td>MethodDeclaration</td><td>L265–289</td><td>string Drilling.Common.Interface.CTalonLaser.CreateSimulationResponse(Drilling.Common.Interface.EN_TALON_COMMAND, double, Drilling.Common.Interface.ST_TALON_STATUS)</td></tr>
+<tr><td>ReadDouble</td><td>MethodDeclaration</td><td>L291–295</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string)</td></tr>
+<tr><td>ReadInt</td><td>MethodDeclaration</td><td>L297–300</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string)</td></tr>
+<tr><td>ReadBool</td><td>MethodDeclaration</td><td>L302–306</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadBool(string)</td></tr>
+<tr><td>ReadLaserEmission</td><td>MethodDeclaration</td><td>L308–312</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadLaserEmission(string)</td></tr>
+<tr><td>ReadLeadingNumber</td><td>MethodDeclaration</td><td>L314–323</td><td>string Drilling.Common.Interface.CTalonLaser.ReadLeadingNumber(string)</td></tr>
+<tr><td>MatchesChar</td><td>LocalFunctionStatement</td><td>L316–319</td><td>bool MatchesChar(char)</td></tr>
+<tr><td>SetDiodeCurrent</td><td>EnumMemberDeclaration</td><td>L328–328</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetDiodeCurrent</td></tr>
+<tr><td>SetQsw</td><td>EnumMemberDeclaration</td><td>L329–329</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetQsw</td></tr>
+<tr><td>SetEprf</td><td>EnumMemberDeclaration</td><td>L330–330</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetEprf</td></tr>
+<tr><td>SetLaserOnOff</td><td>EnumMemberDeclaration</td><td>L331–331</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetLaserOnOff</td></tr>
+<tr><td>SetShutterOpenClose</td><td>EnumMemberDeclaration</td><td>L332–332</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShutterOpenClose</td></tr>
+<tr><td>SetGateOpenClose</td><td>EnumMemberDeclaration</td><td>L333–333</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetGateOpenClose</td></tr>
+<tr><td>SetExtGateEnableDisable</td><td>EnumMemberDeclaration</td><td>L334–334</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetExtGateEnableDisable</td></tr>
+<tr><td>SetShg</td><td>EnumMemberDeclaration</td><td>L335–335</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShg</td></tr>
+<tr><td>SetShgAutotune</td><td>EnumMemberDeclaration</td><td>L336–336</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShgAutotune</td></tr>
+<tr><td>SetQMode</td><td>EnumMemberDeclaration</td><td>L337–337</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetQMode</td></tr>
+<tr><td>GetDiodeCurrent</td><td>EnumMemberDeclaration</td><td>L338–338</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeCurrent</td></tr>
+<tr><td>GetQsw</td><td>EnumMemberDeclaration</td><td>L339–339</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetQsw</td></tr>
+<tr><td>GetEprf</td><td>EnumMemberDeclaration</td><td>L340–340</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetEprf</td></tr>
+<tr><td>GetShutterOpenClose</td><td>EnumMemberDeclaration</td><td>L341–341</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShutterOpenClose</td></tr>
+<tr><td>GetGateOpenClose</td><td>EnumMemberDeclaration</td><td>L342–342</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetGateOpenClose</td></tr>
+<tr><td>GetExtGateEnableDisable</td><td>EnumMemberDeclaration</td><td>L343–343</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetExtGateEnableDisable</td></tr>
+<tr><td>GetOutputPower</td><td>EnumMemberDeclaration</td><td>L344–344</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetOutputPower</td></tr>
+<tr><td>GetShg</td><td>EnumMemberDeclaration</td><td>L345–345</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShg</td></tr>
+<tr><td>GetShgAutotune</td><td>EnumMemberDeclaration</td><td>L346–346</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShgAutotune</td></tr>
+<tr><td>GetThgSpot</td><td>EnumMemberDeclaration</td><td>L347–347</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetThgSpot</td></tr>
+<tr><td>GetThgHour</td><td>EnumMemberDeclaration</td><td>L348–348</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetThgHour</td></tr>
+<tr><td>GetQMode</td><td>EnumMemberDeclaration</td><td>L349–349</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetQMode</td></tr>
+<tr><td>GetDiodeTemp</td><td>EnumMemberDeclaration</td><td>L350–350</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeTemp</td></tr>
+<tr><td>GetTowerTemp</td><td>EnumMemberDeclaration</td><td>L351–351</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetTowerTemp</td></tr>
+<tr><td>GetLaserOnOff</td><td>EnumMemberDeclaration</td><td>L352–352</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetLaserOnOff</td></tr>
+<tr><td>RequestStatusString</td><td>EnumMemberDeclaration</td><td>L353–353</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusString</td></tr>
+<tr><td>RequestStatusCode</td><td>EnumMemberDeclaration</td><td>L354–354</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusCode</td></tr>
+<tr><td>RequestSave</td><td>EnumMemberDeclaration</td><td>L355–355</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestSave</td></tr>
+<tr><td>Ok</td><td>EnumMemberDeclaration</td><td>L360–360</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Ok</td></tr>
+<tr><td>Warning</td><td>EnumMemberDeclaration</td><td>L361–361</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Warning</td></tr>
+<tr><td>Error</td><td>EnumMemberDeclaration</td><td>L362–362</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Error</td></tr>
+<tr><td>Timeout</td><td>EnumMemberDeclaration</td><td>L363–363</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Timeout</td></tr>
+<tr><td>InvalidResponse</td><td>EnumMemberDeclaration</td><td>L364–364</td><td>Drilling.Common.Interface.EN_TALON_ERROR.InvalidResponse</td></tr>
+<tr><td>Empty</td><td>PropertyDeclaration</td><td>L389–389</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.ST_TALON_STATUS.Empty</td></tr>
+<tr><td>get_Empty</td><td>GetAccessorDeclaration</td><td>L389–389</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.ST_TALON_STATUS.Empty.get</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">PropertyDeclaration <code>CommandNewLine</code> · L15–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L15-L21">Drilling.Common/Interface/Serial/CTalonLaser.cs:15–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.CommandNewLine</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">GetAccessorDeclaration <code>get_CommandNewLine</code> · L17–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L17-L20">Drilling.Common/Interface/Serial/CTalonLaser.cs:17–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.CommandNewLine.get</td></tr>
+<tr><td>접근/수식자</td><td>Protected / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>19</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;\r&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">MethodDeclaration <code>FormatCommand</code> · L23–26</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L23-L26">Drilling.Common/Interface/Serial/CTalonLaser.cs:23–26</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.FormatCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L43-L43">Drilling.Common/Interface/Serial/CTalonLaser.cs:43–43</a></td><td>FormatCommand</td><td>True</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>25</td><td>function.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim()</td></tr>
+<tr><td>25</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return function.Trim();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>Execute</code> · L28–88</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L28-L88">Drilling.Common/Interface/Serial/CTalonLaser.cs:28–88</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CTalonLaser.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>30</td><td>SerialLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>35</td><td>Connect</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CSerialComm.cs:32</td></tr>
+<tr><td>43</td><td>FormatCommand</td><td>resolved · 동적 구현 선택 가능</td><td>string Drilling.Common.Interface.CTalonLaser.FormatCommand(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:23</td></tr>
+<tr><td>44</td><td>LastSent.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>47</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>48</td><td>Task.Run</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>51</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>SerialPort.ReadLine().TrimEnd</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>SerialPort.ReadLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>59</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>60</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>65</td><td>SerialPort.ReadExisting().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>65</td><td>SerialPort.ReadExisting().TrimEnd</td><td>unresolved</td><td>None</td></tr>
+<tr><td>65</td><td>SerialPort.ReadExisting</td><td>unresolved</td><td>None</td></tr>
+<tr><td>66</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>68</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>69</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:199</td></tr>
+<tr><td>74</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>79</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>80</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception) · Drilling.Common/Interface/Serial/CSerialComm.cs:192</td></tr>
+<tr><td>86</td><td>SerialLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>30</td><td>await</td><td>비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>31</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>33</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>35</td><td>await</td><td>비동기 완료를 기다립니다: await Connect(cancellationToken)</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)</td></tr>
+<tr><td>38</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>40</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>43</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = FormatCommand(function)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommand(function)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LastSent.StartsWith(&quot;?&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>44</td><td>local-declaration</td><td>지역 변수를 선언합니다: var expectsResponse = LastSent.StartsWith(&quot;?&quot;, StringComparison.Ordinal);</td></tr>
+<tr><td>44</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: expectsResponse = LastSent.StartsWith(&quot;?&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>45</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>48</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = await Task.Run(() =&gt; { SerialPort.NewLine = &quot;\n&quot;; SerialPort.Write(LastSent + &quot;\r&quot;); if (!expectsResponse) { return &quot;&quot;; } return SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim(); }, cancellationToken)</td></tr>
+<tr><td>48</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Run(() =&gt; { SerialPort.NewLine = &quot;\n&quot;; SerialPort.Write(LastSent + &quot;\r&quot;); if (!expectsResponse) { return &quot;&quot;; } return SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim(); }, cancellationToken)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =&gt; { SerialPort.NewLine = &quot;\n&quot;; SerialPort.Write(LastSent + &quot;\r&quot;); if (!expectsResponse) { return &quot;&quot;; } return SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim(); }, cancellationToken)</td></tr>
+<tr><td>50</td><td>assignment</td><td>값을 대상에 대입합니다: SerialPort.NewLine = &quot;\n&quot;</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(LastSent + &quot;\r&quot;)</td></tr>
+<tr><td>52</td><td>if</td><td>조건에 따라 분기합니다: if (!expectsResponse)</td></tr>
+<tr><td>54</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine()</td></tr>
+<tr><td>57</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadLine().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim();</td></tr>
+<tr><td>59</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = expectsResponse &amp;&amp; string.IsNullOrWhiteSpace(LastReceived) ? &quot;Talon response timeout.&quot; : &quot;&quot;</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived)</td></tr>
+<tr><td>59</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: expectsResponse &amp;&amp; string.IsNullOrWhiteSpace(LastReceived) ? &quot;Talon response timeout.&quot; : &quot;&quot;</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>61</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>63</td><td>catch</td><td>지정 예외를 처리합니다: catch (TimeoutException)</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = SerialPort.ReadExisting().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim()</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;).Trim()</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting()</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived)</td></tr>
+<tr><td>66</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(LastReceived))</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(&quot;Talon response timeout.&quot;)</td></tr>
+<tr><td>70</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>75</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>77</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException or OperationCanceledException)</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>81</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>84</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L31 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L33 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L38 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L45 try&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L52 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L63 catch&quot;]
+ N3 --&gt;|포함| N5
+ N6[&quot;L66 if&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L77 catch&quot;]
+ N3 --&gt;|포함| N7
+ N8[&quot;L84 finally&quot;]
+ N0 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L90">MethodDeclaration <code>ExpectsResponse</code> · L90–93</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L90-L93">Drilling.Common/Interface/Serial/CTalonLaser.cs:90–93</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CTalonLaser.ExpectsResponse(Drilling.Common.Interface.EN_TALON_COMMAND)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L944-L944">Drilling.Common/Interface/CInterfaceManager.cs:944–944</a></td><td>CTalonLaser.ExpectsResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139">Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139</a></td><td>ExpectsResponse</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>92</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command &gt;= EN_TALON_COMMAND.GetDiodeCurrent &amp;&amp; command &lt;= EN_TALON_COMMAND.RequestStatusCode;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L95">MethodDeclaration <code>Build</code> · L95–129</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L95-L129">Drilling.Common/Interface/Serial/CTalonLaser.cs:95–129</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L903-L903">Drilling.Common/Interface/CInterfaceManager.cs:903–903</a></td><td>CTalonLaser.Build</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>99</td><td>parameter.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>97</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.SetDiodeCurrent =&gt; $&quot;C1:{parameter.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture)}&quot;, EN_TALON_COMMAND.SetQsw =&gt; $&quot;Q:{(int)parameter}&quot;, EN_TALON_COMMAND.SetEprf =&gt; $&quot;EPRF:{(int)parameter}&quot;, EN</td></tr>
+<tr><td>97</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.SetDiodeCurrent =&gt; $&quot;C1:{parameter.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture)}&quot;, EN_TALON_COMMAND.SetQsw =&gt; $&quot;Q:{(int)parameter}&quot;, EN_TALON_COMMAND.SetEprf =&gt; $&quot;EPRF:{(int)parameter}&quot;, EN_TALON_</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>102</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parameter &gt; 0 ? &quot;ON&quot; : &quot;OFF&quot;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Build&quot;]
+ N0[&quot;L97 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L131">MethodDeclaration <code>IsValidResponse</code> · L131–134</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L131-L134">Drilling.Common/Interface/Serial/CTalonLaser.cs:131–134</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CTalonLaser.IsValidResponse(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L946-L946">Drilling.Common/Interface/CInterfaceManager.cs:946–946</a></td><td>CTalonLaser.IsValidResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139">Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139</a></td><td>IsValidResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>133</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>133</td><td>response.Trim().Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>133</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().Equals(&quot;ERR&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>133</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) &amp;&amp; !response.Trim().Equals(&quot;ERR&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L136">MethodDeclaration <code>Apply</code> · L136–263</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L136-L263">Drilling.Common/Interface/Serial/CTalonLaser.cs:136–263</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_TALON_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_TALON_STATUS</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L882-L882">Drilling.Common/Interface/CInterfaceManager.cs:882–882</a></td><td>CTalonLaser.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L917-L917">Drilling.Common/Interface/CInterfaceManager.cs:917–917</a></td><td>CTalonLaser.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L957-L957">Drilling.Common/Interface/CInterfaceManager.cs:957–957</a></td><td>CTalonLaser.Apply</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>138</td><td>CreateSimulationResponse</td><td>resolved</td><td>string Drilling.Common.Interface.CTalonLaser.CreateSimulationResponse(Drilling.Common.Interface.EN_TALON_COMMAND, double, Drilling.Common.Interface.ST_TALON_STATUS) · Drilling.Common/Interface/Serial/CTalonLaser.cs:265</td></tr>
+<tr><td>138</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>139</td><td>ExpectsResponse</td><td>resolved</td><td>bool Drilling.Common.Interface.CTalonLaser.ExpectsResponse(Drilling.Common.Interface.EN_TALON_COMMAND) · Drilling.Common/Interface/Serial/CTalonLaser.cs:90</td></tr>
+<tr><td>139</td><td>IsValidResponse</td><td>resolved</td><td>bool Drilling.Common.Interface.CTalonLaser.IsValidResponse(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:131</td></tr>
+<tr><td>183</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>195</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>199</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+<tr><td>203</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+<tr><td>207</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>211</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>215</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>219</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>223</td><td>ReadBool</td><td>resolved</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadBool(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:302</td></tr>
+<tr><td>227</td><td>ReadBool</td><td>resolved</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadBool(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:302</td></tr>
+<tr><td>231</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>231</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+<tr><td>235</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>239</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+<tr><td>243</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+<tr><td>247</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+<tr><td>251</td><td>ReadLaserEmission</td><td>resolved</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadLaserEmission(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:308</td></tr>
+<tr><td>259</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:297</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, parameter, current)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>138</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()</td></tr>
+<tr><td>138</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim();</td></tr>
+<tr><td>138</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExpectsResponse(command)</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidResponse(value)</td></tr>
+<tr><td>139</td><td>if</td><td>조건에 따라 분기합니다: if (!simulation &amp;&amp; ExpectsResponse(command) &amp;&amp; !IsValidResponse(value))</td></tr>
+<tr><td>141</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return current with { LastError = EN_TALON_ERROR.InvalidResponse };</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = EN_TALON_ERROR.InvalidResponse</td></tr>
+<tr><td>147</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ok = current with { LastError = EN_TALON_ERROR.Ok };</td></tr>
+<tr><td>147</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ok = current with { LastError = EN_TALON_ERROR.Ok }</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = EN_TALON_ERROR.Ok</td></tr>
+<tr><td>151</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.SetDiodeCurrent =&gt; ok with { DiodeCurrent = parameter }, EN_TALON_COMMAND.SetQsw =&gt; ok with { Qsw = (int)parameter }, EN_TALON_COMMAND.SetEprf =&gt; ok with { Eprf = (int)parameter }, EN_TALON</td></tr>
+<tr><td>151</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.SetDiodeCurrent =&gt; ok with { DiodeCurrent = parameter }, EN_TALON_COMMAND.SetQsw =&gt; ok with { Qsw = (int)parameter }, EN_TALON_COMMAND.SetEprf =&gt; ok with { Eprf = (int)parameter }, EN_TALON_COMMAN</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: DiodeCurrent = parameter</td></tr>
+<tr><td>159</td><td>assignment</td><td>값을 대상에 대입합니다: Qsw = (int)parameter</td></tr>
+<tr><td>163</td><td>assignment</td><td>값을 대상에 대입합니다: Eprf = (int)parameter</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: LaserOn = parameter &gt; 0</td></tr>
+<tr><td>171</td><td>assignment</td><td>값을 대상에 대입합니다: ShutterOpen = parameter &gt; 0</td></tr>
+<tr><td>175</td><td>assignment</td><td>값을 대상에 대입합니다: GateOpen = parameter &gt; 0</td></tr>
+<tr><td>179</td><td>assignment</td><td>값을 대상에 대입합니다: ExtGateEnable = parameter &gt; 0</td></tr>
+<tr><td>183</td><td>assignment</td><td>값을 대상에 대입합니다: ShgReadBackCount = (uint)Math.Max(0, parameter)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, parameter)</td></tr>
+<tr><td>187</td><td>assignment</td><td>값을 대상에 대입합니다: ShgAutoTuneActive = parameter &gt; 0</td></tr>
+<tr><td>191</td><td>assignment</td><td>값을 대상에 대입합니다: QMode = (int)parameter</td></tr>
+<tr><td>195</td><td>assignment</td><td>값을 대상에 대입합니다: DiodeCurrent = ReadDouble(value)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>199</td><td>assignment</td><td>값을 대상에 대입합니다: Qsw = ReadInt(value)</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+<tr><td>203</td><td>assignment</td><td>값을 대상에 대입합니다: Eprf = ReadInt(value)</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+<tr><td>207</td><td>assignment</td><td>값을 대상에 대입합니다: DiodeTemp = ReadDouble(value)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>211</td><td>assignment</td><td>값을 대상에 대입합니다: TowerTemp = ReadDouble(value)</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>215</td><td>assignment</td><td>값을 대상에 대입합니다: OutputPower = ReadDouble(value)</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>219</td><td>assignment</td><td>값을 대상에 대입합니다: ShutterOpen = ReadDouble(value) &gt; 0.5</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>223</td><td>assignment</td><td>값을 대상에 대입합니다: GateOpen = ReadBool(value)</td></tr>
+<tr><td>223</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(value)</td></tr>
+<tr><td>227</td><td>assignment</td><td>값을 대상에 대입합니다: ExtGateEnable = ReadBool(value)</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(value)</td></tr>
+<tr><td>231</td><td>assignment</td><td>값을 대상에 대입합니다: ShgReadBackCount = (uint)Math.Max(0, ReadInt(value))</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, ReadInt(value))</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+<tr><td>235</td><td>assignment</td><td>값을 대상에 대입합니다: ShgAutoTuneActive = ReadDouble(value) &gt; 0.5</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>239</td><td>assignment</td><td>값을 대상에 대입합니다: ThgSpot = ReadInt(value)</td></tr>
+<tr><td>239</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+<tr><td>243</td><td>assignment</td><td>값을 대상에 대입합니다: ThgHour = ReadDouble(value)</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>247</td><td>assignment</td><td>값을 대상에 대입합니다: QMode = ReadInt(value)</td></tr>
+<tr><td>247</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+<tr><td>251</td><td>assignment</td><td>값을 대상에 대입합니다: LaserOn = ReadLaserEmission(value)</td></tr>
+<tr><td>251</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserEmission(value)</td></tr>
+<tr><td>255</td><td>assignment</td><td>값을 대상에 대입합니다: StatusMessage = value</td></tr>
+<tr><td>259</td><td>assignment</td><td>값을 대상에 대입합니다: StatusCode = ReadInt(value)</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Apply&quot;]
+ N0[&quot;L139 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L151 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L265">MethodDeclaration <code>CreateSimulationResponse</code> · L265–289</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L265-L289">Drilling.Common/Interface/Serial/CTalonLaser.cs:265–289</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.CreateSimulationResponse(Drilling.Common.Interface.EN_TALON_COMMAND, double, Drilling.Common.Interface.ST_TALON_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_TALON_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L138-L138">Drilling.Common/Interface/Serial/CTalonLaser.cs:138–138</a></td><td>CreateSimulationResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>269</td><td>current.DiodeCurrent.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>270</td><td>current.Qsw.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>271</td><td>current.Eprf.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>272</td><td>(current.DiodeTemp &lt;= 0 ? 24.6 : current.DiodeTemp).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>273</td><td>(current.TowerTemp &lt;= 0 ? 24.2 : current.TowerTemp).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>274</td><td>current.OutputPower.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>278</td><td>current.ShgReadBackCount.ToString</td><td>resolved</td><td>string uint.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>280</td><td>current.ThgSpot.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>281</td><td>current.ThgHour.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>282</td><td>current.QMode.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>285</td><td>current.StatusCode.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>267</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.GetDiodeCurrent =&gt; current.DiodeCurrent.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetQsw =&gt; current.Qsw.ToString(CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetEprf</td></tr>
+<tr><td>267</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.GetDiodeCurrent =&gt; current.DiodeCurrent.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetQsw =&gt; current.Qsw.ToString(CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetEprf =&gt; cur</td></tr>
+<tr><td>269</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.DiodeCurrent.ToString(&quot;F2&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>270</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.Qsw.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>271</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.Eprf.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>272</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.DiodeTemp &lt;= 0 ? 24.6 : current.DiodeTemp).ToString(&quot;F1&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>272</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.DiodeTemp &lt;= 0 ? 24.6 : current.DiodeTemp</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.TowerTemp &lt;= 0 ? 24.2 : current.TowerTemp).ToString(&quot;F1&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>273</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.TowerTemp &lt;= 0 ? 24.2 : current.TowerTemp</td></tr>
+<tr><td>274</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.OutputPower.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>275</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.ShutterOpen ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>276</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.GateOpen ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>277</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.ExtGateEnable ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.ShgReadBackCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>279</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.ShgAutoTuneActive ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.ThgSpot.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>281</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.ThgHour.ToString(&quot;F1&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>282</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.QMode.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>283</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.LaserOn ? &quot;1&quot; : &quot;0&quot;</td></tr>
+<tr><td>284</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.LaserOn ? &quot;Emission&quot; : &quot;Standby&quot;</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.StatusCode.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>286</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parameter &gt; 0 ? &quot;Emission&quot; : &quot;Standby&quot;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateSimulationResponse&quot;]
+ N0[&quot;L267 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">MethodDeclaration <code>ReadDouble</code> · L291–295</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L291-L295">Drilling.Common/Interface/Serial/CTalonLaser.cs:291–295</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L195-L195">Drilling.Common/Interface/Serial/CTalonLaser.cs:195–195</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L207-L207">Drilling.Common/Interface/Serial/CTalonLaser.cs:207–207</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L211-L211">Drilling.Common/Interface/Serial/CTalonLaser.cs:211–211</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L215-L215">Drilling.Common/Interface/Serial/CTalonLaser.cs:215–215</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L219-L219">Drilling.Common/Interface/Serial/CTalonLaser.cs:219–219</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L235-L235">Drilling.Common/Interface/Serial/CTalonLaser.cs:235–235</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L243-L243">Drilling.Common/Interface/Serial/CTalonLaser.cs:243–243</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L299-L299">Drilling.Common/Interface/Serial/CTalonLaser.cs:299–299</a></td><td>ReadDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>293</td><td>ReadLeadingNumber</td><td>resolved</td><td>string Drilling.Common.Interface.CTalonLaser.ReadLeadingNumber(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:314</td></tr>
+<tr><td>294</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLeadingNumber(value)</td></tr>
+<tr><td>293</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = ReadLeadingNumber(value);</td></tr>
+<tr><td>293</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = ReadLeadingNumber(value)</td></tr>
+<tr><td>294</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>294</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0</td></tr>
+<tr><td>294</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L297">MethodDeclaration <code>ReadInt</code> · L297–300</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L297-L300">Drilling.Common/Interface/Serial/CTalonLaser.cs:297–300</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CTalonLaser.ReadInt(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L199-L199">Drilling.Common/Interface/Serial/CTalonLaser.cs:199–199</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L203-L203">Drilling.Common/Interface/Serial/CTalonLaser.cs:203–203</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L231-L231">Drilling.Common/Interface/Serial/CTalonLaser.cs:231–231</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L239-L239">Drilling.Common/Interface/Serial/CTalonLaser.cs:239–239</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L247-L247">Drilling.Common/Interface/Serial/CTalonLaser.cs:247–247</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L259-L259">Drilling.Common/Interface/Serial/CTalonLaser.cs:259–259</a></td><td>ReadInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>299</td><td>Math.Round</td><td>resolved</td><td>double System.Math.Round(double)</td></tr>
+<tr><td>299</td><td>ReadDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CTalonLaser.ReadDouble(string) · Drilling.Common/Interface/Serial/CTalonLaser.cs:291</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(ReadDouble(value))</td></tr>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)</td></tr>
+<tr><td>299</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (int)Math.Round(ReadDouble(value));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L302">MethodDeclaration <code>ReadBool</code> · L302–306</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L302-L306">Drilling.Common/Interface/Serial/CTalonLaser.cs:302–306</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadBool(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L223-L223">Drilling.Common/Interface/Serial/CTalonLaser.cs:223–223</a></td><td>ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L227-L227">Drilling.Common/Interface/Serial/CTalonLaser.cs:227–227</a></td><td>ReadBool</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>304</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>305</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>305</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>305</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>305</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>304</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>304</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = value.Trim();</td></tr>
+<tr><td>304</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = value.Trim()</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;1&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;ON&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;OPEN&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;TRUE&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>305</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return normalized.Equals(&quot;1&quot;, StringComparison.OrdinalIgnoreCase) || normalized.Equals(&quot;ON&quot;, StringComparison.OrdinalIgnoreCase) || normalized.Equals(&quot;OPEN&quot;, StringComparison.OrdinalIgnoreCase) || normalized.Equals(&quot;TRUE&quot;, StringC</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L308">MethodDeclaration <code>ReadLaserEmission</code> · L308–312</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L308-L312">Drilling.Common/Interface/Serial/CTalonLaser.cs:308–312</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CTalonLaser.ReadLaserEmission(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L251-L251">Drilling.Common/Interface/Serial/CTalonLaser.cs:251–251</a></td><td>ReadLaserEmission</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>310</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>311</td><td>normalized.Contains</td><td>resolved</td><td>bool string.Contains(string, System.StringComparison)</td></tr>
+<tr><td>311</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>311</td><td>normalized.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>310</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = value.Trim();</td></tr>
+<tr><td>310</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = value.Trim()</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains(&quot;emission&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;1&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals(&quot;ON&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>311</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return normalized.Contains(&quot;emission&quot;, StringComparison.OrdinalIgnoreCase) || normalized.Equals(&quot;1&quot;, StringComparison.OrdinalIgnoreCase) || normalized.Equals(&quot;ON&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L314">MethodDeclaration <code>ReadLeadingNumber</code> · L314–323</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L314-L323">Drilling.Common/Interface/Serial/CTalonLaser.cs:314–323</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CTalonLaser.ReadLeadingNumber(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L293-L293">Drilling.Common/Interface/Serial/CTalonLaser.cs:293–293</a></td><td>ReadLeadingNumber</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>321</td><td>value.Trim().TakeWhile(MatchesChar).ToArray</td><td>resolved</td><td>char[] System.Collections.Generic.IEnumerable&lt;char&gt;.ToArray&lt;char&gt;()</td></tr>
+<tr><td>321</td><td>value.Trim().TakeWhile</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;char&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.TakeWhile&lt;char&gt;(System.Func&lt;char, bool&gt;)</td></tr>
+<tr><td>321</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>322</td><td>new string</td><td>resolved</td><td>string.String(char[]?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar).ToArray()</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar)</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>321</td><td>local-declaration</td><td>지역 변수를 선언합니다: var chars = value.Trim().TakeWhile(MatchesChar).ToArray();</td></tr>
+<tr><td>321</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: chars = value.Trim().TakeWhile(MatchesChar).ToArray()</td></tr>
+<tr><td>322</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string (chars)</td></tr>
+<tr><td>322</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: chars.Length == 0 ? &quot;0&quot; : new string (chars)</td></tr>
+<tr><td>322</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return chars.Length == 0 ? &quot;0&quot; : new string (chars);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L316">LocalFunctionStatement <code>MatchesChar</code> · L316–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L316-L319">Drilling.Common/Interface/Serial/CTalonLaser.cs:316–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesChar(char)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CTalonLaser</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>character</td><td>char</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>318</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>318</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character)</td></tr>
+<tr><td>318</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return char.IsDigit(character) || character == &#x27;-&#x27; || character == &#x27;+&#x27; || character == &#x27;.&#x27;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L328">EnumMemberDeclaration <code>SetDiodeCurrent</code> · L328–328</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L328-L328">Drilling.Common/Interface/Serial/CTalonLaser.cs:328–328</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetDiodeCurrent</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L329">EnumMemberDeclaration <code>SetQsw</code> · L329–329</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L329-L329">Drilling.Common/Interface/Serial/CTalonLaser.cs:329–329</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetQsw</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L330">EnumMemberDeclaration <code>SetEprf</code> · L330–330</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L330-L330">Drilling.Common/Interface/Serial/CTalonLaser.cs:330–330</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetEprf</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L331">EnumMemberDeclaration <code>SetLaserOnOff</code> · L331–331</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L331-L331">Drilling.Common/Interface/Serial/CTalonLaser.cs:331–331</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetLaserOnOff</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L332">EnumMemberDeclaration <code>SetShutterOpenClose</code> · L332–332</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L332-L332">Drilling.Common/Interface/Serial/CTalonLaser.cs:332–332</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShutterOpenClose</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L333">EnumMemberDeclaration <code>SetGateOpenClose</code> · L333–333</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L333-L333">Drilling.Common/Interface/Serial/CTalonLaser.cs:333–333</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetGateOpenClose</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L334">EnumMemberDeclaration <code>SetExtGateEnableDisable</code> · L334–334</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L334-L334">Drilling.Common/Interface/Serial/CTalonLaser.cs:334–334</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetExtGateEnableDisable</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L335">EnumMemberDeclaration <code>SetShg</code> · L335–335</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L335-L335">Drilling.Common/Interface/Serial/CTalonLaser.cs:335–335</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShg</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L336">EnumMemberDeclaration <code>SetShgAutotune</code> · L336–336</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L336-L336">Drilling.Common/Interface/Serial/CTalonLaser.cs:336–336</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetShgAutotune</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L337">EnumMemberDeclaration <code>SetQMode</code> · L337–337</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L337-L337">Drilling.Common/Interface/Serial/CTalonLaser.cs:337–337</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.SetQMode</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L338">EnumMemberDeclaration <code>GetDiodeCurrent</code> · L338–338</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L338-L338">Drilling.Common/Interface/Serial/CTalonLaser.cs:338–338</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeCurrent</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L339">EnumMemberDeclaration <code>GetQsw</code> · L339–339</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L339-L339">Drilling.Common/Interface/Serial/CTalonLaser.cs:339–339</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetQsw</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L340">EnumMemberDeclaration <code>GetEprf</code> · L340–340</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L340-L340">Drilling.Common/Interface/Serial/CTalonLaser.cs:340–340</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetEprf</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L341">EnumMemberDeclaration <code>GetShutterOpenClose</code> · L341–341</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L341-L341">Drilling.Common/Interface/Serial/CTalonLaser.cs:341–341</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShutterOpenClose</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L342">EnumMemberDeclaration <code>GetGateOpenClose</code> · L342–342</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L342-L342">Drilling.Common/Interface/Serial/CTalonLaser.cs:342–342</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetGateOpenClose</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L343">EnumMemberDeclaration <code>GetExtGateEnableDisable</code> · L343–343</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L343-L343">Drilling.Common/Interface/Serial/CTalonLaser.cs:343–343</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetExtGateEnableDisable</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L344">EnumMemberDeclaration <code>GetOutputPower</code> · L344–344</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L344-L344">Drilling.Common/Interface/Serial/CTalonLaser.cs:344–344</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetOutputPower</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L345">EnumMemberDeclaration <code>GetShg</code> · L345–345</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L345-L345">Drilling.Common/Interface/Serial/CTalonLaser.cs:345–345</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShg</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L346">EnumMemberDeclaration <code>GetShgAutotune</code> · L346–346</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L346-L346">Drilling.Common/Interface/Serial/CTalonLaser.cs:346–346</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetShgAutotune</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L347">EnumMemberDeclaration <code>GetThgSpot</code> · L347–347</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L347-L347">Drilling.Common/Interface/Serial/CTalonLaser.cs:347–347</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetThgSpot</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L348">EnumMemberDeclaration <code>GetThgHour</code> · L348–348</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L348-L348">Drilling.Common/Interface/Serial/CTalonLaser.cs:348–348</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetThgHour</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L349">EnumMemberDeclaration <code>GetQMode</code> · L349–349</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L349-L349">Drilling.Common/Interface/Serial/CTalonLaser.cs:349–349</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetQMode</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L350">EnumMemberDeclaration <code>GetDiodeTemp</code> · L350–350</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L350-L350">Drilling.Common/Interface/Serial/CTalonLaser.cs:350–350</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeTemp</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L351">EnumMemberDeclaration <code>GetTowerTemp</code> · L351–351</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L351-L351">Drilling.Common/Interface/Serial/CTalonLaser.cs:351–351</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetTowerTemp</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L352">EnumMemberDeclaration <code>GetLaserOnOff</code> · L352–352</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L352-L352">Drilling.Common/Interface/Serial/CTalonLaser.cs:352–352</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.GetLaserOnOff</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L353">EnumMemberDeclaration <code>RequestStatusString</code> · L353–353</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L353-L353">Drilling.Common/Interface/Serial/CTalonLaser.cs:353–353</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusString</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L354">EnumMemberDeclaration <code>RequestStatusCode</code> · L354–354</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L354-L354">Drilling.Common/Interface/Serial/CTalonLaser.cs:354–354</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusCode</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L355">EnumMemberDeclaration <code>RequestSave</code> · L355–355</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L355-L355">Drilling.Common/Interface/Serial/CTalonLaser.cs:355–355</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_COMMAND.RequestSave</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L360">EnumMemberDeclaration <code>Ok</code> · L360–360</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L360-L360">Drilling.Common/Interface/Serial/CTalonLaser.cs:360–360</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Ok</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L361">EnumMemberDeclaration <code>Warning</code> · L361–361</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L361-L361">Drilling.Common/Interface/Serial/CTalonLaser.cs:361–361</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Warning</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L362">EnumMemberDeclaration <code>Error</code> · L362–362</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L362-L362">Drilling.Common/Interface/Serial/CTalonLaser.cs:362–362</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Error</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L363">EnumMemberDeclaration <code>Timeout</code> · L363–363</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L363-L363">Drilling.Common/Interface/Serial/CTalonLaser.cs:363–363</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_ERROR.Timeout</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L364">EnumMemberDeclaration <code>InvalidResponse</code> · L364–364</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L364-L364">Drilling.Common/Interface/Serial/CTalonLaser.cs:364–364</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_TALON_ERROR.InvalidResponse</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_TALON_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L389">PropertyDeclaration <code>Empty</code> · L389–389</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389">Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.ST_TALON_STATUS.Empty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_TALON_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_TALON_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>389</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_TALON_STATUS.ST_TALON_STATUS(double, int, int, double, double, double, bool, bool, bool, bool, bool, int, double, int, uint, string, int, Drilling.Common.Interface.EN_TALON_ERROR) · Drilling.Common/Interface/Serial/CTalonLaser.cs:368</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>389</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0.0, 0, 0, 0.0, 0.0, 0.0, false, false, false, false, false, 0, 0.0, 0, 0, &quot;&quot;, 0, EN_TALON_ERROR.Ok)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L389">GetAccessorDeclaration <code>get_Empty</code> · L389–389</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389">Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.ST_TALON_STATUS.Empty.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_TALON_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_TALON_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Serial/CTalonLaser.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

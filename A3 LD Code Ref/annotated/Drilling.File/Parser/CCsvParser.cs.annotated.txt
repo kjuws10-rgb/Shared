@@ -1,0 +1,887 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/Parser/CCsvParser.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000001 | using System.Text; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.Parser;
+L000004 | namespace Drilling.File.Parser; ⟦EOL⟧
+// 해설 L5: 타입의 구조/상속 선언입니다: internal static class CCsvParser
+L000005 | internal static class CCsvParser ⟦EOL⟧
+// 해설 L6: 구문 블록 경계입니다.
+L000006 | { ⟦EOL⟧
+// 해설 L7: 변수의 초기값을 지정합니다: Utf8BomLength = 3
+L000007 |     private const int Utf8BomLength = 3; ⟦EOL⟧
+// 해설 L8: 함수·델리게이트 또는 객체 생성자를 호출합니다: new UTF8Encoding(encoderShouldEmitUTF8Identifier: true) / 변수의 초기값을 지정합니다: CsvWriteEncoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: true)
+L000008 |     private static readonly Encoding CsvWriteEncoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: true); ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true) / 변수의 초기값을 지정합니다: StrictUtf8Encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true)
+L000009 |     private static readonly Encoding StrictUtf8Encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true); ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(GetKoreanCsvEncoding) / 변수의 초기값을 지정합니다: KoreanCsvEncoding = new(GetKoreanCsvEncoding)
+L000010 |     private static readonly Lazy<Encoding> KoreanCsvEncoding = new(GetKoreanCsvEncoding); ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.Parser.CCsvParser.Read(string)
+L000012 |     public static IReadOnlyList<IReadOnlyDictionary<string, string>> Read(string path) ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(path, null)
+L000013 |         => Read(path, null); ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.Parser.CCsvParser.Read(string, System.Collections.Generic.IList<int>?)
+L000015 |     public static IReadOnlyList<IReadOnlyDictionary<string, string>> Read(string path, IList<int>? rowNumbers) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 Read.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000017 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 Read.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000019 |             return[]; ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 Read.
+L000020 |         } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLines(path) / 지역 변수를 선언합니다: var lines = ReadLines(path); / 변수의 초기값을 지정합니다: lines = ReadLines(path)
+L000022 |         var lines = ReadLines(path); ⟦EOL⟧
+// 해설 L23: 조건에 따라 분기합니다: if (lines.Count == 0)
+L000023 |         if (lines.Count == 0) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Read.
+L000024 |         { ⟦EOL⟧
+// 해설 L25: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000025 |             return[]; ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 Read.
+L000026 |         } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(string)
+L000028 |         string SelectItem(string header) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 SelectItem.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: header.Trim() / 호출자에게 값 또는 제어를 반환합니다: return header.Trim();
+L000030 |             return header.Trim(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 SelectItem.
+L000031 |         } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(lines[0], path, 1).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(lines[0], path, 1).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(lines[0], path, 1) / 지역 변수를 선언합니다: var headers = ParseLine(lines[0], path, 1).Select(SelectItem).ToArray(); / 변수의 초기값을 지정합니다: headers = ParseLine(lines[0], path, 1).Select(SelectItem).ToArray()
+L000033 |         var headers = ParseLine(lines[0], path, 1).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateHeaders(path, headers)
+L000034 |         ValidateHeaders(path, headers); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<IReadOnlyDictionary<string, string>>() / 지역 변수를 선언합니다: var rows = new List<IReadOnlyDictionary<string, string>>(); / 변수의 초기값을 지정합니다: rows = new List<IReadOnlyDictionary<string, string>>()
+L000035 |         var rows = new List<IReadOnlyDictionary<string, string>>(); ⟦EOL⟧
+// 해설 L36: 초기화·조건·증감이 있는 반복입니다: for (var lineIndex = 1; lineIndex < lines.Count; lineIndex++) / 변수의 초기값을 지정합니다: lineIndex = 1
+L000036 |         for (var lineIndex = 1; lineIndex < lines.Count; lineIndex++) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 Read.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 지역 변수를 선언합니다: var line = lines[lineIndex]; / 변수의 초기값을 지정합니다: line = lines[lineIndex]
+L000038 |             var line = lines[lineIndex]; ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(line) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(line))
+L000039 |             if (string.IsNullOrWhiteSpace(line)) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 Read.
+L000040 |             { ⟦EOL⟧
+// 해설 L41: 다음 반복으로 진행합니다: continue;
+L000041 |                 continue; ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Read.
+L000042 |             } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(line, path, lineIndex + 1) / 지역 변수를 선언합니다: var fields = ParseLine(line, path, lineIndex + 1); / 변수의 초기값을 지정합니다: fields = ParseLine(line, path, lineIndex + 1)
+L000044 |             var fields = ParseLine(line, path, lineIndex + 1); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var row = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: row = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+L000045 |             var row = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L46: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < headers.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000046 |             for (var index = 0; index < headers.Length; index++) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 Read.
+L000047 |             { ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: row[headers[index]] = index < fields.Count ? fields[index] : string.Empty / 조건에 따라 결과식을 선택합니다: index < fields.Count ? fields[index] : string.Empty
+L000048 |                 row[headers[index]] = index < fields.Count ? fields[index] : string.Empty; ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Read.
+L000049 |             } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(row)
+L000051 |             rows.Add(row); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Add(lineIndex + 1)
+L000052 |             rowNumbers?.Add(lineIndex + 1); ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 Read.
+L000053 |         } ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return rows;
+L000055 |         return rows; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Read.
+L000056 |     } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000058 |     public static void Write(string path, IReadOnlyList<string> headers, IEnumerable<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 Write.
+L000059 |     { ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.ToArray() / 지역 변수를 선언합니다: var rowList = rows.ToArray(); / 변수의 초기값을 지정합니다: rowList = rows.ToArray()
+L000060 |         var rowList = rows.ToArray(); ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<string> SelectKeys(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000061 |         global::System.Collections.Generic.IEnumerable<string> SelectKeys(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 SelectKeys.
+L000062 |         { ⟦EOL⟧
+// 해설 L63: 호출자에게 값 또는 제어를 반환합니다: return row.Keys;
+L000063 |             return row.Keys; ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 SelectKeys.
+L000064 |         } ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(string)
+L000066 |         bool ShouldIncludeItem(string key) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000067 |         { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Contains(key, StringComparer.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return !headers.Contains(key, StringComparer.OrdinalIgnoreCase);
+L000068 |             return !headers.Contains(key, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000069 |         } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Concat(rowList.SelectMany(SelectKeys).Where(ShouldIncludeItem)).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Concat(rowList.SelectMany(SelectKeys).Where(ShouldIncludeItem)).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Concat(rowList.SelectMany(SelectKeys).Where(ShouldIncludeItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rowList.SelectMany(SelectKeys).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rowList.SelectMany(SelectKeys
+L000071 |         var outputHeaders = headers.Concat(rowList.SelectMany(SelectKeys).Where(ShouldIncludeItem)).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(path) / 지역 변수를 선언합니다: var directory = Path.GetDirectoryName(path); / 변수의 초기값을 지정합니다: directory = Path.GetDirectoryName(path)
+L000072 |         var directory = Path.GetDirectoryName(path); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(directory) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(directory))
+L000073 |         if (!string.IsNullOrWhiteSpace(directory)) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 Write.
+L000074 |         { ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(directory)
+L000075 |             Directory.CreateDirectory(directory); ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Write.
+L000076 |         } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string> { string.Join(",", outputHeaders.Select(Escape)) } / 지역 변수를 선언합니다: var lines = new List<string> { string.Join(",", outputHeaders.Select(Escape)) }; / 변수의 초기값을 지정합니다: lines = new List<string> { string.Join(",", outputHeaders.Select(Escape)) }
+L000078 |         var lines = new List<string> ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Write.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", outputHeaders.Select(Escape)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: outputHeaders.Select(Escape)
+L000080 |             string.Join(",", outputHeaders.Select(Escape)) ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 Write.
+L000081 |         }; ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000082 |         string SelectItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 SelectItem.
+L000083 |         { ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(string)
+L000084 |             string SelectItem(string header) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 SelectItem.
+L000085 |             { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: Escape(Get(row, header)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Get(row, header) / 호출자에게 값 또는 제어를 반환합니다: return Escape(Get(row, header));
+L000086 |                 return Escape(Get(row, header)); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 SelectItem.
+L000087 |             } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", outputHeaders.Select(SelectItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: outputHeaders.Select(SelectItem) / 호출자에게 값 또는 제어를 반환합니다: return string.Join(",", outputHeaders.Select(SelectItem));
+L000089 |             return string.Join(",", outputHeaders.Select(SelectItem)); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 SelectItem.
+L000090 |         } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.AddRange(rowList.Select(SelectItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rowList.Select(SelectItem)
+L000092 |         lines.AddRange(rowList.Select(SelectItem)); ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteLines(path, lines)
+L000093 |         WriteLines(path, lines); ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Write.
+L000094 |     } ⟦EOL⟧
+L000095 |  ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000096 |     public static void Append( ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000097 |         string path, ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000098 |         IReadOnlyList<string> headers, ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000099 |         IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 Append.
+L000100 |     { ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileInfo(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path) || new FileInfo(path).Length == 0)
+L000101 |         if (!System.IO.File.Exists(path) || new FileInfo(path).Length == 0) ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 Append.
+L000102 |         { ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(path, headers, [row])
+L000103 |             Write(path, headers, [row]); ⟦EOL⟧
+// 해설 L104: 호출자에게 값 또는 제어를 반환합니다: return;
+L000104 |             return; ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 Append.
+L000105 |         } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Keys.FirstOrDefault(key => !headers.Contains(key, StringComparer.OrdinalIgnoreCase)) / 지역 변수를 선언합니다: var unexpected = row.Keys.FirstOrDefault(key => !headers.Contains(key, StringComparer.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: unexpected = row.Keys.FirstOrDefault(key => !headers.Contains(key, StringComparer.OrdinalIgnoreCase))
+L000107 |         var unexpected = row.Keys.FirstOrDefault(key => ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Contains(key, StringComparer.OrdinalIgnoreCase)
+L000108 |             !headers.Contains(key, StringComparer.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L109: 조건에 따라 분기합니다: if (unexpected is not null)
+L000109 |         if (unexpected is not null) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 Append.
+L000110 |         { ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"CSV append failed. Unexpected column: {unexpected}") / 예외를 발생/전달합니다: throw new InvalidDataException($"CSV append failed. Unexpected column: {unexpected}");
+L000111 |             throw new InvalidDataException($"CSV append failed. Unexpected column: {unexpected}"); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 Append.
+L000112 |         } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", headers.Select(header => Escape(Get(row, header)))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select(header => Escape(Get(row, header))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Escape(Get(row, header)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Get(row, header) / 지역 변수를 선언합니다: var line = string.Join(",", headers.Select(header => Escape(Get(row, header)))); / 변수의 초기값을 지정합니다: line = string.Join(",", headers.Select(header => Escape(Get(row, header))))
+L000114 |         var line = string.Join(",", headers.Select(header => Escape(Get(row, header)))); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileStream( path, FileMode.Open, FileAccess.ReadWrite, FileShare.Read) / 정리할 자원을 선언합니다: using var stream = new FileStream( path, FileMode.Open, FileAccess.ReadWrite, FileShare.Read); / 변수의 초기값을 지정합니다: stream = new FileStream( path, FileMode.Open, FileAccess.ReadWrite, FileShare.Read)
+L000115 |         using var stream = new FileStream( ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000116 |             path, ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000117 |             FileMode.Open, ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000118 |             FileAccess.ReadWrite, ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000119 |             FileShare.Read); ⟦EOL⟧
+// 해설 L120: 지역 변수를 선언합니다: var originalLength = stream.Length; / 변수의 초기값을 지정합니다: originalLength = stream.Length
+L000120 |         var originalLength = stream.Length; ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: stream.Position = originalLength
+L000121 |         stream.Position = originalLength; ⟦EOL⟧
+// 해설 L122: 예외 처리 범위입니다: try
+L000122 |         try ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 Append.
+L000123 |         { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLastByte(stream) / 조건에 따라 결과식을 선택합니다: originalLength > 0 && ReadLastByte(stream) != (byte)'\n' ? Environment.NewLine : "" / 지역 변수를 선언합니다: var prefix = originalLength > 0 && ReadLastByte(stream) != (byte)'\n' ? Environment.NewLine : ""; / 변수의 초기값을 지정합니다: prefix = originalLength > 0 && ReadLastByte(stream) != (byte)'\n' ? Environment.NewLine : ""
+L000124 |             var prefix = originalLength > 0 && ReadLastByte(stream) != (byte)'\n' ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000125 |                 ? Environment.NewLine ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000126 |                 : ""; ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: stream.Position = originalLength
+L000127 |             stream.Position = originalLength; ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: CsvWriteEncoding.GetBytes(prefix + line + Environment.NewLine) / 지역 변수를 선언합니다: var bytes = CsvWriteEncoding.GetBytes(prefix + line + Environment.NewLine); / 변수의 초기값을 지정합니다: bytes = CsvWriteEncoding.GetBytes(prefix + line + Environment.NewLine)
+L000128 |             var bytes = CsvWriteEncoding.GetBytes(prefix + line + Environment.NewLine); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.Write(bytes, 0, bytes.Length)
+L000129 |             stream.Write(bytes, 0, bytes.Length); ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.Flush(flushToDisk: true)
+L000130 |             stream.Flush(flushToDisk: true); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 Append.
+L000131 |         } ⟦EOL⟧
+// 해설 L132: 지정 예외를 처리합니다: catch
+L000132 |         catch ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 Append.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.SetLength(originalLength)
+L000134 |             stream.SetLength(originalLength); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.Flush(flushToDisk: true)
+L000135 |             stream.Flush(flushToDisk: true); ⟦EOL⟧
+// 해설 L136: 예외를 발생/전달합니다: throw;
+L000136 |             throw; ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Append.
+L000137 |         } ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 Append.
+L000138 |     } ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · byte Drilling.File.Parser.CCsvParser.ReadLastByte(System.IO.FileStream)
+L000140 |     private static byte ReadLastByte(FileStream stream) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 ReadLastByte.
+L000141 |     { ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: stream.Position = stream.Length - 1
+L000142 |         stream.Position = stream.Length - 1; ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.ReadByte() / 지역 변수를 선언합니다: var value = stream.ReadByte(); / 변수의 초기값을 지정합니다: value = stream.ReadByte()
+L000143 |         var value = stream.ReadByte(); ⟦EOL⟧
+// 해설 L144: 조건에 따라 결과식을 선택합니다: value < 0 ? (byte)0 : (byte)value / 호출자에게 값 또는 제어를 반환합니다: return value < 0 ? (byte)0 : (byte)value;
+L000144 |         return value < 0 ? (byte)0 : (byte)value; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ReadLastByte.
+L000145 |     } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.Parser.CCsvParser.ReadLines(string)
+L000147 |     public static IReadOnlyList<string> ReadLines(string path) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 ReadLines.
+L000148 |     { ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000149 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 ReadLines.
+L000150 |         { ⟦EOL⟧
+// 해설 L151: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000151 |             return[]; ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 ReadLines.
+L000152 |         } ⟦EOL⟧
+L000153 |  ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: SplitLines(ReadCsvText(path)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCsvText(path) / 호출자에게 값 또는 제어를 반환합니다: return SplitLines(ReadCsvText(path));
+L000154 |         return SplitLines(ReadCsvText(path)); ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 ReadLines.
+L000155 |     } ⟦EOL⟧
+L000156 |  ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.WriteLines(string, System.Collections.Generic.IEnumerable<string>)
+L000157 |     public static void WriteLines(string path, IEnumerable<string> lines) ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 WriteLines.
+L000158 |     { ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(path) / 지역 변수를 선언합니다: var directory = Path.GetDirectoryName(path); / 변수의 초기값을 지정합니다: directory = Path.GetDirectoryName(path)
+L000159 |         var directory = Path.GetDirectoryName(path); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(directory) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(directory))
+L000160 |         if (!string.IsNullOrWhiteSpace(directory)) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 WriteLines.
+L000161 |         { ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(directory)
+L000162 |             Directory.CreateDirectory(directory); ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 WriteLines.
+L000163 |         } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.WriteAllLines(path, lines, CsvWriteEncoding)
+L000165 |         System.IO.File.WriteAllLines(path, lines, CsvWriteEncoding); ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 WriteLines.
+L000166 |     } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string)
+L000168 |     public static string Get(IReadOnlyDictionary<string, string> row, string key) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Get.
+L000169 |     { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.TryGetValue(key, out var value) / 조건에 따라 결과식을 선택합니다: row.TryGetValue(key, out var value) ? value : string.Empty / 호출자에게 값 또는 제어를 반환합니다: return row.TryGetValue(key, out var value) ? value : string.Empty;
+L000170 |         return row.TryGetValue(key, out var value) ? value : string.Empty; ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Get.
+L000171 |     } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.GetFirst(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[])
+L000173 |     public static string GetFirst(IReadOnlyDictionary<string, string> row, params string[] names) ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 GetFirst.
+L000174 |     { ⟦EOL⟧
+// 해설 L175: 컬렉션 요소를 순회합니다: foreach (var name in names)
+L000175 |         foreach (var name in names) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 GetFirst.
+L000176 |         { ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: Get(row, name) / 지역 변수를 선언합니다: var value = Get(row, name); / 변수의 초기값을 지정합니다: value = Get(row, name)
+L000177 |             var value = Get(row, name); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(value))
+L000178 |             if (!string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 GetFirst.
+L000179 |             { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim();
+L000180 |                 return value.Trim(); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 GetFirst.
+L000181 |             } ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 GetFirst.
+L000182 |         } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000184 |         return ""; ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 GetFirst.
+L000185 |     } ⟦EOL⟧
+L000186 |  ⟦EOL⟧
+// 해설 L187: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.RequireText(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, int, params string[])
+L000187 |     public static string RequireText(IReadOnlyDictionary<string, string> row, string tableName, int rowNo, params string[] names) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 RequireText.
+L000188 |     { ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirst(row, names) / 지역 변수를 선언합니다: var value = GetFirst(row, names); / 변수의 초기값을 지정합니다: value = GetFirst(row, names)
+L000189 |         var value = GetFirst(row, names); ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000190 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 RequireText.
+L000191 |         { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {names[0]} cannot be empty.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {names[0]} cannot be empty.");
+L000192 |             throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {names[0]} cannot be empty."); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 RequireText.
+L000193 |         } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000195 |         return value; ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 RequireText.
+L000196 |     } ⟦EOL⟧
+L000197 |  ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.Parser.CCsvParser.ReadInt(string, string, int, string, int)
+L000198 |     public static int ReadInt(string value, string tableName, int rowNo, string fieldName, int defaultValue) ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 ReadInt.
+L000199 |     { ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000200 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 ReadInt.
+L000201 |         { ⟦EOL⟧
+// 해설 L202: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000202 |             return defaultValue; ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 ReadInt.
+L000203 |         } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be integer: {value}") / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be integer: {value}") / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(valu
+L000205 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be integer: {value}"); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 ReadInt.
+L000206 |     } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.Parser.CCsvParser.ReadRequiredInt(string, string, int, string, bool)
+L000208 |     public static int ReadRequiredInt(string value, string tableName, int rowNo, string fieldName, bool allowNegative = false) ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000209 |     { ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || (!allowNegative && result < 0))
+L000210 |         if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || (!allowNegative && result < 0)) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 조건에 따라 결과식을 선택합니다: allowNegative ? "" : " non-negative" / 지역 변수를 선언합니다: var signText = allowNegative ? "" : " non-negative"; / 변수의 초기값을 지정합니다: signText = allowNegative ? "" : " non-negative"
+L000212 |             var signText = allowNegative ? "" : " non-negative"; ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be a{signText} integer.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be a{signText} integer.");
+L000213 |             throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be a{signText} integer."); ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000214 |         } ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000216 |         return result; ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 ReadRequiredInt.
+L000217 |     } ⟦EOL⟧
+L000218 |  ⟦EOL⟧
+// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.Parser.CCsvParser.ReadDouble(string, string, int, string, double)
+L000219 |     public static double ReadDouble(string value, string tableName, int rowNo, string fieldName, double defaultValue) ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000220 |     { ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000221 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000222 |         { ⟦EOL⟧
+// 해설 L223: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000223 |             return defaultValue; ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000224 |         } ⟦EOL⟧
+L000225 |  ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be number: {value}") / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be number: {value}") / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(v
+L000226 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be number: {value}"); ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000227 |     } ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadBool(string, bool)
+L000229 |     public static bool ReadBool(string value, bool defaultValue) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 ReadBool.
+L000230 |     { ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000231 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 ReadBool.
+L000232 |         { ⟦EOL⟧
+// 해설 L233: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000233 |             return defaultValue; ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 ReadBool.
+L000234 |         } ⟦EOL⟧
+L000235 |  ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeader(value) / 호출자에게 값 또는 제어를 반환합니다: return NormalizeHeader(value) switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" => true, "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" => false, _ => defaultValue }; / 값별 결과식을 선택합니다: NormalizeHeader(value) switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" => true, "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" => false, _ => defaultValue }
+L000236 |         return NormalizeHeader(value) switch ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 ReadBool.
+L000237 |         { ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadBool(string, bool)
+L000238 |             "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" => true, ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadBool(string, bool)
+L000239 |             "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" => false, ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadBool(string, bool)
+L000240 |             _ => defaultValue ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 ReadBool.
+L000241 |         }; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 ReadBool.
+L000242 |     } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadRequiredBool(string, string, int, string)
+L000244 |     public static bool ReadRequiredBool(string value, string tableName, int rowNo, string fieldName) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 ReadRequiredBool.
+L000245 |     { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeader(value) / 호출자에게 값 또는 제어를 반환합니다: return NormalizeHeader(value) switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" or "ONLINE" or "LIVE" or "REAL" => false, _ => t / 값별 결과식을 선택합니다: NormalizeHeader(value) switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" or "ONLINE" or "LIVE" or "REAL" => false, _
+L000246 |         return NormalizeHeader(value) switch ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ReadRequiredBool.
+L000247 |         { ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadRequiredBool(string, string, int, string)
+L000248 |             "1" or "TRUE" or "ON" or "YES" or "USE" or "Y" or "SIMUL" or "SIMULATION" or "SIM" => true, ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.ReadRequiredBool(string, string, int, string)
+L000249 |             "0" or "FALSE" or "OFF" or "NO" or "NOTUSE" or "N" or "ONLINE" or "LIVE" or "REAL" => false, ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be 1/0 or ON/OFF.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be 1/0 or ON/OFF.")
+L000250 |             _ => throw new InvalidDataException($"{tableName} validation failed. Row {rowNo} / {fieldName} must be 1/0 or ON/OFF.")}; ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 ReadRequiredBool.
+L000251 |     } ⟦EOL⟧
+L000252 |  ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.Parser.CCsvParser.ReadHeaders(string)
+L000253 |     public static IReadOnlyList<string> ReadHeaders(string path) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000254 |     { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000255 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000256 |         { ⟦EOL⟧
+// 해설 L257: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000257 |             return[]; ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000258 |         } ⟦EOL⟧
+L000259 |  ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLines(path).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLines(path) / 지역 변수를 선언합니다: var firstLine = ReadLines(path).FirstOrDefault(); / 변수의 초기값을 지정합니다: firstLine = ReadLines(path).FirstOrDefault()
+L000260 |         var firstLine = ReadLines(path).FirstOrDefault(); ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(string)
+L000261 |         string SelectItem(string header) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 SelectItem.
+L000262 |         { ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: header.Trim() / 호출자에게 값 또는 제어를 반환합니다: return header.Trim();
+L000263 |             return header.Trim(); ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 SelectItem.
+L000264 |         } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(string)
+L000266 |         bool ShouldIncludeItem(string header) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(header) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(header);
+L000268 |             return !string.IsNullOrWhiteSpace(header); ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000269 |         } ⟦EOL⟧
+L000270 |  ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(firstLine) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(firstLine, path, 1).Select(SelectItem).Where(ShouldIncludeItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(firstLine, path, 1).Select(SelectItem).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(firstLine, path, 1).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseLine(firstLine, path, 1) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(firstLine) ? [] : ParseLine(firstLine, path, 1).Select(SelectItem).Where(Sho
+L000271 |         var headers = string.IsNullOrWhiteSpace(firstLine) ? [] : ParseLine(firstLine, path, 1).Select(SelectItem).Where(ShouldIncludeItem).ToArray(); ⟦EOL⟧
+// 해설 L272: 조건에 따라 분기합니다: if (headers.Length > 0)
+L000272 |         if (headers.Length > 0) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000273 |         { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateHeaders(path, headers)
+L000274 |             ValidateHeaders(path, headers); ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000275 |         } ⟦EOL⟧
+L000276 |  ⟦EOL⟧
+// 해설 L277: 호출자에게 값 또는 제어를 반환합니다: return headers;
+L000277 |         return headers; ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 ReadHeaders.
+L000278 |     } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<string>>)
+L000280 |     public static void ValidateRequiredHeaders(string path, string tableName, IEnumerable<IEnumerable<string>> requiredHeaderGroups) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000281 |     { ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000282 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException($"{tableName} file not found.", path) / 예외를 발생/전달합니다: throw new FileNotFoundException($"{tableName} file not found.", path);
+L000284 |             throw new FileNotFoundException($"{tableName} file not found.", path); ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000285 |         } ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeaders(path) / 지역 변수를 선언합니다: var headers = ReadHeaders(path); / 변수의 초기값을 지정합니다: headers = ReadHeaders(path)
+L000287 |         var headers = ReadHeaders(path); ⟦EOL⟧
+// 해설 L288: 조건에 따라 분기합니다: if (headers.Count == 0)
+L000288 |         if (headers.Count == 0) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000289 |         { ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Header row is empty.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Header row is empty.");
+L000290 |             throw new InvalidDataException($"{tableName} validation failed. Header row is empty."); ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000291 |         } ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select(NormalizeHeader).ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select(NormalizeHeader) / 지역 변수를 선언합니다: var headerSet = headers.Select(NormalizeHeader).ToHashSet(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: headerSet = headers.Select(NormalizeHeader).ToHashSet(StringComparer.OrdinalIgnoreCase)
+L000293 |         var headerSet = headers.Select(NormalizeHeader).ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(string)
+L000294 |         bool ShouldIncludeItem(string header) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000295 |         { ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(header) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(header);
+L000296 |             return !string.IsNullOrWhiteSpace(header); ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000297 |         } ⟦EOL⟧
+L000298 |  ⟦EOL⟧
+// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(string)
+L000299 |         string SelectItem(string header) ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 SelectItem.
+L000300 |         { ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: header.Trim() / 호출자에게 값 또는 제어를 반환합니다: return header.Trim();
+L000301 |             return header.Trim(); ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 SelectItem.
+L000302 |         } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · string[] SelectValue(System.Collections.Generic.IEnumerable<string>)
+L000304 |         string[] SelectValue(global::System.Collections.Generic.IEnumerable<string> group) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 SelectValue.
+L000305 |         { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Where(ShouldIncludeItem).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Where(ShouldIncludeItem).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Where(ShouldIncludeItem) / 호출자에게 값 또는 제어를 반환합니다: return group.Where(ShouldIncludeItem).Select(SelectItem).ToArray();
+L000306 |             return group.Where(ShouldIncludeItem).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 SelectValue.
+L000307 |         } ⟦EOL⟧
+L000308 |  ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(string)
+L000309 |         bool MatchesItem(string header) ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000310 |         { ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: headerSet.Contains(NormalizeHeader(header)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeader(header) / 호출자에게 값 또는 제어를 반환합니다: return headerSet.Contains(NormalizeHeader(header));
+L000311 |             return headerSet.Contains(NormalizeHeader(header)); ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000312 |         } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · bool MatchesLength(string[])
+L000314 |         bool MatchesLength(string[] group) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 MatchesLength.
+L000315 |         { ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Any(MatchesItem) / 호출자에게 값 또는 제어를 반환합니다: return group.Length > 0 && !group.Any(MatchesItem);
+L000316 |             return group.Length > 0 && !group.Any(MatchesItem); ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 MatchesLength.
+L000317 |         } ⟦EOL⟧
+L000318 |  ⟦EOL⟧
+// 해설 L319: 선언·서명/매개변수·접근 조건입니다 · string SelectString(string[])
+L000319 |         string SelectString(string[] group) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 SelectString.
+L000320 |         { ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" or ", group) / 호출자에게 값 또는 제어를 반환합니다: return string.Join(" or ", group);
+L000321 |             return string.Join(" or ", group); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 SelectString.
+L000322 |         } ⟦EOL⟧
+L000323 |  ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: requiredHeaderGroups.Select(SelectValue).Where(MatchesLength).Select(SelectString).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: requiredHeaderGroups.Select(SelectValue).Where(MatchesLength).Select(SelectString) / 함수·델리게이트 또는 객체 생성자를 호출합니다: requiredHeaderGroups.Select(SelectValue).Where(MatchesLength) / 함수·델리게이트 또는 객체 생성자를 호출합니다: requiredHeaderGroups.Select(SelectValue) / 지역 변수를 선언합니다: var missing = requiredHeaderGroups.Select(SelectValue).Where(MatchesLength).Select(SelectString).ToArray(); / 변수의 초기값을 지정합니다: missi
+L000324 |         var missing = requiredHeaderGroups.Select(SelectValue).Where(MatchesLength).Select(SelectString).ToArray(); ⟦EOL⟧
+// 해설 L325: 조건에 따라 분기합니다: if (missing.Length > 0)
+L000325 |         if (missing.Length > 0) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000326 |         { ⟦EOL⟧
+// 해설 L327: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Missing column(s): {string.Join(", ", missing)}. " + $"Available: {string.Join(", ", headers)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(", ", missing) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(", ", headers) / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Missing column(s): {string.Join(", ", missing)}. " + $"Available: {string.Join(", ", headers)}");
+L000327 |             throw new InvalidDataException($"{tableName} validation failed. Missing column(s): {string.Join(", ", missing)}. " + $"Available: {string.Join(", ", headers)}"); ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000328 |         } ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 ValidateRequiredHeaders.
+L000329 |     } ⟦EOL⟧
+L000330 |  ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Parser.CCsvParser.GetExtra(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IEnumerable<str
+L000331 |     public static IReadOnlyDictionary<string, string> GetExtra(IReadOnlyDictionary<string, string> row, IEnumerable<string> knownHeaders) ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 GetExtra.
+L000332 |     { ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(knownHeaders, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var known = new HashSet<string>(knownHeaders, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: known = new HashSet<string>(knownHeaders, StringComparer.OrdinalIgnoreCase)
+L000333 |         var known = new HashSet<string>(knownHeaders, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>)
+L000334 |         bool ShouldIncludeItem(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000335 |         { ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: known.Contains(item.Key) / 호출자에게 값 또는 제어를 반환합니다: return !known.Contains(item.Key);
+L000336 |             return !known.Contains(item.Key); ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000337 |         } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · string SelectKey(System.Collections.Generic.KeyValuePair<string, string>)
+L000339 |         string SelectKey(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 SelectKey.
+L000340 |         { ⟦EOL⟧
+// 해설 L341: 호출자에게 값 또는 제어를 반환합니다: return item.Key;
+L000341 |             return item.Key; ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 SelectKey.
+L000342 |         } ⟦EOL⟧
+L000343 |  ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.KeyValuePair<string, string>)
+L000344 |         string SelectValue(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 SelectValue.
+L000345 |         { ⟦EOL⟧
+// 해설 L346: 호출자에게 값 또는 제어를 반환합니다: return item.Value;
+L000346 |             return item.Value; ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 SelectValue.
+L000347 |         } ⟦EOL⟧
+L000348 |  ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Where(ShouldIncludeItem).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Where(ShouldIncludeItem) / 호출자에게 값 또는 제어를 반환합니다: return row.Where(ShouldIncludeItem).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase);
+L000349 |         return row.Where(ShouldIncludeItem).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 GetExtra.
+L000350 |     } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.List<string> Drilling.File.Parser.CCsvParser.ParseLine(string, string, int)
+L000352 |     private static List<string> ParseLine(string line, string path, int lineNo) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 ParseLine.
+L000353 |     { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var fields = new List<string>(); / 변수의 초기값을 지정합니다: fields = new List<string>()
+L000354 |         var fields = new List<string>(); ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var value = new StringBuilder(); / 변수의 초기값을 지정합니다: value = new StringBuilder()
+L000355 |         var value = new StringBuilder(); ⟦EOL⟧
+// 해설 L356: 지역 변수를 선언합니다: var inQuotes = false; / 변수의 초기값을 지정합니다: inQuotes = false
+L000356 |         var inQuotes = false; ⟦EOL⟧
+// 해설 L357: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < line.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000357 |         for (var index = 0; index < line.Length; index++) ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 ParseLine.
+L000358 |         { ⟦EOL⟧
+// 해설 L359: 지역 변수를 선언합니다: var current = line[index]; / 변수의 초기값을 지정합니다: current = line[index]
+L000359 |             var current = line[index]; ⟦EOL⟧
+// 해설 L360: 조건에 따라 분기합니다: if (current == '"')
+L000360 |             if (current == '"') ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 ParseLine.
+L000361 |             { ⟦EOL⟧
+// 해설 L362: 조건에 따라 분기합니다: if (inQuotes && index + 1 < line.Length && line[index + 1] == '"')
+L000362 |                 if (inQuotes && index + 1 < line.Length && line[index + 1] == '"') ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 ParseLine.
+L000363 |                 { ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append('"')
+L000364 |                     value.Append('"'); ⟦EOL⟧
+// 해설 L365: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.List<string> Drilling.File.Parser.CCsvParser.ParseLine(string, string, int)
+L000365 |                     index++; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 ParseLine.
+L000366 |                 } ⟦EOL⟧
+// 해설 L367: 앞 조건이 거짓인 경로입니다: else
+L000367 |                 else ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 ParseLine.
+L000368 |                 { ⟦EOL⟧
+// 해설 L369: 값을 대상에 대입합니다: inQuotes = !inQuotes
+L000369 |                     inQuotes = !inQuotes; ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 ParseLine.
+L000370 |                 } ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 ParseLine.
+L000371 |             } ⟦EOL⟧
+// 해설 L372: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (current == ',' && !inQuotes)
+L000372 |             else if (current == ',' && !inQuotes) ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 ParseLine.
+L000373 |             { ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000374 |                 fields.Add(value.ToString()); ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Clear()
+L000375 |                 value.Clear(); ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 ParseLine.
+L000376 |             } ⟦EOL⟧
+// 해설 L377: 앞 조건이 거짓인 경로입니다: else
+L000377 |             else ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ParseLine.
+L000378 |             { ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append(current)
+L000379 |                 value.Append(current); ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 ParseLine.
+L000380 |             } ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 ParseLine.
+L000381 |         } ⟦EOL⟧
+L000382 |  ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000383 |         fields.Add(value.ToString()); ⟦EOL⟧
+// 해설 L384: 조건에 따라 분기합니다: if (inQuotes)
+L000384 |         if (inQuotes) ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 ParseLine.
+L000385 |         { ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path) / 예외를 발생/전달합니다: throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.");
+L000386 |             throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value."); ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 ParseLine.
+L000387 |         } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 호출자에게 값 또는 제어를 반환합니다: return fields;
+L000389 |         return fields; ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 ParseLine.
+L000390 |     } ⟦EOL⟧
+L000391 |  ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Parser.CCsvParser.ValidateHeaders(string, System.Collections.Generic.IReadOnlyList<string>)
+L000392 |     private static void ValidateHeaders(string path, IReadOnlyList<string> headers) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000393 |     { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select((header, index) => new { Header = header, Index = index + 1 }).Where(item => string.IsNullOrWhiteSpace(item.Header)).Select(item => item.Index).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select((header, index) => new { Header = header, Index = index + 1 }).Where(item => string.IsNullOrWhiteSpace(item.Header)).Select(item => item.Index) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select((header, index) => new { Header = header, Index = index + 1 }).Where(item => string.IsNullOrWhiteSpace(item.Head
+L000394 |         var emptyIndexes = headers.Select((header, index) => new { Header = header, Index = index + 1 }).Where(item => string.IsNullOrWhiteSpace(item.Header)).Select(item => item.Index).ToArray(); ⟦EOL⟧
+// 해설 L395: 조건에 따라 분기합니다: if (emptyIndexes.Length > 0)
+L000395 |         if (emptyIndexes.Length > 0) ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000396 |         { ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} header column cannot be empty. Column(s): {string.Join(", ", emptyIndexes)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(", ", emptyIndexes) / 예외를 발생/전달합니다: throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} header column cannot be empty. Column(s): {string.Join(", ", emptyIndexes)}");
+L000397 |             throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} header column cannot be empty. Column(s): {string.Join(", ", emptyIndexes)}"); ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000398 |         } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Linq.IGrouping<string, string>)
+L000400 |         bool ShouldIncludeItem(global::System.Linq.IGrouping<string, string> group) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000401 |         { ⟦EOL⟧
+// 해설 L402: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Count() / 호출자에게 값 또는 제어를 반환합니다: return group.Count() > 1;
+L000402 |             return group.Count() > 1; ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000403 |         } ⟦EOL⟧
+L000404 |  ⟦EOL⟧
+// 해설 L405: 선언·서명/매개변수·접근 조건입니다 · string SelectItem(System.Linq.IGrouping<string, string>)
+L000405 |         string SelectItem(global::System.Linq.IGrouping<string, string> group) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 SelectItem.
+L000406 |         { ⟦EOL⟧
+// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.First() / 호출자에게 값 또는 제어를 반환합니다: return group.First();
+L000407 |             return group.First(); ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 SelectItem.
+L000408 |         } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.GroupBy(NormalizeHeader, StringComparer.OrdinalIgnoreCase).Where(ShouldIncludeItem).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.GroupBy(NormalizeHeader, StringComparer.OrdinalIgnoreCase).Where(ShouldIncludeItem).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.GroupBy(NormalizeHeader, StringComparer.OrdinalIgnoreCase).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.GroupBy(NormalizeHeader, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var duplicatedHeade
+L000410 |         var duplicatedHeaders = headers.GroupBy(NormalizeHeader, StringComparer.OrdinalIgnoreCase).Where(ShouldIncludeItem).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L411: 조건에 따라 분기합니다: if (duplicatedHeaders.Length > 0)
+L000411 |         if (duplicatedHeaders.Length > 0) ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000412 |         { ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} has duplicated header(s): {string.Join(", ", duplicatedHeaders)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(", ", duplicatedHeaders) / 예외를 발생/전달합니다: throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} has duplicated header(s): {string.Join(", ", duplicatedHeaders)}");
+L000413 |             throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} has duplicated header(s): {string.Join(", ", duplicatedHeaders)}"); ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000414 |         } ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 ValidateHeaders.
+L000415 |     } ⟦EOL⟧
+L000416 |  ⟦EOL⟧
+// 해설 L417: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.Escape(string)
+L000417 |     private static string Escape(string value) ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 Escape.
+L000418 |     { ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Contains(',') / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Contains('"') / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Contains('\r') / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Contains('\n') / 조건에 따라 분기합니다: if (!value.Contains(',') && !value.Contains('"') && !value.Contains('\r') && !value.Contains('\n'))
+L000419 |         if (!value.Contains(',') && !value.Contains('"') && !value.Contains('\r') && !value.Contains('\n')) ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 Escape.
+L000420 |         { ⟦EOL⟧
+// 해설 L421: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000421 |             return value; ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 Escape.
+L000422 |         } ⟦EOL⟧
+L000423 |  ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("\"", "\"\"") / 호출자에게 값 또는 제어를 반환합니다: return $"\"{value.Replace("\"", "\"\"")}\"";
+L000424 |         return $"\"{value.Replace("\"", "\"\"")}\""; ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 Escape.
+L000425 |     } ⟦EOL⟧
+L000426 |  ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.NormalizeHeader(string)
+L000427 |     private static string NormalizeHeader(string value) ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 NormalizeHeader.
+L000428 |     { ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant();
+L000429 |         return value.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 NormalizeHeader.
+L000430 |     } ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Parser.CCsvParser.ReadCsvText(string)
+L000432 |     private static string ReadCsvText(string path) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000433 |     { ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.ReadAllBytes(path) / 지역 변수를 선언합니다: var bytes = System.IO.File.ReadAllBytes(path); / 변수의 초기값을 지정합니다: bytes = System.IO.File.ReadAllBytes(path)
+L000434 |         var bytes = System.IO.File.ReadAllBytes(path); ⟦EOL⟧
+// 해설 L435: 조건에 따라 분기합니다: if (bytes.Length == 0)
+L000435 |         if (bytes.Length == 0) ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000436 |         { ⟦EOL⟧
+// 해설 L437: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000437 |             return ""; ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000438 |         } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+// 해설 L440: 함수·델리게이트 또는 객체 생성자를 호출합니다: HasUtf8Bom(bytes) / 조건에 따라 분기합니다: if (HasUtf8Bom(bytes))
+L000440 |         if (HasUtf8Bom(bytes)) ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000441 |         { ⟦EOL⟧
+// 해설 L442: 함수·델리게이트 또는 객체 생성자를 호출합니다: StrictUtf8Encoding.GetString(bytes, Utf8BomLength, bytes.Length - Utf8BomLength) / 호출자에게 값 또는 제어를 반환합니다: return StrictUtf8Encoding.GetString(bytes, Utf8BomLength, bytes.Length - Utf8BomLength);
+L000442 |             return StrictUtf8Encoding.GetString(bytes, Utf8BomLength, bytes.Length - Utf8BomLength); ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000443 |         } ⟦EOL⟧
+L000444 |  ⟦EOL⟧
+// 해설 L445: 예외 처리 범위입니다: try
+L000445 |         try ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000446 |         { ⟦EOL⟧
+// 해설 L447: 함수·델리게이트 또는 객체 생성자를 호출합니다: StrictUtf8Encoding.GetString(bytes) / 호출자에게 값 또는 제어를 반환합니다: return StrictUtf8Encoding.GetString(bytes);
+L000447 |             return StrictUtf8Encoding.GetString(bytes); ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000448 |         } ⟦EOL⟧
+// 해설 L449: 지정 예외를 처리합니다: catch (DecoderFallbackException)
+L000449 |         catch (DecoderFallbackException) ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000450 |         { ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: KoreanCsvEncoding.Value.GetString(bytes) / 호출자에게 값 또는 제어를 반환합니다: return KoreanCsvEncoding.Value.GetString(bytes);
+L000451 |             return KoreanCsvEncoding.Value.GetString(bytes); ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000452 |         } ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 ReadCsvText.
+L000453 |     } ⟦EOL⟧
+L000454 |  ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Parser.CCsvParser.HasUtf8Bom(System.Collections.Generic.IReadOnlyList<byte>)
+L000455 |     private static bool HasUtf8Bom(IReadOnlyList<byte> bytes) ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 HasUtf8Bom.
+L000456 |     { ⟦EOL⟧
+// 해설 L457: 호출자에게 값 또는 제어를 반환합니다: return bytes.Count >= Utf8BomLength && bytes[0] == 0xEF && bytes[1] == 0xBB && bytes[2] == 0xBF;
+L000457 |         return bytes.Count >= Utf8BomLength && bytes[0] == 0xEF && bytes[1] == 0xBB && bytes[2] == 0xBF; ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 HasUtf8Bom.
+L000458 |     } ⟦EOL⟧
+L000459 |  ⟦EOL⟧
+// 해설 L460: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.File.Parser.CCsvParser.SplitLines(string)
+L000460 |     private static string[] SplitLines(string text) ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 SplitLines.
+L000461 |     { ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringReader(text) / 정리할 자원을 선언합니다: using var reader = new StringReader(text); / 변수의 초기값을 지정합니다: reader = new StringReader(text)
+L000462 |         using var reader = new StringReader(text); ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var lines = new List<string>(); / 변수의 초기값을 지정합니다: lines = new List<string>()
+L000463 |         var lines = new List<string>(); ⟦EOL⟧
+// 해설 L464: 함수·델리게이트 또는 객체 생성자를 호출합니다: reader.ReadLine() / 조건을 먼저 확인하며 반복합니다: while (reader.ReadLine() is { } line)
+L000464 |         while (reader.ReadLine() is { } line) ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 SplitLines.
+L000465 |         { ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.Add(line)
+L000466 |             lines.Add(line); ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 SplitLines.
+L000467 |         } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: lines.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return lines.ToArray();
+L000469 |         return lines.ToArray(); ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 SplitLines.
+L000470 |     } ⟦EOL⟧
+L000471 |  ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · System.Text.Encoding Drilling.File.Parser.CCsvParser.GetKoreanCsvEncoding()
+L000472 |     private static Encoding GetKoreanCsvEncoding() ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 GetKoreanCsvEncoding.
+L000473 |     { ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
+L000474 |         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.GetEncoding(949) / 호출자에게 값 또는 제어를 반환합니다: return Encoding.GetEncoding(949);
+L000475 |         return Encoding.GetEncoding(949); ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 GetKoreanCsvEncoding.
+L000476 |     } ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다.
+L000477 | } ⟦EOL⟧

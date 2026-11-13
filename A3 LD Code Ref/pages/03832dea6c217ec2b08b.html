@@ -1,0 +1,404 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>7157f550eaf4f1ab2d2154a9e6ceca3b9345eacead545bdb40ad1b57629ee48c</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>3,289 bytes / 87 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/03832dea6c217ec2b08b.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CAlarmPopupDialog</td><td>ClassDeclaration</td><td>9–24</td><td>CAlarmPopupDialog: Window</td></tr>
+<tr><td>CAlarmPopupPanel</td><td>ClassDeclaration</td><td>26–84</td><td>CAlarmPopupPanel: INotifyPropertyChanged</td></tr>
+<tr><td>CAlarmPopupRow</td><td>RecordDeclaration</td><td>86–86</td><td>CAlarmPopupRow</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Panel</td><td>PropertyDeclaration</td><td>L11–11</td><td>Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel</td></tr>
+<tr><td>get_Panel</td><td>GetAccessorDeclaration</td><td>L11–11</td><td>Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel.get</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L13–21</td><td>Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel)</td></tr>
+<tr><td>CloseClicked</td><td>MethodDeclaration</td><td>L23–23</td><td>void Drilling.UI.Popup.CAlarmPopupDialog.CloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>_revision</td><td>FieldDeclaration</td><td>L28–28</td><td>long Drilling.UI.Popup.CAlarmPopupPanel._revision</td></tr>
+<tr><td>_resetting</td><td>FieldDeclaration</td><td>L29–29</td><td>bool Drilling.UI.Popup.CAlarmPopupPanel._resetting</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L30–30</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged</td></tr>
+<tr><td>Rows</td><td>PropertyDeclaration</td><td>L31–31</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt; Drilling.UI.Popup.CAlarmPopupPanel.Rows</td></tr>
+<tr><td>get_Rows</td><td>GetAccessorDeclaration</td><td>L31–31</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt; Drilling.UI.Popup.CAlarmPopupPanel.Rows.get</td></tr>
+<tr><td>set_Rows</td><td>SetAccessorDeclaration</td><td>L31–31</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Rows.set</td></tr>
+<tr><td>Summary</td><td>PropertyDeclaration</td><td>L32–32</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.Summary</td></tr>
+<tr><td>RecoveryStatus</td><td>PropertyDeclaration</td><td>L33–33</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus</td></tr>
+<tr><td>get_RecoveryStatus</td><td>GetAccessorDeclaration</td><td>L33–33</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.get</td></tr>
+<tr><td>set_RecoveryStatus</td><td>SetAccessorDeclaration</td><td>L33–33</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.set</td></tr>
+<tr><td>ResetCommand</td><td>PropertyDeclaration</td><td>L34–55</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand</td></tr>
+<tr><td>_resetCommand</td><td>FieldDeclaration</td><td>L57–57</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand</td></tr>
+<tr><td>SetRecoveryStatus</td><td>MethodDeclaration</td><td>L58–64</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string)</td></tr>
+<tr><td>Refresh</td><td>MethodDeclaration</td><td>L66–83</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L11">PropertyDeclaration <code>Panel</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">GetAccessorDeclaration <code>get_Panel</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">ConstructorDeclaration <code>.ctor</code> · L13–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L13-L21">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:13–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>panel</td><td>Drilling.UI.Popup.CAlarmPopupPanel</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2601-L2601">Drilling.UI/CRootView.cs:2601–2601</a></td><td>new CAlarmPopupDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>15</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>18</td><td>panel.Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66</td></tr>
+<tr><td>19</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>20</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>16</td><td>assignment</td><td>값을 대상에 대입합니다: Panel = panel</td></tr>
+<tr><td>17</td><td>assignment</td><td>값을 대상에 대입합니다: DataContext = panel</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Refresh()</td></tr>
+<tr><td>19</td><td>assignment</td><td>값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width)</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width)</td></tr>
+<tr><td>20</td><td>assignment</td><td>값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">MethodDeclaration <code>CloseClicked</code> · L23–23</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L23-L23">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:23–23</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CAlarmPopupDialog.CloseClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>23</td><td>Close</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Close()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">FieldDeclaration <code>_revision</code> · L28–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:28–28</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.UI.Popup.CAlarmPopupPanel._revision</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>28</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _revision = -1</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">FieldDeclaration <code>_resetting</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L29-L29">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:29–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CAlarmPopupPanel._resetting</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">EventFieldDeclaration <code>PropertyChanged</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L30-L30">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:30–30</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">PropertyDeclaration <code>Rows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt; Drilling.UI.Popup.CAlarmPopupPanel.Rows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">GetAccessorDeclaration <code>get_Rows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt; Drilling.UI.Popup.CAlarmPopupPanel.Rows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">SetAccessorDeclaration <code>set_Rows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Rows.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">PropertyDeclaration <code>Summary</code> · L32–32</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L32-L32">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:32–32</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.Summary</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>Rows.Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;.Count&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;(System.Func&lt;Drilling.UI.Popup.CAlarmPopupRow, bool&gt;)</td></tr>
+<tr><td>32</td><td>Rows.Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;.Count&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;(System.Func&lt;Drilling.UI.Popup.CAlarmPopupRow, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row =&gt; row.Level == &quot;HEAVY&quot;)</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row =&gt; row.Level == &quot;LIGHT&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">PropertyDeclaration <code>RecoveryStatus</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">GetAccessorDeclaration <code>get_RecoveryStatus</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">SetAccessorDeclaration <code>set_RecoveryStatus</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L34">PropertyDeclaration <code>ResetCommand</code> · L34–55</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L34-L55">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:34–55</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>39</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>42</td><td>reset</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task System.Func&lt;System.Threading.Tasks.Task&gt;.Invoke()</td></tr>
+<tr><td>43</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66</td></tr>
+<tr><td>47</td><td>SetRecoveryStatus</td><td>resolved</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58</td></tr>
+<tr><td>48</td><td>Refresh</td><td>resolved</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66</td></tr>
+<tr><td>53</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>34</td><td>assignment</td><td>값을 대상에 대입합니다: _resetCommand ??= new(async _ =&gt; { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus(&quot;ALARM RESET 실패: &quot; + error.Messa</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ =&gt; { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus(&quot;ALARM RESET 실패: &quot; + error.Message); Ref…</td></tr>
+<tr><td>36</td><td>if</td><td>조건에 따라 분기합니다: if (_resetting)</td></tr>
+<tr><td>37</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>38</td><td>assignment</td><td>값을 대상에 대입합니다: _resetting = true</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+<tr><td>40</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>42</td><td>await</td><td>비동기 완료를 기다립니다: await reset()</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: reset()</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>45</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetRecoveryStatus(&quot;ALARM RESET 실패: &quot; + error.Message)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()</td></tr>
+<tr><td>50</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: _resetting = false</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ResetCommand&quot;]
+ N0[&quot;L36 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L40 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L45 catch&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L50 finally&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L57">FieldDeclaration <code>_resetCommand</code> · L57–57</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:57–57</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L58">MethodDeclaration <code>SetRecoveryStatus</code> · L58–64</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L64">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–64</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2600-L2600">Drilling.UI/CRootView.cs:2600–2600</a></td><td>panel.SetRecoveryStatus</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2636-L2636">Drilling.UI/CRootView.cs:2636–2636</a></td><td>.Panel.SetRecoveryStatus</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L47-L47">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:47–47</a></td><td>SetRecoveryStatus</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>63</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>63</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>63</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>60</td><td>if</td><td>조건에 따라 분기합니다: if (RecoveryStatus == text)</td></tr>
+<tr><td>61</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>62</td><td>assignment</td><td>값을 대상에 대입합니다: RecoveryStatus = text</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(RecoveryStatus)))</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(RecoveryStatus))</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(RecoveryStatus)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetRecoveryStatus&quot;]
+ N0[&quot;L60 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L66">MethodDeclaration <code>Refresh</code> · L66–83</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L66-L83">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66–83</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CAlarmPopupPanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2592-L2592">Drilling.UI/CRootView.cs:2592–2592</a></td><td>open.Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2625-L2625">Drilling.UI/CRootView.cs:2625–2625</a></td><td>.Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2755-L2755">Drilling.UI/CRootView.cs:2755–2755</a></td><td>.Panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:18–18</a></td><td>panel.Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L43-L43">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:43–43</a></td><td>Refresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L48-L48">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:48–48</a></td><td>Refresh</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>68</td><td>alarms.GetCurrentSnapshot</td><td>resolved</td><td>Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.GetCurrentSnapshot() · Drilling.Common/Alarm/CAlarmManager.cs:223</td></tr>
+<tr><td>72</td><td>snapshot.Rows.Select((row, index) =&gt; new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;, row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) )).ToArray</td><td>resolved</td><td>Drilling.UI.Popup.CAlarmPopupRow[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;.ToArray&lt;Drilling.UI.Popup.CAlarmPopupRow&gt;()</td></tr>
+<tr><td>72</td><td>snapshot.Rows.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.CAlarmPopupRow&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Alarm.ST_ALARM_DATA&gt;.Select&lt;Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.UI.Popup.CAlarmPopupRow&gt;(System.Func&lt;Drilling.Common.Alarm.ST_ALARM_DATA, int, Drilling.UI.Popup.CAlarmPopupRow&gt;)</td></tr>
+<tr><td>72</td><td>new CAlarmPopupRow</td><td>resolved</td><td>Drilling.UI.Popup.CAlarmPopupRow.CAlarmPopupRow(int, int, string, string, string, string, string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:86</td></tr>
+<tr><td>79</td><td>row.OccurredAt.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>81</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>81</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+<tr><td>82</td><td>.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.GetCurrentSnapshot()</td></tr>
+<tr><td>68</td><td>local-declaration</td><td>지역 변수를 선언합니다: var snapshot = alarms.GetCurrentSnapshot();</td></tr>
+<tr><td>68</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: snapshot = alarms.GetCurrentSnapshot()</td></tr>
+<tr><td>69</td><td>if</td><td>조건에 따라 분기합니다: if (snapshot.Revision == _revision)</td></tr>
+<tr><td>70</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>71</td><td>assignment</td><td>값을 대상에 대입합니다: _revision = snapshot.Revision</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) =&gt; new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;, row.Group, row.Message, row.Recove</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) =&gt; new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;, row.Group, row.Message, row.Rec…</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) =&gt; new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;, row.Group, row.Message, row.Rec…</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;, row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString(…</td></tr>
+<tr><td>75</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Critical ? &quot;HEAVY&quot; : row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;</td></tr>
+<tr><td>75</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Warning ? &quot;LIGHT&quot; : &quot;INFO&quot;</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.OccurredAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(null))</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(null)</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Refresh&quot;]
+ N0[&quot;L69 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

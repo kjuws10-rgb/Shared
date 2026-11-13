@@ -1,0 +1,292 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/CComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000001 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000002 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000003 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000005 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000006 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Reflection;
+L000007 | using System.Reflection; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000009 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: internal static class CComm
+L000010 | internal static class CComm ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadCommTypes() / 변수의 초기값을 지정합니다: CommTypes = LoadCommTypes()
+L000012 |     private static readonly IReadOnlyList<CCommRegistration> CommTypes = LoadCommTypes(); ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CCommBase Drilling.Common.Interface.CComm.Create(Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.Common.Interface.ST_INTERFACE_CONNECT_OPTION)
+L000013 |     public static CCommBase Create(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 Create.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCommTypeAttribute.NormalizeName(data.InterfaceType.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.InterfaceType.ToString() / 지역 변수를 선언합니다: var interfaceType = CCommTypeAttribute.NormalizeName(data.InterfaceType.ToString()); / 변수의 초기값을 지정합니다: interfaceType = CCommTypeAttribute.NormalizeName(data.InterfaceType.ToString())
+L000015 |         var interfaceType = CCommTypeAttribute.NormalizeName(data.InterfaceType.ToString()); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCommTypeAttribute.NormalizeName(data.Device.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Device.ToString() / 지역 변수를 선언합니다: var deviceName = CCommTypeAttribute.NormalizeName(data.Device.ToString()); / 변수의 초기값을 지정합니다: deviceName = CCommTypeAttribute.NormalizeName(data.Device.ToString())
+L000016 |         var deviceName = CCommTypeAttribute.NormalizeName(data.Device.ToString()); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Interface.CComm.CCommRegistration)
+L000017 |         bool ShouldIncludeItem(global::Drilling.Common.Interface.CComm.CCommRegistration item) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.IsMatch(interfaceType, deviceName) / 호출자에게 값 또는 제어를 반환합니다: return item.IsMatch(interfaceType, deviceName);
+L000019 |             return item.IsMatch(interfaceType, deviceName); ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000020 |         } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · int SelectSortKey(Drilling.Common.Interface.CComm.CCommRegistration)
+L000022 |         int SelectSortKey(global::Drilling.Common.Interface.CComm.CCommRegistration item) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 SelectSortKey.
+L000023 |         { ⟦EOL⟧
+// 해설 L24: 호출자에게 값 또는 제어를 반환합니다: return item.DeviceNames.Count;
+L000024 |             return item.DeviceNames.Count; ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 SelectSortKey.
+L000025 |         } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CommTypes.Where(ShouldIncludeItem) / 지역 변수를 선언합니다: var commType = CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey).FirstOrDefault(); / 변수의 초기값을 지정합니다: commType = CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey).FirstOrDefault()
+L000027 |         var commType = CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey).FirstOrDefault(); ⟦EOL⟧
+// 해설 L28: 조건에 따라 분기합니다: if (commType is null)
+L000028 |         if (commType is null) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Create.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReadyOnlyComm(data, option) / 호출자에게 값 또는 제어를 반환합니다: return new CReadyOnlyComm(data, option);
+L000030 |             return new CReadyOnlyComm(data, option); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Create.
+L000031 |         } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: Activator.CreateInstance(commType.CommType, data, option) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Interface communication creation failed: {data.InterfaceType}/{data.Device}") / 호출자에게 값 또는 제어를 반환합니다: return Activator.CreateInstance(commType.CommType, data, option) as CCommBase ?? throw new InvalidOperationException($"Interface communication creation failed: {data.InterfaceType}/{data.Device}"); / 예외를 발생/전달합니다: throw new InvalidOperationException($"Interface communication creation failed:
+L000033 |         return Activator.CreateInstance(commType.CommType, data, option) as CCommBase ?? throw new InvalidOperationException($"Interface communication creation failed: {data.InterfaceType}/{data.Device}"); ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Create.
+L000034 |     } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.CComm.CCommRegistration> Drilling.Common.Interface.CComm.LoadCommTypes()
+L000036 |     private static IReadOnlyList<CCommRegistration> LoadCommTypes() ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 LoadCommTypes.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Type)
+L000038 |         bool ShouldIncludeItem(global::System.Type type) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000039 |         { ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: typeof(CCommBase).IsAssignableFrom(type) / 호출자에게 값 또는 제어를 반환합니다: return !type.IsAbstract && typeof(CCommBase).IsAssignableFrom(type);
+L000040 |             return !type.IsAbstract && typeof(CCommBase).IsAssignableFrom(type); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000041 |         } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.Common.Interface.CComm.CCommRegistration> BuildCCommRegistration(System.Type)
+L000043 |         global::System.Collections.Generic.IEnumerable<global::Drilling.Common.Interface.CComm.CCommRegistration> BuildCCommRegistration(global::System.Type type) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 BuildCCommRegistration.
+L000044 |         { ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CComm.CCommRegistration BuildCCommRegistration(Drilling.Common.Interface.CCommTypeAttribute)
+L000045 |             global::Drilling.Common.Interface.CComm.CCommRegistration BuildCCommRegistration(global::Drilling.Common.Interface.CCommTypeAttribute attribute) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 BuildCCommRegistration.
+L000046 |             { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CCommRegistration(attribute.InterfaceType, attribute.DeviceNames, type) / 호출자에게 값 또는 제어를 반환합니다: return new CCommRegistration(attribute.InterfaceType, attribute.DeviceNames, type);
+L000047 |                 return new CCommRegistration(attribute.InterfaceType, attribute.DeviceNames, type); ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 BuildCCommRegistration.
+L000048 |             } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: type.GetCustomAttributes<CCommTypeAttribute>().Select(BuildCCommRegistration) / 함수·델리게이트 또는 객체 생성자를 호출합니다: type.GetCustomAttributes<CCommTypeAttribute>() / 호출자에게 값 또는 제어를 반환합니다: return type.GetCustomAttributes<CCommTypeAttribute>().Select(BuildCCommRegistration);
+L000050 |             return type.GetCustomAttributes<CCommTypeAttribute>().Select(BuildCCommRegistration); ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 BuildCCommRegistration.
+L000051 |         } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: typeof(CCommBase).Assembly.GetTypes().Where(ShouldIncludeItem).SelectMany(BuildCCommRegistration).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeof(CCommBase).Assembly.GetTypes().Where(ShouldIncludeItem).SelectMany(BuildCCommRegistration) / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeof(CCommBase).Assembly.GetTypes().Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeof(CCommBase).Assembly.GetTypes() / 호출자에게 값 또는 제어를 반환합니다: return typeof(CCommBase).Assembly.GetTypes().Where(ShouldIncludeItem).SelectMany(BuildCCommRegi
+L000053 |         return typeof(CCommBase).Assembly.GetTypes().Where(ShouldIncludeItem).SelectMany(BuildCCommRegistration).ToArray(); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 LoadCommTypes.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 타입의 구조/상속 선언입니다: private sealed record CCommRegistration(string InterfaceType, IReadOnlyList<string> DeviceNames, Type CommType)
+L000056 |     private sealed record CCommRegistration(string InterfaceType, IReadOnlyList<string> DeviceNames, Type CommType) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CComm.CCommRegistration.IsMatch(string, string)
+L000058 |         public bool IsMatch(string interfaceType, string deviceName) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 IsMatch.
+L000059 |         { ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceType.Equals(interfaceType, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceNames.Contains(deviceName, StringComparer.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return InterfaceType.Equals(interfaceType, StringComparison.OrdinalIgnoreCase) && (DeviceNames.Count == 0 || DeviceNames.Contains(deviceName, StringComparer.OrdinalIgnoreCase));
+L000060 |             return InterfaceType.Equals(interfaceType, StringComparison.OrdinalIgnoreCase) && (DeviceNames.Count == 0 || DeviceNames.Contains(deviceName, StringComparer.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 IsMatch.
+L000061 |         } ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다.
+L000062 |     } ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다.
+L000063 | } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000065 | [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)] ⟦EOL⟧
+// 해설 L66: 타입의 구조/상속 선언입니다: internal sealed class CCommTypeAttribute(string interfaceType, params string[] deviceNames) : Attribute
+L000066 | internal sealed class CCommTypeAttribute(string interfaceType, params string[] deviceNames) : Attribute ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다.
+L000067 | { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeName(interfaceType)
+L000068 |     public string InterfaceType { get; } = NormalizeName(interfaceType); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: deviceNames.Where(name => !string.IsNullOrWhiteSpace(name)).Select(NormalizeName).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: deviceNames.Where(name => !string.IsNullOrWhiteSpace(name)).Select(NormalizeName).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: deviceNames.Where(name => !string.IsNullOrWhiteSpace(name)).Select(NormalizeName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: deviceNames.Where(name => !string.IsNullOrWhiteSpace(name)) / 함수·델리게이트 또는 객체 생성자를 호출
+L000069 |     public IReadOnlyList<string> DeviceNames { get; } = deviceNames.Where(name => !string.IsNullOrWhiteSpace(name)).Select(NormalizeName).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommTypeAttribute.NormalizeName(string)
+L000071 |     public static string NormalizeName(string value) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 NormalizeName.
+L000072 |     { ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant().Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase).Replace(" ", "", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant().Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant().Replace("_", "", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()
+L000073 |         return value.Trim().ToUpperInvariant().Replace("_", "", StringComparison.OrdinalIgnoreCase).Replace("-", "", StringComparison.OrdinalIgnoreCase).Replace(" ", "", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 NormalizeName.
+L000074 |     } ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다.
+L000075 | } ⟦EOL⟧
+L000076 |  ⟦EOL⟧
+// 해설 L77: 타입의 구조/상속 선언입니다: internal sealed record ST_COMM_RECEIVED_MESSAGE(string RemoteEndPoint, string Message, DateTimeOffset ReceivedAt);
+L000077 | internal sealed record ST_COMM_RECEIVED_MESSAGE(string RemoteEndPoint, string Message, DateTimeOffset ReceivedAt); ⟦EOL⟧
+// 해설 L78: 타입의 구조/상속 선언입니다: internal abstract class CCommBase(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option)
+L000078 | internal abstract class CCommBase(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다.
+L000079 | { ⟦EOL⟧
+// 해설 L80: 변수의 초기값을 지정합니다: Data = data
+L000080 |     protected readonly ST_INTERFACE_DATA Data = data; ⟦EOL⟧
+// 해설 L81: 변수의 초기값을 지정합니다: Option = option
+L000081 |     protected readonly ST_INTERFACE_CONNECT_OPTION Option = option; ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_COMM_STATE Drilling.Common.Interface.CCommBase.ConnectionState
+L000082 |     public EN_COMM_STATE ConnectionState { get; protected set; } = EN_COMM_STATE.Offline; ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommBase.Endpoint
+L000084 |     public string Endpoint ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Endpoint.
+L000085 |     { ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommBase.Endpoint.get
+L000086 |         get ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 get_Endpoint.
+L000087 |         { ⟦EOL⟧
+// 해설 L88: 호출자에게 값 또는 제어를 반환합니다: return Option.Endpoint;
+L000088 |             return Option.Endpoint; ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 get_Endpoint.
+L000089 |         } ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Endpoint.
+L000090 |     } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommBase.LastSent
+L000092 |     public string LastSent { get; protected set; } = ""; ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommBase.LastReceived
+L000093 |     public string LastReceived { get; protected set; } = ""; ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CCommBase.LastError
+L000094 |     public string LastError { get; protected set; } = ""; ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Interface.CCommBase.LastChangedAt
+L000095 |     public DateTimeOffset? LastChangedAt { get; protected set; } ⟦EOL⟧
+L000096 |  ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CCommBase.Connect(System.Threading.CancellationToken)
+L000097 |     public abstract Task Connect(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.ResetAutoReconnectPolicy()
+L000098 |     public virtual void ResetAutoReconnectPolicy() ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000099 |     { ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 ResetAutoReconnectPolicy.
+L000100 |     } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.SuppressAutoReconnect()
+L000102 |     public virtual void SuppressAutoReconnect() ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000103 |     { ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 SuppressAutoReconnect.
+L000104 |     } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CCommBase.Disconnect(System.Threading.CancellationToken)
+L000106 |     public virtual Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 Disconnect.
+L000107 |     { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000108 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000109 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L110: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000110 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 Disconnect.
+L000111 |     } ⟦EOL⟧
+L000112 |  ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CCommBase.Execute(string, System.Threading.CancellationToken)
+L000113 |     public abstract Task<string> Execute(string function, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE)
+L000114 |     protected void SetState(EN_COMM_STATE state) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 SetState.
+L000115 |     { ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: ConnectionState = state
+L000116 |         ConnectionState = state; ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000117 |         LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 SetState.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.SetError(System.Exception)
+L000120 |     protected void SetError(Exception ex) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 SetError.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: LastError = ex.Message
+L000122 |         LastError = ex.Message; ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000123 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 SetError.
+L000124 |     } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.SetError(string)
+L000126 |     protected void SetError(string message) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 SetError.
+L000127 |     { ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: LastError = message
+L000128 |         LastError = message; ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000129 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 SetError.
+L000130 |     } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CCommBase.SetCommandError(string)
+L000132 |     protected void SetCommandError(string message) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 SetCommandError.
+L000133 |     { ⟦EOL⟧
+// 해설 L134: 값을 대상에 대입합니다: LastError = message
+L000134 |         LastError = message; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 SetCommandError.
+L000135 |     } ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다.
+L000136 | } ⟦EOL⟧
+L000137 |  ⟦EOL⟧
+// 해설 L138: 타입의 구조/상속 선언입니다: internal sealed class CReadyOnlyComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000138 | internal sealed class CReadyOnlyComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다.
+L000139 | { ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CReadyOnlyComm.Connect(System.Threading.CancellationToken)
+L000140 |     public override Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 Connect.
+L000141 |     { ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000142 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError($"Live channel is not ready for {Data.InterfaceType}.")
+L000143 |         SetError($"Live channel is not ready for {Data.InterfaceType}."); ⟦EOL⟧
+// 해설 L144: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000144 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 Connect.
+L000145 |     } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CReadyOnlyComm.Execute(string, System.Threading.CancellationToken)
+L000147 |     public override Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 Execute.
+L000148 |     { ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000149 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: LastSent = function
+L000150 |         LastSent = function; ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: LastReceived = ""
+L000151 |         LastReceived = ""; ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError($"Live command is not ready for {Data.InterfaceType}.")
+L000152 |         SetError($"Live command is not ready for {Data.InterfaceType}."); ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult("") / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult("");
+L000153 |         return Task.FromResult(""); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Execute.
+L000154 |     } ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다.
+L000155 | } ⟦EOL⟧

@@ -1,0 +1,1490 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Managers/CManager.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000001 | using Drilling.Common.Log; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Automation;
+L000002 | using Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000006 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Product;
+L000008 | using Drilling.Common.Product; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000009 | using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000010 | using Drilling.Common.Station; ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Managers;
+L000012 | namespace Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: public sealed class CManager
+L000013 | public sealed class CManager ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new()
+L000015 |     public CPowerMeasureService PowerMeasure { get; } = new(); ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager._configRoot
+L000017 |     private readonly string _configRoot; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CRecipeFileBase Drilling.Common.Managers.CManager._recipeFile
+L000018 |     private readonly CRecipeFileBase _recipeFile; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CSettingFileBase Drilling.Common.Managers.CManager._settingFile
+L000019 |     private readonly CSettingFileBase _settingFile; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManualScanFileBase Drilling.Common.Managers.CManager._manualScanFile
+L000020 |     private readonly CManualScanFileBase _manualScanFile; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CInterfaceFileBase Drilling.Common.Managers.CManager._interfaceFile
+L000021 |     private readonly CInterfaceFileBase _interfaceFile; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CBETFileBase Drilling.Common.Managers.CManager._betFile
+L000022 |     private readonly CBETFileBase _betFile; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CMotorFileBase Drilling.Common.Managers.CManager._motorFile
+L000023 |     private readonly CMotorFileBase _motorFile; ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CMelsecMapFileBase Drilling.Common.Managers.CManager._melsecMapFile
+L000024 |     private readonly CMelsecMapFileBase _melsecMapFile; ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.CProductFileBase Drilling.Common.Managers.CManager._productFile
+L000025 |     private readonly CProductFileBase _productFile; ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewResultFileBase Drilling.Common.Managers.CManager._reviewResultFile
+L000026 |     private readonly CReviewResultFileBase _reviewResultFile; ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewOffsetFileBase Drilling.Common.Managers.CManager._reviewOffsetFile
+L000027 |     private readonly CReviewOffsetFileBase _reviewOffsetFile; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · CLogManager Drilling.Common.Managers.CManager._logManager
+L000028 |     private readonly CLogManager _logManager; ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CAutomationScriptFileBase Drilling.Common.Managers.CManager._automationScriptFile
+L000029 |     private readonly CAutomationScriptFileBase _automationScriptFile; ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CConfigStructureFileBase? Drilling.Common.Managers.CManager._configStructureFile
+L000030 |     private readonly CConfigStructureFileBase? _configStructureFile; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager Drilling.Common.Managers.CManager._interfaceManager
+L000031 |     private readonly CInterfaceManager _interfaceManager; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationManager Drilling.Common.Managers.CManager._automationManager
+L000032 |     private readonly CAutomationManager _automationManager; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CMotionManager Drilling.Common.Managers.CManager._motionManager
+L000033 |     private readonly CMotionManager _motionManager; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CAlarmManager Drilling.Common.Managers.CManager._alarmManager
+L000034 |     private readonly CAlarmManager _alarmManager; ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CSharedDeviceSnapshotService<System.Collections.Generic.IReadOnlyList<Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS>> Drilling.Common.Managers.CManager._alarmMotorSnapshots
+L000035 |     private readonly CSharedDeviceSnapshotService<IReadOnlyList<ST_MOTOR_AXIS_STATUS>> _alarmMotorSnapshots; ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CSharedDeviceSnapshotService<Drilling.Common.Interface.ST_LASER_STATUS> Drilling.Common.Managers.CManager._alarmLaserSnapshots
+L000036 |     private readonly CSharedDeviceSnapshotService<ST_LASER_STATUS> _alarmLaserSnapshots; ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CSharedDeviceSnapshotService<Drilling.Common.Interface.ST_BET_STATUS> Drilling.Common.Managers.CManager._alarmBetSnapshots
+L000037 |     private readonly CSharedDeviceSnapshotService<ST_BET_STATUS> _alarmBetSnapshots; ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _interLockManager = new()
+L000038 |     private readonly CInterLockManager _interLockManager = new(); ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager Drilling.Common.Managers.CManager._stationManager
+L000039 |     private readonly CStationManager _stationManager; ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CRecipeManager Drilling.Common.Managers.CManager._recipeManager
+L000040 |     private readonly CRecipeManager _recipeManager; ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager._settingManager
+L000041 |     private readonly CSettingManager _settingManager; ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.CProductManager Drilling.Common.Managers.CManager._productManager
+L000042 |     private readonly CProductManager _productManager; ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewManager Drilling.Common.Managers.CManager._reviewManager
+L000043 |     private readonly CReviewManager _reviewManager; ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _startupLock = new()
+L000044 |     private readonly object _startupLock = new(); ⟦EOL⟧
+// 해설 L45: 변수의 초기값을 지정합니다: _startupMessages = []
+L000045 |     private readonly List<string> _startupMessages = []; ⟦EOL⟧
+// 해설 L46: 변수의 초기값을 지정합니다: _startupSteps = []
+L000046 |     private readonly List<ST_MANAGER_STARTUP_STEP> _startupSteps = []; ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CManager._startupStepNo
+L000047 |     private int _startupStepNo; ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CManager._loadedInterfaceCount
+L000048 |     private int _loadedInterfaceCount; ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CManager._loadedMotorCount
+L000049 |     private int _loadedMotorCount; ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CManager._loadedMelsecMapCount
+L000050 |     private int _loadedMelsecMapCount; ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager._activeProductLoaded
+L000051 |     private bool _activeProductLoaded; ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000052 |     public CManager( ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000053 |         string configRoot,  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000054 |         CRecipeFileBase recipeFile,  ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000055 |         CSettingFileBase settingFile,  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000056 |         CManualScanFileBase manualScanFile,  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000057 |         CInterfaceFileBase interfaceFile,  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000058 |         CBETFileBase betFile,  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000059 |         CMotorFileBase motorFile,  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000060 |         CMelsecMapFileBase melsecMapFile,  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000061 |         CProductFileBase productFile,  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000062 |         CReviewResultFileBase reviewResultFile,  ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000063 |         CReviewOffsetFileBase reviewOffsetFile,  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000064 |         CLogManager logManager,  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000065 |         CAutomationScriptFileBase automationScriptFile,  ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000066 |         bool? simulationMode = null,  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000067 |         CConfigStructureFileBase? configStructureFile = null,  ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000068 |         CAlarmListFileBase? alarmListFile = null ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000069 |     ) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 .ctor.
+L000070 |     { ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: _configRoot = configRoot
+L000071 |         _configRoot = configRoot; ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: _recipeFile = recipeFile
+L000072 |         _recipeFile = recipeFile; ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: _settingFile = settingFile
+L000073 |         _settingFile = settingFile; ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: _manualScanFile = manualScanFile
+L000074 |         _manualScanFile = manualScanFile; ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: _interfaceFile = interfaceFile
+L000075 |         _interfaceFile = interfaceFile; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: _betFile = betFile
+L000076 |         _betFile = betFile; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: _motorFile = motorFile
+L000077 |         _motorFile = motorFile; ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: _melsecMapFile = melsecMapFile
+L000078 |         _melsecMapFile = melsecMapFile; ⟦EOL⟧
+// 해설 L79: 값을 대상에 대입합니다: _productFile = productFile
+L000079 |         _productFile = productFile; ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: _reviewResultFile = reviewResultFile
+L000080 |         _reviewResultFile = reviewResultFile; ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: _reviewOffsetFile = reviewOffsetFile
+L000081 |         _reviewOffsetFile = reviewOffsetFile; ⟦EOL⟧
+// 해설 L82: 값을 대상에 대입합니다: _logManager = logManager
+L000082 |         _logManager = logManager; ⟦EOL⟧
+// 해설 L83: 값을 대상에 대입합니다: _alarmManager = new CAlarmManager(logManager) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmManager(logManager)
+L000083 |         _alarmManager = new CAlarmManager(logManager); ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: _automationScriptFile = automationScriptFile
+L000084 |         _automationScriptFile = automationScriptFile; ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: _configStructureFile = configStructureFile
+L000085 |         _configStructureFile = configStructureFile; ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckConfigRoot()
+L000086 |         CheckConfigRoot(); ⟦EOL⟧
+// 해설 L87: 조건에 따라 분기합니다: if (alarmListFile is not null)
+L000087 |         if (alarmListFile is not null) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 .ctor.
+L000088 |         { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.InitializeDefinitions(alarmListFile) / 지역 변수를 선언합니다: var definitions = _alarmManager.InitializeDefinitions(alarmListFile); / 변수의 초기값을 지정합니다: definitions = _alarmManager.InitializeDefinitions(alarmListFile)
+L000089 |             var definitions = _alarmManager.InitializeDefinitions(alarmListFile); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load JHMI_ALARMLIST", string.IsNullOrEmpty(definitions.Error) ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning, string.IsNullOrEmpty(definitions.Error) ? $"Loaded {definitions.Rows.Co… / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(definitions.Error) / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(definitions.Error) ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(definitions.Error) ? $"Loaded {definitions.Rows.C
+L000090 |             AddStartupStep("Load JHMI_ALARMLIST", string.IsNullOrEmpty(definitions.Error) ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning, string.IsNullOrEmpty(definitions.Error) ? $"Loaded {definitions.Rows.Count} alarm definition(s) into memory." : definitions.Error); ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 .ctor.
+L000091 |         } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateConfigStructure()
+L000093 |         ValidateConfigStructure(); ⟦EOL⟧
+// 해설 L94: 값을 대상에 대입합니다: _interfaceManager = new CInterfaceManager(simulationMode, _logManager, _betFile) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CInterfaceManager(simulationMode, _logManager, _betFile)
+L000094 |         _interfaceManager = new CInterfaceManager(simulationMode, _logManager, _betFile); ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Interface Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CInterfaceManager created.")
+L000095 |         AddStartupStep("Create Interface Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CInterfaceManager created."); ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadInterfaceList() / 지역 변수를 선언합니다: var interfaceData = LoadInterfaceList(); / 변수의 초기값을 지정합니다: interfaceData = LoadInterfaceList()
+L000096 |         var interfaceData = LoadInterfaceList(); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterInterfaceList(interfaceData)
+L000097 |         RegisterInterfaceList(interfaceData); ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: _settingManager = new CSettingManager(_settingFile, _interfaceFile, _interfaceManager) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CSettingManager(_settingFile, _interfaceFile, _interfaceManager)
+L000098 |         _settingManager = new CSettingManager(_settingFile, _interfaceFile, _interfaceManager); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadAllSections()
+L000099 |         _settingManager.LoadAllSections(); ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.InitializeSimulatedScannerOutputs(_settingManager.LoadSection(EN_SETTING_TAB.Option)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var simulatedScanners = _interfaceManager.InitializeSimulatedScannerOutputs(_settingManager.LoadSection(EN_SETTING_TAB.Option)); / 변수의 초기값을 지정합니다: simulatedScanners = _interfaceManager.InitializeSimulatedScannerOutputs(_settingManager.LoadSection(EN_SETTING_TAB.Option))
+L000100 |         var simulatedScanners = _interfaceManager.InitializeSimulatedScannerOutputs(_settingManager.LoadSection(EN_SETTING_TAB.Option)); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Initialize Simulated Scanner Outputs", EN_MANAGER_STARTUP_RESULT.Ready, $"Initialized {simulatedScanners} simulated scanner(s): Laser ON / Shutter OPEN / Gate ON.")
+L000101 |         AddStartupStep("Initialize Simulated Scanner Outputs", EN_MANAGER_STARTUP_RESULT.Ready, ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000102 |             $"Initialized {simulatedScanners} simulated scanner(s): Laser ON / Shutter OPEN / Gate ON."); ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.ConfigureVisionLineProtocol(_settingManager.GetVisionMaxHoleCountPerLine, _ => _alarmManager.SetAlarm("VISION_LINE_HOLE_COUNT_EXCEEDED"))
+L000103 |         _interfaceManager.ConfigureVisionLineProtocol(_settingManager.GetVisionMaxHoleCountPerLine, ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.SetAlarm("VISION_LINE_HOLE_COUNT_EXCEEDED")
+L000104 |             _ => _alarmManager.SetAlarm("VISION_LINE_HOLE_COUNT_EXCEEDED")); ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.ConfigureAttenuatorSoftwareLimits(() => _settingManager.LoadSection(EN_SETTING_TAB.Option)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(EN_SETTING_TAB.Option)
+L000105 |         _interfaceManager.ConfigureAttenuatorSoftwareLimits(() => _settingManager.LoadSection(EN_SETTING_TAB.Option)); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load Setting Cache", EN_MANAGER_STARTUP_RESULT.Ready, "Setting sections loaded to memory cache.")
+L000106 |         AddStartupStep("Load Setting Cache", EN_MANAGER_STARTUP_RESULT.Ready, "Setting sections loaded to memory cache."); ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: _automationManager = new CAutomationManager(_interfaceManager, _settingManager, GetProjectRoot(), GetScriptDirectory()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAutomationManager(_interfaceManager, _settingManager, GetProjectRoot(), GetScriptDirectory()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetProjectRoot() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScriptDirectory()
+L000107 |         _automationManager = new CAutomationManager(_interfaceManager, _settingManager, GetProjectRoot(), GetScriptDirectory()); ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Automation Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CAutomationManager created.")
+L000108 |         AddStartupStep("Create Automation Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CAutomationManager created."); ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadMelsecMapList() / 지역 변수를 선언합니다: var melsecMapData = LoadMelsecMapList(); / 변수의 초기값을 지정합니다: melsecMapData = LoadMelsecMapList()
+L000109 |         var melsecMapData = LoadMelsecMapList(); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Melsec.ReloadMap(melsecMapData)
+L000110 |         _interfaceManager.Melsec.ReloadMap(melsecMapData); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Register JHMI_MELSEC_MAP", EN_MANAGER_STARTUP_RESULT.Ready, $"Registered {melsecMapData.Count} MELSEC map row(s).")
+L000111 |         AddStartupStep("Register JHMI_MELSEC_MAP", EN_MANAGER_STARTUP_RESULT.Ready, $"Registered {melsecMapData.Count} MELSEC map row(s)."); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadMotorList() / 지역 변수를 선언합니다: var motorData = LoadMotorList(); / 변수의 초기값을 지정합니다: motorData = LoadMotorList()
+L000112 |         var motorData = LoadMotorList(); ⟦EOL⟧
+// 해설 L113: 지역 변수를 선언합니다: IReadOnlyList<ST_IO_DATA> ioData = []; / 변수의 초기값을 지정합니다: ioData = []
+L000113 |         IReadOnlyList<ST_IO_DATA> ioData = []; ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: _motionManager = new CMotionManager(_interfaceManager, motorData, ioData, isSimulation: GetMotionSimulationMode(simulationMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CMotionManager(_interfaceManager, motorData, ioData, isSimulation: GetMotionSimulationMode(simulationMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMotionSimulationMode(simulationMode)
+L000114 |         _motionManager = new CMotionManager(_interfaceManager, motorData, ioData, isSimulation: GetMotionSimulationMode(simulationMode)); ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: _alarmMotorSnapshots = new(_motionManager.GetAxisStatusAsync) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_motionManager.GetAxisStatusAsync)
+L000115 |         _alarmMotorSnapshots = new(_motionManager.GetAxisStatusAsync); ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: _alarmLaserSnapshots = new(_interfaceManager.ReadLaserStatusAsync) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_interfaceManager.ReadLaserStatusAsync)
+L000116 |         _alarmLaserSnapshots = new(_interfaceManager.ReadLaserStatusAsync); ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: _alarmBetSnapshots = new(_interfaceManager.ReadBetStatusAsync) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_interfaceManager.ReadBetStatusAsync)
+L000117 |         _alarmBetSnapshots = new(_interfaceManager.ReadBetStatusAsync); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Motion Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"CMotionManager created. Axis={motorData.Count}, Simul={_motionManager.IsSimulation}")
+L000118 |         AddStartupStep("Create Motion Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"CMotionManager created. Axis={motorData.Count}, Simul={_motionManager.IsSimulation}"); ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: _productManager = new CProductManager(_productFile, _logManager) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CProductManager(_productFile, _logManager)
+L000119 |         _productManager = new CProductManager(_productFile, _logManager); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Product Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CProductManager created.")
+L000120 |         AddStartupStep("Create Product Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CProductManager created."); ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadActiveProduct()
+L000121 |         LoadActiveProduct(); ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: _reviewManager = new CReviewManager(_reviewResultFile, _interfaceManager, _settingManager, _productManager, _logManager) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewManager(_reviewResultFile, _interfaceManager, _settingManager, _productManager, _logManager)
+L000122 |         _reviewManager = new CReviewManager(_reviewResultFile, _interfaceManager, _settingManager, _productManager, _logManager); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Review Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CReviewManager created.")
+L000123 |         AddStartupStep("Create Review Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CReviewManager created."); ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: _recipeManager = new CRecipeManager(_recipeFile) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeManager(_recipeFile)
+L000124 |         _recipeManager = new CRecipeManager(_recipeFile); ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: _stationManager = new CStationManager( _interfaceManager, _motionManager, _interLockManager, _settingManager, _automationScriptFile, _automationManager, _reviewOffsetFile, _productManager, _logManager, GetScriptDirectory(), _recip / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CStationManager( _interfaceManager, _motionManager, _interLockManager, _settingManager, _automationScriptFile, _automationManager, _reviewOffsetFile, _productManager, _logManager, GetScriptDirectory(), _recipeManager…
+L000125 |         _stationManager = new CStationManager( ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000126 |             _interfaceManager,  ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000127 |             _motionManager,  ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000128 |             _interLockManager,  ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000129 |             _settingManager,  ⟦EOL⟧
+// 해설 L130: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000130 |             _automationScriptFile,  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000131 |             _automationManager,  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000132 |             _reviewOffsetFile,  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000133 |             _productManager,  ⟦EOL⟧
+// 해설 L134: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000134 |             _logManager,  ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScriptDirectory()
+L000135 |             GetScriptDirectory(),  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000136 |             _recipeManager,  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000137 |             _reviewManager ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CIn
+L000138 |         ); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Station Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"Script={GetScriptDirectory()}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScriptDirectory()
+L000139 |         AddStartupStep("Create Station Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"Script={GetScriptDirectory()}"); ⟦EOL⟧
+// 해설 L140: 복합 대입 또는 이벤트 구독/해지 표현입니다: _stationManager.StageRequests.Failed += _alarmManager.SetSequenceFailure
+L000140 |         _stationManager.StageRequests.Failed += _alarmManager.SetSequenceFailure; ⟦EOL⟧
+// 해설 L141: 복합 대입 또는 이벤트 구독/해지 표현입니다: _interfaceManager.StageReviewSequences.Failed += _alarmManager.SetSequenceFailure
+L000141 |         _interfaceManager.StageReviewSequences.Failed += _alarmManager.SetSequenceFailure; ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Create Menu Managers", EN_MANAGER_STARTUP_RESULT.Ready, "Recipe/Setting managers created.")
+L000142 |         AddStartupStep("Create Menu Managers", EN_MANAGER_STARTUP_RESULT.Ready, "Recipe/Setting managers created."); ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 .ctor.
+L000143 |     } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.ConfigRoot
+L000145 |     public string ConfigRoot ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 ConfigRoot.
+L000146 |     { ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.ConfigRoot.get
+L000147 |         get ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 get_ConfigRoot.
+L000148 |         { ⟦EOL⟧
+// 해설 L149: 호출자에게 값 또는 제어를 반환합니다: return _configRoot;
+L000149 |             return _configRoot; ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 get_ConfigRoot.
+L000150 |         } ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 ConfigRoot.
+L000151 |     } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.Common.Managers.CManager.StartupMessages
+L000153 |     public IReadOnlyList<string> StartupMessages ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 StartupMessages.
+L000154 |     { ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.Common.Managers.CManager.StartupMessages.get
+L000155 |         get ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 get_StartupMessages.
+L000156 |         { ⟦EOL⟧
+// 해설 L157: 공유 상태의 임계 구역에 진입합니다: lock (_startupLock)
+L000157 |             lock (_startupLock) ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 get_StartupMessages.
+L000158 |             { ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupMessages.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return _startupMessages.ToArray();
+L000159 |                 return _startupMessages.ToArray(); ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 get_StartupMessages.
+L000160 |             } ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 get_StartupMessages.
+L000161 |         } ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 StartupMessages.
+L000162 |     } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP> Drilling.Common.Managers.CManager.StartupSteps
+L000164 |     public IReadOnlyList<ST_MANAGER_STARTUP_STEP> StartupSteps ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 StartupSteps.
+L000165 |     { ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP> Drilling.Common.Managers.CManager.StartupSteps.get
+L000166 |         get ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 get_StartupSteps.
+L000167 |         { ⟦EOL⟧
+// 해설 L168: 공유 상태의 임계 구역에 진입합니다: lock (_startupLock)
+L000168 |             lock (_startupLock) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 get_StartupSteps.
+L000169 |             { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupSteps.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return _startupSteps.ToArray();
+L000170 |                 return _startupSteps.ToArray(); ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 get_StartupSteps.
+L000171 |             } ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 get_StartupSteps.
+L000172 |         } ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 StartupSteps.
+L000173 |     } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_LOAD_STATUS Drilling.Common.Managers.CManager.ConfigStatus()
+L000175 |     public ST_CONFIG_LOAD_STATUS ConfigStatus() ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 ConfigStatus.
+L000176 |     { ⟦EOL⟧
+// 해설 L177: 공유 상태의 임계 구역에 진입합니다: lock (_startupLock)
+L000177 |         lock (_startupLock) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 ConfigStatus.
+L000178 |         { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_LOAD_STATUS(_configRoot, _loadedInterfaceCount, _loadedMotorCount, _loadedMelsecMapCount, _activeProductLoaded, _startupMessages.ToArray(), _startupSteps.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupMessages.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupSteps.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_LOAD_STATUS(_configRoot, _loadedInterfaceCount, _loadedMotorCount, _loadedMelsecMapCount, _activeProductLoaded, _startupMessages.ToArray(), _startupSteps.ToArray());
+L000179 |             return new ST_CONFIG_LOAD_STATUS(_configRoot, _loadedInterfaceCount, _loadedMotorCount, _loadedMelsecMapCount, _activeProductLoaded, _startupMessages.ToArray(), _startupSteps.ToArray()); ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 ConfigStatus.
+L000180 |         } ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ConfigStatus.
+L000181 |     } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager.IsSimul(int)
+L000183 |     public bool IsSimul(int systemId = 0) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 IsSimul.
+L000184 |     { ⟦EOL⟧
+// 해설 L185: 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager.IsSimulation && _motionManager.IsSimulation;
+L000185 |         return _interfaceManager.IsSimulation && _motionManager.IsSimulation; ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 IsSimul.
+L000186 |     } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager.IsNotSimul(int)
+L000188 |     public bool IsNotSimul(int systemId = 0) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 IsNotSimul.
+L000189 |     { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(systemId) / 호출자에게 값 또는 제어를 반환합니다: return !IsSimul(systemId);
+L000190 |         return !IsSimul(systemId); ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 IsNotSimul.
+L000191 |     } ⟦EOL⟧
+L000192 |  ⟦EOL⟧
+// 해설 L193: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.SetSimul(bool, System.Threading.CancellationToken)
+L000193 |     public async Task SetSimul(bool enabled, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 SetSimul.
+L000194 |     { ⟦EOL⟧
+// 해설 L195: 비동기 완료를 기다립니다: await _interfaceManager.SetSimulationMode(enabled, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.SetSimulationMode(enabled, cancellationToken)
+L000195 |         await _interfaceManager.SetSimulationMode(enabled, cancellationToken); ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionManager.SetSimulationMode(enabled)
+L000196 |         _motionManager.SetSimulationMode(enabled); ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 SetSimul.
+L000197 |     } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.SetSimul(int, bool, System.Threading.CancellationToken)
+L000199 |     public Task SetSimul(int systemId, bool enabled, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 SetSimul.
+L000200 |     { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSimul(enabled, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return SetSimul(enabled, cancellationToken);
+L000201 |         return SetSimul(enabled, cancellationToken); ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 SetSimul.
+L000202 |     } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.Initialize(System.Threading.CancellationToken)
+L000204 |     public async Task Initialize(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 Initialize.
+L000205 |     { ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task SelectValue()
+L000206 |         global::System.Threading.Tasks.Task SelectValue() ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 SelectValue.
+L000207 |         { ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Initialize(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager.Initialize(cancellationToken);
+L000208 |             return _interfaceManager.Initialize(cancellationToken); ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 SelectValue.
+L000209 |         } ⟦EOL⟧
+L000210 |  ⟦EOL⟧
+// 해설 L211: 비동기 완료를 기다립니다: await RunInitializeStep("Initialize Interface Connection", SelectValue, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunInitializeStep("Initialize Interface Connection", SelectValue, cancellationToken)
+L000211 |         await RunInitializeStep("Initialize Interface Connection", SelectValue, cancellationToken); ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task SelectTask()
+L000212 |         global::System.Threading.Tasks.Task SelectTask() ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 SelectTask.
+L000213 |         { ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionManager.Initialize(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _motionManager.Initialize(cancellationToken);
+L000214 |             return _motionManager.Initialize(cancellationToken); ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 SelectTask.
+L000215 |         } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 비동기 완료를 기다립니다: await RunInitializeStep("Initialize Motion Controller", SelectTask, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunInitializeStep("Initialize Motion Controller", SelectTask, cancellationToken)
+L000217 |         await RunInitializeStep("Initialize Motion Controller", SelectTask, cancellationToken); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 Initialize.
+L000218 |     } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.Destroy(System.Threading.CancellationToken)
+L000220 |     public async Task Destroy(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Destroy.
+L000221 |     { ⟦EOL⟧
+// 해설 L222: 예외 처리 범위입니다: try
+L000222 |         try ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 Destroy.
+L000223 |         { ⟦EOL⟧
+// 해설 L224: 비동기 완료를 기다립니다: await StopBackgroundMonitoring() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopBackgroundMonitoring()
+L000224 |             await StopBackgroundMonitoring(); ⟦EOL⟧
+// 해설 L225: 예외 처리 범위입니다: try
+L000225 |             try ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 Destroy.
+L000226 |             { ⟦EOL⟧
+// 해설 L227: 비동기 완료를 기다립니다: await _alarmManager.FlushHistoryAsync(cancellationToken).WaitAsync(TimeSpan.FromSeconds(5), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.FlushHistoryAsync(cancellationToken).WaitAsync(TimeSpan.FromSeconds(5), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.FlushHistoryAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000227 |                 await _alarmManager.FlushHistoryAsync(cancellationToken).WaitAsync(TimeSpan.FromSeconds(5), cancellationToken); ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 Destroy.
+L000228 |             } ⟦EOL⟧
+// 해설 L229: 지정 예외를 처리합니다: catch (TimeoutException exception)
+L000229 |             catch (TimeoutException exception) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 Destroy.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("ALARM_HISTORY_FLUSH_TIMEOUT", exception)
+L000231 |                 CProgramOpenLog.Write("ALARM_HISTORY_FLUSH_TIMEOUT", exception); ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 Destroy.
+L000232 |             } ⟦EOL⟧
+L000233 |  ⟦EOL⟧
+// 해설 L234: 비동기 완료를 기다립니다: await PowerMeasure.DisposeAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: PowerMeasure.DisposeAsync()
+L000234 |             await PowerMeasure.DisposeAsync(); ⟦EOL⟧
+// 해설 L235: 비동기 완료를 기다립니다: await _motionManager.Destroy(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionManager.Destroy(cancellationToken)
+L000235 |             await _motionManager.Destroy(cancellationToken); ⟦EOL⟧
+// 해설 L236: 비동기 완료를 기다립니다: await _interfaceManager.Destroy(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Destroy(cancellationToken)
+L000236 |             await _interfaceManager.Destroy(cancellationToken); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 Destroy.
+L000237 |         } ⟦EOL⟧
+// 해설 L238: 종료 정리 구간입니다: finally
+L000238 |         finally ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 Destroy.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 예외 처리 범위입니다: try
+L000240 |             try ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 Destroy.
+L000241 |             { ⟦EOL⟧
+// 해설 L242: 비동기 완료를 기다립니다: await _logManager.StopInterfaceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.StopInterfaceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.StopInterfaceLoggingAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000242 |                 await _logManager.StopInterfaceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 Destroy.
+L000243 |             } ⟦EOL⟧
+// 해설 L244: 지정 예외를 처리합니다: catch (Exception error)
+L000244 |             catch (Exception error) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 Destroy.
+L000245 |             { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("INTERFACE_LOG_FLUSH_FAILED", error)
+L000246 |                 CProgramOpenLog.Write("INTERFACE_LOG_FLUSH_FAILED", error); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 Destroy.
+L000247 |             } ⟦EOL⟧
+// 해설 L248: 예외 처리 범위입니다: try
+L000248 |             try ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 Destroy.
+L000249 |             { ⟦EOL⟧
+// 해설 L250: 비동기 완료를 기다립니다: await _logManager.StopSequenceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.StopSequenceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _logManager.StopSequenceLoggingAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5)
+L000250 |                 await _logManager.StopSequenceLoggingAsync().WaitAsync(TimeSpan.FromSeconds(5)); ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 Destroy.
+L000251 |             } ⟦EOL⟧
+// 해설 L252: 지정 예외를 처리합니다: catch (Exception error)
+L000252 |             catch (Exception error) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 Destroy.
+L000253 |             { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("SEQUENCE_LOG_FLUSH_FAILED", error)
+L000254 |                 CProgramOpenLog.Write("SEQUENCE_LOG_FLUSH_FAILED", error); ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 Destroy.
+L000255 |             } ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 Destroy.
+L000256 |         } ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 Destroy.
+L000257 |     } ⟦EOL⟧
+L000258 |  ⟦EOL⟧
+// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.StartBackgroundMonitoring()
+L000259 |     public void StartBackgroundMonitoring() ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 StartBackgroundMonitoring.
+L000260 |     { ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StartZeroLinePrewaitMonitoring(() => _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")
+L000261 |         _stationManager.StartZeroLinePrewaitMonitoring(() => _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")); ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StartProtectWindowCompletionMonitoring(() => _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")
+L000262 |         _stationManager.StartProtectWindowCompletionMonitoring(() => _settingManager.GetValue(EN_SETTING_TAB.Option, "SELECT_RECIPE", "DRILL_A01")); ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.EnsureDefinitionsRequested()
+L000263 |         _alarmManager.EnsureDefinitionsRequested(); ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmMotorSnapshots.Start()
+L000264 |         _alarmMotorSnapshots.Start(); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmLaserSnapshots.Start()
+L000265 |         _alarmLaserSnapshots.Start(); ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmBetSnapshots.Start()
+L000266 |         _alarmBetSnapshots.Start(); ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.StartMonitoring(_settingManager, _automationManager, ReadAlarmDeviceSnapshot, _interLockManager, exception => CProgramOpenLog.Write("ALARM_MONITOR_FAILED", exception)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("ALARM_MONITOR_FAILED", exception)
+L000267 |         _alarmManager.StartMonitoring(_settingManager, _automationManager, ReadAlarmDeviceSnapshot, _interLockManager, exception => CProgramOpenLog.Write("ALARM_MONITOR_FAILED", exception)); ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 StartBackgroundMonitoring.
+L000268 |     } ⟦EOL⟧
+L000269 |  ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.StopBackgroundMonitoring()
+L000270 |     public async Task StopBackgroundMonitoring() ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 StopBackgroundMonitoring.
+L000271 |     { ⟦EOL⟧
+// 해설 L272: 비동기 완료를 기다립니다: await _stationManager.StageRequests.StopAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StageRequests.StopAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StageRequests.StopAsync()
+L000272 |         await _stationManager.StageRequests.StopAsync().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L273: 비동기 완료를 기다립니다: await _stationManager.StopZeroLinePrewaitMonitoring().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StopZeroLinePrewaitMonitoring().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StopZeroLinePrewaitMonitoring()
+L000273 |         await _stationManager.StopZeroLinePrewaitMonitoring().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L274: 비동기 완료를 기다립니다: await _stationManager.StopProtectWindowCompletionMonitoring().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StopProtectWindowCompletionMonitoring().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _stationManager.StopProtectWindowCompletionMonitoring()
+L000274 |         await _stationManager.StopProtectWindowCompletionMonitoring().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L275: 비동기 완료를 기다립니다: await _alarmManager.StopMonitoringAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.StopMonitoringAsync().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmManager.StopMonitoringAsync()
+L000275 |         await _alarmManager.StopMonitoringAsync().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L276: 비동기 완료를 기다립니다: await Task.WhenAll(_alarmMotorSnapshots.StopAsync(), _alarmLaserSnapshots.StopAsync(), _alarmBetSnapshots.StopAsync()).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(_alarmMotorSnapshots.StopAsync(), _alarmLaserSnapshots.StopAsync(), _alarmBetSnapshots.StopAsync()).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(_alarmMotorSnapshots.StopAsync(), _alarmLaserSnapshots.StopAsync(), _alarmBetSnapshots.StopAsync()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmMotorSnapshots.StopAsync() / 함수·델리게이트 또는 객체
+L000276 |         await Task.WhenAll(_alarmMotorSnapshots.StopAsync(), _alarmLaserSnapshots.StopAsync(), _alarmBetSnapshots.StopAsync()).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: _automationManager.StatusSnapshots.Dispose()
+L000277 |         _automationManager.StatusSnapshots.Dispose(); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 StopBackgroundMonitoring.
+L000278 |     } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_DEVICE_STATUS Drilling.Common.Managers.CManager.ReadAlarmDeviceSnapshot()
+L000280 |     private ST_DEVICE_STATUS ReadAlarmDeviceSnapshot() ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ReadAlarmDeviceSnapshot.
+L000281 |     { ⟦EOL⟧
+// 해설 L282: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000282 |         // Memory-only: neither a blocked SDK nor a disconnected serial device can hold the alarm worker. ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmMotorSnapshots.GetSnapshot() / 지역 변수를 선언합니다: var motors = _alarmMotorSnapshots.GetSnapshot(); / 변수의 초기값을 지정합니다: motors = _alarmMotorSnapshots.GetSnapshot()
+L000283 |         var motors = _alarmMotorSnapshots.GetSnapshot(); ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmLaserSnapshots.GetSnapshot() / 지역 변수를 선언합니다: var laser = _alarmLaserSnapshots.GetSnapshot(); / 변수의 초기값을 지정합니다: laser = _alarmLaserSnapshots.GetSnapshot()
+L000284 |         var laser = _alarmLaserSnapshots.GetSnapshot(); ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarmBetSnapshots.GetSnapshot() / 지역 변수를 선언합니다: var bet = _alarmBetSnapshots.GetSnapshot(); / 변수의 초기값을 지정합니다: bet = _alarmBetSnapshots.GetSnapshot()
+L000285 |         var bet = _alarmBetSnapshots.GetSnapshot(); ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
+L000286 |         var errors = new List<string>(); ⟦EOL⟧
+// 해설 L287: 조건에 따라 분기합니다: if (motors.State != "OK")
+L000287 |         if (motors.State != "OK") ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"MOTION {motors.State}: {motors.Detail}")
+L000288 |             errors.Add($"MOTION {motors.State}: {motors.Detail}"); ⟦EOL⟧
+// 해설 L289: 조건에 따라 분기합니다: if (laser.State != "OK")
+L000289 |         if (laser.State != "OK") ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"LASER {laser.State}: {laser.Detail}")
+L000290 |             errors.Add($"LASER {laser.State}: {laser.Detail}"); ⟦EOL⟧
+// 해설 L291: 조건에 따라 분기합니다: if (bet.State != "OK")
+L000291 |         if (bet.State != "OK") ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"BET {bet.State}: {bet.Detail}")
+L000292 |             errors.Add($"BET {bet.State}: {bet.Detail}"); ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Attenuator).OrderBy(row => row.Number).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Attenuator).OrderBy(row => row.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Attenuator) / 지역 변수를 선언합니다: var attenuatorNumber = _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Attenuator).OrderBy(row => row.Number).FirstOrDefault()?.Number ?? 0; / 변수의 초기값을 지정합니다: attenuatorNumber = _inter
+L000293 |         var attenuatorNumber = _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Attenuator).OrderBy(row => row.Number).FirstOrDefault()?.Number ?? 0; ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( [], motors.Value ?? [], laser.Value ?? new(false, false, false, 0), _interfaceManager.GetCachedAttenuatorStatus(attenuatorNumber), bet.Value ?? new(0, 0, 0, 0, 0, 0, false, false, false, false), _interfaceManager.Ge… / 호출자에게 값 또는 제어를 반환합니다: return new( [], motors.Value ?? [], laser.Value ?? new(false, false, false, 0), _interfaceManager.GetCachedAttenuatorStatus(attenuatorNumber), bet.Value ?? new(0, 0, 0, 0, 0, 0, false, false, false, false), _interfaceManager.GetPo
+L000294 |         return new( ⟦EOL⟧
+// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_DEVICE_STATUS Drilling.Common.Managers.CManager.ReadAlarmDeviceSnapshot()
+L000295 |             [],  ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_DEVICE_STATUS Drilling.Common.Managers.CManager.ReadAlarmDeviceSnapshot()
+L000296 |             motors.Value ?? [],  ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(false, false, false, 0)
+L000297 |             laser.Value ?? new(false, false, false, 0),  ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetCachedAttenuatorStatus(attenuatorNumber)
+L000298 |             _interfaceManager.GetCachedAttenuatorStatus(attenuatorNumber),  ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 0, 0, 0, 0, 0, false, false, false, false)
+L000299 |             bet.Value ?? new(0, 0, 0, 0, 0, 0, false, false, false, false),  ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetPowerMeterStatus()
+L000300 |             _interfaceManager.GetPowerMeterStatus() ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_DEVICE_STATUS Drilling.Common.Managers.CManager.ReadAlarmDeviceSnapshot()
+L000301 |         ) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ReadAlarmDeviceSnapshot.
+L000302 |         { ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: SnapshotError = string.Join(Environment.NewLine, errors) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors)
+L000303 |             SnapshotError = string.Join(Environment.NewLine, errors) ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 ReadAlarmDeviceSnapshot.
+L000304 |         }; ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 ReadAlarmDeviceSnapshot.
+L000305 |     } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<int> Drilling.Common.Managers.CManager.ConnectInterface(System.Threading.CancellationToken)
+L000307 |     public Task<int> ConnectInterface(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 ConnectInterface.
+L000308 |     { ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Connect(cancellationToken: cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager.Connect(cancellationToken: cancellationToken);
+L000309 |         return _interfaceManager.Connect(cancellationToken: cancellationToken); ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 ConnectInterface.
+L000310 |     } ⟦EOL⟧
+L000311 |  ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<int> Drilling.Common.Managers.CManager.DisconnectInterface(System.Threading.CancellationToken)
+L000312 |     public Task<int> DisconnectInterface(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 DisconnectInterface.
+L000313 |     { ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Disconnect(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager.Disconnect(cancellationToken);
+L000314 |         return _interfaceManager.Disconnect(cancellationToken); ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 DisconnectInterface.
+L000315 |     } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.ReconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
+L000317 |     public Task ReconnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 ReconnectInterface.
+L000318 |     { ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Reconnect(module, number, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager.Reconnect(module, number, cancellationToken);
+L000319 |         return _interfaceManager.Reconnect(module, number, cancellationToken); ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 ReconnectInterface.
+L000320 |     } ⟦EOL⟧
+L000321 |  ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CStationManager Drilling.Common.Managers.CManager.Station()
+L000322 |     public CStationManager Station() ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 Station.
+L000323 |     { ⟦EOL⟧
+// 해설 L324: 호출자에게 값 또는 제어를 반환합니다: return _stationManager;
+L000324 |         return _stationManager; ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 Station.
+L000325 |     } ⟦EOL⟧
+L000326 |  ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CRecipeManager Drilling.Common.Managers.CManager.Recipe()
+L000327 |     public CRecipeManager Recipe() ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 Recipe.
+L000328 |     { ⟦EOL⟧
+// 해설 L329: 호출자에게 값 또는 제어를 반환합니다: return _recipeManager;
+L000329 |         return _recipeManager; ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 Recipe.
+L000330 |     } ⟦EOL⟧
+L000331 |  ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager.Setting()
+L000332 |     public CSettingManager Setting() ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 Setting.
+L000333 |     { ⟦EOL⟧
+// 해설 L334: 호출자에게 값 또는 제어를 반환합니다: return _settingManager;
+L000334 |         return _settingManager; ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 Setting.
+L000335 |     } ⟦EOL⟧
+L000336 |  ⟦EOL⟧
+// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.CProductManager Drilling.Common.Managers.CManager.Product()
+L000337 |     public CProductManager Product() ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 Product.
+L000338 |     { ⟦EOL⟧
+// 해설 L339: 호출자에게 값 또는 제어를 반환합니다: return _productManager;
+L000339 |         return _productManager; ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 Product.
+L000340 |     } ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewManager Drilling.Common.Managers.CManager.Review()
+L000342 |     public CReviewManager Review() ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 Review.
+L000343 |     { ⟦EOL⟧
+// 해설 L344: 호출자에게 값 또는 제어를 반환합니다: return _reviewManager;
+L000344 |         return _reviewManager; ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 Review.
+L000345 |     } ⟦EOL⟧
+L000346 |  ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager Drilling.Common.Managers.CManager.Interface()
+L000347 |     public CInterfaceManager Interface() ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다 · 소속 Interface.
+L000348 |     { ⟦EOL⟧
+// 해설 L349: 호출자에게 값 또는 제어를 반환합니다: return _interfaceManager;
+L000349 |         return _interfaceManager; ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 Interface.
+L000350 |     } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationManager Drilling.Common.Managers.CManager.Automation()
+L000352 |     public CAutomationManager Automation() ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 Automation.
+L000353 |     { ⟦EOL⟧
+// 해설 L354: 호출자에게 값 또는 제어를 반환합니다: return _automationManager;
+L000354 |         return _automationManager; ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 Automation.
+L000355 |     } ⟦EOL⟧
+L000356 |  ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationManager Drilling.Common.Managers.CManager.automation
+L000357 |     public CAutomationManager automation ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 automation.
+L000358 |     { ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.CAutomationManager Drilling.Common.Managers.CManager.automation.get
+L000359 |         get ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 get_automation.
+L000360 |         { ⟦EOL⟧
+// 해설 L361: 호출자에게 값 또는 제어를 반환합니다: return _automationManager;
+L000361 |             return _automationManager; ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 get_automation.
+L000362 |         } ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 automation.
+L000363 |     } ⟦EOL⟧
+L000364 |  ⟦EOL⟧
+// 해설 L365: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CMotionManager Drilling.Common.Managers.CManager.Motion()
+L000365 |     public CMotionManager Motion() ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 Motion.
+L000366 |     { ⟦EOL⟧
+// 해설 L367: 호출자에게 값 또는 제어를 반환합니다: return _motionManager;
+L000367 |         return _motionManager; ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 Motion.
+L000368 |     } ⟦EOL⟧
+L000369 |  ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CAlarmManager Drilling.Common.Managers.CManager.Alarm()
+L000370 |     public CAlarmManager Alarm() ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 Alarm.
+L000371 |     { ⟦EOL⟧
+// 해설 L372: 호출자에게 값 또는 제어를 반환합니다: return _alarmManager;
+L000372 |         return _alarmManager; ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 Alarm.
+L000373 |     } ⟦EOL⟧
+L000374 |  ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.InterLock.CInterLockManager Drilling.Common.Managers.CManager.InterLock()
+L000375 |     public CInterLockManager InterLock() ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 InterLock.
+L000376 |     { ⟦EOL⟧
+// 해설 L377: 호출자에게 값 또는 제어를 반환합니다: return _interLockManager;
+L000377 |         return _interLockManager; ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 InterLock.
+L000378 |     } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · CLogManager Drilling.Common.Managers.CManager.Log()
+L000380 |     public CLogManager Log() ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 Log.
+L000381 |     { ⟦EOL⟧
+// 해설 L382: 호출자에게 값 또는 제어를 반환합니다: return _logManager;
+L000382 |         return _logManager; ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 Log.
+L000383 |     } ⟦EOL⟧
+L000384 |  ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CRecipeFileBase Drilling.Common.Managers.CManager.RecipeFile()
+L000385 |     public CRecipeFileBase RecipeFile() ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 RecipeFile.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 호출자에게 값 또는 제어를 반환합니다: return _recipeFile;
+L000387 |         return _recipeFile; ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 RecipeFile.
+L000388 |     } ⟦EOL⟧
+L000389 |  ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CSettingFileBase Drilling.Common.Managers.CManager.SettingFile()
+L000390 |     public CSettingFileBase SettingFile() ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 SettingFile.
+L000391 |     { ⟦EOL⟧
+// 해설 L392: 호출자에게 값 또는 제어를 반환합니다: return _settingFile;
+L000392 |         return _settingFile; ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 SettingFile.
+L000393 |     } ⟦EOL⟧
+L000394 |  ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CManualScanFileBase Drilling.Common.Managers.CManager.ManualScanFile()
+L000395 |     public CManualScanFileBase ManualScanFile() ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 ManualScanFile.
+L000396 |     { ⟦EOL⟧
+// 해설 L397: 호출자에게 값 또는 제어를 반환합니다: return _manualScanFile;
+L000397 |         return _manualScanFile; ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 ManualScanFile.
+L000398 |     } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.CInterfaceFileBase Drilling.Common.Managers.CManager.InterfaceFile()
+L000400 |     public CInterfaceFileBase InterfaceFile() ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 InterfaceFile.
+L000401 |     { ⟦EOL⟧
+// 해설 L402: 호출자에게 값 또는 제어를 반환합니다: return _interfaceFile;
+L000402 |         return _interfaceFile; ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 InterfaceFile.
+L000403 |     } ⟦EOL⟧
+L000404 |  ⟦EOL⟧
+// 해설 L405: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CBETFileBase Drilling.Common.Managers.CManager.BETFile()
+L000405 |     public CBETFileBase BETFile() ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 BETFile.
+L000406 |     { ⟦EOL⟧
+// 해설 L407: 호출자에게 값 또는 제어를 반환합니다: return _betFile;
+L000407 |         return _betFile; ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 BETFile.
+L000408 |     } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.CMotorFileBase Drilling.Common.Managers.CManager.MotorFile()
+L000410 |     public CMotorFileBase MotorFile() ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 MotorFile.
+L000411 |     { ⟦EOL⟧
+// 해설 L412: 호출자에게 값 또는 제어를 반환합니다: return _motorFile;
+L000412 |         return _motorFile; ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 MotorFile.
+L000413 |     } ⟦EOL⟧
+L000414 |  ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CMelsecMapFileBase Drilling.Common.Managers.CManager.MelsecMapFile()
+L000415 |     public CMelsecMapFileBase MelsecMapFile() ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 MelsecMapFile.
+L000416 |     { ⟦EOL⟧
+// 해설 L417: 호출자에게 값 또는 제어를 반환합니다: return _melsecMapFile;
+L000417 |         return _melsecMapFile; ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 MelsecMapFile.
+L000418 |     } ⟦EOL⟧
+L000419 |  ⟦EOL⟧
+// 해설 L420: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.CProductFileBase Drilling.Common.Managers.CManager.ProductFile()
+L000420 |     public CProductFileBase ProductFile() ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 ProductFile.
+L000421 |     { ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return _productFile;
+L000422 |         return _productFile; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 ProductFile.
+L000423 |     } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewResultFileBase Drilling.Common.Managers.CManager.ReviewResultFile()
+L000425 |     public CReviewResultFileBase ReviewResultFile() ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 ReviewResultFile.
+L000426 |     { ⟦EOL⟧
+// 해설 L427: 호출자에게 값 또는 제어를 반환합니다: return _reviewResultFile;
+L000427 |         return _reviewResultFile; ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 ReviewResultFile.
+L000428 |     } ⟦EOL⟧
+L000429 |  ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewOffsetFileBase Drilling.Common.Managers.CManager.ReviewOffsetFile()
+L000430 |     public CReviewOffsetFileBase ReviewOffsetFile() ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 ReviewOffsetFile.
+L000431 |     { ⟦EOL⟧
+// 해설 L432: 호출자에게 값 또는 제어를 반환합니다: return _reviewOffsetFile;
+L000432 |         return _reviewOffsetFile; ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 ReviewOffsetFile.
+L000433 |     } ⟦EOL⟧
+L000434 |  ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.CheckConfigRoot()
+L000435 |     private void CheckConfigRoot() ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 CheckConfigRoot.
+L000436 |     { ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(_configRoot) / 조건에 따라 분기합니다: if (Directory.Exists(_configRoot))
+L000437 |         if (Directory.Exists(_configRoot)) ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 CheckConfigRoot.
+L000438 |         { ⟦EOL⟧
+// 해설 L439: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Check Config Root", EN_MANAGER_STARTUP_RESULT.Ready, _configRoot)
+L000439 |             AddStartupStep("Check Config Root", EN_MANAGER_STARTUP_RESULT.Ready, _configRoot); ⟦EOL⟧
+// 해설 L440: 호출자에게 값 또는 제어를 반환합니다: return;
+L000440 |             return; ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 CheckConfigRoot.
+L000441 |         } ⟦EOL⟧
+L000442 |  ⟦EOL⟧
+// 해설 L443: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Check Config Root", EN_MANAGER_STARTUP_RESULT.Warning, $"Config root was not found: {_configRoot}")
+L000443 |         AddStartupStep("Check Config Root", EN_MANAGER_STARTUP_RESULT.Warning, $"Config root was not found: {_configRoot}"); ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 CheckConfigRoot.
+L000444 |     } ⟦EOL⟧
+L000445 |  ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.ValidateConfigStructure()
+L000446 |     private void ValidateConfigStructure() ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000447 |     { ⟦EOL⟧
+// 해설 L448: 조건에 따라 분기합니다: if (_configStructureFile is null)
+L000448 |         if (_configStructureFile is null) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000449 |         { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Validate Config Structure", EN_MANAGER_STARTUP_RESULT.Warning, "Config structure validator was not registered.")
+L000450 |             AddStartupStep("Validate Config Structure", EN_MANAGER_STARTUP_RESULT.Warning, "Config structure validator was not registered."); ⟦EOL⟧
+// 해설 L451: 호출자에게 값 또는 제어를 반환합니다: return;
+L000451 |             return; ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000452 |         } ⟦EOL⟧
+L000453 |  ⟦EOL⟧
+// 해설 L454: 예외 처리 범위입니다: try
+L000454 |         try ⟦EOL⟧
+// 해설 L455: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000455 |         { ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: _configStructureFile.Validate().GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _configStructureFile.Validate().GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _configStructureFile.Validate() / 지역 변수를 선언합니다: var statuses = _configStructureFile.Validate().GetAwaiter().GetResult(); / 변수의 초기값을 지정합니다: statuses = _configStructureFile.Validate().GetAwaiter().GetResult()
+L000456 |             var statuses = _configStructureFile.Validate().GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L457: 컬렉션 요소를 순회합니다: foreach (var status in statuses)
+L000457 |             foreach (var status in statuses) ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000458 |             { ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep($"Check {status.ItemName}", ToStartupResult(status), FormatConfigStatusMessage(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToStartupResult(status) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatConfigStatusMessage(status)
+L000459 |                 AddStartupStep($"Check {status.ItemName}", ToStartupResult(status), FormatConfigStatusMessage(status)); ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000460 |             } ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000461 |         } ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupDataException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupDataException(ex))
+L000462 |         catch (Exception ex)when (IsStartupDataException(ex)) ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000463 |         { ⟦EOL⟧
+// 해설 L464: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure("Validate Config Structure", ex)
+L000464 |             AddStartupFailure("Validate Config Structure", ex); ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000465 |         } ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 ValidateConfigStructure.
+L000466 |     } ⟦EOL⟧
+L000467 |  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CManager.LoadInterfaceList()
+L000468 |     private IReadOnlyList<ST_INTERFACE_DATA> LoadInterfaceList() ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000469 |     { ⟦EOL⟧
+// 해설 L470: 예외 처리 범위입니다: try
+L000470 |         try ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000471 |         { ⟦EOL⟧
+// 해설 L472: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceFile.LoadAll() / 지역 변수를 선언합니다: var interfaceData = _interfaceFile.LoadAll(); / 변수의 초기값을 지정합니다: interfaceData = _interfaceFile.LoadAll()
+L000472 |             var interfaceData = _interfaceFile.LoadAll(); ⟦EOL⟧
+// 해설 L473: 값을 대상에 대입합니다: _loadedInterfaceCount = interfaceData.Count
+L000473 |             _loadedInterfaceCount = interfaceData.Count; ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load JHMI_INTERFACE", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {interfaceData.Count} interface row(s).")
+L000474 |             AddStartupStep("Load JHMI_INTERFACE", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {interfaceData.Count} interface row(s)."); ⟦EOL⟧
+// 해설 L475: 호출자에게 값 또는 제어를 반환합니다: return interfaceData;
+L000475 |             return interfaceData; ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000476 |         } ⟦EOL⟧
+// 해설 L477: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupDataException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupDataException(ex))
+L000477 |         catch (Exception ex)when (IsStartupDataException(ex)) ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000478 |         { ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure("Load JHMI_INTERFACE", ex)
+L000479 |             AddStartupFailure("Load JHMI_INTERFACE", ex); ⟦EOL⟧
+// 해설 L480: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000480 |             return[]; ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000481 |         } ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000482 |     } ⟦EOL⟧
+L000483 |  ⟦EOL⟧
+// 해설 L484: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.RegisterInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>)
+L000484 |     private void RegisterInterfaceList(IReadOnlyList<ST_INTERFACE_DATA> interfaceData) ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000485 |     { ⟦EOL⟧
+// 해설 L486: 지역 변수를 선언합니다: var registeredCount = 0; / 변수의 초기값을 지정합니다: registeredCount = 0
+L000486 |         var registeredCount = 0; ⟦EOL⟧
+// 해설 L487: 컬렉션 요소를 순회합니다: foreach (var data in interfaceData)
+L000487 |         foreach (var data in interfaceData) ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000488 |         { ⟦EOL⟧
+// 해설 L489: 예외 처리 범위입니다: try
+L000489 |             try ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000490 |             { ⟦EOL⟧
+// 해설 L491: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.Register(data)
+L000491 |                 _interfaceManager.Register(data); ⟦EOL⟧
+// 해설 L492: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.RegisterInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>)
+L000492 |                 registeredCount++; ⟦EOL⟧
+// 해설 L493: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000493 |             } ⟦EOL⟧
+// 해설 L494: 지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidOperationException or InvalidDataException)
+L000494 |             catch (Exception ex)when (ex is InvalidOperationException or InvalidDataException) ⟦EOL⟧
+// 해설 L495: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000495 |             { ⟦EOL⟧
+// 해설 L496: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure($"Register Interface {data.Device}[{data.Number}]", ex)
+L000496 |                 AddStartupFailure($"Register Interface {data.Device}[{data.Number}]", ex); ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000497 |             } ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000498 |         } ⟦EOL⟧
+L000499 |  ⟦EOL⟧
+// 해설 L500: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Register Interface List", registeredCount == interfaceData.Count ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning, $"Registered {registeredCount}/{interfaceData.Count} interface devic… / 조건에 따라 결과식을 선택합니다: registeredCount == interfaceData.Count ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning
+L000500 |         AddStartupStep("Register Interface List", registeredCount == interfaceData.Count ? EN_MANAGER_STARTUP_RESULT.Ready : EN_MANAGER_STARTUP_RESULT.Warning, $"Registered {registeredCount}/{interfaceData.Count} interface device(s)."); ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 RegisterInterfaceList.
+L000501 |     } ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Motion.ST_MOTOR_DATA> Drilling.Common.Managers.CManager.LoadMotorList()
+L000503 |     private IReadOnlyList<ST_MOTOR_DATA> LoadMotorList() ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000504 |     { ⟦EOL⟧
+// 해설 L505: 예외 처리 범위입니다: try
+L000505 |         try ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000506 |         { ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motorFile.LoadAll() / 지역 변수를 선언합니다: var motorData = _motorFile.LoadAll(); / 변수의 초기값을 지정합니다: motorData = _motorFile.LoadAll()
+L000507 |             var motorData = _motorFile.LoadAll(); ⟦EOL⟧
+// 해설 L508: 값을 대상에 대입합니다: _loadedMotorCount = motorData.Count
+L000508 |             _loadedMotorCount = motorData.Count; ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load JHMI_MOTOR", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {motorData.Count} motor row(s).")
+L000509 |             AddStartupStep("Load JHMI_MOTOR", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {motorData.Count} motor row(s)."); ⟦EOL⟧
+// 해설 L510: 호출자에게 값 또는 제어를 반환합니다: return motorData;
+L000510 |             return motorData; ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000511 |         } ⟦EOL⟧
+// 해설 L512: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupDataException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupDataException(ex))
+L000512 |         catch (Exception ex)when (IsStartupDataException(ex)) ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000513 |         { ⟦EOL⟧
+// 해설 L514: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure("Load JHMI_MOTOR", ex)
+L000514 |             AddStartupFailure("Load JHMI_MOTOR", ex); ⟦EOL⟧
+// 해설 L515: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000515 |             return[]; ⟦EOL⟧
+// 해설 L516: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000516 |         } ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 LoadMotorList.
+L000517 |     } ⟦EOL⟧
+L000518 |  ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.Common.Managers.CManager.LoadMelsecMapList()
+L000519 |     private IReadOnlyList<ST_MELSEC_MAP_DATA> LoadMelsecMapList() ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000520 |     { ⟦EOL⟧
+// 해설 L521: 예외 처리 범위입니다: try
+L000521 |         try ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000522 |         { ⟦EOL⟧
+// 해설 L523: 함수·델리게이트 또는 객체 생성자를 호출합니다: _melsecMapFile.LoadAll() / 지역 변수를 선언합니다: var melsecMapData = _melsecMapFile.LoadAll(); / 변수의 초기값을 지정합니다: melsecMapData = _melsecMapFile.LoadAll()
+L000523 |             var melsecMapData = _melsecMapFile.LoadAll(); ⟦EOL⟧
+// 해설 L524: 값을 대상에 대입합니다: _loadedMelsecMapCount = melsecMapData.Count
+L000524 |             _loadedMelsecMapCount = melsecMapData.Count; ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load JHMI_MELSEC_MAP", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {melsecMapData.Count} MELSEC map row(s).")
+L000525 |             AddStartupStep("Load JHMI_MELSEC_MAP", EN_MANAGER_STARTUP_RESULT.Ready, $"Loaded {melsecMapData.Count} MELSEC map row(s)."); ⟦EOL⟧
+// 해설 L526: 호출자에게 값 또는 제어를 반환합니다: return melsecMapData;
+L000526 |             return melsecMapData; ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000527 |         } ⟦EOL⟧
+// 해설 L528: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupDataException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupDataException(ex))
+L000528 |         catch (Exception ex)when (IsStartupDataException(ex)) ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000529 |         { ⟦EOL⟧
+// 해설 L530: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure("Load JHMI_MELSEC_MAP", ex)
+L000530 |             AddStartupFailure("Load JHMI_MELSEC_MAP", ex); ⟦EOL⟧
+// 해설 L531: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000531 |             return[]; ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000532 |         } ⟦EOL⟧
+// 해설 L533: 구문 블록 경계입니다 · 소속 LoadMelsecMapList.
+L000533 |     } ⟦EOL⟧
+L000534 |  ⟦EOL⟧
+// 해설 L535: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.LoadActiveProduct()
+L000535 |     private void LoadActiveProduct() ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000536 |     { ⟦EOL⟧
+// 해설 L537: 예외 처리 범위입니다: try
+L000537 |         try ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000538 |         { ⟦EOL⟧
+// 해설 L539: 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.LoadActive().GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.LoadActive().GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.LoadActive()
+L000539 |             _productManager.LoadActive().GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L540: 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.RecoverInterrupted().GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.RecoverInterrupted().GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _productManager.RecoverInterrupted()
+L000540 |             _productManager.RecoverInterrupted().GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L541: 값을 대상에 대입합니다: _activeProductLoaded = true
+L000541 |             _activeProductLoaded = true; ⟦EOL⟧
+// 해설 L542: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep("Load Active Product", EN_MANAGER_STARTUP_RESULT.Ready, "Active product loaded.")
+L000542 |             AddStartupStep("Load Active Product", EN_MANAGER_STARTUP_RESULT.Ready, "Active product loaded."); ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000543 |         } ⟦EOL⟧
+// 해설 L544: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupDataException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupDataException(ex))
+L000544 |         catch (Exception ex)when (IsStartupDataException(ex)) ⟦EOL⟧
+// 해설 L545: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000545 |         { ⟦EOL⟧
+// 해설 L546: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure("Load Active Product", ex)
+L000546 |             AddStartupFailure("Load Active Product", ex); ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000547 |         } ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 LoadActiveProduct.
+L000548 |     } ⟦EOL⟧
+L000549 |  ⟦EOL⟧
+// 해설 L550: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManager.RunInitializeStep(string, System.Func<System.Threading.Tasks.Task>, System.Threading.CancellationToken)
+L000550 |     private async Task RunInitializeStep(string stepName, Func<Task> action, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L551: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000551 |     { ⟦EOL⟧
+// 해설 L552: 예외 처리 범위입니다: try
+L000552 |         try ⟦EOL⟧
+// 해설 L553: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000553 |         { ⟦EOL⟧
+// 해설 L554: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000554 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L555: 비동기 완료를 기다립니다: await action() / 함수·델리게이트 또는 객체 생성자를 호출합니다: action()
+L000555 |             await action(); ⟦EOL⟧
+// 해설 L556: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Ready, "OK")
+L000556 |             AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Ready, "OK"); ⟦EOL⟧
+// 해설 L557: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000557 |         } ⟦EOL⟧
+// 해설 L558: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+L000558 |         catch (OperationCanceledException)when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L559: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000559 |         { ⟦EOL⟧
+// 해설 L560: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Warning, "Canceled.")
+L000560 |             AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Warning, "Canceled."); ⟦EOL⟧
+// 해설 L561: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000561 |         } ⟦EOL⟧
+// 해설 L562: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStartupRuntimeException(ex) / 지정 예외를 처리합니다: catch (Exception ex) when (IsStartupRuntimeException(ex))
+L000562 |         catch (Exception ex)when (IsStartupRuntimeException(ex)) ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000563 |         { ⟦EOL⟧
+// 해설 L564: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupFailure(stepName, ex)
+L000564 |             AddStartupFailure(stepName, ex); ⟦EOL⟧
+// 해설 L565: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000565 |         } ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 RunInitializeStep.
+L000566 |     } ⟦EOL⟧
+L000567 |  ⟦EOL⟧
+// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.AddStartupFailure(string, System.Exception)
+L000568 |     private void AddStartupFailure(string stepName, Exception exception) ⟦EOL⟧
+// 해설 L569: 구문 블록 경계입니다 · 소속 AddStartupFailure.
+L000569 |     { ⟦EOL⟧
+// 해설 L570: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Failed, exception.Message)
+L000570 |         AddStartupStep(stepName, EN_MANAGER_STARTUP_RESULT.Failed, exception.Message); ⟦EOL⟧
+// 해설 L571: 구문 블록 경계입니다 · 소속 AddStartupFailure.
+L000571 |     } ⟦EOL⟧
+L000572 |  ⟦EOL⟧
+// 해설 L573: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CManager.AddStartupStep(string, Drilling.Common.Managers.EN_MANAGER_STARTUP_RESULT, string)
+L000573 |     private void AddStartupStep(string stepName, EN_MANAGER_STARTUP_RESULT result, string message) ⟦EOL⟧
+// 해설 L574: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000574 |     { ⟦EOL⟧
+// 해설 L575: 공유 상태의 임계 구역에 진입합니다: lock (_startupLock)
+L000575 |         lock (_startupLock) ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000576 |         { ⟦EOL⟧
+// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupSteps.Add(new ST_MANAGER_STARTUP_STEP(++_startupStepNo, stepName, result, message)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MANAGER_STARTUP_STEP(++_startupStepNo, stepName, result, message)
+L000577 |             _startupSteps.Add(new ST_MANAGER_STARTUP_STEP(++_startupStepNo, stepName, result, message)); ⟦EOL⟧
+// 해설 L578: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(message) / 조건에 따라 분기합니다: if (result != EN_MANAGER_STARTUP_RESULT.Ready && !string.IsNullOrWhiteSpace(message))
+L000578 |             if (result != EN_MANAGER_STARTUP_RESULT.Ready && !string.IsNullOrWhiteSpace(message)) ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000579 |             { ⟦EOL⟧
+// 해설 L580: 함수·델리게이트 또는 객체 생성자를 호출합니다: _startupMessages.Add($"{stepName}: {message}")
+L000580 |                 _startupMessages.Add($"{stepName}: {message}"); ⟦EOL⟧
+// 해설 L581: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000581 |             } ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000582 |         } ⟦EOL⟧
+// 해설 L583: 구문 블록 경계입니다 · 소속 AddStartupStep.
+L000583 |     } ⟦EOL⟧
+L000584 |  ⟦EOL⟧
+// 해설 L585: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager.GetMotionSimulationMode(bool?)
+L000585 |     private bool GetMotionSimulationMode(bool? simulationMode) ⟦EOL⟧
+// 해설 L586: 구문 블록 경계입니다 · 소속 GetMotionSimulationMode.
+L000586 |     { ⟦EOL⟧
+// 해설 L587: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.Interface.ST_INTERFACE_DATA?)
+L000587 |         bool MatchesItem(global::Drilling.Common.Interface.ST_INTERFACE_DATA? data) ⟦EOL⟧
+// 해설 L588: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000588 |         { ⟦EOL⟧
+// 해설 L589: 호출자에게 값 또는 제어를 반환합니다: return data is null || data.IsSimulation;
+L000589 |             return data is null || data.IsSimulation; ⟦EOL⟧
+// 해설 L590: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000590 |         } ⟦EOL⟧
+L000591 |  ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Motion).DefaultIfEmpty().All(MatchesItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Motion).DefaultIfEmpty() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Motion) / 호출자에게 값 또는 제어를 반환합니다: return simulationMode ?? _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Motion).DefaultIfEmpty().All(MatchesItem);
+L000592 |         return simulationMode ?? _interfaceManager.GetInterfaceList(EN_EQP_MODULE.Motion).DefaultIfEmpty().All(MatchesItem); ⟦EOL⟧
+// 해설 L593: 구문 블록 경계입니다 · 소속 GetMotionSimulationMode.
+L000593 |     } ⟦EOL⟧
+L000594 |  ⟦EOL⟧
+// 해설 L595: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.GetScriptDirectory()
+L000595 |     private string GetScriptDirectory() ⟦EOL⟧
+// 해설 L596: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000596 |     { ⟦EOL⟧
+// 해설 L597: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)
+L000597 |         bool MatchesItem(global::Drilling.Common.Managers.ST_SYSTEM_PARAMETER parameter) ⟦EOL⟧
+// 해설 L598: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000598 |         { ⟦EOL⟧
+// 해설 L599: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase);
+L000599 |             return parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000600 |         } ⟦EOL⟧
+L000601 |  ⟦EOL⟧
+// 해설 L602: 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingFile.Load(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var settingPath = _settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value; / 변수의 초기값을 지정합니다: settingPath = _settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value
+L000602 |         var settingPath = _settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value; ⟦EOL⟧
+// 해설 L603: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveProjectPath(settingPath, Path.Combine("Data", "Script")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine("Data", "Script") / 호출자에게 값 또는 제어를 반환합니다: return ResolveProjectPath(settingPath, Path.Combine("Data", "Script"));
+L000603 |         return ResolveProjectPath(settingPath, Path.Combine("Data", "Script")); ⟦EOL⟧
+// 해설 L604: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000604 |     } ⟦EOL⟧
+L000605 |  ⟦EOL⟧
+// 해설 L606: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.GetProjectRoot()
+L000606 |     private string GetProjectRoot() ⟦EOL⟧
+// 해설 L607: 구문 블록 경계입니다 · 소속 GetProjectRoot.
+L000607 |     { ⟦EOL⟧
+// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(_configRoot) / 호출자에게 값 또는 제어를 반환합니다: return Directory.GetParent(_configRoot)?.FullName ?? _configRoot;
+L000608 |         return Directory.GetParent(_configRoot)?.FullName ?? _configRoot; ⟦EOL⟧
+// 해설 L609: 구문 블록 경계입니다 · 소속 GetProjectRoot.
+L000609 |     } ⟦EOL⟧
+L000610 |  ⟦EOL⟧
+// 해설 L611: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.ResolveProjectPath(string?, string)
+L000611 |     private string ResolveProjectPath(string? settingPath, string defaultRelativePath) ⟦EOL⟧
+// 해설 L612: 구문 블록 경계입니다 · 소속 ResolveProjectPath.
+L000612 |     { ⟦EOL⟧
+// 해설 L613: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settingPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settingPath.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(settingPath) ? defaultRelativePath : settingPath.Trim() / 지역 변수를 선언합니다: var path = string.IsNullOrWhiteSpace(settingPath) ? defaultRelativePath : settingPath.Trim(); / 변수의 초기값을 지정합니다: path = string.IsNullOrWhiteSpace(settingPath) ? defaultRelativePath : settingPath.Trim()
+L000613 |         var path = string.IsNullOrWhiteSpace(settingPath) ? defaultRelativePath : settingPath.Trim(); ⟦EOL⟧
+// 해설 L614: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(GetProjectRoot(), path)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(GetProjectRoot(), path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetProjectRoot() / 조건에 따라 결과식을 선택합니다: Path.IsPathRooted(path) ? Path.GetFullPath(path) : Path.GetFullPath(Path.Combine(GetProjectRoot(), path)) / 호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(path) ? Path.GetFullPath(path) : Path.GetFullPath(Path.Combine(Ge
+L000614 |         return Path.IsPathRooted(path) ? Path.GetFullPath(path) : Path.GetFullPath(Path.Combine(GetProjectRoot(), path)); ⟦EOL⟧
+// 해설 L615: 구문 블록 경계입니다 · 소속 ResolveProjectPath.
+L000615 |     } ⟦EOL⟧
+L000616 |  ⟦EOL⟧
+// 해설 L617: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager.IsStartupDataException(System.Exception)
+L000617 |     private static bool IsStartupDataException(Exception exception) ⟦EOL⟧
+// 해설 L618: 구문 블록 경계입니다 · 소속 IsStartupDataException.
+L000618 |     { ⟦EOL⟧
+// 해설 L619: 호출자에게 값 또는 제어를 반환합니다: return exception is InvalidDataException or IOException or UnauthorizedAccessException;
+L000619 |         return exception is InvalidDataException or IOException or UnauthorizedAccessException; ⟦EOL⟧
+// 해설 L620: 구문 블록 경계입니다 · 소속 IsStartupDataException.
+L000620 |     } ⟦EOL⟧
+L000621 |  ⟦EOL⟧
+// 해설 L622: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Managers.CManager.IsStartupRuntimeException(System.Exception)
+L000622 |     private static bool IsStartupRuntimeException(Exception exception) ⟦EOL⟧
+// 해설 L623: 구문 블록 경계입니다 · 소속 IsStartupRuntimeException.
+L000623 |     { ⟦EOL⟧
+// 해설 L624: 호출자에게 값 또는 제어를 반환합니다: return exception is InvalidOperationException or TimeoutException or IOException or UnauthorizedAccessException;
+L000624 |         return exception is InvalidOperationException or TimeoutException or IOException or UnauthorizedAccessException; ⟦EOL⟧
+// 해설 L625: 구문 블록 경계입니다 · 소속 IsStartupRuntimeException.
+L000625 |     } ⟦EOL⟧
+L000626 |  ⟦EOL⟧
+// 해설 L627: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_MANAGER_STARTUP_RESULT Drilling.Common.Managers.CManager.ToStartupResult(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)
+L000627 |     private static EN_MANAGER_STARTUP_RESULT ToStartupResult(ST_CONFIG_FILE_STATUS status) ⟦EOL⟧
+// 해설 L628: 구문 블록 경계입니다 · 소속 ToStartupResult.
+L000628 |     { ⟦EOL⟧
+// 해설 L629: 조건에 따라 분기합니다: if (status.IsValid)
+L000629 |         if (status.IsValid) ⟦EOL⟧
+// 해설 L630: 구문 블록 경계입니다 · 소속 ToStartupResult.
+L000630 |         { ⟦EOL⟧
+// 해설 L631: 호출자에게 값 또는 제어를 반환합니다: return EN_MANAGER_STARTUP_RESULT.Ready;
+L000631 |             return EN_MANAGER_STARTUP_RESULT.Ready; ⟦EOL⟧
+// 해설 L632: 구문 블록 경계입니다 · 소속 ToStartupResult.
+L000632 |         } ⟦EOL⟧
+L000633 |  ⟦EOL⟧
+// 해설 L634: 조건에 따라 결과식을 선택합니다: status.Required ? EN_MANAGER_STARTUP_RESULT.Failed : EN_MANAGER_STARTUP_RESULT.Warning / 호출자에게 값 또는 제어를 반환합니다: return status.Required ? EN_MANAGER_STARTUP_RESULT.Failed : EN_MANAGER_STARTUP_RESULT.Warning;
+L000634 |         return status.Required ? EN_MANAGER_STARTUP_RESULT.Failed : EN_MANAGER_STARTUP_RESULT.Warning; ⟦EOL⟧
+// 해설 L635: 구문 블록 경계입니다 · 소속 ToStartupResult.
+L000635 |     } ⟦EOL⟧
+L000636 |  ⟦EOL⟧
+// 해설 L637: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.CManager.FormatConfigStatusMessage(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)
+L000637 |     private static string FormatConfigStatusMessage(ST_CONFIG_FILE_STATUS status) ⟦EOL⟧
+// 해설 L638: 구문 블록 경계입니다 · 소속 FormatConfigStatusMessage.
+L000638 |     { ⟦EOL⟧
+// 해설 L639: 조건에 따라 결과식을 선택합니다: status.Required ? "Required" : "Optional" / 지역 변수를 선언합니다: var requiredText = status.Required ? "Required" : "Optional"; / 변수의 초기값을 지정합니다: requiredText = status.Required ? "Required" : "Optional"
+L000639 |         var requiredText = status.Required ? "Required" : "Optional"; ⟦EOL⟧
+// 해설 L640: 조건에 따라 결과식을 선택합니다: status.Exists ? "Exists" : "Missing" / 지역 변수를 선언합니다: var existsText = status.Exists ? "Exists" : "Missing"; / 변수의 초기값을 지정합니다: existsText = status.Exists ? "Exists" : "Missing"
+L000640 |         var existsText = status.Exists ? "Exists" : "Missing"; ⟦EOL⟧
+// 해설 L641: 호출자에게 값 또는 제어를 반환합니다: return $"{requiredText}, {existsText}, {status.Message} | {status.Path}";
+L000641 |         return $"{requiredText}, {existsText}, {status.Message} | {status.Path}"; ⟦EOL⟧
+// 해설 L642: 구문 블록 경계입니다 · 소속 FormatConfigStatusMessage.
+L000642 |     } ⟦EOL⟧
+// 해설 L643: 구문 블록 경계입니다.
+L000643 | } ⟦EOL⟧
+L000644 |  ⟦EOL⟧
+// 해설 L645: 타입의 구조/상속 선언입니다: public enum EN_SYSTEM_MODE
+L000645 | public enum EN_SYSTEM_MODE ⟦EOL⟧
+// 해설 L646: 구문 블록 경계입니다.
+L000646 | { ⟦EOL⟧
+// 해설 L647: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SYSTEM_MODE.Simulation
+L000647 |     Simulation, ⟦EOL⟧
+// 해설 L648: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SYSTEM_MODE.Auto
+L000648 |     Auto, ⟦EOL⟧
+// 해설 L649: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SYSTEM_MODE.Manual
+L000649 |     Manual ⟦EOL⟧
+// 해설 L650: 구문 블록 경계입니다.
+L000650 | } ⟦EOL⟧
+L000651 |  ⟦EOL⟧
+// 해설 L652: 타입의 구조/상속 선언입니다: public enum EN_PM_LOCK_STATE
+L000652 | public enum EN_PM_LOCK_STATE ⟦EOL⟧
+// 해설 L653: 구문 블록 경계입니다.
+L000653 | { ⟦EOL⟧
+// 해설 L654: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_PM_LOCK_STATE.Released
+L000654 |     Released, ⟦EOL⟧
+// 해설 L655: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_PM_LOCK_STATE.Locked
+L000655 |     Locked ⟦EOL⟧
+// 해설 L656: 구문 블록 경계입니다.
+L000656 | } ⟦EOL⟧
+L000657 |  ⟦EOL⟧
+// 해설 L658: 타입의 구조/상속 선언입니다: public enum EN_MANAGER_STARTUP_RESULT
+L000658 | public enum EN_MANAGER_STARTUP_RESULT ⟦EOL⟧
+// 해설 L659: 구문 블록 경계입니다.
+L000659 | { ⟦EOL⟧
+// 해설 L660: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_MANAGER_STARTUP_RESULT.Ready
+L000660 |     Ready, ⟦EOL⟧
+// 해설 L661: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_MANAGER_STARTUP_RESULT.Warning
+L000661 |     Warning, ⟦EOL⟧
+// 해설 L662: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_MANAGER_STARTUP_RESULT.Failed
+L000662 |     Failed ⟦EOL⟧
+// 해설 L663: 구문 블록 경계입니다.
+L000663 | } ⟦EOL⟧
+L000664 |  ⟦EOL⟧
+// 해설 L665: 타입의 구조/상속 선언입니다: public sealed record ST_MANUAL_SCAN_PARAM(
+L000665 | public sealed record ST_MANUAL_SCAN_PARAM( ⟦EOL⟧
+// 해설 L666: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000666 |     double ShapeSize,  ⟦EOL⟧
+// 해설 L667: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000667 |     double OffsetX,  ⟦EOL⟧
+// 해설 L668: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000668 |     double OffsetY,  ⟦EOL⟧
+// 해설 L669: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000669 |     string Direction,  ⟦EOL⟧
+// 해설 L670: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000670 |     string ShapeName,  ⟦EOL⟧
+// 해설 L671: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000671 |     double LaserPower = 1.0,  ⟦EOL⟧
+// 해설 L672: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000672 |     double JumpSpeed = 1.5,  ⟦EOL⟧
+// 해설 L673: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000673 |     double MarkSpeed = 0.9,  ⟦EOL⟧
+// 해설 L674: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000674 |     double AttenuatorPosition = 23.50,  ⟦EOL⟧
+// 해설 L675: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000675 |     double LaserFrequency = 20.0,  ⟦EOL⟧
+// 해설 L676: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000676 |     double LaserOnDelay = 8.0,  ⟦EOL⟧
+// 해설 L677: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000677 |     double LaserOffDelay = 12.0,  ⟦EOL⟧
+// 해설 L678: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000678 |     double Time = 1000.0,  ⟦EOL⟧
+// 해설 L679: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000679 |     int Count = 1,  ⟦EOL⟧
+// 해설 L680: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000680 |     int GridRowLines = 5,  ⟦EOL⟧
+// 해설 L681: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000681 |     int GridColLines = 5,  ⟦EOL⟧
+// 해설 L682: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000682 |     string LaserOnMode = "TIME",  ⟦EOL⟧
+// 해설 L683: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000683 |     int RepeatCount = 1,  ⟦EOL⟧
+// 해설 L684: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000684 |     double RepeatDelayTime = 0.0 ⟦EOL⟧
+// 해설 L685: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000685 | ); ⟦EOL⟧
+// 해설 L686: 타입의 구조/상속 선언입니다: public sealed record ST_MANUAL_SCAN_FORM(
+L000686 | public sealed record ST_MANUAL_SCAN_FORM( ⟦EOL⟧
+// 해설 L687: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000687 |     string Name,  ⟦EOL⟧
+// 해설 L688: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000688 |     string DisplayName,  ⟦EOL⟧
+// 해설 L689: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000689 |     EN_RECIPE_DATA_TYPE DataType,  ⟦EOL⟧
+// 해설 L690: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000690 |     string Unit,  ⟦EOL⟧
+// 해설 L691: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000691 |     bool Show,  ⟦EOL⟧
+// 해설 L692: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000692 |     bool Use,  ⟦EOL⟧
+// 해설 L693: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000693 |     string DefaultValue,  ⟦EOL⟧
+// 해설 L694: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000694 |     double Min,  ⟦EOL⟧
+// 해설 L695: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000695 |     double Max,  ⟦EOL⟧
+// 해설 L696: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000696 |     string Description,  ⟦EOL⟧
+// 해설 L697: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000697 |     int DisplayOrder ⟦EOL⟧
+// 해설 L698: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000698 | ); ⟦EOL⟧
+// 해설 L699: 타입의 구조/상속 선언입니다: public sealed record ST_POWER_METER_STATUS(
+L000699 | public sealed record ST_POWER_METER_STATUS( ⟦EOL⟧
+// 해설 L700: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000700 |     double MeasuredPower,  ⟦EOL⟧
+// 해설 L701: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000701 |     string Unit,  ⟦EOL⟧
+// 해설 L702: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000702 |     DateTimeOffset MeasuredAt,  ⟦EOL⟧
+// 해설 L703: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000703 |     double AveragePower = 0.0,  ⟦EOL⟧
+// 해설 L704: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000704 |     double MinPower = 0.0,  ⟦EOL⟧
+// 해설 L705: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000705 |     double MaxPower = 0.0,  ⟦EOL⟧
+// 해설 L706: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000706 |     double WaveLengthNm = 355.0,  ⟦EOL⟧
+// 해설 L707: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000707 |     double BeamPositionX = 0.0,  ⟦EOL⟧
+// 해설 L708: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000708 |     double BeamPositionY = 0.0,  ⟦EOL⟧
+// 해설 L709: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000709 |     int SampleCount = 0,  ⟦EOL⟧
+// 해설 L710: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000710 |     bool IsMeasuring = false,  ⟦EOL⟧
+// 해설 L711: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000711 |     string ModelName = "PowerMax",  ⟦EOL⟧
+// 해설 L712: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000712 |     string SerialNumber = "-",  ⟦EOL⟧
+// 해설 L713: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000713 |     string LastCommand = "",  ⟦EOL⟧
+// 해설 L714: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000714 |     EN_POWER_METER_ERROR LastError = EN_POWER_METER_ERROR.Ok ⟦EOL⟧
+// 해설 L715: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000715 | ) ⟦EOL⟧
+// 해설 L716: 구문 블록 경계입니다.
+L000716 | { ⟦EOL⟧
+// 해설 L717: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Managers.ST_POWER_METER_STATUS.Empty
+L000717 |     public static ST_POWER_METER_STATUS Empty ⟦EOL⟧
+// 해설 L718: 구문 블록 경계입니다 · 소속 Empty.
+L000718 |     { ⟦EOL⟧
+// 해설 L719: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Managers.ST_POWER_METER_STATUS.Empty.get
+L000719 |         get ⟦EOL⟧
+// 해설 L720: 구문 블록 경계입니다 · 소속 get_Empty.
+L000720 |         { ⟦EOL⟧
+// 해설 L721: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(0.0, "W", DateTimeOffset.Now) / 호출자에게 값 또는 제어를 반환합니다: return new(0.0, "W", DateTimeOffset.Now);
+L000721 |             return new(0.0, "W", DateTimeOffset.Now); ⟦EOL⟧
+// 해설 L722: 구문 블록 경계입니다 · 소속 get_Empty.
+L000722 |         } ⟦EOL⟧
+// 해설 L723: 구문 블록 경계입니다 · 소속 Empty.
+L000723 |     } ⟦EOL⟧
+// 해설 L724: 구문 블록 경계입니다.
+L000724 | } ⟦EOL⟧
+L000725 |  ⟦EOL⟧
+// 해설 L726: 타입의 구조/상속 선언입니다: public sealed record ST_DEVICE_STATUS(
+L000726 | public sealed record ST_DEVICE_STATUS( ⟦EOL⟧
+// 해설 L727: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000727 |     IReadOnlyList<ST_IO_STATUS> Io,  ⟦EOL⟧
+// 해설 L728: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000728 |     IReadOnlyList<ST_MOTOR_AXIS_STATUS> Motors,  ⟦EOL⟧
+// 해설 L729: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000729 |     ST_LASER_STATUS Laser,  ⟦EOL⟧
+// 해설 L730: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000730 |     ST_ATTENUATOR_STATUS Attenuator,  ⟦EOL⟧
+// 해설 L731: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000731 |     ST_BET_STATUS Bet,  ⟦EOL⟧
+// 해설 L732: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000732 |     ST_POWER_METER_STATUS PowerMeter ⟦EOL⟧
+// 해설 L733: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000733 | ) ⟦EOL⟧
+// 해설 L734: 구문 블록 경계입니다.
+L000734 | { ⟦EOL⟧
+// 해설 L735: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Managers.ST_DEVICE_STATUS.SnapshotError
+L000735 |     public string SnapshotError { get; init; } = ""; ⟦EOL⟧
+// 해설 L736: 구문 블록 경계입니다.
+L000736 | } ⟦EOL⟧
+L000737 |  ⟦EOL⟧
+// 해설 L738: 타입의 구조/상속 선언입니다: public sealed record ST_SYSTEM_STATUS(string CurrentRecipeId, EN_SYSTEM_MODE OperationMode, EN_ALARM_STATE AlarmState, EN_PM_LOCK_STATE PMLockState, IReadOnlyList<ST_DEVICE_COMM_STATUS> Modules)
+L000738 | public sealed record ST_SYSTEM_STATUS(string CurrentRecipeId, EN_SYSTEM_MODE OperationMode, EN_ALARM_STATE AlarmState, EN_PM_LOCK_STATE PMLockState, IReadOnlyList<ST_DEVICE_COMM_STATUS> Modules) ⟦EOL⟧
+// 해설 L739: 구문 블록 경계입니다.
+L000739 | { ⟦EOL⟧
+// 해설 L740: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_DEVICE_COMM_STATUS Drilling.Common.Managers.ST_SYSTEM_STATUS.GetModule(Drilling.Common.Interface.EN_EQP_MODULE)
+L000740 |     public ST_DEVICE_COMM_STATUS GetModule(EN_EQP_MODULE module) ⟦EOL⟧
+// 해설 L741: 구문 블록 경계입니다 · 소속 GetModule.
+L000741 |     { ⟦EOL⟧
+// 해설 L742: 컬렉션 요소를 순회합니다: foreach (var status in Modules)
+L000742 |         foreach (var status in Modules) ⟦EOL⟧
+// 해설 L743: 구문 블록 경계입니다 · 소속 GetModule.
+L000743 |         { ⟦EOL⟧
+// 해설 L744: 조건에 따라 분기합니다: if (status.Module == module)
+L000744 |             if (status.Module == module) ⟦EOL⟧
+// 해설 L745: 구문 블록 경계입니다 · 소속 GetModule.
+L000745 |             { ⟦EOL⟧
+// 해설 L746: 호출자에게 값 또는 제어를 반환합니다: return status;
+L000746 |                 return status; ⟦EOL⟧
+// 해설 L747: 구문 블록 경계입니다 · 소속 GetModule.
+L000747 |             } ⟦EOL⟧
+// 해설 L748: 구문 블록 경계입니다 · 소속 GetModule.
+L000748 |         } ⟦EOL⟧
+L000749 |  ⟦EOL⟧
+// 해설 L750: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMM_STATUS(module, EN_COMM_STATE.Offline) / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMM_STATUS(module, EN_COMM_STATE.Offline);
+L000750 |         return new ST_DEVICE_COMM_STATUS(module, EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L751: 구문 블록 경계입니다 · 소속 GetModule.
+L000751 |     } ⟦EOL⟧
+// 해설 L752: 구문 블록 경계입니다.
+L000752 | } ⟦EOL⟧
+L000753 |  ⟦EOL⟧
+// 해설 L754: 타입의 구조/상속 선언입니다: public sealed record ST_PM_LOCK_STATUS(bool IsLocked, DateTimeOffset? LockedAt);
+L000754 | public sealed record ST_PM_LOCK_STATUS(bool IsLocked, DateTimeOffset? LockedAt); ⟦EOL⟧
+// 해설 L755: 타입의 구조/상속 선언입니다: public sealed record ST_MANAGER_STARTUP_STEP(int Order, string StepName, EN_MANAGER_STARTUP_RESULT Result, string Message);
+L000755 | public sealed record ST_MANAGER_STARTUP_STEP(int Order, string StepName, EN_MANAGER_STARTUP_RESULT Result, string Message); ⟦EOL⟧
+// 해설 L756: 타입의 구조/상속 선언입니다: public sealed record ST_CONFIG_LOAD_STATUS(
+L000756 | public sealed record ST_CONFIG_LOAD_STATUS( ⟦EOL⟧
+// 해설 L757: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000757 |     string ConfigRoot,  ⟦EOL⟧
+// 해설 L758: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000758 |     int InterfaceCount,  ⟦EOL⟧
+// 해설 L759: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000759 |     int MotorCount,  ⟦EOL⟧
+// 해설 L760: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000760 |     int MelsecMapCount,  ⟦EOL⟧
+// 해설 L761: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000761 |     bool ActiveProductLoaded,  ⟦EOL⟧
+// 해설 L762: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000762 |     IReadOnlyList<string> StartupMessages,  ⟦EOL⟧
+// 해설 L763: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000763 |     IReadOnlyList<ST_MANAGER_STARTUP_STEP> StartupSteps ⟦EOL⟧
+// 해설 L764: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000764 | ); ⟦EOL⟧
+// 해설 L765: 타입의 구조/상속 선언입니다: public sealed record ST_CONFIG_FILE_STATUS(string ItemName, string Path, bool Required, bool Exists, bool IsValid, string Message);
+L000765 | public sealed record ST_CONFIG_FILE_STATUS(string ItemName, string Path, bool Required, bool Exists, bool IsValid, string Message); ⟦EOL⟧
+// 해설 L766: 타입의 구조/상속 선언입니다: public abstract class CConfigStructureFileBase
+L000766 | public abstract class CConfigStructureFileBase ⟦EOL⟧
+// 해설 L767: 구문 블록 경계입니다.
+L000767 | { ⟦EOL⟧
+// 해설 L768: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_CONFIG_FILE_STATUS>> Drilling.Common.Managers.CConfigStructureFileBase.Validate(System.Threading.CancellationToke
+L000768 |     public abstract Task<IReadOnlyList<ST_CONFIG_FILE_STATUS>> Validate(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L769: 구문 블록 경계입니다.
+L000769 | } ⟦EOL⟧
+L000770 |  ⟦EOL⟧
+// 해설 L771: 타입의 구조/상속 선언입니다: public abstract class CManualScanFileBase
+L000771 | public abstract class CManualScanFileBase ⟦EOL⟧
+// 해설 L772: 구문 블록 경계입니다.
+L000772 | { ⟦EOL⟧
+// 해설 L773: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<string>> Drilling.Common.Managers.CManualScanFileBase.List(System.Threading.CancellationToken)
+L000773 |     public abstract Task<IReadOnlyList<string>> List(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L774: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>> Drilling.Common.Managers.CManualScanFileBase.LoadForm(System.Threading.CancellationToken)
+L000774 |     public abstract Task<IReadOnlyList<ST_MANUAL_SCAN_FORM>> LoadForm(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L775: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.Common.Managers.CManualScanFileBase.Load(System.Threading.CancellationToken)
+L000775 |     public abstract Task<ST_MANUAL_SCAN_PARAM> Load(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L776: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.Common.Managers.CManualScanFileBase.Load(string, System.Threading.CancellationToken)
+L000776 |     public abstract Task<ST_MANUAL_SCAN_PARAM> Load(string settingName, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L777: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManualScanFileBase.Save(Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM, System.Threading.CancellationToken)
+L000777 |     public abstract Task Save(ST_MANUAL_SCAN_PARAM settings, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L778: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManualScanFileBase.Save(string, Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM, System.Threading.CancellationToken)
+L000778 |     public abstract Task Save(string settingName, ST_MANUAL_SCAN_PARAM settings, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L779: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManualScanFileBase.Rename(string, string, System.Threading.CancellationToken)
+L000779 |     public abstract Task Rename(string oldSettingName, string newSettingName, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L780: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CManualScanFileBase.Delete(string, System.Threading.CancellationToken)
+L000780 |     public abstract Task Delete(string settingName, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L781: 구문 블록 경계입니다.
+L000781 | } ⟦EOL⟧

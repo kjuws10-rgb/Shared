@@ -1,0 +1,1817 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Recipe/CCellPatternCalculator.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Recipe/CCellPatternCalculator.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs">Git 원본</a></p><h1>Drilling.Common/Recipe/CCellPatternCalculator.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>23,539 bytes / 490 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/4b72d4b0b6802dae9972.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CCellPatternCalculator</td><td>ClassDeclaration</td><td>5–275</td><td>CCellPatternCalculator</td></tr>
+<tr><td>ST_CELL_PATTERN_DEFINITION</td><td>RecordDeclaration</td><td>277–289</td><td>ST_CELL_PATTERN_DEFINITION</td></tr>
+<tr><td>ST_SHOT_GROUP_CENTER</td><td>RecordDeclaration</td><td>290–290</td><td>ST_SHOT_GROUP_CENTER</td></tr>
+<tr><td>ST_CELL_PATTERN_LAYOUT</td><td>RecordDeclaration</td><td>291–328</td><td>ST_CELL_PATTERN_LAYOUT</td></tr>
+<tr><td>ST_RECIPE_CELL_PATTERN_ENTRY</td><td>RecordDeclaration</td><td>330–330</td><td>ST_RECIPE_CELL_PATTERN_ENTRY</td></tr>
+<tr><td>CRecipeCellPatternCatalog</td><td>ClassDeclaration</td><td>336–421</td><td>CRecipeCellPatternCatalog</td></tr>
+<tr><td>ST_RECIPE_MODEL_PIXEL_COUNT</td><td>RecordStructDeclaration</td><td>423–423</td><td>ST_RECIPE_MODEL_PIXEL_COUNT</td></tr>
+<tr><td>ST_RECIPE_MODEL_PATTERN</td><td>RecordStructDeclaration</td><td>424–424</td><td>ST_RECIPE_MODEL_PATTERN</td></tr>
+<tr><td>CRecipeModelPixelCountReader</td><td>ClassDeclaration</td><td>425–489</td><td>CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>MinCellCount</td><td>FieldDeclaration</td><td>L7–7</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MinCellCount</td></tr>
+<tr><td>MaxTotalShotGroupCount</td><td>FieldDeclaration</td><td>L8–8</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaxTotalShotGroupCount</td></tr>
+<tr><td>MaxGroupCountPerCell</td><td>FieldDeclaration</td><td>L9–9</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaxGroupCountPerCell</td></tr>
+<tr><td>MaximumPreviewPointsPerCell</td><td>FieldDeclaration</td><td>L12–12</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaximumPreviewPointsPerCell</td></tr>
+<tr><td>MinimumPreviewPointSize</td><td>FieldDeclaration</td><td>L13–13</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.MinimumPreviewPointSize</td></tr>
+<tr><td>MaximumPreviewPointSize</td><td>FieldDeclaration</td><td>L14–14</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.MaximumPreviewPointSize</td></tr>
+<tr><td>IsSupportedSplitBeamCount</td><td>MethodDeclaration</td><td>L15–18</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.IsSupportedSplitBeamCount(int)</td></tr>
+<tr><td>CalculatePreviewPointSize</td><td>MethodDeclaration</td><td>L20–20</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewPointSize(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, double)</td></tr>
+<tr><td>CalculatePreviewSampleStep</td><td>MethodDeclaration</td><td>L21–27</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewSampleStep(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, double)</td></tr>
+<tr><td>CalculatePreviewBeamHalfSpan</td><td>MethodDeclaration</td><td>L29–29</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewBeamHalfSpan(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, int)</td></tr>
+<tr><td>TryParseCellCount</td><td>MethodDeclaration</td><td>L30–33</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, out int, out string)</td></tr>
+<tr><td>TryParseCellCount</td><td>MethodDeclaration</td><td>L35–63</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, int, int?, out int, out string)</td></tr>
+<tr><td>Calculate</td><td>MethodDeclaration</td><td>L65–65</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION)</td></tr>
+<tr><td>Calculate</td><td>MethodDeclaration</td><td>L66–222</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)</td></tr>
+<tr><td>CalculateShotCenter</td><td>MethodDeclaration</td><td>L224–248</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT)</td></tr>
+<tr><td>Invalid</td><td>MethodDeclaration</td><td>L250–269</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)</td></tr>
+<tr><td>FormatCurrentValue</td><td>MethodDeclaration</td><td>L271–274</td><td>string Drilling.Common.Recipe.CCellPatternCalculator.FormatCurrentValue(string)</td></tr>
+<tr><td>IsValid</td><td>PropertyDeclaration</td><td>L302–308</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid</td></tr>
+<tr><td>get_IsValid</td><td>GetAccessorDeclaration</td><td>L304–307</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid.get</td></tr>
+<tr><td>ProcessedTargetCountX</td><td>PropertyDeclaration</td><td>L310–310</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX</td></tr>
+<tr><td>get_ProcessedTargetCountX</td><td>GetAccessorDeclaration</td><td>L310–310</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX.get</td></tr>
+<tr><td>set_ProcessedTargetCountX</td><td>InitAccessorDeclaration</td><td>L310–310</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX.init</td></tr>
+<tr><td>ProcessedTargetCountY</td><td>PropertyDeclaration</td><td>L311–311</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY</td></tr>
+<tr><td>get_ProcessedTargetCountY</td><td>GetAccessorDeclaration</td><td>L311–311</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY.get</td></tr>
+<tr><td>set_ProcessedTargetCountY</td><td>InitAccessorDeclaration</td><td>L311–311</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY.init</td></tr>
+<tr><td>ExcludedTargetCountX</td><td>PropertyDeclaration</td><td>L312–312</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX</td></tr>
+<tr><td>get_ExcludedTargetCountX</td><td>GetAccessorDeclaration</td><td>L312–312</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX.get</td></tr>
+<tr><td>set_ExcludedTargetCountX</td><td>InitAccessorDeclaration</td><td>L312–312</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX.init</td></tr>
+<tr><td>ExcludedTargetCountY</td><td>PropertyDeclaration</td><td>L313–313</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY</td></tr>
+<tr><td>get_ExcludedTargetCountY</td><td>GetAccessorDeclaration</td><td>L313–313</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY.get</td></tr>
+<tr><td>set_ExcludedTargetCountY</td><td>InitAccessorDeclaration</td><td>L313–313</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY.init</td></tr>
+<tr><td>PixelCountX</td><td>PropertyDeclaration</td><td>L314–314</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX</td></tr>
+<tr><td>get_PixelCountX</td><td>GetAccessorDeclaration</td><td>L314–314</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX.get</td></tr>
+<tr><td>set_PixelCountX</td><td>InitAccessorDeclaration</td><td>L314–314</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX.init</td></tr>
+<tr><td>PixelCountY</td><td>PropertyDeclaration</td><td>L315–315</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY</td></tr>
+<tr><td>get_PixelCountY</td><td>GetAccessorDeclaration</td><td>L315–315</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY.get</td></tr>
+<tr><td>set_PixelCountY</td><td>InitAccessorDeclaration</td><td>L315–315</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY.init</td></tr>
+<tr><td>ProcessedPixelCountX</td><td>PropertyDeclaration</td><td>L316–316</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX</td></tr>
+<tr><td>get_ProcessedPixelCountX</td><td>GetAccessorDeclaration</td><td>L316–316</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX.get</td></tr>
+<tr><td>set_ProcessedPixelCountX</td><td>InitAccessorDeclaration</td><td>L316–316</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX.init</td></tr>
+<tr><td>ProcessedPixelCountY</td><td>PropertyDeclaration</td><td>L317–317</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY</td></tr>
+<tr><td>get_ProcessedPixelCountY</td><td>GetAccessorDeclaration</td><td>L317–317</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY.get</td></tr>
+<tr><td>set_ProcessedPixelCountY</td><td>InitAccessorDeclaration</td><td>L317–317</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY.init</td></tr>
+<tr><td>BeamPitchMillimeters</td><td>PropertyDeclaration</td><td>L318–318</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters</td></tr>
+<tr><td>get_BeamPitchMillimeters</td><td>GetAccessorDeclaration</td><td>L318–318</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters.get</td></tr>
+<tr><td>set_BeamPitchMillimeters</td><td>InitAccessorDeclaration</td><td>L318–318</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters.init</td></tr>
+<tr><td>BeamHalfSpanMillimeters</td><td>PropertyDeclaration</td><td>L319–319</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters</td></tr>
+<tr><td>get_BeamHalfSpanMillimeters</td><td>GetAccessorDeclaration</td><td>L319–319</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters.get</td></tr>
+<tr><td>set_BeamHalfSpanMillimeters</td><td>InitAccessorDeclaration</td><td>L319–319</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters.init</td></tr>
+<tr><td>HasExcludedTargets</td><td>PropertyDeclaration</td><td>L321–327</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets</td></tr>
+<tr><td>get_HasExcludedTargets</td><td>GetAccessorDeclaration</td><td>L323–326</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets.get</td></tr>
+<tr><td>_cells</td><td>FieldDeclaration</td><td>L338–338</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt; Drilling.Common.Recipe.CRecipeCellPatternCatalog._cells</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L339–343</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog.CRecipeCellPatternCatalog(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;, int)</td></tr>
+<tr><td>Count</td><td>PropertyDeclaration</td><td>L345–345</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.Count</td></tr>
+<tr><td>get_Count</td><td>GetAccessorDeclaration</td><td>L345–345</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.Count.get</td></tr>
+<tr><td>CellCount</td><td>PropertyDeclaration</td><td>L346–346</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.CellCount</td></tr>
+<tr><td>Cells</td><td>PropertyDeclaration</td><td>L347–347</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt; Drilling.Common.Recipe.CRecipeCellPatternCatalog.Cells</td></tr>
+<tr><td>Create</td><td>MethodDeclaration</td><td>L349–373</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog Drilling.Common.Recipe.CRecipeCellPatternCatalog.Create(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION&gt;)</td></tr>
+<tr><td>GetCell</td><td>MethodDeclaration</td><td>L375–375</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetCell(int)</td></tr>
+<tr><td>GetShotCenter</td><td>MethodDeclaration</td><td>L376–380</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(int)</td></tr>
+<tr><td>GetShotCenter</td><td>MethodDeclaration</td><td>L382–390</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY, int)</td></tr>
+<tr><td>Resolve</td><td>MethodDeclaration</td><td>L392–420</td><td>(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex) Drilling.Common.Recipe.CRecipeCellPatternCatalog.Resolve(int)</td></tr>
+<tr><td>MaximumCellModelTypeCount</td><td>FieldDeclaration</td><td>L427–427</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.MaximumCellModelTypeCount</td></tr>
+<tr><td>ReadModelTypeCount</td><td>MethodDeclaration</td><td>L428–431</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadModelTypeCount(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ReadCellModelType</td><td>MethodDeclaration</td><td>L433–437</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadCellModelType(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int)</td></tr>
+<tr><td>ReadForCell</td><td>MethodDeclaration</td><td>L439–442</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForCell(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>ReadPatternForCell</td><td>MethodDeclaration</td><td>L444–447</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForCell(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>ReadForModel</td><td>MethodDeclaration</td><td>L449–453</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>ReadPatternForModel</td><td>MethodDeclaration</td><td>L455–465</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>ReadInt</td><td>MethodDeclaration</td><td>L467–488</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[])</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L7">FieldDeclaration <code>MinCellCount</code> · L7–7</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L7-L7">Drilling.Common/Recipe/CCellPatternCalculator.cs:7–7</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MinCellCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>7</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MinCellCount = 1</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L8">FieldDeclaration <code>MaxTotalShotGroupCount</code> · L8–8</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L8-L8">Drilling.Common/Recipe/CCellPatternCalculator.cs:8–8</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaxTotalShotGroupCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>8</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaxTotalShotGroupCount = 500_000</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L9">FieldDeclaration <code>MaxGroupCountPerCell</code> · L9–9</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L9-L9">Drilling.Common/Recipe/CCellPatternCalculator.cs:9–9</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaxGroupCountPerCell</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>9</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaxGroupCountPerCell = MaxTotalShotGroupCount</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>MaximumPreviewPointsPerCell</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L12-L12">Drilling.Common/Recipe/CCellPatternCalculator.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.MaximumPreviewPointsPerCell</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaximumPreviewPointsPerCell = 6_000</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>MinimumPreviewPointSize</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L13-L13">Drilling.Common/Recipe/CCellPatternCalculator.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.MinimumPreviewPointSize</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MinimumPreviewPointSize = 2.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>MaximumPreviewPointSize</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L14-L14">Drilling.Common/Recipe/CCellPatternCalculator.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.MaximumPreviewPointSize</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaximumPreviewPointSize = 8.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">MethodDeclaration <code>IsSupportedSplitBeamCount</code> · L15–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L15-L18">Drilling.Common/Recipe/CCellPatternCalculator.cs:15–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.IsSupportedSplitBeamCount(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>splitBeamCount</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L93-L93">Drilling.Common/Recipe/CCellPatternCalculator.cs:93–93</a></td><td>IsSupportedSplitBeamCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L935-L935">Drilling.Common/Review/CReviewManager.cs:935–935</a></td><td>CCellPatternCalculator.IsSupportedSplitBeamCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5985-L5985">Drilling.UI/Menu/Menus/CMenuCorrection.cs:5985–5985</a></td><td>CCellPatternCalculator.IsSupportedSplitBeamCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L561-L561">Drilling.UI/Menu/Menus/CMenuReview.cs:561–561</a></td><td>CCellPatternCalculator.IsSupportedSplitBeamCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L74-L74">Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:74–74</a></td><td>CCellPatternCalculator.IsSupportedSplitBeamCount</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return splitBeamCount is 1 or 4;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">MethodDeclaration <code>CalculatePreviewPointSize</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L20-L20">Drilling.Common/Recipe/CCellPatternCalculator.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewPointSize(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>layout</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td><td>None</td><td>False /</td></tr>
+<tr><td>scale</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L452-L452">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:452–452</a></td><td>CCellPatternCalculator.CalculatePreviewPointSize</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>20</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(layout.GroupPitchMillimeters * scale, MinimumPreviewPointSize, MaximumPreviewPointSize)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">MethodDeclaration <code>CalculatePreviewSampleStep</code> · L21–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L21-L27">Drilling.Common/Recipe/CCellPatternCalculator.cs:21–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewSampleStep(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>layout</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td><td>None</td><td>False /</td></tr>
+<tr><td>scale</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L471-L471">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:471–471</a></td><td>CCellPatternCalculator.CalculatePreviewSampleStep</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>24</td><td>Math.Ceiling</td><td>resolved</td><td>double System.Math.Ceiling(double)</td></tr>
+<tr><td>24</td><td>Math.Sqrt</td><td>resolved</td><td>double System.Math.Sqrt(double)</td></tr>
+<tr><td>25</td><td>Math.Ceiling</td><td>resolved</td><td>double System.Math.Ceiling(double)</td></tr>
+<tr><td>25</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>26</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>26</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>local-declaration</td><td>지역 변수를 선언합니다: var total = (long)layout.GroupCountX * layout.GroupCountY;</td></tr>
+<tr><td>23</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: total = (long)layout.GroupCountX * layout.GroupCountY</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell))</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(total / (double)MaximumPreviewPointsPerCell)</td></tr>
+<tr><td>24</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: total &lt;= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell))</td></tr>
+<tr><td>24</td><td>local-declaration</td><td>지역 변수를 선언합니다: var countStep = total &lt;= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell));</td></tr>
+<tr><td>24</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: countStep = total &lt;= MaximumPreviewPointsPerCell ? 1 : (int)Math.Ceiling(Math.Sqrt(total / (double)MaximumPreviewPointsPerCell))</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale))</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.000001, layout.GroupPitchMillimeters * scale)</td></tr>
+<tr><td>25</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: layout.GroupPitchMillimeters * scale &gt;= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale))</td></tr>
+<tr><td>25</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pixelStep = layout.GroupPitchMillimeters * scale &gt;= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale));</td></tr>
+<tr><td>25</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pixelStep = layout.GroupPitchMillimeters * scale &gt;= 1.0 ? 1 : (int)Math.Ceiling(1.0 / Math.Max(0.000001, layout.GroupPitchMillimeters * scale))</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Math.Max(countStep, pixelStep))</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(countStep, pixelStep)</td></tr>
+<tr><td>26</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Max(1, Math.Max(countStep, pixelStep));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">MethodDeclaration <code>CalculatePreviewBeamHalfSpan</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L29-L29">Drilling.Common/Recipe/CCellPatternCalculator.cs:29–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.CCellPatternCalculator.CalculatePreviewBeamHalfSpan(Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>layout</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td><td>None</td><td>False /</td></tr>
+<tr><td>splitBeamCount</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L453-L453">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:453–453</a></td><td>CCellPatternCalculator.CalculatePreviewBeamHalfSpan</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>29</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, layout.BeamHalfSpanMillimeters)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">MethodDeclaration <code>TryParseCellCount</code> · L30–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L30-L33">Drilling.Common/Recipe/CCellPatternCalculator.cs:30–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, out int, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string?</td><td>None</td><td>False /</td></tr>
+<tr><td>cellCount</td><td>int</td><td>Out</td><td>False /</td></tr>
+<tr><td>validationMessage</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L100-L100">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:100–100</a></td><td>CCellPatternCalculator.TryParseCellCount</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>TryParseCellCount</td><td>resolved</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, int, int?, out int, out string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:35</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseCellCount(text, MinCellCount, null, out cellCount, out validationMessage)</td></tr>
+<tr><td>32</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return TryParseCellCount(text, MinCellCount, null, out cellCount, out validationMessage);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">MethodDeclaration <code>TryParseCellCount</code> · L35–63</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L35-L63">Drilling.Common/Recipe/CCellPatternCalculator.cs:35–63</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.TryParseCellCount(string?, int, int?, out int, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string?</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>maximum</td><td>int?</td><td>None</td><td>False /</td></tr>
+<tr><td>cellCount</td><td>int</td><td>Out</td><td>False /</td></tr>
+<tr><td>validationMessage</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L32-L32">Drilling.Common/Recipe/CCellPatternCalculator.cs:32–32</a></td><td>TryParseCellCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1219-L1219">Drilling.Common/Review/CReviewManager.cs:1219–1219</a></td><td>CCellPatternCalculator.TryParseCellCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L676-L676">Drilling.File/JHMI/CJhmiRecipeFile.cs:676–676</a></td><td>CCellPatternCalculator.TryParseCellCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L120-L125">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:120–125</a></td><td>CCellPatternCalculator.TryParseCellCount</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>37</td><td>.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>40</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>42</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>46</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>46</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>46</td><td>Math.Truncate</td><td>resolved</td><td>double System.Math.Truncate(double)</td></tr>
+<tr><td>52</td><td>FormatCurrentValue</td><td>resolved</td><td>string Drilling.Common.Recipe.CCellPatternCalculator.FormatCurrentValue(string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:271</td></tr>
+<tr><td>52</td><td>FormatCurrentValue</td><td>resolved</td><td>string Drilling.Common.Recipe.CCellPatternCalculator.FormatCurrentValue(string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:271</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim()</td></tr>
+<tr><td>37</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = text?.Trim() ?? &quot;&quot;;</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = text?.Trim() ?? &quot;&quot;</td></tr>
+<tr><td>38</td><td>assignment</td><td>값을 대상에 대입합니다: cellCount = 0</td></tr>
+<tr><td>39</td><td>assignment</td><td>값을 대상에 대입합니다: validationMessage = &quot;&quot;</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(MinCellCount, minimum)</td></tr>
+<tr><td>40</td><td>local-declaration</td><td>지역 변수를 선언합니다: var effectiveMinimum = Math.Max(MinCellCount, minimum);</td></tr>
+<tr><td>40</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: effectiveMinimum = Math.Max(MinCellCount, minimum)</td></tr>
+<tr><td>41</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: maximum is { } value &amp;&amp; value &gt;= effectiveMinimum ? value : (int? )null</td></tr>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var effectiveMaximum = maximum is { } value &amp;&amp; value &gt;= effectiveMinimum ? value : (int? )null;</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: effectiveMaximum = maximum is { } value &amp;&amp; value &gt;= effectiveMinimum ? value : (int? )null</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue)</td></tr>
+<tr><td>42</td><td>if</td><td>조건에 따라 분기합니다: if (int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue))</td></tr>
+<tr><td>44</td><td>assignment</td><td>값을 대상에 대입합니다: cellCount = intValue</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(doubleValue)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(doubleValue)</td></tr>
+<tr><td>46</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>46</td><td>if</td><td>조건에 따라 분기합니다: if (double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) &amp;&amp; double.IsFinite(doubleValue) &amp;&amp; doubleValue &gt;= int.MinValue &amp;&amp; doubleValue &lt;= int.MaxValue &amp;&amp; doubleValue == Math.Trun…)</td></tr>
+<tr><td>48</td><td>assignment</td><td>값을 대상에 대입합니다: cellCount = checked((int)doubleValue)</td></tr>
+<tr><td>50</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: validationMessage = effectiveMaximum.HasValue ? $&quot;MAX_CELL_NUMBER must be an integer between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {FormatCurrentValue(normalized)}&quot; : $&quot;MAX_CELL_NUMBER must be an integer</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCurrentValue(normalized)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCurrentValue(normalized)</td></tr>
+<tr><td>52</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: effectiveMaximum.HasValue ? $&quot;MAX_CELL_NUMBER must be an integer between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {FormatCurrentValue(normalized)}&quot; : $&quot;MAX_CELL_NUMBER must be an integer greater than or equa</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>56</td><td>if</td><td>조건에 따라 분기합니다: if (cellCount &lt; effectiveMinimum || effectiveMaximum.HasValue &amp;&amp; cellCount &gt; effectiveMaximum.Value)</td></tr>
+<tr><td>58</td><td>assignment</td><td>값을 대상에 대입합니다: validationMessage = effectiveMaximum.HasValue ? $&quot;MAX_CELL_NUMBER must be between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {cellCount}&quot; : $&quot;MAX_CELL_NUMBER must be greater than or equal to {effectiveMinimum}</td></tr>
+<tr><td>58</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: effectiveMaximum.HasValue ? $&quot;MAX_CELL_NUMBER must be between {effectiveMinimum} and {effectiveMaximum.Value}. Current value: {cellCount}&quot; : $&quot;MAX_CELL_NUMBER must be greater than or equal to {effectiveMinimum}. Current value: {ce</td></tr>
+<tr><td>59</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>62</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryParseCellCount&quot;]
+ N0[&quot;L42 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L46 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L46 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L50 else&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L56 if&quot;]
+ M --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L65">MethodDeclaration <code>Calculate</code> · L65–65</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65">Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>input</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L356-L356">Drilling.Common/Recipe/CCellPatternCalculator.cs:356–356</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L234-L246">Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:234–246</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L154-L154">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:154–154</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1499-L1509">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1499–1509</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2855-L2865">Drilling.UI/Menu/Menus/CMenuRecipe.cs:2855–2865</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3225-L3235">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3225–3235</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>65</td><td>Calculate</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool) · Drilling.Common/Recipe/CCellPatternCalculator.cs:66</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Calculate(input, includeShotCenters: true)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L66">MethodDeclaration <code>Calculate</code> · L66–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L66-L222">Drilling.Common/Recipe/CCellPatternCalculator.cs:66–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>input</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>includeShotCenters</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65">Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65</a></td><td>Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L323-L323">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:323–323</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L174-L174">Drilling.Common/Review/CReviewManager.cs:174–174</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L316-L329">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:316–329</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1025-L1025">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1025–1025</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4631-L4632">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4631–4632</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1866-L1866">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1866–1866</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2688-L2688">Drilling.UI/Menu/Menus/CMenuRecipe.cs:2688–2688</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L307-L307">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:307–307</a></td><td>CCellPatternCalculator.Calculate</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>70</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>75</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>80</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>85</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>90</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>93</td><td>IsSupportedSplitBeamCount</td><td>resolved</td><td>bool Drilling.Common.Recipe.CCellPatternCalculator.IsSupportedSplitBeamCount(int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:15</td></tr>
+<tr><td>95</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>110</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>126</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>144</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>145</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>146</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>148</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>163</td><td>new ST_CELL_PATTERN_LAYOUT</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ST_CELL_PATTERN_LAYOUT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER&gt;, int, int, int, int, double, double, string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:291</td></tr>
+<tr><td>178</td><td>new List&lt;ST_SHOT_GROUP_CENTER&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER&gt;.List(int)</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>190</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>192</td><td>Invalid</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:250</td></tr>
+<tr><td>205</td><td>.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER&gt;.Add(Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER)</td></tr>
+<tr><td>205</td><td>new ST_SHOT_GROUP_CENTER</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER.ST_SHOT_GROUP_CENTER(int, int, int, int, int, int, double, double) · Drilling.Common/Recipe/CCellPatternCalculator.cs:290</td></tr>
+<tr><td>209</td><td>new ST_CELL_PATTERN_LAYOUT</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ST_CELL_PATTERN_LAYOUT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER&gt;, int, int, int, int, double, double, string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:291</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>68</td><td>if</td><td>조건에 따라 분기합니다: if (input.CellNo &lt;= 0)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid(&quot;Cell number must be greater than zero.&quot;)</td></tr>
+<tr><td>70</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid(&quot;Cell number must be greater than zero.&quot;);</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.FirstTargetX)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.FirstTargetY)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.RotationDegrees)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.PixelSizeMillimeters)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.OriginX)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(input.OriginY)</td></tr>
+<tr><td>73</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(input.FirstTargetX) || !double.IsFinite(input.FirstTargetY) || !double.IsFinite(input.RotationDegrees) || !double.IsFinite(input.PixelSizeMillimeters) || !double.IsFinite(input.OriginX) || !double.IsFini…)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($&quot;Cell{input.CellNo}: Shot group coordinates must be finite values.&quot;)</td></tr>
+<tr><td>75</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid($&quot;Cell{input.CellNo}: Shot group coordinates must be finite values.&quot;);</td></tr>
+<tr><td>78</td><td>if</td><td>조건에 따라 분기합니다: if (input.PixelSizeMillimeters &lt;= 0.0)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($&quot;Cell{input.CellNo}: Pixel Size must be greater than zero.&quot;)</td></tr>
+<tr><td>80</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid($&quot;Cell{input.CellNo}: Pixel Size must be greater than zero.&quot;);</td></tr>
+<tr><td>83</td><td>if</td><td>조건에 따라 분기합니다: if (input.PixelCountX &lt;= 0 || input.PixelCountY &lt;= 0)</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($&quot;Cell{input.CellNo}: Pixel Count X/Y must be greater than zero.&quot;)</td></tr>
+<tr><td>85</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid($&quot;Cell{input.CellNo}: Pixel Count X/Y must be greater than zero.&quot;);</td></tr>
+<tr><td>88</td><td>if</td><td>조건에 따라 분기합니다: if (input.ProcessPitch &lt;= 0)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($&quot;Cell{input.CellNo}: Process Pitch must be greater than zero.&quot;)</td></tr>
+<tr><td>90</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid($&quot;Cell{input.CellNo}: Process Pitch must be greater than zero.&quot;);</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSupportedSplitBeamCount(input.SplitBeamCount)</td></tr>
+<tr><td>93</td><td>if</td><td>조건에 따라 분기합니다: if (!IsSupportedSplitBeamCount(input.SplitBeamCount))</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid($&quot;Cell{input.CellNo}: DOE Beam Count must be either 1 or 4.&quot;)</td></tr>
+<tr><td>95</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid($&quot;Cell{input.CellNo}: DOE Beam Count must be either 1 or 4.&quot;);</td></tr>
+<tr><td>98</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targetCountX = input.PixelCountX / input.ProcessPitch;</td></tr>
+<tr><td>98</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targetCountX = input.PixelCountX / input.ProcessPitch</td></tr>
+<tr><td>99</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targetCountY = input.PixelCountY / input.ProcessPitch;</td></tr>
+<tr><td>99</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targetCountY = input.PixelCountY / input.ProcessPitch</td></tr>
+<tr><td>100</td><td>local-declaration</td><td>지역 변수를 선언합니다: var groupCountX = targetCountX;</td></tr>
+<tr><td>100</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: groupCountX = targetCountX</td></tr>
+<tr><td>101</td><td>local-declaration</td><td>지역 변수를 선언합니다: var groupCountY = targetCountY;</td></tr>
+<tr><td>101</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: groupCountY = targetCountY</td></tr>
+<tr><td>102</td><td>local-declaration</td><td>지역 변수를 선언합니다: var processedTargetCountX = targetCountX;</td></tr>
+<tr><td>102</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: processedTargetCountX = targetCountX</td></tr>
+<tr><td>103</td><td>local-declaration</td><td>지역 변수를 선언합니다: var processedTargetCountY = targetCountY;</td></tr>
+<tr><td>103</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: processedTargetCountY = targetCountY</td></tr>
+<tr><td>104</td><td>local-declaration</td><td>지역 변수를 선언합니다: var processedPixelCountX = targetCountX * input.ProcessPitch;</td></tr>
+<tr><td>104</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: processedPixelCountX = targetCountX * input.ProcessPitch</td></tr>
+<tr><td>105</td><td>local-declaration</td><td>지역 변수를 선언합니다: var processedPixelCountY = targetCountY * input.ProcessPitch;</td></tr>
+<tr><td>105</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: processedPixelCountY = targetCountY * input.ProcessPitch</td></tr>
+<tr><td>106</td><td>local-declaration</td><td>지역 변수를 선언합니다: var excludedTargetCountX = input.PixelCountX - processedPixelCountX;</td></tr>
+<tr><td>106</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: excludedTargetCountX = input.PixelCountX - processedPixelCountX</td></tr>
+<tr><td>107</td><td>local-declaration</td><td>지역 변수를 선언합니다: var excludedTargetCountY = input.PixelCountY - processedPixelCountY;</td></tr>
+<tr><td>107</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: excludedTargetCountY = input.PixelCountY - processedPixelCountY</td></tr>
+<tr><td>108</td><td>if</td><td>조건에 따라 분기합니다: if (groupCountX &lt;= 0 || groupCountY &lt;= 0)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $&quot;Cell{input.CellNo}: Pixel Count {input.PixelCountX} x {input.PixelCountY} does not contain a process pitch interval {input.ProcessPitch}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTarget…</td></tr>
+<tr><td>110</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid( $&quot;Cell{input.CellNo}: Pixel Count {input.PixelCountX} x {input.PixelCountY} does not contain a process pitch interval {input.ProcessPitch}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCou</td></tr>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var groupCount = (long)groupCountX * groupCountY;</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: groupCount = (long)groupCountX * groupCountY</td></tr>
+<tr><td>124</td><td>if</td><td>조건에 따라 분기합니다: if (groupCount &gt; MaxGroupCountPerCell)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $&quot;Cell{input.CellNo}: Shot Group Count {groupCount:N0} exceeds the limit &quot; + $&quot;{MaxGroupCountPerCell:N0}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, exc…</td></tr>
+<tr><td>126</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid( $&quot;Cell{input.CellNo}: Shot Group Count {groupCount:N0} exceeds the limit &quot; + $&quot;{MaxGroupCountPerCell:N0}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, exclud</td></tr>
+<tr><td>139</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targetPitchMillimeters = input.PixelSizeMillimeters * input.ProcessPitch;</td></tr>
+<tr><td>139</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targetPitchMillimeters = input.PixelSizeMillimeters * input.ProcessPitch</td></tr>
+<tr><td>140</td><td>local-declaration</td><td>지역 변수를 선언합니다: var groupPitchMillimeters = targetPitchMillimeters;</td></tr>
+<tr><td>140</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: groupPitchMillimeters = targetPitchMillimeters</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var beamPitchMillimeters = targetPitchMillimeters / input.SplitBeamCount;</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: beamPitchMillimeters = targetPitchMillimeters / input.SplitBeamCount</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var beamHalfSpanMillimeters = beamPitchMillimeters * (input.SplitBeamCount - 1) / 2.0;</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: beamHalfSpanMillimeters = beamPitchMillimeters * (input.SplitBeamCount - 1) / 2.0</td></tr>
+<tr><td>143</td><td>local-declaration</td><td>지역 변수를 선언합니다: var radians = input.RotationDegrees * Math.PI / 180.0;</td></tr>
+<tr><td>143</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: radians = input.RotationDegrees * Math.PI / 180.0</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>144</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cos = Math.Cos(radians);</td></tr>
+<tr><td>144</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cos = Math.Cos(radians)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>145</td><td>local-declaration</td><td>지역 변수를 선언합니다: var sin = Math.Sin(radians);</td></tr>
+<tr><td>145</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: sin = Math.Sin(radians)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(targetPitchMillimeters)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(groupPitchMillimeters)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamPitchMillimeters)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamHalfSpanMillimeters)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(radians)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(cos)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(sin)</td></tr>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(targetPitchMillimeters) || !double.IsFinite(groupPitchMillimeters) || !double.IsFinite(beamPitchMillimeters) || !double.IsFinite(beamHalfSpanMillimeters) || !double.IsFinite(radians) || !double.IsFinite(…)</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $&quot;Cell{input.CellNo}: Shot group pitch or rotation calculation produced a non-finite value.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, excludedTargetCou…</td></tr>
+<tr><td>148</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid( $&quot;Cell{input.CellNo}: Shot group pitch or rotation calculation produced a non-finite value.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTargetCountY, excludedTargetCountX</td></tr>
+<tr><td>161</td><td>if</td><td>조건에 따라 분기합니다: if (!includeShotCenters)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, &quot;&quot;) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTa…</td></tr>
+<tr><td>163</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, &quot;&quot;) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTarge</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX</td></tr>
+<tr><td>166</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX</td></tr>
+<tr><td>168</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY</td></tr>
+<tr><td>169</td><td>assignment</td><td>값을 대상에 대입합니다: PixelCountX = input.PixelCountX</td></tr>
+<tr><td>170</td><td>assignment</td><td>값을 대상에 대입합니다: PixelCountY = input.PixelCountY</td></tr>
+<tr><td>171</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedPixelCountX = processedPixelCountX</td></tr>
+<tr><td>172</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedPixelCountY = processedPixelCountY</td></tr>
+<tr><td>173</td><td>assignment</td><td>값을 대상에 대입합니다: BeamPitchMillimeters = beamPitchMillimeters</td></tr>
+<tr><td>174</td><td>assignment</td><td>값을 대상에 대입합니다: BeamHalfSpanMillimeters = beamHalfSpanMillimeters</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_SHOT_GROUP_CENTER&gt;((int)groupCount)</td></tr>
+<tr><td>178</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: includeShotCenters ? new List&lt;ST_SHOT_GROUP_CENTER&gt;((int)groupCount) : null</td></tr>
+<tr><td>178</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shotCenters = includeShotCenters ? new List&lt;ST_SHOT_GROUP_CENTER&gt;((int)groupCount) : null;</td></tr>
+<tr><td>178</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shotCenters = includeShotCenters ? new List&lt;ST_SHOT_GROUP_CENTER&gt;((int)groupCount) : null</td></tr>
+<tr><td>179</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cellShotNo = 1;</td></tr>
+<tr><td>179</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cellShotNo = 1</td></tr>
+<tr><td>180</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = 0</td></tr>
+<tr><td>180</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var row = 0; row &lt; groupCountY; row++)</td></tr>
+<tr><td>182</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: column = 0</td></tr>
+<tr><td>182</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var column = 0; column &lt; groupCountX; column++)</td></tr>
+<tr><td>184</td><td>local-declaration</td><td>지역 변수를 선언합니다: var firstTargetColumn = column * input.ProcessPitch;</td></tr>
+<tr><td>184</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: firstTargetColumn = column * input.ProcessPitch</td></tr>
+<tr><td>185</td><td>local-declaration</td><td>지역 변수를 선언합니다: var firstTargetRow = row * input.ProcessPitch;</td></tr>
+<tr><td>185</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: firstTargetRow = row * input.ProcessPitch</td></tr>
+<tr><td>186</td><td>local-declaration</td><td>지역 변수를 선언합니다: var localX = (column * targetPitchMillimeters) + beamHalfSpanMillimeters;</td></tr>
+<tr><td>186</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: localX = (column * targetPitchMillimeters) + beamHalfSpanMillimeters</td></tr>
+<tr><td>187</td><td>local-declaration</td><td>지역 변수를 선언합니다: var localY = (row * targetPitchMillimeters) + beamHalfSpanMillimeters;</td></tr>
+<tr><td>187</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: localY = (row * targetPitchMillimeters) + beamHalfSpanMillimeters</td></tr>
+<tr><td>188</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin);</td></tr>
+<tr><td>188</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin)</td></tr>
+<tr><td>189</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos);</td></tr>
+<tr><td>189</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = input.OriginY + input.FirstTargetY + (localX * sin) + (localY * cos)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(localX)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(localY)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x)</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y)</td></tr>
+<tr><td>190</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(localX) || !double.IsFinite(localY) || !double.IsFinite(x) || !double.IsFinite(y))</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Invalid( $&quot;Cell{input.CellNo}: Shot group coordinate calculation produced a non-finite value &quot; + $&quot;at column {column}, row {row}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTa…</td></tr>
+<tr><td>192</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Invalid( $&quot;Cell{input.CellNo}: Shot group coordinate calculation produced a non-finite value &quot; + $&quot;at column {column}, row {row}.&quot;, targetCountX, targetCountY, groupCountX, groupCountY, processedTargetCountX, processedTarge</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Add(new ST_SHOT_GROUP_CENTER(input.CellNo, cellShotNo++, column, row, firstTargetColumn, firstTargetRow, x, y))</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SHOT_GROUP_CENTER(input.CellNo, cellShotNo++, column, row, firstTargetColumn, firstTargetRow, x, y)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT(shotCenters ?? [], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, &quot;&quot;) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCount…</td></tr>
+<tr><td>209</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT(shotCenters ?? [], targetCountX, targetCountY, groupCountX, groupCountY, targetPitchMillimeters, groupPitchMillimeters, &quot;&quot;) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY =</td></tr>
+<tr><td>211</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX</td></tr>
+<tr><td>212</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY</td></tr>
+<tr><td>213</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX</td></tr>
+<tr><td>214</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY</td></tr>
+<tr><td>215</td><td>assignment</td><td>값을 대상에 대입합니다: PixelCountX = input.PixelCountX</td></tr>
+<tr><td>216</td><td>assignment</td><td>값을 대상에 대입합니다: PixelCountY = input.PixelCountY</td></tr>
+<tr><td>217</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedPixelCountX = processedPixelCountX</td></tr>
+<tr><td>218</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedPixelCountY = processedPixelCountY</td></tr>
+<tr><td>219</td><td>assignment</td><td>값을 대상에 대입합니다: BeamPitchMillimeters = beamPitchMillimeters</td></tr>
+<tr><td>220</td><td>assignment</td><td>값을 대상에 대입합니다: BeamHalfSpanMillimeters = beamHalfSpanMillimeters</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Calculate&quot;]
+ N0[&quot;L68 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L73 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L78 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L83 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L88 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L93 if&quot;]
+ M --&gt;|포함| N5
+ N6[&quot;L108 if&quot;]
+ M --&gt;|포함| N6
+ N7[&quot;L124 if&quot;]
+ M --&gt;|포함| N7
+ N8[&quot;L146 if&quot;]
+ M --&gt;|포함| N8
+ N9[&quot;L161 if&quot;]
+ M --&gt;|포함| N9
+ N10[&quot;L180 for&quot;]
+ M --&gt;|포함| N10
+ N11[&quot;L182 for&quot;]
+ N10 --&gt;|포함| N11
+ N12[&quot;L190 if&quot;]
+ N11 --&gt;|포함| N12</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>CalculateShotCenter</code> · L224–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L224-L248">Drilling.Common/Recipe/CCellPatternCalculator.cs:224–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>input</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>column</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>row</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>layout</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L389-L389">Drilling.Common/Recipe/CCellPatternCalculator.cs:389–389</a></td><td>CCellPatternCalculator.CalculateShotCenter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L329-L329">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:329–329</a></td><td>CCellPatternCalculator.CalculateShotCenter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L478-L482">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:478–482</a></td><td>CCellPatternCalculator.CalculateShotCenter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>226</td><td>ArgumentNullException.ThrowIfNull</td><td>resolved</td><td>void System.ArgumentNullException.ThrowIfNull(object?, string?)</td></tr>
+<tr><td>227</td><td>ArgumentNullException.ThrowIfNull</td><td>resolved</td><td>void System.ArgumentNullException.ThrowIfNull(object?, string?)</td></tr>
+<tr><td>230</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, string?)</td></tr>
+<tr><td>230</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>236</td><td>Math.Cos</td><td>resolved</td><td>double System.Math.Cos(double)</td></tr>
+<tr><td>237</td><td>Math.Sin</td><td>resolved</td><td>double System.Math.Sin(double)</td></tr>
+<tr><td>238</td><td>new ST_SHOT_GROUP_CENTER</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER.ST_SHOT_GROUP_CENTER(int, int, int, int, int, int, double, double) · Drilling.Common/Recipe/CCellPatternCalculator.cs:290</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(input)</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(layout)</td></tr>
+<tr><td>228</td><td>if</td><td>조건에 따라 분기합니다: if (column &lt; 0 || column &gt;= layout.GroupCountX || row &lt; 0 || row &gt;= layout.GroupCountY)</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(column), &quot;Shot group row or column is outside the layout.&quot;)</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(column)</td></tr>
+<tr><td>230</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(column), &quot;Shot group row or column is outside the layout.&quot;);</td></tr>
+<tr><td>233</td><td>local-declaration</td><td>지역 변수를 선언합니다: var radians = input.RotationDegrees * Math.PI / 180.0;</td></tr>
+<tr><td>233</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: radians = input.RotationDegrees * Math.PI / 180.0</td></tr>
+<tr><td>234</td><td>local-declaration</td><td>지역 변수를 선언합니다: var localX = (column * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters;</td></tr>
+<tr><td>234</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: localX = (column * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters</td></tr>
+<tr><td>235</td><td>local-declaration</td><td>지역 변수를 선언합니다: var localY = (row * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters;</td></tr>
+<tr><td>235</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: localY = (row * layout.TargetPitchMillimeters) + layout.BeamHalfSpanMillimeters</td></tr>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians)</td></tr>
+<tr><td>236</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cos = Math.Cos(radians);</td></tr>
+<tr><td>236</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cos = Math.Cos(radians)</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians)</td></tr>
+<tr><td>237</td><td>local-declaration</td><td>지역 변수를 선언합니다: var sin = Math.Sin(radians);</td></tr>
+<tr><td>237</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: sin = Math.Sin(radians)</td></tr>
+<tr><td>238</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SHOT_GROUP_CENTER( input.CellNo, (row * layout.GroupCountX) + column + 1, column, row, column * input.ProcessPitch, row * input.ProcessPitch, input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin), i…</td></tr>
+<tr><td>238</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_SHOT_GROUP_CENTER( input.CellNo, (row * layout.GroupCountX) + column + 1, column, row, column * input.ProcessPitch, row * input.ProcessPitch, input.OriginX + input.FirstTargetX + (localX * cos) - (localY * sin), inpu</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CalculateShotCenter&quot;]
+ N0[&quot;L228 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">MethodDeclaration <code>Invalid</code> · L250–269</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L250-L269">Drilling.Common/Recipe/CCellPatternCalculator.cs:250–269</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Invalid(string, int, int, int, int, int, int, int, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>targetCountX</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>targetCountY</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>groupCountX</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>groupCountY</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>processedTargetCountX</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>processedTargetCountY</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>excludedTargetCountX</td><td>int</td><td>None</td><td>True / 0</td></tr>
+<tr><td>excludedTargetCountY</td><td>int</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L70-L70">Drilling.Common/Recipe/CCellPatternCalculator.cs:70–70</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L75-L75">Drilling.Common/Recipe/CCellPatternCalculator.cs:75–75</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L80-L80">Drilling.Common/Recipe/CCellPatternCalculator.cs:80–80</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L85-L85">Drilling.Common/Recipe/CCellPatternCalculator.cs:85–85</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L90-L90">Drilling.Common/Recipe/CCellPatternCalculator.cs:90–90</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L95-L95">Drilling.Common/Recipe/CCellPatternCalculator.cs:95–95</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L110-L120">Drilling.Common/Recipe/CCellPatternCalculator.cs:110–120</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L126-L136">Drilling.Common/Recipe/CCellPatternCalculator.cs:126–136</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L148-L158">Drilling.Common/Recipe/CCellPatternCalculator.cs:148–158</a></td><td>Invalid</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L192-L202">Drilling.Common/Recipe/CCellPatternCalculator.cs:192–202</a></td><td>Invalid</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>262</td><td>new ST_CELL_PATTERN_LAYOUT</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ST_CELL_PATTERN_LAYOUT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER&gt;, int, int, int, int, double, double, string) · Drilling.Common/Recipe/CCellPatternCalculator.cs:291</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, 0.0, 0.0, message) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTargetCountY, ExcludedTargetCountX…</td></tr>
+<tr><td>262</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PATTERN_LAYOUT([], targetCountX, targetCountY, groupCountX, groupCountY, 0.0, 0.0, message) { ProcessedTargetCountX = processedTargetCountX, ProcessedTargetCountY = processedTargetCountY, ExcludedTargetCountX =</td></tr>
+<tr><td>264</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountX = processedTargetCountX</td></tr>
+<tr><td>265</td><td>assignment</td><td>값을 대상에 대입합니다: ProcessedTargetCountY = processedTargetCountY</td></tr>
+<tr><td>266</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountX = excludedTargetCountX</td></tr>
+<tr><td>267</td><td>assignment</td><td>값을 대상에 대입합니다: ExcludedTargetCountY = excludedTargetCountY</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L271">MethodDeclaration <code>FormatCurrentValue</code> · L271–274</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L271-L274">Drilling.Common/Recipe/CCellPatternCalculator.cs:271–274</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Recipe.CCellPatternCalculator.FormatCurrentValue(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CCellPatternCalculator</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52">Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52</a></td><td>FormatCurrentValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52">Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52</a></td><td>FormatCurrentValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>273</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>273</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? &quot;(empty)&quot; : value</td></tr>
+<tr><td>273</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? &quot;(empty)&quot; : value;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L302">PropertyDeclaration <code>IsValid</code> · L302–308</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L302-L308">Drilling.Common/Recipe/CCellPatternCalculator.cs:302–308</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L304">GetAccessorDeclaration <code>get_IsValid</code> · L304–307</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L304-L307">Drilling.Common/Recipe/CCellPatternCalculator.cs:304–307</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.IsValid.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>306</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>306</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(ValidationMessage)</td></tr>
+<tr><td>306</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(ValidationMessage);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L310">PropertyDeclaration <code>ProcessedTargetCountX</code> · L310–310</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310">Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L310">GetAccessorDeclaration <code>get_ProcessedTargetCountX</code> · L310–310</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310">Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L310">InitAccessorDeclaration <code>set_ProcessedTargetCountX</code> · L310–310</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310">Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L311">PropertyDeclaration <code>ProcessedTargetCountY</code> · L311–311</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311">Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L311">GetAccessorDeclaration <code>get_ProcessedTargetCountY</code> · L311–311</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311">Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L311">InitAccessorDeclaration <code>set_ProcessedTargetCountY</code> · L311–311</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311">Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedTargetCountY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L312">PropertyDeclaration <code>ExcludedTargetCountX</code> · L312–312</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312">Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L312">GetAccessorDeclaration <code>get_ExcludedTargetCountX</code> · L312–312</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312">Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L312">InitAccessorDeclaration <code>set_ExcludedTargetCountX</code> · L312–312</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312">Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L313">PropertyDeclaration <code>ExcludedTargetCountY</code> · L313–313</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313">Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L313">GetAccessorDeclaration <code>get_ExcludedTargetCountY</code> · L313–313</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313">Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L313">InitAccessorDeclaration <code>set_ExcludedTargetCountY</code> · L313–313</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313">Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ExcludedTargetCountY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L314">PropertyDeclaration <code>PixelCountX</code> · L314–314</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314">Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L314">GetAccessorDeclaration <code>get_PixelCountX</code> · L314–314</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314">Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L314">InitAccessorDeclaration <code>set_PixelCountX</code> · L314–314</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314">Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L315">PropertyDeclaration <code>PixelCountY</code> · L315–315</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315">Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L315">GetAccessorDeclaration <code>get_PixelCountY</code> · L315–315</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315">Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L315">InitAccessorDeclaration <code>set_PixelCountY</code> · L315–315</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315">Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.PixelCountY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L316">PropertyDeclaration <code>ProcessedPixelCountX</code> · L316–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316">Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L316">GetAccessorDeclaration <code>get_ProcessedPixelCountX</code> · L316–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316">Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L316">InitAccessorDeclaration <code>set_ProcessedPixelCountX</code> · L316–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316">Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountX.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">PropertyDeclaration <code>ProcessedPixelCountY</code> · L317–317</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317">Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">GetAccessorDeclaration <code>get_ProcessedPixelCountY</code> · L317–317</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317">Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">InitAccessorDeclaration <code>set_ProcessedPixelCountY</code> · L317–317</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317">Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.ProcessedPixelCountY.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L318">PropertyDeclaration <code>BeamPitchMillimeters</code> · L318–318</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318">Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L318">GetAccessorDeclaration <code>get_BeamPitchMillimeters</code> · L318–318</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318">Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L318">InitAccessorDeclaration <code>set_BeamPitchMillimeters</code> · L318–318</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318">Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamPitchMillimeters.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L319">PropertyDeclaration <code>BeamHalfSpanMillimeters</code> · L319–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319">Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L319">GetAccessorDeclaration <code>get_BeamHalfSpanMillimeters</code> · L319–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319">Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L319">InitAccessorDeclaration <code>set_BeamHalfSpanMillimeters</code> · L319–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319">Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.BeamHalfSpanMillimeters.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L321">PropertyDeclaration <code>HasExcludedTargets</code> · L321–327</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L321-L327">Drilling.Common/Recipe/CCellPatternCalculator.cs:321–327</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L323">GetAccessorDeclaration <code>get_HasExcludedTargets</code> · L323–326</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L323-L326">Drilling.Common/Recipe/CCellPatternCalculator.cs:323–326</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT.HasExcludedTargets.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>325</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExcludedTargetCountX &gt; 0 || ExcludedTargetCountY &gt; 0;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L338">FieldDeclaration <code>_cells</code> · L338–338</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L338-L338">Drilling.Common/Recipe/CCellPatternCalculator.cs:338–338</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt; Drilling.Common.Recipe.CRecipeCellPatternCatalog._cells</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L339">ConstructorDeclaration <code>.ctor</code> · L339–343</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L339-L343">Drilling.Common/Recipe/CCellPatternCalculator.cs:339–343</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog.CRecipeCellPatternCatalog(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cells</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>count</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L372-L372">Drilling.Common/Recipe/CCellPatternCalculator.cs:372–372</a></td><td>new CRecipeCellPatternCatalog</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>341</td><td>assignment</td><td>값을 대상에 대입합니다: _cells = cells</td></tr>
+<tr><td>342</td><td>assignment</td><td>값을 대상에 대입합니다: Count = count</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L345">PropertyDeclaration <code>Count</code> · L345–345</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345">Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.Count</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L345">GetAccessorDeclaration <code>get_Count</code> · L345–345</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345">Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.Count.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L346">PropertyDeclaration <code>CellCount</code> · L346–346</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L346-L346">Drilling.Common/Recipe/CCellPatternCalculator.cs:346–346</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeCellPatternCatalog.CellCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L347">PropertyDeclaration <code>Cells</code> · L347–347</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L347-L347">Drilling.Common/Recipe/CCellPatternCalculator.cs:347–347</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt; Drilling.Common.Recipe.CRecipeCellPatternCatalog.Cells</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L349">MethodDeclaration <code>Create</code> · L349–373</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L349-L373">Drilling.Common/Recipe/CCellPatternCalculator.cs:349–373</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog Drilling.Common.Recipe.CRecipeCellPatternCatalog.Create(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>definitions</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L670-L670">Drilling.Common/Review/CReviewManager.cs:670–670</a></td><td>CRecipeCellPatternCatalog.Create</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>351</td><td>ArgumentNullException.ThrowIfNull</td><td>resolved</td><td>void System.ArgumentNullException.ThrowIfNull(object?, string?)</td></tr>
+<tr><td>352</td><td>new List&lt;ST_RECIPE_CELL_PATTERN_ENTRY&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;.List()</td></tr>
+<tr><td>354</td><td>definitions.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION&gt;.OrderBy&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int&gt;(System.Func&lt;Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int&gt;)</td></tr>
+<tr><td>356</td><td>CCellPatternCalculator.Calculate</td><td>resolved</td><td>Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT Drilling.Common.Recipe.CCellPatternCalculator.Calculate(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION) · Drilling.Common/Recipe/CCellPatternCalculator.cs:65</td></tr>
+<tr><td>359</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>365</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>368</td><td>cells.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;.Add(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY)</td></tr>
+<tr><td>368</td><td>new ST_RECIPE_CELL_PATTERN_ENTRY</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY.ST_RECIPE_CELL_PATTERN_ENTRY(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:330</td></tr>
+<tr><td>372</td><td>new CRecipeCellPatternCatalog</td><td>resolved</td><td>Drilling.Common.Recipe.CRecipeCellPatternCatalog.CRecipeCellPatternCatalog(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:339</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>351</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(definitions)</td></tr>
+<tr><td>352</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_RECIPE_CELL_PATTERN_ENTRY&gt;()</td></tr>
+<tr><td>352</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cells = new List&lt;ST_RECIPE_CELL_PATTERN_ENTRY&gt;();</td></tr>
+<tr><td>352</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cells = new List&lt;ST_RECIPE_CELL_PATTERN_ENTRY&gt;()</td></tr>
+<tr><td>353</td><td>local-declaration</td><td>지역 변수를 선언합니다: var totalCount = 0;</td></tr>
+<tr><td>353</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: totalCount = 0</td></tr>
+<tr><td>354</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.OrderBy(item =&gt; item.CellNo)</td></tr>
+<tr><td>354</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var definition in definitions.OrderBy(item =&gt; item.CellNo))</td></tr>
+<tr><td>356</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.Calculate(definition)</td></tr>
+<tr><td>356</td><td>local-declaration</td><td>지역 변수를 선언합니다: var layout = CCellPatternCalculator.Calculate(definition);</td></tr>
+<tr><td>356</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: layout = CCellPatternCalculator.Calculate(definition)</td></tr>
+<tr><td>357</td><td>if</td><td>조건에 따라 분기합니다: if (!layout.IsValid)</td></tr>
+<tr><td>359</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(layout.ValidationMessage)</td></tr>
+<tr><td>359</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(layout.ValidationMessage);</td></tr>
+<tr><td>362</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cellCount = checked(layout.GroupCountX * layout.GroupCountY);</td></tr>
+<tr><td>362</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cellCount = checked(layout.GroupCountX * layout.GroupCountY)</td></tr>
+<tr><td>363</td><td>if</td><td>조건에 따라 분기합니다: if (cellCount &gt; int.MaxValue - totalCount)</td></tr>
+<tr><td>365</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;Recipe Cell point count {(long)totalCount + cellCount:N0} exceeds the supported list size.&quot;)</td></tr>
+<tr><td>365</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;Recipe Cell point count {(long)totalCount + cellCount:N0} exceeds the supported list size.&quot;);</td></tr>
+<tr><td>368</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cells.Add(new ST_RECIPE_CELL_PATTERN_ENTRY(definition, layout, totalCount, cellCount))</td></tr>
+<tr><td>368</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_CELL_PATTERN_ENTRY(definition, layout, totalCount, cellCount)</td></tr>
+<tr><td>369</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: totalCount += cellCount</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeCellPatternCatalog(cells, totalCount)</td></tr>
+<tr><td>372</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new CRecipeCellPatternCatalog(cells, totalCount);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Create&quot;]
+ N0[&quot;L354 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L357 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L363 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L375">MethodDeclaration <code>GetCell</code> · L375–375</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L375-L375">Drilling.Common/Recipe/CCellPatternCalculator.cs:375–375</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetCell(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cellNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>375</td><td>_cells.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;.FirstOrDefault&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY&gt;(System.Func&lt;Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY, bool&gt;)</td></tr>
+<tr><td>375</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>375</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _cells.FirstOrDefault(cell =&gt; cell.Definition.CellNo == cellNo)</td></tr>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(cellNo))</td></tr>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(cellNo)</td></tr>
+<tr><td>375</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(cellNo))</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L376">MethodDeclaration <code>GetShotCenter</code> · L376–380</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L376-L380">Drilling.Common/Recipe/CCellPatternCalculator.cs:376–380</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>378</td><td>Resolve</td><td>resolved</td><td>(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex) Drilling.Common.Recipe.CRecipeCellPatternCatalog.Resolve(int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:392</td></tr>
+<tr><td>379</td><td>GetShotCenter</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:382</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>378</td><td>assignment</td><td>값을 대상에 대입합니다: var(cell, pointIndex) = Resolve(index)</td></tr>
+<tr><td>378</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Resolve(index)</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetShotCenter(cell, pointIndex)</td></tr>
+<tr><td>379</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return GetShotCenter(cell, pointIndex);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L382">MethodDeclaration <code>GetShotCenter</code> · L382–390</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L382-L390">Drilling.Common/Recipe/CCellPatternCalculator.cs:382–390</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CRecipeCellPatternCatalog.GetShotCenter(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cell</td><td>Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY</td><td>None</td><td>False /</td></tr>
+<tr><td>pointIndex</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L379-L379">Drilling.Common/Recipe/CCellPatternCalculator.cs:379–379</a></td><td>GetShotCenter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L682-L682">Drilling.Common/Review/CReviewManager.cs:682–682</a></td><td>CRecipeCellPatternCatalog.GetShotCenter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>386</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>386</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>389</td><td>CCellPatternCalculator.CalculateShotCenter</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER Drilling.Common.Recipe.CCellPatternCalculator.CalculateShotCenter(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, int, int, Drilling.Common.Recipe.ST_CELL_PATTERN_LAYOUT) · Drilling.Common/Recipe/CCellPatternCalculator.cs:224</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>384</td><td>if</td><td>조건에 따라 분기합니다: if ((uint)pointIndex &gt;= (uint)cell.Count)</td></tr>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(pointIndex))</td></tr>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(pointIndex)</td></tr>
+<tr><td>386</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(pointIndex));</td></tr>
+<tr><td>389</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.CalculateShotCenter(cell.Definition, pointIndex % cell.Layout.GroupCountX, pointIndex / cell.Layout.GroupCountX, cell.Layout)</td></tr>
+<tr><td>389</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCellPatternCalculator.CalculateShotCenter(cell.Definition, pointIndex % cell.Layout.GroupCountX, pointIndex / cell.Layout.GroupCountX, cell.Layout);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetShotCenter&quot;]
+ N0[&quot;L384 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L392">MethodDeclaration <code>Resolve</code> · L392–420</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L392-L420">Drilling.Common/Recipe/CCellPatternCalculator.cs:392–420</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex) Drilling.Common.Recipe.CRecipeCellPatternCatalog.Resolve(int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>(Drilling.Common.Recipe.ST_RECIPE_CELL_PATTERN_ENTRY Cell, int PointIndex)</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeCellPatternCatalog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L378-L378">Drilling.Common/Recipe/CCellPatternCalculator.cs:378–378</a></td><td>Resolve</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L894-L894">Drilling.Common/Review/CReviewManager.cs:894–894</a></td><td>catalog.Resolve</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>396</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>396</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>419</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?)</td></tr>
+<tr><td>419</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>394</td><td>if</td><td>조건에 따라 분기합니다: if ((uint)index &gt;= (uint)Count)</td></tr>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(index))</td></tr>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(index)</td></tr>
+<tr><td>396</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(index));</td></tr>
+<tr><td>399</td><td>local-declaration</td><td>지역 변수를 선언합니다: var low = 0;</td></tr>
+<tr><td>399</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: low = 0</td></tr>
+<tr><td>400</td><td>local-declaration</td><td>지역 변수를 선언합니다: var high = _cells.Count - 1;</td></tr>
+<tr><td>400</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: high = _cells.Count - 1</td></tr>
+<tr><td>401</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (low &lt;= high)</td></tr>
+<tr><td>403</td><td>local-declaration</td><td>지역 변수를 선언합니다: var middle = low + ((high - low) / 2);</td></tr>
+<tr><td>403</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: middle = low + ((high - low) / 2)</td></tr>
+<tr><td>404</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cell = _cells[middle];</td></tr>
+<tr><td>404</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cell = _cells[middle]</td></tr>
+<tr><td>405</td><td>if</td><td>조건에 따라 분기합니다: if (index &lt; cell.StartIndex)</td></tr>
+<tr><td>407</td><td>assignment</td><td>값을 대상에 대입합니다: high = middle - 1</td></tr>
+<tr><td>409</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>409</td><td>if</td><td>조건에 따라 분기합니다: if (index &gt;= cell.StartIndex + cell.Count)</td></tr>
+<tr><td>411</td><td>assignment</td><td>값을 대상에 대입합니다: low = middle + 1</td></tr>
+<tr><td>413</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>415</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (cell, index - cell.StartIndex);</td></tr>
+<tr><td>419</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(index))</td></tr>
+<tr><td>419</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(index)</td></tr>
+<tr><td>419</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(index));</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Resolve&quot;]
+ N0[&quot;L394 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L401 while&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L405 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L409 else&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L409 if&quot;]
+ N2 --&gt;|포함| N4
+ N5[&quot;L413 else&quot;]
+ N3 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L427">FieldDeclaration <code>MaximumCellModelTypeCount</code> · L427–427</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L427-L427">Drilling.Common/Recipe/CCellPatternCalculator.cs:427–427</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.MaximumCellModelTypeCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>427</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaximumCellModelTypeCount = 5</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L428">MethodDeclaration <code>ReadModelTypeCount</code> · L428–431</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L428-L431">Drilling.Common/Recipe/CCellPatternCalculator.cs:428–431</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadModelTypeCount(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L435-L435">Drilling.Common/Recipe/CCellPatternCalculator.cs:435–435</a></td><td>ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L228-L228">Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:228–228</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L656-L656">Drilling.Common/Review/CReviewManager.cs:656–656</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L113-L113">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:113–113</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L313-L313">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:313–313</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L684-L684">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:684–684</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L990-L990">Drilling.UI/Menu/Menus/CMenuCorrection.cs:990–990</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4430-L4430">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4430–4430</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L143-L143">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:143–143</a></td><td>CRecipeModelPixelCountReader.ReadModelTypeCount</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>430</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>430</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>430</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, &quot;CELL_MODEL_TYPE_COUNT&quot;), 1, MaximumCellModelTypeCount)</td></tr>
+<tr><td>430</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, &quot;CELL_MODEL_TYPE_COUNT&quot;)</td></tr>
+<tr><td>430</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(ReadInt(parameters, 1, &quot;CELL_MODEL_TYPE_COUNT&quot;), 1, MaximumCellModelTypeCount);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L433">MethodDeclaration <code>ReadCellModelType</code> · L433–437</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L433-L437">Drilling.Common/Recipe/CCellPatternCalculator.cs:433–437</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadCellModelType(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cellNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>modelTypeCount</td><td>int</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441">Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441</a></td><td>ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446">Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446</a></td><td>ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L232-L232">Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:232–232</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L258-L258">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:258–258</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L664-L664">Drilling.Common/Review/CReviewManager.cs:664–664</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L152-L152">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:152–152</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L314-L314">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:314–314</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L694-L694">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:694–694</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1023-L1023">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1023–1023</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6084-L6084">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6084–6084</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6352-L6352">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6352–6352</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L281-L281">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:281–281</a></td><td>CRecipeModelPixelCountReader.ReadCellModelType</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>435</td><td>Math.Min</td><td>resolved</td><td>int System.Math.Min(int, int)</td></tr>
+<tr><td>435</td><td>ReadModelTypeCount</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadModelTypeCount(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CCellPatternCalculator.cs:428</td></tr>
+<tr><td>436</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>436</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>436</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>435</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(modelTypeCount, MaximumCellModelTypeCount)</td></tr>
+<tr><td>435</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModelTypeCount(parameters)</td></tr>
+<tr><td>435</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: modelTypeCount &gt; 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters)</td></tr>
+<tr><td>435</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maximum = modelTypeCount &gt; 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters);</td></tr>
+<tr><td>435</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maximum = modelTypeCount &gt; 0 ? Math.Min(modelTypeCount, MaximumCellModelTypeCount) : ReadModelTypeCount(parameters)</td></tr>
+<tr><td>436</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $&quot;CELL{cellNo}_MODEL_TYPE&quot;), 1, Math.Max(1, maximum))</td></tr>
+<tr><td>436</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $&quot;CELL{cellNo}_MODEL_TYPE&quot;)</td></tr>
+<tr><td>436</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, maximum)</td></tr>
+<tr><td>436</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(ReadInt(parameters, 1, $&quot;CELL{cellNo}_MODEL_TYPE&quot;), 1, Math.Max(1, maximum));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L439">MethodDeclaration <code>ReadForCell</code> · L439–442</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L439-L442">Drilling.Common/Recipe/CCellPatternCalculator.cs:439–442</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForCell(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cellNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>441</td><td>ReadForModel</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:449</td></tr>
+<tr><td>441</td><td>ReadCellModelType</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadCellModelType(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:433</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>441</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadForModel(parameters, ReadCellModelType(parameters, cellNo))</td></tr>
+<tr><td>441</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCellModelType(parameters, cellNo)</td></tr>
+<tr><td>441</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReadForModel(parameters, ReadCellModelType(parameters, cellNo));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L444">MethodDeclaration <code>ReadPatternForCell</code> · L444–447</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L444-L447">Drilling.Common/Recipe/CCellPatternCalculator.cs:444–447</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForCell(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cellNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L321-L321">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:321–321</a></td><td>CRecipeModelPixelCountReader.ReadPatternForCell</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L172-L172">Drilling.Common/Review/CReviewManager.cs:172–172</a></td><td>CRecipeModelPixelCountReader.ReadPatternForCell</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>446</td><td>ReadPatternForModel</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:455</td></tr>
+<tr><td>446</td><td>ReadCellModelType</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadCellModelType(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:433</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>446</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPatternForModel(parameters, ReadCellModelType(parameters, cellNo))</td></tr>
+<tr><td>446</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCellModelType(parameters, cellNo)</td></tr>
+<tr><td>446</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReadPatternForModel(parameters, ReadCellModelType(parameters, cellNo));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L449">MethodDeclaration <code>ReadForModel</code> · L449–453</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L449-L453">Drilling.Common/Recipe/CCellPatternCalculator.cs:449–453</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>modelType</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441">Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441</a></td><td>ReadForModel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>451</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>452</td><td>new ST_RECIPE_MODEL_PIXEL_COUNT</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PIXEL_COUNT.ST_RECIPE_MODEL_PIXEL_COUNT(int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:423</td></tr>
+<tr><td>452</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>452</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>451</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(modelType, 1, MaximumCellModelTypeCount)</td></tr>
+<tr><td>451</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_&quot;;</td></tr>
+<tr><td>451</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_&quot;</td></tr>
+<tr><td>452</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_MODEL_PIXEL_COUNT(ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;), ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;))</td></tr>
+<tr><td>452</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;)</td></tr>
+<tr><td>452</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;)</td></tr>
+<tr><td>452</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_RECIPE_MODEL_PIXEL_COUNT(ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;), ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L455">MethodDeclaration <code>ReadPatternForModel</code> · L455–465</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L455-L465">Drilling.Common/Recipe/CCellPatternCalculator.cs:455–465</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadPatternForModel(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>modelType</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L110-L110">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:110–110</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446">Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446</a></td><td>ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L233-L233">Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:233–233</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L823-L823">Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:823–823</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L665-L665">Drilling.Common/Review/CReviewManager.cs:665–665</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L153-L153">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:153–153</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L315-L315">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:315–315</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L695-L695">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:695–695</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1024-L1024">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1024–1024</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4630-L4630">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4630–4630</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L282-L282">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:282–282</a></td><td>CRecipeModelPixelCountReader.ReadPatternForModel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>457</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>458</td><td>new ST_RECIPE_MODEL_PATTERN</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_MODEL_PATTERN.ST_RECIPE_MODEL_PATTERN(int, int, int, int, int) · Drilling.Common/Recipe/CCellPatternCalculator.cs:424</td></tr>
+<tr><td>459</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>460</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>461</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>462</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>462</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+<tr><td>463</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>463</td><td>ReadInt</td><td>resolved</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[]) · Drilling.Common/Recipe/CCellPatternCalculator.cs:467</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>457</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(modelType, 1, MaximumCellModelTypeCount)</td></tr>
+<tr><td>457</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_&quot;;</td></tr>
+<tr><td>457</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;MODEL{Math.Clamp(modelType, 1, MaximumCellModelTypeCount)}_&quot;</td></tr>
+<tr><td>458</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_MODEL_PATTERN( ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;), ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;), ReadInt(parameters, 1, $&quot;{prefix}PITCH&quot;), Math.Clamp(ReadInt(parameters, 1, $&quot;{prefix}CHE…</td></tr>
+<tr><td>458</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_RECIPE_MODEL_PATTERN( ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;), ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;), ReadInt(parameters, 1, $&quot;{prefix}PITCH&quot;), Math.Clamp(ReadInt(parameters, 1, $&quot;{prefix}CHESS&quot;</td></tr>
+<tr><td>459</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_X&quot;)</td></tr>
+<tr><td>460</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 0, $&quot;{prefix}NUM_OF_PIXEL_Y&quot;)</td></tr>
+<tr><td>461</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $&quot;{prefix}PITCH&quot;)</td></tr>
+<tr><td>462</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $&quot;{prefix}CHESS&quot;), 1, 4)</td></tr>
+<tr><td>462</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $&quot;{prefix}CHESS&quot;)</td></tr>
+<tr><td>463</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ReadInt(parameters, 1, $&quot;{prefix}CHESS_TYPE&quot;), 0, 1)</td></tr>
+<tr><td>463</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(parameters, 1, $&quot;{prefix}CHESS_TYPE&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L467">MethodDeclaration <code>ReadInt</code> · L467–488</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L467-L488">Drilling.Common/Recipe/CCellPatternCalculator.cs:467–488</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Recipe.CRecipeModelPixelCountReader.ReadInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Recipe.CRecipeModelPixelCountReader</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>keys</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L430-L430">Drilling.Common/Recipe/CCellPatternCalculator.cs:430–430</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L436-L436">Drilling.Common/Recipe/CCellPatternCalculator.cs:436–436</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452">Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452">Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L459-L459">Drilling.Common/Recipe/CCellPatternCalculator.cs:459–459</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L460-L460">Drilling.Common/Recipe/CCellPatternCalculator.cs:460–460</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L461-L461">Drilling.Common/Recipe/CCellPatternCalculator.cs:461–461</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L462-L462">Drilling.Common/Recipe/CCellPatternCalculator.cs:462–462</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L463-L463">Drilling.Common/Recipe/CCellPatternCalculator.cs:463–463</a></td><td>ReadInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>471</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>476</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>481</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>483</td><td>Math.Round</td><td>resolved</td><td>double System.Math.Round(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>469</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var key in keys)</td></tr>
+<tr><td>471</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value)</td></tr>
+<tr><td>471</td><td>if</td><td>조건에 따라 분기합니다: if (!parameters.TryGetValue(key, out var value))</td></tr>
+<tr><td>473</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>476</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intResult)</td></tr>
+<tr><td>476</td><td>if</td><td>조건에 따라 분기합니다: if (int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intResult))</td></tr>
+<tr><td>478</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return intResult;</td></tr>
+<tr><td>481</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleResult)</td></tr>
+<tr><td>481</td><td>if</td><td>조건에 따라 분기합니다: if (double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleResult))</td></tr>
+<tr><td>483</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(doubleResult)</td></tr>
+<tr><td>483</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (int)Math.Round(doubleResult);</td></tr>
+<tr><td>487</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadInt&quot;]
+ N0[&quot;L469 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L471 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L476 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L481 if&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Recipe/CCellPatternCalculator.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

@@ -1,0 +1,497 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Motion/ACS/CACSComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using ACS.SPiiPlusNET;
+L000002 | using ACS.SPiiPlusNET; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000006 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000008 | using Drilling.Common.Station; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Motion;
+L000010 | namespace Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 | [CCommType("AcsNet")] ⟦EOL⟧
+// 해설 L12: 타입의 구조/상속 선언입니다: internal sealed class CACSComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000012 | internal sealed class CACSComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다.
+L000013 | { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _commLock = new(1, 1)
+L000014 |     private readonly SemaphoreSlim _commLock = new(1, 1); ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · Api? Drilling.Common.Motion.CACSComm._api
+L000015 |     private Api? _api; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Motion.CACSComm.Connect(System.Threading.CancellationToken)
+L000016 |     public override async Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 Connect.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000018 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L19: 예외 처리 범위입니다: try
+L000019 |         try ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 Connect.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()
+L000021 |             ConnectLocked(); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Connect.
+L000022 |         } ⟦EOL⟧
+// 해설 L23: 지정 예외를 처리합니다: catch (Exception ex)
+L000023 |         catch (Exception ex) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Connect.
+L000024 |         { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000025 |             CloseApi(); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000026 |             SetError(ex); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Connect.
+L000027 |         } ⟦EOL⟧
+// 해설 L28: 종료 정리 구간입니다: finally
+L000028 |         finally ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Connect.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000030 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Connect.
+L000031 |         } ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Connect.
+L000032 |     } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Motion.CACSComm.Disconnect(System.Threading.CancellationToken)
+L000034 |     public override async Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 Disconnect.
+L000035 |     { ⟦EOL⟧
+// 해설 L36: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000036 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L37: 예외 처리 범위입니다: try
+L000037 |         try ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 Disconnect.
+L000038 |         { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000039 |             CloseApi(); ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000040 |             SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Disconnect.
+L000041 |         } ⟦EOL⟧
+// 해설 L42: 종료 정리 구간입니다: finally
+L000042 |         finally ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 Disconnect.
+L000043 |         { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000044 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 Disconnect.
+L000045 |         } ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Disconnect.
+L000046 |     } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Motion.CACSComm.Execute(string, System.Threading.CancellationToken)
+L000048 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Execute.
+L000049 |     { ⟦EOL⟧
+// 해설 L50: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000050 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L51: 예외 처리 범위입니다: try
+L000051 |         try ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 Execute.
+L000052 |         { ⟦EOL⟧
+// 해설 L53: 조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)
+L000053 |             if (_api is null || ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 Execute.
+L000054 |             { ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()
+L000055 |                 ConnectLocked(); ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Execute.
+L000056 |             } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)
+L000058 |             if (_api is null || ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 Execute.
+L000059 |             { ⟦EOL⟧
+// 해설 L60: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000060 |                 return ""; ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Execute.
+L000061 |             } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000063 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: LastSent = function
+L000064 |             LastSent = function; ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: LastReceived = ExecuteACSFunction(_api, function) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteACSFunction(_api, function)
+L000065 |             LastReceived = ExecuteACSFunction(_api, function); ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: LastError = ""
+L000066 |             LastError = ""; ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000067 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L68: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000068 |             return LastReceived; ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Execute.
+L000069 |         } ⟦EOL⟧
+// 해설 L70: 지정 예외를 처리합니다: catch (Exception ex)
+L000070 |         catch (Exception ex) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Execute.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: LastReceived = ""
+L000072 |             LastReceived = ""; ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000073 |             SetError(ex); ⟦EOL⟧
+// 해설 L74: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000074 |             return ""; ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Execute.
+L000075 |         } ⟦EOL⟧
+// 해설 L76: 종료 정리 구간입니다: finally
+L000076 |         finally ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Execute.
+L000077 |         { ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000078 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Execute.
+L000079 |         } ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 Execute.
+L000080 |     } ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CACSComm.ConnectLocked()
+L000082 |     private void ConnectLocked() ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000083 |     { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000084 |         CloseApi(); ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: _api = new Api() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Api()
+L000085 |         _api = new Api(); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulatorEndpoint() / 조건에 따라 분기합니다: if (IsSimulatorEndpoint())
+L000086 |         if (IsSimulatorEndpoint()) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000087 |         { ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: _api.OpenCommSimulator()
+L000088 |             _api.OpenCommSimulator(); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000089 |         } ⟦EOL⟧
+// 해설 L90: 앞 조건이 거짓인 경로입니다: else
+L000090 |         else ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000091 |         { ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0)
+L000092 |             if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000093 |             { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError("ACS endpoint is invalid.")
+L000094 |                 SetError("ACS endpoint is invalid."); ⟦EOL⟧
+// 해설 L95: 호출자에게 값 또는 제어를 반환합니다: return;
+L000095 |                 return; ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000096 |             } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: _api.OpenCommEthernet(Option.RemoteAddress, Option.Port)
+L000098 |             _api.OpenCommEthernet(Option.RemoteAddress, Option.Port); ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000099 |         } ⟦EOL⟧
+L000100 |  ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: LastError = ""
+L000101 |         LastError = ""; ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000102 |         SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000103 |     } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CACSComm.ExecuteACSFunction(Api, string)
+L000105 |     private string ExecuteACSFunction(Api api, string function) ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 ExecuteACSFunction.
+L000106 |     { ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries) / 지역 변수를 선언합니다: var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); / 변수의 초기값을 지정합니다: tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+L000107 |         var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals("ACS", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (tokens.Length < 2 || !tokens[0].Equals("ACS", StringComparison.OrdinalIgnoreCase))
+L000108 |         if (tokens.Length < 2 || !tokens[0].Equals("ACS", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 ExecuteACSFunction.
+L000109 |         { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Command(function)
+L000110 |             api.Command(function); ⟦EOL⟧
+// 해설 L111: 호출자에게 값 또는 제어를 반환합니다: return "OK:COMMAND";
+L000111 |             return "OK:COMMAND"; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 ExecuteACSFunction.
+L000112 |         } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return tokens[1].ToUpperInvariant() switch { "AXIS" => ExecuteAxisFunction(api, tokens), "IO" => ExecuteIoFunction(api, tokens), _ => ExecuteRawACSCommand(api, function)}; / 값별 결과식을 선택합니다: tokens[1].ToUpperInvariant() switch { "AXIS" => ExecuteAxisFunction(api, tokens), "IO" => ExecuteIoFunction(api, tokens), _ => ExecuteRawACSCommand(api, function)}
+L000114 |         return tokens[1].ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 ExecuteACSFunction.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteAxisFunction(api, tokens)
+L000116 |             "AXIS" => ExecuteAxisFunction(api, tokens), ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteIoFunction(api, tokens)
+L000117 |             "IO" => ExecuteIoFunction(api, tokens), ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRawACSCommand(api, function)
+L000118 |             _ => ExecuteRawACSCommand(api, function)}; ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ExecuteACSFunction.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CACSComm.ExecuteAxisFunction(Api, System.Collections.Generic.IReadOnlyList<string>)
+L000121 |     private static string ExecuteAxisFunction(Api api, IReadOnlyList<string> tokens) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 조건에 따라 분기합니다: if (tokens.Count < 5)
+L000123 |         if (tokens.Count < 5) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000124 |         { ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("ACS axis command is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("ACS axis command is invalid.");
+L000125 |             throw new InvalidOperationException("ACS axis command is invalid."); ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000126 |         } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(tokens[2], "AXIS") / 지역 변수를 선언합니다: var axisNo = ReadInt(tokens[2], "AXIS"); / 변수의 초기값을 지정합니다: axisNo = ReadInt(tokens[2], "AXIS")
+L000128 |         var axisNo = ReadInt(tokens[2], "AXIS"); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToAcsAxis(axisNo) / 지역 변수를 선언합니다: var axis = ToAcsAxis(axisNo); / 변수의 초기값을 지정합니다: axis = ToAcsAxis(axisNo)
+L000129 |         var axis = ToAcsAxis(axisNo); ⟦EOL⟧
+// 해설 L130: 지역 변수를 선언합니다: var axisName = tokens[3]; / 변수의 초기값을 지정합니다: axisName = tokens[3]
+L000130 |         var axisName = tokens[3]; ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[4].ToUpperInvariant() / 지역 변수를 선언합니다: var command = tokens[4].ToUpperInvariant(); / 변수의 초기값을 지정합니다: command = tokens[4].ToUpperInvariant()
+L000131 |         var command = tokens[4].ToUpperInvariant(); ⟦EOL⟧
+// 해설 L132: 값에 따라 분기합니다: switch (command)
+L000132 |         switch (command) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 분기값/패턴의 구간입니다: case "SERVO_ON":
+L000134 |             case "SERVO_ON": ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Enable(axis)
+L000135 |                 api.Enable(axis); ⟦EOL⟧
+// 해설 L136: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:SERVO_ON";
+L000136 |                 return $"OK:AXIS:{axisName}:SERVO_ON"; ⟦EOL⟧
+// 해설 L137: 분기값/패턴의 구간입니다: case "SERVO_OFF":
+L000137 |             case "SERVO_OFF": ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Disable(axis)
+L000138 |                 api.Disable(axis); ⟦EOL⟧
+// 해설 L139: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:SERVO_OFF";
+L000139 |                 return $"OK:AXIS:{axisName}:SERVO_OFF"; ⟦EOL⟧
+// 해설 L140: 분기값/패턴의 구간입니다: case "HOME":
+L000140 |             case "HOME": ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Command($"HOME {axisNo}")
+L000141 |                 api.Command($"HOME {axisNo}"); ⟦EOL⟧
+// 해설 L142: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:HOME";
+L000142 |                 return $"OK:AXIS:{axisName}:HOME"; ⟦EOL⟧
+// 해설 L143: 분기값/패턴의 구간입니다: case "MOVE_ABS":
+L000143 |             case "MOVE_ABS": ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.ToPoint(MotionFlags.ACSC_AMF_WAIT, axis, ReadDouble(tokens, 5, "MOVE_ABS")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, 5, "MOVE_ABS")
+L000144 |                 api.ToPoint(MotionFlags.ACSC_AMF_WAIT, axis, ReadDouble(tokens, 5, "MOVE_ABS")); ⟦EOL⟧
+// 해설 L145: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:MOVE_ABS";
+L000145 |                 return $"OK:AXIS:{axisName}:MOVE_ABS"; ⟦EOL⟧
+// 해설 L146: 분기값/패턴의 구간입니다: case "MOVE_REL":
+L000146 |             case "MOVE_REL": ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.ToPoint(MotionFlags.ACSC_AMF_WAIT | MotionFlags.ACSC_AMF_RELATIVE, axis, ReadDouble(tokens, 5, "MOVE_REL")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, 5, "MOVE_REL")
+L000147 |                 api.ToPoint(MotionFlags.ACSC_AMF_WAIT | MotionFlags.ACSC_AMF_RELATIVE, axis, ReadDouble(tokens, 5, "MOVE_REL")); ⟦EOL⟧
+// 해설 L148: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:MOVE_REL";
+L000148 |                 return $"OK:AXIS:{axisName}:MOVE_REL"; ⟦EOL⟧
+// 해설 L149: 분기값/패턴의 구간입니다: case "STOP":
+L000149 |             case "STOP": ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Halt(axis)
+L000150 |                 api.Halt(axis); ⟦EOL⟧
+// 해설 L151: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:STOP";
+L000151 |                 return $"OK:AXIS:{axisName}:STOP"; ⟦EOL⟧
+// 해설 L152: 분기값/패턴의 구간입니다: case "RESET_ALARM":
+L000152 |             case "RESET_ALARM": ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.FaultClear(axis)
+L000153 |                 api.FaultClear(axis); ⟦EOL⟧
+// 해설 L154: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:RESET_ALARM";
+L000154 |                 return $"OK:AXIS:{axisName}:RESET_ALARM"; ⟦EOL⟧
+// 해설 L155: 분기값/패턴의 구간입니다: case "READ":
+L000155 |             case "READ": ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GetFPosition(axis) / 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:FPOS:{api.GetFPosition(axis):F6}";
+L000156 |                 return $"OK:AXIS:{axisName}:FPOS:{api.GetFPosition(axis):F6}"; ⟦EOL⟧
+// 해설 L157: 분기값/패턴의 구간입니다: default:
+L000157 |             default: ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS axis command is unknown: {command}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"ACS axis command is unknown: {command}");
+L000158 |                 throw new InvalidOperationException($"ACS axis command is unknown: {command}"); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000159 |         } ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000160 |     } ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CACSComm.ExecuteIoFunction(Api, System.Collections.Generic.IReadOnlyList<string>)
+L000162 |     private static string ExecuteIoFunction(Api api, IReadOnlyList<string> tokens) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000163 |     { ⟦EOL⟧
+// 해설 L164: 조건에 따라 분기합니다: if (tokens.Count < 4)
+L000164 |         if (tokens.Count < 4) ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000165 |         { ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("ACS IO command is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("ACS IO command is invalid.");
+L000166 |             throw new InvalidOperationException("ACS IO command is invalid."); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000167 |         } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim() / 지역 변수를 선언합니다: var address = tokens[2].Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: address = tokens[2].Trim().ToUpperInvariant()
+L000169 |         var address = tokens[2].Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: var(port, bit) = ParseIoAddress(address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseIoAddress(address)
+L000170 |         var(port, bit) = ParseIoAddress(address); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[3].ToUpperInvariant() / 지역 변수를 선언합니다: var command = tokens[3].ToUpperInvariant(); / 변수의 초기값을 지정합니다: command = tokens[3].ToUpperInvariant()
+L000171 |         var command = tokens[3].ToUpperInvariant(); ⟦EOL⟧
+// 해설 L172: 조건에 따라 분기합니다: if (command == "READ")
+L000172 |         if (command == "READ") ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.StartsWith('Y') / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GetOutput(port, bit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GetInput(port, bit) / 조건에 따라 결과식을 선택합니다: address.StartsWith('Y') ? api.GetOutput(port, bit) : api.GetInput(port, bit) / 지역 변수를 선언합니다: var value = address.StartsWith('Y') ? api.GetOutput(port, bit) : api.GetInput(port, bit); / 변수의 초기값을 지정합니다: value = address.StartsWith('Y') ? api.GetOutput(port, bit) : api.GetInput(port, bit)
+L000174 |             var value = address.StartsWith('Y') ? api.GetOutput(port, bit) : api.GetInput(port, bit); ⟦EOL⟧
+// 해설 L175: 조건에 따라 결과식을 선택합니다: value != 0 ? "ON" : "OFF" / 호출자에게 값 또는 제어를 반환합니다: return $"OK:IO:{address}:{(value != 0 ? "ON" : "OFF")}";
+L000175 |             return $"OK:IO:{address}:{(value != 0 ? "ON" : "OFF")}"; ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000176 |         } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (command is not ("ON" or "OFF"))
+L000178 |         if (command is not ("ON" or "OFF")) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS IO command is unknown: {command}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"ACS IO command is unknown: {command}");
+L000180 |             throw new InvalidOperationException($"ACS IO command is unknown: {command}"); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000181 |         } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 지역 변수를 선언합니다: var isOn = command == "ON"; / 변수의 초기값을 지정합니다: isOn = command == "ON"
+L000183 |         var isOn = command == "ON"; ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.StartsWith('Y') / 조건에 따라 분기합니다: if (!address.StartsWith('Y'))
+L000184 |         if (!address.StartsWith('Y')) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS IO output command can use Y address only: {address}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"ACS IO output command can use Y address only: {address}");
+L000186 |             throw new InvalidOperationException($"ACS IO output command can use Y address only: {address}"); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000187 |         } ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.SetOutput(port, bit, isOn ? 1 : 0) / 조건에 따라 결과식을 선택합니다: isOn ? 1 : 0
+L000189 |         api.SetOutput(port, bit, isOn ? 1 : 0); ⟦EOL⟧
+// 해설 L190: 조건에 따라 결과식을 선택합니다: isOn ? "ON" : "OFF" / 호출자에게 값 또는 제어를 반환합니다: return $"OK:IO:{address}:{(isOn ? "ON" : "OFF")}";
+L000190 |         return $"OK:IO:{address}:{(isOn ? "ON" : "OFF")}"; ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000191 |     } ⟦EOL⟧
+L000192 |  ⟦EOL⟧
+// 해설 L193: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CACSComm.ExecuteRawACSCommand(Api, string)
+L000193 |     private static string ExecuteRawACSCommand(Api api, string function) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 ExecuteRawACSCommand.
+L000194 |     { ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.Command(function)
+L000195 |         api.Command(function); ⟦EOL⟧
+// 해설 L196: 호출자에게 값 또는 제어를 반환합니다: return "OK:COMMAND";
+L000196 |         return "OK:COMMAND"; ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 ExecuteRawACSCommand.
+L000197 |     } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Motion.CACSComm.IsSimulatorEndpoint()
+L000199 |     private bool IsSimulatorEndpoint() ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 IsSimulatorEndpoint.
+L000200 |     { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: Option.RemoteAddress.Equals("SIM", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Option.RemoteAddress.Equals("SIMUL", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Option.RemoteAddress.Equals("SIMULATOR", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return Option.RemoteAddress.Equals("SIM", StringComparison.OrdinalIgnoreCase) || Option.RemoteAddress.Equals("SIMUL", StringComparison.OrdinalIgnoreCase) || Option.RemoteAddress.Equals("SIMULATOR", StringCompar
+L000201 |         return Option.RemoteAddress.Equals("SIM", StringComparison.OrdinalIgnoreCase) || Option.RemoteAddress.Equals("SIMUL", StringComparison.OrdinalIgnoreCase) || Option.RemoteAddress.Equals("SIMULATOR", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 IsSimulatorEndpoint.
+L000202 |     } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CACSComm.CloseApi()
+L000204 |     private void CloseApi() ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 CloseApi.
+L000205 |     { ⟦EOL⟧
+// 해설 L206: 조건에 따라 분기합니다: if (_api is null)
+L000206 |         if (_api is null) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 CloseApi.
+L000207 |         { ⟦EOL⟧
+// 해설 L208: 호출자에게 값 또는 제어를 반환합니다: return;
+L000208 |             return; ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 CloseApi.
+L000209 |         } ⟦EOL⟧
+L000210 |  ⟦EOL⟧
+// 해설 L211: 예외 처리 범위입니다: try
+L000211 |         try ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 CloseApi.
+L000212 |         { ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: _api.CloseComm()
+L000213 |             _api.CloseComm(); ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 CloseApi.
+L000214 |         } ⟦EOL⟧
+// 해설 L215: 지정 예외를 처리합니다: catch
+L000215 |         catch ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 CloseApi.
+L000216 |         { ⟦EOL⟧
+// 해설 L217: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000217 |         // Close should never block application shutdown. ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 CloseApi.
+L000218 |         } ⟦EOL⟧
+// 해설 L219: 종료 정리 구간입니다: finally
+L000219 |         finally ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 CloseApi.
+L000220 |         { ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: _api = null
+L000221 |             _api = null; ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 CloseApi.
+L000222 |         } ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 CloseApi.
+L000223 |     } ⟦EOL⟧
+L000224 |  ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Axis Drilling.Common.Motion.CACSComm.ToAcsAxis(int)
+L000225 |     private static Axis ToAcsAxis(int axisNo) ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 ToAcsAxis.
+L000226 |     { ⟦EOL⟧
+// 해설 L227: 조건에 따라 분기합니다: if (axisNo < 0 || axisNo > 63)
+L000227 |         if (axisNo < 0 || axisNo > 63) ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 ToAcsAxis.
+L000228 |         { ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(axisNo), axisNo, "ACS axis number is out of range.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(axisNo) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(axisNo), axisNo, "ACS axis number is out of range.");
+L000229 |             throw new ArgumentOutOfRangeException(nameof(axisNo), axisNo, "ACS axis number is out of range."); ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 ToAcsAxis.
+L000230 |         } ⟦EOL⟧
+L000231 |  ⟦EOL⟧
+// 해설 L232: 호출자에게 값 또는 제어를 반환합니다: return (Axis)axisNo;
+L000232 |         return (Axis)axisNo; ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ToAcsAxis.
+L000233 |     } ⟦EOL⟧
+L000234 |  ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · (int Port, int Bit) Drilling.Common.Motion.CACSComm.ParseIoAddress(string)
+L000235 |     private static (int Port, int Bit) ParseIoAddress(string address) ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 ParseIoAddress.
+L000236 |     { ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim() / 지역 변수를 선언합니다: var normalized = address.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = address.Trim().ToUpperInvariant()
+L000237 |         var normalized = address.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(normalized[1..], NumberStyles.Integer, CultureInfo.InvariantCulture, out var number) / 조건에 따라 분기합니다: if (normalized.Length < 2 || normalized[0] is not ('X' or 'Y') || !int.TryParse(normalized[1..], NumberStyles.Integer, CultureInfo.InvariantCulture, out var number))
+L000238 |         if (normalized.Length < 2 || normalized[0] is not ('X' or 'Y') || !int.TryParse(normalized[1..], NumberStyles.Integer, CultureInfo.InvariantCulture, out var number)) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 ParseIoAddress.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS IO address is invalid: {address}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"ACS IO address is invalid: {address}");
+L000240 |             throw new InvalidOperationException($"ACS IO address is invalid: {address}"); ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 ParseIoAddress.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 호출자에게 값 또는 제어를 반환합니다: return (number / 8, number % 8);
+L000243 |         return (number / 8, number % 8); ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 ParseIoAddress.
+L000244 |     } ⟦EOL⟧
+L000245 |  ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Motion.CACSComm.ReadInt(string, string)
+L000246 |     private static int ReadInt(string value, string fieldName) ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ReadInt.
+L000247 |     { ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS {fieldName} value is invalid: {value}") / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidOperationException($"ACS {fieldName} value is invalid: {value}") / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result)
+L000248 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new InvalidOperationException($"ACS {fieldName} value is invalid: {value}"); ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 ReadInt.
+L000249 |     } ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Motion.CACSComm.ReadDouble(System.Collections.Generic.IReadOnlyList<string>, int, string)
+L000251 |     private static double ReadDouble(IReadOnlyList<string> tokens, int index, string command) ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000252 |     { ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 분기합니다: if (tokens.Count <= index || !double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result))
+L000253 |         if (tokens.Count <= index || !double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result)) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000254 |         { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"ACS {command} position is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"ACS {command} position is invalid.");
+L000255 |             throw new InvalidOperationException($"ACS {command} position is invalid."); ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000256 |         } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000258 |         return result; ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000259 |     } ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다.
+L000260 | } ⟦EOL⟧

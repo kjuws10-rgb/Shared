@@ -1,0 +1,140 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000001 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 | using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000004 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000005 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public partial class CReviewDataOffsetApplyDialog : Window
+L000008 | public partial class CReviewDataOffsetApplyDialog : Window ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CReviewDataOffsetApplyDialog.CReviewDataOffsetApplyDialog(Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel)
+L000010 |     public CReviewDataOffsetApplyDialog(CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel panel) ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 .ctor.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000012 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L13: 값을 대상에 대입합니다: DataContext = panel
+L000013 |         DataContext = panel; ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 .ctor.
+L000014 |     } ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.ShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000016 |     private void ShotMap_MouseLeftButtonDown(object sender, MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 ShotMap_MouseLeftButtonDown.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel panel)
+L000018 |         if (sender is not FrameworkElement map ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.ShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000019 |             || DataContext is not CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel panel) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 ShotMap_MouseLeftButtonDown.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 호출자에게 값 또는 제어를 반환합니다: return;
+L000021 |             return; ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 ShotMap_MouseLeftButtonDown.
+L000022 |         } ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(map) / 지역 변수를 선언합니다: var point = eventArgs.GetPosition(map); / 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(map)
+L000024 |         var point = eventArgs.GetPosition(map); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt(point.X, point.Y)
+L000025 |         panel.SelectShotAt(point.X, point.Y); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ScrollSelectedRow(panel.SelectedRow)
+L000026 |         ScrollSelectedRow(panel.SelectedRow); ⟦EOL⟧
+// 해설 L27: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000027 |         eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 ShotMap_MouseLeftButtonDown.
+L000028 |     } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.OffsetPreviewGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000030 |     private void OffsetPreviewGrid_SelectionChanged(object sender, SelectionChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 OffsetPreviewGrid_SelectionChanged.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW row } || DataContext is not CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel panel)
+L000032 |         if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW row } ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.OffsetPreviewGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000033 |             || DataContext is not CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel panel) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 OffsetPreviewGrid_SelectionChanged.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 호출자에게 값 또는 제어를 반환합니다: return;
+L000035 |             return; ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 OffsetPreviewGrid_SelectionChanged.
+L000036 |         } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectRow(row)
+L000038 |         panel.SelectRow(row); ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 OffsetPreviewGrid_SelectionChanged.
+L000039 |     } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.ScrollSelectedRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW?)
+L000041 |     private void ScrollSelectedRow(CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW? row) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 ScrollSelectedRow.
+L000042 |     { ⟦EOL⟧
+// 해설 L43: 조건에 따라 분기합니다: if (row is null)
+L000043 |         if (row is null) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 ScrollSelectedRow.
+L000044 |         { ⟦EOL⟧
+// 해설 L45: 호출자에게 값 또는 제어를 반환합니다: return;
+L000045 |             return; ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 ScrollSelectedRow.
+L000046 |         } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: _ = OffsetPreviewGrid.Dispatcher.BeginInvoke( () => OffsetPreviewGrid.ScrollIntoView(row), System.Windows.Threading.DispatcherPriority.Background) / 함수·델리게이트 또는 객체 생성자를 호출합니다: OffsetPreviewGrid.Dispatcher.BeginInvoke( () => OffsetPreviewGrid.ScrollIntoView(row), System.Windows.Threading.DispatcherPriority.Background)
+L000048 |         _ = OffsetPreviewGrid.Dispatcher.BeginInvoke( ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: OffsetPreviewGrid.ScrollIntoView(row)
+L000049 |             () => OffsetPreviewGrid.ScrollIntoView(row), ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.ScrollSelectedRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_OFFSET_APPLY_GRID_ROW?)
+L000050 |             System.Windows.Threading.DispatcherPriority.Background); ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 ScrollSelectedRow.
+L000051 |     } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.SaveClicked(object, RoutedEventArgs)
+L000053 |     private void SaveClicked(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000054 |     { ⟦EOL⟧
+// 해설 L55: 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel { CanSave: true })
+L000055 |         if (DataContext is CMenuCorrection.CReviewDataPanel.CReviewDataOffsetApplyPanel { CanSave: true }) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 값을 대상에 대입합니다: DialogResult = true
+L000057 |             DialogResult = true; ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000058 |         } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 SaveClicked.
+L000059 |     } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.CancelClicked(object, RoutedEventArgs)
+L000061 |     private void CancelClicked(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 CancelClicked.
+L000062 |     { ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: DialogResult = false
+L000063 |         DialogResult = false; ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 CancelClicked.
+L000064 |     } ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CReviewDataOffsetApplyDialog.OnKeyDown(object, KeyEventArgs)
+L000066 |     private void OnKeyDown(object sender, KeyEventArgs eventArgs) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000067 |     { ⟦EOL⟧
+// 해설 L68: 조건에 따라 분기합니다: if (eventArgs.Key == Key.Escape)
+L000068 |         if (eventArgs.Key == Key.Escape) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000069 |         { ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: DialogResult = false
+L000070 |             DialogResult = false; ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000071 |         } ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000072 |     } ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다.
+L000073 | } ⟦EOL⟧

@@ -1,0 +1,813 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <Window x:Class="Drilling.UI.Popup.CAlignOffsetViewerDialog"
+L000001 | <Window x:Class="Drilling.UI.Popup.CAlignOffsetViewerDialog" ⟦EOL⟧
+// 해설 L2: XAML UI 구조·속성·리소스 선언입니다: xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+L000002 |         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ⟦EOL⟧
+// 해설 L3: XAML UI 구조·속성·리소스 선언입니다: xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+L000003 |         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ⟦EOL⟧
+// 해설 L4: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Title="{Binding ViewerTitle}"
+L000004 |         Title="{Binding ViewerTitle}" ⟦EOL⟧
+// 해설 L5: XAML UI 구조·속성·리소스 선언입니다: Width="1520"
+L000005 |         Width="1520" ⟦EOL⟧
+// 해설 L6: XAML UI 구조·속성·리소스 선언입니다: Height="920"
+L000006 |         Height="920" ⟦EOL⟧
+// 해설 L7: XAML UI 구조·속성·리소스 선언입니다: MinWidth="1180"
+L000007 |         MinWidth="1180" ⟦EOL⟧
+// 해설 L8: XAML UI 구조·속성·리소스 선언입니다: MinHeight="700"
+L000008 |         MinHeight="700" ⟦EOL⟧
+// 해설 L9: XAML UI 구조·속성·리소스 선언입니다: WindowStartupLocation="CenterOwner"
+L000009 |         WindowStartupLocation="CenterOwner" ⟦EOL⟧
+// 해설 L10: XAML UI 구조·속성·리소스 선언입니다: FontFamily="Segoe UI"
+L000010 |         FontFamily="Segoe UI" ⟦EOL⟧
+// 해설 L11: XAML UI 구조·속성·리소스 선언입니다: KeyDown="OnKeyDown"
+L000011 |         KeyDown="OnKeyDown" ⟦EOL⟧
+// 해설 L12: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource GridBackgroundBrush}"
+L000012 |         Background="{DynamicResource GridBackgroundBrush}" ⟦EOL⟧
+// 해설 L13: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextPrimaryBrush}">
+L000013 |         Foreground="{DynamicResource TextPrimaryBrush}"> ⟦EOL⟧
+// 해설 L14: XAML UI 구조·속성·리소스 선언입니다: <Window.Resources>
+L000014 |     <Window.Resources> ⟦EOL⟧
+// 해설 L15: XAML UI 구조·속성·리소스 선언입니다: <Style x:Key="OffsetCellButton" TargetType="Button">
+L000015 |         <Style x:Key="OffsetCellButton" TargetType="Button"> ⟦EOL⟧
+// 해설 L16: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="#F4F7FA" />
+L000016 |             <Setter Property="Background" Value="#F4F7FA" /> ⟦EOL⟧
+// 해설 L17: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Foreground" Value="#203446" />
+L000017 |             <Setter Property="Foreground" Value="#203446" /> ⟦EOL⟧
+// 해설 L18: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderBrush" Value="#3F6F98" />
+L000018 |             <Setter Property="BorderBrush" Value="#3F6F98" /> ⟦EOL⟧
+// 해설 L19: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="1" />
+L000019 |             <Setter Property="BorderThickness" Value="1" /> ⟦EOL⟧
+// 해설 L20: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Padding" Value="0" />
+L000020 |             <Setter Property="Padding" Value="0" /> ⟦EOL⟧
+// 해설 L21: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="FontSize" Value="9" />
+L000021 |             <Setter Property="FontSize" Value="9" /> ⟦EOL⟧
+// 해설 L22: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="FontWeight" Value="Bold" />
+L000022 |             <Setter Property="FontWeight" Value="Bold" /> ⟦EOL⟧
+// 해설 L23: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Cursor" Value="Hand" />
+L000023 |             <Setter Property="Cursor" Value="Hand" /> ⟦EOL⟧
+// 해설 L24: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+L000024 |             <Setter Property="FocusVisualStyle" Value="{x:Null}" /> ⟦EOL⟧
+// 해설 L25: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Template">
+L000025 |             <Setter Property="Template"> ⟦EOL⟧
+// 해설 L26: XAML UI 구조·속성·리소스 선언입니다: <Setter.Value>
+L000026 |                 <Setter.Value> ⟦EOL⟧
+// 해설 L27: XAML UI 구조·속성·리소스 선언입니다: <ControlTemplate TargetType="Button">
+L000027 |                     <ControlTemplate TargetType="Button"> ⟦EOL⟧
+// 해설 L28: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Border Background="{TemplateBinding Background}"
+L000028 |                         <Border Background="{TemplateBinding Background}" ⟦EOL⟧
+// 해설 L29: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: BorderBrush="{TemplateBinding BorderBrush}"
+L000029 |                                 BorderBrush="{TemplateBinding BorderBrush}" ⟦EOL⟧
+// 해설 L30: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: BorderThickness="{TemplateBinding BorderThickness}"
+L000030 |                                 BorderThickness="{TemplateBinding BorderThickness}" ⟦EOL⟧
+// 해설 L31: XAML UI 구조·속성·리소스 선언입니다: CornerRadius="2"
+L000031 |                                 CornerRadius="2" ⟦EOL⟧
+// 해설 L32: XAML UI 구조·속성·리소스 선언입니다: SnapsToDevicePixels="True">
+L000032 |                                 SnapsToDevicePixels="True"> ⟦EOL⟧
+// 해설 L33: XAML UI 구조·속성·리소스 선언입니다: <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+L000033 |                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L34: XAML 요소 범위를 닫습니다.
+L000034 |                         </Border> ⟦EOL⟧
+// 해설 L35: XAML 요소 범위를 닫습니다.
+L000035 |                     </ControlTemplate> ⟦EOL⟧
+// 해설 L36: XAML 요소 범위를 닫습니다.
+L000036 |                 </Setter.Value> ⟦EOL⟧
+// 해설 L37: XAML 요소 범위를 닫습니다.
+L000037 |             </Setter> ⟦EOL⟧
+// 해설 L38: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000038 |             <Style.Triggers> ⟦EOL⟧
+// 해설 L39: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding IsSelected}" Value="True">
+L000039 |                 <DataTrigger Binding="{Binding IsSelected}" Value="True"> ⟦EOL⟧
+// 해설 L40: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="#F6C453" />
+L000040 |                     <Setter Property="Background" Value="#F6C453" /> ⟦EOL⟧
+// 해설 L41: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Foreground" Value="#17212B" />
+L000041 |                     <Setter Property="Foreground" Value="#17212B" /> ⟦EOL⟧
+// 해설 L42: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderBrush" Value="#FFF4D6" />
+L000042 |                     <Setter Property="BorderBrush" Value="#FFF4D6" /> ⟦EOL⟧
+// 해설 L43: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="2" />
+L000043 |                     <Setter Property="BorderThickness" Value="2" /> ⟦EOL⟧
+// 해설 L44: XAML 요소 범위를 닫습니다.
+L000044 |                 </DataTrigger> ⟦EOL⟧
+// 해설 L45: XAML 요소 범위를 닫습니다.
+L000045 |             </Style.Triggers> ⟦EOL⟧
+// 해설 L46: XAML 요소 범위를 닫습니다.
+L000046 |         </Style> ⟦EOL⟧
+// 해설 L47: XAML 요소 범위를 닫습니다.
+L000047 |     </Window.Resources> ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: XAML UI 구조·속성·리소스 선언입니다: <Border Padding="16"
+L000049 |     <Border Padding="16" ⟦EOL⟧
+// 해설 L50: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource PanelBackgroundBrush}"
+L000050 |             Background="{DynamicResource PanelBackgroundBrush}" ⟦EOL⟧
+// 해설 L51: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}"
+L000051 |             BorderBrush="{DynamicResource PanelBorderBrush}" ⟦EOL⟧
+// 해설 L52: XAML UI 구조·속성·리소스 선언입니다: BorderThickness="1">
+L000052 |             BorderThickness="1"> ⟦EOL⟧
+// 해설 L53: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000053 |         <Grid> ⟦EOL⟧
+// 해설 L54: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000054 |             <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L55: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000055 |                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L56: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="*" />
+L000056 |                 <RowDefinition Height="*" /> ⟦EOL⟧
+// 해설 L57: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000057 |                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L58: XAML 요소 범위를 닫습니다.
+L000058 |             </Grid.RowDefinitions> ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: XAML UI 구조·속성·리소스 선언입니다: <Grid Margin="0,0,0,12">
+L000060 |             <Grid Margin="0,0,0,12"> ⟦EOL⟧
+// 해설 L61: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions>
+L000061 |                 <Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L62: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="*" />
+L000062 |                     <ColumnDefinition Width="*" /> ⟦EOL⟧
+// 해설 L63: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="Auto" />
+L000063 |                     <ColumnDefinition Width="Auto" /> ⟦EOL⟧
+// 해설 L64: XAML 요소 범위를 닫습니다.
+L000064 |                 </Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L65: XAML UI 구조·속성·리소스 선언입니다: <StackPanel>
+L000065 |                 <StackPanel> ⟦EOL⟧
+// 해설 L66: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding ViewerTitle}" FontSize="22" FontWeight="SemiBold" />
+L000066 |                     <TextBlock Text="{Binding ViewerTitle}" FontSize="22" FontWeight="SemiBold" /> ⟦EOL⟧
+// 해설 L67: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding RecipeName, StringFormat='CURRENT RECIPE : {0}'}"
+L000067 |                     <TextBlock Text="{Binding RecipeName, StringFormat='CURRENT RECIPE : {0}'}" ⟦EOL⟧
+// 해설 L68: XAML UI 구조·속성·리소스 선언입니다: FontSize="13"
+L000068 |                                FontSize="13" ⟦EOL⟧
+// 해설 L69: XAML UI 구조·속성·리소스 선언입니다: Margin="0,3,0,0"
+L000069 |                                Margin="0,3,0,0" ⟦EOL⟧
+// 해설 L70: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}" />
+L000070 |                                Foreground="{DynamicResource TextSecondaryBrush}" /> ⟦EOL⟧
+// 해설 L71: XAML 요소 범위를 닫습니다.
+L000071 |                 </StackPanel> ⟦EOL⟧
+// 해설 L72: XAML UI 구조·속성·리소스 선언입니다: <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+L000072 |                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"> ⟦EOL⟧
+// 해설 L73: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding SelectedCellTitle}"
+L000073 |                     <TextBlock Text="{Binding SelectedCellTitle}" ⟦EOL⟧
+// 해설 L74: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000074 |                                HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L75: XAML UI 구조·속성·리소스 선언입니다: FontSize="14"
+L000075 |                                FontSize="14" ⟦EOL⟧
+// 해설 L76: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000076 |                                FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L77: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource AccentTextBrush}" />
+L000077 |                                Foreground="{DynamicResource AccentTextBrush}" /> ⟦EOL⟧
+// 해설 L78: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding SelectedShotName}"
+L000078 |                     <TextBlock Text="{Binding SelectedShotName}" ⟦EOL⟧
+// 해설 L79: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000079 |                                HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L80: XAML UI 구조·속성·리소스 선언입니다: Margin="0,3,0,0"
+L000080 |                                Margin="0,3,0,0" ⟦EOL⟧
+// 해설 L81: XAML UI 구조·속성·리소스 선언입니다: FontSize="12"
+L000081 |                                FontSize="12" ⟦EOL⟧
+// 해설 L82: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}" />
+L000082 |                                Foreground="{DynamicResource TextSecondaryBrush}" /> ⟦EOL⟧
+// 해설 L83: XAML 요소 범위를 닫습니다.
+L000083 |                 </StackPanel> ⟦EOL⟧
+// 해설 L84: XAML 요소 범위를 닫습니다.
+L000084 |             </Grid> ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="1">
+L000086 |             <Grid Grid.Row="1"> ⟦EOL⟧
+// 해설 L87: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions>
+L000087 |                 <Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L88: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="4*" MinWidth="430" />
+L000088 |                     <ColumnDefinition Width="4*" MinWidth="430" /> ⟦EOL⟧
+// 해설 L89: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="10" />
+L000089 |                     <ColumnDefinition Width="10" /> ⟦EOL⟧
+// 해설 L90: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="6*" MinWidth="650" />
+L000090 |                     <ColumnDefinition Width="6*" MinWidth="650" /> ⟦EOL⟧
+// 해설 L91: XAML 요소 범위를 닫습니다.
+L000091 |                 </Grid.ColumnDefinitions> ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Column="0">
+L000093 |                 <Grid Grid.Column="0"> ⟦EOL⟧
+// 해설 L94: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000094 |                     <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L95: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="2*" />
+L000095 |                         <RowDefinition Height="2*" /> ⟦EOL⟧
+// 해설 L96: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="8" />
+L000096 |                         <RowDefinition Height="8" /> ⟦EOL⟧
+// 해설 L97: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="1*" />
+L000097 |                         <RowDefinition Height="1*" /> ⟦EOL⟧
+// 해설 L98: XAML 요소 범위를 닫습니다.
+L000098 |                     </Grid.RowDefinitions> ⟦EOL⟧
+L000099 |  ⟦EOL⟧
+// 해설 L100: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Row="0" Style="{StaticResource PanelBorder}">
+L000100 |                     <Border Grid.Row="0" Style="{StaticResource PanelBorder}"> ⟦EOL⟧
+// 해설 L101: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000101 |                         <Grid> ⟦EOL⟧
+// 해설 L102: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000102 |                             <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L103: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000103 |                                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L104: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000104 |                                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L105: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="*" />
+L000105 |                                 <RowDefinition Height="*" /> ⟦EOL⟧
+// 해설 L106: XAML 요소 범위를 닫습니다.
+L000106 |                             </Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L107: XAML UI 구조·속성·리소스 선언입니다: <DockPanel Margin="0,0,0,7">
+L000107 |                             <DockPanel Margin="0,0,0,7"> ⟦EOL⟧
+// 해설 L108: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="GLASS-CELL VIEW"
+L000108 |                                 <TextBlock Text="GLASS-CELL VIEW" ⟦EOL⟧
+// 해설 L109: XAML UI 구조·속성·리소스 선언입니다: DockPanel.Dock="Left"
+L000109 |                                            DockPanel.Dock="Left" ⟦EOL⟧
+// 해설 L110: XAML UI 구조·속성·리소스 선언입니다: FontSize="15"
+L000110 |                                            FontSize="15" ⟦EOL⟧
+// 해설 L111: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000111 |                                            FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L112: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000112 |                                            VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L113: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding Summary}"
+L000113 |                                 <TextBlock Text="{Binding Summary}" ⟦EOL⟧
+// 해설 L114: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000114 |                                            HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L115: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center"
+L000115 |                                            VerticalAlignment="Center" ⟦EOL⟧
+// 해설 L116: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}"
+L000116 |                                            Foreground="{DynamicResource TextSecondaryBrush}" ⟦EOL⟧
+// 해설 L117: XAML UI 구조·속성·리소스 선언입니다: FontSize="10"
+L000117 |                                            FontSize="10" ⟦EOL⟧
+// 해설 L118: XAML UI 구조·속성·리소스 선언입니다: TextTrimming="CharacterEllipsis" />
+L000118 |                                            TextTrimming="CharacterEllipsis" /> ⟦EOL⟧
+// 해설 L119: XAML 요소 범위를 닫습니다.
+L000119 |                             </DockPanel> ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ItemsControl Grid.Row="1" ItemsSource="{Binding HeadCards}" Margin="0,0,0,7">
+L000121 |                             <ItemsControl Grid.Row="1" ItemsSource="{Binding HeadCards}" Margin="0,0,0,7"> ⟦EOL⟧
+// 해설 L122: XAML UI 구조·속성·리소스 선언입니다: <ItemsControl.ItemsPanel>
+L000122 |                                 <ItemsControl.ItemsPanel> ⟦EOL⟧
+// 해설 L123: XAML UI 구조·속성·리소스 선언입니다: <ItemsPanelTemplate>
+L000123 |                                     <ItemsPanelTemplate> ⟦EOL⟧
+// 해설 L124: XAML UI 구조·속성·리소스 선언입니다: <UniformGrid Columns="8" />
+L000124 |                                         <UniformGrid Columns="8" /> ⟦EOL⟧
+// 해설 L125: XAML 요소 범위를 닫습니다.
+L000125 |                                     </ItemsPanelTemplate> ⟦EOL⟧
+// 해설 L126: XAML 요소 범위를 닫습니다.
+L000126 |                                 </ItemsControl.ItemsPanel> ⟦EOL⟧
+// 해설 L127: XAML UI 구조·속성·리소스 선언입니다: <ItemsControl.ItemTemplate>
+L000127 |                                 <ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L128: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate>
+L000128 |                                     <DataTemplate> ⟦EOL⟧
+// 해설 L129: XAML UI 구조·속성·리소스 선언입니다: <Border Height="28"
+L000129 |                                         <Border Height="28" ⟦EOL⟧
+// 해설 L130: XAML UI 구조·속성·리소스 선언입니다: Margin="1"
+L000130 |                                                 Margin="1" ⟦EOL⟧
+// 해설 L131: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Background="{Binding Background}"
+L000131 |                                                 Background="{Binding Background}" ⟦EOL⟧
+// 해설 L132: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: BorderBrush="{Binding BorderBrush}"
+L000132 |                                                 BorderBrush="{Binding BorderBrush}" ⟦EOL⟧
+// 해설 L133: XAML UI 구조·속성·리소스 선언입니다: BorderThickness="1"
+L000133 |                                                 BorderThickness="1" ⟦EOL⟧
+// 해설 L134: XAML UI 구조·속성·리소스 선언입니다: CornerRadius="3">
+L000134 |                                                 CornerRadius="3"> ⟦EOL⟧
+// 해설 L135: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding Name}"
+L000135 |                                             <TextBlock Text="{Binding Name}" ⟦EOL⟧
+// 해설 L136: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Foreground="{Binding Foreground}"
+L000136 |                                                        Foreground="{Binding Foreground}" ⟦EOL⟧
+// 해설 L137: XAML UI 구조·속성·리소스 선언입니다: FontSize="10"
+L000137 |                                                        FontSize="10" ⟦EOL⟧
+// 해설 L138: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000138 |                                                        FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L139: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center"
+L000139 |                                                        HorizontalAlignment="Center" ⟦EOL⟧
+// 해설 L140: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000140 |                                                        VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L141: XAML 요소 범위를 닫습니다.
+L000141 |                                         </Border> ⟦EOL⟧
+// 해설 L142: XAML 요소 범위를 닫습니다.
+L000142 |                                     </DataTemplate> ⟦EOL⟧
+// 해설 L143: XAML 요소 범위를 닫습니다.
+L000143 |                                 </ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L144: XAML 요소 범위를 닫습니다.
+L000144 |                             </ItemsControl> ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Row="2"
+L000146 |                             <Border Grid.Row="2" ⟦EOL⟧
+// 해설 L147: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource GridBackgroundBrush}"
+L000147 |                                     Background="{DynamicResource GridBackgroundBrush}" ⟦EOL⟧
+// 해설 L148: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}"
+L000148 |                                     BorderBrush="{DynamicResource PanelBorderBrush}" ⟦EOL⟧
+// 해설 L149: XAML UI 구조·속성·리소스 선언입니다: BorderThickness="1"
+L000149 |                                     BorderThickness="1" ⟦EOL⟧
+// 해설 L150: XAML UI 구조·속성·리소스 선언입니다: Padding="6">
+L000150 |                                     Padding="6"> ⟦EOL⟧
+// 해설 L151: XAML UI 구조·속성·리소스 선언입니다: <Grid ClipToBounds="True">
+L000151 |                                 <Grid ClipToBounds="True"> ⟦EOL⟧
+// 해설 L152: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Image Source="{Binding PreviewImage}" Stretch="Uniform" />
+L000152 |                                     <Image Source="{Binding PreviewImage}" Stretch="Uniform" /> ⟦EOL⟧
+// 해설 L153: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ItemsControl ItemsSource="{Binding CellLabels}"
+L000153 |                                     <ItemsControl ItemsSource="{Binding CellLabels}" ⟦EOL⟧
+// 해설 L154: XAML UI 구조·속성·리소스 선언입니다: Style="{StaticResource CellPreviewLabelItemsControl}"
+L000154 |                                                   Style="{StaticResource CellPreviewLabelItemsControl}" ⟦EOL⟧
+// 해설 L155: XAML UI 구조·속성·리소스 선언입니다: IsHitTestVisible="True">
+L000155 |                                                   IsHitTestVisible="True"> ⟦EOL⟧
+// 해설 L156: XAML UI 구조·속성·리소스 선언입니다: <ItemsControl.ItemTemplate>
+L000156 |                                         <ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L157: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate>
+L000157 |                                             <DataTemplate> ⟦EOL⟧
+// 해설 L158: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Button Width="{Binding Width}"
+L000158 |                                                 <Button Width="{Binding Width}" ⟦EOL⟧
+// 해설 L159: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Height="{Binding Height}"
+L000159 |                                                         Height="{Binding Height}" ⟦EOL⟧
+// 해설 L160: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Content="{Binding CellNo}"
+L000160 |                                                         Content="{Binding CellNo}" ⟦EOL⟧
+// 해설 L161: XAML UI 구조·속성·리소스 선언입니다: Style="{StaticResource OffsetCellButton}"
+L000161 |                                                         Style="{StaticResource OffsetCellButton}" ⟦EOL⟧
+// 해설 L162: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: ToolTip="{Binding DisplayText}"
+L000162 |                                                         ToolTip="{Binding DisplayText}" ⟦EOL⟧
+// 해설 L163: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Command="{Binding DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+L000163 |                                                         Command="{Binding DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window}}" ⟦EOL⟧
+// 해설 L164: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: CommandParameter="{Binding CellNo}" />
+L000164 |                                                         CommandParameter="{Binding CellNo}" /> ⟦EOL⟧
+// 해설 L165: XAML 요소 범위를 닫습니다.
+L000165 |                                             </DataTemplate> ⟦EOL⟧
+// 해설 L166: XAML 요소 범위를 닫습니다.
+L000166 |                                         </ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L167: XAML 요소 범위를 닫습니다.
+L000167 |                                     </ItemsControl> ⟦EOL⟧
+// 해설 L168: XAML 요소 범위를 닫습니다.
+L000168 |                                 </Grid> ⟦EOL⟧
+// 해설 L169: XAML 요소 범위를 닫습니다.
+L000169 |                             </Border> ⟦EOL⟧
+// 해설 L170: XAML 요소 범위를 닫습니다.
+L000170 |                         </Grid> ⟦EOL⟧
+// 해설 L171: XAML 요소 범위를 닫습니다.
+L000171 |                     </Border> ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Row="2" Style="{StaticResource PanelBorder}">
+L000173 |                     <Border Grid.Row="2" Style="{StaticResource PanelBorder}"> ⟦EOL⟧
+// 해설 L174: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000174 |                         <Grid> ⟦EOL⟧
+// 해설 L175: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000175 |                             <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L176: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000176 |                                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L177: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000177 |                                 <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L178: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="*" />
+L000178 |                                 <RowDefinition Height="*" /> ⟦EOL⟧
+// 해설 L179: XAML 요소 범위를 닫습니다.
+L000179 |                             </Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L180: XAML UI 구조·속성·리소스 선언입니다: <Grid Margin="0,0,0,3">
+L000180 |                             <Grid Margin="0,0,0,3"> ⟦EOL⟧
+// 해설 L181: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions>
+L000181 |                                 <Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L182: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="Auto" />
+L000182 |                                     <ColumnDefinition Width="Auto" /> ⟦EOL⟧
+// 해설 L183: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="*" />
+L000183 |                                     <ColumnDefinition Width="*" /> ⟦EOL⟧
+// 해설 L184: XAML 요소 범위를 닫습니다.
+L000184 |                                 </Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L185: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="CELL SHOT VIEW"
+L000185 |                                 <TextBlock Text="CELL SHOT VIEW" ⟦EOL⟧
+// 해설 L186: XAML UI 구조·속성·리소스 선언입니다: FontSize="14"
+L000186 |                                            FontSize="14" ⟦EOL⟧
+// 해설 L187: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000187 |                                            FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L188: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000188 |                                            VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L189: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Grid.Column="1"
+L000189 |                                 <TextBlock Grid.Column="1" ⟦EOL⟧
+// 해설 L190: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Text="{Binding SelectedShotName}"
+L000190 |                                            Text="{Binding SelectedShotName}" ⟦EOL⟧
+// 해설 L191: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource AccentTextBrush}"
+L000191 |                                            Foreground="{DynamicResource AccentTextBrush}" ⟦EOL⟧
+// 해설 L192: XAML UI 구조·속성·리소스 선언입니다: FontSize="11"
+L000192 |                                            FontSize="11" ⟦EOL⟧
+// 해설 L193: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000193 |                                            FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L194: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000194 |                                            HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L195: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center"
+L000195 |                                            VerticalAlignment="Center" ⟦EOL⟧
+// 해설 L196: XAML UI 구조·속성·리소스 선언입니다: TextTrimming="CharacterEllipsis" />
+L000196 |                                            TextTrimming="CharacterEllipsis" /> ⟦EOL⟧
+// 해설 L197: XAML 요소 범위를 닫습니다.
+L000197 |                             </Grid> ⟦EOL⟧
+// 해설 L198: XAML UI 구조·속성·리소스 선언입니다: <WrapPanel Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,0,4">
+L000198 |                             <WrapPanel Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,0,4"> ⟦EOL⟧
+// 해설 L199: XAML UI 구조·속성·리소스 선언입니다: <Ellipse Width="7" Height="7" Fill="#2DD4BF" VerticalAlignment="Center" />
+L000199 |                                 <Ellipse Width="7" Height="7" Fill="#2DD4BF" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L200: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="SHOT" Margin="4,0,10,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" />
+L000200 |                                 <TextBlock Text="SHOT" Margin="4,0,10,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L201: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="×" Foreground="#F87171" FontSize="13" FontWeight="Bold" VerticalAlignment="Center" />
+L000201 |                                 <TextBlock Text="×" Foreground="#F87171" FontSize="13" FontWeight="Bold" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L202: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="MASKING / OFF" Margin="3,0,10,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" />
+L000202 |                                 <TextBlock Text="MASKING / OFF" Margin="3,0,10,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L203: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="◆" Foreground="#C084FC" FontSize="10" VerticalAlignment="Center" />
+L000203 |                                 <TextBlock Text="◆" Foreground="#C084FC" FontSize="10" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L204: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="CHESS / OFF" Margin="3,0,0,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" />
+L000204 |                                 <TextBlock Text="CHESS / OFF" Margin="3,0,0,0" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L205: XAML 요소 범위를 닫습니다.
+L000205 |                             </WrapPanel> ⟦EOL⟧
+// 해설 L206: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Row="2"
+L000206 |                             <Border Grid.Row="2" ⟦EOL⟧
+// 해설 L207: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource GridBackgroundBrush}"
+L000207 |                                     Background="{DynamicResource GridBackgroundBrush}" ⟦EOL⟧
+// 해설 L208: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}"
+L000208 |                                     BorderBrush="{DynamicResource PanelBorderBrush}" ⟦EOL⟧
+// 해설 L209: XAML UI 구조·속성·리소스 선언입니다: BorderThickness="1"
+L000209 |                                     BorderThickness="1" ⟦EOL⟧
+// 해설 L210: XAML UI 구조·속성·리소스 선언입니다: Padding="4"
+L000210 |                                     Padding="4" ⟦EOL⟧
+// 해설 L211: XAML UI 구조·속성·리소스 선언입니다: ClipToBounds="True">
+L000211 |                                     ClipToBounds="True"> ⟦EOL⟧
+// 해설 L212: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000212 |                                 <Grid> ⟦EOL⟧
+// 해설 L213: XAML UI 구조·속성·리소스 선언입니다: <Viewbox Stretch="Uniform">
+L000213 |                                     <Viewbox Stretch="Uniform"> ⟦EOL⟧
+// 해설 L214: XAML UI 구조·속성·리소스 선언입니다: <Grid x:Name="ShotMapSurface"
+L000214 |                                         <Grid x:Name="ShotMapSurface" ⟦EOL⟧
+// 해설 L215: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Width="{Binding ShotMapSurfaceWidth}"
+L000215 |                                               Width="{Binding ShotMapSurfaceWidth}" ⟦EOL⟧
+// 해설 L216: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Height="{Binding ShotMapSurfaceHeight}"
+L000216 |                                               Height="{Binding ShotMapSurfaceHeight}" ⟦EOL⟧
+// 해설 L217: XAML UI 구조·속성·리소스 선언입니다: Background="Transparent"
+L000217 |                                               Background="Transparent" ⟦EOL⟧
+// 해설 L218: XAML UI 구조·속성·리소스 선언입니다: Cursor="Hand"
+L000218 |                                               Cursor="Hand" ⟦EOL⟧
+// 해설 L219: XAML UI 구조·속성·리소스 선언입니다: MouseLeftButtonDown="SelectShotFromMap">
+L000219 |                                               MouseLeftButtonDown="SelectShotFromMap"> ⟦EOL⟧
+// 해설 L220: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Image Source="{Binding ShotMapImage}" Stretch="Fill" IsHitTestVisible="False" />
+L000220 |                                             <Image Source="{Binding ShotMapImage}" Stretch="Fill" IsHitTestVisible="False" /> ⟦EOL⟧
+// 해설 L221: XAML 요소 범위를 닫습니다.
+L000221 |                                         </Grid> ⟦EOL⟧
+// 해설 L222: XAML 요소 범위를 닫습니다.
+L000222 |                                     </Viewbox> ⟦EOL⟧
+// 해설 L223: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="NO CELL SELECTED"
+L000223 |                                     <TextBlock Text="NO CELL SELECTED" ⟦EOL⟧
+// 해설 L224: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextMutedBrush}"
+L000224 |                                                Foreground="{DynamicResource TextMutedBrush}" ⟦EOL⟧
+// 해설 L225: XAML UI 구조·속성·리소스 선언입니다: FontSize="12"
+L000225 |                                                FontSize="12" ⟦EOL⟧
+// 해설 L226: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000226 |                                                FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L227: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center"
+L000227 |                                                HorizontalAlignment="Center" ⟦EOL⟧
+// 해설 L228: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center"
+L000228 |                                                VerticalAlignment="Center" ⟦EOL⟧
+// 해설 L229: XAML UI 구조·속성·리소스 선언입니다: IsHitTestVisible="False">
+L000229 |                                                IsHitTestVisible="False"> ⟦EOL⟧
+// 해설 L230: XAML UI 구조·속성·리소스 선언입니다: <TextBlock.Style>
+L000230 |                                         <TextBlock.Style> ⟦EOL⟧
+// 해설 L231: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="TextBlock">
+L000231 |                                             <Style TargetType="TextBlock"> ⟦EOL⟧
+// 해설 L232: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Collapsed" />
+L000232 |                                                 <Setter Property="Visibility" Value="Collapsed" /> ⟦EOL⟧
+// 해설 L233: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000233 |                                                 <Style.Triggers> ⟦EOL⟧
+// 해설 L234: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True">
+L000234 |                                                     <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True"> ⟦EOL⟧
+// 해설 L235: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Visible" />
+L000235 |                                                         <Setter Property="Visibility" Value="Visible" /> ⟦EOL⟧
+// 해설 L236: XAML 요소 범위를 닫습니다.
+L000236 |                                                     </DataTrigger> ⟦EOL⟧
+// 해설 L237: XAML 요소 범위를 닫습니다.
+L000237 |                                                 </Style.Triggers> ⟦EOL⟧
+// 해설 L238: XAML 요소 범위를 닫습니다.
+L000238 |                                             </Style> ⟦EOL⟧
+// 해설 L239: XAML 요소 범위를 닫습니다.
+L000239 |                                         </TextBlock.Style> ⟦EOL⟧
+// 해설 L240: XAML 요소 범위를 닫습니다.
+L000240 |                                     </TextBlock> ⟦EOL⟧
+// 해설 L241: XAML 요소 범위를 닫습니다.
+L000241 |                                 </Grid> ⟦EOL⟧
+// 해설 L242: XAML 요소 범위를 닫습니다.
+L000242 |                             </Border> ⟦EOL⟧
+// 해설 L243: XAML 요소 범위를 닫습니다.
+L000243 |                         </Grid> ⟦EOL⟧
+// 해설 L244: XAML 요소 범위를 닫습니다.
+L000244 |                     </Border> ⟦EOL⟧
+// 해설 L245: XAML 요소 범위를 닫습니다.
+L000245 |                 </Grid> ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="2" Style="{StaticResource PanelBorder}">
+L000247 |                 <Border Grid.Column="2" Style="{StaticResource PanelBorder}"> ⟦EOL⟧
+// 해설 L248: XAML UI 구조·속성·리소스 선언입니다: <Grid>
+L000248 |                     <Grid> ⟦EOL⟧
+// 해설 L249: XAML UI 구조·속성·리소스 선언입니다: <Grid.RowDefinitions>
+L000249 |                         <Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L250: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000250 |                             <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L251: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="Auto" />
+L000251 |                             <RowDefinition Height="Auto" /> ⟦EOL⟧
+// 해설 L252: XAML UI 구조·속성·리소스 선언입니다: <RowDefinition Height="*" />
+L000252 |                             <RowDefinition Height="*" /> ⟦EOL⟧
+// 해설 L253: XAML 요소 범위를 닫습니다.
+L000253 |                         </Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L254: XAML UI 구조·속성·리소스 선언입니다: <Grid Margin="0,0,0,5">
+L000254 |                         <Grid Margin="0,0,0,5"> ⟦EOL⟧
+// 해설 L255: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions>
+L000255 |                             <Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L256: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="*" />
+L000256 |                                 <ColumnDefinition Width="*" /> ⟦EOL⟧
+// 해설 L257: XAML UI 구조·속성·리소스 선언입니다: <ColumnDefinition Width="Auto" />
+L000257 |                                 <ColumnDefinition Width="Auto" /> ⟦EOL⟧
+// 해설 L258: XAML 요소 범위를 닫습니다.
+L000258 |                             </Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L259: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="OFFSET VIEW"
+L000259 |                             <TextBlock Text="OFFSET VIEW" ⟦EOL⟧
+// 해설 L260: XAML UI 구조·속성·리소스 선언입니다: FontSize="17"
+L000260 |                                        FontSize="17" ⟦EOL⟧
+// 해설 L261: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000261 |                                        FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L262: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000262 |                                        VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L263: XAML UI 구조·속성·리소스 선언입니다: <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+L000263 |                             <StackPanel Grid.Column="1" HorizontalAlignment="Right"> ⟦EOL⟧
+// 해설 L264: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding SelectedCellTitle}"
+L000264 |                                 <TextBlock Text="{Binding SelectedCellTitle}" ⟦EOL⟧
+// 해설 L265: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000265 |                                            HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L266: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource AccentTextBrush}"
+L000266 |                                            Foreground="{DynamicResource AccentTextBrush}" ⟦EOL⟧
+// 해설 L267: XAML UI 구조·속성·리소스 선언입니다: FontSize="13"
+L000267 |                                            FontSize="13" ⟦EOL⟧
+// 해설 L268: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold" />
+L000268 |                                            FontWeight="SemiBold" /> ⟦EOL⟧
+// 해설 L269: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding SelectedShotDetail}"
+L000269 |                                 <TextBlock Text="{Binding SelectedShotDetail}" ⟦EOL⟧
+// 해설 L270: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000270 |                                            HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L271: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}"
+L000271 |                                            Foreground="{DynamicResource TextSecondaryBrush}" ⟦EOL⟧
+// 해설 L272: XAML UI 구조·속성·리소스 선언입니다: FontSize="10" />
+L000272 |                                            FontSize="10" /> ⟦EOL⟧
+// 해설 L273: XAML 요소 범위를 닫습니다.
+L000273 |                             </StackPanel> ⟦EOL⟧
+// 해설 L274: XAML 요소 범위를 닫습니다.
+L000274 |                         </Grid> ⟦EOL⟧
+// 해설 L275: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Grid.Row="1"
+L000275 |                         <TextBlock Grid.Row="1" ⟦EOL⟧
+// 해설 L276: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: Text="{Binding OffsetDescription}"
+L000276 |                                    Text="{Binding OffsetDescription}" ⟦EOL⟧
+// 해설 L277: XAML UI 구조·속성·리소스 선언입니다: Margin="0,0,0,8"
+L000277 |                                    Margin="0,0,0,8" ⟦EOL⟧
+// 해설 L278: XAML UI 구조·속성·리소스 선언입니다: FontSize="11"
+L000278 |                                    FontSize="11" ⟦EOL⟧
+// 해설 L279: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}"
+L000279 |                                    Foreground="{DynamicResource TextSecondaryBrush}" ⟦EOL⟧
+// 해설 L280: XAML UI 구조·속성·리소스 선언입니다: TextWrapping="Wrap" />
+L000280 |                                    TextWrapping="Wrap" /> ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="2">
+L000282 |                         <Grid Grid.Row="2"> ⟦EOL⟧
+// 해설 L283: XAML UI 구조·속성·리소스 선언입니다: <Border Background="{DynamicResource GridBackgroundBrush}"
+L000283 |                             <Border Background="{DynamicResource GridBackgroundBrush}" ⟦EOL⟧
+// 해설 L284: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}"
+L000284 |                                     BorderBrush="{DynamicResource PanelBorderBrush}" ⟦EOL⟧
+// 해설 L285: XAML UI 구조·속성·리소스 선언입니다: BorderThickness="1">
+L000285 |                                     BorderThickness="1"> ⟦EOL⟧
+// 해설 L286: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="SELECT A CELL FROM GLASS-CELL VIEW"
+L000286 |                                 <TextBlock Text="SELECT A CELL FROM GLASS-CELL VIEW" ⟦EOL⟧
+// 해설 L287: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextMutedBrush}"
+L000287 |                                            Foreground="{DynamicResource TextMutedBrush}" ⟦EOL⟧
+// 해설 L288: XAML UI 구조·속성·리소스 선언입니다: FontSize="14"
+L000288 |                                            FontSize="14" ⟦EOL⟧
+// 해설 L289: XAML UI 구조·속성·리소스 선언입니다: FontWeight="SemiBold"
+L000289 |                                            FontWeight="SemiBold" ⟦EOL⟧
+// 해설 L290: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center"
+L000290 |                                            HorizontalAlignment="Center" ⟦EOL⟧
+// 해설 L291: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center">
+L000291 |                                            VerticalAlignment="Center"> ⟦EOL⟧
+// 해설 L292: XAML UI 구조·속성·리소스 선언입니다: <TextBlock.Style>
+L000292 |                                     <TextBlock.Style> ⟦EOL⟧
+// 해설 L293: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="TextBlock">
+L000293 |                                         <Style TargetType="TextBlock"> ⟦EOL⟧
+// 해설 L294: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Collapsed" />
+L000294 |                                             <Setter Property="Visibility" Value="Collapsed" /> ⟦EOL⟧
+// 해설 L295: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000295 |                                             <Style.Triggers> ⟦EOL⟧
+// 해설 L296: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True">
+L000296 |                                                 <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True"> ⟦EOL⟧
+// 해설 L297: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Visible" />
+L000297 |                                                     <Setter Property="Visibility" Value="Visible" /> ⟦EOL⟧
+// 해설 L298: XAML 요소 범위를 닫습니다.
+L000298 |                                                 </DataTrigger> ⟦EOL⟧
+// 해설 L299: XAML 요소 범위를 닫습니다.
+L000299 |                                             </Style.Triggers> ⟦EOL⟧
+// 해설 L300: XAML 요소 범위를 닫습니다.
+L000300 |                                         </Style> ⟦EOL⟧
+// 해설 L301: XAML 요소 범위를 닫습니다.
+L000301 |                                     </TextBlock.Style> ⟦EOL⟧
+// 해설 L302: XAML 요소 범위를 닫습니다.
+L000302 |                                 </TextBlock> ⟦EOL⟧
+// 해설 L303: XAML 요소 범위를 닫습니다.
+L000303 |                             </Border> ⟦EOL⟧
+L000304 |  ⟦EOL⟧
+// 해설 L305: XAML UI 구조·속성·리소스 선언입니다: <DataGrid x:Name="OffsetGrid"
+L000305 |                             <DataGrid x:Name="OffsetGrid" ⟦EOL⟧
+// 해설 L306: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: ItemsSource="{Binding Rows}"
+L000306 |                                       ItemsSource="{Binding Rows}" ⟦EOL⟧
+// 해설 L307: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: SelectedItem="{Binding SelectedRow, Mode=OneWay}"
+L000307 |                                       SelectedItem="{Binding SelectedRow, Mode=OneWay}" ⟦EOL⟧
+// 해설 L308: XAML UI 구조·속성·리소스 선언입니다: AutoGenerateColumns="False"
+L000308 |                                       AutoGenerateColumns="False" ⟦EOL⟧
+// 해설 L309: XAML UI 구조·속성·리소스 선언입니다: IsReadOnly="True"
+L000309 |                                       IsReadOnly="True" ⟦EOL⟧
+// 해설 L310: XAML UI 구조·속성·리소스 선언입니다: CanUserAddRows="False"
+L000310 |                                       CanUserAddRows="False" ⟦EOL⟧
+// 해설 L311: XAML UI 구조·속성·리소스 선언입니다: CanUserDeleteRows="False"
+L000311 |                                       CanUserDeleteRows="False" ⟦EOL⟧
+// 해설 L312: XAML UI 구조·속성·리소스 선언입니다: CanUserReorderColumns="False"
+L000312 |                                       CanUserReorderColumns="False" ⟦EOL⟧
+// 해설 L313: XAML UI 구조·속성·리소스 선언입니다: CanUserResizeRows="False"
+L000313 |                                       CanUserResizeRows="False" ⟦EOL⟧
+// 해설 L314: XAML UI 구조·속성·리소스 선언입니다: SelectionMode="Single"
+L000314 |                                       SelectionMode="Single" ⟦EOL⟧
+// 해설 L315: XAML UI 구조·속성·리소스 선언입니다: SelectionUnit="FullRow"
+L000315 |                                       SelectionUnit="FullRow" ⟦EOL⟧
+// 해설 L316: XAML UI 구조·속성·리소스 선언입니다: HeadersVisibility="Column"
+L000316 |                                       HeadersVisibility="Column" ⟦EOL⟧
+// 해설 L317: XAML UI 구조·속성·리소스 선언입니다: RowHeight="48"
+L000317 |                                       RowHeight="48" ⟦EOL⟧
+// 해설 L318: XAML UI 구조·속성·리소스 선언입니다: ColumnHeaderHeight="38"
+L000318 |                                       ColumnHeaderHeight="38" ⟦EOL⟧
+// 해설 L319: XAML UI 구조·속성·리소스 선언입니다: ScrollViewer.CanContentScroll="True"
+L000319 |                                       ScrollViewer.CanContentScroll="True" ⟦EOL⟧
+// 해설 L320: XAML UI 구조·속성·리소스 선언입니다: VirtualizingPanel.IsVirtualizing="True"
+L000320 |                                       VirtualizingPanel.IsVirtualizing="True" ⟦EOL⟧
+// 해설 L321: XAML UI 구조·속성·리소스 선언입니다: VirtualizingPanel.VirtualizationMode="Recycling"
+L000321 |                                       VirtualizingPanel.VirtualizationMode="Recycling" ⟦EOL⟧
+// 해설 L322: XAML UI 구조·속성·리소스 선언입니다: ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+L000322 |                                       ScrollViewer.HorizontalScrollBarVisibility="Disabled" ⟦EOL⟧
+// 해설 L323: XAML UI 구조·속성·리소스 선언입니다: ScrollViewer.VerticalScrollBarVisibility="Auto"
+L000323 |                                       ScrollViewer.VerticalScrollBarVisibility="Auto" ⟦EOL⟧
+// 해설 L324: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: SelectionChanged="OffsetGrid_SelectionChanged">
+L000324 |                                       SelectionChanged="OffsetGrid_SelectionChanged"> ⟦EOL⟧
+// 해설 L325: XAML UI 구조·속성·리소스 선언입니다: <DataGrid.Style>
+L000325 |                                 <DataGrid.Style> ⟦EOL⟧
+// 해설 L326: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="DataGrid" BasedOn="{StaticResource PlainDataGrid}">
+L000326 |                                     <Style TargetType="DataGrid" BasedOn="{StaticResource PlainDataGrid}"> ⟦EOL⟧
+// 해설 L327: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Visible" />
+L000327 |                                         <Setter Property="Visibility" Value="Visible" /> ⟦EOL⟧
+// 해설 L328: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000328 |                                         <Style.Triggers> ⟦EOL⟧
+// 해설 L329: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True">
+L000329 |                                             <DataTrigger Binding="{Binding HasNoSelectedCell}" Value="True"> ⟦EOL⟧
+// 해설 L330: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Visibility" Value="Collapsed" />
+L000330 |                                                 <Setter Property="Visibility" Value="Collapsed" /> ⟦EOL⟧
+// 해설 L331: XAML 요소 범위를 닫습니다.
+L000331 |                                             </DataTrigger> ⟦EOL⟧
+// 해설 L332: XAML 요소 범위를 닫습니다.
+L000332 |                                         </Style.Triggers> ⟦EOL⟧
+// 해설 L333: XAML 요소 범위를 닫습니다.
+L000333 |                                     </Style> ⟦EOL⟧
+// 해설 L334: XAML 요소 범위를 닫습니다.
+L000334 |                                 </DataGrid.Style> ⟦EOL⟧
+// 해설 L335: XAML UI 구조·속성·리소스 선언입니다: <DataGrid.RowStyle>
+L000335 |                                 <DataGrid.RowStyle> ⟦EOL⟧
+// 해설 L336: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="DataGridRow">
+L000336 |                                     <Style TargetType="DataGridRow"> ⟦EOL⟧
+// 해설 L337: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="{DynamicResource GridBackgroundBrush}" />
+L000337 |                                         <Setter Property="Background" Value="{DynamicResource GridBackgroundBrush}" /> ⟦EOL⟧
+// 해설 L338: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+L000338 |                                         <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" /> ⟦EOL⟧
+// 해설 L339: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderBrush" Value="{DynamicResource PanelBorderBrush}" />
+L000339 |                                         <Setter Property="BorderBrush" Value="{DynamicResource PanelBorderBrush}" /> ⟦EOL⟧
+// 해설 L340: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="0,0,0,1" />
+L000340 |                                         <Setter Property="BorderThickness" Value="0,0,0,1" /> ⟦EOL⟧
+// 해설 L341: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Setter Property="ToolTip" Value="{Binding CoordinateDetail}" />
+L000341 |                                         <Setter Property="ToolTip" Value="{Binding CoordinateDetail}" /> ⟦EOL⟧
+// 해설 L342: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000342 |                                         <Style.Triggers> ⟦EOL⟧
+// 해설 L343: XAML UI 구조·속성·리소스 선언입니다: <Trigger Property="IsSelected" Value="True">
+L000343 |                                             <Trigger Property="IsSelected" Value="True"> ⟦EOL⟧
+// 해설 L344: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="#566B7E" />
+L000344 |                                                 <Setter Property="Background" Value="#566B7E" /> ⟦EOL⟧
+// 해설 L345: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Foreground" Value="#FFFFFF" />
+L000345 |                                                 <Setter Property="Foreground" Value="#FFFFFF" /> ⟦EOL⟧
+// 해설 L346: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderBrush" Value="#B8D5EA" />
+L000346 |                                                 <Setter Property="BorderBrush" Value="#B8D5EA" /> ⟦EOL⟧
+// 해설 L347: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="2,0,0,1" />
+L000347 |                                                 <Setter Property="BorderThickness" Value="2,0,0,1" /> ⟦EOL⟧
+// 해설 L348: XAML 요소 범위를 닫습니다.
+L000348 |                                             </Trigger> ⟦EOL⟧
+// 해설 L349: XAML 요소 범위를 닫습니다.
+L000349 |                                         </Style.Triggers> ⟦EOL⟧
+// 해설 L350: XAML 요소 범위를 닫습니다.
+L000350 |                                     </Style> ⟦EOL⟧
+// 해설 L351: XAML 요소 범위를 닫습니다.
+L000351 |                                 </DataGrid.RowStyle> ⟦EOL⟧
+// 해설 L352: XAML UI 구조·속성·리소스 선언입니다: <DataGrid.CellStyle>
+L000352 |                                 <DataGrid.CellStyle> ⟦EOL⟧
+// 해설 L353: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="DataGridCell">
+L000353 |                                     <Style TargetType="DataGridCell"> ⟦EOL⟧
+// 해설 L354: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="Transparent" />
+L000354 |                                         <Setter Property="Background" Value="Transparent" /> ⟦EOL⟧
+// 해설 L355: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="0" />
+L000355 |                                         <Setter Property="BorderThickness" Value="0" /> ⟦EOL⟧
+// 해설 L356: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground}" />
+L000356 |                                         <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground}" /> ⟦EOL⟧
+// 해설 L357: XAML UI 구조·속성·리소스 선언입니다: <Style.Triggers>
+L000357 |                                         <Style.Triggers> ⟦EOL⟧
+// 해설 L358: XAML UI 구조·속성·리소스 선언입니다: <Trigger Property="IsSelected" Value="True">
+L000358 |                                             <Trigger Property="IsSelected" Value="True"> ⟦EOL⟧
+// 해설 L359: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="Transparent" />
+L000359 |                                                 <Setter Property="Background" Value="Transparent" /> ⟦EOL⟧
+// 해설 L360: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderThickness" Value="0" />
+L000360 |                                                 <Setter Property="BorderThickness" Value="0" /> ⟦EOL⟧
+// 해설 L361: XAML 요소 범위를 닫습니다.
+L000361 |                                             </Trigger> ⟦EOL⟧
+// 해설 L362: XAML 요소 범위를 닫습니다.
+L000362 |                                         </Style.Triggers> ⟦EOL⟧
+// 해설 L363: XAML 요소 범위를 닫습니다.
+L000363 |                                     </Style> ⟦EOL⟧
+// 해설 L364: XAML 요소 범위를 닫습니다.
+L000364 |                                 </DataGrid.CellStyle> ⟦EOL⟧
+// 해설 L365: XAML UI 구조·속성·리소스 선언입니다: <DataGrid.Columns>
+L000365 |                                 <DataGrid.Columns> ⟦EOL⟧
+// 해설 L366: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="SHOT" Binding="{Binding ShotName}" Width="82" />
+L000366 |                                     <DataGridTextColumn Header="SHOT" Binding="{Binding ShotName}" Width="82" /> ⟦EOL⟧
+// 해설 L367: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="HEAD" Binding="{Binding Head}" Width="64" />
+L000367 |                                     <DataGridTextColumn Header="HEAD" Binding="{Binding Head}" Width="64" /> ⟦EOL⟧
+// 해설 L368: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="DESIGN OFFSET X (mm)" Binding="{Binding DesignOffsetX}" Width="*" />
+L000368 |                                     <DataGridTextColumn Header="DESIGN OFFSET X (mm)" Binding="{Binding DesignOffsetX}" Width="*" /> ⟦EOL⟧
+// 해설 L369: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataGridTextColumn Header="DESIGN OFFSET Y (mm)" Binding="{Binding DesignOffsetY}" Width="*" />
+L000369 |                                     <DataGridTextColumn Header="DESIGN OFFSET Y (mm)" Binding="{Binding DesignOffsetY}" Width="*" /> ⟦EOL⟧
+// 해설 L370: XAML UI 구조·속성·리소스 선언입니다: <DataGridTemplateColumn Header="SCANNER OFFSET GX (mm)" Width="*">
+L000370 |                                     <DataGridTemplateColumn Header="SCANNER OFFSET GX (mm)" Width="*"> ⟦EOL⟧
+// 해설 L371: XAML UI 구조·속성·리소스 선언입니다: <DataGridTemplateColumn.CellTemplate>
+L000371 |                                         <DataGridTemplateColumn.CellTemplate> ⟦EOL⟧
+// 해설 L372: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate>
+L000372 |                                             <DataTemplate> ⟦EOL⟧
+// 해설 L373: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding ScannerOffsetGx}"
+L000373 |                                                 <TextBlock Text="{Binding ScannerOffsetGx}" ⟦EOL⟧
+// 해설 L374: XAML UI 구조·속성·리소스 선언입니다: Foreground="#FFB45C"
+L000374 |                                                            Foreground="#FFB45C" ⟦EOL⟧
+// 해설 L375: XAML UI 구조·속성·리소스 선언입니다: FontWeight="Bold"
+L000375 |                                                            FontWeight="Bold" ⟦EOL⟧
+// 해설 L376: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center"
+L000376 |                                                            HorizontalAlignment="Center" ⟦EOL⟧
+// 해설 L377: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000377 |                                                            VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L378: XAML 요소 범위를 닫습니다.
+L000378 |                                             </DataTemplate> ⟦EOL⟧
+// 해설 L379: XAML 요소 범위를 닫습니다.
+L000379 |                                         </DataGridTemplateColumn.CellTemplate> ⟦EOL⟧
+// 해설 L380: XAML 요소 범위를 닫습니다.
+L000380 |                                     </DataGridTemplateColumn> ⟦EOL⟧
+// 해설 L381: XAML UI 구조·속성·리소스 선언입니다: <DataGridTemplateColumn Header="SCANNER OFFSET GY (mm)" Width="*">
+L000381 |                                     <DataGridTemplateColumn Header="SCANNER OFFSET GY (mm)" Width="*"> ⟦EOL⟧
+// 해설 L382: XAML UI 구조·속성·리소스 선언입니다: <DataGridTemplateColumn.CellTemplate>
+L000382 |                                         <DataGridTemplateColumn.CellTemplate> ⟦EOL⟧
+// 해설 L383: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate>
+L000383 |                                             <DataTemplate> ⟦EOL⟧
+// 해설 L384: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <TextBlock Text="{Binding ScannerOffsetGy}"
+L000384 |                                                 <TextBlock Text="{Binding ScannerOffsetGy}" ⟦EOL⟧
+// 해설 L385: XAML UI 구조·속성·리소스 선언입니다: Foreground="#FFB45C"
+L000385 |                                                            Foreground="#FFB45C" ⟦EOL⟧
+// 해설 L386: XAML UI 구조·속성·리소스 선언입니다: FontWeight="Bold"
+L000386 |                                                            FontWeight="Bold" ⟦EOL⟧
+// 해설 L387: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Center"
+L000387 |                                                            HorizontalAlignment="Center" ⟦EOL⟧
+// 해설 L388: XAML UI 구조·속성·리소스 선언입니다: VerticalAlignment="Center" />
+L000388 |                                                            VerticalAlignment="Center" /> ⟦EOL⟧
+// 해설 L389: XAML 요소 범위를 닫습니다.
+L000389 |                                             </DataTemplate> ⟦EOL⟧
+// 해설 L390: XAML 요소 범위를 닫습니다.
+L000390 |                                         </DataGridTemplateColumn.CellTemplate> ⟦EOL⟧
+// 해설 L391: XAML 요소 범위를 닫습니다.
+L000391 |                                     </DataGridTemplateColumn> ⟦EOL⟧
+// 해설 L392: XAML 요소 범위를 닫습니다.
+L000392 |                                 </DataGrid.Columns> ⟦EOL⟧
+// 해설 L393: XAML 요소 범위를 닫습니다.
+L000393 |                             </DataGrid> ⟦EOL⟧
+// 해설 L394: XAML 요소 범위를 닫습니다.
+L000394 |                         </Grid> ⟦EOL⟧
+// 해설 L395: XAML 요소 범위를 닫습니다.
+L000395 |                     </Grid> ⟦EOL⟧
+// 해설 L396: XAML 요소 범위를 닫습니다.
+L000396 |                 </Border> ⟦EOL⟧
+// 해설 L397: XAML 요소 범위를 닫습니다.
+L000397 |             </Grid> ⟦EOL⟧
+L000398 |  ⟦EOL⟧
+// 해설 L399: XAML UI 구조·속성·리소스 선언입니다: <Button Grid.Row="2"
+L000399 |             <Button Grid.Row="2" ⟦EOL⟧
+// 해설 L400: XAML UI 구조·속성·리소스 선언입니다: Content="닫기"
+L000400 |                     Content="닫기" ⟦EOL⟧
+// 해설 L401: XAML UI 구조·속성·리소스 선언입니다: Width="150"
+L000401 |                     Width="150" ⟦EOL⟧
+// 해설 L402: XAML UI 구조·속성·리소스 선언입니다: Height="40"
+L000402 |                     Height="40" ⟦EOL⟧
+// 해설 L403: XAML UI 구조·속성·리소스 선언입니다: Margin="0,12,0,0"
+L000403 |                     Margin="0,12,0,0" ⟦EOL⟧
+// 해설 L404: XAML UI 구조·속성·리소스 선언입니다: HorizontalAlignment="Right"
+L000404 |                     HorizontalAlignment="Right" ⟦EOL⟧
+// 해설 L405: XAML UI 구조·속성·리소스 선언입니다: Style="{StaticResource SecondaryButton}"
+L000405 |                     Style="{StaticResource SecondaryButton}" ⟦EOL⟧
+// 해설 L406: XAML UI 구조·속성·리소스 선언입니다: FontSize="15"
+L000406 |                     FontSize="15" ⟦EOL⟧
+// 해설 L407: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: Click="OnCloseClicked" />
+L000407 |                     Click="OnCloseClicked" /> ⟦EOL⟧
+// 해설 L408: XAML 요소 범위를 닫습니다.
+L000408 |         </Grid> ⟦EOL⟧
+// 해설 L409: XAML 요소 범위를 닫습니다.
+L000409 |     </Border> ⟦EOL⟧
+// 해설 L410: XAML 요소 범위를 닫습니다.
+L000410 | </Window> ⟦EOL⟧

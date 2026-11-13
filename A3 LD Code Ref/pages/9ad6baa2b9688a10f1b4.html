@@ -1,0 +1,1585 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Views/CRecipeView.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Views/CRecipeView.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Views/CRecipeView.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>c3d27bc81b7f9cdd0b8dd2bad10ef87e51ba22c93e2f192c6897b746e8fe704d</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>20,953 bytes / 549 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/9ad6baa2b9688a10f1b4.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CRecipeView</td><td>ClassDeclaration</td><td>13–549</td><td>CRecipeView: UserControl</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>PreviewZoomMinimum</td><td>FieldDeclaration</td><td>L15–15</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomMinimum</td></tr>
+<tr><td>PreviewZoomMaximum</td><td>FieldDeclaration</td><td>L16–16</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomMaximum</td></tr>
+<tr><td>PreviewZoomStep</td><td>FieldDeclaration</td><td>L17–17</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomStep</td></tr>
+<tr><td>_isRecipePreviewDragging</td><td>FieldDeclaration</td><td>L18–18</td><td>bool Drilling.UI.Views.CRecipeView._isRecipePreviewDragging</td></tr>
+<tr><td>_recipePreviewDragStart</td><td>FieldDeclaration</td><td>L19–19</td><td>Point Drilling.UI.Views.CRecipeView._recipePreviewDragStart</td></tr>
+<tr><td>_recipePreviewDragStartX</td><td>FieldDeclaration</td><td>L20–20</td><td>double Drilling.UI.Views.CRecipeView._recipePreviewDragStartX</td></tr>
+<tr><td>_recipePreviewDragStartY</td><td>FieldDeclaration</td><td>L21–21</td><td>double Drilling.UI.Views.CRecipeView._recipePreviewDragStartY</td></tr>
+<tr><td>_isHistoryExpanded</td><td>FieldDeclaration</td><td>L22–22</td><td>bool Drilling.UI.Views.CRecipeView._isHistoryExpanded</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L23–26</td><td>Drilling.UI.Views.CRecipeView.CRecipeView()</td></tr>
+<tr><td>ToggleHistory_Click</td><td>MethodDeclaration</td><td>L28–40</td><td>void Drilling.UI.Views.CRecipeView.ToggleHistory_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>RecipePreview_PreviewMouseWheel</td><td>MethodDeclaration</td><td>L42–79</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>GetPreviewZoomTranslation</td><td>MethodDeclaration</td><td>L81–85</td><td>double Drilling.UI.Views.CRecipeView.GetPreviewZoomTranslation(double, double, double, double, double, double)</td></tr>
+<tr><td>RecipePreview_PreviewMouseLeftButtonDown</td><td>MethodDeclaration</td><td>L87–105</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>RecipePreview_PreviewMouseMove</td><td>MethodDeclaration</td><td>L107–119</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>RecipePreview_PreviewMouseLeftButtonUp</td><td>MethodDeclaration</td><td>L121–130</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonUp(object, MouseButtonEventArgs)</td></tr>
+<tr><td>RecipePreview_PreviewMouseRightButtonDown</td><td>MethodDeclaration</td><td>L132–144</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>RecipePreview_LostMouseCapture</td><td>MethodDeclaration</td><td>L146–152</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_LostMouseCapture(object, MouseEventArgs)</td></tr>
+<tr><td>RecipePreviewResize_Click</td><td>MethodDeclaration</td><td>L154–158</td><td>void Drilling.UI.Views.CRecipeView.RecipePreviewResize_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>CellShotMap_PreviewMouseWheel</td><td>MethodDeclaration</td><td>L160–197</td><td>void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>CellShotMap_PreviewMouseRightButtonDown</td><td>MethodDeclaration</td><td>L199–210</td><td>void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>CellShotMapResize_Click</td><td>MethodDeclaration</td><td>L212–216</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapResize_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>EndRecipePreviewDrag</td><td>MethodDeclaration</td><td>L218–227</td><td>void Drilling.UI.Views.CRecipeView.EndRecipePreviewDrag(FrameworkElement)</td></tr>
+<tr><td>ClampRecipePreviewTranslation</td><td>MethodDeclaration</td><td>L229–240</td><td>void Drilling.UI.Views.CRecipeView.ClampRecipePreviewTranslation(FrameworkElement)</td></tr>
+<tr><td>ClampCellShotMapTranslation</td><td>MethodDeclaration</td><td>L242–253</td><td>void Drilling.UI.Views.CRecipeView.ClampCellShotMapTranslation(FrameworkElement)</td></tr>
+<tr><td>ResetRecipePreviewZoom</td><td>MethodDeclaration</td><td>L255–264</td><td>void Drilling.UI.Views.CRecipeView.ResetRecipePreviewZoom()</td></tr>
+<tr><td>ResetCellShotMapZoom</td><td>MethodDeclaration</td><td>L266–274</td><td>void Drilling.UI.Views.CRecipeView.ResetCellShotMapZoom()</td></tr>
+<tr><td>CellContentScrollViewer_PreviewMouseWheel</td><td>MethodDeclaration</td><td>L276–288</td><td>void Drilling.UI.Views.CRecipeView.CellContentScrollViewer_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>ToggleCellPlacement_Click</td><td>MethodDeclaration</td><td>L290–303</td><td>void Drilling.UI.Views.CRecipeView.ToggleCellPlacement_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>OpenCellPlacementWizard_Click</td><td>MethodDeclaration</td><td>L305–326</td><td>void Drilling.UI.Views.CRecipeView.OpenCellPlacementWizard_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>OpenManagedItemInput</td><td>MethodDeclaration</td><td>L328–341</td><td>void Drilling.UI.Views.CRecipeView.OpenManagedItemInput(object, RoutedEventArgs)</td></tr>
+<tr><td>OpenCellOverviewInput</td><td>MethodDeclaration</td><td>L343–383</td><td>void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)</td></tr>
+<tr><td>OpenShotGroupOffsetInput</td><td>MethodDeclaration</td><td>L385–404</td><td>void Drilling.UI.Views.CRecipeView.OpenShotGroupOffsetInput(object, RoutedEventArgs)</td></tr>
+<tr><td>CanEditCurrentRecipe</td><td>MethodDeclaration</td><td>L406–409</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe()</td></tr>
+<tr><td>SelectShotGroupFromMap</td><td>MethodDeclaration</td><td>L411–421</td><td>void Drilling.UI.Views.CRecipeView.SelectShotGroupFromMap(object, MouseButtonEventArgs)</td></tr>
+<tr><td>CellPreviewLabel_MouseMove</td><td>MethodDeclaration</td><td>L423–434</td><td>void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>CellPreviewLabel_MouseLeave</td><td>MethodDeclaration</td><td>L436–439</td><td>void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>PositionRecipePreviewHoverTip</td><td>MethodDeclaration</td><td>L441–462</td><td>void Drilling.UI.Views.CRecipeView.PositionRecipePreviewHoverTip(Point)</td></tr>
+<tr><td>HideRecipePreviewHoverTip</td><td>MethodDeclaration</td><td>L464–468</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip()</td></tr>
+<tr><td>CellShotMapSurface_MouseMove</td><td>MethodDeclaration</td><td>L470–489</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>CellShotMapSurface_MouseLeave</td><td>MethodDeclaration</td><td>L491–494</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>PositionCellShotMapHoverTip</td><td>MethodDeclaration</td><td>L496–517</td><td>void Drilling.UI.Views.CRecipeView.PositionCellShotMapHoverTip(Point)</td></tr>
+<tr><td>HideCellShotMapHoverTip</td><td>MethodDeclaration</td><td>L519–523</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip()</td></tr>
+<tr><td>RecipeView_IsVisibleChanged</td><td>MethodDeclaration</td><td>L525–532</td><td>void Drilling.UI.Views.CRecipeView.RecipeView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>FindAncestor</td><td>MethodDeclaration</td><td>L534–548</td><td>T? Drilling.UI.Views.CRecipeView.FindAncestor&lt;T&gt;(DependencyObject?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">FieldDeclaration <code>PreviewZoomMinimum</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L15-L15">Drilling.UI/Views/CRecipeView.xaml.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomMinimum</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PreviewZoomMinimum = 1.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>PreviewZoomMaximum</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L16-L16">Drilling.UI/Views/CRecipeView.xaml.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomMaximum</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PreviewZoomMaximum = 4.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>PreviewZoomStep</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L17-L17">Drilling.UI/Views/CRecipeView.xaml.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView.PreviewZoomStep</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PreviewZoomStep = 0.2</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>_isRecipePreviewDragging</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L18-L18">Drilling.UI/Views/CRecipeView.xaml.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Views.CRecipeView._isRecipePreviewDragging</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">FieldDeclaration <code>_recipePreviewDragStart</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L19-L19">Drilling.UI/Views/CRecipeView.xaml.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Point Drilling.UI.Views.CRecipeView._recipePreviewDragStart</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Point</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">FieldDeclaration <code>_recipePreviewDragStartX</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L20-L20">Drilling.UI/Views/CRecipeView.xaml.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView._recipePreviewDragStartX</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">FieldDeclaration <code>_recipePreviewDragStartY</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L21-L21">Drilling.UI/Views/CRecipeView.xaml.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView._recipePreviewDragStartY</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">FieldDeclaration <code>_isHistoryExpanded</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L22-L22">Drilling.UI/Views/CRecipeView.xaml.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Views.CRecipeView._isHistoryExpanded</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">ConstructorDeclaration <code>.ctor</code> · L23–26</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L23-L26">Drilling.UI/Views/CRecipeView.xaml.cs:23–26</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Views.CRecipeView.CRecipeView()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>25</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">MethodDeclaration <code>ToggleHistory_Click</code> · L28–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L28-L40">Drilling.UI/Views/CRecipeView.xaml.cs:28–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ToggleHistory_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>33</td><td>Grid.SetRow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>34</td><td>Grid.SetColumn</td><td>unresolved</td><td>None</td></tr>
+<tr><td>35</td><td>Grid.SetRowSpan</td><td>unresolved</td><td>None</td></tr>
+<tr><td>36</td><td>Grid.SetColumnSpan</td><td>unresolved</td><td>None</td></tr>
+<tr><td>37</td><td>new Thickness</td><td>unresolved</td><td>None</td></tr>
+<tr><td>37</td><td>new Thickness</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>30</td><td>assignment</td><td>값을 대상에 대입합니다: _isHistoryExpanded = !_isHistoryExpanded</td></tr>
+<tr><td>31</td><td>assignment</td><td>값을 대상에 대입합니다: RecipeFilesPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>31</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: RecipeEditorPanel.Visibility = _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>32</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(HistoryPanel, _isHistoryExpanded ? 0 : 1)</td></tr>
+<tr><td>33</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 0 : 1</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(HistoryPanel, _isHistoryExpanded ? 0 : 1)</td></tr>
+<tr><td>34</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 0 : 1</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRowSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1)</td></tr>
+<tr><td>35</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 2 : 1</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(HistoryPanel, _isHistoryExpanded ? 2 : 1)</td></tr>
+<tr><td>36</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? 2 : 1</td></tr>
+<tr><td>37</td><td>assignment</td><td>값을 대상에 대입합니다: HistoryPanel.Margin = _isHistoryExpanded ? new Thickness(0) : new Thickness(12, 12, 0, 0)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(12, 12, 0, 0)</td></tr>
+<tr><td>37</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? new Thickness(0) : new Thickness(12, 12, 0, 0)</td></tr>
+<tr><td>38</td><td>assignment</td><td>값을 대상에 대입합니다: HistoryExpandButton.Content = _isHistoryExpanded ? &quot;COLLAPSE&quot; : &quot;EXPAND&quot;</td></tr>
+<tr><td>38</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _isHistoryExpanded ? &quot;COLLAPSE&quot; : &quot;EXPAND&quot;</td></tr>
+<tr><td>39</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">MethodDeclaration <code>RecipePreview_PreviewMouseWheel</code> · L42–79</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L42-L79">Drilling.UI/Views/CRecipeView.xaml.cs:42–79</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseWheelEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>51</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>52</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>58</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+<tr><td>60</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>60</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>60</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>61</td><td>GetPreviewZoomTranslation</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>62</td><td>GetPreviewZoomTranslation</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>75</td><td>ClampRecipePreviewTranslation</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ClampRecipePreviewTranslation(FrameworkElement) · Drilling.UI/Views/CRecipeView.xaml.cs:229</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>44</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement preview || preview.ActualWidth &lt;= 0 || preview.ActualHeight &lt;= 0)</td></tr>
+<tr><td>46</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>49</td><td>local-declaration</td><td>지역 변수를 선언합니다: var currentScale = RecipePreviewScaleTransform.ScaleX;</td></tr>
+<tr><td>49</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: currentScale = RecipePreviewScaleTransform.ScaleX</td></tr>
+<tr><td>50</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep</td></tr>
+<tr><td>50</td><td>local-declaration</td><td>지역 변수를 선언합니다: var requestedScale = currentScale + (e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep);</td></tr>
+<tr><td>50</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: requestedScale = currentScale + (e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)</td></tr>
+<tr><td>51</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum);</td></tr>
+<tr><td>51</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(nextScale - currentScale)</td></tr>
+<tr><td>52</td><td>if</td><td>조건에 따라 분기합니다: if (Math.Abs(nextScale - currentScale) &lt; double.Epsilon)</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>55</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)</td></tr>
+<tr><td>58</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pointer = e.GetPosition(preview);</td></tr>
+<tr><td>58</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pointer = e.GetPosition(preview)</td></tr>
+<tr><td>59</td><td>local-declaration</td><td>지역 변수를 선언합니다: var currentOrigin = RecipePreviewZoomContent.RenderTransformOrigin;</td></tr>
+<tr><td>59</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: currentOrigin = RecipePreviewZoomContent.RenderTransformOrigin</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0))</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0)</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)</td></tr>
+<tr><td>60</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0));</td></tr>
+<tr><td>60</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0))</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X)</td></tr>
+<tr><td>61</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X);</td></tr>
+<tr><td>61</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, RecipePreviewTranslateTransform.X)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y)</td></tr>
+<tr><td>62</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y);</td></tr>
+<tr><td>62</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, RecipePreviewTranslateTransform.Y)</td></tr>
+<tr><td>63</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewZoomContent.RenderTransformOrigin = nextOrigin</td></tr>
+<tr><td>64</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleX = nextScale</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleY = nextScale</td></tr>
+<tr><td>66</td><td>if</td><td>조건에 따라 분기합니다: if (nextScale &lt;= PreviewZoomMinimum)</td></tr>
+<tr><td>68</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = 0</td></tr>
+<tr><td>69</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = 0</td></tr>
+<tr><td>71</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = nextTranslationX</td></tr>
+<tr><td>74</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = nextTranslationY</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClampRecipePreviewTranslation(preview)</td></tr>
+<tr><td>78</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_PreviewMouseWheel&quot;]
+ N0[&quot;L44 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L52 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L66 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L71 else&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">MethodDeclaration <code>GetPreviewZoomTranslation</code> · L81–85</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L81-L85">Drilling.UI/Views/CRecipeView.xaml.cs:81–85</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Views.CRecipeView.GetPreviewZoomTranslation(double, double, double, double, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>pointer</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>currentScale</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>nextScale</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>currentOrigin</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>nextOrigin</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>currentTranslation</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>83</td><td>local-declaration</td><td>지역 변수를 선언합니다: var contentCoordinate = (pointer - ((1.0 - currentScale) * currentOrigin) - currentTranslation) / currentScale;</td></tr>
+<tr><td>83</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: contentCoordinate = (pointer - ((1.0 - currentScale) * currentOrigin) - currentTranslation) / currentScale</td></tr>
+<tr><td>84</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return pointer - (nextScale * contentCoordinate) - ((1.0 - nextScale) * nextOrigin);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L87">MethodDeclaration <code>RecipePreview_PreviewMouseLeftButtonDown</code> · L87–105</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L87-L105">Drilling.UI/Views/CRecipeView.xaml.cs:87–105</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>89</td><td>FindAncestor&lt;ButtonBase&gt;</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>94</td><td>preview.CaptureMouse</td><td>unresolved</td><td>None</td></tr>
+<tr><td>100</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindAncestor&lt;ButtonBase&gt;(e.OriginalSource as DependencyObject)</td></tr>
+<tr><td>89</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement preview || RecipePreviewScaleTransform.ScaleX &lt;= PreviewZoomMinimum || FindAncestor&lt;ButtonBase&gt;(e.OriginalSource as DependencyObject) is not null)</td></tr>
+<tr><td>91</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: preview.CaptureMouse()</td></tr>
+<tr><td>94</td><td>if</td><td>조건에 따라 분기합니다: if (!preview.CaptureMouse())</td></tr>
+<tr><td>96</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: _isRecipePreviewDragging = true</td></tr>
+<tr><td>100</td><td>assignment</td><td>값을 대상에 대입합니다: _recipePreviewDragStart = e.GetPosition(preview)</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)</td></tr>
+<tr><td>101</td><td>assignment</td><td>값을 대상에 대입합니다: _recipePreviewDragStartX = RecipePreviewTranslateTransform.X</td></tr>
+<tr><td>102</td><td>assignment</td><td>값을 대상에 대입합니다: _recipePreviewDragStartY = RecipePreviewTranslateTransform.Y</td></tr>
+<tr><td>103</td><td>assignment</td><td>값을 대상에 대입합니다: preview.Cursor = Cursors.SizeAll</td></tr>
+<tr><td>104</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_PreviewMouseLeftButtonDown&quot;]
+ N0[&quot;L89 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L94 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L107">MethodDeclaration <code>RecipePreview_PreviewMouseMove</code> · L107–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L107-L119">Drilling.UI/Views/CRecipeView.xaml.cs:107–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>114</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+<tr><td>117</td><td>ClampRecipePreviewTranslation</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ClampRecipePreviewTranslation(FrameworkElement) · Drilling.UI/Views/CRecipeView.xaml.cs:229</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>if</td><td>조건에 따라 분기합니다: if (!_isRecipePreviewDragging || sender is not FrameworkElement preview)</td></tr>
+<tr><td>111</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)</td></tr>
+<tr><td>114</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = e.GetPosition(preview);</td></tr>
+<tr><td>114</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = e.GetPosition(preview)</td></tr>
+<tr><td>115</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = _recipePreviewDragStartX + current.X - _recipePreviewDragStart.X</td></tr>
+<tr><td>116</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = _recipePreviewDragStartY + current.Y - _recipePreviewDragStart.Y</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClampRecipePreviewTranslation(preview)</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_PreviewMouseMove&quot;]
+ N0[&quot;L109 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L121">MethodDeclaration <code>RecipePreview_PreviewMouseLeftButtonUp</code> · L121–130</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L121-L130">Drilling.UI/Views/CRecipeView.xaml.cs:121–130</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseLeftButtonUp(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>128</td><td>EndRecipePreviewDrag</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.EndRecipePreviewDrag(FrameworkElement) · Drilling.UI/Views/CRecipeView.xaml.cs:218</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>123</td><td>if</td><td>조건에 따라 분기합니다: if (!_isRecipePreviewDragging || sender is not FrameworkElement preview)</td></tr>
+<tr><td>125</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(preview)</td></tr>
+<tr><td>129</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_PreviewMouseLeftButtonUp&quot;]
+ N0[&quot;L123 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L132">MethodDeclaration <code>RecipePreview_PreviewMouseRightButtonDown</code> · L132–144</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L132-L144">Drilling.UI/Views/CRecipeView.xaml.cs:132–144</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>134</td><td>HideRecipePreviewHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:464</td></tr>
+<tr><td>135</td><td>EndRecipePreviewDrag</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(RecipePreviewViewport)</td></tr>
+<tr><td>136</td><td>if</td><td>조건에 따라 분기합니다: if (RecipePreviewViewport.ContextMenu is not { } contextMenu)</td></tr>
+<tr><td>138</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>141</td><td>assignment</td><td>값을 대상에 대입합니다: contextMenu.PlacementTarget = RecipePreviewViewport</td></tr>
+<tr><td>142</td><td>assignment</td><td>값을 대상에 대입합니다: contextMenu.IsOpen = true</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_PreviewMouseRightButtonDown&quot;]
+ N0[&quot;L136 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L146">MethodDeclaration <code>RecipePreview_LostMouseCapture</code> · L146–152</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L146-L152">Drilling.UI/Views/CRecipeView.xaml.cs:146–152</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreview_LostMouseCapture(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>150</td><td>EndRecipePreviewDrag</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.EndRecipePreviewDrag(FrameworkElement) · Drilling.UI/Views/CRecipeView.xaml.cs:218</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>148</td><td>if</td><td>조건에 따라 분기합니다: if (sender is FrameworkElement preview)</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(preview)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipePreview_LostMouseCapture&quot;]
+ N0[&quot;L148 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L154">MethodDeclaration <code>RecipePreviewResize_Click</code> · L154–158</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L154-L158">Drilling.UI/Views/CRecipeView.xaml.cs:154–158</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipePreviewResize_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>156</td><td>ResetRecipePreviewZoom</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ResetRecipePreviewZoom() · Drilling.UI/Views/CRecipeView.xaml.cs:255</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ResetRecipePreviewZoom()</td></tr>
+<tr><td>157</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">MethodDeclaration <code>CellShotMap_PreviewMouseWheel</code> · L160–197</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L160-L197">Drilling.UI/Views/CRecipeView.xaml.cs:160–197</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseWheelEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>169</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>170</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>176</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+<tr><td>178</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>178</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>178</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>179</td><td>GetPreviewZoomTranslation</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>180</td><td>GetPreviewZoomTranslation</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>193</td><td>ClampCellShotMapTranslation</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ClampCellShotMapTranslation(FrameworkElement) · Drilling.UI/Views/CRecipeView.xaml.cs:242</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement preview || preview.ActualWidth &lt;= 0 || preview.ActualHeight &lt;= 0)</td></tr>
+<tr><td>164</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>167</td><td>local-declaration</td><td>지역 변수를 선언합니다: var currentScale = CellShotMapScaleTransform.ScaleX;</td></tr>
+<tr><td>167</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: currentScale = CellShotMapScaleTransform.ScaleX</td></tr>
+<tr><td>168</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep</td></tr>
+<tr><td>168</td><td>local-declaration</td><td>지역 변수를 선언합니다: var requestedScale = currentScale + (e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep);</td></tr>
+<tr><td>168</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: requestedScale = currentScale + (e.Delta &gt; 0 ? PreviewZoomStep : -PreviewZoomStep)</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)</td></tr>
+<tr><td>169</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum);</td></tr>
+<tr><td>169</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextScale = Math.Clamp(requestedScale, PreviewZoomMinimum, PreviewZoomMaximum)</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(nextScale - currentScale)</td></tr>
+<tr><td>170</td><td>if</td><td>조건에 따라 분기합니다: if (Math.Abs(nextScale - currentScale) &lt; double.Epsilon)</td></tr>
+<tr><td>172</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>173</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)</td></tr>
+<tr><td>176</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pointer = e.GetPosition(preview);</td></tr>
+<tr><td>176</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pointer = e.GetPosition(preview)</td></tr>
+<tr><td>177</td><td>local-declaration</td><td>지역 변수를 선언합니다: var currentOrigin = CellShotMapZoomContent.RenderTransformOrigin;</td></tr>
+<tr><td>177</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: currentOrigin = CellShotMapZoomContent.RenderTransformOrigin</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0))</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0)</td></tr>
+<tr><td>178</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0));</td></tr>
+<tr><td>178</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextOrigin = new Point(Math.Clamp(pointer.X / preview.ActualWidth, 0.0, 1.0), Math.Clamp(pointer.Y / preview.ActualHeight, 0.0, 1.0))</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X)</td></tr>
+<tr><td>179</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X);</td></tr>
+<tr><td>179</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextTranslationX = GetPreviewZoomTranslation(pointer.X, currentScale, nextScale, currentOrigin.X * preview.ActualWidth, nextOrigin.X * preview.ActualWidth, CellShotMapTranslateTransform.X)</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y)</td></tr>
+<tr><td>180</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y);</td></tr>
+<tr><td>180</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nextTranslationY = GetPreviewZoomTranslation(pointer.Y, currentScale, nextScale, currentOrigin.Y * preview.ActualHeight, nextOrigin.Y * preview.ActualHeight, CellShotMapTranslateTransform.Y)</td></tr>
+<tr><td>181</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapZoomContent.RenderTransformOrigin = nextOrigin</td></tr>
+<tr><td>182</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleX = nextScale</td></tr>
+<tr><td>183</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleY = nextScale</td></tr>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (nextScale &lt;= PreviewZoomMinimum)</td></tr>
+<tr><td>186</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.X = 0</td></tr>
+<tr><td>187</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = 0</td></tr>
+<tr><td>189</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>191</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.X = nextTranslationX</td></tr>
+<tr><td>192</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = nextTranslationY</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClampCellShotMapTranslation(preview)</td></tr>
+<tr><td>196</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CellShotMap_PreviewMouseWheel&quot;]
+ N0[&quot;L162 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L170 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L184 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L189 else&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L199">MethodDeclaration <code>CellShotMap_PreviewMouseRightButtonDown</code> · L199–210</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L199-L210">Drilling.UI/Views/CRecipeView.xaml.cs:199–210</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellShotMap_PreviewMouseRightButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>201</td><td>HideCellShotMapHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:519</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()</td></tr>
+<tr><td>202</td><td>if</td><td>조건에 따라 분기합니다: if (CellShotMapViewport.ContextMenu is not { } contextMenu)</td></tr>
+<tr><td>204</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>207</td><td>assignment</td><td>값을 대상에 대입합니다: contextMenu.PlacementTarget = CellShotMapViewport</td></tr>
+<tr><td>208</td><td>assignment</td><td>값을 대상에 대입합니다: contextMenu.IsOpen = true</td></tr>
+<tr><td>209</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CellShotMap_PreviewMouseRightButtonDown&quot;]
+ N0[&quot;L202 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L212">MethodDeclaration <code>CellShotMapResize_Click</code> · L212–216</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L212-L216">Drilling.UI/Views/CRecipeView.xaml.cs:212–216</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapResize_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>214</td><td>ResetCellShotMapZoom</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ResetCellShotMapZoom() · Drilling.UI/Views/CRecipeView.xaml.cs:266</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ResetCellShotMapZoom()</td></tr>
+<tr><td>215</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L218">MethodDeclaration <code>EndRecipePreviewDrag</code> · L218–227</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L218-L227">Drilling.UI/Views/CRecipeView.xaml.cs:218–227</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.EndRecipePreviewDrag(FrameworkElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>preview</td><td>FrameworkElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L128-L128">Drilling.UI/Views/CRecipeView.xaml.cs:128–128</a></td><td>EndRecipePreviewDrag</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L150-L150">Drilling.UI/Views/CRecipeView.xaml.cs:150–150</a></td><td>EndRecipePreviewDrag</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>223</td><td>preview.ReleaseMouseCapture</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>220</td><td>assignment</td><td>값을 대상에 대입합니다: _isRecipePreviewDragging = false</td></tr>
+<tr><td>221</td><td>if</td><td>조건에 따라 분기합니다: if (Mouse.Captured == preview)</td></tr>
+<tr><td>223</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: preview.ReleaseMouseCapture()</td></tr>
+<tr><td>226</td><td>assignment</td><td>값을 대상에 대입합니다: preview.Cursor = Cursors.Hand</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EndRecipePreviewDrag&quot;]
+ N0[&quot;L221 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L229">MethodDeclaration <code>ClampRecipePreviewTranslation</code> · L229–240</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L229-L240">Drilling.UI/Views/CRecipeView.xaml.cs:229–240</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ClampRecipePreviewTranslation(FrameworkElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>preview</td><td>FrameworkElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L75-L75">Drilling.UI/Views/CRecipeView.xaml.cs:75–75</a></td><td>ClampRecipePreviewTranslation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L117-L117">Drilling.UI/Views/CRecipeView.xaml.cs:117–117</a></td><td>ClampRecipePreviewTranslation</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>238</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>239</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>231</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scale = RecipePreviewScaleTransform.ScaleX;</td></tr>
+<tr><td>231</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scale = RecipePreviewScaleTransform.ScaleX</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, scale - PreviewZoomMinimum)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum);</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum)</td></tr>
+<tr><td>233</td><td>local-declaration</td><td>지역 변수를 선언합니다: var origin = RecipePreviewZoomContent.RenderTransformOrigin;</td></tr>
+<tr><td>233</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: origin = RecipePreviewZoomContent.RenderTransformOrigin</td></tr>
+<tr><td>234</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio;</td></tr>
+<tr><td>234</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio</td></tr>
+<tr><td>235</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxX = preview.ActualWidth * origin.X * overflowRatio;</td></tr>
+<tr><td>235</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxX = preview.ActualWidth * origin.X * overflowRatio</td></tr>
+<tr><td>236</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio;</td></tr>
+<tr><td>236</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio</td></tr>
+<tr><td>237</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxY = preview.ActualHeight * origin.Y * overflowRatio;</td></tr>
+<tr><td>237</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxY = preview.ActualHeight * origin.Y * overflowRatio</td></tr>
+<tr><td>238</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = Math.Clamp(RecipePreviewTranslateTransform.X, minX, maxX)</td></tr>
+<tr><td>238</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(RecipePreviewTranslateTransform.X, minX, maxX)</td></tr>
+<tr><td>239</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = Math.Clamp(RecipePreviewTranslateTransform.Y, minY, maxY)</td></tr>
+<tr><td>239</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(RecipePreviewTranslateTransform.Y, minY, maxY)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L242">MethodDeclaration <code>ClampCellShotMapTranslation</code> · L242–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L242-L253">Drilling.UI/Views/CRecipeView.xaml.cs:242–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ClampCellShotMapTranslation(FrameworkElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>preview</td><td>FrameworkElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L193-L193">Drilling.UI/Views/CRecipeView.xaml.cs:193–193</a></td><td>ClampCellShotMapTranslation</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>245</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>251</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>252</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>244</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scale = CellShotMapScaleTransform.ScaleX;</td></tr>
+<tr><td>244</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scale = CellShotMapScaleTransform.ScaleX</td></tr>
+<tr><td>245</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, scale - PreviewZoomMinimum)</td></tr>
+<tr><td>245</td><td>local-declaration</td><td>지역 변수를 선언합니다: var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum);</td></tr>
+<tr><td>245</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum)</td></tr>
+<tr><td>246</td><td>local-declaration</td><td>지역 변수를 선언합니다: var origin = CellShotMapZoomContent.RenderTransformOrigin;</td></tr>
+<tr><td>246</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: origin = CellShotMapZoomContent.RenderTransformOrigin</td></tr>
+<tr><td>247</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio;</td></tr>
+<tr><td>247</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio</td></tr>
+<tr><td>248</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxX = preview.ActualWidth * origin.X * overflowRatio;</td></tr>
+<tr><td>248</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxX = preview.ActualWidth * origin.X * overflowRatio</td></tr>
+<tr><td>249</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio;</td></tr>
+<tr><td>249</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio</td></tr>
+<tr><td>250</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxY = preview.ActualHeight * origin.Y * overflowRatio;</td></tr>
+<tr><td>250</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxY = preview.ActualHeight * origin.Y * overflowRatio</td></tr>
+<tr><td>251</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.X = Math.Clamp(CellShotMapTranslateTransform.X, minX, maxX)</td></tr>
+<tr><td>251</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(CellShotMapTranslateTransform.X, minX, maxX)</td></tr>
+<tr><td>252</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = Math.Clamp(CellShotMapTranslateTransform.Y, minY, maxY)</td></tr>
+<tr><td>252</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(CellShotMapTranslateTransform.Y, minY, maxY)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">MethodDeclaration <code>ResetRecipePreviewZoom</code> · L255–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L255-L264">Drilling.UI/Views/CRecipeView.xaml.cs:255–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ResetRecipePreviewZoom()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L156-L156">Drilling.UI/Views/CRecipeView.xaml.cs:156–156</a></td><td>ResetRecipePreviewZoom</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L529-L529">Drilling.UI/Views/CRecipeView.xaml.cs:529–529</a></td><td>ResetRecipePreviewZoom</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>257</td><td>HideRecipePreviewHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:464</td></tr>
+<tr><td>258</td><td>EndRecipePreviewDrag</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>263</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()</td></tr>
+<tr><td>258</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndRecipePreviewDrag(RecipePreviewViewport)</td></tr>
+<tr><td>259</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleX = PreviewZoomMinimum</td></tr>
+<tr><td>260</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewScaleTransform.ScaleY = PreviewZoomMinimum</td></tr>
+<tr><td>261</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.X = 0</td></tr>
+<tr><td>262</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewTranslateTransform.Y = 0</td></tr>
+<tr><td>263</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewZoomContent.RenderTransformOrigin = new Point(0.5, 0.5)</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(0.5, 0.5)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L266">MethodDeclaration <code>ResetCellShotMapZoom</code> · L266–274</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L266-L274">Drilling.UI/Views/CRecipeView.xaml.cs:266–274</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ResetCellShotMapZoom()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L214-L214">Drilling.UI/Views/CRecipeView.xaml.cs:214–214</a></td><td>ResetCellShotMapZoom</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L530-L530">Drilling.UI/Views/CRecipeView.xaml.cs:530–530</a></td><td>ResetCellShotMapZoom</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>268</td><td>HideCellShotMapHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:519</td></tr>
+<tr><td>273</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()</td></tr>
+<tr><td>269</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleX = PreviewZoomMinimum</td></tr>
+<tr><td>270</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapScaleTransform.ScaleY = PreviewZoomMinimum</td></tr>
+<tr><td>271</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.X = 0</td></tr>
+<tr><td>272</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapTranslateTransform.Y = 0</td></tr>
+<tr><td>273</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapZoomContent.RenderTransformOrigin = new Point(0.5, 0.5)</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(0.5, 0.5)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L276">MethodDeclaration <code>CellContentScrollViewer_PreviewMouseWheel</code> · L276–288</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L276-L288">Drilling.UI/Views/CRecipeView.xaml.cs:276–288</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellContentScrollViewer_PreviewMouseWheel(object, MouseWheelEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseWheelEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>286</td><td>scrollViewer.ScrollToVerticalOffset</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>278</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not ScrollViewer scrollViewer)</td></tr>
+<tr><td>279</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>281</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canScrollUp = e.Delta &gt; 0 &amp;&amp; scrollViewer.VerticalOffset &gt; 0;</td></tr>
+<tr><td>281</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canScrollUp = e.Delta &gt; 0 &amp;&amp; scrollViewer.VerticalOffset &gt; 0</td></tr>
+<tr><td>282</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canScrollDown = e.Delta &lt; 0 &amp;&amp; scrollViewer.VerticalOffset &lt; scrollViewer.ScrollableHeight;</td></tr>
+<tr><td>282</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canScrollDown = e.Delta &lt; 0 &amp;&amp; scrollViewer.VerticalOffset &lt; scrollViewer.ScrollableHeight</td></tr>
+<tr><td>283</td><td>if</td><td>조건에 따라 분기합니다: if (!canScrollUp &amp;&amp; !canScrollDown)</td></tr>
+<tr><td>284</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>286</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0))</td></tr>
+<tr><td>287</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CellContentScrollViewer_PreviewMouseWheel&quot;]
+ N0[&quot;L278 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L283 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">MethodDeclaration <code>ToggleCellPlacement_Click</code> · L290–303</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L290-L303">Drilling.UI/Views/CRecipeView.xaml.cs:290–303</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.ToggleCellPlacement_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>294</td><td>recipe.ToggleCellPlacementExpanded</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMenuRecipe.ToggleCellPlacementExpanded() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:936</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>292</td><td>if</td><td>조건에 따라 분기합니다: if (DataContext is CRootView root &amp;&amp; root.CurrentScreen.Recipe is CMenuRecipe recipe)</td></tr>
+<tr><td>294</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.ToggleCellPlacementExpanded()</td></tr>
+<tr><td>295</td><td>assignment</td><td>값을 대상에 대입합니다: CellParameterPanel.Visibility = recipe.IsCellPlacementExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>295</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: recipe.IsCellPlacementExpanded ? Visibility.Collapsed : Visibility.Visible</td></tr>
+<tr><td>296</td><td>if</td><td>조건에 따라 분기합니다: if (sender is Button button)</td></tr>
+<tr><td>298</td><td>assignment</td><td>값을 대상에 대입합니다: button.Content = recipe.CellPlacementExpandButtonText</td></tr>
+<tr><td>302</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ToggleCellPlacement_Click&quot;]
+ N0[&quot;L292 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L296 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L305">MethodDeclaration <code>OpenCellPlacementWizard_Click</code> · L305–326</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L305-L326">Drilling.UI/Views/CRecipeView.xaml.cs:305–326</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.OpenCellPlacementWizard_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>313</td><td>CanEditCurrentRecipe</td><td>resolved</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406</td></tr>
+<tr><td>318</td><td>new CCellPlacementWizardDialog</td><td>resolved</td><td>Drilling.UI.Popup.CCellPlacementWizardDialog.CCellPlacementWizardDialog(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:27</td></tr>
+<tr><td>318</td><td>recipe.CreateCellPlacementWizardContext</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT Drilling.UI.Menu.Menus.CMenuRecipe.CreateCellPlacementWizardContext() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:943</td></tr>
+<tr><td>320</td><td>Window.GetWindow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>322</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+<tr><td>324</td><td>recipe.ApplyCellPlacementWizard</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMenuRecipe.ApplyCellPlacementWizard(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:957</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>307</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>308</td><td>if</td><td>조건에 따라 분기합니다: if (DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)</td></tr>
+<tr><td>310</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe()</td></tr>
+<tr><td>313</td><td>if</td><td>조건에 따라 분기합니다: if (!CanEditCurrentRecipe())</td></tr>
+<tr><td>315</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>318</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.CreateCellPlacementWizardContext()</td></tr>
+<tr><td>318</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>318</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) };</td></tr>
+<tr><td>318</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CCellPlacementWizardDialog(recipe.CreateCellPlacementWizardContext()) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>320</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Window.GetWindow(this)</td></tr>
+<tr><td>320</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)</td></tr>
+<tr><td>322</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>322</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() == true)</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.ApplyCellPlacementWizard(dialog.Result)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenCellPlacementWizard_Click&quot;]
+ N0[&quot;L308 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L313 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L322 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L328">MethodDeclaration <code>OpenManagedItemInput</code> · L328–341</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L328-L341">Drilling.UI/Views/CRecipeView.xaml.cs:328–341</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.OpenManagedItemInput(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>333</td><td>CanEditCurrentRecipe</td><td>resolved</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406</td></tr>
+<tr><td>335</td><td>new CValueInputDialog</td><td>resolved</td><td>Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13</td></tr>
+<tr><td>337</td><td>Window.GetWindow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>339</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>330</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement { Tag: ST_RECIPE_PARAMETER_EDITOR_ITEM item })</td></tr>
+<tr><td>331</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>332</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>333</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe()</td></tr>
+<tr><td>333</td><td>if</td><td>조건에 따라 분기합니다: if (!CanEditCurrentRecipe())</td></tr>
+<tr><td>334</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>335</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) };</td></tr>
+<tr><td>335</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CValueInputDialog(item.Item, item.Value, item.DataType, item.Min, item.Max) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>337</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Window.GetWindow(this)</td></tr>
+<tr><td>337</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)</td></tr>
+<tr><td>339</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>339</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() == true)</td></tr>
+<tr><td>340</td><td>assignment</td><td>값을 대상에 대입합니다: item.Value = dialog.ResultValue</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenManagedItemInput&quot;]
+ N0[&quot;L330 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L333 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L339 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L343">MethodDeclaration <code>OpenCellOverviewInput</code> · L343–383</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L343-L383">Drilling.UI/Views/CRecipeView.xaml.cs:343–383</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.OpenCellOverviewInput(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>348</td><td>CanEditCurrentRecipe</td><td>resolved</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406</td></tr>
+<tr><td>364</td><td>row.GetItem</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_RECIPE_PARAMETER_EDITOR_ITEM? Drilling.UI.Menu.Menus.ST_RECIPE_CELL_OVERVIEW_ROW.GetItem(string) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3576</td></tr>
+<tr><td>365</td><td>new CValueInputDialog</td><td>resolved</td><td>Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13</td></tr>
+<tr><td>367</td><td>Window.GetWindow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>369</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>345</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_RECIPE_CELL_OVERVIEW_ROW row, Tag: string field })</td></tr>
+<tr><td>346</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>347</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>348</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe()</td></tr>
+<tr><td>348</td><td>if</td><td>조건에 따라 분기합니다: if (!CanEditCurrentRecipe())</td></tr>
+<tr><td>349</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>350</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = field switch { &quot;FirstX&quot; =&gt; row.FirstX, &quot;FirstY&quot; =&gt; row.FirstY, &quot;Rotation&quot; =&gt; row.Rotation, _ =&gt; &quot;&quot; };</td></tr>
+<tr><td>350</td><td>switch-expression</td><td>값별 결과식을 선택합니다: field switch { &quot;FirstX&quot; =&gt; row.FirstX, &quot;FirstY&quot; =&gt; row.FirstY, &quot;Rotation&quot; =&gt; row.Rotation, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>350</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = field switch { &quot;FirstX&quot; =&gt; row.FirstX, &quot;FirstY&quot; =&gt; row.FirstY, &quot;Rotation&quot; =&gt; row.Rotation, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>357</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameterName = field switch { &quot;FirstX&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_X&quot;, &quot;FirstY&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_Y&quot;, &quot;Rotation&quot; =&gt; &quot;ROTATION&quot;, _ =&gt; &quot;&quot; };</td></tr>
+<tr><td>357</td><td>switch-expression</td><td>값별 결과식을 선택합니다: field switch { &quot;FirstX&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_X&quot;, &quot;FirstY&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_Y&quot;, &quot;Rotation&quot; =&gt; &quot;ROTATION&quot;, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>357</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameterName = field switch { &quot;FirstX&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_X&quot;, &quot;FirstY&quot; =&gt; &quot;ALIGN_TO_1ST_PIXEL_Y&quot;, &quot;Rotation&quot; =&gt; &quot;ROTATION&quot;, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>364</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.GetItem(parameterName)</td></tr>
+<tr><td>364</td><td>local-declaration</td><td>지역 변수를 선언합니다: var item = row.GetItem(parameterName);</td></tr>
+<tr><td>364</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: item = row.GetItem(parameterName)</td></tr>
+<tr><td>365</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>365</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) { Owner = Window.GetWindow(this) };</td></tr>
+<tr><td>365</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CValueInputDialog(item?.Item ?? field, value, item?.DataType ?? EN_RECIPE_DATA_TYPE.Double, item?.Min ?? 0.0, item?.Max ?? 0.0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>367</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Window.GetWindow(this)</td></tr>
+<tr><td>367</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)</td></tr>
+<tr><td>369</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>369</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() != true)</td></tr>
+<tr><td>370</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>371</td><td>switch</td><td>값에 따라 분기합니다: switch (field)</td></tr>
+<tr><td>373</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;FirstX&quot;:</td></tr>
+<tr><td>374</td><td>assignment</td><td>값을 대상에 대입합니다: row.FirstX = dialog.ResultValue</td></tr>
+<tr><td>375</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>376</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;FirstY&quot;:</td></tr>
+<tr><td>377</td><td>assignment</td><td>값을 대상에 대입합니다: row.FirstY = dialog.ResultValue</td></tr>
+<tr><td>378</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>379</td><td>case</td><td>분기값/패턴의 구간입니다: case &quot;Rotation&quot;:</td></tr>
+<tr><td>380</td><td>assignment</td><td>값을 대상에 대입합니다: row.Rotation = dialog.ResultValue</td></tr>
+<tr><td>381</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenCellOverviewInput&quot;]
+ N0[&quot;L345 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L348 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L350 switch-expression&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L357 switch-expression&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L369 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L371 switch&quot;]
+ M --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L385">MethodDeclaration <code>OpenShotGroupOffsetInput</code> · L385–404</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L385-L404">Drilling.UI/Views/CRecipeView.xaml.cs:385–404</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.OpenShotGroupOffsetInput(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>391</td><td>CanEditCurrentRecipe</td><td>resolved</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406</td></tr>
+<tr><td>394</td><td>new CValueInputDialog</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>396</td><td>Window.GetWindow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>398</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>387</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement { Tag: ST_SHOT_GROUP_EDITOR_ROW row } element)</td></tr>
+<tr><td>388</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>389</td><td>local-declaration</td><td>지역 변수를 선언합니다: var field = element.Uid;</td></tr>
+<tr><td>389</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: field = element.Uid</td></tr>
+<tr><td>390</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>391</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanEditCurrentRecipe()</td></tr>
+<tr><td>391</td><td>if</td><td>조건에 따라 분기합니다: if (!CanEditCurrentRecipe())</td></tr>
+<tr><td>392</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>393</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: field == &quot;OffsetX&quot; ? row.OffsetX : row.OffsetY</td></tr>
+<tr><td>393</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = field == &quot;OffsetX&quot; ? row.OffsetX : row.OffsetY;</td></tr>
+<tr><td>393</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = field == &quot;OffsetX&quot; ? row.OffsetX : row.OffsetY</td></tr>
+<tr><td>394</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>394</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) };</td></tr>
+<tr><td>394</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>396</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Window.GetWindow(this)</td></tr>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)</td></tr>
+<tr><td>398</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>398</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() != true)</td></tr>
+<tr><td>399</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>400</td><td>if</td><td>조건에 따라 분기합니다: if (field == &quot;OffsetX&quot;)</td></tr>
+<tr><td>401</td><td>assignment</td><td>값을 대상에 대입합니다: row.OffsetX = dialog.ResultValue</td></tr>
+<tr><td>402</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>403</td><td>assignment</td><td>값을 대상에 대입합니다: row.OffsetY = dialog.ResultValue</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenShotGroupOffsetInput&quot;]
+ N0[&quot;L387 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L391 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L398 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L400 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L402 else&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L406">MethodDeclaration <code>CanEditCurrentRecipe</code> · L406–409</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L406-L409">Drilling.UI/Views/CRecipeView.xaml.cs:406–409</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L313-L313">Drilling.UI/Views/CRecipeView.xaml.cs:313–313</a></td><td>CanEditCurrentRecipe</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L333-L333">Drilling.UI/Views/CRecipeView.xaml.cs:333–333</a></td><td>CanEditCurrentRecipe</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L348-L348">Drilling.UI/Views/CRecipeView.xaml.cs:348–348</a></td><td>CanEditCurrentRecipe</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L391-L391">Drilling.UI/Views/CRecipeView.xaml.cs:391–391</a></td><td>CanEditCurrentRecipe</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>408</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return DataContext is CRootView root &amp;&amp; root.CurrentScreen.Recipe?.IsViewRecipeSelected == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L411">MethodDeclaration <code>SelectShotGroupFromMap</code> · L411–421</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L411-L421">Drilling.UI/Views/CRecipeView.xaml.cs:411–421</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.SelectShotGroupFromMap(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>418</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+<tr><td>419</td><td>recipe.SelectShotGroupAt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>413</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)</td></tr>
+<tr><td>415</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>418</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map)</td></tr>
+<tr><td>418</td><td>local-declaration</td><td>지역 변수를 선언합니다: var point = e.GetPosition(map);</td></tr>
+<tr><td>418</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: point = e.GetPosition(map)</td></tr>
+<tr><td>419</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.SelectShotGroupAt(point.X, point.Y)</td></tr>
+<tr><td>420</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SelectShotGroupFromMap&quot;]
+ N0[&quot;L413 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L423">MethodDeclaration <code>CellPreviewLabel_MouseMove</code> · L423–434</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L423-L434">Drilling.UI/Views/CRecipeView.xaml.cs:423–434</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>427</td><td>HideRecipePreviewHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:464</td></tr>
+<tr><td>433</td><td>PositionRecipePreviewHoverTip</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>433</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>425</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })</td></tr>
+<tr><td>427</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()</td></tr>
+<tr><td>428</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>431</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTipText.Text = label.DisplayText</td></tr>
+<tr><td>432</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTip.Visibility = Visibility.Visible</td></tr>
+<tr><td>433</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PositionRecipePreviewHoverTip(e.GetPosition(RecipePreviewViewport))</td></tr>
+<tr><td>433</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(RecipePreviewViewport)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CellPreviewLabel_MouseMove&quot;]
+ N0[&quot;L425 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L436">MethodDeclaration <code>CellPreviewLabel_MouseLeave</code> · L436–439</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L436-L439">Drilling.UI/Views/CRecipeView.xaml.cs:436–439</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellPreviewLabel_MouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>438</td><td>HideRecipePreviewHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:464</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>438</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideRecipePreviewHoverTip()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L441">MethodDeclaration <code>PositionRecipePreviewHoverTip</code> · L441–462</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L441-L462">Drilling.UI/Views/CRecipeView.xaml.cs:441–462</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.PositionRecipePreviewHoverTip(Point)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>pointer</td><td>Point</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>446</td><td>RecipePreviewHoverTip.Measure</td><td>unresolved</td><td>None</td></tr>
+<tr><td>446</td><td>new Size</td><td>unresolved</td><td>None</td></tr>
+<tr><td>452</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>452</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>457</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>457</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>443</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double margin = 4.0;</td></tr>
+<tr><td>443</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: margin = 4.0</td></tr>
+<tr><td>444</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double offsetX = 12.0;</td></tr>
+<tr><td>444</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetX = 12.0</td></tr>
+<tr><td>445</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double offsetY = 14.0;</td></tr>
+<tr><td>445</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetY = 14.0</td></tr>
+<tr><td>446</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RecipePreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity))</td></tr>
+<tr><td>446</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)</td></tr>
+<tr><td>447</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tipSize = RecipePreviewHoverTip.DesiredSize;</td></tr>
+<tr><td>447</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tipSize = RecipePreviewHoverTip.DesiredSize</td></tr>
+<tr><td>448</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = pointer.X + offsetX;</td></tr>
+<tr><td>448</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = pointer.X + offsetX</td></tr>
+<tr><td>449</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = pointer.Y + offsetY;</td></tr>
+<tr><td>449</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = pointer.Y + offsetY</td></tr>
+<tr><td>450</td><td>if</td><td>조건에 따라 분기합니다: if (RecipePreviewViewport.ActualWidth &gt; 0)</td></tr>
+<tr><td>452</td><td>assignment</td><td>값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin))</td></tr>
+<tr><td>452</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin))</td></tr>
+<tr><td>452</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, RecipePreviewViewport.ActualWidth - tipSize.Width - margin)</td></tr>
+<tr><td>455</td><td>if</td><td>조건에 따라 분기합니다: if (RecipePreviewViewport.ActualHeight &gt; 0)</td></tr>
+<tr><td>457</td><td>assignment</td><td>값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin))</td></tr>
+<tr><td>457</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin))</td></tr>
+<tr><td>457</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, RecipePreviewViewport.ActualHeight - tipSize.Height - margin)</td></tr>
+<tr><td>460</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTipTranslateTransform.X = x</td></tr>
+<tr><td>461</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTipTranslateTransform.Y = y</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PositionRecipePreviewHoverTip&quot;]
+ N0[&quot;L450 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L455 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L464">MethodDeclaration <code>HideRecipePreviewHoverTip</code> · L464–468</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L464-L468">Drilling.UI/Views/CRecipeView.xaml.cs:464–468</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.HideRecipePreviewHoverTip()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L134-L134">Drilling.UI/Views/CRecipeView.xaml.cs:134–134</a></td><td>HideRecipePreviewHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L257-L257">Drilling.UI/Views/CRecipeView.xaml.cs:257–257</a></td><td>HideRecipePreviewHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L427-L427">Drilling.UI/Views/CRecipeView.xaml.cs:427–427</a></td><td>HideRecipePreviewHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L438-L438">Drilling.UI/Views/CRecipeView.xaml.cs:438–438</a></td><td>HideRecipePreviewHoverTip</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>466</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTip.Visibility = Visibility.Collapsed</td></tr>
+<tr><td>467</td><td>assignment</td><td>값을 대상에 대입합니다: RecipePreviewHoverTipText.Text = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L470">MethodDeclaration <code>CellShotMapSurface_MouseMove</code> · L470–489</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L470-L489">Drilling.UI/Views/CRecipeView.xaml.cs:470–489</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseMove(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>474</td><td>HideCellShotMapHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:519</td></tr>
+<tr><td>478</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+<tr><td>479</td><td>recipe.GetShotGroupNameAt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>480</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>482</td><td>HideCellShotMapHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:519</td></tr>
+<tr><td>488</td><td>PositionCellShotMapHoverTip</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>488</td><td>e.GetPosition</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>472</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Recipe is not CMenuRecipe recipe)</td></tr>
+<tr><td>474</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()</td></tr>
+<tr><td>475</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>478</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map)</td></tr>
+<tr><td>478</td><td>local-declaration</td><td>지역 변수를 선언합니다: var point = e.GetPosition(map);</td></tr>
+<tr><td>478</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: point = e.GetPosition(map)</td></tr>
+<tr><td>479</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GetShotGroupNameAt(point.X, point.Y)</td></tr>
+<tr><td>479</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shotName = recipe.GetShotGroupNameAt(point.X, point.Y);</td></tr>
+<tr><td>479</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shotName = recipe.GetShotGroupNameAt(point.X, point.Y)</td></tr>
+<tr><td>480</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(shotName)</td></tr>
+<tr><td>480</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(shotName))</td></tr>
+<tr><td>482</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()</td></tr>
+<tr><td>483</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>486</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTipText.Text = shotName</td></tr>
+<tr><td>487</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTip.Visibility = Visibility.Visible</td></tr>
+<tr><td>488</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PositionCellShotMapHoverTip(e.GetPosition(CellShotMapViewport))</td></tr>
+<tr><td>488</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(CellShotMapViewport)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CellShotMapSurface_MouseMove&quot;]
+ N0[&quot;L472 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L480 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L491">MethodDeclaration <code>CellShotMapSurface_MouseLeave</code> · L491–494</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L491-L494">Drilling.UI/Views/CRecipeView.xaml.cs:491–494</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.CellShotMapSurface_MouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>493</td><td>HideCellShotMapHoverTip</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip() · Drilling.UI/Views/CRecipeView.xaml.cs:519</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>493</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellShotMapHoverTip()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L496">MethodDeclaration <code>PositionCellShotMapHoverTip</code> · L496–517</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L496-L517">Drilling.UI/Views/CRecipeView.xaml.cs:496–517</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.PositionCellShotMapHoverTip(Point)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>pointer</td><td>Point</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>501</td><td>CellShotMapHoverTip.Measure</td><td>unresolved</td><td>None</td></tr>
+<tr><td>501</td><td>new Size</td><td>unresolved</td><td>None</td></tr>
+<tr><td>507</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>507</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>512</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>512</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>498</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double margin = 4.0;</td></tr>
+<tr><td>498</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: margin = 4.0</td></tr>
+<tr><td>499</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double offsetX = 12.0;</td></tr>
+<tr><td>499</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetX = 12.0</td></tr>
+<tr><td>500</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double offsetY = 14.0;</td></tr>
+<tr><td>500</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: offsetY = 14.0</td></tr>
+<tr><td>501</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CellShotMapHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity))</td></tr>
+<tr><td>501</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)</td></tr>
+<tr><td>502</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tipSize = CellShotMapHoverTip.DesiredSize;</td></tr>
+<tr><td>502</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tipSize = CellShotMapHoverTip.DesiredSize</td></tr>
+<tr><td>503</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = pointer.X + offsetX;</td></tr>
+<tr><td>503</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = pointer.X + offsetX</td></tr>
+<tr><td>504</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = pointer.Y + offsetY;</td></tr>
+<tr><td>504</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = pointer.Y + offsetY</td></tr>
+<tr><td>505</td><td>if</td><td>조건에 따라 분기합니다: if (CellShotMapViewport.ActualWidth &gt; 0)</td></tr>
+<tr><td>507</td><td>assignment</td><td>값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin))</td></tr>
+<tr><td>507</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin))</td></tr>
+<tr><td>507</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CellShotMapViewport.ActualWidth - tipSize.Width - margin)</td></tr>
+<tr><td>510</td><td>if</td><td>조건에 따라 분기합니다: if (CellShotMapViewport.ActualHeight &gt; 0)</td></tr>
+<tr><td>512</td><td>assignment</td><td>값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin))</td></tr>
+<tr><td>512</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin))</td></tr>
+<tr><td>512</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CellShotMapViewport.ActualHeight - tipSize.Height - margin)</td></tr>
+<tr><td>515</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTipTranslateTransform.X = x</td></tr>
+<tr><td>516</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTipTranslateTransform.Y = y</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PositionCellShotMapHoverTip&quot;]
+ N0[&quot;L505 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L510 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L519">MethodDeclaration <code>HideCellShotMapHoverTip</code> · L519–523</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L519-L523">Drilling.UI/Views/CRecipeView.xaml.cs:519–523</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.HideCellShotMapHoverTip()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L201-L201">Drilling.UI/Views/CRecipeView.xaml.cs:201–201</a></td><td>HideCellShotMapHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L268-L268">Drilling.UI/Views/CRecipeView.xaml.cs:268–268</a></td><td>HideCellShotMapHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L474-L474">Drilling.UI/Views/CRecipeView.xaml.cs:474–474</a></td><td>HideCellShotMapHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L482-L482">Drilling.UI/Views/CRecipeView.xaml.cs:482–482</a></td><td>HideCellShotMapHoverTip</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L493-L493">Drilling.UI/Views/CRecipeView.xaml.cs:493–493</a></td><td>HideCellShotMapHoverTip</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>521</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTip.Visibility = Visibility.Collapsed</td></tr>
+<tr><td>522</td><td>assignment</td><td>값을 대상에 대입합니다: CellShotMapHoverTipText.Text = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L525">MethodDeclaration <code>RecipeView_IsVisibleChanged</code> · L525–532</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L525-L532">Drilling.UI/Views/CRecipeView.xaml.cs:525–532</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CRecipeView.RecipeView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>DependencyPropertyChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>529</td><td>ResetRecipePreviewZoom</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ResetRecipePreviewZoom() · Drilling.UI/Views/CRecipeView.xaml.cs:255</td></tr>
+<tr><td>530</td><td>ResetCellShotMapZoom</td><td>resolved</td><td>void Drilling.UI.Views.CRecipeView.ResetCellShotMapZoom() · Drilling.UI/Views/CRecipeView.xaml.cs:266</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>527</td><td>if</td><td>조건에 따라 분기합니다: if (e.NewValue is false)</td></tr>
+<tr><td>529</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ResetRecipePreviewZoom()</td></tr>
+<tr><td>530</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ResetCellShotMapZoom()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RecipeView_IsVisibleChanged&quot;]
+ N0[&quot;L527 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L534">MethodDeclaration <code>FindAncestor</code> · L534–548</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L534-L548">Drilling.UI/Views/CRecipeView.xaml.cs:534–548</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>T? Drilling.UI.Views.CRecipeView.FindAncestor&lt;T&gt;(DependencyObject?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>T?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CRecipeView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>source</td><td>DependencyObject?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>544</td><td>VisualTreeHelper.GetParent</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>537</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (source is not null)</td></tr>
+<tr><td>539</td><td>if</td><td>조건에 따라 분기합니다: if (source is T match)</td></tr>
+<tr><td>541</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return match;</td></tr>
+<tr><td>544</td><td>assignment</td><td>값을 대상에 대입합니다: source = source is Visual || source is Visual3D ? VisualTreeHelper.GetParent(source) : null</td></tr>
+<tr><td>544</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source)</td></tr>
+<tr><td>544</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: source is Visual || source is Visual3D ? VisualTreeHelper.GetParent(source) : null</td></tr>
+<tr><td>547</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return null;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FindAncestor&quot;]
+ N0[&quot;L537 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L539 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Views/CRecipeView.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

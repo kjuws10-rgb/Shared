@@ -1,0 +1,1012 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Review/CReviewRulePlanBuilder.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Review
+L000001 | namespace Drilling.Common.Review ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 타입의 구조/상속 선언입니다: public static class CReviewRulePlanBuilder
+L000003 |     public static class CReviewRulePlanBuilder ⟦EOL⟧
+// 해설 L4: 구문 블록 경계입니다.
+L000004 |     { ⟦EOL⟧
+// 해설 L5: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RULE_PLAN Drilling.Common.Review.CReviewRulePlanBuilder.Build(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.ST_REVIEW_RULE_CONFIGURATION)
+L000005 |         public static ST_REVIEW_RULE_PLAN Build(ST_REVIEW_PLAN plan, ST_REVIEW_RULE_CONFIGURATION configuration) ⟦EOL⟧
+// 해설 L6: 구문 블록 경계입니다 · 소속 Build.
+L000006 |         { ⟦EOL⟧
+// 해설 L7: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(plan)
+L000007 |             ArgumentNullException.ThrowIfNull(plan); ⟦EOL⟧
+// 해설 L8: 지역 변수를 선언합니다: var targets = configuration.Rule switch { EN_REVIEW_CORRECTION_RULE.Simple => BuildSimple(plan, configuration.ReferenceShotKey), EN_REVIEW_CORRECTION_RULE.Rough => BuildRough(plan, configuration.RoughReference, configuration.Scope / 값별 결과식을 선택합니다: configuration.Rule switch { EN_REVIEW_CORRECTION_RULE.Simple => BuildSimple(plan, configuration.ReferenceShotKey), EN_REVIEW_CORRECTION_RULE.Rough => BuildRough(plan, configuration.RoughReference, configuration.Scope), EN_REVIEW_C / 변수의 초기값을 지정합니다: targets = configuration.Rule
+L000008 |             var targets = configuration.Rule switch ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다 · 소속 Build.
+L000009 |             { ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildSimple(plan, configuration.ReferenceShotKey)
+L000010 |                 EN_REVIEW_CORRECTION_RULE.Simple => BuildSimple(plan, configuration.ReferenceShotKey), ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildRough(plan, configuration.RoughReference, configuration.Scope)
+L000011 |                 EN_REVIEW_CORRECTION_RULE.Rough => BuildRough(plan, configuration.RoughReference, configuration.Scope), ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildFine(plan, configuration.FineLineCount)
+L000012 |                 EN_REVIEW_CORRECTION_RULE.Fine => BuildFine(plan, configuration.FineLineCount), ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildEdge(plan)
+L000013 |                 EN_REVIEW_CORRECTION_RULE.Edge => BuildEdge(plan), ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RULE_PLAN Drilling.Common.Review.CReviewRulePlanBuilder.Build(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.ST_REVIEW_RULE_CONFIGURATION)
+L000014 |                 _ => [] ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 Build.
+L000015 |             }; ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(configuration, targets) / 호출자에게 값 또는 제어를 반환합니다: return new(configuration, targets);
+L000016 |             return new(configuration, targets); ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 Build.
+L000017 |         } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildSimple(Drilling.Common.Review.ST_REVIEW_PLAN, string)
+L000019 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildSimple(ST_REVIEW_PLAN plan, string key) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 BuildSimple.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetPoint(plan, CReviewManager.NormalizeShotKey(key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.NormalizeShotKey(key) / 지역 변수를 선언합니다: var point = TryGetPoint(plan, CReviewManager.NormalizeShotKey(key)); / 변수의 초기값을 지정합니다: point = TryGetPoint(plan, CReviewManager.NormalizeShotKey(key))
+L000021 |             var point = TryGetPoint(plan, CReviewManager.NormalizeShotKey(key)); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTarget(point, "SIMPLE") / 조건에 따라 결과식을 선택합니다: point is null || point.HeadNo <= 0 ? [] : [CreateTarget(point, "SIMPLE")] / 호출자에게 값 또는 제어를 반환합니다: return point is null || point.HeadNo <= 0 ? [] : [CreateTarget(point, "SIMPLE")];
+L000022 |             return point is null || point.HeadNo <= 0 ? [] : [CreateTarget(point, "SIMPLE")]; ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 BuildSimple.
+L000023 |         } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildRough(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.EN_R
+L000025 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildRough(ST_REVIEW_PLAN plan, EN_REVIEW_REFERENCE_LINE reference, EN_REVIEW_CORRECTION_SCOPE scope) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 BuildRough.
+L000026 |         { ⟦EOL⟧
+// 해설 L27: 조건에 따라 분기합니다: if (scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell)
+L000027 |             if (scope == EN_REVIEW_CORRECTION_SCOPE.HeadCell) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 BuildRough.
+L000028 |             { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildRoughByHeadCell(plan, reference) / 호출자에게 값 또는 제어를 반환합니다: return BuildRoughByHeadCell(plan, reference);
+L000029 |                 return BuildRoughByHeadCell(plan, reference); ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 BuildRough.
+L000030 |             } ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan) / 지역 변수를 선언합니다: var cells = EnumerateCells(plan).ToArray(); / 변수의 초기값을 지정합니다: cells = EnumerateCells(plan).ToArray()
+L000032 |             var cells = EnumerateCells(plan).ToArray(); ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, (double MinY, double MaxY)>() / 지역 변수를 선언합니다: var headRanges = new Dictionary<int, (double MinY, double MaxY)>(); / 변수의 초기값을 지정합니다: headRanges = new Dictionary<int, (double MinY, double MaxY)>()
+L000033 |             var headRanges = new Dictionary<int, (double MinY, double MaxY)>(); ⟦EOL⟧
+// 해설 L34: 컬렉션 요소를 순회합니다: foreach (var cell in cells)
+L000034 |             foreach (var cell in cells) ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 BuildRough.
+L000035 |             { ⟦EOL⟧
+// 해설 L36: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000036 |                 for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 BuildRough.
+L000037 |                 { ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateHeadRange(GetPoint(plan, cell, 0, column), headRanges) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, column)
+L000038 |                     UpdateHeadRange(GetPoint(plan, cell, 0, column), headRanges); ⟦EOL⟧
+// 해설 L39: 조건에 따라 분기합니다: if (cell.Rows > 1)
+L000039 |                     if (cell.Rows > 1) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 BuildRough.
+L000040 |                     { ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateHeadRange(GetPoint(plan, cell, cell.Rows - 1, column), headRanges) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, column)
+L000041 |                         UpdateHeadRange(GetPoint(plan, cell, cell.Rows - 1, column), headRanges); ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 BuildRough.
+L000042 |                     } ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 BuildRough.
+L000043 |                 } ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 BuildRough.
+L000044 |             } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: headRanges.ToDictionary(item => item.Key, item => ResolveReferenceY(item.Value, reference)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveReferenceY(item.Value, reference) / 지역 변수를 선언합니다: var targetYByHead = headRanges.ToDictionary(item => item.Key, item => ResolveReferenceY(item.Value, reference)); / 변수의 초기값을 지정합니다: targetYByHead = headRanges.ToDictionary(item => item.Key, item => ResolveReferenceY(item.Value, reference))
+L000046 |             var targetYByHead = headRanges.ToDictionary(item => item.Key, item => ResolveReferenceY(item.Value, reference)); ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, ST_REVIEW_PLAN_POINT>() / 지역 변수를 선언합니다: var selectedByHead = new Dictionary<int, ST_REVIEW_PLAN_POINT>(); / 변수의 초기값을 지정합니다: selectedByHead = new Dictionary<int, ST_REVIEW_PLAN_POINT>()
+L000047 |             var selectedByHead = new Dictionary<int, ST_REVIEW_PLAN_POINT>(); ⟦EOL⟧
+// 해설 L48: 컬렉션 요소를 순회합니다: foreach (var cell in cells)
+L000048 |             foreach (var cell in cells) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 BuildRough.
+L000049 |             { ⟦EOL⟧
+// 해설 L50: 초기화·조건·증감이 있는 반복입니다: for (var row = 0; row < cell.Rows; row++) / 변수의 초기값을 지정합니다: row = 0
+L000050 |                 for (var row = 0; row < cell.Rows; row++) ⟦EOL⟧
+// 해설 L51: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000051 |                     for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 BuildRough.
+L000052 |                     { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, row, column) / 지역 변수를 선언합니다: var point = GetPoint(plan, cell, row, column); / 변수의 초기값을 지정합니다: point = GetPoint(plan, cell, row, column)
+L000053 |                         var point = GetPoint(plan, cell, row, column); ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsExecutableRoughPoint(point) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targetYByHead.TryGetValue(point.HeadNo, out var targetY) / 조건에 따라 분기합니다: if (!IsExecutableRoughPoint(point) || !targetYByHead.TryGetValue(point.HeadNo, out var targetY))
+L000054 |                         if (!IsExecutableRoughPoint(point) || !targetYByHead.TryGetValue(point.HeadNo, out var targetY)) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 BuildRough.
+L000055 |                         { ⟦EOL⟧
+// 해설 L56: 다음 반복으로 진행합니다: continue;
+L000056 |                             continue; ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 BuildRough.
+L000057 |                         } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHead.TryGetValue(point.HeadNo, out var selected) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsEarlierRoughPoint(point, selected, targetY) / 조건에 따라 분기합니다: if (!selectedByHead.TryGetValue(point.HeadNo, out var selected) || IsEarlierRoughPoint(point, selected, targetY))
+L000059 |                         if (!selectedByHead.TryGetValue(point.HeadNo, out var selected) || IsEarlierRoughPoint(point, selected, targetY)) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 BuildRough.
+L000060 |                         { ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: selectedByHead[point.HeadNo] = point
+L000061 |                             selectedByHead[point.HeadNo] = point; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 BuildRough.
+L000062 |                         } ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 BuildRough.
+L000063 |                     } ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 BuildRough.
+L000064 |             } ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHead.OrderBy(item => item.Key).Select(item => CreateTarget(item.Value, reference.ToString().ToUpperInvariant())).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHead.OrderBy(item => item.Key).Select(item => CreateTarget(item.Value, reference.ToString().ToUpperInvariant())) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHead.OrderBy(item => item.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTarget(item.Value, reference.ToString().ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.ToString().ToUpperInvari
+L000066 |             return selectedByHead.OrderBy(item => item.Key).Select(item => CreateTarget(item.Value, reference.ToString().ToUpperInvariant())).ToArray(); ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 BuildRough.
+L000067 |         } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildRoughByHeadCell(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.R
+L000069 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildRoughByHeadCell(ST_REVIEW_PLAN plan, EN_REVIEW_REFERENCE_LINE reference) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000071 |             // The plan point list is lazy.  Do not materialize every Shot and ⟦EOL⟧
+// 해설 L72: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000072 |             // then group/sort it for HEAD + CELL.  Rough only needs the edge rows ⟦EOL⟧
+// 해설 L73: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000073 |             // and the three rows around its calculated reference position. ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan) / 지역 변수를 선언합니다: var cells = EnumerateCells(plan).ToArray(); / 변수의 초기값을 지정합니다: cells = EnumerateCells(plan).ToArray()
+L000074 |             var cells = EnumerateCells(plan).ToArray(); ⟦EOL⟧
+// 해설 L75: 조건에 따라 분기합니다: if (cells.Length == 0)
+L000075 |             if (cells.Length == 0) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000076 |             { ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000077 |                 return[]; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000078 |             } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, (double MinY, double MaxY)>() / 지역 변수를 선언합니다: var headRanges = new Dictionary<int, (double MinY, double MaxY)>(); / 변수의 초기값을 지정합니다: headRanges = new Dictionary<int, (double MinY, double MaxY)>()
+L000080 |             var headRanges = new Dictionary<int, (double MinY, double MaxY)>(); ⟦EOL⟧
+// 해설 L81: 컬렉션 요소를 순회합니다: foreach (var cell in cells)
+L000081 |             foreach (var cell in cells) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000082 |             { ⟦EOL⟧
+// 해설 L83: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000083 |                 for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000084 |                 { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateHeadRange(GetPoint(plan, cell, 0, column), headRanges) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, column)
+L000085 |                     UpdateHeadRange(GetPoint(plan, cell, 0, column), headRanges); ⟦EOL⟧
+// 해설 L86: 조건에 따라 분기합니다: if (cell.Rows > 1)
+L000086 |                     if (cell.Rows > 1) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000087 |                     { ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateHeadRange(GetPoint(plan, cell, cell.Rows - 1, column), headRanges) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, column)
+L000088 |                         UpdateHeadRange(GetPoint(plan, cell, cell.Rows - 1, column), headRanges); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000089 |                     } ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000090 |                 } ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000091 |             } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 조건에 따라 분기합니다: if (headRanges.Count == 0)
+L000093 |             if (headRanges.Count == 0) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000094 |             { ⟦EOL⟧
+// 해설 L95: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000095 |                 return[]; ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000096 |             } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveRoughCellSelectionY(plan, cells, headRanges, reference) / 지역 변수를 선언합니다: var selectionYByHead = ResolveRoughCellSelectionY(plan, cells, headRanges, reference); / 변수의 초기값을 지정합니다: selectionYByHead = ResolveRoughCellSelectionY(plan, cells, headRanges, reference)
+L000098 |             var selectionYByHead = ResolveRoughCellSelectionY(plan, cells, headRanges, reference); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<(int HeadNo, int CellNo), ST_REVIEW_PLAN_POINT>() / 지역 변수를 선언합니다: var selectedByHeadCell = new Dictionary<(int HeadNo, int CellNo), ST_REVIEW_PLAN_POINT>(); / 변수의 초기값을 지정합니다: selectedByHeadCell = new Dictionary<(int HeadNo, int CellNo), ST_REVIEW_PLAN_POINT>()
+L000099 |             var selectedByHeadCell = new Dictionary<(int HeadNo, int CellNo), ST_REVIEW_PLAN_POINT>(); ⟦EOL⟧
+// 해설 L100: 컬렉션 요소를 순회합니다: foreach (var cell in cells)
+L000100 |             foreach (var cell in cells) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000101 |             { ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY) / 조건에 따라 분기합니다: if (!TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY))
+L000102 |                 if (!TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY)) ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000103 |                 { ⟦EOL⟧
+// 해설 L104: 다음 반복으로 진행합니다: continue;
+L000104 |                     continue; ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000105 |                 } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 컬렉션 요소를 순회합니다: foreach (var headNo in headRanges.Keys)
+L000107 |                 foreach (var headNo in headRanges.Keys) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000108 |                 { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectionYByHead.TryGetValue(headNo, out var selectionY) / 조건에 따라 분기합니다: if (!selectionYByHead.TryGetValue(headNo, out var selectionY) || selectionY < minimumCellY - 0.000001 || selectionY > maximumCellY + 0.000001)
+L000109 |                     if (!selectionYByHead.TryGetValue(headNo, out var selectionY) || selectionY < minimumCellY - 0.000001 || selectionY > maximumCellY + 0.000001) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000110 |                     { ⟦EOL⟧
+// 해설 L111: 다음 반복으로 진행합니다: continue;
+L000111 |                         continue; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000112 |                     } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 초기화·조건·증감이 있는 반복입니다: for (var row = 0; row < cell.Rows; row++) / 변수의 초기값을 지정합니다: row = 0
+L000114 |                     for (var row = 0; row < cell.Rows; row++) ⟦EOL⟧
+// 해설 L115: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000115 |                         for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000116 |                         { ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, row, column) / 지역 변수를 선언합니다: var point = GetPoint(plan, cell, row, column); / 변수의 초기값을 지정합니다: point = GetPoint(plan, cell, row, column)
+L000117 |                             var point = GetPoint(plan, cell, row, column); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsExecutableRoughPoint(point) / 조건에 따라 분기합니다: if (point.HeadNo != headNo || !IsExecutableRoughPoint(point))
+L000118 |                             if (point.HeadNo != headNo || !IsExecutableRoughPoint(point)) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000119 |                             { ⟦EOL⟧
+// 해설 L120: 다음 반복으로 진행합니다: continue;
+L000120 |                                 continue; ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000121 |                             } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 지역 변수를 선언합니다: var key = (headNo, point.CellNo); / 변수의 초기값을 지정합니다: key = (headNo, point.CellNo)
+L000123 |                             var key = (headNo, point.CellNo); ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHeadCell.TryGetValue(key, out var selected) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsEarlierRoughPoint(point, selected, selectionY) / 조건에 따라 분기합니다: if (!selectedByHeadCell.TryGetValue(key, out var selected) || IsEarlierRoughPoint(point, selected, selectionY))
+L000124 |                             if (!selectedByHeadCell.TryGetValue(key, out var selected) || IsEarlierRoughPoint(point, selected, selectionY)) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000125 |                             { ⟦EOL⟧
+// 해설 L126: 값을 대상에 대입합니다: selectedByHeadCell[key] = point
+L000126 |                                 selectedByHeadCell[key] = point; ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000127 |                             } ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000128 |                         } ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000129 |                 } ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000130 |             } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHeadCell.Values.OrderBy(point => point.HeadNo).ThenBy(point => point.CellNo).Select(point => CreateTarget(point, $"{reference.ToString().ToUpperInvariant()} / HEAD + CELL")).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHeadCell.Values.OrderBy(point => point.HeadNo).ThenBy(point => point.CellNo).Select(point => CreateTarget(point, $"{reference.ToString().ToUpperInvariant()} / HEAD + CELL")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedByHeadCell.Values.OrderBy(point => point.HeadNo).ThenBy(point => poin
+L000132 |             return selectedByHeadCell.Values.OrderBy(point => point.HeadNo).ThenBy(point => point.CellNo).Select(point => CreateTarget(point, $"{reference.ToString().ToUpperInvariant()} / HEAD + CELL")).ToArray(); ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 BuildRoughByHeadCell.
+L000133 |         } ⟦EOL⟧
+L000134 |  ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<int, double> Drilling.Common.Review.CReviewRulePlanBuilder.ResolveRoughCellSelectionY(Drilling.Common.Review.ST_REVIEW_PLAN, System.Collections.Generic.IReadOnlyList<Drilli
+L000135 |         private static Dictionary<int, double> ResolveRoughCellSelectionY(ST_REVIEW_PLAN plan, IReadOnlyList<CellSlice> cells, IReadOnlyDictionary<int, (double MinY, double MaxY)> headRanges, EN_REVIEW_REFERENCE_LINE reference) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000136 |         { ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, double>() / 지역 변수를 선언합니다: var selectionYByHead = new Dictionary<int, double>(); / 변수의 초기값을 지정합니다: selectionYByHead = new Dictionary<int, double>()
+L000137 |             var selectionYByHead = new Dictionary<int, double>(); ⟦EOL⟧
+// 해설 L138: 컬렉션 요소를 순회합니다: foreach (var headRange in headRanges)
+L000138 |             foreach (var headRange in headRanges) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000139 |             { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveReferenceY(headRange.Value, reference) / 지역 변수를 선언합니다: var targetY = ResolveReferenceY(headRange.Value, reference); / 변수의 초기값을 지정합니다: targetY = ResolveReferenceY(headRange.Value, reference)
+L000140 |                 var targetY = ResolveReferenceY(headRange.Value, reference); ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: var bestDistance = double.MaxValue; / 변수의 초기값을 지정합니다: bestDistance = double.MaxValue
+L000141 |                 var bestDistance = double.MaxValue; ⟦EOL⟧
+// 해설 L142: 지역 변수를 선언합니다: var selectedY = targetY; / 변수의 초기값을 지정합니다: selectedY = targetY
+L000142 |                 var selectedY = targetY; ⟦EOL⟧
+// 해설 L143: 컬렉션 요소를 순회합니다: foreach (var cell in cells)
+L000143 |                 foreach (var cell in cells) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000144 |                 { ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CellContainsHead(plan, cell, headRange.Key) / 조건에 따라 분기합니다: if (!TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY) || !CellContainsHead(plan, cell, headRange.Key))
+L000145 |                     if (!TryGetCellYRange(plan, cell, out var minimumCellY, out var maximumCellY) || !CellContainsHead(plan, cell, headRange.Key)) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000146 |                     { ⟦EOL⟧
+// 해설 L147: 다음 반복으로 진행합니다: continue;
+L000147 |                         continue; ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000148 |                     } ⟦EOL⟧
+L000149 |  ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: DistanceToRange(targetY, minimumCellY, maximumCellY) / 지역 변수를 선언합니다: var distance = DistanceToRange(targetY, minimumCellY, maximumCellY); / 변수의 초기값을 지정합니다: distance = DistanceToRange(targetY, minimumCellY, maximumCellY)
+L000150 |                     var distance = DistanceToRange(targetY, minimumCellY, maximumCellY); ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(targetY, minimumCellY, maximumCellY) / 지역 변수를 선언합니다: var candidateY = Math.Clamp(targetY, minimumCellY, maximumCellY); / 변수의 초기값을 지정합니다: candidateY = Math.Clamp(targetY, minimumCellY, maximumCellY)
+L000151 |                     var candidateY = Math.Clamp(targetY, minimumCellY, maximumCellY); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(distance - bestDistance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PreferRoughCellSelectionY(candidateY, selectedY, reference) / 조건에 따라 분기합니다: if (distance < bestDistance - 0.000001 || Math.Abs(distance - bestDistance) <= 0.000001 && PreferRoughCellSelectionY(candidateY, selectedY, reference))
+L000152 |                     if (distance < bestDistance - 0.000001 || Math.Abs(distance - bestDistance) <= 0.000001 && PreferRoughCellSelectionY(candidateY, selectedY, reference)) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000153 |                     { ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: bestDistance = distance
+L000154 |                         bestDistance = distance; ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: selectedY = candidateY
+L000155 |                         selectedY = candidateY; ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000156 |                     } ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000157 |                 } ⟦EOL⟧
+L000158 |  ⟦EOL⟧
+// 해설 L159: 조건에 따라 분기합니다: if (bestDistance < double.MaxValue)
+L000159 |                 if (bestDistance < double.MaxValue) ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000160 |                 { ⟦EOL⟧
+// 해설 L161: 값을 대상에 대입합니다: selectionYByHead[headRange.Key] = selectedY
+L000161 |                     selectionYByHead[headRange.Key] = selectedY; ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000162 |                 } ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000163 |             } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return selectionYByHead;
+L000165 |             return selectionYByHead; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 ResolveRoughCellSelectionY.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.CellContainsHead(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice, int)
+L000168 |         private static bool CellContainsHead(ST_REVIEW_PLAN plan, CellSlice cell, int headNo) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000170 |             for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000171 |             { ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, column) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, column) / 조건에 따라 분기합니다: if (GetPoint(plan, cell, 0, column).HeadNo == headNo || cell.Rows > 1 && GetPoint(plan, cell, cell.Rows - 1, column).HeadNo == headNo)
+L000172 |                 if (GetPoint(plan, cell, 0, column).HeadNo == headNo || cell.Rows > 1 && GetPoint(plan, cell, cell.Rows - 1, column).HeadNo == headNo) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000173 |                 { ⟦EOL⟧
+// 해설 L174: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000174 |                     return true; ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000175 |                 } ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000176 |             } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000178 |             return false; ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 CellContainsHead.
+L000179 |         } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.PreferRoughCellSelectionY(double, double, Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)
+L000181 |         private static bool PreferRoughCellSelectionY(double candidateY, double selectedY, EN_REVIEW_REFERENCE_LINE reference) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 PreferRoughCellSelectionY.
+L000182 |         { ⟦EOL⟧
+// 해설 L183: 조건에 따라 결과식을 선택합니다: reference == EN_REVIEW_REFERENCE_LINE.Last ? candidateY > selectedY : candidateY < selectedY / 호출자에게 값 또는 제어를 반환합니다: return reference == EN_REVIEW_REFERENCE_LINE.Last ? candidateY > selectedY : candidateY < selectedY;
+L000183 |             return reference == EN_REVIEW_REFERENCE_LINE.Last ? candidateY > selectedY : candidateY < selectedY; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 PreferRoughCellSelectionY.
+L000184 |         } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.TryGetCellYRange(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice, out double, out double)
+L000186 |         private static bool TryGetCellYRange(ST_REVIEW_PLAN plan, CellSlice cell, out double minimumY, out double maximumY) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000187 |         { ⟦EOL⟧
+// 해설 L188: 값을 대상에 대입합니다: minimumY = double.MaxValue
+L000188 |             minimumY = double.MaxValue; ⟦EOL⟧
+// 해설 L189: 값을 대상에 대입합니다: maximumY = double.MinValue
+L000189 |             maximumY = double.MinValue; ⟦EOL⟧
+// 해설 L190: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000190 |             for (var column = 0; column < cell.Columns; column++) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000191 |             { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, column) / 지역 변수를 선언합니다: var firstPoint = GetPoint(plan, cell, 0, column); / 변수의 초기값을 지정합니다: firstPoint = GetPoint(plan, cell, 0, column)
+L000192 |                 var firstPoint = GetPoint(plan, cell, 0, column); ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(firstPoint.DesignY) / 조건에 따라 분기합니다: if (double.IsFinite(firstPoint.DesignY))
+L000193 |                 if (double.IsFinite(firstPoint.DesignY)) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000194 |                 { ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: minimumY = Math.Min(minimumY, firstPoint.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(minimumY, firstPoint.DesignY)
+L000195 |                     minimumY = Math.Min(minimumY, firstPoint.DesignY); ⟦EOL⟧
+// 해설 L196: 값을 대상에 대입합니다: maximumY = Math.Max(maximumY, firstPoint.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(maximumY, firstPoint.DesignY)
+L000196 |                     maximumY = Math.Max(maximumY, firstPoint.DesignY); ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000197 |                 } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 조건에 따라 분기합니다: if (cell.Rows > 1)
+L000199 |                 if (cell.Rows > 1) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000200 |                 { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, column) / 지역 변수를 선언합니다: var lastPoint = GetPoint(plan, cell, cell.Rows - 1, column); / 변수의 초기값을 지정합니다: lastPoint = GetPoint(plan, cell, cell.Rows - 1, column)
+L000201 |                     var lastPoint = GetPoint(plan, cell, cell.Rows - 1, column); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(lastPoint.DesignY) / 조건에 따라 분기합니다: if (double.IsFinite(lastPoint.DesignY))
+L000202 |                     if (double.IsFinite(lastPoint.DesignY)) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000203 |                     { ⟦EOL⟧
+// 해설 L204: 값을 대상에 대입합니다: minimumY = Math.Min(minimumY, lastPoint.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(minimumY, lastPoint.DesignY)
+L000204 |                         minimumY = Math.Min(minimumY, lastPoint.DesignY); ⟦EOL⟧
+// 해설 L205: 값을 대상에 대입합니다: maximumY = Math.Max(maximumY, lastPoint.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(maximumY, lastPoint.DesignY)
+L000205 |                         maximumY = Math.Max(maximumY, lastPoint.DesignY); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000206 |                     } ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000207 |                 } ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000208 |             } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 호출자에게 값 또는 제어를 반환합니다: return minimumY <= maximumY;
+L000210 |             return minimumY <= maximumY; ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 TryGetCellYRange.
+L000211 |         } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewRulePlanBuilder.ResolveReferenceY((double MinY, double MaxY), Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)
+L000213 |         private static double ResolveReferenceY((double MinY, double MaxY) range, EN_REVIEW_REFERENCE_LINE reference) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 ResolveReferenceY.
+L000214 |         { ⟦EOL⟧
+// 해설 L215: 호출자에게 값 또는 제어를 반환합니다: return reference switch { EN_REVIEW_REFERENCE_LINE.Last => range.MaxY, EN_REVIEW_REFERENCE_LINE.Center => (range.MinY + range.MaxY) / 2.0, _ => range.MinY }; / 값별 결과식을 선택합니다: reference switch { EN_REVIEW_REFERENCE_LINE.Last => range.MaxY, EN_REVIEW_REFERENCE_LINE.Center => (range.MinY + range.MaxY) / 2.0, _ => range.MinY }
+L000215 |             return reference switch ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 ResolveReferenceY.
+L000216 |             { ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewRulePlanBuilder.ResolveReferenceY((double MinY, double MaxY), Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)
+L000217 |                 EN_REVIEW_REFERENCE_LINE.Last => range.MaxY, ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewRulePlanBuilder.ResolveReferenceY((double MinY, double MaxY), Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)
+L000218 |                 EN_REVIEW_REFERENCE_LINE.Center => (range.MinY + range.MaxY) / 2.0, ⟦EOL⟧
+// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewRulePlanBuilder.ResolveReferenceY((double MinY, double MaxY), Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)
+L000219 |                 _ => range.MinY ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 ResolveReferenceY.
+L000220 |             }; ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ResolveReferenceY.
+L000221 |         } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Review.CReviewRulePlanBuilder.UpdateHeadRange(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, System.Collections.Generic.IDictionary<int, (double MinY, double MaxY)>)
+L000223 |         private static void UpdateHeadRange(ST_REVIEW_PLAN_POINT point, IDictionary<int, (double MinY, double MaxY)> headRanges) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000224 |         { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY) / 조건에 따라 분기합니다: if (point.HeadNo <= 0 || !double.IsFinite(point.DesignX) || !double.IsFinite(point.DesignY))
+L000225 |             if (point.HeadNo <= 0 || !double.IsFinite(point.DesignX) || !double.IsFinite(point.DesignY)) ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000226 |             { ⟦EOL⟧
+// 해설 L227: 호출자에게 값 또는 제어를 반환합니다: return;
+L000227 |                 return; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000228 |             } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: headRanges.TryGetValue(point.HeadNo, out var range) / 조건에 따라 분기합니다: if (headRanges.TryGetValue(point.HeadNo, out var range))
+L000230 |             if (headRanges.TryGetValue(point.HeadNo, out var range)) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000231 |             { ⟦EOL⟧
+// 해설 L232: 값을 대상에 대입합니다: headRanges[point.HeadNo] = (Math.Min(range.MinY, point.DesignY), Math.Max(range.MaxY, point.DesignY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(range.MinY, point.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(range.MaxY, point.DesignY)
+L000232 |                 headRanges[point.HeadNo] = (Math.Min(range.MinY, point.DesignY), Math.Max(range.MaxY, point.DesignY)); ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000233 |             } ⟦EOL⟧
+// 해설 L234: 앞 조건이 거짓인 경로입니다: else
+L000234 |             else ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000235 |             { ⟦EOL⟧
+// 해설 L236: 값을 대상에 대입합니다: headRanges[point.HeadNo] = (point.DesignY, point.DesignY)
+L000236 |                 headRanges[point.HeadNo] = (point.DesignY, point.DesignY); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000237 |             } ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 UpdateHeadRange.
+L000238 |         } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Review.CReviewRulePlanBuilder.FindNearestRow(double, double, int, double)
+L000240 |         private static int FindNearestRow(double firstY, double lastY, int rowCount, double targetY) ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000241 |         { ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(firstY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(lastY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(targetY) / 조건에 따라 분기합니다: if (rowCount <= 1 || !double.IsFinite(firstY) || !double.IsFinite(lastY) || !double.IsFinite(targetY))
+L000242 |             if (rowCount <= 1 || !double.IsFinite(firstY) || !double.IsFinite(lastY) || !double.IsFinite(targetY)) ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000243 |             { ⟦EOL⟧
+// 해설 L244: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000244 |                 return 0; ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000245 |             } ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: 지역 변수를 선언합니다: var rowStepY = (lastY - firstY) / (rowCount - 1); / 변수의 초기값을 지정합니다: rowStepY = (lastY - firstY) / (rowCount - 1)
+L000247 |             var rowStepY = (lastY - firstY) / (rowCount - 1); ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(rowStepY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(rowStepY) / 조건에 따라 분기합니다: if (!double.IsFinite(rowStepY) || Math.Abs(rowStepY) <= double.Epsilon)
+L000248 |             if (!double.IsFinite(rowStepY) || Math.Abs(rowStepY) <= double.Epsilon) ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000249 |             { ⟦EOL⟧
+// 해설 L250: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000250 |                 return 0; ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000251 |             } ⟦EOL⟧
+L000252 |  ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)Math.Round((targetY - firstY) / rowStepY, MidpointRounding.AwayFromZero), 0, rowCount - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round((targetY - firstY) / rowStepY, MidpointRounding.AwayFromZero) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp((int)Math.Round((targetY - firstY) / rowStepY, MidpointRounding.AwayFromZero), 0, rowCount - 1);
+L000253 |             return Math.Clamp((int)Math.Round((targetY - firstY) / rowStepY, MidpointRounding.AwayFromZero), 0, rowCount - 1); ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 FindNearestRow.
+L000254 |         } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.IsEarlierRoughPoint(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, Drilling.Common.Review.ST_REVIEW_PLAN_POINT, double)
+L000256 |         private static bool IsEarlierRoughPoint(ST_REVIEW_PLAN_POINT candidate, ST_REVIEW_PLAN_POINT selected, double targetY) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000257 |         { ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(candidate.DesignY - targetY) / 지역 변수를 선언합니다: var candidateDistance = Math.Abs(candidate.DesignY - targetY); / 변수의 초기값을 지정합니다: candidateDistance = Math.Abs(candidate.DesignY - targetY)
+L000258 |             var candidateDistance = Math.Abs(candidate.DesignY - targetY); ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(selected.DesignY - targetY) / 지역 변수를 선언합니다: var selectedDistance = Math.Abs(selected.DesignY - targetY); / 변수의 초기값을 지정합니다: selectedDistance = Math.Abs(selected.DesignY - targetY)
+L000259 |             var selectedDistance = Math.Abs(selected.DesignY - targetY); ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidateDistance.CompareTo(selectedDistance) / 지역 변수를 선언합니다: var distanceComparison = candidateDistance.CompareTo(selectedDistance); / 변수의 초기값을 지정합니다: distanceComparison = candidateDistance.CompareTo(selectedDistance)
+L000260 |             var distanceComparison = candidateDistance.CompareTo(selectedDistance); ⟦EOL⟧
+// 해설 L261: 조건에 따라 분기합니다: if (distanceComparison != 0)
+L000261 |             if (distanceComparison != 0) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000262 |             { ⟦EOL⟧
+// 해설 L263: 호출자에게 값 또는 제어를 반환합니다: return distanceComparison < 0;
+L000263 |                 return distanceComparison < 0; ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000264 |             } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.DesignY.CompareTo(selected.DesignY) / 지역 변수를 선언합니다: var yComparison = candidate.DesignY.CompareTo(selected.DesignY); / 변수의 초기값을 지정합니다: yComparison = candidate.DesignY.CompareTo(selected.DesignY)
+L000266 |             var yComparison = candidate.DesignY.CompareTo(selected.DesignY); ⟦EOL⟧
+// 해설 L267: 조건에 따라 분기합니다: if (yComparison != 0)
+L000267 |             if (yComparison != 0) ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000268 |             { ⟦EOL⟧
+// 해설 L269: 호출자에게 값 또는 제어를 반환합니다: return yComparison < 0;
+L000269 |                 return yComparison < 0; ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000270 |             } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.DesignX.CompareTo(selected.DesignX) / 지역 변수를 선언합니다: var xComparison = candidate.DesignX.CompareTo(selected.DesignX); / 변수의 초기값을 지정합니다: xComparison = candidate.DesignX.CompareTo(selected.DesignX)
+L000272 |             var xComparison = candidate.DesignX.CompareTo(selected.DesignX); ⟦EOL⟧
+// 해설 L273: 조건에 따라 분기합니다: if (xComparison != 0)
+L000273 |             if (xComparison != 0) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000274 |             { ⟦EOL⟧
+// 해설 L275: 호출자에게 값 또는 제어를 반환합니다: return xComparison < 0;
+L000275 |                 return xComparison < 0; ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000276 |             } ⟦EOL⟧
+L000277 |  ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.CellNo.CompareTo(selected.CellNo) / 지역 변수를 선언합니다: var cellComparison = candidate.CellNo.CompareTo(selected.CellNo); / 변수의 초기값을 지정합니다: cellComparison = candidate.CellNo.CompareTo(selected.CellNo)
+L000278 |             var cellComparison = candidate.CellNo.CompareTo(selected.CellNo); ⟦EOL⟧
+// 해설 L279: 조건에 따라 결과식을 선택합니다: cellComparison != 0 ? cellComparison < 0 : candidate.ShotNo < selected.ShotNo / 호출자에게 값 또는 제어를 반환합니다: return cellComparison != 0 ? cellComparison < 0 : candidate.ShotNo < selected.ShotNo;
+L000279 |             return cellComparison != 0 ? cellComparison < 0 : candidate.ShotNo < selected.ShotNo; ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 IsEarlierRoughPoint.
+L000280 |         } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildFine(Drilling.Common.Review.ST_REVIEW_PLAN, int)
+L000282 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildFine(ST_REVIEW_PLAN plan, int lineCount) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 BuildFine.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (plan.Points is IReviewCellPointSource)
+L000284 |             if (plan.Points is IReviewCellPointSource) ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 BuildFine.
+L000285 |             { ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildFineFromCellSource(plan, lineCount) / 호출자에게 값 또는 제어를 반환합니다: return BuildFineFromCellSource(plan, lineCount);
+L000286 |                 return BuildFineFromCellSource(plan, lineCount); ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 BuildFine.
+L000287 |             } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0 && point.HeadNo > 0 && double.IsFinite(point.DesignY)).GroupBy(point => point.CellNo).OrderBy(cell => cell.Key).SelectMany(cell => { var rows = cell.GroupBy(point => Coordinate… / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0 && point.HeadNo > 0 && double.IsFinite(point.DesignY)).GroupBy(point => point.CellNo).OrderBy(cell => cell.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0 && point.HeadNo > 0 && double.IsF
+L000289 |             return plan.Points.Where(point => point.CellNo > 0 && point.HeadNo > 0 && double.IsFinite(point.DesignY)).GroupBy(point => point.CellNo).OrderBy(cell => cell.Key).SelectMany(cell => ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 BuildFine.
+L000290 |             { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: cell.GroupBy(point => CoordinateKey(point.DesignY)).OrderBy(row => row.Key).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: cell.GroupBy(point => CoordinateKey(point.DesignY)).OrderBy(row => row.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: cell.GroupBy(point => CoordinateKey(point.DesignY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CoordinateKey(point.DesignY) / 지역 변수를 선언합니다: var rows = cell.GroupBy(point => CoordinateKey(point.DesignY)).OrderBy(row => row.Key).ToArray(); / 변수의 초기값을 지정합니다: rows = cell.GroupBy(point => CoordinateKey(point.De
+L000291 |                 var rows = cell.GroupBy(point => CoordinateKey(point.DesignY)).OrderBy(row => row.Key).ToArray(); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: FineCellRows(rows, lineCount, rows[0].Key, rows[^1].Key).SelectMany((row, lineIndex) => row.OrderBy(point => point.DesignX).ThenBy(point => point.HeadNo).ThenBy(point => point.ShotNo).Select(point => CreateTarget(point, … / 함수·델리게이트 또는 객체 생성자를 호출합니다: FineCellRows(rows, lineCount, rows[0].Key, rows[^1].Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OrderBy(point => point.DesignX).ThenBy(point => point.HeadNo).ThenBy(point => point.ShotNo).Select(point => CreateTarget(point, $"CELL {cell.Key:00} LINE {lineIndex + 1}"))
+L000292 |                 return FineCellRows(rows, lineCount, rows[0].Key, rows[^1].Key).SelectMany((row, lineIndex) => row.OrderBy(point => point.DesignX).ThenBy(point => point.HeadNo).ThenBy(point => point.ShotNo).Select(point => CreateTarget(point, $"CELL {cell.Key:00} LINE {lineIndex + 1}"))); ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildFine(Drilling.Common.Review.ST_REVIEW_PLAN, int)
+L000293 |             }).ToArray(); ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 BuildFine.
+L000294 |         } ⟦EOL⟧
+L000295 |  ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(point.ExclusionReason) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY)
+L000296 |         private static bool IsExecutableRoughPoint(ST_REVIEW_PLAN_POINT point) => point.HeadNo > 0 && point.Use && string.IsNullOrWhiteSpace(point.ExclusionReason) && double.IsFinite(point.DesignX) && double.IsFinite(point.DesignY); ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildEdge(Drilling.Common.Review.ST_REVIEW_PLAN)
+L000297 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildEdge(ST_REVIEW_PLAN plan) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000298 |         { ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_RULE_TARGET>() / 지역 변수를 선언합니다: var targets = new List<ST_REVIEW_RULE_TARGET>(); / 변수의 초기값을 지정합니다: targets = new List<ST_REVIEW_RULE_TARGET>()
+L000299 |             var targets = new List<ST_REVIEW_RULE_TARGET>(); ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan) / 컬렉션 요소를 순회합니다: foreach (var cell in EnumerateCells(plan))
+L000300 |             foreach (var cell in EnumerateCells(plan)) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000301 |             { ⟦EOL⟧
+// 해설 L302: 초기화·조건·증감이 있는 반복입니다: for (var row = 1; row <= cell.Rows; row++) / 변수의 초기값을 지정합니다: row = 1
+L000302 |                 for (var row = 1; row <= cell.Rows; row++) ⟦EOL⟧
+// 해설 L303: 초기화·조건·증감이 있는 반복입니다: for (var column = 1; column <= cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 1
+L000303 |                     for (var column = 1; column <= cell.Columns; column++) ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000304 |                     { ⟦EOL⟧
+// 해설 L305: 조건에 따라 분기합니다: if (row != 1 && row != cell.Rows && column != 1 && column != cell.Columns)
+L000305 |                         if (row != 1 && row != cell.Rows && column != 1 && column != cell.Columns) ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000306 |                         { ⟦EOL⟧
+// 해설 L307: 다음 반복으로 진행합니다: continue;
+L000307 |                             continue; ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000308 |                         } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, row - 1, column - 1) / 지역 변수를 선언합니다: var point = GetPoint(plan, cell, row - 1, column - 1); / 변수의 초기값을 지정합니다: point = GetPoint(plan, cell, row - 1, column - 1)
+L000310 |                         var point = GetPoint(plan, cell, row - 1, column - 1); ⟦EOL⟧
+// 해설 L311: 조건에 따라 분기합니다: if (point.HeadNo > 0)
+L000311 |                         if (point.HeadNo > 0) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000312 |                         { ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(CreateTarget(point, "EDGE")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTarget(point, "EDGE")
+L000313 |                             targets.Add(CreateTarget(point, "EDGE")); ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000314 |                         } ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000315 |                     } ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000316 |             } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 호출자에게 값 또는 제어를 반환합니다: return targets;
+L000318 |             return targets; ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 BuildEdge.
+L000319 |         } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice> Drilling.Common.Review.CReviewRulePlanBuilder.EnumerateCells(Drilling.Common.Review.ST_REVIEW_PLAN)
+L000321 |         private static IEnumerable<CellSlice> EnumerateCells(ST_REVIEW_PLAN plan) ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000322 |         { ⟦EOL⟧
+// 해설 L323: 조건에 따라 분기합니다: if (plan.Points is IReviewCellPointSource cellSource)
+L000323 |             if (plan.Points is IReviewCellPointSource cellSource) ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000324 |             { ⟦EOL⟧
+// 해설 L325: 초기화·조건·증감이 있는 반복입니다: for (var cellIndex = 0; cellIndex < cellSource.PatternCellCount; cellIndex++) / 변수의 초기값을 지정합니다: cellIndex = 0
+L000325 |                 for (var cellIndex = 0; cellIndex < cellSource.PatternCellCount; cellIndex++) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000326 |                 { ⟦EOL⟧
+// 해설 L327: 함수·델리게이트 또는 객체 생성자를 호출합니다: cellSource.GetCellRange(cellIndex) / 지역 변수를 선언합니다: var range = cellSource.GetCellRange(cellIndex); / 변수의 초기값을 지정합니다: range = cellSource.GetCellRange(cellIndex)
+L000327 |                     var range = cellSource.GetCellRange(cellIndex); ⟦EOL⟧
+// 해설 L328: 조건에 따라 분기합니다: if (range.PointCount <= 0)
+L000328 |                     if (range.PointCount <= 0) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000329 |                     { ⟦EOL⟧
+// 해설 L330: 다음 반복으로 진행합니다: continue;
+L000330 |                         continue; ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000331 |                     } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(range.StartIndex, Math.Max(1, range.ColumnCount), Math.Max(1, range.RowCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, range.ColumnCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, range.RowCount) / 열거값/종료를 전달합니다: yield return new(range.StartIndex, Math.Max(1, range.ColumnCount), Math.Max(1, range.RowCount));
+L000333 |                     yield return new(range.StartIndex, Math.Max(1, range.ColumnCount), Math.Max(1, range.RowCount)); ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000334 |                 } ⟦EOL⟧
+L000335 |  ⟦EOL⟧
+// 해설 L336: 열거값/종료를 전달합니다: yield break;
+L000336 |                 yield break; ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000337 |             } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0).GroupBy(point => point.CellNo).OrderBy(group => group.Key).Select(group => group.OrderBy(point => point.ShotNo).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0).GroupBy(point => point.CellNo).OrderBy(group => group.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0).GroupBy(point => point.CellNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(point => point.CellNo > 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: grou
+L000339 |             foreach (var cellPoints in plan.Points.Where(point => point.CellNo > 0).GroupBy(point => point.CellNo).OrderBy(group => group.Key).Select(group => group.OrderBy(point => point.ShotNo).ToArray())) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000340 |             { ⟦EOL⟧
+// 해설 L341: 조건에 따라 분기합니다: if (cellPoints.Length == 0)
+L000341 |                 if (cellPoints.Length == 0) ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000342 |                 { ⟦EOL⟧
+// 해설 L343: 다음 반복으로 진행합니다: continue;
+L000343 |                     continue; ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000344 |                 } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 지역 변수를 선언합니다: var first = cellPoints[0]; / 변수의 초기값을 지정합니다: first = cellPoints[0]
+L000346 |                 var first = cellPoints[0]; ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, first.PixelCountX) / 지역 변수를 선언합니다: var columns = Math.Max(1, first.PixelCountX); / 변수의 초기값을 지정합니다: columns = Math.Max(1, first.PixelCountX)
+L000347 |                 var columns = Math.Max(1, first.PixelCountX); ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Math.Min(first.PixelCountY, cellPoints.Length / columns)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(first.PixelCountY, cellPoints.Length / columns) / 지역 변수를 선언합니다: var rows = Math.Max(1, Math.Min(first.PixelCountY, cellPoints.Length / columns)); / 변수의 초기값을 지정합니다: rows = Math.Max(1, Math.Min(first.PixelCountY, cellPoints.Length / columns))
+L000348 |                 var rows = Math.Max(1, Math.Min(first.PixelCountY, cellPoints.Length / columns)); ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(cellPoints.Length, rows * columns) / 지역 변수를 선언합니다: var usableCount = Math.Min(cellPoints.Length, rows * columns); / 변수의 초기값을 지정합니다: usableCount = Math.Min(cellPoints.Length, rows * columns)
+L000349 |                 var usableCount = Math.Min(cellPoints.Length, rows * columns); ⟦EOL⟧
+// 해설 L350: 조건에 따라 분기합니다: if (usableCount <= 0)
+L000350 |                 if (usableCount <= 0) ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000351 |                 { ⟦EOL⟧
+// 해설 L352: 다음 반복으로 진행합니다: continue;
+L000352 |                     continue; ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000353 |                 } ⟦EOL⟧
+L000354 |  ⟦EOL⟧
+// 해설 L355: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000355 |                 // This overload is only used by materialized non-Recipe plans; ⟦EOL⟧
+// 해설 L356: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000356 |                 // their per-cell points are already ordered by ShotNo. ⟦EOL⟧
+// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CellSlice(0, columns, rows, cellPoints[..usableCount]) / 열거값/종료를 전달합니다: yield return new CellSlice(0, columns, rows, cellPoints[..usableCount]);
+L000357 |                 yield return new CellSlice(0, columns, rows, cellPoints[..usableCount]); ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000358 |             } ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 EnumerateCells.
+L000359 |         } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildFineFromCellSource(Drilling.Common.Review.ST_REVIEW_PLAN, int)
+L000361 |         private static IReadOnlyList<ST_REVIEW_RULE_TARGET> BuildFineFromCellSource(ST_REVIEW_PLAN plan, int requestedCount) ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000362 |         { ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateCells(plan) / 지역 변수를 선언합니다: var cells = EnumerateCells(plan).ToArray(); / 변수의 초기값을 지정합니다: cells = EnumerateCells(plan).ToArray()
+L000363 |             var cells = EnumerateCells(plan).ToArray(); ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: cells.Select(cell => CreateFineCellRange(plan, cell)).Where(range => range.HasAssignedPoint).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: cells.Select(cell => CreateFineCellRange(plan, cell)).Where(range => range.HasAssignedPoint) / 함수·델리게이트 또는 객체 생성자를 호출합니다: cells.Select(cell => CreateFineCellRange(plan, cell)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFineCellRange(plan, cell) / 지역 변수를 선언합니다: var cellRanges = cells.Select(cell => CreateFineCellRange(plan, cell)).Where(range => range.HasAssignedPoint).ToArray(); / 변수의 초
+L000364 |             var cellRanges = cells.Select(cell => CreateFineCellRange(plan, cell)).Where(range => range.HasAssignedPoint).ToArray(); ⟦EOL⟧
+// 해설 L365: 조건에 따라 분기합니다: if (cellRanges.Length == 0)
+L000365 |             if (cellRanges.Length == 0) ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000366 |             { ⟦EOL⟧
+// 해설 L367: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000367 |                 return[]; ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000368 |             } ⟦EOL⟧
+L000369 |  ⟦EOL⟧
+// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_RULE_TARGET>() / 지역 변수를 선언합니다: var selected = new List<ST_REVIEW_RULE_TARGET>(); / 변수의 초기값을 지정합니다: selected = new List<ST_REVIEW_RULE_TARGET>()
+L000370 |             var selected = new List<ST_REVIEW_RULE_TARGET>(); ⟦EOL⟧
+// 해설 L371: 컬렉션 요소를 순회합니다: foreach (var range in cellRanges)
+L000371 |             foreach (var range in cellRanges) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000372 |             { ⟦EOL⟧
+// 해설 L373: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000373 |                 // Distribute lines independently within each Cell's Shot range. ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedCount, 1, Math.Min(7, range.Cell.Rows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(7, range.Cell.Rows) / 지역 변수를 선언합니다: var count = Math.Clamp(requestedCount, 1, Math.Min(7, range.Cell.Rows)); / 변수의 초기값을 지정합니다: count = Math.Clamp(requestedCount, 1, Math.Min(7, range.Cell.Rows))
+L000374 |                 var count = Math.Clamp(requestedCount, 1, Math.Min(7, range.Cell.Rows)); ⟦EOL⟧
+// 해설 L375: 조건에 따라 결과식을 선택합니다: count == 1 ? new[] { range.MinimumY + ((range.MaximumY - range.MinimumY) / 2.0) } : Enumerable.Range(0, count).Select(index => range.MinimumY + ((range.MaximumY - range.MinimumY) * index / (count - 1.0))).ToArray() / 지역 변수를 선언합니다: var targetRows = count == 1 ? new[] { range.MinimumY + ((range.MaximumY - range.MinimumY) / 2.0) } : Enumerable.Range(0, count).Select(index => range.MinimumY + ((range.MaximumY - range.MinimumY) * index / (count - 1.0))).ToArray( / 변수의 초기값을 지정합니다: targetRows = count == 1 ? new[] { range.M
+L000375 |                 var targetRows = count == 1 ? new[] ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000376 |                 { ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RULE_TARGET> Drilling.Common.Review.CReviewRulePlanBuilder.BuildFineFromCellSource(Drilling.Common.Review.ST_REVIEW_PLAN, int)
+L000377 |                     range.MinimumY + ((range.MaximumY - range.MinimumY) / 2.0) ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000378 |                 } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count).Select(index => range.MinimumY + ((range.MaximumY - range.MinimumY) * index / (count - 1.0))).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count).Select(index => range.MinimumY + ((range.MaximumY - range.MinimumY) * index / (count - 1.0))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count)
+L000380 |                 : Enumerable.Range(0, count).Select(index => range.MinimumY + ((range.MaximumY - range.MinimumY) * index / (count - 1.0))).ToArray(); ⟦EOL⟧
+// 해설 L381: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<int>() / 지역 변수를 선언합니다: var selectedRows = new HashSet<int>(); / 변수의 초기값을 지정합니다: selectedRows = new HashSet<int>()
+L000381 |                 var selectedRows = new HashSet<int>(); ⟦EOL⟧
+// 해설 L382: 초기화·조건·증감이 있는 반복입니다: for (var targetIndex = 0; targetIndex < targetRows.Length; targetIndex++) / 변수의 초기값을 지정합니다: targetIndex = 0
+L000382 |                 for (var targetIndex = 0; targetIndex < targetRows.Length; targetIndex++) ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000383 |                 { ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindNearestRow(range.FirstRowY, range.LastRowY, range.Cell.Rows, targetRows[targetIndex]) / 지역 변수를 선언합니다: var nearestRow = FindNearestRow(range.FirstRowY, range.LastRowY, range.Cell.Rows, targetRows[targetIndex]); / 변수의 초기값을 지정합니다: nearestRow = FindNearestRow(range.FirstRowY, range.LastRowY, range.Cell.Rows, targetRows[targetIndex])
+L000384 |                     var nearestRow = FindNearestRow(range.FirstRowY, range.LastRowY, range.Cell.Rows, targetRows[targetIndex]); ⟦EOL⟧
+// 해설 L385: 조건에 따라 결과식을 선택합니다: range.Cell.Rows <= 1 ? 0 : (range.LastRowY - range.FirstRowY) / (range.Cell.Rows - 1) / 지역 변수를 선언합니다: var rowStep = range.Cell.Rows <= 1 ? 0 : (range.LastRowY - range.FirstRowY) / (range.Cell.Rows - 1); / 변수의 초기값을 지정합니다: rowStep = range.Cell.Rows <= 1 ? 0 : (range.LastRowY - range.FirstRowY) / (range.Cell.Rows - 1)
+L000385 |                     var rowStep = range.Cell.Rows <= 1 ? 0 : (range.LastRowY - range.FirstRowY) / (range.Cell.Rows - 1); ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(Math.Max(0, nearestRow - 1), Math.Min(range.Cell.Rows - 1, nearestRow + 1) - Math.Max(0, nearestRow - 1) + 1).OrderBy(candidate => Math.Abs(range.FirstRowY + rowStep * candidate - targetRows[targetIndex]… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(Math.Max(0, nearestRow - 1), Math.Min(range.Cell.Rows - 1, nearestRow + 1) - Math.Max(0, nearestRow - 1) + 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, nearestRow - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(range.Cell.Rows - 1, nearestRow + 1) / 함
+L000386 |                     var row = Enumerable.Range(Math.Max(0, nearestRow - 1), Math.Min(range.Cell.Rows - 1, nearestRow + 1) - Math.Max(0, nearestRow - 1) + 1).OrderBy(candidate => Math.Abs(range.FirstRowY + rowStep * candidate - targetRows[targetIndex])).ThenBy(candidate => range.FirstRowY + rowStep * candidate).First(); ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedRows.Add(row) / 조건에 따라 분기합니다: if (!selectedRows.Add(row))
+L000387 |                     if (!selectedRows.Add(row)) ⟦EOL⟧
+// 해설 L388: 다음 반복으로 진행합니다: continue;
+L000388 |                         continue; ⟦EOL⟧
+// 해설 L389: 초기화·조건·증감이 있는 반복입니다: for (var column = 0; column < range.Cell.Columns; column++) / 변수의 초기값을 지정합니다: column = 0
+L000389 |                     for (var column = 0; column < range.Cell.Columns; column++) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000390 |                     { ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, range.Cell, row, column) / 지역 변수를 선언합니다: var point = GetPoint(plan, range.Cell, row, column); / 변수의 초기값을 지정합니다: point = GetPoint(plan, range.Cell, row, column)
+L000391 |                         var point = GetPoint(plan, range.Cell, row, column); ⟦EOL⟧
+// 해설 L392: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY) / 조건에 따라 분기합니다: if (point.HeadNo > 0 && double.IsFinite(point.DesignX) && double.IsFinite(point.DesignY))
+L000392 |                         if (point.HeadNo > 0 && double.IsFinite(point.DesignX) && double.IsFinite(point.DesignY)) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000393 |                         { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Add(CreateTarget(point, $"CELL {point.CellNo:00} LINE {targetIndex + 1}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTarget(point, $"CELL {point.CellNo:00} LINE {targetIndex + 1}")
+L000394 |                             selected.Add(CreateTarget(point, $"CELL {point.CellNo:00} LINE {targetIndex + 1}")); ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000395 |                         } ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000396 |                     } ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000397 |                 } ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000398 |             } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.DistinctBy(item => item.ShotKey, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.DistinctBy(item => item.ShotKey, StringComparer.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return selected.DistinctBy(item => item.ShotKey, StringComparer.OrdinalIgnoreCase).ToArray();
+L000400 |             return selected.DistinctBy(item => item.ShotKey, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 BuildFineFromCellSource.
+L000401 |         } ⟦EOL⟧
+L000402 |  ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewRulePlanBuilder.FineCellRange Drilling.Common.Review.CReviewRulePlanBuilder.CreateFineCellRange(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder
+L000403 |         private static FineCellRange CreateFineCellRange(ST_REVIEW_PLAN plan, CellSlice cell) ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000404 |         { ⟦EOL⟧
+// 해설 L405: 지역 변수를 선언합니다: var corners = new[] { GetPoint(plan, cell, 0, 0), GetPoint(plan, cell, 0, cell.Columns - 1), GetPoint(plan, cell, cell.Rows - 1, 0), GetPoint(plan, cell, cell.Rows - 1, cell.Columns - 1) }; / 변수의 초기값을 지정합니다: corners = new[] { GetPoint(plan, cell, 0, 0), GetPoint(plan, cell, 0, cell.Columns - 1), GetPoint(plan, cell, cell.Rows - 1, 0), GetPoint(plan, cell, cell.Rows - 1, cell.Columns - 1) }
+L000405 |             var corners = new[] ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000406 |             { ⟦EOL⟧
+// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, 0)
+L000407 |                 GetPoint(plan, cell, 0, 0), ⟦EOL⟧
+// 해설 L408: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, 0, cell.Columns - 1)
+L000408 |                 GetPoint(plan, cell, 0, cell.Columns - 1), ⟦EOL⟧
+// 해설 L409: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, 0)
+L000409 |                 GetPoint(plan, cell, cell.Rows - 1, 0), ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(plan, cell, cell.Rows - 1, cell.Columns - 1)
+L000410 |                 GetPoint(plan, cell, cell.Rows - 1, cell.Columns - 1) ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000411 |             }; ⟦EOL⟧
+// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Where(point => point.HeadNo > 0 && double.IsFinite(point.DesignY)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Where(point => point.HeadNo > 0 && double.IsFinite(point.DesignY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY) / 지역 변수를 선언합니다: var assignedCorners = corners.Where(point => point.HeadNo > 0 && double.IsFinite(point.DesignY)).ToArray(); / 변수의 초기값을 지정합니다: assignedCorners = corners.Where(point => point.HeadNo > 0 && double.IsFinite(point.DesignY)).ToArray()
+L000412 |             var assignedCorners = corners.Where(point => point.HeadNo > 0 && double.IsFinite(point.DesignY)).ToArray(); ⟦EOL⟧
+// 해설 L413: 조건에 따라 분기합니다: if (assignedCorners.Length == 0)
+L000413 |             if (assignedCorners.Length == 0) ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000414 |             { ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FineCellRange(cell, 0.0, 0.0, 0.0, 0.0, false) / 호출자에게 값 또는 제어를 반환합니다: return new FineCellRange(cell, 0.0, 0.0, 0.0, 0.0, false);
+L000415 |                 return new FineCellRange(cell, 0.0, 0.0, 0.0, 0.0, false); ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000416 |             } ⟦EOL⟧
+L000417 |  ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Take(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Take(2).Where(point => double.IsFinite(point.DesignY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Take(2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY) / 지역 변수를 선언합니다: var firstRowY = corners.Take(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY); / 변수의 초기값을 지정합니다: firstRowY = corners.Take(2).Where(point => double.IsFinite(point.DesignY)).
+L000418 |             var firstRowY = corners.Take(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY); ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Skip(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Skip(2).Where(point => double.IsFinite(point.DesignY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Skip(2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(point.DesignY) / 지역 변수를 선언합니다: var lastRowY = corners.Skip(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY); / 변수의 초기값을 지정합니다: lastRowY = corners.Skip(2).Where(point => double.IsFinite(point.DesignY)).Av
+L000419 |             var lastRowY = corners.Skip(2).Where(point => double.IsFinite(point.DesignY)).Average(point => point.DesignY); ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FineCellRange(cell, assignedCorners.Min(point => point.DesignY), assignedCorners.Max(point => point.DesignY), firstRowY, lastRowY, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: assignedCorners.Min(point => point.DesignY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: assignedCorners.Max(point => point.DesignY) / 호출자에게 값 또는 제어를 반환합니다: return new FineCellRange(cell, assignedCorners.Min(point => point.DesignY), assignedCorners.Max(point => point.DesignY), firstRowY, lastRowY, true);
+L000420 |             return new FineCellRange(cell, assignedCorners.Min(point => point.DesignY), assignedCorners.Max(point => point.DesignY), firstRowY, lastRowY, true); ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 CreateFineCellRange.
+L000421 |         } ⟦EOL⟧
+L000422 |  ⟦EOL⟧
+// 해설 L423: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewRulePlanBuilder.DistanceToRange(double, double, double)
+L000423 |         private static double DistanceToRange(double value, double minimum, double maximum) ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 DistanceToRange.
+L000424 |         { ⟦EOL⟧
+// 해설 L425: 조건에 따라 분기합니다: if (value < minimum)
+L000425 |             if (value < minimum) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 DistanceToRange.
+L000426 |             { ⟦EOL⟧
+// 해설 L427: 호출자에게 값 또는 제어를 반환합니다: return minimum - value;
+L000427 |                 return minimum - value; ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 DistanceToRange.
+L000428 |             } ⟦EOL⟧
+L000429 |  ⟦EOL⟧
+// 해설 L430: 조건에 따라 결과식을 선택합니다: value > maximum ? value - maximum : 0.0 / 호출자에게 값 또는 제어를 반환합니다: return value > maximum ? value - maximum : 0.0;
+L000430 |             return value > maximum ? value - maximum : 0.0; ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 DistanceToRange.
+L000431 |         } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 조건에 따라 결과식을 선택합니다: cell.Points is null ? plan.Points[cell.Start + (row * cell.Columns) + column] : cell.Points[(row * cell.Columns) + column]
+L000433 |         private static ST_REVIEW_PLAN_POINT GetPoint(ST_REVIEW_PLAN plan, CellSlice cell, int row, int column) => cell.Points is null ? plan.Points[cell.Start + (row * cell.Columns) + column] : cell.Points[(row * cell.Columns) + column]; ⟦EOL⟧
+// 해설 L434: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Linq.IGrouping<double, Drilling.Common.Review.ST_REVIEW_PLAN_POINT>> Drilling.Common.Review.CReviewRulePlanBuilder.FineCellRows(System.Collections.Generic.IReadOn
+L000434 |         private static IReadOnlyList<IGrouping<double, ST_REVIEW_PLAN_POINT>> FineCellRows(IReadOnlyList<IGrouping<double, ST_REVIEW_PLAN_POINT>> rows, int requestedCount, double minimumY, double maximumY) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 FineCellRows.
+L000435 |         { ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(requestedCount, 1, Math.Min(7, rows.Count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(7, rows.Count) / 지역 변수를 선언합니다: var count = Math.Clamp(requestedCount, 1, Math.Min(7, rows.Count)); / 변수의 초기값을 지정합니다: count = Math.Clamp(requestedCount, 1, Math.Min(7, rows.Count))
+L000436 |             var count = Math.Clamp(requestedCount, 1, Math.Min(7, rows.Count)); ⟦EOL⟧
+// 해설 L437: 지역 변수를 선언합니다: var centerY = minimumY + ((maximumY - minimumY) / 2.0); / 변수의 초기값을 지정합니다: centerY = minimumY + ((maximumY - minimumY) / 2.0)
+L000437 |             var centerY = minimumY + ((maximumY - minimumY) / 2.0); ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count).Select(index => minimumY + ((maximumY - minimumY) * index / (count - 1.0))).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count).Select(index => minimumY + ((maximumY - minimumY) * index / (count - 1.0))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, count) / 조건에 따라 결과식을 선택합니다: count == 1 ? [centerY] : Enumerable.Range(0, count).Select(index => minimumY + ((maximumY - minimumY) * index / (count - 1.0))).ToArray() / 지역 변수를 선언합니다: var targets = count == 1 ? [centerY]
+L000438 |             var targets = count == 1 ? [centerY] : Enumerable.Range(0, count).Select(index => minimumY + ((maximumY - minimumY) * index / (count - 1.0))).ToArray(); ⟦EOL⟧
+// 해설 L439: 조건에 따라 분기합니다: if ((count & 1) == 1)
+L000439 |             if ((count & 1) == 1) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 FineCellRows.
+L000440 |             { ⟦EOL⟧
+// 해설 L441: 값을 대상에 대입합니다: targets[count / 2] = centerY
+L000441 |                 targets[count / 2] = centerY; ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 FineCellRows.
+L000442 |             } ⟦EOL⟧
+L000443 |  ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(target => rows.OrderBy(row => Math.Abs(row.Key - target)).ThenBy(row => row.Key).First()).DistinctBy(row => row.Key).OrderBy(row => row.Key).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(target => rows.OrderBy(row => Math.Abs(row.Key - target)).ThenBy(row => row.Key).First()).DistinctBy(row => row.Key).OrderBy(row => row.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(target => rows.OrderBy(row => Math.Abs(row.Key - target)).ThenBy(row => row.Key).First()).DistinctBy(row => row.Key) /
+L000444 |             return targets.Select(target => rows.OrderBy(row => Math.Abs(row.Key - target)).ThenBy(row => row.Key).First()).DistinctBy(row => row.Key).OrderBy(row => row.Key).ToArray(); ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 FineCellRows.
+L000445 |         } ⟦EOL⟧
+L000446 |  ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RULE_TARGET Drilling.Common.Review.CReviewRulePlanBuilder.CreateTarget(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, string)
+L000447 |         private static ST_REVIEW_RULE_TARGET CreateTarget(ST_REVIEW_PLAN_POINT point, string role) ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 CreateTarget.
+L000448 |         { ⟦EOL⟧
+// 해설 L449: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountX) / 지역 변수를 선언합니다: var columns = Math.Max(1, point.PixelCountX); / 변수의 초기값을 지정합니다: columns = Math.Max(1, point.PixelCountX)
+L000449 |             var columns = Math.Max(1, point.PixelCountX); ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, point.ShotNo - 1) / 지역 변수를 선언합니다: var index = Math.Max(0, point.ShotNo - 1); / 변수의 초기값을 지정합니다: index = Math.Max(0, point.ShotNo - 1)
+L000450 |             var index = Math.Max(0, point.ShotNo - 1); ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(point.ShotKey, point.HeadNo, point.CellNo, (index / columns) + 1, (index % columns) + 1, role) / 호출자에게 값 또는 제어를 반환합니다: return new(point.ShotKey, point.HeadNo, point.CellNo, (index / columns) + 1, (index % columns) + 1, role);
+L000451 |             return new(point.ShotKey, point.HeadNo, point.CellNo, (index / columns) + 1, (index % columns) + 1, role); ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 CreateTarget.
+L000452 |         } ⟦EOL⟧
+L000453 |  ⟦EOL⟧
+// 해설 L454: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_PLAN_POINT? Drilling.Common.Review.CReviewRulePlanBuilder.TryGetPoint(Drilling.Common.Review.ST_REVIEW_PLAN, string)
+L000454 |         private static ST_REVIEW_PLAN_POINT? TryGetPoint(ST_REVIEW_PLAN plan, string key) ⟦EOL⟧
+// 해설 L455: 구문 블록 경계입니다 · 소속 TryGetPoint.
+L000455 |         { ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: key.IndexOf("_SHOT", StringComparison.Ordinal) / 지역 변수를 선언합니다: var separator = key.IndexOf("_SHOT", StringComparison.Ordinal); / 변수의 초기값을 지정합니다: separator = key.IndexOf("_SHOT", StringComparison.Ordinal)
+L000456 |             var separator = key.IndexOf("_SHOT", StringComparison.Ordinal); ⟦EOL⟧
+// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(key.AsSpan(4, separator - 4), out var cell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.AsSpan(4, separator - 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(key.AsSpan(separator + 5), out var shot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.AsSpan(separator + 5) / 조건에 따라 분기합니다: if (separator <= 4 || plan.CellCount <= 0 || !int.TryParse(key.AsSpan(4, separator - 4), out var cell) || !int.TryParse(key.AsSpan(separator + 5), out var shot))
+L000457 |             if (separator <= 4 || plan.CellCount <= 0 || !int.TryParse(key.AsSpan(4, separator - 4), out var cell) || !int.TryParse(key.AsSpan(separator + 5), out var shot)) ⟦EOL⟧
+// 해설 L458: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000458 |                 return null; ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.FindPoint(cell, shot) / 조건에 따라 결과식을 선택합니다: cell >= 1 && cell <= plan.CellCount && shot >= 1 ? plan.FindPoint(cell, shot) : null / 호출자에게 값 또는 제어를 반환합니다: return cell >= 1 && cell <= plan.CellCount && shot >= 1 ? plan.FindPoint(cell, shot) : null;
+L000459 |             return cell >= 1 && cell <= plan.CellCount && shot >= 1 ? plan.FindPoint(cell, shot) : null; ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 TryGetPoint.
+L000460 |         } ⟦EOL⟧
+L000461 |  ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(value, 6)
+L000462 |         private static double CoordinateKey(double value) => Math.Round(value, 6); ⟦EOL⟧
+// 해설 L463: 타입의 구조/상속 선언입니다: private readonly record struct FineCellRange(CellSlice Cell, double MinimumY, double MaximumY, double FirstRowY, double LastRowY, bool HasAssignedPoint);
+L000463 |         private readonly record struct FineCellRange(CellSlice Cell, double MinimumY, double MaximumY, double FirstRowY, double LastRowY, bool HasAssignedPoint); ⟦EOL⟧
+// 해설 L464: 타입의 구조/상속 선언입니다: private readonly record struct CellSlice(int Start, int Columns, int Rows, IReadOnlyList<ST_REVIEW_PLAN_POINT>? Points = null);
+L000464 |         private readonly record struct CellSlice(int Start, int Columns, int Rows, IReadOnlyList<ST_REVIEW_PLAN_POINT>? Points = null); ⟦EOL⟧
+// 해설 L465: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region 검사점 선택
+L000465 | #region 검사점 선택 ⟦EOL⟧
+// 해설 L466: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyCollection<string> Drilling.Common.Review.CReviewRulePlanBuilder.SelectEdgeShotKeys(Drilling.Common.Review.ST_REVIEW_PLAN)
+L000466 |         public static IReadOnlyCollection<string> SelectEdgeShotKeys(ST_REVIEW_PLAN plan) ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 SelectEdgeShotKeys.
+L000467 |         { ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · string SelectShotKey(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)
+L000468 |             string SelectShotKey(global::Drilling.Common.Review.ST_REVIEW_PLAN_POINT point) ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000469 |             { ⟦EOL⟧
+// 해설 L470: 호출자에게 값 또는 제어를 반환합니다: return point.ShotKey;
+L000470 |                 return point.ShotKey; ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000471 |             } ⟦EOL⟧
+L000472 |  ⟦EOL⟧
+// 해설 L473: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellEdgeShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellEdgeShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellEdgeShot).Select(SelectShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellEdgeShot) / 호출자에게 값 또는 제어를 반환합니다: return plan.Points.Where(IsCellEdgeShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase
+L000473 |             return plan.Points.Where(IsCellEdgeShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 SelectEdgeShotKeys.
+L000474 |         } ⟦EOL⟧
+L000475 |  ⟦EOL⟧
+// 해설 L476: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyCollection<string> Drilling.Common.Review.CReviewRulePlanBuilder.SelectCenterShotKeys(Drilling.Common.Review.ST_REVIEW_PLAN)
+L000476 |         public static IReadOnlyCollection<string> SelectCenterShotKeys(ST_REVIEW_PLAN plan) ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 SelectCenterShotKeys.
+L000477 |         { ⟦EOL⟧
+// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · string SelectShotKey(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)
+L000478 |             string SelectShotKey(global::Drilling.Common.Review.ST_REVIEW_PLAN_POINT point) ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000479 |             { ⟦EOL⟧
+// 해설 L480: 호출자에게 값 또는 제어를 반환합니다: return point.ShotKey;
+L000480 |                 return point.ShotKey; ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000481 |             } ⟦EOL⟧
+L000482 |  ⟦EOL⟧
+// 해설 L483: 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellCenterShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellCenterShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellCenterShot).Select(SelectShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: plan.Points.Where(IsCellCenterShot) / 호출자에게 값 또는 제어를 반환합니다: return plan.Points.Where(IsCellCenterShot).Select(SelectShotKey).Distinct(StringComparer.Ordinal
+L000483 |             return plan.Points.Where(IsCellCenterShot).Select(SelectShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 SelectCenterShotKeys.
+L000484 |         } ⟦EOL⟧
+L000485 |  ⟦EOL⟧
+// 해설 L486: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.IsCellEdgeShot(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)
+L000486 |         private static bool IsCellEdgeShot(ST_REVIEW_PLAN_POINT point) ⟦EOL⟧
+// 해설 L487: 구문 블록 경계입니다 · 소속 IsCellEdgeShot.
+L000487 |         { ⟦EOL⟧
+// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountX) / 지역 변수를 선언합니다: var columnCount = Math.Max(1, point.PixelCountX); / 변수의 초기값을 지정합니다: columnCount = Math.Max(1, point.PixelCountX)
+L000488 |             var columnCount = Math.Max(1, point.PixelCountX); ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, point.PixelCountY) / 지역 변수를 선언합니다: var rowCount = Math.Max(1, point.PixelCountY); / 변수의 초기값을 지정합니다: rowCount = Math.Max(1, point.PixelCountY)
+L000489 |             var rowCount = Math.Max(1, point.PixelCountY); ⟦EOL⟧
+// 해설 L490: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, point.ShotNo - 1) / 지역 변수를 선언합니다: var zeroBasedShotNo = Math.Max(0, point.ShotNo - 1); / 변수의 초기값을 지정합니다: zeroBasedShotNo = Math.Max(0, point.ShotNo - 1)
+L000490 |             var zeroBasedShotNo = Math.Max(0, point.ShotNo - 1); ⟦EOL⟧
+// 해설 L491: 지역 변수를 선언합니다: var column = zeroBasedShotNo % columnCount; / 변수의 초기값을 지정합니다: column = zeroBasedShotNo % columnCount
+L000491 |             var column = zeroBasedShotNo % columnCount; ⟦EOL⟧
+// 해설 L492: 지역 변수를 선언합니다: var row = zeroBasedShotNo / columnCount; / 변수의 초기값을 지정합니다: row = zeroBasedShotNo / columnCount
+L000492 |             var row = zeroBasedShotNo / columnCount; ⟦EOL⟧
+// 해설 L493: 호출자에게 값 또는 제어를 반환합니다: return column == 0 || column == columnCount - 1 || row == 0 || row == rowCount - 1;
+L000493 |             return column == 0 || column == columnCount - 1 || row == 0 || row == rowCount - 1; ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 IsCellEdgeShot.
+L000494 |         } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewRulePlanBuilder.IsCellCenterShot(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)
+L000496 |         private static bool IsCellCenterShot(ST_REVIEW_PLAN_POINT point) ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 IsCellCenterShot.
+L000497 |         { ⟦EOL⟧
+// 해설 L498: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsCellEdgeShot(point) / 호출자에게 값 또는 제어를 반환합니다: return !IsCellEdgeShot(point);
+L000498 |             return !IsCellEdgeShot(point); ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 IsCellCenterShot.
+L000499 |         } ⟦EOL⟧
+// 해설 L500: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000500 | #endregion ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다.
+L000501 |     } ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 타입의 구조/상속 선언입니다: public enum EN_REVIEW_CORRECTION_RULE
+L000503 |     public enum EN_REVIEW_CORRECTION_RULE ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다.
+L000504 |     { ⟦EOL⟧
+// 해설 L505: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Simple
+L000505 |         Simple, ⟦EOL⟧
+// 해설 L506: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Rough
+L000506 |         Rough, ⟦EOL⟧
+// 해설 L507: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Fine
+L000507 |         Fine, ⟦EOL⟧
+// 해설 L508: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Edge
+L000508 |         Edge ⟦EOL⟧
+// 해설 L509: 구문 블록 경계입니다.
+L000509 |     } ⟦EOL⟧
+L000510 |  ⟦EOL⟧
+// 해설 L511: 타입의 구조/상속 선언입니다: public enum EN_REVIEW_CORRECTION_SCOPE
+L000511 |     public enum EN_REVIEW_CORRECTION_SCOPE ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다.
+L000512 |     { ⟦EOL⟧
+// 해설 L513: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_SCOPE.Head
+L000513 |         Head, ⟦EOL⟧
+// 해설 L514: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_CORRECTION_SCOPE.HeadCell
+L000514 |         HeadCell ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다.
+L000515 |     } ⟦EOL⟧
+L000516 |  ⟦EOL⟧
+// 해설 L517: 타입의 구조/상속 선언입니다: public enum EN_REVIEW_REFERENCE_LINE
+L000517 |     public enum EN_REVIEW_REFERENCE_LINE ⟦EOL⟧
+// 해설 L518: 구문 블록 경계입니다.
+L000518 |     { ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.First
+L000519 |         First, ⟦EOL⟧
+// 해설 L520: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.Center
+L000520 |         Center, ⟦EOL⟧
+// 해설 L521: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.Last
+L000521 |         Last ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다.
+L000522 |     } ⟦EOL⟧
+L000523 |  ⟦EOL⟧
+// 해설 L524: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RULE_CONFIGURATION(
+L000524 |     public sealed record ST_REVIEW_RULE_CONFIGURATION( ⟦EOL⟧
+// 해설 L525: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000525 |         EN_REVIEW_CORRECTION_RULE Rule,  ⟦EOL⟧
+// 해설 L526: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000526 |         EN_REVIEW_CORRECTION_SCOPE Scope,  ⟦EOL⟧
+// 해설 L527: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000527 |         int BeamNo,  ⟦EOL⟧
+// 해설 L528: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000528 |         string ReferenceShotKey,  ⟦EOL⟧
+// 해설 L529: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000529 |         EN_REVIEW_REFERENCE_LINE RoughReference,  ⟦EOL⟧
+// 해설 L530: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000530 |         int FineLineCount ⟦EOL⟧
+// 해설 L531: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000531 |     ); ⟦EOL⟧
+// 해설 L532: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RULE_TARGET(string ShotKey, int HeadNo, int CellNo, int RowNo, int ColumnNo, string Role);
+L000532 |     public sealed record ST_REVIEW_RULE_TARGET(string ShotKey, int HeadNo, int CellNo, int RowNo, int ColumnNo, string Role); ⟦EOL⟧
+// 해설 L533: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RULE_PLAN(ST_REVIEW_RULE_CONFIGURATION Configuration, IReadOnlyList<ST_REVIEW_RULE_TARGET> Targets)
+L000533 |     public sealed record ST_REVIEW_RULE_PLAN(ST_REVIEW_RULE_CONFIGURATION Configuration, IReadOnlyList<ST_REVIEW_RULE_TARGET> Targets) ⟦EOL⟧
+// 해설 L534: 구문 블록 경계입니다.
+L000534 |     { ⟦EOL⟧
+// 해설 L535: 함수·델리게이트 또는 객체 생성자를 호출합니다: Targets.Select(target => target.ShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Targets.Select(target => target.ShotKey).Distinct(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Targets.Select(target => target.ShotKey)
+L000535 |         public IReadOnlyCollection<string> ShotKeys { get; } = Targets.Select(target => target.ShotKey).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다.
+L000536 |     } ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다.
+L000537 | } ⟦EOL⟧

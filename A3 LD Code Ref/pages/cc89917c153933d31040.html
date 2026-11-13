@@ -1,0 +1,802 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Threading/CtrlThread.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Threading/CtrlThread.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs">Git 원본</a></p><h1>Drilling.Common/Threading/CtrlThread.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>072b00b00719220875cbf64c016f85320d0262f45f10e5f599a4abb7e673a5a3</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>7,048 bytes / 293 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/cc89917c153933d31040.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CtrlThread</td><td>ClassDeclaration</td><td>4–284</td><td>CtrlThread</td></tr>
+<tr><td>EN_CTRL_THREAD_STATE</td><td>EnumDeclaration</td><td>286–293</td><td>EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_sync</td><td>FieldDeclaration</td><td>L6–6</td><td>object Drilling.Common.Threading.CtrlThread._sync</td></tr>
+<tr><td>_pauseEvent</td><td>FieldDeclaration</td><td>L7–7</td><td>System.Threading.ManualResetEventSlim Drilling.Common.Threading.CtrlThread._pauseEvent</td></tr>
+<tr><td>_stopEvent</td><td>FieldDeclaration</td><td>L8–8</td><td>System.Threading.ManualResetEventSlim Drilling.Common.Threading.CtrlThread._stopEvent</td></tr>
+<tr><td>_thread</td><td>FieldDeclaration</td><td>L9–9</td><td>System.Threading.Thread? Drilling.Common.Threading.CtrlThread._thread</td></tr>
+<tr><td>_stopRequested</td><td>FieldDeclaration</td><td>L10–10</td><td>bool Drilling.Common.Threading.CtrlThread._stopRequested</td></tr>
+<tr><td>_delayMs</td><td>FieldDeclaration</td><td>L11–11</td><td>int Drilling.Common.Threading.CtrlThread._delayMs</td></tr>
+<tr><td>_threadName</td><td>FieldDeclaration</td><td>L12–12</td><td>string Drilling.Common.Threading.CtrlThread._threadName</td></tr>
+<tr><td>_state</td><td>FieldDeclaration</td><td>L13–13</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread._state</td></tr>
+<tr><td>_lastError</td><td>FieldDeclaration</td><td>L14–14</td><td>System.Exception? Drilling.Common.Threading.CtrlThread._lastError</td></tr>
+<tr><td>_disposed</td><td>FieldDeclaration</td><td>L15–15</td><td>bool Drilling.Common.Threading.CtrlThread._disposed</td></tr>
+<tr><td>IsRunning</td><td>PropertyDeclaration</td><td>L16–25</td><td>bool Drilling.Common.Threading.CtrlThread.IsRunning</td></tr>
+<tr><td>get_IsRunning</td><td>GetAccessorDeclaration</td><td>L18–24</td><td>bool Drilling.Common.Threading.CtrlThread.IsRunning.get</td></tr>
+<tr><td>IsPaused</td><td>PropertyDeclaration</td><td>L27–36</td><td>bool Drilling.Common.Threading.CtrlThread.IsPaused</td></tr>
+<tr><td>get_IsPaused</td><td>GetAccessorDeclaration</td><td>L29–35</td><td>bool Drilling.Common.Threading.CtrlThread.IsPaused.get</td></tr>
+<tr><td>ThreadState</td><td>PropertyDeclaration</td><td>L38–47</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState</td></tr>
+<tr><td>get_ThreadState</td><td>GetAccessorDeclaration</td><td>L40–46</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState.get</td></tr>
+<tr><td>LastThreadError</td><td>PropertyDeclaration</td><td>L49–58</td><td>System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError</td></tr>
+<tr><td>get_LastThreadError</td><td>GetAccessorDeclaration</td><td>L51–57</td><td>System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError.get</td></tr>
+<tr><td>Start</td><td>MethodDeclaration</td><td>L60–96</td><td>void Drilling.Common.Threading.CtrlThread.Start(int, string)</td></tr>
+<tr><td>Pause</td><td>MethodDeclaration</td><td>L98–111</td><td>void Drilling.Common.Threading.CtrlThread.Pause()</td></tr>
+<tr><td>Resume</td><td>MethodDeclaration</td><td>L113–126</td><td>void Drilling.Common.Threading.CtrlThread.Resume()</td></tr>
+<tr><td>Stop</td><td>MethodDeclaration</td><td>L128–188</td><td>void Drilling.Common.Threading.CtrlThread.Stop()</td></tr>
+<tr><td>Dispose</td><td>MethodDeclaration</td><td>L190–208</td><td>void Drilling.Common.Threading.CtrlThread.Dispose()</td></tr>
+<tr><td>Run</td><td>MethodDeclaration</td><td>L210–212</td><td>void Drilling.Common.Threading.CtrlThread.Run()</td></tr>
+<tr><td>IsStopRequested</td><td>MethodDeclaration</td><td>L214–217</td><td>bool Drilling.Common.Threading.CtrlThread.IsStopRequested()</td></tr>
+<tr><td>OnThreadError</td><td>MethodDeclaration</td><td>L219–222</td><td>void Drilling.Common.Threading.CtrlThread.OnThreadError(System.Exception)</td></tr>
+<tr><td>ThrowIfDisposed</td><td>MethodDeclaration</td><td>L224–230</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed()</td></tr>
+<tr><td>ThreadProcess</td><td>MethodDeclaration</td><td>L232–283</td><td>void Drilling.Common.Threading.CtrlThread.ThreadProcess()</td></tr>
+<tr><td>Stopped</td><td>EnumMemberDeclaration</td><td>L288–288</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopped</td></tr>
+<tr><td>Running</td><td>EnumMemberDeclaration</td><td>L289–289</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Running</td></tr>
+<tr><td>Paused</td><td>EnumMemberDeclaration</td><td>L290–290</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Paused</td></tr>
+<tr><td>Stopping</td><td>EnumMemberDeclaration</td><td>L291–291</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopping</td></tr>
+<tr><td>Error</td><td>EnumMemberDeclaration</td><td>L292–292</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Error</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L6">FieldDeclaration <code>_sync</code> · L6–6</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L6-L6">Drilling.Common/Threading/CtrlThread.cs:6–6</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>object Drilling.Common.Threading.CtrlThread._sync</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>object</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>6</td><td>new</td><td>resolved</td><td>object.Object()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>6</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>6</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _sync = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L7">FieldDeclaration <code>_pauseEvent</code> · L7–7</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L7-L7">Drilling.Common/Threading/CtrlThread.cs:7–7</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.ManualResetEventSlim Drilling.Common.Threading.CtrlThread._pauseEvent</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.ManualResetEventSlim</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>7</td><td>new</td><td>resolved</td><td>System.Threading.ManualResetEventSlim.ManualResetEventSlim(bool)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>7</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(true)</td></tr>
+<tr><td>7</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _pauseEvent = new(true)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L8">FieldDeclaration <code>_stopEvent</code> · L8–8</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L8-L8">Drilling.Common/Threading/CtrlThread.cs:8–8</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.ManualResetEventSlim Drilling.Common.Threading.CtrlThread._stopEvent</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.ManualResetEventSlim</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>8</td><td>new</td><td>resolved</td><td>System.Threading.ManualResetEventSlim.ManualResetEventSlim(bool)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>8</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(false)</td></tr>
+<tr><td>8</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _stopEvent = new(false)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L9">FieldDeclaration <code>_thread</code> · L9–9</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L9-L9">Drilling.Common/Threading/CtrlThread.cs:9–9</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Thread? Drilling.Common.Threading.CtrlThread._thread</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Thread?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L10">FieldDeclaration <code>_stopRequested</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L10-L10">Drilling.Common/Threading/CtrlThread.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread._stopRequested</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, volatile</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>_delayMs</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L11-L11">Drilling.Common/Threading/CtrlThread.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Threading.CtrlThread._delayMs</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _delayMs = 1</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_threadName</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L12-L12">Drilling.Common/Threading/CtrlThread.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Threading.CtrlThread._threadName</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _threadName = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>_state</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L13-L13">Drilling.Common/Threading/CtrlThread.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread._state</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _state = EN_CTRL_THREAD_STATE.Stopped</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_lastError</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L14-L14">Drilling.Common/Threading/CtrlThread.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Exception? Drilling.Common.Threading.CtrlThread._lastError</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Exception?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>_disposed</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L15-L15">Drilling.Common/Threading/CtrlThread.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread._disposed</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">PropertyDeclaration <code>IsRunning</code> · L16–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L16-L25">Drilling.Common/Threading/CtrlThread.cs:16–25</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread.IsRunning</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">GetAccessorDeclaration <code>get_IsRunning</code> · L18–24</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L18-L24">Drilling.Common/Threading/CtrlThread.cs:18–24</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread.IsRunning.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>22</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _thread is { IsAlive: true };</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_IsRunning&quot;]
+ N0[&quot;L20 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">PropertyDeclaration <code>IsPaused</code> · L27–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L27-L36">Drilling.Common/Threading/CtrlThread.cs:27–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread.IsPaused</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">GetAccessorDeclaration <code>get_IsPaused</code> · L29–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L29-L35">Drilling.Common/Threading/CtrlThread.cs:29–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread.IsPaused.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>31</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>33</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _state == EN_CTRL_THREAD_STATE.Paused;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_IsPaused&quot;]
+ N0[&quot;L31 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">PropertyDeclaration <code>ThreadState</code> · L38–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L38-L47">Drilling.Common/Threading/CtrlThread.cs:38–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">GetAccessorDeclaration <code>get_ThreadState</code> · L40–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L40-L46">Drilling.Common/Threading/CtrlThread.cs:40–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>42</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>44</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _state;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_ThreadState&quot;]
+ N0[&quot;L42 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">PropertyDeclaration <code>LastThreadError</code> · L49–58</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L49-L58">Drilling.Common/Threading/CtrlThread.cs:49–58</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Exception?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L51">GetAccessorDeclaration <code>get_LastThreadError</code> · L51–57</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L51-L57">Drilling.Common/Threading/CtrlThread.cs:51–57</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Exception?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>55</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _lastError;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;get_LastThreadError&quot;]
+ N0[&quot;L53 lock&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L60">MethodDeclaration <code>Start</code> · L60–96</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L60-L96">Drilling.Common/Threading/CtrlThread.cs:60–96</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Start(int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>delayMs</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L153-L153">Drilling.Common/Interface/Melsec/CMelsec.cs:153–153</a></td><td>Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L319-L319">Drilling.Common/Station/CStationProcess.cs:319–319</a></td><td>base.Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1216-L1216">Drilling.Common/Station/CStationProcess.cs:1216–1216</a></td><td>base.Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1277-L1277">Drilling.Common/Station/CStationProcess.cs:1277–1277</a></td><td>base.Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L3991-L3991">Drilling.UI/Menu/Menus/CMenuMain.cs:3991–3991</a></td><td>base.Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7829-L7829">Drilling.UI/Menu/Menus/CMenuManual.cs:7829–7829</a></td><td>base.Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L34-L34">Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:34–34</a></td><td>base.Start</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>64</td><td>ThrowIfDisposed</td><td>resolved</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed() · Drilling.Common/Threading/CtrlThread.cs:224</td></tr>
+<tr><td>70</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>71</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>71</td><td>GetType</td><td>resolved</td><td>System.Type object.GetType()</td></tr>
+<tr><td>74</td><td>_stopEvent.Reset</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Reset()</td></tr>
+<tr><td>75</td><td>_pauseEvent.Set</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Set()</td></tr>
+<tr><td>77</td><td>new Thread</td><td>resolved</td><td>System.Threading.Thread.Thread(System.Threading.ThreadStart)</td></tr>
+<tr><td>84</td><td>_thread.Start</td><td>resolved</td><td>void System.Threading.Thread.Start()</td></tr>
+<tr><td>92</td><td>Debug.WriteLine</td><td>resolved</td><td>void System.Diagnostics.Debug.WriteLine(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>62</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()</td></tr>
+<tr><td>65</td><td>if</td><td>조건에 따라 분기합니다: if (_thread is { IsAlive: true })</td></tr>
+<tr><td>67</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>70</td><td>assignment</td><td>값을 대상에 대입합니다: _delayMs = Math.Max(1, delayMs)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, delayMs)</td></tr>
+<tr><td>71</td><td>assignment</td><td>값을 대상에 대입합니다: _threadName = string.IsNullOrWhiteSpace(name) ? GetType().Name : name</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetType()</td></tr>
+<tr><td>71</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(name) ? GetType().Name : name</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: _stopRequested = false</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: _lastError = null</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Reset()</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()</td></tr>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Running</td></tr>
+<tr><td>77</td><td>assignment</td><td>값을 대상에 대입합니다: _thread = new Thread(ThreadProcess) { IsBackground = true, Name = _threadName }</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Thread(ThreadProcess) { IsBackground = true, Name = _threadName }</td></tr>
+<tr><td>79</td><td>assignment</td><td>값을 대상에 대입합니다: IsBackground = true</td></tr>
+<tr><td>80</td><td>assignment</td><td>값을 대상에 대입합니다: Name = _threadName</td></tr>
+<tr><td>82</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _thread.Start()</td></tr>
+<tr><td>86</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception)</td></tr>
+<tr><td>88</td><td>assignment</td><td>값을 대상에 대입합니다: _thread = null</td></tr>
+<tr><td>89</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Error</td></tr>
+<tr><td>90</td><td>assignment</td><td>값을 대상에 대입합니다: _lastError = exception</td></tr>
+<tr><td>91</td><td>assignment</td><td>값을 대상에 대입합니다: _stopRequested = true</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine(&quot;Thread start failed : &quot; + _threadName + &quot; / &quot; + exception)</td></tr>
+<tr><td>93</td><td>throw</td><td>예외를 발생/전달합니다: throw;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Start&quot;]
+ N0[&quot;L62 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L65 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L82 try&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L86 catch&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L98">MethodDeclaration <code>Pause</code> · L98–111</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L98-L111">Drilling.Common/Threading/CtrlThread.cs:98–111</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Pause()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>102</td><td>ThrowIfDisposed</td><td>resolved</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed() · Drilling.Common/Threading/CtrlThread.cs:224</td></tr>
+<tr><td>108</td><td>_pauseEvent.Reset</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Reset()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>100</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()</td></tr>
+<tr><td>103</td><td>if</td><td>조건에 따라 분기합니다: if (_thread is not { IsAlive: true } || _stopRequested)</td></tr>
+<tr><td>105</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Reset()</td></tr>
+<tr><td>109</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Paused</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Pause&quot;]
+ N0[&quot;L100 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L103 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L113">MethodDeclaration <code>Resume</code> · L113–126</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L113-L126">Drilling.Common/Threading/CtrlThread.cs:113–126</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Resume()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>117</td><td>ThrowIfDisposed</td><td>resolved</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed() · Drilling.Common/Threading/CtrlThread.cs:224</td></tr>
+<tr><td>124</td><td>_pauseEvent.Set</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Set()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>115</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()</td></tr>
+<tr><td>118</td><td>if</td><td>조건에 따라 분기합니다: if (_thread is not { IsAlive: true } || _stopRequested)</td></tr>
+<tr><td>120</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>123</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Running</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Resume&quot;]
+ N0[&quot;L115 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L118 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L128">MethodDeclaration <code>Stop</code> · L128–188</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L128-L188">Drilling.Common/Threading/CtrlThread.cs:128–188</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Stop()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L168-L168">Drilling.Common/Interface/Melsec/CMelsec.cs:168–168</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L171-L171">Drilling.Common/Interface/Melsec/CMelsec.cs:171–171</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1081-L1081">Drilling.UI/Menu/Menus/CMenuMain.cs:1081–1081</a></td><td>_motorStatusPollingService.Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3844-L3844">Drilling.UI/Menu/Menus/CMenuManual.cs:3844–3844</a></td><td>_stageMotionPollingService.Stop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>134</td><td>ThrowIfDisposed</td><td>resolved</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed() · Drilling.Common/Threading/CtrlThread.cs:224</td></tr>
+<tr><td>137</td><td>_pauseEvent.Set</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Set()</td></tr>
+<tr><td>138</td><td>_stopEvent.Set</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Set()</td></tr>
+<tr><td>161</td><td>target.Join</td><td>resolved</td><td>bool System.Threading.Thread.Join(int)</td></tr>
+<tr><td>165</td><td>ReferenceEquals</td><td>resolved</td><td>bool object.ReferenceEquals(object?, object?)</td></tr>
+<tr><td>178</td><td>new TimeoutException</td><td>resolved</td><td>System.TimeoutException.TimeoutException(string?)</td></tr>
+<tr><td>180</td><td>Debug.WriteLine</td><td>resolved</td><td>void System.Diagnostics.Debug.WriteLine(string?)</td></tr>
+<tr><td>180</td><td>stopError.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Exception.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>130</td><td>local-declaration</td><td>지역 변수를 선언합니다: Thread? target;</td></tr>
+<tr><td>131</td><td>local-declaration</td><td>지역 변수를 선언합니다: bool isCurrentThread;</td></tr>
+<tr><td>132</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: _stopRequested = true</td></tr>
+<tr><td>136</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopping</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Set()</td></tr>
+<tr><td>139</td><td>assignment</td><td>값을 대상에 대입합니다: target = _thread</td></tr>
+<tr><td>140</td><td>assignment</td><td>값을 대상에 대입합니다: isCurrentThread = target == Thread.CurrentThread</td></tr>
+<tr><td>143</td><td>if</td><td>조건에 따라 분기합니다: if (target is null)</td></tr>
+<tr><td>145</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>147</td><td>if</td><td>조건에 따라 분기합니다: if (_thread is null)</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped</td></tr>
+<tr><td>153</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>156</td><td>if</td><td>조건에 따라 분기합니다: if (isCurrentThread)</td></tr>
+<tr><td>158</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.Join(3000)</td></tr>
+<tr><td>161</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stopped = target.Join(3000);</td></tr>
+<tr><td>161</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stopped = target.Join(3000)</td></tr>
+<tr><td>162</td><td>local-declaration</td><td>지역 변수를 선언합니다: Exception? stopError = null;</td></tr>
+<tr><td>162</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stopError = null</td></tr>
+<tr><td>163</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_thread, target)</td></tr>
+<tr><td>165</td><td>if</td><td>조건에 따라 분기합니다: if (!ReferenceEquals(_thread, target))</td></tr>
+<tr><td>167</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>170</td><td>if</td><td>조건에 따라 분기합니다: if (stopped || !target.IsAlive)</td></tr>
+<tr><td>172</td><td>assignment</td><td>값을 대상에 대입합니다: _thread = null</td></tr>
+<tr><td>173</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped</td></tr>
+<tr><td>175</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>177</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Error</td></tr>
+<tr><td>178</td><td>assignment</td><td>값을 대상에 대입합니다: stopError = new TimeoutException(&quot;Thread stop timeout: &quot; + _threadName)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException(&quot;Thread stop timeout: &quot; + _threadName)</td></tr>
+<tr><td>179</td><td>assignment</td><td>값을 대상에 대입합니다: _lastError = stopError</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine(stopError.ToString())</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stopError.ToString()</td></tr>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (stopError is not null)</td></tr>
+<tr><td>186</td><td>throw</td><td>예외를 발생/전달합니다: throw stopError;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Stop&quot;]
+ N0[&quot;L132 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L143 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L145 lock&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L147 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L156 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L163 lock&quot;]
+ M --&gt;|포함| N5
+ N6[&quot;L165 if&quot;]
+ N5 --&gt;|포함| N6
+ N7[&quot;L170 if&quot;]
+ N5 --&gt;|포함| N7
+ N8[&quot;L175 else&quot;]
+ N7 --&gt;|포함| N8
+ N9[&quot;L184 if&quot;]
+ M --&gt;|포함| N9</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L190">MethodDeclaration <code>Dispose</code> · L190–208</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L190-L208">Drilling.Common/Threading/CtrlThread.cs:190–208</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Dispose()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L484-L484">Drilling.Common/Interface/Melsec/CMelsec.cs:484–484</a></td><td>base.Dispose</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>201</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>204</td><td>_pauseEvent.Dispose</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Dispose()</td></tr>
+<tr><td>205</td><td>_stopEvent.Dispose</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Dispose()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>192</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>194</td><td>if</td><td>조건에 따라 분기합니다: if (_disposed)</td></tr>
+<tr><td>196</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>199</td><td>if</td><td>조건에 따라 분기합니다: if (_thread is { IsAlive: true })</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;CtrlThread cannot be disposed while the worker thread is running.&quot;)</td></tr>
+<tr><td>201</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;CtrlThread cannot be disposed while the worker thread is running.&quot;);</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Dispose()</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Dispose()</td></tr>
+<tr><td>206</td><td>assignment</td><td>값을 대상에 대입합니다: _disposed = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Dispose&quot;]
+ N0[&quot;L192 lock&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L194 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L199 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L210">MethodDeclaration <code>Run</code> · L210–212</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L210-L212">Drilling.Common/Threading/CtrlThread.cs:210–212</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.Run()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, virtual</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L246-L246">Drilling.Common/Threading/CtrlThread.cs:246–246</a></td><td>Run</td><td>True</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L214">MethodDeclaration <code>IsStopRequested</code> · L214–217</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L214-L217">Drilling.Common/Threading/CtrlThread.cs:214–217</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Threading.CtrlThread.IsStopRequested()</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>216</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return _stopRequested;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L219">MethodDeclaration <code>OnThreadError</code> · L219–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L219-L222">Drilling.Common/Threading/CtrlThread.cs:219–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.OnThreadError(System.Exception)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, virtual</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>exception</td><td>System.Exception</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L235-L235">Drilling.Common/Interface/Melsec/CMelsec.cs:235–235</a></td><td>base.OnThreadError</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L257-L257">Drilling.Common/Threading/CtrlThread.cs:257–257</a></td><td>OnThreadError</td><td>True</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>221</td><td>Debug.WriteLine</td><td>resolved</td><td>void System.Diagnostics.Debug.WriteLine(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>221</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine(&quot;Thread Error : &quot; + _threadName + &quot; / &quot; + exception)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>ThrowIfDisposed</code> · L224–230</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L224-L230">Drilling.Common/Threading/CtrlThread.cs:224–230</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L64-L64">Drilling.Common/Threading/CtrlThread.cs:64–64</a></td><td>ThrowIfDisposed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L102-L102">Drilling.Common/Threading/CtrlThread.cs:102–102</a></td><td>ThrowIfDisposed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L117-L117">Drilling.Common/Threading/CtrlThread.cs:117–117</a></td><td>ThrowIfDisposed</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L134-L134">Drilling.Common/Threading/CtrlThread.cs:134–134</a></td><td>ThrowIfDisposed</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>228</td><td>new ObjectDisposedException</td><td>resolved</td><td>System.ObjectDisposedException.ObjectDisposedException(string?)</td></tr>
+<tr><td>228</td><td>GetType</td><td>resolved</td><td>System.Type object.GetType()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>if</td><td>조건에 따라 분기합니다: if (_disposed)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ObjectDisposedException(GetType().Name)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetType()</td></tr>
+<tr><td>228</td><td>throw</td><td>예외를 발생/전달합니다: throw new ObjectDisposedException(GetType().Name);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ThrowIfDisposed&quot;]
+ N0[&quot;L226 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L232">MethodDeclaration <code>ThreadProcess</code> · L232–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L232-L283">Drilling.Common/Threading/CtrlThread.cs:232–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Threading.CtrlThread.ThreadProcess()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.CtrlThread</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>238</td><td>_pauseEvent.Wait</td><td>resolved</td><td>void System.Threading.ManualResetEventSlim.Wait()</td></tr>
+<tr><td>246</td><td>Run</td><td>resolved · 동적 구현 선택 가능</td><td>void Drilling.Common.Threading.CtrlThread.Run() · Drilling.Common/Threading/CtrlThread.cs:210</td></tr>
+<tr><td>257</td><td>OnThreadError</td><td>resolved · 동적 구현 선택 가능</td><td>void Drilling.Common.Threading.CtrlThread.OnThreadError(System.Exception) · Drilling.Common/Threading/CtrlThread.cs:219</td></tr>
+<tr><td>261</td><td>Debug.WriteLine</td><td>resolved</td><td>void System.Diagnostics.Debug.WriteLine(string?)</td></tr>
+<tr><td>265</td><td>_stopEvent.Wait</td><td>resolved</td><td>bool System.Threading.ManualResetEventSlim.Wait(int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>234</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>236</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (!_stopRequested)</td></tr>
+<tr><td>238</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Wait()</td></tr>
+<tr><td>239</td><td>if</td><td>조건에 따라 분기합니다: if (_stopRequested)</td></tr>
+<tr><td>241</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>244</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Run()</td></tr>
+<tr><td>248</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception)</td></tr>
+<tr><td>250</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>252</td><td>assignment</td><td>값을 대상에 대입합니다: _lastError = exception</td></tr>
+<tr><td>255</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: OnThreadError(exception)</td></tr>
+<tr><td>259</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception callbackException)</td></tr>
+<tr><td>261</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine(&quot;Thread error callback failed : &quot; + _threadName + &quot; / &quot; + callbackException)</td></tr>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Wait(_delayMs)</td></tr>
+<tr><td>265</td><td>if</td><td>조건에 따라 분기합니다: if (_delayMs &gt; 0 &amp;&amp; _stopEvent.Wait(_delayMs))</td></tr>
+<tr><td>267</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>271</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>273</td><td>lock</td><td>공유 상태의 임계 구역에 진입합니다: lock (_sync)</td></tr>
+<tr><td>275</td><td>if</td><td>조건에 따라 분기합니다: if (_thread == Thread.CurrentThread)</td></tr>
+<tr><td>277</td><td>assignment</td><td>값을 대상에 대입합니다: _thread = null</td></tr>
+<tr><td>280</td><td>assignment</td><td>값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ThreadProcess&quot;]
+ N0[&quot;L234 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L236 while&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L239 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L244 try&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L248 catch&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L250 lock&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L255 try&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L259 catch&quot;]
+ N6 --&gt;|포함| N7
+ N8[&quot;L265 if&quot;]
+ N1 --&gt;|포함| N8
+ N9[&quot;L271 finally&quot;]
+ N0 --&gt;|포함| N9
+ N10[&quot;L273 lock&quot;]
+ N9 --&gt;|포함| N10
+ N11[&quot;L275 if&quot;]
+ N10 --&gt;|포함| N11</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L288">EnumMemberDeclaration <code>Stopped</code> · L288–288</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L288-L288">Drilling.Common/Threading/CtrlThread.cs:288–288</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopped</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L289">EnumMemberDeclaration <code>Running</code> · L289–289</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L289-L289">Drilling.Common/Threading/CtrlThread.cs:289–289</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Running</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L290">EnumMemberDeclaration <code>Paused</code> · L290–290</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L290-L290">Drilling.Common/Threading/CtrlThread.cs:290–290</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Paused</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">EnumMemberDeclaration <code>Stopping</code> · L291–291</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L291-L291">Drilling.Common/Threading/CtrlThread.cs:291–291</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopping</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L292">EnumMemberDeclaration <code>Error</code> · L292–292</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L292-L292">Drilling.Common/Threading/CtrlThread.cs:292–292</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Error</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Threading.EN_CTRL_THREAD_STATE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Threading/CtrlThread.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

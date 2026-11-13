@@ -1,0 +1,942 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Correction/CAlignInterpolation.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Correction
+L000001 | namespace Drilling.Common.Correction ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000003 |     using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 |     using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000006 |     using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000007 |     using System.Globalization; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000009 |     // Interpolate each horizontal row linearly in X, then use global Lagrange interpolation in Y. ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 |     // This also handles rows whose left/right X coordinates do not match the AK columns. ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CAlignInterpolation
+L000011 |     public sealed class CAlignInterpolation ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: AlgorithmName = "Lagrange"
+L000013 |         public const string AlgorithmName = "Lagrange"; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · double[] Drilling.Common.Correction.CAlignInterpolation._normalizedY
+L000014 |         private readonly double[] _normalizedY; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · double[] Drilling.Common.Correction.CAlignInterpolation._weights
+L000015 |         private readonly double[] _weights; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_ROW> Drilling.Common.Correction.CAlignInterpolation.Rows
+L000016 |         public IReadOnlyList<ST_ALIGN_INTERPOLATION_ROW> Rows { get; } ⟦EOL⟧
+L000017 |  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.CAlignInterpolation.CAlignInterpolation(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_KEY>, System.Collections.Generic.IReadOnlyCollection
+L000018 |         public CAlignInterpolation(IReadOnlyList<ST_ALIGN_INTERPOLATION_KEY> keys, IReadOnlyCollection<string> selectedDkNames) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 .ctor.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.ToDictionary(key => key.Name, StringComparer.Ordinal) / 지역 변수를 선언합니다: var byName = keys.ToDictionary(key => key.Name, StringComparer.Ordinal); / 변수의 초기값을 지정합니다: byName = keys.ToDictionary(key => key.Name, StringComparer.Ordinal)
+L000020 |             var byName = keys.ToDictionary(key => key.Name, StringComparer.Ordinal); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: byName.TryGetValue(name, out var key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{name} 키 위치가 없습니다.") / 조건에 따라 결과식을 선택합니다: byName.TryGetValue(name, out var key) ? key : throw new InvalidOperationException($"{name} 키 위치가 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{name} 키 위치가 없습니다.")
+L000021 |             ST_ALIGN_INTERPOLATION_KEY Find(string name) => byName.TryGetValue(name, out var key) ? key : throw new InvalidOperationException($"{name} 키 위치가 없습니다."); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_ROW(Find("AK1"), Find("AK3")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Find("AK1") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Find("AK3") / 지역 변수를 선언합니다: var top = new ST_ALIGN_INTERPOLATION_ROW(Find("AK1"), Find("AK3")); / 변수의 초기값을 지정합니다: top = new ST_ALIGN_INTERPOLATION_ROW(Find("AK1"), Find("AK3"))
+L000022 |             var top = new ST_ALIGN_INTERPOLATION_ROW(Find("AK1"), Find("AK3")); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_ROW(Find("AK2"), Find("AK4")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Find("AK2") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Find("AK4") / 지역 변수를 선언합니다: var bottom = new ST_ALIGN_INTERPOLATION_ROW(Find("AK2"), Find("AK4")); / 변수의 초기값을 지정합니다: bottom = new ST_ALIGN_INTERPOLATION_ROW(Find("AK2"), Find("AK4"))
+L000023 |             var bottom = new ST_ALIGN_INTERPOLATION_ROW(Find("AK2"), Find("AK4")); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRow(top)
+L000024 |             ValidateRow(top); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRow(bottom)
+L000025 |             ValidateRow(bottom); ⟦EOL⟧
+// 해설 L26: 조건에 따라 분기합니다: if (bottom.Y - top.Y <= 1e-9)
+L000026 |             if (bottom.Y - top.Y <= 1e-9) ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("위쪽 AK와 아래쪽 AK의 Y 위치가 서로 달라야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("위쪽 AK와 아래쪽 AK의 Y 위치가 서로 달라야 합니다.");
+L000027 |                 throw new InvalidOperationException("위쪽 AK와 아래쪽 AK의 Y 위치가 서로 달라야 합니다."); ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedDkNames.Distinct(StringComparer.Ordinal).Select(Find).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedDkNames.Distinct(StringComparer.Ordinal).Select(Find) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedDkNames.Distinct(StringComparer.Ordinal) / 지역 변수를 선언합니다: var selected = selectedDkNames.Distinct(StringComparer.Ordinal).Select(Find).ToArray(); / 변수의 초기값을 지정합니다: selected = selectedDkNames.Distinct(StringComparer.Ordinal).Select(Find).ToArray()
+L000028 |             var selected = selectedDkNames.Distinct(StringComparer.Ordinal).Select(Find).ToArray(); ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_ALIGN_INTERPOLATION_ROW> { top } / 지역 변수를 선언합니다: var rows = new List<ST_ALIGN_INTERPOLATION_ROW> { top }; / 변수의 초기값을 지정합니다: rows = new List<ST_ALIGN_INTERPOLATION_ROW> { top }
+L000029 |             var rows = new List<ST_ALIGN_INTERPOLATION_ROW> ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 .ctor.
+L000030 |             { ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.CAlignInterpolation.CAlignInterpolation(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_KEY>, System.Collections.Generic.IReadOnlyCollection
+L000031 |                 top ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 .ctor.
+L000032 |             }; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.GroupBy(key => key.Y).OrderBy(group => group.Key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.GroupBy(key => key.Y) / 컬렉션 요소를 순회합니다: foreach (var group in selected.GroupBy(key => key.Y).OrderBy(group => group.Key))
+L000033 |             foreach (var group in selected.GroupBy(key => key.Y).OrderBy(group => group.Key)) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 .ctor.
+L000034 |             { ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.OrderBy(key => key.X).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.OrderBy(key => key.X) / 지역 변수를 선언합니다: var pair = group.OrderBy(key => key.X).ToArray(); / 변수의 초기값을 지정합니다: pair = group.OrderBy(key => key.X).ToArray()
+L000035 |                 var pair = group.OrderBy(key => key.X).ToArray(); ⟦EOL⟧
+// 해설 L36: 조건에 따라 분기합니다: if (pair.Length != 2)
+L000036 |                 if (pair.Length != 2) ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Y={group.Key:0.###} 행에는 DK가 {pair.Length}개 있습니다. 좌우 DK 두 개로 구성된 행을 선택해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Y={group.Key:0.###} 행에는 DK가 {pair.Length}개 있습니다. 좌우 DK 두 개로 구성된 행을 선택해 주세요.");
+L000037 |                     throw new InvalidOperationException($"Y={group.Key:0.###} 행에는 DK가 {pair.Length}개 있습니다. 좌우 DK 두 개로 구성된 행을 선택해 주세요."); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_ROW(pair[0], pair[1]) / 지역 변수를 선언합니다: var row = new ST_ALIGN_INTERPOLATION_ROW(pair[0], pair[1]); / 변수의 초기값을 지정합니다: row = new ST_ALIGN_INTERPOLATION_ROW(pair[0], pair[1])
+L000038 |                 var row = new ST_ALIGN_INTERPOLATION_ROW(pair[0], pair[1]); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRow(row)
+L000039 |                 ValidateRow(row); ⟦EOL⟧
+// 해설 L40: 조건에 따라 분기합니다: if (row.Y <= top.Y || row.Y >= bottom.Y)
+L000040 |                 if (row.Y <= top.Y || row.Y >= bottom.Y) ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{pair[0].Name} / {pair[1].Name}의 Y 위치가 위·아래 AK 사이에 있어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{pair[0].Name} / {pair[1].Name}의 Y 위치가 위·아래 AK 사이에 있어야 합니다.");
+L000041 |                     throw new InvalidOperationException($"{pair[0].Name} / {pair[1].Name}의 Y 위치가 위·아래 AK 사이에 있어야 합니다."); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(row)
+L000042 |                 rows.Add(row); ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 .ctor.
+L000043 |             } ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(bottom)
+L000045 |             rows.Add(bottom); ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Zip(rows.Skip(1), (first, second) => second.Y - first.Y).Any(span => span <= 1e-9) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Zip(rows.Skip(1), (first, second) => second.Y - first.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Skip(1) / 조건에 따라 분기합니다: if (rows.Zip(rows.Skip(1), (first, second) => second.Y - first.Y).Any(span => span <= 1e-9))
+L000046 |             if (rows.Zip(rows.Skip(1), (first, second) => second.Y - first.Y).Any(span => span <= 1e-9)) ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("선택한 키 행의 Y 간격이 너무 작습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("선택한 키 행의 Y 간격이 너무 작습니다.");
+L000047 |                 throw new InvalidOperationException("선택한 키 행의 Y 간격이 너무 작습니다."); ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: Rows = rows.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.ToArray()
+L000048 |             Rows = rows.ToArray(); ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: _normalizedY = rows.Select(row => (row.Y - top.Y) / (bottom.Y - top.Y)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(row => (row.Y - top.Y) / (bottom.Y - top.Y)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(row => (row.Y - top.Y) / (bottom.Y - top.Y))
+L000049 |             _normalizedY = rows.Select(row => (row.Y - top.Y) / (bottom.Y - top.Y)).ToArray(); ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: _weights = _normalizedY.Select((value, index) => 1.0 / _normalizedY.Where((_, other) => other != index).Aggregate(1.0, (product, other) => product * (value - other))).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _normalizedY.Select((value, index) => 1.0 / _normalizedY.Where((_, other) => other != index).Aggregate(1.0, (product, other) => product * (value - other))).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _normalizedY.Select((value, index) => 1.0 / _normalizedY.Where((_, other) => other != index).Aggregate(1.0, (product, other)
+L000050 |             _weights = _normalizedY.Select((value, index) => 1.0 / _normalizedY.Where((_, other) => other != index).Aggregate(1.0, (product, other) => product * (value - other))).ToArray(); ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: _weights.Any(weight => !double.IsFinite(weight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(weight) / 조건에 따라 분기합니다: if (_weights.Any(weight => !double.IsFinite(weight)))
+L000051 |             if (_weights.Any(weight => !double.IsFinite(weight))) ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("선택한 키의 Y 간격으로 라그랑쥬 보간을 계산할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("선택한 키의 Y 간격으로 라그랑쥬 보간을 계산할 수 없습니다.");
+L000052 |                 throw new InvalidOperationException("선택한 키의 Y 간격으로 라그랑쥬 보간을 계산할 수 없습니다."); ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 .ctor.
+L000053 |         } ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CAlignInterpolation.Contains(double, double)
+L000055 |         public bool Contains(double x, double y) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Contains.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 조건에 따라 분기합니다: if (!double.IsFinite(x) || !double.IsFinite(y) || y < Rows[0].Y || y > Rows[^1].Y)
+L000057 |             if (!double.IsFinite(x) || !double.IsFinite(y) || y < Rows[0].Y || y > Rows[^1].Y) ⟦EOL⟧
+// 해설 L58: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000058 |                 return false; ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: var(first, second, fraction) = FindInterval(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindInterval(y)
+L000059 |             var(first, second, fraction) = FindInterval(y); ⟦EOL⟧
+// 해설 L60: 지역 변수를 선언합니다: var left = first.Left.X + fraction * (second.Left.X - first.Left.X); / 변수의 초기값을 지정합니다: left = first.Left.X + fraction * (second.Left.X - first.Left.X)
+L000060 |             var left = first.Left.X + fraction * (second.Left.X - first.Left.X); ⟦EOL⟧
+// 해설 L61: 지역 변수를 선언합니다: var right = first.Right.X + fraction * (second.Right.X - first.Right.X); / 변수의 초기값을 지정합니다: right = first.Right.X + fraction * (second.Right.X - first.Right.X)
+L000061 |             var right = first.Right.X + fraction * (second.Right.X - first.Right.X); ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return x >= left - 1e-9 && x <= right + 1e-9;
+L000062 |             return x >= left - 1e-9 && x <= right + 1e-9; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Contains.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Correction.CAlignInterpolation.ValidateMeasurements()
+L000065 |         public void ValidateMeasurements() ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000066 |         { ⟦EOL⟧
+// 해설 L67: 컬렉션 요소를 순회합니다: foreach (var row in Rows)
+L000067 |             foreach (var row in Rows) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000068 |             { ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCorrection(row.Left)
+L000069 |                 ReadCorrection(row.Left); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCorrection(row.Right)
+L000070 |                 ReadCorrection(row.Right); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000071 |             } ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 ValidateMeasurements.
+L000072 |         } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_ALIGN_CORRECTION Drilling.Common.Correction.CAlignInterpolation.Evaluate(double, double)
+L000074 |         public ST_ALIGN_CORRECTION Evaluate(double x, double y) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Evaluate.
+L000075 |         { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: Contains(x, y) / 조건에 따라 분기합니다: if (!Contains(x, y))
+L000076 |             if (!Contains(x, y)) ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("검증 위치가 선택한 키로 구성된 보간 범위를 벗어납니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("검증 위치가 선택한 키로 구성된 보간 범위를 벗어납니다.");
+L000077 |                 throw new InvalidOperationException("검증 위치가 선택한 키로 구성된 보간 범위를 벗어납니다."); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateMeasurements()
+L000078 |             ValidateMeasurements(); ⟦EOL⟧
+// 해설 L79: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < Rows.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000079 |             for (var index = 0; index < Rows.Count; index++) ⟦EOL⟧
+// 해설 L80: 조건에 따라 분기합니다: if (y == Rows[index].Y)
+L000080 |                 if (y == Rows[index].Y) ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: EvaluateRow(Rows[index], x) / 호출자에게 값 또는 제어를 반환합니다: return EvaluateRow(Rows[index], x);
+L000081 |                     return EvaluateRow(Rows[index], x); ⟦EOL⟧
+// 해설 L82: 지역 변수를 선언합니다: var normalized = (y - Rows[0].Y) / (Rows[^1].Y - Rows[0].Y); / 변수의 초기값을 지정합니다: normalized = (y - Rows[0].Y) / (Rows[^1].Y - Rows[0].Y)
+L000082 |             var normalized = (y - Rows[0].Y) / (Rows[^1].Y - Rows[0].Y); ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: double denominator = 0, numeratorX = 0, numeratorY = 0; / 변수의 초기값을 지정합니다: denominator = 0 / 변수의 초기값을 지정합니다: numeratorX = 0 / 변수의 초기값을 지정합니다: numeratorY = 0
+L000083 |             double denominator = 0, numeratorX = 0, numeratorY = 0; ⟦EOL⟧
+// 해설 L84: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < Rows.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000084 |             for (var index = 0; index < Rows.Count; index++) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Evaluate.
+L000085 |             { ⟦EOL⟧
+// 해설 L86: 지역 변수를 선언합니다: var term = _weights[index] / (normalized - _normalizedY[index]); / 변수의 초기값을 지정합니다: term = _weights[index] / (normalized - _normalizedY[index])
+L000086 |                 var term = _weights[index] / (normalized - _normalizedY[index]); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: EvaluateRow(Rows[index], x) / 지역 변수를 선언합니다: var value = EvaluateRow(Rows[index], x); / 변수의 초기값을 지정합니다: value = EvaluateRow(Rows[index], x)
+L000087 |                 var value = EvaluateRow(Rows[index], x); ⟦EOL⟧
+// 해설 L88: 복합 대입 또는 이벤트 구독/해지 표현입니다: denominator += term
+L000088 |                 denominator += term; ⟦EOL⟧
+// 해설 L89: 복합 대입 또는 이벤트 구독/해지 표현입니다: numeratorX += term * value.X
+L000089 |                 numeratorX += term * value.X; ⟦EOL⟧
+// 해설 L90: 복합 대입 또는 이벤트 구독/해지 표현입니다: numeratorY += term * value.Y
+L000090 |                 numeratorY += term * value.Y; ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Evaluate.
+L000091 |             } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: Finite(new ST_ALIGN_CORRECTION(numeratorX / denominator, numeratorY / denominator)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_CORRECTION(numeratorX / denominator, numeratorY / denominator) / 호출자에게 값 또는 제어를 반환합니다: return Finite(new ST_ALIGN_CORRECTION(numeratorX / denominator, numeratorY / denominator));
+L000093 |             return Finite(new ST_ALIGN_CORRECTION(numeratorX / denominator, numeratorY / denominator)); ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Evaluate.
+L000094 |         } ⟦EOL⟧
+L000095 |  ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · (Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_ROW First, Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_ROW Second, double Fraction) Drilling.Common.Correction.CAlignInterpolation.FindInterval(double)
+L000096 |         private (ST_ALIGN_INTERPOLATION_ROW First, ST_ALIGN_INTERPOLATION_ROW Second, double Fraction) FindInterval(double y) ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 FindInterval.
+L000097 |         { ⟦EOL⟧
+// 해설 L98: 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index < Rows.Count; index++) / 변수의 초기값을 지정합니다: index = 1
+L000098 |             for (var index = 1; index < Rows.Count; index++) ⟦EOL⟧
+// 해설 L99: 조건에 따라 분기합니다: if (y <= Rows[index].Y)
+L000099 |                 if (y <= Rows[index].Y) ⟦EOL⟧
+// 해설 L100: 호출자에게 값 또는 제어를 반환합니다: return (Rows[index - 1], Rows[index], (y - Rows[index - 1].Y) / (Rows[index].Y - Rows[index - 1].Y));
+L000100 |                     return (Rows[index - 1], Rows[index], (y - Rows[index - 1].Y) / (Rows[index].Y - Rows[index - 1].Y)); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("검증 위치의 Y 구간을 찾을 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("검증 위치의 Y 구간을 찾을 수 없습니다.");
+L000101 |             throw new InvalidOperationException("검증 위치의 Y 구간을 찾을 수 없습니다."); ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 FindInterval.
+L000102 |         } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Correction.CAlignInterpolation.ValidateRow(Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_ROW)
+L000104 |         private static void ValidateRow(ST_ALIGN_INTERPOLATION_ROW row) ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 ValidateRow.
+L000105 |         { ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(row.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(row.Right.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(row.Left.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(row.Right.X) / 조건에 따라 분기합니다: if (!double.IsFinite(row.Y) || !double.IsFinite(row.Right.Y) || row.Y != row.Right.Y || !double.IsFinite(row.Left.X) || !double.IsFinite(row.Right.X) || row.Right.X - row.Left.X <= 1e-9)
+L000106 |             if (!double.IsFinite(row.Y) || !double.IsFinite(row.Right.Y) || row.Y != row.Right.Y || !double.IsFinite(row.Left.X) || !double.IsFinite(row.Right.X) || row.Right.X - row.Left.X <= 1e-9) ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{row.Left.Name} / {row.Right.Name}는 같은 Y에서 서로 다른 X 위치에 있어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{row.Left.Name} / {row.Right.Name}는 같은 Y에서 서로 다른 X 위치에 있어야 합니다.");
+L000107 |                 throw new InvalidOperationException($"{row.Left.Name} / {row.Right.Name}는 같은 Y에서 서로 다른 X 위치에 있어야 합니다."); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 ValidateRow.
+L000108 |         } ⟦EOL⟧
+L000109 |  ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(x, y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{key.Name}의 Base / LastLoad X/Y 값이 없습니다. Load 후 다시 확인해 주세요.") / 조건에 따라 결과식을 선택합니다: key.CorrectionX is { } x && key.CorrectionY is { } y && double.IsFinite(x) && double.IsFinite(y) ? new(x, y) : throw new InvalidOperationException($"{key.Name}의 Base / LastLoad X/Y 값이 없습니다. Load 후 다시 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException(
+L000110 |         private static ST_ALIGN_CORRECTION ReadCorrection(ST_ALIGN_INTERPOLATION_KEY key) => key.CorrectionX is { } x && key.CorrectionY is { } y && double.IsFinite(x) && double.IsFinite(y) ? new(x, y) : throw new InvalidOperationException($"{key.Name}의 Base / LastLoad X/Y 값이 없습니다. Load 후 다시 확인해 주세요."); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Blend(ReadCorrection(row.Left), ReadCorrection(row.Right), (x - row.Left.X) / (row.Right.X - row.Left.X)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCorrection(row.Left) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCorrection(row.Right)
+L000111 |         private static ST_ALIGN_CORRECTION EvaluateRow(ST_ALIGN_INTERPOLATION_ROW row, double x) => Blend(ReadCorrection(row.Left), ReadCorrection(row.Right), (x - row.Left.X) / (row.Right.X - row.Left.X)); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: Finite(new(first.X + fraction * (second.X - first.X), first.Y + fraction * (second.Y - first.Y))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(first.X + fraction * (second.X - first.X), first.Y + fraction * (second.Y - first.Y))
+L000112 |         private static ST_ALIGN_CORRECTION Blend(ST_ALIGN_CORRECTION first, ST_ALIGN_CORRECTION second, double fraction) => Finite(new(first.X + fraction * (second.X - first.X), first.Y + fraction * (second.Y - first.Y))); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("보간 계산 결과가 유한한 값이 아닙니다.") / 조건에 따라 결과식을 선택합니다: double.IsFinite(value.X) && double.IsFinite(value.Y) ? value : throw new InvalidOperationException("보간 계산 결과가 유한한 값이 아닙니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("보간 계산 결과가 유한한 값이 아닙니다.")
+L000113 |         private static ST_ALIGN_CORRECTION Finite(ST_ALIGN_CORRECTION value) => double.IsFinite(value.X) && double.IsFinite(value.Y) ? value : throw new InvalidOperationException("보간 계산 결과가 유한한 값이 아닙니다."); ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다.
+L000114 |     } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 타입의 구조/상속 선언입니다: public sealed record ST_ALIGN_INTERPOLATION_KEY(string Name, double X, double Y, double? CorrectionX = null, double? CorrectionY = null);
+L000116 |     public sealed record ST_ALIGN_INTERPOLATION_KEY(string Name, double X, double Y, double? CorrectionX = null, double? CorrectionY = null); ⟦EOL⟧
+// 해설 L117: 타입의 구조/상속 선언입니다: public sealed record ST_ALIGN_INTERPOLATION_ROW(ST_ALIGN_INTERPOLATION_KEY Left, ST_ALIGN_INTERPOLATION_KEY Right)
+L000117 |     public sealed record ST_ALIGN_INTERPOLATION_ROW(ST_ALIGN_INTERPOLATION_KEY Left, ST_ALIGN_INTERPOLATION_KEY Right) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다.
+L000118 |     { ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_ROW.Y
+L000119 |         public double Y => Left.Y; ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다.
+L000120 |     } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 타입의 구조/상속 선언입니다: public readonly record struct ST_ALIGN_CORRECTION(double X, double Y);
+L000122 |     public readonly record struct ST_ALIGN_CORRECTION(double X, double Y); ⟦EOL⟧
+// 해설 L123: 타입의 구조/상속 선언입니다: public sealed record ST_ALIGN_OFFSET_KEY_LOG(
+L000123 |     public sealed record ST_ALIGN_OFFSET_KEY_LOG( ⟦EOL⟧
+// 해설 L124: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000124 |         string Name,  ⟦EOL⟧
+// 해설 L125: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000125 |         bool Included,  ⟦EOL⟧
+// 해설 L126: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000126 |         double DesignX,  ⟦EOL⟧
+// 해설 L127: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000127 |         double DesignY,  ⟦EOL⟧
+// 해설 L128: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000128 |         double? BaseX,  ⟦EOL⟧
+// 해설 L129: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000129 |         double? BaseY,  ⟦EOL⟧
+// 해설 L130: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000130 |         double? LastLoadX,  ⟦EOL⟧
+// 해설 L131: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000131 |         double? LastLoadY,  ⟦EOL⟧
+// 해설 L132: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000132 |         double? OffsetX,  ⟦EOL⟧
+// 해설 L133: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000133 |         double? OffsetY ⟦EOL⟧
+// 해설 L134: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000134 |     ); ⟦EOL⟧
+// 해설 L135: 타입의 구조/상속 선언입니다: public sealed record ST_ALIGN_OFFSET_LOG(
+L000135 |     public sealed record ST_ALIGN_OFFSET_LOG( ⟦EOL⟧
+// 해설 L136: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000136 |         string RecipeId,  ⟦EOL⟧
+// 해설 L137: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000137 |         string RecipeName,  ⟦EOL⟧
+// 해설 L138: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000138 |         bool IsInit,  ⟦EOL⟧
+// 해설 L139: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000139 |         DateTimeOffset ChangedAt,  ⟦EOL⟧
+// 해설 L140: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000140 |         DateTimeOffset? LastLoadedAt,  ⟦EOL⟧
+// 해설 L141: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000141 |         bool IsSimulation,  ⟦EOL⟧
+// 해설 L142: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000142 |         IReadOnlyList<ST_ALIGN_OFFSET_KEY_LOG> Keys,  ⟦EOL⟧
+// 해설 L143: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000143 |         IReadOnlyList<ST_ALIGN_SHOT_OFFSET> Shots ⟦EOL⟧
+// 해설 L144: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000144 |     ) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다.
+L000145 |     { ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG.Tolerance
+L000146 |         public double? Tolerance { get; init; } ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET> Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG.CalculatedOffsets
+L000147 |         public IReadOnlyList<ST_ALIGN_SHOT_OFFSET> CalculatedOffsets { get; init; } = []; ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET> Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG.ExcludedOffsets
+L000148 |         public IReadOnlyList<ST_ALIGN_SHOT_OFFSET> ExcludedOffsets { get; init; } = []; ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다.
+L000149 |     } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 타입의 구조/상속 선언입니다: public abstract class CAlignOffsetLogFileBase
+L000151 |     public abstract class CAlignOffsetLogFileBase ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다.
+L000152 |     { ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Correction.CAlignOffsetLogFileBase.Save(Drilling.Common.Correction.ST_ALIGN_OFFSET_LOG, System.Threading.CancellationToken)
+L000153 |         public abstract Task<string> Save(ST_ALIGN_OFFSET_LOG entry, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다.
+L000154 |     } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 타입의 구조/상속 선언입니다: public sealed record ST_ALIGN_OFFSET_TOLERANCE_CHECK(double Tolerance, int TotalShots, IReadOnlyList<ST_ALIGN_SHOT_OFFSET> ExceededShots)
+L000156 |     public sealed record ST_ALIGN_OFFSET_TOLERANCE_CHECK(double Tolerance, int TotalShots, IReadOnlyList<ST_ALIGN_SHOT_OFFSET> ExceededShots) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다.
+L000157 |     { ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_ALIGN_OFFSET_TOLERANCE_CHECK.ApplyCount
+L000158 |         public int ApplyCount => TotalShots - ExceededShots.Count; ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.ST_ALIGN_OFFSET_TOLERANCE_CHECK.CanApplyRemaining
+L000159 |         public bool CanApplyRemaining => ApplyCount > 0; ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: Tolerance.ToString("0.000", CultureInfo.InvariantCulture)
+L000160 |         public string Summary => $"{CAlignInterpolation.AlgorithmName} / Setting Tolerance : ±{Tolerance.ToString("0.000", CultureInfo.InvariantCulture)} mm\n" + $"전체 {TotalShots:N0} Shot · 초과 {ExceededShots.Count:N0} Shot · 적용 가능 {ApplyCount:N0} Shot"; ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다.
+L000161 |     } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 타입의 구조/상속 선언입니다: public static class CAlignOffsetTolerance
+L000163 |     public static class CAlignOffsetTolerance ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다.
+L000164 |     { ⟦EOL⟧
+// 해설 L165: 변수의 초기값을 지정합니다: SettingKey = "ALIGN_OFFSET_TOLERANCE"
+L000165 |         public const string SettingKey = "ALIGN_OFFSET_TOLERANCE"; ⟦EOL⟧
+// 해설 L166: 변수의 초기값을 지정합니다: DefaultValue = 0.5
+L000166 |         public const double DefaultValue = 0.5; ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CAlignOffsetTolerance.Parse(string)
+L000167 |         public static double Parse(string value) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 Parse.
+L000168 |         { ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var tolerance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(tolerance) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var tolerance) || !double.IsFinite(tolerance) || tolerance < 0 || tolerance > 100000)
+L000169 |             if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var tolerance) || !double.IsFinite(tolerance) || tolerance < 0 || tolerance > 100000) ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Setting > COMMON > ALIGN의 Align Offset Tolerance를 0 ~ 100000 mm 범위로 설정해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Setting > COMMON > ALIGN의 Align Offset Tolerance를 0 ~ 100000 mm 범위로 설정해 주세요.");
+L000170 |                 throw new InvalidOperationException("Setting > COMMON > ALIGN의 Align Offset Tolerance를 0 ~ 100000 mm 범위로 설정해 주세요."); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.RoundValue(tolerance) / 호출자에게 값 또는 제어를 반환합니다: return CAlignShotOffsetData.RoundValue(tolerance);
+L000171 |             return CAlignShotOffsetData.RoundValue(tolerance); ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Parse.
+L000172 |         } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000174 |         // Reject the entire shot, including its other axis, if either axis exceeds the limit. ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shot.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shot.Y)
+L000175 |         public static bool Exceeds(ST_ALIGN_SHOT_OFFSET shot, double tolerance) => Math.Abs(shot.X) > tolerance || Math.Abs(shot.Y) > tolerance; ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(tolerance, offsets.Count, offsets.Where(shot => Exceeds(shot, tolerance)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsets.Where(shot => Exceeds(shot, tolerance)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsets.Where(shot => Exceeds(shot, tolerance)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Exceeds(shot, tolerance)
+L000176 |         public static ST_ALIGN_OFFSET_TOLERANCE_CHECK Check(double tolerance, IReadOnlyList<ST_ALIGN_SHOT_OFFSET> offsets) => new(tolerance, offsets.Count, offsets.Where(shot => Exceeds(shot, tolerance)).ToArray()); ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다.
+L000177 |     } ⟦EOL⟧
+// 해설 L178: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000178 |     // Stage Y=0 when imaging AK2/AK4. Positive Stage motion visits Group2,1,0, then AK1/AK3. ⟦EOL⟧
+// 해설 L179: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000179 |     // Design Y increases downwards, so Stage displacement is subtracted from the lower AK row. ⟦EOL⟧
+// 해설 L180: 타입의 구조/상속 선언입니다: public static class CAlignKeyGeometry
+L000180 |     public static class CAlignKeyGeometry ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다.
+L000181 |     { ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(group)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(group) / 조건에 따라 결과식을 선택합니다: group is >= 0 and <= 2 ? $"DK{group}_STAGE_Y_POSITION" : throw new ArgumentOutOfRangeException(nameof(group)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(group))
+L000182 |         public static string StagePositionKey(int group) => group is >= 0 and <= 2 ? $"DK{group}_STAGE_Y_POSITION" : throw new ArgumentOutOfRangeException(nameof(group)); ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(marginY, 0, height / 2)
+L000183 |         public static double DesignY(double height, double marginY, double stageY) => height - Math.Clamp(marginY, 0, height / 2) - stageY; ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Select(group => { var key = StagePositionKey(group); var text = settings.FirstOrDefault(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value; return double.TryParse(text, NumberStyles… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)
+L000184 |         public static double[] ReadStagePositions(IReadOnlyList<ST_SYSTEM_PARAMETER> settings) => Enumerable.Range(0, 3).Select(group => ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 ReadStagePositions.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: StagePositionKey(group) / 지역 변수를 선언합니다: var key = StagePositionKey(group); / 변수의 초기값을 지정합니다: key = StagePositionKey(group)
+L000186 |             var key = StagePositionKey(group); ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.FirstOrDefault(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(key, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var text = settings.FirstOrDefault(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value; / 변수의 초기값을 지정합니다: text = settings.FirstOrDefault(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value
+L000187 |             var text = settings.FirstOrDefault(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value; ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 결과식을 선택합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) ? value : throw new InvalidOperationException($"Setting > Motor > ALIGN의 {key}에 유효한 mm 값이 필요합니다.") / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(valu
+L000188 |             return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Setting > Motor > ALIGN의 {key}에 유효한 mm 값이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Setting > Motor > ALIGN의 {key}에 유효한 mm 값이 필요합니다.")
+L000189 |                 ? value : throw new InvalidOperationException($"Setting > Motor > ALIGN의 {key}에 유효한 mm 값이 필요합니다."); ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · double[] Drilling.Common.Correction.CAlignKeyGeometry.ReadStagePositions(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
+L000190 |         }).ToArray(); ⟦EOL⟧
+// 해설 L191: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_KEY[] Drilling.Common.Correction.CAlignKeyGeometry.Create(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyLi
+L000191 |         public static ST_ALIGN_INTERPOLATION_KEY[] Create(IReadOnlyDictionary<string, string> recipe, IReadOnlyList<double> stageY) ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 Create.
+L000192 |         { ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.TryGetValue(key, out var text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var v) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 결과식을 선택합니다: recipe.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var v) && double.IsFinite(v) ? v : throw new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다.")
+L000193 |             double Read(string key) => recipe.TryGetValue(key, out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var v) && double.IsFinite(v) ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다.")
+L000194 |                 ? v : throw new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다."); ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("GLASS_SIZE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("GLASS_SIZE_Y") / 지역 변수를 선언합니다: var width = Read("GLASS_SIZE_X"); / 지역 변수를 선언합니다: var height = Read("GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: width = Read("GLASS_SIZE_X") / 변수의 초기값을 지정합니다: height = Read("GLASS_SIZE_Y")
+L000195 |             var width = Read("GLASS_SIZE_X"); var height = Read("GLASS_SIZE_Y"); ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Glass Size는 0보다 커야 합니다.") / 조건에 따라 분기합니다: if (width <= 0 || height <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("Glass Size는 0보다 커야 합니다.");
+L000196 |             if (width <= 0 || height <= 0) throw new InvalidOperationException("Glass Size는 0보다 커야 합니다."); ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: stageY.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (stageY.Count != 3 || stageY.Any(v => !double.IsFinite(v)))
+L000197 |             if (stageY.Count != 3 || stageY.Any(v => !double.IsFinite(v))) ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Setting > Motor > ALIGN의 DK0/1/2 Stage Y Position을 확인하세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Setting > Motor > ALIGN의 DK0/1/2 Stage Y Position을 확인하세요.");
+L000198 |                 throw new InvalidOperationException("Setting > Motor > ALIGN의 DK0/1/2 Stage Y Position을 확인하세요."); ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(Read("AK_MARGIN_X"), 0, width / 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("AK_MARGIN_X") / 지역 변수를 선언합니다: var mx = Math.Clamp(Read("AK_MARGIN_X"), 0, width / 2); / 변수의 초기값을 지정합니다: mx = Math.Clamp(Read("AK_MARGIN_X"), 0, width / 2)
+L000199 |             var mx = Math.Clamp(Read("AK_MARGIN_X"), 0, width / 2); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(Read("AK_MARGIN_Y"), 0, height / 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read("AK_MARGIN_Y") / 지역 변수를 선언합니다: var my = Math.Clamp(Read("AK_MARGIN_Y"), 0, height / 2); / 변수의 초기값을 지정합니다: my = Math.Clamp(Read("AK_MARGIN_Y"), 0, height / 2)
+L000200 |             var my = Math.Clamp(Read("AK_MARGIN_Y"), 0, height / 2); ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { new ST_ALIGN_INTERPOLATION_KEY("AK1", mx, my), new("AK2", mx, height - my), new("AK3", width - mx, my), new("AK4", width - mx, height - my) } .Concat(Enumerable.Range(0, 3).SelectMany(group => new[] { new ST_ALIG… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_KEY("AK1", mx, my) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("AK2", mx, height - my) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("AK3", width - mx, my) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("AK4", width - mx, height - my) / 호출자에게 값 또는 제어를 반환합니다: return new[] {
+L000201 |             return new[] { new ST_ALIGN_INTERPOLATION_KEY("AK1", mx, my), new("AK2", mx, height - my), new("AK3", width - mx, my), new("AK4", width - mx, height - my) } ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).SelectMany(group => new[] { new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 1}", mx, DesignY(height, my, stageY[group])), new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 2}", width - mx, DesignY(he… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)
+L000202 |                 .Concat(Enumerable.Range(0, 3).SelectMany(group => new[] ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 Create.
+L000203 |                 { ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 1}", mx, DesignY(height, my, stageY[group])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DesignY(height, my, stageY[group])
+L000204 |                     new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 1}", mx, DesignY(height, my, stageY[group])), ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 2}", width - mx, DesignY(height, my, stageY[group])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DesignY(height, my, stageY[group])
+L000205 |                     new ST_ALIGN_INTERPOLATION_KEY($"DK{group * 2 + 2}", width - mx, DesignY(height, my, stageY[group])) ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_KEY[] Drilling.Common.Correction.CAlignKeyGeometry.Create(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyLi
+L000206 |                 })).ToArray(); ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Create.
+L000207 |         } ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다.
+L000208 |     } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 타입의 구조/상속 선언입니다: public sealed record ST_WAPAGE_ALIGNBASE_POINT(string Label, string VisionId, string BaseId, string RangeId);
+L000210 |     public sealed record ST_WAPAGE_ALIGNBASE_POINT(string Label, string VisionId, string BaseId, string RangeId); ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000212 |     // A complete published frame. The UI never reads the PLC or an editable recipe to display a run. ⟦EOL⟧
+// 해설 L213: 타입의 구조/상속 선언입니다: public sealed record ST_DISTORTION_MEASUREMENT_SNAPSHOT(Guid RunId, ST_RECIPE_DEFINITION Recipe, string GlassId,
+L000213 |     public sealed record ST_DISTORTION_MEASUREMENT_SNAPSHOT(Guid RunId, ST_RECIPE_DEFINITION Recipe, string GlassId, ⟦EOL⟧
+// 해설 L214: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000214 |         IReadOnlyList<int> Groups, IReadOnlyDictionary<string, double> LastLoads, DateTimeOffset? LoadedAt) ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다.
+L000215 |     { ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<double> Drilling.Common.Correction.ST_DISTORTION_MEASUREMENT_SNAPSHOT.StageYPositions
+L000216 |         public IReadOnlyList<double> StageYPositions { get; init; } = []; ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다.
+L000217 |     } ⟦EOL⟧
+L000218 |  ⟦EOL⟧
+// 해설 L219: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000219 |     /// <summary>One real-communication Distortion transaction, called serially by the Stage worker.</summary> ⟦EOL⟧
+// 해설 L220: 타입의 구조/상속 선언입니다: public sealed class CAlignDistortionCycle(CInterfaceManager interfaces, CSettingManager settings, CRecipeManager recipes,
+L000220 |     public sealed class CAlignDistortionCycle(CInterfaceManager interfaces, CSettingManager settings, CRecipeManager recipes, ⟦EOL⟧
+// 해설 L221: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000221 |         CAlignOffsetLogFileBase audit, Func<CancellationToken, Task<ST_STAGE_PROCESS_REQUEST>> capture, Action<string>? log = null) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다.
+L000222 |     { ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(interfaces) / 변수의 초기값을 지정합니다: _io = new(interfaces)
+L000223 |         private readonly CAlignWapageService _io = new(interfaces); ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STAGE_PROCESS_REQUEST? Drilling.Common.Correction.CAlignDistortionCycle._input
+L000224 |         private ST_STAGE_PROCESS_REQUEST? _input, _pending; ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RECIPE_DEFINITION? Drilling.Common.Correction.CAlignDistortionCycle._recipe
+L000225 |         private ST_RECIPE_DEFINITION? _recipe; ⟦EOL⟧
+// 해설 L226: 변수의 초기값을 지정합니다: _groups = []
+L000226 |         private int[] _groups = []; ⟦EOL⟧
+// 해설 L227: 변수의 초기값을 지정합니다: _stageYPositions = []
+L000227 |         private IReadOnlyList<double> _stageYPositions = []; ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CAlignDistortionCycle._tolerance
+L000228 |         private double _tolerance; ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, double>? Drilling.Common.Correction.CAlignDistortionCycle._results
+L000229 |         private IReadOnlyDictionary<string, double>? _results; ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.CAlignInterpolation? Drilling.Common.Correction.CAlignDistortionCycle._model
+L000230 |         private CAlignInterpolation? _model; ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Recipe.ST_ALIGN_SHOT_OFFSET>? Drilling.Common.Correction.CAlignDistortionCycle._offsets
+L000231 |         private IReadOnlyList<ST_ALIGN_SHOT_OFFSET>? _offsets; ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Correction.CAlignDistortionCycle._loadedAt
+L000232 |         private DateTimeOffset? _loadedAt; ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CAlignDistortionCycle._saved
+L000233 |         private bool _saved; ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DISTORTION_MEASUREMENT_SNAPSHOT? Drilling.Common.Correction.CAlignDistortionCycle._snapshot
+L000234 |         private ST_DISTORTION_MEASUREMENT_SNAPSHOT? _snapshot; ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _snapshot)
+L000235 |         public ST_DISTORTION_MEASUREMENT_SNAPSHOT? Snapshot => Volatile.Read(ref _snapshot); ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.CAlignDistortionCycle.GlassId
+L000236 |         public string GlassId => _input?.GlassId ?? ""; ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.CAlignDistortionCycle.ResultId(string)
+L000237 |         public static string ResultId(string parameterKey) ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ResultId.
+L000238 |         { ⟦EOL⟧
+// 해설 L239: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameterKey.Split('_') / 지역 변수를 선언합니다: var parts = parameterKey.Split('_'); / 변수의 초기값을 지정합니다: parts = parameterKey.Split('_')
+L000239 |             var parts = parameterKey.Split('_'); ⟦EOL⟧
+// 해설 L240: 조건에 따라 분기합니다: if (parts.Length != 3 || parts[0] != "ALIGNBASE" || parts[2] is not ("X" or "Y") || parts[1].Length < 3 || !int.TryParse(parts[1].AsSpan(2), NumberStyles.None, CultureInfo.InvariantCulture, out var number))
+L000240 |             if (parts.Length != 3 || parts[0] != "ALIGNBASE" || parts[2] is not ("X" or "Y") || parts[1].Length < 3 ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(parts[1].AsSpan(2), NumberStyles.None, CultureInfo.InvariantCulture, out var number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].AsSpan(2)
+L000241 |                 || !int.TryParse(parts[1].AsSpan(2), NumberStyles.None, CultureInfo.InvariantCulture, out var number)) ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}");
+L000242 |                 throw new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}"); ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].StartsWith("AK", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (parts[1].StartsWith("AK", StringComparison.Ordinal) && number is >= 1 and <= 4)
+L000243 |             if (parts[1].StartsWith("AK", StringComparison.Ordinal) && number is >= 1 and <= 4) ⟦EOL⟧
+// 해설 L244: 호출자에게 값 또는 제어를 반환합니다: return $"DISTORTION_POS0_CAM{number}{parts[2]}";
+L000244 |                 return $"DISTORTION_POS0_CAM{number}{parts[2]}"; ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].StartsWith("DK", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (parts[1].StartsWith("DK", StringComparison.Ordinal) && number is >= 1 and <= 6)
+L000245 |             if (parts[1].StartsWith("DK", StringComparison.Ordinal) && number is >= 1 and <= 6) ⟦EOL⟧
+// 해설 L246: 조건에 따라 결과식을 선택합니다: number % 2 == 1 ? 2 : 4 / 호출자에게 값 또는 제어를 반환합니다: return $"DISTORTION_POS{(number - 1) / 2 + 1}_CAM{(number % 2 == 1 ? 2 : 4)}{parts[2]}";
+L000246 |                 return $"DISTORTION_POS{(number - 1) / 2 + 1}_CAM{(number % 2 == 1 ? 2 : 4)}{parts[2]}"; ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}");
+L000247 |             throw new InvalidOperationException($"알 수 없는 Align LastLoad 항목: {parameterKey}"); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 ResultId.
+L000248 |         } ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).Select(n => $"AK{n}") .Concat(groups.Order().SelectMany(group => new[] { $"DK{group * 2 + 1}", $"DK{group * 2 + 2}" })).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).Select(n => $"AK{n}") .Concat(groups.Order().SelectMany(group => new[] { $"DK{group * 2 + 1}", $"DK{group * 2 + 2}" })) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).Select(n => $"AK{n}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4)
+L000249 |         private static string[] Names(IReadOnlyCollection<int> groups) => Enumerable.Range(1, 4).Select(n => $"AK{n}") ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Order().SelectMany(group => new[] { $"DK{group * 2 + 1}", $"DK{group * 2 + 2}" }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Order()
+L000250 |             .Concat(groups.Order().SelectMany(group => new[] { $"DK{group * 2 + 1}", $"DK{group * 2 + 2}" })).ToArray(); ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(groups).SelectMany(name => new[] { $"ALIGNBASE_{name}_X", $"ALIGNBASE_{name}_Y" }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(groups).SelectMany(name => new[] { $"ALIGNBASE_{name}_X", $"ALIGNBASE_{name}_Y" }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(groups)
+L000251 |         private static string[] ParameterKeys(IReadOnlyCollection<int> groups) => Names(groups).SelectMany(name => new[] { $"ALIGNBASE_{name}_X", $"ALIGNBASE_{name}_Y" }).ToArray(); ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CAlignDistortionCycle.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>, string)
+L000252 |         private static double Read(IReadOnlyDictionary<string, string> values, string key) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 Read.
+L000253 |         { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text) || !double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))
+L000254 |             if (!values.TryGetValue(key, out var text) || !double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value)) ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다.");
+L000255 |                 throw new InvalidOperationException($"{key}의 유효한 숫자 값이 필요합니다."); ⟦EOL⟧
+// 해설 L256: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000256 |             return value; ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 Read.
+L000257 |         } ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_ALIGN_INTERPOLATION_KEY[] Drilling.Common.Correction.CAlignDistortionCycle.Keys()
+L000258 |         private ST_ALIGN_INTERPOLATION_KEY[] Keys() ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 Keys.
+L000259 |         { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 레시피가 준비되지 않았습니다.") / 지역 변수를 선언합니다: var recipe = _recipe ?? throw new InvalidOperationException("Distortion 레시피가 준비되지 않았습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion 레시피가 준비되지 않았습니다.") / 변수의 초기값을 지정합니다: recipe = _recipe ?? throw new InvalidOperationException("Distortion 레시피가 준비되지 않았습니다.")
+L000260 |             var recipe = _recipe ?? throw new InvalidOperationException("Distortion 레시피가 준비되지 않았습니다."); ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var p = recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: p = recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase)
+L000261 |             var p = recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: _results.TryGetValue($"ALIGNBASE_{name}_{axis}", out var measured) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(p, $"ALIGNBASE_{name}_{axis}") / 조건에 따라 결과식을 선택합니다: _results is not null && _results.TryGetValue($"ALIGNBASE_{name}_{axis}", out var measured) ? Read(p, $"ALIGNBASE_{name}_{axis}") - measured : null
+L000262 |             double? Delta(string name, string axis) => _results is not null && _results.TryGetValue($"ALIGNBASE_{name}_{axis}", out var measured) ? Read(p, $"ALIGNBASE_{name}_{axis}") - measured : null; ⟦EOL⟧
+// 해설 L263: 값을 대상에 대입합니다: CorrectionX = Delta(key.Name, "X") / 값을 대상에 대입합니다: CorrectionY = Delta(key.Name, "Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignKeyGeometry.Create(p, _stageYPositions).Select(key => key with { CorrectionX = Delta(key.Name, "X"), CorrectionY = Delta(key.Name, "Y") }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignKeyGeometry.Create(p, _stageYPositions).Select(key => key with { CorrectionX = Delta(key.Name, "X"), CorrectionY = Delta(key.Name, "Y") }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignKeyGeometry.Create(p, _stageYPositions) / 함수·델리
+L000263 |             return CAlignKeyGeometry.Create(p, _stageYPositions).Select(key => key with { CorrectionX = Delta(key.Name, "X"), CorrectionY = Delta(key.Name, "Y") }).ToArray(); ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 Keys.
+L000264 |         } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Correction.CAlignDistortionCycle.Prepare(System.Threading.CancellationToken)
+L000266 |         public async Task Prepare(CancellationToken token) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 Prepare.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _snapshot, null)
+L000268 |             Volatile.Write(ref _snapshot, null); ⟦EOL⟧
+// 해설 L269: 값을 대상에 대입합니다: _pending = null / 값을 대상에 대입합니다: _results = null / 값을 대상에 대입합니다: _offsets = null / 값을 대상에 대입합니다: _model = null / 값을 대상에 대입합니다: _loadedAt = null / 값을 대상에 대입합니다: _saved = false
+L000269 |             _pending = null; _results = null; _offsets = null; _model = null; _loadedAt = null; _saved = false; ⟦EOL⟧
+// 해설 L270: 값을 대상에 대입합니다: _input = await capture(token).ConfigureAwait(false) / 비동기 완료를 기다립니다: await capture(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: capture(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: capture(token)
+L000270 |             _input = await capture(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: _recipe = await recipes.RefreshRecipe(_input.RecipeId, token).ConfigureAwait(false) ?? throw new InvalidOperationException("Distortion 레시피를 찾을 수 없습니다.") / 비동기 완료를 기다립니다: await recipes.RefreshRecipe(_input.RecipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.RefreshRecipe(_input.RecipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.RefreshRecipe(_input.RecipeId, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 레시피를 찾을 수 없습니다.") / 예외를 발생/전달합니다: throw
+L000271 |             _recipe = await recipes.RefreshRecipe(_input.RecipeId, token).ConfigureAwait(false) ?? throw new InvalidOperationException("Distortion 레시피를 찾을 수 없습니다."); ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var option = settings.LoadSection(EN_SETTING_TAB.Option).ToArray(); / 변수의 초기값을 지정합니다: option = settings.LoadSection(EN_SETTING_TAB.Option).ToArray()
+L000272 |             var option = settings.LoadSection(EN_SETTING_TAB.Option).ToArray(); ⟦EOL⟧
+// 해설 L273: 값을 대상에 대입합니다: _stageYPositions = Array.AsReadOnly(CAlignKeyGeometry.ReadStagePositions(settings.LoadSection(EN_SETTING_TAB.Motor))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(CAlignKeyGeometry.ReadStagePositions(settings.LoadSection(EN_SETTING_TAB.Motor))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignKeyGeometry.ReadStagePositions(settings.LoadSection(EN_SETTING_TAB.Motor)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Motor)
+L000273 |             _stageYPositions = Array.AsReadOnly(CAlignKeyGeometry.ReadStagePositions(settings.LoadSection(EN_SETTING_TAB.Motor))); ⟦EOL⟧
+// 해설 L274: 값을 대상에 대입합니다: _groups = CRunOptionSettings.Read(option).DistortionGroups.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(option).DistortionGroups.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(option)
+L000274 |             _groups = CRunOptionSettings.Read(option).DistortionGroups.ToArray(); ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: option.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var op = option.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: op = option.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000275 |             var op = option.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L276: 값을 대상에 대입합니다: _tolerance = CAlignOffsetTolerance.Parse(op.GetValueOrDefault(CAlignOffsetTolerance.SettingKey, "0.5")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignOffsetTolerance.Parse(op.GetValueOrDefault(CAlignOffsetTolerance.SettingKey, "0.5")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: op.GetValueOrDefault(CAlignOffsetTolerance.SettingKey, "0.5")
+L000276 |             _tolerance = CAlignOffsetTolerance.Parse(op.GetValueOrDefault(CAlignOffsetTolerance.SettingKey, "0.5")); ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(op, CSettingManager.AlignCameraResolutionKey) / 지역 변수를 선언합니다: var resolution = Read(op, CSettingManager.AlignCameraResolutionKey); / 변수의 초기값을 지정합니다: resolution = Read(op, CSettingManager.AlignCameraResolutionKey)
+L000277 |             var resolution = Read(op, CSettingManager.AlignCameraResolutionKey); ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(op, CSettingManager.WapageAlignBaseToleranceKey) / 지역 변수를 선언합니다: var rangeMm = Read(op, CSettingManager.WapageAlignBaseToleranceKey); / 변수의 초기값을 지정합니다: rangeMm = Read(op, CSettingManager.WapageAlignBaseToleranceKey)
+L000278 |             var rangeMm = Read(op, CSettingManager.WapageAlignBaseToleranceKey); ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Align 분해능은 양수, Wapage 허용범위는 0 이상이어야 합니다.") / 조건에 따라 분기합니다: if (resolution <= 0 || rangeMm < 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("Align 분해능은 양수, Wapage 허용범위는 0 이상이어야 합니다.");
+L000279 |             if (resolution <= 0 || rangeMm < 0) throw new InvalidOperationException("Align 분해능은 양수, Wapage 허용범위는 0 이상이어야 합니다."); ⟦EOL⟧
+// 해설 L280: 지역 변수를 선언합니다: var pixels = rangeMm / resolution; / 변수의 초기값을 지정합니다: pixels = rangeMm / resolution
+L000280 |             var pixels = rangeMm / resolution; ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pixels) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Wapage pixel 범위를 계산할 수 없습니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(pixels)) / 예외를 발생/전달합니다: throw new InvalidOperationException("Wapage pixel 범위를 계산할 수 없습니다.");
+L000281 |             if (!double.IsFinite(pixels)) throw new InvalidOperationException("Wapage pixel 범위를 계산할 수 없습니다."); ⟦EOL⟧
+// 해설 L282: 값을 대상에 대입합니다: _ = new CAlignInterpolation(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlignInterpolation(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups).Where(name => name.StartsWith("DK", StringComparison.O
+L000282 |             _ = new CAlignInterpolation(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()); ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var rp = _recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: rp = _recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000283 |             var rp = _recipe.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L284: 값을 대상에 대입합니다: _ = Read(rp, key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys(_groups) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(rp, key) / 컬렉션 요소를 순회합니다: foreach (var key in ParameterKeys(_groups))
+L000284 |             foreach (var key in ParameterKeys(_groups)) _ = Read(rp, key); ⟦EOL⟧
+// 해설 L285: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000285 |             // Keep the viewer frame small: shot offsets/history are unrelated to key measurement display. ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys([0, 1, 2]).ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys([0, 1, 2]) / 지역 변수를 선언합니다: var displayKeys = ParameterKeys([0, 1, 2]).ToHashSet(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: displayKeys = ParameterKeys([0, 1, 2]).ToHashSet(StringComparer.OrdinalIgnoreCase)
+L000286 |             var displayKeys = ParameterKeys([0, 1, 2]).ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: displayKeys.UnionWith(new[] { "GLASS_SIZE_X", "GLASS_SIZE_Y", "AK_MARGIN_X", "AK_MARGIN_Y" })
+L000287 |             displayKeys.UnionWith(new[] { "GLASS_SIZE_X", "GLASS_SIZE_Y", "AK_MARGIN_X", "AK_MARGIN_Y" }); ⟦EOL⟧
+// 해설 L288: 값을 대상에 대입합니다: Parameters = Array.AsReadOnly(_recipe.Parameters.Where(p => displayKeys.Contains(p.Key)).ToArray()) / 값을 대상에 대입합니다: History = [] / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(_recipe.Parameters.Where(p => displayKeys.Contains(p.Key)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipe.Parameters.Where(p => displayKeys.Contains(p.Key)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipe.Parameters.Where(p => displayKeys.Contains(p.Key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: displayKeys.Contains(p.Key) / 지역 변수를 선언합니다: var frozenRecipe = _re
+L000288 |             var frozenRecipe = _recipe with { Parameters = Array.AsReadOnly(_recipe.Parameters.Where(p => displayKeys.Contains(p.Key)).ToArray()), History = [] }; ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _snapshot, new(Guid.NewGuid(), frozenRecipe, GlassId, Array.AsReadOnly(_groups.ToArray()), new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>(new Dictionary<string, double>()), null)… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(Guid.NewGuid(), frozenRecipe, GlassId, Array.AsReadOnly(_groups.ToArray()), new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>(new Dictionary<string, double>()), null) { StageYPositions = _stageYPo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGui
+L000289 |             Volatile.Write(ref _snapshot, new(Guid.NewGuid(), frozenRecipe, GlassId, Array.AsReadOnly(_groups.ToArray()), ⟦EOL⟧
+// 해설 L290: 값을 대상에 대입합니다: StageYPositions = _stageYPositions / 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>(new Dictionary<string, double>()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double>()
+L000290 |                 new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>(new Dictionary<string, double>()), null) { StageYPositions = _stageYPositions }); ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<(string Id, double Value)> { ("PROCESS_DISTORTION_COUNT", _groups.Length) } / 지역 변수를 선언합니다: var control = new List<(string Id, double Value)> { ("PROCESS_DISTORTION_COUNT", _groups.Length) }; / 변수의 초기값을 지정합니다: control = new List<(string Id, double Value)> { ("PROCESS_DISTORTION_COUNT", _groups.Length) }
+L000291 |             var control = new List<(string Id, double Value)> { ("PROCESS_DISTORTION_COUNT", _groups.Length) }; ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.Add(($"PROCESS_DISTORTION_INDEX_{index}", _groups.Contains(index) ? 1 : 0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _groups.Contains(index) / 조건에 따라 결과식을 선택합니다: _groups.Contains(index) ? 1 : 0 / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < 3; index++) / 변수의 초기값을 지정합니다: index = 0
+L000292 |             for (var index = 0; index < 3; index++) control.Add(($"PROCESS_DISTORTION_INDEX_{index}", _groups.Contains(index) ? 1 : 0)); ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.Add(($"PROCESS_DISTORTION_INDEX_{index}_POSITION", _stageYPositions[index])) / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < 3; index++) / 변수의 초기값을 지정합니다: index = 0
+L000293 |             for (var index = 0; index < 3; index++) control.Add(($"PROCESS_DISTORTION_INDEX_{index}_POSITION", _stageYPositions[index])); ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4) / 지역 변수를 선언합니다: var visionIds = Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{c
+L000294 |             var visionIds = Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }).ToArray(); ⟦EOL⟧
+// 해설 L295: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000295 |             // Validate every required route before the first PLC write. Source/result data are never fabricated. ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.Validate(visionIds, false)
+L000296 |             _io.Validate(visionIds, false); ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.Validate(ParameterKeys(_groups).Select(ResultId).ToArray(), false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys(_groups).Select(ResultId).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys(_groups).Select(ResultId) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys(_groups)
+L000297 |             _io.Validate(ParameterKeys(_groups).Select(ResultId).ToArray(), false); ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.Validate(CAlignWapageService.Points.SelectMany(point => new[] { point.BaseId, point.RangeId }).Concat(control.Select(item => item.Id)).ToArray(), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignWapageService.Points.SelectMany(point => new[] { point.BaseId, point.RangeId }).Concat(control.Select(item => item.Id)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignWapageService.Points.SelectMany(point => new[] { point.BaseId, point.RangeId }).Concat(control.Select(item => item.Id)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignWa
+L000298 |             _io.Validate(CAlignWapageService.Points.SelectMany(point => new[] { point.BaseId, point.RangeId }).Concat(control.Select(item => item.Id)).ToArray(), true); ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log($"측정 조건 동결 · Recipe={_recipe.Name}; Groups={string.Join(",", _groups)}; Count={_groups.Length}; Range={pixels:0.####} pixel; " + string.Join(",", control.Where(item => item.Id.EndsWith("_POSITION")).Select(item => $"… / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", _groups) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", control.Where(item => item.Id.EndsWith("_POSITION")).Select(item => $"{item.Id}={item.Value:0.####} mm")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: control.Where(item => item.Id.EndsWith("_POSITION")).Se
+L000299 |             Log($"측정 조건 동결 · Recipe={_recipe.Name}; Groups={string.Join(",", _groups)}; Count={_groups.Length}; Range={pixels:0.####} pixel; " + string.Join(",", control.Where(item => item.Id.EndsWith("_POSITION")).Select(item => $"{item.Id}={item.Value:0.####} mm"))); ⟦EOL⟧
+// 해설 L300: 비동기 완료를 기다립니다: await _io.ReadValues(visionIds, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.ReadValues(visionIds, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.ReadValues(visionIds, token) / 지역 변수를 선언합니다: var vision = await _io.ReadValues(visionIds, token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: vision = await _io.ReadValues(visionIds, token).ConfigureAwait(false)
+L000300 |             var vision = await _io.ReadValues(visionIds, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L301: 비동기 완료를 기다립니다: await _io.SetBase(vision, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.SetBase(vision, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.SetBase(vision, token)
+L000301 |             await _io.SetBase(vision, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L302: 비동기 완료를 기다립니다: await _io.SetRange(pixels, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.SetRange(pixels, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.SetRange(pixels, token)
+L000302 |             await _io.SetRange(pixels, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L303: 비동기 완료를 기다립니다: await _io.WriteValues(control.ToArray(), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.WriteValues(control.ToArray(), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.WriteValues(control.ToArray(), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: control.ToArray()
+L000303 |             await _io.WriteValues(control.ToArray(), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log("Wapage Base/Range · Distortion Count/Index/Stage Y 기록 및 읽기 확인 완료")
+L000304 |             Log("Wapage Base/Range · Distortion Count/Index/Stage Y 기록 및 읽기 확인 완료"); ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 Prepare.
+L000305 |         } ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Correction.CAlignDistortionCycle.LoadResults(System.Threading.CancellationToken)
+L000306 |         public async Task LoadResults(CancellationToken token) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 LoadResults.
+L000307 |         { ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 준비가 필요합니다.") / 조건에 따라 분기합니다: if (_recipe is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion 준비가 필요합니다.");
+L000308 |             if (_recipe is null) throw new InvalidOperationException("Distortion 준비가 필요합니다."); ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParameterKeys(_groups) / 지역 변수를 선언합니다: var keys = ParameterKeys(_groups); / 변수의 초기값을 지정합니다: keys = ParameterKeys(_groups)
+L000309 |             var keys = ParameterKeys(_groups); ⟦EOL⟧
+// 해설 L310: 비동기 완료를 기다립니다: await _io.ReadValues(keys.Select(ResultId).ToArray(), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.ReadValues(keys.Select(ResultId).ToArray(), token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _io.ReadValues(keys.Select(ResultId).ToArray(), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Select(ResultId).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Select(ResultId) / 지역 변수를 선언합니다: var values = await _io.ReadValues(keys.Select(ResultId).ToArray(), token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: values =
+L000310 |             var values = await _io.ReadValues(keys.Select(ResultId).ToArray(), token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L311: 값을 대상에 대입합니다: _results = keys.ToDictionary(key => key, key => values[ResultId(key)], StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.ToDictionary(key => key, key => values[ResultId(key)], StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ResultId(key)
+L000311 |             _results = keys.ToDictionary(key => key, key => values[ResultId(key)], StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L312: 값을 대상에 대입합니다: _loadedAt = DateTimeOffset.Now
+L000312 |             _loadedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L313: 조건에 따라 분기합니다: if (Snapshot is { } frame)
+L000313 |             if (Snapshot is { } frame) ⟦EOL⟧
+// 해설 L314: 값을 대상에 대입합니다: LastLoads = new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>( new Dictionary<string, double>(_results, StringComparer.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _snapshot, frame with { LastLoads = new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>( new Dictionary<string, double>(_results, StringComparer.OrdinalIgnoreCase)), LoadedAt = _loade… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>( new Dictionary<s
+L000314 |                 Volatile.Write(ref _snapshot, frame with { LastLoads = new System.Collections.ObjectModel.ReadOnlyDictionary<string, double>( ⟦EOL⟧
+// 해설 L315: 값을 대상에 대입합니다: LoadedAt = _loadedAt / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double>(_results, StringComparer.OrdinalIgnoreCase)
+L000315 |                     new Dictionary<string, double>(_results, StringComparer.OrdinalIgnoreCase)), LoadedAt = _loadedAt }); ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log($"측정값 취득 · {key}={_results[key]:0.####} mm ({ResultId(key)})") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ResultId(key) / 컬렉션 요소를 순회합니다: foreach (var key in keys)
+L000316 |             foreach (var key in keys) Log($"측정값 취득 · {key}={_results[key]:0.####} mm ({ResultId(key)})"); ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 LoadResults.
+L000317 |         } ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { token.ThrowIfCancellationRequested(); if (_results is null || _recipe is null) throw new InvalidOperationException("Distortion 측정 결과가 없습니다."); _model = new(Keys(), Names(_groups).Where(name => name.Start…
+L000318 |         public Task Calculate(CancellationToken token) => Task.Run(() => ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 Calculate.
+L000319 |         { ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000320 |             token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 측정 결과가 없습니다.") / 조건에 따라 분기합니다: if (_results is null || _recipe is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion 측정 결과가 없습니다.");
+L000321 |             if (_results is null || _recipe is null) throw new InvalidOperationException("Distortion 측정 결과가 없습니다."); ⟦EOL⟧
+// 해설 L322: 값을 대상에 대입합니다: _model = new(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)) / 함수·델리게이트 또는 객체 생성자를 호출합니
+L000322 |             _model = new(Keys(), Names(_groups).Where(name => name.StartsWith("DK", StringComparison.Ordinal)).ToArray()); ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.Calculate(_recipe, _model) / 지역 변수를 선언합니다: var offsets = CAlignShotOffsetData.Calculate(_recipe, _model); / 변수의 초기값을 지정합니다: offsets = CAlignShotOffsetData.Calculate(_recipe, _model)
+L000323 |             var offsets = CAlignShotOffsetData.Calculate(_recipe, _model); ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignOffsetTolerance.Check(_tolerance, offsets) / 지역 변수를 선언합니다: var exceeded = CAlignOffsetTolerance.Check(_tolerance, offsets).ExceededShots; / 변수의 초기값을 지정합니다: exceeded = CAlignOffsetTolerance.Check(_tolerance, offsets).ExceededShots
+L000324 |             var exceeded = CAlignOffsetTolerance.Check(_tolerance, offsets).ExceededShots; ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Align Offset Tolerance ±{_tolerance:0.000} mm 초과 {exceeded.Count} Shot. 전체 적용 취소. " + string.Join("; ", exceeded.Take(8).Select(shot => $"Cell{shot.CellNo}/{shot.ShotName}: X={shot.X:0.000… / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("; ", exceeded.Take(8).Select(shot => $"Cell{shot.CellNo}/{shot.ShotName}: X={shot.X:0.000}, Y={shot.Y:0.000}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: exceeded.Take(8).Select(shot => $"Cell{shot.CellNo}/{shot.ShotName}: X={shot.X:0.000}, Y={shot.Y:0.000}") /
+L000325 |             if (exceeded.Count > 0) throw new InvalidOperationException($"Align Offset Tolerance ±{_tolerance:0.000} mm 초과 {exceeded.Count} Shot. 전체 적용 취소. " + string.Join("; ", exceeded.Take(8).Select(shot => $"Cell{shot.CellNo}/{shot.ShotName}: X={shot.X:0.000}, Y={shot.Y:0.000}"))); ⟦EOL⟧
+// 해설 L326: 값을 대상에 대입합니다: _offsets = offsets
+L000326 |             _offsets = offsets; ⟦EOL⟧
+// 해설 L327: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log($"Base−LastLoad 라그랑주 계산 완료 · {offsets.Count} Shot · Tolerance ±{_tolerance:0.000} mm · 설계 좌표 기준")
+L000327 |             Log($"Base−LastLoad 라그랑주 계산 완료 · {offsets.Count} Shot · Tolerance ±{_tolerance:0.000} mm · 설계 좌표 기준"); ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Correction.CAlignDistortionCycle.Calculate(System.Threading.CancellationToken)
+L000328 |         }, token); ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Correction.CAlignDistortionCycle.Save(System.Threading.CancellationToken)
+L000329 |         public async Task Save(CancellationToken token) ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 Save.
+L000330 |         { ⟦EOL⟧
+// 해설 L331: 조건에 따라 분기합니다: if (_saved) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000331 |             if (_saved) return; ⟦EOL⟧
+// 해설 L332: 조건에 따라 분기합니다: if (_recipe is null || _input is null || _model is null || _offsets is null || _results is null)
+L000332 |             if (_recipe is null || _input is null || _model is null || _offsets is null || _results is null) ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 보정 계산이 완료되지 않았습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion 보정 계산이 완료되지 않았습니다.");
+L000333 |                 throw new InvalidOperationException("Distortion 보정 계산이 완료되지 않았습니다."); ⟦EOL⟧
+// 해설 L334: 비동기 완료를 기다립니다: await recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token) / 지역 변수를 선언합니다: var saved = await recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token).ConfigureAwait(false); / 변수의 초기값을 지정합니다: saved = await recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token).ConfigureAwait(fal
+L000334 |             var saved = await recipes.SaveAlignOffsetsIfUnchanged(_recipe, _offsets, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups).ToHashSet(StringComparer.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Names(_groups) / 지역 변수를 선언합니다: var selected = Names(_groups).ToHashSet(StringComparer.Ordinal); / 변수의 초기값을 지정합니다: selected = Names(_groups).ToHashSet(StringComparer.Ordinal)
+L000335 |             var selected = Names(_groups).ToHashSet(StringComparer.Ordinal); ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var p = _recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: p = _recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase)
+L000336 |             var p = _recipe.Parameters.ToDictionary(item => item.Key, item => item.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L337: 함수·델리게이트 또는 객체 생성자를 호출합니다: p.TryGetValue($"ALIGNBASE_{name}_{axis}", out var text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 결과식을 선택합니다: p.TryGetValue($"ALIGNBASE_{name}_{axis}", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) ? value : null
+L000337 |             double? OptionalBase(string name, string axis) => p.TryGetValue($"ALIGNBASE_{name}_{axis}", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) ? value : null; ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys().Select(key => { var delta = selected.Contains(key.Name) ? new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) : (ST_ALIGN_CORRECTION?)null; return new ST_ALIGN_OFFSET_KEY_LOG(key.Name, selected… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys() / 지역 변수를 선언합니다: var keyLog = Keys().Select(key => { var delta = selected.Contains(key.Name) ? new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) : (ST_ALIGN_CORRECTION?)null; return new ST_ALIGN_OFFSET_KEY_LOG(key.Name, selec / 변수의 초기
+L000338 |             var keyLog = Keys().Select(key => ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 Save.
+L000339 |             { ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Contains(key.Name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) / 조건에 따라 결과식을 선택합니다: selected.Contains(key.Name) ? new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) : (ST_ALIGN_CORRECTION?)null / 지역 변수를 선언합니다: var delta = selected.Contains(key.Name) ? new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) : (ST_ALIGN_CORRECTION?)null; / 변수의 초기값을 지정합니다: delta = selected.Contains(key.Name) ? new ST_ALIGN_COR
+L000340 |                 var delta = selected.Contains(key.Name) ? new ST_ALIGN_CORRECTION(key.CorrectionX!.Value, key.CorrectionY!.Value) : (ST_ALIGN_CORRECTION?)null; ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALIGN_OFFSET_KEY_LOG(key.Name, selected.Contains(key.Name), key.X, key.Y, OptionalBase(key.Name, "X"), OptionalBase(key.Name, "Y"), _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_X", double.NaN) is var x && dou… / 함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Contains(key.Name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: OptionalBase(key.Name, "X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: OptionalBase(key.Name, "Y") / 호출자에게 값 또는 제어를 반환합니다: return new ST_ALIGN_OFFSET_KEY_LOG(key.Name, selected.Contains(key.Name), key.X, key.Y, Optional
+L000341 |                 return new ST_ALIGN_OFFSET_KEY_LOG(key.Name, selected.Contains(key.Name), key.X, key.Y, OptionalBase(key.Name, "X"), OptionalBase(key.Name, "Y"), ⟦EOL⟧
+// 해설 L342: 함수·델리게이트 또는 객체 생성자를 호출합니다: _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_X", double.NaN) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 조건에 따라 결과식을 선택합니다: _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_X", double.NaN) is var x && double.IsFinite(x) ? x : null
+L000342 |                     _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_X", double.NaN) is var x && double.IsFinite(x) ? x : null, ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_Y", double.NaN) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 조건에 따라 결과식을 선택합니다: _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_Y", double.NaN) is var y && double.IsFinite(y) ? y : null
+L000343 |                     _results.GetValueOrDefault($"ALIGNBASE_{key.Name}_Y", double.NaN) is var y && double.IsFinite(y) ? y : null, delta?.X, delta?.Y); ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Correction.CAlignDistortionCycle.Save(System.Threading.CancellationToken)
+L000344 |             }).ToArray(); ⟦EOL⟧
+// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).Any(device => device.IsSimulation) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var simulation = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).Any(device => device.IsSimulation); / 변수의 초기값을 지정합니다: simulation = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).Any(device => device.IsSimulation)
+L000345 |             var simulation = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).Any(device => device.IsSimulation); ⟦EOL⟧
+// 해설 L346: 값을 대상에 대입합니다: Tolerance = _tolerance / 값을 대상에 대입합니다: CalculatedOffsets = _offsets / 비동기 완료를 기다립니다: await audit.Save(new(_recipe.Id, _recipe.Name, false, DateTimeOffset.Now, _loadedAt, simulation, keyLog, _offsets) { Tolerance = _tolerance, CalculatedOffsets = _offsets }, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: audit.Save(new(_recipe.Id, _recipe.Name, false, DateTimeOffset.Now, _loadedAt, simulation, keyLog, _offsets) { Tolerance = _tolerance, CalculatedOffsets = _offsets }, token).ConfigureAwait(false) / 함수·델리게이트 또는
+L000346 |             var path = await audit.Save(new(_recipe.Id, _recipe.Name, false, DateTimeOffset.Now, _loadedAt, simulation, keyLog, _offsets) { Tolerance = _tolerance, CalculatedOffsets = _offsets }, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(_input.Parameters, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var parameters = new Dictionary<string, string>(_input.Parameters, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: parameters = new Dictionary<string, string>(_input.Parameters, StringComparer.OrdinalIgnoreCase)
+L000347 |             var parameters = new Dictionary<string, string>(_input.Parameters, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Keys.Where(CAlignShotOffsetData.IsParameterKey).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Keys.Where(CAlignShotOffsetData.IsParameterKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Remove(key) / 컬렉션 요소를 순회합니다: foreach (var key in parameters.Keys.Where(CAlignShotOffsetData.IsParameterKey).ToArray())
+L000348 |             foreach (var key in parameters.Keys.Where(CAlignShotOffsetData.IsParameterKey).ToArray()) parameters.Remove(key); ⟦EOL⟧
+// 해설 L349: 값을 대상에 대입합니다: parameters[item.Key] = item.Value / 함수·델리게이트 또는 객체 생성자를 호출합니다: saved.Parameters.Where(item => CAlignShotOffsetData.IsParameterKey(item.Key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.IsParameterKey(item.Key) / 컬렉션 요소를 순회합니다: foreach (var item in saved.Parameters.Where(item => CAlignShotOffsetData.IsParameterKey(item.Key)))
+L000349 |             foreach (var item in saved.Parameters.Where(item => CAlignShotOffsetData.IsParameterKey(item.Key))) parameters[item.Key] = item.Value; ⟦EOL⟧
+// 해설 L350: 값을 대상에 대입합니다: Parameters = parameters / 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _pending, _input with { Parameters = parameters })
+L000350 |             Interlocked.Exchange(ref _pending, _input with { Parameters = parameters }); ⟦EOL⟧
+// 해설 L351: 값을 대상에 대입합니다: _saved = true
+L000351 |             _saved = true; ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: Log($"이번 Glass Align Offset 갱신 완료 · {_offsets.Count} Shot · Audit={path}")
+L000352 |             Log($"이번 Glass Align Offset 갱신 완료 · {_offsets.Count} Shot · Audit={path}"); ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 Save.
+L000353 |         } ⟦EOL⟧
+// 해설 L354: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.ST_STAGE_PROCESS_REQUEST? Drilling.Common.Correction.CAlignDistortionCycle.TakePreparedRequest(string)
+L000354 |         public ST_STAGE_PROCESS_REQUEST? TakePreparedRequest(string recipeId) ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 TakePreparedRequest.
+L000355 |         { ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _pending) / 지역 변수를 선언합니다: var pending = Volatile.Read(ref _pending); / 변수의 초기값을 지정합니다: pending = Volatile.Read(ref _pending)
+L000356 |             var pending = Volatile.Read(ref _pending); ⟦EOL⟧
+// 해설 L357: 조건에 따라 분기합니다: if (pending is null) / 호출자에게 값 또는 제어를 반환합니다: return null;
+L000357 |             if (pending is null) return null; ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.RecipeId.Equals(recipeId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion과 DoReady의 레시피가 다릅니다.") / 조건에 따라 분기합니다: if (!pending.RecipeId.Equals(recipeId, StringComparison.OrdinalIgnoreCase)) / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion과 DoReady의 레시피가 다릅니다.");
+L000358 |             if (!pending.RecipeId.Equals(recipeId, StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException("Distortion과 DoReady의 레시피가 다릅니다."); ⟦EOL⟧
+// 해설 L359: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.CompareExchange(ref _pending, null, pending) / 조건에 따라 결과식을 선택합니다: Interlocked.CompareExchange(ref _pending, null, pending) == pending ? pending : null / 호출자에게 값 또는 제어를 반환합니다: return Interlocked.CompareExchange(ref _pending, null, pending) == pending ? pending : null;
+L000359 |             return Interlocked.CompareExchange(ref _pending, null, pending) == pending ? pending : null; ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 TakePreparedRequest.
+L000360 |         } ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError("Distortion log failed: " + error) / 지정 예외를 처리합니다: catch (Exception error) / 예외 처리 범위입니다: try
+L000361 |         private void Log(string text) { try { log?.Invoke(text); } catch (Exception error) { System.Diagnostics.Trace.TraceError("Distortion log failed: " + error); } } ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다.
+L000362 |     } ⟦EOL⟧
+L000363 |  ⟦EOL⟧
+// 해설 L364: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000364 |     // Button-driven one-shot operations. No polling or automatic publication is added here. ⟦EOL⟧
+// 해설 L365: 타입의 구조/상속 선언입니다: public sealed class CAlignWapageService
+L000365 |     public sealed class CAlignWapageService ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다.
+L000366 |     { ⟦EOL⟧
+// 해설 L367: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000367 |         // Vision source addresses stay unchanged. The user-confirmed destination order is ⟦EOL⟧
+// 해설 L368: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000368 |         // CAM1..4 X -> X1..4, then CAM1..4 Y -> Y1..4 (not the interleaved 0.12 sheet remarks). ⟦EOL⟧
+// 해설 L369: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 8).Select(index => { var axis = index < 4 ? "X" : "Y"; var camera = index % 4 + 1; return new ST_WAPAGE_ALIGNBASE_POINT($"CAM{camera} {axis} → {axis}{camera}", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_{a… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 8)
+L000369 |         public static IReadOnlyList<ST_WAPAGE_ALIGNBASE_POINT> Points { get; } = Enumerable.Range(0, 8).Select(index => ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 Points.
+L000370 |         { ⟦EOL⟧
+// 해설 L371: 조건에 따라 결과식을 선택합니다: index < 4 ? "X" : "Y" / 지역 변수를 선언합니다: var axis = index < 4 ? "X" : "Y"; / 변수의 초기값을 지정합니다: axis = index < 4 ? "X" : "Y"
+L000371 |             var axis = index < 4 ? "X" : "Y"; ⟦EOL⟧
+// 해설 L372: 지역 변수를 선언합니다: var camera = index % 4 + 1; / 변수의 초기값을 지정합니다: camera = index % 4 + 1
+L000372 |             var camera = index % 4 + 1; ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_WAPAGE_ALIGNBASE_POINT($"CAM{camera} {axis} → {axis}{camera}", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", $"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", $"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}") / 호출자에게 값 또는 제어를 반환합니다: return new ST_WAPAGE_ALIGNBASE_POINT($"CAM{camera} {axis} → {axis}{camera}", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", $"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", $"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}");
+L000373 |             return new ST_WAPAGE_ALIGNBASE_POINT($"CAM{camera} {axis} → {axis}{camera}", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_WAPAGE_ALIGNBASE_POINT> Drilling.Common.Correction.CAlignWapageService.Points
+L000374 |                 $"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", $"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}"); ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_WAPAGE_ALIGNBASE_POINT> Drilling.Common.Correction.CAlignWapageService.Points
+L000375 |         }).ToArray(); ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>> Drilling.Common.Correction.CAlignWapageService._map
+L000376 |         private readonly Func<IReadOnlyList<ST_MELSEC_MAP_DATA>> _map; ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS>> Drilling.Common.Correction.CAlignWapageService._connections
+L000377 |         private readonly Func<IReadOnlyList<ST_INTERFACE_COMM_STATUS>> _connections; ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · System.Func<string, System.Threading.CancellationToken, double> Drilling.Common.Correction.CAlignWapageService._read
+L000378 |         private readonly Func<string, CancellationToken, double> _read; ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · System.Action<string, double, System.Threading.CancellationToken> Drilling.Common.Correction.CAlignWapageService._write
+L000379 |         private readonly Action<string, double, CancellationToken> _write; ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Melsec.GetMapList()
+L000380 |         public CAlignWapageService(CInterfaceManager? manager) : this(() => manager?.Melsec.GetMapList() ?? [], ⟦EOL⟧
+// 해설 L381: 함수·델리게이트 또는 객체 생성자를 호출합니다: .GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec)
+L000381 |             () => manager?.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) ?? [], ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Melsec.ReadDoubleNoLog(id, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.")
+L000382 |             (id, token) => manager?.Melsec.ReadDoubleNoLog(id, token) ?? throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다."), ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Melsec.WriteDouble(id, value, token) / 조건에 따라 분기합니다: if (manager is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.");
+L000383 |             (id, value, token) => { if (manager is null) throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다."); manager.Melsec.WriteDouble(id, value, token); }) { } ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.CAlignWapageService.CAlignWapageService(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>>, System.Func<System.Collections.Generic.IRe
+L000384 |         public CAlignWapageService(Func<IReadOnlyList<ST_MELSEC_MAP_DATA>> map, Func<IReadOnlyList<ST_INTERFACE_COMM_STATUS>> connections, ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.CAlignWapageService.CAlignWapageService(System.Func<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>>, System.Func<System.Collections.Generic.IRe
+L000385 |             Func<string, CancellationToken, double> read, Action<string, double, CancellationToken> write) ⟦EOL⟧
+// 해설 L386: 값을 대상에 대입합니다: _map = map / 값을 대상에 대입합니다: _connections = connections / 값을 대상에 대입합니다: _read = read / 값을 대상에 대입합니다: _write = write
+L000386 |         { _map = map; _connections = connections; _read = read; _write = write; } ⟦EOL⟧
+L000387 |  ⟦EOL⟧
+// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<string, Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.Common.Correction.CAlignWapageService.Validate(System.Collections.Generic.IReadOnlyCollection<string>, bool)
+L000388 |         internal Dictionary<string, ST_MELSEC_MAP_DATA> Validate(IReadOnlyCollection<string> ids, bool write) ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 Validate.
+L000389 |         { ⟦EOL⟧
+// 해설 L390: 함수·델리게이트 또는 객체 생성자를 호출합니다: _map().ToDictionary(row => row.Id, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _map() / 지역 변수를 선언합니다: var map = _map().ToDictionary(row => row.Id, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: map = _map().ToDictionary(row => row.Id, StringComparer.OrdinalIgnoreCase)
+L000390 |             var map = _map().ToDictionary(row => row.Id, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: _connections() / 지역 변수를 선언합니다: var connections = _connections(); / 변수의 초기값을 지정합니다: connections = _connections()
+L000391 |             var connections = _connections(); ⟦EOL⟧
+// 해설 L392: 컬렉션 요소를 순회합니다: foreach (var id in ids)
+L000392 |             foreach (var id in ids) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 Validate.
+L000393 |             { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.TryGetValue(id, out var row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(row.Address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!map.TryGetValue(id, out var row) || !row.Use || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase))
+L000394 |                 if (!map.TryGetValue(id, out var row) || !row.Use || string.IsNullOrWhiteSpace(row.Address) || row.Address.Equals("UNASSIGNED", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L395: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{id}의 MELSEC 주소와 USE 설정을 확인하세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{id}의 MELSEC 주소와 USE 설정을 확인하세요.");
+L000395 |                     throw new InvalidOperationException($"{id}의 MELSEC 주소와 USE 설정을 확인하세요."); ⟦EOL⟧
+// 해설 L396: 조건에 따라 분기합니다: if (row.DataType != EN_MELSEC_DATA_TYPE.Double || row.Access == EN_MELSEC_ACCESS.Write || write && row.Access != EN_MELSEC_ACCESS.ReadWrite)
+L000396 |                 if (row.DataType != EN_MELSEC_DATA_TYPE.Double || row.Access == EN_MELSEC_ACCESS.Write || write && row.Access != EN_MELSEC_ACCESS.ReadWrite) ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{id}의 DOUBLE 형식과 {(write ? "읽기/쓰기" : "읽기")} 권한을 확인하세요.") / 조건에 따라 결과식을 선택합니다: write ? "읽기/쓰기" : "읽기" / 예외를 발생/전달합니다: throw new InvalidOperationException($"{id}의 DOUBLE 형식과 {(write ? "읽기/쓰기" : "읽기")} 권한을 확인하세요.");
+L000397 |                     throw new InvalidOperationException($"{id}의 DOUBLE 형식과 {(write ? "읽기/쓰기" : "읽기")} 권한을 확인하세요."); ⟦EOL⟧
+// 해설 L398: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("SVID_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DISTORTION_POS", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("SVID_", StringComparison.Ordinal) || id.StartsWith("DISTORTION_POS", StringComparison.Ordinal) ? row.Direction != EN_MELSEC_DIRECTION.In : row.Direction != EN_MELSEC_DIRECTION.Out / 조건에 따라 분기합니다: if (id.StartsWith("SVID_", StringComparison.Ordinal) || id.StartsWith("DISTORTION_POS", StringComparison.Ordinal) ? row.Direction != EN_MELSEC_DI
+L000398 |                 if (id.StartsWith("SVID_", StringComparison.Ordinal) || id.StartsWith("DISTORTION_POS", StringComparison.Ordinal) ? row.Direction != EN_MELSEC_DIRECTION.In : row.Direction != EN_MELSEC_DIRECTION.Out) ⟦EOL⟧
+// 해설 L399: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{id}의 MELSEC 입출력 방향을 확인하세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{id}의 MELSEC 입출력 방향을 확인하세요.");
+L000399 |                     throw new InvalidOperationException($"{id}의 MELSEC 입출력 방향을 확인하세요."); ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.ValidateMapData(row)
+L000400 |                 CMelsec.ValidateMapData(row); ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: connections.FirstOrDefault(item => item.Module == EN_EQP_MODULE.Melsec && item.Number == row.DeviceNo) / 지역 변수를 선언합니다: var connection = connections.FirstOrDefault(item => item.Module == EN_EQP_MODULE.Melsec && item.Number == row.DeviceNo); / 변수의 초기값을 지정합니다: connection = connections.FirstOrDefault(item => item.Module == EN_EQP_MODULE.Melsec && item.Number == row.DeviceNo)
+L000401 |                 var connection = connections.FirstOrDefault(item => item.Module == EN_EQP_MODULE.Melsec && item.Number == row.DeviceNo); ⟦EOL⟧
+// 해설 L402: 조건에 따라 분기합니다: if (connection is null || !(connection.IsSimulation || connection.ConnectionState is EN_COMM_STATE.Online or EN_COMM_STATE.Simulation))
+L000402 |                 if (connection is null || !(connection.IsSimulation || connection.ConnectionState is EN_COMM_STATE.Online or EN_COMM_STATE.Simulation)) ⟦EOL⟧
+// 해설 L403: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다.");
+L000403 |                     throw new InvalidOperationException("MELSEC이 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 Validate.
+L000404 |             } ⟦EOL⟧
+// 해설 L405: 호출자에게 값 또는 제어를 반환합니다: return map;
+L000405 |             return map; ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 Validate.
+L000406 |         } ⟦EOL⟧
+L000407 |  ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.Load(System.Threading.CancellationToken)
+L000408 |         public Task<IReadOnlyDictionary<string, double>> Load(CancellationToken token = default) ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 Load.
+L000409 |         { ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 4) / 지역 변수를 선언합니다: var visionOrder = Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }); / 변수의 초기값을 지정합니다: visionOrder = Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camer
+L000410 |             var visionOrder = Enumerable.Range(1, 4).SelectMany(camera => new[] { $"SVID_FINEALN_CAM{camera}_GLS_RESULT_X", $"SVID_FINEALN_CAM{camera}_GLS_RESULT_Y" }); ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: visionOrder.Concat(Points.Select(point => point.BaseId)).Concat(Points.Select(point => point.RangeId)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: visionOrder.Concat(Points.Select(point => point.BaseId)).Concat(Points.Select(point => point.RangeId)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: visionOrder.Concat(Points.Select(point => point.BaseId)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => point.BaseId) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => point.RangeId) / 지역 변수를 선언합니다: var ids = visionOrder.Concat(Poin
+L000411 |             var ids = visionOrder.Concat(Points.Select(point => point.BaseId)).Concat(Points.Select(point => point.RangeId)).ToArray(); ⟦EOL⟧
+// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(ids, false)
+L000412 |             Validate(ids, false); ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(ids, token) / 호출자에게 값 또는 제어를 반환합니다: return Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token);
+L000413 |             return Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token); ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 Load.
+L000414 |         } ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.ReadValues(string[], System.Threading.CancellationToken)
+L000415 |         internal Task<IReadOnlyDictionary<string, double>> ReadValues(string[] ids, CancellationToken token) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 ReadValues.
+L000416 |         { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(ids, false)
+L000417 |             Validate(ids, false); ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(ids, token) / 호출자에게 값 또는 제어를 반환합니다: return Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token);
+L000418 |             return Task.Run<IReadOnlyDictionary<string, double>>(() => Read(ids, token), token); ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 ReadValues.
+L000419 |         } ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(values, token)
+L000420 |         internal Task<IReadOnlyDictionary<string, double>> WriteValues((string Id, double Value)[] values, CancellationToken token) => Write(values, token); ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<string, double> Drilling.Common.Correction.CAlignWapageService.Read(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+L000421 |         private Dictionary<string, double> Read(IEnumerable<string> ids, CancellationToken token) ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 Read.
+L000422 |         { ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var values = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
+L000423 |             var values = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L424: 컬렉션 요소를 순회합니다: foreach (var id in ids)
+L000424 |             foreach (var id in ids) ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 Read.
+L000425 |             { ⟦EOL⟧
+// 해설 L426: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000426 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: _read(id, token) / 지역 변수를 선언합니다: var value = _read(id, token); / 변수의 초기값을 지정합니다: value = _read(id, token)
+L000427 |                 var value = _read(id, token); // READ_SCALE is already applied by CMelsec. ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{id}의 MELSEC 값이 유한한 숫자가 아닙니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(value)) / 예외를 발생/전달합니다: throw new InvalidOperationException($"{id}의 MELSEC 값이 유한한 숫자가 아닙니다.");
+L000428 |                 if (!double.IsFinite(value)) throw new InvalidOperationException($"{id}의 MELSEC 값이 유한한 숫자가 아닙니다."); ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add(id, value)
+L000429 |                 values.Add(id, value); ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 Read.
+L000430 |             } ⟦EOL⟧
+// 해설 L431: 호출자에게 값 또는 제어를 반환합니다: return values;
+L000431 |             return values; ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 Read.
+L000432 |         } ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.SetBase(System.Collections.Generic.IReadOnlyDictionary<string, double>,
+L000433 |         public Task<IReadOnlyDictionary<string, double>> SetBase(IReadOnlyDictionary<string, double> vision, CancellationToken token = default) ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 SetBase.
+L000434 |         { ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Any(point => !vision.TryGetValue(point.VisionId, out var value) || !double.IsFinite(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: vision.TryGetValue(point.VisionId, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (vision.Count != 8 || Points.Any(point => !vision.TryGetValue(point.VisionId, out var value) || !double.IsFinite(value)))
+L000435 |             if (vision.Count != 8 || Points.Any(point => !vision.TryGetValue(point.VisionId, out var value) || !double.IsFinite(value))) ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Vision X/Y 8개 값을 먼저 정상적으로 Load해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Vision X/Y 8개 값을 먼저 정상적으로 Load해 주세요.");
+L000436 |                 throw new InvalidOperationException("Vision X/Y 8개 값을 먼저 정상적으로 Load해 주세요."); ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(Points.Select(point => (point.BaseId, vision[point.VisionId])).ToArray(), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => (point.BaseId, vision[point.VisionId])).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => (point.BaseId, vision[point.VisionId])) / 호출자에게 값 또는 제어를 반환합니다: return Write(Points.Select(point => (point.BaseId, vision[point.VisionId])).ToArray(), token);
+L000437 |             return Write(Points.Select(point => (point.BaseId, vision[point.VisionId])).ToArray(), token); ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 SetBase.
+L000438 |         } ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.SetRange(double, System.Threading.CancellationToken)
+L000439 |         public Task<IReadOnlyDictionary<string, double>> SetRange(double pixels, CancellationToken token = default) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 SetRange.
+L000440 |         { ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pixels) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Wapage Range는 0 이상의 유한한 pixel 값이어야 합니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(pixels) || pixels < 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("Wapage Range는 0 이상의 유한한 pixel 값이어야 합니다.");
+L000441 |             if (!double.IsFinite(pixels) || pixels < 0) throw new InvalidOperationException("Wapage Range는 0 이상의 유한한 pixel 값이어야 합니다."); ⟦EOL⟧
+// 해설 L442: 함수·델리게이트 또는 객체 생성자를 호출합니다: Write(Points.Select(point => (point.RangeId, pixels)).ToArray(), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => (point.RangeId, pixels)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Points.Select(point => (point.RangeId, pixels)) / 호출자에게 값 또는 제어를 반환합니다: return Write(Points.Select(point => (point.RangeId, pixels)).ToArray(), token);
+L000442 |             return Write(Points.Select(point => (point.RangeId, pixels)).ToArray(), token); ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 SetRange.
+L000443 |         } ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.Write((string Id, double Value)[], System.Threading.CancellationToken)
+L000444 |         private Task<IReadOnlyDictionary<string, double>> Write((string Id, double Value)[] values, CancellationToken token) ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 Write.
+L000445 |         { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(values.Select(item => item.Id).ToArray(), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => item.Id).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => item.Id) / 지역 변수를 선언합니다: var map = Validate(values.Select(item => item.Id).ToArray(), true); / 변수의 초기값을 지정합니다: map = Validate(values.Select(item => item.Id).ToArray(), true)
+L000446 |             var map = Validate(values.Select(item => item.Id).ToArray(), true); ⟦EOL⟧
+// 해설 L447: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var expected = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: expected = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
+L000447 |             var expected = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L448: 컬렉션 요소를 순회합니다: foreach (var item in values)
+L000448 |             foreach (var item in values) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 Write.
+L000449 |             { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(item.Value * map[item.Id].WriteScale, MidpointRounding.AwayFromZero) / 지역 변수를 선언합니다: var raw = Math.Round(item.Value * map[item.Id].WriteScale, MidpointRounding.AwayFromZero); / 변수의 초기값을 지정합니다: raw = Math.Round(item.Value * map[item.Id].WriteScale, MidpointRounding.AwayFromZero)
+L000450 |                 var raw = Math.Round(item.Value * map[item.Id].WriteScale, MidpointRounding.AwayFromZero); ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(raw) / 조건에 따라 분기합니다: if (!double.IsFinite(raw) || raw < int.MinValue || raw > int.MaxValue)
+L000451 |                 if (!double.IsFinite(raw) || raw < int.MinValue || raw > int.MaxValue) ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{item.Id} 값이 MELSEC 저장 범위를 초과합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{item.Id} 값이 MELSEC 저장 범위를 초과합니다.");
+L000452 |                     throw new InvalidOperationException($"{item.Id} 값이 MELSEC 저장 범위를 초과합니다."); ⟦EOL⟧
+// 해설 L453: 함수·델리게이트 또는 객체 생성자를 호출합니다: expected.Add(item.Id, raw * map[item.Id].ReadScale)
+L000453 |                 expected.Add(item.Id, raw * map[item.Id].ReadScale); ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 Write.
+L000454 |             } ⟦EOL⟧
+// 해설 L455: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run<IReadOnlyDictionary<string, double>>(() => { var completed = 0; try { foreach (var item in values) { token.ThrowIfCancellationRequested(); _write(item.Id, item.Value, token); // WRITE_SCALE is applied once, insi… / 호출자에게 값 또는 제어를 반환합니다: return Task.Run<IReadOnlyDictionary<string, double>>(() => { var completed = 0; try { foreach (var item in values) { token.ThrowIfCancellationRequested(); _write(item.Id, item.Value, token); // WRITE_SCALE is applied once, inside
+L000455 |             return Task.Run<IReadOnlyDictionary<string, double>>(() => ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 Write.
+L000456 |             { ⟦EOL⟧
+// 해설 L457: 지역 변수를 선언합니다: var completed = 0; / 변수의 초기값을 지정합니다: completed = 0
+L000457 |                 var completed = 0; ⟦EOL⟧
+// 해설 L458: 예외 처리 범위입니다: try
+L000458 |                 try ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 Write.
+L000459 |                 { ⟦EOL⟧
+// 해설 L460: 컬렉션 요소를 순회합니다: foreach (var item in values)
+L000460 |                     foreach (var item in values) ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 Write.
+L000461 |                     { ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000462 |                         token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: _write(item.Id, item.Value, token)
+L000463 |                         _write(item.Id, item.Value, token); // WRITE_SCALE is applied once, inside CMelsec. ⟦EOL⟧
+// 해설 L464: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.Write((string Id, double Value)[], System.Threading.CancellationToken)
+L000464 |                         completed++; ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 Write.
+L000465 |                     } ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(values.Select(item => item.Id), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => item.Id) / 지역 변수를 선언합니다: var readback = Read(values.Select(item => item.Id), token); / 변수의 초기값을 지정합니다: readback = Read(values.Select(item => item.Id), token)
+L000466 |                     var readback = Read(values.Select(item => item.Id), token); ⟦EOL⟧
+// 해설 L467: 컬렉션 요소를 순회합니다: foreach (var pair in expected)
+L000467 |                     foreach (var pair in expected) ⟦EOL⟧
+// 해설 L468: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(readback[pair.Key] - pair.Value) / 조건에 따라 분기합니다: if (Math.Abs(readback[pair.Key] - pair.Value) > 1e-7)
+L000468 |                         if (Math.Abs(readback[pair.Key] - pair.Value) > 1e-7) ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{pair.Key} 기록값과 읽은 값이 다릅니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{pair.Key} 기록값과 읽은 값이 다릅니다.");
+L000469 |                             throw new InvalidOperationException($"{pair.Key} 기록값과 읽은 값이 다릅니다."); ⟦EOL⟧
+// 해설 L470: 호출자에게 값 또는 제어를 반환합니다: return readback;
+L000470 |                     return readback; ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 Write.
+L000471 |                 } ⟦EOL⟧
+// 해설 L472: 지정 예외를 처리합니다: catch (Exception exception)
+L000472 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 Write.
+L000473 |                 { ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Wapage Set 확인 실패 (쓰기 완료 {completed}/{values.Length}). 일부 값이 변경되었을 수 있으므로 Load로 현재값을 확인하세요.\n{exception.Message}", exception) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Wapage Set 확인 실패 (쓰기 완료 {completed}/{values.Length}). 일부 값이 변경되었을 수 있으므로 Load로 현재값을 확인하세요.\n{exception.Message}", exception);
+L000474 |                     throw new InvalidOperationException($"Wapage Set 확인 실패 (쓰기 완료 {completed}/{values.Length}). 일부 값이 변경되었을 수 있으므로 Load로 현재값을 확인하세요.\n{exception.Message}", exception); ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 Write.
+L000475 |                 } ⟦EOL⟧
+// 해설 L476: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Correction.CAlignWapageService.Write((string Id, double Value)[], System.Threading.CancellationToken)
+L000476 |             }, token); ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 Write.
+L000477 |         } ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다.
+L000478 |     } ⟦EOL⟧
+L000479 |  ⟦EOL⟧
+L000480 |  ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다.
+L000481 | } ⟦EOL⟧

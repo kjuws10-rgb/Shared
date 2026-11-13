@@ -1,0 +1,51 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000004 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public partial class CAutomationControllerStatusView : UserControl
+L000006 | public partial class CAutomationControllerStatusView : UserControl ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(IsCompact), typeof(bool), typeof(CAutomationControllerStatusView), new PropertyMetadata(false)) / 변수의 초기값을 지정합니다: IsCompactProperty = DependencyProperty.Register( nameof(IsCompact), typeof(bool), typeof(CAutomationControllerStatusView), new PropertyMetadata(false))
+L000008 |     public static readonly DependencyProperty IsCompactProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsCompact) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false)
+L000009 |         nameof(IsCompact), typeof(bool), typeof(CAutomationControllerStatusView), new PropertyMetadata(false)); ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CAutomationControllerStatusView.IsCompact
+L000010 |     public bool IsCompact ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 IsCompact.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(IsCompactProperty)
+L000012 |         get => (bool)GetValue(IsCompactProperty); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(IsCompactProperty, value)
+L000013 |         set => SetValue(IsCompactProperty, value); ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 IsCompact.
+L000014 |     } ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(TaskColumns), typeof(int), typeof(CAutomationControllerStatusView), new PropertyMetadata(2), value => value is int columns && columns > 0) / 변수의 초기값을 지정합니다: TaskColumnsProperty = DependencyProperty.Register( nameof(TaskColumns), typeof(int), typeof(CAutomationControllerStatusView), new PropertyMetadata(2), value => value is int columns && columns > 0)
+L000015 |     public static readonly DependencyProperty TaskColumnsProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(TaskColumns) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(2)
+L000016 |         nameof(TaskColumns), typeof(int), typeof(CAutomationControllerStatusView), new PropertyMetadata(2), ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CAutomationControllerStatusView.TaskColumnsProperty
+L000017 |         value => value is int columns && columns > 0); ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Views.CAutomationControllerStatusView.TaskColumns
+L000018 |     public int TaskColumns ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 TaskColumns.
+L000019 |     { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(TaskColumnsProperty)
+L000020 |         get => (int)GetValue(TaskColumnsProperty); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(TaskColumnsProperty, value)
+L000021 |         set => SetValue(TaskColumnsProperty, value); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 TaskColumns.
+L000022 |     } ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000023 |     public CAutomationControllerStatusView() => InitializeComponent(); ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다.
+L000024 | } ⟦EOL⟧

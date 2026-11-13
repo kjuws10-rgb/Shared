@@ -1,0 +1,89 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000004 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000005 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000007 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CAutoReviewMonitorDialog : Window
+L000009 | public partial class CAutoReviewMonitorDialog : Window ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(100) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(100) / 변수의 초기값을 지정합니다: _timer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) }
+L000011 |     private readonly DispatcherTimer _timer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(100) }; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CAutoReviewMonitorPanel Drilling.UI.Popup.CAutoReviewMonitorDialog._panel
+L000012 |     private readonly CAutoReviewMonitorPanel _panel; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · long Drilling.UI.Popup.CAutoReviewMonitorDialog._lastResults
+L000013 |     private long _lastResults; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAutoReviewMonitorDialog.CAutoReviewMonitorDialog(Drilling.UI.Menu.Menus.CAutoReviewMonitorPanel)
+L000014 |     public CAutoReviewMonitorDialog(CAutoReviewMonitorPanel panel) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 .ctor.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 값을 대상에 대입합니다: _panel = panel / 값을 대상에 대입합니다: DataContext = panel / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000016 |         InitializeComponent(); _panel = panel; DataContext = panel; ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: panel.Preview.ShowLineDetails = ShowLine
+L000017 |         panel.Preview.ShowLineDetails = ShowLine; ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width)
+L000018 |         Width = Math.Min(Width, SystemParameters.WorkArea.Width); ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height)
+L000019 |         Height = Math.Min(Height, SystemParameters.WorkArea.Height); ⟦EOL⟧
+// 해설 L20: 복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick += Refresh
+L000020 |         _timer.Tick += Refresh; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(null, EventArgs.Empty) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Start() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Stop() / 복합 대입 또는 이벤트 구독/해지 표현입니다: IsVisibleChanged += (_, _) => { if (IsVisible) { Refresh(null, EventArgs.Empty); _timer.Start(); } else _timer.Stop(); } / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (IsVisible)
+L000021 |         IsVisibleChanged += (_, _) => { if (IsVisible) { Refresh(null, EventArgs.Empty); _timer.Start(); } else _timer.Stop(); }; ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: panel.Preview.ShowLineDetails = null / 함수·델리게이트 또는 객체 생성자를 호출합니다: _timer.Stop() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Closed += (_, _) => { _timer.Stop(); _timer.Tick -= Refresh; panel.Preview.ShowLineDetails = null; } / 복합 대입 또는 이벤트 구독/해지 표현입니다: _timer.Tick -= Refresh
+L000022 |         Closed += (_, _) => { _timer.Stop(); _timer.Tick -= Refresh; panel.Preview.ShowLineDetails = null; }; ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 .ctor.
+L000023 |     } ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAutoReviewMonitorDialog.IsRefreshing
+L000024 |     public bool IsRefreshing => _timer.IsEnabled; ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAutoReviewMonitorDialog.Refresh(object?, System.EventArgs)
+L000025 |     private void Refresh(object? sender, EventArgs e) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 Refresh.
+L000026 |     { ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.RefreshFeedback()
+L000027 |         _panel.RefreshFeedback(); ⟦EOL⟧
+// 해설 L28: 지역 변수를 선언합니다: var now = Environment.TickCount64; / 변수의 초기값을 지정합니다: now = Environment.TickCount64
+L000028 |         var now = Environment.TickCount64; ⟦EOL⟧
+// 해설 L29: 조건에 따라 분기합니다: if (now - _lastResults < 200) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000029 |         if (now - _lastResults < 200) return; ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: _lastResults = now
+L000030 |         _lastResults = now; ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.RefreshResults()
+L000031 |         _panel.RefreshResults(); ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Refresh.
+L000032 |     } ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAutoReviewMonitorDialog.ShowLine(Drilling.UI.Menu.Menus.CFineInspectionLine)
+L000033 |     private void ShowLine(CFineInspectionLine line) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 ShowLine.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: Owner = this / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CFineLineDetailsDialog(line) { Owner = this } / 지역 변수를 선언합니다: var details = new CFineLineDetailsDialog(line) { Owner = this }; / 변수의 초기값을 지정합니다: details = new CFineLineDetailsDialog(line) { Owner = this }
+L000035 |         var details = new CFineLineDetailsDialog(line) { Owner = this }; ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: details.Show()
+L000036 |         details.Show(); ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ShowLine.
+L000037 |     } ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAutoReviewMonitorDialog.LineDoubleClicked(object, MouseButtonEventArgs)
+L000038 |     private void LineDoubleClicked(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 LineDoubleClicked.
+L000039 |     { ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowLine(line) / 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CFineInspectionLine line })
+L000040 |         if (sender is DataGrid { SelectedItem: CFineInspectionLine line }) ShowLine(line); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 LineDoubleClicked.
+L000041 |     } ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000042 |     private void CloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다.
+L000043 | } ⟦EOL⟧

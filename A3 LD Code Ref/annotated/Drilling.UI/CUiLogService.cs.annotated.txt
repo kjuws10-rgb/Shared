@@ -1,0 +1,374 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CUiLogService.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 | using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000004 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls.Primitives;
+L000005 | using System.Windows.Controls.Primitives; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000006 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000007 | using Drilling.Common.Log; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000009 | namespace Drilling.UI; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public static class CUiLogService
+L000011 | public static class CUiLogService ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: SyncRoot = new()
+L000013 |     private static readonly object SyncRoot = new(); ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · CLogManager? Drilling.UI.CUiLogService._logManager
+L000014 |     private static CLogManager? _logManager; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CUiLogService._isRegistered
+L000015 |     private static bool _isRegistered; ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CUiLogService.Configure(CLogManager)
+L000017 |     public static void Configure(CLogManager logManager) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 Configure.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(logManager)
+L000019 |         ArgumentNullException.ThrowIfNull(logManager); ⟦EOL⟧
+// 해설 L20: 공유 상태의 임계 구역에 진입합니다: lock (SyncRoot)
+L000020 |         lock (SyncRoot) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 Configure.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: _logManager = logManager
+L000022 |             _logManager = logManager; ⟦EOL⟧
+// 해설 L23: 조건에 따라 분기합니다: if (_isRegistered)
+L000023 |             if (_isRegistered) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Configure.
+L000024 |             { ⟦EOL⟧
+// 해설 L25: 호출자에게 값 또는 제어를 반환합니다: return;
+L000025 |                 return; ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 Configure.
+L000026 |             } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: EventManager.RegisterClassHandler(typeof(ButtonBase), ButtonBase.ClickEvent, new RoutedEventHandler(OnButtonClicked), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new RoutedEventHandler(OnButtonClicked)
+L000028 |             EventManager.RegisterClassHandler(typeof(ButtonBase), ButtonBase.ClickEvent, new RoutedEventHandler(OnButtonClicked), true); ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: _isRegistered = true
+L000029 |             _isRegistered = true; ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 Configure.
+L000030 |         } ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Configure.
+L000031 |     } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CUiLogService.WriteClick(string, string, string, string)
+L000033 |     public static void WriteClick(string screenName, string controlName, string parameter = "", string detail = "") ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 WriteClick.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 지역 변수를 선언합니다: CLogManager? logManager;
+L000035 |         CLogManager? logManager; ⟦EOL⟧
+// 해설 L36: 공유 상태의 임계 구역에 진입합니다: lock (SyncRoot)
+L000036 |         lock (SyncRoot) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 WriteClick.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: logManager = _logManager
+L000038 |             logManager = _logManager; ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 WriteClick.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 조건에 따라 분기합니다: if (logManager is null)
+L000041 |         if (logManager is null) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 WriteClick.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 호출자에게 값 또는 제어를 반환합니다: return;
+L000043 |             return; ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 WriteClick.
+L000044 |         } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 예외 처리 범위입니다: try
+L000046 |         try ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 WriteClick.
+L000047 |         { ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: logManager.WriteUiClick(Normalize(screenName, "UNKNOWN"), Normalize(controlName, "UNKNOWN"), Normalize(parameter, "-"), Normalize(detail, "-")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(screenName, "UNKNOWN") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(controlName, "UNKNOWN") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(parameter, "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(detail, "-")
+L000048 |             logManager.WriteUiClick(Normalize(screenName, "UNKNOWN"), Normalize(controlName, "UNKNOWN"), Normalize(parameter, "-"), Normalize(detail, "-")); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 WriteClick.
+L000049 |         } ⟦EOL⟧
+// 해설 L50: 지정 예외를 처리합니다: catch (IOException)
+L000050 |         catch (IOException) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 WriteClick.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 WriteClick.
+L000052 |         } ⟦EOL⟧
+// 해설 L53: 지정 예외를 처리합니다: catch (UnauthorizedAccessException)
+L000053 |         catch (UnauthorizedAccessException) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 WriteClick.
+L000054 |         { ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 WriteClick.
+L000055 |         } ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 WriteClick.
+L000056 |     } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CUiLogService.OnButtonClicked(object, RoutedEventArgs)
+L000058 |     private static void OnButtonClicked(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 OnButtonClicked.
+L000059 |     { ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShouldSkipButton(button) / 조건에 따라 분기합니다: if (sender is not ButtonBase button || ShouldSkipButton(button))
+L000060 |         if (sender is not ButtonBase button || ShouldSkipButton(button)) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 OnButtonClicked.
+L000061 |         { ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return;
+L000062 |             return; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 OnButtonClicked.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScreenName(button) / 지역 변수를 선언합니다: var screenName = GetScreenName(button); / 변수의 초기값을 지정합니다: screenName = GetScreenName(button)
+L000065 |         var screenName = GetScreenName(button); ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetControlName(button) / 지역 변수를 선언합니다: var controlName = GetControlName(button); / 변수의 초기값을 지정합니다: controlName = GetControlName(button)
+L000066 |         var controlName = GetControlName(button); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(button.CommandParameter) / 지역 변수를 선언합니다: var parameter = FormatValue(button.CommandParameter); / 변수의 초기값을 지정합니다: parameter = FormatValue(button.CommandParameter)
+L000067 |         var parameter = FormatValue(button.CommandParameter); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDetail(button) / 지역 변수를 선언합니다: var detail = GetDetail(button); / 변수의 초기값을 지정합니다: detail = GetDetail(button)
+L000068 |         var detail = GetDetail(button); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteClick(screenName, controlName, parameter, detail)
+L000069 |         WriteClick(screenName, controlName, parameter, detail); ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 OnButtonClicked.
+L000070 |     } ⟦EOL⟧
+L000071 |  ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CUiLogService.ShouldSkipButton(ButtonBase)
+L000072 |     private static bool ShouldSkipButton(ButtonBase button) ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000073 |     { ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(button) / 지역 변수를 선언합니다: var window = Window.GetWindow(button); / 변수의 초기값을 지정합니다: window = Window.GetWindow(button)
+L000074 |         var window = Window.GetWindow(button); ⟦EOL⟧
+// 해설 L75: 조건에 따라 분기합니다: if (window is null)
+L000075 |         if (window is null) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000076 |         { ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000077 |             return false; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000078 |         } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: window.GetType() / 지역 변수를 선언합니다: var windowTypeName = window.GetType().Name; / 변수의 초기값을 지정합니다: windowTypeName = window.GetType().Name
+L000080 |         var windowTypeName = window.GetType().Name; ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: windowTypeName.Equals("CValueInputDialog", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: windowTypeName.Equals("CPasswordInputDialog", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (!windowTypeName.Equals("CValueInputDialog", StringComparison.Ordinal) && !windowTypeName.Equals("CPasswordInputDialog", StringComparison.Ordinal))
+L000081 |         if (!windowTypeName.Equals("CValueInputDialog", StringComparison.Ordinal) && !windowTypeName.Equals("CPasswordInputDialog", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000082 |         { ⟦EOL⟧
+// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000083 |             return false; ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000084 |         } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(button.Content) / 지역 변수를 선언합니다: var content = FormatValue(button.Content); / 변수의 초기값을 지정합니다: content = FormatValue(button.Content)
+L000086 |         var content = FormatValue(button.Content); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: content.Equals("SPACE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: content.Equals("BACK", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: content.Equals("CLEAR", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (content.Length == 1 || content.Equals("SPACE", StringComparison.OrdinalIgnoreCase) || content.Equals("BACK", StringComparison.OrdinalIgnoreCase) || content.Equals("CLEAR", StringComparison.OrdinalIgnoreCase))
+L000087 |         if (content.Length == 1 || content.Equals("SPACE", StringComparison.OrdinalIgnoreCase) || content.Equals("BACK", StringComparison.OrdinalIgnoreCase) || content.Equals("CLEAR", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000088 |         { ⟦EOL⟧
+// 해설 L89: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000089 |             return true; ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000090 |         } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000092 |         return false; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ShouldSkipButton.
+L000093 |     } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CUiLogService.GetScreenName(FrameworkElement)
+L000095 |     private static string GetScreenName(FrameworkElement element) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000096 |     { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(element) / 지역 변수를 선언합니다: var window = Window.GetWindow(element); / 변수의 초기값을 지정합니다: window = Window.GetWindow(element)
+L000097 |         var window = Window.GetWindow(element); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: window.GetType().Name.Equals("CRootView", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: window.GetType() / 조건에 따라 분기합니다: if (window is not null && !window.GetType().Name.Equals("CRootView", StringComparison.Ordinal))
+L000098 |         if (window is not null && !window.GetType().Name.Equals("CRootView", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: window.GetType() / 호출자에게 값 또는 제어를 반환합니다: return window.GetType().Name;
+L000100 |             return window.GetType().Name; ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000101 |         } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: current = VisualTreeHelper.GetParent(current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(current) / 초기화·조건·증감이 있는 반복입니다: for (DependencyObject? current = element; current is not null; current = VisualTreeHelper.GetParent(current)) / 변수의 초기값을 지정합니다: current = element
+L000103 |         for (DependencyObject? current = element; current is not null; current = VisualTreeHelper.GetParent(current)) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 조건에 따라 분기합니다: if (current is UserControl control)
+L000105 |             if (current is UserControl control) ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000106 |             { ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.GetType() / 호출자에게 값 또는 제어를 반환합니다: return control.GetType().Name;
+L000107 |                 return control.GetType().Name; ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000108 |             } ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000109 |         } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: .GetType() / 호출자에게 값 또는 제어를 반환합니다: return window?.GetType().Name ?? "UNKNOWN";
+L000111 |         return window?.GetType().Name ?? "UNKNOWN"; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 GetScreenName.
+L000112 |     } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CUiLogService.GetControlName(ButtonBase)
+L000114 |     private static string GetControlName(ButtonBase button) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 GetControlName.
+L000115 |     { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(button.Name, "") / 지역 변수를 선언합니다: var name = Normalize(button.Name, ""); / 변수의 초기값을 지정합니다: name = Normalize(button.Name, "")
+L000116 |         var name = Normalize(button.Name, ""); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(name))
+L000117 |         if (!string.IsNullOrWhiteSpace(name)) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 GetControlName.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 호출자에게 값 또는 제어를 반환합니다: return name;
+L000119 |             return name; ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 GetControlName.
+L000120 |         } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(button.Uid, "") / 지역 변수를 선언합니다: var uid = Normalize(button.Uid, ""); / 변수의 초기값을 지정합니다: uid = Normalize(button.Uid, "")
+L000122 |         var uid = Normalize(button.Uid, ""); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(uid) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(uid))
+L000123 |         if (!string.IsNullOrWhiteSpace(uid)) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 GetControlName.
+L000124 |         { ⟦EOL⟧
+// 해설 L125: 호출자에게 값 또는 제어를 반환합니다: return uid;
+L000125 |             return uid; ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 GetControlName.
+L000126 |         } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(button.Content) / 지역 변수를 선언합니다: var content = FormatValue(button.Content); / 변수의 초기값을 지정합니다: content = FormatValue(button.Content)
+L000128 |         var content = FormatValue(button.Content); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(content) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(content))
+L000129 |         if (!string.IsNullOrWhiteSpace(content)) ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 GetControlName.
+L000130 |         { ⟦EOL⟧
+// 해설 L131: 호출자에게 값 또는 제어를 반환합니다: return content;
+L000131 |             return content; ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 GetControlName.
+L000132 |         } ⟦EOL⟧
+L000133 |  ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.GetType() / 호출자에게 값 또는 제어를 반환합니다: return button.GetType().Name;
+L000134 |         return button.GetType().Name; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 GetControlName.
+L000135 |     } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CUiLogService.GetDetail(ButtonBase)
+L000137 |     private static string GetDetail(ButtonBase button) ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 GetDetail.
+L000138 |     { ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var values = new List<string>(); / 변수의 초기값을 지정합니다: values = new List<string>()
+L000139 |         var values = new List<string>(); ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(button.Tag) / 지역 변수를 선언합니다: var tag = FormatValue(button.Tag); / 변수의 초기값을 지정합니다: tag = FormatValue(button.Tag)
+L000140 |         var tag = FormatValue(button.Tag); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tag) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(tag))
+L000141 |         if (!string.IsNullOrWhiteSpace(tag)) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 GetDetail.
+L000142 |         { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add($"Tag={tag}")
+L000143 |             values.Add($"Tag={tag}"); ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 GetDetail.
+L000144 |         } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(button.ToolTip) / 지역 변수를 선언합니다: var toolTip = FormatValue(button.ToolTip); / 변수의 초기값을 지정합니다: toolTip = FormatValue(button.ToolTip)
+L000146 |         var toolTip = FormatValue(button.ToolTip); ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(toolTip) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(toolTip))
+L000147 |         if (!string.IsNullOrWhiteSpace(toolTip)) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 GetDetail.
+L000148 |         { ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add($"ToolTip={toolTip}")
+L000149 |             values.Add($"ToolTip={toolTip}"); ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 GetDetail.
+L000150 |         } ⟦EOL⟧
+L000151 |  ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: .GetType() / 지역 변수를 선언합니다: var dataContext = button.DataContext?.GetType().Name ?? ""; / 변수의 초기값을 지정합니다: dataContext = button.DataContext?.GetType().Name ?? ""
+L000152 |         var dataContext = button.DataContext?.GetType().Name ?? ""; ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(dataContext) / 함수·델리게이트 또는 객체 생성자를 호출합니다: dataContext.Equals("String", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(dataContext) && !dataContext.Equals("String", StringComparison.Ordinal))
+L000153 |         if (!string.IsNullOrWhiteSpace(dataContext) && !dataContext.Equals("String", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 GetDetail.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Add($"DataContext={dataContext}")
+L000155 |             values.Add($"DataContext={dataContext}"); ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 GetDetail.
+L000156 |         } ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(", ", values) / 조건에 따라 결과식을 선택합니다: values.Count == 0 ? "-" : string.Join(", ", values) / 호출자에게 값 또는 제어를 반환합니다: return values.Count == 0 ? "-" : string.Join(", ", values);
+L000158 |         return values.Count == 0 ? "-" : string.Join(", ", values); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 GetDetail.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CUiLogService.FormatValue(object?)
+L000161 |     private static string FormatValue(object? value) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 FormatValue.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 조건에 따라 분기합니다: if (value is null)
+L000163 |         if (value is null) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 FormatValue.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000165 |             return ""; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 FormatValue.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 조건에 따라 분기합니다: if (value is string text)
+L000168 |         if (value is string text) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 FormatValue.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(text, "") / 호출자에게 값 또는 제어를 반환합니다: return Normalize(text, "");
+L000170 |             return Normalize(text, ""); ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 FormatValue.
+L000171 |         } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 조건에 따라 분기합니다: if (value is TextBlock textBlock)
+L000173 |         if (value is TextBlock textBlock) ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 FormatValue.
+L000174 |         { ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(textBlock.Text, "") / 호출자에게 값 또는 제어를 반환합니다: return Normalize(textBlock.Text, "");
+L000175 |             return Normalize(textBlock.Text, ""); ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 FormatValue.
+L000176 |         } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (value is FrameworkElement frameworkElement)
+L000178 |         if (value is FrameworkElement frameworkElement) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 FormatValue.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(frameworkElement.Name, "") / 지역 변수를 선언합니다: var elementName = Normalize(frameworkElement.Name, ""); / 변수의 초기값을 지정합니다: elementName = Normalize(frameworkElement.Name, "")
+L000180 |             var elementName = Normalize(frameworkElement.Name, ""); ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(elementName) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(elementName))
+L000181 |             if (!string.IsNullOrWhiteSpace(elementName)) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 FormatValue.
+L000182 |             { ⟦EOL⟧
+// 해설 L183: 호출자에게 값 또는 제어를 반환합니다: return elementName;
+L000183 |                 return elementName; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 FormatValue.
+L000184 |             } ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 FormatValue.
+L000185 |         } ⟦EOL⟧
+L000186 |  ⟦EOL⟧
+// 해설 L187: 조건에 따라 분기합니다: if (value is IFormattable formattable)
+L000187 |         if (value is IFormattable formattable) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 FormatValue.
+L000188 |         { ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(formattable.ToString(null, CultureInfo.InvariantCulture) ?? "", "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: formattable.ToString(null, CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return Normalize(formattable.ToString(null, CultureInfo.InvariantCulture) ?? "", "");
+L000189 |             return Normalize(formattable.ToString(null, CultureInfo.InvariantCulture) ?? "", ""); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 FormatValue.
+L000190 |         } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value.ToString() ?? "", "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString() / 호출자에게 값 또는 제어를 반환합니다: return Normalize(value.ToString() ?? "", "");
+L000192 |         return Normalize(value.ToString() ?? "", ""); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 FormatValue.
+L000193 |     } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CUiLogService.Normalize(string, string)
+L000195 |     private static string Normalize(string value, string defaultValue) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 Normalize.
+L000196 |     { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("\r", " ").Replace("\n", " ").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("\r", " ").Replace("\n", " ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace("\r", " ") / 지역 변수를 선언합니다: var normalized = value.Replace("\r", " ").Replace("\n", " ").Trim(); / 변수의 초기값을 지정합니다: normalized = value.Replace("\r", " ").Replace("\n", " ").Trim()
+L000197 |         var normalized = value.Replace("\r", " ").Replace("\n", " ").Trim(); ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(normalized) ? defaultValue : normalized / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(normalized) ? defaultValue : normalized;
+L000198 |         return string.IsNullOrWhiteSpace(normalized) ? defaultValue : normalized; ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 Normalize.
+L000199 |     } ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다.
+L000200 | } ⟦EOL⟧

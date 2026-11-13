@@ -1,0 +1,127 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: .gitattributes
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000001 | ############################################################################### ⟦EOL⟧
+// 해설 L2: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Set default behavior to automatically normalize line endings.
+L000002 | # Set default behavior to automatically normalize line endings. ⟦EOL⟧
+// 해설 L3: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000003 | ############################################################################### ⟦EOL⟧
+// 해설 L4: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000004 | * text=auto ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000006 | ############################################################################### ⟦EOL⟧
+// 해설 L7: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Set default behavior for command prompt diff.
+L000007 | # Set default behavior for command prompt diff. ⟦EOL⟧
+// 해설 L8: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #
+L000008 | # ⟦EOL⟧
+// 해설 L9: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # This is need for earlier builds of msysgit that does not have it on by
+L000009 | # This is need for earlier builds of msysgit that does not have it on by ⟦EOL⟧
+// 해설 L10: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # default for csharp files.
+L000010 | # default for csharp files. ⟦EOL⟧
+// 해설 L11: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Note: This is only used by command line
+L000011 | # Note: This is only used by command line ⟦EOL⟧
+// 해설 L12: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000012 | ############################################################################### ⟦EOL⟧
+// 해설 L13: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.cs     diff=csharp
+L000013 | #*.cs     diff=csharp ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000015 | ############################################################################### ⟦EOL⟧
+// 해설 L16: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Set the merge driver for project and solution files
+L000016 | # Set the merge driver for project and solution files ⟦EOL⟧
+// 해설 L17: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #
+L000017 | # ⟦EOL⟧
+// 해설 L18: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Merging from the command prompt will add diff markers to the files if there
+L000018 | # Merging from the command prompt will add diff markers to the files if there ⟦EOL⟧
+// 해설 L19: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # are conflicts (Merging from VS is not affected by the settings below, in VS
+L000019 | # are conflicts (Merging from VS is not affected by the settings below, in VS ⟦EOL⟧
+// 해설 L20: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # the diff markers are never inserted). Diff markers may cause the following
+L000020 | # the diff markers are never inserted). Diff markers may cause the following  ⟦EOL⟧
+// 해설 L21: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # file extensions to fail to load in VS. An alternative would be to treat
+L000021 | # file extensions to fail to load in VS. An alternative would be to treat ⟦EOL⟧
+// 해설 L22: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # these files as binary and thus will always conflict and require user
+L000022 | # these files as binary and thus will always conflict and require user ⟦EOL⟧
+// 해설 L23: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # intervention with every merge. To do so, just uncomment the entries below
+L000023 | # intervention with every merge. To do so, just uncomment the entries below ⟦EOL⟧
+// 해설 L24: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000024 | ############################################################################### ⟦EOL⟧
+// 해설 L25: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.sln       merge=binary
+L000025 | #*.sln       merge=binary ⟦EOL⟧
+// 해설 L26: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.csproj    merge=binary
+L000026 | #*.csproj    merge=binary ⟦EOL⟧
+// 해설 L27: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.vbproj    merge=binary
+L000027 | #*.vbproj    merge=binary ⟦EOL⟧
+// 해설 L28: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.vcxproj   merge=binary
+L000028 | #*.vcxproj   merge=binary ⟦EOL⟧
+// 해설 L29: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.vcproj    merge=binary
+L000029 | #*.vcproj    merge=binary ⟦EOL⟧
+// 해설 L30: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.dbproj    merge=binary
+L000030 | #*.dbproj    merge=binary ⟦EOL⟧
+// 해설 L31: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.fsproj    merge=binary
+L000031 | #*.fsproj    merge=binary ⟦EOL⟧
+// 해설 L32: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.lsproj    merge=binary
+L000032 | #*.lsproj    merge=binary ⟦EOL⟧
+// 해설 L33: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.wixproj   merge=binary
+L000033 | #*.wixproj   merge=binary ⟦EOL⟧
+// 해설 L34: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.modelproj merge=binary
+L000034 | #*.modelproj merge=binary ⟦EOL⟧
+// 해설 L35: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.sqlproj   merge=binary
+L000035 | #*.sqlproj   merge=binary ⟦EOL⟧
+// 해설 L36: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.wwaproj   merge=binary
+L000036 | #*.wwaproj   merge=binary ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000038 | ############################################################################### ⟦EOL⟧
+// 해설 L39: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # behavior for image files
+L000039 | # behavior for image files ⟦EOL⟧
+// 해설 L40: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #
+L000040 | # ⟦EOL⟧
+// 해설 L41: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # image files are treated as binary by default.
+L000041 | # image files are treated as binary by default. ⟦EOL⟧
+// 해설 L42: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000042 | ############################################################################### ⟦EOL⟧
+// 해설 L43: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.jpg   binary
+L000043 | #*.jpg   binary ⟦EOL⟧
+// 해설 L44: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.png   binary
+L000044 | #*.png   binary ⟦EOL⟧
+// 해설 L45: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.gif   binary
+L000045 | #*.gif   binary ⟦EOL⟧
+L000046 |  ⟦EOL⟧
+// 해설 L47: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000047 | ############################################################################### ⟦EOL⟧
+// 해설 L48: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # diff behavior for common document formats
+L000048 | # diff behavior for common document formats ⟦EOL⟧
+// 해설 L49: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #
+L000049 | #  ⟦EOL⟧
+// 해설 L50: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # Convert binary document formats to text before diffing them. This feature
+L000050 | # Convert binary document formats to text before diffing them. This feature ⟦EOL⟧
+// 해설 L51: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # is only available from the command line. Turn it on by uncommenting the
+L000051 | # is only available from the command line. Turn it on by uncommenting the  ⟦EOL⟧
+// 해설 L52: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: # entries below.
+L000052 | # entries below. ⟦EOL⟧
+// 해설 L53: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: ###############################################################################
+L000053 | ############################################################################### ⟦EOL⟧
+// 해설 L54: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.doc   diff=astextplain
+L000054 | #*.doc   diff=astextplain ⟦EOL⟧
+// 해설 L55: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.DOC   diff=astextplain
+L000055 | #*.DOC   diff=astextplain ⟦EOL⟧
+// 해설 L56: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.docx  diff=astextplain
+L000056 | #*.docx  diff=astextplain ⟦EOL⟧
+// 해설 L57: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.DOCX  diff=astextplain
+L000057 | #*.DOCX  diff=astextplain ⟦EOL⟧
+// 해설 L58: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.dot   diff=astextplain
+L000058 | #*.dot   diff=astextplain ⟦EOL⟧
+// 해설 L59: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.DOT   diff=astextplain
+L000059 | #*.DOT   diff=astextplain ⟦EOL⟧
+// 해설 L60: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.pdf   diff=astextplain
+L000060 | #*.pdf   diff=astextplain ⟦EOL⟧
+// 해설 L61: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.PDF   diff=astextplain
+L000061 | #*.PDF   diff=astextplain ⟦EOL⟧
+// 해설 L62: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.rtf   diff=astextplain
+L000062 | #*.rtf   diff=astextplain ⟦EOL⟧
+// 해설 L63: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #*.RTF   diff=astextplain
+L000063 | #*.RTF   diff=astextplain ⟦EOL⟧

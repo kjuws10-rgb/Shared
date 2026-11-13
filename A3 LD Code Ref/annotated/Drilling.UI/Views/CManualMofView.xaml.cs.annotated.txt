@@ -1,0 +1,306 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CManualMofView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System;
+L000001 | using System; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000004 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI;
+L000005 | using Drilling.UI; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000008 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CManualMofView : UserControl
+L000009 | public partial class CManualMofView : UserControl ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: PreviewZoomMinimum = 1.0
+L000011 |     private const double PreviewZoomMinimum = 1.0; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CManualMofView._isGlassPreviewDragging
+L000012 |     private bool _isGlassPreviewDragging; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Views.CManualMofView._glassPreviewDragStart
+L000013 |     private Point _glassPreviewDragStart; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Views.CManualMofView._glassPreviewDragStartX
+L000014 |     private double _glassPreviewDragStartX; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Views.CManualMofView._glassPreviewDragStartY
+L000015 |     private double _glassPreviewDragStartY; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CManualMofView.CManualMofView()
+L000016 |     public CManualMofView() ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 .ctor.
+L000019 |     } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.GlassPreview_PreviewMouseLeftButtonDown(object, MouseButtonEventArgs)
+L000021 |     private void GlassPreview_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000022 |     { ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideGlassPreviewHoverTip()
+L000023 |         HideGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L24: 조건에 따라 분기합니다: if (sender is not FrameworkElement preview || GlassPreviewScaleTransform.ScaleX <= PreviewZoomMinimum)
+L000024 |         if (sender is not FrameworkElement preview || GlassPreviewScaleTransform.ScaleX <= PreviewZoomMinimum) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 호출자에게 값 또는 제어를 반환합니다: return;
+L000026 |             return; ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000027 |         } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: preview.CaptureMouse() / 조건에 따라 분기합니다: if (!preview.CaptureMouse())
+L000029 |         if (!preview.CaptureMouse()) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000030 |         { ⟦EOL⟧
+// 해설 L31: 호출자에게 값 또는 제어를 반환합니다: return;
+L000031 |             return; ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000032 |         } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: _isGlassPreviewDragging = true
+L000034 |         _isGlassPreviewDragging = true; ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: _glassPreviewDragStart = e.GetPosition(preview) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview)
+L000035 |         _glassPreviewDragStart = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: _glassPreviewDragStartX = GlassPreviewTranslateTransform.X
+L000036 |         _glassPreviewDragStartX = GlassPreviewTranslateTransform.X; ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: _glassPreviewDragStartY = GlassPreviewTranslateTransform.Y
+L000037 |         _glassPreviewDragStartY = GlassPreviewTranslateTransform.Y; ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: preview.Cursor = Cursors.SizeAll
+L000038 |         preview.Cursor = Cursors.SizeAll; ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: e.Handled = true
+L000039 |         e.Handled = true; ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonDown.
+L000040 |     } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.GlassPreview_PreviewMouseMove(object, MouseEventArgs)
+L000042 |     private void GlassPreview_PreviewMouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseMove.
+L000043 |     { ⟦EOL⟧
+// 해설 L44: 조건에 따라 분기합니다: if (!_isGlassPreviewDragging || sender is not FrameworkElement preview)
+L000044 |         if (!_isGlassPreviewDragging || sender is not FrameworkElement preview) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseMove.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 호출자에게 값 또는 제어를 반환합니다: return;
+L000046 |             return; ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseMove.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(preview) / 지역 변수를 선언합니다: var current = e.GetPosition(preview); / 변수의 초기값을 지정합니다: current = e.GetPosition(preview)
+L000049 |         var current = e.GetPosition(preview); ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.X = _glassPreviewDragStartX + current.X - _glassPreviewDragStart.X
+L000050 |         GlassPreviewTranslateTransform.X = _glassPreviewDragStartX + current.X - _glassPreviewDragStart.X; ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.Y = _glassPreviewDragStartY + current.Y - _glassPreviewDragStart.Y
+L000051 |         GlassPreviewTranslateTransform.Y = _glassPreviewDragStartY + current.Y - _glassPreviewDragStart.Y; ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampGlassPreviewTranslation(preview)
+L000052 |         ClampGlassPreviewTranslation(preview); ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: e.Handled = true
+L000053 |         e.Handled = true; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseMove.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.GlassPreview_PreviewMouseLeftButtonUp(object, MouseButtonEventArgs)
+L000056 |     private void GlassPreview_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonUp.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 조건에 따라 분기합니다: if (!_isGlassPreviewDragging || sender is not FrameworkElement preview)
+L000058 |         if (!_isGlassPreviewDragging || sender is not FrameworkElement preview) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonUp.
+L000059 |         { ⟦EOL⟧
+// 해설 L60: 호출자에게 값 또는 제어를 반환합니다: return;
+L000060 |             return; ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonUp.
+L000061 |         } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndGlassPreviewDrag(preview)
+L000063 |         EndGlassPreviewDrag(preview); ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: e.Handled = true
+L000064 |         e.Handled = true; ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 GlassPreview_PreviewMouseLeftButtonUp.
+L000065 |     } ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.GlassPreview_LostMouseCapture(object, MouseEventArgs)
+L000067 |     private void GlassPreview_LostMouseCapture(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 GlassPreview_LostMouseCapture.
+L000068 |     { ⟦EOL⟧
+// 해설 L69: 조건에 따라 분기합니다: if (sender is FrameworkElement preview)
+L000069 |         if (sender is FrameworkElement preview) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 GlassPreview_LostMouseCapture.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndGlassPreviewDrag(preview)
+L000071 |             EndGlassPreviewDrag(preview); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 GlassPreview_LostMouseCapture.
+L000072 |         } ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 GlassPreview_LostMouseCapture.
+L000073 |     } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.EndGlassPreviewDrag(FrameworkElement)
+L000075 |     private void EndGlassPreviewDrag(FrameworkElement preview) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 EndGlassPreviewDrag.
+L000076 |     { ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: _isGlassPreviewDragging = false
+L000077 |         _isGlassPreviewDragging = false; ⟦EOL⟧
+// 해설 L78: 조건에 따라 분기합니다: if (Mouse.Captured == preview)
+L000078 |         if (Mouse.Captured == preview) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 EndGlassPreviewDrag.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: preview.ReleaseMouseCapture()
+L000080 |             preview.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 EndGlassPreviewDrag.
+L000081 |         } ⟦EOL⟧
+L000082 |  ⟦EOL⟧
+// 해설 L83: 값을 대상에 대입합니다: preview.Cursor = Cursors.Hand
+L000083 |         preview.Cursor = Cursors.Hand; ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 EndGlassPreviewDrag.
+L000084 |     } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.CellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000086 |     private void CellPreviewLabel_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000087 |     { ⟦EOL⟧
+// 해설 L88: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })
+L000088 |         if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000089 |         { ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideGlassPreviewHoverTip()
+L000090 |             HideGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L91: 호출자에게 값 또는 제어를 반환합니다: return;
+L000091 |             return; ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 값을 대상에 대입합니다: GlassPreviewHoverTipText.Text = label.DisplayText
+L000094 |         GlassPreviewHoverTipText.Text = label.DisplayText; ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: GlassPreviewHoverTip.Visibility = Visibility.Visible
+L000095 |         GlassPreviewHoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionGlassPreviewHoverTip(e.GetPosition(GlassPreviewViewport)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(GlassPreviewViewport)
+L000096 |         PositionGlassPreviewHoverTip(e.GetPosition(GlassPreviewViewport)); ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseMove.
+L000097 |     } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.CellPreviewLabel_MouseLeave(object, MouseEventArgs)
+L000099 |     private void CellPreviewLabel_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseLeave.
+L000100 |     { ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideGlassPreviewHoverTip()
+L000101 |         HideGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 CellPreviewLabel_MouseLeave.
+L000102 |     } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.PositionGlassPreviewHoverTip(Point)
+L000104 |     private void PositionGlassPreviewHoverTip(Point pointer) ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000105 |     { ⟦EOL⟧
+// 해설 L106: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000106 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L107: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000107 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L108: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000108 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: GlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000109 |         GlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L110: 지역 변수를 선언합니다: var tipSize = GlassPreviewHoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = GlassPreviewHoverTip.DesiredSize
+L000110 |         var tipSize = GlassPreviewHoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L111: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000111 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L112: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000112 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L113: 조건에 따라 분기합니다: if (GlassPreviewViewport.ActualWidth > 0)
+L000113 |         if (GlassPreviewViewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000114 |         { ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, GlassPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, GlassPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, GlassPreviewViewport.ActualWidth - tipSize.Width - margin)
+L000115 |             x = Math.Clamp(x, margin, Math.Max(margin, GlassPreviewViewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000116 |         } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 조건에 따라 분기합니다: if (GlassPreviewViewport.ActualHeight > 0)
+L000118 |         if (GlassPreviewViewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, GlassPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, GlassPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, GlassPreviewViewport.ActualHeight - tipSize.Height - margin)
+L000120 |             y = Math.Clamp(y, margin, Math.Max(margin, GlassPreviewViewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000121 |         } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: GlassPreviewHoverTipTranslateTransform.X = x
+L000123 |         GlassPreviewHoverTipTranslateTransform.X = x; ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: GlassPreviewHoverTipTranslateTransform.Y = y
+L000124 |         GlassPreviewHoverTipTranslateTransform.Y = y; ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 PositionGlassPreviewHoverTip.
+L000125 |     } ⟦EOL⟧
+L000126 |  ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.HideGlassPreviewHoverTip()
+L000127 |     private void HideGlassPreviewHoverTip() ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 HideGlassPreviewHoverTip.
+L000128 |     { ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: GlassPreviewHoverTip.Visibility = Visibility.Collapsed
+L000129 |         GlassPreviewHoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: GlassPreviewHoverTipText.Text = ""
+L000130 |         GlassPreviewHoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 HideGlassPreviewHoverTip.
+L000131 |     } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.ClampGlassPreviewTranslation(FrameworkElement)
+L000133 |     private void ClampGlassPreviewTranslation(FrameworkElement preview) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 ClampGlassPreviewTranslation.
+L000134 |     { ⟦EOL⟧
+// 해설 L135: 지역 변수를 선언합니다: var scale = GlassPreviewScaleTransform.ScaleX; / 변수의 초기값을 지정합니다: scale = GlassPreviewScaleTransform.ScaleX
+L000135 |         var scale = GlassPreviewScaleTransform.ScaleX; ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, scale - PreviewZoomMinimum) / 지역 변수를 선언합니다: var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); / 변수의 초기값을 지정합니다: overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum)
+L000136 |         var overflowRatio = Math.Max(0.0, scale - PreviewZoomMinimum); ⟦EOL⟧
+// 해설 L137: 지역 변수를 선언합니다: var origin = GlassPreviewZoomContent.RenderTransformOrigin; / 변수의 초기값을 지정합니다: origin = GlassPreviewZoomContent.RenderTransformOrigin
+L000137 |         var origin = GlassPreviewZoomContent.RenderTransformOrigin; ⟦EOL⟧
+// 해설 L138: 지역 변수를 선언합니다: var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; / 변수의 초기값을 지정합니다: minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio
+L000138 |         var minX = -preview.ActualWidth * (1.0 - origin.X) * overflowRatio; ⟦EOL⟧
+// 해설 L139: 지역 변수를 선언합니다: var maxX = preview.ActualWidth * origin.X * overflowRatio; / 변수의 초기값을 지정합니다: maxX = preview.ActualWidth * origin.X * overflowRatio
+L000139 |         var maxX = preview.ActualWidth * origin.X * overflowRatio; ⟦EOL⟧
+// 해설 L140: 지역 변수를 선언합니다: var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; / 변수의 초기값을 지정합니다: minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio
+L000140 |         var minY = -preview.ActualHeight * (1.0 - origin.Y) * overflowRatio; ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: var maxY = preview.ActualHeight * origin.Y * overflowRatio; / 변수의 초기값을 지정합니다: maxY = preview.ActualHeight * origin.Y * overflowRatio
+L000141 |         var maxY = preview.ActualHeight * origin.Y * overflowRatio; ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.X = Math.Clamp(GlassPreviewTranslateTransform.X, minX, maxX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(GlassPreviewTranslateTransform.X, minX, maxX)
+L000142 |         GlassPreviewTranslateTransform.X = Math.Clamp(GlassPreviewTranslateTransform.X, minX, maxX); ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.Y = Math.Clamp(GlassPreviewTranslateTransform.Y, minY, maxY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(GlassPreviewTranslateTransform.Y, minY, maxY)
+L000143 |         GlassPreviewTranslateTransform.Y = Math.Clamp(GlassPreviewTranslateTransform.Y, minY, maxY); ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 ClampGlassPreviewTranslation.
+L000144 |     } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CManualMofView.MofView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000146 |     private void MofView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 MofView_IsVisibleChanged.
+L000147 |     { ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (e.NewValue is not false)
+L000148 |         if (e.NewValue is not false) ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 MofView_IsVisibleChanged.
+L000149 |         { ⟦EOL⟧
+// 해설 L150: 호출자에게 값 또는 제어를 반환합니다: return;
+L000150 |             return; ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 MofView_IsVisibleChanged.
+L000151 |         } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndGlassPreviewDrag(GlassPreviewViewport)
+L000153 |         EndGlassPreviewDrag(GlassPreviewViewport); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideGlassPreviewHoverTip()
+L000154 |         HideGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: GlassPreviewScaleTransform.ScaleX = PreviewZoomMinimum
+L000155 |         GlassPreviewScaleTransform.ScaleX = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L156: 값을 대상에 대입합니다: GlassPreviewScaleTransform.ScaleY = PreviewZoomMinimum
+L000156 |         GlassPreviewScaleTransform.ScaleY = PreviewZoomMinimum; ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.X = 0
+L000157 |         GlassPreviewTranslateTransform.X = 0; ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: GlassPreviewTranslateTransform.Y = 0
+L000158 |         GlassPreviewTranslateTransform.Y = 0; ⟦EOL⟧
+// 해설 L159: 값을 대상에 대입합니다: GlassPreviewZoomContent.RenderTransformOrigin = new Point(0.5, 0.5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(0.5, 0.5)
+L000159 |         GlassPreviewZoomContent.RenderTransformOrigin = new Point(0.5, 0.5); ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 MofView_IsVisibleChanged.
+L000160 |     } ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다.
+L000161 | } ⟦EOL⟧

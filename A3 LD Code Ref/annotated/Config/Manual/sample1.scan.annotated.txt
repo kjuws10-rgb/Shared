@@ -1,0 +1,19 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Config/Manual/sample1.scan
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000001 | NAME,VALUE ⟦EOL⟧
+// 해설 L2: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000002 | LaserPower,1.00 ⟦EOL⟧
+// 해설 L3: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000003 | JumpSpeed,1.500 ⟦EOL⟧
+// 해설 L4: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000004 | MarkSpeed,0.900 ⟦EOL⟧
+// 해설 L5: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000005 | LaserFrequency,20.000 ⟦EOL⟧
+// 해설 L6: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000006 | LaserOnDelay,8.000 ⟦EOL⟧
+// 해설 L7: 수동 패턴 설정 행입니다. 키/값의 해석은 CManualScanFile 소비 경로를 확인합니다.
+L000007 | LaserOffDelay,12.000 ⟦EOL⟧

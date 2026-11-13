@@ -1,0 +1,1409 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Serial/CBeamExpander.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Serial/CBeamExpander.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Serial/CBeamExpander.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>03863c21ee7090c376d28f5692562f60e13eaf9efa617f9f5964a87158246346</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>16,548 bytes / 475 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/a4bfddc62b0618c04a3f.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CBeamExpander</td><td>ClassDeclaration</td><td>12–424</td><td>CBeamExpander: CSerialComm(data, option)</td></tr>
+<tr><td>EN_BET_COMMAND</td><td>EnumDeclaration</td><td>426–438</td><td>EN_BET_COMMAND</td></tr>
+<tr><td>EN_BET_ERROR</td><td>EnumDeclaration</td><td>440–447</td><td>EN_BET_ERROR</td></tr>
+<tr><td>ST_BET_STATUS</td><td>RecordDeclaration</td><td>449–464</td><td>ST_BET_STATUS</td></tr>
+<tr><td>ST_BET_TABLE_DATA</td><td>RecordDeclaration</td><td>465–475</td><td>ST_BET_TABLE_DATA</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>ResponseQuietTimeoutMs</td><td>FieldDeclaration</td><td>L16–16</td><td>int Drilling.Common.Interface.CBeamExpander.ResponseQuietTimeoutMs</td></tr>
+<tr><td>ResponsePollIntervalMs</td><td>FieldDeclaration</td><td>L17–17</td><td>int Drilling.Common.Interface.CBeamExpander.ResponsePollIntervalMs</td></tr>
+<tr><td>MaxResponseLength</td><td>FieldDeclaration</td><td>L18–18</td><td>int Drilling.Common.Interface.CBeamExpander.MaxResponseLength</td></tr>
+<tr><td>Build</td><td>MethodDeclaration</td><td>L19–33</td><td>string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)</td></tr>
+<tr><td>BuildLogText</td><td>MethodDeclaration</td><td>L35–43</td><td>string Drilling.Common.Interface.CBeamExpander.BuildLogText(Drilling.Common.Interface.EN_BET_COMMAND, double, double)</td></tr>
+<tr><td>IsSuccessResponse</td><td>MethodDeclaration</td><td>L45–48</td><td>bool Drilling.Common.Interface.CBeamExpander.IsSuccessResponse(string)</td></tr>
+<tr><td>Apply</td><td>MethodDeclaration</td><td>L50–129</td><td>Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L131–142</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CBeamExpander.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ExecuteBeamExpander</td><td>MethodDeclaration</td><td>L144–175</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L157–160</td><td>string SelectValue()</td></tr>
+<tr><td>ExecuteBeamExpander</td><td>MethodDeclaration</td><td>L177–201</td><td>string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string)</td></tr>
+<tr><td>SendMove</td><td>MethodDeclaration</td><td>L203–221</td><td>string Drilling.Common.Interface.CBeamExpander.SendMove(double, double)</td></tr>
+<tr><td>SendSelecting</td><td>MethodDeclaration</td><td>L223–228</td><td>string Drilling.Common.Interface.CBeamExpander.SendSelecting(string)</td></tr>
+<tr><td>SendPolling</td><td>MethodDeclaration</td><td>L230–261</td><td>string Drilling.Common.Interface.CBeamExpander.SendPolling(string)</td></tr>
+<tr><td>SendAndWaitAck</td><td>MethodDeclaration</td><td>L263–267</td><td>bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string)</td></tr>
+<tr><td>NormalizeAckWriteCommand</td><td>MethodDeclaration</td><td>L269–273</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizeAckWriteCommand(string)</td></tr>
+<tr><td>NormalizePollingWriteCommand</td><td>MethodDeclaration</td><td>L275–283</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)</td></tr>
+<tr><td>IsPollingCommand</td><td>MethodDeclaration</td><td>L285–289</td><td>bool Drilling.Common.Interface.CBeamExpander.IsPollingCommand(string)</td></tr>
+<tr><td>NormalizePollingCommand</td><td>MethodDeclaration</td><td>L291–305</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string)</td></tr>
+<tr><td>ReadDeviceResponse</td><td>MethodDeclaration</td><td>L307–342</td><td>string Drilling.Common.Interface.CBeamExpander.ReadDeviceResponse()</td></tr>
+<tr><td>WaitForNextResponseByte</td><td>MethodDeclaration</td><td>L344–362</td><td>bool Drilling.Common.Interface.CBeamExpander.WaitForNextResponseByte()</td></tr>
+<tr><td>ToMotorStep</td><td>MethodDeclaration</td><td>L364–367</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double)</td></tr>
+<tr><td>CreateSimulationResponse</td><td>MethodDeclaration</td><td>L369–378</td><td>string Drilling.Common.Interface.CBeamExpander.CreateSimulationResponse(Drilling.Common.Interface.EN_BET_COMMAND, double, double, Drilling.Common.Interface.ST_BET_STATUS)</td></tr>
+<tr><td>ReadError</td><td>MethodDeclaration</td><td>L380–395</td><td>Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)</td></tr>
+<tr><td>ReadTaggedDouble</td><td>MethodDeclaration</td><td>L397–402</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double)</td></tr>
+<tr><td>TryReadBeamPosition</td><td>MethodDeclaration</td><td>L404–423</td><td>bool Drilling.Common.Interface.CBeamExpander.TryReadBeamPosition(string, out double)</td></tr>
+<tr><td>MatchesChar</td><td>LocalFunctionStatement</td><td>L409–412</td><td>bool MatchesChar(char)</td></tr>
+<tr><td>InitMotor</td><td>EnumMemberDeclaration</td><td>L428–428</td><td>Drilling.Common.Interface.EN_BET_COMMAND.InitMotor</td></tr>
+<tr><td>MoveManual</td><td>EnumMemberDeclaration</td><td>L429–429</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveManual</td></tr>
+<tr><td>MoveMagnification</td><td>EnumMemberDeclaration</td><td>L430–430</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveMagnification</td></tr>
+<tr><td>MoveDivergence</td><td>EnumMemberDeclaration</td><td>L431–431</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveDivergence</td></tr>
+<tr><td>MoveTable</td><td>EnumMemberDeclaration</td><td>L432–432</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveTable</td></tr>
+<tr><td>Stop</td><td>EnumMemberDeclaration</td><td>L433–433</td><td>Drilling.Common.Interface.EN_BET_COMMAND.Stop</td></tr>
+<tr><td>ResetAlarm</td><td>EnumMemberDeclaration</td><td>L434–434</td><td>Drilling.Common.Interface.EN_BET_COMMAND.ResetAlarm</td></tr>
+<tr><td>Refresh</td><td>EnumMemberDeclaration</td><td>L435–435</td><td>Drilling.Common.Interface.EN_BET_COMMAND.Refresh</td></tr>
+<tr><td>PollMagnificationPosition</td><td>EnumMemberDeclaration</td><td>L436–436</td><td>Drilling.Common.Interface.EN_BET_COMMAND.PollMagnificationPosition</td></tr>
+<tr><td>PollDivergencePosition</td><td>EnumMemberDeclaration</td><td>L437–437</td><td>Drilling.Common.Interface.EN_BET_COMMAND.PollDivergencePosition</td></tr>
+<tr><td>Ok</td><td>EnumMemberDeclaration</td><td>L442–442</td><td>Drilling.Common.Interface.EN_BET_ERROR.Ok</td></tr>
+<tr><td>Error</td><td>EnumMemberDeclaration</td><td>L443–443</td><td>Drilling.Common.Interface.EN_BET_ERROR.Error</td></tr>
+<tr><td>Timeout</td><td>EnumMemberDeclaration</td><td>L444–444</td><td>Drilling.Common.Interface.EN_BET_ERROR.Timeout</td></tr>
+<tr><td>InvalidResponse</td><td>EnumMemberDeclaration</td><td>L445–445</td><td>Drilling.Common.Interface.EN_BET_ERROR.InvalidResponse</td></tr>
+<tr><td>NotSupported</td><td>EnumMemberDeclaration</td><td>L446–446</td><td>Drilling.Common.Interface.EN_BET_ERROR.NotSupported</td></tr>
+<tr><td>DefaultRowBeamSize</td><td>FieldDeclaration</td><td>L467–467</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.DefaultRowBeamSize</td></tr>
+<tr><td>SpotSize</td><td>PropertyDeclaration</td><td>L468–474</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize</td></tr>
+<tr><td>get_SpotSize</td><td>GetAccessorDeclaration</td><td>L470–473</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize.get</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L16">FieldDeclaration <code>ResponseQuietTimeoutMs</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L16-L16">Drilling.Common/Interface/Serial/CBeamExpander.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CBeamExpander.ResponseQuietTimeoutMs</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ResponseQuietTimeoutMs = 50</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>ResponsePollIntervalMs</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L17-L17">Drilling.Common/Interface/Serial/CBeamExpander.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CBeamExpander.ResponsePollIntervalMs</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ResponsePollIntervalMs = 5</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>MaxResponseLength</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L18-L18">Drilling.Common/Interface/Serial/CBeamExpander.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CBeamExpander.MaxResponseLength</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>18</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaxResponseLength = 128</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">MethodDeclaration <code>Build</code> · L19–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L19-L33">Drilling.Common/Interface/Serial/CBeamExpander.cs:19–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>magnification</td><td>double</td><td>None</td><td>True / 0</td></tr>
+<tr><td>divergence</td><td>double</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1304-L1304">Drilling.Common/Interface/CInterfaceManager.cs:1304–1304</a></td><td>CBeamExpander.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L42-L42">Drilling.Common/Interface/Serial/CBeamExpander.cs:42–42</a></td><td>Build</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>24</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, params System.ReadOnlySpan&lt;string?&gt;)</td></tr>
+<tr><td>24</td><td>magnification.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>24</td><td>divergence.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>25</td><td>ToMotorStep(magnification).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>25</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>26</td><td>ToMotorStep(divergence).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>26</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.InitMotor =&gt; &quot;#I:&quot;, EN_BET_COMMAND.MoveManual =&gt; string.Join(&quot;:&quot;, &quot;MOVE&quot;, magnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture), divergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)),</td></tr>
+<tr><td>21</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.InitMotor =&gt; &quot;#I:&quot;, EN_BET_COMMAND.MoveManual =&gt; string.Join(&quot;:&quot;, &quot;MOVE&quot;, magnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture), divergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)), EN_BET</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;:&quot;, &quot;MOVE&quot;, magnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture), divergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture))</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: magnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: divergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Build&quot;]
+ N0[&quot;L21 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">MethodDeclaration <code>BuildLogText</code> · L35–43</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L35-L43">Drilling.Common/Interface/Serial/CBeamExpander.cs:35–43</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.BuildLogText(Drilling.Common.Interface.EN_BET_COMMAND, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>magnification</td><td>double</td><td>None</td><td>True / 0</td></tr>
+<tr><td>divergence</td><td>double</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1305-L1305">Drilling.Common/Interface/CInterfaceManager.cs:1305–1305</a></td><td>CBeamExpander.BuildLogText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>39</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, params System.ReadOnlySpan&lt;string?&gt;)</td></tr>
+<tr><td>39</td><td>ToMotorStep(divergence).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>39</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>39</td><td>ToMotorStep(magnification).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>39</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>40</td><td>ToMotorStep(magnification).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>40</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>41</td><td>ToMotorStep(divergence).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>41</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>42</td><td>Build</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.Build(Drilling.Common.Interface.EN_BET_COMMAND, double, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:19</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>37</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.MoveManual =&gt; string.Join(&quot; / &quot;, $&quot;#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}&quot;, $&quot;#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}&quot;), EN_BET_COM</td></tr>
+<tr><td>37</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.MoveManual =&gt; string.Join(&quot; / &quot;, $&quot;#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}&quot;, $&quot;#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}&quot;), EN_BET_COMMAND.Mo</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot; / &quot;, $&quot;#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}&quot;, $&quot;#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}&quot;)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Build(command, magnification, divergence)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BuildLogText&quot;]
+ N0[&quot;L37 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L45">MethodDeclaration <code>IsSuccessResponse</code> · L45–48</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L45-L48">Drilling.Common/Interface/Serial/CBeamExpander.cs:45–48</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CBeamExpander.IsSuccessResponse(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1349-L1349">Drilling.Common/Interface/CInterfaceManager.cs:1349–1349</a></td><td>CBeamExpander.IsSuccessResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L53-L53">Drilling.Common/Interface/Serial/CBeamExpander.cs:53–53</a></td><td>IsSuccessResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>47</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>47</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) &amp;&amp; !response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L50">MethodDeclaration <code>Apply</code> · L50–129</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L50-L129">Drilling.Common/Interface/Serial/CBeamExpander.cs:50–129</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_BET_STATUS Drilling.Common.Interface.CBeamExpander.Apply(Drilling.Common.Interface.EN_BET_COMMAND, double, double, string, Drilling.Common.Interface.ST_BET_STATUS, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_BET_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>magnification</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>divergence</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_BET_STATUS</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1319-L1319">Drilling.Common/Interface/CInterfaceManager.cs:1319–1319</a></td><td>CBeamExpander.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1346-L1346">Drilling.Common/Interface/CInterfaceManager.cs:1346–1346</a></td><td>CBeamExpander.Apply</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>52</td><td>CreateSimulationResponse</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.CreateSimulationResponse(Drilling.Common.Interface.EN_BET_COMMAND, double, double, Drilling.Common.Interface.ST_BET_STATUS) · Drilling.Common/Interface/Serial/CBeamExpander.cs:369</td></tr>
+<tr><td>52</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>53</td><td>IsSuccessResponse</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.IsSuccessResponse(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:45</td></tr>
+<tr><td>58</td><td>ReadError</td><td>resolved</td><td>Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:380</td></tr>
+<tr><td>117</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:397</td></tr>
+<tr><td>118</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:397</td></tr>
+<tr><td>123</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:397</td></tr>
+<tr><td>124</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:397</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, magnification, divergence, current)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>52</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim()</td></tr>
+<tr><td>52</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim();</td></tr>
+<tr><td>52</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, magnification, divergence, current) : response.Trim()</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSuccessResponse(value)</td></tr>
+<tr><td>53</td><td>if</td><td>조건에 따라 분기합니다: if (!simulation &amp;&amp; !IsSuccessResponse(value))</td></tr>
+<tr><td>55</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return current with { CommOk = false, LastError = ReadError(value), UpdatedAt = DateTimeOffset.Now };</td></tr>
+<tr><td>57</td><td>assignment</td><td>값을 대상에 대입합니다: CommOk = false</td></tr>
+<tr><td>58</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ReadError(value)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadError(value)</td></tr>
+<tr><td>59</td><td>assignment</td><td>값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now</td></tr>
+<tr><td>63</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ok = current with { CommOk = true, LastError = EN_BET_ERROR.Ok, UpdatedAt = DateTimeOffset.Now };</td></tr>
+<tr><td>63</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ok = current with { CommOk = true, LastError = EN_BET_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: CommOk = true</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = EN_BET_ERROR.Ok</td></tr>
+<tr><td>67</td><td>assignment</td><td>값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now</td></tr>
+<tr><td>69</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.InitMotor =&gt; ok with { IsMoving = false, MagHomeCompleted = true, DivHomeCompleted = true, LastCommand = &quot;INIT&quot; }, EN_BET_COMMAND.MoveManual =&gt; ok with { CurrentMagnification = simulation ? m</td></tr>
+<tr><td>69</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.InitMotor =&gt; ok with { IsMoving = false, MagHomeCompleted = true, DivHomeCompleted = true, LastCommand = &quot;INIT&quot; }, EN_BET_COMMAND.MoveManual =&gt; ok with { CurrentMagnification = simulation ? magnific</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = false</td></tr>
+<tr><td>74</td><td>assignment</td><td>값을 대상에 대입합니다: MagHomeCompleted = true</td></tr>
+<tr><td>75</td><td>assignment</td><td>값을 대상에 대입합니다: DivHomeCompleted = true</td></tr>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;INIT&quot;</td></tr>
+<tr><td>80</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentMagnification = simulation ? magnification : ok.CurrentMagnification</td></tr>
+<tr><td>80</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.CurrentMagnification</td></tr>
+<tr><td>81</td><td>assignment</td><td>값을 대상에 대입합니다: TargetMagnification = magnification</td></tr>
+<tr><td>82</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentDivergence = simulation ? divergence : ok.CurrentDivergence</td></tr>
+<tr><td>82</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.CurrentDivergence</td></tr>
+<tr><td>83</td><td>assignment</td><td>값을 대상에 대입합니다: TargetDivergence = divergence</td></tr>
+<tr><td>84</td><td>assignment</td><td>값을 대상에 대입합니다: MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition</td></tr>
+<tr><td>84</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.MagnificationAxisPosition</td></tr>
+<tr><td>85</td><td>assignment</td><td>값을 대상에 대입합니다: DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.DivergenceAxisPosition</td></tr>
+<tr><td>86</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = !simulation</td></tr>
+<tr><td>87</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;MOVE&quot;</td></tr>
+<tr><td>91</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentMagnification = simulation ? magnification : ok.CurrentMagnification</td></tr>
+<tr><td>91</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.CurrentMagnification</td></tr>
+<tr><td>92</td><td>assignment</td><td>값을 대상에 대입합니다: TargetMagnification = magnification</td></tr>
+<tr><td>93</td><td>assignment</td><td>값을 대상에 대입합니다: MagnificationAxisPosition = simulation ? magnification : ok.MagnificationAxisPosition</td></tr>
+<tr><td>93</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? magnification : ok.MagnificationAxisPosition</td></tr>
+<tr><td>94</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = !simulation</td></tr>
+<tr><td>95</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;MOVE MAG&quot;</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentDivergence = simulation ? divergence : ok.CurrentDivergence</td></tr>
+<tr><td>99</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.CurrentDivergence</td></tr>
+<tr><td>100</td><td>assignment</td><td>값을 대상에 대입합니다: TargetDivergence = divergence</td></tr>
+<tr><td>101</td><td>assignment</td><td>값을 대상에 대입합니다: DivergenceAxisPosition = simulation ? divergence : ok.DivergenceAxisPosition</td></tr>
+<tr><td>101</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? divergence : ok.DivergenceAxisPosition</td></tr>
+<tr><td>102</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = !simulation</td></tr>
+<tr><td>103</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;MOVE DIV&quot;</td></tr>
+<tr><td>107</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = false</td></tr>
+<tr><td>108</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;STOP&quot;</td></tr>
+<tr><td>112</td><td>assignment</td><td>값을 대상에 대입합니다: AlarmOn = false</td></tr>
+<tr><td>113</td><td>assignment</td><td>값을 대상에 대입합니다: LastCommand = &quot;RESET&quot;</td></tr>
+<tr><td>117</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentMagnification = ReadTaggedDouble(value, &quot;M2&quot;, ok.CurrentMagnification)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;M2&quot;, ok.CurrentMagnification)</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: MagnificationAxisPosition = ReadTaggedDouble(value, &quot;M2&quot;, ok.MagnificationAxisPosition)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;M2&quot;, ok.MagnificationAxisPosition)</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = false</td></tr>
+<tr><td>123</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentDivergence = ReadTaggedDouble(value, &quot;M1&quot;, ok.CurrentDivergence)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;M1&quot;, ok.CurrentDivergence)</td></tr>
+<tr><td>124</td><td>assignment</td><td>값을 대상에 대입합니다: DivergenceAxisPosition = ReadTaggedDouble(value, &quot;M1&quot;, ok.DivergenceAxisPosition)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;M1&quot;, ok.DivergenceAxisPosition)</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: IsMoving = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Apply&quot;]
+ N0[&quot;L53 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L69 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L131">MethodDeclaration <code>Execute</code> · L131–142</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L131-L142">Drilling.Common/Interface/Serial/CBeamExpander.cs:131–142</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CBeamExpander.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>133</td><td>SerialLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>136</td><td>ExecuteBeamExpander</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string, System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CBeamExpander.cs:144</td></tr>
+<tr><td>140</td><td>SerialLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>133</td><td>await</td><td>비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>134</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>136</td><td>await</td><td>비동기 완료를 기다립니다: await ExecuteBeamExpander(function, cancellationToken)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteBeamExpander(function, cancellationToken)</td></tr>
+<tr><td>136</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return await ExecuteBeamExpander(function, cancellationToken);</td></tr>
+<tr><td>138</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L134 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L138 finally&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L144">MethodDeclaration <code>ExecuteBeamExpander</code> · L144–175</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L144-L175">Drilling.Common/Interface/Serial/CBeamExpander.cs:144–175</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L136-L136">Drilling.Common/Interface/Serial/CBeamExpander.cs:136–136</a></td><td>ExecuteBeamExpander</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>148</td><td>Connect</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CSerialComm.cs:32</td></tr>
+<tr><td>164</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.Task.Run&lt;string&gt;(System.Func&lt;string&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>165</td><td>LastReceived.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>166</td><td>SetResponseState</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetResponseState(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:206</td></tr>
+<tr><td>171</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>172</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception) · Drilling.Common/Interface/Serial/CSerialComm.cs:192</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>148</td><td>await</td><td>비동기 완료를 기다립니다: await Connect(cancellationToken)</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)</td></tr>
+<tr><td>151</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>153</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>156</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = function</td></tr>
+<tr><td>162</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>164</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = await Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>164</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? LastReceived : &quot;&quot;</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>165</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? LastReceived : &quot;&quot;</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetResponseState(LastReceived)</td></tr>
+<tr><td>167</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>169</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException)</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>173</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteBeamExpander&quot;]
+ N0[&quot;L146 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L151 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L162 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L169 catch&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L157">LocalFunctionStatement <code>SelectValue</code> · L157–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L157-L160">Drilling.Common/Interface/Serial/CBeamExpander.cs:157–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>159</td><td>ExecuteBeamExpander</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:177</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteBeamExpander(function)</td></tr>
+<tr><td>159</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExecuteBeamExpander(function);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L177">MethodDeclaration <code>ExecuteBeamExpander</code> · L177–201</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L177-L201">Drilling.Common/Interface/Serial/CBeamExpander.cs:177–201</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.ExecuteBeamExpander(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L159-L159">Drilling.Common/Interface/Serial/CBeamExpander.cs:159–159</a></td><td>ExecuteBeamExpander</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>179</td><td>function.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>180</td><td>function.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>180</td><td>function.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>183</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.SendSelecting(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:223</td></tr>
+<tr><td>186</td><td>text.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>186</td><td>text.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>188</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.SendSelecting(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:223</td></tr>
+<tr><td>191</td><td>IsPollingCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.IsPollingCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:285</td></tr>
+<tr><td>193</td><td>SendPolling</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.SendPolling(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:230</td></tr>
+<tr><td>196</td><td>parts[0].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>198</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>198</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>198</td><td>SendMove</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.SendMove(double, double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:203</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(&#x27;:&#x27;, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>179</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parts = function.Split(&#x27;:&#x27;, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);</td></tr>
+<tr><td>179</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parts = function.Split(&#x27;:&#x27;, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant()</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim()</td></tr>
+<tr><td>180</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = function.Trim().ToUpperInvariant();</td></tr>
+<tr><td>180</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = function.Trim().ToUpperInvariant()</td></tr>
+<tr><td>181</td><td>if</td><td>조건에 따라 분기합니다: if (text is &quot;#I:&quot; or &quot;#I:!&quot; or &quot;#0:&quot; or &quot;#0:!&quot;)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(text)</td></tr>
+<tr><td>183</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SendSelecting(text);</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith(&quot;#1:&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith(&quot;#2:&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>186</td><td>if</td><td>조건에 따라 분기합니다: if (text.StartsWith(&quot;#1:&quot;, StringComparison.Ordinal) || text.StartsWith(&quot;#2:&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(text)</td></tr>
+<tr><td>188</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SendSelecting(text);</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsPollingCommand(text)</td></tr>
+<tr><td>191</td><td>if</td><td>조건에 따라 분기합니다: if (IsPollingCommand(text))</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text)</td></tr>
+<tr><td>193</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SendPolling(text);</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parts[0].ToUpperInvariant()</td></tr>
+<tr><td>196</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parts.Length &gt; 0 ? parts[0].ToUpperInvariant() switch { &quot;MOVE&quot; when parts.Length &gt;= 3 &amp;&amp; double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) &amp;&amp; double.TryParse(parts[2], NumberStyles.Float, Cul</td></tr>
+<tr><td>196</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parts.Length &gt; 0 ? parts[0].ToUpperInvariant() switch { &quot;MOVE&quot; when parts.Length &gt;= 3 &amp;&amp; double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) &amp;&amp; double.TryParse(parts[2], NumberStyles.Flo</td></tr>
+<tr><td>196</td><td>switch-expression</td><td>값별 결과식을 선택합니다: parts[0].ToUpperInvariant() switch { &quot;MOVE&quot; when parts.Length &gt;= 3 &amp;&amp; double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag) &amp;&amp; double.TryParse(parts[2], NumberStyles.Float, CultureInfo.InvariantC</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var mag)</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[2], NumberStyles.Float, CultureInfo.InvariantCulture, out var div)</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendMove(mag, div)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteBeamExpander&quot;]
+ N0[&quot;L181 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L186 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L191 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L196 switch-expression&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L203">MethodDeclaration <code>SendMove</code> · L203–221</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L203-L221">Drilling.Common/Interface/Serial/CBeamExpander.cs:203–221</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.SendMove(double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>magnification</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>divergence</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L198-L198">Drilling.Common/Interface/Serial/CBeamExpander.cs:198–198</a></td><td>SendMove</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>205</td><td>SerialPort!.DiscardInBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>206</td><td>SerialPort.DiscardOutBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>207</td><td>ToMotorStep(divergence).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>207</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>208</td><td>ToMotorStep(magnification).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>208</td><td>ToMotorStep</td><td>resolved</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:364</td></tr>
+<tr><td>210</td><td>SendAndWaitAck</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:263</td></tr>
+<tr><td>215</td><td>SendAndWaitAck</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:263</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()</td></tr>
+<tr><td>206</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(divergence)</td></tr>
+<tr><td>207</td><td>local-declaration</td><td>지역 변수를 선언합니다: var divCommand = $&quot;#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}&quot;;</td></tr>
+<tr><td>207</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: divCommand = $&quot;#1:{ToMotorStep(divergence).ToString(CultureInfo.InvariantCulture)}&quot;</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ToMotorStep(magnification)</td></tr>
+<tr><td>208</td><td>local-declaration</td><td>지역 변수를 선언합니다: var magCommand = $&quot;#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}&quot;;</td></tr>
+<tr><td>208</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: magCommand = $&quot;#2:{ToMotorStep(magnification).ToString(CultureInfo.InvariantCulture)}&quot;</td></tr>
+<tr><td>209</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = $&quot;{divCommand} / {magCommand}&quot;</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(divCommand)</td></tr>
+<tr><td>210</td><td>if</td><td>조건에 따라 분기합니다: if (!SendAndWaitAck(divCommand))</td></tr>
+<tr><td>212</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-2&quot;;</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(magCommand)</td></tr>
+<tr><td>215</td><td>if</td><td>조건에 따라 분기합니다: if (!SendAndWaitAck(magCommand))</td></tr>
+<tr><td>217</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-2&quot;;</td></tr>
+<tr><td>220</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;OK&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SendMove&quot;]
+ N0[&quot;L210 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L215 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L223">MethodDeclaration <code>SendSelecting</code> · L223–228</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L223-L228">Drilling.Common/Interface/Serial/CBeamExpander.cs:223–228</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.SendSelecting(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L183-L183">Drilling.Common/Interface/Serial/CBeamExpander.cs:183–183</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L188-L188">Drilling.Common/Interface/Serial/CBeamExpander.cs:188–188</a></td><td>SendSelecting</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>225</td><td>SerialPort!.DiscardInBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>226</td><td>SerialPort.DiscardOutBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>227</td><td>SendAndWaitAck</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:263</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendAndWaitAck(command)</td></tr>
+<tr><td>227</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: SendAndWaitAck(command) ? &quot;OK&quot; : &quot;ERR:-2&quot;</td></tr>
+<tr><td>227</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SendAndWaitAck(command) ? &quot;OK&quot; : &quot;ERR:-2&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L230">MethodDeclaration <code>SendPolling</code> · L230–261</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L230-L261">Drilling.Common/Interface/Serial/CBeamExpander.cs:230–261</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.SendPolling(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L193-L193">Drilling.Common/Interface/Serial/CBeamExpander.cs:193–193</a></td><td>SendPolling</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>NormalizePollingCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:291</td></tr>
+<tr><td>238</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>243</td><td>SerialPort!.DiscardInBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>244</td><td>SerialPort.DiscardOutBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>245</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>245</td><td>NormalizePollingWriteCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:275</td></tr>
+<tr><td>248</td><td>ReadDeviceResponse</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.ReadDeviceResponse() · Drilling.Common/Interface/Serial/CBeamExpander.cs:307</td></tr>
+<tr><td>249</td><td>TryReadBeamPosition</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.TryReadBeamPosition(string, out double) · Drilling.Common/Interface/Serial/CBeamExpander.cs:404</td></tr>
+<tr><td>249</td><td>position.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>253</td><td>SerialPort.ReadExisting</td><td>unresolved</td><td>None</td></tr>
+<tr><td>254</td><td>string.IsNullOrWhiteSpace</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>259</td><td>TryReadBeamPosition</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>259</td><td>position.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = NormalizePollingCommand(command) switch { &quot;7&quot; =&gt; &quot;M1&quot;, &quot;8&quot; =&gt; &quot;M2&quot;, _ =&gt; &quot;&quot; };</td></tr>
+<tr><td>232</td><td>switch-expression</td><td>값별 결과식을 선택합니다: NormalizePollingCommand(command) switch { &quot;7&quot; =&gt; &quot;M1&quot;, &quot;8&quot; =&gt; &quot;M2&quot;, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = NormalizePollingCommand(command) switch { &quot;7&quot; =&gt; &quot;M1&quot;, &quot;8&quot; =&gt; &quot;M2&quot;, _ =&gt; &quot;&quot; }</td></tr>
+<tr><td>238</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized)</td></tr>
+<tr><td>238</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalized))</td></tr>
+<tr><td>240</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-2&quot;;</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()</td></tr>
+<tr><td>244</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()</td></tr>
+<tr><td>245</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(NormalizePollingWriteCommand(command))</td></tr>
+<tr><td>245</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingWriteCommand(command)</td></tr>
+<tr><td>246</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>248</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDeviceResponse()</td></tr>
+<tr><td>248</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = ReadDeviceResponse();</td></tr>
+<tr><td>248</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = ReadDeviceResponse()</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadBeamPosition(response, out var position)</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>249</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryReadBeamPosition(response, out var position) ? $&quot;{normalized}:{position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot; : &quot;ERR:-2&quot;</td></tr>
+<tr><td>249</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return TryReadBeamPosition(response, out var position) ? $&quot;{normalized}:{position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot; : &quot;ERR:-2&quot;;</td></tr>
+<tr><td>251</td><td>catch</td><td>지정 예외를 처리합니다: catch (TimeoutException)</td></tr>
+<tr><td>253</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting()</td></tr>
+<tr><td>253</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = SerialPort.ReadExisting();</td></tr>
+<tr><td>253</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = SerialPort.ReadExisting()</td></tr>
+<tr><td>254</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>254</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response))</td></tr>
+<tr><td>256</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-1&quot;;</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadBeamPosition(response, out var position)</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>259</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryReadBeamPosition(response, out var position) ? $&quot;{normalized}:{position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot; : &quot;ERR:-2&quot;</td></tr>
+<tr><td>259</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return TryReadBeamPosition(response, out var position) ? $&quot;{normalized}:{position.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot; : &quot;ERR:-2&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SendPolling&quot;]
+ N0[&quot;L232 switch-expression&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L238 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L246 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L251 catch&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L254 if&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L263">MethodDeclaration <code>SendAndWaitAck</code> · L263–267</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L263-L267">Drilling.Common/Interface/Serial/CBeamExpander.cs:263–267</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CBeamExpander.SendAndWaitAck(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L210-L210">Drilling.Common/Interface/Serial/CBeamExpander.cs:210–210</a></td><td>SendAndWaitAck</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L215-L215">Drilling.Common/Interface/Serial/CBeamExpander.cs:215–215</a></td><td>SendAndWaitAck</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L227-L227">Drilling.Common/Interface/Serial/CBeamExpander.cs:227–227</a></td><td>SendAndWaitAck</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>265</td><td>SerialPort!.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>265</td><td>NormalizeAckWriteCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizeAckWriteCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:269</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.Write(NormalizeAckWriteCommand(command))</td></tr>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeAckWriteCommand(command)</td></tr>
+<tr><td>266</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L269">MethodDeclaration <code>NormalizeAckWriteCommand</code> · L269–273</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L269-L273">Drilling.Common/Interface/Serial/CBeamExpander.cs:269–273</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizeAckWriteCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L265-L265">Drilling.Common/Interface/Serial/CBeamExpander.cs:265–265</a></td><td>NormalizeAckWriteCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>271</td><td>command.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>272</td><td>text.EndsWith</td><td>resolved</td><td>bool string.EndsWith(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>271</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim()</td></tr>
+<tr><td>271</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = command.Trim();</td></tr>
+<tr><td>271</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = command.Trim()</td></tr>
+<tr><td>272</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.EndsWith(&#x27;!&#x27;)</td></tr>
+<tr><td>272</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: text.EndsWith(&#x27;!&#x27;) ? text[..^1] : text</td></tr>
+<tr><td>272</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return text.EndsWith(&#x27;!&#x27;) ? text[..^1] : text;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L275">MethodDeclaration <code>NormalizePollingWriteCommand</code> · L275–283</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L275-L283">Drilling.Common/Interface/Serial/CBeamExpander.cs:275–283</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingWriteCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L245-L245">Drilling.Common/Interface/Serial/CBeamExpander.cs:245–245</a></td><td>NormalizePollingWriteCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>277</td><td>NormalizePollingCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:291</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>277</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command)</td></tr>
+<tr><td>277</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return NormalizePollingCommand(command) switch { &quot;7&quot; =&gt; &quot;#7:&quot;, &quot;8&quot; =&gt; &quot;#8:&quot;, _ =&gt; command };</td></tr>
+<tr><td>277</td><td>switch-expression</td><td>값별 결과식을 선택합니다: NormalizePollingCommand(command) switch { &quot;7&quot; =&gt; &quot;#7:&quot;, &quot;8&quot; =&gt; &quot;#8:&quot;, _ =&gt; command }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NormalizePollingWriteCommand&quot;]
+ N0[&quot;L277 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L285">MethodDeclaration <code>IsPollingCommand</code> · L285–289</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L285-L289">Drilling.Common/Interface/Serial/CBeamExpander.cs:285–289</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CBeamExpander.IsPollingCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L191-L191">Drilling.Common/Interface/Serial/CBeamExpander.cs:191–191</a></td><td>IsPollingCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>287</td><td>NormalizePollingCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string) · Drilling.Common/Interface/Serial/CBeamExpander.cs:291</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>287</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePollingCommand(command)</td></tr>
+<tr><td>287</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalized = NormalizePollingCommand(command);</td></tr>
+<tr><td>287</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalized = NormalizePollingCommand(command)</td></tr>
+<tr><td>288</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return normalized is &quot;7&quot; or &quot;8&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">MethodDeclaration <code>NormalizePollingCommand</code> · L291–305</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L291-L305">Drilling.Common/Interface/Serial/CBeamExpander.cs:291–305</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.NormalizePollingCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L232-L232">Drilling.Common/Interface/Serial/CBeamExpander.cs:232–232</a></td><td>NormalizePollingCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L277-L277">Drilling.Common/Interface/Serial/CBeamExpander.cs:277–277</a></td><td>NormalizePollingCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L287-L287">Drilling.Common/Interface/Serial/CBeamExpander.cs:287–287</a></td><td>NormalizePollingCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>293</td><td>command.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>293</td><td>command.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>294</td><td>text.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>299</td><td>text.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim().ToUpperInvariant()</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim()</td></tr>
+<tr><td>293</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = command.Trim().ToUpperInvariant();</td></tr>
+<tr><td>293</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = command.Trim().ToUpperInvariant()</td></tr>
+<tr><td>294</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith(&quot;#7:&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>294</td><td>if</td><td>조건에 따라 분기합니다: if (text.StartsWith(&quot;#7:&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>296</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;7&quot;;</td></tr>
+<tr><td>299</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.StartsWith(&quot;#8:&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>299</td><td>if</td><td>조건에 따라 분기합니다: if (text.StartsWith(&quot;#8:&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>301</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;8&quot;;</td></tr>
+<tr><td>304</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NormalizePollingCommand&quot;]
+ N0[&quot;L294 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L299 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L307">MethodDeclaration <code>ReadDeviceResponse</code> · L307–342</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L307-L342">Drilling.Common/Interface/Serial/CBeamExpander.cs:307–342</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.ReadDeviceResponse()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L248-L248">Drilling.Common/Interface/Serial/CBeamExpander.cs:248–248</a></td><td>ReadDeviceResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>309</td><td>new StringBuilder</td><td>resolved</td><td>System.Text.StringBuilder.StringBuilder()</td></tr>
+<tr><td>312</td><td>WaitForNextResponseByte</td><td>resolved</td><td>bool Drilling.Common.Interface.CBeamExpander.WaitForNextResponseByte() · Drilling.Common/Interface/Serial/CBeamExpander.cs:344</td></tr>
+<tr><td>317</td><td>SerialPort!.ReadChar</td><td>unresolved</td><td>None</td></tr>
+<tr><td>334</td><td>builder.Append</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.Append(char)</td></tr>
+<tr><td>341</td><td>builder.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder()</td></tr>
+<tr><td>309</td><td>local-declaration</td><td>지역 변수를 선언합니다: var builder = new StringBuilder();</td></tr>
+<tr><td>309</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: builder = new StringBuilder()</td></tr>
+<tr><td>310</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (builder.Length &lt; MaxResponseLength)</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WaitForNextResponseByte()</td></tr>
+<tr><td>312</td><td>if</td><td>조건에 따라 분기합니다: if (builder.Length &gt; 0 &amp;&amp; !WaitForNextResponseByte())</td></tr>
+<tr><td>314</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>317</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.ReadChar()</td></tr>
+<tr><td>317</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = SerialPort!.ReadChar();</td></tr>
+<tr><td>317</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = SerialPort!.ReadChar()</td></tr>
+<tr><td>318</td><td>if</td><td>조건에 따라 분기합니다: if (value &lt; 0)</td></tr>
+<tr><td>320</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>323</td><td>local-declaration</td><td>지역 변수를 선언합니다: var character = (char)value;</td></tr>
+<tr><td>323</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: character = (char)value</td></tr>
+<tr><td>324</td><td>if</td><td>조건에 따라 분기합니다: if (character is &#x27;\r&#x27; or &#x27;\n&#x27;)</td></tr>
+<tr><td>326</td><td>if</td><td>조건에 따라 분기합니다: if (builder.Length &gt; 0)</td></tr>
+<tr><td>328</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>331</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>334</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(character)</td></tr>
+<tr><td>335</td><td>if</td><td>조건에 따라 분기합니다: if (character == &#x27;!&#x27;)</td></tr>
+<tr><td>337</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString()</td></tr>
+<tr><td>341</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return builder.ToString();</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadDeviceResponse&quot;]
+ N0[&quot;L310 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L312 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L318 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L324 if&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L326 if&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L335 if&quot;]
+ N0 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L344">MethodDeclaration <code>WaitForNextResponseByte</code> · L344–362</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L344-L362">Drilling.Common/Interface/Serial/CBeamExpander.cs:344–362</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CBeamExpander.WaitForNextResponseByte()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L312-L312">Drilling.Common/Interface/Serial/CBeamExpander.cs:312–312</a></td><td>WaitForNextResponseByte</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>354</td><td>Thread.Sleep</td><td>resolved</td><td>void System.Threading.Thread.Sleep(int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>346</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort!.BytesToRead &gt; 0)</td></tr>
+<tr><td>348</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>351</td><td>local-declaration</td><td>지역 변수를 선언합니다: var expiresAt = Environment.TickCount64 + ResponseQuietTimeoutMs;</td></tr>
+<tr><td>351</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: expiresAt = Environment.TickCount64 + ResponseQuietTimeoutMs</td></tr>
+<tr><td>352</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (Environment.TickCount64 &lt; expiresAt)</td></tr>
+<tr><td>354</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(ResponsePollIntervalMs)</td></tr>
+<tr><td>355</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort.BytesToRead &gt; 0)</td></tr>
+<tr><td>357</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>361</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WaitForNextResponseByte&quot;]
+ N0[&quot;L346 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L352 while&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L355 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L364">MethodDeclaration <code>ToMotorStep</code> · L364–367</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L364-L367">Drilling.Common/Interface/Serial/CBeamExpander.cs:364–367</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CBeamExpander.ToMotorStep(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L25-L25">Drilling.Common/Interface/Serial/CBeamExpander.cs:25–25</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L26-L26">Drilling.Common/Interface/Serial/CBeamExpander.cs:26–26</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39">Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39">Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L40-L40">Drilling.Common/Interface/Serial/CBeamExpander.cs:40–40</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L41-L41">Drilling.Common/Interface/Serial/CBeamExpander.cs:41–41</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L207-L207">Drilling.Common/Interface/Serial/CBeamExpander.cs:207–207</a></td><td>ToMotorStep</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L208-L208">Drilling.Common/Interface/Serial/CBeamExpander.cs:208–208</a></td><td>ToMotorStep</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>366</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>366</td><td>Math.Round</td><td>resolved</td><td>double System.Math.Round(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>366</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)Math.Round(value), 0, 4500)</td></tr>
+<tr><td>366</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(value)</td></tr>
+<tr><td>366</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Clamp((int)Math.Round(value), 0, 4500);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L369">MethodDeclaration <code>CreateSimulationResponse</code> · L369–378</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L369-L378">Drilling.Common/Interface/Serial/CBeamExpander.cs:369–378</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CBeamExpander.CreateSimulationResponse(Drilling.Common.Interface.EN_BET_COMMAND, double, double, Drilling.Common.Interface.ST_BET_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>magnification</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>divergence</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_BET_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L52-L52">Drilling.Common/Interface/Serial/CBeamExpander.cs:52–52</a></td><td>CreateSimulationResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>373</td><td>current.CurrentMagnification.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>374</td><td>current.CurrentDivergence.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>375</td><td>magnification.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>375</td><td>divergence.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>371</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_BET_COMMAND.PollMagnificationPosition or EN_BET_COMMAND.Refresh =&gt; $&quot;M2:{current.CurrentMagnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot;, EN_BET_COMMAND.PollDivergencePosition =&gt; $&quot;M1:{curren</td></tr>
+<tr><td>371</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_BET_COMMAND.PollMagnificationPosition or EN_BET_COMMAND.Refresh =&gt; $&quot;M2:{current.CurrentMagnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot;, EN_BET_COMMAND.PollDivergencePosition =&gt; $&quot;M1:{current.Curre</td></tr>
+<tr><td>373</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentMagnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>374</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentDivergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: magnification.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: divergence.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateSimulationResponse&quot;]
+ N0[&quot;L371 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L380">MethodDeclaration <code>ReadError</code> · L380–395</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L380-L395">Drilling.Common/Interface/Serial/CBeamExpander.cs:380–395</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR Drilling.Common.Interface.CBeamExpander.ReadError(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L58-L58">Drilling.Common/Interface/Serial/CBeamExpander.cs:58–58</a></td><td>ReadError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>382</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>383</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>382</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>382</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;</td></tr>
+<tr><td>382</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;;</td></tr>
+<tr><td>382</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;</td></tr>
+<tr><td>383</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code)</td></tr>
+<tr><td>383</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code))</td></tr>
+<tr><td>385</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EN_BET_ERROR.Error;</td></tr>
+<tr><td>388</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return code switch { -99 =&gt; EN_BET_ERROR.NotSupported, -2 =&gt; EN_BET_ERROR.InvalidResponse, -1 =&gt; EN_BET_ERROR.Timeout, _ =&gt; EN_BET_ERROR.Error };</td></tr>
+<tr><td>388</td><td>switch-expression</td><td>값별 결과식을 선택합니다: code switch { -99 =&gt; EN_BET_ERROR.NotSupported, -2 =&gt; EN_BET_ERROR.InvalidResponse, -1 =&gt; EN_BET_ERROR.Timeout, _ =&gt; EN_BET_ERROR.Error }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadError&quot;]
+ N0[&quot;L383 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L388 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L397">MethodDeclaration <code>ReadTaggedDouble</code> · L397–402</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L397-L402">Drilling.Common/Interface/Serial/CBeamExpander.cs:397–402</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CBeamExpander.ReadTaggedDouble(string, string, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>tag</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L117-L117">Drilling.Common/Interface/Serial/CBeamExpander.cs:117–117</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L118-L118">Drilling.Common/Interface/Serial/CBeamExpander.cs:118–118</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L123-L123">Drilling.Common/Interface/Serial/CBeamExpander.cs:123–123</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L124-L124">Drilling.Common/Interface/Serial/CBeamExpander.cs:124–124</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>400</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>401</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>399</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;{tag}:&quot;;</td></tr>
+<tr><td>399</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;{tag}:&quot;</td></tr>
+<tr><td>400</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>400</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>400</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response;</td></tr>
+<tr><td>400</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>401</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>401</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue</td></tr>
+<tr><td>401</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L404">MethodDeclaration <code>TryReadBeamPosition</code> · L404–423</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L404-L423">Drilling.Common/Interface/Serial/CBeamExpander.cs:404–423</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CBeamExpander.TryReadBeamPosition(string, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>position</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L249-L249">Drilling.Common/Interface/Serial/CBeamExpander.cs:249–249</a></td><td>TryReadBeamPosition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>406</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>407</td><td>text.IndexOf</td><td>resolved</td><td>int string.IndexOf(char, System.StringComparison)</td></tr>
+<tr><td>414</td><td>new string</td><td>resolved</td><td>string.String(char[]?)</td></tr>
+<tr><td>414</td><td>value.TakeWhile(MatchesChar).ToArray</td><td>resolved</td><td>char[] System.Collections.Generic.IEnumerable&lt;char&gt;.ToArray&lt;char&gt;()</td></tr>
+<tr><td>414</td><td>value.TakeWhile</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;char&gt; System.Collections.Generic.IEnumerable&lt;char&gt;.TakeWhile&lt;char&gt;(System.Func&lt;char, bool&gt;)</td></tr>
+<tr><td>415</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>415</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>406</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>406</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = response.Trim();</td></tr>
+<tr><td>406</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = response.Trim()</td></tr>
+<tr><td>407</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.IndexOf(&#x27;:&#x27;, StringComparison.Ordinal)</td></tr>
+<tr><td>407</td><td>local-declaration</td><td>지역 변수를 선언합니다: var colonIndex = text.IndexOf(&#x27;:&#x27;, StringComparison.Ordinal);</td></tr>
+<tr><td>407</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: colonIndex = text.IndexOf(&#x27;:&#x27;, StringComparison.Ordinal)</td></tr>
+<tr><td>408</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: colonIndex &gt;= 0 ? text[(colonIndex + 1)..] : text</td></tr>
+<tr><td>408</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = colonIndex &gt;= 0 ? text[(colonIndex + 1)..] : text;</td></tr>
+<tr><td>408</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = colonIndex &gt;= 0 ? text[(colonIndex + 1)..] : text</td></tr>
+<tr><td>414</td><td>assignment</td><td>값을 대상에 대입합니다: value = new string (value.TakeWhile(MatchesChar).ToArray())</td></tr>
+<tr><td>414</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new string (value.TakeWhile(MatchesChar).ToArray())</td></tr>
+<tr><td>414</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.TakeWhile(MatchesChar).ToArray()</td></tr>
+<tr><td>414</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.TakeWhile(MatchesChar)</td></tr>
+<tr><td>415</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var step)</td></tr>
+<tr><td>415</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(step)</td></tr>
+<tr><td>415</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var step) || !double.IsFinite(step))</td></tr>
+<tr><td>417</td><td>assignment</td><td>값을 대상에 대입합니다: position = 0.0</td></tr>
+<tr><td>418</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>421</td><td>assignment</td><td>값을 대상에 대입합니다: position = step</td></tr>
+<tr><td>422</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryReadBeamPosition&quot;]
+ N0[&quot;L415 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L409">LocalFunctionStatement <code>MatchesChar</code> · L409–412</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L409-L412">Drilling.Common/Interface/Serial/CBeamExpander.cs:409–412</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesChar(char)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CBeamExpander</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>character</td><td>char</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>411</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>411</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character)</td></tr>
+<tr><td>411</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return char.IsDigit(character) || character == &#x27;-&#x27; || character == &#x27;+&#x27; || character == &#x27;.&#x27;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L428">EnumMemberDeclaration <code>InitMotor</code> · L428–428</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L428-L428">Drilling.Common/Interface/Serial/CBeamExpander.cs:428–428</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.InitMotor</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L429">EnumMemberDeclaration <code>MoveManual</code> · L429–429</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L429-L429">Drilling.Common/Interface/Serial/CBeamExpander.cs:429–429</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveManual</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L430">EnumMemberDeclaration <code>MoveMagnification</code> · L430–430</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L430-L430">Drilling.Common/Interface/Serial/CBeamExpander.cs:430–430</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveMagnification</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L431">EnumMemberDeclaration <code>MoveDivergence</code> · L431–431</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L431-L431">Drilling.Common/Interface/Serial/CBeamExpander.cs:431–431</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveDivergence</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L432">EnumMemberDeclaration <code>MoveTable</code> · L432–432</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L432-L432">Drilling.Common/Interface/Serial/CBeamExpander.cs:432–432</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.MoveTable</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L433">EnumMemberDeclaration <code>Stop</code> · L433–433</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L433-L433">Drilling.Common/Interface/Serial/CBeamExpander.cs:433–433</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.Stop</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L434">EnumMemberDeclaration <code>ResetAlarm</code> · L434–434</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L434-L434">Drilling.Common/Interface/Serial/CBeamExpander.cs:434–434</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.ResetAlarm</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L435">EnumMemberDeclaration <code>Refresh</code> · L435–435</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L435-L435">Drilling.Common/Interface/Serial/CBeamExpander.cs:435–435</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.Refresh</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L436">EnumMemberDeclaration <code>PollMagnificationPosition</code> · L436–436</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L436-L436">Drilling.Common/Interface/Serial/CBeamExpander.cs:436–436</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.PollMagnificationPosition</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L437">EnumMemberDeclaration <code>PollDivergencePosition</code> · L437–437</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L437-L437">Drilling.Common/Interface/Serial/CBeamExpander.cs:437–437</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_COMMAND.PollDivergencePosition</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L442">EnumMemberDeclaration <code>Ok</code> · L442–442</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L442-L442">Drilling.Common/Interface/Serial/CBeamExpander.cs:442–442</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR.Ok</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L443">EnumMemberDeclaration <code>Error</code> · L443–443</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L443-L443">Drilling.Common/Interface/Serial/CBeamExpander.cs:443–443</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR.Error</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L444">EnumMemberDeclaration <code>Timeout</code> · L444–444</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L444-L444">Drilling.Common/Interface/Serial/CBeamExpander.cs:444–444</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR.Timeout</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L445">EnumMemberDeclaration <code>InvalidResponse</code> · L445–445</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L445-L445">Drilling.Common/Interface/Serial/CBeamExpander.cs:445–445</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR.InvalidResponse</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L446">EnumMemberDeclaration <code>NotSupported</code> · L446–446</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L446-L446">Drilling.Common/Interface/Serial/CBeamExpander.cs:446–446</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_BET_ERROR.NotSupported</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_BET_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L467">FieldDeclaration <code>DefaultRowBeamSize</code> · L467–467</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L467-L467">Drilling.Common/Interface/Serial/CBeamExpander.cs:467–467</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.DefaultRowBeamSize</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_BET_TABLE_DATA</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>467</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultRowBeamSize = 32.64</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L468">PropertyDeclaration <code>SpotSize</code> · L468–474</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L468-L474">Drilling.Common/Interface/Serial/CBeamExpander.cs:468–474</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_BET_TABLE_DATA</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L470">GetAccessorDeclaration <code>get_SpotSize</code> · L470–473</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CBeamExpander.cs#L470-L473">Drilling.Common/Interface/Serial/CBeamExpander.cs:470–473</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.ST_BET_TABLE_DATA.SpotSize.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_BET_TABLE_DATA</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>472</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Magnification == 0.0 ? 0.001 : (DefaultRowBeamSize / Magnification) / 1000.0</td></tr>
+<tr><td>472</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Magnification == 0.0 ? 0.001 : (DefaultRowBeamSize / Magnification) / 1000.0;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Serial/CBeamExpander.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

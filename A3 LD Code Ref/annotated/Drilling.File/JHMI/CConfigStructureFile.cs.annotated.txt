@@ -1,0 +1,887 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CConfigStructureFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000001 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000002 | using Drilling.File.Parser; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000004 | namespace Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L5: 타입의 구조/상속 선언입니다: public sealed class CConfigStructureFile(string configRoot) : CConfigStructureFileBase
+L000005 | public sealed class CConfigStructureFile(string configRoot) : CConfigStructureFileBase ⟦EOL⟧
+// 해설 L6: 구문 블록 경계입니다.
+L000006 | { ⟦EOL⟧
+// 해설 L7: 변수의 초기값을 지정합니다: RequiredCsvFiles = [ Csv( "JHMI_RCP", "JHMI_RCP.csv", [ ["TAB"], ["GROUP"], ["NAME"], ["DISPLAY NAME"], ["CIM NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["SCALE"], ["CHANGE LIMIT"], ["MIN"], ["MAX"], ["DESCRIPT
+L000007 |     private static readonly IReadOnlyList<ST_REQUIRED_CSV> RequiredCsvFiles = ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000008 |     [ ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( "JHMI_RCP", "JHMI_RCP.csv", [ ["TAB"], ["GROUP"], ["NAME"], ["DISPLAY NAME"], ["CIM NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["SCALE"], ["CHANGE LIMIT"], ["MIN"], ["MAX"], ["DESCRIPTION"], ["OR…
+L000010 |         Csv( ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000011 |             "JHMI_RCP",  ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000012 |             "JHMI_RCP.csv",  ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000013 |             [ ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000014 |             ["TAB"],  ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000015 |             ["GROUP"],  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000016 |             ["NAME"],  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000017 |             ["DISPLAY NAME"],  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000018 |             ["CIM NAME"],  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000019 |             ["DATA TYPE"],  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000020 |             ["UNIT"],  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000021 |             ["SHOW"],  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000022 |             ["USE"],  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000023 |             ["VALUE"],  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000024 |             ["SCALE"],  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000025 |             ["CHANGE LIMIT"],  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000026 |             ["MIN"],  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000027 |             ["MAX"],  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000028 |             ["DESCRIPTION"],  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000029 |             ["ORDER"] ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000030 |         ],  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000031 |             ValidateTabNameKey ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000032 |         ), ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv("JHMI_SETTING", "JHMI_SETTING.csv", [["TAB"], ["GROUP"], ["NAME"], ["DISPLAY NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["MIN"], ["MAX"], ["DESCRIPTION"]], ValidateTabNameKey)
+L000034 |         Csv("JHMI_SETTING", "JHMI_SETTING.csv", [["TAB"], ["GROUP"], ["NAME"], ["DISPLAY NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["MIN"], ["MAX"], ["DESCRIPTION"]], ValidateTabNameKey), ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( "JHMI_INTERFACE", "JHMI_INTERFACE.csv", [ ["TYPE"], ["DEVICE"], ["NUMBER", "NO"], ["NICKNAME"], ["SYSTEM_SECTION", "SYSTEM SECTION", "SECTION"], ["AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"], ["SIMUL", "S…
+L000036 |         Csv( ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000037 |             "JHMI_INTERFACE",  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000038 |             "JHMI_INTERFACE.csv",  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000039 |             [ ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000040 |             ["TYPE"],  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000041 |             ["DEVICE"],  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000042 |             ["NUMBER", "NO"],  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000043 |             ["NICKNAME"],  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000044 |             ["SYSTEM_SECTION", "SYSTEM SECTION", "SECTION"],  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000045 |             ["AUTOCONNECTION", "AUTO_CONNECTION", "AUTO CONNECTION"],  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000046 |             ["SIMUL", "SIMULATION", "SIM_MODE", "SIM MODE"],  ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000047 |             ["ARG1"],  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000048 |             ["ARG2"],  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000049 |             ["ARG3"],  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000050 |             ["ARG4"],  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000051 |             ["ARG5"] ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000052 |         ],  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000053 |             ValidateDeviceNumberKey ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000054 |         ), ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( "JHMI_MOTOR", "JHMI_MOTOR.csv", [["NAME", "MOTOR NAME", "AXIS NAME"], ["USE"], ["AXIS"], ["DEV TYPE", "DEVICE TYPE"], ["DEV NO", "DEVICE NO"], ["SCALE"], ["MAXVEL"], ["MAXACC"], ["MIN"], ["MAX"]], ValidateNameKey )
+L000056 |         Csv( ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000057 |             "JHMI_MOTOR",  ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000058 |             "JHMI_MOTOR.csv",  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000059 |             [["NAME", "MOTOR NAME", "AXIS NAME"], ["USE"], ["AXIS"], ["DEV TYPE", "DEVICE TYPE"], ["DEV NO", "DEVICE NO"], ["SCALE"], ["MAXVEL"], ["MAXACC"], ["MIN"], ["MAX"]],  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000060 |             ValidateNameKey ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000061 |         ), ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv("JHMI_MELSEC_MAP", "JHMI_MELSEC_MAP.csv", CMelsecMapFile.RequiredHeaderGroups, ValidateIdKey)
+L000063 |         Csv("JHMI_MELSEC_MAP", "JHMI_MELSEC_MAP.csv", CMelsecMapFile.RequiredHeaderGroups, ValidateIdKey), ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv("JHMI_BET", "JHMI_BET.csv", [["INDEX"], ["DESCRIPTION"], ["DIV"], ["MAG"], ["SPOTSIZE"]], ValidateIndexKey)
+L000065 |         Csv("JHMI_BET", "JHMI_BET.csv", [["INDEX"], ["DESCRIPTION"], ["DIV"], ["MAG"], ["SPOTSIZE"]], ValidateIndexKey), ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: Csv("JHMI_MANUAL_SCAN", "JHMI_MANUAL_SCAN.csv", [["NAME"], ["DISPLAY NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["MIN"], ["MAX"], ["DESCRIPTION"], ["ORDER"]], ValidateNameKey)
+L000067 |         Csv("JHMI_MANUAL_SCAN", "JHMI_MANUAL_SCAN.csv", [["NAME"], ["DISPLAY NAME"], ["DATA TYPE"], ["UNIT"], ["SHOW"], ["USE"], ["VALUE"], ["MIN"], ["MAX"], ["DESCRIPTION"], ["ORDER"]], ValidateNameKey) ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV> Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles
+L000069 |     ]; ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueCsv("Setting Value", "Setting\\Setting.csv", [["TAB"], ["NAME"], ["VALUE"]], ValidateTabNameKey) / 변수의 초기값을 지정합니다: OptionalValueFiles = [ValueCsv("Setting Value", "Setting\\Setting.csv", [["TAB"], ["NAME"], ["VALUE"]], ValidateTabNameKey)]
+L000070 |     private static readonly IReadOnlyList<ST_VALUE_CSV> OptionalValueFiles = [ValueCsv("Setting Value", "Setting\\Setting.csv", [["TAB"], ["NAME"], ["VALUE"]], ValidateTabNameKey)]; ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_CONFIG_FILE_STATUS>> Drilling.File.JHMI.CConfigStructureFile.Validate(System.Threading.CancellationToken)
+L000071 |     public override Task<IReadOnlyList<ST_CONFIG_FILE_STATUS>> Validate(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Validate.
+L000072 |     { ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000073 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_CONFIG_FILE_STATUS> { CheckRoot() } / 지역 변수를 선언합니다: var statuses = new List<ST_CONFIG_FILE_STATUS> { CheckRoot() }; / 변수의 초기값을 지정합니다: statuses = new List<ST_CONFIG_FILE_STATUS> { CheckRoot() }
+L000074 |         var statuses = new List<ST_CONFIG_FILE_STATUS> ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Validate.
+L000075 |         { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckRoot()
+L000076 |             CheckRoot() ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Validate.
+L000077 |         }; ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.AddRange([ EnsureDirectory("RECIPE Directory", "RECIPE", cancellationToken), EnsureDirectory("Setting Directory", "Setting", cancellationToken), EnsureDirectory("Manual Directory", "Manual", cancellationToken) ]…
+L000078 |         statuses.AddRange([ ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory("RECIPE Directory", "RECIPE", cancellationToken)
+L000079 |             EnsureDirectory("RECIPE Directory", "RECIPE", cancellationToken),  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory("Setting Directory", "Setting", cancellationToken)
+L000080 |             EnsureDirectory("Setting Directory", "Setting", cancellationToken),  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory("Manual Directory", "Manual", cancellationToken)
+L000081 |             EnsureDirectory("Manual Directory", "Manual", cancellationToken) ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_CONFIG_FILE_STATUS>> Drilling.File.JHMI.CConfigStructureFile.Validate(System.Threading.CancellationToken)
+L000082 |         ]); ⟦EOL⟧
+// 해설 L83: 컬렉션 요소를 순회합니다: foreach (var csvFile in RequiredCsvFiles)
+L000083 |         foreach (var csvFile in RequiredCsvFiles) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Validate.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000085 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckCsv(csvFile)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckCsv(csvFile)
+L000086 |             statuses.Add(CheckCsv(csvFile)); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Validate.
+L000087 |         } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 컬렉션 요소를 순회합니다: foreach (var valueFile in OptionalValueFiles)
+L000089 |         foreach (var valueFile in OptionalValueFiles) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Validate.
+L000090 |         { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000091 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckValueCsv(valueFile)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckValueCsv(valueFile)
+L000092 |             statuses.Add(CheckValueCsv(valueFile)); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Validate.
+L000093 |         } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckRecipeValueFiles(cancellationToken)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckRecipeValueFiles(cancellationToken)
+L000095 |         statuses.Add(CheckRecipeValueFiles(cancellationToken)); ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckManualValueFiles(cancellationToken)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckManualValueFiles(cancellationToken)
+L000096 |         statuses.Add(CheckManualValueFiles(cancellationToken)); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_CONFIG_FILE_STATUS>>(statuses) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<ST_CONFIG_FILE_STATUS>>(statuses);
+L000097 |         return Task.FromResult<IReadOnlyList<ST_CONFIG_FILE_STATUS>>(statuses); ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 Validate.
+L000098 |     } ⟦EOL⟧
+L000099 |  ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRoot()
+L000100 |     private ST_CONFIG_FILE_STATUS CheckRoot() ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 CheckRoot.
+L000101 |     { ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePath(configRoot) / 지역 변수를 선언합니다: var path = NormalizePath(configRoot); / 변수의 초기값을 지정합니다: path = NormalizePath(configRoot)
+L000102 |         var path = NormalizePath(configRoot); ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path) / 지역 변수를 선언합니다: var exists = Directory.Exists(path); / 변수의 초기값을 지정합니다: exists = Directory.Exists(path)
+L000103 |         var exists = Directory.Exists(path); ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS("Config Root", path, true, exists, exists, exists ? "Config root found." : "Config root is missing.") / 조건에 따라 결과식을 선택합니다: exists ? "Config root found." : "Config root is missing." / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS("Config Root", path, true, exists, exists, exists ? "Config root found." : "Config root is missing.");
+L000104 |         return new ST_CONFIG_FILE_STATUS("Config Root", path, true, exists, exists, exists ? "Config root found." : "Config root is missing."); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 CheckRoot.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken)
+L000107 |     private ST_CONFIG_FILE_STATUS EnsureDirectory(string itemName, string relativePath, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 EnsureDirectory.
+L000108 |     { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000109 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativePath) / 지역 변수를 선언합니다: var path = GetPath(relativePath); / 변수의 초기값을 지정합니다: path = GetPath(relativePath)
+L000110 |         var path = GetPath(relativePath); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path) / 지역 변수를 선언합니다: var existed = Directory.Exists(path); / 변수의 초기값을 지정합니다: existed = Directory.Exists(path)
+L000111 |         var existed = Directory.Exists(path); ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (!existed)
+L000112 |         if (!existed) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 EnsureDirectory.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(path)
+L000114 |             Directory.CreateDirectory(path); ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 EnsureDirectory.
+L000115 |         } ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, path, true, Directory.Exists(path), Directory.Exists(path), existed ? "Directory found." : "Directory created.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path) / 조건에 따라 결과식을 선택합니다: existed ? "Directory found." : "Directory created." / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, path, true, Directory.Exists(path), Directory.Exists(path), existed ? "Directory found." : "Directory created.");
+L000117 |         return new ST_CONFIG_FILE_STATUS(itemName, path, true, Directory.Exists(path), Directory.Exists(path), existed ? "Directory found." : "Directory created."); ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 EnsureDirectory.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsv(Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV)
+L000120 |     private ST_CONFIG_FILE_STATUS CheckCsv(ST_REQUIRED_CSV csvFile) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(csvFile.RelativePath) / 지역 변수를 선언합니다: var path = GetPath(csvFile.RelativePath); / 변수의 초기값을 지정합니다: path = GetPath(csvFile.RelativePath)
+L000122 |         var path = GetPath(csvFile.RelativePath); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000123 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000124 |         { ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, false, false, "Required JHMI schema file is missing.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, false, false, "Required JHMI schema file is missing.");
+L000125 |             return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, false, false, "Required JHMI schema file is missing."); ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000126 |         } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 예외 처리 범위입니다: try
+L000128 |         try ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, csvFile.ItemName, csvFile.RequiredHeaderGroups)
+L000130 |             CCsvParser.ValidateRequiredHeaders(path, csvFile.ItemName, csvFile.RequiredHeaderGroups); ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) / 지역 변수를 선언합니다: var rows = CCsvParser.Read(path); / 변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)
+L000131 |             var rows = CCsvParser.Read(path); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: csvFile.RowValidator(csvFile.ItemName, rows)
+L000132 |             csvFile.RowValidator(csvFile.ItemName, rows); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, true, $"CSV header and key structure OK. Rows={rows.Count}.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, true, $"CSV header and key structure OK. Rows={rows.Count}.");
+L000133 |             return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, true, $"CSV header and key structure OK. Rows={rows.Count}."); ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000134 |         } ⟦EOL⟧
+// 해설 L135: 지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)
+L000135 |         catch (Exception ex)when (ex is InvalidDataException or IOException or UnauthorizedAccessException) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000136 |         { ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, false, ex.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, false, ex.Message);
+L000137 |             return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, false, ex.Message); ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000138 |         } ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 CheckCsv.
+L000139 |     } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckValueCsv(Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV)
+L000141 |     private ST_CONFIG_FILE_STATUS CheckValueCsv(ST_VALUE_CSV valueFile) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000142 |     { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(valueFile.RelativePath) / 지역 변수를 선언합니다: var path = GetPath(valueFile.RelativePath); / 변수의 초기값을 지정합니다: path = GetPath(valueFile.RelativePath)
+L000143 |         var path = GetPath(valueFile.RelativePath); ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000144 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000145 |         { ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, false, true, "Optional value file is not created yet.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, false, true, "Optional value file is not created yet.");
+L000146 |             return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, false, true, "Optional value file is not created yet."); ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000147 |         } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 예외 처리 범위입니다: try
+L000149 |         try ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000150 |         { ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, valueFile.ItemName, valueFile.RequiredHeaderGroups)
+L000151 |             CCsvParser.ValidateRequiredHeaders(path, valueFile.ItemName, valueFile.RequiredHeaderGroups); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) / 지역 변수를 선언합니다: var rows = CCsvParser.Read(path); / 변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)
+L000152 |             var rows = CCsvParser.Read(path); ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: valueFile.RowValidator(valueFile.ItemName, rows)
+L000153 |             valueFile.RowValidator(valueFile.ItemName, rows); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, true, $"CSV value structure OK. Rows={rows.Count}.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, true, $"CSV value structure OK. Rows={rows.Count}.");
+L000154 |             return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, true, $"CSV value structure OK. Rows={rows.Count}."); ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000155 |         } ⟦EOL⟧
+// 해설 L156: 지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)
+L000156 |         catch (Exception ex)when (ex is InvalidDataException or IOException or UnauthorizedAccessException) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000157 |         { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, false, ex.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, false, ex.Message);
+L000158 |             return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, false, ex.Message); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000159 |         } ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 CheckValueCsv.
+L000160 |     } ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRecipeValueFiles(System.Threading.CancellationToken)
+L000162 |     private ST_CONFIG_FILE_STATUS CheckRecipeValueFiles(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 CheckRecipeValueFiles.
+L000163 |     { ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCount(System.Collections.Generic.IReadOnlyList<string>)
+L000164 |         bool MatchesCount(global::System.Collections.Generic.IReadOnlyList<string> lineFields) ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 MatchesCount.
+L000165 |         { ⟦EOL⟧
+// 해설 L166: 호출자에게 값 또는 제어를 반환합니다: return lineFields.Count >= 3;
+L000166 |             return lineFields.Count >= 3; ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 MatchesCount.
+L000167 |         } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckLineValueFiles("Recipe Value Files", "RECIPE", "*.csv", MatchesCount, "Each recipe line must be TAB,NAME,VALUE.", cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return CheckLineValueFiles("Recipe Value Files", "RECIPE", "*.csv", MatchesCount, "Each recipe line must be TAB,NAME,VALUE.", cancellationToken);
+L000169 |         return CheckLineValueFiles("Recipe Value Files", "RECIPE", "*.csv", MatchesCount, "Each recipe line must be TAB,NAME,VALUE.", cancellationToken); ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 CheckRecipeValueFiles.
+L000170 |     } ⟦EOL⟧
+L000171 |  ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckManualValueFiles(System.Threading.CancellationToken)
+L000172 |     private ST_CONFIG_FILE_STATUS CheckManualValueFiles(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 CheckManualValueFiles.
+L000173 |     { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckCsvValueFiles("Manual Scan Files", "Manual", "*.scan", [["NAME"], ["VALUE"]], ValidateNameKey, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return CheckCsvValueFiles("Manual Scan Files", "Manual", "*.scan", [["NAME"], ["VALUE"]], ValidateNameKey, cancellationToken);
+L000174 |         return CheckCsvValueFiles("Manual Scan Files", "Manual", "*.scan", [["NAME"], ["VALUE"]], ValidateNameKey, cancellationToken); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 CheckManualValueFiles.
+L000175 |     } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000177 |     private ST_CONFIG_FILE_STATUS CheckCsvValueFiles( ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000178 |         string itemName,  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000179 |         string relativeDirectory,  ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000180 |         string pattern,  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000181 |         IReadOnlyList<IReadOnlyList<string>> requiredHeaderGroups,  ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000182 |         Action<string, IReadOnlyList<IReadOnlyDictionary<string, string>>> rowValidator,  ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000183 |         CancellationToken cancellationToken ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyLis
+L000184 |     ) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000185 |     { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativeDirectory) / 지역 변수를 선언합니다: var directory = GetPath(relativeDirectory); / 변수의 초기값을 지정합니다: directory = GetPath(relativeDirectory)
+L000186 |         var directory = GetPath(relativeDirectory); ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory) / 조건에 따라 분기합니다: if (!Directory.Exists(directory))
+L000187 |         if (!Directory.Exists(directory)) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000188 |         { ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet.");
+L000189 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet."); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000190 |         } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · string SelectPath(string)
+L000192 |         string SelectPath(string path) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 SelectPath.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 호출자에게 값 또는 제어를 반환합니다: return path;
+L000194 |             return path; ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 SelectPath.
+L000195 |         } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern) / 지역 변수를 선언합니다: var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray(); / 변수의 초기값을 지정합니다: files = Directory.EnumerateFiles(directory, pa
+L000197 |         var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L198: 조건에 따라 분기합니다: if (files.Length == 0)
+L000198 |         if (files.Length == 0) ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000199 |         { ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet.");
+L000200 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet."); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000201 |         } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 예외 처리 범위입니다: try
+L000203 |         try ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000204 |         { ⟦EOL⟧
+// 해설 L205: 지역 변수를 선언합니다: var rowCount = 0; / 변수의 초기값을 지정합니다: rowCount = 0
+L000205 |             var rowCount = 0; ⟦EOL⟧
+// 해설 L206: 컬렉션 요소를 순회합니다: foreach (var file in files)
+L000206 |             foreach (var file in files) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000207 |             { ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000208 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(file, itemName, requiredHeaderGroups)
+L000209 |                 CCsvParser.ValidateRequiredHeaders(file, itemName, requiredHeaderGroups); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(file) / 지역 변수를 선언합니다: var rows = CCsvParser.Read(file); / 변수의 초기값을 지정합니다: rows = CCsvParser.Read(file)
+L000210 |                 var rows = CCsvParser.Read(file); ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: rowValidator(itemName, rows)
+L000211 |                 rowValidator(itemName, rows); ⟦EOL⟧
+// 해설 L212: 복합 대입 또는 이벤트 구독/해지 표현입니다: rowCount += rows.Count
+L000212 |                 rowCount += rows.Count; ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000213 |             } ⟦EOL⟧
+L000214 |  ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"CSV value files OK. Files={files.Length}, Rows={rowCount}.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"CSV value files OK. Files={files.Length}, Rows={rowCount}.");
+L000215 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"CSV value files OK. Files={files.Length}, Rows={rowCount}."); ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000216 |         } ⟦EOL⟧
+// 해설 L217: 지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)
+L000217 |         catch (Exception ex)when (ex is InvalidDataException or IOException or UnauthorizedAccessException) ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000218 |         { ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message);
+L000219 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message); ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000220 |         } ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 CheckCsvValueFiles.
+L000221 |     } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000223 |     private ST_CONFIG_FILE_STATUS CheckLineValueFiles( ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000224 |         string itemName,  ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000225 |         string relativeDirectory,  ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000226 |         string pattern,  ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000227 |         Func<IReadOnlyList<string>, bool> lineValidator,  ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000228 |         string invalidMessage,  ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000229 |         CancellationToken cancellationToken ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000230 |     ) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000231 |     { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativeDirectory) / 지역 변수를 선언합니다: var directory = GetPath(relativeDirectory); / 변수의 초기값을 지정합니다: directory = GetPath(relativeDirectory)
+L000232 |         var directory = GetPath(relativeDirectory); ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory) / 조건에 따라 분기합니다: if (!Directory.Exists(directory))
+L000233 |         if (!Directory.Exists(directory)) ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000234 |         { ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet.");
+L000235 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, "Optional value directory is not created yet."); ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000236 |         } ⟦EOL⟧
+L000237 |  ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · string SelectPath(string)
+L000238 |         string SelectPath(string path) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 SelectPath.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 호출자에게 값 또는 제어를 반환합니다: return path;
+L000240 |             return path; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 SelectPath.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern) / 지역 변수를 선언합니다: var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray(); / 변수의 초기값을 지정합니다: files = Directory.EnumerateFiles(directory, pa
+L000243 |         var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L244: 조건에 따라 분기합니다: if (files.Length == 0)
+L000244 |         if (files.Length == 0) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000245 |         { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet.");
+L000246 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, "No value file yet."); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000247 |         } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 예외 처리 범위입니다: try
+L000249 |         try ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000250 |         { ⟦EOL⟧
+// 해설 L251: 지역 변수를 선언합니다: var lineCount = 0; / 변수의 초기값을 지정합니다: lineCount = 0
+L000251 |             var lineCount = 0; ⟦EOL⟧
+// 해설 L252: 컬렉션 요소를 순회합니다: foreach (var file in files)
+L000252 |             foreach (var file in files) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000253 |             { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000254 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L255: 지역 변수를 선언합니다: var lineNo = 0; / 변수의 초기값을 지정합니다: lineNo = 0
+L000255 |                 var lineNo = 0; ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadLines(file) / 컬렉션 요소를 순회합니다: foreach (var line in CCsvParser.ReadLines(file))
+L000256 |                 foreach (var line in CCsvParser.ReadLines(file)) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000257 |                 { ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000258 |                     lineNo++; ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(line) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(line))
+L000259 |                     if (string.IsNullOrWhiteSpace(line)) ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000260 |                     { ⟦EOL⟧
+// 해설 L261: 다음 반복으로 진행합니다: continue;
+L000261 |                         continue; ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000262 |                     } ⟦EOL⟧
+L000263 |  ⟦EOL⟧
+// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func<System.Collections.Generic.IReadOnlyList<string>, bool>, string, Sy
+L000264 |                     lineCount++; ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: SplitCsvLine(line, file, lineNo) / 지역 변수를 선언합니다: var fields = SplitCsvLine(line, file, lineNo); / 변수의 초기값을 지정합니다: fields = SplitCsvLine(line, file, lineNo)
+L000265 |                     var fields = SplitCsvLine(line, file, lineNo); ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: lineValidator(fields) / 조건에 따라 분기합니다: if (!lineValidator(fields))
+L000266 |                     if (!lineValidator(fields)) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000267 |                     { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{itemName} validation failed. {Path.GetFileName(file)} row {lineNo}: {invalidMessage}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(file) / 예외를 발생/전달합니다: throw new InvalidDataException($"{itemName} validation failed. {Path.GetFileName(file)} row {lineNo}: {invalidMessage}");
+L000268 |                         throw new InvalidDataException($"{itemName} validation failed. {Path.GetFileName(file)} row {lineNo}: {invalidMessage}"); ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000269 |                     } ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000270 |                 } ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000271 |             } ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"Line value files OK. Files={files.Length}, Lines={lineCount}.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"Line value files OK. Files={files.Length}, Lines={lineCount}.");
+L000273 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $"Line value files OK. Files={files.Length}, Lines={lineCount}."); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000274 |         } ⟦EOL⟧
+// 해설 L275: 지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)
+L000275 |         catch (Exception ex)when (ex is InvalidDataException or IOException or UnauthorizedAccessException) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000276 |         { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message);
+L000277 |             return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000278 |         } ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 CheckLineValueFiles.
+L000279 |     } ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CConfigStructureFile.GetPath(string)
+L000281 |     private string GetPath(string relativePath) ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 GetPath.
+L000282 |     { ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePath(Path.Combine(configRoot, relativePath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, relativePath) / 호출자에게 값 또는 제어를 반환합니다: return NormalizePath(Path.Combine(configRoot, relativePath));
+L000283 |         return NormalizePath(Path.Combine(configRoot, relativePath)); ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 GetPath.
+L000284 |     } ⟦EOL⟧
+L000285 |  ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CConfigStructureFile.NormalizePath(string)
+L000286 |     private static string NormalizePath(string path) ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 NormalizePath.
+L000287 |     { ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path) / 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(path);
+L000288 |         return Path.GetFullPath(path); ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 NormalizePath.
+L000289 |     } ⟦EOL⟧
+L000290 |  ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateTabNameKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000291 |     private static void ValidateTabNameKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 ValidateTabNameKey.
+L000292 |     { ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000293 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 SelectValue.
+L000294 |         { ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TAB").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TAB").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TAB") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return $"{CCsvParser.Get(row, "TAB").Trim().ToUpperInvariant()}|{CCsvParser.Get(row, "NAME").Trim().ToUpperInvari
+L000295 |             return $"{CCsvParser.Get(row, "TAB").Trim().ToUpperInvariant()}|{CCsvParser.Get(row, "NAME").Trim().ToUpperInvariant()}"; ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 SelectValue.
+L000296 |         } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["TAB", "NAME"], SelectValue)
+L000298 |         ValidateUniqueKey(tableName, rows, ["TAB", "NAME"], SelectValue); ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 ValidateTabNameKey.
+L000299 |     } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateDeviceNumberKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000301 |     private static void ValidateDeviceNumberKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ValidateDeviceNumberKey.
+L000302 |     { ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000303 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 SelectValue.
+L000304 |         { ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DEVICE").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DEVICE").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DEVICE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, "NUMBER", "NO").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, "NUMBER", "NO").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, "NUMBER", "NO") / 호출자에게 값 또는 제어를 반환합니다: return $"{CCsvParser.Get(row, "DEVICE").Trim().ToUpperInvariant()}|{GetFirstValue(r
+L000305 |             return $"{CCsvParser.Get(row, "DEVICE").Trim().ToUpperInvariant()}|{GetFirstValue(row, "NUMBER", "NO").Trim().ToUpperInvariant()}"; ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 SelectValue.
+L000306 |         } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["DEVICE", "NUMBER"], SelectValue)
+L000308 |         ValidateUniqueKey(tableName, rows, ["DEVICE", "NUMBER"], SelectValue); ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 ValidateDeviceNumberKey.
+L000309 |     } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateNameKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000311 |     private static void ValidateNameKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 ValidateNameKey.
+L000312 |     { ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000313 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 SelectValue.
+L000314 |         { ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME").Trim().ToUpperInvariant();
+L000315 |             return CCsvParser.Get(row, "NAME").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 SelectValue.
+L000316 |         } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["NAME"], SelectValue)
+L000318 |         ValidateUniqueKey(tableName, rows, ["NAME"], SelectValue); ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 ValidateNameKey.
+L000319 |     } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateGroupKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000321 |     private static void ValidateGroupKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 ValidateGroupKey.
+L000322 |     { ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000323 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 SelectValue.
+L000324 |         { ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GROUP").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GROUP").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GROUP") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "KEY").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "KEY").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "KEY") / 호출자에게 값 또는 제어를 반환합니다: return $"{CCsvParser.Get(row, "GROUP").Trim().ToUpperInvariant()}|{CCsvParser.Get(row, "KEY").Trim().ToUpperIn
+L000325 |             return $"{CCsvParser.Get(row, "GROUP").Trim().ToUpperInvariant()}|{CCsvParser.Get(row, "KEY").Trim().ToUpperInvariant()}"; ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 SelectValue.
+L000326 |         } ⟦EOL⟧
+L000327 |  ⟦EOL⟧
+// 해설 L328: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["GROUP", "KEY"], SelectValue)
+L000328 |         ValidateUniqueKey(tableName, rows, ["GROUP", "KEY"], SelectValue); ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 ValidateGroupKey.
+L000329 |     } ⟦EOL⟧
+L000330 |  ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateIdKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000331 |     private static void ValidateIdKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 ValidateIdKey.
+L000332 |     { ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000333 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 SelectValue.
+L000334 |         { ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ID").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ID").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ID") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "ID").Trim().ToUpperInvariant();
+L000335 |             return CCsvParser.Get(row, "ID").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 SelectValue.
+L000336 |         } ⟦EOL⟧
+L000337 |  ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["ID"], SelectValue)
+L000338 |         ValidateUniqueKey(tableName, rows, ["ID"], SelectValue); ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 ValidateIdKey.
+L000339 |     } ⟦EOL⟧
+L000340 |  ⟦EOL⟧
+// 해설 L341: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateIndexKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000341 |     private static void ValidateIndexKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 ValidateIndexKey.
+L000342 |     { ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000343 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 SelectValue.
+L000344 |         { ⟦EOL⟧
+// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "INDEX").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "INDEX").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "INDEX") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "INDEX").Trim().ToUpperInvariant();
+L000345 |             return CCsvParser.Get(row, "INDEX").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다 · 소속 SelectValue.
+L000346 |         } ⟦EOL⟧
+L000347 |  ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["INDEX"], SelectValue)
+L000348 |         ValidateUniqueKey(tableName, rows, ["INDEX"], SelectValue); ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 ValidateIndexKey.
+L000349 |     } ⟦EOL⟧
+L000350 |  ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateStepKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000351 |     private static void ValidateStepKey(string tableName, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다 · 소속 ValidateStepKey.
+L000352 |     { ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000353 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 SelectValue.
+L000354 |         { ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STEP").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STEP").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STEP") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "STEP").Trim().ToUpperInvariant();
+L000355 |             return CCsvParser.Get(row, "STEP").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 SelectValue.
+L000356 |         } ⟦EOL⟧
+L000357 |  ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, ["STEP"], SelectValue)
+L000358 |         ValidateUniqueKey(tableName, rows, ["STEP"], SelectValue); ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 ValidateStepKey.
+L000359 |     } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000361 |     private static void ValidateUniqueKey( ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000362 |         string tableName,  ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000363 |         IReadOnlyList<IReadOnlyDictionary<string, string>> rows,  ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000364 |         IReadOnlyList<string> displayKeyNames,  ⟦EOL⟧
+// 해설 L365: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000365 |         Func<IReadOnlyDictionary<string, string>, string> createKey ⟦EOL⟧
+// 해설 L366: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, System.Collections.Generic.IReadO
+L000366 |     ) ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000367 |     { ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+L000368 |         var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L369: 컬렉션 요소를 순회합니다: foreach (var row in rows)
+L000369 |         foreach (var row in rows) ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000370 |         { ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: createKey(row) / 지역 변수를 선언합니다: var key = createKey(row); / 변수의 초기값을 지정합니다: key = createKey(row)
+L000371 |             var key = createKey(row); ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(key.Replace("|", "", StringComparison.Ordinal)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Replace("|", "", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(key.Replace("|", "", StringComparison.Ordinal)))
+L000372 |             if (string.IsNullOrWhiteSpace(key.Replace("|", "", StringComparison.Ordinal))) ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000373 |             { ⟦EOL⟧
+// 해설 L374: 다음 반복으로 진행합니다: continue;
+L000374 |                 continue; ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000375 |             } ⟦EOL⟧
+L000376 |  ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Add(key) / 조건에 따라 분기합니다: if (!keys.Add(key))
+L000377 |             if (!keys.Add(key)) ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000378 |             { ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{tableName} validation failed. Duplicated key: {string.Join("+", displayKeyNames)}={key}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("+", displayKeyNames) / 예외를 발생/전달합니다: throw new InvalidDataException($"{tableName} validation failed. Duplicated key: {string.Join("+", displayKeyNames)}={key}");
+L000379 |                 throw new InvalidDataException($"{tableName} validation failed. Duplicated key: {string.Join("+", displayKeyNames)}={key}"); ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000380 |             } ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000381 |         } ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 ValidateUniqueKey.
+L000382 |     } ⟦EOL⟧
+L000383 |  ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CConfigStructureFile.GetFirstValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[])
+L000384 |     private static string GetFirstValue(IReadOnlyDictionary<string, string> row, params string[] names) ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000385 |     { ⟦EOL⟧
+// 해설 L386: 컬렉션 요소를 순회합니다: foreach (var name in names)
+L000386 |         foreach (var name in names) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000387 |         { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, name) / 지역 변수를 선언합니다: var value = CCsvParser.Get(row, name); / 변수의 초기값을 지정합니다: value = CCsvParser.Get(row, name)
+L000388 |             var value = CCsvParser.Get(row, name); ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(value))
+L000389 |             if (!string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000390 |             { ⟦EOL⟧
+// 해설 L391: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000391 |                 return value; ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000392 |             } ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000393 |         } ⟦EOL⟧
+L000394 |  ⟦EOL⟧
+// 해설 L395: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000395 |         return ""; ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 GetFirstValue.
+L000396 |     } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CConfigStructureFile.SplitCsvLine(string, string, int)
+L000398 |     private static IReadOnlyList<string> SplitCsvLine(string line, string path, int lineNo) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000399 |     { ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var fields = new List<string>(); / 변수의 초기값을 지정합니다: fields = new List<string>()
+L000400 |         var fields = new List<string>(); ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Text.StringBuilder() / 지역 변수를 선언합니다: var value = new System.Text.StringBuilder(); / 변수의 초기값을 지정합니다: value = new System.Text.StringBuilder()
+L000401 |         var value = new System.Text.StringBuilder(); ⟦EOL⟧
+// 해설 L402: 지역 변수를 선언합니다: var inQuotes = false; / 변수의 초기값을 지정합니다: inQuotes = false
+L000402 |         var inQuotes = false; ⟦EOL⟧
+// 해설 L403: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < line.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000403 |         for (var index = 0; index < line.Length; index++) ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000404 |         { ⟦EOL⟧
+// 해설 L405: 지역 변수를 선언합니다: var current = line[index]; / 변수의 초기값을 지정합니다: current = line[index]
+L000405 |             var current = line[index]; ⟦EOL⟧
+// 해설 L406: 조건에 따라 분기합니다: if (current == '"')
+L000406 |             if (current == '"') ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000407 |             { ⟦EOL⟧
+// 해설 L408: 조건에 따라 분기합니다: if (inQuotes && index + 1 < line.Length && line[index + 1] == '"')
+L000408 |                 if (inQuotes && index + 1 < line.Length && line[index + 1] == '"') ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000409 |                 { ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append('"')
+L000410 |                     value.Append('"'); ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CConfigStructureFile.SplitCsvLine(string, string, int)
+L000411 |                     index++; ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000412 |                 } ⟦EOL⟧
+// 해설 L413: 앞 조건이 거짓인 경로입니다: else
+L000413 |                 else ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000414 |                 { ⟦EOL⟧
+// 해설 L415: 값을 대상에 대입합니다: inQuotes = !inQuotes
+L000415 |                     inQuotes = !inQuotes; ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000416 |                 } ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000417 |             } ⟦EOL⟧
+// 해설 L418: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (current == ',' && !inQuotes)
+L000418 |             else if (current == ',' && !inQuotes) ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000419 |             { ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000420 |                 fields.Add(value.ToString()); ⟦EOL⟧
+// 해설 L421: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Clear()
+L000421 |                 value.Clear(); ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000422 |             } ⟦EOL⟧
+// 해설 L423: 앞 조건이 거짓인 경로입니다: else
+L000423 |             else ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000424 |             { ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append(current)
+L000425 |                 value.Append(current); ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000426 |             } ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000427 |         } ⟦EOL⟧
+L000428 |  ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000429 |         fields.Add(value.ToString()); ⟦EOL⟧
+// 해설 L430: 조건에 따라 분기합니다: if (inQuotes)
+L000430 |         if (inQuotes) ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000431 |         { ⟦EOL⟧
+// 해설 L432: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path) / 예외를 발생/전달합니다: throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.");
+L000432 |             throw new InvalidDataException($"CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value."); ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000433 |         } ⟦EOL⟧
+L000434 |  ⟦EOL⟧
+// 해설 L435: 호출자에게 값 또는 제어를 반환합니다: return fields;
+L000435 |         return fields; ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 SplitCsvLine.
+L000436 |     } ⟦EOL⟧
+L000437 |  ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000438 |     private static ST_REQUIRED_CSV Csv( ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000439 |         string itemName,  ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000440 |         string relativePath,  ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000441 |         IReadOnlyList<IReadOnlyList<string>> requiredHeaderGroups,  ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000442 |         Action<string, IReadOnlyList<IReadOnlyDictionary<string, string>>> rowValidator ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>, Sy
+L000443 |     ) ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 Csv.
+L000444 |     { ⟦EOL⟧
+// 해설 L445: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REQUIRED_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REQUIRED_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator);
+L000445 |         return new ST_REQUIRED_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator); ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 Csv.
+L000446 |     } ⟦EOL⟧
+L000447 |  ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000448 |     private static ST_VALUE_CSV ValueCsv( ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000449 |         string itemName,  ⟦EOL⟧
+// 해설 L450: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000450 |         string relativePath,  ⟦EOL⟧
+// 해설 L451: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000451 |         IReadOnlyList<IReadOnlyList<string>> requiredHeaderGroups,  ⟦EOL⟧
+// 해설 L452: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000452 |         Action<string, IReadOnlyList<IReadOnlyDictionary<string, string>>> rowValidator ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>>,
+L000453 |     ) ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 ValueCsv.
+L000454 |     { ⟦EOL⟧
+// 해설 L455: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VALUE_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VALUE_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator);
+L000455 |         return new ST_VALUE_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator); ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 ValueCsv.
+L000456 |     } ⟦EOL⟧
+L000457 |  ⟦EOL⟧
+// 해설 L458: 타입의 구조/상속 선언입니다: private sealed record ST_REQUIRED_CSV(
+L000458 |     private sealed record ST_REQUIRED_CSV( ⟦EOL⟧
+// 해설 L459: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000459 |         string ItemName,  ⟦EOL⟧
+// 해설 L460: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000460 |         string RelativePath,  ⟦EOL⟧
+// 해설 L461: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000461 |         IReadOnlyList<IReadOnlyList<string>> RequiredHeaderGroups,  ⟦EOL⟧
+// 해설 L462: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000462 |         Action<string, IReadOnlyList<IReadOnlyDictionary<string, string>>> RowValidator ⟦EOL⟧
+// 해설 L463: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000463 |     ); ⟦EOL⟧
+// 해설 L464: 타입의 구조/상속 선언입니다: private sealed record ST_VALUE_CSV(
+L000464 |     private sealed record ST_VALUE_CSV( ⟦EOL⟧
+// 해설 L465: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000465 |         string ItemName,  ⟦EOL⟧
+// 해설 L466: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000466 |         string RelativePath,  ⟦EOL⟧
+// 해설 L467: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000467 |         IReadOnlyList<IReadOnlyList<string>> RequiredHeaderGroups,  ⟦EOL⟧
+// 해설 L468: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000468 |         Action<string, IReadOnlyList<IReadOnlyDictionary<string, string>>> RowValidator ⟦EOL⟧
+// 해설 L469: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000469 |     ); ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다.
+L000470 | } ⟦EOL⟧

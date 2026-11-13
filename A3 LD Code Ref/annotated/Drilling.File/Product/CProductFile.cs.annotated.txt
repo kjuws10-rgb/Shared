@@ -1,0 +1,967 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/Product/CProductFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Product;
+L000002 | using Drilling.Common.Product; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000003 | using Drilling.File.Parser; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.Product;
+L000005 | namespace Drilling.File.Product; ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public sealed class CProductFile(string configRoot) : CProductFileBase
+L000006 | public sealed class CProductFile(string configRoot) : CProductFileBase ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 변수의 초기값을 지정합니다: DefaultReviewBeamNo = 1
+L000008 |     private const int DefaultReviewBeamNo = 1; ⟦EOL⟧
+// 해설 L9: 변수의 초기값을 지정합니다: ActiveHeaders = ["TYPE", "NAME", "VALUE"]
+L000009 |     private static readonly IReadOnlyList<string> ActiveHeaders = ["TYPE", "NAME", "VALUE"]; ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: HistoryHeaders = ["OCCURRED_AT", "ROW_TYPE", "GLASS_ID", "PROCESS_ID", "RECIPE_ID", "ACTION", "STATE", "RESULT", "DETAIL"]
+L000010 |     private static readonly IReadOnlyList<string> HistoryHeaders = ["OCCURRED_AT", "ROW_TYPE", "GLASS_ID", "PROCESS_ID", "RECIPE_ID", "ACTION", "STATE", "RESULT", "DETAIL"]; ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Directory.GetParent(configRoot)?.FullName ?? configRoot, "Data", "Product") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(configRoot) / 변수의 초기값을 지정합니다: _productRoot = Path.Combine(Directory.GetParent(configRoot)?.FullName ?? configRoot, "Data", "Product")
+L000011 |     private readonly string _productRoot = Path.Combine(Directory.GetParent(configRoot)?.FullName ?? configRoot, "Data", "Product"); ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.File.Product.CProductFile.LoadActive(System.Threading.CancellationToken)
+L000012 |     public override Task<ST_PRODUCT_DATA?> LoadActive(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 LoadActive.
+L000013 |     { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000014 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() / 지역 변수를 선언합니다: var activePath = GetActiveProductPath(); / 변수의 초기값을 지정합니다: activePath = GetActiveProductPath()
+L000015 |         var activePath = GetActiveProductPath(); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(activePath) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(activePath))
+L000016 |         if (!System.IO.File.Exists(activePath)) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 LoadActive.
+L000017 |         { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<ST_PRODUCT_DATA?>(null) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<ST_PRODUCT_DATA?>(null);
+L000018 |             return Task.FromResult<ST_PRODUCT_DATA?>(null); ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 LoadActive.
+L000019 |         } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(activePath) / 지역 변수를 선언합니다: var rows = CCsvParser.Read(activePath); / 변수의 초기값을 지정합니다: rows = CCsvParser.Read(activePath)
+L000021 |         var rows = CCsvParser.Read(activePath); ⟦EOL⟧
+// 해설 L22: 조건에 따라 분기합니다: if (rows.Count == 0)
+L000022 |         if (rows.Count == 0) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 LoadActive.
+L000023 |         { ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product file is empty.") / 예외를 발생/전달합니다: throw new InvalidDataException("Active Product file is empty.");
+L000024 |             throw new InvalidDataException("Active Product file is empty."); ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 LoadActive.
+L000025 |         } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000027 |         bool MatchesItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000028 |         { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "TYPE")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE") / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "TYPE"));
+L000029 |             return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "TYPE")); ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000030 |         } ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Any(MatchesItem) / 조건에 따라 분기합니다: if (!rows.Any(MatchesItem))
+L000032 |         if (!rows.Any(MatchesItem)) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 LoadActive.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product file is not in the current compact format.") / 예외를 발생/전달합니다: throw new InvalidDataException("Active Product file is not in the current compact format.");
+L000034 |             throw new InvalidDataException("Active Product file is not in the current compact format."); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 LoadActive.
+L000035 |         } ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadCompactActive(rows) / 지역 변수를 선언합니다: var product = LoadCompactActive(rows); / 변수의 초기값을 지정합니다: product = LoadCompactActive(rows)
+L000037 |         var product = LoadCompactActive(rows); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product file does not contain a valid H_GLASSID.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<ST_PRODUCT_DATA?>(product) / 조건에 따라 결과식을 선택합니다: product is null ? throw new InvalidDataException("Active Product file does not contain a valid H_GLASSID.") : Task.FromResult<ST_PRODUCT_DATA?>(product) / 호출자에게 값 또는 제어를 반환합니다: return product is null ? throw new InvalidDataException("Active Product file does not contain a valid H_GLASSID.") : Task.FromResult<ST_PRODUCT_DATA?>(product)
+L000038 |         return product is null ? throw new InvalidDataException("Active Product file does not contain a valid H_GLASSID.") : Task.FromResult<ST_PRODUCT_DATA?>(product); ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 LoadActive.
+L000039 |     } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000041 |     private static ST_PRODUCT_DATA? LoadCompactActive(IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000042 |     { ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "PRODUCT") / 지역 변수를 선언합니다: var productValues = ReadSection(rows, "PRODUCT"); / 변수의 초기값을 지정합니다: productValues = ReadSection(rows, "PRODUCT")
+L000043 |         var productValues = ReadSection(rows, "PRODUCT"); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "H_GLASSID") / 지역 변수를 선언합니다: var glassId = ReadAny(productValues, "H_GLASSID"); / 변수의 초기값을 지정합니다: glassId = ReadAny(productValues, "H_GLASSID")
+L000044 |         var glassId = ReadAny(productValues, "H_GLASSID"); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(glassId) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(glassId))
+L000045 |         if (string.IsNullOrWhiteSpace(glassId)) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000046 |         { ⟦EOL⟧
+// 해설 L47: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000047 |             return null; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000048 |         } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID", "PPID", "PRODUCT_STATE", "JUDGEMENT", "CREATED_AT", "STARTED_AT", "COMPLETED_AT" } / 지역 변수를 선언합니다: var reservedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID", "PPID", "PRODUCT_STATE", "JUDGEMENT", "CREATED_AT", "STARTED_AT", "COMPLETED_AT" }; / 변수의 초기값을 지정합니다: reservedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID",
+L000050 |         var reservedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000052 |             "H_GLASSID", ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000053 |             "LOTID", ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000054 |             "PROCESS_ID", ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000055 |             "PPID", ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000056 |             "PRODUCT_STATE", ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000057 |             "JUDGEMENT", ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000058 |             "CREATED_AT", ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000059 |             "STARTED_AT", ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000060 |             "COMPLETED_AT" ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000061 |         }; ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "RECIPE") / 지역 변수를 선언합니다: var parameters = ReadSection(rows, "RECIPE"); / 변수의 초기값을 지정합니다: parameters = ReadSection(rows, "RECIPE")
+L000062 |         var parameters = ReadSection(rows, "RECIPE"); ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>)
+L000063 |         bool ShouldIncludeItem(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: reservedNames.Contains(item.Key) / 호출자에게 값 또는 제어를 반환합니다: return !reservedNames.Contains(item.Key);
+L000065 |             return !reservedNames.Contains(item.Key); ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000066 |         } ⟦EOL⟧
+L000067 |  ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: productValues.Where(ShouldIncludeItem) / 컬렉션 요소를 순회합니다: foreach (var item in productValues.Where(ShouldIncludeItem))
+L000068 |         foreach (var item in productValues.Where(ShouldIncludeItem)) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000069 |         { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryAdd(item.Key, item.Value)
+L000070 |             parameters.TryAdd(item.Key, item.Value); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000071 |         } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "ALIGN") / 지역 변수를 선언합니다: var alignValues = ReadSection(rows, "ALIGN"); / 변수의 초기값을 지정합니다: alignValues = ReadSection(rows, "ALIGN")
+L000073 |         var alignValues = ReadSection(rows, "ALIGN"); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "DISTORTION") / 지역 변수를 선언합니다: var distortionValues = ReadSection(rows, "DISTORTION"); / 변수의 초기값을 지정합니다: distortionValues = ReadSection(rows, "DISTORTION")
+L000074 |         var distortionValues = ReadSection(rows, "DISTORTION"); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW") / 지역 변수를 선언합니다: var reviewValues = ReadSection(rows, "REVIEW"); / 변수의 초기값을 지정합니다: reviewValues = ReadSection(rows, "REVIEW")
+L000075 |         var reviewValues = ReadSection(rows, "REVIEW"); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW_RESULT") / 지역 변수를 선언합니다: var reviewResultValues = ReadSection(rows, "REVIEW_RESULT"); / 변수의 초기값을 지정합니다: reviewResultValues = ReadSection(rows, "REVIEW_RESULT")
+L000076 |         var reviewResultValues = ReadSection(rows, "REVIEW_RESULT"); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseCompactReview(reviewValues, reviewResultValues) / 지역 변수를 선언합니다: var review = ParseCompactReview(reviewValues, reviewResultValues); / 변수의 초기값을 지정합니다: review = ParseCompactReview(reviewValues, reviewResultValues)
+L000077 |         var review = ParseCompactReview(reviewValues, reviewResultValues); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateReview(review)
+L000078 |         ValidateReview(review); ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · string SelectName(string)
+L000079 |         string SelectName(string name) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 SelectName.
+L000080 |         { ⟦EOL⟧
+// 해설 L81: 호출자에게 값 또는 제어를 반환합니다: return name;
+L000081 |             return name; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 SelectName.
+L000082 |         } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(string)
+L000084 |         string SelectValue(string name) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 SelectValue.
+L000085 |         { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, name) / 호출자에게 값 또는 제어를 반환합니다: return ReadAny(productValues, name);
+L000086 |             return ReadAny(productValues, name); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 SelectValue.
+L000087 |         } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase)
+L000089 |         var normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: normalizedProductValues["H_GLASSID"] = glassId
+L000090 |         normalizedProductValues["H_GLASSID"] = glassId; ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: normalizedProductValues["LOTID"] = ReadAny(productValues, "LOTID") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "LOTID")
+L000091 |         normalizedProductValues["LOTID"] = ReadAny(productValues, "LOTID"); ⟦EOL⟧
+// 해설 L92: 값을 대상에 대입합니다: normalizedProductValues["PPID"] = ReadAny(productValues, "PPID") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "PPID")
+L000092 |         normalizedProductValues["PPID"] = ReadAny(productValues, "PPID"); ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), Default… / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultTex
+L000093 |         return new ST_PRODUCT_DATA( ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(normalizedProductValues)
+L000094 |             new ST_PRODUCT_INFO(normalizedProductValues),  ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RECIPE_DATA(parameters)
+L000095 |             new ST_PRODUCT_RECIPE_DATA(parameters),  ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(alignValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")), Par…
+L000096 |             new ST_PRODUCT_ALIGN_DATA( ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "STATE")
+L000097 |             ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted),  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(alignValues, "RESULT"), "PENDING") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "RESULT")
+L000098 |             DefaultText(ReadAny(alignValues, "RESULT"), "PENDING"),  ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_X")
+L000099 |             ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")),  ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_Y")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_Y")
+L000100 |             ParseNullableDouble(ReadAny(alignValues, "OFFSET_Y")),  ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "ROTATION")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "ROTATION")
+L000101 |             ParseNullableDouble(ReadAny(alignValues, "ROTATION")) ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000102 |         ),  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DISTORTION_DATA(ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(distortionValues… / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "STATE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING") / 함수·델리게이트 또는 객체 생성자를 호출합니
+L000103 |             new ST_PRODUCT_DISTORTION_DATA(ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(distortionValues, "MAX_DA"))),  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000104 |             review,  ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RUNTIME_DATA([])
+L000105 |             new ST_PRODUCT_RUNTIME_DATA([]) ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000106 |         ); ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 LoadCompactActive.
+L000107 |     } ⟦EOL⟧
+L000108 |  ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken)
+L000109 |     public override Task SaveActive(ST_PRODUCT_DATA product, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 SaveActive.
+L000110 |     { ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000111 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<IReadOnlyDictionary<string, string>>() / 지역 변수를 선언합니다: var rows = new List<IReadOnlyDictionary<string, string>>(); / 변수의 초기값을 지정합니다: rows = new List<IReadOnlyDictionary<string, string>>()
+L000112 |         var rows = new List<IReadOnlyDictionary<string, string>>(); ⟦EOL⟧
+// 해설 L113: 컬렉션 요소를 순회합니다: foreach (var name in CProductManager.ProductFieldNames)
+L000113 |         foreach (var name in CProductManager.ProductFieldNames) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 SaveActive.
+L000114 |         { ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "PRODUCT", name, product.Product.Get(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Product.Get(name)
+L000115 |             AddCompactRow(rows, "PRODUCT", name, product.Product.Get(name)); ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 SaveActive.
+L000116 |         } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>)
+L000118 |         bool ShouldIncludeItem(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsCompactProductCoreName(item.Key) / 호출자에게 값 또는 제어를 반환합니다: return !IsCompactProductCoreName(item.Key);
+L000120 |             return !IsCompactProductCoreName(item.Key); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000121 |         } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · string SelectKey(System.Collections.Generic.KeyValuePair<string, string>)
+L000123 |         string SelectKey(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 SelectKey.
+L000124 |         { ⟦EOL⟧
+// 해설 L125: 호출자에게 값 또는 제어를 반환합니다: return item.Key;
+L000125 |             return item.Key; ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 SelectKey.
+L000126 |         } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> BuildRecipeParameterCompactRow(System.Collections.Generic.KeyValuePair<string, string>)
+L000128 |         global::System.Collections.Generic.IReadOnlyDictionary<string, string> BuildRecipeParameterCompactRow(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 BuildRecipeParameterCompactRow.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow("RECIPE", item.Key, item.Value) / 호출자에게 값 또는 제어를 반환합니다: return CompactRow("RECIPE", item.Key, item.Value);
+L000130 |             return CompactRow("RECIPE", item.Key, item.Value); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 BuildRecipeParameterCompactRow.
+L000131 |         } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.AddRange(product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem
+L000133 |         rows.AddRange(product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow)); ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "STATE", product.Align.State.ToString().ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString()
+L000134 |         AddCompactRow(rows, "ALIGN", "STATE", product.Align.State.ToString().ToUpperInvariant()); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "RESULT", product.Align.Result)
+L000135 |         AddCompactRow(rows, "ALIGN", "RESULT", product.Align.Result); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_X", FormatDouble(product.Align.OffsetX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetX)
+L000136 |         AddCompactRow(rows, "ALIGN", "OFFSET_X", FormatDouble(product.Align.OffsetX)); ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_Y", FormatDouble(product.Align.OffsetY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetY)
+L000137 |         AddCompactRow(rows, "ALIGN", "OFFSET_Y", FormatDouble(product.Align.OffsetY)); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "ROTATION", FormatDouble(product.Align.Rotation)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.Rotation)
+L000138 |         AddCompactRow(rows, "ALIGN", "ROTATION", FormatDouble(product.Align.Rotation)); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "STATE", product.Distortion.State.ToString().ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString()
+L000139 |         AddCompactRow(rows, "DISTORTION", "STATE", product.Distortion.State.ToString().ToUpperInvariant()); ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "RESULT", product.Distortion.Result)
+L000140 |         AddCompactRow(rows, "DISTORTION", "RESULT", product.Distortion.Result); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "MAX_DA", FormatDouble(product.Distortion.MaxDa)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Distortion.MaxDa)
+L000141 |         AddCompactRow(rows, "DISTORTION", "MAX_DA", FormatDouble(product.Distortion.MaxDa)); ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "STATE", product.Review.State.ToString().ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString()
+L000142 |         AddCompactRow(rows, "REVIEW", "STATE", product.Review.State.ToString().ToUpperInvariant()); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "INSPECTION_METHOD", product.Review.InspectionMethod)
+L000143 |         AddCompactRow(rows, "REVIEW", "INSPECTION_METHOD", product.Review.InspectionMethod); ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RECIPE_ID", product.Review.RecipeId)
+L000144 |         AddCompactRow(rows, "REVIEW", "RECIPE_ID", product.Review.RecipeId); ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE", product.Review.Rule)
+L000145 |         AddCompactRow(rows, "REVIEW", "RULE", product.Review.Rule); ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE_SCOPE", product.Review.RuleScope)
+L000146 |         AddCompactRow(rows, "REVIEW", "RULE_SCOPE", product.Review.RuleScope); ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "BEAM_NO", product.Review.BeamNo.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.BeamNo.ToString(CultureInfo.InvariantCulture)
+L000147 |         AddCompactRow(rows, "REVIEW", "BEAM_NO", product.Review.BeamNo.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_CELL_NO", product.Review.ReferenceCellNo?.ToString(CultureInfo.InvariantCulture) ?? "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(CultureInfo.InvariantCulture)
+L000148 |         AddCompactRow(rows, "REVIEW", "REFERENCE_CELL_NO", product.Review.ReferenceCellNo?.ToString(CultureInfo.InvariantCulture) ?? ""); ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_SHOT", product.Review.ReferenceShot)
+L000149 |         AddCompactRow(rows, "REVIEW", "REFERENCE_SHOT", product.Review.ReferenceShot); ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "ROUGH_REFERENCE", product.Review.RoughReference)
+L000150 |         AddCompactRow(rows, "REVIEW", "ROUGH_REFERENCE", product.Review.RoughReference); ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "FINE_LINE_COUNT", product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture)
+L000151 |         AddCompactRow(rows, "REVIEW", "FINE_LINE_COUNT", product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "TOTAL_COUNT", product.Review.TotalCount.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.TotalCount.ToString(CultureInfo.InvariantCulture)
+L000152 |         AddCompactRow(rows, "REVIEW", "TOTAL_COUNT", product.Review.TotalCount.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L153: 조건에 따라 분기합니다: if (product.Review.SavedAt.HasValue)
+L000153 |         if (product.Review.SavedAt.HasValue) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SaveActive.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", "SAVED_AT", FormatDate(product.Review.SavedAt)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(product.Review.SavedAt)
+L000155 |             AddCompactRow(rows, "REVIEW_RESULT", "SAVED_AT", FormatDate(product.Review.SavedAt)); ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 SaveActive.
+L000156 |         } ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT)
+L000158 |         int SelectCellNo(global::Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT item) ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 SelectCellNo.
+L000159 |         { ⟦EOL⟧
+// 해설 L160: 호출자에게 값 또는 제어를 반환합니다: return item.CellNo;
+L000160 |             return item.CellNo; ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 SelectCellNo.
+L000161 |         } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT)
+L000163 |         string SelectShotKey(global::Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT item) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return item.ShotKey;
+L000165 |             return item.ShotKey; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo) / 컬렉션 요소를 순회합니다: foreach (var result in product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase))
+L000168 |         foreach (var result in product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 SaveActive.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.HEAD_NO", result.HeadNo.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.HeadNo.ToString(CultureInfo.InvariantCulture)
+L000170 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.HEAD_NO", result.HeadNo.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.CELL_NO", result.CellNo.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.CellNo.ToString(CultureInfo.InvariantCulture)
+L000171 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.CELL_NO", result.CellNo.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.BEAM_NO", result.BeamNo.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.BeamNo.ToString(CultureInfo.InvariantCulture)
+L000172 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.BEAM_NO", result.BeamNo.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_X", result.ErrorX.ToString("G", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorX.ToString("G", CultureInfo.InvariantCulture)
+L000173 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_X", result.ErrorX.ToString("G", CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_Y", result.ErrorY.ToString("G", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorY.ToString("G", CultureInfo.InvariantCulture)
+L000174 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_Y", result.ErrorY.ToString("G", CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.JUDGE", result.Judge)
+L000175 |             AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.JUDGE", result.Judge); ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 SaveActive.
+L000176 |         } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteActiveProductAtomically(rows)
+L000178 |         WriteActiveProductAtomically(rows); ⟦EOL⟧
+// 해설 L179: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000179 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 SaveActive.
+L000180 |     } ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Product.CProductFile.WriteActiveProductAtomically(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000182 |     private void WriteActiveProductAtomically(IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000183 |     { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() / 지역 변수를 선언합니다: var activePath = GetActiveProductPath(); / 변수의 초기값을 지정합니다: activePath = GetActiveProductPath()
+L000184 |         var activePath = GetActiveProductPath(); ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp"; / 변수의 초기값을 지정합니다: temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp"
+L000185 |         var temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp"; ⟦EOL⟧
+// 해설 L186: 예외 처리 범위입니다: try
+L000186 |         try ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000187 |         { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, ActiveHeaders, rows)
+L000188 |             CCsvParser.Write(temporaryPath, ActiveHeaders, rows); ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(activePath) / 조건에 따라 분기합니다: if (System.IO.File.Exists(activePath))
+L000189 |             if (System.IO.File.Exists(activePath)) ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000190 |             { ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, activePath, null)
+L000191 |                 System.IO.File.Replace(temporaryPath, activePath, null); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000192 |             } ⟦EOL⟧
+// 해설 L193: 앞 조건이 거짓인 경로입니다: else
+L000193 |             else ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000194 |             { ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, activePath)
+L000195 |                 System.IO.File.Move(temporaryPath, activePath); ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000196 |             } ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000197 |         } ⟦EOL⟧
+// 해설 L198: 종료 정리 구간입니다: finally
+L000198 |         finally ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000199 |         { ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath)
+L000200 |             DeleteIfExists(temporaryPath); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000201 |         } ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 WriteActiveProductAtomically.
+L000202 |     } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.ClearActive(System.Threading.CancellationToken)
+L000204 |     public override Task ClearActive(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ClearActive.
+L000205 |     { ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000206 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(GetActiveProductPath()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath()
+L000207 |         DeleteIfExists(GetActiveProductPath()); ⟦EOL⟧
+// 해설 L208: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000208 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 ClearActive.
+L000209 |     } ⟦EOL⟧
+L000210 |  ⟦EOL⟧
+// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
+L000211 |     public override Task AppendHistory(ST_PRODUCT_HISTORY history, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 AppendHistory.
+L000212 |     { ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000213 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(history.OccurredAt) / 지역 변수를 선언합니다: var path = GetHistoryPath(history.OccurredAt); / 변수의 초기값을 지정합니다: path = GetHistoryPath(history.OccurredAt)
+L000214 |         var path = GetHistoryPath(history.OccurredAt); ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.
+L000215 |         var rows = CCsvParser.Read(path) ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
+L000216 |             .Select(ParseHistory) ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
+L000217 |             .Where(item => item is not null) ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(item!)
+L000218 |             .Select(item => ToHistoryRow(item!)) ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(history)
+L000219 |             .Append(ToHistoryRow(history)) ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
+L000220 |             .ToArray(); ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteRowsAtomically(path, HistoryHeaders, rows)
+L000221 |         WriteRowsAtomically(path, HistoryHeaders, rows); ⟦EOL⟧
+// 해설 L222: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000222 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 AppendHistory.
+L000223 |     } ⟦EOL⟧
+L000224 |  ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.File.Product.CProductFile.LoadHistory(int, int, System.Threading.CancellationToken)
+L000225 |     public override Task<IReadOnlyList<ST_PRODUCT_HISTORY>> LoadHistory(int maxRows = 100, int days = 14, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 LoadHistory.
+L000226 |     { ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000227 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L228: 지역 변수를 선언합니다: var today = DateTime.Today; / 변수의 초기값을 지정합니다: today = DateTime.Today
+L000228 |         var today = DateTime.Today; ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · System.DateTime SelectValue(int)
+L000229 |         global::System.DateTime SelectValue(int offset) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 SelectValue.
+L000230 |         { ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: today.AddDays(-offset) / 호출자에게 값 또는 제어를 반환합니다: return today.AddDays(-offset);
+L000231 |             return today.AddDays(-offset); ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 SelectValue.
+L000232 |         } ⟦EOL⟧
+L000233 |  ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · string SelectHistoryPath(System.DateTime)
+L000234 |         string SelectHistoryPath(global::System.DateTime date) ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 SelectHistoryPath.
+L000235 |         { ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(new DateTimeOffset(date)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTimeOffset(date) / 호출자에게 값 또는 제어를 반환합니다: return GetHistoryPath(new DateTimeOffset(date));
+L000236 |             return GetHistoryPath(new DateTimeOffset(date)); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 SelectHistoryPath.
+L000237 |         } ⟦EOL⟧
+L000238 |  ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?)
+L000239 |         bool ShouldIncludeItem(global::Drilling.Common.Product.ST_PRODUCT_HISTORY? history) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000240 |         { ⟦EOL⟧
+// 해설 L241: 호출자에게 값 또는 제어를 반환합니다: return history is not null;
+L000241 |             return history is not null; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000242 |         } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_HISTORY SelectItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?)
+L000244 |         global::Drilling.Common.Product.ST_PRODUCT_HISTORY SelectItem(global::Drilling.Common.Product.ST_PRODUCT_HISTORY? history) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 SelectItem.
+L000245 |         { ⟦EOL⟧
+// 해설 L246: 호출자에게 값 또는 제어를 반환합니다: return history!;
+L000246 |             return history!; ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 SelectItem.
+L000247 |         } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset SelectOccurredAt(Drilling.Common.Product.ST_PRODUCT_HISTORY)
+L000249 |         global::System.DateTimeOffset SelectOccurredAt(global::Drilling.Common.Product.ST_PRODUCT_HISTORY history) ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 SelectOccurredAt.
+L000250 |         { ⟦EOL⟧
+// 해설 L251: 호출자에게 값 또는 제어를 반환합니다: return history.OccurredAt;
+L000251 |             return history.OccurredAt; ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 SelectOccurredAt.
+L000252 |         } ⟦EOL⟧
+L000253 |  ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.M
+L000254 |         var histories = Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending(SelectOccurredAt).Take(Math.Max(1, maxRows)).ToArray(); ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories);
+L000255 |         return Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories); ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 LoadHistory.
+L000256 |     } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.GetActiveProductPath()
+L000258 |     private string GetActiveProductPath() ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 GetActiveProductPath.
+L000259 |     { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "ActiveProduct.csv") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "ActiveProduct.csv");
+L000260 |         return Path.Combine(_productRoot, "ActiveProduct.csv"); ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 GetActiveProductPath.
+L000261 |     } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset)
+L000263 |     private string GetHistoryPath(DateTimeOffset timestamp) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 GetHistoryPath.
+L000264 |     { ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv") / 함수·델리게이트 또는 객체 생성자를 호출합니다: timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv");
+L000265 |         return Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv"); ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 GetHistoryPath.
+L000266 |     } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Product.CProductFile.ValidateReview(Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA)
+L000268 |     private static void ValidateReview(ST_PRODUCT_REVIEW_DATA review) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000269 |     { ⟦EOL⟧
+// 해설 L270: 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.Completed && review.Results.Count == 0)
+L000270 |         if (review.State == EN_PRODUCT_PROCESS_STATE.Completed && review.Results.Count == 0) ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000271 |         { ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty.") / 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty.");
+L000272 |             throw new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty."); ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000273 |         } ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.NotStarted && review.Results.Count > 0)
+L000275 |         if (review.State == EN_PRODUCT_PROCESS_STATE.NotStarted && review.Results.Count > 0) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000276 |         { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED.") / 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED.");
+L000277 |             throw new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED."); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000278 |         } ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 ValidateReview.
+L000279 |     } ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000281 |     private static ST_PRODUCT_REVIEW_DATA ParseCompactReview(IReadOnlyDictionary<string, string> reviewValues, IReadOnlyDictionary<string, string> resultValues) ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000282 |     { ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>)
+L000283 |         bool ShouldIncludeItem(global::System.Collections.Generic.KeyValuePair<string, string> item) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000284 |         { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return !item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase);
+L000285 |             return !item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000286 |         } ⟦EOL⟧
+L000287 |  ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT)
+L000288 |         int SelectCellNo(global::Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT result) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 SelectCellNo.
+L000289 |         { ⟦EOL⟧
+// 해설 L290: 호출자에게 값 또는 제어를 반환합니다: return result.CellNo;
+L000290 |             return result.CellNo; ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 SelectCellNo.
+L000291 |         } ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT)
+L000293 |         string SelectShotKey(global::Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT result) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000294 |         { ⟦EOL⟧
+// 해설 L295: 호출자에게 값 또는 제어를 반환합니다: return result.ShotKey;
+L000295 |             return result.ShotKey; ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 SelectShotKey.
+L000296 |         } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… / 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues
+L000298 |         var groupedResults = resultValues.Where(ShouldIncludeItem).Select(item => ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000299 |         { ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.LastIndexOf('.') / 지역 변수를 선언합니다: var separator = item.Key.LastIndexOf('.'); / 변수의 초기값을 지정합니다: separator = item.Key.LastIndexOf('.')
+L000300 |             var separator = item.Key.LastIndexOf('.'); ⟦EOL⟧
+// 해설 L301: 조건에 따라 결과식을 선택합니다: separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null / 호출자에게 값 또는 제어를 반환합니다: return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null;
+L000301 |             return separator > 0 ? new ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000302 |             { ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000303 |                 ShotKey = item.Key[..separator], ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000304 |                 Field = item.Key[(separator + 1)..], ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000305 |                 item.Value ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000306 |             } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000308 |             : null; ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000309 |         }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000310 |         { ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase)
+L000311 |             var values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X… / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X"))
+L000312 |             return new ST_PRODUCT_REVIEW_RESULT( ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000313 |                 group.Key,  ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "HEAD_NO")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "HEAD_NO")
+L000314 |                 ParseInt(ReadAny(values, "HEAD_NO")),  ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "CELL_NO")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "CELL_NO")
+L000315 |                 ParseInt(ReadAny(values, "CELL_NO")),  ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "BEAM_NO")
+L000316 |                 ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo),  ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_X")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_X")
+L000317 |                 ParseNullableDouble(ReadAny(values, "ERROR_X")) ?? 0.0,  ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_Y")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_Y")
+L000318 |                 ParseNullableDouble(ReadAny(values, "ERROR_Y")) ?? 0.0,  ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "JUDGE")
+L000319 |                 ReadAny(values, "JUDGE") ⟦EOL⟧
+// 해설 L320: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000320 |             ); ⟦EOL⟧
+// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000321 |         }).OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPEC… / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPECTIO
+L000322 |         return new ST_PRODUCT_REVIEW_DATA( ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "STATE")
+L000323 |             ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(ReadAny(resultValues, "SAVED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(resultValues, "SAVED_AT")
+L000324 |             ParseDate(ReadAny(resultValues, "SAVED_AT")), ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionar
+L000325 |             groupedResults) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000326 |         { ⟦EOL⟧
+// 해설 L327: 값을 대상에 대입합니다: InspectionMethod = ReadAny(reviewValues, "INSPECTION_METHOD") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "INSPECTION_METHOD")
+L000327 |             InspectionMethod = ReadAny(reviewValues, "INSPECTION_METHOD"), ⟦EOL⟧
+// 해설 L328: 값을 대상에 대입합니다: RecipeId = ReadAny(reviewValues, "RECIPE_ID") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RECIPE_ID")
+L000328 |             RecipeId = ReadAny(reviewValues, "RECIPE_ID"), ⟦EOL⟧
+// 해설 L329: 값을 대상에 대입합니다: Rule = ReadAny(reviewValues, "RULE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE")
+L000329 |             Rule = ReadAny(reviewValues, "RULE"), ⟦EOL⟧
+// 해설 L330: 값을 대상에 대입합니다: RuleScope = ReadAny(reviewValues, "RULE_SCOPE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE_SCOPE")
+L000330 |             RuleScope = ReadAny(reviewValues, "RULE_SCOPE"), ⟦EOL⟧
+// 해설 L331: 값을 대상에 대입합니다: BeamNo = ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "BEAM_NO")
+L000331 |             BeamNo = ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo), ⟦EOL⟧
+// 해설 L332: 값을 대상에 대입합니다: ReferenceCellNo = ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_CELL_NO")
+L000332 |             ReferenceCellNo = ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")), ⟦EOL⟧
+// 해설 L333: 값을 대상에 대입합니다: ReferenceShot = ReadAny(reviewValues, "REFERENCE_SHOT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_SHOT")
+L000333 |             ReferenceShot = ReadAny(reviewValues, "REFERENCE_SHOT"), ⟦EOL⟧
+// 해설 L334: 값을 대상에 대입합니다: RoughReference = ReadAny(reviewValues, "ROUGH_REFERENCE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "ROUGH_REFERENCE")
+L000334 |             RoughReference = ReadAny(reviewValues, "ROUGH_REFERENCE"), ⟦EOL⟧
+// 해설 L335: 값을 대상에 대입합니다: FineLineCount = ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "FINE_LINE_COUNT")
+L000335 |             FineLineCount = ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")), ⟦EOL⟧
+// 해설 L336: 값을 대상에 대입합니다: TotalCount = ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "TOTAL_COUNT")
+L000336 |             TotalCount = ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000337 |         }; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 ParseCompactReview.
+L000338 |     } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, str
+L000340 |     private static Dictionary<string, string> ReadSection(IReadOnlyList<IReadOnlyDictionary<string, string>> rows, string type) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 ReadSection.
+L000341 |     { ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · bool MatchesSectionType(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000342 |         bool MatchesSectionType(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 MatchesSectionType.
+L000343 |         { ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase);
+L000344 |             return CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 MatchesSectionType.
+L000345 |         } ⟦EOL⟧
+L000346 |  ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · bool HasSectionName(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000347 |         bool HasSectionName(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다 · 소속 HasSectionName.
+L000348 |         { ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME"));
+L000349 |             return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")); ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 HasSectionName.
+L000350 |         } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · string SelectGroupKey(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000352 |         string SelectGroupKey(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 SelectGroupKey.
+L000353 |         { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME");
+L000354 |             return CCsvParser.Get(row, "NAME"); ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 SelectGroupKey.
+L000355 |         } ⟦EOL⟧
+L000356 |  ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · string SelectKey(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000357 |         string SelectKey(global::System.Linq.IGrouping<string, global::System.Collections.Generic.IReadOnlyDictionary<string, string>> group) ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 SelectKey.
+L000358 |         { ⟦EOL⟧
+// 해설 L359: 호출자에게 값 또는 제어를 반환합니다: return group.Key;
+L000359 |             return group.Key; ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 SelectKey.
+L000360 |         } ⟦EOL⟧
+L000361 |  ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>)
+L000362 |         string SelectValue(global::System.Linq.IGrouping<string, global::System.Collections.Generic.IReadOnlyDictionary<string, string>> group) ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 SelectValue.
+L000363 |         { ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(group.Last(), "VALUE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Last() / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(group.Last(), "VALUE");
+L000364 |             return CCsvParser.Get(group.Last(), "VALUE"); ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 SelectValue.
+L000365 |         } ⟦EOL⟧
+L000366 |  ⟦EOL⟧
+// 해설 L367: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType) / 호출자에게 값 또는 제어를 반환합니다: return rows.Where(Matches
+L000367 |         return rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 ReadSection.
+L000368 |     } ⟦EOL⟧
+L000369 |  ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[])
+L000370 |     private static string ReadAny(IReadOnlyDictionary<string, string> values, params string[] names) ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 ReadAny.
+L000371 |     { ⟦EOL⟧
+// 해설 L372: 컬렉션 요소를 순회합니다: foreach (var name in names)
+L000372 |         foreach (var name in names) ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 ReadAny.
+L000373 |         { ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(name, out var value) / 조건에 따라 분기합니다: if (values.TryGetValue(name, out var value))
+L000374 |             if (values.TryGetValue(name, out var value)) ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 ReadAny.
+L000375 |             { ⟦EOL⟧
+// 해설 L376: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000376 |                 return value; ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 ReadAny.
+L000377 |             } ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ReadAny.
+L000378 |         } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000380 |         return ""; ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 ReadAny.
+L000381 |     } ⟦EOL⟧
+L000382 |  ⟦EOL⟧
+// 해설 L383: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string)
+L000383 |     private static void AddCompactRow(ICollection<IReadOnlyDictionary<string, string>> rows, string type, string name, string value) ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 AddCompactRow.
+L000384 |     { ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(CompactRow(type, name, value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow(type, name, value)
+L000385 |         rows.Add(CompactRow(type, name, value)); ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 AddCompactRow.
+L000386 |     } ⟦EOL⟧
+L000387 |  ⟦EOL⟧
+// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string)
+L000388 |     private static IReadOnlyDictionary<string, string> CompactRow(string type, string name, string value) ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 CompactRow.
+L000389 |     { ⟦EOL⟧
+// 해설 L390: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value } / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value };
+L000390 |         return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 CompactRow.
+L000391 |         { ⟦EOL⟧
+// 해설 L392: 값을 대상에 대입합니다: ["TYPE"] = type
+L000392 |             ["TYPE"] = type, ⟦EOL⟧
+// 해설 L393: 값을 대상에 대입합니다: ["NAME"] = name
+L000393 |             ["NAME"] = name, ⟦EOL⟧
+// 해설 L394: 값을 대상에 대입합니다: ["VALUE"] = value
+L000394 |             ["VALUE"] = value ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 CompactRow.
+L000395 |         }; ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 CompactRow.
+L000396 |     } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string)
+L000398 |     private static bool IsCompactProductCoreName(string name) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 IsCompactProductCoreName.
+L000399 |     { ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim() / 호출자에게 값 또는 제어를 반환합니다: return name.Trim().ToUpperInvariant() switch { "H_GLASSID" or "LOTID" or "PROCESS_ID" or "PPID" or "PRODUCT_STATE" or "JUDGEMENT" or "CREATED_AT" or "STARTED_AT" or "COMPLETED_AT" => true, _ => false }; / 값별 결과식을 선택합니다: name.Trim().ToUpperInvariant() switch { "H_GLASSID" or "LOTID" or "PROCESS_ID" or "PPID" or "PRODUCT_STATE" or "JUDGEMENT" or "CREATED_AT" or "STARTED_AT" or "COMPLETED_AT" => true, _ => false }
+L000400 |         return name.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 IsCompactProductCoreName.
+L000401 |         { ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string)
+L000402 |             "H_GLASSID" or "LOTID" or "PROCESS_ID" or "PPID" or "PRODUCT_STATE" or "JUDGEMENT" or "CREATED_AT" or "STARTED_AT" or "COMPLETED_AT" => true, ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string)
+L000403 |             _ => false ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 IsCompactProductCoreName.
+L000404 |         }; ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 IsCompactProductCoreName.
+L000405 |     } ⟦EOL⟧
+L000406 |  ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.DefaultText(string, string)
+L000407 |     private static string DefaultText(string value, string defaultValue) ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 DefaultText.
+L000408 |     { ⟦EOL⟧
+// 해설 L409: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value;
+L000409 |         return string.IsNullOrWhiteSpace(value) ? defaultValue : value; ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 DefaultText.
+L000410 |     } ⟦EOL⟧
+L000411 |  ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.Product.CProductFile.ParseInt(string, int)
+L000412 |     private static int ParseInt(string value, int defaultValue = 0) ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 ParseInt.
+L000413 |     { ⟦EOL⟧
+// 해설 L414: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue;
+L000414 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue; ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 ParseInt.
+L000415 |     } ⟦EOL⟧
+L000416 |  ⟦EOL⟧
+// 해설 L417: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.File.Product.CProductFile.ParseNullableInt(string)
+L000417 |     private static int? ParseNullableInt(string value) ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 ParseNullableInt.
+L000418 |     { ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null;
+L000419 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 ParseNullableInt.
+L000420 |     } ⟦EOL⟧
+L000421 |  ⟦EOL⟧
+// 해설 L422: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.File.Product.CProductFile.ParseNullableDouble(string)
+L000422 |     private static double? ParseNullableDouble(string value) ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 ParseNullableDouble.
+L000423 |     { ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null;
+L000424 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 ParseNullableDouble.
+L000425 |     } ⟦EOL⟧
+L000426 |  ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.FormatDouble(double?)
+L000427 |     private static string FormatDouble(double? value) ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 FormatDouble.
+L000428 |     { ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("G", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("G", CultureInfo.InvariantCulture) ?? "";
+L000429 |         return value?.ToString("G", CultureInfo.InvariantCulture) ?? ""; ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 FormatDouble.
+L000430 |     } ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY)
+L000432 |     private static IReadOnlyDictionary<string, string> ToHistoryRow(ST_PRODUCT_HISTORY history) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 ToHistoryRow.
+L000433 |     { ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID… / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID"]
+L000434 |         return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 ToHistoryRow.
+L000435 |         { ⟦EOL⟧
+// 해설 L436: 값을 대상에 대입합니다: ["OCCURRED_AT"] = FormatDate(history.OccurredAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(history.OccurredAt)
+L000436 |             ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ⟦EOL⟧
+// 해설 L437: 값을 대상에 대입합니다: ["ROW_TYPE"] = "EVENT"
+L000437 |             ["ROW_TYPE"] = "EVENT", ⟦EOL⟧
+// 해설 L438: 값을 대상에 대입합니다: ["GLASS_ID"] = history.GlassId
+L000438 |             ["GLASS_ID"] = history.GlassId, ⟦EOL⟧
+// 해설 L439: 값을 대상에 대입합니다: ["PROCESS_ID"] = history.ProcessId
+L000439 |             ["PROCESS_ID"] = history.ProcessId, ⟦EOL⟧
+// 해설 L440: 값을 대상에 대입합니다: ["RECIPE_ID"] = history.RecipeId
+L000440 |             ["RECIPE_ID"] = history.RecipeId, ⟦EOL⟧
+// 해설 L441: 값을 대상에 대입합니다: ["ACTION"] = history.Action
+L000441 |             ["ACTION"] = history.Action, ⟦EOL⟧
+// 해설 L442: 값을 대상에 대입합니다: ["STATE"] = history.State
+L000442 |             ["STATE"] = history.State, ⟦EOL⟧
+// 해설 L443: 값을 대상에 대입합니다: ["RESULT"] = history.Result
+L000443 |             ["RESULT"] = history.Result, ⟦EOL⟧
+// 해설 L444: 값을 대상에 대입합니다: ["DETAIL"] = history.Detail
+L000444 |             ["DETAIL"] = history.Detail ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 ToHistoryRow.
+L000445 |         }; ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 ToHistoryRow.
+L000446 |     } ⟦EOL⟧
+L000447 |  ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_HISTORY? Drilling.File.Product.CProductFile.ParseHistory(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000448 |     private static ST_PRODUCT_HISTORY? ParseHistory(IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 ParseHistory.
+L000449 |     { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(CCsvParser.Get(row, "OCCURRED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "OCCURRED_AT") / 지역 변수를 선언합니다: var occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")); / 변수의 초기값을 지정합니다: occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT"))
+L000450 |         var occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")); ⟦EOL⟧
+// 해설 L451: 조건에 따라 분기합니다: if (!occurredAt.HasValue)
+L000451 |         if (!occurredAt.HasValue) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 ParseHistory.
+L000452 |         { ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000453 |             return null; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 ParseHistory.
+L000454 |         } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(… / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(row
+L000456 |         return new ST_PRODUCT_HISTORY( ⟦EOL⟧
+// 해설 L457: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_HISTORY? Drilling.File.Product.CProductFile.ParseHistory(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000457 |             occurredAt.Value,  ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GLASS_ID")
+L000458 |             CCsvParser.Get(row, "GLASS_ID"),  ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "PROCESS_ID")
+L000459 |             CCsvParser.Get(row, "PROCESS_ID"),  ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RECIPE_ID")
+L000460 |             CCsvParser.Get(row, "RECIPE_ID"),  ⟦EOL⟧
+// 해설 L461: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ACTION")
+L000461 |             CCsvParser.Get(row, "ACTION"),  ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STATE")
+L000462 |             CCsvParser.Get(row, "STATE"),  ⟦EOL⟧
+// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RESULT")
+L000463 |             CCsvParser.Get(row, "RESULT"),  ⟦EOL⟧
+// 해설 L464: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DETAIL")
+L000464 |             CCsvParser.Get(row, "DETAIL") ⟦EOL⟧
+// 해설 L465: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_HISTORY? Drilling.File.Product.CProductFile.ParseHistory(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000465 |         ); ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 ParseHistory.
+L000466 |     } ⟦EOL⟧
+L000467 |  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Product.CProductFile.WriteRowsAtomically(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<stri
+L000468 |     private static void WriteRowsAtomically(string path, IReadOnlyList<string> headers, IReadOnlyList<IReadOnlyDictionary<string, string>> rows) ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000469 |     { ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp"; / 변수의 초기값을 지정합니다: temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp"
+L000470 |         var temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp"; ⟦EOL⟧
+// 해설 L471: 예외 처리 범위입니다: try
+L000471 |         try ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000472 |         { ⟦EOL⟧
+// 해설 L473: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, headers, rows)
+L000473 |             CCsvParser.Write(temporaryPath, headers, rows); ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (System.IO.File.Exists(path))
+L000474 |             if (System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000475 |             { ⟦EOL⟧
+// 해설 L476: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, path, null)
+L000476 |                 System.IO.File.Replace(temporaryPath, path, null); ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000477 |             } ⟦EOL⟧
+// 해설 L478: 앞 조건이 거짓인 경로입니다: else
+L000478 |             else ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000479 |             { ⟦EOL⟧
+// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, path)
+L000480 |                 System.IO.File.Move(temporaryPath, path); ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000481 |             } ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000482 |         } ⟦EOL⟧
+// 해설 L483: 종료 정리 구간입니다: finally
+L000483 |         finally ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000484 |         { ⟦EOL⟧
+// 해설 L485: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath)
+L000485 |             DeleteIfExists(temporaryPath); ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000486 |         } ⟦EOL⟧
+// 해설 L487: 구문 블록 경계입니다 · 소속 WriteRowsAtomically.
+L000487 |     } ⟦EOL⟧
+L000488 |  ⟦EOL⟧
+// 해설 L489: 선언·서명/매개변수·접근 조건입니다 · T Drilling.File.Product.CProductFile.ParseEnum<T>(string, T)
+L000489 |     private static T ParseEnum<T>(string value, T defaultValue) ⟦EOL⟧
+// 해설 L490: 선언·서명/매개변수·접근 조건입니다 · T Drilling.File.Product.CProductFile.ParseEnum<T>(string, T)
+L000490 |         where T : struct, Enum ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 ParseEnum.
+L000491 |     { ⟦EOL⟧
+// 해설 L492: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var result) / 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var result) ? result : defaultValue;
+L000492 |         return Enum.TryParse<T>(value, true, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L493: 구문 블록 경계입니다 · 소속 ParseEnum.
+L000493 |     } ⟦EOL⟧
+L000494 |  ⟦EOL⟧
+// 해설 L495: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?)
+L000495 |     private static string FormatDate(DateTimeOffset? value) ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 FormatDate.
+L000496 |     { ⟦EOL⟧
+// 해설 L497: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("O", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("O", CultureInfo.InvariantCulture) ?? "";
+L000497 |         return value?.ToString("O", CultureInfo.InvariantCulture) ?? ""; ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 FormatDate.
+L000498 |     } ⟦EOL⟧
+L000499 |  ⟦EOL⟧
+// 해설 L500: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string)
+L000500 |     private static DateTimeOffset? ParseDate(string value) ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 ParseDate.
+L000501 |     { ⟦EOL⟧
+// 해설 L502: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) / 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null / 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null;
+L000502 |         return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null; ⟦EOL⟧
+// 해설 L503: 구문 블록 경계입니다 · 소속 ParseDate.
+L000503 |     } ⟦EOL⟧
+L000504 |  ⟦EOL⟧
+// 해설 L505: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.Product.CProductFile.DeleteIfExists(string)
+L000505 |     private static void DeleteIfExists(string path) ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 DeleteIfExists.
+L000506 |     { ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (System.IO.File.Exists(path))
+L000507 |         if (System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 DeleteIfExists.
+L000508 |         { ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(path)
+L000509 |             System.IO.File.Delete(path); ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 DeleteIfExists.
+L000510 |         } ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 DeleteIfExists.
+L000511 |     } ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다.
+L000512 | } ⟦EOL⟧

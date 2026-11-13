@@ -1,0 +1,302 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CPreviewCoordinateBehavior.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000005 | namespace Drilling.UI; ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public static class CPreviewCoordinateBehavior
+L000006 | public static class CPreviewCoordinateBehavior ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("PositionX") / 변수의 초기값을 지정합니다: PositionXProperty = CreateInputProperty("PositionX")
+L000008 |     public static readonly DependencyProperty PositionXProperty = CreateInputProperty("PositionX"); ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("PositionY") / 변수의 초기값을 지정합니다: PositionYProperty = CreateInputProperty("PositionY")
+L000009 |     public static readonly DependencyProperty PositionYProperty = CreateInputProperty("PositionY"); ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("ContainerWidth") / 변수의 초기값을 지정합니다: ContainerWidthProperty = CreateInputProperty("ContainerWidth")
+L000010 |     public static readonly DependencyProperty ContainerWidthProperty = CreateInputProperty("ContainerWidth"); ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("ContainerHeight") / 변수의 초기값을 지정합니다: ContainerHeightProperty = CreateInputProperty("ContainerHeight")
+L000011 |     public static readonly DependencyProperty ContainerHeightProperty = CreateInputProperty("ContainerHeight"); ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("DesignWidth") / 변수의 초기값을 지정합니다: DesignWidthProperty = CreateInputProperty("DesignWidth")
+L000012 |     public static readonly DependencyProperty DesignWidthProperty = CreateInputProperty("DesignWidth"); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("DesignHeight") / 변수의 초기값을 지정합니다: DesignHeightProperty = CreateInputProperty("DesignHeight")
+L000013 |     public static readonly DependencyProperty DesignHeightProperty = CreateInputProperty("DesignHeight"); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("ElementWidth") / 변수의 초기값을 지정합니다: ElementWidthProperty = CreateInputProperty("ElementWidth")
+L000014 |     public static readonly DependencyProperty ElementWidthProperty = CreateInputProperty("ElementWidth"); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateInputProperty("ElementHeight") / 변수의 초기값을 지정합니다: ElementHeightProperty = CreateInputProperty("ElementHeight")
+L000015 |     public static readonly DependencyProperty ElementHeightProperty = CreateInputProperty("ElementHeight"); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached("UseStretchScale", typeof(bool), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(false, OnInputChanged)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false, OnInputChanged) / 변수의 초기값을 지정합니다: UseStretchScaleProperty = DependencyProperty.RegisterAttached("UseStretchScale", typeof(bool), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(false, OnInputChanged))
+L000016 |     public static readonly DependencyProperty UseStretchScaleProperty = DependencyProperty.RegisterAttached("UseStretchScale", typeof(bool), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(false, OnInputChanged)); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionX(DependencyObject)
+L000017 |     public static object? GetPositionX(DependencyObject target) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 GetPositionX.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(PositionXProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(PositionXProperty);
+L000019 |         return target.GetValue(PositionXProperty); ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 GetPositionX.
+L000020 |     } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetPositionX(DependencyObject, object?)
+L000022 |     public static void SetPositionX(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 SetPositionX.
+L000023 |     { ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(PositionXProperty, value)
+L000024 |         target.SetValue(PositionXProperty, value); ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 SetPositionX.
+L000025 |     } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionY(DependencyObject)
+L000027 |     public static object? GetPositionY(DependencyObject target) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 GetPositionY.
+L000028 |     { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(PositionYProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(PositionYProperty);
+L000029 |         return target.GetValue(PositionYProperty); ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 GetPositionY.
+L000030 |     } ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetPositionY(DependencyObject, object?)
+L000032 |     public static void SetPositionY(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 SetPositionY.
+L000033 |     { ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(PositionYProperty, value)
+L000034 |         target.SetValue(PositionYProperty, value); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 SetPositionY.
+L000035 |     } ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerWidth(DependencyObject)
+L000037 |     public static object? GetContainerWidth(DependencyObject target) ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 GetContainerWidth.
+L000038 |     { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ContainerWidthProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ContainerWidthProperty);
+L000039 |         return target.GetValue(ContainerWidthProperty); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 GetContainerWidth.
+L000040 |     } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetContainerWidth(DependencyObject, object?)
+L000042 |     public static void SetContainerWidth(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 SetContainerWidth.
+L000043 |     { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ContainerWidthProperty, value)
+L000044 |         target.SetValue(ContainerWidthProperty, value); ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 SetContainerWidth.
+L000045 |     } ⟦EOL⟧
+L000046 |  ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerHeight(DependencyObject)
+L000047 |     public static object? GetContainerHeight(DependencyObject target) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 GetContainerHeight.
+L000048 |     { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ContainerHeightProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ContainerHeightProperty);
+L000049 |         return target.GetValue(ContainerHeightProperty); ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 GetContainerHeight.
+L000050 |     } ⟦EOL⟧
+L000051 |  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetContainerHeight(DependencyObject, object?)
+L000052 |     public static void SetContainerHeight(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 SetContainerHeight.
+L000053 |     { ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ContainerHeightProperty, value)
+L000054 |         target.SetValue(ContainerHeightProperty, value); ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 SetContainerHeight.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignWidth(DependencyObject)
+L000057 |     public static object? GetDesignWidth(DependencyObject target) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 GetDesignWidth.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(DesignWidthProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(DesignWidthProperty);
+L000059 |         return target.GetValue(DesignWidthProperty); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 GetDesignWidth.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetDesignWidth(DependencyObject, object?)
+L000062 |     public static void SetDesignWidth(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 SetDesignWidth.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(DesignWidthProperty, value)
+L000064 |         target.SetValue(DesignWidthProperty, value); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 SetDesignWidth.
+L000065 |     } ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignHeight(DependencyObject)
+L000067 |     public static object? GetDesignHeight(DependencyObject target) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 GetDesignHeight.
+L000068 |     { ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(DesignHeightProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(DesignHeightProperty);
+L000069 |         return target.GetValue(DesignHeightProperty); ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 GetDesignHeight.
+L000070 |     } ⟦EOL⟧
+L000071 |  ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetDesignHeight(DependencyObject, object?)
+L000072 |     public static void SetDesignHeight(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 SetDesignHeight.
+L000073 |     { ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(DesignHeightProperty, value)
+L000074 |         target.SetValue(DesignHeightProperty, value); ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 SetDesignHeight.
+L000075 |     } ⟦EOL⟧
+L000076 |  ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetElementWidth(DependencyObject)
+L000077 |     public static object? GetElementWidth(DependencyObject target) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 GetElementWidth.
+L000078 |     { ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ElementWidthProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ElementWidthProperty);
+L000079 |         return target.GetValue(ElementWidthProperty); ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 GetElementWidth.
+L000080 |     } ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetElementWidth(DependencyObject, object?)
+L000082 |     public static void SetElementWidth(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 SetElementWidth.
+L000083 |     { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ElementWidthProperty, value)
+L000084 |         target.SetValue(ElementWidthProperty, value); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 SetElementWidth.
+L000085 |     } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.CPreviewCoordinateBehavior.GetElementHeight(DependencyObject)
+L000087 |     public static object? GetElementHeight(DependencyObject target) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 GetElementHeight.
+L000088 |     { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(ElementHeightProperty) / 호출자에게 값 또는 제어를 반환합니다: return target.GetValue(ElementHeightProperty);
+L000089 |         return target.GetValue(ElementHeightProperty); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 GetElementHeight.
+L000090 |     } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetElementHeight(DependencyObject, object?)
+L000092 |     public static void SetElementHeight(DependencyObject target, object? value) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 SetElementHeight.
+L000093 |     { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(ElementHeightProperty, value)
+L000094 |         target.SetValue(ElementHeightProperty, value); ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 SetElementHeight.
+L000095 |     } ⟦EOL⟧
+L000096 |  ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CPreviewCoordinateBehavior.GetUseStretchScale(DependencyObject)
+L000097 |     public static bool GetUseStretchScale(DependencyObject target) ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 GetUseStretchScale.
+L000098 |     { ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(UseStretchScaleProperty) / 호출자에게 값 또는 제어를 반환합니다: return (bool)target.GetValue(UseStretchScaleProperty);
+L000099 |         return (bool)target.GetValue(UseStretchScaleProperty); ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 GetUseStretchScale.
+L000100 |     } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.SetUseStretchScale(DependencyObject, bool)
+L000102 |     public static void SetUseStretchScale(DependencyObject target, bool value) ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 SetUseStretchScale.
+L000103 |     { ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(UseStretchScaleProperty, value)
+L000104 |         target.SetValue(UseStretchScaleProperty, value); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 SetUseStretchScale.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string)
+L000107 |     private static DependencyProperty CreateInputProperty(string name) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 CreateInputProperty.
+L000108 |     { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached(name, typeof(object), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(null, OnInputChanged)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(null, OnInputChanged) / 호출자에게 값 또는 제어를 반환합니다: return DependencyProperty.RegisterAttached(name, typeof(object), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(null, OnInputChanged));
+L000109 |         return DependencyProperty.RegisterAttached(name, typeof(object), typeof(CPreviewCoordinateBehavior), new PropertyMetadata(null, OnInputChanged)); ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 CreateInputProperty.
+L000110 |     } ⟦EOL⟧
+L000111 |  ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.OnInputChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+L000112 |     private static void OnInputChanged(DependencyObject target, DependencyPropertyChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 OnInputChanged.
+L000113 |     { ⟦EOL⟧
+// 해설 L114: 조건에 따라 분기합니다: if (target is ContentPresenter presenter)
+L000114 |         if (target is ContentPresenter presenter) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 OnInputChanged.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCoordinates(presenter)
+L000116 |             UpdateCoordinates(presenter); ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 OnInputChanged.
+L000117 |         } ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 OnInputChanged.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CPreviewCoordinateBehavior.UpdateCoordinates(ContentPresenter)
+L000120 |     private static void UpdateCoordinates(ContentPresenter presenter) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetPositionX(presenter), out var positionX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPositionX(presenter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetPositionY(presenter), out var positionY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPositionY(presenter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetContainerWidth(presenter), out var actualWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetContainerWidth(presenter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryDouble(GetContainerHeight(presenter), out var actualHeight) / 함수·델리게이트 또는 객체 생성자를 호출합니다: G
+L000122 |         if (!TryDouble(GetPositionX(presenter), out var positionX) || !TryDouble(GetPositionY(presenter), out var positionY) || !TryDouble(GetContainerWidth(presenter), out var actualWidth) || !TryDouble(GetContainerHeight(presenter), out var actualHeight) || !TryDouble(GetDesignWidth(presenter), out var designWidth) || !TryDouble(GetDesignHeight(presenter), out var designHeight) || !TryDouble(GetElementWidth(presenter), out var elementWidth) || !TryDouble(GetElementHeight(presenter), out var elementHeight) || actualWidth <= 0.0 || actualHeight <= 0.0 || designWidth <= 0.0 || designHeight <= 0.0) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000123 |         { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(presenter, 0.0)
+L000124 |             Canvas.SetLeft(presenter, 0.0); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(presenter, 0.0)
+L000125 |             Canvas.SetTop(presenter, 0.0); ⟦EOL⟧
+// 해설 L126: 호출자에게 값 또는 제어를 반환합니다: return;
+L000126 |             return; ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000127 |         } ⟦EOL⟧
+L000128 |  ⟦EOL⟧
+// 해설 L129: 지역 변수를 선언합니다: double left;
+L000129 |         double left; ⟦EOL⟧
+// 해설 L130: 지역 변수를 선언합니다: double top;
+L000130 |         double top; ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetUseStretchScale(presenter) / 조건에 따라 분기합니다: if (GetUseStretchScale(presenter))
+L000131 |         if (GetUseStretchScale(presenter)) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000132 |         { ⟦EOL⟧
+// 해설 L133: 지역 변수를 선언합니다: var scaleX = actualWidth / designWidth; / 변수의 초기값을 지정합니다: scaleX = actualWidth / designWidth
+L000133 |             var scaleX = actualWidth / designWidth; ⟦EOL⟧
+// 해설 L134: 지역 변수를 선언합니다: var scaleY = actualHeight / designHeight; / 변수의 초기값을 지정합니다: scaleY = actualHeight / designHeight
+L000134 |             var scaleY = actualHeight / designHeight; ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: left = (positionX * scaleX) - (elementWidth / 2.0)
+L000135 |             left = (positionX * scaleX) - (elementWidth / 2.0); ⟦EOL⟧
+// 해설 L136: 값을 대상에 대입합니다: top = (positionY * scaleY) - (elementHeight / 2.0)
+L000136 |             top = (positionY * scaleY) - (elementHeight / 2.0); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000137 |         } ⟦EOL⟧
+// 해설 L138: 앞 조건이 거짓인 경로입니다: else
+L000138 |         else ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(actualWidth / designWidth, actualHeight / designHeight) / 지역 변수를 선언합니다: var scale = Math.Min(actualWidth / designWidth, actualHeight / designHeight); / 변수의 초기값을 지정합니다: scale = Math.Min(actualWidth / designWidth, actualHeight / designHeight)
+L000140 |             var scale = Math.Min(actualWidth / designWidth, actualHeight / designHeight); ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: var offsetX = (actualWidth - (designWidth * scale)) / 2.0; / 변수의 초기값을 지정합니다: offsetX = (actualWidth - (designWidth * scale)) / 2.0
+L000141 |             var offsetX = (actualWidth - (designWidth * scale)) / 2.0; ⟦EOL⟧
+// 해설 L142: 지역 변수를 선언합니다: var offsetY = (actualHeight - (designHeight * scale)) / 2.0; / 변수의 초기값을 지정합니다: offsetY = (actualHeight - (designHeight * scale)) / 2.0
+L000142 |             var offsetY = (actualHeight - (designHeight * scale)) / 2.0; ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: left = offsetX + (positionX * scale) - (elementWidth / 2.0)
+L000143 |             left = offsetX + (positionX * scale) - (elementWidth / 2.0); ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: top = offsetY + (positionY * scale) - (elementHeight / 2.0)
+L000144 |             top = offsetY + (positionY * scale) - (elementHeight / 2.0); ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(presenter, left)
+L000147 |         Canvas.SetLeft(presenter, left); ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(presenter, top)
+L000148 |         Canvas.SetTop(presenter, top); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 UpdateCoordinates.
+L000149 |     } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double)
+L000151 |     private static bool TryDouble(object? value, out double result) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 TryDouble.
+L000152 |     { ⟦EOL⟧
+// 해설 L153: 조건에 따라 분기합니다: if (value is double number)
+L000153 |         if (value is double number) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 TryDouble.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: result = number
+L000155 |             result = number; ⟦EOL⟧
+// 해설 L156: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000156 |             return true; ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 TryDouble.
+L000157 |         } ⟦EOL⟧
+L000158 |  ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out result);
+L000159 |         return double.TryParse(value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out result); ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 TryDouble.
+L000160 |     } ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다.
+L000161 | } ⟦EOL⟧

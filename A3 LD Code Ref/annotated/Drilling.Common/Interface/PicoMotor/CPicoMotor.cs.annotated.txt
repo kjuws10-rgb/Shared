@@ -1,0 +1,1926 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/PicoMotor/CPicoMotor.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface
+L000001 | namespace Drilling.Common.Interface ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 |     using System.Globalization; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using NewFocus.Picomotor;
+L000004 |     using NewFocus.Picomotor; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public static class CPicoMotor
+L000006 |     public static class CPicoMotor ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 |     { ⟦EOL⟧
+// 해설 L8: 변수의 초기값을 지정합니다: StepPerMillimeter = 50000
+L000008 |         public const int StepPerMillimeter = 50000; ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotor.BuildAxisCommand(int, string, long?, bool)
+L000009 |         public static string BuildAxisCommand(int motorNo, string command, long? value = null, bool isQuery = false) ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000010 |         { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(motorNo, 1, 4) / 지역 변수를 선언합니다: var axis = Math.Clamp(motorNo, 1, 4); / 변수의 초기값을 지정합니다: axis = Math.Clamp(motorNo, 1, 4)
+L000011 |             var axis = Math.Clamp(motorNo, 1, 4); ⟦EOL⟧
+// 해설 L12: 조건에 따라 분기합니다: if (isQuery)
+L000012 |             if (isQuery) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000013 |             { ⟦EOL⟧
+// 해설 L14: 호출자에게 값 또는 제어를 반환합니다: return $"{axis}{command}?\n";
+L000014 |                 return $"{axis}{command}?\n"; ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000015 |             } ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Value.ToString(CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: value is null ? $"{axis}{command}\n" : $"{axis}{command}{value.Value.ToString(CultureInfo.InvariantCulture)}\n" / 호출자에게 값 또는 제어를 반환합니다: return value is null ? $"{axis}{command}\n" : $"{axis}{command}{value.Value.ToString(CultureInfo.InvariantCulture)}\n";
+L000017 |             return value is null ? $"{axis}{command}\n" : $"{axis}{command}{value.Value.ToString(CultureInfo.InvariantCulture)}\n"; ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000018 |         } ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotor.BuildAxisCommand(int, string, string)
+L000020 |         public static string BuildAxisCommand(int motorNo, string command, string value) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(motorNo, 1, 4) / 지역 변수를 선언합니다: var axis = Math.Clamp(motorNo, 1, 4); / 변수의 초기값을 지정합니다: axis = Math.Clamp(motorNo, 1, 4)
+L000022 |             var axis = Math.Clamp(motorNo, 1, 4); ⟦EOL⟧
+// 해설 L23: 호출자에게 값 또는 제어를 반환합니다: return $"{axis}{command}{value}\n";
+L000023 |             return $"{axis}{command}{value}\n"; ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 BuildAxisCommand.
+L000024 |         } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotor.BuildGlobalCommand(string, bool)
+L000026 |         public static string BuildGlobalCommand(string command, bool isQuery = false) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 BuildGlobalCommand.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 조건에 따라 결과식을 선택합니다: isQuery ? $"{command}?\n" : $"{command}\n" / 호출자에게 값 또는 제어를 반환합니다: return isQuery ? $"{command}?\n" : $"{command}\n";
+L000028 |             return isQuery ? $"{command}?\n" : $"{command}\n"; ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 BuildGlobalCommand.
+L000029 |         } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Interface.CPicoMotor.MillimeterToStep(double)
+L000031 |         public static long MillimeterToStep(double value) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 MillimeterToStep.
+L000032 |         { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToInt64(Math.Round(value * StepPerMillimeter, MidpointRounding.AwayFromZero)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(value * StepPerMillimeter, MidpointRounding.AwayFromZero) / 호출자에게 값 또는 제어를 반환합니다: return Convert.ToInt64(Math.Round(value * StepPerMillimeter, MidpointRounding.AwayFromZero));
+L000033 |             return Convert.ToInt64(Math.Round(value * StepPerMillimeter, MidpointRounding.AwayFromZero)); ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 MillimeterToStep.
+L000034 |         } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotor.StepToMillimeter(long)
+L000036 |         public static double StepToMillimeter(long value) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 StepToMillimeter.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return value / (double)StepPerMillimeter;
+L000038 |             return value / (double)StepPerMillimeter; ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 StepToMillimeter.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotor.TryParseLong(string, out long)
+L000041 |         public static bool TryParseLong(string response, out long value) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 TryParseLong.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeResponse(response) / 호출자에게 값 또는 제어를 반환합니다: return long.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value);
+L000043 |             return long.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value); ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 TryParseLong.
+L000044 |         } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotor.TryParseInt(string, out int)
+L000046 |         public static bool TryParseInt(string response, out int value) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 TryParseInt.
+L000047 |         { ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeResponse(response) / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value);
+L000048 |             return int.TryParse(NormalizeResponse(response), NumberStyles.Integer, CultureInfo.InvariantCulture, out value); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 TryParseInt.
+L000049 |         } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotor.NormalizeResponse(string)
+L000051 |         public static string NormalizeResponse(string response) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 NormalizeResponse.
+L000052 |         { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().TrimEnd('\0').Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().TrimEnd('\0') / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 호출자에게 값 또는 제어를 반환합니다: return response.Trim().TrimEnd('\0').Trim();
+L000053 |             return response.Trim().TrimEnd('\0').Trim(); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 NormalizeResponse.
+L000054 |         } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR Drilling.Common.Interface.CPicoMotor.ToError(int)
+L000056 |         public static EN_PICO_MOTOR_ERROR ToError(int errorCode) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 ToError.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(typeof(EN_PICO_MOTOR_ERROR), errorCode) / 조건에 따라 결과식을 선택합니다: Enum.IsDefined(typeof(EN_PICO_MOTOR_ERROR), errorCode) ? (EN_PICO_MOTOR_ERROR)errorCode : EN_PICO_MOTOR_ERROR.Error / 호출자에게 값 또는 제어를 반환합니다: return Enum.IsDefined(typeof(EN_PICO_MOTOR_ERROR), errorCode) ? (EN_PICO_MOTOR_ERROR)errorCode : EN_PICO_MOTOR_ERROR.Error;
+L000058 |             return Enum.IsDefined(typeof(EN_PICO_MOTOR_ERROR), errorCode) ? (EN_PICO_MOTOR_ERROR)errorCode : EN_PICO_MOTOR_ERROR.Error; ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 ToError.
+L000059 |         } ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 타입의 구조/상속 선언입니다: public enum EN_PICO_MOTOR_COMMAND
+L000062 |     public enum EN_PICO_MOTOR_COMMAND ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.Connect
+L000064 |         Connect, ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.Disconnect
+L000065 |         Disconnect, ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.SelectMotor
+L000066 |         SelectMotor, ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.SetVelocity
+L000067 |         SetVelocity, ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.SetAcceleration
+L000068 |         SetAcceleration, ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.StopMotion
+L000069 |         StopMotion, ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.Home
+L000070 |         Home, ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.JogNegative
+L000071 |         JogNegative, ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.JogPositive
+L000072 |         JogPositive, ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.MoveRelativeNegative
+L000073 |         MoveRelativeNegative, ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.MoveRelativePositive
+L000074 |         MoveRelativePositive, ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.MoveAbsolute
+L000075 |         MoveAbsolute, ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.AllMotorStart
+L000076 |         AllMotorStart, ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.AllMotorStop
+L000077 |         AllMotorStop, ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND.Refresh
+L000078 |         Refresh ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다.
+L000079 |     } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 타입의 구조/상속 선언입니다: public enum EN_PICO_MOTOR_ERROR
+L000081 |     public enum EN_PICO_MOTOR_ERROR ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.Ok
+L000083 |         Ok = 0, ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.Error
+L000084 |         Error = 1, ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.OverTemp
+L000085 |         OverTemp = 3, ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.CommandNotExist
+L000086 |         CommandNotExist = 6, ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.ParameterOutOfRange
+L000087 |         ParameterOutOfRange = 7, ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.AxisNoOutOfRange
+L000088 |         AxisNoOutOfRange = 9, ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.EepromWriteFail
+L000089 |         EepromWriteFail = 10, ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.EepromReadFail
+L000090 |         EepromReadFail = 11, ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.AxisNoMissing
+L000091 |         AxisNoMissing = 37, ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.CommandParameterMissing
+L000092 |         CommandParameterMissing = 38, ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.Rs485ExtFault
+L000093 |         Rs485ExtFault = 46, ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.Rs485CrcFault
+L000094 |         Rs485CrcFault = 47, ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.ControllerNoOutOfRange
+L000095 |         ControllerNoOutOfRange = 48, ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.ScanInProgress
+L000096 |         ScanInProgress = 49, ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.Timeout
+L000097 |         Timeout = -1, ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.InvalidResponse
+L000098 |         InvalidResponse = -2, ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_PICO_MOTOR_ERROR.NotSupported
+L000099 |         NotSupported = -99 ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다.
+L000100 |     } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 타입의 구조/상속 선언입니다: public sealed record ST_PICO_MOTOR_STATUS(
+L000102 |     public sealed record ST_PICO_MOTOR_STATUS( ⟦EOL⟧
+// 해설 L103: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000103 |         bool IsConnected,  ⟦EOL⟧
+// 해설 L104: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000104 |         string Controller,  ⟦EOL⟧
+// 해설 L105: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000105 |         int SelectedMotorNo,  ⟦EOL⟧
+// 해설 L106: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000106 |         double Motor1Position,  ⟦EOL⟧
+// 해설 L107: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000107 |         double Motor2Position,  ⟦EOL⟧
+// 해설 L108: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000108 |         double Motor3Position,  ⟦EOL⟧
+// 해설 L109: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000109 |         double Motor4Position,  ⟦EOL⟧
+// 해설 L110: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000110 |         long HomePosition,  ⟦EOL⟧
+// 해설 L111: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000111 |         double CurrentVelocity,  ⟦EOL⟧
+// 해설 L112: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000112 |         double CurrentAcceleration,  ⟦EOL⟧
+// 해설 L113: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000113 |         string MotionState,  ⟦EOL⟧
+// 해설 L114: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000114 |         int ErrorCode,  ⟦EOL⟧
+// 해설 L115: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000115 |         int AllMoveCurrentCount = 0,  ⟦EOL⟧
+// 해설 L116: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000116 |         int AllMoveSetCount = 0,  ⟦EOL⟧
+// 해설 L117: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000117 |         double AllMovePosition = 0.0,  ⟦EOL⟧
+// 해설 L118: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000118 |         bool CommOk = true,  ⟦EOL⟧
+// 해설 L119: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000119 |         EN_PICO_MOTOR_ERROR LastError = EN_PICO_MOTOR_ERROR.Ok,  ⟦EOL⟧
+// 해설 L120: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000120 |         DateTimeOffset? UpdatedAt = null ⟦EOL⟧
+// 해설 L121: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000121 |     ) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(false, "8742", 1, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, "IDLE", 0, 0, 0, 0.0, true, EN_PICO_MOTOR_ERROR.Ok, null)
+L000123 |         public static ST_PICO_MOTOR_STATUS Empty { get; } = new(false, "8742", 1, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, "IDLE", 0, 0, 0, 0.0, true, EN_PICO_MOTOR_ERROR.Ok, null); ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다.
+L000124 |     } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 타입의 구조/상속 선언입니다: public sealed class CPicoMotorCommandSession
+L000126 |     public sealed class CPicoMotorCommandSession ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다.
+L000127 |     { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _syncRoot = new()
+L000128 |         private readonly object _syncRoot = new(); ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · CmdLib8742? Drilling.Common.Interface.CPicoMotorCommandSession._cmdLib
+L000129 |         private CmdLib8742? _cmdLib; ⟦EOL⟧
+// 해설 L130: 변수의 초기값을 지정합니다: _deviceKey = string.Empty
+L000130 |         private string _deviceKey = string.Empty; ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorCommandSession.IsConnected
+L000131 |         public bool IsConnected ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 IsConnected.
+L000132 |         { ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorCommandSession.IsConnected.get
+L000133 |             get ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 get_IsConnected.
+L000134 |             { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(_deviceKey) / 호출자에게 값 또는 제어를 반환합니다: return _cmdLib is not null && !string.IsNullOrWhiteSpace(_deviceKey);
+L000135 |                 return _cmdLib is not null && !string.IsNullOrWhiteSpace(_deviceKey); ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 get_IsConnected.
+L000136 |             } ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 IsConnected.
+L000137 |         } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotorCommandSession.DeviceKey
+L000139 |         public string DeviceKey ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 DeviceKey.
+L000140 |         { ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotorCommandSession.DeviceKey.get
+L000141 |             get ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 get_DeviceKey.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 호출자에게 값 또는 제어를 반환합니다: return _deviceKey;
+L000143 |                 return _deviceKey; ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 get_DeviceKey.
+L000144 |             } ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 DeviceKey.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorCommandSession.Connect(int)
+L000147 |         public bool Connect(int discoveryDelayMs = 5000) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 Connect.
+L000148 |         { ⟦EOL⟧
+// 해설 L149: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000149 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Connect.
+L000150 |             { ⟦EOL⟧
+// 해설 L151: 조건에 따라 분기합니다: if (IsConnected)
+L000151 |                 if (IsConnected) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 Connect.
+L000152 |                 { ⟦EOL⟧
+// 해설 L153: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000153 |                     return true; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Connect.
+L000154 |                 } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 지역 변수를 선언합니다: var deviceKey = string.Empty; / 변수의 초기값을 지정합니다: deviceKey = string.Empty
+L000156 |                 var deviceKey = string.Empty; ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CmdLib8742(false, discoveryDelayMs, ref deviceKey) / 지역 변수를 선언합니다: var cmdLib = new CmdLib8742(false, discoveryDelayMs, ref deviceKey); / 변수의 초기값을 지정합니다: cmdLib = new CmdLib8742(false, discoveryDelayMs, ref deviceKey)
+L000157 |                 var cmdLib = new CmdLib8742(false, discoveryDelayMs, ref deviceKey); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(deviceKey) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(deviceKey))
+L000158 |                 if (string.IsNullOrWhiteSpace(deviceKey)) ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Connect.
+L000159 |                 { ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: cmdLib.Shutdown()
+L000160 |                     cmdLib.Shutdown(); ⟦EOL⟧
+// 해설 L161: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000161 |                     return false; ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Connect.
+L000162 |                 } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: cmdLib.Open(deviceKey) / 조건에 따라 분기합니다: if (!cmdLib.Open(deviceKey))
+L000164 |                 if (!cmdLib.Open(deviceKey)) ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Connect.
+L000165 |                 { ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: cmdLib.Shutdown()
+L000166 |                     cmdLib.Shutdown(); ⟦EOL⟧
+// 해설 L167: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000167 |                     return false; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 Connect.
+L000168 |                 } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: _cmdLib = cmdLib
+L000170 |                 _cmdLib = cmdLib; ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: _deviceKey = deviceKey
+L000171 |                 _deviceKey = deviceKey; ⟦EOL⟧
+// 해설 L172: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000172 |                 return true; ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 Connect.
+L000173 |             } ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 Connect.
+L000174 |         } ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.Disconnect()
+L000176 |         public void Disconnect() ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 Disconnect.
+L000177 |         { ⟦EOL⟧
+// 해설 L178: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000178 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 Disconnect.
+L000179 |             { ⟦EOL⟧
+// 해설 L180: 조건에 따라 분기합니다: if (_cmdLib is null)
+L000180 |                 if (_cmdLib is null) ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 Disconnect.
+L000181 |                 { ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: _deviceKey = string.Empty
+L000182 |                     _deviceKey = string.Empty; ⟦EOL⟧
+// 해설 L183: 호출자에게 값 또는 제어를 반환합니다: return;
+L000183 |                     return; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 Disconnect.
+L000184 |                 } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(_deviceKey) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(_deviceKey))
+L000186 |                 if (!string.IsNullOrWhiteSpace(_deviceKey)) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Disconnect.
+L000187 |                 { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cmdLib.Close(_deviceKey)
+L000188 |                     _cmdLib.Close(_deviceKey); ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 Disconnect.
+L000189 |                 } ⟦EOL⟧
+L000190 |  ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cmdLib.Shutdown()
+L000191 |                 _cmdLib.Shutdown(); ⟦EOL⟧
+// 해설 L192: 값을 대상에 대입합니다: _cmdLib = null
+L000192 |                 _cmdLib = null; ⟦EOL⟧
+// 해설 L193: 값을 대상에 대입합니다: _deviceKey = string.Empty
+L000193 |                 _deviceKey = string.Empty; ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Disconnect.
+L000194 |             } ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 Disconnect.
+L000195 |         } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPicoMotorCommandSession.GetIdentification()
+L000197 |         public string GetIdentification() ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 GetIdentification.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 지역 변수를 선언합니다: var id = string.Empty; / 변수의 초기값을 지정합니다: id = string.Empty
+L000199 |             var id = string.Empty; ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000200 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000201 |             { ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetIdentification(_deviceKey, ref id) / 호출자에게 값 또는 제어를 반환합니다: return command.GetIdentification(_deviceKey, ref id);
+L000202 |                 return command.GetIdentification(_deviceKey, ref id); ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000203 |             } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: Execute(MatchesCmdlib8742) / 조건에 따라 결과식을 선택합니다: Execute(MatchesCmdlib8742) ? id : string.Empty / 호출자에게 값 또는 제어를 반환합니다: return Execute(MatchesCmdlib8742) ? id : string.Empty;
+L000205 |             return Execute(MatchesCmdlib8742) ? id : string.Empty; ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 GetIdentification.
+L000206 |         } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.GetPositionStep(int)
+L000208 |         public int GetPositionStep(int motorNo) ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 GetPositionStep.
+L000209 |         { ⟦EOL⟧
+// 해설 L210: 지역 변수를 선언합니다: var position = 0; / 변수의 초기값을 지정합니다: position = 0
+L000210 |             var position = 0; ⟦EOL⟧
+// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000211 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000212 |             { ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetPosition(_deviceKey, ClampMotorNo(motorNo), ref position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.GetPosition(_deviceKey, ClampMotorNo(motorNo), ref position);
+L000213 |                 return command.GetPosition(_deviceKey, ClampMotorNo(motorNo), ref position); ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000214 |             } ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetPosition")
+L000216 |             ExecuteOrThrow(MatchesCmdlib8742, "GetPosition"); ⟦EOL⟧
+// 해설 L217: 호출자에게 값 또는 제어를 반환합니다: return position;
+L000217 |             return position; ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 GetPositionStep.
+L000218 |         } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.GetVelocityStep(int)
+L000220 |         public int GetVelocityStep(int motorNo) ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 GetVelocityStep.
+L000221 |         { ⟦EOL⟧
+// 해설 L222: 지역 변수를 선언합니다: var velocity = 0; / 변수의 초기값을 지정합니다: velocity = 0
+L000222 |             var velocity = 0; ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000223 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000224 |             { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetVelocity(_deviceKey, ClampMotorNo(motorNo), ref velocity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.GetVelocity(_deviceKey, ClampMotorNo(motorNo), ref velocity);
+L000225 |                 return command.GetVelocity(_deviceKey, ClampMotorNo(motorNo), ref velocity); ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000226 |             } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetVelocity")
+L000228 |             ExecuteOrThrow(MatchesCmdlib8742, "GetVelocity"); ⟦EOL⟧
+// 해설 L229: 호출자에게 값 또는 제어를 반환합니다: return velocity;
+L000229 |             return velocity; ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 GetVelocityStep.
+L000230 |         } ⟦EOL⟧
+L000231 |  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.GetAccelerationStep(int)
+L000232 |         public int GetAccelerationStep(int motorNo) ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 GetAccelerationStep.
+L000233 |         { ⟦EOL⟧
+// 해설 L234: 지역 변수를 선언합니다: var acceleration = 0; / 변수의 초기값을 지정합니다: acceleration = 0
+L000234 |             var acceleration = 0; ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000235 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000236 |             { ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetAcceleration(_deviceKey, ClampMotorNo(motorNo), ref acceleration) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.GetAcceleration(_deviceKey, ClampMotorNo(motorNo), ref acceleration);
+L000237 |                 return command.GetAcceleration(_deviceKey, ClampMotorNo(motorNo), ref acceleration); ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000238 |             } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetAcceleration")
+L000240 |             ExecuteOrThrow(MatchesCmdlib8742, "GetAcceleration"); ⟦EOL⟧
+// 해설 L241: 호출자에게 값 또는 제어를 반환합니다: return acceleration;
+L000241 |             return acceleration; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 GetAccelerationStep.
+L000242 |         } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorCommandSession.GetMotionDone(int)
+L000244 |         public bool GetMotionDone(int motorNo) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 GetMotionDone.
+L000245 |         { ⟦EOL⟧
+// 해설 L246: 지역 변수를 선언합니다: var isDone = false; / 변수의 초기값을 지정합니다: isDone = false
+L000246 |             var isDone = false; ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000247 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000248 |             { ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetMotionDone(_deviceKey, ClampMotorNo(motorNo), ref isDone) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.GetMotionDone(_deviceKey, ClampMotorNo(motorNo), ref isDone);
+L000249 |                 return command.GetMotionDone(_deviceKey, ClampMotorNo(motorNo), ref isDone); ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000250 |             } ⟦EOL⟧
+L000251 |  ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetMotionDone")
+L000252 |             ExecuteOrThrow(MatchesCmdlib8742, "GetMotionDone"); ⟦EOL⟧
+// 해설 L253: 호출자에게 값 또는 제어를 반환합니다: return isDone;
+L000253 |             return isDone; ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 GetMotionDone.
+L000254 |         } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.GetErrorCode()
+L000256 |         public int GetErrorCode() ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 GetErrorCode.
+L000257 |         { ⟦EOL⟧
+// 해설 L258: 지역 변수를 선언합니다: var error = string.Empty; / 변수의 초기값을 지정합니다: error = string.Empty
+L000258 |             var error = string.Empty; ⟦EOL⟧
+// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000259 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000260 |             { ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.GetErrorNum(_deviceKey, ref error) / 호출자에게 값 또는 제어를 반환합니다: return command.GetErrorNum(_deviceKey, ref error);
+L000261 |                 return command.GetErrorNum(_deviceKey, ref error); ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000262 |             } ⟦EOL⟧
+L000263 |  ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetErrorNum")
+L000264 |             ExecuteOrThrow(MatchesCmdlib8742, "GetErrorNum"); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(CPicoMotor.NormalizeResponse(error), NumberStyles.Integer, CultureInfo.InvariantCulture, out var errorCode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.NormalizeResponse(error) / 조건에 따라 결과식을 선택합니다: int.TryParse(CPicoMotor.NormalizeResponse(error), NumberStyles.Integer, CultureInfo.InvariantCulture, out var errorCode) ? errorCode : (int)EN_PICO_MOTOR_ERROR.InvalidResponse / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(CPicoMotor.NormalizeResponse(error), NumberStyles.Integer, CultureInfo.InvariantCultur
+L000265 |             return int.TryParse(CPicoMotor.NormalizeResponse(error), NumberStyles.Integer, CultureInfo.InvariantCulture, out var errorCode) ? errorCode : (int)EN_PICO_MOTOR_ERROR.InvalidResponse; ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 GetErrorCode.
+L000266 |         } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Interface.CPicoMotorCommandSession.GetHomePositionStep(int)
+L000268 |         public long GetHomePositionStep(int motorNo) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 GetHomePositionStep.
+L000269 |         { ⟦EOL⟧
+// 해설 L270: 지역 변수를 선언합니다: var home = string.Empty; / 변수의 초기값을 지정합니다: home = string.Empty
+L000270 |             var home = string.Empty; ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000271 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000272 |             { ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Query(_deviceKey, $"{ClampMotorNo(motorNo)}DH?", ref home) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.Query(_deviceKey, $"{ClampMotorNo(motorNo)}DH?", ref home);
+L000273 |                 return command.Query(_deviceKey, $"{ClampMotorNo(motorNo)}DH?", ref home); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000274 |             } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "GetHomePosition")
+L000276 |             ExecuteOrThrow(MatchesCmdlib8742, "GetHomePosition"); ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(CPicoMotor.NormalizeResponse(home), NumberStyles.Integer, CultureInfo.InvariantCulture, out var homeStep) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.NormalizeResponse(home) / 조건에 따라 결과식을 선택합니다: long.TryParse(CPicoMotor.NormalizeResponse(home), NumberStyles.Integer, CultureInfo.InvariantCulture, out var homeStep) ? homeStep : 0L / 호출자에게 값 또는 제어를 반환합니다: return long.TryParse(CPicoMotor.NormalizeResponse(home), NumberStyles.Integer, CultureInfo.InvariantCulture, out var homeStep) ? homeStep : 0L;
+L000277 |             return long.TryParse(CPicoMotor.NormalizeResponse(home), NumberStyles.Integer, CultureInfo.InvariantCulture, out var homeStep) ? homeStep : 0L; ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 GetHomePositionStep.
+L000278 |         } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.SetVelocity(int, int)
+L000280 |         public void SetVelocity(int motorNo, int velocityStep) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 SetVelocity.
+L000281 |         { ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000282 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000283 |             { ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.SetVelocity(_deviceKey, ClampMotorNo(motorNo), velocityStep) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.SetVelocity(_deviceKey, ClampMotorNo(motorNo), velocityStep);
+L000284 |                 return command.SetVelocity(_deviceKey, ClampMotorNo(motorNo), velocityStep); ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000285 |             } ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "SetVelocity")
+L000287 |             ExecuteOrThrow(MatchesCmdlib8742, "SetVelocity"); ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 SetVelocity.
+L000288 |         } ⟦EOL⟧
+L000289 |  ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.SetAcceleration(int, int)
+L000290 |         public void SetAcceleration(int motorNo, int accelerationStep) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 SetAcceleration.
+L000291 |         { ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000292 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000293 |             { ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.SetAcceleration(_deviceKey, ClampMotorNo(motorNo), accelerationStep) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.SetAcceleration(_deviceKey, ClampMotorNo(motorNo), accelerationStep);
+L000294 |                 return command.SetAcceleration(_deviceKey, ClampMotorNo(motorNo), accelerationStep); ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000295 |             } ⟦EOL⟧
+L000296 |  ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "SetAcceleration")
+L000297 |             ExecuteOrThrow(MatchesCmdlib8742, "SetAcceleration"); ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 SetAcceleration.
+L000298 |         } ⟦EOL⟧
+L000299 |  ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.StopMotion(int)
+L000300 |         public void StopMotion(int motorNo) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 StopMotion.
+L000301 |         { ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000302 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000303 |             { ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.StopMotion(_deviceKey, ClampMotorNo(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.StopMotion(_deviceKey, ClampMotorNo(motorNo));
+L000304 |                 return command.StopMotion(_deviceKey, ClampMotorNo(motorNo)); ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000305 |             } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "StopMotion")
+L000307 |             ExecuteOrThrow(MatchesCmdlib8742, "StopMotion"); ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 StopMotion.
+L000308 |         } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.AbortMotion()
+L000310 |         public void AbortMotion() ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 AbortMotion.
+L000311 |         { ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000312 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000313 |             { ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.AbortMotion(_deviceKey) / 호출자에게 값 또는 제어를 반환합니다: return command.AbortMotion(_deviceKey);
+L000314 |                 return command.AbortMotion(_deviceKey); ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000315 |             } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "AbortMotion")
+L000317 |             ExecuteOrThrow(MatchesCmdlib8742, "AbortMotion"); ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 AbortMotion.
+L000318 |         } ⟦EOL⟧
+L000319 |  ⟦EOL⟧
+// 해설 L320: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.MoveHome(int)
+L000320 |         public void MoveHome(int motorNo) ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 MoveHome.
+L000321 |         { ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHomePositionStep(motorNo) / 지역 변수를 선언합니다: var homeStep = GetHomePositionStep(motorNo); / 변수의 초기값을 지정합니다: homeStep = GetHomePositionStep(motorNo)
+L000322 |             var homeStep = GetHomePositionStep(motorNo); ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: AbsoluteMove(motorNo, homeStep)
+L000323 |             AbsoluteMove(motorNo, homeStep); ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 MoveHome.
+L000324 |         } ⟦EOL⟧
+L000325 |  ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.JogNegative(int)
+L000326 |         public void JogNegative(int motorNo) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 JogNegative.
+L000327 |         { ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000328 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000329 |             { ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.JogNegative(_deviceKey, ClampMotorNo(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.JogNegative(_deviceKey, ClampMotorNo(motorNo));
+L000330 |                 return command.JogNegative(_deviceKey, ClampMotorNo(motorNo)); ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000331 |             } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "JogNegative")
+L000333 |             ExecuteOrThrow(MatchesCmdlib8742, "JogNegative"); ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 JogNegative.
+L000334 |         } ⟦EOL⟧
+L000335 |  ⟦EOL⟧
+// 해설 L336: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.JogPositive(int)
+L000336 |         public void JogPositive(int motorNo) ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 JogPositive.
+L000337 |         { ⟦EOL⟧
+// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000338 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000339 |             { ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.JogPositive(_deviceKey, ClampMotorNo(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 호출자에게 값 또는 제어를 반환합니다: return command.JogPositive(_deviceKey, ClampMotorNo(motorNo));
+L000340 |                 return command.JogPositive(_deviceKey, ClampMotorNo(motorNo)); ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000341 |             } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "JogPositive")
+L000343 |             ExecuteOrThrow(MatchesCmdlib8742, "JogPositive"); ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 JogPositive.
+L000344 |         } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.RelativeMove(int, long)
+L000346 |         public void RelativeMove(int motorNo, long step) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 RelativeMove.
+L000347 |         { ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000348 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000349 |             { ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.RelativeMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToInt32Step(step) / 호출자에게 값 또는 제어를 반환합니다: return command.RelativeMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step));
+L000350 |                 return command.RelativeMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step)); ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000351 |             } ⟦EOL⟧
+L000352 |  ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "RelativeMove")
+L000353 |             ExecuteOrThrow(MatchesCmdlib8742, "RelativeMove"); ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 RelativeMove.
+L000354 |         } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.AbsoluteMove(int, long)
+L000356 |         public void AbsoluteMove(int motorNo, long step) ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 AbsoluteMove.
+L000357 |         { ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · bool MatchesCmdlib8742(CmdLib8742)
+L000358 |             bool MatchesCmdlib8742(CmdLib8742 command) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000359 |             { ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.AbsoluteMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampMotorNo(motorNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToInt32Step(step) / 호출자에게 값 또는 제어를 반환합니다: return command.AbsoluteMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step));
+L000360 |                 return command.AbsoluteMove(_deviceKey, ClampMotorNo(motorNo), ToInt32Step(step)); ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 MatchesCmdlib8742.
+L000361 |             } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteOrThrow(MatchesCmdlib8742, "AbsoluteMove")
+L000363 |             ExecuteOrThrow(MatchesCmdlib8742, "AbsoluteMove"); ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 AbsoluteMove.
+L000364 |         } ⟦EOL⟧
+L000365 |  ⟦EOL⟧
+// 해설 L366: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.Dispose()
+L000366 |         public void Dispose() ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 Dispose.
+L000367 |         { ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: Disconnect()
+L000368 |             Disconnect(); ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 Dispose.
+L000369 |         } ⟦EOL⟧
+L000370 |  ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorCommandSession.Execute(System.Func<CmdLib8742, bool>)
+L000371 |         private bool Execute(Func<CmdLib8742, bool> action) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 Execute.
+L000372 |         { ⟦EOL⟧
+// 해설 L373: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000373 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 Execute.
+L000374 |             { ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(_deviceKey) / 조건에 따라 분기합니다: if (_cmdLib is null || string.IsNullOrWhiteSpace(_deviceKey))
+L000375 |                 if (_cmdLib is null || string.IsNullOrWhiteSpace(_deviceKey)) ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 Execute.
+L000376 |                 { ⟦EOL⟧
+// 해설 L377: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000377 |                     return false; ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 Execute.
+L000378 |                 } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: action(_cmdLib) / 호출자에게 값 또는 제어를 반환합니다: return action(_cmdLib);
+L000380 |                 return action(_cmdLib); ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 Execute.
+L000381 |             } ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 Execute.
+L000382 |         } ⟦EOL⟧
+L000383 |  ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorCommandSession.ExecuteOrThrow(System.Func<CmdLib8742, bool>, string)
+L000384 |         private void ExecuteOrThrow(Func<CmdLib8742, bool> action, string commandName) ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 ExecuteOrThrow.
+L000385 |         { ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: Execute(action) / 조건에 따라 분기합니다: if (!Execute(action))
+L000386 |             if (!Execute(action)) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 ExecuteOrThrow.
+L000387 |             { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"PicoMotor CmdLib command failed. Command={commandName}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"PicoMotor CmdLib command failed. Command={commandName}");
+L000388 |                 throw new InvalidOperationException($"PicoMotor CmdLib command failed. Command={commandName}"); ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 ExecuteOrThrow.
+L000389 |             } ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 ExecuteOrThrow.
+L000390 |         } ⟦EOL⟧
+L000391 |  ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.ClampMotorNo(int)
+L000392 |         private static int ClampMotorNo(int motorNo) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 ClampMotorNo.
+L000393 |         { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(motorNo, 1, 4) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(motorNo, 1, 4);
+L000394 |             return Math.Clamp(motorNo, 1, 4); ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 ClampMotorNo.
+L000395 |         } ⟦EOL⟧
+L000396 |  ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.ToInt32Step(long)
+L000397 |         private static int ToInt32Step(long step) ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 ToInt32Step.
+L000398 |         { ⟦EOL⟧
+// 해설 L399: 호출자에게 값 또는 제어를 반환합니다: return step switch { > int.MaxValue => int.MaxValue, < int.MinValue => int.MinValue, _ => (int)step }; / 값별 결과식을 선택합니다: step switch { > int.MaxValue => int.MaxValue, < int.MinValue => int.MinValue, _ => (int)step }
+L000399 |             return step switch ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 ToInt32Step.
+L000400 |             { ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.ToInt32Step(long)
+L000401 |                 > int.MaxValue => int.MaxValue, ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.ToInt32Step(long)
+L000402 |                 < int.MinValue => int.MinValue, ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPicoMotorCommandSession.ToInt32Step(long)
+L000403 |                 _ => (int)step ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 ToInt32Step.
+L000404 |             }; ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 ToInt32Step.
+L000405 |         } ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다.
+L000406 |     } ⟦EOL⟧
+L000407 |  ⟦EOL⟧
+// 해설 L408: 타입의 구조/상속 선언입니다: public sealed class CPicoMotorService
+L000408 |     public sealed class CPicoMotorService ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다.
+L000409 |     { ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _syncRoot = new()
+L000410 |         private readonly object _syncRoot = new(); ⟦EOL⟧
+// 해설 L411: 변수의 초기값을 지정합니다: _sessions = []
+L000411 |         private readonly Dictionary<int, CPicoMotorCommandSession> _sessions = []; ⟦EOL⟧
+// 해설 L412: 변수의 초기값을 지정합니다: _statuses = []
+L000412 |         private readonly Dictionary<int, ST_PICO_MOTOR_STATUS> _statuses = []; ⟦EOL⟧
+// 해설 L413: 변수의 초기값을 지정합니다: _allMoveTokens = []
+L000413 |         private readonly Dictionary<int, CancellationTokenSource> _allMoveTokens = []; ⟦EOL⟧
+// 해설 L414: 변수의 초기값을 지정합니다: _motionTokens = []
+L000414 |         private readonly Dictionary<int, CancellationTokenSource> _motionTokens = []; ⟦EOL⟧
+// 해설 L415: 변수의 초기값을 지정합니다: SimulationIntervalMs = 100
+L000415 |         private const int SimulationIntervalMs = 100; ⟦EOL⟧
+// 해설 L416: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.GetStatus(int)
+L000416 |         public ST_PICO_MOTOR_STATUS GetStatus(int number) ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 GetStatus.
+L000417 |         { ⟦EOL⟧
+// 해설 L418: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000418 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 GetStatus.
+L000419 |             { ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statuses.TryGetValue(number, out var status) / 조건에 따라 결과식을 선택합니다: _statuses.TryGetValue(number, out var status) ? status : ST_PICO_MOTOR_STATUS.Empty / 호출자에게 값 또는 제어를 반환합니다: return _statuses.TryGetValue(number, out var status) ? status : ST_PICO_MOTOR_STATUS.Empty;
+L000420 |                 return _statuses.TryGetValue(number, out var status) ? status : ST_PICO_MOTOR_STATUS.Empty; ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 GetStatus.
+L000421 |             } ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 GetStatus.
+L000422 |         } ⟦EOL⟧
+L000423 |  ⟦EOL⟧
+// 해설 L424: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_PICO_MOTOR_STATUS> Drilling.Common.Interface.CPicoMotorService.Refresh(int, bool, System.Threading.CancellationToken)
+L000424 |         public async Task<ST_PICO_MOTOR_STATUS> Refresh(int number, bool simulation, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 Refresh.
+L000425 |         { ⟦EOL⟧
+// 해설 L426: 조건에 따라 분기합니다: if (simulation)
+L000426 |             if (simulation) ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 Refresh.
+L000427 |             { ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 호출자에게 값 또는 제어를 반환합니다: return GetStatus(number)with { CommOk = true, UpdatedAt = DateTimeOffset.Now };
+L000428 |                 return GetStatus(number)with ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 Refresh.
+L000429 |                 { ⟦EOL⟧
+// 해설 L430: 값을 대상에 대입합니다: CommOk = true
+L000430 |                     CommOk = true, ⟦EOL⟧
+// 해설 L431: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000431 |                     UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 Refresh.
+L000432 |                 }; ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 Refresh.
+L000433 |             } ⟦EOL⟧
+L000434 |  ⟦EOL⟧
+// 해설 L435: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS SelectStatus()
+L000435 |             global::Drilling.Common.Interface.ST_PICO_MOTOR_STATUS SelectStatus() ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 SelectStatus.
+L000436 |             { ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000437 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSession(number, requireConnected: true) / 지역 변수를 선언합니다: var session = GetSession(number, requireConnected: true); / 변수의 초기값을 지정합니다: session = GetSession(number, requireConnected: true)
+L000438 |                 var session = GetSession(number, requireConnected: true); ⟦EOL⟧
+// 해설 L439: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var before = GetStatus(number); / 변수의 초기값을 지정합니다: before = GetStatus(number)
+L000439 |                 var before = GetStatus(number); ⟦EOL⟧
+// 해설 L440: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(before.SelectedMotorNo, 1, 4) / 지역 변수를 선언합니다: var motorNo = Math.Clamp(before.SelectedMotorNo, 1, 4); / 변수의 초기값을 지정합니다: motorNo = Math.Clamp(before.SelectedMotorNo, 1, 4)
+L000440 |                 var motorNo = Math.Clamp(before.SelectedMotorNo, 1, 4); ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetIdentification() / 지역 변수를 선언합니다: var identification = session.GetIdentification(); / 변수의 초기값을 지정합니다: identification = session.GetIdentification()
+L000441 |                 var identification = session.GetIdentification(); ⟦EOL⟧
+// 해설 L442: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetErrorCode() / 지역 변수를 선언합니다: var errorCode = session.GetErrorCode(); / 변수의 초기값을 지정합니다: errorCode = session.GetErrorCode()
+L000442 |                 var errorCode = session.GetErrorCode(); ⟦EOL⟧
+// 해설 L443: 지역 변수를 선언합니다: var status = before with { IsConnected = true, Controller = string.IsNullOrWhiteSpace(identification) ? "8742" : identification, Motor1Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(1)), Motor2Position = CPicoMotor / 변수의 초기값을 지정합니다: status = before with { IsConnected = true, Controller = string.IsNullOrWhiteSpace(identification) ? "8742" : identification, Motor1Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(1)), Motor2Position = CPicoMotor.Ste
+L000443 |                 var status = before with ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 SelectStatus.
+L000444 |                 { ⟦EOL⟧
+// 해설 L445: 값을 대상에 대입합니다: IsConnected = true
+L000445 |                     IsConnected = true, ⟦EOL⟧
+// 해설 L446: 값을 대상에 대입합니다: Controller = string.IsNullOrWhiteSpace(identification) ? "8742" : identification / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(identification) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(identification) ? "8742" : identification
+L000446 |                     Controller = string.IsNullOrWhiteSpace(identification) ? "8742" : identification, ⟦EOL⟧
+// 해설 L447: 값을 대상에 대입합니다: Motor1Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetPositionStep(1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetPositionStep(1)
+L000447 |                     Motor1Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(1)), ⟦EOL⟧
+// 해설 L448: 값을 대상에 대입합니다: Motor2Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetPositionStep(2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetPositionStep(2)
+L000448 |                     Motor2Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(2)), ⟦EOL⟧
+// 해설 L449: 값을 대상에 대입합니다: Motor3Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(3)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetPositionStep(3)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetPositionStep(3)
+L000449 |                     Motor3Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(3)), ⟦EOL⟧
+// 해설 L450: 값을 대상에 대입합니다: Motor4Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(4)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetPositionStep(4)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetPositionStep(4)
+L000450 |                     Motor4Position = CPicoMotor.StepToMillimeter(session.GetPositionStep(4)), ⟦EOL⟧
+// 해설 L451: 값을 대상에 대입합니다: HomePosition = session.GetHomePositionStep(motorNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetHomePositionStep(motorNo)
+L000451 |                     HomePosition = session.GetHomePositionStep(motorNo), ⟦EOL⟧
+// 해설 L452: 값을 대상에 대입합니다: CurrentVelocity = CPicoMotor.StepToMillimeter(session.GetVelocityStep(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetVelocityStep(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetVelocityStep(motorNo)
+L000452 |                     CurrentVelocity = CPicoMotor.StepToMillimeter(session.GetVelocityStep(motorNo)), ⟦EOL⟧
+// 해설 L453: 값을 대상에 대입합니다: CurrentAcceleration = CPicoMotor.StepToMillimeter(session.GetAccelerationStep(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(session.GetAccelerationStep(motorNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetAccelerationStep(motorNo)
+L000453 |                     CurrentAcceleration = CPicoMotor.StepToMillimeter(session.GetAccelerationStep(motorNo)), ⟦EOL⟧
+// 해설 L454: 값을 대상에 대입합니다: MotionState = session.GetMotionDone(motorNo) ? "IDLE" : "MOVING" / 함수·델리게이트 또는 객체 생성자를 호출합니다: session.GetMotionDone(motorNo) / 조건에 따라 결과식을 선택합니다: session.GetMotionDone(motorNo) ? "IDLE" : "MOVING"
+L000454 |                     MotionState = session.GetMotionDone(motorNo) ? "IDLE" : "MOVING", ⟦EOL⟧
+// 해설 L455: 값을 대상에 대입합니다: ErrorCode = errorCode
+L000455 |                     ErrorCode = errorCode, ⟦EOL⟧
+// 해설 L456: 값을 대상에 대입합니다: CommOk = true
+L000456 |                     CommOk = true, ⟦EOL⟧
+// 해설 L457: 값을 대상에 대입합니다: LastError = CPicoMotor.ToError(errorCode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.ToError(errorCode)
+L000457 |                     LastError = CPicoMotor.ToError(errorCode), ⟦EOL⟧
+// 해설 L458: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000458 |                     UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 SelectStatus.
+L000459 |                 }; ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, status)
+L000460 |                 SetStatus(number, status); ⟦EOL⟧
+// 해설 L461: 호출자에게 값 또는 제어를 반환합니다: return status;
+L000461 |                 return status; ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 SelectStatus.
+L000462 |             } ⟦EOL⟧
+L000463 |  ⟦EOL⟧
+// 해설 L464: 비동기 완료를 기다립니다: await Task.Run(SelectStatus, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectStatus, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return await Task.Run(SelectStatus, cancellationToken);
+L000464 |             return await Task.Run(SelectStatus, cancellationToken); ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 Refresh.
+L000465 |         } ⟦EOL⟧
+L000466 |  ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_DEVICE_COMMAND_RESULT> Drilling.Common.Interface.CPicoMotorService.Execute(int, bool, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, Syste
+L000467 |         public async Task<ST_DEVICE_COMMAND_RESULT> Execute(int number, bool simulation, EN_PICO_MOTOR_COMMAND command, int motorNo, double parameter, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L468: 구문 블록 경계입니다 · 소속 Execute.
+L000468 |         { ⟦EOL⟧
+// 해설 L469: 값을 대상에 대입합니다: motorNo = Math.Clamp(motorNo, 1, 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(motorNo, 1, 4)
+L000469 |             motorNo = Math.Clamp(motorNo, 1, 4); ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · void ExecuteLiveCallback()
+L000470 |             void ExecuteLiveCallback() ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 ExecuteLiveCallback.
+L000471 |             { ⟦EOL⟧
+// 해설 L472: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteLive(number, command, motorNo, parameter)
+L000472 |                 ExecuteLive(number, command, motorNo, parameter); ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 ExecuteLiveCallback.
+L000473 |             } ⟦EOL⟧
+L000474 |  ⟦EOL⟧
+// 해설 L475: 예외 처리 범위입니다: try
+L000475 |             try ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 Execute.
+L000476 |             { ⟦EOL⟧
+// 해설 L477: 조건에 따라 분기합니다: if (command is EN_PICO_MOTOR_COMMAND.SetVelocity or EN_PICO_MOTOR_COMMAND.SetAcceleration)
+L000477 |                 if (command is EN_PICO_MOTOR_COMMAND.SetVelocity or EN_PICO_MOTOR_COMMAND.SetAcceleration) ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 Execute.
+L000478 |                 { ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter) / 지역 변수를 선언합니다: var stepValue = CPicoMotor.MillimeterToStep(parameter); / 변수의 초기값을 지정합니다: stepValue = CPicoMotor.MillimeterToStep(parameter)
+L000479 |                     var stepValue = CPicoMotor.MillimeterToStep(parameter); ⟦EOL⟧
+// 해설 L480: 조건에 따라 분기합니다: if (parameter < 0.0 || stepValue > int.MaxValue)
+L000480 |                     if (parameter < 0.0 || stepValue > int.MaxValue) ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 Execute.
+L000481 |                     { ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} value is out of range.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} value is out of range.");
+L000482 |                         return new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} value is out of range."); ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다 · 소속 Execute.
+L000483 |                     } ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 Execute.
+L000484 |                 } ⟦EOL⟧
+L000485 |  ⟦EOL⟧
+// 해설 L486: 조건에 따라 분기합니다: if (command == EN_PICO_MOTOR_COMMAND.AllMotorStop)
+L000486 |                 if (command == EN_PICO_MOTOR_COMMAND.AllMotorStop) ⟦EOL⟧
+// 해설 L487: 구문 블록 경계입니다 · 소속 Execute.
+L000487 |                 { ⟦EOL⟧
+// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelAllMove(number)
+L000488 |                     CancelAllMove(number); ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelMotion(number)
+L000489 |                     CancelMotion(number); ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 Execute.
+L000490 |                 } ⟦EOL⟧
+// 해설 L491: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (command == EN_PICO_MOTOR_COMMAND.StopMotion)
+L000491 |                 else if (command == EN_PICO_MOTOR_COMMAND.StopMotion) ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 Execute.
+L000492 |                 { ⟦EOL⟧
+// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelMotion(number)
+L000493 |                     CancelMotion(number); ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 Execute.
+L000494 |                 } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 조건에 따라 분기합니다: if (simulation)
+L000496 |                 if (simulation) ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 Execute.
+L000497 |                 { ⟦EOL⟧
+// 해설 L498: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsMoveCommand(command) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateSimulationMove(number, out var validationError) / 조건에 따라 분기합니다: if (IsMoveCommand(command) && !ValidateSimulationMove(number, out var validationError))
+L000498 |                     if (IsMoveCommand(command) && !ValidateSimulationMove(number, out var validationError)) ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 Execute.
+L000499 |                     { ⟦EOL⟧
+// 해설 L500: 호출자에게 값 또는 제어를 반환합니다: return validationError;
+L000500 |                         return validationError; ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 Execute.
+L000501 |                     } ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 조건에 따라 분기합니다: if (command is EN_PICO_MOTOR_COMMAND.Home or EN_PICO_MOTOR_COMMAND.MoveRelativeNegative or EN_PICO_MOTOR_COMMAND.MoveRelativePositive or EN_PICO_MOTOR_COMMAND.MoveAbsolute)
+L000503 |                     if (command is EN_PICO_MOTOR_COMMAND.Home or EN_PICO_MOTOR_COMMAND.MoveRelativeNegative or EN_PICO_MOTOR_COMMAND.MoveRelativePositive or EN_PICO_MOTOR_COMMAND.MoveAbsolute) ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 Execute.
+L000504 |                     { ⟦EOL⟧
+// 해설 L505: 비동기 완료를 기다립니다: await ExecuteSimulationPositionMove(number, command, motorNo, parameter, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSimulationPositionMove(number, command, motorNo, parameter, cancellationToken)
+L000505 |                         await ExecuteSimulationPositionMove(number, command, motorNo, parameter, cancellationToken); ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 Execute.
+L000506 |                     } ⟦EOL⟧
+// 해설 L507: 앞 조건이 거짓인 경로입니다: else
+L000507 |                     else ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 Execute.
+L000508 |                     { ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSimulation(number, command, motorNo, parameter)
+L000509 |                         ExecuteSimulation(number, command, motorNo, parameter); ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 Execute.
+L000510 |                     } ⟦EOL⟧
+L000511 |  ⟦EOL⟧
+// 해설 L512: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(true, $"SIM:PICO_MOTOR:{command}:MOTOR={motorNo}:VALUE={parameter:0.###}") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(true, $"SIM:PICO_MOTOR:{command}:MOTOR={motorNo}:VALUE={parameter:0.###}");
+L000512 |                     return new ST_DEVICE_COMMAND_RESULT(true, $"SIM:PICO_MOTOR:{command}:MOTOR={motorNo}:VALUE={parameter:0.###}"); ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 Execute.
+L000513 |                 } ⟦EOL⟧
+L000514 |  ⟦EOL⟧
+// 해설 L515: 비동기 완료를 기다립니다: await Task.Run(ExecuteLiveCallback, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(ExecuteLiveCallback, cancellationToken)
+L000515 |                 await Task.Run(ExecuteLiveCallback, cancellationToken); ⟦EOL⟧
+// 해설 L516: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(true, $"PICO_MOTOR {command} OK. MOTOR={motorNo}") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(true, $"PICO_MOTOR {command} OK. MOTOR={motorNo}");
+L000516 |                 return new ST_DEVICE_COMMAND_RESULT(true, $"PICO_MOTOR {command} OK. MOTOR={motorNo}"); ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 Execute.
+L000517 |             } ⟦EOL⟧
+// 해설 L518: 지정 예외를 처리합니다: catch (OperationCanceledException)
+L000518 |             catch (OperationCanceledException) ⟦EOL⟧
+// 해설 L519: 구문 블록 경계입니다 · 소속 Execute.
+L000519 |             { ⟦EOL⟧
+// 해설 L520: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR command canceled.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR command canceled.");
+L000520 |                 return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR command canceled."); ⟦EOL⟧
+// 해설 L521: 구문 블록 경계입니다 · 소속 Execute.
+L000521 |             } ⟦EOL⟧
+// 해설 L522: 지정 예외를 처리합니다: catch (Exception ex)
+L000522 |             catch (Exception ex) ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 Execute.
+L000523 |             { ⟦EOL⟧
+// 해설 L524: 값을 대상에 대입합니다: CommOk = false / 값을 대상에 대입합니다: LastError = EN_PICO_MOTOR_ERROR.Error / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { CommOk = false, LastError = EN_PICO_MOTOR_ERROR.Error, UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000524 |                 SetStatus(number, GetStatus(number)with { CommOk = false, LastError = EN_PICO_MOTOR_ERROR.Error, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} failed: {ex.Message}") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} failed: {ex.Message}");
+L000525 |                 return new ST_DEVICE_COMMAND_RESULT(false, $"PICO_MOTOR {command} failed: {ex.Message}"); ⟦EOL⟧
+// 해설 L526: 구문 블록 경계입니다 · 소속 Execute.
+L000526 |             } ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 Execute.
+L000527 |         } ⟦EOL⟧
+L000528 |  ⟦EOL⟧
+// 해설 L529: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_DEVICE_COMMAND_RESULT> Drilling.Common.Interface.CPicoMotorService.ExecuteAllMove(int, bool, System.Collections.Generic.IReadOnlyCollection<int>, double,
+L000529 |         public async Task<ST_DEVICE_COMMAND_RESULT> ExecuteAllMove(int number, bool simulation, IReadOnlyCollection<int> motorNos, double positionMm, int count, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L530: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000530 |         { ⟦EOL⟧
+// 해설 L531: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(int)
+L000531 |             bool ShouldIncludeItem(int value) ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000532 |             { ⟦EOL⟧
+// 해설 L533: 호출자에게 값 또는 제어를 반환합니다: return value is >= 1 and <= 4;
+L000533 |                 return value is >= 1 and <= 4; ⟦EOL⟧
+// 해설 L534: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000534 |             } ⟦EOL⟧
+L000535 |  ⟦EOL⟧
+// 해설 L536: 선언·서명/매개변수·접근 조건입니다 · int SelectValue(int)
+L000536 |             int SelectValue(int value) ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 SelectValue.
+L000537 |             { ⟦EOL⟧
+// 해설 L538: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000538 |                 return value; ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 SelectValue.
+L000539 |             } ⟦EOL⟧
+L000540 |  ⟦EOL⟧
+// 해설 L541: 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.Where(ShouldIncludeItem).Distinct().OrderBy(SelectValue).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.Where(ShouldIncludeItem).Distinct().OrderBy(SelectValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.Where(ShouldIncludeItem).Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.Where(ShouldIncludeItem) / 지역 변수를 선언합니다: var motors = motorNos.Where(ShouldIncludeItem).Distinct().OrderBy(SelectValue).ToArray(); / 변수의 초기값을 지정합니다: motors = motorNos.Where(ShouldIncludeItem).Distinct().OrderBy(SelectValue).ToArra
+L000541 |             var motors = motorNos.Where(ShouldIncludeItem).Distinct().OrderBy(SelectValue).ToArray(); ⟦EOL⟧
+// 해설 L542: 조건에 따라 분기합니다: if (motors.Length == 0)
+L000542 |             if (motors.Length == 0) ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000543 |             { ⟦EOL⟧
+// 해설 L544: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move requires at least one selected motor.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move requires at least one selected motor.");
+L000544 |                 return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move requires at least one selected motor."); ⟦EOL⟧
+// 해설 L545: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000545 |             } ⟦EOL⟧
+L000546 |  ⟦EOL⟧
+// 해설 L547: 조건에 따라 분기합니다: if (count <= 0)
+L000547 |             if (count <= 0) ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000548 |             { ⟦EOL⟧
+// 해설 L549: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move count must be greater than zero.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move count must be greater than zero.");
+L000549 |                 return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR all move count must be greater than zero."); ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000550 |             } ⟦EOL⟧
+L000551 |  ⟦EOL⟧
+// 해설 L552: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var before = GetStatus(number); / 변수의 초기값을 지정합니다: before = GetStatus(number)
+L000552 |             var before = GetStatus(number); ⟦EOL⟧
+// 해설 L553: 조건에 따라 분기합니다: if (!before.IsConnected)
+L000553 |             if (!before.IsConnected) ⟦EOL⟧
+// 해설 L554: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000554 |             { ⟦EOL⟧
+// 해설 L555: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first.");
+L000555 |                 return new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first."); ⟦EOL⟧
+// 해설 L556: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000556 |             } ⟦EOL⟧
+L000557 |  ⟦EOL⟧
+// 해설 L558: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateSimulationMove(number, out var validationError) / 조건에 따라 분기합니다: if (simulation && !ValidateSimulationMove(number, out var validationError))
+L000558 |             if (simulation && !ValidateSimulationMove(number, out var validationError)) ⟦EOL⟧
+// 해설 L559: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000559 |             { ⟦EOL⟧
+// 해설 L560: 호출자에게 값 또는 제어를 반환합니다: return validationError;
+L000560 |                 return validationError; ⟦EOL⟧
+// 해설 L561: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000561 |             } ⟦EOL⟧
+L000562 |  ⟦EOL⟧
+// 해설 L563: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelAllMove(number)
+L000563 |             CancelAllMove(number); ⟦EOL⟧
+// 해설 L564: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 지역 변수를 선언합니다: var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000564 |             var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L565: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000565 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000566 |             { ⟦EOL⟧
+// 해설 L567: 값을 대상에 대입합니다: _allMoveTokens[number] = linked
+L000567 |                 _allMoveTokens[number] = linked; ⟦EOL⟧
+// 해설 L568: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000568 |             } ⟦EOL⟧
+L000569 |  ⟦EOL⟧
+// 해설 L570: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(before.SelectedMotorNo, 1, 4) / 지역 변수를 선언합니다: var selectedMotorNo = Math.Clamp(before.SelectedMotorNo, 1, 4); / 변수의 초기값을 지정합니다: selectedMotorNo = Math.Clamp(before.SelectedMotorNo, 1, 4)
+L000570 |             var selectedMotorNo = Math.Clamp(before.SelectedMotorNo, 1, 4); ⟦EOL⟧
+// 해설 L571: 값을 대상에 대입합니다: SelectedMotorNo = selectedMotorNo / 값을 대상에 대입합니다: MotionState = "ALL MOVE" / 값을 대상에 대입합니다: AllMoveCurrentCount = 0 / 값을 대상에 대입합니다: AllMoveSetCount = count / 값을 대상에 대입합니다: AllMovePosition = positionMm / 값을 대상에 대입합니다: CommOk = true / 값을 대상에 대입합니다: LastError = EN_PICO_MOTOR_ERROR.Ok / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, before with { SelectedMotorNo = selectedMotorNo, MotionState = "ALL MOVE", AllMoveCurrentCount = 0, AllMoveSetCount = count, AllMovePosition = position
+L000571 |             SetStatus(number, before with { SelectedMotorNo = selectedMotorNo, MotionState = "ALL MOVE", AllMoveCurrentCount = 0, AllMoveSetCount = count, AllMovePosition = positionMm, CommOk = true, LastError = EN_PICO_MOTOR_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L572: 예외 처리 범위입니다: try
+L000572 |             try ⟦EOL⟧
+// 해설 L573: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000573 |             { ⟦EOL⟧
+// 해설 L574: 초기화·조건·증감이 있는 반복입니다: for (var current = 1; current <= count; current++) / 변수의 초기값을 지정합니다: current = 1
+L000574 |                 for (var current = 1; current <= count; current++) ⟦EOL⟧
+// 해설 L575: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000575 |                 { ⟦EOL⟧
+// 해설 L576: 함수·델리게이트 또는 객체 생성자를 호출합니다: linked.Token.ThrowIfCancellationRequested()
+L000576 |                     linked.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L577: 조건에 따라 분기합니다: if (simulation)
+L000577 |                     if (simulation) ⟦EOL⟧
+// 해설 L578: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000578 |                     { ⟦EOL⟧
+// 해설 L579: 비동기 완료를 기다립니다: await SimulateAllMotorMoveByDelta(number, motors, positionMm, linked.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SimulateAllMotorMoveByDelta(number, motors, positionMm, linked.Token)
+L000579 |                         await SimulateAllMotorMoveByDelta(number, motors, positionMm, linked.Token); ⟦EOL⟧
+// 해설 L580: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000580 |                     } ⟦EOL⟧
+// 해설 L581: 앞 조건이 거짓인 경로입니다: else
+L000581 |                     else ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000582 |                     { ⟦EOL⟧
+// 해설 L583: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSession(number, requireConnected: true) / 지역 변수를 선언합니다: var session = GetSession(number, requireConnected: true); / 변수의 초기값을 지정합니다: session = GetSession(number, requireConnected: true)
+L000583 |                         var session = GetSession(number, requireConnected: true); ⟦EOL⟧
+// 해설 L584: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(positionMm) / 지역 변수를 선언합니다: var moveStep = CPicoMotor.MillimeterToStep(positionMm); / 변수의 초기값을 지정합니다: moveStep = CPicoMotor.MillimeterToStep(positionMm)
+L000584 |                         var moveStep = CPicoMotor.MillimeterToStep(positionMm); ⟦EOL⟧
+// 해설 L585: 선언·서명/매개변수·접근 조건입니다 · void GeneratedMoveCallback()
+L000585 |                         void GeneratedMoveCallback() ⟦EOL⟧
+// 해설 L586: 구문 블록 경계입니다 · 소속 GeneratedMoveCallback.
+L000586 |                         { ⟦EOL⟧
+// 해설 L587: 컬렉션 요소를 순회합니다: foreach (var motorNo in motors)
+L000587 |                             foreach (var motorNo in motors) ⟦EOL⟧
+// 해설 L588: 구문 블록 경계입니다 · 소속 GeneratedMoveCallback.
+L000588 |                             { ⟦EOL⟧
+// 해설 L589: 함수·델리게이트 또는 객체 생성자를 호출합니다: linked.Token.ThrowIfCancellationRequested()
+L000589 |                                 linked.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L590: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.RelativeMove(motorNo, moveStep)
+L000590 |                                 session.RelativeMove(motorNo, moveStep); ⟦EOL⟧
+// 해설 L591: 구문 블록 경계입니다 · 소속 GeneratedMoveCallback.
+L000591 |                             } ⟦EOL⟧
+// 해설 L592: 구문 블록 경계입니다 · 소속 GeneratedMoveCallback.
+L000592 |                         } ⟦EOL⟧
+L000593 |  ⟦EOL⟧
+// 해설 L594: 비동기 완료를 기다립니다: await Task.Run(GeneratedMoveCallback, linked.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(GeneratedMoveCallback, linked.Token)
+L000594 |                         await Task.Run(GeneratedMoveCallback, linked.Token); ⟦EOL⟧
+// 해설 L595: 비동기 완료를 기다립니다: await WaitAllMotorsDone(session, motors, linked.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitAllMotorsDone(session, motors, linked.Token)
+L000595 |                         await WaitAllMotorsDone(session, motors, linked.Token); ⟦EOL⟧
+// 해설 L596: 비동기 완료를 기다립니다: await Refresh(number, false, linked.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(number, false, linked.Token)
+L000596 |                         await Refresh(number, false, linked.Token); ⟦EOL⟧
+// 해설 L597: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000597 |                     } ⟦EOL⟧
+L000598 |  ⟦EOL⟧
+// 해설 L599: 값을 대상에 대입합니다: SelectedMotorNo = selectedMotorNo / 값을 대상에 대입합니다: MotionState = current == count ? "IDLE" : "ALL MOVE" / 값을 대상에 대입합니다: AllMoveCurrentCount = current / 값을 대상에 대입합니다: AllMoveSetCount = count / 값을 대상에 대입합니다: AllMovePosition = positionMm / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = current == count ? "IDLE" : "ALL MOVE", AllMoveCurrentCount = current, AllMoveSetCount = count, AllMovePosition = positionMm,
+L000599 |                     SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = current == count ? "IDLE" : "ALL MOVE", AllMoveCurrentCount = current, AllMoveSetCount = count, AllMovePosition = positionMm, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000600 |                 } ⟦EOL⟧
+L000601 |  ⟦EOL⟧
+// 해설 L602: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move completed.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move completed.");
+L000602 |                 return new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move completed."); ⟦EOL⟧
+// 해설 L603: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000603 |             } ⟦EOL⟧
+// 해설 L604: 지정 예외를 처리합니다: catch (OperationCanceledException)
+L000604 |             catch (OperationCanceledException) ⟦EOL⟧
+// 해설 L605: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000605 |             { ⟦EOL⟧
+// 해설 L606: 값을 대상에 대입합니다: SelectedMotorNo = selectedMotorNo / 값을 대상에 대입합니다: MotionState = "IDLE" / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000606 |                 SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move stopped.") / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move stopped.");
+L000607 |                 return new ST_DEVICE_COMMAND_RESULT(true, "PICO_MOTOR all move stopped."); ⟦EOL⟧
+// 해설 L608: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000608 |             } ⟦EOL⟧
+// 해설 L609: 지정 예외를 처리합니다: catch (TimeoutException ex)
+L000609 |             catch (TimeoutException ex) ⟦EOL⟧
+// 해설 L610: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000610 |             { ⟦EOL⟧
+// 해설 L611: 값을 대상에 대입합니다: SelectedMotorNo = selectedMotorNo / 값을 대상에 대입합니다: MotionState = "IDLE" / 값을 대상에 대입합니다: CommOk = false / 값을 대상에 대입합니다: LastError = EN_PICO_MOTOR_ERROR.Timeout / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = "IDLE", CommOk = false, LastError = EN_PICO_MOTOR_ERROR.Timeout, UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000611 |                 SetStatus(number, GetStatus(number)with { SelectedMotorNo = selectedMotorNo, MotionState = "IDLE", CommOk = false, LastError = EN_PICO_MOTOR_ERROR.Timeout, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L612: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, ex.Message) / 호출자에게 값 또는 제어를 반환합니다: return new ST_DEVICE_COMMAND_RESULT(false, ex.Message);
+L000612 |                 return new ST_DEVICE_COMMAND_RESULT(false, ex.Message); ⟦EOL⟧
+// 해설 L613: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000613 |             } ⟦EOL⟧
+// 해설 L614: 종료 정리 구간입니다: finally
+L000614 |             finally ⟦EOL⟧
+// 해설 L615: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000615 |             { ⟦EOL⟧
+// 해설 L616: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000616 |                 lock (_syncRoot) ⟦EOL⟧
+// 해설 L617: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000617 |                 { ⟦EOL⟧
+// 해설 L618: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allMoveTokens.TryGetValue(number, out var token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(token, linked) / 조건에 따라 분기합니다: if (_allMoveTokens.TryGetValue(number, out var token) && ReferenceEquals(token, linked))
+L000618 |                     if (_allMoveTokens.TryGetValue(number, out var token) && ReferenceEquals(token, linked)) ⟦EOL⟧
+// 해설 L619: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000619 |                     { ⟦EOL⟧
+// 해설 L620: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allMoveTokens.Remove(number)
+L000620 |                         _allMoveTokens.Remove(number); ⟦EOL⟧
+// 해설 L621: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Dispose()
+L000621 |                         token.Dispose(); ⟦EOL⟧
+// 해설 L622: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000622 |                     } ⟦EOL⟧
+// 해설 L623: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000623 |                 } ⟦EOL⟧
+// 해설 L624: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000624 |             } ⟦EOL⟧
+// 해설 L625: 구문 블록 경계입니다 · 소속 ExecuteAllMove.
+L000625 |         } ⟦EOL⟧
+L000626 |  ⟦EOL⟧
+// 해설 L627: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.CancelAllMove(int)
+L000627 |         public void CancelAllMove(int number) ⟦EOL⟧
+// 해설 L628: 구문 블록 경계입니다 · 소속 CancelAllMove.
+L000628 |         { ⟦EOL⟧
+// 해설 L629: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000629 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L630: 구문 블록 경계입니다 · 소속 CancelAllMove.
+L000630 |             { ⟦EOL⟧
+// 해설 L631: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allMoveTokens.TryGetValue(number, out var token) / 조건에 따라 분기합니다: if (_allMoveTokens.TryGetValue(number, out var token))
+L000631 |                 if (_allMoveTokens.TryGetValue(number, out var token)) ⟦EOL⟧
+// 해설 L632: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Cancel()
+L000632 |                     token.Cancel(); ⟦EOL⟧
+// 해설 L633: 구문 블록 경계입니다 · 소속 CancelAllMove.
+L000633 |             } ⟦EOL⟧
+// 해설 L634: 구문 블록 경계입니다 · 소속 CancelAllMove.
+L000634 |         } ⟦EOL⟧
+L000635 |  ⟦EOL⟧
+// 해설 L636: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.CancelMotion(int)
+L000636 |         private void CancelMotion(int number) ⟦EOL⟧
+// 해설 L637: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000637 |         { ⟦EOL⟧
+// 해설 L638: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000638 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L639: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000639 |             { ⟦EOL⟧
+// 해설 L640: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionTokens.TryGetValue(number, out var token) / 조건에 따라 분기합니다: if (_motionTokens.TryGetValue(number, out var token))
+L000640 |                 if (_motionTokens.TryGetValue(number, out var token)) ⟦EOL⟧
+// 해설 L641: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000641 |                 { ⟦EOL⟧
+// 해설 L642: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Cancel()
+L000642 |                     token.Cancel(); ⟦EOL⟧
+// 해설 L643: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000643 |                 } ⟦EOL⟧
+// 해설 L644: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000644 |             } ⟦EOL⟧
+// 해설 L645: 구문 블록 경계입니다 · 소속 CancelMotion.
+L000645 |         } ⟦EOL⟧
+L000646 |  ⟦EOL⟧
+// 해설 L647: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorService.IsMoveCommand(Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND)
+L000647 |         private static bool IsMoveCommand(EN_PICO_MOTOR_COMMAND command) ⟦EOL⟧
+// 해설 L648: 구문 블록 경계입니다 · 소속 IsMoveCommand.
+L000648 |         { ⟦EOL⟧
+// 해설 L649: 호출자에게 값 또는 제어를 반환합니다: return command is EN_PICO_MOTOR_COMMAND.Home or EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive or EN_PICO_MOTOR_COMMAND.MoveRelativeNegative or EN_PICO_MOTOR_COMMAND.MoveRelativePositive or EN_PICO_MOTOR_CO
+L000649 |             return command is EN_PICO_MOTOR_COMMAND.Home or EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive or EN_PICO_MOTOR_COMMAND.MoveRelativeNegative or EN_PICO_MOTOR_COMMAND.MoveRelativePositive or EN_PICO_MOTOR_COMMAND.MoveAbsolute; ⟦EOL⟧
+// 해설 L650: 구문 블록 경계입니다 · 소속 IsMoveCommand.
+L000650 |         } ⟦EOL⟧
+L000651 |  ⟦EOL⟧
+// 해설 L652: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPicoMotorService.ValidateSimulationMove(int, out Drilling.Common.Interface.ST_DEVICE_COMMAND_RESULT)
+L000652 |         private bool ValidateSimulationMove(int number, out ST_DEVICE_COMMAND_RESULT error) ⟦EOL⟧
+// 해설 L653: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000653 |         { ⟦EOL⟧
+// 해설 L654: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var status = GetStatus(number); / 변수의 초기값을 지정합니다: status = GetStatus(number)
+L000654 |             var status = GetStatus(number); ⟦EOL⟧
+// 해설 L655: 조건에 따라 분기합니다: if (!status.IsConnected)
+L000655 |             if (!status.IsConnected) ⟦EOL⟧
+// 해설 L656: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000656 |             { ⟦EOL⟧
+// 해설 L657: 값을 대상에 대입합니다: error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first.")
+L000657 |                 error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR is disconnected. Connect first."); ⟦EOL⟧
+// 해설 L658: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000658 |                 return false; ⟦EOL⟧
+// 해설 L659: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000659 |             } ⟦EOL⟧
+L000660 |  ⟦EOL⟧
+// 해설 L661: 조건에 따라 분기합니다: if (status.CurrentVelocity <= 0.0)
+L000661 |             if (status.CurrentVelocity <= 0.0) ⟦EOL⟧
+// 해설 L662: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000662 |             { ⟦EOL⟧
+// 해설 L663: 값을 대상에 대입합니다: error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR velocity must be greater than 0 before move.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR velocity must be greater than 0 before move.")
+L000663 |                 error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR velocity must be greater than 0 before move."); ⟦EOL⟧
+// 해설 L664: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000664 |                 return false; ⟦EOL⟧
+// 해설 L665: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000665 |             } ⟦EOL⟧
+L000666 |  ⟦EOL⟧
+// 해설 L667: 조건에 따라 분기합니다: if (status.CurrentAcceleration <= 0.0)
+L000667 |             if (status.CurrentAcceleration <= 0.0) ⟦EOL⟧
+// 해설 L668: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000668 |             { ⟦EOL⟧
+// 해설 L669: 값을 대상에 대입합니다: error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR acceleration must be greater than 0 before move.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR acceleration must be greater than 0 before move.")
+L000669 |                 error = new ST_DEVICE_COMMAND_RESULT(false, "PICO_MOTOR acceleration must be greater than 0 before move."); ⟦EOL⟧
+// 해설 L670: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000670 |                 return false; ⟦EOL⟧
+// 해설 L671: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000671 |             } ⟦EOL⟧
+L000672 |  ⟦EOL⟧
+// 해설 L673: 값을 대상에 대입합니다: error = new ST_DEVICE_COMMAND_RESULT(true, string.Empty) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_COMMAND_RESULT(true, string.Empty)
+L000673 |             error = new ST_DEVICE_COMMAND_RESULT(true, string.Empty); ⟦EOL⟧
+// 해설 L674: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000674 |             return true; ⟦EOL⟧
+// 해설 L675: 구문 블록 경계입니다 · 소속 ValidateSimulationMove.
+L000675 |         } ⟦EOL⟧
+L000676 |  ⟦EOL⟧
+// 해설 L677: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.SimulateAllMotorMoveByDelta(int, System.Collections.Generic.IReadOnlyList<int>, double, System.Threading.CancellationToken)
+L000677 |         private async Task SimulateAllMotorMoveByDelta(int number, IReadOnlyList<int> motorNos, double deltaPosition, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L678: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000678 |         { ⟦EOL⟧
+// 해설 L679: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var start = GetStatus(number); / 변수의 초기값을 지정합니다: start = GetStatus(number)
+L000679 |             var start = GetStatus(number); ⟦EOL⟧
+// 해설 L680: 선언·서명/매개변수·접근 조건입니다 · int SelectMotorNo(int)
+L000680 |             int SelectMotorNo(int motorNo) ⟦EOL⟧
+// 해설 L681: 구문 블록 경계입니다 · 소속 SelectMotorNo.
+L000681 |             { ⟦EOL⟧
+// 해설 L682: 호출자에게 값 또는 제어를 반환합니다: return motorNo;
+L000682 |                 return motorNo; ⟦EOL⟧
+// 해설 L683: 구문 블록 경계입니다 · 소속 SelectMotorNo.
+L000683 |             } ⟦EOL⟧
+L000684 |  ⟦EOL⟧
+// 해설 L685: 선언·서명/매개변수·접근 조건입니다 · double SelectValue(int)
+L000685 |             double SelectValue(int motorNo) ⟦EOL⟧
+// 해설 L686: 구문 블록 경계입니다 · 소속 SelectValue.
+L000686 |             { ⟦EOL⟧
+// 해설 L687: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPosition(start, motorNo) / 호출자에게 값 또는 제어를 반환합니다: return GetPosition(start, motorNo) + deltaPosition;
+L000687 |                 return GetPosition(start, motorNo) + deltaPosition; ⟦EOL⟧
+// 해설 L688: 구문 블록 경계입니다 · 소속 SelectValue.
+L000688 |             } ⟦EOL⟧
+L000689 |  ⟦EOL⟧
+// 해설 L690: 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.ToDictionary(SelectMotorNo, SelectValue) / 지역 변수를 선언합니다: var targets = motorNos.ToDictionary(SelectMotorNo, SelectValue); / 변수의 초기값을 지정합니다: targets = motorNos.ToDictionary(SelectMotorNo, SelectValue)
+L000690 |             var targets = motorNos.ToDictionary(SelectMotorNo, SelectValue); ⟦EOL⟧
+// 해설 L691: 조건을 먼저 확인하며 반복합니다: while (true)
+L000691 |             while (true) ⟦EOL⟧
+// 해설 L692: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000692 |             { ⟦EOL⟧
+// 해설 L693: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000693 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L694: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var status = GetStatus(number); / 변수의 초기값을 지정합니다: status = GetStatus(number)
+L000694 |                 var status = GetStatus(number); ⟦EOL⟧
+// 해설 L695: 지역 변수를 선언합니다: var next = status; / 변수의 초기값을 지정합니다: next = status
+L000695 |                 var next = status; ⟦EOL⟧
+// 해설 L696: 지역 변수를 선언합니다: var completed = true; / 변수의 초기값을 지정합니다: completed = true
+L000696 |                 var completed = true; ⟦EOL⟧
+// 해설 L697: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSimulationStepDistance(status) / 지역 변수를 선언합니다: var stepDistance = GetSimulationStepDistance(status); / 변수의 초기값을 지정합니다: stepDistance = GetSimulationStepDistance(status)
+L000697 |                 var stepDistance = GetSimulationStepDistance(status); ⟦EOL⟧
+// 해설 L698: 컬렉션 요소를 순회합니다: foreach (var motorNo in motorNos)
+L000698 |                 foreach (var motorNo in motorNos) ⟦EOL⟧
+// 해설 L699: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000699 |                 { ⟦EOL⟧
+// 해설 L700: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPosition(next, motorNo) / 지역 변수를 선언합니다: var current = GetPosition(next, motorNo); / 변수의 초기값을 지정합니다: current = GetPosition(next, motorNo)
+L000700 |                     var current = GetPosition(next, motorNo); ⟦EOL⟧
+// 해설 L701: 지역 변수를 선언합니다: var distance = targets[motorNo] - current; / 변수의 초기값을 지정합니다: distance = targets[motorNo] - current
+L000701 |                     var distance = targets[motorNo] - current; ⟦EOL⟧
+// 해설 L702: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(distance) / 조건에 따라 분기합니다: if (Math.Abs(distance) <= 0.000001)
+L000702 |                     if (Math.Abs(distance) <= 0.000001) ⟦EOL⟧
+// 해설 L703: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000703 |                     { ⟦EOL⟧
+// 해설 L704: 값을 대상에 대입합니다: next = SetPosition(next, motorNo, targets[motorNo]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(next, motorNo, targets[motorNo])
+L000704 |                         next = SetPosition(next, motorNo, targets[motorNo]); ⟦EOL⟧
+// 해설 L705: 다음 반복으로 진행합니다: continue;
+L000705 |                         continue; ⟦EOL⟧
+// 해설 L706: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000706 |                     } ⟦EOL⟧
+L000707 |  ⟦EOL⟧
+// 해설 L708: 값을 대상에 대입합니다: completed = false
+L000708 |                     completed = false; ⟦EOL⟧
+// 해설 L709: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(distance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sign(distance) / 조건에 따라 결과식을 선택합니다: Math.Abs(distance) <= stepDistance ? targets[motorNo] : current + (Math.Sign(distance) * stepDistance) / 지역 변수를 선언합니다: var position = Math.Abs(distance) <= stepDistance ? targets[motorNo] : current + (Math.Sign(distance) * stepDistance); / 변수의 초기값을 지정합니다: position = Math.Abs(distance) <= stepDistance ? targets[motorNo] : current + (Math.Sign(distance) * stepDistance)
+L000709 |                     var position = Math.Abs(distance) <= stepDistance ? targets[motorNo] : current + (Math.Sign(distance) * stepDistance); ⟦EOL⟧
+// 해설 L710: 값을 대상에 대입합니다: next = SetPosition(next, motorNo, position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(next, motorNo, position)
+L000710 |                     next = SetPosition(next, motorNo, position); ⟦EOL⟧
+// 해설 L711: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000711 |                 } ⟦EOL⟧
+L000712 |  ⟦EOL⟧
+// 해설 L713: 값을 대상에 대입합니다: MotionState = completed ? "IDLE" : "ALL MOVE" / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, next with { MotionState = completed ? "IDLE" : "ALL MOVE", UpdatedAt = DateTimeOffset.Now }) / 조건에 따라 결과식을 선택합니다: completed ? "IDLE" : "ALL MOVE"
+L000713 |                 SetStatus(number, next with { MotionState = completed ? "IDLE" : "ALL MOVE", UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L714: 조건에 따라 분기합니다: if (completed)
+L000714 |                 if (completed) ⟦EOL⟧
+// 해설 L715: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000715 |                 { ⟦EOL⟧
+// 해설 L716: 호출자에게 값 또는 제어를 반환합니다: return;
+L000716 |                     return; ⟦EOL⟧
+// 해설 L717: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000717 |                 } ⟦EOL⟧
+L000718 |  ⟦EOL⟧
+// 해설 L719: 비동기 완료를 기다립니다: await Task.Delay(SimulationIntervalMs, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(SimulationIntervalMs, cancellationToken)
+L000719 |                 await Task.Delay(SimulationIntervalMs, cancellationToken); ⟦EOL⟧
+// 해설 L720: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000720 |             } ⟦EOL⟧
+// 해설 L721: 구문 블록 경계입니다 · 소속 SimulateAllMotorMoveByDelta.
+L000721 |         } ⟦EOL⟧
+L000722 |  ⟦EOL⟧
+// 해설 L723: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.WaitAllMotorsDone(Drilling.Common.Interface.CPicoMotorCommandSession, System.Collections.Generic.IReadOnlyList<int>, System.Threading.Canc
+L000723 |         private static async Task WaitAllMotorsDone(CPicoMotorCommandSession session, IReadOnlyList<int> motorNos, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L724: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000724 |         { ⟦EOL⟧
+// 해설 L725: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.UtcNow.AddSeconds(120) / 지역 변수를 선언합니다: var timeoutAt = DateTimeOffset.UtcNow.AddSeconds(120); / 변수의 초기값을 지정합니다: timeoutAt = DateTimeOffset.UtcNow.AddSeconds(120)
+L000725 |             var timeoutAt = DateTimeOffset.UtcNow.AddSeconds(120); ⟦EOL⟧
+// 해설 L726: 선언·서명/매개변수·접근 조건입니다 · bool Matches()
+L000726 |             bool Matches() ⟦EOL⟧
+// 해설 L727: 구문 블록 경계입니다 · 소속 Matches.
+L000727 |             { ⟦EOL⟧
+// 해설 L728: 함수·델리게이트 또는 객체 생성자를 호출합니다: motorNos.All(session.GetMotionDone) / 호출자에게 값 또는 제어를 반환합니다: return motorNos.All(session.GetMotionDone);
+L000728 |                 return motorNos.All(session.GetMotionDone); ⟦EOL⟧
+// 해설 L729: 구문 블록 경계입니다 · 소속 Matches.
+L000729 |             } ⟦EOL⟧
+L000730 |  ⟦EOL⟧
+// 해설 L731: 조건을 먼저 확인하며 반복합니다: while (true)
+L000731 |             while (true) ⟦EOL⟧
+// 해설 L732: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000732 |             { ⟦EOL⟧
+// 해설 L733: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000733 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L734: 비동기 완료를 기다립니다: await Task.Run(Matches, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(Matches, cancellationToken) / 지역 변수를 선언합니다: var completed = await Task.Run(Matches, cancellationToken); / 변수의 초기값을 지정합니다: completed = await Task.Run(Matches, cancellationToken)
+L000734 |                 var completed = await Task.Run(Matches, cancellationToken); ⟦EOL⟧
+// 해설 L735: 조건에 따라 분기합니다: if (completed)
+L000735 |                 if (completed) ⟦EOL⟧
+// 해설 L736: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000736 |                 { ⟦EOL⟧
+// 해설 L737: 호출자에게 값 또는 제어를 반환합니다: return;
+L000737 |                     return; ⟦EOL⟧
+// 해설 L738: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000738 |                 } ⟦EOL⟧
+L000739 |  ⟦EOL⟧
+// 해설 L740: 조건에 따라 분기합니다: if (DateTimeOffset.UtcNow >= timeoutAt)
+L000740 |                 if (DateTimeOffset.UtcNow >= timeoutAt) ⟦EOL⟧
+// 해설 L741: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000741 |                 { ⟦EOL⟧
+// 해설 L742: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("PICO_MOTOR all move completion timeout.") / 예외를 발생/전달합니다: throw new TimeoutException("PICO_MOTOR all move completion timeout.");
+L000742 |                     throw new TimeoutException("PICO_MOTOR all move completion timeout."); ⟦EOL⟧
+// 해설 L743: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000743 |                 } ⟦EOL⟧
+L000744 |  ⟦EOL⟧
+// 해설 L745: 비동기 완료를 기다립니다: await Task.Delay(50, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(50, cancellationToken)
+L000745 |                 await Task.Delay(50, cancellationToken); ⟦EOL⟧
+// 해설 L746: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000746 |             } ⟦EOL⟧
+// 해설 L747: 구문 블록 경계입니다 · 소속 WaitAllMotorsDone.
+L000747 |         } ⟦EOL⟧
+L000748 |  ⟦EOL⟧
+// 해설 L749: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetSimulationStepDistance(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS)
+L000749 |         private static double GetSimulationStepDistance(ST_PICO_MOTOR_STATUS status) ⟦EOL⟧
+// 해설 L750: 구문 블록 경계입니다 · 소속 GetSimulationStepDistance.
+L000750 |         { ⟦EOL⟧
+// 해설 L751: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.000001, status.CurrentVelocity * SimulationIntervalMs / 1000.0) / 호출자에게 값 또는 제어를 반환합니다: return Math.Max(0.000001, status.CurrentVelocity * SimulationIntervalMs / 1000.0);
+L000751 |             return Math.Max(0.000001, status.CurrentVelocity * SimulationIntervalMs / 1000.0); ⟦EOL⟧
+// 해설 L752: 구문 블록 경계입니다 · 소속 GetSimulationStepDistance.
+L000752 |         } ⟦EOL⟧
+L000753 |  ⟦EOL⟧
+// 해설 L754: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.Disconnect(int)
+L000754 |         public void Disconnect(int number) ⟦EOL⟧
+// 해설 L755: 구문 블록 경계입니다 · 소속 Disconnect.
+L000755 |         { ⟦EOL⟧
+// 해설 L756: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000756 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L757: 구문 블록 경계입니다 · 소속 Disconnect.
+L000757 |             { ⟦EOL⟧
+// 해설 L758: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allMoveTokens.Remove(number, out var allMove) / 조건에 따라 분기합니다: if (_allMoveTokens.Remove(number, out var allMove))
+L000758 |                 if (_allMoveTokens.Remove(number, out var allMove)) ⟦EOL⟧
+// 해설 L759: 함수·델리게이트 또는 객체 생성자를 호출합니다: allMove.Cancel()
+L000759 |                     allMove.Cancel(); ⟦EOL⟧
+// 해설 L760: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionTokens.Remove(number, out var motion) / 조건에 따라 분기합니다: if (_motionTokens.Remove(number, out var motion))
+L000760 |                 if (_motionTokens.Remove(number, out var motion)) ⟦EOL⟧
+// 해설 L761: 함수·델리게이트 또는 객체 생성자를 호출합니다: motion.Cancel()
+L000761 |                     motion.Cancel(); ⟦EOL⟧
+// 해설 L762: 함수·델리게이트 또는 객체 생성자를 호출합니다: _sessions.Remove(number, out var session) / 조건에 따라 분기합니다: if (_sessions.Remove(number, out var session))
+L000762 |                 if (_sessions.Remove(number, out var session)) ⟦EOL⟧
+// 해설 L763: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Dispose()
+L000763 |                     session.Dispose(); ⟦EOL⟧
+// 해설 L764: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statuses.Remove(number)
+L000764 |                 _statuses.Remove(number); ⟦EOL⟧
+// 해설 L765: 구문 블록 경계입니다 · 소속 Disconnect.
+L000765 |             } ⟦EOL⟧
+// 해설 L766: 구문 블록 경계입니다 · 소속 Disconnect.
+L000766 |         } ⟦EOL⟧
+L000767 |  ⟦EOL⟧
+// 해설 L768: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.DisconnectAll()
+L000768 |         public void DisconnectAll() ⟦EOL⟧
+// 해설 L769: 구문 블록 경계입니다 · 소속 DisconnectAll.
+L000769 |         { ⟦EOL⟧
+// 해설 L770: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000770 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L771: 구문 블록 경계입니다 · 소속 DisconnectAll.
+L000771 |             { ⟦EOL⟧
+// 해설 L772: 컬렉션 요소를 순회합니다: foreach (var token in _allMoveTokens.Values)
+L000772 |                 foreach (var token in _allMoveTokens.Values) ⟦EOL⟧
+// 해설 L773: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Cancel()
+L000773 |                     token.Cancel(); ⟦EOL⟧
+// 해설 L774: 컬렉션 요소를 순회합니다: foreach (var token in _motionTokens.Values)
+L000774 |                 foreach (var token in _motionTokens.Values) ⟦EOL⟧
+// 해설 L775: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Cancel()
+L000775 |                     token.Cancel(); ⟦EOL⟧
+// 해설 L776: 컬렉션 요소를 순회합니다: foreach (var session in _sessions.Values)
+L000776 |                 foreach (var session in _sessions.Values) ⟦EOL⟧
+// 해설 L777: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Dispose()
+L000777 |                     session.Dispose(); ⟦EOL⟧
+// 해설 L778: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allMoveTokens.Clear()
+L000778 |                 _allMoveTokens.Clear(); ⟦EOL⟧
+// 해설 L779: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionTokens.Clear()
+L000779 |                 _motionTokens.Clear(); ⟦EOL⟧
+// 해설 L780: 함수·델리게이트 또는 객체 생성자를 호출합니다: _sessions.Clear()
+L000780 |                 _sessions.Clear(); ⟦EOL⟧
+// 해설 L781: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statuses.Clear()
+L000781 |                 _statuses.Clear(); ⟦EOL⟧
+// 해설 L782: 구문 블록 경계입니다 · 소속 DisconnectAll.
+L000782 |             } ⟦EOL⟧
+// 해설 L783: 구문 블록 경계입니다 · 소속 DisconnectAll.
+L000783 |         } ⟦EOL⟧
+L000784 |  ⟦EOL⟧
+// 해설 L785: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.Dispose()
+L000785 |         public void Dispose() ⟦EOL⟧
+// 해설 L786: 구문 블록 경계입니다 · 소속 Dispose.
+L000786 |         { ⟦EOL⟧
+// 해설 L787: 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectAll()
+L000787 |             DisconnectAll(); ⟦EOL⟧
+// 해설 L788: 구문 블록 경계입니다 · 소속 Dispose.
+L000788 |         } ⟦EOL⟧
+L000789 |  ⟦EOL⟧
+// 해설 L790: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000790 |         private void ExecuteLive(int number, EN_PICO_MOTOR_COMMAND command, int motorNo, double parameter) ⟦EOL⟧
+// 해설 L791: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000791 |         { ⟦EOL⟧
+// 해설 L792: 조건에 따라 분기합니다: if (command == EN_PICO_MOTOR_COMMAND.Connect)
+L000792 |             if (command == EN_PICO_MOTOR_COMMAND.Connect) ⟦EOL⟧
+// 해설 L793: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000793 |             { ⟦EOL⟧
+// 해설 L794: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSession(number, requireConnected: false) / 지역 변수를 선언합니다: var session = GetSession(number, requireConnected: false); / 변수의 초기값을 지정합니다: session = GetSession(number, requireConnected: false)
+L000794 |                 var session = GetSession(number, requireConnected: false); ⟦EOL⟧
+// 해설 L795: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Connect() / 조건에 따라 분기합니다: if (!session.Connect())
+L000795 |                 if (!session.Connect()) ⟦EOL⟧
+// 해설 L796: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("CmdLib device discovery/open failed.") / 예외를 발생/전달합니다: throw new InvalidOperationException("CmdLib device discovery/open failed.");
+L000796 |                     throw new InvalidOperationException("CmdLib device discovery/open failed."); ⟦EOL⟧
+// 해설 L797: 값을 대상에 대입합니다: IsConnected = true / 값을 대상에 대입합니다: CommOk = true / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { IsConnected = true, CommOk = true, UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000797 |                 SetStatus(number, GetStatus(number)with { IsConnected = true, CommOk = true, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L798: 호출자에게 값 또는 제어를 반환합니다: return;
+L000798 |                 return; ⟦EOL⟧
+// 해설 L799: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000799 |             } ⟦EOL⟧
+L000800 |  ⟦EOL⟧
+// 해설 L801: 조건에 따라 분기합니다: if (command == EN_PICO_MOTOR_COMMAND.Disconnect)
+L000801 |             if (command == EN_PICO_MOTOR_COMMAND.Disconnect) ⟦EOL⟧
+// 해설 L802: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000802 |             { ⟦EOL⟧
+// 해설 L803: 함수·델리게이트 또는 객체 생성자를 호출합니다: _sessions.TryGetValue(number, out var session) / 조건에 따라 분기합니다: if (_sessions.TryGetValue(number, out var session))
+L000803 |                 if (_sessions.TryGetValue(number, out var session)) ⟦EOL⟧
+// 해설 L804: 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Disconnect()
+L000804 |                     session.Disconnect(); ⟦EOL⟧
+// 해설 L805: 값을 대상에 대입합니다: IsConnected = false / 값을 대상에 대입합니다: MotionState = "IDLE" / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { IsConnected = false, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000805 |                 SetStatus(number, GetStatus(number)with { IsConnected = false, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L806: 호출자에게 값 또는 제어를 반환합니다: return;
+L000806 |                 return; ⟦EOL⟧
+// 해설 L807: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000807 |             } ⟦EOL⟧
+L000808 |  ⟦EOL⟧
+// 해설 L809: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSession(number, requireConnected: true) / 지역 변수를 선언합니다: var live = GetSession(number, requireConnected: true); / 변수의 초기값을 지정합니다: live = GetSession(number, requireConnected: true)
+L000809 |             var live = GetSession(number, requireConnected: true); ⟦EOL⟧
+// 해설 L810: 값에 따라 분기합니다: switch (command)
+L000810 |             switch (command) ⟦EOL⟧
+// 해설 L811: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000811 |             { ⟦EOL⟧
+// 해설 L812: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.SelectMotor:
+L000812 |                 case EN_PICO_MOTOR_COMMAND.SelectMotor: ⟦EOL⟧
+// 해설 L813: 해당 반복/분기 구간을 종료합니다: break;
+L000813 |                     break; ⟦EOL⟧
+// 해설 L814: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.SetVelocity:
+L000814 |                 case EN_PICO_MOTOR_COMMAND.SetVelocity: ⟦EOL⟧
+// 해설 L815: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.SetVelocity(motorNo, checked((int)CPicoMotor.MillimeterToStep(parameter))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter)
+L000815 |                     live.SetVelocity(motorNo, checked((int)CPicoMotor.MillimeterToStep(parameter))); ⟦EOL⟧
+// 해설 L816: 해당 반복/분기 구간을 종료합니다: break;
+L000816 |                     break; ⟦EOL⟧
+// 해설 L817: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.SetAcceleration:
+L000817 |                 case EN_PICO_MOTOR_COMMAND.SetAcceleration: ⟦EOL⟧
+// 해설 L818: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.SetAcceleration(motorNo, checked((int)CPicoMotor.MillimeterToStep(parameter))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter)
+L000818 |                     live.SetAcceleration(motorNo, checked((int)CPicoMotor.MillimeterToStep(parameter))); ⟦EOL⟧
+// 해설 L819: 해당 반복/분기 구간을 종료합니다: break;
+L000819 |                     break; ⟦EOL⟧
+// 해설 L820: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.StopMotion:
+L000820 |                 case EN_PICO_MOTOR_COMMAND.StopMotion: ⟦EOL⟧
+// 해설 L821: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.StopMotion(motorNo)
+L000821 |                     live.StopMotion(motorNo); ⟦EOL⟧
+// 해설 L822: 해당 반복/분기 구간을 종료합니다: break;
+L000822 |                     break; ⟦EOL⟧
+// 해설 L823: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.AllMotorStop:
+L000823 |                 case EN_PICO_MOTOR_COMMAND.AllMotorStop: ⟦EOL⟧
+// 해설 L824: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.AbortMotion()
+L000824 |                     live.AbortMotion(); ⟦EOL⟧
+// 해설 L825: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelAllMove(number)
+L000825 |                     CancelAllMove(number); ⟦EOL⟧
+// 해설 L826: 해당 반복/분기 구간을 종료합니다: break;
+L000826 |                     break; ⟦EOL⟧
+// 해설 L827: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.Home:
+L000827 |                 case EN_PICO_MOTOR_COMMAND.Home: ⟦EOL⟧
+// 해설 L828: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.MoveHome(motorNo)
+L000828 |                     live.MoveHome(motorNo); ⟦EOL⟧
+// 해설 L829: 해당 반복/분기 구간을 종료합니다: break;
+L000829 |                     break; ⟦EOL⟧
+// 해설 L830: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.JogNegative:
+L000830 |                 case EN_PICO_MOTOR_COMMAND.JogNegative: ⟦EOL⟧
+// 해설 L831: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.JogNegative(motorNo)
+L000831 |                     live.JogNegative(motorNo); ⟦EOL⟧
+// 해설 L832: 해당 반복/분기 구간을 종료합니다: break;
+L000832 |                     break; ⟦EOL⟧
+// 해설 L833: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.JogPositive:
+L000833 |                 case EN_PICO_MOTOR_COMMAND.JogPositive: ⟦EOL⟧
+// 해설 L834: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.JogPositive(motorNo)
+L000834 |                     live.JogPositive(motorNo); ⟦EOL⟧
+// 해설 L835: 해당 반복/분기 구간을 종료합니다: break;
+L000835 |                     break; ⟦EOL⟧
+// 해설 L836: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.MoveRelativeNegative:
+L000836 |                 case EN_PICO_MOTOR_COMMAND.MoveRelativeNegative: ⟦EOL⟧
+// 해설 L837: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.RelativeMove(motorNo, -CPicoMotor.MillimeterToStep(parameter)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter)
+L000837 |                     live.RelativeMove(motorNo, -CPicoMotor.MillimeterToStep(parameter)); ⟦EOL⟧
+// 해설 L838: 해당 반복/분기 구간을 종료합니다: break;
+L000838 |                     break; ⟦EOL⟧
+// 해설 L839: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.MoveRelativePositive:
+L000839 |                 case EN_PICO_MOTOR_COMMAND.MoveRelativePositive: ⟦EOL⟧
+// 해설 L840: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.RelativeMove(motorNo, CPicoMotor.MillimeterToStep(parameter)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter)
+L000840 |                     live.RelativeMove(motorNo, CPicoMotor.MillimeterToStep(parameter)); ⟦EOL⟧
+// 해설 L841: 해당 반복/분기 구간을 종료합니다: break;
+L000841 |                     break; ⟦EOL⟧
+// 해설 L842: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.MoveAbsolute:
+L000842 |                 case EN_PICO_MOTOR_COMMAND.MoveAbsolute: ⟦EOL⟧
+// 해설 L843: 함수·델리게이트 또는 객체 생성자를 호출합니다: live.AbsoluteMove(motorNo, CPicoMotor.MillimeterToStep(parameter)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.MillimeterToStep(parameter)
+L000843 |                     live.AbsoluteMove(motorNo, CPicoMotor.MillimeterToStep(parameter)); ⟦EOL⟧
+// 해설 L844: 해당 반복/분기 구간을 종료합니다: break;
+L000844 |                     break; ⟦EOL⟧
+// 해설 L845: 분기값/패턴의 구간입니다: case EN_PICO_MOTOR_COMMAND.Refresh:
+L000845 |                 case EN_PICO_MOTOR_COMMAND.Refresh: ⟦EOL⟧
+// 해설 L846: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(number, false).GetAwaiter().GetResult() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(number, false).GetAwaiter() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(number, false)
+L000846 |                     Refresh(number, false).GetAwaiter().GetResult(); ⟦EOL⟧
+// 해설 L847: 호출자에게 값 또는 제어를 반환합니다: return;
+L000847 |                     return; ⟦EOL⟧
+// 해설 L848: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000848 |             } ⟦EOL⟧
+L000849 |  ⟦EOL⟧
+// 해설 L850: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var status = GetStatus(number); / 변수의 초기값을 지정합니다: status = GetStatus(number)
+L000850 |             var status = GetStatus(number); ⟦EOL⟧
+// 해설 L851: 값을 대상에 대입합니다: SelectedMotorNo = motorNo / 값을 대상에 대입합니다: CurrentVelocity = command == EN_PICO_MOTOR_COMMAND.SetVelocity ? parameter : status.CurrentVelocity / 값을 대상에 대입합니다: CurrentAcceleration = command == EN_PICO_MOTOR_COMMAND.SetAcceleration ? parameter : status.CurrentAcceleration / 값을 대상에 대입합니다: MotionState = command switch { EN_PICO_MOTOR_COMMAND.StopMotion or EN_PICO_MOTOR_COMMAND.AllMotorStop => "IDLE", EN_PICO_MOTOR_COMMAND.Home => "HOME", EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive => "JOG" / 함수·델리게이
+L000851 |             SetStatus(number, status with { SelectedMotorNo = motorNo, CurrentVelocity = command == EN_PICO_MOTOR_COMMAND.SetVelocity ? parameter : status.CurrentVelocity, CurrentAcceleration = command == EN_PICO_MOTOR_COMMAND.SetAcceleration ? parameter : status.CurrentAcceleration, MotionState = command switch ⟦EOL⟧
+// 해설 L852: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000852 |             { ⟦EOL⟧
+// 해설 L853: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000853 |                 EN_PICO_MOTOR_COMMAND.StopMotion or EN_PICO_MOTOR_COMMAND.AllMotorStop => "IDLE", ⟦EOL⟧
+// 해설 L854: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000854 |                 EN_PICO_MOTOR_COMMAND.Home => "HOME", ⟦EOL⟧
+// 해설 L855: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000855 |                 EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive => "JOG", ⟦EOL⟧
+// 해설 L856: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000856 |                 EN_PICO_MOTOR_COMMAND.MoveRelativeNegative or EN_PICO_MOTOR_COMMAND.MoveRelativePositive => "REL MOVE", ⟦EOL⟧
+// 해설 L857: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000857 |                 EN_PICO_MOTOR_COMMAND.MoveAbsolute => "ABS MOVE", ⟦EOL⟧
+// 해설 L858: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteLive(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000858 |                 _ => status.MotionState ⟦EOL⟧
+// 해설 L859: 값을 대상에 대입합니다: CommOk = true / 값을 대상에 대입합니다: LastError = EN_PICO_MOTOR_ERROR.Ok / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000859 |             }, CommOk = true, LastError = EN_PICO_MOTOR_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L860: 구문 블록 경계입니다 · 소속 ExecuteLive.
+L000860 |         } ⟦EOL⟧
+L000861 |  ⟦EOL⟧
+// 해설 L862: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000862 |         private void ExecuteSimulation(int number, EN_PICO_MOTOR_COMMAND command, int motorNo, double parameter) ⟦EOL⟧
+// 해설 L863: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000863 |         { ⟦EOL⟧
+// 해설 L864: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var status = GetStatus(number); / 변수의 초기값을 지정합니다: status = GetStatus(number)
+L000864 |             var status = GetStatus(number); ⟦EOL⟧
+// 해설 L865: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPosition(status, motorNo) / 지역 변수를 선언합니다: var position = GetPosition(status, motorNo); / 변수의 초기값을 지정합니다: position = GetPosition(status, motorNo)
+L000865 |             var position = GetPosition(status, motorNo); ⟦EOL⟧
+// 해설 L866: 값을 대상에 대입합니다: status = command switch { EN_PICO_MOTOR_COMMAND.Connect => status with { IsConnected = true }, EN_PICO_MOTOR_COMMAND.Disconnect => status with { IsConnected = false }, EN_PICO_MOTOR_COMMAND.SetVelocity => status with { CurrentVelo / 값별 결과식을 선택합니다: command switch { EN_PICO_MOTOR_COMMAND.Connect => status with { IsConnected = true }, EN_PICO_MOTOR_COMMAND.Disconnect => status with { IsConnected = false }, EN_PICO_MOTOR_COMMAND.SetVelocity => status with { CurrentVelocity = pa
+L000866 |             status = command switch ⟦EOL⟧
+// 해설 L867: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000867 |             { ⟦EOL⟧
+// 해설 L868: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000868 |                 EN_PICO_MOTOR_COMMAND.Connect => status with ⟦EOL⟧
+// 해설 L869: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000869 |                 { ⟦EOL⟧
+// 해설 L870: 값을 대상에 대입합니다: IsConnected = true
+L000870 |                     IsConnected = true ⟦EOL⟧
+// 해설 L871: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000871 |                 }, ⟦EOL⟧
+// 해설 L872: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000872 |                 EN_PICO_MOTOR_COMMAND.Disconnect => status with ⟦EOL⟧
+// 해설 L873: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000873 |                 { ⟦EOL⟧
+// 해설 L874: 값을 대상에 대입합니다: IsConnected = false
+L000874 |                     IsConnected = false ⟦EOL⟧
+// 해설 L875: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000875 |                 }, ⟦EOL⟧
+// 해설 L876: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000876 |                 EN_PICO_MOTOR_COMMAND.SetVelocity => status with ⟦EOL⟧
+// 해설 L877: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000877 |                 { ⟦EOL⟧
+// 해설 L878: 값을 대상에 대입합니다: CurrentVelocity = parameter
+L000878 |                     CurrentVelocity = parameter ⟦EOL⟧
+// 해설 L879: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000879 |                 }, ⟦EOL⟧
+// 해설 L880: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000880 |                 EN_PICO_MOTOR_COMMAND.SetAcceleration => status with ⟦EOL⟧
+// 해설 L881: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000881 |                 { ⟦EOL⟧
+// 해설 L882: 값을 대상에 대입합니다: CurrentAcceleration = parameter
+L000882 |                     CurrentAcceleration = parameter ⟦EOL⟧
+// 해설 L883: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000883 |                 }, ⟦EOL⟧
+// 해설 L884: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, CPicoMotor.StepToMillimeter(status.HomePosition)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(status.HomePosition)
+L000884 |                 EN_PICO_MOTOR_COMMAND.Home => SetPosition(status, motorNo, CPicoMotor.StepToMillimeter(status.HomePosition)), ⟦EOL⟧
+// 해설 L885: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, position - parameter)
+L000885 |                 EN_PICO_MOTOR_COMMAND.MoveRelativeNegative => SetPosition(status, motorNo, position - parameter), ⟦EOL⟧
+// 해설 L886: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, position + parameter)
+L000886 |                 EN_PICO_MOTOR_COMMAND.MoveRelativePositive => SetPosition(status, motorNo, position + parameter), ⟦EOL⟧
+// 해설 L887: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, parameter)
+L000887 |                 EN_PICO_MOTOR_COMMAND.MoveAbsolute => SetPosition(status, motorNo, parameter), ⟦EOL⟧
+// 해설 L888: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, position - GetSimulationStepDistance(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSimulationStepDistance(status)
+L000888 |                 EN_PICO_MOTOR_COMMAND.JogNegative => SetPosition(status, motorNo, position - GetSimulationStepDistance(status)), ⟦EOL⟧
+// 해설 L889: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, position + GetSimulationStepDistance(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSimulationStepDistance(status)
+L000889 |                 EN_PICO_MOTOR_COMMAND.JogPositive => SetPosition(status, motorNo, position + GetSimulationStepDistance(status)), ⟦EOL⟧
+// 해설 L890: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000890 |                 _ => status ⟦EOL⟧
+// 해설 L891: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000891 |             }; ⟦EOL⟧
+// 해설 L892: 지역 변수를 선언합니다: var motionState = command switch { EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive => "JOG", EN_PICO_MOTOR_COMMAND.StopMotion or EN_PICO_MOTOR_COMMAND.AllMotorStop or EN_PICO_MOTOR_COMMAND.Disconnect => "IDL / 값별 결과식을 선택합니다: command switch { EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive => "JOG", EN_PICO_MOTOR_COMMAND.StopMotion or EN_PICO_MOTOR_COMMAND.AllMotorStop or EN_PICO_MOTOR_COMMAND.Disconnect => "IDLE", _ => status.Mo / 변수의 초기값을 지정합니다: motionState = command switch
+L000892 |             var motionState = command switch ⟦EOL⟧
+// 해설 L893: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000893 |             { ⟦EOL⟧
+// 해설 L894: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000894 |                 EN_PICO_MOTOR_COMMAND.JogNegative or EN_PICO_MOTOR_COMMAND.JogPositive => "JOG", ⟦EOL⟧
+// 해설 L895: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000895 |                 EN_PICO_MOTOR_COMMAND.StopMotion or EN_PICO_MOTOR_COMMAND.AllMotorStop or EN_PICO_MOTOR_COMMAND.Disconnect => "IDLE", ⟦EOL⟧
+// 해설 L896: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.ExecuteSimulation(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double)
+L000896 |                 _ => status.MotionState ⟦EOL⟧
+// 해설 L897: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000897 |             }; ⟦EOL⟧
+// 해설 L898: 값을 대상에 대입합니다: SelectedMotorNo = motorNo / 값을 대상에 대입합니다: MotionState = motionState / 값을 대상에 대입합니다: CommOk = true / 값을 대상에 대입합니다: LastError = EN_PICO_MOTOR_ERROR.Ok / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, status with { SelectedMotorNo = motorNo, MotionState = motionState, CommOk = true, LastError = EN_PICO_MOTOR_ERROR.Ok, UpdatedAt = DateTimeOffset.Now })
+L000898 |             SetStatus(number, status with { SelectedMotorNo = motorNo, MotionState = motionState, CommOk = true, LastError = EN_PICO_MOTOR_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L899: 구문 블록 경계입니다 · 소속 ExecuteSimulation.
+L000899 |         } ⟦EOL⟧
+L000900 |  ⟦EOL⟧
+// 해설 L901: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.ExecuteSimulationPositionMove(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, System.Threading.CancellationToken)
+L000901 |         private async Task ExecuteSimulationPositionMove(int number, EN_PICO_MOTOR_COMMAND command, int motorNo, double parameter, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L902: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000902 |         { ⟦EOL⟧
+// 해설 L903: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelMotion(number)
+L000903 |             CancelMotion(number); ⟦EOL⟧
+// 해설 L904: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 지역 변수를 선언합니다: var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000904 |             var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L905: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000905 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L906: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000906 |             { ⟦EOL⟧
+// 해설 L907: 값을 대상에 대입합니다: _motionTokens[number] = linked
+L000907 |                 _motionTokens[number] = linked; ⟦EOL⟧
+// 해설 L908: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000908 |             } ⟦EOL⟧
+L000909 |  ⟦EOL⟧
+// 해설 L910: 예외 처리 범위입니다: try
+L000910 |             try ⟦EOL⟧
+// 해설 L911: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000911 |             { ⟦EOL⟧
+// 해설 L912: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number) / 지역 변수를 선언합니다: var status = GetStatus(number); / 변수의 초기값을 지정합니다: status = GetStatus(number)
+L000912 |                 var status = GetStatus(number); ⟦EOL⟧
+// 해설 L913: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPosition(status, motorNo) / 지역 변수를 선언합니다: var start = GetPosition(status, motorNo); / 변수의 초기값을 지정합니다: start = GetPosition(status, motorNo)
+L000913 |                 var start = GetPosition(status, motorNo); ⟦EOL⟧
+// 해설 L914: 지역 변수를 선언합니다: var target = command switch { EN_PICO_MOTOR_COMMAND.Home => CPicoMotor.StepToMillimeter(status.HomePosition), EN_PICO_MOTOR_COMMAND.MoveRelativeNegative => start - Math.Abs(parameter), EN_PICO_MOTOR_COMMAND.MoveRelativePositive => / 값별 결과식을 선택합니다: command switch { EN_PICO_MOTOR_COMMAND.Home => CPicoMotor.StepToMillimeter(status.HomePosition), EN_PICO_MOTOR_COMMAND.MoveRelativeNegative => start - Math.Abs(parameter), EN_PICO_MOTOR_COMMAND.MoveRelativePositive => start + Math / 변수의 초기값을 지정합니다: target = command switch { EN_
+L000914 |                 var target = command switch ⟦EOL⟧
+// 해설 L915: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000915 |                 { ⟦EOL⟧
+// 해설 L916: 함수·델리게이트 또는 객체 생성자를 호출합니다: CPicoMotor.StepToMillimeter(status.HomePosition)
+L000916 |                     EN_PICO_MOTOR_COMMAND.Home => CPicoMotor.StepToMillimeter(status.HomePosition), ⟦EOL⟧
+// 해설 L917: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(parameter)
+L000917 |                     EN_PICO_MOTOR_COMMAND.MoveRelativeNegative => start - Math.Abs(parameter), ⟦EOL⟧
+// 해설 L918: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(parameter)
+L000918 |                     EN_PICO_MOTOR_COMMAND.MoveRelativePositive => start + Math.Abs(parameter), ⟦EOL⟧
+// 해설 L919: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.ExecuteSimulationPositionMove(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, System.Threading.CancellationToken)
+L000919 |                     _ => parameter ⟦EOL⟧
+// 해설 L920: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000920 |                 }; ⟦EOL⟧
+// 해설 L921: 지역 변수를 선언합니다: var motionState = command switch { EN_PICO_MOTOR_COMMAND.Home => "HOME", EN_PICO_MOTOR_COMMAND.MoveAbsolute => "ABS MOVE", _ => "REL MOVE" }; / 값별 결과식을 선택합니다: command switch { EN_PICO_MOTOR_COMMAND.Home => "HOME", EN_PICO_MOTOR_COMMAND.MoveAbsolute => "ABS MOVE", _ => "REL MOVE" } / 변수의 초기값을 지정합니다: motionState = command switch { EN_PICO_MOTOR_COMMAND.Home => "HOME", EN_PICO_MOTOR_COMMAND.MoveAbsolute => "ABS MOVE", _ => "REL MOVE" }
+L000921 |                 var motionState = command switch ⟦EOL⟧
+// 해설 L922: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000922 |                 { ⟦EOL⟧
+// 해설 L923: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.ExecuteSimulationPositionMove(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, System.Threading.CancellationToken)
+L000923 |                     EN_PICO_MOTOR_COMMAND.Home => "HOME", ⟦EOL⟧
+// 해설 L924: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.ExecuteSimulationPositionMove(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, System.Threading.CancellationToken)
+L000924 |                     EN_PICO_MOTOR_COMMAND.MoveAbsolute => "ABS MOVE", ⟦EOL⟧
+// 해설 L925: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CPicoMotorService.ExecuteSimulationPositionMove(int, Drilling.Common.Interface.EN_PICO_MOTOR_COMMAND, int, double, System.Threading.CancellationToken)
+L000925 |                     _ => "REL MOVE" ⟦EOL⟧
+// 해설 L926: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000926 |                 }; ⟦EOL⟧
+// 해설 L927: 조건을 먼저 확인하며 반복합니다: while (true)
+L000927 |                 while (true) ⟦EOL⟧
+// 해설 L928: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000928 |                 { ⟦EOL⟧
+// 해설 L929: 함수·델리게이트 또는 객체 생성자를 호출합니다: linked.Token.ThrowIfCancellationRequested()
+L000929 |                     linked.Token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L930: 값을 대상에 대입합니다: status = GetStatus(number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000930 |                     status = GetStatus(number); ⟦EOL⟧
+// 해설 L931: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPosition(status, motorNo) / 지역 변수를 선언합니다: var current = GetPosition(status, motorNo); / 변수의 초기값을 지정합니다: current = GetPosition(status, motorNo)
+L000931 |                     var current = GetPosition(status, motorNo); ⟦EOL⟧
+// 해설 L932: 지역 변수를 선언합니다: var distance = target - current; / 변수의 초기값을 지정합니다: distance = target - current
+L000932 |                     var distance = target - current; ⟦EOL⟧
+// 해설 L933: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(distance) / 조건에 따라 분기합니다: if (Math.Abs(distance) <= 0.000001)
+L000933 |                     if (Math.Abs(distance) <= 0.000001) ⟦EOL⟧
+// 해설 L934: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000934 |                     { ⟦EOL⟧
+// 해설 L935: 값을 대상에 대입합니다: SelectedMotorNo = motorNo / 값을 대상에 대입합니다: MotionState = "IDLE" / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, SetPosition(status, motorNo, target)with { SelectedMotorNo = motorNo, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, target)
+L000935 |                         SetStatus(number, SetPosition(status, motorNo, target)with { SelectedMotorNo = motorNo, MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L936: 호출자에게 값 또는 제어를 반환합니다: return;
+L000936 |                         return; ⟦EOL⟧
+// 해설 L937: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000937 |                     } ⟦EOL⟧
+L000938 |  ⟦EOL⟧
+// 해설 L939: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSimulationStepDistance(status) / 지역 변수를 선언합니다: var stepDistance = GetSimulationStepDistance(status); / 변수의 초기값을 지정합니다: stepDistance = GetSimulationStepDistance(status)
+L000939 |                     var stepDistance = GetSimulationStepDistance(status); ⟦EOL⟧
+// 해설 L940: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(distance) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sign(distance) / 조건에 따라 결과식을 선택합니다: Math.Abs(distance) <= stepDistance ? target : current + (Math.Sign(distance) * stepDistance) / 지역 변수를 선언합니다: var position = Math.Abs(distance) <= stepDistance ? target : current + (Math.Sign(distance) * stepDistance); / 변수의 초기값을 지정합니다: position = Math.Abs(distance) <= stepDistance ? target : current + (Math.Sign(distance) * stepDistance)
+L000940 |                     var position = Math.Abs(distance) <= stepDistance ? target : current + (Math.Sign(distance) * stepDistance); ⟦EOL⟧
+// 해설 L941: 값을 대상에 대입합니다: SelectedMotorNo = motorNo / 값을 대상에 대입합니다: MotionState = motionState / 값을 대상에 대입합니다: CommOk = true / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, SetPosition(status, motorNo, position)with { SelectedMotorNo = motorNo, MotionState = motionState, CommOk = true, UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPosition(status, motorNo, position)
+L000941 |                     SetStatus(number, SetPosition(status, motorNo, position)with { SelectedMotorNo = motorNo, MotionState = motionState, CommOk = true, UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L942: 비동기 완료를 기다립니다: await Task.Delay(SimulationIntervalMs, linked.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(SimulationIntervalMs, linked.Token)
+L000942 |                     await Task.Delay(SimulationIntervalMs, linked.Token); ⟦EOL⟧
+// 해설 L943: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000943 |                 } ⟦EOL⟧
+// 해설 L944: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000944 |             } ⟦EOL⟧
+// 해설 L945: 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+L000945 |             catch (OperationCanceledException)when (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L946: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000946 |             { ⟦EOL⟧
+// 해설 L947: 값을 대상에 대입합니다: MotionState = "IDLE" / 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatus(number, GetStatus(number)with { MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetStatus(number)
+L000947 |                 SetStatus(number, GetStatus(number)with { MotionState = "IDLE", UpdatedAt = DateTimeOffset.Now }); ⟦EOL⟧
+// 해설 L948: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000948 |             } ⟦EOL⟧
+// 해설 L949: 종료 정리 구간입니다: finally
+L000949 |             finally ⟦EOL⟧
+// 해설 L950: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000950 |             { ⟦EOL⟧
+// 해설 L951: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000951 |                 lock (_syncRoot) ⟦EOL⟧
+// 해설 L952: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000952 |                 { ⟦EOL⟧
+// 해설 L953: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionTokens.TryGetValue(number, out var token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(token, linked) / 조건에 따라 분기합니다: if (_motionTokens.TryGetValue(number, out var token) && ReferenceEquals(token, linked))
+L000953 |                     if (_motionTokens.TryGetValue(number, out var token) && ReferenceEquals(token, linked)) ⟦EOL⟧
+// 해설 L954: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000954 |                     { ⟦EOL⟧
+// 해설 L955: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motionTokens.Remove(number)
+L000955 |                         _motionTokens.Remove(number); ⟦EOL⟧
+// 해설 L956: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Dispose()
+L000956 |                         token.Dispose(); ⟦EOL⟧
+// 해설 L957: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000957 |                     } ⟦EOL⟧
+// 해설 L958: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000958 |                 } ⟦EOL⟧
+// 해설 L959: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000959 |             } ⟦EOL⟧
+// 해설 L960: 구문 블록 경계입니다 · 소속 ExecuteSimulationPositionMove.
+L000960 |         } ⟦EOL⟧
+L000961 |  ⟦EOL⟧
+// 해설 L962: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CPicoMotorCommandSession Drilling.Common.Interface.CPicoMotorService.GetSession(int, bool)
+L000962 |         private CPicoMotorCommandSession GetSession(int number, bool requireConnected) ⟦EOL⟧
+// 해설 L963: 구문 블록 경계입니다 · 소속 GetSession.
+L000963 |         { ⟦EOL⟧
+// 해설 L964: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000964 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L965: 구문 블록 경계입니다 · 소속 GetSession.
+L000965 |             { ⟦EOL⟧
+// 해설 L966: 함수·델리게이트 또는 객체 생성자를 호출합니다: _sessions.TryGetValue(number, out var session) / 조건에 따라 분기합니다: if (!_sessions.TryGetValue(number, out var session))
+L000966 |                 if (!_sessions.TryGetValue(number, out var session)) ⟦EOL⟧
+// 해설 L967: 구문 블록 경계입니다 · 소속 GetSession.
+L000967 |                 { ⟦EOL⟧
+// 해설 L968: 값을 대상에 대입합니다: session = new CPicoMotorCommandSession() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CPicoMotorCommandSession()
+L000968 |                     session = new CPicoMotorCommandSession(); ⟦EOL⟧
+// 해설 L969: 값을 대상에 대입합니다: _sessions[number] = session
+L000969 |                     _sessions[number] = session; ⟦EOL⟧
+// 해설 L970: 구문 블록 경계입니다 · 소속 GetSession.
+L000970 |                 } ⟦EOL⟧
+L000971 |  ⟦EOL⟧
+// 해설 L972: 조건에 따라 분기합니다: if (requireConnected && !session.IsConnected)
+L000972 |                 if (requireConnected && !session.IsConnected) ⟦EOL⟧
+// 해설 L973: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("PicoMotor is not connected.") / 예외를 발생/전달합니다: throw new InvalidOperationException("PicoMotor is not connected.");
+L000973 |                     throw new InvalidOperationException("PicoMotor is not connected."); ⟦EOL⟧
+// 해설 L974: 호출자에게 값 또는 제어를 반환합니다: return session;
+L000974 |                 return session; ⟦EOL⟧
+// 해설 L975: 구문 블록 경계입니다 · 소속 GetSession.
+L000975 |             } ⟦EOL⟧
+// 해설 L976: 구문 블록 경계입니다 · 소속 GetSession.
+L000976 |         } ⟦EOL⟧
+L000977 |  ⟦EOL⟧
+// 해설 L978: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPicoMotorService.SetStatus(int, Drilling.Common.Interface.ST_PICO_MOTOR_STATUS)
+L000978 |         private void SetStatus(int number, ST_PICO_MOTOR_STATUS status) ⟦EOL⟧
+// 해설 L979: 구문 블록 경계입니다 · 소속 SetStatus.
+L000979 |         { ⟦EOL⟧
+// 해설 L980: 공유 상태의 임계 구역에 진입합니다: lock (_syncRoot)
+L000980 |             lock (_syncRoot) ⟦EOL⟧
+// 해설 L981: 값을 대상에 대입합니다: _statuses[number] = status
+L000981 |                 _statuses[number] = status; ⟦EOL⟧
+// 해설 L982: 구문 블록 경계입니다 · 소속 SetStatus.
+L000982 |         } ⟦EOL⟧
+L000983 |  ⟦EOL⟧
+// 해설 L984: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int)
+L000984 |         private static double GetPosition(ST_PICO_MOTOR_STATUS status, int motorNo) ⟦EOL⟧
+// 해설 L985: 구문 블록 경계입니다 · 소속 GetPosition.
+L000985 |         { ⟦EOL⟧
+// 해설 L986: 호출자에게 값 또는 제어를 반환합니다: return motorNo switch { 1 => status.Motor1Position, 2 => status.Motor2Position, 3 => status.Motor3Position, _ => status.Motor4Position }; / 값별 결과식을 선택합니다: motorNo switch { 1 => status.Motor1Position, 2 => status.Motor2Position, 3 => status.Motor3Position, _ => status.Motor4Position }
+L000986 |             return motorNo switch ⟦EOL⟧
+// 해설 L987: 구문 블록 경계입니다 · 소속 GetPosition.
+L000987 |             { ⟦EOL⟧
+// 해설 L988: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int)
+L000988 |                 1 => status.Motor1Position, ⟦EOL⟧
+// 해설 L989: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int)
+L000989 |                 2 => status.Motor2Position, ⟦EOL⟧
+// 해설 L990: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int)
+L000990 |                 3 => status.Motor3Position, ⟦EOL⟧
+// 해설 L991: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPicoMotorService.GetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int)
+L000991 |                 _ => status.Motor4Position ⟦EOL⟧
+// 해설 L992: 구문 블록 경계입니다 · 소속 GetPosition.
+L000992 |             }; ⟦EOL⟧
+// 해설 L993: 구문 블록 경계입니다 · 소속 GetPosition.
+L000993 |         } ⟦EOL⟧
+L000994 |  ⟦EOL⟧
+// 해설 L995: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L000995 |         private static ST_PICO_MOTOR_STATUS SetPosition(ST_PICO_MOTOR_STATUS status, int motorNo, double value) ⟦EOL⟧
+// 해설 L996: 구문 블록 경계입니다 · 소속 SetPosition.
+L000996 |         { ⟦EOL⟧
+// 해설 L997: 호출자에게 값 또는 제어를 반환합니다: return motorNo switch { 1 => status with { Motor1Position = value }, 2 => status with { Motor2Position = value }, 3 => status with { Motor3Position = value }, _ => status with { Motor4Position = value } }; / 값별 결과식을 선택합니다: motorNo switch { 1 => status with { Motor1Position = value }, 2 => status with { Motor2Position = value }, 3 => status with { Motor3Position = value }, _ => status with { Motor4Position = value } }
+L000997 |             return motorNo switch ⟦EOL⟧
+// 해설 L998: 구문 블록 경계입니다 · 소속 SetPosition.
+L000998 |             { ⟦EOL⟧
+// 해설 L999: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L000999 |                 1 => status with ⟦EOL⟧
+// 해설 L1000: 구문 블록 경계입니다 · 소속 SetPosition.
+L001000 |                 { ⟦EOL⟧
+// 해설 L1001: 값을 대상에 대입합니다: Motor1Position = value
+L001001 |                     Motor1Position = value ⟦EOL⟧
+// 해설 L1002: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001002 |                 }, ⟦EOL⟧
+// 해설 L1003: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001003 |                 2 => status with ⟦EOL⟧
+// 해설 L1004: 구문 블록 경계입니다 · 소속 SetPosition.
+L001004 |                 { ⟦EOL⟧
+// 해설 L1005: 값을 대상에 대입합니다: Motor2Position = value
+L001005 |                     Motor2Position = value ⟦EOL⟧
+// 해설 L1006: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001006 |                 }, ⟦EOL⟧
+// 해설 L1007: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001007 |                 3 => status with ⟦EOL⟧
+// 해설 L1008: 구문 블록 경계입니다 · 소속 SetPosition.
+L001008 |                 { ⟦EOL⟧
+// 해설 L1009: 값을 대상에 대입합니다: Motor3Position = value
+L001009 |                     Motor3Position = value ⟦EOL⟧
+// 해설 L1010: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001010 |                 }, ⟦EOL⟧
+// 해설 L1011: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_PICO_MOTOR_STATUS Drilling.Common.Interface.CPicoMotorService.SetPosition(Drilling.Common.Interface.ST_PICO_MOTOR_STATUS, int, double)
+L001011 |                 _ => status with ⟦EOL⟧
+// 해설 L1012: 구문 블록 경계입니다 · 소속 SetPosition.
+L001012 |                 { ⟦EOL⟧
+// 해설 L1013: 값을 대상에 대입합니다: Motor4Position = value
+L001013 |                     Motor4Position = value ⟦EOL⟧
+// 해설 L1014: 구문 블록 경계입니다 · 소속 SetPosition.
+L001014 |                 } ⟦EOL⟧
+// 해설 L1015: 구문 블록 경계입니다 · 소속 SetPosition.
+L001015 |             }; ⟦EOL⟧
+// 해설 L1016: 구문 블록 경계입니다 · 소속 SetPosition.
+L001016 |         } ⟦EOL⟧
+// 해설 L1017: 구문 블록 경계입니다.
+L001017 |     } ⟦EOL⟧
+// 해설 L1018: 구문 블록 경계입니다.
+L001018 | } ⟦EOL⟧

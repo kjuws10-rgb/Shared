@@ -1,0 +1,287 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Config/JHMI_SETTING.csv</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Config/JHMI_SETTING.csv.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_SETTING.csv">Git 원본</a></p><h1>Config/JHMI_SETTING.csv</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>8fc521531722667ec07896f1f16f48feb82ad7689b54d7094e6a7808daf1ac74</td></tr>
+<tr><td>파일 분류</td><td>data_schema</td></tr>
+<tr><td>원본 크기/행</td><td>35,599 bytes / 259 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_SETTING.csv">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>화면/장비의 데이터 항목 정의입니다. 키·형식·표시와 실제 소비 코드의 연결을 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/054f39b91d1e9f7c661e.svg"></p>
+<h2>저장/설정 스키마 참고</h2>
+<p>실행 이력·측정 레코드는 문서에 전체 복제하지 않습니다. 행 수와 구조, 소비 코드 연결을 검토하기 위한 참고입니다. 첫 행이 실제 헤더인지는 해당 CSV 파서와 대조해야 합니다.</p>
+<table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody>
+<tr><td>레코드 수</td><td>259</td></tr>
+<tr><td>첫 행 필드 개수</td><td>12</td></tr>
+<tr><td>첫 행 컬럼 후보</td><td>TAB / GROUP / NAME / DISPLAY NAME / DATA TYPE / UNIT / SHOW / USE / VALUE / MIN / MAX / DESCRIPTION</td></tr>
+</tbody></table>
+<p>정의 항목 목록(인증 관련 값은 포함하지 않음):</p>
+<table><thead><tr><th>CSV 행</th><th>정의 키/형식</th></tr></thead><tbody>
+<tr><td>2</td><td>OPTION / POWERMETER / H01_TPM_SETTLE_TIME_MS / H01 TPM Settle Time</td></tr>
+<tr><td>3</td><td>OPTION / POWERMETER / H01_TPM_MEASURE_COUNT / H01 TPM Measure Count</td></tr>
+<tr><td>4</td><td>OPTION / POWERMETER / H01_TPM_INTERVAL_MS / H01 TPM Interval</td></tr>
+<tr><td>5</td><td>OPTION / POWERMETER / H01_TPM_TARGET_POWER_W / H01 TPM Target Power</td></tr>
+<tr><td>6</td><td>OPTION / POWERMETER / H01_TPM_TOLERANCE_W / H01 TPM 허용오차</td></tr>
+<tr><td>7</td><td>OPTION / POWERMETER / H01_TPM_MAX_ATTEMPTS / H01 TPM 최대 검사 횟수</td></tr>
+<tr><td>8</td><td>OPTION / POWERMETER / H02_TPM_SETTLE_TIME_MS / H02 TPM Settle Time</td></tr>
+<tr><td>9</td><td>OPTION / POWERMETER / H02_TPM_MEASURE_COUNT / H02 TPM Measure Count</td></tr>
+<tr><td>10</td><td>OPTION / POWERMETER / H02_TPM_INTERVAL_MS / H02 TPM Interval</td></tr>
+<tr><td>11</td><td>OPTION / POWERMETER / H02_TPM_TARGET_POWER_W / H02 TPM Target Power</td></tr>
+<tr><td>12</td><td>OPTION / POWERMETER / H02_TPM_TOLERANCE_W / H02 TPM 허용오차</td></tr>
+<tr><td>13</td><td>OPTION / POWERMETER / H02_TPM_MAX_ATTEMPTS / H02 TPM 최대 검사 횟수</td></tr>
+<tr><td>14</td><td>OPTION / POWERMETER / H03_TPM_SETTLE_TIME_MS / H03 TPM Settle Time</td></tr>
+<tr><td>15</td><td>OPTION / POWERMETER / H03_TPM_MEASURE_COUNT / H03 TPM Measure Count</td></tr>
+<tr><td>16</td><td>OPTION / POWERMETER / H03_TPM_INTERVAL_MS / H03 TPM Interval</td></tr>
+<tr><td>17</td><td>OPTION / POWERMETER / H03_TPM_TARGET_POWER_W / H03 TPM Target Power</td></tr>
+<tr><td>18</td><td>OPTION / POWERMETER / H03_TPM_TOLERANCE_W / H03 TPM 허용오차</td></tr>
+<tr><td>19</td><td>OPTION / POWERMETER / H03_TPM_MAX_ATTEMPTS / H03 TPM 최대 검사 횟수</td></tr>
+<tr><td>20</td><td>OPTION / POWERMETER / H04_TPM_SETTLE_TIME_MS / H04 TPM Settle Time</td></tr>
+<tr><td>21</td><td>OPTION / POWERMETER / H04_TPM_MEASURE_COUNT / H04 TPM Measure Count</td></tr>
+<tr><td>22</td><td>OPTION / POWERMETER / H04_TPM_INTERVAL_MS / H04 TPM Interval</td></tr>
+<tr><td>23</td><td>OPTION / POWERMETER / H04_TPM_TARGET_POWER_W / H04 TPM Target Power</td></tr>
+<tr><td>24</td><td>OPTION / POWERMETER / H04_TPM_TOLERANCE_W / H04 TPM 허용오차</td></tr>
+<tr><td>25</td><td>OPTION / POWERMETER / H04_TPM_MAX_ATTEMPTS / H04 TPM 최대 검사 횟수</td></tr>
+<tr><td>26</td><td>OPTION / POWERMETER / H05_TPM_SETTLE_TIME_MS / H05 TPM Settle Time</td></tr>
+<tr><td>27</td><td>OPTION / POWERMETER / H05_TPM_MEASURE_COUNT / H05 TPM Measure Count</td></tr>
+<tr><td>28</td><td>OPTION / POWERMETER / H05_TPM_INTERVAL_MS / H05 TPM Interval</td></tr>
+<tr><td>29</td><td>OPTION / POWERMETER / H05_TPM_TARGET_POWER_W / H05 TPM Target Power</td></tr>
+<tr><td>30</td><td>OPTION / POWERMETER / H05_TPM_TOLERANCE_W / H05 TPM 허용오차</td></tr>
+<tr><td>31</td><td>OPTION / POWERMETER / H05_TPM_MAX_ATTEMPTS / H05 TPM 최대 검사 횟수</td></tr>
+<tr><td>32</td><td>OPTION / POWERMETER / H06_TPM_SETTLE_TIME_MS / H06 TPM Settle Time</td></tr>
+<tr><td>33</td><td>OPTION / POWERMETER / H06_TPM_MEASURE_COUNT / H06 TPM Measure Count</td></tr>
+<tr><td>34</td><td>OPTION / POWERMETER / H06_TPM_INTERVAL_MS / H06 TPM Interval</td></tr>
+<tr><td>35</td><td>OPTION / POWERMETER / H06_TPM_TARGET_POWER_W / H06 TPM Target Power</td></tr>
+<tr><td>36</td><td>OPTION / POWERMETER / H06_TPM_TOLERANCE_W / H06 TPM 허용오차</td></tr>
+<tr><td>37</td><td>OPTION / POWERMETER / H06_TPM_MAX_ATTEMPTS / H06 TPM 최대 검사 횟수</td></tr>
+<tr><td>38</td><td>OPTION / POWERMETER / H07_TPM_SETTLE_TIME_MS / H07 TPM Settle Time</td></tr>
+<tr><td>39</td><td>OPTION / POWERMETER / H07_TPM_MEASURE_COUNT / H07 TPM Measure Count</td></tr>
+<tr><td>40</td><td>OPTION / POWERMETER / H07_TPM_INTERVAL_MS / H07 TPM Interval</td></tr>
+<tr><td>41</td><td>OPTION / POWERMETER / H07_TPM_TARGET_POWER_W / H07 TPM Target Power</td></tr>
+<tr><td>42</td><td>OPTION / POWERMETER / H07_TPM_TOLERANCE_W / H07 TPM 허용오차</td></tr>
+<tr><td>43</td><td>OPTION / POWERMETER / H07_TPM_MAX_ATTEMPTS / H07 TPM 최대 검사 횟수</td></tr>
+<tr><td>44</td><td>OPTION / POWERMETER / H08_TPM_SETTLE_TIME_MS / H08 TPM Settle Time</td></tr>
+<tr><td>45</td><td>OPTION / POWERMETER / H08_TPM_MEASURE_COUNT / H08 TPM Measure Count</td></tr>
+<tr><td>46</td><td>OPTION / POWERMETER / H08_TPM_INTERVAL_MS / H08 TPM Interval</td></tr>
+<tr><td>47</td><td>OPTION / POWERMETER / H08_TPM_TARGET_POWER_W / H08 TPM Target Power</td></tr>
+<tr><td>48</td><td>OPTION / POWERMETER / H08_TPM_TOLERANCE_W / H08 TPM 허용오차</td></tr>
+<tr><td>49</td><td>OPTION / POWERMETER / H08_TPM_MAX_ATTEMPTS / H08 TPM 최대 검사 횟수</td></tr>
+<tr><td>50</td><td>OPTION / POWERMETER / TPM_COOLING_TIME_MS / TPM Cooling Time</td></tr>
+<tr><td>51</td><td>OPTION / POWERMETER / TPM_TOLERANCE_W / TPM Power Tolerance</td></tr>
+<tr><td>52</td><td>OPTION / POWERMETER / TPM_MAX_ATTEMPTS / TPM Maximum Attempts</td></tr>
+<tr><td>53</td><td>OPTION / POWERMETER / TPM_STAGE_Y_TOLERANCE_MM / PowerMeasure Stage Y Tolerance</td></tr>
+<tr><td>54</td><td>OPTION / POWERMETER / TPM_OPERATION_TIMEOUT_MS / PowerMeasure Operation Timeout</td></tr>
+<tr><td>55</td><td>OPTION / RUNOPTION / RUNOPTION_ZERO_DEFENCE_USE / 0선방어</td></tr>
+<tr><td>56</td><td>OPTION / RUNOPTION / RUNOPTION_CURRENT_GROUP / 0선방어 Current Group</td></tr>
+<tr><td>57</td><td>OPTION / RUNOPTION / RUNOPTION_FOLLOWUP_USE / 후속 1줄검사</td></tr>
+<tr><td>58</td><td>OPTION / RUNOPTION / RUNOPTION_DISTORTION_GROUP0_USE / Distortion Key Group 0</td></tr>
+<tr><td>59</td><td>OPTION / RUNOPTION / RUNOPTION_DISTORTION_GROUP1_USE / Distortion Key Group 1</td></tr>
+<tr><td>60</td><td>OPTION / RUNOPTION / RUNOPTION_DISTORTION_GROUP2_USE / Distortion Key Group 2</td></tr>
+<tr><td>61</td><td>OPTION / RUNOPTION / RUNOPTION_REVIEW_METHOD / Review Method</td></tr>
+<tr><td>62</td><td>OPTION / RUNOPTION / RUNOPTION_REVIEW_LINE / Review Line</td></tr>
+<tr><td>63</td><td>OPTION / RUNOPTION / RUNOPTION_REVIEW_IMMEDIATE_RETRY / Review Immediate Retry</td></tr>
+<tr><td>64</td><td>OPTION / RUNOPTION / RUNOPTION_REVIEW_RETRY_COUNT / Review Retry Count</td></tr>
+<tr><td>65</td><td>OPTION / PATH / LocalScriptPath / Local Script Path</td></tr>
+<tr><td>66</td><td>OPTION / PATH / AutomationScriptPath / Automation Script Path</td></tr>
+<tr><td>67</td><td>OPTION / SCRIPT / SCRIPT_BUFFERED_RUN_USE / Script Buffered Run Use</td></tr>
+<tr><td>68</td><td>OPTION / SCRIPT / SCRIPT_BUFFERED_RUN_LINES_PER_COMMAND / Buffered Run Lines Per Command</td></tr>
+<tr><td>69</td><td>OPTION / SCRIPT / SCRIPT_BUFFERED_RUN_TIMEOUT_MS / Buffered Run Timeout</td></tr>
+<tr><td>70</td><td>OPTION / SCRIPT / SCRIPT_BUFFERED_RUN_QUEUE_SIZE / Buffered Run Queue Size</td></tr>
+<tr><td>71</td><td>OPTION / SCRIPT / AUTOMATION1_SIMULATOR_USE / Automation1 Simulator Use</td></tr>
+<tr><td>72</td><td>OPTION / RECIPE / SELECT_RECIPE / Select Recipe</td></tr>
+<tr><td>73</td><td>OPTION / AUTOMATION / H01_AUTOMATION_NO / H01 Automation No</td></tr>
+<tr><td>74</td><td>OPTION / AUTOMATION / H01_AUTOMATION_TASK_NO / H01 Automation Task No</td></tr>
+<tr><td>75</td><td>OPTION / AUTOMATION / H02_AUTOMATION_NO / H02 Automation No</td></tr>
+<tr><td>76</td><td>OPTION / AUTOMATION / H02_AUTOMATION_TASK_NO / H02 Automation Task No</td></tr>
+<tr><td>77</td><td>OPTION / AUTOMATION / H03_AUTOMATION_NO / H03 Automation No</td></tr>
+<tr><td>78</td><td>OPTION / AUTOMATION / H03_AUTOMATION_TASK_NO / H03 Automation Task No</td></tr>
+<tr><td>79</td><td>OPTION / AUTOMATION / H04_AUTOMATION_NO / H04 Automation No</td></tr>
+<tr><td>80</td><td>OPTION / AUTOMATION / H04_AUTOMATION_TASK_NO / H04 Automation Task No</td></tr>
+<tr><td>81</td><td>OPTION / AUTOMATION / H05_AUTOMATION_NO / H05 Automation No</td></tr>
+<tr><td>82</td><td>OPTION / AUTOMATION / H05_AUTOMATION_TASK_NO / H05 Automation Task No</td></tr>
+<tr><td>83</td><td>OPTION / AUTOMATION / H06_AUTOMATION_NO / H06 Automation No</td></tr>
+<tr><td>84</td><td>OPTION / AUTOMATION / H06_AUTOMATION_TASK_NO / H06 Automation Task No</td></tr>
+<tr><td>85</td><td>OPTION / AUTOMATION / H07_AUTOMATION_NO / H07 Automation No</td></tr>
+<tr><td>86</td><td>OPTION / AUTOMATION / H07_AUTOMATION_TASK_NO / H07 Automation Task No</td></tr>
+<tr><td>87</td><td>OPTION / AUTOMATION / H08_AUTOMATION_NO / H08 Automation No</td></tr>
+<tr><td>88</td><td>OPTION / AUTOMATION / H08_AUTOMATION_TASK_NO / H08 Automation Task No</td></tr>
+<tr><td>89</td><td>OPTION / REVIEW / VisionXFlip / X Flip</td></tr>
+<tr><td>90</td><td>OPTION / REVIEW / VisionYFlip / Y Flip</td></tr>
+<tr><td>91</td><td>OPTION / REVIEW / VisionXyFlip / XY Flip</td></tr>
+<tr><td>92</td><td>OPTION / REVIEW / REVIEW_X_ANIMATION_FLIP / Review X Animation Flip</td></tr>
+<tr><td>93</td><td>OPTION / REVIEW / VISION_ANIMATION_USE / Vision Animation Use</td></tr>
+<tr><td>94</td><td>OPTION / REVIEW / MaxHoleCountPerLine / MaxHoleCountPerLine</td></tr>
+<tr><td>95</td><td>OPTION / REVIEW / Review_Camera_Resolution / Review_Camera_Resolution</td></tr>
+<tr><td>96</td><td>OPTION / REVIEW / REVIEW_OFFSET_SCALE / Review Offset Scale</td></tr>
+<tr><td>97</td><td>OPTION / ALIGN / Align_Camera_Resolution / Align_Camera_Resolution</td></tr>
+<tr><td>98</td><td>OPTION / ALIGN / ALIGN_OFFSET_SCALE / Align Offset Scale</td></tr>
+<tr><td>99</td><td>OPTION / ALIGN / Wapage_AlignBase_Tolerance / Wapage_AlignBase_Tolerance</td></tr>
+<tr><td>100</td><td>OPTION / INTERLOCK / SCANNER_TEMP_LIMIT / Scanner Temp Limit</td></tr>
+<tr><td>101</td><td>OPTION / INTERLOCK / DOE_Z_TOLERANCE / DOE Z Tolerance</td></tr>
+<tr><td>102</td><td>OPTION / ALIGN / ALIGN_OFFSET_TOLERANCE / Align Offset Tolerance</td></tr>
+<tr><td>103</td><td>OPTION / INTERLOCK / LASER_THG_HOUR_LIMIT / LASER THG Hour Limit</td></tr>
+<tr><td>104</td><td>OPTION / INTERLOCK / ATTENUATOR_DEGREE_MIN_SW_LIMIT / Attenuator Degree Min SW Limit</td></tr>
+<tr><td>105</td><td>OPTION / INTERLOCK / ATTENUATOR_DEGREE_MAX_SW_LIMIT / Attenuator Degree Max SW Limit</td></tr>
+<tr><td>106</td><td>INTERFACE / HOST / HostIp / Host IP</td></tr>
+<tr><td>107</td><td>INTERFACE / HOST / Port / Host Port</td></tr>
+<tr><td>108</td><td>INTERFACE / HOST / Timeout / Message Timeout</td></tr>
+<tr><td>109</td><td>INTERFACE / HOST / Retry / Retry Count</td></tr>
+<tr><td>110</td><td>IO / OUTPUT / OutputOnDelay / Output ON Delay</td></tr>
+<tr><td>111</td><td>IO / OUTPUT / OutputOffDelay / Output OFF Delay</td></tr>
+<tr><td>112</td><td>IO / INPUT / InputStableTime / Input Stable Time</td></tr>
+<tr><td>113</td><td>MOTOR / REVIEW / REVIEW_X_SPEED / Review X Speed</td></tr>
+<tr><td>114</td><td>MOTOR / REVIEW / REVIEW_X_ACC / Review X Acc</td></tr>
+<tr><td>115</td><td>MOTOR / STAGE / STAGE_START_POS_Y / Stage Start Pos Y</td></tr>
+<tr><td>116</td><td>MOTOR / ALIGN / DK0_STAGE_Y_POSITION / DK0 Stage Y Position</td></tr>
+<tr><td>117</td><td>MOTOR / ALIGN / DK1_STAGE_Y_POSITION / DK1 Stage Y Position</td></tr>
+<tr><td>118</td><td>MOTOR / ALIGN / DK2_STAGE_Y_POSITION / DK2 Stage Y Position</td></tr>
+<tr><td>119</td><td>MOTOR / AXIS / MoveTimeout / Move Timeout</td></tr>
+<tr><td>120</td><td>OPTION / SCANNER / SCAN_ENCODER_SCALE / Scan Encoder Scale</td></tr>
+<tr><td>121</td><td>OPTION / SCANNER / SCAN_ENCODER_FEEDBACK_FLIP / Scan Encoder Feedback Flip</td></tr>
+<tr><td>122</td><td>OPTION / SCANNER / SCAN_START_JUMP_STEP / Scan Start Jump Step</td></tr>
+<tr><td>123</td><td>OPTION / SCANNER / SCAN_LINE_PRE_APPROACH_USE / Scan Line Pre Approach Use</td></tr>
+<tr><td>124</td><td>OPTION / SCANNER / SCAN_LINE_PRE_APPROACH_DISTANCE / Scan Line Pre Approach Distance</td></tr>
+<tr><td>125</td><td>OPTION / SCANNER / STAGE_SCAN_DIRECTION_Y / Stage Scan Direction Y</td></tr>
+<tr><td>126</td><td>OPTION / SCANNER / HeadGapX / Head Gap X</td></tr>
+<tr><td>127</td><td>OPTION / SCANNER / HeadGapY / Head Gap Y</td></tr>
+<tr><td>128</td><td>OPTION / SCANNER / REVIEW_TO_HEAD1_GAP_Y / Review To Head1 Gap Y</td></tr>
+<tr><td>129</td><td>OPTION / SCANNER / H01_USE / H01 Use</td></tr>
+<tr><td>130</td><td>OPTION / SCANNER / H02_USE / H02 Use</td></tr>
+<tr><td>131</td><td>OPTION / SCANNER / H03_USE / H03 Use</td></tr>
+<tr><td>132</td><td>OPTION / SCANNER / H04_USE / H04 Use</td></tr>
+<tr><td>133</td><td>OPTION / SCANNER / H05_USE / H05 Use</td></tr>
+<tr><td>134</td><td>OPTION / SCANNER / H06_USE / H06 Use</td></tr>
+<tr><td>135</td><td>OPTION / SCANNER / H07_USE / H07 Use</td></tr>
+<tr><td>136</td><td>OPTION / SCANNER / H08_USE / H08 Use</td></tr>
+<tr><td>137</td><td>OPTION / SCANNER / H01_AK_POSITION_X / H01 AK Position X</td></tr>
+<tr><td>138</td><td>OPTION / SCANNER / H01_SCAN_FIELD_WIDTH_X / H01 Scan Field Width X</td></tr>
+<tr><td>139</td><td>OPTION / SCANNER / H02_SCAN_FIELD_WIDTH_X / H02 Scan Field Width X</td></tr>
+<tr><td>140</td><td>OPTION / SCANNER / H03_SCAN_FIELD_WIDTH_X / H03 Scan Field Width X</td></tr>
+<tr><td>141</td><td>OPTION / SCANNER / H04_SCAN_FIELD_WIDTH_X / H04 Scan Field Width X</td></tr>
+<tr><td>142</td><td>OPTION / SCANNER / H05_SCAN_FIELD_WIDTH_X / H05 Scan Field Width X</td></tr>
+<tr><td>143</td><td>OPTION / SCANNER / H06_SCAN_FIELD_WIDTH_X / H06 Scan Field Width X</td></tr>
+<tr><td>144</td><td>OPTION / SCANNER / H07_SCAN_FIELD_WIDTH_X / H07 Scan Field Width X</td></tr>
+<tr><td>145</td><td>OPTION / SCANNER / H08_SCAN_FIELD_WIDTH_X / H08 Scan Field Width X</td></tr>
+<tr><td>146</td><td>OPTION / SCANNER / H01_SCANNER_XY_FLIP / H01 Scanner XY Flip</td></tr>
+<tr><td>147</td><td>OPTION / SCANNER / H01_SCANNER_X_FLIP / H01 Scanner X Flip</td></tr>
+<tr><td>148</td><td>OPTION / SCANNER / H01_SCANNER_Y_FLIP / H01 Scanner Y Flip</td></tr>
+<tr><td>149</td><td>OPTION / SCANNER / H02_SCANNER_XY_FLIP / H02 Scanner XY Flip</td></tr>
+<tr><td>150</td><td>OPTION / SCANNER / H02_SCANNER_X_FLIP / H02 Scanner X Flip</td></tr>
+<tr><td>151</td><td>OPTION / SCANNER / H02_SCANNER_Y_FLIP / H02 Scanner Y Flip</td></tr>
+<tr><td>152</td><td>OPTION / SCANNER / H03_SCANNER_XY_FLIP / H03 Scanner XY Flip</td></tr>
+<tr><td>153</td><td>OPTION / SCANNER / H03_SCANNER_X_FLIP / H03 Scanner X Flip</td></tr>
+<tr><td>154</td><td>OPTION / SCANNER / H03_SCANNER_Y_FLIP / H03 Scanner Y Flip</td></tr>
+<tr><td>155</td><td>OPTION / SCANNER / H04_SCANNER_XY_FLIP / H04 Scanner XY Flip</td></tr>
+<tr><td>156</td><td>OPTION / SCANNER / H04_SCANNER_X_FLIP / H04 Scanner X Flip</td></tr>
+<tr><td>157</td><td>OPTION / SCANNER / H04_SCANNER_Y_FLIP / H04 Scanner Y Flip</td></tr>
+<tr><td>158</td><td>OPTION / SCANNER / H05_SCANNER_XY_FLIP / H05 Scanner XY Flip</td></tr>
+<tr><td>159</td><td>OPTION / SCANNER / H05_SCANNER_X_FLIP / H05 Scanner X Flip</td></tr>
+<tr><td>160</td><td>OPTION / SCANNER / H05_SCANNER_Y_FLIP / H05 Scanner Y Flip</td></tr>
+<tr><td>161</td><td>OPTION / SCANNER / H06_SCANNER_XY_FLIP / H06 Scanner XY Flip</td></tr>
+<tr><td>162</td><td>OPTION / SCANNER / H06_SCANNER_X_FLIP / H06 Scanner X Flip</td></tr>
+<tr><td>163</td><td>OPTION / SCANNER / H06_SCANNER_Y_FLIP / H06 Scanner Y Flip</td></tr>
+<tr><td>164</td><td>OPTION / SCANNER / H07_SCANNER_XY_FLIP / H07 Scanner XY Flip</td></tr>
+<tr><td>165</td><td>OPTION / SCANNER / H07_SCANNER_X_FLIP / H07 Scanner X Flip</td></tr>
+<tr><td>166</td><td>OPTION / SCANNER / H07_SCANNER_Y_FLIP / H07 Scanner Y Flip</td></tr>
+<tr><td>167</td><td>OPTION / SCANNER / H08_SCANNER_XY_FLIP / H08 Scanner XY Flip</td></tr>
+<tr><td>168</td><td>OPTION / SCANNER / H08_SCANNER_X_FLIP / H08 Scanner X Flip</td></tr>
+<tr><td>169</td><td>OPTION / SCANNER / H08_SCANNER_Y_FLIP / H08 Scanner Y Flip</td></tr>
+<tr><td>170</td><td>OPTION / SCANNER / H01_X_AXIS / H01 X Axis</td></tr>
+<tr><td>171</td><td>OPTION / SCANNER / H01_Y_AXIS / H01 Y Axis</td></tr>
+<tr><td>172</td><td>OPTION / SCANNER / H01_SCANNER_Z_USE / H01 Scanner Z Use</td></tr>
+<tr><td>173</td><td>OPTION / SCANNER / H01_SCANNER_Z_AXIS / H01 Scanner Z Axis</td></tr>
+<tr><td>174</td><td>OPTION / SCANNER / H01_ENCODER_AXIS / H01 Encoder Axis</td></tr>
+<tr><td>175</td><td>OPTION / SCANNER / H01_ENCODER_SCALE / H01 Encoder Scale</td></tr>
+<tr><td>176</td><td>OPTION / SCANNER / H01_ENCODER_FEEDBACK_FLIP / H01 Encoder Feedback Flip</td></tr>
+<tr><td>177</td><td>OPTION / SCANNER / H02_X_AXIS / H02 X Axis</td></tr>
+<tr><td>178</td><td>OPTION / SCANNER / H02_Y_AXIS / H02 Y Axis</td></tr>
+<tr><td>179</td><td>OPTION / SCANNER / H02_SCANNER_Z_USE / H02 Scanner Z Use</td></tr>
+<tr><td>180</td><td>OPTION / SCANNER / H02_SCANNER_Z_AXIS / H02 Scanner Z Axis</td></tr>
+<tr><td>181</td><td>OPTION / SCANNER / H02_ENCODER_AXIS / H02 Encoder Axis</td></tr>
+<tr><td>182</td><td>OPTION / SCANNER / H02_ENCODER_SCALE / H02 Encoder Scale</td></tr>
+<tr><td>183</td><td>OPTION / SCANNER / H02_ENCODER_FEEDBACK_FLIP / H02 Encoder Feedback Flip</td></tr>
+<tr><td>184</td><td>OPTION / SCANNER / H03_X_AXIS / H03 X Axis</td></tr>
+<tr><td>185</td><td>OPTION / SCANNER / H03_Y_AXIS / H03 Y Axis</td></tr>
+<tr><td>186</td><td>OPTION / SCANNER / H03_SCANNER_Z_USE / H03 Scanner Z Use</td></tr>
+<tr><td>187</td><td>OPTION / SCANNER / H03_SCANNER_Z_AXIS / H03 Scanner Z Axis</td></tr>
+<tr><td>188</td><td>OPTION / SCANNER / H03_ENCODER_AXIS / H03 Encoder Axis</td></tr>
+<tr><td>189</td><td>OPTION / SCANNER / H03_ENCODER_SCALE / H03 Encoder Scale</td></tr>
+<tr><td>190</td><td>OPTION / SCANNER / H03_ENCODER_FEEDBACK_FLIP / H03 Encoder Feedback Flip</td></tr>
+<tr><td>191</td><td>OPTION / SCANNER / H04_X_AXIS / H04 X Axis</td></tr>
+<tr><td>192</td><td>OPTION / SCANNER / H04_Y_AXIS / H04 Y Axis</td></tr>
+<tr><td>193</td><td>OPTION / SCANNER / H04_SCANNER_Z_USE / H04 Scanner Z Use</td></tr>
+<tr><td>194</td><td>OPTION / SCANNER / H04_SCANNER_Z_AXIS / H04 Scanner Z Axis</td></tr>
+<tr><td>195</td><td>OPTION / SCANNER / H04_ENCODER_AXIS / H04 Encoder Axis</td></tr>
+<tr><td>196</td><td>OPTION / SCANNER / H04_ENCODER_SCALE / H04 Encoder Scale</td></tr>
+<tr><td>197</td><td>OPTION / SCANNER / H04_ENCODER_FEEDBACK_FLIP / H04 Encoder Feedback Flip</td></tr>
+<tr><td>198</td><td>OPTION / SCANNER / H05_X_AXIS / H05 X Axis</td></tr>
+<tr><td>199</td><td>OPTION / SCANNER / H05_Y_AXIS / H05 Y Axis</td></tr>
+<tr><td>200</td><td>OPTION / SCANNER / H05_SCANNER_Z_USE / H05 Scanner Z Use</td></tr>
+<tr><td>201</td><td>OPTION / SCANNER / H05_SCANNER_Z_AXIS / H05 Scanner Z Axis</td></tr>
+<tr><td>202</td><td>OPTION / SCANNER / H05_ENCODER_AXIS / H05 Encoder Axis</td></tr>
+<tr><td>203</td><td>OPTION / SCANNER / H05_ENCODER_SCALE / H05 Encoder Scale</td></tr>
+<tr><td>204</td><td>OPTION / SCANNER / H05_ENCODER_FEEDBACK_FLIP / H05 Encoder Feedback Flip</td></tr>
+<tr><td>205</td><td>OPTION / SCANNER / H06_X_AXIS / H06 X Axis</td></tr>
+<tr><td>206</td><td>OPTION / SCANNER / H06_Y_AXIS / H06 Y Axis</td></tr>
+<tr><td>207</td><td>OPTION / SCANNER / H06_SCANNER_Z_USE / H06 Scanner Z Use</td></tr>
+<tr><td>208</td><td>OPTION / SCANNER / H06_SCANNER_Z_AXIS / H06 Scanner Z Axis</td></tr>
+<tr><td>209</td><td>OPTION / SCANNER / H06_ENCODER_AXIS / H06 Encoder Axis</td></tr>
+<tr><td>210</td><td>OPTION / SCANNER / H06_ENCODER_SCALE / H06 Encoder Scale</td></tr>
+<tr><td>211</td><td>OPTION / SCANNER / H06_ENCODER_FEEDBACK_FLIP / H06 Encoder Feedback Flip</td></tr>
+<tr><td>212</td><td>OPTION / SCANNER / H07_X_AXIS / H07 X Axis</td></tr>
+<tr><td>213</td><td>OPTION / SCANNER / H07_Y_AXIS / H07 Y Axis</td></tr>
+<tr><td>214</td><td>OPTION / SCANNER / H07_SCANNER_Z_USE / H07 Scanner Z Use</td></tr>
+<tr><td>215</td><td>OPTION / SCANNER / H07_SCANNER_Z_AXIS / H07 Scanner Z Axis</td></tr>
+<tr><td>216</td><td>OPTION / SCANNER / H07_ENCODER_AXIS / H07 Encoder Axis</td></tr>
+<tr><td>217</td><td>OPTION / SCANNER / H07_ENCODER_SCALE / H07 Encoder Scale</td></tr>
+<tr><td>218</td><td>OPTION / SCANNER / H07_ENCODER_FEEDBACK_FLIP / H07 Encoder Feedback Flip</td></tr>
+<tr><td>219</td><td>OPTION / SCANNER / H08_X_AXIS / H08 X Axis</td></tr>
+<tr><td>220</td><td>OPTION / SCANNER / H08_Y_AXIS / H08 Y Axis</td></tr>
+<tr><td>221</td><td>OPTION / SCANNER / H08_SCANNER_Z_USE / H08 Scanner Z Use</td></tr>
+<tr><td>222</td><td>OPTION / SCANNER / H08_SCANNER_Z_AXIS / H08 Scanner Z Axis</td></tr>
+<tr><td>223</td><td>OPTION / SCANNER / H08_ENCODER_AXIS / H08 Encoder Axis</td></tr>
+<tr><td>224</td><td>OPTION / SCANNER / H08_ENCODER_SCALE / H08 Encoder Scale</td></tr>
+<tr><td>225</td><td>OPTION / SCANNER / H08_ENCODER_FEEDBACK_FLIP / H08 Encoder Feedback Flip</td></tr>
+<tr><td>226</td><td>OPTION / SCANNER / H01_SCANNER_DIO_NO / H01 Scanner DIO No</td></tr>
+<tr><td>227</td><td>OPTION / SCANNER / H02_SCANNER_DIO_NO / H02 Scanner DIO No</td></tr>
+<tr><td>228</td><td>OPTION / SCANNER / H03_SCANNER_DIO_NO / H03 Scanner DIO No</td></tr>
+<tr><td>229</td><td>OPTION / SCANNER / H04_SCANNER_DIO_NO / H04 Scanner DIO No</td></tr>
+<tr><td>230</td><td>OPTION / SCANNER / H05_SCANNER_DIO_NO / H05 Scanner DIO No</td></tr>
+<tr><td>231</td><td>OPTION / SCANNER / H06_SCANNER_DIO_NO / H06 Scanner DIO No</td></tr>
+<tr><td>232</td><td>OPTION / SCANNER / H07_SCANNER_DIO_NO / H07 Scanner DIO No</td></tr>
+<tr><td>233</td><td>OPTION / SCANNER / H08_SCANNER_DIO_NO / H08 Scanner DIO No</td></tr>
+<tr><td>234</td><td>OPTION / SCANNER / H01_SCANNER_AIO_NO / H01 Scanner AIO No</td></tr>
+<tr><td>235</td><td>OPTION / SCANNER / H02_SCANNER_AIO_NO / H02 Scanner AIO No</td></tr>
+<tr><td>236</td><td>OPTION / SCANNER / H03_SCANNER_AIO_NO / H03 Scanner AIO No</td></tr>
+<tr><td>237</td><td>OPTION / SCANNER / H04_SCANNER_AIO_NO / H04 Scanner AIO No</td></tr>
+<tr><td>238</td><td>OPTION / SCANNER / H05_SCANNER_AIO_NO / H05 Scanner AIO No</td></tr>
+<tr><td>239</td><td>OPTION / SCANNER / H06_SCANNER_AIO_NO / H06 Scanner AIO No</td></tr>
+<tr><td>240</td><td>OPTION / SCANNER / H07_SCANNER_AIO_NO / H07 Scanner AIO No</td></tr>
+<tr><td>241</td><td>OPTION / SCANNER / H08_SCANNER_AIO_NO / H08 Scanner AIO No</td></tr>
+<tr><td>242</td><td>ALARM / ALARM / ResetTimeout / Reset Timeout</td></tr>
+<tr><td>243</td><td>ALARM / BUZZER / BuzzerAutoOff / Buzzer Auto Off</td></tr>
+<tr><td>244</td><td>OPTION / SCANNER / H01_SCAN_FIELD_HEIGHT_Y / H01 Scan Field Height Y</td></tr>
+<tr><td>245</td><td>OPTION / SCANNER / H01_DOE_ROTATION_ANGLE / H01 DOE 회전 각도</td></tr>
+<tr><td>246</td><td>OPTION / SCANNER / H02_SCAN_FIELD_HEIGHT_Y / H02 Scan Field Height Y</td></tr>
+<tr><td>247</td><td>OPTION / SCANNER / H02_DOE_ROTATION_ANGLE / H02 DOE 회전 각도</td></tr>
+<tr><td>248</td><td>OPTION / SCANNER / H03_SCAN_FIELD_HEIGHT_Y / H03 Scan Field Height Y</td></tr>
+<tr><td>249</td><td>OPTION / SCANNER / H03_DOE_ROTATION_ANGLE / H03 DOE 회전 각도</td></tr>
+<tr><td>250</td><td>OPTION / SCANNER / H04_SCAN_FIELD_HEIGHT_Y / H04 Scan Field Height Y</td></tr>
+<tr><td>251</td><td>OPTION / SCANNER / H04_DOE_ROTATION_ANGLE / H04 DOE 회전 각도</td></tr>
+<tr><td>252</td><td>OPTION / SCANNER / H05_SCAN_FIELD_HEIGHT_Y / H05 Scan Field Height Y</td></tr>
+<tr><td>253</td><td>OPTION / SCANNER / H05_DOE_ROTATION_ANGLE / H05 DOE 회전 각도</td></tr>
+<tr><td>254</td><td>OPTION / SCANNER / H06_SCAN_FIELD_HEIGHT_Y / H06 Scan Field Height Y</td></tr>
+<tr><td>255</td><td>OPTION / SCANNER / H06_DOE_ROTATION_ANGLE / H06 DOE 회전 각도</td></tr>
+<tr><td>256</td><td>OPTION / SCANNER / H07_SCAN_FIELD_HEIGHT_Y / H07 Scan Field Height Y</td></tr>
+<tr><td>257</td><td>OPTION / SCANNER / H07_DOE_ROTATION_ANGLE / H07 DOE 회전 각도</td></tr>
+<tr><td>258</td><td>OPTION / SCANNER / H08_SCAN_FIELD_HEIGHT_Y / H08 Scan Field Height Y</td></tr>
+<tr><td>259</td><td>OPTION / SCANNER / H08_DOE_ROTATION_ANGLE / H08 DOE 회전 각도</td></tr>
+</tbody></table>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

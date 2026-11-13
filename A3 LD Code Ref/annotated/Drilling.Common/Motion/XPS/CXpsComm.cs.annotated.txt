@@ -1,0 +1,1183 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Motion/XPS/CXpsComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000001 | using System.Diagnostics; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using CommandInterfaceXPS;
+L000003 | using CommandInterfaceXPS; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000005 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000007 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000008 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000009 | using Drilling.Common.Station; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Motion;
+L000011 | namespace Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("XpsNet")] ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: internal sealed class CXpsComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000013 | internal sealed class CXpsComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _commLock = new(1, 1)
+L000015 |     private readonly SemaphoreSlim _commLock = new(1, 1); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _diagnosticLock = new()
+L000016 |     private readonly object _diagnosticLock = new(); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Motion.CXpsComm._diagnosticSequence
+L000017 |     private long _diagnosticSequence; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Motion.CXpsComm._lastAppliedDiagnosticSequence
+L000018 |     private long _lastAppliedDiagnosticSequence; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Motion.CXpsComm._priorityStopGeneration
+L000019 |     private long _priorityStopGeneration; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · XPS? Drilling.Common.Motion.CXpsComm._api
+L000020 |     private XPS? _api; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Connect(System.Threading.CancellationToken)
+L000021 |     public override async Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Connect.
+L000022 |     { ⟦EOL⟧
+// 해설 L23: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000023 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L24: 예외 처리 범위입니다: try
+L000024 |         try ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Connect.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()
+L000026 |             ConnectLocked(); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Connect.
+L000027 |         } ⟦EOL⟧
+// 해설 L28: 지정 예외를 처리합니다: catch (Exception ex)
+L000028 |         catch (Exception ex) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Connect.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000030 |             CloseApi(); ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryError(ex)
+L000031 |             SetPrimaryError(ex); ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Connect.
+L000032 |         } ⟦EOL⟧
+// 해설 L33: 종료 정리 구간입니다: finally
+L000033 |         finally ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Connect.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000035 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Connect.
+L000036 |         } ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 Connect.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Motion.CXpsComm.Disconnect(System.Threading.CancellationToken)
+L000039 |     public override async Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 Disconnect.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000041 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L42: 예외 처리 범위입니다: try
+L000042 |         try ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 Disconnect.
+L000043 |         { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000044 |             CloseApi(); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryState(EN_COMM_STATE.Offline)
+L000045 |             SetPrimaryState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Disconnect.
+L000046 |         } ⟦EOL⟧
+// 해설 L47: 종료 정리 구간입니다: finally
+L000047 |         finally ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Disconnect.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000049 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 Disconnect.
+L000050 |         } ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Disconnect.
+L000051 |     } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Motion.CXpsComm.Execute(string, System.Threading.CancellationToken)
+L000053 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 Execute.
+L000054 |     { ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration) / 지역 변수를 선언합니다: var observedStopGeneration = Volatile.Read(ref _priorityStopGeneration); / 변수의 초기값을 지정합니다: observedStopGeneration = Volatile.Read(ref _priorityStopGeneration)
+L000055 |         var observedStopGeneration = Volatile.Read(ref _priorityStopGeneration); ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPriorityStopCommand(function) / 조건에 따라 분기합니다: if (IsPriorityStopCommand(function))
+L000056 |         if (IsPriorityStopCommand(function)) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 Execute.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _priorityStopGeneration)
+L000058 |             Interlocked.Increment(ref _priorityStopGeneration); ⟦EOL⟧
+// 해설 L59: 비동기 완료를 기다립니다: await ExecutePriorityStop(function, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecutePriorityStop(function, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return await ExecutePriorityStop(function, cancellationToken);
+L000059 |             return await ExecutePriorityStop(function, cancellationToken); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Execute.
+L000060 |         } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 비동기 완료를 기다립니다: await _commLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.WaitAsync(cancellationToken)
+L000062 |         await _commLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · void ThrowIfPriorityStopOccurredCallback()
+L000063 |         void ThrowIfPriorityStopOccurredCallback() ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurredCallback.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfPriorityStopOccurred(observedStopGeneration)
+L000065 |             ThrowIfPriorityStopOccurred(observedStopGeneration); ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurredCallback.
+L000066 |         } ⟦EOL⟧
+L000067 |  ⟦EOL⟧
+// 해설 L68: 예외 처리 범위입니다: try
+L000068 |         try ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Execute.
+L000069 |         { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration) / 조건에 따라 분기합니다: if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration))
+L000070 |             if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration)) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Execute.
+L000071 |             { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse("XPS command invalidated by priority stop.") / 호출자에게 값 또는 제어를 반환합니다: return CreateErrorResponse("XPS command invalidated by priority stop.");
+L000072 |                 return CreateErrorResponse("XPS command invalidated by priority stop."); ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 Execute.
+L000073 |             } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginCommandDiagnostic(function) / 지역 변수를 선언합니다: var diagnosticSequence = BeginCommandDiagnostic(function); / 변수의 초기값을 지정합니다: diagnosticSequence = BeginCommandDiagnostic(function)
+L000075 |             var diagnosticSequence = BeginCommandDiagnostic(function); ⟦EOL⟧
+// 해설 L76: 예외 처리 범위입니다: try
+L000076 |             try ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Execute.
+L000077 |             { ⟦EOL⟧
+// 해설 L78: 조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)
+L000078 |                 if (_api is null || ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Execute.
+L000079 |                 { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectLocked()
+L000080 |                     ConnectLocked(); ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 Execute.
+L000081 |                 } ⟦EOL⟧
+L000082 |  ⟦EOL⟧
+// 해설 L83: 조건에 따라 분기합니다: if (_api is null || ConnectionState != EN_COMM_STATE.Online)
+L000083 |                 if (_api is null || ConnectionState != EN_COMM_STATE.Online) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Execute.
+L000084 |                 { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS primary connection is offline.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS primary connection is offline.");
+L000085 |                     throw new InvalidOperationException("XPS primary connection is offline."); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Execute.
+L000086 |                 } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000088 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfPriorityStopOccurred(observedStopGeneration)
+L000089 |                 ThrowIfPriorityStopOccurred(observedStopGeneration); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback) / 지역 변수를 선언합니다: var response = ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback); / 변수의 초기값을 지정합니다: response = ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback)
+L000090 |                 var response = ExecuteXpsFunction(_api, function, cancellationToken, ThrowIfPriorityStopOccurredCallback); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: CompletePrimaryCommand(diagnosticSequence, response)
+L000091 |                 CompletePrimaryCommand(diagnosticSequence, response); ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000092 |                 return response; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Execute.
+L000093 |             } ⟦EOL⟧
+// 해설 L94: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+L000094 |             catch (OperationCanceledException)when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Execute.
+L000095 |             { ⟦EOL⟧
+// 해설 L96: 예외를 발생/전달합니다: throw;
+L000096 |                 throw; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Execute.
+L000097 |             } ⟦EOL⟧
+// 해설 L98: 지정 예외를 처리합니다: catch (Exception ex)
+L000098 |             catch (Exception ex) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 Execute.
+L000099 |             { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: FailPrimaryCommand(diagnosticSequence, ex) / 호출자에게 값 또는 제어를 반환합니다: return FailPrimaryCommand(diagnosticSequence, ex);
+L000100 |                 return FailPrimaryCommand(diagnosticSequence, ex); ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 Execute.
+L000101 |             } ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 Execute.
+L000102 |         } ⟦EOL⟧
+// 해설 L103: 종료 정리 구간입니다: finally
+L000103 |         finally ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 Execute.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: _commLock.Release()
+L000105 |             _commLock.Release(); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Execute.
+L000106 |         } ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 Execute.
+L000107 |     } ⟦EOL⟧
+L000108 |  ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.ConnectLocked()
+L000109 |     private void ConnectLocked() ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000110 |     { ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseApi()
+L000111 |         CloseApi(); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0)
+L000112 |         if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS endpoint is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS endpoint is invalid.");
+L000114 |             throw new InvalidOperationException("XPS endpoint is invalid."); ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000115 |         } ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: _api = new XPS() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new XPS()
+L000117 |         _api = new XPS(); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs) / 지역 변수를 선언합니다: var result = _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs); / 변수의 초기값을 지정합니다: result = _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs)
+L000118 |         var result = _api.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs); ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(_api, result, "OpenInstrument")
+L000119 |         CheckResult(_api, result, "OpenInstrument"); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetPrimaryConnected()
+L000120 |         SetPrimaryConnected(); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 ConnectLocked.
+L000121 |     } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteXpsFunction(XPS, string, System.Threading.CancellationToken, System.Action?)
+L000123 |     private static string ExecuteXpsFunction(XPS api, string function, CancellationToken cancellationToken, Action? validateCommandGeneration = null) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 ExecuteXpsFunction.
+L000124 |     { ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000125 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000126 |         validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries) / 지역 변수를 선언합니다: var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); / 변수의 초기값을 지정합니다: tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+L000127 |         var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (tokens.Length < 2 || !tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase))
+L000128 |         if (tokens.Length < 2 || !tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 ExecuteXpsFunction.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRawCommand(api, function) / 호출자에게 값 또는 제어를 반환합니다: return ExecuteRawCommand(api, function);
+L000130 |             return ExecuteRawCommand(api, function); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 ExecuteXpsFunction.
+L000131 |         } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return tokens[1].ToUpperInvariant() switch { "AXIS" => ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration), "IO" => ExecuteIoFunction(api, tokens), _ => ExecuteRawCommand(api, function)}; / 값별 결과식을 선택합니다: tokens[1].ToUpperInvariant() switch { "AXIS" => ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration), "IO" => ExecuteIoFunction(api, tokens), _ => ExecuteRawCommand(api, function)}
+L000133 |         return tokens[1].ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 ExecuteXpsFunction.
+L000134 |         { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration)
+L000135 |             "AXIS" => ExecuteAxisFunction(api, tokens, cancellationToken, validateCommandGeneration), ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteIoFunction(api, tokens)
+L000136 |             "IO" => ExecuteIoFunction(api, tokens), ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRawCommand(api, function)
+L000137 |             _ => ExecuteRawCommand(api, function)}; ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 ExecuteXpsFunction.
+L000138 |     } ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000140 |     private static string ExecuteAxisFunction(XPS api, IReadOnlyList<string> tokens, CancellationToken cancellationToken, Action? validateCommandGeneration) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000141 |     { ⟦EOL⟧
+// 해설 L142: 조건에 따라 분기합니다: if (tokens.Count < 5)
+L000142 |         if (tokens.Count < 5) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS axis command is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS axis command is invalid.");
+L000144 |             throw new InvalidOperationException("XPS axis command is invalid."); ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 지역 변수를 선언합니다: var axisName = tokens[3]; / 변수의 초기값을 지정합니다: axisName = tokens[3]
+L000147 |         var axisName = tokens[3]; ⟦EOL⟧
+// 해설 L148: 조건에 따라 결과식을 선택합니다: tokens.Count >= 6 ? tokens[4] : axisName / 지역 변수를 선언합니다: var groupName = tokens.Count >= 6 ? tokens[4] : axisName; / 변수의 초기값을 지정합니다: groupName = tokens.Count >= 6 ? tokens[4] : axisName
+L000148 |         var groupName = tokens.Count >= 6 ? tokens[4] : axisName; ⟦EOL⟧
+// 해설 L149: 조건에 따라 결과식을 선택합니다: tokens.Count >= 6 ? 5 : 4 / 지역 변수를 선언합니다: var commandIndex = tokens.Count >= 6 ? 5 : 4; / 변수의 초기값을 지정합니다: commandIndex = tokens.Count >= 6 ? 5 : 4
+L000149 |         var commandIndex = tokens.Count >= 6 ? 5 : 4; ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].ToUpperInvariant() / 지역 변수를 선언합니다: var command = tokens[commandIndex].ToUpperInvariant(); / 변수의 초기값을 지정합니다: command = tokens[commandIndex].ToUpperInvariant()
+L000150 |         var command = tokens[commandIndex].ToUpperInvariant(); ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000151 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000152 |         validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L153: 값에 따라 분기합니다: switch (command)
+L000153 |         switch (command) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 분기값/패턴의 구간입니다: case "SERVO_ON":
+L000155 |             case "SERVO_ON": ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionEnable(groupName, out var servoOnError), servoOnError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionEnable(groupName, out var servoOnError)
+L000156 |                 CheckResult(api, api.GroupMotionEnable(groupName, out var servoOnError), servoOnError); ⟦EOL⟧
+// 해설 L157: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:SERVO_ON";
+L000157 |                 return $"OK:AXIS:{axisName}:SERVO_ON"; ⟦EOL⟧
+// 해설 L158: 분기값/패턴의 구간입니다: case "SERVO_OFF":
+L000158 |             case "SERVO_OFF": ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionDisable(groupName, out var servoOffError), servoOffError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionDisable(groupName, out var servoOffError)
+L000159 |                 CheckResult(api, api.GroupMotionDisable(groupName, out var servoOffError), servoOffError); ⟦EOL⟧
+// 해설 L160: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:SERVO_OFF";
+L000160 |                 return $"OK:AXIS:{axisName}:SERVO_OFF"; ⟦EOL⟧
+// 해설 L161: 분기값/패턴의 구간입니다: case "HOME":
+L000161 |             case "HOME": ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupInitialize(groupName, out var initializeError), initializeError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupInitialize(groupName, out var initializeError)
+L000162 |                 CheckResult(api, api.GroupInitialize(groupName, out var initializeError), initializeError); ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000163 |                 validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupHomeSearch(groupName, out var homeError), homeError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupHomeSearch(groupName, out var homeError)
+L000164 |                 CheckResult(api, api.GroupHomeSearch(groupName, out var homeError), homeError); ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:HOME";
+L000165 |                 return $"OK:AXIS:{axisName}:HOME"; ⟦EOL⟧
+// 해설 L166: 분기값/패턴의 구간입니다: case "MOVE_ABS":
+L000166 |             case "MOVE_ABS": ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbsolute(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_ABS")], 1, out var moveAbsError), moveAbsError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbsolute(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_ABS")], 1, out var moveAbsError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, "MOVE_ABS")
+L000167 |                 CheckResult(api, api.GroupMoveAbsolute(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_ABS")], 1, out var moveAbsError), moveAbsError); ⟦EOL⟧
+// 해설 L168: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:MOVE_ABS";
+L000168 |                 return $"OK:AXIS:{axisName}:MOVE_ABS"; ⟦EOL⟧
+// 해설 L169: 분기값/패턴의 구간입니다: case "MOVE_REL":
+L000169 |             case "MOVE_REL": ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveRelative(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_REL")], 1, out var moveRelError), moveRelError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveRelative(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_REL")], 1, out var moveRelError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, "MOVE_REL")
+L000170 |                 CheckResult(api, api.GroupMoveRelative(groupName, [ReadDouble(tokens, commandIndex + 1, "MOVE_REL")], 1, out var moveRelError), moveRelError); ⟦EOL⟧
+// 해설 L171: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:MOVE_REL";
+L000171 |                 return $"OK:AXIS:{axisName}:MOVE_REL"; ⟦EOL⟧
+// 해설 L172: 분기값/패턴의 구간입니다: case "SET_PROFILE":
+L000172 |             case "SET_PROFILE": ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.PositionerSGammaVelocityAndAccelerationSet(axisName, ReadPositiveDouble(tokens, commandIndex + 1, "SET_PROFILE VELOCITY"), ReadPositiveDouble(tokens, commandIndex + 2, "SET_PROFILE ACCELERATION"), ou… / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.PositionerSGammaVelocityAndAccelerationSet(axisName, ReadPositiveDouble(tokens, commandIndex + 1, "SET_PROFILE VELOCITY"), ReadPositiveDouble(tokens, commandIndex + 2, "SET_PROFILE ACCELERATION"), out var profileErro… / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPositiv
+L000173 |                 CheckResult(api, api.PositionerSGammaVelocityAndAccelerationSet(axisName, ReadPositiveDouble(tokens, commandIndex + 1, "SET_PROFILE VELOCITY"), ReadPositiveDouble(tokens, commandIndex + 2, "SET_PROFILE ACCELERATION"), out var profileError), profileError); ⟦EOL⟧
+// 해설 L174: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:SET_PROFILE";
+L000174 |                 return $"OK:AXIS:{axisName}:SET_PROFILE"; ⟦EOL⟧
+// 해설 L175: 분기값/패턴의 구간입니다: case "JOG":
+L000175 |             case "JOG": ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, commandIndex + 1, "JOG VELOCITY") / 지역 변수를 선언합니다: var jogVelocity = ReadDouble(tokens, commandIndex + 1, "JOG VELOCITY"); / 변수의 초기값을 지정합니다: jogVelocity = ReadDouble(tokens, commandIndex + 1, "JOG VELOCITY")
+L000176 |                 var jogVelocity = ReadDouble(tokens, commandIndex + 1, "JOG VELOCITY"); ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPositiveDouble(tokens, commandIndex + 2, "JOG ACCELERATION") / 지역 변수를 선언합니다: var jogAcceleration = ReadPositiveDouble(tokens, commandIndex + 2, "JOG ACCELERATION"); / 변수의 초기값을 지정합니다: jogAcceleration = ReadPositiveDouble(tokens, commandIndex + 2, "JOG ACCELERATION")
+L000177 |                 var jogAcceleration = ReadPositiveDouble(tokens, commandIndex + 2, "JOG ACCELERATION"); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(jogVelocity) / 조건에 따라 분기합니다: if (Math.Abs(jogVelocity) <= double.Epsilon)
+L000178 |                 if (Math.Abs(jogVelocity) <= double.Epsilon) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000179 |                 { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS JOG velocity must not be zero.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS JOG velocity must not be zero.");
+L000180 |                     throw new InvalidOperationException("XPS JOG velocity must not be zero."); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000181 |                 } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 예외 처리 범위입니다: try
+L000183 |                 try ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000184 |                 { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000185 |                     validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupJogModeEnable(groupName, out var jogEnableError), jogEnableError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogModeEnable(groupName, out var jogEnableError)
+L000186 |                     CheckResult(api, api.GroupJogModeEnable(groupName, out var jogEnableError), jogEnableError); ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000187 |                     cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000188 |                     validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupJogParametersSet(groupName, [jogVelocity], [jogAcceleration], 1, out var jogSetError), jogSetError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogParametersSet(groupName, [jogVelocity], [jogAcceleration], 1, out var jogSetError)
+L000189 |                     CheckResult(api, api.GroupJogParametersSet(groupName, [jogVelocity], [jogAcceleration], 1, out var jogSetError), jogSetError); ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000190 |                     cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000191 |                     validateCommandGeneration?.Invoke(); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000192 |                 } ⟦EOL⟧
+// 해설 L193: 지정 예외를 처리합니다: catch (Exception jogException)
+L000193 |                 catch (Exception jogException) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000194 |                 { ⟦EOL⟧
+// 해설 L195: 예외 처리 범위입니다: try
+L000195 |                     try ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000196 |                     { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopJogAndDisable(api, groupName)
+L000197 |                         StopJogAndDisable(api, groupName); ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000198 |                     } ⟦EOL⟧
+// 해설 L199: 지정 예외를 처리합니다: catch (Exception cleanupException)
+L000199 |                     catch (Exception cleanupException) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000200 |                     { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException("XPS jog start and cleanup both failed.", jogException, cleanupException) / 예외를 발생/전달합니다: throw new AggregateException("XPS jog start and cleanup both failed.", jogException, cleanupException);
+L000201 |                         throw new AggregateException("XPS jog start and cleanup both failed.", jogException, cleanupException); ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000202 |                     } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 예외를 발생/전달합니다: throw;
+L000204 |                     throw; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000205 |                 } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:JOG";
+L000207 |                 return $"OK:AXIS:{axisName}:JOG"; ⟦EOL⟧
+// 해설 L208: 분기값/패턴의 구간입니다: case "JOG_STOP":
+L000208 |             case "JOG_STOP": ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopJogAndDisable(api, groupName)
+L000209 |                 StopJogAndDisable(api, groupName); ⟦EOL⟧
+// 해설 L210: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:JOG_STOP";
+L000210 |                 return $"OK:AXIS:{axisName}:JOG_STOP"; ⟦EOL⟧
+// 해설 L211: 분기값/패턴의 구간입니다: case "STOP":
+L000211 |             case "STOP": ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbort(groupName, out var stopError), stopError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbort(groupName, out var stopError)
+L000212 |                 CheckResult(api, api.GroupMoveAbort(groupName, out var stopError), stopError); ⟦EOL⟧
+// 해설 L213: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:STOP";
+L000213 |                 return $"OK:AXIS:{axisName}:STOP"; ⟦EOL⟧
+// 해설 L214: 분기값/패턴의 구간입니다: case "RESET_ALARM":
+L000214 |             case "RESET_ALARM": ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupInitialize(groupName, out var resetError), resetError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupInitialize(groupName, out var resetError)
+L000215 |                 CheckResult(api, api.GroupInitialize(groupName, out var resetError), resetError); ⟦EOL⟧
+// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return $"OK:AXIS:{axisName}:RESET_ALARM";
+L000216 |                 return $"OK:AXIS:{axisName}:RESET_ALARM"; ⟦EOL⟧
+// 해설 L217: 분기값/패턴의 구간입니다: case "READ":
+L000217 |             case "READ": ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupPositionCurrentGet(groupName, out var position, 1, out var readError), readError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupPositionCurrentGet(groupName, out var position, 1, out var readError)
+L000218 |                 CheckResult(api, api.GroupPositionCurrentGet(groupName, out var position, 1, out var readError), readError); ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(position, "position") / 지역 변수를 선언합니다: var positionValue = ReadRequiredFirst(position, "position"); / 변수의 초기값을 지정합니다: positionValue = ReadRequiredFirst(position, "position")
+L000219 |                 var positionValue = ReadRequiredFirst(position, "position"); ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusGet(groupName, out var groupStatus, out var groupStatusError), groupStatusError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusGet(groupName, out var groupStatus, out var groupStatusError)
+L000220 |                 CheckResult(api, api.GroupStatusGet(groupName, out var groupStatus, out var groupStatusError), groupStatusError); ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusStringGet(groupStatus, out var groupStatusText, out var groupStatusTextError), groupStatusTextError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusStringGet(groupStatus, out var groupStatusText, out var groupStatusTextError)
+L000221 |                 CheckResult(api, api.GroupStatusStringGet(groupStatus, out var groupStatusText, out var groupStatusTextError), groupStatusTextError); ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMotionStatusGet(groupName, out var motionStatus, 1, out var motionStatusError), motionStatusError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMotionStatusGet(groupName, out var motionStatus, 1, out var motionStatusError)
+L000222 |                 CheckResult(api, api.GroupMotionStatusGet(groupName, out var motionStatus, 1, out var motionStatusError), motionStatusError); ⟦EOL⟧
+// 해설 L223: 조건에 따라 분기합니다: if (motionStatus.Length == 0)
+L000223 |                 if (motionStatus.Length == 0) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000224 |                 { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS motion status response is empty.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS motion status response is empty.");
+L000225 |                     throw new InvalidOperationException("XPS motion status response is empty."); ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000226 |                 } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.PositionerHardwareStatusGet(axisName, out var hardwareStatus, out var hardwareStatusError), hardwareStatusError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.PositionerHardwareStatusGet(axisName, out var hardwareStatus, out var hardwareStatusError)
+L000228 |                 CheckResult(api, api.PositionerHardwareStatusGet(axisName, out var hardwareStatus, out var hardwareStatusError), hardwareStatusError); ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupVelocityCurrentGet(groupName, out var currentVelocity, 1, out var velocityError), velocityError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupVelocityCurrentGet(groupName, out var currentVelocity, 1, out var velocityError)
+L000229 |                 CheckResult(api, api.GroupVelocityCurrentGet(groupName, out var currentVelocity, 1, out var velocityError), velocityError); ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(currentVelocity, "velocity") / 지역 변수를 선언합니다: var velocity = ReadRequiredFirst(currentVelocity, "velocity"); / 변수의 초기값을 지정합니다: velocity = ReadRequiredFirst(currentVelocity, "velocity")
+L000230 |                 var velocity = ReadRequiredFirst(currentVelocity, "velocity"); ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupAccelerationCurrentGet(groupName, out var currentAcceleration, 1, out var accelerationError), accelerationError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupAccelerationCurrentGet(groupName, out var currentAcceleration, 1, out var accelerationError)
+L000231 |                 CheckResult(api, api.GroupAccelerationCurrentGet(groupName, out var currentAcceleration, 1, out var accelerationError), accelerationError); ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRequiredFirst(currentAcceleration, "acceleration") / 지역 변수를 선언합니다: var acceleration = ReadRequiredFirst(currentAcceleration, "acceleration"); / 변수의 초기값을 지정합니다: acceleration = ReadRequiredFirst(currentAcceleration, "acceleration")
+L000232 |                 var acceleration = ReadRequiredFirst(currentAcceleration, "acceleration"); ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join( ":", "OK", "AXIS", axisName, "FPOS", positionValue.ToString("F6", CultureInfo.InvariantCulture), "GROUP_STATUS_TEXT", SanitizeResponseText(groupStatusText), "MOTION_STATUS", motionStatus[0].ToString(CultureI… / 호출자에게 값 또는 제어를 반환합니다: return string.Join( ":", "OK", "AXIS", axisName, "FPOS", positionValue.ToString("F6", CultureInfo.InvariantCulture), "GROUP_STATUS_TEXT", SanitizeResponseText(groupStatusText), "MOTION_STATUS", motionStatus[0].ToString(CultureInfo
+L000233 |                 return string.Join( ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000234 |                     ":",  ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000235 |                     "OK",  ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000236 |                     "AXIS",  ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000237 |                     axisName,  ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000238 |                     "FPOS",  ⟦EOL⟧
+// 해설 L239: 함수·델리게이트 또는 객체 생성자를 호출합니다: positionValue.ToString("F6", CultureInfo.InvariantCulture)
+L000239 |                     positionValue.ToString("F6", CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000240 |                     "GROUP_STATUS_TEXT",  ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: SanitizeResponseText(groupStatusText)
+L000241 |                     SanitizeResponseText(groupStatusText),  ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000242 |                     "MOTION_STATUS",  ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: motionStatus[0].ToString(CultureInfo.InvariantCulture)
+L000243 |                     motionStatus[0].ToString(CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000244 |                     "HARDWARE_STATUS",  ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: hardwareStatus.ToString(CultureInfo.InvariantCulture)
+L000245 |                     hardwareStatus.ToString(CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000246 |                     "FVEL",  ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: velocity.ToString("F6", CultureInfo.InvariantCulture)
+L000247 |                     velocity.ToString("F6", CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000248 |                     "FACCEL",  ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: acceleration.ToString("F6", CultureInfo.InvariantCulture)
+L000249 |                     acceleration.ToString("F6", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteAxisFunction(XPS, System.Collections.Generic.IReadOnlyList<string>, System.Threading.CancellationToken, System.Action?)
+L000250 |                 ); ⟦EOL⟧
+// 해설 L251: 분기값/패턴의 구간입니다: default:
+L000251 |             default: ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS axis command is unknown: {command}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS axis command is unknown: {command}");
+L000252 |                 throw new InvalidOperationException($"XPS axis command is unknown: {command}"); ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000253 |         } ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ExecuteAxisFunction.
+L000254 |     } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteIoFunction(XPS, System.Collections.Generic.IReadOnlyList<string>)
+L000256 |     private static string ExecuteIoFunction(XPS api, IReadOnlyList<string> tokens) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000257 |     { ⟦EOL⟧
+// 해설 L258: 조건에 따라 분기합니다: if (tokens.Count < 4)
+L000258 |         if (tokens.Count < 4) ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000259 |         { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS IO command is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS IO command is invalid.");
+L000260 |             throw new InvalidOperationException("XPS IO command is invalid."); ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000261 |         } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[2].Trim() / 지역 변수를 선언합니다: var address = tokens[2].Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: address = tokens[2].Trim().ToUpperInvariant()
+L000263 |         var address = tokens[2].Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: var(gpioName, bitNo) = ParseDigitalIoAddress(address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDigitalIoAddress(address)
+L000264 |         var(gpioName, bitNo) = ParseDigitalIoAddress(address); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[3].ToUpperInvariant() / 지역 변수를 선언합니다: var command = tokens[3].ToUpperInvariant(); / 변수의 초기값을 지정합니다: command = tokens[3].ToUpperInvariant()
+L000265 |         var command = tokens[3].ToUpperInvariant(); ⟦EOL⟧
+// 해설 L266: 지역 변수를 선언합니다: var mask = checked((ushort)(1 << bitNo)); / 변수의 초기값을 지정합니다: mask = checked((ushort)(1 << bitNo))
+L000266 |         var mask = checked((ushort)(1 << bitNo)); ⟦EOL⟧
+// 해설 L267: 조건에 따라 분기합니다: if (command == "READ")
+L000267 |         if (command == "READ") ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000268 |         { ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GPIODigitalGet(gpioName, out var value, out var readError), readError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GPIODigitalGet(gpioName, out var value, out var readError)
+L000269 |             CheckResult(api, api.GPIODigitalGet(gpioName, out var value, out var readError), readError); ⟦EOL⟧
+// 해설 L270: 조건에 따라 결과식을 선택합니다: (value & mask) != 0 ? "ON" : "OFF" / 호출자에게 값 또는 제어를 반환합니다: return $"OK:IO:{address}:{((value & mask) != 0 ? "ON" : "OFF")}";
+L000270 |             return $"OK:IO:{address}:{((value & mask) != 0 ? "ON" : "OFF")}"; ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000271 |         } ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 조건에 따라 분기합니다: if (command is not ("ON" or "OFF"))
+L000273 |         if (command is not ("ON" or "OFF")) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000274 |         { ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS IO command is unknown: {command}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS IO command is unknown: {command}");
+L000275 |             throw new InvalidOperationException($"XPS IO command is unknown: {command}"); ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000276 |         } ⟦EOL⟧
+L000277 |  ⟦EOL⟧
+// 해설 L278: 조건에 따라 결과식을 선택합니다: command == "ON" ? mask : (ushort)0 / 지역 변수를 선언합니다: var output = command == "ON" ? mask : (ushort)0; / 변수의 초기값을 지정합니다: output = command == "ON" ? mask : (ushort)0
+L000278 |         var output = command == "ON" ? mask : (ushort)0; ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GPIODigitalSet(gpioName, mask, output, out var writeError), writeError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GPIODigitalSet(gpioName, mask, output, out var writeError)
+L000279 |         CheckResult(api, api.GPIODigitalSet(gpioName, mask, output, out var writeError), writeError); ⟦EOL⟧
+// 해설 L280: 호출자에게 값 또는 제어를 반환합니다: return $"OK:IO:{address}:{command}";
+L000280 |         return $"OK:IO:{address}:{command}"; ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ExecuteIoFunction.
+L000281 |     } ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecuteRawCommand(XPS, string)
+L000283 |     private static string ExecuteRawCommand(XPS api, string function) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 ExecuteRawCommand.
+L000284 |     { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 호출자에게 값 또는 제어를 반환합니다: return function.Trim().ToUpperInvariant() switch { "STATUS" => ExecuteStatus(api), "SOCKETS" => ExecuteSockets(api), _ => throw new InvalidOperationException($"XPS raw command is not supported yet: {function}")}; / 값별 결과식을 선택합니다: function.Trim().ToUpperInvariant() switch { "STATUS" => ExecuteStatus(api), "SOCKETS" => ExecuteSockets(api), _ => throw new InvalidOperationException($"XPS raw command is not sup
+L000285 |         return function.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 ExecuteRawCommand.
+L000286 |         { ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteStatus(api)
+L000287 |             "STATUS" => ExecuteStatus(api), ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteSockets(api)
+L000288 |             "SOCKETS" => ExecuteSockets(api), ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS raw command is not supported yet: {function}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS raw command is not supported yet: {function}")
+L000289 |             _ => throw new InvalidOperationException($"XPS raw command is not supported yet: {function}")}; ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · string ExecuteStatus(XPS)
+L000290 |         string ExecuteStatus(XPS xps) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 ExecuteStatus.
+L000291 |         { ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.ControllerStatusGet(out var status, out var statusError), statusError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: xps.ControllerStatusGet(out var status, out var statusError)
+L000292 |             CheckResult(xps, xps.ControllerStatusGet(out var status, out var statusError), statusError); ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.ControllerStatusStringGet(status, out var statusText, out var statusTextError), statusTextError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: xps.ControllerStatusStringGet(status, out var statusText, out var statusTextError)
+L000293 |             CheckResult(xps, xps.ControllerStatusStringGet(status, out var statusText, out var statusTextError), statusTextError); ⟦EOL⟧
+// 해설 L294: 호출자에게 값 또는 제어를 반환합니다: return $"OK:STATUS:{status}:{statusText}";
+L000294 |             return $"OK:STATUS:{status}:{statusText}"; ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 ExecuteStatus.
+L000295 |         } ⟦EOL⟧
+L000296 |  ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · string ExecuteSockets(XPS)
+L000297 |         string ExecuteSockets(XPS xps) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 ExecuteSockets.
+L000298 |         { ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(xps, xps.SocketsStatusGet(out var result, out var socketError), socketError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: xps.SocketsStatusGet(out var result, out var socketError)
+L000299 |             CheckResult(xps, xps.SocketsStatusGet(out var result, out var socketError), socketError); ⟦EOL⟧
+// 해설 L300: 호출자에게 값 또는 제어를 반환합니다: return $"OK:SOCKETS:{result}";
+L000300 |             return $"OK:SOCKETS:{result}"; ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 ExecuteSockets.
+L000301 |         } ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ExecuteRawCommand.
+L000302 |     } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.CloseApi()
+L000304 |     private void CloseApi() ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 CloseApi.
+L000305 |     { ⟦EOL⟧
+// 해설 L306: 조건에 따라 분기합니다: if (_api is null)
+L000306 |         if (_api is null) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 CloseApi.
+L000307 |         { ⟦EOL⟧
+// 해설 L308: 호출자에게 값 또는 제어를 반환합니다: return;
+L000308 |             return; ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 CloseApi.
+L000309 |         } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 예외 처리 범위입니다: try
+L000311 |         try ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 CloseApi.
+L000312 |         { ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: _api.CloseInstrument()
+L000313 |             _api.CloseInstrument(); ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 CloseApi.
+L000314 |         } ⟦EOL⟧
+// 해설 L315: 지정 예외를 처리합니다: catch
+L000315 |         catch ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 CloseApi.
+L000316 |         { ⟦EOL⟧
+// 해설 L317: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000317 |         // Close should never block application shutdown. ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 CloseApi.
+L000318 |         } ⟦EOL⟧
+// 해설 L319: 종료 정리 구간입니다: finally
+L000319 |         finally ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 CloseApi.
+L000320 |         { ⟦EOL⟧
+// 해설 L321: 값을 대상에 대입합니다: _api = null
+L000321 |             _api = null; ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 CloseApi.
+L000322 |         } ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 CloseApi.
+L000323 |     } ⟦EOL⟧
+L000324 |  ⟦EOL⟧
+// 해설 L325: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.CheckResult(XPS, int, string)
+L000325 |     private static void CheckResult(XPS api, int result, string detail) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 CheckResult.
+L000326 |     { ⟦EOL⟧
+// 해설 L327: 조건에 따라 분기합니다: if (result == 0)
+L000327 |         if (result == 0) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 CheckResult.
+L000328 |         { ⟦EOL⟧
+// 해설 L329: 호출자에게 값 또는 제어를 반환합니다: return;
+L000329 |             return; ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 CheckResult.
+L000330 |         } ⟦EOL⟧
+L000331 |  ⟦EOL⟧
+// 해설 L332: 지역 변수를 선언합니다: var error = ""; / 변수의 초기값을 지정합니다: error = ""
+L000332 |         var error = ""; ⟦EOL⟧
+// 해설 L333: 예외 처리 범위입니다: try
+L000333 |         try ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 CheckResult.
+L000334 |         { ⟦EOL⟧
+// 해설 L335: 값을 대상에 대입합니다: _ = api.ErrorStringGet(result, out error, out _) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.ErrorStringGet(result, out error, out _)
+L000335 |             _ = api.ErrorStringGet(result, out error, out _); ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 CheckResult.
+L000336 |         } ⟦EOL⟧
+// 해설 L337: 지정 예외를 처리합니다: catch
+L000337 |         catch ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 CheckResult.
+L000338 |         { ⟦EOL⟧
+// 해설 L339: 값을 대상에 대입합니다: error = ""
+L000339 |             error = ""; ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 CheckResult.
+L000340 |         } ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(error) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(error) ? detail : error / 지역 변수를 선언합니다: var message = string.IsNullOrWhiteSpace(error) ? detail : error; / 변수의 초기값을 지정합니다: message = string.IsNullOrWhiteSpace(error) ? detail : error
+L000342 |         var message = string.IsNullOrWhiteSpace(error) ? detail : error; ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS command failed. Code={result}, Detail={message}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS command failed. Code={result}, Detail={message}");
+L000343 |         throw new InvalidOperationException($"XPS command failed. Code={result}, Detail={message}"); ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 CheckResult.
+L000344 |     } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Motion.CXpsComm.ReadDouble(System.Collections.Generic.IReadOnlyList<string>, int, string)
+L000346 |     private static double ReadDouble(IReadOnlyList<string> tokens, int index, string command) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000347 |     { ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result) / 조건에 따라 분기합니다: if (tokens.Count <= index || !double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result))
+L000348 |         if (tokens.Count <= index || !double.TryParse(tokens[index], NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result)) ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000349 |         { ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS {command} parameter must be finite.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS {command} parameter must be finite.");
+L000350 |             throw new InvalidOperationException($"XPS {command} parameter must be finite."); ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000351 |         } ⟦EOL⟧
+L000352 |  ⟦EOL⟧
+// 해설 L353: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000353 |         return result; ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000354 |     } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Motion.CXpsComm.ExecutePriorityStop(string, System.Threading.CancellationToken)
+L000356 |     private async Task<string> ExecutePriorityStop(string function, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000357 |     { ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginCommandDiagnostic(function) / 지역 변수를 선언합니다: var diagnosticSequence = BeginCommandDiagnostic(function); / 변수의 초기값을 지정합니다: diagnosticSequence = BeginCommandDiagnostic(function)
+L000358 |         var diagnosticSequence = BeginCommandDiagnostic(function); ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · string SelectValue()
+L000359 |         string SelectValue() ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 SelectValue.
+L000360 |         { ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecutePriorityStopCore(function) / 호출자에게 값 또는 제어를 반환합니다: return ExecutePriorityStopCore(function);
+L000361 |             return ExecutePriorityStopCore(function); ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 SelectValue.
+L000362 |         } ⟦EOL⟧
+L000363 |  ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · System.AggregateException? SelectAggregateexception(System.Threading.Tasks.Task<string>)
+L000364 |         global::System.AggregateException? SelectAggregateexception(global::System.Threading.Tasks.Task<string> task) ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 SelectAggregateexception.
+L000365 |         { ⟦EOL⟧
+// 해설 L366: 값을 대상에 대입합니다: _ = task.Exception / 호출자에게 값 또는 제어를 반환합니다: return _ = task.Exception;
+L000366 |             return _ = task.Exception; ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 SelectAggregateexception.
+L000367 |         } ⟦EOL⟧
+L000368 |  ⟦EOL⟧
+// 해설 L369: 예외 처리 범위입니다: try
+L000369 |         try ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000370 |         { ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default) / 지역 변수를 선언합니다: var stopTask = Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default); / 변수의 초기값을 지정합니다: stopTask = Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.De
+L000371 |             var stopTask = Task.Factory.StartNew(SelectValue, CancellationToken.None, TaskCreationOptions.LongRunning | TaskCreationOptions.DenyChildAttach, TaskScheduler.Default); ⟦EOL⟧
+// 해설 L372: 값을 대상에 대입합니다: _ = stopTask.ContinueWith(SelectAggregateexception, CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stopTask.ContinueWith(SelectAggregateexception, CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default)
+L000372 |             _ = stopTask.ContinueWith(SelectAggregateexception, CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default); ⟦EOL⟧
+// 해설 L373: 비동기 완료를 기다립니다: await stopTask.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stopTask.WaitAsync(cancellationToken) / 지역 변수를 선언합니다: var response = await stopTask.WaitAsync(cancellationToken); / 변수의 초기값을 지정합니다: response = await stopTask.WaitAsync(cancellationToken)
+L000373 |             var response = await stopTask.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: CompletePriorityStop(diagnosticSequence, response)
+L000374 |             CompletePriorityStop(diagnosticSequence, response); ⟦EOL⟧
+// 해설 L375: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000375 |             return response; ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000376 |         } ⟦EOL⟧
+// 해설 L377: 지정 예외를 처리합니다: catch (OperationCanceledException exception) when (cancellationToken.IsCancellationRequested)
+L000377 |         catch (OperationCanceledException exception)when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000378 |         { ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: FailPriorityStop(diagnosticSequence, new TimeoutException($"XPS priority stop timed out after {(Option.TimeoutMs > 0 ? Option.TimeoutMs : 5000)} ms.", exception)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"XPS priority stop timed out after {(Option.TimeoutMs > 0 ? Option.TimeoutMs : 5000)} ms.", exception) / 조건에 따라 결과식을 선택합니다: Option.TimeoutMs > 0 ? Option.TimeoutMs : 5000 / 호출자에게 값 또는 제어를 반환합니다: return FailPriorityStop(diagnosticSequence, new TimeoutException($"XPS priority stop timed out after {(O
+L000379 |             return FailPriorityStop(diagnosticSequence, new TimeoutException($"XPS priority stop timed out after {(Option.TimeoutMs > 0 ? Option.TimeoutMs : 5000)} ms.", exception)); ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000380 |         } ⟦EOL⟧
+// 해설 L381: 지정 예외를 처리합니다: catch (Exception ex)
+L000381 |         catch (Exception ex) ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000382 |         { ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: FailPriorityStop(diagnosticSequence, ex) / 호출자에게 값 또는 제어를 반환합니다: return FailPriorityStop(diagnosticSequence, ex);
+L000383 |             return FailPriorityStop(diagnosticSequence, ex); ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000384 |         } ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 ExecutePriorityStop.
+L000385 |     } ⟦EOL⟧
+L000386 |  ⟦EOL⟧
+// 해설 L387: 선언·서명/매개변수·접근 조건입니다 · long Drilling.Common.Motion.CXpsComm.BeginCommandDiagnostic(string)
+L000387 |     private long BeginCommandDiagnostic(string function) ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 BeginCommandDiagnostic.
+L000388 |     { ⟦EOL⟧
+// 해설 L389: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000389 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 BeginCommandDiagnostic.
+L000390 |         { ⟦EOL⟧
+// 해설 L391: 지역 변수를 선언합니다: var sequence = ++_diagnosticSequence; / 변수의 초기값을 지정합니다: sequence = ++_diagnosticSequence
+L000391 |             var sequence = ++_diagnosticSequence; ⟦EOL⟧
+// 해설 L392: 값을 대상에 대입합니다: _lastAppliedDiagnosticSequence = sequence
+L000392 |             _lastAppliedDiagnosticSequence = sequence; ⟦EOL⟧
+// 해설 L393: 값을 대상에 대입합니다: LastSent = function
+L000393 |             LastSent = function; ⟦EOL⟧
+// 해설 L394: 값을 대상에 대입합니다: LastReceived = ""
+L000394 |             LastReceived = ""; ⟦EOL⟧
+// 해설 L395: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000395 |             LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L396: 호출자에게 값 또는 제어를 반환합니다: return sequence;
+L000396 |             return sequence; ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 BeginCommandDiagnostic.
+L000397 |         } ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 BeginCommandDiagnostic.
+L000398 |     } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.CompletePrimaryCommand(long, string)
+L000400 |     private void CompletePrimaryCommand(long sequence, string response) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000401 |     { ⟦EOL⟧
+// 해설 L402: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000402 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000403 |         { ⟦EOL⟧
+// 해설 L404: 조건에 따라 분기합니다: if (sequence < _lastAppliedDiagnosticSequence)
+L000404 |             if (sequence < _lastAppliedDiagnosticSequence) ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000405 |             { ⟦EOL⟧
+// 해설 L406: 호출자에게 값 또는 제어를 반환합니다: return;
+L000406 |                 return; ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000407 |             } ⟦EOL⟧
+L000408 |  ⟦EOL⟧
+// 해설 L409: 값을 대상에 대입합니다: LastReceived = response
+L000409 |             LastReceived = response; ⟦EOL⟧
+// 해설 L410: 값을 대상에 대입합니다: LastError = ""
+L000410 |             LastError = ""; ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000411 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000412 |         } ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 CompletePrimaryCommand.
+L000413 |     } ⟦EOL⟧
+L000414 |  ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.FailPrimaryCommand(long, System.Exception)
+L000415 |     private string FailPrimaryCommand(long sequence, Exception exception) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000416 |     { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception) / 지역 변수를 선언합니다: var response = CreateErrorResponse(exception); / 변수의 초기값을 지정합니다: response = CreateErrorResponse(exception)
+L000417 |         var response = CreateErrorResponse(exception); ⟦EOL⟧
+// 해설 L418: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000418 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000419 |         { ⟦EOL⟧
+// 해설 L420: 조건에 따라 분기합니다: if (sequence < _lastAppliedDiagnosticSequence)
+L000420 |             if (sequence < _lastAppliedDiagnosticSequence) ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000421 |             { ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000422 |                 return response; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000423 |             } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 값을 대상에 대입합니다: LastReceived = response
+L000425 |             LastReceived = response; ⟦EOL⟧
+// 해설 L426: 값을 대상에 대입합니다: LastError = exception.Message
+L000426 |             LastError = exception.Message; ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000427 |             SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L428: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000428 |             return response; ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000429 |         } ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 FailPrimaryCommand.
+L000430 |     } ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.CompletePriorityStop(long, string)
+L000432 |     private void CompletePriorityStop(long sequence, string response) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000433 |     { ⟦EOL⟧
+// 해설 L434: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000434 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000435 |         { ⟦EOL⟧
+// 해설 L436: 조건에 따라 분기합니다: if (sequence < _lastAppliedDiagnosticSequence)
+L000436 |             if (sequence < _lastAppliedDiagnosticSequence) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000437 |             { ⟦EOL⟧
+// 해설 L438: 호출자에게 값 또는 제어를 반환합니다: return;
+L000438 |                 return; ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000439 |             } ⟦EOL⟧
+L000440 |  ⟦EOL⟧
+// 해설 L441: 값을 대상에 대입합니다: LastReceived = response
+L000441 |             LastReceived = response; ⟦EOL⟧
+// 해설 L442: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000442 |             LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000443 |         } ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 CompletePriorityStop.
+L000444 |     } ⟦EOL⟧
+L000445 |  ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.FailPriorityStop(long, System.Exception)
+L000446 |     private string FailPriorityStop(long sequence, Exception exception) ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000447 |     { ⟦EOL⟧
+// 해설 L448: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception) / 지역 변수를 선언합니다: var response = CreateErrorResponse(exception); / 변수의 초기값을 지정합니다: response = CreateErrorResponse(exception)
+L000448 |         var response = CreateErrorResponse(exception); ⟦EOL⟧
+// 해설 L449: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000449 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000450 |         { ⟦EOL⟧
+// 해설 L451: 조건에 따라 분기합니다: if (sequence < _lastAppliedDiagnosticSequence)
+L000451 |             if (sequence < _lastAppliedDiagnosticSequence) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000452 |             { ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000453 |                 return response; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000454 |             } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 값을 대상에 대입합니다: LastReceived = response
+L000456 |             LastReceived = response; ⟦EOL⟧
+// 해설 L457: 값을 대상에 대입합니다: LastError = $"XPS priority stop failed. {exception.Message}"
+L000457 |             LastError = $"XPS priority stop failed. {exception.Message}"; ⟦EOL⟧
+// 해설 L458: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000458 |             LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L459: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000459 |             return response; ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000460 |         } ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 FailPriorityStop.
+L000461 |     } ⟦EOL⟧
+L000462 |  ⟦EOL⟧
+// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(System.Exception)
+L000463 |     private static string CreateErrorResponse(Exception exception) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 CreateErrorResponse.
+L000464 |     { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorResponse(exception.Message) / 호출자에게 값 또는 제어를 반환합니다: return CreateErrorResponse(exception.Message);
+L000465 |         return CreateErrorResponse(exception.Message); ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 CreateErrorResponse.
+L000466 |     } ⟦EOL⟧
+L000467 |  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.CreateErrorResponse(string)
+L000468 |     private static string CreateErrorResponse(string message) ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 CreateErrorResponse.
+L000469 |     { ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: SanitizeResponseText(message) / 지역 변수를 선언합니다: var detail = SanitizeResponseText(message); / 변수의 초기값을 지정합니다: detail = SanitizeResponseText(message)
+L000470 |         var detail = SanitizeResponseText(message); ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(detail) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(detail) ? "UNKNOWN" : detail / 호출자에게 값 또는 제어를 반환합니다: return $"ERR:XPS:{(string.IsNullOrWhiteSpace(detail) ? "UNKNOWN" : detail)}";
+L000471 |         return $"ERR:XPS:{(string.IsNullOrWhiteSpace(detail) ? "UNKNOWN" : detail)}"; ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 CreateErrorResponse.
+L000472 |     } ⟦EOL⟧
+L000473 |  ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.ThrowIfPriorityStopOccurred(long)
+L000474 |     private void ThrowIfPriorityStopOccurred(long observedStopGeneration) ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurred.
+L000475 |     { ⟦EOL⟧
+// 해설 L476: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _priorityStopGeneration) / 조건에 따라 분기합니다: if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration))
+L000476 |         if (observedStopGeneration != Volatile.Read(ref _priorityStopGeneration)) ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurred.
+L000477 |         { ⟦EOL⟧
+// 해설 L478: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS command invalidated by priority stop.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS command invalidated by priority stop.");
+L000478 |             throw new InvalidOperationException("XPS command invalidated by priority stop."); ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurred.
+L000479 |         } ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 ThrowIfPriorityStopOccurred.
+L000480 |     } ⟦EOL⟧
+L000481 |  ⟦EOL⟧
+// 해설 L482: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.SetPrimaryConnected()
+L000482 |     private void SetPrimaryConnected() ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다 · 소속 SetPrimaryConnected.
+L000483 |     { ⟦EOL⟧
+// 해설 L484: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000484 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 SetPrimaryConnected.
+L000485 |         { ⟦EOL⟧
+// 해설 L486: 값을 대상에 대입합니다: LastError = ""
+L000486 |             LastError = ""; ⟦EOL⟧
+// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000487 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 SetPrimaryConnected.
+L000488 |         } ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다 · 소속 SetPrimaryConnected.
+L000489 |     } ⟦EOL⟧
+L000490 |  ⟦EOL⟧
+// 해설 L491: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.SetPrimaryState(Drilling.Common.Interface.EN_COMM_STATE)
+L000491 |     private void SetPrimaryState(EN_COMM_STATE state) ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 SetPrimaryState.
+L000492 |     { ⟦EOL⟧
+// 해설 L493: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000493 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 SetPrimaryState.
+L000494 |         { ⟦EOL⟧
+// 해설 L495: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(state)
+L000495 |             SetState(state); ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 SetPrimaryState.
+L000496 |         } ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 SetPrimaryState.
+L000497 |     } ⟦EOL⟧
+L000498 |  ⟦EOL⟧
+// 해설 L499: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.SetPrimaryError(System.Exception)
+L000499 |     private void SetPrimaryError(Exception exception) ⟦EOL⟧
+// 해설 L500: 구문 블록 경계입니다 · 소속 SetPrimaryError.
+L000500 |     { ⟦EOL⟧
+// 해설 L501: 공유 상태의 임계 구역에 진입합니다: lock (_diagnosticLock)
+L000501 |         lock (_diagnosticLock) ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 SetPrimaryError.
+L000502 |         { ⟦EOL⟧
+// 해설 L503: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(exception)
+L000503 |             SetError(exception); ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 SetPrimaryError.
+L000504 |         } ⟦EOL⟧
+// 해설 L505: 구문 블록 경계입니다 · 소속 SetPrimaryError.
+L000505 |     } ⟦EOL⟧
+L000506 |  ⟦EOL⟧
+// 해설 L507: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.ExecutePriorityStopCore(string)
+L000507 |     private string ExecutePriorityStopCore(string function) ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000508 |     { ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0)
+L000509 |         if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0) ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000510 |         { ⟦EOL⟧
+// 해설 L511: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("XPS endpoint is invalid.") / 예외를 발생/전달합니다: throw new InvalidOperationException("XPS endpoint is invalid.");
+L000511 |             throw new InvalidOperationException("XPS endpoint is invalid."); ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000512 |         } ⟦EOL⟧
+L000513 |  ⟦EOL⟧
+// 해설 L514: 함수·델리게이트 또는 객체 생성자를 호출합니다: new XPS() / 지역 변수를 선언합니다: var stopApi = new XPS(); / 변수의 초기값을 지정합니다: stopApi = new XPS()
+L000514 |         var stopApi = new XPS(); ⟦EOL⟧
+// 해설 L515: 예외 처리 범위입니다: try
+L000515 |         try ⟦EOL⟧
+// 해설 L516: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000516 |         { ⟦EOL⟧
+// 해설 L517: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(stopApi, stopApi.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs), "OpenInstrument for priority stop") / 함수·델리게이트 또는 객체 생성자를 호출합니다: stopApi.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs)
+L000517 |             CheckResult(stopApi, stopApi.OpenInstrument(Option.RemoteAddress, Option.Port, Option.TimeoutMs), "OpenInstrument for priority stop"); ⟦EOL⟧
+// 해설 L518: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsFunction(stopApi, function, CancellationToken.None) / 호출자에게 값 또는 제어를 반환합니다: return ExecuteXpsFunction(stopApi, function, CancellationToken.None);
+L000518 |             return ExecuteXpsFunction(stopApi, function, CancellationToken.None); ⟦EOL⟧
+// 해설 L519: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000519 |         } ⟦EOL⟧
+// 해설 L520: 종료 정리 구간입니다: finally
+L000520 |         finally ⟦EOL⟧
+// 해설 L521: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000521 |         { ⟦EOL⟧
+// 해설 L522: 예외 처리 범위입니다: try
+L000522 |             try ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000523 |             { ⟦EOL⟧
+// 해설 L524: 함수·델리게이트 또는 객체 생성자를 호출합니다: stopApi.CloseInstrument()
+L000524 |                 stopApi.CloseInstrument(); ⟦EOL⟧
+// 해설 L525: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000525 |             } ⟦EOL⟧
+// 해설 L526: 지정 예외를 처리합니다: catch
+L000526 |             catch ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000527 |             { ⟦EOL⟧
+// 해설 L528: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000528 |             // The stop result is more important than a temporary socket close failure. ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000529 |             } ⟦EOL⟧
+// 해설 L530: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000530 |         } ⟦EOL⟧
+// 해설 L531: 구문 블록 경계입니다 · 소속 ExecutePriorityStopCore.
+L000531 |     } ⟦EOL⟧
+L000532 |  ⟦EOL⟧
+// 해설 L533: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Motion.CXpsComm.IsPriorityStopCommand(string)
+L000533 |     private static bool IsPriorityStopCommand(string function) ⟦EOL⟧
+// 해설 L534: 구문 블록 경계입니다 · 소속 IsPriorityStopCommand.
+L000534 |     { ⟦EOL⟧
+// 해설 L535: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries) / 지역 변수를 선언합니다: var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); / 변수의 초기값을 지정합니다: tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+L000535 |         var tokens = function.Split(':', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries); ⟦EOL⟧
+// 해설 L536: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (tokens.Length < 5 || !tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase) || !tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase))
+L000536 |         if (tokens.Length < 5 || !tokens[0].Equals("XPS", StringComparison.OrdinalIgnoreCase) || !tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 IsPriorityStopCommand.
+L000537 |         { ⟦EOL⟧
+// 해설 L538: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000538 |             return false; ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 IsPriorityStopCommand.
+L000539 |         } ⟦EOL⟧
+L000540 |  ⟦EOL⟧
+// 해설 L541: 조건에 따라 결과식을 선택합니다: tokens.Length >= 6 ? 5 : 4 / 지역 변수를 선언합니다: var commandIndex = tokens.Length >= 6 ? 5 : 4; / 변수의 초기값을 지정합니다: commandIndex = tokens.Length >= 6 ? 5 : 4
+L000541 |         var commandIndex = tokens.Length >= 6 ? 5 : 4; ⟦EOL⟧
+// 해설 L542: 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].Equals("JOG_STOP", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[commandIndex].Equals("STOP", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return tokens[commandIndex].Equals("JOG_STOP", StringComparison.OrdinalIgnoreCase) || tokens[commandIndex].Equals("STOP", StringComparison.OrdinalIgnoreCase);
+L000542 |         return tokens[commandIndex].Equals("JOG_STOP", StringComparison.OrdinalIgnoreCase) || tokens[commandIndex].Equals("STOP", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 IsPriorityStopCommand.
+L000543 |     } ⟦EOL⟧
+L000544 |  ⟦EOL⟧
+// 해설 L545: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Motion.CXpsComm.StopJogAndDisable(XPS, string)
+L000545 |     private static void StopJogAndDisable(XPS api, string groupName) ⟦EOL⟧
+// 해설 L546: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000546 |     { ⟦EOL⟧
+// 해설 L547: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupMoveAbort(groupName, out var abortError), abortError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupMoveAbort(groupName, out var abortError)
+L000547 |         CheckResult(api, api.GroupMoveAbort(groupName, out var abortError), abortError); ⟦EOL⟧
+// 해설 L548: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp() / 지역 변수를 선언합니다: var startedAt = Stopwatch.GetTimestamp(); / 변수의 초기값을 지정합니다: startedAt = Stopwatch.GetTimestamp()
+L000548 |         var startedAt = Stopwatch.GetTimestamp(); ⟦EOL⟧
+// 해설 L549: 조건을 먼저 확인하며 반복합니다: while (true)
+L000549 |         while (true) ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000550 |         { ⟦EOL⟧
+// 해설 L551: 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupJogModeDisable(groupName, out var disableError) / 지역 변수를 선언합니다: var disableResult = api.GroupJogModeDisable(groupName, out var disableError); / 변수의 초기값을 지정합니다: disableResult = api.GroupJogModeDisable(groupName, out var disableError)
+L000551 |             var disableResult = api.GroupJogModeDisable(groupName, out var disableError); ⟦EOL⟧
+// 해설 L552: 조건에 따라 분기합니다: if (disableResult == 0)
+L000552 |             if (disableResult == 0) ⟦EOL⟧
+// 해설 L553: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000553 |             { ⟦EOL⟧
+// 해설 L554: 호출자에게 값 또는 제어를 반환합니다: return;
+L000554 |                 return; ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000555 |             } ⟦EOL⟧
+L000556 |  ⟦EOL⟧
+// 해설 L557: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsGroupJogging(api, groupName) / 조건에 따라 분기합니다: if (!IsGroupJogging(api, groupName))
+L000557 |             if (!IsGroupJogging(api, groupName)) ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000558 |             { ⟦EOL⟧
+// 해설 L559: 호출자에게 값 또는 제어를 반환합니다: return;
+L000559 |                 return; ⟦EOL⟧
+// 해설 L560: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000560 |             } ⟦EOL⟧
+L000561 |  ⟦EOL⟧
+// 해설 L562: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(startedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(2) / 조건에 따라 분기합니다: if (Stopwatch.GetElapsedTime(startedAt) >= TimeSpan.FromSeconds(2))
+L000562 |             if (Stopwatch.GetElapsedTime(startedAt) >= TimeSpan.FromSeconds(2)) ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000563 |             { ⟦EOL⟧
+// 해설 L564: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, disableResult, disableError)
+L000564 |                 CheckResult(api, disableResult, disableError); ⟦EOL⟧
+// 해설 L565: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000565 |             } ⟦EOL⟧
+L000566 |  ⟦EOL⟧
+// 해설 L567: 함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(20)
+L000567 |             Thread.Sleep(20); ⟦EOL⟧
+// 해설 L568: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000568 |         } ⟦EOL⟧
+// 해설 L569: 구문 블록 경계입니다 · 소속 StopJogAndDisable.
+L000569 |     } ⟦EOL⟧
+L000570 |  ⟦EOL⟧
+// 해설 L571: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Motion.CXpsComm.IsGroupJogging(XPS, string)
+L000571 |     private static bool IsGroupJogging(XPS api, string groupName) ⟦EOL⟧
+// 해설 L572: 구문 블록 경계입니다 · 소속 IsGroupJogging.
+L000572 |     { ⟦EOL⟧
+// 해설 L573: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusGet(groupName, out var status, out var statusError), statusError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusGet(groupName, out var status, out var statusError)
+L000573 |         CheckResult(api, api.GroupStatusGet(groupName, out var status, out var statusError), statusError); ⟦EOL⟧
+// 해설 L574: 함수·델리게이트 또는 객체 생성자를 호출합니다: CheckResult(api, api.GroupStatusStringGet(status, out var statusText, out var statusTextError), statusTextError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: api.GroupStatusStringGet(status, out var statusText, out var statusTextError)
+L000574 |         CheckResult(api, api.GroupStatusStringGet(status, out var statusText, out var statusTextError), statusTextError); ⟦EOL⟧
+// 해설 L575: 함수·델리게이트 또는 객체 생성자를 호출합니다: statusText.Contains("JOGGING", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return statusText.Contains("JOGGING", StringComparison.OrdinalIgnoreCase);
+L000575 |         return statusText.Contains("JOGGING", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다 · 소속 IsGroupJogging.
+L000576 |     } ⟦EOL⟧
+L000577 |  ⟦EOL⟧
+// 해설 L578: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Motion.CXpsComm.ReadPositiveDouble(System.Collections.Generic.IReadOnlyList<string>, int, string)
+L000578 |     private static double ReadPositiveDouble(IReadOnlyList<string> tokens, int index, string command) ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다 · 소속 ReadPositiveDouble.
+L000579 |     { ⟦EOL⟧
+// 해설 L580: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(tokens, index, command) / 지역 변수를 선언합니다: var value = ReadDouble(tokens, index, command); / 변수의 초기값을 지정합니다: value = ReadDouble(tokens, index, command)
+L000580 |         var value = ReadDouble(tokens, index, command); ⟦EOL⟧
+// 해설 L581: 조건에 따라 분기합니다: if (value <= 0.0)
+L000581 |         if (value <= 0.0) ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 ReadPositiveDouble.
+L000582 |         { ⟦EOL⟧
+// 해설 L583: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS {command} must be greater than 0.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS {command} must be greater than 0.");
+L000583 |             throw new InvalidOperationException($"XPS {command} must be greater than 0."); ⟦EOL⟧
+// 해설 L584: 구문 블록 경계입니다 · 소속 ReadPositiveDouble.
+L000584 |         } ⟦EOL⟧
+L000585 |  ⟦EOL⟧
+// 해설 L586: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000586 |         return value; ⟦EOL⟧
+// 해설 L587: 구문 블록 경계입니다 · 소속 ReadPositiveDouble.
+L000587 |     } ⟦EOL⟧
+L000588 |  ⟦EOL⟧
+// 해설 L589: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Motion.CXpsComm.ReadRequiredFirst(double[]?, string)
+L000589 |     private static double ReadRequiredFirst(double[]? values, string valueName) ⟦EOL⟧
+// 해설 L590: 구문 블록 경계입니다 · 소속 ReadRequiredFirst.
+L000590 |     { ⟦EOL⟧
+// 해설 L591: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(values[0]) / 조건에 따라 분기합니다: if (values is not { Length: > 0 } || !double.IsFinite(values[0]))
+L000591 |         if (values is not { Length: > 0 } || !double.IsFinite(values[0])) ⟦EOL⟧
+// 해설 L592: 구문 블록 경계입니다 · 소속 ReadRequiredFirst.
+L000592 |         { ⟦EOL⟧
+// 해설 L593: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS {valueName} status response is empty or non-finite.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS {valueName} status response is empty or non-finite.");
+L000593 |             throw new InvalidOperationException($"XPS {valueName} status response is empty or non-finite."); ⟦EOL⟧
+// 해설 L594: 구문 블록 경계입니다 · 소속 ReadRequiredFirst.
+L000594 |         } ⟦EOL⟧
+L000595 |  ⟦EOL⟧
+// 해설 L596: 호출자에게 값 또는 제어를 반환합니다: return values[0];
+L000596 |         return values[0]; ⟦EOL⟧
+// 해설 L597: 구문 블록 경계입니다 · 소속 ReadRequiredFirst.
+L000597 |     } ⟦EOL⟧
+L000598 |  ⟦EOL⟧
+// 해설 L599: 선언·서명/매개변수·접근 조건입니다 · (string GpioName, int BitNo) Drilling.Common.Motion.CXpsComm.ParseDigitalIoAddress(string)
+L000599 |     private static (string GpioName, int BitNo) ParseDigitalIoAddress(string address) ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000600 |     { ⟦EOL⟧
+// 해설 L601: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: address.Trim() / 지역 변수를 선언합니다: var normalized = address.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = address.Trim().ToUpperInvariant()
+L000601 |         var normalized = address.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L602: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.LastIndexOfAny(['.', ':', '/', '[']) / 지역 변수를 선언합니다: var separatorIndex = normalized.LastIndexOfAny(['.', ':', '/', '[']); / 변수의 초기값을 지정합니다: separatorIndex = normalized.LastIndexOfAny(['.', ':', '/', '['])
+L000602 |         var separatorIndex = normalized.LastIndexOfAny(['.', ':', '/', '[']); ⟦EOL⟧
+// 해설 L603: 조건에 따라 분기합니다: if (separatorIndex < 1)
+L000603 |         if (separatorIndex < 1) ⟦EOL⟧
+// 해설 L604: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000604 |         { ⟦EOL⟧
+// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS digital IO address is invalid: {address}. Use GPIOName.BitNo, for example GPIO1.0") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS digital IO address is invalid: {address}. Use GPIOName.BitNo, for example GPIO1.0");
+L000605 |             throw new InvalidOperationException($"XPS digital IO address is invalid: {address}. Use GPIOName.BitNo, for example GPIO1.0"); ⟦EOL⟧
+// 해설 L606: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000606 |         } ⟦EOL⟧
+L000607 |  ⟦EOL⟧
+// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized[..separatorIndex].TrimEnd(']') / 지역 변수를 선언합니다: var gpioName = normalized[..separatorIndex].TrimEnd(']'); / 변수의 초기값을 지정합니다: gpioName = normalized[..separatorIndex].TrimEnd(']')
+L000608 |         var gpioName = normalized[..separatorIndex].TrimEnd(']'); ⟦EOL⟧
+// 해설 L609: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized[(separatorIndex + 1)..].TrimEnd(']') / 지역 변수를 선언합니다: var bitText = normalized[(separatorIndex + 1)..].TrimEnd(']'); / 변수의 초기값을 지정합니다: bitText = normalized[(separatorIndex + 1)..].TrimEnd(']')
+L000609 |         var bitText = normalized[(separatorIndex + 1)..].TrimEnd(']'); ⟦EOL⟧
+// 해설 L610: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(gpioName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(bitText, NumberStyles.Integer, CultureInfo.InvariantCulture, out var bitNo) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(gpioName) || !int.TryParse(bitText, NumberStyles.Integer, CultureInfo.InvariantCulture, out var bitNo) || bitNo < 0 || bitNo > 15)
+L000610 |         if (string.IsNullOrWhiteSpace(gpioName) || !int.TryParse(bitText, NumberStyles.Integer, CultureInfo.InvariantCulture, out var bitNo) || bitNo < 0 || bitNo > 15) ⟦EOL⟧
+// 해설 L611: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000611 |         { ⟦EOL⟧
+// 해설 L612: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"XPS digital IO address is invalid: {address}. Bit number must be 0~15.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"XPS digital IO address is invalid: {address}. Bit number must be 0~15.");
+L000612 |             throw new InvalidOperationException($"XPS digital IO address is invalid: {address}. Bit number must be 0~15."); ⟦EOL⟧
+// 해설 L613: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000613 |         } ⟦EOL⟧
+L000614 |  ⟦EOL⟧
+// 해설 L615: 호출자에게 값 또는 제어를 반환합니다: return (gpioName, bitNo);
+L000615 |         return (gpioName, bitNo); ⟦EOL⟧
+// 해설 L616: 구문 블록 경계입니다 · 소속 ParseDigitalIoAddress.
+L000616 |     } ⟦EOL⟧
+L000617 |  ⟦EOL⟧
+// 해설 L618: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CXpsComm.SanitizeResponseText(string)
+L000618 |     private static string SanitizeResponseText(string value) ⟦EOL⟧
+// 해설 L619: 구문 블록 경계입니다 · 소속 SanitizeResponseText.
+L000619 |     { ⟦EOL⟧
+// 해설 L620: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(":", " ", StringComparison.Ordinal).Replace("\r", " ", StringComparison.Ordinal).Replace("\n", " ", StringComparison.Ordinal).Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(":", " ", StringComparison.Ordinal).Replace("\r", " ", StringComparison.Ordinal).Replace("\n", " ", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(":", " ", StringComparison.Ordinal).Replace("\r", " ", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(":", " ", StringComparison.Ord
+L000620 |         return value.Replace(":", " ", StringComparison.Ordinal).Replace("\r", " ", StringComparison.Ordinal).Replace("\n", " ", StringComparison.Ordinal).Trim(); ⟦EOL⟧
+// 해설 L621: 구문 블록 경계입니다 · 소속 SanitizeResponseText.
+L000621 |     } ⟦EOL⟧
+// 해설 L622: 구문 블록 경계입니다.
+L000622 | } ⟦EOL⟧

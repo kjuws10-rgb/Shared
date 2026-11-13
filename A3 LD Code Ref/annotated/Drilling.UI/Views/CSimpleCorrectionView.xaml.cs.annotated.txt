@@ -1,0 +1,120 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CSimpleCorrectionView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000005 | using Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000007 | using System.Windows.Threading; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000009 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public partial class CSimpleCorrectionView : UserControl
+L000011 | public partial class CSimpleCorrectionView : UserControl ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSimpleCorrectionView.SelectRepresentativeShot(object, MouseButtonEventArgs)
+L000013 |     private void SelectRepresentativeShot(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 SelectRepresentativeShot.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 조건에 따라 분기합니다: if (DataContext is CSimpleCorrectionPanel { IsRough: true } panel && sender is FrameworkElement { DataContext: ST_SIMPLE_CORRECTION_SHOT shot } && shot.CanProcess && panel.SelectCorrectionShotCommand.CanExecute(shot.Key))
+L000015 |         if (DataContext is CSimpleCorrectionPanel { IsRough: true } panel && sender is FrameworkElement { DataContext: ST_SIMPLE_CORRECTION_SHOT shot } && ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectCorrectionShotCommand.CanExecute(shot.Key)
+L000016 |             shot.CanProcess && panel.SelectCorrectionShotCommand.CanExecute(shot.Key)) ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: e.Handled = true / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectCorrectionShotCommand.Execute(shot.Key)
+L000017 |         { panel.SelectCorrectionShotCommand.Execute(shot.Key); e.Handled = true; } ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 SelectRepresentativeShot.
+L000018 |     } ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(200) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(200) / 변수의 초기값을 지정합니다: _feedbackTimer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) }
+L000019 |     private readonly DispatcherTimer _feedbackTimer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) }; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CSimpleCorrectionView.CSimpleCorrectionView()
+L000020 |     public CSimpleCorrectionView() ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 .ctor.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000022 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview() / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateFeedbackTimer() / 복합 대입 또는 이벤트 구독/해지 표현입니다: DataContextChanged += (_, _) => { ResizePreview(); UpdateFeedbackTimer(); }
+L000023 |         DataContextChanged += (_, _) => { ResizePreview(); UpdateFeedbackTimer(); }; ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: .RefreshFeedback() / 복합 대입 또는 이벤트 구독/해지 표현입니다: _feedbackTimer.Tick += (_, _) => (DataContext as CSimpleCorrectionPanel)?.RefreshFeedback()
+L000024 |         _feedbackTimer.Tick += (_, _) => (DataContext as CSimpleCorrectionPanel)?.RefreshFeedback(); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateFeedbackTimer() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => UpdateFeedbackTimer()
+L000025 |         Loaded += (_, _) => UpdateFeedbackTimer(); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: _feedbackTimer.Stop() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Unloaded += (_, _) => _feedbackTimer.Stop()
+L000026 |         Unloaded += (_, _) => _feedbackTimer.Stop(); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 .ctor.
+L000027 |     } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSimpleCorrectionView.UpdateFeedbackTimer()
+L000029 |     private void UpdateFeedbackTimer() ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 UpdateFeedbackTimer.
+L000030 |     { ⟦EOL⟧
+// 해설 L31: 조건에 따라 분기합니다: if (IsLoaded && DataContext is CSimpleCorrectionPanel { IsRough: true } panel)
+L000031 |         if (IsLoaded && DataContext is CSimpleCorrectionPanel { IsRough: true } panel) ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.RefreshFeedback() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _feedbackTimer.Start()
+L000032 |         { panel.RefreshFeedback(); _feedbackTimer.Start(); } ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: _feedbackTimer.Stop() / 앞 조건이 거짓인 경로입니다: else
+L000033 |         else _feedbackTimer.Stop(); ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 UpdateFeedbackTimer.
+L000034 |     } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSimpleCorrectionView.OpenCorrectionInput(object, MouseButtonEventArgs)
+L000036 |     private void OpenCorrectionInput(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 OpenCorrectionInput.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: e.Handled = true / 조건에 따라 분기합니다: if (DataContext is CSimpleCorrectionPanel { IsOffsetOperationRunning: true }) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000038 |         if (DataContext is CSimpleCorrectionPanel { IsOffsetOperationRunning: true }) { e.Handled = true; return; } ⟦EOL⟧
+// 해설 L39: 조건에 따라 분기합니다: if (sender is not TextBox { DataContext: CSimpleCorrectionInput row } input) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000039 |         if (sender is not TextBox { DataContext: CSimpleCorrectionInput row } input) return; ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: e.Handled = true
+L000040 |         e.Handled = true; ⟦EOL⟧
+// 해설 L41: 지역 변수를 선언합니다: var isX = input.Tag as string == "X"; / 변수의 초기값을 지정합니다: isX = input.Tag as string == "X"
+L000041 |         var isX = input.Tag as string == "X"; ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{row.Title} · {(isX ? "X" : "Y")} (mm)", isX ? row.InputX : row.InputY, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } / 조건에 따라 결과식을 선택합니다: isX ? "X" : "Y" / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{row.Title} · {(isX ? "X" : "Y")} (mm)", isX ? row.InputX : row.InputY, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{row.Title} · {(isX ? "X" : "Y")} (mm)", isX ? row.InputX : row.I
+L000042 |         var dialog = new CValueInputDialog($"{row.Title} · {(isX ? "X" : "Y")} (mm)", ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) / 조건에 따라 결과식을 선택합니다: isX ? row.InputX : row.InputY
+L000043 |             isX ? row.InputX : row.InputY, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000044 |         if (dialog.ShowDialog() != true) return; ⟦EOL⟧
+// 해설 L45: 값을 대상에 대입합니다: row.InputX = dialog.ResultValue / 조건에 따라 분기합니다: if (isX)
+L000045 |         if (isX) row.InputX = dialog.ResultValue; ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: row.InputY = dialog.ResultValue / 앞 조건이 거짓인 경로입니다: else
+L000046 |         else row.InputY = dialog.ResultValue; ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 OpenCorrectionInput.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview()
+L000049 |     private void PreviewSizeChanged(object sender, SizeChangedEventArgs e) => ResizePreview(); ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSimpleCorrectionView.PreviewScrollChanged(object, ScrollChangedEventArgs)
+L000050 |     private void PreviewScrollChanged(object sender, ScrollChangedEventArgs e) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 PreviewScrollChanged.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview() / 조건에 따라 분기합니다: if (e.ViewportWidthChange != 0 || e.ViewportHeightChange != 0)
+L000052 |         if (e.ViewportWidthChange != 0 || e.ViewportHeightChange != 0) ResizePreview(); ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 PreviewScrollChanged.
+L000053 |     } ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CSimpleCorrectionView.ResizePreview()
+L000054 |     private void ResizePreview() ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ResizePreview.
+L000055 |     { ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (DataContext is CSimpleCorrectionPanel panel && SimplePreviewScroll is not null)
+L000056 |         if (DataContext is CSimpleCorrectionPanel panel && SimplePreviewScroll is not null) ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ResizePreview(SimplePreviewScroll.ViewportWidth > 0 ? SimplePreviewScroll.ViewportWidth : SimplePreviewScroll.ActualWidth, SimplePreviewScroll.ViewportHeight > 0 ? SimplePreviewScroll.ViewportHeight : SimplePreview… / 조건에 따라 결과식을 선택합니다: SimplePreviewScroll.ViewportWidth > 0 ? SimplePreviewScroll.ViewportWidth : SimplePreviewScroll.ActualWidth
+L000057 |             panel.ResizePreview(SimplePreviewScroll.ViewportWidth > 0 ? SimplePreviewScroll.ViewportWidth : SimplePreviewScroll.ActualWidth, ⟦EOL⟧
+// 해설 L58: 조건에 따라 결과식을 선택합니다: SimplePreviewScroll.ViewportHeight > 0 ? SimplePreviewScroll.ViewportHeight : SimplePreviewScroll.ActualHeight
+L000058 |                 SimplePreviewScroll.ViewportHeight > 0 ? SimplePreviewScroll.ViewportHeight : SimplePreviewScroll.ActualHeight); ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 ResizePreview.
+L000059 |     } ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다.
+L000060 | } ⟦EOL⟧

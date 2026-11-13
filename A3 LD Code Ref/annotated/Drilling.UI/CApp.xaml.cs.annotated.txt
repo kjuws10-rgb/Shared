@@ -1,0 +1,347 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CApp.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.InteropServices;
+L000001 | using System.Runtime.InteropServices; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Interop;
+L000004 | using System.Windows.Interop; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000005 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000006 | using Drilling.Common.Log; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000008 | namespace Drilling.UI; ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CApp : Application
+L000009 | public partial class CApp : Application ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: MonitorDefaultToNearest = 0x00000002
+L000011 |     private const uint MonitorDefaultToNearest = 0x00000002; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · DispatcherTimer Drilling.UI.CApp._monitorFitTimer
+L000012 |     private readonly DispatcherTimer _monitorFitTimer; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CApp._isFittingMainWindow
+L000013 |     private bool _isFittingMainWindow; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView? Drilling.UI.CApp._rootView
+L000014 |     private CRootView? _rootView; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CApp.CApp()
+L000015 |     public CApp() ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 .ctor.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: _monitorFitTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(450) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(450) }
+L000017 |         _monitorFitTimer = new DispatcherTimer ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 .ctor.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(450) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(450)
+L000019 |             Interval = TimeSpan.FromMilliseconds(450) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 .ctor.
+L000020 |         }; ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 .ctor.
+L000021 |     } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.OnStartup(StartupEventArgs)
+L000023 |     protected override void OnStartup(StartupEventArgs e) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 OnStartup.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterExceptionHandlers()
+L000025 |         RegisterExceptionHandlers(); ⟦EOL⟧
+// 해설 L26: 예외 처리 범위입니다: try
+L000026 |         try ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 OnStartup.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnStartup(e)
+L000028 |             base.OnStartup(e); ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("PROGRAM_OPEN", "Application startup started.")
+L000029 |             CProgramOpenLog.Write("PROGRAM_OPEN", "Application startup started."); ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadComponent(new Uri("CRootView.xaml", UriKind.Relative)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Uri("CRootView.xaml", UriKind.Relative) / 지역 변수를 선언합니다: var window = (Window)LoadComponent(new Uri("CRootView.xaml", UriKind.Relative)); / 변수의 초기값을 지정합니다: window = (Window)LoadComponent(new Uri("CRootView.xaml", UriKind.Relative))
+L000030 |             var window = (Window)LoadComponent(new Uri("CRootView.xaml", UriKind.Relative)); ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: _rootView = CAppStartup.CreateMainViewModel() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CAppStartup.CreateMainViewModel()
+L000031 |             _rootView = CAppStartup.CreateMainViewModel(); ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: window.DataContext = _rootView
+L000032 |             window.DataContext = _rootView; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConfigureMainWindowBounds(window)
+L000033 |             ConfigureMainWindowBounds(window); ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: MainWindow = window
+L000034 |             MainWindow = window; ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: window.Show()
+L000035 |             window.Show(); ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: _rootView.StartProtectWindowRequestNotice(window)
+L000036 |             _rootView.StartProtectWindowRequestNotice(window); ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("PROGRAM_OPEN", "Main window opened.")
+L000037 |             CProgramOpenLog.Write("PROGRAM_OPEN", "Main window opened."); ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 OnStartup.
+L000038 |         } ⟦EOL⟧
+// 해설 L39: 지정 예외를 처리합니다: catch (Exception exception)
+L000039 |         catch (Exception exception) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 OnStartup.
+L000040 |         { ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("PROGRAM_OPEN_FAILED", exception)
+L000041 |             CProgramOpenLog.Write("PROGRAM_OPEN_FAILED", exception); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show($"프로그램을 시작하지 못했습니다.{Environment.NewLine}{exception.Message}{Environment.NewLine}{Environment.NewLine}로그: {CProgramOpenLog.LogPath}", "Laser Drilling", MessageBoxButton.OK, MessageBoxImage.Error)
+L000042 |             MessageBox.Show($"프로그램을 시작하지 못했습니다.{Environment.NewLine}{exception.Message}{Environment.NewLine}{Environment.NewLine}로그: {CProgramOpenLog.LogPath}", "Laser Drilling", MessageBoxButton.OK, MessageBoxImage.Error); ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: Shutdown(-1)
+L000043 |             Shutdown(-1); ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 OnStartup.
+L000044 |         } ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 OnStartup.
+L000045 |     } ⟦EOL⟧
+L000046 |  ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.OnExit(ExitEventArgs)
+L000047 |     protected override void OnExit(ExitEventArgs e) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 OnExit.
+L000048 |     { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: .StopAutomationStatusAcquisition()
+L000049 |         _rootView?.StopAutomationStatusAcquisition(); ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnExit(e)
+L000050 |         base.OnExit(e); ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 OnExit.
+L000051 |     } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.RegisterExceptionHandlers()
+L000053 |     private void RegisterExceptionHandlers() ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 RegisterExceptionHandlers.
+L000054 |     { ⟦EOL⟧
+// 해설 L55: 복합 대입 또는 이벤트 구독/해지 표현입니다: DispatcherUnhandledException += (_, args) => { CProgramOpenLog.Write("DISPATCHER_UNHANDLED", args.Exception); }
+L000055 |         DispatcherUnhandledException += (_, args) => ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 RegisterExceptionHandlers.
+L000056 |         { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("DISPATCHER_UNHANDLED", args.Exception)
+L000057 |             CProgramOpenLog.Write("DISPATCHER_UNHANDLED", args.Exception); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 RegisterExceptionHandlers.
+L000058 |         }; ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void HandleUnhandledException(object, System.UnhandledExceptionEventArgs)
+L000059 |         void HandleUnhandledException(object arg0, global::System.UnhandledExceptionEventArgs args) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 HandleUnhandledException.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 지역 변수를 선언합니다: var exception = args.ExceptionObject as Exception; / 변수의 초기값을 지정합니다: exception = args.ExceptionObject as Exception
+L000061 |             var exception = args.ExceptionObject as Exception; ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("APPDOMAIN_UNHANDLED", exception?.ToString() ?? args.ExceptionObject?.ToString() ?? "Unknown unhandled exception.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()
+L000062 |             CProgramOpenLog.Write("APPDOMAIN_UNHANDLED", exception?.ToString() ?? args.ExceptionObject?.ToString() ?? "Unknown unhandled exception."); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 HandleUnhandledException.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 복합 대입 또는 이벤트 구독/해지 표현입니다: AppDomain.CurrentDomain.UnhandledException += HandleUnhandledException
+L000065 |         AppDomain.CurrentDomain.UnhandledException += HandleUnhandledException; ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · void HandleUnobservedTaskException(object?, System.Threading.Tasks.UnobservedTaskExceptionEventArgs)
+L000066 |         void HandleUnobservedTaskException(object? arg0, global::System.Threading.Tasks.UnobservedTaskExceptionEventArgs args) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 HandleUnobservedTaskException.
+L000067 |         { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("TASK_UNOBSERVED", args.Exception)
+L000068 |             CProgramOpenLog.Write("TASK_UNOBSERVED", args.Exception); ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 HandleUnobservedTaskException.
+L000069 |         } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 복합 대입 또는 이벤트 구독/해지 표현입니다: TaskScheduler.UnobservedTaskException += HandleUnobservedTaskException
+L000071 |         TaskScheduler.UnobservedTaskException += HandleUnobservedTaskException; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 RegisterExceptionHandlers.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.ConfigureMainWindowBounds(Window)
+L000074 |     private void ConfigureMainWindowBounds(Window window) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: window.ResizeMode = ResizeMode.CanMinimize
+L000076 |         window.ResizeMode = ResizeMode.CanMinimize; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: window.WindowStartupLocation = WindowStartupLocation.CenterScreen
+L000077 |         window.WindowStartupLocation = WindowStartupLocation.CenterScreen; ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: window.WindowState = WindowState.Maximized
+L000078 |         window.WindowState = WindowState.Maximized; ⟦EOL⟧
+// 해설 L79: 복합 대입 또는 이벤트 구독/해지 표현입니다: _monitorFitTimer.Tick += (_, _) => { _monitorFitTimer.Stop(); if (Mouse.LeftButton == MouseButtonState.Pressed) { ScheduleMainWindowFit(window); return; } FitMainWindowToCurrentMonitor(window); }
+L000079 |         _monitorFitTimer.Tick += (_, _) => ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000080 |         { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Stop()
+L000081 |             _monitorFitTimer.Stop(); ⟦EOL⟧
+// 해설 L82: 조건에 따라 분기합니다: if (Mouse.LeftButton == MouseButtonState.Pressed)
+L000082 |             if (Mouse.LeftButton == MouseButtonState.Pressed) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000083 |             { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window)
+L000084 |                 ScheduleMainWindowFit(window); ⟦EOL⟧
+// 해설 L85: 호출자에게 값 또는 제어를 반환합니다: return;
+L000085 |                 return; ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000086 |             } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: FitMainWindowToCurrentMonitor(window)
+L000088 |             FitMainWindowToCurrentMonitor(window); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000089 |         }; ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: FitMainWindowToCurrentMonitor(window) / 복합 대입 또는 이벤트 구독/해지 표현입니다: window.SourceInitialized += (_, _) => FitMainWindowToCurrentMonitor(window)
+L000090 |         window.SourceInitialized += (_, _) => FitMainWindowToCurrentMonitor(window); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window) / 복합 대입 또는 이벤트 구독/해지 표현입니다: window.LocationChanged += (_, _) => ScheduleMainWindowFit(window)
+L000091 |         window.LocationChanged += (_, _) => ScheduleMainWindowFit(window); ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: ScheduleMainWindowFit(window) / 복합 대입 또는 이벤트 구독/해지 표현입니다: window.StateChanged += (_, _) => ScheduleMainWindowFit(window)
+L000092 |         window.StateChanged += (_, _) => ScheduleMainWindowFit(window); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ConfigureMainWindowBounds.
+L000093 |     } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.ScheduleMainWindowFit(Window)
+L000095 |     private void ScheduleMainWindowFit(Window window) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ScheduleMainWindowFit.
+L000096 |     { ⟦EOL⟧
+// 해설 L97: 조건에 따라 분기합니다: if (_isFittingMainWindow || window.WindowState == WindowState.Minimized)
+L000097 |         if (_isFittingMainWindow || window.WindowState == WindowState.Minimized) ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 ScheduleMainWindowFit.
+L000098 |         { ⟦EOL⟧
+// 해설 L99: 호출자에게 값 또는 제어를 반환합니다: return;
+L000099 |             return; ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 ScheduleMainWindowFit.
+L000100 |         } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Stop()
+L000102 |         _monitorFitTimer.Stop(); ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: _monitorFitTimer.Start()
+L000103 |         _monitorFitTimer.Start(); ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 ScheduleMainWindowFit.
+L000104 |     } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CApp.FitMainWindowToCurrentMonitor(Window)
+L000106 |     private void FitMainWindowToCurrentMonitor(Window window) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000107 |     { ⟦EOL⟧
+// 해설 L108: 조건에 따라 분기합니다: if (_isFittingMainWindow || window.WindowState == WindowState.Minimized)
+L000108 |         if (_isFittingMainWindow || window.WindowState == WindowState.Minimized) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000109 |         { ⟦EOL⟧
+// 해설 L110: 호출자에게 값 또는 제어를 반환합니다: return;
+L000110 |             return; ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000111 |         } ⟦EOL⟧
+L000112 |  ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: new WindowInteropHelper(window) / 지역 변수를 선언합니다: var handle = new WindowInteropHelper(window).Handle; / 변수의 초기값을 지정합니다: handle = new WindowInteropHelper(window).Handle
+L000113 |         var handle = new WindowInteropHelper(window).Handle; ⟦EOL⟧
+// 해설 L114: 조건에 따라 분기합니다: if (handle == IntPtr.Zero)
+L000114 |         if (handle == IntPtr.Zero) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000115 |         { ⟦EOL⟧
+// 해설 L116: 호출자에게 값 또는 제어를 반환합니다: return;
+L000116 |             return; ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000117 |         } ⟦EOL⟧
+L000118 |  ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: MonitorFromWindow(handle, MonitorDefaultToNearest) / 지역 변수를 선언합니다: var monitor = MonitorFromWindow(handle, MonitorDefaultToNearest); / 변수의 초기값을 지정합니다: monitor = MonitorFromWindow(handle, MonitorDefaultToNearest)
+L000119 |         var monitor = MonitorFromWindow(handle, MonitorDefaultToNearest); ⟦EOL⟧
+// 해설 L120: 조건에 따라 분기합니다: if (monitor == IntPtr.Zero)
+L000120 |         if (monitor == IntPtr.Zero) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000121 |         { ⟦EOL⟧
+// 해설 L122: 호출자에게 값 또는 제어를 반환합니다: return;
+L000122 |             return; ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000123 |         } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new MONITORINFO { cbSize = Marshal.SizeOf<MONITORINFO>() } / 지역 변수를 선언합니다: var monitorInfo = new MONITORINFO { cbSize = Marshal.SizeOf<MONITORINFO>() }; / 변수의 초기값을 지정합니다: monitorInfo = new MONITORINFO { cbSize = Marshal.SizeOf<MONITORINFO>() }
+L000125 |         var monitorInfo = new MONITORINFO ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000126 |         { ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: cbSize = Marshal.SizeOf<MONITORINFO>() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Marshal.SizeOf<MONITORINFO>()
+L000127 |             cbSize = Marshal.SizeOf<MONITORINFO>() ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000128 |         }; ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorInfo(monitor, ref monitorInfo) / 조건에 따라 분기합니다: if (!GetMonitorInfo(monitor, ref monitorInfo))
+L000129 |         if (!GetMonitorInfo(monitor, ref monitorInfo)) ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000130 |         { ⟦EOL⟧
+// 해설 L131: 호출자에게 값 또는 제어를 반환합니다: return;
+L000131 |             return; ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000132 |         } ⟦EOL⟧
+L000133 |  ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: PresentationSource.FromVisual(window) / 지역 변수를 선언합니다: var source = PresentationSource.FromVisual(window); / 변수의 초기값을 지정합니다: source = PresentationSource.FromVisual(window)
+L000134 |         var source = PresentationSource.FromVisual(window); ⟦EOL⟧
+// 해설 L135: 지역 변수를 선언합니다: var transform = source?.CompositionTarget?.TransformFromDevice; / 변수의 초기값을 지정합니다: transform = source?.CompositionTarget?.TransformFromDevice
+L000135 |         var transform = source?.CompositionTarget?.TransformFromDevice; ⟦EOL⟧
+// 해설 L136: 조건에 따라 분기합니다: if (transform is null)
+L000136 |         if (transform is null) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000137 |         { ⟦EOL⟧
+// 해설 L138: 호출자에게 값 또는 제어를 반환합니다: return;
+L000138 |             return; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000139 |         } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top) / 지역 변수를 선언합니다: var topLeft = transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top)); / 변수의 초기값을 지정합니다: topLeft = transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top))
+L000141 |         var topLeft = transform.Value.Transform(new Point(monitorInfo.rcWork.Left, monitorInfo.rcWork.Top)); ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom) / 지역 변수를 선언합니다: var bottomRight = transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom)); / 변수의 초기값을 지정합니다: bottomRight = transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom))
+L000142 |         var bottomRight = transform.Value.Transform(new Point(monitorInfo.rcWork.Right, monitorInfo.rcWork.Bottom)); ⟦EOL⟧
+// 해설 L143: 예외 처리 범위입니다: try
+L000143 |         try ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000144 |         { ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: _isFittingMainWindow = true
+L000145 |             _isFittingMainWindow = true; ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: window.WindowState = WindowState.Normal
+L000146 |             window.WindowState = WindowState.Normal; ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: window.Left = topLeft.X
+L000147 |             window.Left = topLeft.X; ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: window.Top = topLeft.Y
+L000148 |             window.Top = topLeft.Y; ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: window.Width = Math.Max(1, bottomRight.X - topLeft.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, bottomRight.X - topLeft.X)
+L000149 |             window.Width = Math.Max(1, bottomRight.X - topLeft.X); ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: window.Height = Math.Max(1, bottomRight.Y - topLeft.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, bottomRight.Y - topLeft.Y)
+L000150 |             window.Height = Math.Max(1, bottomRight.Y - topLeft.Y); ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: window.WindowState = WindowState.Maximized
+L000151 |             window.WindowState = WindowState.Maximized; ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000152 |         } ⟦EOL⟧
+// 해설 L153: 종료 정리 구간입니다: finally
+L000153 |         finally ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: _isFittingMainWindow = false
+L000155 |             _isFittingMainWindow = false; ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000156 |         } ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 FitMainWindowToCurrentMonitor.
+L000157 |     } ⟦EOL⟧
+L000158 |  ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · nint Drilling.UI.CApp.MonitorFromWindow(nint, uint)
+L000159 |     [DllImport("user32.dll")] ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · nint Drilling.UI.CApp.MonitorFromWindow(nint, uint)
+L000160 |     private static extern IntPtr MonitorFromWindow(IntPtr hwnd, uint dwFlags); ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CApp.GetMonitorInfo(nint, ref Drilling.UI.CApp.MONITORINFO)
+L000161 |     [DllImport("user32.dll", SetLastError = true)] ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CApp.GetMonitorInfo(nint, ref Drilling.UI.CApp.MONITORINFO)
+L000162 |     private static extern bool GetMonitorInfo(IntPtr hMonitor, ref MONITORINFO lpmi); ⟦EOL⟧
+// 해설 L163: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000163 |     [StructLayout(LayoutKind.Sequential)] ⟦EOL⟧
+// 해설 L164: 타입의 구조/상속 선언입니다: private struct MONITORINFO
+L000164 |     private struct MONITORINFO ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다.
+L000165 |     { ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CApp.MONITORINFO.cbSize
+L000166 |         public int cbSize; ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcMonitor
+L000167 |         public RECT rcMonitor; ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CApp.RECT Drilling.UI.CApp.MONITORINFO.rcWork
+L000168 |         public RECT rcWork; ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · uint Drilling.UI.CApp.MONITORINFO.dwFlags
+L000169 |         public uint dwFlags; ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다.
+L000170 |     } ⟦EOL⟧
+L000171 |  ⟦EOL⟧
+// 해설 L172: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000172 |     [StructLayout(LayoutKind.Sequential)] ⟦EOL⟧
+// 해설 L173: 타입의 구조/상속 선언입니다: private struct RECT
+L000173 |     private struct RECT ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다.
+L000174 |     { ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CApp.RECT.Left
+L000175 |         public int Left; ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CApp.RECT.Top
+L000176 |         public int Top; ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CApp.RECT.Right
+L000177 |         public int Right; ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CApp.RECT.Bottom
+L000178 |         public int Bottom; ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다.
+L000179 |     } ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다.
+L000180 | } ⟦EOL⟧

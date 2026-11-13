@@ -1,0 +1,384 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Config/JHMI_RCP.csv</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Config/JHMI_RCP.csv.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_RCP.csv">Git 원본</a></p><h1>Config/JHMI_RCP.csv</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>79a037d6427e2230b36485a5c8c1982fba6b6f25fbfe4b3cf3758ba482f34d18</td></tr>
+<tr><td>파일 분류</td><td>data_schema</td></tr>
+<tr><td>원본 크기/행</td><td>62,317 bytes / 356 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_RCP.csv">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>화면/장비의 데이터 항목 정의입니다. 키·형식·표시와 실제 소비 코드의 연결을 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/b067dd179decddb7466a.svg"></p>
+<h2>저장/설정 스키마 참고</h2>
+<p>실행 이력·측정 레코드는 문서에 전체 복제하지 않습니다. 행 수와 구조, 소비 코드 연결을 검토하기 위한 참고입니다. 첫 행이 실제 헤더인지는 해당 CSV 파서와 대조해야 합니다.</p>
+<table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody>
+<tr><td>레코드 수</td><td>356</td></tr>
+<tr><td>첫 행 필드 개수</td><td>16</td></tr>
+<tr><td>첫 행 컬럼 후보</td><td>TAB / GROUP / NAME / DISPLAY NAME / CIM NAME / DATA TYPE / UNIT / SHOW / USE / VALUE / SCALE / CHANGE LIMIT / MIN / MAX / DESCRIPTION / ORDER</td></tr>
+</tbody></table>
+<p>정의 항목 목록(인증 관련 값은 포함하지 않음):</p>
+<table><thead><tr><th>CSV 행</th><th>정의 키/형식</th></tr></thead><tbody>
+<tr><td>2</td><td>COMMON / COMMON / RECIPE_NAME / Recipe Name</td></tr>
+<tr><td>3</td><td>COMMON / COMMON / ONLINE_PPID_NAME / Online PPID Name</td></tr>
+<tr><td>4</td><td>COMMON / COMMON / MAX_CELL_NUMBER / Max Cell Number</td></tr>
+<tr><td>5</td><td>COMMON / REVIEW / REVIEW_TOLERANCE_X / Review Tolerance X</td></tr>
+<tr><td>6</td><td>COMMON / REVIEW / REVIEW_TOLERANCE_Y / Review Tolerance Y</td></tr>
+<tr><td>7</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK1_X / AK1 BaseX</td></tr>
+<tr><td>8</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK1_Y / AK1 BaseY</td></tr>
+<tr><td>9</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK2_X / AK2 BaseX</td></tr>
+<tr><td>10</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK2_Y / AK2 BaseY</td></tr>
+<tr><td>11</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK3_X / AK3 BaseX</td></tr>
+<tr><td>12</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK3_Y / AK3 BaseY</td></tr>
+<tr><td>13</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK4_X / AK4 BaseX</td></tr>
+<tr><td>14</td><td>COMMON / ALIGNBASE / ALIGNBASE_AK4_Y / AK4 BaseY</td></tr>
+<tr><td>15</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK1_X / DK1 BaseX</td></tr>
+<tr><td>16</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK1_Y / DK1 BaseY</td></tr>
+<tr><td>17</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK2_X / DK2 BaseX</td></tr>
+<tr><td>18</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK2_Y / DK2 BaseY</td></tr>
+<tr><td>19</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK3_X / DK3 BaseX</td></tr>
+<tr><td>20</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK3_Y / DK3 BaseY</td></tr>
+<tr><td>21</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK4_X / DK4 BaseX</td></tr>
+<tr><td>22</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK4_Y / DK4 BaseY</td></tr>
+<tr><td>23</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK5_X / DK5 BaseX</td></tr>
+<tr><td>24</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK5_Y / DK5 BaseY</td></tr>
+<tr><td>25</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK6_X / DK6 BaseX</td></tr>
+<tr><td>26</td><td>COMMON / ALIGNBASE / ALIGNBASE_DK6_Y / DK6 BaseY</td></tr>
+<tr><td>27</td><td>PROCESS / SCAN / GLASS_SIZE_X / Glass Size X</td></tr>
+<tr><td>28</td><td>PROCESS / SCAN / GLASS_SIZE_Y / Glass Size Y</td></tr>
+<tr><td>29</td><td>PROCESS / SCAN / STAGE_SPEED / Stage Speed</td></tr>
+<tr><td>30</td><td>PROCESS / SCAN / AK_MARGIN_X / AK Margin X</td></tr>
+<tr><td>31</td><td>PROCESS / SCAN / AK_MARGIN_Y / AK Margin Y</td></tr>
+<tr><td>32</td><td>PROCESS / SCAN / ESC_EDGE_TO_GLASS_EDGE / ESC Edge To Glass Edge</td></tr>
+<tr><td>33</td><td>PROCESS / SCAN / GLASS_CENTER_TO_SCANNER_CENTER / Glass Center To Scanner Center</td></tr>
+<tr><td>34</td><td>PROCESS / SCAN / REVIEW_CAMERA_ALIGN_KEY_POS_X / Review Camera Align Key Pos X</td></tr>
+<tr><td>35</td><td>PROCESS / SCAN / REVIEW_CAMERA_ALIGN_KEY_POS_Y / Review Camera Align Key Pos Y</td></tr>
+<tr><td>36</td><td>PROCESS / SCAN / DISTORTION_PAIR0_Y / Distortion Group 0 Y</td></tr>
+<tr><td>37</td><td>PROCESS / SCAN / DISTORTION_PAIR1_Y / Distortion Group 1 Y</td></tr>
+<tr><td>38</td><td>PROCESS / SCAN / DISTORTION_PAIR2_Y / Distortion Group 2 Y</td></tr>
+<tr><td>39</td><td>PROCESS / SCAN / SCAN_START_DELAY_LENGTH_Y / Scan Start Delay Length Y</td></tr>
+<tr><td>40</td><td>PROCESS / CELL / PIXEL_SIZE / Pixel Size</td></tr>
+<tr><td>41</td><td>PROCESS / CELL / MODEL1_NUM_OF_PIXEL_X / Model1 Pixel Count X</td></tr>
+<tr><td>42</td><td>PROCESS / CELL / MODEL1_NUM_OF_PIXEL_Y / Model1 Pixel Count Y</td></tr>
+<tr><td>43</td><td>PROCESS / CELL / MODEL2_NUM_OF_PIXEL_X / Model2 Pixel Count X</td></tr>
+<tr><td>44</td><td>PROCESS / CELL / MODEL2_NUM_OF_PIXEL_Y / Model2 Pixel Count Y</td></tr>
+<tr><td>45</td><td>PROCESS / CELL / MODEL3_NUM_OF_PIXEL_X / Model3 Pixel Count X</td></tr>
+<tr><td>46</td><td>PROCESS / CELL / MODEL3_NUM_OF_PIXEL_Y / Model3 Pixel Count Y</td></tr>
+<tr><td>47</td><td>PROCESS / CELL / MODEL4_NUM_OF_PIXEL_X / Model4 Pixel Count X</td></tr>
+<tr><td>48</td><td>PROCESS / CELL / MODEL4_NUM_OF_PIXEL_Y / Model4 Pixel Count Y</td></tr>
+<tr><td>49</td><td>PROCESS / CELL / MODEL5_NUM_OF_PIXEL_X / Model5 Pixel Count X</td></tr>
+<tr><td>50</td><td>PROCESS / CELL / MODEL5_NUM_OF_PIXEL_Y / Model5 Pixel Count Y</td></tr>
+<tr><td>51</td><td>PROCESS / CELL / MODEL1_PITCH / Model1 Pitch</td></tr>
+<tr><td>52</td><td>PROCESS / CELL / MODEL1_CHESS / Model1 Chess</td></tr>
+<tr><td>53</td><td>PROCESS / CELL / MODEL1_CHESS_TYPE / Model1 Chess Type</td></tr>
+<tr><td>54</td><td>PROCESS / CELL / MODEL2_PITCH / Model2 Pitch</td></tr>
+<tr><td>55</td><td>PROCESS / CELL / MODEL2_CHESS / Model2 Chess</td></tr>
+<tr><td>56</td><td>PROCESS / CELL / MODEL2_CHESS_TYPE / Model2 Chess Type</td></tr>
+<tr><td>57</td><td>PROCESS / CELL / MODEL3_PITCH / Model3 Pitch</td></tr>
+<tr><td>58</td><td>PROCESS / CELL / MODEL3_CHESS / Model3 Chess</td></tr>
+<tr><td>59</td><td>PROCESS / CELL / MODEL3_CHESS_TYPE / Model3 Chess Type</td></tr>
+<tr><td>60</td><td>PROCESS / CELL / MODEL4_PITCH / Model4 Pitch</td></tr>
+<tr><td>61</td><td>PROCESS / CELL / MODEL4_CHESS / Model4 Chess</td></tr>
+<tr><td>62</td><td>PROCESS / CELL / MODEL4_CHESS_TYPE / Model4 Chess Type</td></tr>
+<tr><td>63</td><td>PROCESS / CELL / MODEL5_PITCH / Model5 Pitch</td></tr>
+<tr><td>64</td><td>PROCESS / CELL / MODEL5_CHESS / Model5 Chess</td></tr>
+<tr><td>65</td><td>PROCESS / CELL / MODEL5_CHESS_TYPE / Model5 Chess Type</td></tr>
+<tr><td>66</td><td>PROCESS / CELL / SPLITED_BEAM_COUNT / DOE Beam Count</td></tr>
+<tr><td>67</td><td>PROCESS / CELL / CELL_ALIGN_TO_1ST_PIXEL_X / Align To 1St Pixel X</td></tr>
+<tr><td>68</td><td>PROCESS / CELL / CELL_ALIGN_TO_1ST_PIXEL_Y / Align To 1St Pixel Y</td></tr>
+<tr><td>69</td><td>PROCESS / CELL / CELL_ROTATION / Rotation</td></tr>
+<tr><td>70</td><td>PROCESS / CELL / CELL_MODEL_TYPE_COUNT / Cell Model Type Count</td></tr>
+<tr><td>71</td><td>PROCESS / CELL / CELL_MODEL_TYPE / Model Type</td></tr>
+<tr><td>72</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE_NUMBER / MODEL1_MASKING_HOLE_NUMBER</td></tr>
+<tr><td>73</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE1_X / MODEL1_MASKING_HOLE1_X</td></tr>
+<tr><td>74</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE1_Y / MODEL1_MASKING_HOLE1_Y</td></tr>
+<tr><td>75</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE2_X / MODEL1_MASKING_HOLE2_X</td></tr>
+<tr><td>76</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE2_Y / MODEL1_MASKING_HOLE2_Y</td></tr>
+<tr><td>77</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE3_X / MODEL1_MASKING_HOLE3_X</td></tr>
+<tr><td>78</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE3_Y / MODEL1_MASKING_HOLE3_Y</td></tr>
+<tr><td>79</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE1_SIZE_X / MODEL1_MASKING_HOLE1_SIZE_X</td></tr>
+<tr><td>80</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE1_SIZE_Y / MODEL1_MASKING_HOLE1_SIZE_Y</td></tr>
+<tr><td>81</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE2_SIZE_X / MODEL1_MASKING_HOLE2_SIZE_X</td></tr>
+<tr><td>82</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE2_SIZE_Y / MODEL1_MASKING_HOLE2_SIZE_Y</td></tr>
+<tr><td>83</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE3_SIZE_X / MODEL1_MASKING_HOLE3_SIZE_X</td></tr>
+<tr><td>84</td><td>PROCESS / HOLE MASKING / MODEL1_MASKING_HOLE3_SIZE_Y / MODEL1_MASKING_HOLE3_SIZE_Y</td></tr>
+<tr><td>85</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_UP_LEFT_ROUND_X / MODEL1_CELL_UP_LEFT_ROUND_X</td></tr>
+<tr><td>86</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_UP_LEFT_ROUND_Y / MODEL1_CELL_UP_LEFT_ROUND_Y</td></tr>
+<tr><td>87</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_UP_RIGHT_ROUND_X / MODEL1_CELL_UP_RIGHT_ROUND_X</td></tr>
+<tr><td>88</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_UP_RIGHT_ROUND_Y / MODEL1_CELL_UP_RIGHT_ROUND_Y</td></tr>
+<tr><td>89</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_DOWN_LEFT_ROUND_X / MODEL1_CELL_DOWN_LEFT_ROUND_X</td></tr>
+<tr><td>90</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_DOWN_LEFT_ROUND_Y / MODEL1_CELL_DOWN_LEFT_ROUND_Y</td></tr>
+<tr><td>91</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_DOWN_RIGHT_ROUND_X / MODEL1_CELL_DOWN_RIGHT_ROUND_X</td></tr>
+<tr><td>92</td><td>PROCESS / EDGE MASKING / MODEL1_CELL_DOWN_RIGHT_ROUND_Y / MODEL1_CELL_DOWN_RIGHT_ROUND_Y</td></tr>
+<tr><td>93</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE_NUMBER / MODEL2_MASKING_HOLE_NUMBER</td></tr>
+<tr><td>94</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE1_X / MODEL2_MASKING_HOLE1_X</td></tr>
+<tr><td>95</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE1_Y / MODEL2_MASKING_HOLE1_Y</td></tr>
+<tr><td>96</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE2_X / MODEL2_MASKING_HOLE2_X</td></tr>
+<tr><td>97</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE2_Y / MODEL2_MASKING_HOLE2_Y</td></tr>
+<tr><td>98</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE3_X / MODEL2_MASKING_HOLE3_X</td></tr>
+<tr><td>99</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE3_Y / MODEL2_MASKING_HOLE3_Y</td></tr>
+<tr><td>100</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE1_SIZE_X / MODEL2_MASKING_HOLE1_SIZE_X</td></tr>
+<tr><td>101</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE1_SIZE_Y / MODEL2_MASKING_HOLE1_SIZE_Y</td></tr>
+<tr><td>102</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE2_SIZE_X / MODEL2_MASKING_HOLE2_SIZE_X</td></tr>
+<tr><td>103</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE2_SIZE_Y / MODEL2_MASKING_HOLE2_SIZE_Y</td></tr>
+<tr><td>104</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE3_SIZE_X / MODEL2_MASKING_HOLE3_SIZE_X</td></tr>
+<tr><td>105</td><td>PROCESS / HOLE MASKING / MODEL2_MASKING_HOLE3_SIZE_Y / MODEL2_MASKING_HOLE3_SIZE_Y</td></tr>
+<tr><td>106</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_UP_LEFT_ROUND_X / MODEL2_CELL_UP_LEFT_ROUND_X</td></tr>
+<tr><td>107</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_UP_LEFT_ROUND_Y / MODEL2_CELL_UP_LEFT_ROUND_Y</td></tr>
+<tr><td>108</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_UP_RIGHT_ROUND_X / MODEL2_CELL_UP_RIGHT_ROUND_X</td></tr>
+<tr><td>109</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_UP_RIGHT_ROUND_Y / MODEL2_CELL_UP_RIGHT_ROUND_Y</td></tr>
+<tr><td>110</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_DOWN_LEFT_ROUND_X / MODEL2_CELL_DOWN_LEFT_ROUND_X</td></tr>
+<tr><td>111</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_DOWN_LEFT_ROUND_Y / MODEL2_CELL_DOWN_LEFT_ROUND_Y</td></tr>
+<tr><td>112</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_DOWN_RIGHT_ROUND_X / MODEL2_CELL_DOWN_RIGHT_ROUND_X</td></tr>
+<tr><td>113</td><td>PROCESS / EDGE MASKING / MODEL2_CELL_DOWN_RIGHT_ROUND_Y / MODEL2_CELL_DOWN_RIGHT_ROUND_Y</td></tr>
+<tr><td>114</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE_NUMBER / MODEL3_MASKING_HOLE_NUMBER</td></tr>
+<tr><td>115</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE1_X / MODEL3_MASKING_HOLE1_X</td></tr>
+<tr><td>116</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE1_Y / MODEL3_MASKING_HOLE1_Y</td></tr>
+<tr><td>117</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE2_X / MODEL3_MASKING_HOLE2_X</td></tr>
+<tr><td>118</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE2_Y / MODEL3_MASKING_HOLE2_Y</td></tr>
+<tr><td>119</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE3_X / MODEL3_MASKING_HOLE3_X</td></tr>
+<tr><td>120</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE3_Y / MODEL3_MASKING_HOLE3_Y</td></tr>
+<tr><td>121</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE1_SIZE_X / MODEL3_MASKING_HOLE1_SIZE_X</td></tr>
+<tr><td>122</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE1_SIZE_Y / MODEL3_MASKING_HOLE1_SIZE_Y</td></tr>
+<tr><td>123</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE2_SIZE_X / MODEL3_MASKING_HOLE2_SIZE_X</td></tr>
+<tr><td>124</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE2_SIZE_Y / MODEL3_MASKING_HOLE2_SIZE_Y</td></tr>
+<tr><td>125</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE3_SIZE_X / MODEL3_MASKING_HOLE3_SIZE_X</td></tr>
+<tr><td>126</td><td>PROCESS / HOLE MASKING / MODEL3_MASKING_HOLE3_SIZE_Y / MODEL3_MASKING_HOLE3_SIZE_Y</td></tr>
+<tr><td>127</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_UP_LEFT_ROUND_X / MODEL3_CELL_UP_LEFT_ROUND_X</td></tr>
+<tr><td>128</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_UP_LEFT_ROUND_Y / MODEL3_CELL_UP_LEFT_ROUND_Y</td></tr>
+<tr><td>129</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_UP_RIGHT_ROUND_X / MODEL3_CELL_UP_RIGHT_ROUND_X</td></tr>
+<tr><td>130</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_UP_RIGHT_ROUND_Y / MODEL3_CELL_UP_RIGHT_ROUND_Y</td></tr>
+<tr><td>131</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_DOWN_LEFT_ROUND_X / MODEL3_CELL_DOWN_LEFT_ROUND_X</td></tr>
+<tr><td>132</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_DOWN_LEFT_ROUND_Y / MODEL3_CELL_DOWN_LEFT_ROUND_Y</td></tr>
+<tr><td>133</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_DOWN_RIGHT_ROUND_X / MODEL3_CELL_DOWN_RIGHT_ROUND_X</td></tr>
+<tr><td>134</td><td>PROCESS / EDGE MASKING / MODEL3_CELL_DOWN_RIGHT_ROUND_Y / MODEL3_CELL_DOWN_RIGHT_ROUND_Y</td></tr>
+<tr><td>135</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE_NUMBER / MODEL4_MASKING_HOLE_NUMBER</td></tr>
+<tr><td>136</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE1_X / MODEL4_MASKING_HOLE1_X</td></tr>
+<tr><td>137</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE1_Y / MODEL4_MASKING_HOLE1_Y</td></tr>
+<tr><td>138</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE2_X / MODEL4_MASKING_HOLE2_X</td></tr>
+<tr><td>139</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE2_Y / MODEL4_MASKING_HOLE2_Y</td></tr>
+<tr><td>140</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE3_X / MODEL4_MASKING_HOLE3_X</td></tr>
+<tr><td>141</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE3_Y / MODEL4_MASKING_HOLE3_Y</td></tr>
+<tr><td>142</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE1_SIZE_X / MODEL4_MASKING_HOLE1_SIZE_X</td></tr>
+<tr><td>143</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE1_SIZE_Y / MODEL4_MASKING_HOLE1_SIZE_Y</td></tr>
+<tr><td>144</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE2_SIZE_X / MODEL4_MASKING_HOLE2_SIZE_X</td></tr>
+<tr><td>145</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE2_SIZE_Y / MODEL4_MASKING_HOLE2_SIZE_Y</td></tr>
+<tr><td>146</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE3_SIZE_X / MODEL4_MASKING_HOLE3_SIZE_X</td></tr>
+<tr><td>147</td><td>PROCESS / HOLE MASKING / MODEL4_MASKING_HOLE3_SIZE_Y / MODEL4_MASKING_HOLE3_SIZE_Y</td></tr>
+<tr><td>148</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_UP_LEFT_ROUND_X / MODEL4_CELL_UP_LEFT_ROUND_X</td></tr>
+<tr><td>149</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_UP_LEFT_ROUND_Y / MODEL4_CELL_UP_LEFT_ROUND_Y</td></tr>
+<tr><td>150</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_UP_RIGHT_ROUND_X / MODEL4_CELL_UP_RIGHT_ROUND_X</td></tr>
+<tr><td>151</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_UP_RIGHT_ROUND_Y / MODEL4_CELL_UP_RIGHT_ROUND_Y</td></tr>
+<tr><td>152</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_DOWN_LEFT_ROUND_X / MODEL4_CELL_DOWN_LEFT_ROUND_X</td></tr>
+<tr><td>153</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_DOWN_LEFT_ROUND_Y / MODEL4_CELL_DOWN_LEFT_ROUND_Y</td></tr>
+<tr><td>154</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_DOWN_RIGHT_ROUND_X / MODEL4_CELL_DOWN_RIGHT_ROUND_X</td></tr>
+<tr><td>155</td><td>PROCESS / EDGE MASKING / MODEL4_CELL_DOWN_RIGHT_ROUND_Y / MODEL4_CELL_DOWN_RIGHT_ROUND_Y</td></tr>
+<tr><td>156</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE_NUMBER / MODEL5_MASKING_HOLE_NUMBER</td></tr>
+<tr><td>157</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE1_X / MODEL5_MASKING_HOLE1_X</td></tr>
+<tr><td>158</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE1_Y / MODEL5_MASKING_HOLE1_Y</td></tr>
+<tr><td>159</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE2_X / MODEL5_MASKING_HOLE2_X</td></tr>
+<tr><td>160</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE2_Y / MODEL5_MASKING_HOLE2_Y</td></tr>
+<tr><td>161</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE3_X / MODEL5_MASKING_HOLE3_X</td></tr>
+<tr><td>162</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE3_Y / MODEL5_MASKING_HOLE3_Y</td></tr>
+<tr><td>163</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE1_SIZE_X / MODEL5_MASKING_HOLE1_SIZE_X</td></tr>
+<tr><td>164</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE1_SIZE_Y / MODEL5_MASKING_HOLE1_SIZE_Y</td></tr>
+<tr><td>165</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE2_SIZE_X / MODEL5_MASKING_HOLE2_SIZE_X</td></tr>
+<tr><td>166</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE2_SIZE_Y / MODEL5_MASKING_HOLE2_SIZE_Y</td></tr>
+<tr><td>167</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE3_SIZE_X / MODEL5_MASKING_HOLE3_SIZE_X</td></tr>
+<tr><td>168</td><td>PROCESS / HOLE MASKING / MODEL5_MASKING_HOLE3_SIZE_Y / MODEL5_MASKING_HOLE3_SIZE_Y</td></tr>
+<tr><td>169</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_UP_LEFT_ROUND_X / MODEL5_CELL_UP_LEFT_ROUND_X</td></tr>
+<tr><td>170</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_UP_LEFT_ROUND_Y / MODEL5_CELL_UP_LEFT_ROUND_Y</td></tr>
+<tr><td>171</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_UP_RIGHT_ROUND_X / MODEL5_CELL_UP_RIGHT_ROUND_X</td></tr>
+<tr><td>172</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_UP_RIGHT_ROUND_Y / MODEL5_CELL_UP_RIGHT_ROUND_Y</td></tr>
+<tr><td>173</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_DOWN_LEFT_ROUND_X / MODEL5_CELL_DOWN_LEFT_ROUND_X</td></tr>
+<tr><td>174</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_DOWN_LEFT_ROUND_Y / MODEL5_CELL_DOWN_LEFT_ROUND_Y</td></tr>
+<tr><td>175</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_DOWN_RIGHT_ROUND_X / MODEL5_CELL_DOWN_RIGHT_ROUND_X</td></tr>
+<tr><td>176</td><td>PROCESS / EDGE MASKING / MODEL5_CELL_DOWN_RIGHT_ROUND_Y / MODEL5_CELL_DOWN_RIGHT_ROUND_Y</td></tr>
+<tr><td>177</td><td>PROCESS / ProtectWindow / MAX_PROCESS_COUNT / Max Process Count</td></tr>
+<tr><td>178</td><td>PROCESS / ProtectWindow / CURRENT_PROCESS_COUNT / Current Process Count</td></tr>
+<tr><td>179</td><td>PROCESS / DEFENSE / ZERO_DEFENCE_REVIEW_POINT / Zero Defence Review Point</td></tr>
+<tr><td>180</td><td>HEAD / H01 / H01_LASER_POWER / Laser Power</td></tr>
+<tr><td>181</td><td>HEAD / H01 / H01_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>182</td><td>HEAD / H01 / H01_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>183</td><td>HEAD / H01 / H01_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>184</td><td>HEAD / H01 / H01_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>185</td><td>HEAD / H01 / H01_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>186</td><td>HEAD / H01 / H01_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>187</td><td>HEAD / H01 / H01_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>188</td><td>HEAD / H01 / H01_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>189</td><td>HEAD / H01 / H01_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>190</td><td>HEAD / H01 / H01_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>191</td><td>HEAD / H01 / H01_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>192</td><td>HEAD / H01 / H01_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>193</td><td>HEAD / H01 / H01_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>194</td><td>HEAD / H01 / H01_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>195</td><td>HEAD / H01 / H01_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>196</td><td>HEAD / H01 / H01_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>197</td><td>HEAD / H01 / H01_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>198</td><td>HEAD / H01 / H01_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>199</td><td>HEAD / H02 / H02_LASER_POWER / Laser Power</td></tr>
+<tr><td>200</td><td>HEAD / H02 / H02_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>201</td><td>HEAD / H02 / H02_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>202</td><td>HEAD / H02 / H02_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>203</td><td>HEAD / H02 / H02_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>204</td><td>HEAD / H02 / H02_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>205</td><td>HEAD / H02 / H02_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>206</td><td>HEAD / H02 / H02_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>207</td><td>HEAD / H02 / H02_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>208</td><td>HEAD / H02 / H02_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>209</td><td>HEAD / H02 / H02_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>210</td><td>HEAD / H02 / H02_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>211</td><td>HEAD / H02 / H02_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>212</td><td>HEAD / H02 / H02_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>213</td><td>HEAD / H02 / H02_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>214</td><td>HEAD / H02 / H02_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>215</td><td>HEAD / H02 / H02_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>216</td><td>HEAD / H02 / H02_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>217</td><td>HEAD / H02 / H02_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>218</td><td>HEAD / H03 / H03_LASER_POWER / Laser Power</td></tr>
+<tr><td>219</td><td>HEAD / H03 / H03_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>220</td><td>HEAD / H03 / H03_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>221</td><td>HEAD / H03 / H03_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>222</td><td>HEAD / H03 / H03_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>223</td><td>HEAD / H03 / H03_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>224</td><td>HEAD / H03 / H03_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>225</td><td>HEAD / H03 / H03_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>226</td><td>HEAD / H03 / H03_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>227</td><td>HEAD / H03 / H03_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>228</td><td>HEAD / H03 / H03_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>229</td><td>HEAD / H03 / H03_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>230</td><td>HEAD / H03 / H03_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>231</td><td>HEAD / H03 / H03_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>232</td><td>HEAD / H03 / H03_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>233</td><td>HEAD / H03 / H03_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>234</td><td>HEAD / H03 / H03_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>235</td><td>HEAD / H03 / H03_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>236</td><td>HEAD / H03 / H03_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>237</td><td>HEAD / H04 / H04_LASER_POWER / Laser Power</td></tr>
+<tr><td>238</td><td>HEAD / H04 / H04_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>239</td><td>HEAD / H04 / H04_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>240</td><td>HEAD / H04 / H04_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>241</td><td>HEAD / H04 / H04_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>242</td><td>HEAD / H04 / H04_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>243</td><td>HEAD / H04 / H04_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>244</td><td>HEAD / H04 / H04_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>245</td><td>HEAD / H04 / H04_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>246</td><td>HEAD / H04 / H04_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>247</td><td>HEAD / H04 / H04_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>248</td><td>HEAD / H04 / H04_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>249</td><td>HEAD / H04 / H04_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>250</td><td>HEAD / H04 / H04_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>251</td><td>HEAD / H04 / H04_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>252</td><td>HEAD / H04 / H04_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>253</td><td>HEAD / H04 / H04_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>254</td><td>HEAD / H04 / H04_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>255</td><td>HEAD / H04 / H04_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>256</td><td>HEAD / H05 / H05_LASER_POWER / Laser Power</td></tr>
+<tr><td>257</td><td>HEAD / H05 / H05_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>258</td><td>HEAD / H05 / H05_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>259</td><td>HEAD / H05 / H05_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>260</td><td>HEAD / H05 / H05_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>261</td><td>HEAD / H05 / H05_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>262</td><td>HEAD / H05 / H05_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>263</td><td>HEAD / H05 / H05_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>264</td><td>HEAD / H05 / H05_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>265</td><td>HEAD / H05 / H05_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>266</td><td>HEAD / H05 / H05_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>267</td><td>HEAD / H05 / H05_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>268</td><td>HEAD / H05 / H05_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>269</td><td>HEAD / H05 / H05_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>270</td><td>HEAD / H05 / H05_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>271</td><td>HEAD / H05 / H05_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>272</td><td>HEAD / H05 / H05_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>273</td><td>HEAD / H05 / H05_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>274</td><td>HEAD / H05 / H05_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>275</td><td>HEAD / H06 / H06_LASER_POWER / Laser Power</td></tr>
+<tr><td>276</td><td>HEAD / H06 / H06_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>277</td><td>HEAD / H06 / H06_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>278</td><td>HEAD / H06 / H06_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>279</td><td>HEAD / H06 / H06_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>280</td><td>HEAD / H06 / H06_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>281</td><td>HEAD / H06 / H06_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>282</td><td>HEAD / H06 / H06_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>283</td><td>HEAD / H06 / H06_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>284</td><td>HEAD / H06 / H06_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>285</td><td>HEAD / H06 / H06_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>286</td><td>HEAD / H06 / H06_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>287</td><td>HEAD / H06 / H06_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>288</td><td>HEAD / H06 / H06_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>289</td><td>HEAD / H06 / H06_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>290</td><td>HEAD / H06 / H06_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>291</td><td>HEAD / H06 / H06_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>292</td><td>HEAD / H06 / H06_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>293</td><td>HEAD / H06 / H06_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>294</td><td>HEAD / H07 / H07_LASER_POWER / Laser Power</td></tr>
+<tr><td>295</td><td>HEAD / H07 / H07_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>296</td><td>HEAD / H07 / H07_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>297</td><td>HEAD / H07 / H07_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>298</td><td>HEAD / H07 / H07_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>299</td><td>HEAD / H07 / H07_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>300</td><td>HEAD / H07 / H07_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>301</td><td>HEAD / H07 / H07_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>302</td><td>HEAD / H07 / H07_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>303</td><td>HEAD / H07 / H07_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>304</td><td>HEAD / H07 / H07_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>305</td><td>HEAD / H07 / H07_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>306</td><td>HEAD / H07 / H07_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>307</td><td>HEAD / H07 / H07_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>308</td><td>HEAD / H07 / H07_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>309</td><td>HEAD / H07 / H07_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>310</td><td>HEAD / H07 / H07_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>311</td><td>HEAD / H07 / H07_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>312</td><td>HEAD / H07 / H07_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>313</td><td>HEAD / H08 / H08_LASER_POWER / Laser Power</td></tr>
+<tr><td>314</td><td>HEAD / H08 / H08_LASER_FREQUENCY / Laser Frequency</td></tr>
+<tr><td>315</td><td>HEAD / H08 / H08_SHOT_COUNT / Shot Count</td></tr>
+<tr><td>316</td><td>HEAD / H08 / H08_ATTENUATOR_POSITION / Attenuator Position</td></tr>
+<tr><td>317</td><td>HEAD / H08 / H08_DEFAULT_OFFSET_X / Default Offset X</td></tr>
+<tr><td>318</td><td>HEAD / H08 / H08_DEFAULT_OFFSET_Y / Default Offset Y</td></tr>
+<tr><td>319</td><td>HEAD / H08 / H08_FIRST_BEAM_OFFSET_X / First Beam Offset X</td></tr>
+<tr><td>320</td><td>HEAD / H08 / H08_FIRST_BEAM_OFFSET_Y / First Beam Offset Y</td></tr>
+<tr><td>321</td><td>HEAD / H08 / H08_SCANNER_X_RAMP_RATE / Scanner X Ramp Rate</td></tr>
+<tr><td>322</td><td>HEAD / H08 / H08_SCANNER_Y_RAMP_RATE / Scanner Y Ramp Rate</td></tr>
+<tr><td>323</td><td>HEAD / H08 / H08_SCANNER_Z_RAMP_RATE / Scanner Z Ramp Rate</td></tr>
+<tr><td>324</td><td>HEAD / H08 / H08_SCANNER_JUMP_SPEED / Scanner Jump Speed</td></tr>
+<tr><td>325</td><td>HEAD / H08 / H08_SCANNER_Z_SPEED / Scanner Z Speed</td></tr>
+<tr><td>326</td><td>HEAD / H08 / H08_SCANNER_JUMP_DELAY / Scanner Jump Delay</td></tr>
+<tr><td>327</td><td>HEAD / H08 / H08_LASER_ON_DELAY / Laser On Delay</td></tr>
+<tr><td>328</td><td>HEAD / H08 / H08_LASER_OFF_DELAY / Laser Off Delay</td></tr>
+<tr><td>329</td><td>HEAD / H08 / H08_DOE_Z_POSITION / DOE Z Position</td></tr>
+<tr><td>330</td><td>HEAD / H08 / H08_BET_MAGNIFICATION / BET MAG</td></tr>
+<tr><td>331</td><td>HEAD / H08 / H08_BET_DIVERGENCE / BET DIV</td></tr>
+<tr><td>332</td><td>ZERO_DEFENCE / PLAN / ZERO_DEFENCE_POINT_COUNT / Point Count</td></tr>
+<tr><td>333</td><td>ZERO_DEFENCE / H01 / ZD_H01_CELL / Cell</td></tr>
+<tr><td>334</td><td>ZERO_DEFENCE / H01 / ZD_H01_SHOT / Shot</td></tr>
+<tr><td>335</td><td>ZERO_DEFENCE / H01 / ZD_H01_BEAM / Beam</td></tr>
+<tr><td>336</td><td>ZERO_DEFENCE / H02 / ZD_H02_CELL / Cell</td></tr>
+<tr><td>337</td><td>ZERO_DEFENCE / H02 / ZD_H02_SHOT / Shot</td></tr>
+<tr><td>338</td><td>ZERO_DEFENCE / H02 / ZD_H02_BEAM / Beam</td></tr>
+<tr><td>339</td><td>ZERO_DEFENCE / H03 / ZD_H03_CELL / Cell</td></tr>
+<tr><td>340</td><td>ZERO_DEFENCE / H03 / ZD_H03_SHOT / Shot</td></tr>
+<tr><td>341</td><td>ZERO_DEFENCE / H03 / ZD_H03_BEAM / Beam</td></tr>
+<tr><td>342</td><td>ZERO_DEFENCE / H04 / ZD_H04_CELL / Cell</td></tr>
+<tr><td>343</td><td>ZERO_DEFENCE / H04 / ZD_H04_SHOT / Shot</td></tr>
+<tr><td>344</td><td>ZERO_DEFENCE / H04 / ZD_H04_BEAM / Beam</td></tr>
+<tr><td>345</td><td>ZERO_DEFENCE / H05 / ZD_H05_CELL / Cell</td></tr>
+<tr><td>346</td><td>ZERO_DEFENCE / H05 / ZD_H05_SHOT / Shot</td></tr>
+<tr><td>347</td><td>ZERO_DEFENCE / H05 / ZD_H05_BEAM / Beam</td></tr>
+<tr><td>348</td><td>ZERO_DEFENCE / H06 / ZD_H06_CELL / Cell</td></tr>
+<tr><td>349</td><td>ZERO_DEFENCE / H06 / ZD_H06_SHOT / Shot</td></tr>
+<tr><td>350</td><td>ZERO_DEFENCE / H06 / ZD_H06_BEAM / Beam</td></tr>
+<tr><td>351</td><td>ZERO_DEFENCE / H07 / ZD_H07_CELL / Cell</td></tr>
+<tr><td>352</td><td>ZERO_DEFENCE / H07 / ZD_H07_SHOT / Shot</td></tr>
+<tr><td>353</td><td>ZERO_DEFENCE / H07 / ZD_H07_BEAM / Beam</td></tr>
+<tr><td>354</td><td>ZERO_DEFENCE / H08 / ZD_H08_CELL / Cell</td></tr>
+<tr><td>355</td><td>ZERO_DEFENCE / H08 / ZD_H08_SHOT / Shot</td></tr>
+<tr><td>356</td><td>ZERO_DEFENCE / H08 / ZD_H08_BEAM / Beam</td></tr>
+</tbody></table>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

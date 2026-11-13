@@ -1,0 +1,1437 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/ReviewOffset/CReviewOffsetFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000002 | using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000003 | using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000004 | using Drilling.File.Parser; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.ReviewOffset;
+L000006 | namespace Drilling.File.ReviewOffset; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public sealed class CReviewOffsetFile : CReviewOffsetFileBase
+L000008 | public sealed class CReviewOffsetFile : CReviewOffsetFileBase ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: ApplyHistoryDirectoryName = "_apply"
+L000010 |     private const string ApplyHistoryDirectoryName = "_apply"; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: ApplyHistoryFileName = "AppliedSources.csv"
+L000011 |     private const string ApplyHistoryFileName = "AppliedSources.csv"; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: Headers = [ "CELLID", "SHOTID", "REVIEWOFFSETX", "REVIEWOFFSETY", "COORDINATE_SPACE" ]
+L000012 |     private static readonly IReadOnlyList<string> Headers = ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000013 |     [ ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000014 |         "CELLID", ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000015 |         "SHOTID", ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000016 |         "REVIEWOFFSETX", ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000017 |         "REVIEWOFFSETY", ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000018 |         "COORDINATE_SPACE" ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.Headers
+L000019 |     ]; ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 변수의 초기값을 지정합니다: RequiredHeaderGroups = [ ["CELLID"], ["SHOTID"], ["REVIEWOFFSETX"], ["REVIEWOFFSETY"] ]
+L000021 |     private static readonly IReadOnlyList<IReadOnlyList<string>> RequiredHeaderGroups = ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000022 |     [ ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000023 |         ["CELLID"], ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000024 |         ["SHOTID"], ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000025 |         ["REVIEWOFFSETX"], ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000026 |         ["REVIEWOFFSETY"] ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.RequiredHeaderGroups
+L000027 |     ]; ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 변수의 초기값을 지정합니다: ApplyHistoryHeaders = [ "SOURCE_RESULT_FILE", "OFFSET_FILE", "APPLIED_AT" ]
+L000029 |     private static readonly IReadOnlyList<string> ApplyHistoryHeaders = ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryHeaders
+L000030 |     [ ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryHeaders
+L000031 |         "SOURCE_RESULT_FILE", ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryHeaders
+L000032 |         "OFFSET_FILE", ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryHeaders
+L000033 |         "APPLIED_AT" ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryHeaders
+L000034 |     ]; ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 변수의 초기값을 지정합니다: ApplyHistoryRequiredHeaderGroups = [ ["SOURCE_RESULT_FILE"], ["OFFSET_FILE"], ["APPLIED_AT"] ]
+L000036 |     private static readonly IReadOnlyList<IReadOnlyList<string>> ApplyHistoryRequiredHeaderGroups = ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryRequiredHeaderGroups
+L000037 |     [ ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryRequiredHeaderGroups
+L000038 |         ["SOURCE_RESULT_FILE"], ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryRequiredHeaderGroups
+L000039 |         ["OFFSET_FILE"], ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryRequiredHeaderGroups
+L000040 |         ["APPLIED_AT"] ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.ReviewOffset.CReviewOffsetFile.ApplyHistoryRequiredHeaderGroups
+L000041 |     ]; ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile._applicationRoot
+L000043 |     private readonly string _applicationRoot; ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile._recipeRoot
+L000044 |     private readonly string _recipeRoot; ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.DateTimeOffset> Drilling.File.ReviewOffset.CReviewOffsetFile._now
+L000045 |     private readonly Func<DateTimeOffset> _now; ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _fileLock = new(1, 1)
+L000046 |     private readonly SemaphoreSlim _fileLock = new(1, 1); ⟦EOL⟧
+// 해설 L47: 변수의 초기값을 지정합니다: _applyHistoryCache = new(StringComparer.OrdinalIgnoreCase)
+L000047 |     private readonly Dictionary<string, ST_APPLY_HISTORY_CACHE> _applyHistoryCache ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase)
+L000048 |         = new(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 타입의 구조/상속 선언입니다: private sealed record ST_APPLY_HISTORY_CACHE(
+L000050 |     private sealed record ST_APPLY_HISTORY_CACHE( ⟦EOL⟧
+// 해설 L51: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000051 |         long Length, ⟦EOL⟧
+// 해설 L52: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000052 |         DateTime LastWriteTimeUtc, ⟦EOL⟧
+// 해설 L53: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000053 |         IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> Rows); ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.File.ReviewOffset.CReviewOffsetFile.CReviewOffsetFile(string, System.Func<System.DateTimeOffset>?)
+L000055 |     public CReviewOffsetFile(string configRoot, Func<DateTimeOffset>? now = null) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 .ctor.
+L000056 |     { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(configRoot) / 지역 변수를 선언합니다: var normalizedConfigRoot = Path.GetFullPath(configRoot); / 변수의 초기값을 지정합니다: normalizedConfigRoot = Path.GetFullPath(configRoot)
+L000057 |         var normalizedConfigRoot = Path.GetFullPath(configRoot); ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: _applicationRoot = Directory.GetParent(normalizedConfigRoot)?.FullName ?? normalizedConfigRoot / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(normalizedConfigRoot)
+L000058 |         _applicationRoot = Directory.GetParent(normalizedConfigRoot)?.FullName ?? normalizedConfigRoot; ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: _recipeRoot = Path.Combine(normalizedConfigRoot, "RECIPE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(normalizedConfigRoot, "RECIPE")
+L000059 |         _recipeRoot = Path.Combine(normalizedConfigRoot, "RECIPE"); ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: _now = now ?? (() => DateTimeOffset.Now)
+L000060 |         _now = now ?? (() => DateTimeOffset.Now); ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 .ctor.
+L000061 |     } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.RootPath
+L000063 |     public override string RootPath => _recipeRoot; ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatest(string, System.Threading.CancellationToken)
+L000065 |     public override async Task<ST_REVIEW_OFFSET_FILE_DATA> LoadLatest( ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatest(string, System.Threading.CancellationToken)
+L000066 |         string recipeId, ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatest(string, System.Threading.CancellationToken)
+L000067 |         CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000068 |     { ⟦EOL⟧
+// 해설 L69: 비동기 완료를 기다립니다: await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken)
+L000069 |         await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L70: 예외 처리 범위입니다: try
+L000070 |         try ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadLatestCore(recipeId, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return LoadLatestCore(recipeId, cancellationToken);
+L000072 |             return LoadLatestCore(recipeId, cancellationToken); ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000073 |         } ⟦EOL⟧
+// 해설 L74: 종료 정리 구간입니다: finally
+L000074 |         finally ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000075 |         { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.Release()
+L000076 |             _fileLock.Release(); ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000077 |         } ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 LoadLatest.
+L000078 |     } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatestCore(string, System.Threading.CancellationToken)
+L000080 |     private ST_REVIEW_OFFSET_FILE_DATA LoadLatestCore( ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatestCore(string, System.Threading.CancellationToken)
+L000081 |         string recipeId, ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.LoadLatestCore(string, System.Threading.CancellationToken)
+L000082 |         CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000083 |     { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000084 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(recipeId) / 지역 변수를 선언합니다: var normalizedRecipeId = NormalizeRecipeId(recipeId); / 변수의 초기값을 지정합니다: normalizedRecipeId = NormalizeRecipeId(recipeId)
+L000086 |         var normalizedRecipeId = NormalizeRecipeId(recipeId); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalizedRecipeId) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalizedRecipeId))
+L000087 |         if (string.IsNullOrWhiteSpace(normalizedRecipeId)) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000088 |         { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: ST_REVIEW_OFFSET_FILE_DATA.Empty("") / 호출자에게 값 또는 제어를 반환합니다: return ST_REVIEW_OFFSET_FILE_DATA.Empty("");
+L000089 |             return ST_REVIEW_OFFSET_FILE_DATA.Empty(""); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000090 |         } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetRecipeOffsetDirectory(normalizedRecipeId) / 지역 변수를 선언합니다: var directory = GetRecipeOffsetDirectory(normalizedRecipeId); / 변수의 초기값을 지정합니다: directory = GetRecipeOffsetDirectory(normalizedRecipeId)
+L000092 |         var directory = GetRecipeOffsetDirectory(normalizedRecipeId); ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory) / 조건에 따라 분기합니다: if (!Directory.Exists(directory))
+L000093 |         if (!Directory.Exists(directory)) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId) / 호출자에게 값 또는 제어를 반환합니다: return ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId);
+L000095 |             return ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId); ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000096 |         } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory) / 지역 변수를 선언합니다: var latestFile = EnumerateActiveFiles(directory).FirstOrDefault(); / 변수의 초기값을 지정합니다: latestFile = EnumerateActiveFiles(directory).FirstOrDefault()
+L000098 |         var latestFile = EnumerateActiveFiles(directory).FirstOrDefault(); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(latestFile) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(latestFile))
+L000099 |         if (string.IsNullOrWhiteSpace(latestFile)) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000100 |         { ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId) / 호출자에게 값 또는 제어를 반환합니다: return ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId);
+L000101 |             return ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId); ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000102 |         } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: Load(normalizedRecipeId, latestFile, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return Load(normalizedRecipeId, latestFile, cancellationToken);
+L000104 |         return Load(normalizedRecipeId, latestFile, cancellationToken); ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 LoadLatestCore.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNew(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REV
+L000107 |     public override async Task<ST_REVIEW_OFFSET_FILE_DATA> SaveNew( ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNew(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REV
+L000108 |         string recipeId, ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNew(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REV
+L000109 |         IReadOnlyList<ST_REVIEW_OFFSET_ROW> rows, ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNew(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REV
+L000110 |         CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 SaveNew.
+L000111 |     { ⟦EOL⟧
+// 해설 L112: 비동기 완료를 기다립니다: await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken)
+L000112 |         await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L113: 예외 처리 범위입니다: try
+L000113 |         try ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 SaveNew.
+L000114 |         { ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveNewCore(recipeId, rows, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return SaveNewCore(recipeId, rows, cancellationToken);
+L000115 |             return SaveNewCore(recipeId, rows, cancellationToken); ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 SaveNew.
+L000116 |         } ⟦EOL⟧
+// 해설 L117: 종료 정리 구간입니다: finally
+L000117 |         finally ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 SaveNew.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.Release()
+L000119 |             _fileLock.Release(); ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 SaveNew.
+L000120 |         } ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 SaveNew.
+L000121 |     } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION?> Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplication(string, string, System.Threading.CancellationToken)
+L000123 |     public override async Task<ST_REVIEW_OFFSET_SOURCE_APPLICATION?> FindSourceApplication( ⟦EOL⟧
+// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION?> Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplication(string, string, System.Threading.CancellationToken)
+L000124 |         string recipeId, ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION?> Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplication(string, string, System.Threading.CancellationToken)
+L000125 |         string sourceResultFile, ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION?> Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplication(string, string, System.Threading.CancellationToken)
+L000126 |         CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000127 |     { ⟦EOL⟧
+// 해설 L128: 비동기 완료를 기다립니다: await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken)
+L000128 |         await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L129: 예외 처리 범위입니다: try
+L000129 |         try ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000130 |         { ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000131 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireRecipeId(recipeId, "Review Offset 적용 이력 조회") / 지역 변수를 선언합니다: var normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 적용 이력 조회"); / 변수의 초기값을 지정합니다: normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 적용 이력 조회")
+L000132 |             var normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 적용 이력 조회"); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSourceIdentity(sourceResultFile, requireExistingFile: false) / 지역 변수를 선언합니다: var sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: false); / 변수의 초기값을 지정합니다: sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: false)
+L000133 |             var sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: false); ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: _now() / 지역 변수를 선언합니다: var appliedAt = _now(); / 변수의 초기값을 지정합니다: appliedAt = _now()
+L000134 |             var appliedAt = _now(); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetApplyHistoryPath(normalizedRecipeId, appliedAt) / 지역 변수를 선언합니다: var historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt); / 변수의 초기값을 지정합니다: historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt)
+L000135 |             var historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadApplyHistory(historyPath, cancellationToken) / 지역 변수를 선언합니다: var historyRows = LoadApplyHistory(historyPath, cancellationToken); / 변수의 초기값을 지정합니다: historyRows = LoadApplyHistory(historyPath, cancellationToken)
+L000136 |             var historyRows = LoadApplyHistory(historyPath, cancellationToken); ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindSourceApplicationCore(sourceIdentity, historyRows) / 호출자에게 값 또는 제어를 반환합니다: return FindSourceApplicationCore(sourceIdentity, historyRows);
+L000137 |             return FindSourceApplicationCore(sourceIdentity, historyRows); ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000138 |         } ⟦EOL⟧
+// 해설 L139: 종료 정리 구간입니다: finally
+L000139 |         finally ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000140 |         { ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.Release()
+L000141 |             _fileLock.Release(); ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000142 |         } ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 FindSourceApplication.
+L000143 |     } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000145 |     public override async Task<ST_REVIEW_OFFSET_FILE_DATA> SaveNewFromSource( ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000146 |         string recipeId, ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000147 |         IReadOnlyList<ST_REVIEW_OFFSET_ROW> rows, ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000148 |         string sourceResultFile, ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000149 |         bool allowDuplicate, ⟦EOL⟧
+// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000150 |         CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000151 |     { ⟦EOL⟧
+// 해설 L152: 비동기 완료를 기다립니다: await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken)
+L000152 |         await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L153: 예외 처리 범위입니다: try
+L000153 |         try ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000155 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireRecipeId(recipeId, "Review Offset 저장") / 지역 변수를 선언합니다: var normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 저장"); / 변수의 초기값을 지정합니다: normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 저장")
+L000156 |             var normalizedRecipeId = RequireRecipeId(recipeId, "Review Offset 저장"); ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSourceIdentity(sourceResultFile, requireExistingFile: true) / 지역 변수를 선언합니다: var sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: true); / 변수의 초기값을 지정합니다: sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: true)
+L000157 |             var sourceIdentity = NormalizeSourceIdentity(sourceResultFile, requireExistingFile: true); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: _now() / 지역 변수를 선언합니다: var appliedAt = _now(); / 변수의 초기값을 지정합니다: appliedAt = _now()
+L000158 |             var appliedAt = _now(); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetApplyHistoryPath(normalizedRecipeId, appliedAt) / 지역 변수를 선언합니다: var historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt); / 변수의 초기값을 지정합니다: historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt)
+L000159 |             var historyPath = GetApplyHistoryPath(normalizedRecipeId, appliedAt); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadApplyHistory(historyPath, cancellationToken) / 지역 변수를 선언합니다: var historyRows = LoadApplyHistory(historyPath, cancellationToken); / 변수의 초기값을 지정합니다: historyRows = LoadApplyHistory(historyPath, cancellationToken)
+L000160 |             var historyRows = LoadApplyHistory(historyPath, cancellationToken); ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindSourceApplicationCore(sourceIdentity, historyRows) / 지역 변수를 선언합니다: var existing = FindSourceApplicationCore(sourceIdentity, historyRows); / 변수의 초기값을 지정합니다: existing = FindSourceApplicationCore(sourceIdentity, historyRows)
+L000161 |             var existing = FindSourceApplicationCore(sourceIdentity, historyRows); ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (existing is not null && !allowDuplicate)
+L000162 |             if (existing is not null && !allowDuplicate) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000163 |             { ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewOffsetDuplicateSourceException(existing) / 예외를 발생/전달합니다: throw new CReviewOffsetDuplicateSourceException(existing);
+L000164 |                 throw new CReviewOffsetDuplicateSourceException(existing); ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000165 |             } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveNewCore( normalizedRecipeId, rows, cancellationToken, appliedAt) / 지역 변수를 선언합니다: var saved = SaveNewCore( normalizedRecipeId, rows, cancellationToken, appliedAt); / 변수의 초기값을 지정합니다: saved = SaveNewCore( normalizedRecipeId, rows, cancellationToken, appliedAt)
+L000167 |             var saved = SaveNewCore( ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000168 |                 normalizedRecipeId, ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000169 |                 rows, ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000170 |                 cancellationToken, ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000171 |                 appliedAt); ⟦EOL⟧
+// 해설 L172: 예외 처리 범위입니다: try
+L000172 |             try ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000173 |             { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_SOURCE_APPLICATION( sourceIdentity, saved.FileName, appliedAt, Path.GetFullPath(historyPath)) / 지역 변수를 선언합니다: var application = new ST_REVIEW_OFFSET_SOURCE_APPLICATION( sourceIdentity, saved.FileName, appliedAt, Path.GetFullPath(historyPath)); / 변수의 초기값을 지정합니다: application = new ST_REVIEW_OFFSET_SOURCE_APPLICATION( sourceIdentity, saved.FileName, appliedAt, Path.GetFullPath(historyPath))
+L000174 |                 var application = new ST_REVIEW_OFFSET_SOURCE_APPLICATION( ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000175 |                     sourceIdentity, ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000176 |                     saved.FileName, ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000177 |                     appliedAt, ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(historyPath)
+L000178 |                     Path.GetFullPath(historyPath)); ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendApplyHistory( historyPath, historyRows, application, cancellationToken)
+L000179 |                 AppendApplyHistory( ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000180 |                     historyPath, ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000181 |                     historyRows, ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000182 |                     application, ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000183 |                     cancellationToken); ⟦EOL⟧
+// 해설 L184: 호출자에게 값 또는 제어를 반환합니다: return saved;
+L000184 |                 return saved; ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000185 |             } ⟦EOL⟧
+// 해설 L186: 지정 예외를 처리합니다: catch (Exception historyError)
+L000186 |             catch (Exception historyError) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000187 |             { ⟦EOL⟧
+// 해설 L188: 예외 처리 범위입니다: try
+L000188 |                 try ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000189 |                 { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(saved.FilePath) / 조건에 따라 분기합니다: if (System.IO.File.Exists(saved.FilePath))
+L000190 |                     if (System.IO.File.Exists(saved.FilePath)) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000191 |                     { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(saved.FilePath)
+L000192 |                         System.IO.File.Delete(saved.FilePath); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000193 |                     } ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000194 |                 } ⟦EOL⟧
+// 해설 L195: 지정 예외를 처리합니다: catch (Exception cleanupError)
+L000195 |                 catch (Exception cleanupError) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000196 |                 { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException( "Review Offset 적용 이력 저장 실패 후 신규 Offset 파일 정리에도 실패했습니다.", historyError, cleanupError) / 예외를 발생/전달합니다: throw new AggregateException( "Review Offset 적용 이력 저장 실패 후 신규 Offset 파일 정리에도 실패했습니다.", historyError, cleanupError);
+L000197 |                     throw new AggregateException( ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000198 |                         "Review Offset 적용 이력 저장 실패 후 신규 Offset 파일 정리에도 실패했습니다.", ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000199 |                         historyError, ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000200 |                         cleanupError); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000201 |                 } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException( "Review Offset 적용 이력을 저장하지 못해 신규 Offset 파일 생성을 취소했습니다.", historyError) / 예외를 발생/전달합니다: throw new IOException( "Review Offset 적용 이력을 저장하지 못해 신규 Offset 파일 생성을 취소했습니다.", historyError);
+L000203 |                 throw new IOException( ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000204 |                     "Review Offset 적용 이력을 저장하지 못해 신규 Offset 파일 생성을 취소했습니다.", ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA> Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewFromSource(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Rev
+L000205 |                     historyError); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000206 |             } ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000207 |         } ⟦EOL⟧
+// 해설 L208: 종료 정리 구간입니다: finally
+L000208 |         finally ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000209 |         { ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.Release()
+L000210 |             _fileLock.Release(); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000211 |         } ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 SaveNewFromSource.
+L000212 |     } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000214 |     private ST_REVIEW_OFFSET_FILE_DATA SaveNewCore( ⟦EOL⟧
+// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000215 |         string recipeId, ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000216 |         IReadOnlyList<ST_REVIEW_OFFSET_ROW> rows, ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000217 |         CancellationToken cancellationToken, ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000218 |         DateTimeOffset? fixedSavedAt = null) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000219 |     { ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000220 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+L000221 |  ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(recipeId) / 지역 변수를 선언합니다: var normalizedRecipeId = NormalizeRecipeId(recipeId); / 변수의 초기값을 지정합니다: normalizedRecipeId = NormalizeRecipeId(recipeId)
+L000222 |         var normalizedRecipeId = NormalizeRecipeId(recipeId); ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalizedRecipeId) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalizedRecipeId))
+L000223 |         if (string.IsNullOrWhiteSpace(normalizedRecipeId)) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000224 |         { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review Offset save failed. Recipe ID is empty.") / 예외를 발생/전달합니다: throw new InvalidDataException("Review Offset save failed. Recipe ID is empty.");
+L000225 |             throw new InvalidDataException("Review Offset save failed. Recipe ID is empty."); ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000226 |         } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewOffsetData.ValidateRows(rows, $"{normalizedRecipeId} (저장할 Review Offset)", token: cancellationToken) / 지역 변수를 선언합니다: var normalizedRows = CReviewOffsetData.ValidateRows(rows, $"{normalizedRecipeId} (저장할 Review Offset)", token: cancellationToken); / 변수의 초기값을 지정합니다: normalizedRows = CReviewOffsetData.ValidateRows(rows, $"{normalizedRecipeId} (저장할 Review Offset)", token: cancellationToken)
+L000228 |         var normalizedRows = CReviewOffsetData.ValidateRows(rows, ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000229 |             $"{normalizedRecipeId} (저장할 Review Offset)", token: cancellationToken); ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: _now() / 지역 변수를 선언합니다: var savedAt = fixedSavedAt ?? _now(); / 변수의 초기값을 지정합니다: savedAt = fixedSavedAt ?? _now()
+L000230 |         var savedAt = fixedSavedAt ?? _now(); ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetRecipeOffsetDirectory(normalizedRecipeId) / 지역 변수를 선언합니다: var directory = GetRecipeOffsetDirectory(normalizedRecipeId); / 변수의 초기값을 지정합니다: directory = GetRecipeOffsetDirectory(normalizedRecipeId)
+L000231 |         var directory = GetRecipeOffsetDirectory(normalizedRecipeId); ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(directory)
+L000232 |         Directory.CreateDirectory(directory); ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $".{Guid.NewGuid():N}.tmp") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); / 변수의 초기값을 지정합니다: temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp")
+L000233 |         var temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); ⟦EOL⟧
+// 해설 L234: 지역 변수를 선언합니다: string path;
+L000234 |         string path; ⟦EOL⟧
+// 해설 L235: 예외 처리 범위입니다: try
+L000235 |         try ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000236 |         { ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporary, Headers, normalizedRows.OrderBy(row => row.CellId) .ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).Select(ToCsvRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedRows.OrderBy(row => row.CellId) .ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).Select(ToCsvRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedRows.OrderBy(row => row.CellId) .ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedRows.OrderBy(row => row.CellId)
+L000237 |             CCsvParser.Write(temporary, Headers, normalizedRows.OrderBy(row => row.CellId) ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000238 |                 .ThenBy(row => row.ShotId, StringComparer.OrdinalIgnoreCase).Select(ToCsvRow)); ⟦EOL⟧
+// 해설 L239: 조건을 먼저 확인하며 반복합니다: while (true)
+L000239 |             while (true) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000240 |             { ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000241 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: path = Path.Combine(directory, $"{savedAt:yyyyMMdd_HHmmss_fff}_reviewoffset.csv") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $"{savedAt:yyyyMMdd_HHmmss_fff}_reviewoffset.csv")
+L000242 |                 path = Path.Combine(directory, $"{savedAt:yyyyMMdd_HHmmss_fff}_reviewoffset.csv"); ⟦EOL⟧
+// 해설 L243: 해당 반복/분기 구간을 종료합니다: break; / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporary, path, overwrite: false) / 예외 처리 범위입니다: try
+L000243 |                 try { System.IO.File.Move(temporary, path, overwrite: false); break; } ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: savedAt = savedAt.AddMilliseconds(1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 함수·델리게이트 또는 객체 생성자를 호출합니다: savedAt.AddMilliseconds(1) / 지정 예외를 처리합니다: catch (IOException) when (System.IO.File.Exists(path))
+L000244 |                 catch (IOException) when (System.IO.File.Exists(path)) { savedAt = savedAt.AddMilliseconds(1); } ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000245 |             } ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000246 |         } ⟦EOL⟧
+// 해설 L247: 종료 정리 구간입니다: finally
+L000247 |         finally ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000248 |         { ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporary) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporary) / 조건에 따라 분기합니다: if (System.IO.File.Exists(temporary))
+L000249 |             if (System.IO.File.Exists(temporary)) System.IO.File.Delete(temporary); ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000250 |         } ⟦EOL⟧
+L000251 |  ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_FILE_DATA( normalizedRecipeId, Path.GetFullPath(path), Path.GetFileName(path), savedAt, normalizedRows) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_FILE_DATA( normalizedRecipeId, Path.GetFullPath(path), Path.GetFileName(path), savedAt, normalizedRows);
+L000252 |         return new ST_REVIEW_OFFSET_FILE_DATA( ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000253 |             normalizedRecipeId, ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path)
+L000254 |             Path.GetFullPath(path), ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path)
+L000255 |             Path.GetFileName(path), ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000256 |             savedAt, ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.SaveNewCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_ROW>, System.T
+L000257 |             normalizedRows); ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 SaveNewCore.
+L000258 |     } ⟦EOL⟧
+L000259 |  ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000260 |     public override async Task<ST_REVIEW_OFFSET_ROLLBACK_RESULT> RollbackLatest( ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000261 |         string recipeId, ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000262 |         string expectedLatestFilePath, ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000263 |         CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000264 |     { ⟦EOL⟧
+// 해설 L265: 비동기 완료를 기다립니다: await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.WaitAsync(cancellationToken)
+L000265 |         await _fileLock.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L266: 예외 처리 범위입니다: try
+L000266 |         try ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000268 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(recipeId) / 지역 변수를 선언합니다: var normalizedRecipeId = NormalizeRecipeId(recipeId); / 변수의 초기값을 지정합니다: normalizedRecipeId = NormalizeRecipeId(recipeId)
+L000269 |             var normalizedRecipeId = NormalizeRecipeId(recipeId); ⟦EOL⟧
+// 해설 L270: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalizedRecipeId) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalizedRecipeId))
+L000270 |             if (string.IsNullOrWhiteSpace(normalizedRecipeId)) ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000271 |             { ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Review Offset rollback failed. Recipe ID is empty.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Review Offset rollback failed. Recipe ID is empty.");
+L000272 |                 throw new InvalidOperationException("Review Offset rollback failed. Recipe ID is empty."); ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000273 |             } ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetRecipeOffsetDirectory(normalizedRecipeId) / 지역 변수를 선언합니다: var directory = GetRecipeOffsetDirectory(normalizedRecipeId); / 변수의 초기값을 지정합니다: directory = GetRecipeOffsetDirectory(normalizedRecipeId)
+L000275 |             var directory = GetRecipeOffsetDirectory(normalizedRecipeId); ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory) / 조건에 따라 결과식을 선택합니다: Directory.Exists(directory) ? EnumerateActiveFiles(directory).ToArray() : [] / 지역 변수를 선언합니다: var activeFiles = Directory.Exists(directory) ? EnumerateActiveFiles(directory).ToArray() : []; / 변수의 초기값을 지정합니다: activeFiles = Directory.Exists(directory) ? EnumerateActiveFiles(directory).ToArray() : []
+L000276 |             var activeFiles = Directory.Exists(directory) ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory)
+L000277 |                 ? EnumerateActiveFiles(directory).ToArray() ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000278 |                 : []; ⟦EOL⟧
+// 해설 L279: 조건에 따라 분기합니다: if (activeFiles.Length == 0)
+L000279 |             if (activeFiles.Length == 0) ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000280 |             { ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{normalizedRecipeId} 레시피에 되돌릴 Review Offset 파일이 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{normalizedRecipeId} 레시피에 되돌릴 Review Offset 파일이 없습니다.");
+L000281 |                 throw new InvalidOperationException($"{normalizedRecipeId} 레시피에 되돌릴 Review Offset 파일이 없습니다."); ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000282 |             } ⟦EOL⟧
+L000283 |  ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(activeFiles[0]) / 지역 변수를 선언합니다: var latestPath = Path.GetFullPath(activeFiles[0]); / 변수의 초기값을 지정합니다: latestPath = Path.GetFullPath(activeFiles[0])
+L000284 |             var latestPath = Path.GetFullPath(activeFiles[0]); ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(expectedLatestFilePath) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(expectedLatestFilePath) ? "" : Path.GetFullPath(expectedLatestFilePath) / 지역 변수를 선언합니다: var expectedPath = string.IsNullOrWhiteSpace(expectedLatestFilePath) ? "" : Path.GetFullPath(expectedLatestFilePath); / 변수의 초기값을 지정합니다: expectedPath = string.IsNullOrWhiteSpace(expectedLatestFilePath) ? "" : Path.GetFullPath(expectedLatestFilePath)
+L000285 |             var expectedPath = string.IsNullOrWhiteSpace(expectedLatestFilePath) ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000286 |                 ? "" ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(expectedLatestFilePath)
+L000287 |                 : Path.GetFullPath(expectedLatestFilePath); ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: latestPath.Equals(expectedPath, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!latestPath.Equals(expectedPath, StringComparison.OrdinalIgnoreCase))
+L000288 |             if (!latestPath.Equals(expectedPath, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000289 |             { ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("확인 중 최신 Review Offset 파일이 변경되었습니다. 현재 값을 다시 확인한 뒤 롤백해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("확인 중 최신 Review Offset 파일이 변경되었습니다. 현재 값을 다시 확인한 뒤 롤백해 주세요.");
+L000290 |                 throw new InvalidOperationException("확인 중 최신 Review Offset 파일이 변경되었습니다. 현재 값을 다시 확인한 뒤 롤백해 주세요."); ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000291 |             } ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: Load(normalizedRecipeId, latestPath, cancellationToken) / 지역 변수를 선언합니다: var removed = Load(normalizedRecipeId, latestPath, cancellationToken); / 변수의 초기값을 지정합니다: removed = Load(normalizedRecipeId, latestPath, cancellationToken)
+L000293 |             var removed = Load(normalizedRecipeId, latestPath, cancellationToken); ⟦EOL⟧
+// 해설 L294: 조건에 따라 결과식을 선택합니다: activeFiles.Length > 1 ? Load(normalizedRecipeId, activeFiles[1], cancellationToken) : ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId) / 지역 변수를 선언합니다: var current = activeFiles.Length > 1 ? Load(normalizedRecipeId, activeFiles[1], cancellationToken) : ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId); / 변수의 초기값을 지정합니다: current = activeFiles.Length > 1 ? Load(normalizedRecipeId, activeFiles[1], cancellationToken) : ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId)
+L000294 |             var current = activeFiles.Length > 1 ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: Load(normalizedRecipeId, activeFiles[1], cancellationToken)
+L000295 |                 ? Load(normalizedRecipeId, activeFiles[1], cancellationToken) ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId)
+L000296 |                 : ST_REVIEW_OFFSET_FILE_DATA.Empty(normalizedRecipeId); ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, "Rollback") / 지역 변수를 선언합니다: var rollbackDirectory = Path.Combine(directory, "Rollback"); / 변수의 초기값을 지정합니다: rollbackDirectory = Path.Combine(directory, "Rollback")
+L000298 |             var rollbackDirectory = Path.Combine(directory, "Rollback"); ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(rollbackDirectory)
+L000299 |             Directory.CreateDirectory(rollbackDirectory); ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateArchivePath(rollbackDirectory, removed.FileName) / 지역 변수를 선언합니다: var archivedPath = CreateArchivePath(rollbackDirectory, removed.FileName); / 변수의 초기값을 지정합니다: archivedPath = CreateArchivePath(rollbackDirectory, removed.FileName)
+L000300 |             var archivedPath = CreateArchivePath(rollbackDirectory, removed.FileName); ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetApplyHistoryPath(normalizedRecipeId, removed.SavedAt) / 지역 변수를 선언합니다: var historyPath = GetApplyHistoryPath(normalizedRecipeId, removed.SavedAt); / 변수의 초기값을 지정합니다: historyPath = GetApplyHistoryPath(normalizedRecipeId, removed.SavedAt)
+L000301 |             var historyPath = GetApplyHistoryPath(normalizedRecipeId, removed.SavedAt); ⟦EOL⟧
+// 해설 L302: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(historyPath) / 지역 변수를 선언합니다: var historyExisted = System.IO.File.Exists(historyPath); / 변수의 초기값을 지정합니다: historyExisted = System.IO.File.Exists(historyPath)
+L000302 |             var historyExisted = System.IO.File.Exists(historyPath); ⟦EOL⟧
+// 해설 L303: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadApplyHistory(historyPath, cancellationToken) / 지역 변수를 선언합니다: var originalHistory = LoadApplyHistory(historyPath, cancellationToken); / 변수의 초기값을 지정합니다: originalHistory = LoadApplyHistory(historyPath, cancellationToken)
+L000303 |             var originalHistory = LoadApplyHistory(historyPath, cancellationToken); ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: originalHistory .Where(row => !row.OffsetFile.Equals(removed.FileName, StringComparison.OrdinalIgnoreCase)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: originalHistory .Where(row => !row.OffsetFile.Equals(removed.FileName, StringComparison.OrdinalIgnoreCase)) / 지역 변수를 선언합니다: var retainedHistory = originalHistory .Where(row => !row.OffsetFile.Equals(removed.FileName, StringComparison.OrdinalIgnoreCase)) .ToArray(); / 변수의 초기값을 지정합니다: retainedHistory = originalHistory .Where(row => !row.OffsetFile.Equals(removed.Fi
+L000304 |             var retainedHistory = originalHistory ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OffsetFile.Equals(removed.FileName, StringComparison.OrdinalIgnoreCase)
+L000305 |                 .Where(row => !row.OffsetFile.Equals(removed.FileName, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000306 |                 .ToArray(); ⟦EOL⟧
+// 해설 L307: 지역 변수를 선언합니다: var historyChanged = retainedHistory.Length != originalHistory.Count; / 변수의 초기값을 지정합니다: historyChanged = retainedHistory.Length != originalHistory.Count
+L000307 |             var historyChanged = retainedHistory.Length != originalHistory.Count; ⟦EOL⟧
+// 해설 L308: 지역 변수를 선언합니다: var offsetMoved = false; / 변수의 초기값을 지정합니다: offsetMoved = false
+L000308 |             var offsetMoved = false; ⟦EOL⟧
+// 해설 L309: 예외 처리 범위입니다: try
+L000309 |             try ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000310 |             { ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(latestPath, archivedPath, overwrite: false)
+L000311 |                 System.IO.File.Move(latestPath, archivedPath, overwrite: false); ⟦EOL⟧
+// 해설 L312: 값을 대상에 대입합니다: offsetMoved = true
+L000312 |                 offsetMoved = true; ⟦EOL⟧
+// 해설 L313: 조건에 따라 분기합니다: if (historyChanged)
+L000313 |                 if (historyChanged) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000314 |                 { ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteApplyHistory(historyPath, retainedHistory, cancellationToken)
+L000315 |                     WriteApplyHistory(historyPath, retainedHistory, cancellationToken); ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000316 |                 } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory).FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnumerateActiveFiles(directory) / 지역 변수를 선언합니다: var latestAfterRollback = EnumerateActiveFiles(directory).FirstOrDefault(); / 변수의 초기값을 지정합니다: latestAfterRollback = EnumerateActiveFiles(directory).FirstOrDefault()
+L000318 |                 var latestAfterRollback = EnumerateActiveFiles(directory).FirstOrDefault(); ⟦EOL⟧
+// 해설 L319: 지역 변수를 선언합니다: var expectedCurrentPath = current.FilePath; / 변수의 초기값을 지정합니다: expectedCurrentPath = current.FilePath
+L000319 |                 var expectedCurrentPath = current.FilePath; ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Equals( string.IsNullOrWhiteSpace(latestAfterRollback) ? "" : Path.GetFullPath(latestAfterRollback), expectedCurrentPath, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!string.Equals( string.IsNullOrWhiteSpace(latestAfterRollback) ? "" : Path.GetFullPath(latestAfterRollback), expectedCurrentPath, StringComparison.OrdinalIgnoreCase))
+L000320 |                 if (!string.Equals( ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(latestAfterRollback) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(latestAfterRollback) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(latestAfterRollback) ? "" : Path.GetFullPath(latestAfterRollback)
+L000321 |                         string.IsNullOrWhiteSpace(latestAfterRollback) ? "" : Path.GetFullPath(latestAfterRollback), ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000322 |                         expectedCurrentPath, ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000323 |                         StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000324 |                 { ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Review Offset 롤백 후 활성 파일 검증에 실패했습니다.") / 예외를 발생/전달합니다: throw new IOException("Review Offset 롤백 후 활성 파일 검증에 실패했습니다.");
+L000325 |                     throw new IOException("Review Offset 롤백 후 활성 파일 검증에 실패했습니다."); ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000326 |                 } ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000327 |             } ⟦EOL⟧
+// 해설 L328: 지정 예외를 처리합니다: catch (Exception rollbackError)
+L000328 |             catch (Exception rollbackError) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000329 |             { ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<Exception>() / 지역 변수를 선언합니다: var recoveryErrors = new List<Exception>(); / 변수의 초기값을 지정합니다: recoveryErrors = new List<Exception>()
+L000330 |                 var recoveryErrors = new List<Exception>(); ⟦EOL⟧
+// 해설 L331: 조건에 따라 분기합니다: if (offsetMoved)
+L000331 |                 if (offsetMoved) ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000332 |                 { ⟦EOL⟧
+// 해설 L333: 예외 처리 범위입니다: try
+L000333 |                     try ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000334 |                     { ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(archivedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(latestPath) / 조건에 따라 분기합니다: if (System.IO.File.Exists(archivedPath) && !System.IO.File.Exists(latestPath))
+L000335 |                         if (System.IO.File.Exists(archivedPath) && !System.IO.File.Exists(latestPath)) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000336 |                         { ⟦EOL⟧
+// 해설 L337: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(archivedPath, latestPath, overwrite: false)
+L000337 |                             System.IO.File.Move(archivedPath, latestPath, overwrite: false); ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000338 |                         } ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000339 |                     } ⟦EOL⟧
+// 해설 L340: 지정 예외를 처리합니다: catch (Exception recoveryError)
+L000340 |                     catch (Exception recoveryError) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000341 |                     { ⟦EOL⟧
+// 해설 L342: 함수·델리게이트 또는 객체 생성자를 호출합니다: recoveryErrors.Add(recoveryError)
+L000342 |                         recoveryErrors.Add(recoveryError); ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000343 |                     } ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000344 |                 } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 조건에 따라 분기합니다: if (historyChanged)
+L000346 |                 if (historyChanged) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000347 |                 { ⟦EOL⟧
+// 해설 L348: 예외 처리 범위입니다: try
+L000348 |                     try ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000349 |                     { ⟦EOL⟧
+// 해설 L350: 조건에 따라 분기합니다: if (historyExisted)
+L000350 |                         if (historyExisted) ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000351 |                         { ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteApplyHistory(historyPath, originalHistory, CancellationToken.None)
+L000352 |                             WriteApplyHistory(historyPath, originalHistory, CancellationToken.None); ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000353 |                         } ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(historyPath) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (System.IO.File.Exists(historyPath))
+L000354 |                         else if (System.IO.File.Exists(historyPath)) ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000355 |                         { ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(historyPath)
+L000356 |                             System.IO.File.Delete(historyPath); ⟦EOL⟧
+// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: _applyHistoryCache.Remove(Path.GetFullPath(historyPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(historyPath)
+L000357 |                             _applyHistoryCache.Remove(Path.GetFullPath(historyPath)); ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000358 |                         } ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000359 |                     } ⟦EOL⟧
+// 해설 L360: 지정 예외를 처리합니다: catch (Exception recoveryError)
+L000360 |                     catch (Exception recoveryError) ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000361 |                     { ⟦EOL⟧
+// 해설 L362: 함수·델리게이트 또는 객체 생성자를 호출합니다: recoveryErrors.Add(recoveryError)
+L000362 |                         recoveryErrors.Add(recoveryError); ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000363 |                     } ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000364 |                 } ⟦EOL⟧
+L000365 |  ⟦EOL⟧
+// 해설 L366: 조건에 따라 분기합니다: if (recoveryErrors.Count > 0)
+L000366 |                 if (recoveryErrors.Count > 0) ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000367 |                 { ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException( "Review Offset 롤백 실패 후 파일 상태 복구에도 실패했습니다.", new[] { rollbackError }.Concat(recoveryErrors)) / 예외를 발생/전달합니다: throw new AggregateException( "Review Offset 롤백 실패 후 파일 상태 복구에도 실패했습니다.", new[] { rollbackError }.Concat(recoveryErrors));
+L000368 |                     throw new AggregateException( ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000369 |                         "Review Offset 롤백 실패 후 파일 상태 복구에도 실패했습니다.", ⟦EOL⟧
+// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { rollbackError }.Concat(recoveryErrors)
+L000370 |                         new[] { rollbackError }.Concat(recoveryErrors)); ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000371 |                 } ⟦EOL⟧
+L000372 |  ⟦EOL⟧
+// 해설 L373: 예외를 발생/전달합니다: throw;
+L000373 |                 throw; ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000374 |             } ⟦EOL⟧
+L000375 |  ⟦EOL⟧
+// 해설 L376: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_ROLLBACK_RESULT( normalizedRecipeId, removed.FileName, removed.SavedAt, Path.GetFullPath(archivedPath), current) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_ROLLBACK_RESULT( normalizedRecipeId, removed.FileName, removed.SavedAt, Path.GetFullPath(archivedPath), current);
+L000376 |             return new ST_REVIEW_OFFSET_ROLLBACK_RESULT( ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000377 |                 normalizedRecipeId, ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000378 |                 removed.FileName, ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000379 |                 removed.SavedAt, ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(archivedPath)
+L000380 |                 Path.GetFullPath(archivedPath), ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_OFFSET_ROLLBACK_RESULT> Drilling.File.ReviewOffset.CReviewOffsetFile.RollbackLatest(string, string, System.Threading.CancellationToken)
+L000381 |                 current); ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000382 |         } ⟦EOL⟧
+// 해설 L383: 종료 정리 구간입니다: finally
+L000383 |         finally ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000384 |         { ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: _fileLock.Release()
+L000385 |             _fileLock.Release(); ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000386 |         } ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 RollbackLatest.
+L000387 |     } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<string> Drilling.File.ReviewOffset.CReviewOffsetFile.EnumerateActiveFiles(string)
+L000389 |     private static IEnumerable<string> EnumerateActiveFiles(string directory) ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 EnumerateActiveFiles.
+L000390 |     { ⟦EOL⟧
+// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory .EnumerateFiles(directory, "*_reviewoffset.csv", SearchOption.TopDirectoryOnly) .OrderByDescending(Path.GetFileName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory .EnumerateFiles(directory, "*_reviewoffset.csv", SearchOption.TopDirectoryOnly) / 호출자에게 값 또는 제어를 반환합니다: return Directory .EnumerateFiles(directory, "*_reviewoffset.csv", SearchOption.TopDirectoryOnly) .OrderByDescending(Path.GetFileName, StringComparer.OrdinalIgnoreCase);
+L000391 |         return Directory ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<string> Drilling.File.ReviewOffset.CReviewOffsetFile.EnumerateActiveFiles(string)
+L000392 |             .EnumerateFiles(directory, "*_reviewoffset.csv", SearchOption.TopDirectoryOnly) ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<string> Drilling.File.ReviewOffset.CReviewOffsetFile.EnumerateActiveFiles(string)
+L000393 |             .OrderByDescending(Path.GetFileName, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 EnumerateActiveFiles.
+L000394 |     } ⟦EOL⟧
+L000395 |  ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION? Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplicationCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVI
+L000396 |     private static ST_REVIEW_OFFSET_SOURCE_APPLICATION? FindSourceApplicationCore( ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION? Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplicationCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVI
+L000397 |         string sourceIdentity, ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION? Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplicationCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVI
+L000398 |         IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> historyRows) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 FindSourceApplicationCore.
+L000399 |     { ⟦EOL⟧
+// 해설 L400: 함수·델리게이트 또는 객체 생성자를 호출합니다: historyRows .Where(row => row.SourceResultFile.Equals(sourceIdentity, StringComparison.OrdinalIgnoreCase)) .OrderByDescending(row => row.AppliedAt) .FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: historyRows .Where(row => row.SourceResultFile.Equals(sourceIdentity, StringComparison.OrdinalIgnoreCase)) .OrderByDescending(row => row.AppliedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: historyRows .Where(row => row.SourceResultFile.Equals(sourceIdentity, StringComparison.OrdinalIgnoreCase)) / 호출자에게 값 또는 제어를 반환합니다: return his
+L000400 |         return historyRows ⟦EOL⟧
+// 해설 L401: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.SourceResultFile.Equals(sourceIdentity, StringComparison.OrdinalIgnoreCase)
+L000401 |             .Where(row => row.SourceResultFile.Equals(sourceIdentity, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION? Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplicationCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVI
+L000402 |             .OrderByDescending(row => row.AppliedAt) ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION? Drilling.File.ReviewOffset.CReviewOffsetFile.FindSourceApplicationCore(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVI
+L000403 |             .FirstOrDefault(); ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 FindSourceApplicationCore.
+L000404 |     } ⟦EOL⟧
+L000405 |  ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000406 |     private IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> LoadApplyHistory( ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000407 |         string historyPath, ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000408 |         CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000409 |     { ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(historyPath) / 지역 변수를 선언합니다: var fullPath = Path.GetFullPath(historyPath); / 변수의 초기값을 지정합니다: fullPath = Path.GetFullPath(historyPath)
+L000410 |         var fullPath = Path.GetFullPath(historyPath); ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(fullPath) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(fullPath))
+L000411 |         if (!System.IO.File.Exists(fullPath)) ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000412 |         { ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: _applyHistoryCache.Remove(fullPath)
+L000413 |             _applyHistoryCache.Remove(fullPath); ⟦EOL⟧
+// 해설 L414: 호출자에게 값 또는 제어를 반환합니다: return [];
+L000414 |             return []; ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000415 |         } ⟦EOL⟧
+L000416 |  ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileInfo(fullPath) / 지역 변수를 선언합니다: var fileInfo = new FileInfo(fullPath); / 변수의 초기값을 지정합니다: fileInfo = new FileInfo(fullPath)
+L000417 |         var fileInfo = new FileInfo(fullPath); ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: _applyHistoryCache.TryGetValue(fullPath, out var cached) / 조건에 따라 분기합니다: if (_applyHistoryCache.TryGetValue(fullPath, out var cached) && cached.Length == fileInfo.Length && cached.LastWriteTimeUtc == fileInfo.LastWriteTimeUtc)
+L000418 |         if (_applyHistoryCache.TryGetValue(fullPath, out var cached) ⟦EOL⟧
+// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000419 |             && cached.Length == fileInfo.Length ⟦EOL⟧
+// 해설 L420: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000420 |             && cached.LastWriteTimeUtc == fileInfo.LastWriteTimeUtc) ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000421 |         { ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return cached.Rows;
+L000422 |             return cached.Rows; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000423 |         } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders( fullPath, "Review Offset 적용 이력", ApplyHistoryRequiredHeaderGroups)
+L000425 |         CCsvParser.ValidateRequiredHeaders( ⟦EOL⟧
+// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000426 |             fullPath, ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000427 |             "Review Offset 적용 이력", ⟦EOL⟧
+// 해설 L428: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000428 |             ApplyHistoryRequiredHeaderGroups); ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<int>() / 지역 변수를 선언합니다: var lineNumbers = new List<int>(); / 변수의 초기값을 지정합니다: lineNumbers = new List<int>()
+L000429 |         var lineNumbers = new List<int>(); ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(fullPath, lineNumbers) / 지역 변수를 선언합니다: var sourceRows = CCsvParser.Read(fullPath, lineNumbers); / 변수의 초기값을 지정합니다: sourceRows = CCsvParser.Read(fullPath, lineNumbers)
+L000430 |         var sourceRows = CCsvParser.Read(fullPath, lineNumbers); ⟦EOL⟧
+// 해설 L431: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_OFFSET_SOURCE_APPLICATION>(sourceRows.Count) / 지역 변수를 선언합니다: var rows = new List<ST_REVIEW_OFFSET_SOURCE_APPLICATION>(sourceRows.Count); / 변수의 초기값을 지정합니다: rows = new List<ST_REVIEW_OFFSET_SOURCE_APPLICATION>(sourceRows.Count)
+L000431 |         var rows = new List<ST_REVIEW_OFFSET_SOURCE_APPLICATION>(sourceRows.Count); ⟦EOL⟧
+// 해설 L432: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < sourceRows.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000432 |         for (var index = 0; index < sourceRows.Count; index++) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000433 |         { ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000434 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L435: 지역 변수를 선언합니다: var row = sourceRows[index]; / 변수의 초기값을 지정합니다: row = sourceRows[index]
+L000435 |             var row = sourceRows[index]; ⟦EOL⟧
+// 해설 L436: 지역 변수를 선언합니다: var lineNo = lineNumbers[index]; / 변수의 초기값을 지정합니다: lineNo = lineNumbers[index]
+L000436 |             var lineNo = lineNumbers[index]; ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredSourceIdentity(CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "SOURCE_RESULT_FILE")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "SOURCE_RESULT_FILE") / 지역 변수를 선언합니다: var source = NormalizeStoredSourceIdentity(CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "SOURCE_RESULT_FILE")); / 변수의 초기값을 지정합니다: source = NormalizeStoredSourceIdentity(CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "SOURCE_RESULT_FILE"))
+L000437 |             var source = NormalizeStoredSourceIdentity(CCsvParser.RequireText( ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000438 |                 row, ⟦EOL⟧
+// 해설 L439: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000439 |                 "Review Offset 적용 이력", ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000440 |                 lineNo, ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000441 |                 "SOURCE_RESULT_FILE")); ⟦EOL⟧
+// 해설 L442: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "OFFSET_FILE").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "OFFSET_FILE") / 지역 변수를 선언합니다: var offsetFile = CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "OFFSET_FILE").Trim(); / 변수의 초기값을 지정합니다: offsetFile = CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "OFFSET_FILE").Trim()
+L000442 |             var offsetFile = CCsvParser.RequireText( ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000443 |                 row, ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000444 |                 "Review Offset 적용 이력", ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000445 |                 lineNo, ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000446 |                 "OFFSET_FILE").Trim(); ⟦EOL⟧
+// 해설 L447: 함수·델리게이트 또는 객체 생성자를 호출합니다: offsetFile.Equals(Path.GetFileName(offsetFile), StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(offsetFile) / 조건에 따라 분기합니다: if (!offsetFile.Equals(Path.GetFileName(offsetFile), StringComparison.Ordinal) || !offsetFile.EndsWith("_reviewoffset.csv", StringComparison.OrdinalIgnoreCase))
+L000447 |             if (!offsetFile.Equals(Path.GetFileName(offsetFile), StringComparison.Ordinal) ⟦EOL⟧
+// 해설 L448: 함수·델리게이트 또는 객체 생성자를 호출합니다: offsetFile.EndsWith("_reviewoffset.csv", StringComparison.OrdinalIgnoreCase)
+L000448 |                 || !offsetFile.EndsWith("_reviewoffset.csv", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000449 |             { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException( $"Review Offset 적용 이력 {lineNo}행의 OFFSET_FILE이 올바르지 않습니다: {offsetFile}") / 예외를 발생/전달합니다: throw new InvalidDataException( $"Review Offset 적용 이력 {lineNo}행의 OFFSET_FILE이 올바르지 않습니다: {offsetFile}");
+L000450 |                 throw new InvalidDataException( ⟦EOL⟧
+// 해설 L451: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000451 |                     $"Review Offset 적용 이력 {lineNo}행의 OFFSET_FILE이 올바르지 않습니다: {offsetFile}"); ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000452 |             } ⟦EOL⟧
+L000453 |  ⟦EOL⟧
+// 해설 L454: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "APPLIED_AT") / 지역 변수를 선언합니다: var appliedAtText = CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "APPLIED_AT"); / 변수의 초기값을 지정합니다: appliedAtText = CCsvParser.RequireText( row, "Review Offset 적용 이력", lineNo, "APPLIED_AT")
+L000454 |             var appliedAtText = CCsvParser.RequireText( ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000455 |                 row, ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000456 |                 "Review Offset 적용 이력", ⟦EOL⟧
+// 해설 L457: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000457 |                 lineNo, ⟦EOL⟧
+// 해설 L458: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000458 |                 "APPLIED_AT"); ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse( appliedAtText, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var appliedAt) / 조건에 따라 분기합니다: if (!DateTimeOffset.TryParse( appliedAtText, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var appliedAt))
+L000459 |             if (!DateTimeOffset.TryParse( ⟦EOL⟧
+// 해설 L460: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000460 |                     appliedAtText, ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000461 |                     CultureInfo.InvariantCulture, ⟦EOL⟧
+// 해설 L462: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000462 |                     DateTimeStyles.RoundtripKind, ⟦EOL⟧
+// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000463 |                     out var appliedAt)) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000464 |             { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException( $"Review Offset 적용 이력 {lineNo}행의 APPLIED_AT이 올바르지 않습니다: {appliedAtText}") / 예외를 발생/전달합니다: throw new InvalidDataException( $"Review Offset 적용 이력 {lineNo}행의 APPLIED_AT이 올바르지 않습니다: {appliedAtText}");
+L000465 |                 throw new InvalidDataException( ⟦EOL⟧
+// 해설 L466: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000466 |                     $"Review Offset 적용 이력 {lineNo}행의 APPLIED_AT이 올바르지 않습니다: {appliedAtText}"); ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000467 |             } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(new( source, offsetFile, appliedAt, fullPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new( source, offsetFile, appliedAt, fullPath)
+L000469 |             rows.Add(new( ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000470 |                 source, ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000471 |                 offsetFile, ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000472 |                 appliedAt, ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION> Drilling.File.ReviewOffset.CReviewOffsetFile.LoadApplyHistory(string, System.Threading.CancellationToken)
+L000473 |                 fullPath)); ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000474 |         } ⟦EOL⟧
+L000475 |  ⟦EOL⟧
+// 해설 L476: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.ToArray() / 지역 변수를 선언합니다: var result = rows.ToArray(); / 변수의 초기값을 지정합니다: result = rows.ToArray()
+L000476 |         var result = rows.ToArray(); ⟦EOL⟧
+// 해설 L477: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateApplyHistoryCache(fullPath, result)
+L000477 |         UpdateApplyHistoryCache(fullPath, result); ⟦EOL⟧
+// 해설 L478: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000478 |         return result; ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 LoadApplyHistory.
+L000479 |     } ⟦EOL⟧
+L000480 |  ⟦EOL⟧
+// 해설 L481: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000481 |     private void AppendApplyHistory( ⟦EOL⟧
+// 해설 L482: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000482 |         string historyPath, ⟦EOL⟧
+// 해설 L483: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000483 |         IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> existingRows, ⟦EOL⟧
+// 해설 L484: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000484 |         ST_REVIEW_OFFSET_SOURCE_APPLICATION application, ⟦EOL⟧
+// 해설 L485: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000485 |         CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 AppendApplyHistory.
+L000486 |     { ⟦EOL⟧
+// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000487 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(historyPath) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(historyPath))
+L000488 |         if (!System.IO.File.Exists(historyPath)) ⟦EOL⟧
+// 해설 L489: 구문 블록 경계입니다 · 소속 AppendApplyHistory.
+L000489 |         { ⟦EOL⟧
+// 해설 L490: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteApplyHistory(historyPath, [application], cancellationToken)
+L000490 |             WriteApplyHistory(historyPath, [application], cancellationToken); ⟦EOL⟧
+// 해설 L491: 호출자에게 값 또는 제어를 반환합니다: return;
+L000491 |             return; ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 AppendApplyHistory.
+L000492 |         } ⟦EOL⟧
+L000493 |  ⟦EOL⟧
+// 해설 L494: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Append( historyPath, ApplyHistoryHeaders, ToApplyHistoryCsvRow(application))
+L000494 |         CCsvParser.Append( ⟦EOL⟧
+// 해설 L495: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000495 |             historyPath, ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000496 |             ApplyHistoryHeaders, ⟦EOL⟧
+// 해설 L497: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToApplyHistoryCsvRow(application)
+L000497 |             ToApplyHistoryCsvRow(application)); ⟦EOL⟧
+// 해설 L498: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateApplyHistoryCache( historyPath, existingRows.Concat([application]).ToArray())
+L000498 |         UpdateApplyHistoryCache( ⟦EOL⟧
+// 해설 L499: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.AppendApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, Drilling.Common.Review.ST_REVIE
+L000499 |             historyPath, ⟦EOL⟧
+// 해설 L500: 함수·델리게이트 또는 객체 생성자를 호출합니다: existingRows.Concat([application]).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: existingRows.Concat([application])
+L000500 |             existingRows.Concat([application]).ToArray()); ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 AppendApplyHistory.
+L000501 |     } ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000503 |     private void WriteApplyHistory( ⟦EOL⟧
+// 해설 L504: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000504 |         string historyPath, ⟦EOL⟧
+// 해설 L505: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000505 |         IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> rows, ⟦EOL⟧
+// 해설 L506: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000506 |         CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L507: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000507 |     { ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000508 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(historyPath) / 지역 변수를 선언합니다: var directory = Path.GetDirectoryName(historyPath) ?? throw new InvalidOperationException("Review Offset 적용 이력 경로가 올바르지 않습니다."); / 변수의 초기값을 지정합니다: directory = Path.GetDirectoryName(historyPath) ?? throw new InvalidOperationException("Review Offset 적용 이력 경로가 올바르지 않습니다.")
+L000509 |         var directory = Path.GetDirectoryName(historyPath) ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Review Offset 적용 이력 경로가 올바르지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Review Offset 적용 이력 경로가 올바르지 않습니다.")
+L000510 |             ?? throw new InvalidOperationException("Review Offset 적용 이력 경로가 올바르지 않습니다."); ⟦EOL⟧
+// 해설 L511: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(directory)
+L000511 |         Directory.CreateDirectory(directory); ⟦EOL⟧
+// 해설 L512: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory, $".{Guid.NewGuid():N}.tmp") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 지역 변수를 선언합니다: var temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); / 변수의 초기값을 지정합니다: temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp")
+L000512 |         var temporary = Path.Combine(directory, $".{Guid.NewGuid():N}.tmp"); ⟦EOL⟧
+// 해설 L513: 예외 처리 범위입니다: try
+L000513 |         try ⟦EOL⟧
+// 해설 L514: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000514 |         { ⟦EOL⟧
+// 해설 L515: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write( temporary, ApplyHistoryHeaders, rows.OrderBy(row => row.AppliedAt).Select(ToApplyHistoryCsvRow))
+L000515 |             CCsvParser.Write( ⟦EOL⟧
+// 해설 L516: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000516 |                 temporary, ⟦EOL⟧
+// 해설 L517: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.WriteApplyHistory(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>, System.Threading.CancellationTok
+L000517 |                 ApplyHistoryHeaders, ⟦EOL⟧
+// 해설 L518: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.OrderBy(row => row.AppliedAt).Select(ToApplyHistoryCsvRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.OrderBy(row => row.AppliedAt)
+L000518 |                 rows.OrderBy(row => row.AppliedAt).Select(ToApplyHistoryCsvRow)); ⟦EOL⟧
+// 해설 L519: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000519 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L520: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporary, historyPath, overwrite: true)
+L000520 |             System.IO.File.Move(temporary, historyPath, overwrite: true); ⟦EOL⟧
+// 해설 L521: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateApplyHistoryCache(historyPath, rows.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.ToArray()
+L000521 |             UpdateApplyHistoryCache(historyPath, rows.ToArray()); ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000522 |         } ⟦EOL⟧
+// 해설 L523: 종료 정리 구간입니다: finally
+L000523 |         finally ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000524 |         { ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(temporary) / 조건에 따라 분기합니다: if (System.IO.File.Exists(temporary))
+L000525 |             if (System.IO.File.Exists(temporary)) ⟦EOL⟧
+// 해설 L526: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000526 |             { ⟦EOL⟧
+// 해설 L527: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(temporary)
+L000527 |                 System.IO.File.Delete(temporary); ⟦EOL⟧
+// 해설 L528: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000528 |             } ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000529 |         } ⟦EOL⟧
+// 해설 L530: 구문 블록 경계입니다 · 소속 WriteApplyHistory.
+L000530 |     } ⟦EOL⟧
+L000531 |  ⟦EOL⟧
+// 해설 L532: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000532 |     private void UpdateApplyHistoryCache( ⟦EOL⟧
+// 해설 L533: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000533 |         string historyPath, ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000534 |         IReadOnlyList<ST_REVIEW_OFFSET_SOURCE_APPLICATION> rows) ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000535 |     { ⟦EOL⟧
+// 해설 L536: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(historyPath) / 지역 변수를 선언합니다: var fullPath = Path.GetFullPath(historyPath); / 변수의 초기값을 지정합니다: fullPath = Path.GetFullPath(historyPath)
+L000536 |         var fullPath = Path.GetFullPath(historyPath); ⟦EOL⟧
+// 해설 L537: 예외 처리 범위입니다: try
+L000537 |         try ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000538 |         { ⟦EOL⟧
+// 해설 L539: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileInfo(fullPath) / 지역 변수를 선언합니다: var fileInfo = new FileInfo(fullPath); / 변수의 초기값을 지정합니다: fileInfo = new FileInfo(fullPath)
+L000539 |             var fileInfo = new FileInfo(fullPath); ⟦EOL⟧
+// 해설 L540: 함수·델리게이트 또는 객체 생성자를 호출합니다: fileInfo.Refresh()
+L000540 |             fileInfo.Refresh(); ⟦EOL⟧
+// 해설 L541: 값을 대상에 대입합니다: _applyHistoryCache[fullPath] = new( fileInfo.Length, fileInfo.LastWriteTimeUtc, rows) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new( fileInfo.Length, fileInfo.LastWriteTimeUtc, rows)
+L000541 |             _applyHistoryCache[fullPath] = new( ⟦EOL⟧
+// 해설 L542: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000542 |                 fileInfo.Length, ⟦EOL⟧
+// 해설 L543: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000543 |                 fileInfo.LastWriteTimeUtc, ⟦EOL⟧
+// 해설 L544: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewOffset.CReviewOffsetFile.UpdateApplyHistoryCache(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION>)
+L000544 |                 rows); ⟦EOL⟧
+// 해설 L545: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000545 |         } ⟦EOL⟧
+// 해설 L546: 지정 예외를 처리합니다: catch
+L000546 |         catch ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000547 |         { ⟦EOL⟧
+// 해설 L548: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000548 |             // The CSV is already committed. A cache refresh failure must not roll back ⟦EOL⟧
+// 해설 L549: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000549 |             // a valid Offset/history pair; the next lookup reloads it from disk. ⟦EOL⟧
+// 해설 L550: 함수·델리게이트 또는 객체 생성자를 호출합니다: _applyHistoryCache.Remove(fullPath)
+L000550 |             _applyHistoryCache.Remove(fullPath); ⟦EOL⟧
+// 해설 L551: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000551 |         } ⟦EOL⟧
+// 해설 L552: 구문 블록 경계입니다 · 소속 UpdateApplyHistoryCache.
+L000552 |     } ⟦EOL⟧
+L000553 |  ⟦EOL⟧
+// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.ReviewOffset.CReviewOffsetFile.ToApplyHistoryCsvRow(Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION)
+L000554 |     private static IReadOnlyDictionary<string, string> ToApplyHistoryCsvRow( ⟦EOL⟧
+// 해설 L555: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.ReviewOffset.CReviewOffsetFile.ToApplyHistoryCsvRow(Drilling.Common.Review.ST_REVIEW_OFFSET_SOURCE_APPLICATION)
+L000555 |         ST_REVIEW_OFFSET_SOURCE_APPLICATION row) ⟦EOL⟧
+// 해설 L556: 구문 블록 경계입니다 · 소속 ToApplyHistoryCsvRow.
+L000556 |     { ⟦EOL⟧
+// 해설 L557: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["SOURCE_RESULT_FILE"] = row.SourceResultFile, ["OFFSET_FILE"] = row.OffsetFile, ["APPLIED_AT"] = row.AppliedAt.ToString("O", CultureInfo.InvariantCultur… / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["SOURCE_RESULT_FILE"] = row.SourceResultFile, ["OFFSET_FILE"] = row.OffsetFile, ["APPLIED_AT"] = row.AppliedAt.ToString("O", CultureInfo.InvariantCulture)
+L000557 |         return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 ToApplyHistoryCsvRow.
+L000558 |         { ⟦EOL⟧
+// 해설 L559: 값을 대상에 대입합니다: ["SOURCE_RESULT_FILE"] = row.SourceResultFile
+L000559 |             ["SOURCE_RESULT_FILE"] = row.SourceResultFile, ⟦EOL⟧
+// 해설 L560: 값을 대상에 대입합니다: ["OFFSET_FILE"] = row.OffsetFile
+L000560 |             ["OFFSET_FILE"] = row.OffsetFile, ⟦EOL⟧
+// 해설 L561: 값을 대상에 대입합니다: ["APPLIED_AT"] = row.AppliedAt.ToString("O", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.AppliedAt.ToString("O", CultureInfo.InvariantCulture)
+L000561 |             ["APPLIED_AT"] = row.AppliedAt.ToString("O", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L562: 구문 블록 경계입니다 · 소속 ToApplyHistoryCsvRow.
+L000562 |         }; ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 ToApplyHistoryCsvRow.
+L000563 |     } ⟦EOL⟧
+L000564 |  ⟦EOL⟧
+// 해설 L565: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.GetApplyHistoryPath(string, System.DateTimeOffset)
+L000565 |     private string GetApplyHistoryPath(string recipeId, DateTimeOffset appliedAt) ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 GetApplyHistoryPath.
+L000566 |     { ⟦EOL⟧
+// 해설 L567: 함수·델리게이트 또는 객체 생성자를 호출합니다: appliedAt.ToLocalTime() / 지역 변수를 선언합니다: var local = appliedAt.ToLocalTime(); / 변수의 초기값을 지정합니다: local = appliedAt.ToLocalTime()
+L000567 |         var local = appliedAt.ToLocalTime(); ⟦EOL⟧
+// 해설 L568: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine( GetRecipeOffsetDirectory(recipeId), ApplyHistoryDirectoryName, local.Year.ToString("0000", CultureInfo.InvariantCulture), local.Month.ToString("00", CultureInfo.InvariantCulture), local.Day.ToString("00", C… / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine( GetRecipeOffsetDirectory(recipeId), ApplyHistoryDirectoryName, local.Year.ToString("0000", CultureInfo.InvariantCulture), local.Month.ToString("00", CultureInfo.InvariantCulture), local.Day.ToString("00", Cult
+L000568 |         return Path.Combine( ⟦EOL⟧
+// 해설 L569: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetRecipeOffsetDirectory(recipeId)
+L000569 |             GetRecipeOffsetDirectory(recipeId), ⟦EOL⟧
+// 해설 L570: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.GetApplyHistoryPath(string, System.DateTimeOffset)
+L000570 |             ApplyHistoryDirectoryName, ⟦EOL⟧
+// 해설 L571: 함수·델리게이트 또는 객체 생성자를 호출합니다: local.Year.ToString("0000", CultureInfo.InvariantCulture)
+L000571 |             local.Year.ToString("0000", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L572: 함수·델리게이트 또는 객체 생성자를 호출합니다: local.Month.ToString("00", CultureInfo.InvariantCulture)
+L000572 |             local.Month.ToString("00", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L573: 함수·델리게이트 또는 객체 생성자를 호출합니다: local.Day.ToString("00", CultureInfo.InvariantCulture)
+L000573 |             local.Day.ToString("00", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L574: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.GetApplyHistoryPath(string, System.DateTimeOffset)
+L000574 |             ApplyHistoryFileName); ⟦EOL⟧
+// 해설 L575: 구문 블록 경계입니다 · 소속 GetApplyHistoryPath.
+L000575 |     } ⟦EOL⟧
+L000576 |  ⟦EOL⟧
+// 해설 L577: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeSourceIdentity(string, bool)
+L000577 |     private string NormalizeSourceIdentity(string sourceResultFile, bool requireExistingFile) ⟦EOL⟧
+// 해설 L578: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000578 |     { ⟦EOL⟧
+// 해설 L579: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(sourceResultFile) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(sourceResultFile))
+L000579 |         if (string.IsNullOrWhiteSpace(sourceResultFile)) ⟦EOL⟧
+// 해설 L580: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000580 |         { ⟦EOL⟧
+// 해설 L581: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review Offset 적용 출처 파일이 비어 있습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("Review Offset 적용 출처 파일이 비어 있습니다.");
+L000581 |             throw new InvalidDataException("Review Offset 적용 출처 파일이 비어 있습니다."); ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000582 |         } ⟦EOL⟧
+L000583 |  ⟦EOL⟧
+// 해설 L584: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(sourceResultFile.Trim()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: sourceResultFile.Trim() / 지역 변수를 선언합니다: var fullPath = Path.GetFullPath(sourceResultFile.Trim()); / 변수의 초기값을 지정합니다: fullPath = Path.GetFullPath(sourceResultFile.Trim())
+L000584 |         var fullPath = Path.GetFullPath(sourceResultFile.Trim()); ⟦EOL⟧
+// 해설 L585: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(fullPath) / 조건에 따라 분기합니다: if (requireExistingFile && !System.IO.File.Exists(fullPath))
+L000585 |         if (requireExistingFile && !System.IO.File.Exists(fullPath)) ⟦EOL⟧
+// 해설 L586: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000586 |         { ⟦EOL⟧
+// 해설 L587: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException( "Review Offset 적용 출처 파일을 찾을 수 없습니다.", fullPath) / 예외를 발생/전달합니다: throw new FileNotFoundException( "Review Offset 적용 출처 파일을 찾을 수 없습니다.", fullPath);
+L000587 |             throw new FileNotFoundException( ⟦EOL⟧
+// 해설 L588: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeSourceIdentity(string, bool)
+L000588 |                 "Review Offset 적용 출처 파일을 찾을 수 없습니다.", ⟦EOL⟧
+// 해설 L589: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeSourceIdentity(string, bool)
+L000589 |                 fullPath); ⟦EOL⟧
+// 해설 L590: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000590 |         } ⟦EOL⟧
+L000591 |  ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetRelativePath(_applicationRoot, fullPath) / 지역 변수를 선언합니다: var relativePath = Path.GetRelativePath(_applicationRoot, fullPath); / 변수의 초기값을 지정합니다: relativePath = Path.GetRelativePath(_applicationRoot, fullPath)
+L000592 |         var relativePath = Path.GetRelativePath(_applicationRoot, fullPath); ⟦EOL⟧
+// 해설 L593: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(relativePath) / 조건에 따라 분기합니다: if (!Path.IsPathRooted(relativePath) && !relativePath.Equals("..", StringComparison.Ordinal) && !relativePath.StartsWith($"..{Path.DirectorySeparatorChar}", StringComparison.Ordinal) && !relativePath.StartsWith($"..{Path.Alt…)
+L000593 |         if (!Path.IsPathRooted(relativePath) ⟦EOL⟧
+// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: relativePath.Equals("..", StringComparison.Ordinal)
+L000594 |             && !relativePath.Equals("..", StringComparison.Ordinal) ⟦EOL⟧
+// 해설 L595: 함수·델리게이트 또는 객체 생성자를 호출합니다: relativePath.StartsWith($"..{Path.DirectorySeparatorChar}", StringComparison.Ordinal)
+L000595 |             && !relativePath.StartsWith($"..{Path.DirectorySeparatorChar}", StringComparison.Ordinal) ⟦EOL⟧
+// 해설 L596: 함수·델리게이트 또는 객체 생성자를 호출합니다: relativePath.StartsWith($"..{Path.AltDirectorySeparatorChar}", StringComparison.Ordinal)
+L000596 |             && !relativePath.StartsWith($"..{Path.AltDirectorySeparatorChar}", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L597: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000597 |         { ⟦EOL⟧
+// 해설 L598: 함수·델리게이트 또는 객체 생성자를 호출합니다: relativePath.Replace('\\', '/') / 호출자에게 값 또는 제어를 반환합니다: return relativePath.Replace('\\', '/');
+L000598 |             return relativePath.Replace('\\', '/'); ⟦EOL⟧
+// 해설 L599: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000599 |         } ⟦EOL⟧
+L000600 |  ⟦EOL⟧
+// 해설 L601: 함수·델리게이트 또는 객체 생성자를 호출합니다: fullPath.Replace('\\', '/') / 호출자에게 값 또는 제어를 반환합니다: return fullPath.Replace('\\', '/');
+L000601 |         return fullPath.Replace('\\', '/'); ⟦EOL⟧
+// 해설 L602: 구문 블록 경계입니다 · 소속 NormalizeSourceIdentity.
+L000602 |     } ⟦EOL⟧
+L000603 |  ⟦EOL⟧
+// 해설 L604: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeStoredSourceIdentity(string)
+L000604 |     private static string NormalizeStoredSourceIdentity(string sourceResultFile) ⟦EOL⟧
+// 해설 L605: 구문 블록 경계입니다 · 소속 NormalizeStoredSourceIdentity.
+L000605 |     { ⟦EOL⟧
+// 해설 L606: 함수·델리게이트 또는 객체 생성자를 호출합니다: sourceResultFile.Trim().Replace('\\', '/') / 함수·델리게이트 또는 객체 생성자를 호출합니다: sourceResultFile.Trim() / 지역 변수를 선언합니다: var normalized = sourceResultFile.Trim().Replace('\\', '/'); / 변수의 초기값을 지정합니다: normalized = sourceResultFile.Trim().Replace('\\', '/')
+L000606 |         var normalized = sourceResultFile.Trim().Replace('\\', '/'); ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(normalized) / 조건에 따라 결과식을 선택합니다: Path.IsPathRooted(normalized) ? Path.GetFullPath(normalized).Replace('\\', '/') : normalized / 호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(normalized) ? Path.GetFullPath(normalized).Replace('\\', '/') : normalized;
+L000607 |         return Path.IsPathRooted(normalized) ⟦EOL⟧
+// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(normalized).Replace('\\', '/') / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(normalized)
+L000608 |             ? Path.GetFullPath(normalized).Replace('\\', '/') ⟦EOL⟧
+// 해설 L609: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeStoredSourceIdentity(string)
+L000609 |             : normalized; ⟦EOL⟧
+// 해설 L610: 구문 블록 경계입니다 · 소속 NormalizeStoredSourceIdentity.
+L000610 |     } ⟦EOL⟧
+L000611 |  ⟦EOL⟧
+// 해설 L612: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.RequireRecipeId(string, string)
+L000612 |     private static string RequireRecipeId(string recipeId, string operation) ⟦EOL⟧
+// 해설 L613: 구문 블록 경계입니다 · 소속 RequireRecipeId.
+L000613 |     { ⟦EOL⟧
+// 해설 L614: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(recipeId) / 지역 변수를 선언합니다: var normalized = NormalizeRecipeId(recipeId); / 변수의 초기값을 지정합니다: normalized = NormalizeRecipeId(recipeId)
+L000614 |         var normalized = NormalizeRecipeId(recipeId); ⟦EOL⟧
+// 해설 L615: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalized))
+L000615 |         if (string.IsNullOrWhiteSpace(normalized)) ⟦EOL⟧
+// 해설 L616: 구문 블록 경계입니다 · 소속 RequireRecipeId.
+L000616 |         { ⟦EOL⟧
+// 해설 L617: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{operation} 실패. Recipe ID가 비어 있습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{operation} 실패. Recipe ID가 비어 있습니다.");
+L000617 |             throw new InvalidDataException($"{operation} 실패. Recipe ID가 비어 있습니다."); ⟦EOL⟧
+// 해설 L618: 구문 블록 경계입니다 · 소속 RequireRecipeId.
+L000618 |         } ⟦EOL⟧
+L000619 |  ⟦EOL⟧
+// 해설 L620: 호출자에게 값 또는 제어를 반환합니다: return normalized;
+L000620 |         return normalized; ⟦EOL⟧
+// 해설 L621: 구문 블록 경계입니다 · 소속 RequireRecipeId.
+L000621 |     } ⟦EOL⟧
+L000622 |  ⟦EOL⟧
+// 해설 L623: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.CreateArchivePath(string, string)
+L000623 |     private static string CreateArchivePath(string rollbackDirectory, string fileName) ⟦EOL⟧
+// 해설 L624: 구문 블록 경계입니다 · 소속 CreateArchivePath.
+L000624 |     { ⟦EOL⟧
+// 해설 L625: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(rollbackDirectory, fileName) / 지역 변수를 선언합니다: var path = Path.Combine(rollbackDirectory, fileName); / 변수의 초기값을 지정합니다: path = Path.Combine(rollbackDirectory, fileName)
+L000625 |         var path = Path.Combine(rollbackDirectory, fileName); ⟦EOL⟧
+// 해설 L626: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(path))
+L000626 |         if (!System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L627: 구문 블록 경계입니다 · 소속 CreateArchivePath.
+L000627 |         { ⟦EOL⟧
+// 해설 L628: 호출자에게 값 또는 제어를 반환합니다: return path;
+L000628 |             return path; ⟦EOL⟧
+// 해설 L629: 구문 블록 경계입니다 · 소속 CreateArchivePath.
+L000629 |         } ⟦EOL⟧
+L000630 |  ⟦EOL⟧
+// 해설 L631: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(fileName) / 지역 변수를 선언합니다: var name = Path.GetFileNameWithoutExtension(fileName); / 변수의 초기값을 지정합니다: name = Path.GetFileNameWithoutExtension(fileName)
+L000631 |         var name = Path.GetFileNameWithoutExtension(fileName); ⟦EOL⟧
+// 해설 L632: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetExtension(fileName) / 지역 변수를 선언합니다: var extension = Path.GetExtension(fileName); / 변수의 초기값을 지정합니다: extension = Path.GetExtension(fileName)
+L000632 |         var extension = Path.GetExtension(fileName); ⟦EOL⟧
+// 해설 L633: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(rollbackDirectory, $"{name}_{DateTimeOffset.Now:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}{extension}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(rollbackDirectory, $"{name}_{DateTimeOffset.Now:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}{extension}");
+L000633 |         return Path.Combine(rollbackDirectory, $"{name}_{DateTimeOffset.Now:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}{extension}"); ⟦EOL⟧
+// 해설 L634: 구문 블록 경계입니다 · 소속 CreateArchivePath.
+L000634 |     } ⟦EOL⟧
+L000635 |  ⟦EOL⟧
+// 해설 L636: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000636 |     private ST_REVIEW_OFFSET_FILE_DATA Load(string recipeId, string path, CancellationToken token) ⟦EOL⟧
+// 해설 L637: 구문 블록 경계입니다 · 소속 Load.
+L000637 |     { ⟦EOL⟧
+// 해설 L638: 예외 처리 범위입니다: try
+L000638 |         try ⟦EOL⟧
+// 해설 L639: 구문 블록 경계입니다 · 소속 Load.
+L000639 |         { ⟦EOL⟧
+// 해설 L640: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders( path, "Review Offset", RequiredHeaderGroups)
+L000640 |             CCsvParser.ValidateRequiredHeaders( ⟦EOL⟧
+// 해설 L641: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000641 |                 path, ⟦EOL⟧
+// 해설 L642: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000642 |                 "Review Offset", ⟦EOL⟧
+// 해설 L643: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000643 |                 RequiredHeaderGroups); ⟦EOL⟧
+L000644 |  ⟦EOL⟧
+// 해설 L645: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<int>() / 지역 변수를 선언합니다: var lineNumbers = new List<int>(); / 변수의 초기값을 지정합니다: lineNumbers = new List<int>()
+L000645 |             var lineNumbers = new List<int>(); ⟦EOL⟧
+// 해설 L646: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path, lineNumbers) / 지역 변수를 선언합니다: var sourceRows = CCsvParser.Read(path, lineNumbers); / 변수의 초기값을 지정합니다: sourceRows = CCsvParser.Read(path, lineNumbers)
+L000646 |             var sourceRows = CCsvParser.Read(path, lineNumbers); ⟦EOL⟧
+// 해설 L647: 지역 변수를 선언합니다: var parsed = new ST_REVIEW_OFFSET_ROW[sourceRows.Count]; / 변수의 초기값을 지정합니다: parsed = new ST_REVIEW_OFFSET_ROW[sourceRows.Count]
+L000647 |             var parsed = new ST_REVIEW_OFFSET_ROW[sourceRows.Count]; ⟦EOL⟧
+// 해설 L648: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < sourceRows.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000648 |             for (var index = 0; index < sourceRows.Count; index++) ⟦EOL⟧
+// 해설 L649: 구문 블록 경계입니다 · 소속 Load.
+L000649 |             { ⟦EOL⟧
+// 해설 L650: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000650 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L651: 값을 대상에 대입합니다: parsed[index] = ToOffsetRow(sourceRows[index], lineNumbers[index]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToOffsetRow(sourceRows[index], lineNumbers[index]) / 예외 처리 범위입니다: try
+L000651 |                 try { parsed[index] = ToOffsetRow(sourceRows[index], lineNumbers[index]); } ⟦EOL⟧
+// 해설 L652: 지정 예외를 처리합니다: catch (InvalidDataException error)
+L000652 |                 catch (InvalidDataException error) ⟦EOL⟧
+// 해설 L653: 구문 블록 경계입니다 · 소속 Load.
+L000653 |                 { ⟦EOL⟧
+// 해설 L654: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewOffsetValidationException(path, lineNumbers[index], error.Message) / 예외를 발생/전달합니다: throw new CReviewOffsetValidationException(path, lineNumbers[index], error.Message);
+L000654 |                     throw new CReviewOffsetValidationException(path, lineNumbers[index], error.Message); ⟦EOL⟧
+// 해설 L655: 구문 블록 경계입니다 · 소속 Load.
+L000655 |                 } ⟦EOL⟧
+// 해설 L656: 구문 블록 경계입니다 · 소속 Load.
+L000656 |             } ⟦EOL⟧
+// 해설 L657: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewOffsetData.ValidateRows(parsed, path, lineNumbers, token) / 지역 변수를 선언합니다: var rows = CReviewOffsetData.ValidateRows(parsed, path, lineNumbers, token); / 변수의 초기값을 지정합니다: rows = CReviewOffsetData.ValidateRows(parsed, path, lineNumbers, token)
+L000657 |             var rows = CReviewOffsetData.ValidateRows(parsed, path, lineNumbers, token); ⟦EOL⟧
+// 해설 L658: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileInfo(path) / 지역 변수를 선언합니다: var fileInfo = new FileInfo(path); / 변수의 초기값을 지정합니다: fileInfo = new FileInfo(path)
+L000658 |             var fileInfo = new FileInfo(path); ⟦EOL⟧
+// 해설 L659: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseSavedAt(fileInfo.Name) / 지역 변수를 선언합니다: var savedAt = TryParseSavedAt(fileInfo.Name) ?? fileInfo.LastWriteTime; / 변수의 초기값을 지정합니다: savedAt = TryParseSavedAt(fileInfo.Name) ?? fileInfo.LastWriteTime
+L000659 |             var savedAt = TryParseSavedAt(fileInfo.Name) ?? fileInfo.LastWriteTime; ⟦EOL⟧
+// 해설 L660: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_FILE_DATA( recipeId, fileInfo.FullName, fileInfo.Name, savedAt, rows) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_FILE_DATA( recipeId, fileInfo.FullName, fileInfo.Name, savedAt, rows);
+L000660 |             return new ST_REVIEW_OFFSET_FILE_DATA( ⟦EOL⟧
+// 해설 L661: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000661 |                 recipeId, ⟦EOL⟧
+// 해설 L662: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000662 |                 fileInfo.FullName, ⟦EOL⟧
+// 해설 L663: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000663 |                 fileInfo.Name, ⟦EOL⟧
+// 해설 L664: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000664 |                 savedAt, ⟦EOL⟧
+// 해설 L665: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_FILE_DATA Drilling.File.ReviewOffset.CReviewOffsetFile.Load(string, string, System.Threading.CancellationToken)
+L000665 |                 rows); ⟦EOL⟧
+// 해설 L666: 구문 블록 경계입니다 · 소속 Load.
+L000666 |         } ⟦EOL⟧
+// 해설 L667: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewOffsetValidationException(path, 0, error.Message) / 지정 예외를 처리합니다: catch (InvalidDataException error) / 예외를 발생/전달합니다: throw new CReviewOffsetValidationException(path, 0, error.Message);
+L000667 |         catch (InvalidDataException error) { throw new CReviewOffsetValidationException(path, 0, error.Message); } ⟦EOL⟧
+// 해설 L668: 구문 블록 경계입니다 · 소속 Load.
+L000668 |     } ⟦EOL⟧
+L000669 |  ⟦EOL⟧
+// 해설 L670: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.GetRecipeOffsetDirectory(string)
+L000670 |     private string GetRecipeOffsetDirectory(string recipeId) ⟦EOL⟧
+// 해설 L671: 구문 블록 경계입니다 · 소속 GetRecipeOffsetDirectory.
+L000671 |     { ⟦EOL⟧
+// 해설 L672: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_recipeRoot, $"{SanitizeFileName(recipeId)}_reviewoffset") / 함수·델리게이트 또는 객체 생성자를 호출합니다: SanitizeFileName(recipeId) / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_recipeRoot, $"{SanitizeFileName(recipeId)}_reviewoffset");
+L000672 |         return Path.Combine(_recipeRoot, $"{SanitizeFileName(recipeId)}_reviewoffset"); ⟦EOL⟧
+// 해설 L673: 구문 블록 경계입니다 · 소속 GetRecipeOffsetDirectory.
+L000673 |     } ⟦EOL⟧
+L000674 |  ⟦EOL⟧
+// 해설 L675: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000675 |     private static ST_REVIEW_OFFSET_ROW ToOffsetRow( ⟦EOL⟧
+// 해설 L676: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000676 |         IReadOnlyDictionary<string, string> row, ⟦EOL⟧
+// 해설 L677: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000677 |         int rowNo) ⟦EOL⟧
+// 해설 L678: 구문 블록 경계입니다 · 소속 ToOffsetRow.
+L000678 |     { ⟦EOL⟧
+// 해설 L679: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadRequiredInt( CCsvParser.Get(row, "CELLID"), "Review Offset", rowNo, "CELLID") / 지역 변수를 선언합니다: var cellId = CCsvParser.ReadRequiredInt( CCsvParser.Get(row, "CELLID"), "Review Offset", rowNo, "CELLID"); / 변수의 초기값을 지정합니다: cellId = CCsvParser.ReadRequiredInt( CCsvParser.Get(row, "CELLID"), "Review Offset", rowNo, "CELLID")
+L000679 |         var cellId = CCsvParser.ReadRequiredInt( ⟦EOL⟧
+// 해설 L680: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "CELLID")
+L000680 |             CCsvParser.Get(row, "CELLID"), ⟦EOL⟧
+// 해설 L681: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000681 |             "Review Offset", ⟦EOL⟧
+// 해설 L682: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000682 |             rowNo, ⟦EOL⟧
+// 해설 L683: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000683 |             "CELLID"); ⟦EOL⟧
+// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset", rowNo, "SHOTID").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset", rowNo, "SHOTID").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText( row, "Review Offset", rowNo, "SHOTID") / 지역 변수를 선언합니다: var shotId = CCsvParser.RequireText( row, "Review Offset", rowNo, "SHOTID").Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: shotId = CCsvParser.RequireText( row, "Review Offset", rowNo, "SHOTID").Trim().ToUpperInvariant(
+L000684 |         var shotId = CCsvParser.RequireText( ⟦EOL⟧
+// 해설 L685: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000685 |             row, ⟦EOL⟧
+// 해설 L686: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000686 |             "Review Offset", ⟦EOL⟧
+// 해설 L687: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000687 |             rowNo, ⟦EOL⟧
+// 해설 L688: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_OFFSET_ROW Drilling.File.ReviewOffset.CReviewOffsetFile.ToOffsetRow(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000688 |             "SHOTID").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L689: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(CCsvParser.Get(row, name), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, name) / 조건에 따라 결과식을 선택합니다: double.TryParse(CCsvParser.Get(row, name), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? value : throw new InvalidDataException($"{name} 값이 숫자가 아닙니다: '{CCsvParser.Get(row, name)}'.")
+L000689 |         double Number(string name) => double.TryParse(CCsvParser.Get(row, name), NumberStyles.Float, ⟦EOL⟧
+// 해설 L690: 선언·서명/매개변수·접근 조건입니다 · double Number(string)
+L000690 |             CultureInfo.InvariantCulture, out var value) ? value ⟦EOL⟧
+// 해설 L691: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{name} 값이 숫자가 아닙니다: '{CCsvParser.Get(row, name)}'.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, name) / 예외를 발생/전달합니다: throw new InvalidDataException($"{name} 값이 숫자가 아닙니다: '{CCsvParser.Get(row, name)}'.")
+L000691 |             : throw new InvalidDataException($"{name} 값이 숫자가 아닙니다: '{CCsvParser.Get(row, name)}'."); ⟦EOL⟧
+// 해설 L692: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number("REVIEWOFFSETX") / 지역 변수를 선언합니다: var offsetX = Number("REVIEWOFFSETX"); / 변수의 초기값을 지정합니다: offsetX = Number("REVIEWOFFSETX")
+L000692 |         var offsetX = Number("REVIEWOFFSETX"); ⟦EOL⟧
+// 해설 L693: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number("REVIEWOFFSETY") / 지역 변수를 선언합니다: var offsetY = Number("REVIEWOFFSETY"); / 변수의 초기값을 지정합니다: offsetY = Number("REVIEWOFFSETY")
+L000693 |         var offsetY = Number("REVIEWOFFSETY"); ⟦EOL⟧
+// 해설 L694: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "COORDINATE_SPACE").Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "COORDINATE_SPACE").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "COORDINATE_SPACE") / 지역 변수를 선언합니다: var space = CCsvParser.Get(row, "COORDINATE_SPACE").Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: space = CCsvParser.Get(row, "COORDINATE_SPACE").Trim().ToUpperInvariant()
+L000694 |         var space = CCsvParser.Get(row, "COORDINATE_SPACE").Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L695: 조건에 따라 분기합니다: if (space is not ("" or "SCANNER" or "DESIGN"))
+L000695 |         if (space is not ("" or "SCANNER" or "DESIGN")) ⟦EOL⟧
+// 해설 L696: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Review Offset row {rowNo}: invalid COORDINATE_SPACE {space}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Review Offset row {rowNo}: invalid COORDINATE_SPACE {space}.");
+L000696 |             throw new InvalidDataException($"Review Offset row {rowNo}: invalid COORDINATE_SPACE {space}."); ⟦EOL⟧
+// 해설 L697: 값을 대상에 대입합니다: IsDesignCoordinate = space == "DESIGN" / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_OFFSET_ROW(cellId, shotId, offsetX, offsetY) { IsDesignCoordinate = space == "DESIGN" } / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_OFFSET_ROW(cellId, shotId, offsetX, offsetY) { IsDesignCoordinate = space == "DESIGN" };
+L000697 |         return new ST_REVIEW_OFFSET_ROW(cellId, shotId, offsetX, offsetY) { IsDesignCoordinate = space == "DESIGN" }; ⟦EOL⟧
+// 해설 L698: 구문 블록 경계입니다 · 소속 ToOffsetRow.
+L000698 |     } ⟦EOL⟧
+L000699 |  ⟦EOL⟧
+// 해설 L700: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.ReviewOffset.CReviewOffsetFile.ToCsvRow(Drilling.Common.Review.ST_REVIEW_OFFSET_ROW)
+L000700 |     private static IReadOnlyDictionary<string, string> ToCsvRow(ST_REVIEW_OFFSET_ROW row) ⟦EOL⟧
+// 해설 L701: 구문 블록 경계입니다 · 소속 ToCsvRow.
+L000701 |     { ⟦EOL⟧
+// 해설 L702: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["CELLID"] = row.CellId.ToString(CultureInfo.InvariantCulture), ["SHOTID"] = row.ShotId, ["REVIEWOFFSETX"] = FormatDouble(row.ReviewOffsetX), ["REVIEWOFF… / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["CELLID"] = row.CellId.ToString(CultureInfo.InvariantCulture), ["SHOTID"] = row.ShotId, ["REVIEWOFFSETX"] = FormatDouble(row.ReviewOffsetX), ["REVIEWOFFSET
+L000702 |         return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L703: 구문 블록 경계입니다 · 소속 ToCsvRow.
+L000703 |         { ⟦EOL⟧
+// 해설 L704: 값을 대상에 대입합니다: ["CELLID"] = row.CellId.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.CellId.ToString(CultureInfo.InvariantCulture)
+L000704 |             ["CELLID"] = row.CellId.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L705: 값을 대상에 대입합니다: ["SHOTID"] = row.ShotId
+L000705 |             ["SHOTID"] = row.ShotId, ⟦EOL⟧
+// 해설 L706: 값을 대상에 대입합니다: ["REVIEWOFFSETX"] = FormatDouble(row.ReviewOffsetX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(row.ReviewOffsetX)
+L000706 |             ["REVIEWOFFSETX"] = FormatDouble(row.ReviewOffsetX), ⟦EOL⟧
+// 해설 L707: 값을 대상에 대입합니다: ["REVIEWOFFSETY"] = FormatDouble(row.ReviewOffsetY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(row.ReviewOffsetY)
+L000707 |             ["REVIEWOFFSETY"] = FormatDouble(row.ReviewOffsetY), ⟦EOL⟧
+// 해설 L708: 값을 대상에 대입합니다: ["COORDINATE_SPACE"] = row.IsDesignCoordinate ? "DESIGN" : "SCANNER" / 조건에 따라 결과식을 선택합니다: row.IsDesignCoordinate ? "DESIGN" : "SCANNER"
+L000708 |             ["COORDINATE_SPACE"] = row.IsDesignCoordinate ? "DESIGN" : "SCANNER" ⟦EOL⟧
+// 해설 L709: 구문 블록 경계입니다 · 소속 ToCsvRow.
+L000709 |         }; ⟦EOL⟧
+// 해설 L710: 구문 블록 경계입니다 · 소속 ToCsvRow.
+L000710 |     } ⟦EOL⟧
+L000711 |  ⟦EOL⟧
+// 해설 L712: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000712 |     private static DateTimeOffset? TryParseSavedAt(string fileName) ⟦EOL⟧
+// 해설 L713: 구문 블록 경계입니다 · 소속 TryParseSavedAt.
+L000713 |     { ⟦EOL⟧
+// 해설 L714: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(fileName) / 지역 변수를 선언합니다: var name = Path.GetFileNameWithoutExtension(fileName); / 변수의 초기값을 지정합니다: name = Path.GetFileNameWithoutExtension(fileName)
+L000714 |         var name = Path.GetFileNameWithoutExtension(fileName); ⟦EOL⟧
+// 해설 L715: 지역 변수를 선언합니다: var marker = "_reviewoffset"; / 변수의 초기값을 지정합니다: marker = "_reviewoffset"
+L000715 |         var marker = "_reviewoffset"; ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: name.EndsWith(marker, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (name.EndsWith(marker, StringComparison.OrdinalIgnoreCase))
+L000716 |         if (name.EndsWith(marker, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L717: 구문 블록 경계입니다 · 소속 TryParseSavedAt.
+L000717 |         { ⟦EOL⟧
+// 해설 L718: 값을 대상에 대입합니다: name = name[..^marker.Length]
+L000718 |             name = name[..^marker.Length]; ⟦EOL⟧
+// 해설 L719: 구문 블록 경계입니다 · 소속 TryParseSavedAt.
+L000719 |         } ⟦EOL⟧
+L000720 |  ⟦EOL⟧
+// 해설 L721: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParseExact( name, "yyyyMMdd_HHmmss_fff", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) / 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParseExact( name, "yyyyMMdd_HHmmss_fff", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : null / 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParseExact( name, "yyyyMMdd_HHmmss_fff", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : null;
+L000721 |         return DateTimeOffset.TryParseExact( ⟦EOL⟧
+// 해설 L722: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000722 |             name, ⟦EOL⟧
+// 해설 L723: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000723 |             "yyyyMMdd_HHmmss_fff", ⟦EOL⟧
+// 해설 L724: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000724 |             CultureInfo.InvariantCulture, ⟦EOL⟧
+// 해설 L725: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000725 |             DateTimeStyles.AssumeLocal, ⟦EOL⟧
+// 해설 L726: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000726 |             out var savedAt) ⟦EOL⟧
+// 해설 L727: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000727 |                 ? savedAt ⟦EOL⟧
+// 해설 L728: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.File.ReviewOffset.CReviewOffsetFile.TryParseSavedAt(string)
+L000728 |                 : null; ⟦EOL⟧
+// 해설 L729: 구문 블록 경계입니다 · 소속 TryParseSavedAt.
+L000729 |     } ⟦EOL⟧
+L000730 |  ⟦EOL⟧
+// 해설 L731: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.NormalizeRecipeId(string)
+L000731 |     private static string NormalizeRecipeId(string value) ⟦EOL⟧
+// 해설 L732: 구문 블록 경계입니다 · 소속 NormalizeRecipeId.
+L000732 |     { ⟦EOL⟧
+// 해설 L733: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(value?.Trim() ?? "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 호출자에게 값 또는 제어를 반환합니다: return Path.GetFileNameWithoutExtension(value?.Trim() ?? "");
+L000733 |         return Path.GetFileNameWithoutExtension(value?.Trim() ?? ""); ⟦EOL⟧
+// 해설 L734: 구문 블록 경계입니다 · 소속 NormalizeRecipeId.
+L000734 |     } ⟦EOL⟧
+L000735 |  ⟦EOL⟧
+// 해설 L736: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.FormatDouble(double)
+L000736 |     private static string FormatDouble(double value) ⟦EOL⟧
+// 해설 L737: 구문 블록 경계입니다 · 소속 FormatDouble.
+L000737 |     { ⟦EOL⟧
+// 해설 L738: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.000000", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.000000", CultureInfo.InvariantCulture);
+L000738 |         return value.ToString("0.000000", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L739: 구문 블록 경계입니다 · 소속 FormatDouble.
+L000739 |     } ⟦EOL⟧
+L000740 |  ⟦EOL⟧
+// 해설 L741: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.SanitizeFileName(string)
+L000741 |     private static string SanitizeFileName(string value) ⟦EOL⟧
+// 해설 L742: 구문 블록 경계입니다 · 소속 SanitizeFileName.
+L000742 |     { ⟦EOL⟧
+// 해설 L743: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetInvalidFileNameChars() / 지역 변수를 선언합니다: var invalidChars = Path.GetInvalidFileNameChars(); / 변수의 초기값을 지정합니다: invalidChars = Path.GetInvalidFileNameChars()
+L000743 |         var invalidChars = Path.GetInvalidFileNameChars(); ⟦EOL⟧
+// 해설 L744: 함수·델리게이트 또는 객체 생성자를 호출합니다: new string(value .Select(character => invalidChars.Contains(character) ? '_' : character) .ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value .Select(character => invalidChars.Contains(character) ? '_' : character) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value .Select(character => invalidChars.Contains(character) ? '_' : character) / 지역 변수를 선언합니다: var sanitized = new string(value .Select(character => invalidChars.Contains(character) ? '_' : character) .ToArray()); / 변수의 초기값을 지정합니다: sanitized = new string(value .S
+L000744 |         var sanitized = new string(value ⟦EOL⟧
+// 해설 L745: 함수·델리게이트 또는 객체 생성자를 호출합니다: invalidChars.Contains(character) / 조건에 따라 결과식을 선택합니다: invalidChars.Contains(character) ? '_' : character
+L000745 |             .Select(character => invalidChars.Contains(character) ? '_' : character) ⟦EOL⟧
+// 해설 L746: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewOffset.CReviewOffsetFile.SanitizeFileName(string)
+L000746 |             .ToArray()); ⟦EOL⟧
+L000747 |  ⟦EOL⟧
+// 해설 L748: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(sanitized) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(sanitized) ? "UNLINKED" : sanitized / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(sanitized) ? "UNLINKED" : sanitized;
+L000748 |         return string.IsNullOrWhiteSpace(sanitized) ? "UNLINKED" : sanitized; ⟦EOL⟧
+// 해설 L749: 구문 블록 경계입니다 · 소속 SanitizeFileName.
+L000749 |     } ⟦EOL⟧
+// 해설 L750: 구문 블록 경계입니다.
+L000750 | } ⟦EOL⟧

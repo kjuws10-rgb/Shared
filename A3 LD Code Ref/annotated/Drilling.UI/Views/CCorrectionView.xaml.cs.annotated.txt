@@ -1,0 +1,171 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CCorrectionView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000004 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000006 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public partial class CCorrectionView : UserControl
+L000007 | public partial class CCorrectionView : UserControl ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CCorrectionView.CCorrectionView()
+L000009 |     public CCorrectionView() ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 .ctor.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000011 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 .ctor.
+L000012 |     } ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.SelectOutputViewerShotFromMap(object, MouseButtonEventArgs)
+L000014 |     private void SelectOutputViewerShotFromMap(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 SelectOutputViewerShotFromMap.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Correction is not CMenuCorrection correction)
+L000016 |         if (sender is not FrameworkElement map || DataContext is not CRootView root || root.CurrentScreen.Correction is not CMenuCorrection correction) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 SelectOutputViewerShotFromMap.
+L000017 |         { ⟦EOL⟧
+// 해설 L18: 호출자에게 값 또는 제어를 반환합니다: return;
+L000018 |             return; ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 SelectOutputViewerShotFromMap.
+L000019 |         } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map) / 지역 변수를 선언합니다: var point = e.GetPosition(map); / 변수의 초기값을 지정합니다: point = e.GetPosition(map)
+L000021 |         var point = e.GetPosition(map); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotAt(point.X, point.Y)
+L000022 |         correction.SelectOutputViewerShotAt(point.X, point.Y); ⟦EOL⟧
+// 해설 L23: 값을 대상에 대입합니다: e.Handled = true
+L000023 |         e.Handled = true; ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 SelectOutputViewerShotFromMap.
+L000024 |     } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.OutputOffsetGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000026 |     private void OutputOffsetGrid_SelectionChanged(object sender, SelectionChangedEventArgs e) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000027 |     { ⟦EOL⟧
+// 해설 L28: 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: ST_CORRECTION_OFFSET_SHOT_ITEM shot } || DataContext is not CRootView root || root.CurrentScreen.Correction is not CMenuCorrection correction)
+L000028 |         if (sender is not DataGrid { SelectedItem: ST_CORRECTION_OFFSET_SHOT_ITEM shot } || DataContext is not CRootView root || root.CurrentScreen.Correction is not CMenuCorrection correction) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000029 |         { ⟦EOL⟧
+// 해설 L30: 호출자에게 값 또는 제어를 반환합니다: return;
+L000030 |             return; ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000031 |         } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotByKey(shot.ShotKey)
+L000033 |         correction.SelectOutputViewerShotByKey(shot.ShotKey); ⟦EOL⟧
+// 해설 L34: 지역 변수를 선언합니다: var selectedShot = correction.OutputOffsets.SelectedShotItem; / 변수의 초기값을 지정합니다: selectedShot = correction.OutputOffsets.SelectedShotItem
+L000034 |         var selectedShot = correction.OutputOffsets.SelectedShotItem; ⟦EOL⟧
+// 해설 L35: 조건에 따라 분기합니다: if (selectedShot is not null)
+L000035 |         if (selectedShot is not null) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: _ = OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background) / 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background)
+L000037 |             _ = OutputOffsetGrid.Dispatcher.BeginInvoke( ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.ScrollIntoView(selectedShot)
+L000038 |                 () => OutputOffsetGrid.ScrollIntoView(selectedShot), ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.OutputOffsetGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000039 |                 System.Windows.Threading.DispatcherPriority.Background); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000040 |         } ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 OutputOffsetGrid_SelectionChanged.
+L000041 |     } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000043 |     private void OutputViewerCellPreviewLabel_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseMove.
+L000044 |     { ⟦EOL⟧
+// 해설 L45: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })
+L000045 |         if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseMove.
+L000046 |         { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip()
+L000047 |             HideOutputViewerPreviewHoverTip(); ⟦EOL⟧
+// 해설 L48: 호출자에게 값 또는 제어를 반환합니다: return;
+L000048 |             return; ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseMove.
+L000049 |         } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture)
+L000051 |         OutputViewerPreviewHoverTipText.Text = label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Visible
+L000052 |         OutputViewerPreviewHoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionOutputViewerPreviewHoverTip(e.GetPosition(OutputViewerPreviewViewport)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(OutputViewerPreviewViewport)
+L000053 |         PositionOutputViewerPreviewHoverTip(e.GetPosition(OutputViewerPreviewViewport)); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseMove.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseLeave(object, MouseEventArgs)
+L000056 |     private void OutputViewerCellPreviewLabel_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseLeave.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip()
+L000058 |         HideOutputViewerPreviewHoverTip(); ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 OutputViewerCellPreviewLabel_MouseLeave.
+L000059 |     } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.PositionOutputViewerPreviewHoverTip(Point)
+L000061 |     private void PositionOutputViewerPreviewHoverTip(Point pointer) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000062 |     { ⟦EOL⟧
+// 해설 L63: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000063 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L64: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000064 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L65: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000065 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputViewerPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000066 |         OutputViewerPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L67: 지역 변수를 선언합니다: var tipSize = OutputViewerPreviewHoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = OutputViewerPreviewHoverTip.DesiredSize
+L000067 |         var tipSize = OutputViewerPreviewHoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L68: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000068 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L69: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000069 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L70: 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualWidth > 0)
+L000070 |         if (OutputViewerPreviewViewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)
+L000072 |             x = Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000073 |         } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualHeight > 0)
+L000075 |         if (OutputViewerPreviewViewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000076 |         { ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)
+L000077 |             y = Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000078 |         } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.X = x
+L000080 |         OutputViewerPreviewHoverTipTranslateTransform.X = x; ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.Y = y
+L000081 |         OutputViewerPreviewHoverTipTranslateTransform.Y = y; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 PositionOutputViewerPreviewHoverTip.
+L000082 |     } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip()
+L000084 |     private void HideOutputViewerPreviewHoverTip() ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 HideOutputViewerPreviewHoverTip.
+L000085 |     { ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Collapsed
+L000086 |         OutputViewerPreviewHoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = ""
+L000087 |         OutputViewerPreviewHoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 HideOutputViewerPreviewHoverTip.
+L000088 |     } ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다.
+L000089 | } ⟦EOL⟧

@@ -1,0 +1,981 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>0c8e4dde3d973c0dc0c46013c41c9c0fc259e7c6b28729f41fc622c66ce275df</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>7,829 bytes / 204 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/51d08836da166be1ee4c.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>EN_DEFAULT_RESTART_CHOICE</td><td>EnumDeclaration</td><td>6–6</td><td>EN_DEFAULT_RESTART_CHOICE</td></tr>
+<tr><td>CRecipeConfirmDialog</td><td>ClassDeclaration</td><td>8–197</td><td>CRecipeConfirmDialog: Window</td></tr>
+<tr><td>EN_REVIEW_RESUME_CHOICE</td><td>EnumDeclaration</td><td>199–204</td><td>EN_REVIEW_RESUME_CHOICE</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Cancel</td><td>EnumMemberDeclaration</td><td>L6–6</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.Cancel</td></tr>
+<tr><td>AllFromStart</td><td>EnumMemberDeclaration</td><td>L6–6</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.AllFromStart</td></tr>
+<tr><td>InspectionFromStart</td><td>EnumMemberDeclaration</td><td>L6–6</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.InspectionFromStart</td></tr>
+<tr><td>_alternateSelected</td><td>FieldDeclaration</td><td>L10–10</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog._alternateSelected</td></tr>
+<tr><td>ShowConfirmation</td><td>MethodDeclaration</td><td>L11–18</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool)</td></tr>
+<tr><td>ShowDuplicateOffsetConfirmation</td><td>MethodDeclaration</td><td>L20–28</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowDuplicateOffsetConfirmation(string, string)</td></tr>
+<tr><td>ShowSavedResultLoadConfirmation</td><td>MethodDeclaration</td><td>L30–38</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowSavedResultLoadConfirmation(string, string)</td></tr>
+<tr><td>ShowRecipeFolderCopy</td><td>MethodDeclaration</td><td>L40–48</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderCopy(string, string)</td></tr>
+<tr><td>ShowRecipeFolderRename</td><td>MethodDeclaration</td><td>L51–55</td><td>bool? Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderRename(string, string)</td></tr>
+<tr><td>CreateRecipeFolderRename</td><td>MethodDeclaration</td><td>L57–68</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateRecipeFolderRename(string, string)</td></tr>
+<tr><td>ShowRecipeFolderDelete</td><td>MethodDeclaration</td><td>L70–70</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderDelete(string, string)</td></tr>
+<tr><td>ShowRecipeFolderAction</td><td>MethodDeclaration</td><td>L71–79</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderAction(string, string, string, bool)</td></tr>
+<tr><td>ShowCompletion</td><td>MethodDeclaration</td><td>L81–84</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?)</td></tr>
+<tr><td>ShowWarning</td><td>MethodDeclaration</td><td>L86–89</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?)</td></tr>
+<tr><td>ShowReviewResumeChoice</td><td>MethodDeclaration</td><td>L91–105</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowReviewResumeChoice(string)</td></tr>
+<tr><td>ShowFineRetryChoice</td><td>MethodDeclaration</td><td>L107–112</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowFineRetryChoice(string)</td></tr>
+<tr><td>ShowDefaultRestartChoice</td><td>MethodDeclaration</td><td>L114–119</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowDefaultRestartChoice(string)</td></tr>
+<tr><td>CreateDefaultRestartChoice</td><td>MethodDeclaration</td><td>L121–131</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateDefaultRestartChoice(string)</td></tr>
+<tr><td>CreateFineRetryChoice</td><td>MethodDeclaration</td><td>L133–141</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateFineRetryChoice(string)</td></tr>
+<tr><td>ShowMessage</td><td>MethodDeclaration</td><td>L143–152</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?)</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L154–169</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool)</td></tr>
+<tr><td>OnKeyDown</td><td>MethodDeclaration</td><td>L171–179</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnKeyDown(KeyEventArgs)</td></tr>
+<tr><td>OnConfirmClicked</td><td>MethodDeclaration</td><td>L181–184</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnConfirmClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>OnCancelClicked</td><td>MethodDeclaration</td><td>L186–190</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnCancelClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>OnAbortClicked</td><td>MethodDeclaration</td><td>L192–196</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnAbortClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>Cancel</td><td>EnumMemberDeclaration</td><td>L201–201</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
+<tr><td>Resume</td><td>EnumMemberDeclaration</td><td>L202–202</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Resume</td></tr>
+<tr><td>Restart</td><td>EnumMemberDeclaration</td><td>L203–203</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Restart</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L6">EnumMemberDeclaration <code>Cancel</code> · L6–6</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.Cancel</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L6">EnumMemberDeclaration <code>AllFromStart</code> · L6–6</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.AllFromStart</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L6">EnumMemberDeclaration <code>InspectionFromStart</code> · L6–6</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.InspectionFromStart</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L10">FieldDeclaration <code>_alternateSelected</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog._alternateSelected</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">MethodDeclaration <code>ShowConfirmation</code> · L11–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L11-L18">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>confirmText</td><td>string</td><td>None</td><td>True / &quot;\uD655\uC778&quot;</td></tr>
+<tr><td>useDangerStyle</td><td>bool</td><td>None</td><td>True / false</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L583-L583">Drilling.UI/CRootView.cs:583–583</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1608-L1608">Drilling.UI/CRootView.cs:1608–1608</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2616-L2616">Drilling.UI/CRootView.cs:2616–2616</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L153-L157">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:153–157</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L366-L371">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:366–371</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L105-L105">Drilling.UI/Menu/Menus/CMenuCorrection.cs:105–105</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L193-L196">Drilling.UI/Menu/Menus/CMenuCorrection.cs:193–196</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1257-L1257">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1257–1257</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1265-L1265">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1265–1265</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1275-L1275">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1275–1275</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1344-L1344">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1344–1344</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1523-L1523">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1523–1523</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1535-L1535">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1535–1535</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2590-L2590">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2590–2590</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2607-L2612">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2607–2612</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2656-L2656">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2656–2656</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2667-L2667">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2667–2667</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2678-L2678">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2678–2678</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2734-L2734">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2734–2734</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2892-L2892">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2892–2892</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3004-L3004">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3004–3004</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3864-L3864">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3864–3864</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4013-L4017">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4013–4017</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4112-L4112">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4112–4112</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1790-L1790">Drilling.UI/Menu/Menus/CMenuManual.cs:1790–1790</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2202-L2202">Drilling.UI/Menu/Menus/CMenuManual.cs:2202–2202</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2626-L2626">Drilling.UI/Menu/Menus/CMenuManual.cs:2626–2626</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2735-L2735">Drilling.UI/Menu/Menus/CMenuManual.cs:2735–2735</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3267-L3267">Drilling.UI/Menu/Menus/CMenuManual.cs:3267–3267</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3307-L3307">Drilling.UI/Menu/Menus/CMenuManual.cs:3307–3307</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3367-L3367">Drilling.UI/Menu/Menus/CMenuManual.cs:3367–3367</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3528-L3528">Drilling.UI/Menu/Menus/CMenuManual.cs:3528–3528</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3910-L3910">Drilling.UI/Menu/Menus/CMenuManual.cs:3910–3910</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3955-L3955">Drilling.UI/Menu/Menus/CMenuManual.cs:3955–3955</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3974-L3974">Drilling.UI/Menu/Menus/CMenuManual.cs:3974–3974</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4006-L4006">Drilling.UI/Menu/Menus/CMenuManual.cs:4006–4006</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4075-L4075">Drilling.UI/Menu/Menus/CMenuManual.cs:4075–4075</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4301-L4301">Drilling.UI/Menu/Menus/CMenuManual.cs:4301–4301</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4639-L4639">Drilling.UI/Menu/Menus/CMenuManual.cs:4639–4639</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5052-L5052">Drilling.UI/Menu/Menus/CMenuManual.cs:5052–5052</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5256-L5256">Drilling.UI/Menu/Menus/CMenuManual.cs:5256–5256</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6299-L6299">Drilling.UI/Menu/Menus/CMenuManual.cs:6299–6299</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1220-L1220">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1220–1220</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2767-L2767">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2767–2767</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3970-L3970">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3970–3970</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L735-L735">Drilling.UI/Menu/Menus/CMenuRecipe.cs:735–735</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L761-L761">Drilling.UI/Menu/Menus/CMenuRecipe.cs:761–761</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1033-L1033">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1033–1033</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2022-L2022">Drilling.UI/Menu/Menus/CMenuReview.cs:2022–2022</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2048-L2051">Drilling.UI/Menu/Menus/CMenuReview.cs:2048–2051</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2065-L2065">Drilling.UI/Menu/Menus/CMenuReview.cs:2065–2065</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2288-L2288">Drilling.UI/Menu/Menus/CMenuReview.cs:2288–2288</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2624-L2624">Drilling.UI/Menu/Menus/CMenuReview.cs:2624–2624</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L339-L339">Drilling.UI/Menu/Menus/CMenuSetting.cs:339–339</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L381-L381">Drilling.UI/Menu/Menus/CMenuSetting.cs:381–381</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L405-L405">Drilling.UI/Menu/Menus/CMenuSetting.cs:405–405</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L466-L466">Drilling.UI/Menu/Menus/CMenuSetting.cs:466–466</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L485-L485">Drilling.UI/Menu/Menus/CMenuSetting.cs:485–485</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>13</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>17</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>13</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>15</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>17</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">MethodDeclaration <code>ShowDuplicateOffsetConfirmation</code> · L20–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L20-L28">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:20–28</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowDuplicateOffsetConfirmation(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>22</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>27</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, &quot;중복 적용&quot;, useDangerStyle: true) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>22</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, &quot;중복 적용&quot;, useDangerStyle: true) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>22</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, &quot;중복 적용&quot;, useDangerStyle: true) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>24</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;아니오&quot;</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>27</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">MethodDeclaration <code>ShowSavedResultLoadConfirmation</code> · L30–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L30-L38">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:30–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowSavedResultLoadConfirmation(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L425-L427">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:425–427</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>37</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, &quot;예, LOAD&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>32</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, &quot;예, LOAD&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>32</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, &quot;예, LOAD&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>34</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>36</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;아니오&quot;</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>37</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">MethodDeclaration <code>ShowRecipeFolderCopy</code> · L40–48</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L40-L48">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:40–48</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderCopy(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>42</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>47</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, &quot;복사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>42</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, &quot;복사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, &quot;복사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>44</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>46</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;복사 안 함&quot;</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L51">MethodDeclaration <code>ShowRecipeFolderRename</code> · L51–55</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L51-L55">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:51–55</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool? Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderRename(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>CreateRecipeFolderRename</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateRecipeFolderRename(string, string) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:57</td></tr>
+<tr><td>54</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipeFolderRename(title, message)</td></tr>
+<tr><td>53</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = CreateRecipeFolderRename(title, message);</td></tr>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = CreateRecipeFolderRename(title, message)</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>54</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dialog.ShowDialog() == true ? true : dialog._alternateSelected ? false : null</td></tr>
+<tr><td>54</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? false : null</td></tr>
+<tr><td>54</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true ? true : dialog._alternateSelected ? false : null;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L57">MethodDeclaration <code>CreateRecipeFolderRename</code> · L57–68</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L57-L68">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:57–68</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateRecipeFolderRename(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:53–53</a></td><td>CreateRecipeFolderRename</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>60</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>64</td><td>new GridLength</td><td>unresolved</td><td>None</td></tr>
+<tr><td>65</td><td>new GridLength</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>59</td><td>local-declaration</td><td>지역 변수를 선언합니다: var owner = Application.Current?.MainWindow;</td></tr>
+<tr><td>59</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, &quot;함께 변경&quot;, useDangerStyle: false)</td></tr>
+<tr><td>60</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, &quot;함께 변경&quot;, useDangerStyle: false);</td></tr>
+<tr><td>60</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, &quot;함께 변경&quot;, useDangerStyle: false)</td></tr>
+<tr><td>61</td><td>if</td><td>조건에 따라 분기합니다: if (owner is not null)</td></tr>
+<tr><td>62</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.Owner = owner</td></tr>
+<tr><td>63</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;폴더 유지&quot;</td></tr>
+<tr><td>64</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortGap.Width = new GridLength(12)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(12)</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortButton.Visibility = Visibility.Visible</td></tr>
+<tr><td>67</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateRecipeFolderRename&quot;]
+ N0[&quot;L61 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L70">MethodDeclaration <code>ShowRecipeFolderDelete</code> · L70–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderDelete(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>70</td><td>ShowRecipeFolderAction</td><td>resolved</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderAction(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:71</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ShowRecipeFolderAction(title, message, &quot;함께 삭제&quot;, true)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L71">MethodDeclaration <code>ShowRecipeFolderAction</code> · L71–79</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L71-L79">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:71–79</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderAction(string, string, string, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>action</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>danger</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></td><td>ShowRecipeFolderAction</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>73</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>78</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>75</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>77</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;폴더 유지&quot;</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>78</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">MethodDeclaration <code>ShowCompletion</code> · L81–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L81-L84">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>owner</td><td>Window?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L120-L120">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:120–120</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L194-L194">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:194–194</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1384-L1384">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1384–1384</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1709-L1709">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1709–1709</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2593-L2593">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2593–2593</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2602-L2602">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2602–2602</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2615-L2615">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2615–2615</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2735-L2735">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2735–2735</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3005-L3005">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3005–3005</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3865-L3865">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3865–3865</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4018-L4018">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4018–4018</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4113-L4113">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4113–4113</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2041-L2041">Drilling.UI/Menu/Menus/CMenuManual.cs:2041–2041</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5073-L5073">Drilling.UI/Menu/Menus/CMenuManual.cs:5073–5073</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5181-L5181">Drilling.UI/Menu/Menus/CMenuManual.cs:5181–5181</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L774-L774">Drilling.UI/Menu/Menus/CMenuRecipe.cs:774–774</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1035-L1035">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1035–1035</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1246-L1246">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1246–1246</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2229-L2229">Drilling.UI/Menu/Menus/CMenuReview.cs:2229–2229</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2304-L2304">Drilling.UI/Menu/Menus/CMenuReview.cs:2304–2304</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L431-L431">Drilling.UI/Menu/Menus/CMenuSetting.cs:431–431</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L461-L461">Drilling.UI/Menu/Menus/CMenuSetting.cs:461–461</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>83</td><td>ShowMessage</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:143</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ShowMessage(title, message, useDangerStyle: false, owner)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">MethodDeclaration <code>ShowWarning</code> · L86–89</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L86-L89">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86–89</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>owner</td><td>Window?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L276-L276">Drilling.UI/CRootView.cs:276–276</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L285-L285">Drilling.UI/CRootView.cs:285–285</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L584-L584">Drilling.UI/CRootView.cs:584–584</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1244-L1244">Drilling.UI/CRootView.cs:1244–1244</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1381-L1381">Drilling.UI/CRootView.cs:1381–1381</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1603-L1603">Drilling.UI/CRootView.cs:1603–1603</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1612-L1612">Drilling.UI/CRootView.cs:1612–1612</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1624-L1624">Drilling.UI/CRootView.cs:1624–1624</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1642-L1642">Drilling.UI/CRootView.cs:1642–1642</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1655-L1655">Drilling.UI/CRootView.cs:1655–1655</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1679-L1679">Drilling.UI/CRootView.cs:1679–1679</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L125-L125">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:125–125</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L199-L199">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:199–199</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L242-L242">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:242–242</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L360-L362">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:360–362</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L407-L409">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:407–409</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L437-L439">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:437–439</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L90-L90">Drilling.UI/Menu/Menus/CMenuCorrection.cs:90–90</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L107-L107">Drilling.UI/Menu/Menus/CMenuCorrection.cs:107–107</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2633-L2633">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2633–2633</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2679-L2679">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2679–2679</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2893-L2893">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2893–2893</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3006-L3006">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3006–3006</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3866-L3866">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3866–3866</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4019-L4019">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4019–4019</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4114-L4114">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4114–4114</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1819-L1819">Drilling.UI/Menu/Menus/CMenuManual.cs:1819–1819</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2052-L2052">Drilling.UI/Menu/Menus/CMenuManual.cs:2052–2052</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2198-L2198">Drilling.UI/Menu/Menus/CMenuManual.cs:2198–2198</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2228-L2228">Drilling.UI/Menu/Menus/CMenuManual.cs:2228–2228</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2587-L2587">Drilling.UI/Menu/Menus/CMenuManual.cs:2587–2587</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2604-L2604">Drilling.UI/Menu/Menus/CMenuManual.cs:2604–2604</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2615-L2615">Drilling.UI/Menu/Menus/CMenuManual.cs:2615–2615</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2690-L2690">Drilling.UI/Menu/Menus/CMenuManual.cs:2690–2690</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2708-L2708">Drilling.UI/Menu/Menus/CMenuManual.cs:2708–2708</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2731-L2731">Drilling.UI/Menu/Menus/CMenuManual.cs:2731–2731</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2777-L2777">Drilling.UI/Menu/Menus/CMenuManual.cs:2777–2777</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3268-L3268">Drilling.UI/Menu/Menus/CMenuManual.cs:3268–3268</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3308-L3308">Drilling.UI/Menu/Menus/CMenuManual.cs:3308–3308</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3383-L3383">Drilling.UI/Menu/Menus/CMenuManual.cs:3383–3383</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3388-L3388">Drilling.UI/Menu/Menus/CMenuManual.cs:3388–3388</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3408-L3408">Drilling.UI/Menu/Menus/CMenuManual.cs:3408–3408</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3456-L3456">Drilling.UI/Menu/Menus/CMenuManual.cs:3456–3456</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4060-L4060">Drilling.UI/Menu/Menus/CMenuManual.cs:4060–4060</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4071-L4071">Drilling.UI/Menu/Menus/CMenuManual.cs:4071–4071</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4138-L4138">Drilling.UI/Menu/Menus/CMenuManual.cs:4138–4138</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4289-L4289">Drilling.UI/Menu/Menus/CMenuManual.cs:4289–4289</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4325-L4325">Drilling.UI/Menu/Menus/CMenuManual.cs:4325–4325</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4368-L4368">Drilling.UI/Menu/Menus/CMenuManual.cs:4368–4368</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4627-L4627">Drilling.UI/Menu/Menus/CMenuManual.cs:4627–4627</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4662-L4662">Drilling.UI/Menu/Menus/CMenuManual.cs:4662–4662</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4827-L4827">Drilling.UI/Menu/Menus/CMenuManual.cs:4827–4827</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5357-L5357">Drilling.UI/Menu/Menus/CMenuManual.cs:5357–5357</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5411-L5411">Drilling.UI/Menu/Menus/CMenuManual.cs:5411–5411</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5448-L5448">Drilling.UI/Menu/Menus/CMenuManual.cs:5448–5448</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6298-L6298">Drilling.UI/Menu/Menus/CMenuManual.cs:6298–6298</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6403-L6403">Drilling.UI/Menu/Menus/CMenuManual.cs:6403–6403</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1163-L1163">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1163–1163</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2756-L2756">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2756–2756</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4648-L4648">Drilling.UI/Menu/Menus/CMenuMonitor.cs:4648–4648</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1034-L1034">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1034–1034</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1078-L1078">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1078–1078</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1178-L1178">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1178–1178</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1245-L1245">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1245–1245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1466-L1466">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1466–1466</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L591-L591">Drilling.UI/Menu/Menus/CMenuReview.cs:591–591</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2221-L2221">Drilling.UI/Menu/Menus/CMenuReview.cs:2221–2221</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2227-L2227">Drilling.UI/Menu/Menus/CMenuReview.cs:2227–2227</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2237-L2237">Drilling.UI/Menu/Menus/CMenuReview.cs:2237–2237</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2342-L2342">Drilling.UI/Menu/Menus/CMenuReview.cs:2342–2342</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2357-L2357">Drilling.UI/Menu/Menus/CMenuReview.cs:2357–2357</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2370-L2370">Drilling.UI/Menu/Menus/CMenuReview.cs:2370–2370</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2405-L2405">Drilling.UI/Menu/Menus/CMenuReview.cs:2405–2405</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2418-L2418">Drilling.UI/Menu/Menus/CMenuReview.cs:2418–2418</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2625-L2625">Drilling.UI/Menu/Menus/CMenuReview.cs:2625–2625</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3028-L3028">Drilling.UI/Menu/Menus/CMenuReview.cs:3028–3028</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3217-L3217">Drilling.UI/Menu/Menus/CMenuReview.cs:3217–3217</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L85-L85">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:85–85</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L113-L113">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:113–113</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L135-L135">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:135–135</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L316-L316">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:316–316</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CMofDisableDialog.xaml.cs:33–33</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L135-L135">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:135–135</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L136-L136">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:136–136</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L139-L139">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:139–139</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L142-L142">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:142–142</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>88</td><td>ShowMessage</td><td>resolved</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:143</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ShowMessage(title, message, useDangerStyle: true, owner)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L91">MethodDeclaration <code>ShowReviewResumeChoice</code> · L91–105</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L91-L105">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:91–105</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowReviewResumeChoice(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3037-L3037">Drilling.UI/Menu/Menus/CMenuReview.cs:3037–3037</a></td><td>CRecipeConfirmDialog.ShowReviewResumeChoice</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>93</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>98</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(&quot;미완료 Review 확인&quot;, message, &quot;이어서 검사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>93</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(&quot;미완료 Review 확인&quot;, message, &quot;이어서 검사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow };</td></tr>
+<tr><td>93</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(&quot;미완료 Review 확인&quot;, message, &quot;이어서 검사&quot;, useDangerStyle: false) { Owner = Application.Current?.MainWindow }</td></tr>
+<tr><td>95</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Application.Current?.MainWindow</td></tr>
+<tr><td>97</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;처음부터&quot;</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>98</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = dialog.ShowDialog();</td></tr>
+<tr><td>98</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = dialog.ShowDialog()</td></tr>
+<tr><td>99</td><td>if</td><td>조건에 따라 분기합니다: if (result == true)</td></tr>
+<tr><td>101</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EN_REVIEW_RESUME_CHOICE.Resume;</td></tr>
+<tr><td>104</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
+<tr><td>104</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ShowReviewResumeChoice&quot;]
+ N0[&quot;L99 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L107">MethodDeclaration <code>ShowFineRetryChoice</code> · L107–112</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L107-L112">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:107–112</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowFineRetryChoice(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>109</td><td>CreateFineRetryChoice</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateFineRetryChoice(string) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:133</td></tr>
+<tr><td>110</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFineRetryChoice(message)</td></tr>
+<tr><td>109</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = CreateFineRetryChoice(message);</td></tr>
+<tr><td>109</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = CreateFineRetryChoice(message)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = dialog.ShowDialog();</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = dialog.ShowDialog()</td></tr>
+<tr><td>111</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result == true ? EN_REVIEW_RESUME_CHOICE.Resume : dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
+<tr><td>111</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
+<tr><td>111</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result == true ? EN_REVIEW_RESUME_CHOICE.Resume : dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L114">MethodDeclaration <code>ShowDefaultRestartChoice</code> · L114–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L114-L119">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:114–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowDefaultRestartChoice(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>116</td><td>CreateDefaultRestartChoice</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateDefaultRestartChoice(string) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:121</td></tr>
+<tr><td>117</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDefaultRestartChoice(message)</td></tr>
+<tr><td>116</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = CreateDefaultRestartChoice(message);</td></tr>
+<tr><td>116</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = CreateDefaultRestartChoice(message)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>117</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = dialog.ShowDialog();</td></tr>
+<tr><td>117</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = dialog.ShowDialog()</td></tr>
+<tr><td>118</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: result == true ? EN_DEFAULT_RESTART_CHOICE.InspectionFromStart : dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel</td></tr>
+<tr><td>118</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel</td></tr>
+<tr><td>118</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result == true ? EN_DEFAULT_RESTART_CHOICE.InspectionFromStart : dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L121">MethodDeclaration <code>CreateDefaultRestartChoice</code> · L121–131</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L121-L131">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:121–131</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateDefaultRestartChoice(string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L116-L116">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:116–116</a></td><td>CreateDefaultRestartChoice</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>124</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>127</td><td>new GridLength</td><td>unresolved</td><td>None</td></tr>
+<tr><td>128</td><td>new GridLength</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var owner = Application.Current?.MainWindow;</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(&quot;Default 전체 실행 재시작&quot;, message, &quot;검사부터 다시&quot;, useDangerStyle: false)</td></tr>
+<tr><td>124</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(&quot;Default 전체 실행 재시작&quot;, message, &quot;검사부터 다시&quot;, useDangerStyle: false);</td></tr>
+<tr><td>124</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(&quot;Default 전체 실행 재시작&quot;, message, &quot;검사부터 다시&quot;, useDangerStyle: false)</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.Owner = owner</td></tr>
+<tr><td>125</td><td>if</td><td>조건에 따라 분기합니다: if (owner is not null)</td></tr>
+<tr><td>126</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;처음부터&quot;</td></tr>
+<tr><td>127</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortGap.Width = new GridLength(12)</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(12)</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)</td></tr>
+<tr><td>129</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.AbortButton.Visibility = Visibility.Visible</td></tr>
+<tr><td>130</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateDefaultRestartChoice&quot;]
+ N0[&quot;L125 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L133">MethodDeclaration <code>CreateFineRetryChoice</code> · L133–141</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L133-L141">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:133–141</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateFineRetryChoice(string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L109-L109">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:109–109</a></td><td>CreateFineRetryChoice</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>136</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var owner = Application.Current?.MainWindow;</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(&quot;FINE NG 재검사&quot;, message, &quot;NG 라인부터&quot;, useDangerStyle: false)</td></tr>
+<tr><td>136</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(&quot;FINE NG 재검사&quot;, message, &quot;NG 라인부터&quot;, useDangerStyle: false);</td></tr>
+<tr><td>136</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(&quot;FINE NG 재검사&quot;, message, &quot;NG 라인부터&quot;, useDangerStyle: false)</td></tr>
+<tr><td>137</td><td>if</td><td>조건에 따라 분기합니다: if (owner is not null)</td></tr>
+<tr><td>138</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.Owner = owner</td></tr>
+<tr><td>139</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Content = &quot;처음부터&quot;</td></tr>
+<tr><td>140</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dialog;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateFineRetryChoice&quot;]
+ N0[&quot;L137 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L143">MethodDeclaration <code>ShowMessage</code> · L143–152</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L143-L152">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:143–152</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>useDangerStyle</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>owner</td><td>Window?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:83–83</a></td><td>ShowMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L88-L88">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:88–88</a></td><td>ShowMessage</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>145</td><td>new CRecipeConfirmDialog</td><td>resolved</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154</td></tr>
+<tr><td>150</td><td>Grid.SetColumnSpan</td><td>unresolved</td><td>None</td></tr>
+<tr><td>151</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, &quot;확인&quot;, useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow }</td></tr>
+<tr><td>145</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, &quot;확인&quot;, useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow };</td></tr>
+<tr><td>145</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, &quot;확인&quot;, useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow }</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = owner ?? Application.Current?.MainWindow</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: dialog.CancelButton.Visibility = Visibility.Collapsed</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(dialog.ConfirmButton, 3)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L154">ConstructorDeclaration <code>.ctor</code> · L154–169</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L154-L169">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154–169</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>confirmText</td><td>string</td><td>None</td><td>True / &quot;\uD655\uC778&quot;</td></tr>
+<tr><td>useDangerStyle</td><td>bool</td><td>None</td><td>True / true</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6071-L6074">Drilling.UI/Menu/Menus/CMenuManual.cs:6071–6074</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3111-L3114">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3111–3114</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L13-L16">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:13–16</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L22-L25">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:22–25</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L32-L35">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:32–35</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L42-L45">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:42–45</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L60-L60">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:60–60</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L73-L76">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:73–76</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L93-L96">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:93–96</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L124-L124">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:124–124</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L136-L136">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:136–136</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L145-L148">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:145–148</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>156</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>157</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>164</td><td>ConfirmButton.SetResourceReference</td><td>unresolved</td><td>None</td></tr>
+<tr><td>165</td><td>ConfirmButton.SetResourceReference</td><td>unresolved</td><td>None</td></tr>
+<tr><td>168</td><td>ConfirmButton.Focus</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>157</td><td>assignment</td><td>값을 대상에 대입합니다: MaxHeight = Math.Max(MinHeight, SystemParameters.WorkArea.Height - 40)</td></tr>
+<tr><td>157</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(MinHeight, SystemParameters.WorkArea.Height - 40)</td></tr>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: Title = title</td></tr>
+<tr><td>159</td><td>assignment</td><td>값을 대상에 대입합니다: TitleText.Text = title</td></tr>
+<tr><td>160</td><td>assignment</td><td>값을 대상에 대입합니다: MessageText.Text = message</td></tr>
+<tr><td>161</td><td>assignment</td><td>값을 대상에 대입합니다: ConfirmButton.Content = confirmText</td></tr>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (!useDangerStyle)</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.SetResourceReference(Control.BackgroundProperty, &quot;ButtonSuccessBrush&quot;)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.SetResourceReference(Control.BorderBrushProperty, &quot;ButtonSuccessBorderBrush&quot;)</td></tr>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.Focus()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L162 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">MethodDeclaration <code>OnKeyDown</code> · L171–179</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L171-L179">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:171–179</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnKeyDown(KeyEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>e</td><td>KeyEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>173</td><td>base.OnKeyDown</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnKeyDown(e)</td></tr>
+<tr><td>174</td><td>if</td><td>조건에 따라 분기합니다: if (e.Key == Key.Escape)</td></tr>
+<tr><td>176</td><td>assignment</td><td>값을 대상에 대입합니다: _alternateSelected = false</td></tr>
+<tr><td>177</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnKeyDown&quot;]
+ N0[&quot;L174 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L181">MethodDeclaration <code>OnConfirmClicked</code> · L181–184</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L181-L184">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:181–184</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnConfirmClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>183</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = true</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L186">MethodDeclaration <code>OnCancelClicked</code> · L186–190</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L186-L190">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:186–190</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnCancelClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>188</td><td>assignment</td><td>값을 대상에 대입합니다: _alternateSelected = true</td></tr>
+<tr><td>189</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L192">MethodDeclaration <code>OnAbortClicked</code> · L192–196</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L192-L196">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:192–196</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnAbortClicked(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CRecipeConfirmDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>194</td><td>assignment</td><td>값을 대상에 대입합니다: _alternateSelected = false</td></tr>
+<tr><td>195</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L201">EnumMemberDeclaration <code>Cancel</code> · L201–201</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L201-L201">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:201–201</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L202">EnumMemberDeclaration <code>Resume</code> · L202–202</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L202-L202">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:202–202</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Resume</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L203">EnumMemberDeclaration <code>Restart</code> · L203–203</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L203-L203">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:203–203</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Restart</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

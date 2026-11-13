@@ -1,0 +1,763 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Serial/CTalonLaser.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000003 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000006 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000008 | using Drilling.Common.Station; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000010 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 | [CCommType("Serial", "TalonLaser")] ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("ModbusSerial", "TalonLaser")] ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: internal sealed class CTalonLaser(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option)
+L000013 | internal sealed class CTalonLaser(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.CommandNewLine
+L000015 |     protected override string CommandNewLine ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.CommandNewLine.get
+L000017 |         get ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 호출자에게 값 또는 제어를 반환합니다: return "\r";
+L000019 |             return "\r"; ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000020 |         } ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000021 |     } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.FormatCommand(string)
+L000023 |     protected override string FormatCommand(string function) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 호출자에게 값 또는 제어를 반환합니다: return function.Trim();
+L000025 |         return function.Trim(); ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CTalonLaser.Execute(string, System.Threading.CancellationToken)
+L000028 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Execute.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)
+L000030 |         await SerialLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L31: 예외 처리 범위입니다: try
+L000031 |         try ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Execute.
+L000032 |         { ⟦EOL⟧
+// 해설 L33: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000033 |             if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Execute.
+L000034 |             { ⟦EOL⟧
+// 해설 L35: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000035 |                 await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Execute.
+L000036 |             } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000038 |             if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 Execute.
+L000039 |             { ⟦EOL⟧
+// 해설 L40: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000040 |                 return ""; ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Execute.
+L000041 |             } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: LastSent = FormatCommand(function) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommand(function)
+L000043 |             LastSent = FormatCommand(function); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: LastSent.StartsWith("?", StringComparison.Ordinal) / 지역 변수를 선언합니다: var expectsResponse = LastSent.StartsWith("?", StringComparison.Ordinal); / 변수의 초기값을 지정합니다: expectsResponse = LastSent.StartsWith("?", StringComparison.Ordinal)
+L000044 |             var expectsResponse = LastSent.StartsWith("?", StringComparison.Ordinal); ⟦EOL⟧
+// 해설 L45: 예외 처리 범위입니다: try
+L000045 |             try ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Execute.
+L000046 |             { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000047 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: LastReceived = await Task.Run(() => { SerialPort.NewLine = "\n"; SerialPort.Write(LastSent + "\r"); if (!expectsResponse) { return ""; } return SerialPort.ReadLine().TrimEnd('\r', '\n').Trim(); }, cancellationToken) / 비동기 완료를 기다립니다: await Task.Run(() => { SerialPort.NewLine = "\n"; SerialPort.Write(LastSent + "\r"); if (!expectsResponse) { return ""; } return SerialPort.ReadLine().TrimEnd('\r', '\n').Trim(); }, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { SerialPort.NewLine = "\n"; SerialPort.Write(La
+L000048 |                 LastReceived = await Task.Run(() => ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Execute.
+L000049 |                 { ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: SerialPort.NewLine = "\n"
+L000050 |                     SerialPort.NewLine = "\n"; ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(LastSent + "\r")
+L000051 |                     SerialPort.Write(LastSent + "\r"); ⟦EOL⟧
+// 해설 L52: 조건에 따라 분기합니다: if (!expectsResponse)
+L000052 |                     if (!expectsResponse) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 Execute.
+L000053 |                     { ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000054 |                         return ""; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 Execute.
+L000055 |                     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().TrimEnd('\r', '\n').Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine().TrimEnd('\r', '\n') / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine() / 호출자에게 값 또는 제어를 반환합니다: return SerialPort.ReadLine().TrimEnd('\r', '\n').Trim();
+L000057 |                     return SerialPort.ReadLine().TrimEnd('\r', '\n').Trim(); ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CTalonLaser.Execute(string, System.Threading.CancellationToken)
+L000058 |                 }, cancellationToken); ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: LastError = expectsResponse && string.IsNullOrWhiteSpace(LastReceived) ? "Talon response timeout." : "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived) / 조건에 따라 결과식을 선택합니다: expectsResponse && string.IsNullOrWhiteSpace(LastReceived) ? "Talon response timeout." : ""
+L000059 |                 LastError = expectsResponse && string.IsNullOrWhiteSpace(LastReceived) ? "Talon response timeout." : ""; ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000060 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000061 |                 return LastReceived; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 Execute.
+L000062 |             } ⟦EOL⟧
+// 해설 L63: 지정 예외를 처리합니다: catch (TimeoutException)
+L000063 |             catch (TimeoutException) ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 Execute.
+L000064 |             { ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: LastReceived = SerialPort.ReadExisting().TrimEnd('\r', '\n').Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().TrimEnd('\r', '\n').Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().TrimEnd('\r', '\n') / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting()
+L000065 |                 LastReceived = SerialPort.ReadExisting().TrimEnd('\r', '\n').Trim(); ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(LastReceived))
+L000066 |                 if (string.IsNullOrWhiteSpace(LastReceived)) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 Execute.
+L000067 |                 { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000068 |                     CloseSerialPort(); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError("Talon response timeout.")
+L000069 |                     SetError("Talon response timeout."); ⟦EOL⟧
+// 해설 L70: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000070 |                     return ""; ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Execute.
+L000071 |                 } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: LastError = ""
+L000073 |                 LastError = ""; ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000074 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L75: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000075 |                 return LastReceived; ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Execute.
+L000076 |             } ⟦EOL⟧
+// 해설 L77: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException or OperationCanceledException)
+L000077 |             catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException or OperationCanceledException) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Execute.
+L000078 |             { ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000079 |                 CloseSerialPort(); ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000080 |                 SetError(ex); ⟦EOL⟧
+// 해설 L81: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000081 |                 return ""; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 Execute.
+L000082 |             } ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Execute.
+L000083 |         } ⟦EOL⟧
+// 해설 L84: 종료 정리 구간입니다: finally
+L000084 |         finally ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Execute.
+L000085 |         { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()
+L000086 |             SerialLock.Release(); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Execute.
+L000087 |         } ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 Execute.
+L000088 |     } ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CTalonLaser.ExpectsResponse(Drilling.Common.Interface.EN_TALON_COMMAND)
+L000090 |     public static bool ExpectsResponse(EN_TALON_COMMAND command) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 ExpectsResponse.
+L000091 |     { ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return command >= EN_TALON_COMMAND.GetDiodeCurrent && command <= EN_TALON_COMMAND.RequestStatusCode;
+L000092 |         return command >= EN_TALON_COMMAND.GetDiodeCurrent && command <= EN_TALON_COMMAND.RequestStatusCode; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ExpectsResponse.
+L000093 |     } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000095 |     public static string Build(EN_TALON_COMMAND command, double parameter) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Build.
+L000096 |     { ⟦EOL⟧
+// 해설 L97: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.SetDiodeCurrent => $"C1:{parameter.ToString("F2", CultureInfo.InvariantCulture)}", EN_TALON_COMMAND.SetQsw => $"Q:{(int)parameter}", EN_TALON_COMMAND.SetEprf => $"EPRF:{(int)parameter}", EN / 값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.SetDiodeCurrent => $"C1:{parameter.ToString("F2", CultureInfo.InvariantCulture)}", EN_TALON_COMMAND.SetQsw => $"Q:{(int)parameter}", EN_TALON_COMMAND.SetEprf => $"EPRF:{(int)parameter}", EN_TALON_
+L000097 |         return command switch ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 Build.
+L000098 |         { ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.ToString("F2", CultureInfo.InvariantCulture)
+L000099 |             EN_TALON_COMMAND.SetDiodeCurrent => $"C1:{parameter.ToString("F2", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000100 |             EN_TALON_COMMAND.SetQsw => $"Q:{(int)parameter}", ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000101 |             EN_TALON_COMMAND.SetEprf => $"EPRF:{(int)parameter}", ⟦EOL⟧
+// 해설 L102: 조건에 따라 결과식을 선택합니다: parameter > 0 ? "ON" : "OFF"
+L000102 |             EN_TALON_COMMAND.SetLaserOnOff => parameter > 0 ? "ON" : "OFF", ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000103 |             EN_TALON_COMMAND.SetShutterOpenClose => $"SHT:{(int)parameter}", ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000104 |             EN_TALON_COMMAND.SetGateOpenClose => $"G:{(int)parameter}", ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000105 |             EN_TALON_COMMAND.SetExtGateEnableDisable => $"GEXT:{(int)parameter}", ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000106 |             EN_TALON_COMMAND.SetShg => $"SHG:{(int)parameter}", ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000107 |             EN_TALON_COMMAND.SetShgAutotune => $"SAUTO:{(int)parameter}", ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000108 |             EN_TALON_COMMAND.SetQMode => $"QMODE:{(int)parameter}", ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000109 |             EN_TALON_COMMAND.GetDiodeCurrent => "?C1", ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000110 |             EN_TALON_COMMAND.GetQsw => "?Q", ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000111 |             EN_TALON_COMMAND.GetEprf => "?EPRF", ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000112 |             EN_TALON_COMMAND.GetShutterOpenClose => "?SHT", ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000113 |             EN_TALON_COMMAND.GetGateOpenClose => "?G", ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000114 |             EN_TALON_COMMAND.GetExtGateEnableDisable => "?GEXT", ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000115 |             EN_TALON_COMMAND.GetOutputPower => "?P", ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000116 |             EN_TALON_COMMAND.GetShg => "?SHG", ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000117 |             EN_TALON_COMMAND.GetShgAutotune => "?SAUTO", ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000118 |             EN_TALON_COMMAND.GetThgSpot => "?MTR:TSPOT", ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000119 |             EN_TALON_COMMAND.GetThgHour => "?MTR:THR", ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000120 |             EN_TALON_COMMAND.GetQMode => "?QMODE", ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000121 |             EN_TALON_COMMAND.GetDiodeTemp => "?T1", ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000122 |             EN_TALON_COMMAND.GetTowerTemp => "?TT", ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000123 |             EN_TALON_COMMAND.GetLaserOnOff => "?F", ⟦EOL⟧
+// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000124 |             EN_TALON_COMMAND.RequestStatusString => "?F", ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000125 |             EN_TALON_COMMAND.RequestStatusCode => "?FH", ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000126 |             EN_TALON_COMMAND.RequestSave => "SAVE", ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.Build(Drilling.Common.Interface.EN_TALON_COMMAND, double)
+L000127 |             _ => "" ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 Build.
+L000128 |         }; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 Build.
+L000129 |     } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CTalonLaser.IsValidResponse(string)
+L000131 |     public static bool IsValidResponse(string response) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 IsValidResponse.
+L000132 |     { ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().Equals("ERR", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) && !response.Trim().Equals("ERR", StringComparison.OrdinalIgnoreCase);
+L000133 |         return !string.IsNullOrWhiteSpace(response) && !response.Trim().Equals("ERR", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 IsValidResponse.
+L000134 |     } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000136 |     public static ST_TALON_STATUS Apply(EN_TALON_COMMAND command, double parameter, string response, ST_TALON_STATUS current, bool simulation) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Apply.
+L000137 |     { ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, parameter, current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim() / 지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim(); / 변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()
+L000138 |         var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim(); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpectsResponse(command) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidResponse(value) / 조건에 따라 분기합니다: if (!simulation && ExpectsResponse(command) && !IsValidResponse(value))
+L000139 |         if (!simulation && ExpectsResponse(command) && !IsValidResponse(value)) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 Apply.
+L000140 |         { ⟦EOL⟧
+// 해설 L141: 호출자에게 값 또는 제어를 반환합니다: return current with { LastError = EN_TALON_ERROR.InvalidResponse };
+L000141 |             return current with ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Apply.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: LastError = EN_TALON_ERROR.InvalidResponse
+L000143 |                 LastError = EN_TALON_ERROR.InvalidResponse ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 Apply.
+L000144 |             }; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 Apply.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 지역 변수를 선언합니다: var ok = current with { LastError = EN_TALON_ERROR.Ok }; / 변수의 초기값을 지정합니다: ok = current with { LastError = EN_TALON_ERROR.Ok }
+L000147 |         var ok = current with ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 Apply.
+L000148 |         { ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: LastError = EN_TALON_ERROR.Ok
+L000149 |             LastError = EN_TALON_ERROR.Ok ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Apply.
+L000150 |         }; ⟦EOL⟧
+// 해설 L151: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.SetDiodeCurrent => ok with { DiodeCurrent = parameter }, EN_TALON_COMMAND.SetQsw => ok with { Qsw = (int)parameter }, EN_TALON_COMMAND.SetEprf => ok with { Eprf = (int)parameter }, EN_TALON / 값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.SetDiodeCurrent => ok with { DiodeCurrent = parameter }, EN_TALON_COMMAND.SetQsw => ok with { Qsw = (int)parameter }, EN_TALON_COMMAND.SetEprf => ok with { Eprf = (int)parameter }, EN_TALON_COMMAN
+L000151 |         return command switch ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 Apply.
+L000152 |         { ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000153 |             EN_TALON_COMMAND.SetDiodeCurrent => ok with ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Apply.
+L000154 |             { ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: DiodeCurrent = parameter
+L000155 |                 DiodeCurrent = parameter ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000156 |             }, ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000157 |             EN_TALON_COMMAND.SetQsw => ok with ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 Apply.
+L000158 |             { ⟦EOL⟧
+// 해설 L159: 값을 대상에 대입합니다: Qsw = (int)parameter
+L000159 |                 Qsw = (int)parameter ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000160 |             }, ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000161 |             EN_TALON_COMMAND.SetEprf => ok with ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Apply.
+L000162 |             { ⟦EOL⟧
+// 해설 L163: 값을 대상에 대입합니다: Eprf = (int)parameter
+L000163 |                 Eprf = (int)parameter ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000164 |             }, ⟦EOL⟧
+// 해설 L165: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000165 |             EN_TALON_COMMAND.SetLaserOnOff => ok with ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 Apply.
+L000166 |             { ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: LaserOn = parameter > 0
+L000167 |                 LaserOn = parameter > 0 ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000168 |             }, ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000169 |             EN_TALON_COMMAND.SetShutterOpenClose => ok with ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 Apply.
+L000170 |             { ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: ShutterOpen = parameter > 0
+L000171 |                 ShutterOpen = parameter > 0 ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000172 |             }, ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000173 |             EN_TALON_COMMAND.SetGateOpenClose => ok with ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 Apply.
+L000174 |             { ⟦EOL⟧
+// 해설 L175: 값을 대상에 대입합니다: GateOpen = parameter > 0
+L000175 |                 GateOpen = parameter > 0 ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000176 |             }, ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000177 |             EN_TALON_COMMAND.SetExtGateEnableDisable => ok with ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 Apply.
+L000178 |             { ⟦EOL⟧
+// 해설 L179: 값을 대상에 대입합니다: ExtGateEnable = parameter > 0
+L000179 |                 ExtGateEnable = parameter > 0 ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000180 |             }, ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000181 |             EN_TALON_COMMAND.SetShg => ok with ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 Apply.
+L000182 |             { ⟦EOL⟧
+// 해설 L183: 값을 대상에 대입합니다: ShgReadBackCount = (uint)Math.Max(0, parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, parameter)
+L000183 |                 ShgReadBackCount = (uint)Math.Max(0, parameter) ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000184 |             }, ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000185 |             EN_TALON_COMMAND.SetShgAutotune => ok with ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 Apply.
+L000186 |             { ⟦EOL⟧
+// 해설 L187: 값을 대상에 대입합니다: ShgAutoTuneActive = parameter > 0
+L000187 |                 ShgAutoTuneActive = parameter > 0 ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000188 |             }, ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000189 |             EN_TALON_COMMAND.SetQMode => ok with ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 Apply.
+L000190 |             { ⟦EOL⟧
+// 해설 L191: 값을 대상에 대입합니다: QMode = (int)parameter
+L000191 |                 QMode = (int)parameter ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000192 |             }, ⟦EOL⟧
+// 해설 L193: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000193 |             EN_TALON_COMMAND.GetDiodeCurrent => ok with ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Apply.
+L000194 |             { ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: DiodeCurrent = ReadDouble(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000195 |                 DiodeCurrent = ReadDouble(value) ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000196 |             }, ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000197 |             EN_TALON_COMMAND.GetQsw => ok with ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Apply.
+L000198 |             { ⟦EOL⟧
+// 해설 L199: 값을 대상에 대입합니다: Qsw = ReadInt(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000199 |                 Qsw = ReadInt(value) ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000200 |             }, ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000201 |             EN_TALON_COMMAND.GetEprf => ok with ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Apply.
+L000202 |             { ⟦EOL⟧
+// 해설 L203: 값을 대상에 대입합니다: Eprf = ReadInt(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000203 |                 Eprf = ReadInt(value) ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000204 |             }, ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000205 |             EN_TALON_COMMAND.GetDiodeTemp => ok with ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 Apply.
+L000206 |             { ⟦EOL⟧
+// 해설 L207: 값을 대상에 대입합니다: DiodeTemp = ReadDouble(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000207 |                 DiodeTemp = ReadDouble(value) ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000208 |             }, ⟦EOL⟧
+// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000209 |             EN_TALON_COMMAND.GetTowerTemp => ok with ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 Apply.
+L000210 |             { ⟦EOL⟧
+// 해설 L211: 값을 대상에 대입합니다: TowerTemp = ReadDouble(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000211 |                 TowerTemp = ReadDouble(value) ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000212 |             }, ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000213 |             EN_TALON_COMMAND.GetOutputPower => ok with ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 Apply.
+L000214 |             { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: OutputPower = ReadDouble(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000215 |                 OutputPower = ReadDouble(value) ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000216 |             }, ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000217 |             EN_TALON_COMMAND.GetShutterOpenClose => ok with ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 Apply.
+L000218 |             { ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: ShutterOpen = ReadDouble(value) > 0.5 / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000219 |                 ShutterOpen = ReadDouble(value) > 0.5 ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000220 |             }, ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000221 |             EN_TALON_COMMAND.GetGateOpenClose => ok with ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 Apply.
+L000222 |             { ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: GateOpen = ReadBool(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(value)
+L000223 |                 GateOpen = ReadBool(value) ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000224 |             }, ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000225 |             EN_TALON_COMMAND.GetExtGateEnableDisable => ok with ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 Apply.
+L000226 |             { ⟦EOL⟧
+// 해설 L227: 값을 대상에 대입합니다: ExtGateEnable = ReadBool(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(value)
+L000227 |                 ExtGateEnable = ReadBool(value) ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000228 |             }, ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000229 |             EN_TALON_COMMAND.GetShg => ok with ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 Apply.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: ShgReadBackCount = (uint)Math.Max(0, ReadInt(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, ReadInt(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000231 |                 ShgReadBackCount = (uint)Math.Max(0, ReadInt(value)) ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000232 |             }, ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000233 |             EN_TALON_COMMAND.GetShgAutotune => ok with ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 Apply.
+L000234 |             { ⟦EOL⟧
+// 해설 L235: 값을 대상에 대입합니다: ShgAutoTuneActive = ReadDouble(value) > 0.5 / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000235 |                 ShgAutoTuneActive = ReadDouble(value) > 0.5 ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000236 |             }, ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000237 |             EN_TALON_COMMAND.GetThgSpot => ok with ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 Apply.
+L000238 |             { ⟦EOL⟧
+// 해설 L239: 값을 대상에 대입합니다: ThgSpot = ReadInt(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000239 |                 ThgSpot = ReadInt(value) ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000240 |             }, ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000241 |             EN_TALON_COMMAND.GetThgHour => ok with ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 Apply.
+L000242 |             { ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: ThgHour = ReadDouble(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value)
+L000243 |                 ThgHour = ReadDouble(value) ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000244 |             }, ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000245 |             EN_TALON_COMMAND.GetQMode => ok with ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 Apply.
+L000246 |             { ⟦EOL⟧
+// 해설 L247: 값을 대상에 대입합니다: QMode = ReadInt(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000247 |                 QMode = ReadInt(value) ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000248 |             }, ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000249 |             EN_TALON_COMMAND.GetLaserOnOff => ok with ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 Apply.
+L000250 |             { ⟦EOL⟧
+// 해설 L251: 값을 대상에 대입합니다: LaserOn = ReadLaserEmission(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserEmission(value)
+L000251 |                 LaserOn = ReadLaserEmission(value) ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000252 |             }, ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000253 |             EN_TALON_COMMAND.RequestStatusString => ok with ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 Apply.
+L000254 |             { ⟦EOL⟧
+// 해설 L255: 값을 대상에 대입합니다: StatusMessage = value
+L000255 |                 StatusMessage = value ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000256 |             }, ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000257 |             EN_TALON_COMMAND.RequestStatusCode => ok with ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 Apply.
+L000258 |             { ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: StatusCode = ReadInt(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(value)
+L000259 |                 StatusCode = ReadInt(value) ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000260 |             }, ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CTalonLaser.Apply(Drilling.Common.Interface.EN_TALON_COMMAND, double, string, Drilling.Common.Interface.ST_TALON_STATUS, bool)
+L000261 |             _ => ok ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 Apply.
+L000262 |         }; ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 Apply.
+L000263 |     } ⟦EOL⟧
+L000264 |  ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.CreateSimulationResponse(Drilling.Common.Interface.EN_TALON_COMMAND, double, Drilling.Common.Interface.ST_TALON_STATUS)
+L000265 |     private static string CreateSimulationResponse(EN_TALON_COMMAND command, double parameter, ST_TALON_STATUS current) ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000266 |     { ⟦EOL⟧
+// 해설 L267: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_TALON_COMMAND.GetDiodeCurrent => current.DiodeCurrent.ToString("F2", CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetQsw => current.Qsw.ToString(CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetEprf / 값별 결과식을 선택합니다: command switch { EN_TALON_COMMAND.GetDiodeCurrent => current.DiodeCurrent.ToString("F2", CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetQsw => current.Qsw.ToString(CultureInfo.InvariantCulture), EN_TALON_COMMAND.GetEprf => cur
+L000267 |         return command switch ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000268 |         { ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.DiodeCurrent.ToString("F2", CultureInfo.InvariantCulture)
+L000269 |             EN_TALON_COMMAND.GetDiodeCurrent => current.DiodeCurrent.ToString("F2", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L270: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Qsw.ToString(CultureInfo.InvariantCulture)
+L000270 |             EN_TALON_COMMAND.GetQsw => current.Qsw.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Eprf.ToString(CultureInfo.InvariantCulture)
+L000271 |             EN_TALON_COMMAND.GetEprf => current.Eprf.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.DiodeTemp <= 0 ? 24.6 : current.DiodeTemp).ToString("F1", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: current.DiodeTemp <= 0 ? 24.6 : current.DiodeTemp
+L000272 |             EN_TALON_COMMAND.GetDiodeTemp => (current.DiodeTemp <= 0 ? 24.6 : current.DiodeTemp).ToString("F1", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.TowerTemp <= 0 ? 24.2 : current.TowerTemp).ToString("F1", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: current.TowerTemp <= 0 ? 24.2 : current.TowerTemp
+L000273 |             EN_TALON_COMMAND.GetTowerTemp => (current.TowerTemp <= 0 ? 24.2 : current.TowerTemp).ToString("F1", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.OutputPower.ToString("F3", CultureInfo.InvariantCulture)
+L000274 |             EN_TALON_COMMAND.GetOutputPower => current.OutputPower.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L275: 조건에 따라 결과식을 선택합니다: current.ShutterOpen ? "1" : "0"
+L000275 |             EN_TALON_COMMAND.GetShutterOpenClose => current.ShutterOpen ? "1" : "0", ⟦EOL⟧
+// 해설 L276: 조건에 따라 결과식을 선택합니다: current.GateOpen ? "1" : "0"
+L000276 |             EN_TALON_COMMAND.GetGateOpenClose => current.GateOpen ? "1" : "0", ⟦EOL⟧
+// 해설 L277: 조건에 따라 결과식을 선택합니다: current.ExtGateEnable ? "1" : "0"
+L000277 |             EN_TALON_COMMAND.GetExtGateEnableDisable => current.ExtGateEnable ? "1" : "0", ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.ShgReadBackCount.ToString(CultureInfo.InvariantCulture)
+L000278 |             EN_TALON_COMMAND.GetShg => current.ShgReadBackCount.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L279: 조건에 따라 결과식을 선택합니다: current.ShgAutoTuneActive ? "1" : "0"
+L000279 |             EN_TALON_COMMAND.GetShgAutotune => current.ShgAutoTuneActive ? "1" : "0", ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.ThgSpot.ToString(CultureInfo.InvariantCulture)
+L000280 |             EN_TALON_COMMAND.GetThgSpot => current.ThgSpot.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.ThgHour.ToString("F1", CultureInfo.InvariantCulture)
+L000281 |             EN_TALON_COMMAND.GetThgHour => current.ThgHour.ToString("F1", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.QMode.ToString(CultureInfo.InvariantCulture)
+L000282 |             EN_TALON_COMMAND.GetQMode => current.QMode.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L283: 조건에 따라 결과식을 선택합니다: current.LaserOn ? "1" : "0"
+L000283 |             EN_TALON_COMMAND.GetLaserOnOff => current.LaserOn ? "1" : "0", ⟦EOL⟧
+// 해설 L284: 조건에 따라 결과식을 선택합니다: current.LaserOn ? "Emission" : "Standby"
+L000284 |             EN_TALON_COMMAND.RequestStatusString => current.LaserOn ? "Emission" : "Standby", ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.StatusCode.ToString(CultureInfo.InvariantCulture)
+L000285 |             EN_TALON_COMMAND.RequestStatusCode => current.StatusCode.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L286: 조건에 따라 결과식을 선택합니다: parameter > 0 ? "Emission" : "Standby"
+L000286 |             EN_TALON_COMMAND.SetLaserOnOff => parameter > 0 ? "Emission" : "Standby", ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.CreateSimulationResponse(Drilling.Common.Interface.EN_TALON_COMMAND, double, Drilling.Common.Interface.ST_TALON_STATUS)
+L000287 |             _ => "OK" ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000288 |         }; ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000289 |     } ⟦EOL⟧
+L000290 |  ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CTalonLaser.ReadDouble(string)
+L000291 |     private static double ReadDouble(string value) ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000292 |     { ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLeadingNumber(value) / 지역 변수를 선언합니다: var normalized = ReadLeadingNumber(value); / 변수의 초기값을 지정합니다: normalized = ReadLeadingNumber(value)
+L000293 |         var normalized = ReadLeadingNumber(value); ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0 / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0;
+L000294 |         return double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0; ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000295 |     } ⟦EOL⟧
+L000296 |  ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CTalonLaser.ReadInt(string)
+L000297 |     private static int ReadInt(string value) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 ReadInt.
+L000298 |     { ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(ReadDouble(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value) / 호출자에게 값 또는 제어를 반환합니다: return (int)Math.Round(ReadDouble(value));
+L000299 |         return (int)Math.Round(ReadDouble(value)); ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 ReadInt.
+L000300 |     } ⟦EOL⟧
+L000301 |  ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CTalonLaser.ReadBool(string)
+L000302 |     private static bool ReadBool(string value) ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 ReadBool.
+L000303 |     { ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var normalized = value.Trim(); / 변수의 초기값을 지정합니다: normalized = value.Trim()
+L000304 |         var normalized = value.Trim(); ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("1", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("ON", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("OPEN", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return normalized.Equals("1", StringComparison.OrdinalIgnoreCase) || normalized.Equals("ON", StringComparison.OrdinalIgnoreCase) || normalized.Equals("OPEN", S
+L000305 |         return normalized.Equals("1", StringComparison.OrdinalIgnoreCase) || normalized.Equals("ON", StringComparison.OrdinalIgnoreCase) || normalized.Equals("OPEN", StringComparison.OrdinalIgnoreCase) || normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 ReadBool.
+L000306 |     } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CTalonLaser.ReadLaserEmission(string)
+L000308 |     private static bool ReadLaserEmission(string value) ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 ReadLaserEmission.
+L000309 |     { ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var normalized = value.Trim(); / 변수의 초기값을 지정합니다: normalized = value.Trim()
+L000310 |         var normalized = value.Trim(); ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("emission", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("1", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("ON", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return normalized.Contains("emission", StringComparison.OrdinalIgnoreCase) || normalized.Equals("1", StringComparison.OrdinalIgnoreCase) || normalized.Equals("ON", StringComparison.OrdinalIgnoreCase);
+L000311 |         return normalized.Contains("emission", StringComparison.OrdinalIgnoreCase) || normalized.Equals("1", StringComparison.OrdinalIgnoreCase) || normalized.Equals("ON", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 ReadLaserEmission.
+L000312 |     } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CTalonLaser.ReadLeadingNumber(string)
+L000314 |     private static string ReadLeadingNumber(string value) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 ReadLeadingNumber.
+L000315 |     { ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · bool MatchesChar(char)
+L000316 |         bool MatchesChar(char character) ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000317 |         { ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 호출자에게 값 또는 제어를 반환합니다: return char.IsDigit(character) || character == '-' || character == '+' || character == '.';
+L000318 |             return char.IsDigit(character) || character == '-' || character == '+' || character == '.'; ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000319 |         } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var chars = value.Trim().TakeWhile(MatchesChar).ToArray(); / 변수의 초기값을 지정합니다: chars = value.Trim().TakeWhile(MatchesChar).ToArray()
+L000321 |         var chars = value.Trim().TakeWhile(MatchesChar).ToArray(); ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: new string (chars) / 조건에 따라 결과식을 선택합니다: chars.Length == 0 ? "0" : new string (chars) / 호출자에게 값 또는 제어를 반환합니다: return chars.Length == 0 ? "0" : new string (chars);
+L000322 |         return chars.Length == 0 ? "0" : new string (chars); ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 ReadLeadingNumber.
+L000323 |     } ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다.
+L000324 | } ⟦EOL⟧
+L000325 |  ⟦EOL⟧
+// 해설 L326: 타입의 구조/상속 선언입니다: public enum EN_TALON_COMMAND
+L000326 | public enum EN_TALON_COMMAND ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다.
+L000327 | { ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetDiodeCurrent
+L000328 |     SetDiodeCurrent, ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetQsw
+L000329 |     SetQsw, ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetEprf
+L000330 |     SetEprf, ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetLaserOnOff
+L000331 |     SetLaserOnOff, ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetShutterOpenClose
+L000332 |     SetShutterOpenClose, ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetGateOpenClose
+L000333 |     SetGateOpenClose, ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetExtGateEnableDisable
+L000334 |     SetExtGateEnableDisable, ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetShg
+L000335 |     SetShg, ⟦EOL⟧
+// 해설 L336: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetShgAutotune
+L000336 |     SetShgAutotune, ⟦EOL⟧
+// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.SetQMode
+L000337 |     SetQMode, ⟦EOL⟧
+// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeCurrent
+L000338 |     GetDiodeCurrent, ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetQsw
+L000339 |     GetQsw, ⟦EOL⟧
+// 해설 L340: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetEprf
+L000340 |     GetEprf, ⟦EOL⟧
+// 해설 L341: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetShutterOpenClose
+L000341 |     GetShutterOpenClose, ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetGateOpenClose
+L000342 |     GetGateOpenClose, ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetExtGateEnableDisable
+L000343 |     GetExtGateEnableDisable, ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetOutputPower
+L000344 |     GetOutputPower, ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetShg
+L000345 |     GetShg, ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetShgAutotune
+L000346 |     GetShgAutotune, ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetThgSpot
+L000347 |     GetThgSpot, ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetThgHour
+L000348 |     GetThgHour, ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetQMode
+L000349 |     GetQMode, ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetDiodeTemp
+L000350 |     GetDiodeTemp, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetTowerTemp
+L000351 |     GetTowerTemp, ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.GetLaserOnOff
+L000352 |     GetLaserOnOff, ⟦EOL⟧
+// 해설 L353: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusString
+L000353 |     RequestStatusString, ⟦EOL⟧
+// 해설 L354: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.RequestStatusCode
+L000354 |     RequestStatusCode, ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_COMMAND.RequestSave
+L000355 |     RequestSave ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다.
+L000356 | } ⟦EOL⟧
+L000357 |  ⟦EOL⟧
+// 해설 L358: 타입의 구조/상속 선언입니다: public enum EN_TALON_ERROR
+L000358 | public enum EN_TALON_ERROR ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다.
+L000359 | { ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_ERROR.Ok
+L000360 |     Ok = 0, ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_ERROR.Warning
+L000361 |     Warning = 1, ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_ERROR.Error
+L000362 |     Error = 2, ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_ERROR.Timeout
+L000363 |     Timeout = -1, ⟦EOL⟧
+// 해설 L364: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_TALON_ERROR.InvalidResponse
+L000364 |     InvalidResponse = -2 ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다.
+L000365 | } ⟦EOL⟧
+L000366 |  ⟦EOL⟧
+// 해설 L367: 타입의 구조/상속 선언입니다: public sealed record ST_LASER_STATUS(bool PowerOn, bool ShutterOpen, bool GateOn, double OutputPower);
+L000367 | public sealed record ST_LASER_STATUS(bool PowerOn, bool ShutterOpen, bool GateOn, double OutputPower); ⟦EOL⟧
+// 해설 L368: 타입의 구조/상속 선언입니다: public sealed record ST_TALON_STATUS(
+L000368 | public sealed record ST_TALON_STATUS( ⟦EOL⟧
+// 해설 L369: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000369 |     double DiodeCurrent,  ⟦EOL⟧
+// 해설 L370: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000370 |     int Qsw,  ⟦EOL⟧
+// 해설 L371: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000371 |     int Eprf,  ⟦EOL⟧
+// 해설 L372: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000372 |     double DiodeTemp,  ⟦EOL⟧
+// 해설 L373: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000373 |     double TowerTemp,  ⟦EOL⟧
+// 해설 L374: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000374 |     double OutputPower,  ⟦EOL⟧
+// 해설 L375: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000375 |     bool LaserOn,  ⟦EOL⟧
+// 해설 L376: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000376 |     bool ShutterOpen,  ⟦EOL⟧
+// 해설 L377: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000377 |     bool GateOpen,  ⟦EOL⟧
+// 해설 L378: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000378 |     bool ExtGateEnable,  ⟦EOL⟧
+// 해설 L379: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000379 |     bool ShgAutoTuneActive,  ⟦EOL⟧
+// 해설 L380: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000380 |     int ThgSpot,  ⟦EOL⟧
+// 해설 L381: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000381 |     double ThgHour,  ⟦EOL⟧
+// 해설 L382: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000382 |     int QMode,  ⟦EOL⟧
+// 해설 L383: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000383 |     uint ShgReadBackCount,  ⟦EOL⟧
+// 해설 L384: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000384 |     string StatusMessage,  ⟦EOL⟧
+// 해설 L385: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000385 |     int StatusCode,  ⟦EOL⟧
+// 해설 L386: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000386 |     EN_TALON_ERROR LastError ⟦EOL⟧
+// 해설 L387: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000387 | ) ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다.
+L000388 | { ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(0.0, 0, 0, 0.0, 0.0, 0.0, false, false, false, false, false, 0, 0.0, 0, 0, "", 0, EN_TALON_ERROR.Ok)
+L000389 |     public static ST_TALON_STATUS Empty { get; } = new(0.0, 0, 0, 0.0, 0.0, 0.0, false, false, false, false, false, 0, 0.0, 0, 0, "", 0, EN_TALON_ERROR.Ok); ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다.
+L000390 | } ⟦EOL⟧

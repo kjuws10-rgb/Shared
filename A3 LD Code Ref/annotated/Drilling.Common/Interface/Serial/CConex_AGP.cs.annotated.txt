@@ -1,0 +1,1076 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Serial/CConex_AGP.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000003 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000004 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000006 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000007 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000008 | using Drilling.Common.Station; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000010 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 | [CCommType("Serial", "Attenuator")] ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("ModbusSerial", "Attenuator")] ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: internal sealed class CConex_AGP(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option)
+L000013 | internal sealed class CConex_AGP(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000015 |     public static string Build(EN_ATTENUATOR_COMMAND command, double parameter = 0.0) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 Build.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.MoveAbs => $"PA:{FormatPositionParameter(parameter)}", EN_ATTENUATOR_COMMAND.MoveRel => $"PR:{FormatPositionParameter(parameter)}", EN_ATTENUATOR_COMMAND.Home => "OR", EN_ATTENUATOR_CO / 값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.MoveAbs => $"PA:{FormatPositionParameter(parameter)}", EN_ATTENUATOR_COMMAND.MoveRel => $"PR:{FormatPositionParameter(parameter)}", EN_ATTENUATOR_COMMAND.Home => "OR", EN_ATTENUATOR_COMMAND.S
+L000017 |         return command switch ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 Build.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatPositionParameter(parameter)
+L000019 |             EN_ATTENUATOR_COMMAND.MoveAbs => $"PA:{FormatPositionParameter(parameter)}", ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatPositionParameter(parameter)
+L000020 |             EN_ATTENUATOR_COMMAND.MoveRel => $"PR:{FormatPositionParameter(parameter)}", ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000021 |             EN_ATTENUATOR_COMMAND.Home => "OR", ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000022 |             EN_ATTENUATOR_COMMAND.Stop => "ST", ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000023 |             EN_ATTENUATOR_COMMAND.ResetController => "RS", ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000024 |             EN_ATTENUATOR_COMMAND.Refresh => "TP", ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000025 |             EN_ATTENUATOR_COMMAND.PollCurrentPosition => "TP", ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000026 |             EN_ATTENUATOR_COMMAND.PollTargetPosition => "TH", ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000027 |             EN_ATTENUATOR_COMMAND.PollState => "TS", ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000028 |             EN_ATTENUATOR_COMMAND.GetHomeType => "HT?", ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatIntegerCommandParameter(parameter)
+L000029 |             EN_ATTENUATOR_COMMAND.SetHomeType => $"HT:{FormatIntegerCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000030 |             EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit => "SL?", ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)
+L000031 |             EN_ATTENUATOR_COMMAND.SetNegativeSoftwareLimit => $"SL:{FormatCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000032 |             EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit => "SR?", ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)
+L000033 |             EN_ATTENUATOR_COMMAND.SetPositiveSoftwareLimit => $"SR:{FormatCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000034 |             EN_ATTENUATOR_COMMAND.GetIGain => "KI?", ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)
+L000035 |             EN_ATTENUATOR_COMMAND.SetIGain => $"KI:{FormatCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000036 |             EN_ATTENUATOR_COMMAND.GetPGain => "KP?", ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)
+L000037 |             EN_ATTENUATOR_COMMAND.SetPGain => $"KP:{FormatCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000038 |             EN_ATTENUATOR_COMMAND.GetInterpolationFactor => "IF?", ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)
+L000039 |             EN_ATTENUATOR_COMMAND.SetInterpolationFactor => $"IF:{FormatCommandParameter(parameter)}", ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)
+L000040 |             _ => "" ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Build.
+L000041 |         }; ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Build.
+L000042 |     } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsSuccessResponse(string)
+L000044 |     public static bool IsSuccessResponse(string response) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000045 |     { ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) && !response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase);
+L000046 |         return !string.IsNullOrWhiteSpace(response) && !response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000049 |     public static ST_ATTENUATOR_STATUS Apply(EN_ATTENUATOR_COMMAND command, double parameter, string response, ST_ATTENUATOR_STATUS current, bool simulation) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 Apply.
+L000050 |     { ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, parameter, current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim() / 지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim(); / 변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()
+L000051 |         var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim(); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSuccessResponse(value) / 조건에 따라 분기합니다: if (!simulation && !IsSuccessResponse(value))
+L000052 |         if (!simulation && !IsSuccessResponse(value)) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 Apply.
+L000053 |         { ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return current with { CommOk = false, LastError = ReadError(value), UpdatedAt = DateTimeOffset.Now };
+L000054 |             return current with ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 Apply.
+L000055 |             { ⟦EOL⟧
+// 해설 L56: 값을 대상에 대입합니다: CommOk = false
+L000056 |                 CommOk = false, ⟦EOL⟧
+// 해설 L57: 값을 대상에 대입합니다: LastError = ReadError(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadError(value)
+L000057 |                 LastError = ReadError(value), ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000058 |                 UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 Apply.
+L000059 |             }; ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Apply.
+L000060 |         } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 지역 변수를 선언합니다: var ok = current with { CommOk = true, LastError = EN_CONEX_AGP_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }; / 변수의 초기값을 지정합니다: ok = current with { CommOk = true, LastError = EN_CONEX_AGP_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }
+L000062 |         var ok = current with ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Apply.
+L000063 |         { ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: CommOk = true
+L000064 |             CommOk = true, ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: LastError = EN_CONEX_AGP_ERROR.Ok
+L000065 |             LastError = EN_CONEX_AGP_ERROR.Ok, ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now
+L000066 |             UpdatedAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 Apply.
+L000067 |         }; ⟦EOL⟧
+// 해설 L68: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.MoveAbs => ok with { CurrentPosition = simulation ? parameter : ok.CurrentPosition, TargetPosition = parameter, CommandState = simulation ? "READY" : "MOVING" }, EN_ATTENUATOR_COMMAND. / 값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.MoveAbs => ok with { CurrentPosition = simulation ? parameter : ok.CurrentPosition, TargetPosition = parameter, CommandState = simulation ? "READY" : "MOVING" }, EN_ATTENUATOR_COMMAND.MoveRel
+L000068 |         return command switch ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Apply.
+L000069 |         { ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000070 |             EN_ATTENUATOR_COMMAND.MoveAbs => ok with ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Apply.
+L000071 |             { ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: CurrentPosition = simulation ? parameter : ok.CurrentPosition / 조건에 따라 결과식을 선택합니다: simulation ? parameter : ok.CurrentPosition
+L000072 |                 CurrentPosition = simulation ? parameter : ok.CurrentPosition, ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: TargetPosition = parameter
+L000073 |                 TargetPosition = parameter, ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: CommandState = simulation ? "READY" : "MOVING" / 조건에 따라 결과식을 선택합니다: simulation ? "READY" : "MOVING"
+L000074 |                 CommandState = simulation ? "READY" : "MOVING" ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000075 |             }, ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000076 |             EN_ATTENUATOR_COMMAND.MoveRel => ok with ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Apply.
+L000077 |             { ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: CurrentPosition = simulation ? ok.CurrentPosition + parameter : ok.CurrentPosition / 조건에 따라 결과식을 선택합니다: simulation ? ok.CurrentPosition + parameter : ok.CurrentPosition
+L000078 |                 CurrentPosition = simulation ? ok.CurrentPosition + parameter : ok.CurrentPosition, ⟦EOL⟧
+// 해설 L79: 값을 대상에 대입합니다: TargetPosition = simulation ? ok.CurrentPosition + parameter : ok.TargetPosition + parameter / 조건에 따라 결과식을 선택합니다: simulation ? ok.CurrentPosition + parameter : ok.TargetPosition + parameter
+L000079 |                 TargetPosition = simulation ? ok.CurrentPosition + parameter : ok.TargetPosition + parameter, ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: CommandState = simulation ? "READY" : "MOVING" / 조건에 따라 결과식을 선택합니다: simulation ? "READY" : "MOVING"
+L000080 |                 CommandState = simulation ? "READY" : "MOVING" ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000081 |             }, ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000082 |             EN_ATTENUATOR_COMMAND.Home => ok with ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Apply.
+L000083 |             { ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: CurrentPosition = simulation ? 0.0 : ok.CurrentPosition / 조건에 따라 결과식을 선택합니다: simulation ? 0.0 : ok.CurrentPosition
+L000084 |                 CurrentPosition = simulation ? 0.0 : ok.CurrentPosition, ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: TargetPosition = simulation ? 0.0 : ok.TargetPosition / 조건에 따라 결과식을 선택합니다: simulation ? 0.0 : ok.TargetPosition
+L000085 |                 TargetPosition = simulation ? 0.0 : ok.TargetPosition, ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: CommandState = simulation ? "READY" : "HOMING" / 조건에 따라 결과식을 선택합니다: simulation ? "READY" : "HOMING"
+L000086 |                 CommandState = simulation ? "READY" : "HOMING" ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000087 |             }, ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000088 |             EN_ATTENUATOR_COMMAND.Stop => ok with ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Apply.
+L000089 |             { ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: CommandState = "STOP"
+L000090 |                 CommandState = "STOP" ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000091 |             }, ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000092 |             EN_ATTENUATOR_COMMAND.ResetController => ok with ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Apply.
+L000093 |             { ⟦EOL⟧
+// 해설 L94: 값을 대상에 대입합니다: CommandState = "NOT_REFERENCED"
+L000094 |                 CommandState = "NOT_REFERENCED" ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000095 |             }, ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000096 |             EN_ATTENUATOR_COMMAND.Refresh or EN_ATTENUATOR_COMMAND.PollCurrentPosition => ok with ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Apply.
+L000097 |             { ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: CurrentPosition = ReadTaggedDouble(value, "TP", ok.CurrentPosition) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "TP", ok.CurrentPosition)
+L000098 |                 CurrentPosition = ReadTaggedDouble(value, "TP", ok.CurrentPosition), ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: CommandState = IsMovingState(ok.CommandState) ? ok.CommandState : "READY" / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsMovingState(ok.CommandState) / 조건에 따라 결과식을 선택합니다: IsMovingState(ok.CommandState) ? ok.CommandState : "READY"
+L000099 |                 CommandState = IsMovingState(ok.CommandState) ? ok.CommandState : "READY" ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000100 |             }, ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000101 |             EN_ATTENUATOR_COMMAND.PollTargetPosition => ok with ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 Apply.
+L000102 |             { ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: TargetPosition = ReadTaggedDouble(value, "TH", ok.TargetPosition) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, "TH", ok.TargetPosition)
+L000103 |                 TargetPosition = ReadTaggedDouble(value, "TH", ok.TargetPosition) ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000104 |             }, ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000105 |             EN_ATTENUATOR_COMMAND.PollState => ok with ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Apply.
+L000106 |             { ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: CommandState = ReadControllerState(value, ok.CommandState) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadControllerState(value, ok.CommandState)
+L000107 |                 CommandState = ReadControllerState(value, ok.CommandState) ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000108 |             }, ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000109 |             EN_ATTENUATOR_COMMAND.GetHomeType => ok with ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 Apply.
+L000110 |             { ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: HomeType = ReadTaggedInt(value, "HT", ok.HomeType) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedInt(value, "HT", ok.HomeType)
+L000111 |                 HomeType = ReadTaggedInt(value, "HT", ok.HomeType) ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000112 |             }, ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000113 |             EN_ATTENUATOR_COMMAND.SetHomeType => ok with ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 Apply.
+L000114 |             { ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: HomeType = ValidateInt32CommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(parameter)
+L000115 |                 HomeType = ValidateInt32CommandParameter(parameter) ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000116 |             }, ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000117 |             EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit => ok with ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 Apply.
+L000118 |             { ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: NegativeSoftwareLimit = ReadTaggedNullableDouble(value, "SL", ok.NegativeSoftwareLimit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, "SL", ok.NegativeSoftwareLimit)
+L000119 |                 NegativeSoftwareLimit = ReadTaggedNullableDouble(value, "SL", ok.NegativeSoftwareLimit) ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000120 |             }, ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000121 |             EN_ATTENUATOR_COMMAND.SetNegativeSoftwareLimit => ok with ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 Apply.
+L000122 |             { ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: NegativeSoftwareLimit = NormalizeStoredCommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)
+L000123 |                 NegativeSoftwareLimit = NormalizeStoredCommandParameter(parameter) ⟦EOL⟧
+// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000124 |             }, ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000125 |             EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit => ok with ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 Apply.
+L000126 |             { ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: PositiveSoftwareLimit = ReadTaggedNullableDouble(value, "SR", ok.PositiveSoftwareLimit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, "SR", ok.PositiveSoftwareLimit)
+L000127 |                 PositiveSoftwareLimit = ReadTaggedNullableDouble(value, "SR", ok.PositiveSoftwareLimit) ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000128 |             }, ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000129 |             EN_ATTENUATOR_COMMAND.SetPositiveSoftwareLimit => ok with ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 Apply.
+L000130 |             { ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: PositiveSoftwareLimit = NormalizeStoredCommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)
+L000131 |                 PositiveSoftwareLimit = NormalizeStoredCommandParameter(parameter) ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000132 |             }, ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000133 |             EN_ATTENUATOR_COMMAND.GetIGain => ok with ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 Apply.
+L000134 |             { ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: IGain = ReadTaggedNullableDouble(value, "KI", ok.IGain) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, "KI", ok.IGain)
+L000135 |                 IGain = ReadTaggedNullableDouble(value, "KI", ok.IGain) ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000136 |             }, ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000137 |             EN_ATTENUATOR_COMMAND.SetIGain => ok with ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 Apply.
+L000138 |             { ⟦EOL⟧
+// 해설 L139: 값을 대상에 대입합니다: IGain = NormalizeStoredCommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)
+L000139 |                 IGain = NormalizeStoredCommandParameter(parameter) ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000140 |             }, ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000141 |             EN_ATTENUATOR_COMMAND.GetPGain => ok with ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Apply.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: PGain = ReadTaggedNullableDouble(value, "KP", ok.PGain) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, "KP", ok.PGain)
+L000143 |                 PGain = ReadTaggedNullableDouble(value, "KP", ok.PGain) ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000144 |             }, ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000145 |             EN_ATTENUATOR_COMMAND.SetPGain => ok with ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 Apply.
+L000146 |             { ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: PGain = NormalizeStoredCommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)
+L000147 |                 PGain = NormalizeStoredCommandParameter(parameter) ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000148 |             }, ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000149 |             EN_ATTENUATOR_COMMAND.GetInterpolationFactor => ok with ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Apply.
+L000150 |             { ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: InterpolationFactor = ReadTaggedNullableDouble(value, "IF", ok.InterpolationFactor) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, "IF", ok.InterpolationFactor)
+L000151 |                 InterpolationFactor = ReadTaggedNullableDouble(value, "IF", ok.InterpolationFactor) ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000152 |             }, ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000153 |             EN_ATTENUATOR_COMMAND.SetInterpolationFactor => ok with ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Apply.
+L000154 |             { ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: InterpolationFactor = NormalizeStoredCommandParameter(parameter) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)
+L000155 |                 InterpolationFactor = NormalizeStoredCommandParameter(parameter) ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000156 |             }, ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)
+L000157 |             _ => ok ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 Apply.
+L000158 |         }; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Apply.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CConex_AGP.Execute(string, System.Threading.CancellationToken)
+L000161 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Execute.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)
+L000163 |         await SerialLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L164: 예외 처리 범위입니다: try
+L000164 |         try ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Execute.
+L000165 |         { ⟦EOL⟧
+// 해설 L166: 비동기 완료를 기다립니다: await ExecuteConex(function, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteConex(function, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return await ExecuteConex(function, cancellationToken);
+L000166 |             return await ExecuteConex(function, cancellationToken); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 Execute.
+L000167 |         } ⟦EOL⟧
+// 해설 L168: 종료 정리 구간입니다: finally
+L000168 |         finally ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Execute.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()
+L000170 |             SerialLock.Release(); ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Execute.
+L000171 |         } ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Execute.
+L000172 |     } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CConex_AGP.ExecuteConex(string, System.Threading.CancellationToken)
+L000174 |     private async Task<string> ExecuteConex(string function, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000175 |     { ⟦EOL⟧
+// 해설 L176: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000176 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000177 |         { ⟦EOL⟧
+// 해설 L178: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000178 |             await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000179 |         } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000181 |         if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000182 |         { ⟦EOL⟧
+// 해설 L183: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000183 |             return ""; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000184 |         } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 값을 대상에 대입합니다: LastSent = function
+L000186 |         LastSent = function; ⟦EOL⟧
+// 해설 L187: 선언·서명/매개변수·접근 조건입니다 · string SelectValue()
+L000187 |         string SelectValue() ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 SelectValue.
+L000188 |         { ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteConex(function) / 호출자에게 값 또는 제어를 반환합니다: return ExecuteConex(function);
+L000189 |             return ExecuteConex(function); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 SelectValue.
+L000190 |         } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 예외 처리 범위입니다: try
+L000192 |         try ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 값을 대상에 대입합니다: LastReceived = await Task.Run(SelectValue, cancellationToken) / 비동기 완료를 기다립니다: await Task.Run(SelectValue, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, cancellationToken)
+L000194 |             LastReceived = await Task.Run(SelectValue, cancellationToken); ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: LastError = LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : ""
+L000195 |             LastError = LastReceived.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? LastReceived : ""; ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResponseState(LastReceived)
+L000196 |             SetResponseState(LastReceived); ⟦EOL⟧
+// 해설 L197: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000197 |             return LastReceived; ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000198 |         } ⟦EOL⟧
+// 해설 L199: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException)
+L000199 |         catch (Exception ex)when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000200 |         { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000201 |             CloseSerialPort(); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000202 |             SetError(ex); ⟦EOL⟧
+// 해설 L203: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000203 |             return ""; ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000204 |         } ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000205 |     } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.ExecuteConex(string)
+L000207 |     private string ExecuteConex(string function) ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000208 |     { ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var parts = function.Split(':', StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: parts = function.Split(':', StringSplitOptions.TrimEntries)
+L000209 |         var parts = function.Split(':', StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 지역 변수를 선언합니다: var text = function.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: text = function.Trim().ToUpperInvariant()
+L000210 |         var text = function.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.EndsWith("?", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (text.EndsWith("?", StringComparison.Ordinal))
+L000211 |         if (text.EndsWith("?", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000212 |         { ⟦EOL⟧
+// 해설 L213: 지역 변수를 선언합니다: var queryCommand = text[..^1]; / 변수의 초기값을 지정합니다: queryCommand = text[..^1]
+L000213 |             var queryCommand = text[..^1]; ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsParameterQueryCommand(queryCommand) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text) / 조건에 따라 결과식을 선택합니다: IsParameterQueryCommand(queryCommand) ? SendPolling(text) : "ERR:-2" / 호출자에게 값 또는 제어를 반환합니다: return IsParameterQueryCommand(queryCommand) ? SendPolling(text) : "ERR:-2";
+L000214 |             return IsParameterQueryCommand(queryCommand) ? SendPolling(text) : "ERR:-2"; ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000215 |         } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPollingCommand(text) / 조건에 따라 분기합니다: if (IsPollingCommand(text))
+L000217 |         if (IsPollingCommand(text)) ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000218 |         { ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text) / 호출자에게 값 또는 제어를 반환합니다: return SendPolling(text);
+L000219 |             return SendPolling(text); ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000220 |         } ⟦EOL⟧
+L000221 |  ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[0].ToUpperInvariant() / 조건에 따라 결과식을 선택합니다: parts.Length > 0 ? parts[0].ToUpperInvariant() : text / 지역 변수를 선언합니다: var command = parts.Length > 0 ? parts[0].ToUpperInvariant() : text; / 변수의 초기값을 지정합니다: command = parts.Length > 0 ? parts[0].ToUpperInvariant() : text
+L000222 |         var command = parts.Length > 0 ? parts[0].ToUpperInvariant() : text; ⟦EOL⟧
+// 해설 L223: 호출자에게 값 또는 제어를 반환합니다: return command switch { "PA" when IsSingleValueCommand(parts) => SendSelecting("PA", parts[1]), "PR" when IsSingleValueCommand(parts) => SendSelecting("PR", parts[1]), "OR" when IsNoValueCommand(parts) => SendSelecting("OR", ""),  / 값별 결과식을 선택합니다: command switch { "PA" when IsSingleValueCommand(parts) => SendSelecting("PA", parts[1]), "PR" when IsSingleValueCommand(parts) => SendSelecting("PR", parts[1]), "OR" when IsNoValueCommand(parts) => SendSelecting("OR", ""), "ST" wh
+L000223 |         return command switch ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000224 |         { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("PA", parts[1])
+L000225 |             "PA" when IsSingleValueCommand(parts) => SendSelecting("PA", parts[1]), ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("PR", parts[1])
+L000226 |             "PR" when IsSingleValueCommand(parts) => SendSelecting("PR", parts[1]), ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("OR", "")
+L000227 |             "OR" when IsNoValueCommand(parts) => SendSelecting("OR", ""), ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("ST", "")
+L000228 |             "ST" when IsNoValueCommand(parts) => SendSelecting("ST", ""), ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("RS", "")
+L000229 |             "RS" when IsNoValueCommand(parts) => SendSelecting("RS", ""), ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("HT", parts[1])
+L000230 |             "HT" when IsSingleValueCommand(parts) => SendSelecting("HT", parts[1]), ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("SL", parts[1])
+L000231 |             "SL" when IsSingleValueCommand(parts) => SendSelecting("SL", parts[1]), ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("SR", parts[1])
+L000232 |             "SR" when IsSingleValueCommand(parts) => SendSelecting("SR", parts[1]), ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("KI", parts[1])
+L000233 |             "KI" when IsSingleValueCommand(parts) => SendSelecting("KI", parts[1]), ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("KP", parts[1])
+L000234 |             "KP" when IsSingleValueCommand(parts) => SendSelecting("KP", parts[1]), ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting("IF", parts[1])
+L000235 |             "IF" when IsSingleValueCommand(parts) => SendSelecting("IF", parts[1]), ⟦EOL⟧
+// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.ExecuteConex(string)
+L000236 |             _ => "ERR:-2" ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000237 |         }; ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ExecuteConex.
+L000238 |     } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[])
+L000240 |     private static bool IsNoValueCommand(string[] parts) ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 IsNoValueCommand.
+L000241 |     { ⟦EOL⟧
+// 해설 L242: 호출자에게 값 또는 제어를 반환합니다: return parts.Length == 1;
+L000242 |         return parts.Length == 1; ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 IsNoValueCommand.
+L000243 |     } ⟦EOL⟧
+L000244 |  ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[])
+L000245 |     private static bool IsSingleValueCommand(string[] parts) ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 IsSingleValueCommand.
+L000246 |     { ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parts[1]) / 호출자에게 값 또는 제어를 반환합니다: return parts.Length == 2 && !string.IsNullOrWhiteSpace(parts[1]);
+L000247 |         return parts.Length == 2 && !string.IsNullOrWhiteSpace(parts[1]); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 IsSingleValueCommand.
+L000248 |     } ⟦EOL⟧
+L000249 |  ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string)
+L000250 |     private string SendSelecting(string command, string value) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000251 |     { ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()
+L000252 |         SerialPort!.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()
+L000253 |         SerialPort.DiscardOutBuffer(); ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand(command, value) / 지역 변수를 선언합니다: var tx = FormatDeviceCommand(command, value); / 변수의 초기값을 지정합니다: tx = FormatDeviceCommand(command, value)
+L000254 |         var tx = FormatDeviceCommand(command, value); ⟦EOL⟧
+// 해설 L255: 값을 대상에 대입합니다: LastSent = tx.TrimEnd('\r', '\n') / 함수·델리게이트 또는 객체 생성자를 호출합니다: tx.TrimEnd('\r', '\n')
+L000255 |         LastSent = tx.TrimEnd('\r', '\n'); ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(tx)
+L000256 |         SerialPort.Write(tx); ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("RS", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (command.Equals("RS", StringComparison.OrdinalIgnoreCase))
+L000257 |         if (command.Equals("RS", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000258 |         { ⟦EOL⟧
+// 해설 L259: 호출자에게 값 또는 제어를 반환합니다: return "OK";
+L000259 |             return "OK"; ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000260 |         } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(50)
+L000262 |         Thread.Sleep(50); ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand("TE", "") / 지역 변수를 선언합니다: var errorQuery = FormatDeviceCommand("TE", ""); / 변수의 초기값을 지정합니다: errorQuery = FormatDeviceCommand("TE", "")
+L000263 |         var errorQuery = FormatDeviceCommand("TE", ""); ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(errorQuery)
+L000264 |         SerialPort.Write(errorQuery); ⟦EOL⟧
+// 해설 L265: 예외 처리 범위입니다: try
+L000265 |         try ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000266 |         { ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine() / 지역 변수를 선언합니다: var response = SerialPort.ReadLine(); / 변수의 초기값을 지정합니다: response = SerialPort.ReadLine()
+L000267 |             var response = SerialPort.ReadLine(); ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var errorCode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals("TE", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!TryParseResponse(response, out _, out var responseCommand, out var errorCode) || !responseCommand.Equals("TE", StringComparison.OrdinalIgnoreCase))
+L000268 |             if (!TryParseResponse(response, out _, out var responseCommand, out var errorCode) || !responseCommand.Equals("TE", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000269 |             { ⟦EOL⟧
+// 해설 L270: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-2";
+L000270 |                 return "ERR:-2"; ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000271 |             } ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: errorCode.Trim() / 지역 변수를 선언합니다: var normalizedError = errorCode.Trim(); / 변수의 초기값을 지정합니다: normalizedError = errorCode.Trim()
+L000273 |             var normalizedError = errorCode.Trim(); ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedError.Equals("@", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: normalizedError.Equals("@", StringComparison.Ordinal) ? "OK" : $"ERR:TE:{normalizedError}" / 호출자에게 값 또는 제어를 반환합니다: return normalizedError.Equals("@", StringComparison.Ordinal) ? "OK" : $"ERR:TE:{normalizedError}";
+L000274 |             return normalizedError.Equals("@", StringComparison.Ordinal) ? "OK" : $"ERR:TE:{normalizedError}"; ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000275 |         } ⟦EOL⟧
+// 해설 L276: 지정 예외를 처리합니다: catch (TimeoutException)
+L000276 |         catch (TimeoutException) ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000277 |         { ⟦EOL⟧
+// 해설 L278: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-1";
+L000278 |             return "ERR:-1"; ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000279 |         } ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 SendSelecting.
+L000280 |     } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.SendPolling(string)
+L000282 |     private string SendPolling(string command) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 SendPolling.
+L000283 |     { ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()
+L000284 |         SerialPort!.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()
+L000285 |         SerialPort.DiscardOutBuffer(); ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand(command, "") / 지역 변수를 선언합니다: var tx = FormatDeviceCommand(command, ""); / 변수의 초기값을 지정합니다: tx = FormatDeviceCommand(command, "")
+L000286 |         var tx = FormatDeviceCommand(command, ""); ⟦EOL⟧
+// 해설 L287: 값을 대상에 대입합니다: LastSent = tx.TrimEnd('\r', '\n') / 함수·델리게이트 또는 객체 생성자를 호출합니다: tx.TrimEnd('\r', '\n')
+L000287 |         LastSent = tx.TrimEnd('\r', '\n'); ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(tx)
+L000288 |         SerialPort.Write(tx); ⟦EOL⟧
+// 해설 L289: 예외 처리 범위입니다: try
+L000289 |         try ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 SendPolling.
+L000290 |         { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine() / 지역 변수를 선언합니다: var response = SerialPort.ReadLine(); / 변수의 초기값을 지정합니다: response = SerialPort.ReadLine()
+L000291 |             var response = SerialPort.ReadLine(); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsError(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsState(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 조건에 따라 결과식을 선택합니다: TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) ? $"TS:{ReadTsError(value)}:{ReadTsState(valu
+L000292 |             return TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) ? $"TS:{ReadTsError(value)}:{ReadTsState(value)}" : $"{responseCommand}:{value.Trim()}" : "ERR:-2"; ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 SendPolling.
+L000293 |         } ⟦EOL⟧
+// 해설 L294: 지정 예외를 처리합니다: catch (TimeoutException)
+L000294 |         catch (TimeoutException) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 SendPolling.
+L000295 |         { ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting() / 지역 변수를 선언합니다: var response = SerialPort.ReadExisting().Trim(); / 변수의 초기값을 지정합니다: response = SerialPort.ReadExisting().Trim()
+L000296 |             var response = SerialPort.ReadExisting().Trim(); ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response))
+L000297 |             if (string.IsNullOrWhiteSpace(response)) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 SendPolling.
+L000298 |             { ⟦EOL⟧
+// 해설 L299: 호출자에게 값 또는 제어를 반환합니다: return "ERR:-1";
+L000299 |                 return "ERR:-1"; ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 SendPolling.
+L000300 |             } ⟦EOL⟧
+L000301 |  ⟦EOL⟧
+// 해설 L302: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsError(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsState(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 조건에 따라 결과식을 선택합니다: TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) ? $"TS:{ReadTsError(value)}:{ReadTsState(valu
+L000302 |             return TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals("TS", StringComparison.OrdinalIgnoreCase) ? $"TS:{ReadTsError(value)}:{ReadTsState(value)}" : $"{responseCommand}:{value.Trim()}" : "ERR:-2"; ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 SendPolling.
+L000303 |         } ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 SendPolling.
+L000304 |     } ⟦EOL⟧
+L000305 |  ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string)
+L000306 |     private string FormatDeviceCommand(string command, string value) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 FormatDeviceCommand.
+L000307 |     { ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadControllerAddress() / 지역 변수를 선언합니다: var address = ReadControllerAddress(); / 변수의 초기값을 지정합니다: address = ReadControllerAddress()
+L000308 |         var address = ReadControllerAddress(); ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: address.ToString(CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return $"{address.ToString(CultureInfo.InvariantCulture)}{command}{value}\r\n";
+L000309 |         return $"{address.ToString(CultureInfo.InvariantCulture)}{command}{value}\r\n"; ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 FormatDeviceCommand.
+L000310 |     } ⟦EOL⟧
+L000311 |  ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsPollingCommand(string)
+L000312 |     private static bool IsPollingCommand(string command) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 IsPollingCommand.
+L000313 |     { ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("TP", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("TH", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("TS", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return command.Equals("TP", StringComparison.OrdinalIgnoreCase) || command.Equals("TH", StringComparison.OrdinalIgnoreCase) || command.Equals("TS", StringComparison.OrdinalIgnoreCase);
+L000314 |         return command.Equals("TP", StringComparison.OrdinalIgnoreCase) || command.Equals("TH", StringComparison.OrdinalIgnoreCase) || command.Equals("TS", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 IsPollingCommand.
+L000315 |     } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsParameterQueryCommand(string)
+L000317 |     private static bool IsParameterQueryCommand(string command) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 IsParameterQueryCommand.
+L000318 |     { ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("HT", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("SL", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("SR", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("KI", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("KP", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals("IF", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: re
+L000319 |         return command.Equals("HT", StringComparison.OrdinalIgnoreCase) || command.Equals("SL", StringComparison.OrdinalIgnoreCase) || command.Equals("SR", StringComparison.OrdinalIgnoreCase) || command.Equals("KI", StringComparison.OrdinalIgnoreCase) || command.Equals("KP", StringComparison.OrdinalIgnoreCase) || command.Equals("IF", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 IsParameterQueryCommand.
+L000320 |     } ⟦EOL⟧
+L000321 |  ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()
+L000322 |     private int ReadControllerAddress() ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000323 |     { ⟦EOL⟧
+// 해설 L324: 조건에 따라 분기합니다: if (Data.Extra is not null)
+L000324 |         if (Data.Extra is not null) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000325 |         { ⟦EOL⟧
+// 해설 L326: 컬렉션 요소를 순회합니다: foreach (var key in new[] { "ADDRESS", "DEV_ADDRESS", "CONTROLLER_ADDRESS" })
+L000326 |             foreach (var key in new[] ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000327 |             { ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()
+L000328 |                 "ADDRESS", ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()
+L000329 |                 "DEV_ADDRESS", ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()
+L000330 |                 "CONTROLLER_ADDRESS" ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000331 |             } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()
+L000333 |             ) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000334 |             { ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: Data.Extra.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var address) / 조건에 따라 분기합니다: if (Data.Extra.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var address) && address is >= 1 and <= 31)
+L000335 |                 if (Data.Extra.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var address) && address is >= 1 and <= 31) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000336 |                 { ⟦EOL⟧
+// 해설 L337: 호출자에게 값 또는 제어를 반환합니다: return address;
+L000337 |                     return address; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000338 |                 } ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000339 |             } ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000340 |         } ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 호출자에게 값 또는 제어를 반환합니다: return 1;
+L000342 |         return 1; ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 ReadControllerAddress.
+L000343 |     } ⟦EOL⟧
+L000344 |  ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.TryParseResponse(string, out int, out string, out string)
+L000345 |     private static bool TryParseResponse(string response, out int address, out string command, out string value) ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000346 |     { ⟦EOL⟧
+// 해설 L347: 값을 대상에 대입합니다: address = 0
+L000347 |         address = 0; ⟦EOL⟧
+// 해설 L348: 값을 대상에 대입합니다: command = ""
+L000348 |         command = ""; ⟦EOL⟧
+// 해설 L349: 값을 대상에 대입합니다: value = ""
+L000349 |         value = ""; ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 지역 변수를 선언합니다: var text = response.Trim(); / 변수의 초기값을 지정합니다: text = response.Trim()
+L000350 |         var text = response.Trim(); ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(text[0]) / 조건에 따라 분기합니다: if (text.Length < 3 || !char.IsDigit(text[0]))
+L000351 |         if (text.Length < 3 || !char.IsDigit(text[0])) ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000352 |         { ⟦EOL⟧
+// 해설 L353: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000353 |             return false; ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000354 |         } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(text[1]) / 지역 변수를 선언합니다: var twoDigitAddress = text.Length >= 4 && char.IsDigit(text[1]); / 변수의 초기값을 지정합니다: twoDigitAddress = text.Length >= 4 && char.IsDigit(text[1])
+L000356 |         var twoDigitAddress = text.Length >= 4 && char.IsDigit(text[1]); ⟦EOL⟧
+// 해설 L357: 조건에 따라 결과식을 선택합니다: twoDigitAddress ? 2 : 1 / 지역 변수를 선언합니다: var addressLength = twoDigitAddress ? 2 : 1; / 변수의 초기값을 지정합니다: addressLength = twoDigitAddress ? 2 : 1
+L000357 |         var addressLength = twoDigitAddress ? 2 : 1; ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text[..addressLength], NumberStyles.Integer, CultureInfo.InvariantCulture, out address) / 조건에 따라 분기합니다: if (text.Length < addressLength + 2 || !int.TryParse(text[..addressLength], NumberStyles.Integer, CultureInfo.InvariantCulture, out address))
+L000358 |         if (text.Length < addressLength + 2 || !int.TryParse(text[..addressLength], NumberStyles.Integer, CultureInfo.InvariantCulture, out address)) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000359 |         { ⟦EOL⟧
+// 해설 L360: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000360 |             return false; ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000361 |         } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 값을 대상에 대입합니다: command = text.Substring(addressLength, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Substring(addressLength, 2)
+L000363 |         command = text.Substring(addressLength, 2); ⟦EOL⟧
+// 해설 L364: 값을 대상에 대입합니다: value = text.Length > addressLength + 2 ? text[(addressLength + 2)..] : "" / 조건에 따라 결과식을 선택합니다: text.Length > addressLength + 2 ? text[(addressLength + 2)..] : ""
+L000364 |         value = text.Length > addressLength + 2 ? text[(addressLength + 2)..] : ""; ⟦EOL⟧
+// 해설 L365: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000365 |         return true; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 TryParseResponse.
+L000366 |     } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS)
+L000368 |     private static string CreateSimulationResponse(EN_ATTENUATOR_COMMAND command, double parameter, ST_ATTENUATOR_STATUS current) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000369 |     { ⟦EOL⟧
+// 해설 L370: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.PollCurrentPosition or EN_ATTENUATOR_COMMAND.Refresh => $"TP:{current.CurrentPosition.ToString("F3", CultureInfo.InvariantCulture)}", EN_ATTENUATOR_COMMAND.PollTargetPosition => $"TH:{ / 값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.PollCurrentPosition or EN_ATTENUATOR_COMMAND.Refresh => $"TP:{current.CurrentPosition.ToString("F3", CultureInfo.InvariantCulture)}", EN_ATTENUATOR_COMMAND.PollTargetPosition => $"TH:{current
+L000370 |         return command switch ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000371 |         { ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentPosition.ToString("F3", CultureInfo.InvariantCulture)
+L000372 |             EN_ATTENUATOR_COMMAND.PollCurrentPosition or EN_ATTENUATOR_COMMAND.Refresh => $"TP:{current.CurrentPosition.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.TargetPosition.ToString("F3", CultureInfo.InvariantCulture)
+L000373 |             EN_ATTENUATOR_COMMAND.PollTargetPosition => $"TH:{current.TargetPosition.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS)
+L000374 |             EN_ATTENUATOR_COMMAND.PollState => "TS:0:READY", ⟦EOL⟧
+// 해설 L375: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.HomeType ?? 4).ToString(CultureInfo.InvariantCulture)
+L000375 |             EN_ATTENUATOR_COMMAND.GetHomeType => $"HT:{(current.HomeType ?? 4).ToString(CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L376: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.NegativeSoftwareLimit ?? 0.0).ToString("F3", CultureInfo.InvariantCulture)
+L000376 |             EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit => $"SL:{(current.NegativeSoftwareLimit ?? 0.0).ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.PositiveSoftwareLimit ?? 360.0).ToString("F3", CultureInfo.InvariantCulture)
+L000377 |             EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit => $"SR:{(current.PositiveSoftwareLimit ?? 360.0).ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L378: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.IGain ?? 800.0).ToString("F3", CultureInfo.InvariantCulture)
+L000378 |             EN_ATTENUATOR_COMMAND.GetIGain => $"KI:{(current.IGain ?? 800.0).ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.PGain ?? 10.0).ToString("F3", CultureInfo.InvariantCulture)
+L000379 |             EN_ATTENUATOR_COMMAND.GetPGain => $"KP:{(current.PGain ?? 10.0).ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: (current.InterpolationFactor ?? 1000.0).ToString("F3", CultureInfo.InvariantCulture)
+L000380 |             EN_ATTENUATOR_COMMAND.GetInterpolationFactor => $"IF:{(current.InterpolationFactor ?? 1000.0).ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS)
+L000381 |             _ => "OK" ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000382 |         }; ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000383 |     } ⟦EOL⟧
+L000384 |  ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)
+L000385 |     private static EN_CONEX_AGP_ERROR ReadError(string response) ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 ReadError.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : "" / 지역 변수를 선언합니다: var value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""; / 변수의 초기값을 지정합니다: value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""
+L000387 |         var value = response.StartsWith("ERR:", StringComparison.OrdinalIgnoreCase) ? response[4..] : ""; ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code))
+L000388 |         if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code)) ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 ReadError.
+L000389 |         { ⟦EOL⟧
+// 해설 L390: 호출자에게 값 또는 제어를 반환합니다: return EN_CONEX_AGP_ERROR.Error;
+L000390 |             return EN_CONEX_AGP_ERROR.Error; ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 ReadError.
+L000391 |         } ⟦EOL⟧
+L000392 |  ⟦EOL⟧
+// 해설 L393: 호출자에게 값 또는 제어를 반환합니다: return code switch { -99 => EN_CONEX_AGP_ERROR.NotSupported, -2 => EN_CONEX_AGP_ERROR.InvalidResponse, -1 => EN_CONEX_AGP_ERROR.Timeout, _ => EN_CONEX_AGP_ERROR.Error }; / 값별 결과식을 선택합니다: code switch { -99 => EN_CONEX_AGP_ERROR.NotSupported, -2 => EN_CONEX_AGP_ERROR.InvalidResponse, -1 => EN_CONEX_AGP_ERROR.Timeout, _ => EN_CONEX_AGP_ERROR.Error }
+L000393 |         return code switch ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 ReadError.
+L000394 |         { ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)
+L000395 |             -99 => EN_CONEX_AGP_ERROR.NotSupported, ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)
+L000396 |             -2 => EN_CONEX_AGP_ERROR.InvalidResponse, ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)
+L000397 |             -1 => EN_CONEX_AGP_ERROR.Timeout, ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)
+L000398 |             _ => EN_CONEX_AGP_ERROR.Error ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 ReadError.
+L000399 |         }; ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 ReadError.
+L000400 |     } ⟦EOL⟧
+L000401 |  ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CConex_AGP.ReadTaggedDouble(string, string, double)
+L000402 |     private static double ReadTaggedDouble(string response, string tag, double defaultValue) ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 ReadTaggedDouble.
+L000403 |     { ⟦EOL⟧
+// 해설 L404: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(response, tag, defaultValue) / 호출자에게 값 또는 제어를 반환합니다: return ReadTaggedNullableDouble(response, tag, defaultValue) ?? defaultValue;
+L000404 |         return ReadTaggedNullableDouble(response, tag, defaultValue) ?? defaultValue; ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 ReadTaggedDouble.
+L000405 |     } ⟦EOL⟧
+L000406 |  ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?)
+L000407 |     private static double? ReadTaggedNullableDouble(string response, string tag, double? defaultValue) ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 ReadTaggedNullableDouble.
+L000408 |     { ⟦EOL⟧
+// 해설 L409: 지역 변수를 선언합니다: var prefix = $"{tag}:"; / 변수의 초기값을 지정합니다: prefix = $"{tag}:"
+L000409 |         var prefix = $"{tag}:"; ⟦EOL⟧
+// 해설 L410: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response / 지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; / 변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response
+L000410 |         var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; ⟦EOL⟧
+// 해설 L411: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result))
+L000411 |         if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result)) ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 ReadTaggedNullableDouble.
+L000412 |         { ⟦EOL⟧
+// 해설 L413: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000413 |             return defaultValue; ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 ReadTaggedNullableDouble.
+L000414 |         } ⟦EOL⟧
+L000415 |  ⟦EOL⟧
+// 해설 L416: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000416 |         return result; ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 ReadTaggedNullableDouble.
+L000417 |     } ⟦EOL⟧
+L000418 |  ⟦EOL⟧
+// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.Interface.CConex_AGP.ReadTaggedInt(string, string, int?)
+L000419 |     private static int? ReadTaggedInt(string response, string tag, int? defaultValue) ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 ReadTaggedInt.
+L000420 |     { ⟦EOL⟧
+// 해설 L421: 지역 변수를 선언합니다: var prefix = $"{tag}:"; / 변수의 초기값을 지정합니다: prefix = $"{tag}:"
+L000421 |         var prefix = $"{tag}:"; ⟦EOL⟧
+// 해설 L422: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response / 지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; / 변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response
+L000422 |         var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response; ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000423 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 ReadTaggedInt.
+L000424 |     } ⟦EOL⟧
+L000425 |  ⟦EOL⟧
+// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double)
+L000426 |     private static string FormatCommandParameter(double value) ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 FormatCommandParameter.
+L000427 |     { ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value).ToString("0.###", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value) / 호출자에게 값 또는 제어를 반환합니다: return ValidateFiniteCommandParameter(value).ToString("0.###", CultureInfo.InvariantCulture);
+L000428 |         return ValidateFiniteCommandParameter(value).ToString("0.###", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 FormatCommandParameter.
+L000429 |     } ⟦EOL⟧
+L000430 |  ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double)
+L000431 |     private static double NormalizeStoredCommandParameter(double value) ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 NormalizeStoredCommandParameter.
+L000432 |     { ⟦EOL⟧
+// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.Parse(FormatCommandParameter(value), NumberStyles.Float, CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(value) / 호출자에게 값 또는 제어를 반환합니다: return double.Parse(FormatCommandParameter(value), NumberStyles.Float, CultureInfo.InvariantCulture);
+L000433 |         return double.Parse(FormatCommandParameter(value), NumberStyles.Float, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 NormalizeStoredCommandParameter.
+L000434 |     } ⟦EOL⟧
+L000435 |  ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.FormatPositionParameter(double)
+L000436 |     private static string FormatPositionParameter(double value) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 FormatPositionParameter.
+L000437 |     { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value).ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value) / 호출자에게 값 또는 제어를 반환합니다: return ValidateFiniteCommandParameter(value).ToString("F3", CultureInfo.InvariantCulture);
+L000438 |         return ValidateFiniteCommandParameter(value).ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 FormatPositionParameter.
+L000439 |     } ⟦EOL⟧
+L000440 |  ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.FormatIntegerCommandParameter(double)
+L000441 |     private static string FormatIntegerCommandParameter(double value) ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 FormatIntegerCommandParameter.
+L000442 |     { ⟦EOL⟧
+// 해설 L443: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(value).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(value) / 호출자에게 값 또는 제어를 반환합니다: return ValidateInt32CommandParameter(value).ToString(CultureInfo.InvariantCulture);
+L000443 |         return ValidateInt32CommandParameter(value).ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 FormatIntegerCommandParameter.
+L000444 |     } ⟦EOL⟧
+L000445 |  ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double)
+L000446 |     private static double ValidateFiniteCommandParameter(double value) ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 ValidateFiniteCommandParameter.
+L000447 |     { ⟦EOL⟧
+// 해설 L448: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 조건에 따라 분기합니다: if (!double.IsFinite(value))
+L000448 |         if (!double.IsFinite(value)) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 ValidateFiniteCommandParameter.
+L000449 |         { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be a finite number.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be a finite number.");
+L000450 |             throw new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be a finite number."); ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 ValidateFiniteCommandParameter.
+L000451 |         } ⟦EOL⟧
+L000452 |  ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000453 |         return value; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 ValidateFiniteCommandParameter.
+L000454 |     } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CConex_AGP.ValidateInt32CommandParameter(double)
+L000456 |     private static int ValidateInt32CommandParameter(double value) ⟦EOL⟧
+// 해설 L457: 구문 블록 경계입니다 · 소속 ValidateInt32CommandParameter.
+L000457 |     { ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value) / 지역 변수를 선언합니다: var finiteValue = ValidateFiniteCommandParameter(value); / 변수의 초기값을 지정합니다: finiteValue = ValidateFiniteCommandParameter(value)
+L000458 |         var finiteValue = ValidateFiniteCommandParameter(value); ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(finiteValue) / 조건에 따라 분기합니다: if (finiteValue < int.MinValue || finiteValue > int.MaxValue || finiteValue != Math.Truncate(finiteValue))
+L000459 |         if (finiteValue < int.MinValue || finiteValue > int.MaxValue || finiteValue != Math.Truncate(finiteValue)) ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 ValidateInt32CommandParameter.
+L000460 |         { ⟦EOL⟧
+// 해설 L461: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be an Int32 integer.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be an Int32 integer.");
+L000461 |             throw new ArgumentOutOfRangeException(nameof(value), value, "CONEX-AGP command parameter must be an Int32 integer."); ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 ValidateInt32CommandParameter.
+L000462 |         } ⟦EOL⟧
+L000463 |  ⟦EOL⟧
+// 해설 L464: 호출자에게 값 또는 제어를 반환합니다: return (int)finiteValue;
+L000464 |         return (int)finiteValue; ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 ValidateInt32CommandParameter.
+L000465 |     } ⟦EOL⟧
+L000466 |  ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.ReadControllerState(string, string)
+L000467 |     private static string ReadControllerState(string response, string defaultState) ⟦EOL⟧
+// 해설 L468: 구문 블록 경계입니다 · 소속 ReadControllerState.
+L000468 |     { ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith("TS:", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!response.StartsWith("TS:", StringComparison.OrdinalIgnoreCase))
+L000469 |         if (!response.StartsWith("TS:", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 ReadControllerState.
+L000470 |         { ⟦EOL⟧
+// 해설 L471: 호출자에게 값 또는 제어를 반환합니다: return defaultState;
+L000471 |             return defaultState; ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 ReadControllerState.
+L000472 |         } ⟦EOL⟧
+L000473 |  ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(':', StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var parts = response.Split(':', StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: parts = response.Split(':', StringSplitOptions.TrimEntries)
+L000474 |         var parts = response.Split(':', StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeControllerState(parts[2]) / 조건에 따라 결과식을 선택합니다: parts.Length >= 3 ? NormalizeControllerState(parts[2]) : defaultState / 호출자에게 값 또는 제어를 반환합니다: return parts.Length >= 3 ? NormalizeControllerState(parts[2]) : defaultState;
+L000475 |         return parts.Length >= 3 ? NormalizeControllerState(parts[2]) : defaultState; ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 ReadControllerState.
+L000476 |     } ⟦EOL⟧
+L000477 |  ⟦EOL⟧
+// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000478 |     private static string NormalizeControllerState(string value) ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 NormalizeControllerState.
+L000479 |     { ⟦EOL⟧
+// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var state) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var state))
+L000480 |         if (!int.TryParse(value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var state)) ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 NormalizeControllerState.
+L000481 |         { ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return value.ToUpperInvariant();
+L000482 |             return value.ToUpperInvariant(); ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다 · 소속 NormalizeControllerState.
+L000483 |         } ⟦EOL⟧
+L000484 |  ⟦EOL⟧
+// 해설 L485: 호출자에게 값 또는 제어를 반환합니다: return state switch { >= 0x0A and <= 0x10 => "NOT_REFERENCED", 0x14 => "CONFIGURATION", 0x1E => "HOMING", 0x28 => "MOVING", 0x32 or 0x33 or 0x34 => "READY", 0x3C or 0x3D => "DISABLE", _ => $"STATE_{state:X2}"}; / 값별 결과식을 선택합니다: state switch { >= 0x0A and <= 0x10 => "NOT_REFERENCED", 0x14 => "CONFIGURATION", 0x1E => "HOMING", 0x28 => "MOVING", 0x32 or 0x33 or 0x34 => "READY", 0x3C or 0x3D => "DISABLE", _ => $"STATE_{state:X2}"}
+L000485 |         return state switch ⟦EOL⟧
+// 해설 L486: 구문 블록 경계입니다 · 소속 NormalizeControllerState.
+L000486 |         { ⟦EOL⟧
+// 해설 L487: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000487 |             >= 0x0A and <= 0x10 => "NOT_REFERENCED", ⟦EOL⟧
+// 해설 L488: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000488 |             0x14 => "CONFIGURATION", ⟦EOL⟧
+// 해설 L489: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000489 |             0x1E => "HOMING", ⟦EOL⟧
+// 해설 L490: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000490 |             0x28 => "MOVING", ⟦EOL⟧
+// 해설 L491: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000491 |             0x32 or 0x33 or 0x34 => "READY", ⟦EOL⟧
+// 해설 L492: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000492 |             0x3C or 0x3D => "DISABLE", ⟦EOL⟧
+// 해설 L493: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)
+L000493 |             _ => $"STATE_{state:X2}"}; ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 NormalizeControllerState.
+L000494 |     } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CConex_AGP.IsMovingState(string)
+L000496 |     private static bool IsMovingState(string value) ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 IsMovingState.
+L000497 |     { ⟦EOL⟧
+// 해설 L498: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("MOVING", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("HOMING", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return value.Equals("MOVING", StringComparison.OrdinalIgnoreCase) || value.Equals("HOMING", StringComparison.OrdinalIgnoreCase);
+L000498 |         return value.Equals("MOVING", StringComparison.OrdinalIgnoreCase) || value.Equals("HOMING", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 IsMovingState.
+L000499 |     } ⟦EOL⟧
+L000500 |  ⟦EOL⟧
+// 해설 L501: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.ReadTsError(string)
+L000501 |     private static string ReadTsError(string value) ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 ReadTsError.
+L000502 |     { ⟦EOL⟧
+// 해설 L503: 조건에 따라 결과식을 선택합니다: value.Length >= 4 ? value[..4] : "0" / 호출자에게 값 또는 제어를 반환합니다: return value.Length >= 4 ? value[..4] : "0";
+L000503 |         return value.Length >= 4 ? value[..4] : "0"; ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 ReadTsError.
+L000504 |     } ⟦EOL⟧
+L000505 |  ⟦EOL⟧
+// 해설 L506: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CConex_AGP.ReadTsState(string)
+L000506 |     private static string ReadTsState(string value) ⟦EOL⟧
+// 해설 L507: 구문 블록 경계입니다 · 소속 ReadTsState.
+L000507 |     { ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Substring(4, 2) / 조건에 따라 결과식을 선택합니다: value.Length >= 6 ? value.Substring(4, 2) : "0" / 호출자에게 값 또는 제어를 반환합니다: return value.Length >= 6 ? value.Substring(4, 2) : "0";
+L000508 |         return value.Length >= 6 ? value.Substring(4, 2) : "0"; ⟦EOL⟧
+// 해설 L509: 구문 블록 경계입니다 · 소속 ReadTsState.
+L000509 |     } ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다.
+L000510 | } ⟦EOL⟧
+L000511 |  ⟦EOL⟧
+// 해설 L512: 타입의 구조/상속 선언입니다: public enum EN_ATTENUATOR_COMMAND
+L000512 | public enum EN_ATTENUATOR_COMMAND ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다.
+L000513 | { ⟦EOL⟧
+// 해설 L514: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveAbs
+L000514 |     MoveAbs, ⟦EOL⟧
+// 해설 L515: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveRel
+L000515 |     MoveRel, ⟦EOL⟧
+// 해설 L516: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Home
+L000516 |     Home, ⟦EOL⟧
+// 해설 L517: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Stop
+L000517 |     Stop, ⟦EOL⟧
+// 해설 L518: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.ResetController
+L000518 |     ResetController, ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Refresh
+L000519 |     Refresh, ⟦EOL⟧
+// 해설 L520: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollCurrentPosition
+L000520 |     PollCurrentPosition, ⟦EOL⟧
+// 해설 L521: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollTargetPosition
+L000521 |     PollTargetPosition, ⟦EOL⟧
+// 해설 L522: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollState
+L000522 |     PollState, ⟦EOL⟧
+// 해설 L523: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetHomeType
+L000523 |     GetHomeType, ⟦EOL⟧
+// 해설 L524: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetHomeType
+L000524 |     SetHomeType, ⟦EOL⟧
+// 해설 L525: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit
+L000525 |     GetNegativeSoftwareLimit, ⟦EOL⟧
+// 해설 L526: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetNegativeSoftwareLimit
+L000526 |     SetNegativeSoftwareLimit, ⟦EOL⟧
+// 해설 L527: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit
+L000527 |     GetPositiveSoftwareLimit, ⟦EOL⟧
+// 해설 L528: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPositiveSoftwareLimit
+L000528 |     SetPositiveSoftwareLimit, ⟦EOL⟧
+// 해설 L529: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetIGain
+L000529 |     GetIGain, ⟦EOL⟧
+// 해설 L530: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetIGain
+L000530 |     SetIGain, ⟦EOL⟧
+// 해설 L531: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPGain
+L000531 |     GetPGain, ⟦EOL⟧
+// 해설 L532: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPGain
+L000532 |     SetPGain, ⟦EOL⟧
+// 해설 L533: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetInterpolationFactor
+L000533 |     GetInterpolationFactor, ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetInterpolationFactor
+L000534 |     SetInterpolationFactor ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다.
+L000535 | } ⟦EOL⟧
+L000536 |  ⟦EOL⟧
+// 해설 L537: 타입의 구조/상속 선언입니다: public enum EN_CONEX_AGP_ERROR
+L000537 | public enum EN_CONEX_AGP_ERROR ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다.
+L000538 | { ⟦EOL⟧
+// 해설 L539: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Ok
+L000539 |     Ok = 0, ⟦EOL⟧
+// 해설 L540: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Error
+L000540 |     Error = 1, ⟦EOL⟧
+// 해설 L541: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Timeout
+L000541 |     Timeout = -1, ⟦EOL⟧
+// 해설 L542: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR.InvalidResponse
+L000542 |     InvalidResponse = -2, ⟦EOL⟧
+// 해설 L543: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_CONEX_AGP_ERROR.NotSupported
+L000543 |     NotSupported = -99 ⟦EOL⟧
+// 해설 L544: 구문 블록 경계입니다.
+L000544 | } ⟦EOL⟧
+L000545 |  ⟦EOL⟧
+// 해설 L546: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000546 | // Intentional breaking change during active development. ⟦EOL⟧
+// 해설 L547: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000547 | // ST_ATTENUATOR_STATUS is a solution-local DTO, not a stable external SDK contract. ⟦EOL⟧
+// 해설 L548: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000548 | // Legacy constructor and Deconstruct compatibility are intentionally not preserved. ⟦EOL⟧
+// 해설 L549: 타입의 구조/상속 선언입니다: public sealed record ST_ATTENUATOR_STATUS(
+L000549 | public sealed record ST_ATTENUATOR_STATUS( ⟦EOL⟧
+// 해설 L550: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000550 |     double CurrentPosition,  ⟦EOL⟧
+// 해설 L551: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000551 |     double TargetPosition,  ⟦EOL⟧
+// 해설 L552: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000552 |     string CommandState,  ⟦EOL⟧
+// 해설 L553: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000553 |     bool CommOk = true,  ⟦EOL⟧
+// 해설 L554: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000554 |     EN_CONEX_AGP_ERROR LastError = EN_CONEX_AGP_ERROR.Ok,  ⟦EOL⟧
+// 해설 L555: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000555 |     DateTimeOffset? UpdatedAt = null,  ⟦EOL⟧
+// 해설 L556: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000556 |     int? HomeType = null,  ⟦EOL⟧
+// 해설 L557: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000557 |     double? NegativeSoftwareLimit = null,  ⟦EOL⟧
+// 해설 L558: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000558 |     double? PositiveSoftwareLimit = null,  ⟦EOL⟧
+// 해설 L559: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000559 |     double? IGain = null,  ⟦EOL⟧
+// 해설 L560: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000560 |     double? PGain = null,  ⟦EOL⟧
+// 해설 L561: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000561 |     double? InterpolationFactor = null ⟦EOL⟧
+// 해설 L562: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000562 | ); ⟦EOL⟧

@@ -1,0 +1,1072 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CMonitorView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000007 | using Drilling.UI.Popup; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000009 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CMonitorView : UserControl
+L000010 | public partial class CMonitorView : UserControl ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Window? Drilling.UI.Views.CMonitorView._hostWindow
+L000012 |     private Window? _hostWindow; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView? Drilling.UI.Views.CMonitorView._rootView
+L000013 |     private CRootView? _rootView; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView._monitorMenu
+L000014 |     private CMenuMonitor? _monitorMenu; ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CMonitorView.CMonitorView()
+L000016 |     public CMonitorView() ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 .ctor.
+L000019 |     } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MonitorViewLoaded(object, RoutedEventArgs)
+L000021 |     private void MonitorViewLoaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000022 |     { ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) / 지역 변수를 선언합니다: var window = Window.GetWindow(this); / 변수의 초기값을 지정합니다: window = Window.GetWindow(this)
+L000023 |         var window = Window.GetWindow(this); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_hostWindow, window) / 조건에 따라 분기합니다: if (!ReferenceEquals(_hostWindow, window))
+L000024 |         if (!ReferenceEquals(_hostWindow, window)) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 조건에 따라 분기합니다: if (_hostWindow is not null)
+L000026 |             if (_hostWindow is not null) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000027 |             { ⟦EOL⟧
+// 해설 L28: 복합 대입 또는 이벤트 구독/해지 표현입니다: _hostWindow.PreviewKeyDown -= MonitorViewPreviewKeyDown
+L000028 |                 _hostWindow.PreviewKeyDown -= MonitorViewPreviewKeyDown; ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000029 |             } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: _hostWindow = window
+L000031 |             _hostWindow = window; ⟦EOL⟧
+// 해설 L32: 조건에 따라 분기합니다: if (_hostWindow is not null)
+L000032 |             if (_hostWindow is not null) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000033 |             { ⟦EOL⟧
+// 해설 L34: 복합 대입 또는 이벤트 구독/해지 표현입니다: _hostWindow.PreviewKeyDown += MonitorViewPreviewKeyDown
+L000034 |                 _hostWindow.PreviewKeyDown += MonitorViewPreviewKeyDown; ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000035 |             } ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000036 |         } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 지역 변수를 선언합니다: var rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView; / 변수의 초기값을 지정합니다: rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView
+L000038 |         var rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView; ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_rootView, rootView) / 조건에 따라 분기합니다: if (ReferenceEquals(_rootView, rootView))
+L000039 |         if (ReferenceEquals(_rootView, rootView)) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000040 |         { ⟦EOL⟧
+// 해설 L41: 호출자에게 값 또는 제어를 반환합니다: return;
+L000041 |             return; ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000042 |         } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 조건에 따라 분기합니다: if (_rootView is not null)
+L000044 |         if (_rootView is not null) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 복합 대입 또는 이벤트 구독/해지 표현입니다: _rootView.CurrentScreenChanged -= RootViewCurrentScreenChanged
+L000046 |             _rootView.CurrentScreenChanged -= RootViewCurrentScreenChanged; ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: _rootView = rootView
+L000049 |         _rootView = rootView; ⟦EOL⟧
+// 해설 L50: 조건에 따라 분기합니다: if (_rootView is not null)
+L000050 |         if (_rootView is not null) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 복합 대입 또는 이벤트 구독/해지 표현입니다: _rootView.CurrentScreenChanged += RootViewCurrentScreenChanged
+L000052 |             _rootView.CurrentScreenChanged += RootViewCurrentScreenChanged; ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: _monitorMenu = _rootView.CurrentScreen.Monitor ?? _monitorMenu
+L000053 |             _monitorMenu = _rootView.CurrentScreen.Monitor ?? _monitorMenu; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000054 |         } ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 MonitorViewLoaded.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.RootViewCurrentScreenChanged(object?, System.EventArgs)
+L000057 |     private void RootViewCurrentScreenChanged(object? sender, EventArgs e) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (_rootView is null)
+L000059 |         if (_rootView is null) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return;
+L000061 |             return; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000062 |         } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 조건에 따라 분기합니다: if (_rootView.CurrentScreen.Menu != EN_MENU.Monitor)
+L000064 |         if (_rootView.CurrentScreen.Menu != EN_MENU.Monitor) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: .HideAndLockMelsecWrite()
+L000066 |             _monitorMenu?.HideAndLockMelsecWrite(); ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return;
+L000067 |             return; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000068 |         } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: _monitorMenu = _rootView.CurrentScreen.Monitor ?? _monitorMenu
+L000070 |         _monitorMenu = _rootView.CurrentScreen.Monitor ?? _monitorMenu; ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 RootViewCurrentScreenChanged.
+L000071 |     } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MonitorViewPreviewKeyDown(object, KeyEventArgs)
+L000073 |     private void MonitorViewPreviewKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 MonitorViewPreviewKeyDown.
+L000074 |     { ⟦EOL⟧
+// 해설 L75: 지역 변수를 선언합니다: var rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView; / 변수의 초기값을 지정합니다: rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView
+L000075 |         var rootView = DataContext as CRootView ?? _hostWindow?.DataContext as CRootView; ⟦EOL⟧
+// 해설 L76: 지역 변수를 선언합니다: var requiredModifiers = ModifierKeys.Control | ModifierKeys.Shift; / 변수의 초기값을 지정합니다: requiredModifiers = ModifierKeys.Control | ModifierKeys.Shift
+L000076 |         var requiredModifiers = ModifierKeys.Control | ModifierKeys.Shift; ⟦EOL⟧
+// 해설 L77: 조건에 따라 분기합니다: if (e.Key != Key.F12 || (Keyboard.Modifiers & requiredModifiers) != requiredModifiers || rootView?.CurrentScreen.Monitor is not CMenuMonitor monitor)
+L000077 |         if (e.Key != Key.F12 || ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MonitorViewPreviewKeyDown(object, KeyEventArgs)
+L000078 |             (Keyboard.Modifiers & requiredModifiers) != requiredModifiers || ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MonitorViewPreviewKeyDown(object, KeyEventArgs)
+L000079 |             rootView?.CurrentScreen.Monitor is not CMenuMonitor monitor) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 MonitorViewPreviewKeyDown.
+L000080 |         { ⟦EOL⟧
+// 해설 L81: 호출자에게 값 또는 제어를 반환합니다: return;
+L000081 |             return; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 MonitorViewPreviewKeyDown.
+L000082 |         } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.ToggleMelsecWriteLockVisibility()
+L000084 |         monitor.ToggleMelsecWriteLockVisibility(); ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: e.Handled = true
+L000085 |         e.Handled = true; ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 MonitorViewPreviewKeyDown.
+L000086 |     } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MonitorViewUnloaded(object, RoutedEventArgs)
+L000088 |     private void MonitorViewUnloaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000089 |     { ⟦EOL⟧
+// 해설 L90: 조건에 따라 분기합니다: if (_hostWindow is not null)
+L000090 |         if (_hostWindow is not null) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000091 |         { ⟦EOL⟧
+// 해설 L92: 복합 대입 또는 이벤트 구독/해지 표현입니다: _hostWindow.PreviewKeyDown -= MonitorViewPreviewKeyDown
+L000092 |             _hostWindow.PreviewKeyDown -= MonitorViewPreviewKeyDown; ⟦EOL⟧
+// 해설 L93: 값을 대상에 대입합니다: _hostWindow = null
+L000093 |             _hostWindow = null; ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000094 |         } ⟦EOL⟧
+L000095 |  ⟦EOL⟧
+// 해설 L96: 조건에 따라 분기합니다: if (_rootView is not null)
+L000096 |         if (_rootView is not null) ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000097 |         { ⟦EOL⟧
+// 해설 L98: 복합 대입 또는 이벤트 구독/해지 표현입니다: _rootView.CurrentScreenChanged -= RootViewCurrentScreenChanged
+L000098 |             _rootView.CurrentScreenChanged -= RootViewCurrentScreenChanged; ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _rootView = null
+L000099 |             _rootView = null; ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000100 |         } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: .HideAndLockMelsecWrite()
+L000102 |         _monitorMenu?.HideAndLockMelsecWrite(); ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: _monitorMenu = null
+L000103 |         _monitorMenu = null; ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 MonitorViewUnloaded.
+L000104 |     } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.XpsMultiMoveGrid_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000106 |     private void XpsMultiMoveGrid_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 XpsMultiMoveGrid_PreviewMouseWheel.
+L000107 |     { ⟦EOL⟧
+// 해설 L108: 지역 변수를 선언합니다: var scrollViewer = XpsOperationScrollViewer; / 변수의 초기값을 지정합니다: scrollViewer = XpsOperationScrollViewer
+L000108 |         var scrollViewer = XpsOperationScrollViewer; ⟦EOL⟧
+// 해설 L109: 지역 변수를 선언합니다: var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; / 변수의 초기값을 지정합니다: canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0
+L000109 |         var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; ⟦EOL⟧
+// 해설 L110: 지역 변수를 선언합니다: var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; / 변수의 초기값을 지정합니다: canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight
+L000110 |         var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; ⟦EOL⟧
+// 해설 L111: 조건에 따라 분기합니다: if (!canScrollUp && !canScrollDown)
+L000111 |         if (!canScrollUp && !canScrollDown) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 XpsMultiMoveGrid_PreviewMouseWheel.
+L000112 |         { ⟦EOL⟧
+// 해설 L113: 호출자에게 값 또는 제어를 반환합니다: return;
+L000113 |             return; ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 XpsMultiMoveGrid_PreviewMouseWheel.
+L000114 |         } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0))
+L000116 |         scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0)); ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: e.Handled = true
+L000117 |         e.Handled = true; ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 XpsMultiMoveGrid_PreviewMouseWheel.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OuterScrollViewer_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000120 |     private void OuterScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 조건에 따라 분기합니다: if (sender is not ScrollViewer scrollViewer)
+L000122 |         if (sender is not ScrollViewer scrollViewer) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000123 |         { ⟦EOL⟧
+// 해설 L124: 호출자에게 값 또는 제어를 반환합니다: return;
+L000124 |             return; ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000125 |         } ⟦EOL⟧
+L000126 |  ⟦EOL⟧
+// 해설 L127: 지역 변수를 선언합니다: var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; / 변수의 초기값을 지정합니다: canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0
+L000127 |         var canScrollUp = e.Delta > 0 && scrollViewer.VerticalOffset > 0; ⟦EOL⟧
+// 해설 L128: 지역 변수를 선언합니다: var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; / 변수의 초기값을 지정합니다: canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight
+L000128 |         var canScrollDown = e.Delta < 0 && scrollViewer.VerticalOffset < scrollViewer.ScrollableHeight; ⟦EOL⟧
+// 해설 L129: 조건에 따라 분기합니다: if (!canScrollUp && !canScrollDown)
+L000129 |         if (!canScrollUp && !canScrollDown) ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000130 |         { ⟦EOL⟧
+// 해설 L131: 호출자에게 값 또는 제어를 반환합니다: return;
+L000131 |             return; ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000132 |         } ⟦EOL⟧
+L000133 |  ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0))
+L000134 |         scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - (e.Delta / 3.0)); ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: e.Handled = true
+L000135 |         e.Handled = true; ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 OuterScrollViewer_PreviewMouseWheel.
+L000136 |     } ⟦EOL⟧
+L000137 |  ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.CoordinateCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000138 |     private void CoordinateCellPreviewLabel_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseMove.
+L000139 |     { ⟦EOL⟧
+// 해설 L140: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })
+L000140 |         if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseMove.
+L000141 |         { ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCoordinateGlassPreviewHoverTip()
+L000142 |             HideCoordinateGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L143: 호출자에게 값 또는 제어를 반환합니다: return;
+L000143 |             return; ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseMove.
+L000144 |         } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipText.Text = label.DisplayText
+L000146 |         CoordinateGlassPreviewHoverTipText.Text = label.DisplayText; ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTip.Visibility = Visibility.Visible
+L000147 |         CoordinateGlassPreviewHoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionCoordinateGlassPreviewHoverTip(e.GetPosition(CoordinateGlassPreviewViewport)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(CoordinateGlassPreviewViewport)
+L000148 |         PositionCoordinateGlassPreviewHoverTip(e.GetPosition(CoordinateGlassPreviewViewport)); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseMove.
+L000149 |     } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.CoordinateCellPreviewLabel_MouseLeave(object, MouseEventArgs)
+L000151 |     private void CoordinateCellPreviewLabel_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseLeave.
+L000152 |     { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCoordinateGlassPreviewHoverTip()
+L000153 |         HideCoordinateGlassPreviewHoverTip(); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 CoordinateCellPreviewLabel_MouseLeave.
+L000154 |     } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.PositionCoordinateGlassPreviewHoverTip(Point)
+L000156 |     private void PositionCoordinateGlassPreviewHoverTip(Point pointer) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000157 |     { ⟦EOL⟧
+// 해설 L158: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000158 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L159: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000159 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L160: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000160 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: CoordinateGlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000161 |         CoordinateGlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L162: 지역 변수를 선언합니다: var tipSize = CoordinateGlassPreviewHoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = CoordinateGlassPreviewHoverTip.DesiredSize
+L000162 |         var tipSize = CoordinateGlassPreviewHoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L163: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000163 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L164: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000164 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L165: 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualWidth > 0)
+L000165 |         if (CoordinateGlassPreviewViewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000166 |         { ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)
+L000167 |             x = Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000168 |         } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualHeight > 0)
+L000170 |         if (CoordinateGlassPreviewViewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000171 |         { ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)
+L000172 |             y = Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000173 |         } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.X = x
+L000175 |         CoordinateGlassPreviewHoverTipTranslateTransform.X = x; ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.Y = y
+L000176 |         CoordinateGlassPreviewHoverTipTranslateTransform.Y = y; ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 PositionCoordinateGlassPreviewHoverTip.
+L000177 |     } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip()
+L000179 |     private void HideCoordinateGlassPreviewHoverTip() ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 HideCoordinateGlassPreviewHoverTip.
+L000180 |     { ⟦EOL⟧
+// 해설 L181: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTip.Visibility = Visibility.Collapsed
+L000181 |         CoordinateGlassPreviewHoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipText.Text = ""
+L000182 |         CoordinateGlassPreviewHoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 HideCoordinateGlassPreviewHoverTip.
+L000183 |     } ⟦EOL⟧
+L000184 |  ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.AttenuatorScrollViewer_ScrollChanged(object, ScrollChangedEventArgs)
+L000185 |     private void AttenuatorScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e) ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 AttenuatorScrollViewer_ScrollChanged.
+L000186 |     { ⟦EOL⟧
+// 해설 L187: 조건에 따라 분기합니다: if (e.VerticalChange == 0 || sender is not DependencyObject root)
+L000187 |         if (e.VerticalChange == 0 || sender is not DependencyObject root) ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 AttenuatorScrollViewer_ScrollChanged.
+L000188 |         { ⟦EOL⟧
+// 해설 L189: 호출자에게 값 또는 제어를 반환합니다: return;
+L000189 |             return; ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 AttenuatorScrollViewer_ScrollChanged.
+L000190 |         } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(root)
+L000192 |         CloseOpenComboBoxes(root); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 AttenuatorScrollViewer_ScrollChanged.
+L000193 |     } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs)
+L000195 |     private void MelsecGrid_SizeChanged(object sender, SizeChangedEventArgs e) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000196 |     { ⟦EOL⟧
+// 해설 L197: 조건에 따라 분기합니다: if (sender is not DataGrid grid || grid.Columns.Count == 0)
+L000197 |         if (sender is not DataGrid grid || grid.Columns.Count == 0) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 호출자에게 값 또는 제어를 반환합니다: return;
+L000199 |             return; ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000200 |         } ⟦EOL⟧
+L000201 |  ⟦EOL⟧
+// 해설 L202: 지역 변수를 선언합니다: var fixedColumnsWidth = 0.0; / 변수의 초기값을 지정합니다: fixedColumnsWidth = 0.0
+L000202 |         var fixedColumnsWidth = 0.0; ⟦EOL⟧
+// 해설 L203: 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index < grid.Columns.Count; index++) / 변수의 초기값을 지정합니다: index = 1
+L000203 |         for (var index = 1; index < grid.Columns.Count; index++) ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000204 |         { ⟦EOL⟧
+// 해설 L205: 복합 대입 또는 이벤트 구독/해지 표현입니다: fixedColumnsWidth += grid.Columns[index].Width.Value
+L000205 |             fixedColumnsWidth += grid.Columns[index].Width.Value; ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000206 |         } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 지역 변수를 선언합니다: const double minimumIdWidth = 160.0; / 변수의 초기값을 지정합니다: minimumIdWidth = 160.0
+L000208 |         const double minimumIdWidth = 160.0; ⟦EOL⟧
+// 해설 L209: 지역 변수를 선언합니다: var availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0; / 변수의 초기값을 지정합니다: availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0
+L000209 |         var availableIdWidth = grid.ActualWidth ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs)
+L000210 |                                - fixedColumnsWidth ⟦EOL⟧
+// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs)
+L000211 |                                - SystemParameters.VerticalScrollBarWidth ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs)
+L000212 |                                - 2.0; ⟦EOL⟧
+// 해설 L213: 값을 대상에 대입합니다: grid.Columns[0].Width = new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(minimumIdWidth, availableIdWidth)
+L000213 |         grid.Columns[0].Width = new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)); ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 MelsecGrid_SizeChanged.
+L000214 |     } ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.CloseOpenComboBoxes(DependencyObject)
+L000216 |     private static void CloseOpenComboBoxes(DependencyObject root) ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000217 |     { ⟦EOL⟧
+// 해설 L218: 조건에 따라 분기합니다: if (root is ComboBox { IsDropDownOpen: true } comboBox)
+L000218 |         if (root is ComboBox { IsDropDownOpen: true } comboBox) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000219 |         { ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false
+L000220 |             comboBox.IsDropDownOpen = false; ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000221 |         } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(root) / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(root); index++) / 변수의 초기값을 지정합니다: index = 0
+L000223 |         for (var index = 0; index < VisualTreeHelper.GetChildrenCount(root); index++) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000224 |         { ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(VisualTreeHelper.GetChild(root, index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(root, index)
+L000225 |             CloseOpenComboBoxes(VisualTreeHelper.GetChild(root, index)); ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000226 |         } ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 CloseOpenComboBoxes.
+L000227 |     } ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenPowerMeterSettingInput(object, RoutedEventArgs)
+L000229 |     private void OpenPowerMeterSettingInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000230 |     { ⟦EOL⟧
+// 해설 L231: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_PWM_SETTING_ROW row } || row.UsesSelectionEditor)
+L000231 |         if (sender is not FrameworkElement { DataContext: ST_PWM_SETTING_ROW row } || row.UsesSelectionEditor) ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000232 |         { ⟦EOL⟧
+// 해설 L233: 호출자에게 값 또는 제어를 반환합니다: return;
+L000233 |             return; ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000234 |         } ⟦EOL⟧
+L000235 |  ⟦EOL⟧
+// 해설 L236: 값을 대상에 대입합니다: e.Handled = true
+L000236 |         e.Handled = true; ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000237 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") / 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true)
+L000238 |         if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 호출자에게 값 또는 제어를 반환합니다: return;
+L000240 |             return; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) }
+L000243 |         var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000244 |         { ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000245 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000246 |         }; ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000247 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000248 |         { ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000249 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000250 |         } ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 OpenPowerMeterSettingInput.
+L000251 |     } ⟦EOL⟧
+L000252 |  ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseDown(object, MouseButtonEventArgs)
+L000253 |     private void PowerMeterSettingSelection_PreviewMouseDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseDown.
+L000254 |     { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000255 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") / 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true)
+L000256 |         if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseDown.
+L000257 |         { ⟦EOL⟧
+// 해설 L258: 값을 대상에 대입합니다: e.Handled = true
+L000258 |             e.Handled = true; ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseDown.
+L000259 |         } ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseDown.
+L000260 |     } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewKeyDown(object, KeyEventArgs)
+L000262 |     private void PowerMeterSettingSelection_PreviewKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000263 |     { ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPowerMeterSettingSelectionKey(e.Key) / 조건에 따라 분기합니다: if (!IsPowerMeterSettingSelectionKey(e.Key))
+L000264 |         if (!IsPowerMeterSettingSelectionKey(e.Key)) ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000265 |         { ⟦EOL⟧
+// 해설 L266: 호출자에게 값 또는 제어를 반환합니다: return;
+L000266 |             return; ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000267 |         } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000269 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L270: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") / 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true)
+L000270 |         if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000271 |         { ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: e.Handled = true
+L000272 |             e.Handled = true; ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000273 |         } ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewKeyDown.
+L000274 |     } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseWheel(object, MouseWheelEventArgs)
+L000276 |     private void PowerMeterSettingSelection_PreviewMouseWheel(object sender, MouseWheelEventArgs e) ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseWheel.
+L000277 |     { ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000278 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") / 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true)
+L000279 |         if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseWheel.
+L000280 |         { ⟦EOL⟧
+// 해설 L281: 값을 대상에 대입합니다: e.Handled = true
+L000281 |             e.Handled = true; ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseWheel.
+L000282 |         } ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_PreviewMouseWheel.
+L000283 |     } ⟦EOL⟧
+L000284 |  ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_DropDownOpened(object, System.EventArgs)
+L000285 |     private void PowerMeterSettingSelection_DropDownOpened(object sender, EventArgs e) ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_DropDownOpened.
+L000286 |     { ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000287 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") / 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") != true || sender is not ComboBox comboBox)
+L000288 |         if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") != true || sender is not ComboBox comboBox) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_DropDownOpened.
+L000289 |         { ⟦EOL⟧
+// 해설 L290: 호출자에게 값 또는 제어를 반환합니다: return;
+L000290 |             return; ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_DropDownOpened.
+L000291 |         } ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false
+L000293 |         comboBox.IsDropDownOpen = false; ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 PowerMeterSettingSelection_DropDownOpened.
+L000294 |     } ⟦EOL⟧
+L000295 |  ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CMonitorView.IsPowerMeterSettingSelectionKey(Key)
+L000296 |     private static bool IsPowerMeterSettingSelectionKey(Key key) ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 IsPowerMeterSettingSelectionKey.
+L000297 |     { ⟦EOL⟧
+// 해설 L298: 값에 따라 분기합니다: switch (key)
+L000298 |         switch (key) ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 IsPowerMeterSettingSelectionKey.
+L000299 |         { ⟦EOL⟧
+// 해설 L300: 분기값/패턴의 구간입니다: case Key.Enter:
+L000300 |             case Key.Enter: ⟦EOL⟧
+// 해설 L301: 분기값/패턴의 구간입니다: case Key.Space:
+L000301 |             case Key.Space: ⟦EOL⟧
+// 해설 L302: 분기값/패턴의 구간입니다: case Key.Up:
+L000302 |             case Key.Up: ⟦EOL⟧
+// 해설 L303: 분기값/패턴의 구간입니다: case Key.Down:
+L000303 |             case Key.Down: ⟦EOL⟧
+// 해설 L304: 분기값/패턴의 구간입니다: case Key.PageUp:
+L000304 |             case Key.PageUp: ⟦EOL⟧
+// 해설 L305: 분기값/패턴의 구간입니다: case Key.PageDown:
+L000305 |             case Key.PageDown: ⟦EOL⟧
+// 해설 L306: 분기값/패턴의 구간입니다: case Key.Home:
+L000306 |             case Key.Home: ⟦EOL⟧
+// 해설 L307: 분기값/패턴의 구간입니다: case Key.End:
+L000307 |             case Key.End: ⟦EOL⟧
+// 해설 L308: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000308 |                 return true; ⟦EOL⟧
+// 해설 L309: 분기값/패턴의 구간입니다: default:
+L000309 |             default: ⟦EOL⟧
+// 해설 L310: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000310 |                 return false; ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 IsPowerMeterSettingSelectionKey.
+L000311 |         } ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 IsPowerMeterSettingSelectionKey.
+L000312 |     } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenLaserSettingInput(object, RoutedEventArgs)
+L000314 |     private void OpenLaserSettingInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000315 |     { ⟦EOL⟧
+// 해설 L316: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_LASER_CONTROL_ROW row } button || !row.CanCommand)
+L000316 |         if (sender is not Button { DataContext: ST_MONITOR_LASER_CONTROL_ROW row } button || !row.CanCommand) ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000317 |         { ⟦EOL⟧
+// 해설 L318: 호출자에게 값 또는 제어를 반환합니다: return;
+L000318 |             return; ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000319 |         } ⟦EOL⟧
+L000320 |  ⟦EOL⟧
+// 해설 L321: 값을 대상에 대입합니다: e.Handled = true
+L000321 |         e.Handled = true; ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) }
+L000322 |         var dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000323 |         { ⟦EOL⟧
+// 해설 L324: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000324 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000325 |         }; ⟦EOL⟧
+// 해설 L326: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000326 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000327 |         { ⟦EOL⟧
+// 해설 L328: 값을 대상에 대입합니다: row.Setting.Value = dialog.ResultValue
+L000328 |             row.Setting.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L329: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000329 |             button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000330 |         } ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 OpenLaserSettingInput.
+L000331 |     } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenMotorOperationInput(object, RoutedEventArgs)
+L000333 |     private void OpenMotorOperationInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000334 |     { ⟦EOL⟧
+// 해설 L335: 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button)
+L000335 |         if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000336 |         { ⟦EOL⟧
+// 해설 L337: 호출자에게 값 또는 제어를 반환합니다: return;
+L000337 |             return; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000338 |         } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 값을 대상에 대입합니다: e.Handled = true
+L000340 |         e.Handled = true; ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }
+L000341 |         var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000342 |         { ⟦EOL⟧
+// 해설 L343: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000343 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000344 |         }; ⟦EOL⟧
+// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000345 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000346 |         { ⟦EOL⟧
+// 해설 L347: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000347 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L348: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000348 |             button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000349 |         } ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 OpenMotorOperationInput.
+L000350 |     } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenXpsMultiMoveTargetInput(object, RoutedEventArgs)
+L000352 |     private void OpenXpsMultiMoveTargetInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000353 |     { ⟦EOL⟧
+// 해설 L354: 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_MULTI_MOVE_AXIS_ROW row })
+L000354 |         if (sender is not Button { Tag: ST_MONITOR_MULTI_MOVE_AXIS_ROW row }) ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000355 |         { ⟦EOL⟧
+// 해설 L356: 호출자에게 값 또는 제어를 반환합니다: return;
+L000356 |             return; ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000357 |         } ⟦EOL⟧
+L000358 |  ⟦EOL⟧
+// 해설 L359: 값을 대상에 대입합니다: e.Handled = true
+L000359 |         e.Handled = true; ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }
+L000360 |         var dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000361 |         { ⟦EOL⟧
+// 해설 L362: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000362 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000363 |         }; ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000364 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000365 |         { ⟦EOL⟧
+// 해설 L366: 값을 대상에 대입합니다: row.TargetPosition = dialog.ResultValue
+L000366 |             row.TargetPosition = dialog.ResultValue; ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000367 |         } ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 OpenXpsMultiMoveTargetInput.
+L000368 |     } ⟦EOL⟧
+L000369 |  ⟦EOL⟧
+// 해설 L370: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StartXpsJogNegative(object, MouseButtonEventArgs)
+L000370 |     private async void StartXpsJogNegative(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 StartXpsJogNegative.
+L000371 |     { ⟦EOL⟧
+// 해설 L372: 값을 대상에 대입합니다: e.Handled = true
+L000372 |         e.Handled = true; ⟦EOL⟧
+// 해설 L373: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: false)
+L000373 |         await ExecuteXpsJogEvent(positive: false); ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 StartXpsJogNegative.
+L000374 |     } ⟦EOL⟧
+L000375 |  ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StartXpsJogPositive(object, MouseButtonEventArgs)
+L000376 |     private async void StartXpsJogPositive(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 StartXpsJogPositive.
+L000377 |     { ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: e.Handled = true
+L000378 |         e.Handled = true; ⟦EOL⟧
+// 해설 L379: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: true)
+L000379 |         await ExecuteXpsJogEvent(positive: true); ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 StartXpsJogPositive.
+L000380 |     } ⟦EOL⟧
+L000381 |  ⟦EOL⟧
+// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StopXpsJog(object, MouseButtonEventArgs)
+L000382 |     private async void StopXpsJog(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 StopXpsJog.
+L000383 |     { ⟦EOL⟧
+// 해설 L384: 값을 대상에 대입합니다: e.Handled = true
+L000384 |         e.Handled = true; ⟦EOL⟧
+// 해설 L385: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null)
+L000385 |         await ExecuteXpsJogEvent(positive: null); ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 StopXpsJog.
+L000386 |     } ⟦EOL⟧
+L000387 |  ⟦EOL⟧
+// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StopXpsJogOnMouseLeave(object, MouseEventArgs)
+L000388 |     private async void StopXpsJogOnMouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 StopXpsJogOnMouseLeave.
+L000389 |     { ⟦EOL⟧
+// 해설 L390: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null)
+L000390 |         await ExecuteXpsJogEvent(positive: null); ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 StopXpsJogOnMouseLeave.
+L000391 |     } ⟦EOL⟧
+L000392 |  ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostMouseCapture(object, MouseEventArgs)
+L000393 |     private async void StopXpsJogOnLostMouseCapture(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 StopXpsJogOnLostMouseCapture.
+L000394 |     { ⟦EOL⟧
+// 해설 L395: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null)
+L000395 |         await ExecuteXpsJogEvent(positive: null); ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 StopXpsJogOnLostMouseCapture.
+L000396 |     } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostKeyboardFocus(object, KeyboardFocusChangedEventArgs)
+L000398 |     private async void StopXpsJogOnLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 StopXpsJogOnLostKeyboardFocus.
+L000399 |     { ⟦EOL⟧
+// 해설 L400: 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null)
+L000400 |         await ExecuteXpsJogEvent(positive: null); ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 StopXpsJogOnLostKeyboardFocus.
+L000401 |     } ⟦EOL⟧
+L000402 |  ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?)
+L000403 |     private async Task ExecuteXpsJogEvent(bool? positive) ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000404 |     { ⟦EOL⟧
+// 해설 L405: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 조건에 따라 분기합니다: if (GetMonitorMenu()is not { } monitor)
+L000405 |         if (GetMonitorMenu()is not { } monitor) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000406 |         { ⟦EOL⟧
+// 해설 L407: 호출자에게 값 또는 제어를 반환합니다: return;
+L000407 |             return; ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000408 |         } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 예외 처리 범위입니다: try
+L000410 |         try ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000411 |         { ⟦EOL⟧
+// 해설 L412: 조건에 따라 분기합니다: if (positive.HasValue)
+L000412 |             if (positive.HasValue) ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000413 |             { ⟦EOL⟧
+// 해설 L414: 비동기 완료를 기다립니다: await monitor.StartXpsJog(positive.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StartXpsJog(positive.Value)
+L000414 |                 await monitor.StartXpsJog(positive.Value); ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000415 |             } ⟦EOL⟧
+// 해설 L416: 앞 조건이 거짓인 경로입니다: else
+L000416 |             else ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000417 |             { ⟦EOL⟧
+// 해설 L418: 비동기 완료를 기다립니다: await monitor.StopXpsJog() / 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StopXpsJog()
+L000418 |                 await monitor.StopXpsJog(); ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000419 |             } ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000420 |         } ⟦EOL⟧
+// 해설 L421: 지정 예외를 처리합니다: catch (OperationCanceledException) when (positive.HasValue)
+L000421 |         catch (OperationCanceledException)when (positive.HasValue) ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000422 |         { ⟦EOL⟧
+// 해설 L423: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000423 |         // Releasing the hold-to-run button normally cancels an in-flight START. ⟦EOL⟧
+// 해설 L424: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000424 |         } ⟦EOL⟧
+// 해설 L425: 지정 예외를 처리합니다: catch (Exception exception)
+L000425 |         catch (Exception exception) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000426 |         { ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.ReportXpsJogFailure(exception)
+L000427 |             monitor.ReportXpsJogFailure(exception); ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000428 |         } ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 ExecuteXpsJogEvent.
+L000429 |     } ⟦EOL⟧
+L000430 |  ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu()
+L000431 |     private CMenuMonitor? GetMonitorMenu() ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 GetMonitorMenu.
+L000432 |     { ⟦EOL⟧
+// 해설 L433: 조건에 따라 결과식을 선택합니다: DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null / 호출자에게 값 또는 제어를 반환합니다: return DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null;
+L000433 |         return DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null; ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 GetMonitorMenu.
+L000434 |     } ⟦EOL⟧
+L000435 |  ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenAttenuatorPositionInput(object, RoutedEventArgs)
+L000436 |     private void OpenAttenuatorPositionInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000437 |     { ⟦EOL⟧
+// 해설 L438: 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button)
+L000438 |         if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000439 |         { ⟦EOL⟧
+// 해설 L440: 호출자에게 값 또는 제어를 반환합니다: return;
+L000440 |             return; ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000441 |         } ⟦EOL⟧
+L000442 |  ⟦EOL⟧
+// 해설 L443: 값을 대상에 대입합니다: e.Handled = true
+L000443 |         e.Handled = true; ⟦EOL⟧
+// 해설 L444: 지역 변수를 선언합니다: var parameter = row.Parameter ?? string.Empty; / 변수의 초기값을 지정합니다: parameter = row.Parameter ?? string.Empty
+L000444 |         var parameter = row.Parameter ?? string.Empty; ⟦EOL⟧
+// 해설 L445: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double / 지역 변수를 선언합니다: var dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double; / 변수의 초기값을 지정합니다: dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int
+L000445 |         var dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double; ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) }
+L000446 |         var dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000447 |         { ⟦EOL⟧
+// 해설 L448: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000448 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000449 |         }; ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000450 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000451 |         { ⟦EOL⟧
+// 해설 L452: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000452 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L453: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000453 |             button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000454 |         } ⟦EOL⟧
+// 해설 L455: 구문 블록 경계입니다 · 소속 OpenAttenuatorPositionInput.
+L000455 |     } ⟦EOL⟧
+L000456 |  ⟦EOL⟧
+// 해설 L457: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs)
+L000457 |     private void OpenBetTableInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000458 |     { ⟦EOL⟧
+// 해설 L459: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_BET_TABLE_ROW row, Tag: string field } button)
+L000459 |         if (sender is not Button { DataContext: ST_MONITOR_BET_TABLE_ROW row, Tag: string field } button) ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000460 |         { ⟦EOL⟧
+// 해설 L461: 호출자에게 값 또는 제어를 반환합니다: return;
+L000461 |             return; ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000462 |         } ⟦EOL⟧
+L000463 |  ⟦EOL⟧
+// 해설 L464: 값을 대상에 대입합니다: e.Handled = true
+L000464 |         e.Handled = true; ⟦EOL⟧
+// 해설 L465: 지역 변수를 선언합니다: var currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" }; / 값별 결과식을 선택합니다: field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" } / 변수의 초기값을 지정합니다: currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" }
+L000465 |         var currentValue = field switch ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000466 |         { ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs)
+L000467 |             "DESCRIPTION" => row.Description, ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs)
+L000468 |             "DIV" => row.Div, ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs)
+L000469 |             "MAG" => row.Mag, ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs)
+L000470 |             _ => "" ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000471 |         }; ⟦EOL⟧
+// 해설 L472: 조건에 따라 결과식을 선택합니다: field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int / 지역 변수를 선언합니다: var dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int; / 변수의 초기값을 지정합니다: dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int
+L000472 |         var dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int; ⟦EOL⟧
+// 해설 L473: 조건에 따라 결과식을 선택합니다: field is "DIV" or "MAG" ? 4500 : 0 / 지역 변수를 선언합니다: var max = field is "DIV" or "MAG" ? 4500 : 0; / 변수의 초기값을 지정합니다: max = field is "DIV" or "MAG" ? 4500 : 0
+L000473 |         var max = field is "DIV" or "MAG" ? 4500 : 0; ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) }
+L000474 |         var dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000475 |         { ⟦EOL⟧
+// 해설 L476: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000476 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000477 |         }; ⟦EOL⟧
+// 해설 L478: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000478 |         if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000479 |         { ⟦EOL⟧
+// 해설 L480: 호출자에게 값 또는 제어를 반환합니다: return;
+L000480 |             return; ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000481 |         } ⟦EOL⟧
+L000482 |  ⟦EOL⟧
+// 해설 L483: 값에 따라 분기합니다: switch (field)
+L000483 |         switch (field) ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000484 |         { ⟦EOL⟧
+// 해설 L485: 분기값/패턴의 구간입니다: case "DESCRIPTION":
+L000485 |             case "DESCRIPTION": ⟦EOL⟧
+// 해설 L486: 값을 대상에 대입합니다: row.Description = dialog.ResultValue
+L000486 |                 row.Description = dialog.ResultValue; ⟦EOL⟧
+// 해설 L487: 해당 반복/분기 구간을 종료합니다: break;
+L000487 |                 break; ⟦EOL⟧
+// 해설 L488: 분기값/패턴의 구간입니다: case "DIV":
+L000488 |             case "DIV": ⟦EOL⟧
+// 해설 L489: 값을 대상에 대입합니다: row.Div = dialog.ResultValue
+L000489 |                 row.Div = dialog.ResultValue; ⟦EOL⟧
+// 해설 L490: 해당 반복/분기 구간을 종료합니다: break;
+L000490 |                 break; ⟦EOL⟧
+// 해설 L491: 분기값/패턴의 구간입니다: case "MAG":
+L000491 |             case "MAG": ⟦EOL⟧
+// 해설 L492: 값을 대상에 대입합니다: row.Mag = dialog.ResultValue
+L000492 |                 row.Mag = dialog.ResultValue; ⟦EOL⟧
+// 해설 L493: 해당 반복/분기 구간을 종료합니다: break;
+L000493 |                 break; ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000494 |         } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000496 |         button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 OpenBetTableInput.
+L000497 |     } ⟦EOL⟧
+L000498 |  ⟦EOL⟧
+// 해설 L499: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenBetPositionInput(object, RoutedEventArgs)
+L000499 |     private void OpenBetPositionInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L500: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000500 |     { ⟦EOL⟧
+// 해설 L501: 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button)
+L000501 |         if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000502 |         { ⟦EOL⟧
+// 해설 L503: 호출자에게 값 또는 제어를 반환합니다: return;
+L000503 |             return; ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000504 |         } ⟦EOL⟧
+L000505 |  ⟦EOL⟧
+// 해설 L506: 값을 대상에 대입합니다: e.Handled = true
+L000506 |         e.Handled = true; ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) }
+L000507 |         var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000508 |         { ⟦EOL⟧
+// 해설 L509: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000509 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000510 |         }; ⟦EOL⟧
+// 해설 L511: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000511 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L512: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000512 |         { ⟦EOL⟧
+// 해설 L513: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000513 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L514: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000514 |             button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000515 |         } ⟦EOL⟧
+// 해설 L516: 구문 블록 경계입니다 · 소속 OpenBetPositionInput.
+L000516 |     } ⟦EOL⟧
+L000517 |  ⟦EOL⟧
+// 해설 L518: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.OpenMelsecWriteInput(object, RoutedEventArgs)
+L000518 |     private void OpenMelsecWriteInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L519: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000519 |     { ⟦EOL⟧
+// 해설 L520: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_MELSEC_ROW row } || !row.CanWrite || row.UsesWriteSelection)
+L000520 |         if (sender is not Button { DataContext: ST_MONITOR_MELSEC_ROW row } || !row.CanWrite || row.UsesWriteSelection) ⟦EOL⟧
+// 해설 L521: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000521 |         { ⟦EOL⟧
+// 해설 L522: 호출자에게 값 또는 제어를 반환합니다: return;
+L000522 |             return; ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000523 |         } ⟦EOL⟧
+L000524 |  ⟦EOL⟧
+// 해설 L525: 값을 대상에 대입합니다: e.Handled = true
+L000525 |         e.Handled = true; ⟦EOL⟧
+// 해설 L526: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) / 조건에 따라 분기합니다: if (!EnsureMelsecWriteInputUnlocked(e))
+L000526 |         if (!EnsureMelsecWriteInputUnlocked(e)) ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000527 |         { ⟦EOL⟧
+// 해설 L528: 호출자에게 값 또는 제어를 반환합니다: return;
+L000528 |             return; ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000529 |         } ⟦EOL⟧
+L000530 |  ⟦EOL⟧
+// 해설 L531: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) }
+L000531 |         var dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000532 |         { ⟦EOL⟧
+// 해설 L533: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000533 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L534: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000534 |         }; ⟦EOL⟧
+// 해설 L535: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true && EnsureMelsecWriteInputUnlocked(e))
+L000535 |         if (dialog.ShowDialog() == true && EnsureMelsecWriteInputUnlocked(e)) ⟦EOL⟧
+// 해설 L536: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000536 |         { ⟦EOL⟧
+// 해설 L537: 값을 대상에 대입합니다: row.WriteValue = dialog.ResultValue
+L000537 |             row.WriteValue = dialog.ResultValue; ⟦EOL⟧
+// 해설 L538: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000538 |         } ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 OpenMelsecWriteInput.
+L000539 |     } ⟦EOL⟧
+L000540 |  ⟦EOL⟧
+// 해설 L541: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecWriteSelectionPreviewInput(object, RoutedEventArgs)
+L000541 |     private void MelsecWriteSelectionPreviewInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 MelsecWriteSelectionPreviewInput.
+L000542 |     { ⟦EOL⟧
+// 해설 L543: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000543 |         // Keep focus navigation available while blocking selection changes. ⟦EOL⟧
+// 해설 L544: 조건에 따라 분기합니다: if (e is KeyEventArgs key && key.Key is Key.Tab or Key.Escape or Key.LeftShift or Key.RightShift or Key.LeftCtrl or Key.RightCtrl or Key.LeftAlt or Key.RightAlt)
+L000544 |         if (e is KeyEventArgs key && key.Key is Key.Tab or Key.Escape or ⟦EOL⟧
+// 해설 L545: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorView.MelsecWriteSelectionPreviewInput(object, RoutedEventArgs)
+L000545 |             Key.LeftShift or Key.RightShift or Key.LeftCtrl or Key.RightCtrl or Key.LeftAlt or Key.RightAlt) ⟦EOL⟧
+// 해설 L546: 구문 블록 경계입니다 · 소속 MelsecWriteSelectionPreviewInput.
+L000546 |         { ⟦EOL⟧
+// 해설 L547: 호출자에게 값 또는 제어를 반환합니다: return;
+L000547 |             return; ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 MelsecWriteSelectionPreviewInput.
+L000548 |         } ⟦EOL⟧
+L000549 |  ⟦EOL⟧
+// 해설 L550: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e)
+L000550 |         EnsureMelsecWriteInputUnlocked(e); ⟦EOL⟧
+// 해설 L551: 구문 블록 경계입니다 · 소속 MelsecWriteSelectionPreviewInput.
+L000551 |     } ⟦EOL⟧
+L000552 |  ⟦EOL⟧
+// 해설 L553: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs)
+L000553 |     private bool EnsureMelsecWriteInputUnlocked(RoutedEventArgs e) ⟦EOL⟧
+// 해설 L554: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000554 |     { ⟦EOL⟧
+// 해설 L555: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() / 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); / 변수의 초기값을 지정합니다: monitor = GetMonitorMenu()
+L000555 |         var monitor = GetMonitorMenu(); ⟦EOL⟧
+// 해설 L556: 조건에 따라 분기합니다: if (monitor?.IsMelsecWriteUnlocked == true)
+L000556 |         if (monitor?.IsMelsecWriteUnlocked == true) ⟦EOL⟧
+// 해설 L557: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000557 |         { ⟦EOL⟧
+// 해설 L558: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000558 |             return true; ⟦EOL⟧
+// 해설 L559: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000559 |         } ⟦EOL⟧
+L000560 |  ⟦EOL⟧
+// 해설 L561: 값을 대상에 대입합니다: e.Handled = true
+L000561 |         e.Handled = true; ⟦EOL⟧
+// 해설 L562: 조건에 따라 분기합니다: if (monitor is not null)
+L000562 |         if (monitor is not null) ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000563 |         { ⟦EOL⟧
+// 해설 L564: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("MELSEC WRITE LOCK", "WRITE LOCK 상태에서는 값을 입력하거나 변경할 수 없습니다.\nWRITE UNLOCK 후 다시 입력해 주세요.", Window.GetWindow(this))
+L000564 |             CRecipeConfirmDialog.ShowWarning("MELSEC WRITE LOCK", ⟦EOL⟧
+// 해설 L565: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs)
+L000565 |                 "WRITE LOCK 상태에서는 값을 입력하거나 변경할 수 없습니다.\nWRITE UNLOCK 후 다시 입력해 주세요.", ⟦EOL⟧
+// 해설 L566: 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000566 |                 Window.GetWindow(this)); ⟦EOL⟧
+// 해설 L567: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000567 |         } ⟦EOL⟧
+// 해설 L568: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000568 |         return false; ⟦EOL⟧
+// 해설 L569: 구문 블록 경계입니다 · 소속 EnsureMelsecWriteInputUnlocked.
+L000569 |     } ⟦EOL⟧
+L000570 |  ⟦EOL⟧
+// 해설 L571: 구문 블록 경계입니다.
+L000571 | } ⟦EOL⟧

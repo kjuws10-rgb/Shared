@@ -1,0 +1,98 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Drilling.Common.csproj
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000001 | <Project Sdk="Microsoft.NET.Sdk"> ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000003 |   <ItemGroup> ⟦EOL⟧
+// 해설 L4: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000004 |     <PackageReference Include="System.IO.Ports" Version="8.0.0" /> ⟦EOL⟧
+// 해설 L5: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000005 |   </ItemGroup> ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000007 |   <ItemGroup> ⟦EOL⟧
+// 해설 L8: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000008 |     <Reference Include="ACS.SPiiPlusNET7"> ⟦EOL⟧
+// 해설 L9: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000009 |       <HintPath>Motion\ACS\ACS.SPiiPlusNET7.dll</HintPath> ⟦EOL⟧
+// 해설 L10: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000010 |       <Private>true</Private> ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 |     </Reference> ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 |     <Reference Include="CmdLib"> ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 |       <HintPath>Interface\PicoMotor\Sdk\CmdLib.dll</HintPath> ⟦EOL⟧
+// 해설 L14: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000014 |       <Private>true</Private> ⟦EOL⟧
+// 해설 L15: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000015 |     </Reference> ⟦EOL⟧
+// 해설 L16: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000016 |     <Reference Include="Newport.XPS.CommandInterface"> ⟦EOL⟧
+// 해설 L17: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000017 |       <HintPath>Motion\XPS\Newport.XPS.CommandInterface.dll</HintPath> ⟦EOL⟧
+// 해설 L18: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000018 |       <Private>true</Private> ⟦EOL⟧
+// 해설 L19: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000019 |     </Reference> ⟦EOL⟧
+// 해설 L20: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000020 |     <Reference Include="Aerotech.Automation1.Communication"> ⟦EOL⟧
+// 해설 L21: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000021 |       <HintPath>Interface\Automation1\Sdk\Aerotech.Automation1.Communication.dll</HintPath> ⟦EOL⟧
+// 해설 L22: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000022 |       <Private>true</Private> ⟦EOL⟧
+// 해설 L23: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000023 |     </Reference> ⟦EOL⟧
+// 해설 L24: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000024 |     <Reference Include="Aerotech.Automation1.DotNet"> ⟦EOL⟧
+// 해설 L25: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000025 |       <HintPath>Interface\Automation1\Sdk\Aerotech.Automation1.DotNet.dll</HintPath> ⟦EOL⟧
+// 해설 L26: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000026 |       <Private>true</Private> ⟦EOL⟧
+// 해설 L27: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000027 |     </Reference> ⟦EOL⟧
+// 해설 L28: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000028 |   </ItemGroup> ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000030 |   <ItemGroup> ⟦EOL⟧
+// 해설 L31: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000031 |     <Content Include="Interface\Automation1\Sdk\Automation1Compiler.dll"> ⟦EOL⟧
+// 해설 L32: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000032 |       <Link>Interface\Automation1\Sdk\Automation1Compiler.dll</Link> ⟦EOL⟧
+// 해설 L33: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000033 |       <TargetPath>Automation1Compiler.dll</TargetPath> ⟦EOL⟧
+// 해설 L34: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000034 |       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> ⟦EOL⟧
+// 해설 L35: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000035 |     </Content> ⟦EOL⟧
+// 해설 L36: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000036 |     <Content Include="Interface\Automation1\Sdk\Automation1Compiler64.dll"> ⟦EOL⟧
+// 해설 L37: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000037 |       <Link>Interface\Automation1\Sdk\Automation1Compiler64.dll</Link> ⟦EOL⟧
+// 해설 L38: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000038 |       <TargetPath>Automation1Compiler64.dll</TargetPath> ⟦EOL⟧
+// 해설 L39: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000039 |       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> ⟦EOL⟧
+// 해설 L40: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000040 |     </Content> ⟦EOL⟧
+// 해설 L41: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000041 |   </ItemGroup> ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000043 |   <PropertyGroup> ⟦EOL⟧
+// 해설 L44: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000044 |     <TargetFramework>net8.0</TargetFramework> ⟦EOL⟧
+// 해설 L45: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000045 |     <ImplicitUsings>enable</ImplicitUsings> ⟦EOL⟧
+// 해설 L46: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000046 |     <Nullable>enable</Nullable> ⟦EOL⟧
+// 해설 L47: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000047 |   </PropertyGroup> ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000049 | </Project> ⟦EOL⟧

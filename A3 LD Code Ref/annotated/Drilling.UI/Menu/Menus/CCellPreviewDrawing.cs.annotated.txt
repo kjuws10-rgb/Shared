@@ -1,0 +1,361 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Threading;
+L000002 | using System.Threading; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 | using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000006 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: internal static class CCellPreviewDrawing
+L000007 | internal static class CCellPreviewDrawing ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawAlignKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, double, double)
+L000009 |     public static void DrawAlignKeys(DrawingContext context, ST_GLASS_PREVIEW_FRAME frame, double glassWidth, double glassHeight, double marginX, double marginY) ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 DrawAlignKeys.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(251, 191, 36)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(251, 191, 36) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(251, 191, 36)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(251, 191, 36))
+L000011 |         var brush = new SolidColorBrush(Color.FromRgb(251, 191, 36)); ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000012 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanDrawFormattedText() / 지역 변수를 선언합니다: var canDrawText = CanDrawFormattedText(); / 변수의 초기값을 지정합니다: canDrawText = CanDrawFormattedText()
+L000013 |         var canDrawText = CanDrawFormattedText(); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new FontFamily("Segoe UI") / 조건에 따라 결과식을 선택합니다: canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null / 지역 변수를 선언합니다: var typeface = canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null; / 변수의 초기값을 지정합니다: typeface = canDrawText ? new Typ
+L000014 |         var typeface = canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null; ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square } / 지역 변수를 선언합니다: var crossPen = new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }; / 변수의 초기값을 지정합니다: crossPen = new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }
+L000015 |         var crossPen = new Pen(brush, 1.6) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 DrawAlignKeys.
+L000016 |         { ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: StartLineCap = PenLineCap.Square
+L000017 |             StartLineCap = PenLineCap.Square, ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: EndLineCap = PenLineCap.Square
+L000018 |             EndLineCap = PenLineCap.Square ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 DrawAlignKeys.
+L000019 |         }; ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: crossPen.Freeze()
+L000020 |         crossPen.Freeze(); ⟦EOL⟧
+// 해설 L21: 지역 변수를 선언합니다: const double crossHalfLength = 4.0; / 변수의 초기값을 지정합니다: crossHalfLength = 4.0
+L000021 |         const double crossHalfLength = 4.0; ⟦EOL⟧
+// 해설 L22: 지역 변수를 선언합니다: const double labelGap = 6.0; / 변수의 초기값을 지정합니다: labelGap = 6.0
+L000022 |         const double labelGap = 6.0; ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassWidth) / 지역 변수를 선언합니다: var safeGlassWidth = Math.Max(1.0, glassWidth); / 변수의 초기값을 지정합니다: safeGlassWidth = Math.Max(1.0, glassWidth)
+L000023 |         var safeGlassWidth = Math.Max(1.0, glassWidth); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassHeight) / 지역 변수를 선언합니다: var safeGlassHeight = Math.Max(1.0, glassHeight); / 변수의 초기값을 지정합니다: safeGlassHeight = Math.Max(1.0, glassHeight)
+L000024 |         var safeGlassHeight = Math.Max(1.0, glassHeight); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0) / 지역 변수를 선언합니다: var safeMarginX = Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0); / 변수의 초기값을 지정합니다: safeMarginX = Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0)
+L000025 |         var safeMarginX = Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0) / 지역 변수를 선언합니다: var safeMarginY = Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0); / 변수의 초기값을 지정합니다: safeMarginY = Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0)
+L000026 |         var safeMarginY = Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0); ⟦EOL⟧
+// 해설 L27: 지역 변수를 선언합니다: var leftX = frame.CanvasLeft + (safeMarginX / safeGlassWidth * frame.Width); / 변수의 초기값을 지정합니다: leftX = frame.CanvasLeft + (safeMarginX / safeGlassWidth * frame.Width)
+L000027 |         var leftX = frame.CanvasLeft + (safeMarginX / safeGlassWidth * frame.Width); ⟦EOL⟧
+// 해설 L28: 지역 변수를 선언합니다: var rightX = frame.CanvasLeft + frame.Width - (safeMarginX / safeGlassWidth * frame.Width); / 변수의 초기값을 지정합니다: rightX = frame.CanvasLeft + frame.Width - (safeMarginX / safeGlassWidth * frame.Width)
+L000028 |         var rightX = frame.CanvasLeft + frame.Width - (safeMarginX / safeGlassWidth * frame.Width); ⟦EOL⟧
+// 해설 L29: 지역 변수를 선언합니다: var topY = frame.CanvasTop + (safeMarginY / safeGlassHeight * frame.Height); / 변수의 초기값을 지정합니다: topY = frame.CanvasTop + (safeMarginY / safeGlassHeight * frame.Height)
+L000029 |         var topY = frame.CanvasTop + (safeMarginY / safeGlassHeight * frame.Height); ⟦EOL⟧
+// 해설 L30: 지역 변수를 선언합니다: var bottomY = frame.CanvasTop + frame.Height - (safeMarginY / safeGlassHeight * frame.Height); / 변수의 초기값을 지정합니다: bottomY = frame.CanvasTop + frame.Height - (safeMarginY / safeGlassHeight * frame.Height)
+L000030 |         var bottomY = frame.CanvasTop + frame.Height - (safeMarginY / safeGlassHeight * frame.Height); ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey("AK1", leftX, topY, false, false)
+L000031 |         DrawKey("AK1", leftX, topY, false, false); ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey("AK2", leftX, bottomY, false, true)
+L000032 |         DrawKey("AK2", leftX, bottomY, false, true); ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey("AK3", rightX, topY, true, false)
+L000033 |         DrawKey("AK3", rightX, topY, true, false); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey("AK4", rightX, bottomY, true, true)
+L000034 |         DrawKey("AK4", rightX, bottomY, true, true); ⟦EOL⟧
+// 해설 L35: 호출자에게 값 또는 제어를 반환합니다: return;
+L000035 |         return; ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void DrawKey(string, double, double, bool, bool)
+L000036 |         void DrawKey(string name, double centerX, double centerY, bool alignRight, bool alignBelow) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 DrawKey.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawCross(centerX, centerY)
+L000038 |             DrawCross(centerX, centerY); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawLabel(name, centerX, alignBelow ? centerY + 2.0 : centerY - 15.0, alignRight) / 조건에 따라 결과식을 선택합니다: alignBelow ? centerY + 2.0 : centerY - 15.0
+L000039 |             DrawLabel(name, centerX, alignBelow ? centerY + 2.0 : centerY - 15.0, alignRight); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 DrawKey.
+L000040 |         } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void DrawCross(double, double)
+L000042 |         void DrawCross(double centerX, double centerY) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 DrawCross.
+L000043 |         { ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - crossHalfLength, centerY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + crossHalfLength, centerY)
+L000044 |             context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY)); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY - crossHalfLength) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY + crossHalfLength)
+L000045 |             context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength)); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 DrawCross.
+L000046 |         } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · void DrawLabel(string, double, double, bool)
+L000048 |         void DrawLabel(string name, double dotX, double top, bool alignRight) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 DrawLabel.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 조건에 따라 분기합니다: if (!canDrawText || typeface is null)
+L000050 |             if (!canDrawText || typeface is null) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 DrawLabel.
+L000051 |             { ⟦EOL⟧
+// 해설 L52: 호출자에게 값 또는 제어를 반환합니다: return;
+L000052 |                 return; ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 DrawLabel.
+L000053 |             } ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0) / 지역 변수를 선언합니다: var text = new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0); / 변수의 초기값을 지정합니다: text = new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)
+L000055 |             var text = new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0); ⟦EOL⟧
+// 해설 L56: 조건에 따라 결과식을 선택합니다: alignRight ? dotX - labelGap - text.Width : dotX + labelGap / 지역 변수를 선언합니다: var left = alignRight ? dotX - labelGap - text.Width : dotX + labelGap; / 변수의 초기값을 지정합니다: left = alignRight ? dotX - labelGap - text.Width : dotX + labelGap
+L000056 |             var left = alignRight ? dotX - labelGap - text.Width : dotX + labelGap; ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(text, new Point(left, top)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(left, top)
+L000057 |             context.DrawText(text, new Point(left, top)); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 DrawLabel.
+L000058 |         } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 DrawAlignKeys.
+L000059 |     } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW> Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateDistortionKeyPreviews(double, double, double, double, System.Func<stri
+L000061 |     public static IReadOnlyList<ST_DISTORTION_KEY_PREVIEW> CreateDistortionKeyPreviews(double glassWidth, double glassHeight, double akMarginX, double akMarginY, Func<string, double?> readValue) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 CreateDistortionKeyPreviews.
+L000062 |     { ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassHeight) / 조건에 따라 분기합니다: if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0 || glassHeight <= 0) / 호출자에게 값 또는 제어를 반환합니다: return [];
+L000063 |         if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0 || glassHeight <= 0) return []; ⟦EOL⟧
+// 해설 L64: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000064 |         // Never use legacy recipe DK Y fields or invent evenly spaced DK rows. ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).SelectMany(index => { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty<… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3) / 호출자에게 값 또는 제어를 반환합니다: return Enumerable.Range(0, 3).SelectMany(index => { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return
+L000065 |         return Enumerable.Range(0, 3).SelectMany(index => ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 CreateDistortionKeyPreviews.
+L000066 |         { ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index) / 지역 변수를 선언합니다: var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); / 변수의 초기값을 지정합니다: stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index))
+L000067 |             var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(position) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<ST_DISTORTION_KEY_PREVIEW>() / 조건에 따라 분기합니다: if (stageY is not { } position || !double.IsFinite(position)) / 호출자에게 값 또는 제어를 반환합니다: return Array.Empty<ST_DISTORTION_KEY_PREVIEW>();
+L000068 |             if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty<ST_DISTORTION_KEY_PREVIEW>(); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position) / 지역 변수를 선언합니다: var y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position); / 변수의 초기값을 지정합니다: y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position)
+L000069 |             var y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISTORTION_KEY_PREVIEW(index * 2 + 1, akMarginX, y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISTORTION_KEY_PREVIEW(index * 2 + 2, glassWidth - akMarginX, y) / 호출자에게 값 또는 제어를 반환합니다: return new[] { new ST_DISTORTION_KEY_PREVIEW(index * 2 + 1, akMarginX, y), new ST_DISTORTION_KEY_PREVIEW(index * 2 + 2, glassWidth - akMarginX, y) };
+L000070 |             return new[] { new ST_DISTORTION_KEY_PREVIEW(index * 2 + 1, akMarginX, y), new ST_DISTORTION_KEY_PREVIEW(index * 2 + 2, glassWidth - akMarginX, y) }; ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW> Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateDistortionKeyPreviews(double, double, double, double, System.Func<stri
+L000071 |         }).ToArray(); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 CreateDistortionKeyPreviews.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawDistortionKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.
+L000074 |     public static void DrawDistortionKeys(DrawingContext context, ST_GLASS_PREVIEW_FRAME frame, double glassWidth, double glassHeight, IReadOnlyList<ST_DISTORTION_KEY_PREVIEW> distortionKeys) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 조건에 따라 분기합니다: if (distortionKeys.Count == 0)
+L000076 |         if (distortionKeys.Count == 0) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000077 |         { ⟦EOL⟧
+// 해설 L78: 호출자에게 값 또는 제어를 반환합니다: return;
+L000078 |             return; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000079 |         } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(34, 197, 94)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(34, 197, 94) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(34, 197, 94)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(34, 197, 94))
+L000081 |         var brush = new SolidColorBrush(Color.FromRgb(34, 197, 94)); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000082 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: CanDrawFormattedText() / 지역 변수를 선언합니다: var canDrawText = CanDrawFormattedText(); / 변수의 초기값을 지정합니다: canDrawText = CanDrawFormattedText()
+L000083 |         var canDrawText = CanDrawFormattedText(); ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new FontFamily("Segoe UI") / 조건에 따라 결과식을 선택합니다: canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null / 지역 변수를 선언합니다: var typeface = canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null; / 변수의 초기값을 지정합니다: typeface = canDrawText ? new Typ
+L000084 |         var typeface = canDrawText ? new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null; ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square } / 지역 변수를 선언합니다: var crossPen = new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }; / 변수의 초기값을 지정합니다: crossPen = new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }
+L000085 |         var crossPen = new Pen(brush, 2.0) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000086 |         { ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: StartLineCap = PenLineCap.Square
+L000087 |             StartLineCap = PenLineCap.Square, ⟦EOL⟧
+// 해설 L88: 값을 대상에 대입합니다: EndLineCap = PenLineCap.Square
+L000088 |             EndLineCap = PenLineCap.Square ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000089 |         }; ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: crossPen.Freeze()
+L000090 |         crossPen.Freeze(); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassWidth) / 지역 변수를 선언합니다: var safeGlassWidth = Math.Max(1.0, glassWidth); / 변수의 초기값을 지정합니다: safeGlassWidth = Math.Max(1.0, glassWidth)
+L000091 |         var safeGlassWidth = Math.Max(1.0, glassWidth); ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassHeight) / 지역 변수를 선언합니다: var safeGlassHeight = Math.Max(1.0, glassHeight); / 변수의 초기값을 지정합니다: safeGlassHeight = Math.Max(1.0, glassHeight)
+L000092 |         var safeGlassHeight = Math.Max(1.0, glassHeight); ⟦EOL⟧
+// 해설 L93: 지역 변수를 선언합니다: var scaleX = frame.Width / safeGlassWidth; / 변수의 초기값을 지정합니다: scaleX = frame.Width / safeGlassWidth
+L000093 |         var scaleX = frame.Width / safeGlassWidth; ⟦EOL⟧
+// 해설 L94: 지역 변수를 선언합니다: var scaleY = frame.Height / safeGlassHeight; / 변수의 초기값을 지정합니다: scaleY = frame.Height / safeGlassHeight
+L000094 |         var scaleY = frame.Height / safeGlassHeight; ⟦EOL⟧
+// 해설 L95: 지역 변수를 선언합니다: const double crossHalfLength = 6.0; / 변수의 초기값을 지정합니다: crossHalfLength = 6.0
+L000095 |         const double crossHalfLength = 6.0; ⟦EOL⟧
+// 해설 L96: 지역 변수를 선언합니다: const double labelGap = 7.0; / 변수의 초기값을 지정합니다: labelGap = 7.0
+L000096 |         const double labelGap = 7.0; ⟦EOL⟧
+// 해설 L97: 컬렉션 요소를 순회합니다: foreach (var key in distortionKeys)
+L000097 |         foreach (var key in distortionKeys) ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000098 |         { ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(key.GlassX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(key.GlassY) / 조건에 따라 분기합니다: if (!double.IsFinite(key.GlassX) || !double.IsFinite(key.GlassY) || key.GlassX < 0.0 || key.GlassX > safeGlassWidth || key.GlassY < 0.0 || key.GlassY > safeGlassHeight)
+L000099 |             if (!double.IsFinite(key.GlassX) || !double.IsFinite(key.GlassY) || key.GlassX < 0.0 || key.GlassX > safeGlassWidth || key.GlassY < 0.0 || key.GlassY > safeGlassHeight) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000100 |             { ⟦EOL⟧
+// 해설 L101: 다음 반복으로 진행합니다: continue;
+L000101 |                 continue; ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000102 |             } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 지역 변수를 선언합니다: var centerX = frame.CanvasLeft + (key.GlassX * scaleX); / 변수의 초기값을 지정합니다: centerX = frame.CanvasLeft + (key.GlassX * scaleX)
+L000104 |             var centerX = frame.CanvasLeft + (key.GlassX * scaleX); ⟦EOL⟧
+// 해설 L105: 지역 변수를 선언합니다: var centerY = frame.CanvasTop + (key.GlassY * scaleY); / 변수의 초기값을 지정합니다: centerY = frame.CanvasTop + (key.GlassY * scaleY)
+L000105 |             var centerY = frame.CanvasTop + (key.GlassY * scaleY); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - crossHalfLength, centerY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + crossHalfLength, centerY)
+L000106 |             context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY)); ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY - crossHalfLength) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY + crossHalfLength)
+L000107 |             context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength)); ⟦EOL⟧
+// 해설 L108: 조건에 따라 분기합니다: if (!canDrawText || typeface is null)
+L000108 |             if (!canDrawText || typeface is null) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 다음 반복으로 진행합니다: continue;
+L000110 |                 continue; ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000111 |             } ⟦EOL⟧
+L000112 |  ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0) / 지역 변수를 선언합니다: var text = new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0); / 변수의 초기값을 지정합니다: text = new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)
+L000113 |             var text = new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0) / 지역 변수를 선언합니다: var left = ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0); / 변수의 초기값을 지정합니다: left = ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0)
+L000114 |             var left = ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0) / 지역 변수를 선언합니다: var top = ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0); / 변수의 초기값을 지정합니다: top = ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0)
+L000115 |             var top = ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0); ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(text, new Point(left, top)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(left, top)
+L000116 |             context.DrawText(text, new Point(left, top)); ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000117 |         } ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 DrawDistortionKeys.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCellPreviewDrawing.ClampToRange(double, double, double)
+L000120 |     private static double ClampToRange(double value, double min, double max) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 ClampToRange.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(value, min, max) / 조건에 따라 결과식을 선택합니다: max < min ? min : Math.Clamp(value, min, max) / 호출자에게 값 또는 제어를 반환합니다: return max < min ? min : Math.Clamp(value, min, max);
+L000122 |         return max < min ? min : Math.Clamp(value, min, max); ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 ClampToRange.
+L000123 |     } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL? Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateCellLabel(int, Rect, double, double, bool)
+L000125 |     public static ST_CELL_PREVIEW_LABEL? CreateCellLabel(int cellNo, Rect cellBounds, double designWidth, double designHeight, bool isSelected = false) ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 CreateCellLabel.
+L000126 |     { ⟦EOL⟧
+// 해설 L127: 조건에 따라 분기합니다: if (cellBounds.IsEmpty)
+L000127 |         if (cellBounds.IsEmpty) ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 CreateCellLabel.
+L000128 |         { ⟦EOL⟧
+// 해설 L129: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000129 |             return null; ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 CreateCellLabel.
+L000130 |         } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(34.0, EstimateTextWidth($"Cell{cellNo}") + 10.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EstimateTextWidth($"Cell{cellNo}") / 지역 변수를 선언합니다: var badgeWidth = Math.Max(34.0, EstimateTextWidth($"Cell{cellNo}") + 10.0); / 변수의 초기값을 지정합니다: badgeWidth = Math.Max(34.0, EstimateTextWidth($"Cell{cellNo}") + 10.0)
+L000132 |         var badgeWidth = Math.Max(34.0, EstimateTextWidth($"Cell{cellNo}") + 10.0); ⟦EOL⟧
+// 해설 L133: 지역 변수를 선언합니다: const double labelHalfHeight = 8.0; / 변수의 초기값을 지정합니다: labelHalfHeight = 8.0
+L000133 |         const double labelHalfHeight = 8.0; ⟦EOL⟧
+// 해설 L134: 지역 변수를 선언합니다: var labelHalfWidth = badgeWidth / 2.0; / 변수의 초기값을 지정합니다: labelHalfWidth = badgeWidth / 2.0
+L000134 |         var labelHalfWidth = badgeWidth / 2.0; ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(labelHalfWidth, designWidth - labelHalfWidth) / 지역 변수를 선언합니다: var maxCenterX = Math.Max(labelHalfWidth, designWidth - labelHalfWidth); / 변수의 초기값을 지정합니다: maxCenterX = Math.Max(labelHalfWidth, designWidth - labelHalfWidth)
+L000135 |         var maxCenterX = Math.Max(labelHalfWidth, designWidth - labelHalfWidth); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX) / 지역 변수를 선언합니다: var centerX = Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX); / 변수의 초기값을 지정합니다: centerX = Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX)
+L000136 |         var centerX = Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX); ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(labelHalfHeight, designHeight - labelHalfHeight) / 지역 변수를 선언합니다: var centerY = Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight)); / 변수의 초기값을 지정합니다: centerY = Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designH
+L000137 |         var centerY = Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight)); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PREVIEW_LABEL(cellNo, centerX, centerY, badgeWidth, designWidth, designHeight, isSelected) / 호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PREVIEW_LABEL(cellNo, centerX, centerY, badgeWidth, designWidth, designHeight, isSelected);
+L000138 |         return new ST_CELL_PREVIEW_LABEL(cellNo, centerX, centerY, badgeWidth, designWidth, designHeight, isSelected); ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 CreateCellLabel.
+L000139 |     } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCellPreviewDrawing.CanDrawFormattedText()
+L000141 |     private static bool CanDrawFormattedText() ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 CanDrawFormattedText.
+L000142 |     { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.CurrentThread.GetApartmentState() / 조건에 따라 분기합니다: if (Thread.CurrentThread.GetApartmentState() != ApartmentState.STA)
+L000143 |         if (Thread.CurrentThread.GetApartmentState() != ApartmentState.STA) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 CanDrawFormattedText.
+L000144 |         { ⟦EOL⟧
+// 해설 L145: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000145 |             return false; ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 CanDrawFormattedText.
+L000146 |         } ⟦EOL⟧
+L000147 |  ⟦EOL⟧
+// 해설 L148: 지역 변수를 선언합니다: var dispatcher = Application.Current?.Dispatcher; / 변수의 초기값을 지정합니다: dispatcher = Application.Current?.Dispatcher
+L000148 |         var dispatcher = Application.Current?.Dispatcher; ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: dispatcher.CheckAccess() / 호출자에게 값 또는 제어를 반환합니다: return dispatcher is null || dispatcher.CheckAccess();
+L000149 |         return dispatcher is null || dispatcher.CheckAccess(); ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 CanDrawFormattedText.
+L000150 |     } ⟦EOL⟧
+L000151 |  ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCellPreviewDrawing.EstimateTextWidth(string)
+L000152 |     private static double EstimateTextWidth(string text) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 EstimateTextWidth.
+L000153 |     { ⟦EOL⟧
+// 해설 L154: 호출자에게 값 또는 제어를 반환합니다: return text.Length * 6.2;
+L000154 |         return text.Length * 6.2; ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 EstimateTextWidth.
+L000155 |     } ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다.
+L000156 | } ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PREVIEW_LABEL(int CellNo, double CanvasCenterX, double CanvasCenterY, double Width, double DesignWidth, double DesignHeight, bool IsSelected)
+L000158 | public sealed record ST_CELL_PREVIEW_LABEL(int CellNo, double CanvasCenterX, double CanvasCenterY, double Width, double DesignWidth, double DesignHeight, bool IsSelected) ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다.
+L000159 | { ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds
+L000160 |     public Rect CellBounds { get; init; } = Rect.Empty; ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText
+L000161 |     public string DisplayText ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 DisplayText.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText.get
+L000163 |         get ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return $"Cell{CellNo}";
+L000165 |             return $"Cell{CellNo}"; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000166 |         } ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 DisplayText.
+L000167 |     } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height
+L000169 |     public double Height ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 Height.
+L000170 |     { ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height.get
+L000171 |         get ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 get_Height.
+L000172 |         { ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return 16.0;
+L000173 |             return 16.0; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 get_Height.
+L000174 |         } ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 Height.
+L000175 |     } ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다.
+L000176 | } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 타입의 구조/상속 선언입니다: public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY)
+L000178 | public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다.
+L000179 | { ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText
+L000180 |     public string DisplayText ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 DisplayText.
+L000181 |     { ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText.get
+L000182 |         get ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 호출자에게 값 또는 제어를 반환합니다: return $"DK{KeyNo}";
+L000184 |             return $"DK{KeyNo}"; ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000185 |         } ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 DisplayText.
+L000186 |     } ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다.
+L000187 | } ⟦EOL⟧

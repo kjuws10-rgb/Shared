@@ -1,0 +1,42 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Motion/A3200/CA3200Motion.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000001 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000002 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000003 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000006 | using Drilling.Common.Station; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Motion;
+L000008 | namespace Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L9: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000009 | [CMotionControllerType("A3200")] ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: internal sealed class CA3200Motion(CInterfaceManager? interfaceManager, int deviceNo = 0) : CMotionController("A3200", interfaceManager, deviceNo)
+L000010 | internal sealed class CA3200Motion(CInterfaceManager? interfaceManager, int deviceNo = 0) : CMotionController("A3200", interfaceManager, deviceNo) ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CA3200Motion.CommandPrefix
+L000012 |     protected override string CommandPrefix ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 CommandPrefix.
+L000013 |     { ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Motion.CA3200Motion.CommandPrefix.get
+L000014 |         get ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 get_CommandPrefix.
+L000015 |         { ⟦EOL⟧
+// 해설 L16: 호출자에게 값 또는 제어를 반환합니다: return "A3200";
+L000016 |             return "A3200"; ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 get_CommandPrefix.
+L000017 |         } ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 CommandPrefix.
+L000018 |     } ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다.
+L000019 | } ⟦EOL⟧

@@ -1,0 +1,1478 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>5d06e93a3ba16a27c93f45c6825f5ef8324b118a9c80bb7ef241987423a8c303</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>11,031 bytes / 252 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/f9e938052c476b768f46.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CMonitorLogViewerPanel</td><td>ClassDeclaration</td><td>9–195</td><td>CMonitorLogViewerPanel: INotifyPropertyChanged</td></tr>
+<tr><td>CLogTreeNode</td><td>ClassDeclaration</td><td>197–251</td><td>CLogTreeNode: INotifyPropertyChanged</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>_logDirectory</td><td>FieldDeclaration</td><td>L11–11</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._logDirectory</td></tr>
+<tr><td>_fileScope</td><td>FieldDeclaration</td><td>L12–12</td><td>CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope</td></tr>
+<tr><td>_lastOpenedDirectory</td><td>FieldDeclaration</td><td>L13–13</td><td>string? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._lastOpenedDirectory</td></tr>
+<tr><td>_readCts</td><td>FieldDeclaration</td><td>L14–14</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readCts</td></tr>
+<tr><td>_readVersion</td><td>FieldDeclaration</td><td>L15–15</td><td>long Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readVersion</td></tr>
+<tr><td>_initializeTask</td><td>FieldDeclaration</td><td>L16–16</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._initializeTask</td></tr>
+<tr><td>_isTreeBusy</td><td>FieldDeclaration</td><td>L17–17</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._isTreeBusy</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L18–29</td><td>Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.CMonitorLogViewerPanel(string)</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L31–31</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.PropertyChanged</td></tr>
+<tr><td>OpenDirectory</td><td>PropertyDeclaration</td><td>L32–32</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.OpenDirectory</td></tr>
+<tr><td>FilePath</td><td>PropertyDeclaration</td><td>L33–33</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath</td></tr>
+<tr><td>get_FilePath</td><td>GetAccessorDeclaration</td><td>L33–33</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath.get</td></tr>
+<tr><td>set_FilePath</td><td>SetAccessorDeclaration</td><td>L33–33</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath.set</td></tr>
+<tr><td>Text</td><td>PropertyDeclaration</td><td>L34–34</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text</td></tr>
+<tr><td>get_Text</td><td>GetAccessorDeclaration</td><td>L34–34</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text.get</td></tr>
+<tr><td>set_Text</td><td>SetAccessorDeclaration</td><td>L34–34</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text.set</td></tr>
+<tr><td>Status</td><td>PropertyDeclaration</td><td>L35–35</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status</td></tr>
+<tr><td>get_Status</td><td>GetAccessorDeclaration</td><td>L35–35</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status.get</td></tr>
+<tr><td>set_Status</td><td>SetAccessorDeclaration</td><td>L35–35</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status.set</td></tr>
+<tr><td>TreeStatus</td><td>PropertyDeclaration</td><td>L36–36</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus</td></tr>
+<tr><td>get_TreeStatus</td><td>GetAccessorDeclaration</td><td>L36–36</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus.get</td></tr>
+<tr><td>set_TreeStatus</td><td>SetAccessorDeclaration</td><td>L36–36</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus.set</td></tr>
+<tr><td>TreeRoots</td><td>PropertyDeclaration</td><td>L37–37</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeRoots</td></tr>
+<tr><td>get_TreeRoots</td><td>GetAccessorDeclaration</td><td>L37–37</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeRoots.get</td></tr>
+<tr><td>IsTreeBusy</td><td>PropertyDeclaration</td><td>L38–38</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsTreeBusy</td></tr>
+<tr><td>IsBusy</td><td>PropertyDeclaration</td><td>L39–39</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy</td></tr>
+<tr><td>get_IsBusy</td><td>GetAccessorDeclaration</td><td>L39–39</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy.get</td></tr>
+<tr><td>set_IsBusy</td><td>SetAccessorDeclaration</td><td>L39–39</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy.set</td></tr>
+<tr><td>LoadProgress</td><td>PropertyDeclaration</td><td>L40–40</td><td>double Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress</td></tr>
+<tr><td>get_LoadProgress</td><td>GetAccessorDeclaration</td><td>L40–40</td><td>double Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress.get</td></tr>
+<tr><td>set_LoadProgress</td><td>SetAccessorDeclaration</td><td>L40–40</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress.set</td></tr>
+<tr><td>LoadProgressText</td><td>PropertyDeclaration</td><td>L41–41</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText</td></tr>
+<tr><td>get_LoadProgressText</td><td>GetAccessorDeclaration</td><td>L41–41</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText.get</td></tr>
+<tr><td>set_LoadProgressText</td><td>SetAccessorDeclaration</td><td>L41–41</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText.set</td></tr>
+<tr><td>RefreshTreeCommand</td><td>PropertyDeclaration</td><td>L42–42</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeCommand</td></tr>
+<tr><td>get_RefreshTreeCommand</td><td>GetAccessorDeclaration</td><td>L42–42</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeCommand.get</td></tr>
+<tr><td>InitializeAsync</td><td>MethodDeclaration</td><td>L44–44</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.InitializeAsync()</td></tr>
+<tr><td>ExpandDirectoryAsync</td><td>MethodDeclaration</td><td>L45–45</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ExpandDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>SelectNodeAsync</td><td>MethodDeclaration</td><td>L46–46</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.SelectNodeAsync(Drilling.UI.Menu.Menus.CLogTreeNode?)</td></tr>
+<tr><td>EnsureDirectoryAsync</td><td>MethodDeclaration</td><td>L47–54</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.EnsureDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode, bool)</td></tr>
+<tr><td>ReadDirectoryAsync</td><td>MethodDeclaration</td><td>L56–93</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ReadDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>RefreshTreeAsync</td><td>MethodDeclaration</td><td>L95–112</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeAsync()</td></tr>
+<tr><td>RefreshExpandedAsync</td><td>MethodDeclaration</td><td>L114–119</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshExpandedAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>LoadFileAsync</td><td>MethodDeclaration</td><td>L121–176</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadFileAsync(string)</td></tr>
+<tr><td>NotifyView</td><td>MethodDeclaration</td><td>L178–192</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView()</td></tr>
+<tr><td>Notify</td><td>MethodDeclaration</td><td>L194–194</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?)</td></tr>
+<tr><td>_isExpanded</td><td>FieldDeclaration</td><td>L199–199</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode._isExpanded</td></tr>
+<tr><td>_isSelected</td><td>FieldDeclaration</td><td>L200–200</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode._isSelected</td></tr>
+<tr><td>_error</td><td>FieldDeclaration</td><td>L201–201</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode._error</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L202–210</td><td>Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool)</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L212–212</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CLogTreeNode.PropertyChanged</td></tr>
+<tr><td>Path</td><td>PropertyDeclaration</td><td>L213–213</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Path</td></tr>
+<tr><td>get_Path</td><td>GetAccessorDeclaration</td><td>L213–213</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Path.get</td></tr>
+<tr><td>Name</td><td>PropertyDeclaration</td><td>L214–214</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Name</td></tr>
+<tr><td>get_Name</td><td>GetAccessorDeclaration</td><td>L214–214</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Name.get</td></tr>
+<tr><td>IsDirectory</td><td>PropertyDeclaration</td><td>L215–215</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsDirectory</td></tr>
+<tr><td>get_IsDirectory</td><td>GetAccessorDeclaration</td><td>L215–215</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsDirectory.get</td></tr>
+<tr><td>IsPlaceholder</td><td>PropertyDeclaration</td><td>L216–216</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsPlaceholder</td></tr>
+<tr><td>get_IsPlaceholder</td><td>GetAccessorDeclaration</td><td>L216–216</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsPlaceholder.get</td></tr>
+<tr><td>ToolTip</td><td>PropertyDeclaration</td><td>L217–217</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.ToolTip</td></tr>
+<tr><td>Children</td><td>PropertyDeclaration</td><td>L218–218</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CLogTreeNode.Children</td></tr>
+<tr><td>get_Children</td><td>GetAccessorDeclaration</td><td>L218–218</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CLogTreeNode.Children.get</td></tr>
+<tr><td>IsExpanded</td><td>PropertyDeclaration</td><td>L220–228</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded</td></tr>
+<tr><td>get_IsExpanded</td><td>GetAccessorDeclaration</td><td>L222–222</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.get</td></tr>
+<tr><td>set_IsExpanded</td><td>SetAccessorDeclaration</td><td>L223–227</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.set</td></tr>
+<tr><td>IsSelected</td><td>PropertyDeclaration</td><td>L230–238</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected</td></tr>
+<tr><td>get_IsSelected</td><td>GetAccessorDeclaration</td><td>L232–232</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.get</td></tr>
+<tr><td>set_IsSelected</td><td>SetAccessorDeclaration</td><td>L233–237</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.set</td></tr>
+<tr><td>IsLoaded</td><td>PropertyDeclaration</td><td>L240–240</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded</td></tr>
+<tr><td>get_IsLoaded</td><td>GetAccessorDeclaration</td><td>L240–240</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded.get</td></tr>
+<tr><td>set_IsLoaded</td><td>SetAccessorDeclaration</td><td>L240–240</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded.set</td></tr>
+<tr><td>LoadingTask</td><td>PropertyDeclaration</td><td>L241–241</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask</td></tr>
+<tr><td>get_LoadingTask</td><td>GetAccessorDeclaration</td><td>L241–241</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask.get</td></tr>
+<tr><td>set_LoadingTask</td><td>SetAccessorDeclaration</td><td>L241–241</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask.set</td></tr>
+<tr><td>SetError</td><td>MethodDeclaration</td><td>L243–247</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string)</td></tr>
+<tr><td>Placeholder</td><td>MethodDeclaration</td><td>L249–249</td><td>Drilling.UI.Menu.Menus.CLogTreeNode Drilling.UI.Menu.Menus.CLogTreeNode.Placeholder(string)</td></tr>
+<tr><td>Notify</td><td>MethodDeclaration</td><td>L250–250</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.Notify(string?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L11">FieldDeclaration <code>_logDirectory</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L11-L11">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._logDirectory</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_fileScope</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L12-L12">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>CLogFileScope</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>_lastOpenedDirectory</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L13-L13">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._lastOpenedDirectory</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_readCts</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L14-L14">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readCts</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.CancellationTokenSource?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>_readVersion</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L15-L15">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>long Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readVersion</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>long</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>_initializeTask</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L16-L16">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._initializeTask</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_isTreeBusy</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L17-L17">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._isTreeBusy</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">ConstructorDeclaration <code>.ctor</code> · L18–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L18-L29">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:18–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.CMonitorLogViewerPanel(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>logDirectory</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L161-L161">Drilling.UI/Menu/Menus/CMenuMonitor.cs:161–161</a></td><td>new CMonitorLogViewerPanel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>20</td><td>new CLogFileScope</td><td>unresolved</td><td>None</td></tr>
+<tr><td>22</td><td>new CLogTreeNode</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202</td></tr>
+<tr><td>28</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+<tr><td>28</td><td>RefreshTreeAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeAsync() · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:95</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>20</td><td>assignment</td><td>값을 대상에 대입합니다: _fileScope = new CLogFileScope(logDirectory)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogFileScope(logDirectory)</td></tr>
+<tr><td>21</td><td>assignment</td><td>값을 대상에 대입합니다: _logDirectory = _fileScope.RootDirectory</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogTreeNode(_logDirectory, &quot;Log&quot;, true) { IsExpanded = true }</td></tr>
+<tr><td>22</td><td>assignment</td><td>값을 대상에 대입합니다: TreeRoots = [new CLogTreeNode(_logDirectory, &quot;Log&quot;, true) { IsExpanded = true } ]</td></tr>
+<tr><td>24</td><td>assignment</td><td>값을 대상에 대입합니다: IsExpanded = true</td></tr>
+<tr><td>28</td><td>assignment</td><td>값을 대상에 대입합니다: RefreshTreeCommand = new(async _ =&gt; await RefreshTreeAsync(), _ =&gt; !IsTreeBusy)</td></tr>
+<tr><td>28</td><td>await</td><td>비동기 완료를 기다립니다: await RefreshTreeAsync()</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ =&gt; await RefreshTreeAsync(), _ =&gt; !IsTreeBusy)</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeAsync()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">EventFieldDeclaration <code>PropertyChanged</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L31-L31">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">PropertyDeclaration <code>OpenDirectory</code> · L32–32</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L32-L32">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:32–32</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.OpenDirectory</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">PropertyDeclaration <code>FilePath</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">GetAccessorDeclaration <code>get_FilePath</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">SetAccessorDeclaration <code>set_FilePath</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.FilePath.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L34">PropertyDeclaration <code>Text</code> · L34–34</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L34">GetAccessorDeclaration <code>get_Text</code> · L34–34</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L34">SetAccessorDeclaration <code>set_Text</code> · L34–34</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Text.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">PropertyDeclaration <code>Status</code> · L35–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">GetAccessorDeclaration <code>get_Status</code> · L35–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">SetAccessorDeclaration <code>set_Status</code> · L35–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Status.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">PropertyDeclaration <code>TreeStatus</code> · L36–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">GetAccessorDeclaration <code>get_TreeStatus</code> · L36–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">SetAccessorDeclaration <code>set_TreeStatus</code> · L36–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeStatus.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">PropertyDeclaration <code>TreeRoots</code> · L37–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeRoots</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">GetAccessorDeclaration <code>get_TreeRoots</code> · L37–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.TreeRoots.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">PropertyDeclaration <code>IsTreeBusy</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L38-L38">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsTreeBusy</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">PropertyDeclaration <code>IsBusy</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">GetAccessorDeclaration <code>get_IsBusy</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">SetAccessorDeclaration <code>set_IsBusy</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.IsBusy.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">PropertyDeclaration <code>LoadProgress</code> · L40–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">GetAccessorDeclaration <code>get_LoadProgress</code> · L40–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">SetAccessorDeclaration <code>set_LoadProgress</code> · L40–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgress.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">PropertyDeclaration <code>LoadProgressText</code> · L41–41</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">GetAccessorDeclaration <code>get_LoadProgressText</code> · L41–41</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">SetAccessorDeclaration <code>set_LoadProgressText</code> · L41–41</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadProgressText.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">PropertyDeclaration <code>RefreshTreeCommand</code> · L42–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeCommand</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">GetAccessorDeclaration <code>get_RefreshTreeCommand</code> · L42–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeCommand.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L44">MethodDeclaration <code>InitializeAsync</code> · L44–44</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.InitializeAsync()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L13-L13">Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:13–13</a></td><td>panel.InitializeAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>44</td><td>ExpandDirectoryAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ExpandDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>44</td><td>assignment</td><td>값을 대상에 대입합니다: _initializeTask ??= ExpandDirectoryAsync(TreeRoots[0])</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandDirectoryAsync(TreeRoots[0])</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L45">MethodDeclaration <code>ExpandDirectoryAsync</code> · L45–45</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ExpandDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>node</td><td>Drilling.UI.Menu.Menus.CLogTreeNode</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44</a></td><td>ExpandDirectoryAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L23-L23">Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:23–23</a></td><td>panel.ExpandDirectoryAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>45</td><td>EnsureDirectoryAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.EnsureDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:47</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectoryAsync(node, false)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L46">MethodDeclaration <code>SelectNodeAsync</code> · L46–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.SelectNodeAsync(Drilling.UI.Menu.Menus.CLogTreeNode?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>node</td><td>Drilling.UI.Menu.Menus.CLogTreeNode?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L28-L28">Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:28–28</a></td><td>panel.SelectNodeAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>46</td><td>LoadFileAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadFileAsync(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:121</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LoadFileAsync(node.Path)</td></tr>
+<tr><td>46</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: node is { IsDirectory: false, IsPlaceholder: false } ? LoadFileAsync(node.Path) : Task.CompletedTask</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L47">MethodDeclaration <code>EnsureDirectoryAsync</code> · L47–54</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L47-L54">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:47–54</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.EnsureDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>node</td><td>Drilling.UI.Menu.Menus.CLogTreeNode</td><td>None</td><td>False /</td></tr>
+<tr><td>refresh</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45</a></td><td>EnsureDirectoryAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L116-L116">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:116–116</a></td><td>EnsureDirectoryAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>53</td><td>ReadDirectoryAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ReadDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:56</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>49</td><td>if</td><td>조건에 따라 분기합니다: if (!node.IsDirectory || (!refresh &amp;&amp; node.IsLoaded))</td></tr>
+<tr><td>50</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;</td></tr>
+<tr><td>51</td><td>if</td><td>조건에 따라 분기합니다: if (node.LoadingTask is { IsCompleted: false } pending)</td></tr>
+<tr><td>52</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return pending;</td></tr>
+<tr><td>53</td><td>assignment</td><td>값을 대상에 대입합니다: node.LoadingTask = ReadDirectoryAsync(node)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDirectoryAsync(node)</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return node.LoadingTask = ReadDirectoryAsync(node);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EnsureDirectoryAsync&quot;]
+ N0[&quot;L49 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L51 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L56">MethodDeclaration <code>ReadDirectoryAsync</code> · L56–93</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L56-L93">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:56–93</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.ReadDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>node</td><td>Drilling.UI.Menu.Menus.CLogTreeNode</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L53-L53">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:53–53</a></td><td>ReadDirectoryAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>61</td><td>Task.Run</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is DirectoryInfo || CLogFileScope.IsLogFile(info.Name)).Select(info =&gt; (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB…</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is DirectoryInfo || CLogFileScope.IsLogFile(info.Name)).Select(info =&gt; (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB…</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is DirectoryInfo || CLogFileScope.IsLogFile(info.Name)).Select(info =&gt; (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB…</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is DirectoryInfo || CLogFileScope.IsLogFile(info.Name)).Select</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>61</td><td>new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt; System.IO.DirectoryInfo.EnumerateFileSystemInfos()</td></tr>
+<tr><td>61</td><td>new DirectoryInfo</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>61</td><td>_fileScope.ResolveDirectory</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>CLogFileScope.IsAlarm</td><td>unresolved</td><td>None</td></tr>
+<tr><td>61</td><td>CLogFileScope.IsLogFile</td><td>unresolved</td><td>None</td></tr>
+<tr><td>62</td><td>node.Children.Where(child =&gt; !child.IsPlaceholder).ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, Drilling.UI.Menu.Menus.CLogTreeNode&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.ToDictionary&lt;Drilling.UI.Menu.Menus.CLogTreeNode, string&gt;(System.Func&lt;Drilling.UI.Menu.Menus.CLogTreeNode, string&gt;, System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>62</td><td>node.Children.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Where&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;(System.Func&lt;Drilling.UI.Menu.Menus.CLogTreeNode, bool&gt;)</td></tr>
+<tr><td>63</td><td>entries.Select(entry =&gt; existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray</td><td>unresolved</td><td>None</td></tr>
+<tr><td>63</td><td>entries.Select</td><td>unresolved</td><td>None</td></tr>
+<tr><td>63</td><td>existing.TryGetValue</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>63</td><td>new CLogTreeNode</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>64</td><td>node.Children.ToHashSet</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.ToHashSet&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;()</td></tr>
+<tr><td>68</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>70</td><td>present.Contains</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>70</td><td>node.Children.IndexOf</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>72</td><td>node.Children.Move</td><td>resolved</td><td>void System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Move(int, int)</td></tr>
+<tr><td>74</td><td>node.Children.Insert</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>78</td><td>node.Children.RemoveAt</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.RemoveAt(int)</td></tr>
+<tr><td>80</td><td>node.SetError</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243</td></tr>
+<tr><td>86</td><td>node.SetError</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243</td></tr>
+<tr><td>87</td><td>node.Children.Clear</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Clear()</td></tr>
+<tr><td>88</td><td>node.Children.Add</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Add(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>88</td><td>CLogTreeNode.Placeholder</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CLogTreeNode Drilling.UI.Menu.Menus.CLogTreeNode.Placeholder(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249</td></tr>
+<tr><td>92</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+<tr><td>92</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>58</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>61</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Run(() =&gt; new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() =&gt; new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; i…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is Director…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is Director…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is Director…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is Director…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(info =&gt; info is Director…</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name))</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos()</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(_fileScope.ResolveDirectory(node.Path))</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _fileScope.ResolveDirectory(node.Path)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CLogFileScope.IsAlarm(info.Name)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CLogFileScope.IsLogFile(info.Name)</td></tr>
+<tr><td>61</td><td>local-declaration</td><td>지역 변수를 선언합니다: var entries = await Task.Run(() =&gt; new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where</td></tr>
+<tr><td>61</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: entries = await Task.Run(() =&gt; new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info =&gt; (info.Attributes &amp; FileAttributes.ReparsePoint) == 0 &amp;&amp; !CLogFileScope.IsAlarm(info.Name)).Where(inf</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child =&gt; !child.IsPlaceholder).ToDictionary(child =&gt; child.Path, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child =&gt; !child.IsPlaceholder)</td></tr>
+<tr><td>62</td><td>local-declaration</td><td>지역 변수를 선언합니다: var existing = node.Children.Where(child =&gt; !child.IsPlaceholder).ToDictionary(child =&gt; child.Path, StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>62</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: existing = node.Children.Where(child =&gt; !child.IsPlaceholder).ToDictionary(child =&gt; child.Path, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Select(entry =&gt; existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray()</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entries.Select(entry =&gt; existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory))</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: existing.TryGetValue(entry.FullName, out var child)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)</td></tr>
+<tr><td>63</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)</td></tr>
+<tr><td>63</td><td>local-declaration</td><td>지역 변수를 선언합니다: var children = entries.Select(entry =&gt; existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray();</td></tr>
+<tr><td>63</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: children = entries.Select(entry =&gt; existing.TryGetValue(entry.FullName, out var child) &amp;&amp; child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray()</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.ToHashSet()</td></tr>
+<tr><td>64</td><td>local-declaration</td><td>지역 변수를 선언합니다: var present = node.Children.ToHashSet();</td></tr>
+<tr><td>64</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: present = node.Children.ToHashSet()</td></tr>
+<tr><td>66</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>66</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; children.Length; index++)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(node.Children[index], children[index])</td></tr>
+<tr><td>68</td><td>if</td><td>조건에 따라 분기합니다: if (index &lt; node.Children.Count &amp;&amp; ReferenceEquals(node.Children[index], children[index]))</td></tr>
+<tr><td>69</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: present.Contains(children[index])</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.IndexOf(children[index])</td></tr>
+<tr><td>70</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1</td></tr>
+<tr><td>70</td><td>local-declaration</td><td>지역 변수를 선언합니다: var previous = present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1;</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: previous = present.Contains(children[index]) ? node.Children.IndexOf(children[index]) : -1</td></tr>
+<tr><td>71</td><td>if</td><td>조건에 따라 분기합니다: if (previous &gt;= 0)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Move(previous, index)</td></tr>
+<tr><td>73</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Insert(index, children[index])</td></tr>
+<tr><td>77</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (node.Children.Count &gt; children.Length)</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.RemoveAt(node.Children.Count - 1)</td></tr>
+<tr><td>79</td><td>assignment</td><td>값을 대상에 대입합니다: node.IsLoaded = true</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.SetError(&quot;&quot;)</td></tr>
+<tr><td>81</td><td>assignment</td><td>값을 대상에 대입합니다: TreeStatus = &quot;파일을 선택하면 오른쪽에 내용이 표시됩니다.&quot;</td></tr>
+<tr><td>83</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException)</td></tr>
+<tr><td>85</td><td>assignment</td><td>값을 대상에 대입합니다: node.IsLoaded = false</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.SetError(exception.Message)</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Clear()</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Add(CLogTreeNode.Placeholder(&quot;조회 실패 · 다시 펼쳐서 재시도&quot;))</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CLogTreeNode.Placeholder(&quot;조회 실패 · 다시 펼쳐서 재시도&quot;)</td></tr>
+<tr><td>89</td><td>assignment</td><td>값을 대상에 대입합니다: TreeStatus = $&quot;폴더를 읽지 못했습니다: {exception.Message}&quot;</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(TreeStatus))</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(TreeStatus)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadDirectoryAsync&quot;]
+ N0[&quot;L58 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L66 for&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L68 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L71 if&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L73 else&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L77 while&quot;]
+ N0 --&gt;|포함| N5
+ N6[&quot;L83 catch&quot;]
+ N0 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L95">MethodDeclaration <code>RefreshTreeAsync</code> · L95–112</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L95-L112">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:95–112</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeAsync()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L28-L28">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:28–28</a></td><td>RefreshTreeAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>100</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+<tr><td>100</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>101</td><td>RefreshTreeCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+<tr><td>104</td><td>RefreshExpandedAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshExpandedAsync(Drilling.UI.Menu.Menus.CLogTreeNode) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:114</td></tr>
+<tr><td>109</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+<tr><td>109</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>110</td><td>RefreshTreeCommand.NotifyCanExecuteChanged</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>97</td><td>if</td><td>조건에 따라 분기합니다: if (_isTreeBusy)</td></tr>
+<tr><td>98</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: _isTreeBusy = true</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsTreeBusy))</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsTreeBusy)</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>102</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>104</td><td>await</td><td>비동기 완료를 기다립니다: await RefreshExpandedAsync(TreeRoots[0])</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshExpandedAsync(TreeRoots[0])</td></tr>
+<tr><td>106</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>108</td><td>assignment</td><td>값을 대상에 대입합니다: _isTreeBusy = false</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsTreeBusy))</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsTreeBusy)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTreeCommand.NotifyCanExecuteChanged()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RefreshTreeAsync&quot;]
+ N0[&quot;L97 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L102 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L106 finally&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L114">MethodDeclaration <code>RefreshExpandedAsync</code> · L114–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L114-L119">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:114–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshExpandedAsync(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>node</td><td>Drilling.UI.Menu.Menus.CLogTreeNode</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L104-L104">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:104–104</a></td><td>RefreshExpandedAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L118-L118">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:118–118</a></td><td>RefreshExpandedAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>116</td><td>EnsureDirectoryAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.EnsureDirectoryAsync(Drilling.UI.Menu.Menus.CLogTreeNode, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:47</td></tr>
+<tr><td>117</td><td>node.Children.Where(child =&gt; child.IsDirectory &amp;&amp; child.IsExpanded).ToArray</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CLogTreeNode[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.ToArray&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;()</td></tr>
+<tr><td>117</td><td>node.Children.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Where&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;(System.Func&lt;Drilling.UI.Menu.Menus.CLogTreeNode, bool&gt;)</td></tr>
+<tr><td>118</td><td>RefreshExpandedAsync</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshExpandedAsync(Drilling.UI.Menu.Menus.CLogTreeNode) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:114</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>116</td><td>await</td><td>비동기 완료를 기다립니다: await EnsureDirectoryAsync(node, true)</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectoryAsync(node, true)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child =&gt; child.IsDirectory &amp;&amp; child.IsExpanded).ToArray()</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Where(child =&gt; child.IsDirectory &amp;&amp; child.IsExpanded)</td></tr>
+<tr><td>117</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var child in node.Children.Where(child =&gt; child.IsDirectory &amp;&amp; child.IsExpanded).ToArray())</td></tr>
+<tr><td>118</td><td>await</td><td>비동기 완료를 기다립니다: await RefreshExpandedAsync(child)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshExpandedAsync(child)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RefreshExpandedAsync&quot;]
+ N0[&quot;L117 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L121">MethodDeclaration <code>LoadFileAsync</code> · L121–176</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L121-L176">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:121–176</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.LoadFileAsync(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46</a></td><td>LoadFileAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>123</td><td>.Cancel</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Cancel()</td></tr>
+<tr><td>124</td><td>new CancellationTokenSource</td><td>resolved</td><td>System.Threading.CancellationTokenSource.CancellationTokenSource()</td></tr>
+<tr><td>133</td><td>NotifyView</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView() · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178</td></tr>
+<tr><td>137</td><td>new Progress&lt;double&gt;</td><td>resolved</td><td>System.Progress&lt;double&gt;.Progress(System.Action&lt;double&gt;)</td></tr>
+<tr><td>141</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>143</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+<tr><td>143</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>144</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+<tr><td>144</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>146</td><td>CLogTextReader.ReadAllAsync</td><td>unresolved</td><td>None</td></tr>
+<tr><td>146</td><td>_fileScope.ResolveFile</td><td>unresolved</td><td>None</td></tr>
+<tr><td>149</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>150</td><td>Path.GetDirectoryName</td><td>resolved</td><td>string? System.IO.Path.GetDirectoryName(string?)</td></tr>
+<tr><td>172</td><td>NotifyView</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView() · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178</td></tr>
+<tr><td>174</td><td>cts.Dispose</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Dispose()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()</td></tr>
+<tr><td>124</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cts = new CancellationTokenSource();</td></tr>
+<tr><td>124</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cts = new CancellationTokenSource()</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: _readCts = cts</td></tr>
+<tr><td>126</td><td>local-declaration</td><td>지역 변수를 선언합니다: var version = ++_readVersion;</td></tr>
+<tr><td>126</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: version = ++_readVersion</td></tr>
+<tr><td>127</td><td>assignment</td><td>값을 대상에 대입합니다: FilePath = &quot;&quot;</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: Text = &quot;&quot;</td></tr>
+<tr><td>129</td><td>assignment</td><td>값을 대상에 대입합니다: IsBusy = true</td></tr>
+<tr><td>130</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgress = 0.0</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgressText = &quot;0% · 로그 파일 준비 중&quot;</td></tr>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: Status = &quot;로그를 읽고 있습니다...&quot;</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyView()</td></tr>
+<tr><td>134</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Progress&lt;double&gt;(value =&gt; { if (version != _readVersion || !IsBusy) return; LoadProgress = Math.Clamp(value, 0.0, 100.0); LoadProgressText = $&quot;{LoadProgress:0}% · 로그 파일 읽는 중&quot;; Notify(nameof(LoadProgress)); Notify(nam…</td></tr>
+<tr><td>137</td><td>local-declaration</td><td>지역 변수를 선언합니다: var progress = new Progress&lt;double&gt;(value =&gt; { if (version != _readVersion || !IsBusy) return; LoadProgress = Math.Clamp(value, 0.0, 100.0); LoadProgressText = $&quot;{LoadProgress:0}% · 로그 파일 읽는 중&quot;; Notify(nameof(LoadProgress)); Notif</td></tr>
+<tr><td>137</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: progress = new Progress&lt;double&gt;(value =&gt; { if (version != _readVersion || !IsBusy) return; LoadProgress = Math.Clamp(value, 0.0, 100.0); LoadProgressText = $&quot;{LoadProgress:0}% · 로그 파일 읽는 중&quot;; Notify(nameof(LoadProgress)); Notify(na</td></tr>
+<tr><td>139</td><td>if</td><td>조건에 따라 분기합니다: if (version != _readVersion || !IsBusy)</td></tr>
+<tr><td>140</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>141</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgress = Math.Clamp(value, 0.0, 100.0)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(value, 0.0, 100.0)</td></tr>
+<tr><td>142</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgressText = $&quot;{LoadProgress:0}% · 로그 파일 읽는 중&quot;</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(LoadProgress))</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgress)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(LoadProgressText))</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgressText)</td></tr>
+<tr><td>146</td><td>await</td><td>비동기 완료를 기다립니다: await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _fileScope.ResolveFile(path)</td></tr>
+<tr><td>146</td><td>local-declaration</td><td>지역 변수를 선언합니다: var file = await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token);</td></tr>
+<tr><td>146</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: file = await CLogTextReader.ReadAllAsync(_fileScope.ResolveFile(path), progress, cts.Token)</td></tr>
+<tr><td>147</td><td>if</td><td>조건에 따라 분기합니다: if (version != _readVersion)</td></tr>
+<tr><td>148</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>149</td><td>assignment</td><td>값을 대상에 대입합니다: FilePath = Path.GetFullPath(path)</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path)</td></tr>
+<tr><td>150</td><td>assignment</td><td>값을 대상에 대입합니다: _lastOpenedDirectory = Path.GetDirectoryName(FilePath)</td></tr>
+<tr><td>150</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetDirectoryName(FilePath)</td></tr>
+<tr><td>151</td><td>assignment</td><td>값을 대상에 대입합니다: Text = file.Text</td></tr>
+<tr><td>152</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgress = 100.0</td></tr>
+<tr><td>153</td><td>assignment</td><td>값을 대상에 대입합니다: LoadProgressText = &quot;100% · 로그 표시 완료&quot;</td></tr>
+<tr><td>154</td><td>assignment</td><td>값을 대상에 대입합니다: Status = Text.Length == 0 ? &quot;내용이 없는 파일입니다.&quot; : $&quot;{file.FileLength / 1024.0:N1} KB · 읽기 전용 · 전체 내용&quot;</td></tr>
+<tr><td>154</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Text.Length == 0 ? &quot;내용이 없는 파일입니다.&quot; : $&quot;{file.FileLength / 1024.0:N1} KB · 읽기 전용 · 전체 내용&quot;</td></tr>
+<tr><td>156</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (cts.IsCancellationRequested)</td></tr>
+<tr><td>160</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException)</td></tr>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (version != _readVersion)</td></tr>
+<tr><td>163</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>164</td><td>assignment</td><td>값을 대상에 대입합니다: Status = $&quot;로그를 읽지 못했습니다: {exception.Message}&quot;</td></tr>
+<tr><td>166</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>168</td><td>if</td><td>조건에 따라 분기합니다: if (version == _readVersion)</td></tr>
+<tr><td>170</td><td>assignment</td><td>값을 대상에 대입합니다: _readCts = null</td></tr>
+<tr><td>171</td><td>assignment</td><td>값을 대상에 대입합니다: IsBusy = false</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyView()</td></tr>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cts.Dispose()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;LoadFileAsync&quot;]
+ N0[&quot;L134 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L139 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L147 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L156 catch&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L160 catch&quot;]
+ N0 --&gt;|포함| N4
+ N5[&quot;L162 if&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L166 finally&quot;]
+ N0 --&gt;|포함| N6
+ N7[&quot;L168 if&quot;]
+ N6 --&gt;|포함| N7</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L178">MethodDeclaration <code>NotifyView</code> · L178–192</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L178-L192">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178–192</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L133-L133">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:133–133</a></td><td>NotifyView</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L172-L172">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:172–172</a></td><td>NotifyView</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>182</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>183</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>184</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>185</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>186</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>187</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+<tr><td>191</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>180</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var property in new[] { nameof(FilePath), nameof(Text), nameof(Status), nameof(IsBusy), nameof(LoadProgress), nameof(LoadProgressText) })</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(FilePath)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Text)</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgress)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(LoadProgressText)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(property)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NotifyView&quot;]
+ N0[&quot;L180 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L194">MethodDeclaration <code>Notify</code> · L194–194</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L194-L194">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194–194</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>property</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L92-L92">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:92–92</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L100-L100">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:100–100</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L109-L109">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:109–109</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L143-L143">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:143–143</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L144-L144">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:144–144</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L191-L191">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:191–191</a></td><td>Notify</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>194</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>194</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(property))</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(property)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L199">FieldDeclaration <code>_isExpanded</code> · L199–199</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L199-L199">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:199–199</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode._isExpanded</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L200">FieldDeclaration <code>_isSelected</code> · L200–200</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L200-L200">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:200–200</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode._isSelected</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L201">FieldDeclaration <code>_error</code> · L201–201</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L201-L201">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:201–201</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode._error</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>201</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _error = &quot;&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L202">ConstructorDeclaration <code>.ctor</code> · L202–210</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L202-L210">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202–210</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>isDirectory</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>isPlaceholder</td><td>bool</td><td>None</td><td>True / false</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L22-L25">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:22–25</a></td><td>new CLogTreeNode</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249</a></td><td>new</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>209</td><td>Children.Add</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;.Add(Drilling.UI.Menu.Menus.CLogTreeNode)</td></tr>
+<tr><td>209</td><td>Placeholder</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CLogTreeNode Drilling.UI.Menu.Menus.CLogTreeNode.Placeholder(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>204</td><td>assignment</td><td>값을 대상에 대입합니다: Path = path</td></tr>
+<tr><td>205</td><td>assignment</td><td>값을 대상에 대입합니다: Name = name</td></tr>
+<tr><td>206</td><td>assignment</td><td>값을 대상에 대입합니다: IsDirectory = isDirectory</td></tr>
+<tr><td>207</td><td>assignment</td><td>값을 대상에 대입합니다: IsPlaceholder = isPlaceholder</td></tr>
+<tr><td>208</td><td>if</td><td>조건에 따라 분기합니다: if (isDirectory)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Children.Add(Placeholder(&quot;펼쳐서 보기&quot;))</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Placeholder(&quot;펼쳐서 보기&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L208 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L212">EventFieldDeclaration <code>PropertyChanged</code> · L212–212</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L212-L212">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:212–212</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CLogTreeNode.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">PropertyDeclaration <code>Path</code> · L213–213</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Path</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">GetAccessorDeclaration <code>get_Path</code> · L213–213</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Path.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L214">PropertyDeclaration <code>Name</code> · L214–214</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Name</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L214">GetAccessorDeclaration <code>get_Name</code> · L214–214</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.Name.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L215">PropertyDeclaration <code>IsDirectory</code> · L215–215</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsDirectory</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L215">GetAccessorDeclaration <code>get_IsDirectory</code> · L215–215</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsDirectory.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L216">PropertyDeclaration <code>IsPlaceholder</code> · L216–216</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsPlaceholder</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L216">GetAccessorDeclaration <code>get_IsPlaceholder</code> · L216–216</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsPlaceholder.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L217">PropertyDeclaration <code>ToolTip</code> · L217–217</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L217-L217">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:217–217</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CLogTreeNode.ToolTip</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>217</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: _error.Length == 0 ? Path : _error</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L218">PropertyDeclaration <code>Children</code> · L218–218</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CLogTreeNode.Children</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L218">GetAccessorDeclaration <code>get_Children</code> · L218–218</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt; Drilling.UI.Menu.Menus.CLogTreeNode.Children.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Menu.Menus.CLogTreeNode&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L220">PropertyDeclaration <code>IsExpanded</code> · L220–228</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L220-L228">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:220–228</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L222">GetAccessorDeclaration <code>get_IsExpanded</code> · L222–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L222-L222">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:222–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L223">SetAccessorDeclaration <code>set_IsExpanded</code> · L223–227</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L223-L227">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:223–227</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsExpanded.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>226</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>225</td><td>assignment</td><td>값을 대상에 대입합니다: _isExpanded = value</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L230">PropertyDeclaration <code>IsSelected</code> · L230–238</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L230-L238">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:230–238</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L232">GetAccessorDeclaration <code>get_IsSelected</code> · L232–232</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L232-L232">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:232–232</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L233">SetAccessorDeclaration <code>set_IsSelected</code> · L233–237</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L233-L237">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:233–237</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsSelected.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>236</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>235</td><td>assignment</td><td>값을 대상에 대입합니다: _isSelected = value</td></tr>
+<tr><td>236</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">PropertyDeclaration <code>IsLoaded</code> · L240–240</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">GetAccessorDeclaration <code>get_IsLoaded</code> · L240–240</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">SetAccessorDeclaration <code>set_IsLoaded</code> · L240–240</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.IsLoaded.set</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L241">PropertyDeclaration <code>LoadingTask</code> · L241–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L241">GetAccessorDeclaration <code>get_LoadingTask</code> · L241–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask.get</td></tr>
+<tr><td>접근/수식자</td><td>Internal / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L241">SetAccessorDeclaration <code>set_LoadingTask</code> · L241–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.LoadingTask.set</td></tr>
+<tr><td>접근/수식자</td><td>Internal / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Threading.Tasks.Task?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L243">MethodDeclaration <code>SetError</code> · L243–247</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L243-L247">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243–247</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>error</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L80-L80">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:80–80</a></td><td>node.SetError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L86-L86">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:86–86</a></td><td>node.SetError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>246</td><td>Notify</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250</td></tr>
+<tr><td>246</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>245</td><td>assignment</td><td>값을 대상에 대입합니다: _error = error</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ToolTip))</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ToolTip)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L249">MethodDeclaration <code>Placeholder</code> · L249–249</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.CLogTreeNode Drilling.UI.Menu.Menus.CLogTreeNode.Placeholder(string)</td></tr>
+<tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L88-L88">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:88–88</a></td><td>CLogTreeNode.Placeholder</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L209-L209">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:209–209</a></td><td>Placeholder</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>249</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;&quot;, name, false, true)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">MethodDeclaration <code>Notify</code> · L250–250</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L250-L250">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250–250</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CLogTreeNode.Notify(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CLogTreeNode</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L226-L226">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:226–226</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L236-L236">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:236–236</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L246-L246">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:246–246</a></td><td>Notify</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>250</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>250</td><td>new</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name))</td></tr>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

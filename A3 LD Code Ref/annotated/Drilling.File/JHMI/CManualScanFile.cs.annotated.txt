@@ -1,0 +1,946 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CManualScanFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000002 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000004 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000005 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000007 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000008 | using Drilling.File.Parser; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000010 | namespace Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CManualScanFile(string configRoot) : CManualScanFileBase
+L000011 | public sealed class CManualScanFile(string configRoot) : CManualScanFileBase ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: DefaultSettingName = "CIRCLE_TEST.scan"
+L000013 |     private const string DefaultSettingName = "CIRCLE_TEST.scan"; ⟦EOL⟧
+// 해설 L14: 변수의 초기값을 지정합니다: ValueHeaders = ["NAME", "VALUE"]
+L000014 |     private static readonly IReadOnlyList<string> ValueHeaders = ["NAME", "VALUE"]; ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: LaserActionParameterNames = ["LaserOnMode", "Time", "Count", "RepeatCount", "RepeatDelayTime"]
+L000015 |     private static readonly string[] LaserActionParameterNames = ["LaserOnMode", "Time", "Count", "RepeatCount", "RepeatDelayTime"]; ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "Manual") / 변수의 초기값을 지정합니다: _manualDirectory = Path.Combine(configRoot, "Manual")
+L000016 |     private readonly string _manualDirectory = Path.Combine(configRoot, "Manual"); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<string>> Drilling.File.JHMI.CManualScanFile.List(System.Threading.CancellationToken)
+L000017 |     public override Task<IReadOnlyList<string>> List(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 List.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000019 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(_manualDirectory) / 조건에 따라 분기합니다: if (!Directory.Exists(_manualDirectory))
+L000020 |         if (!Directory.Exists(_manualDirectory)) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 List.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<string>>([]) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<string>>([]);
+L000022 |             return Task.FromResult<IReadOnlyList<string>>([]); ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 List.
+L000023 |         } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(string?)
+L000025 |         bool ShouldIncludeItem(string? name) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000026 |         { ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(name);
+L000027 |             return !string.IsNullOrWhiteSpace(name); ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000028 |         } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · string SelectName(string)
+L000030 |         string SelectName(string name) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 SelectName.
+L000031 |         { ⟦EOL⟧
+// 해설 L32: 호출자에게 값 또는 제어를 반환합니다: return name;
+L000032 |             return name; ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 SelectName.
+L000033 |         } ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).Where(ShouldIncludeItem).Cast<string>().OrderBy(SelectName, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).Where(ShouldIncludeItem).Cast<string>().OrderBy(SelectName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).Where(ShouldIncludeItem
+L000035 |         var settingNames = Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).Where(ShouldIncludeItem).Cast<string>().OrderBy(SelectName, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<string>>(settingNames) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<string>>(settingNames);
+L000036 |         return Task.FromResult<IReadOnlyList<string>>(settingNames); ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 List.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>> Drilling.File.JHMI.CManualScanFile.LoadForm(System.Threading.CancellationToken)
+L000039 |     public override Task<IReadOnlyList<ST_MANUAL_SCAN_FORM>> LoadForm(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 LoadForm.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000041 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(LoadFormItems()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadFormItems() / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(LoadFormItems());
+L000042 |         return Task.FromResult(LoadFormItems()); ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 LoadForm.
+L000043 |     } ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.File.JHMI.CManualScanFile.Load(System.Threading.CancellationToken)
+L000045 |     public override Task<ST_MANUAL_SCAN_PARAM> Load(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Load.
+L000046 |     { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: Load(GetDefaultSettingName(), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDefaultSettingName() / 호출자에게 값 또는 제어를 반환합니다: return Load(GetDefaultSettingName(), cancellationToken);
+L000047 |         return Load(GetDefaultSettingName(), cancellationToken); ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 Load.
+L000048 |     } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.File.JHMI.CManualScanFile.Load(string, System.Threading.CancellationToken)
+L000050 |     public override Task<ST_MANUAL_SCAN_PARAM> Load(string settingName, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Load.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000052 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadFormItems() / 지역 변수를 선언합니다: var formItems = LoadFormItems(); / 변수의 초기값을 지정합니다: formItems = LoadFormItems()
+L000053 |         var formItems = LoadFormItems(); ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000054 |         bool ShouldIncludeItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000055 |         { ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME"));
+L000056 |             return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000057 |         } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · string SelectDictionaryKey(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000059 |         string SelectDictionaryKey(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 SelectDictionaryKey.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME");
+L000061 |             return CCsvParser.Get(row, "NAME"); ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 SelectDictionaryKey.
+L000062 |         } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000064 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 SelectValue.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "VALUE") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "VALUE");
+L000066 |             return CCsvParser.Get(row, "VALUE"); ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 SelectValue.
+L000067 |         } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictionaryKey, SelectValue, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(settingName) / 지역 변수를 선언합니다: var values = CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictionaryKey,
+L000069 |         var values = CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictionaryKey, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MANUAL_SCAN_PARAM( ReadDouble(values, formItems, "ShapeSize", 0.350), ReadDouble(values, formItems, "OffsetX", 0.000), ReadDouble(values, formItems, "OffsetY", 0.000), ReadString(values, formItems, "Direction", "C… / 지역 변수를 선언합니다: var settings = new ST_MANUAL_SCAN_PARAM( ReadDouble(values, formItems, "ShapeSize", 0.350), ReadDouble(values, formItems, "OffsetX", 0.000), ReadDouble(values, formItems, "OffsetY", 0.000), ReadString(values, formItems, "Direction / 변수의 초기값을 지정합니다: settings = new ST_MANUAL_S
+L000070 |         var settings = new ST_MANUAL_SCAN_PARAM( ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "ShapeSize", 0.350)
+L000071 |             ReadDouble(values, formItems, "ShapeSize", 0.350),  ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "OffsetX", 0.000)
+L000072 |             ReadDouble(values, formItems, "OffsetX", 0.000),  ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "OffsetY", 0.000)
+L000073 |             ReadDouble(values, formItems, "OffsetY", 0.000),  ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, "Direction", "CW")
+L000074 |             ReadString(values, formItems, "Direction", "CW"),  ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, "ShapeName", "Circle")
+L000075 |             ReadString(values, formItems, "ShapeName", "Circle"),  ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "LaserPower", 1.0)
+L000076 |             ReadDouble(values, formItems, "LaserPower", 1.0),  ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "JumpSpeed", 1.5)
+L000077 |             ReadDouble(values, formItems, "JumpSpeed", 1.5),  ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "MarkSpeed", 0.9)
+L000078 |             ReadDouble(values, formItems, "MarkSpeed", 0.9),  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.File.JHMI.CManualScanFile.Load(string, System.Threading.CancellationToken)
+L000079 |             0.0,  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "LaserFrequency", 20.0)
+L000080 |             ReadDouble(values, formItems, "LaserFrequency", 20.0),  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "LaserOnDelay", 8.0)
+L000081 |             ReadDouble(values, formItems, "LaserOnDelay", 8.0),  ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, formItems, "LaserOffDelay", 12.0)
+L000082 |             ReadDouble(values, formItems, "LaserOffDelay", 12.0),  ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserActionDouble(values, formItems, "Time", 1000.0)
+L000083 |             ReadLaserActionDouble(values, formItems, "Time", 1000.0),  ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserActionCount(values, formItems, "Count", 1)
+L000084 |             ReadLaserActionCount(values, formItems, "Count", 1),  ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(values, formItems, "GridRowLines", 5)
+L000085 |             ReadInt(values, formItems, "GridRowLines", 5),  ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(values, formItems, "GridColLines", 5)
+L000086 |             ReadInt(values, formItems, "GridColLines", 5),  ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeLaserOnMode(ReadString(values, formItems, "LaserOnMode", "TIME")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, "LaserOnMode", "TIME")
+L000087 |             NormalizeLaserOnMode(ReadString(values, formItems, "LaserOnMode", "TIME")),  ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserActionCount(values, formItems, "RepeatCount", 1)
+L000088 |             ReadLaserActionCount(values, formItems, "RepeatCount", 1),  ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLaserActionDouble(values, formItems, "RepeatDelayTime", 0.0)
+L000089 |             ReadLaserActionDouble(values, formItems, "RepeatDelayTime", 0.0) ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM> Drilling.File.JHMI.CManualScanFile.Load(string, System.Threading.CancellationToken)
+L000090 |         ); ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(settings) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(settings);
+L000091 |         return Task.FromResult(settings); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Load.
+L000092 |     } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.JHMI.CManualScanFile.Save(Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM, System.Threading.CancellationToken)
+L000094 |     public override Task Save(ST_MANUAL_SCAN_PARAM settings, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Save.
+L000095 |     { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: Save(GetDefaultSettingName(), settings, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDefaultSettingName() / 호출자에게 값 또는 제어를 반환합니다: return Save(GetDefaultSettingName(), settings, cancellationToken);
+L000096 |         return Save(GetDefaultSettingName(), settings, cancellationToken); ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Save.
+L000097 |     } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.JHMI.CManualScanFile.Save(string, Drilling.Common.Managers.ST_MANUAL_SCAN_PARAM, System.Threading.CancellationToken)
+L000099 |     public override Task Save(string settingName, ST_MANUAL_SCAN_PARAM settings, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 Save.
+L000100 |     { ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000101 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingName(settingName) / 지역 변수를 선언합니다: var normalizedName = NormalizeSettingName(settingName); / 변수의 초기값을 지정합니다: normalizedName = NormalizeSettingName(settingName)
+L000102 |         var normalizedName = NormalizeSettingName(settingName); ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadFormItems() / 지역 변수를 선언합니다: var formItems = LoadFormItems(); / 변수의 초기값을 지정합니다: formItems = LoadFormItems()
+L000103 |         var formItems = LoadFormItems(); ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["ShapeSize"] = settings.ShapeSize.ToString("F3", CultureInfo.InvariantCulture), ["OffsetX"] = settings.OffsetX.ToString("F3", CultureInfo.InvariantCultu… / 지역 변수를 선언합니다: var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["ShapeSize"] = settings.ShapeSize.ToString("F3", CultureInfo.InvariantCulture), ["OffsetX"] = settings.OffsetX.ToString("F3", CultureInfo.InvariantCu / 변수의 초기값을 지정합니다: values = new Dictionary<st
+L000104 |         var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 Save.
+L000105 |         { ⟦EOL⟧
+// 해설 L106: 값을 대상에 대입합니다: ["ShapeSize"] = settings.ShapeSize.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.ShapeSize.ToString("F3", CultureInfo.InvariantCulture)
+L000106 |             ["ShapeSize"] = settings.ShapeSize.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: ["OffsetX"] = settings.OffsetX.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.OffsetX.ToString("F3", CultureInfo.InvariantCulture)
+L000107 |             ["OffsetX"] = settings.OffsetX.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: ["OffsetY"] = settings.OffsetY.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.OffsetY.ToString("F3", CultureInfo.InvariantCulture)
+L000108 |             ["OffsetY"] = settings.OffsetY.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: ["Direction"] = settings.Direction
+L000109 |             ["Direction"] = settings.Direction, ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: ["ShapeName"] = settings.ShapeName
+L000110 |             ["ShapeName"] = settings.ShapeName, ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: ["LaserPower"] = settings.LaserPower.ToString("F2", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LaserPower.ToString("F2", CultureInfo.InvariantCulture)
+L000111 |             ["LaserPower"] = settings.LaserPower.ToString("F2", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: ["JumpSpeed"] = settings.JumpSpeed.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.JumpSpeed.ToString("F3", CultureInfo.InvariantCulture)
+L000112 |             ["JumpSpeed"] = settings.JumpSpeed.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: ["MarkSpeed"] = settings.MarkSpeed.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.MarkSpeed.ToString("F3", CultureInfo.InvariantCulture)
+L000113 |             ["MarkSpeed"] = settings.MarkSpeed.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: ["LaserFrequency"] = settings.LaserFrequency.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LaserFrequency.ToString("F3", CultureInfo.InvariantCulture)
+L000114 |             ["LaserFrequency"] = settings.LaserFrequency.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: ["LaserOnDelay"] = settings.LaserOnDelay.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LaserOnDelay.ToString("F3", CultureInfo.InvariantCulture)
+L000115 |             ["LaserOnDelay"] = settings.LaserOnDelay.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: ["LaserOffDelay"] = settings.LaserOffDelay.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LaserOffDelay.ToString("F3", CultureInfo.InvariantCulture)
+L000116 |             ["LaserOffDelay"] = settings.LaserOffDelay.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: ["GridRowLines"] = settings.GridRowLines.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.GridRowLines.ToString(CultureInfo.InvariantCulture)
+L000117 |             ["GridRowLines"] = settings.GridRowLines.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: ["GridColLines"] = settings.GridColLines.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.GridColLines.ToString(CultureInfo.InvariantCulture)
+L000118 |             ["GridColLines"] = settings.GridColLines.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: ["LaserOnMode"] = NormalizeLaserOnMode(settings.LaserOnMode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeLaserOnMode(settings.LaserOnMode)
+L000119 |             ["LaserOnMode"] = NormalizeLaserOnMode(settings.LaserOnMode), ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: ["Time"] = settings.Time.ToString("R", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.Time.ToString("R", CultureInfo.InvariantCulture)
+L000120 |             ["Time"] = settings.Time.ToString("R", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: ["Count"] = settings.Count.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.Count.ToString(CultureInfo.InvariantCulture)
+L000121 |             ["Count"] = settings.Count.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: ["RepeatCount"] = settings.RepeatCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.RepeatCount.ToString(CultureInfo.InvariantCulture)
+L000122 |             ["RepeatCount"] = settings.RepeatCount.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: ["RepeatDelayTime"] = settings.RepeatDelayTime.ToString("R", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.RepeatDelayTime.ToString("R", CultureInfo.InvariantCulture)
+L000123 |             ["RepeatDelayTime"] = settings.RepeatDelayTime.ToString("R", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 Save.
+L000124 |         }; ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateValues(formItems, values)
+L000125 |         ValidateValues(formItems, values); ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · bool IsUse(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000126 |         bool IsUse(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 IsUse.
+L000127 |         { ⟦EOL⟧
+// 해설 L128: 호출자에게 값 또는 제어를 반환합니다: return item.Use;
+L000128 |             return item.Use; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 IsUse.
+L000129 |         } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · int SelectDisplayOrder(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000131 |         int SelectDisplayOrder(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 SelectDisplayOrder.
+L000132 |         { ⟦EOL⟧
+// 해설 L133: 호출자에게 값 또는 제어를 반환합니다: return item.DisplayOrder;
+L000133 |             return item.DisplayOrder; ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 SelectDisplayOrder.
+L000134 |         } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<string, string> BuildManualSettingValueRow(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000136 |         global::System.Collections.Generic.Dictionary<string, string> BuildManualSettingValueRow(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 BuildManualSettingValueRow.
+L000137 |         { ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string> { ["NAME"] = item.Name, ["VALUE"] = values.TryGetValue(item.Name, out var value) ? value : item.DefaultValue } / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string> { ["NAME"] = item.Name, ["VALUE"] = values.TryGetValue(item.Name, out var value) ? value : item.DefaultValue };
+L000138 |             return new Dictionary<string, string> ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 BuildManualSettingValueRow.
+L000139 |             { ⟦EOL⟧
+// 해설 L140: 값을 대상에 대입합니다: ["NAME"] = item.Name
+L000140 |                 ["NAME"] = item.Name, ⟦EOL⟧
+// 해설 L141: 값을 대상에 대입합니다: ["VALUE"] = values.TryGetValue(item.Name, out var value) ? value : item.DefaultValue / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(item.Name, out var value) / 조건에 따라 결과식을 선택합니다: values.TryGetValue(item.Name, out var value) ? value : item.DefaultValue
+L000141 |                 ["VALUE"] = values.TryGetValue(item.Name, out var value) ? value : item.DefaultValue ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 BuildManualSettingValueRow.
+L000142 |             }; ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 BuildManualSettingValueRow.
+L000143 |         } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse).OrderBy(SelectDisplayOrder).Select(BuildManualSettingValueRow).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse).OrderBy(SelectDisplayOrder).Select(BuildManualSettingValueRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse).OrderBy(SelectDisplayOrder) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse) / 지역 변수를 선언합니다: IReadOnlyList<IReadOnlyDictionary<string, string>> rows = formItems.Where(IsUse).OrderBy(SelectDisplayOrder).Select(BuildManualSettingValueRow).ToArray();
+L000145 |         IReadOnlyList<IReadOnlyDictionary<string, string>> rows = formItems.Where(IsUse).OrderBy(SelectDisplayOrder).Select(BuildManualSettingValueRow).ToArray(); ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(GetSettingPath(normalizedName), ValueHeaders, rows) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(normalizedName)
+L000146 |         CCsvParser.Write(GetSettingPath(normalizedName), ValueHeaders, rows); ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateSavedSetting(normalizedName, values)
+L000147 |         ValidateSavedSetting(normalizedName, values); ⟦EOL⟧
+// 해설 L148: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000148 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 Save.
+L000149 |     } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.JHMI.CManualScanFile.Rename(string, string, System.Threading.CancellationToken)
+L000151 |     public override Task Rename(string oldSettingName, string newSettingName, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 Rename.
+L000152 |     { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000153 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(oldSettingName) / 지역 변수를 선언합니다: var oldPath = GetSettingPath(oldSettingName); / 변수의 초기값을 지정합니다: oldPath = GetSettingPath(oldSettingName)
+L000154 |         var oldPath = GetSettingPath(oldSettingName); ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(newSettingName) / 지역 변수를 선언합니다: var newPath = GetSettingPath(newSettingName); / 변수의 초기값을 지정합니다: newPath = GetSettingPath(newSettingName)
+L000155 |         var newPath = GetSettingPath(newSettingName); ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(oldPath) / 조건에 따라 분기합니다: if (!System.IO.File.Exists(oldPath))
+L000156 |         if (!System.IO.File.Exists(oldPath)) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 Rename.
+L000157 |         { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException($"Manual setting file was not found: {NormalizeSettingName(oldSettingName)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingName(oldSettingName) / 예외를 발생/전달합니다: throw new FileNotFoundException($"Manual setting file was not found: {NormalizeSettingName(oldSettingName)}");
+L000158 |             throw new FileNotFoundException($"Manual setting file was not found: {NormalizeSettingName(oldSettingName)}"); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Rename.
+L000159 |         } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(newPath) / 조건에 따라 분기합니다: if (System.IO.File.Exists(newPath))
+L000161 |         if (System.IO.File.Exists(newPath)) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Rename.
+L000162 |         { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException($"Manual setting file already exists: {NormalizeSettingName(newSettingName)}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingName(newSettingName) / 예외를 발생/전달합니다: throw new IOException($"Manual setting file already exists: {NormalizeSettingName(newSettingName)}");
+L000163 |             throw new IOException($"Manual setting file already exists: {NormalizeSettingName(newSettingName)}"); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 Rename.
+L000164 |         } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(_manualDirectory)
+L000166 |         Directory.CreateDirectory(_manualDirectory); ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(oldPath, newPath)
+L000167 |         System.IO.File.Move(oldPath, newPath); ⟦EOL⟧
+// 해설 L168: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000168 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 Rename.
+L000169 |     } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.JHMI.CManualScanFile.Delete(string, System.Threading.CancellationToken)
+L000171 |     public override Task Delete(string settingName, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Delete.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000173 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(settingName) / 지역 변수를 선언합니다: var path = GetSettingPath(settingName); / 변수의 초기값을 지정합니다: path = GetSettingPath(settingName)
+L000174 |         var path = GetSettingPath(settingName); ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (System.IO.File.Exists(path))
+L000175 |         if (System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 Delete.
+L000176 |         { ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(path)
+L000177 |             System.IO.File.Delete(path); ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 Delete.
+L000178 |         } ⟦EOL⟧
+L000179 |  ⟦EOL⟧
+// 해설 L180: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000180 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 Delete.
+L000181 |     } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.GetDefaultSettingName()
+L000183 |     private string GetDefaultSettingName() ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 GetDefaultSettingName.
+L000184 |     { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(GetSettingPath(DefaultSettingName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(DefaultSettingName) / 조건에 따라 분기합니다: if (System.IO.File.Exists(GetSettingPath(DefaultSettingName)))
+L000185 |         if (System.IO.File.Exists(GetSettingPath(DefaultSettingName))) ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 GetDefaultSettingName.
+L000186 |         { ⟦EOL⟧
+// 해설 L187: 호출자에게 값 또는 제어를 반환합니다: return DefaultSettingName;
+L000187 |             return DefaultSettingName; ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 GetDefaultSettingName.
+L000188 |         } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(string?)
+L000190 |         bool MatchesItem(string? name) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000191 |         { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(name);
+L000192 |             return !string.IsNullOrWhiteSpace(name); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000193 |         } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(_manualDirectory) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).FirstOrDefault(MatchesItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(_manualDirectory, "*.scan") / 조건에 따라 결과식을 선택합니다: Directory.Exists(_manualDirectory) ? Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).FirstOrDefault(Mat
+L000195 |         return Directory.Exists(_manualDirectory) ? Directory.EnumerateFiles(_manualDirectory, "*.scan").Select(Path.GetFileName).FirstOrDefault(MatchesItem) ?? DefaultSettingName : DefaultSettingName; ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 GetDefaultSettingName.
+L000196 |     } ⟦EOL⟧
+L000197 |  ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM> Drilling.File.JHMI.CManualScanFile.LoadFormItems()
+L000198 |     private IReadOnlyList<ST_MANUAL_SCAN_FORM> LoadFormItems() ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000199 |     { ⟦EOL⟧
+// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_MANUAL_SCAN_FORM BuildManual(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000200 |         global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM BuildManual(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row, int index) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 BuildManual.
+L000201 |         { ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME").Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 지역 변수를 선언합니다: var name = CCsvParser.Get(row, "NAME").Trim(); / 변수의 초기값을 지정합니다: name = CCsvParser.Get(row, "NAME").Trim()
+L000202 |             var name = CCsvParser.Get(row, "NAME").Trim(); ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Equals("LaserOnDelay", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: name.Equals("LaserOnDelay", StringComparison.OrdinalIgnoreCase) || name.Equals("LaserOffDelay", StringComparison.OrdinalIgnoreCase) ? "msec" : CCsvParser.Get(row, "UNIT") / 지역 변수를 선언합니다: var unit = name.Equals("LaserOnDelay", StringComparison.OrdinalIgnoreCase) || name.Equals("LaserOffDelay", StringComparison.OrdinalIgnoreCase) ? "msec" : CCsvParser.Get(row, "UNIT"); / 변수의 초기값을 지정합니다: unit = name.Equals("LaserOnDelay", Strin
+L000203 |             var unit = name.Equals("LaserOnDelay", StringComparison.OrdinalIgnoreCase) || ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Equals("LaserOffDelay", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "UNIT")
+L000204 |                 name.Equals("LaserOffDelay", StringComparison.OrdinalIgnoreCase) ? "msec" : CCsvParser.Get(row, "UNIT"); ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MANUAL_SCAN_FORM( name, GetOrDefault(CCsvParser.Get(row, "DISPLAY NAME"), name), ReadDataType(CCsvParser.Get(row, "DATA TYPE")), unit, ReadBool(CCsvParser.Get(row, "SHOW"), true), ReadBool(CCsvParser.Get(row, "USE… / 호출자에게 값 또는 제어를 반환합니다: return new ST_MANUAL_SCAN_FORM( name, GetOrDefault(CCsvParser.Get(row, "DISPLAY NAME"), name), ReadDataType(CCsvParser.Get(row, "DATA TYPE")), unit, ReadBool(CCsvParser.Get(row, "SHOW"), true), ReadBool(CCsvParser.Get(row, "USE"),
+L000205 |             return new ST_MANUAL_SCAN_FORM( ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_MANUAL_SCAN_FORM BuildManual(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000206 |                 name,  ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetOrDefault(CCsvParser.Get(row, "DISPLAY NAME"), name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DISPLAY NAME")
+L000207 |                 GetOrDefault(CCsvParser.Get(row, "DISPLAY NAME"), name),  ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDataType(CCsvParser.Get(row, "DATA TYPE")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DATA TYPE")
+L000208 |                 ReadDataType(CCsvParser.Get(row, "DATA TYPE")),  ⟦EOL⟧
+// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_MANUAL_SCAN_FORM BuildManual(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000209 |                 unit,  ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(CCsvParser.Get(row, "SHOW"), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "SHOW")
+L000210 |                 ReadBool(CCsvParser.Get(row, "SHOW"), true),  ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(CCsvParser.Get(row, "USE"), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "USE")
+L000211 |                 ReadBool(CCsvParser.Get(row, "USE"), true),  ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "VALUE")
+L000212 |                 CCsvParser.Get(row, "VALUE"),  ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleValue(CCsvParser.Get(row, "MIN"), 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "MIN")
+L000213 |                 ReadDoubleValue(CCsvParser.Get(row, "MIN"), 0.0),  ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleValue(CCsvParser.Get(row, "MAX"), 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "MAX")
+L000214 |                 ReadDoubleValue(CCsvParser.Get(row, "MAX"), 0.0),  ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DESCRIPTION")
+L000215 |                 CCsvParser.Get(row, "DESCRIPTION"),  ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(CCsvParser.Get(row, "ORDER"), index + 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ORDER")
+L000216 |                 ReadInt(CCsvParser.Get(row, "ORDER"), index + 1) ⟦EOL⟧
+// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_MANUAL_SCAN_FORM BuildManual(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000217 |             ); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 BuildManual.
+L000218 |         } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000220 |         bool ShouldIncludeItem(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000221 |         { ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(item.Name) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(item.Name);
+L000222 |             return !string.IsNullOrWhiteSpace(item.Name); ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000223 |         } ⟦EOL⟧
+L000224 |  ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetFormPath()).Select(BuildManual).Where(ShouldIncludeItem).ToList() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetFormPath()).Select(BuildManual).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetFormPath()).Select(BuildManual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetFormPath()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath() / 지역 변수를 선언합니다: var formItems = CCsvParser.Read(GetFormPath()).Select(BuildManual).Where(ShouldIncludeItem).ToList(); / 변수의 초기값을 지정합니다: form
+L000225 |         var formItems = CCsvParser.Read(GetFormPath()).Select(BuildManual).Where(ShouldIncludeItem).ToList(); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFallbackFormItems() / 지역 변수를 선언합니다: var defaults = CreateFallbackFormItems(); / 변수의 초기값을 지정합니다: defaults = CreateFallbackFormItems()
+L000226 |         var defaults = CreateFallbackFormItems(); ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Select(item => item.Name).ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Select(item => item.Name) / 지역 변수를 선언합니다: var names = formItems.Select(item => item.Name).ToHashSet(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: names = formItems.Select(item => item.Name).ToHashSet(StringComparer.OrdinalIgnoreCase)
+L000227 |         var names = formItems.Select(item => item.Name).ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L228: 컬렉션 요소를 순회합니다: foreach (var definition in defaults)
+L000228 |         foreach (var definition in defaults) ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000229 |         { ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: names.Add(definition.Name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Add(definition) / 조건에 따라 분기합니다: if (names.Add(definition.Name))
+L000230 |             if (names.Add(definition.Name)) formItems.Add(definition); ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000231 |         } ⟦EOL⟧
+// 해설 L232: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000232 |         // Older deployed forms have only the original scan rows. Make the five file-backed laser controls ⟦EOL⟧
+// 해설 L233: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000233 |         // mandatory and normalize their editor metadata without rewriting an operator's form file. ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Select(item => { if (!LaserActionParameterNames.Contains(item.Name, StringComparer.OrdinalIgnoreCase)) return item; var definition = defaults.Single(candidate => candidate.Name.Equals(item.Name, StringCompariso… / 호출자에게 값 또는 제어를 반환합니다: return formItems.Select(item => { if (!LaserActionParameterNames.Contains(item.Name, StringComparer.OrdinalIgnoreCase)) return item; var definition = defaults.Single(candidate => candidate.Name.Equals(item.Name, StringComparison.O
+L000234 |         return formItems.Select(item => ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000235 |         { ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: LaserActionParameterNames.Contains(item.Name, StringComparer.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!LaserActionParameterNames.Contains(item.Name, StringComparer.OrdinalIgnoreCase)) / 호출자에게 값 또는 제어를 반환합니다: return item;
+L000236 |             if (!LaserActionParameterNames.Contains(item.Name, StringComparer.OrdinalIgnoreCase)) return item; ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: defaults.Single(candidate => candidate.Name.Equals(item.Name, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: candidate.Name.Equals(item.Name, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var definition = defaults.Single(candidate => candidate.Name.Equals(item.Name, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: definition = defaults.Single(candidate => candidate.Name.Equals(item.Name, StringComparison.OrdinalIgnoreCase))
+L000237 |             var definition = defaults.Single(candidate => candidate.Name.Equals(item.Name, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L238: 호출자에게 값 또는 제어를 반환합니다: return item with { Name = definition.Name, DisplayName = definition.DisplayName, DataType = definition.DataType, Unit = definition.Unit, Show = true, Use = true, DefaultValue = GetOrDefault(item.DefaultValue, definition.DefaultVal
+L000238 |             return item with ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000239 |             { ⟦EOL⟧
+// 해설 L240: 값을 대상에 대입합니다: Name = definition.Name
+L000240 |                 Name = definition.Name, ⟦EOL⟧
+// 해설 L241: 값을 대상에 대입합니다: DisplayName = definition.DisplayName
+L000241 |                 DisplayName = definition.DisplayName, ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: DataType = definition.DataType
+L000242 |                 DataType = definition.DataType, ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: Unit = definition.Unit
+L000243 |                 Unit = definition.Unit, ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: Show = true
+L000244 |                 Show = true, ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: Use = true
+L000245 |                 Use = true, ⟦EOL⟧
+// 해설 L246: 값을 대상에 대입합니다: DefaultValue = GetOrDefault(item.DefaultValue, definition.DefaultValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetOrDefault(item.DefaultValue, definition.DefaultValue)
+L000246 |                 DefaultValue = GetOrDefault(item.DefaultValue, definition.DefaultValue), ⟦EOL⟧
+// 해설 L247: 값을 대상에 대입합니다: Min = definition.Min
+L000247 |                 Min = definition.Min, ⟦EOL⟧
+// 해설 L248: 값을 대상에 대입합니다: Max = definition.Max
+L000248 |                 Max = definition.Max, ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: DisplayOrder = definition.DisplayOrder
+L000249 |                 DisplayOrder = definition.DisplayOrder ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000250 |             }; ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM> Drilling.File.JHMI.CManualScanFile.LoadFormItems()
+L000251 |         }).ToArray(); ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 LoadFormItems.
+L000252 |     } ⟦EOL⟧
+L000253 |  ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CManualScanFile.ValidateSavedSetting(string, System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Threading.CancellationToken)
+L000254 |     private void ValidateSavedSetting(string settingName, IReadOnlyDictionary<string, string> values, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000255 |     { ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000256 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000257 |         bool ShouldIncludeItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000258 |         { ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME"));
+L000259 |             return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")); ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000260 |         } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · string SelectDictionaryKey(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000262 |         string SelectDictionaryKey(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 SelectDictionaryKey.
+L000263 |         { ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME");
+L000264 |             return CCsvParser.Get(row, "NAME"); ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 SelectDictionaryKey.
+L000265 |         } ⟦EOL⟧
+L000266 |  ⟦EOL⟧
+// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · string SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000267 |         string SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 SelectValue.
+L000268 |         { ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "VALUE") / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "VALUE");
+L000269 |             return CCsvParser.Get(row, "VALUE"); ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 SelectValue.
+L000270 |         } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictionaryKey, SelectValue, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetSettingPath(settingName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSettingPath(settingName) / 지역 변수를 선언합니다: var actualValues = CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictiona
+L000272 |         var actualValues = CCsvParser.Read(GetSettingPath(settingName)).Where(ShouldIncludeItem).ToDictionary(SelectDictionaryKey, SelectValue, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L273: 컬렉션 요소를 순회합니다: foreach (var(name, expectedValue)in values) { if (!actualValues.TryGetValue(name, out var actualValue)) { throw new InvalidDataException($"Manual setting CSV validation failed. Missing parameter: {name}"); } if (!actualValue.Equal
+L000273 |         foreach (var(name, expectedValue)in values) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000274 |         { ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: actualValues.TryGetValue(name, out var actualValue) / 조건에 따라 분기합니다: if (!actualValues.TryGetValue(name, out var actualValue))
+L000275 |             if (!actualValues.TryGetValue(name, out var actualValue)) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000276 |             { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting CSV validation failed. Missing parameter: {name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting CSV validation failed. Missing parameter: {name}");
+L000277 |                 throw new InvalidDataException($"Manual setting CSV validation failed. Missing parameter: {name}"); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000278 |             } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: actualValue.Equals(expectedValue, StringComparison.Ordinal) / 조건에 따라 분기합니다: if (!actualValue.Equals(expectedValue, StringComparison.Ordinal))
+L000280 |             if (!actualValue.Equals(expectedValue, StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000281 |             { ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting CSV validation failed. {name}: expected '{expectedValue}', actual '{actualValue}'") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting CSV validation failed. {name}: expected '{expectedValue}', actual '{actualValue}'");
+L000282 |                 throw new InvalidDataException($"Manual setting CSV validation failed. {name}: expected '{expectedValue}', actual '{actualValue}'"); ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000283 |             } ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000284 |         } ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 ValidateSavedSetting.
+L000285 |     } ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CManualScanFile.ValidateValues(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000287 |     private static void ValidateValues(IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, IReadOnlyDictionary<string, string> values) ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000288 |     { ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · bool IsUse(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000289 |         bool IsUse(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 IsUse.
+L000290 |         { ⟦EOL⟧
+// 해설 L291: 호출자에게 값 또는 제어를 반환합니다: return item.Use;
+L000291 |             return item.Use; ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 IsUse.
+L000292 |         } ⟦EOL⟧
+L000293 |  ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · string SelectName(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000294 |         string SelectName(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 SelectName.
+L000295 |         { ⟦EOL⟧
+// 해설 L296: 호출자에게 값 또는 제어를 반환합니다: return item.Name;
+L000296 |             return item.Name; ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 SelectName.
+L000297 |         } ⟦EOL⟧
+L000298 |  ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse).ToDictionary(SelectName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.Where(IsUse) / 지역 변수를 선언합니다: var formItemsByName = formItems.Where(IsUse).ToDictionary(SelectName, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: formItemsByName = formItems.Where(IsUse).ToDictionary(SelectName, StringComparer.OrdinalIgnoreCase)
+L000299 |         var formItemsByName = formItems.Where(IsUse).ToDictionary(SelectName, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L300: 컬렉션 요소를 순회합니다: foreach (var(name, value)in values) { if (!formItemsByName.TryGetValue(name, out var formItem)) { throw new InvalidDataException($"Manual setting save blocked. Unknown parameter: {name}"); } if (string.IsNullOrWhiteSpace(value)) {
+L000300 |         foreach (var(name, value)in values) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000301 |         { ⟦EOL⟧
+// 해설 L302: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItemsByName.TryGetValue(name, out var formItem) / 조건에 따라 분기합니다: if (!formItemsByName.TryGetValue(name, out var formItem))
+L000302 |             if (!formItemsByName.TryGetValue(name, out var formItem)) ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000303 |             { ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting save blocked. Unknown parameter: {name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting save blocked. Unknown parameter: {name}");
+L000304 |                 throw new InvalidDataException($"Manual setting save blocked. Unknown parameter: {name}"); ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000305 |             } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000307 |             if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000308 |             { ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting save blocked. {formItem.DisplayName} cannot be empty.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting save blocked. {formItem.DisplayName} cannot be empty.");
+L000309 |                 throw new InvalidDataException($"Manual setting save blocked. {formItem.DisplayName} cannot be empty."); ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000310 |             } ⟦EOL⟧
+L000311 |  ⟦EOL⟧
+// 해설 L312: 지역 변수를 선언합니다: var validationMessage = formItem.DataType switch { EN_RECIPE_DATA_TYPE.Int => ValidateIntParameter(formItem, value), EN_RECIPE_DATA_TYPE.Double => ValidateDoubleParameter(formItem, value), EN_RECIPE_DATA_TYPE.Bool => ValidateBoolP / 값별 결과식을 선택합니다: formItem.DataType switch { EN_RECIPE_DATA_TYPE.Int => ValidateIntParameter(formItem, value), EN_RECIPE_DATA_TYPE.Double => ValidateDoubleParameter(formItem, value), EN_RECIPE_DATA_TYPE.Bool => ValidateBoolParameter(formItem, value / 변수의 초기값을 지정합니다: validationMessage = formItem.
+L000312 |             var validationMessage = formItem.DataType switch ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000313 |             { ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateIntParameter(formItem, value)
+L000314 |                 EN_RECIPE_DATA_TYPE.Int => ValidateIntParameter(formItem, value), ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateDoubleParameter(formItem, value)
+L000315 |                 EN_RECIPE_DATA_TYPE.Double => ValidateDoubleParameter(formItem, value), ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBoolParameter(formItem, value)
+L000316 |                 EN_RECIPE_DATA_TYPE.Bool => ValidateBoolParameter(formItem, value), ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CManualScanFile.ValidateValues(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>, System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000317 |                 _ => "" ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000318 |             }; ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(validationMessage) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(validationMessage))
+L000319 |             if (!string.IsNullOrWhiteSpace(validationMessage)) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000320 |             { ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException(validationMessage) / 예외를 발생/전달합니다: throw new InvalidDataException(validationMessage);
+L000321 |                 throw new InvalidDataException(validationMessage); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000322 |             } ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000323 |         } ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 ValidateValues.
+L000324 |     } ⟦EOL⟧
+L000325 |  ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.ValidateIntParameter(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM, string)
+L000326 |     private static string ValidateIntParameter(ST_MANUAL_SCAN_FORM formItem, string value) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 ValidateIntParameter.
+L000327 |     { ⟦EOL⟧
+// 해설 L328: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+L000328 |         if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 ValidateIntParameter.
+L000329 |         { ⟦EOL⟧
+// 해설 L330: 호출자에게 값 또는 제어를 반환합니다: return $"Manual setting save blocked. {formItem.DisplayName} must be an integer.";
+L000330 |             return $"Manual setting save blocked. {formItem.DisplayName} must be an integer."; ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 ValidateIntParameter.
+L000331 |         } ⟦EOL⟧
+L000332 |  ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateNumericRange(formItem, parsed) / 호출자에게 값 또는 제어를 반환합니다: return ValidateNumericRange(formItem, parsed);
+L000333 |         return ValidateNumericRange(formItem, parsed); ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 ValidateIntParameter.
+L000334 |     } ⟦EOL⟧
+L000335 |  ⟦EOL⟧
+// 해설 L336: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.ValidateDoubleParameter(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM, string)
+L000336 |     private static string ValidateDoubleParameter(ST_MANUAL_SCAN_FORM formItem, string value) ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 ValidateDoubleParameter.
+L000337 |     { ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(parsed) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) || !double.IsFinite(parsed))
+L000338 |         if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) || !double.IsFinite(parsed)) ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 ValidateDoubleParameter.
+L000339 |         { ⟦EOL⟧
+// 해설 L340: 호출자에게 값 또는 제어를 반환합니다: return $"Manual setting save blocked. {formItem.DisplayName} must be numeric.";
+L000340 |             return $"Manual setting save blocked. {formItem.DisplayName} must be numeric."; ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 ValidateDoubleParameter.
+L000341 |         } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateNumericRange(formItem, parsed) / 호출자에게 값 또는 제어를 반환합니다: return ValidateNumericRange(formItem, parsed);
+L000343 |         return ValidateNumericRange(formItem, parsed); ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 ValidateDoubleParameter.
+L000344 |     } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.ValidateBoolParameter(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM, string)
+L000346 |     private static string ValidateBoolParameter(ST_MANUAL_SCAN_FORM formItem, string value) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 ValidateBoolParameter.
+L000347 |     { ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var normalized = value.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = value.Trim().ToUpperInvariant()
+L000348 |         var normalized = value.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L349: 조건에 따라 결과식을 선택합니다: normalized is "ON" or "OFF" or "TRUE" or "FALSE" or "1" or "0" or "YES" or "NO" ? "" : $"Manual setting save blocked. {formItem.DisplayName} must be ON/OFF or TRUE/FALSE." / 호출자에게 값 또는 제어를 반환합니다: return normalized is "ON" or "OFF" or "TRUE" or "FALSE" or "1" or "0" or "YES" or "NO" ? "" : $"Manual setting save blocked. {formItem.DisplayName} must be ON/OFF or TRUE/FALSE.";
+L000349 |         return normalized is "ON" or "OFF" or "TRUE" or "FALSE" or "1" or "0" or "YES" or "NO" ? "" : $"Manual setting save blocked. {formItem.DisplayName} must be ON/OFF or TRUE/FALSE."; ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 ValidateBoolParameter.
+L000350 |     } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.ValidateNumericRange(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM, double)
+L000352 |     private static string ValidateNumericRange(ST_MANUAL_SCAN_FORM formItem, double value) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 ValidateNumericRange.
+L000353 |     { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: formItem.Min.Equals(formItem.Max) / 조건에 따라 분기합니다: if (formItem.Min.Equals(formItem.Max))
+L000354 |         if (formItem.Min.Equals(formItem.Max)) ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 ValidateNumericRange.
+L000355 |         { ⟦EOL⟧
+// 해설 L356: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000356 |             return ""; ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 ValidateNumericRange.
+L000357 |         } ⟦EOL⟧
+L000358 |  ⟦EOL⟧
+// 해설 L359: 조건에 따라 결과식을 선택합니다: value < formItem.Min || value > formItem.Max ? $"Manual setting save blocked. {formItem.DisplayName} must be between {formItem.Min:0.###} and {formItem.Max:0.###} {formItem.Unit}." : "" / 호출자에게 값 또는 제어를 반환합니다: return value < formItem.Min || value > formItem.Max ? $"Manual setting save blocked. {formItem.DisplayName} must be between {formItem.Min:0.###} and {formItem.Max:0.###} {formItem.Unit}." : "";
+L000359 |         return value < formItem.Min || value > formItem.Max ? $"Manual setting save blocked. {formItem.DisplayName} must be between {formItem.Min:0.###} and {formItem.Max:0.###} {formItem.Unit}." : ""; ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 ValidateNumericRange.
+L000360 |     } ⟦EOL⟧
+L000361 |  ⟦EOL⟧
+// 해설 L362: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.JHMI.CManualScanFile.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>, strin
+L000362 |     private double ReadDouble(IReadOnlyDictionary<string, string> values, IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, string key, double defaultValue) ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000363 |     { ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultValue.ToString(CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); / 변수의 초기값을 지정합니다: value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture))
+L000364 |         var value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000365 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000366 |     } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CManualScanFile.ReadInt(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>, string, int
+L000368 |     private int ReadInt(IReadOnlyDictionary<string, string> values, IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, string key, int defaultValue) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 ReadInt.
+L000369 |     { ⟦EOL⟧
+// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultValue.ToString(CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); / 변수의 초기값을 지정합니다: value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture))
+L000370 |         var value = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000371 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 ReadInt.
+L000372 |     } ⟦EOL⟧
+L000373 |  ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.JHMI.CManualScanFile.ReadLaserActionDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_F
+L000374 |     private double ReadLaserActionDouble(IReadOnlyDictionary<string, string> values, IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, string key, double defaultValue) ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 ReadLaserActionDouble.
+L000375 |     { ⟦EOL⟧
+// 해설 L376: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultValue.ToString(CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); / 변수의 초기값을 지정합니다: text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture))
+L000376 |         var text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result) || result < 0)
+L000377 |         if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result) || result < 0) ⟦EOL⟧
+// 해설 L378: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting load blocked. {key} must be a finite number greater than or equal to 0 msec.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting load blocked. {key} must be a finite number greater than or equal to 0 msec.");
+L000378 |             throw new InvalidDataException($"Manual setting load blocked. {key} must be a finite number greater than or equal to 0 msec."); ⟦EOL⟧
+// 해설 L379: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000379 |         return result; ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 ReadLaserActionDouble.
+L000380 |     } ⟦EOL⟧
+L000381 |  ⟦EOL⟧
+// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CManualScanFile.ReadLaserActionCount(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>
+L000382 |     private int ReadLaserActionCount(IReadOnlyDictionary<string, string> values, IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, string key, int defaultValue) ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 ReadLaserActionCount.
+L000383 |     { ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultValue.ToString(CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); / 변수의 초기값을 지정합니다: text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture))
+L000384 |         var text = ReadString(values, formItems, key, defaultValue.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 분기합니다: if (!int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || result < 1)
+L000385 |         if (!int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) || result < 1) ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Manual setting load blocked. {key} must be an integer greater than or equal to 1.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Manual setting load blocked. {key} must be an integer greater than or equal to 1.");
+L000386 |             throw new InvalidDataException($"Manual setting load blocked. {key} must be an integer greater than or equal to 1."); ⟦EOL⟧
+// 해설 L387: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000387 |         return result; ⟦EOL⟧
+// 해설 L388: 구문 블록 경계입니다 · 소속 ReadLaserActionCount.
+L000388 |     } ⟦EOL⟧
+L000389 |  ⟦EOL⟧
+// 해설 L390: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.NormalizeLaserOnMode(string)
+L000390 |     private static string NormalizeLaserOnMode(string mode) ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 NormalizeLaserOnMode.
+L000391 |     { ⟦EOL⟧
+// 해설 L392: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var normalized = mode?.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = mode?.Trim().ToUpperInvariant()
+L000392 |         var normalized = mode?.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L393: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Manual setting LaserOnMode must be TIME or COUNT.") / 조건에 따라 결과식을 선택합니다: normalized is "TIME" or "COUNT" ? normalized : throw new InvalidDataException("Manual setting LaserOnMode must be TIME or COUNT.") / 호출자에게 값 또는 제어를 반환합니다: return normalized is "TIME" or "COUNT" ? normalized : throw new InvalidDataException("Manual setting LaserOnMode must be TIME or COUNT."); / 예외를 발생/전달합니다: throw new InvalidDataException("Manual setting LaserOnMode must be TIME or COUNT.")
+L000393 |         return normalized is "TIME" or "COUNT" ? normalized : throw new InvalidDataException("Manual setting LaserOnMode must be TIME or COUNT."); ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 NormalizeLaserOnMode.
+L000394 |     } ⟦EOL⟧
+L000395 |  ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.JHMI.CManualScanFile.ReadDoubleValue(string, double)
+L000396 |     private static double ReadDoubleValue(string value, double defaultValue) ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 ReadDoubleValue.
+L000397 |     { ⟦EOL⟧
+// 해설 L398: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000398 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 ReadDoubleValue.
+L000399 |     } ⟦EOL⟧
+L000400 |  ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.ReadString(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM>, strin
+L000401 |     private string ReadString(IReadOnlyDictionary<string, string> values, IReadOnlyList<ST_MANUAL_SCAN_FORM> formItems, string key, string defaultValue) ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 ReadString.
+L000402 |     { ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.Managers.ST_MANUAL_SCAN_FORM)
+L000403 |         bool MatchesItem(global::Drilling.Common.Managers.ST_MANUAL_SCAN_FORM item) ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000404 |         { ⟦EOL⟧
+// 해설 L405: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(key, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return item.Name.Equals(key, StringComparison.OrdinalIgnoreCase);
+L000405 |             return item.Name.Equals(key, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000406 |         } ⟦EOL⟧
+L000407 |  ⟦EOL⟧
+// 해설 L408: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: formItems.FirstOrDefault(MatchesItem) / 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value) ? value : formItems.FirstOrDefault(MatchesItem)?.DefaultValue ?? defaultValue / 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value) ? value : formItems.FirstOrDefault(MatchesItem)?.DefaultValue ?
+L000408 |         return values.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value) ? value : formItems.FirstOrDefault(MatchesItem)?.DefaultValue ?? defaultValue; ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 ReadString.
+L000409 |     } ⟦EOL⟧
+L000410 |  ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.GetFormPath()
+L000411 |     private string GetFormPath() ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 GetFormPath.
+L000412 |     { ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "JHMI_MANUAL_SCAN.csv") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(configRoot, "JHMI_MANUAL_SCAN.csv");
+L000413 |         return Path.Combine(configRoot, "JHMI_MANUAL_SCAN.csv"); ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 GetFormPath.
+L000414 |     } ⟦EOL⟧
+L000415 |  ⟦EOL⟧
+// 해설 L416: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.GetSettingPath(string)
+L000416 |     private string GetSettingPath(string settingName) ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 GetSettingPath.
+L000417 |     { ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_manualDirectory, NormalizeSettingName(settingName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingName(settingName) / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_manualDirectory, NormalizeSettingName(settingName));
+L000418 |         return Path.Combine(_manualDirectory, NormalizeSettingName(settingName)); ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 GetSettingPath.
+L000419 |     } ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.NormalizeSettingName(string)
+L000421 |     private static string NormalizeSettingName(string settingName) ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000422 |     { ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(settingName.Trim()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settingName.Trim() / 지역 변수를 선언합니다: var normalized = Path.GetFileName(settingName.Trim()); / 변수의 초기값을 지정합니다: normalized = Path.GetFileName(settingName.Trim())
+L000423 |         var normalized = Path.GetFileName(settingName.Trim()); ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(normalized))
+L000424 |         if (string.IsNullOrWhiteSpace(normalized)) ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000425 |         { ⟦EOL⟧
+// 해설 L426: 값을 대상에 대입합니다: normalized = DefaultSettingName
+L000426 |             normalized = DefaultSettingName; ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000427 |         } ⟦EOL⟧
+L000428 |  ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.EndsWith(".scan", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!normalized.EndsWith(".scan", StringComparison.OrdinalIgnoreCase))
+L000429 |         if (!normalized.EndsWith(".scan", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000430 |         { ⟦EOL⟧
+// 해설 L431: 값을 대상에 대입합니다: normalized = $"{normalized}.scan"
+L000431 |             normalized = $"{normalized}.scan"; ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000432 |         } ⟦EOL⟧
+L000433 |  ⟦EOL⟧
+// 해설 L434: 호출자에게 값 또는 제어를 반환합니다: return normalized;
+L000434 |         return normalized; ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 NormalizeSettingName.
+L000435 |     } ⟦EOL⟧
+L000436 |  ⟦EOL⟧
+// 해설 L437: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.File.JHMI.CManualScanFile.ReadDataType(string)
+L000437 |     private static EN_RECIPE_DATA_TYPE ReadDataType(string value) ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 ReadDataType.
+L000438 |     { ⟦EOL⟧
+// 해설 L439: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "INT" => EN_RECIPE_DATA_TYPE.Int, "DOUBLE" => EN_RECIPE_DATA_TYPE.Double, "BOOL" => EN_RECIPE_DATA_TYPE.Bool, _ => EN_RECIPE_DATA_TYPE.String }; / 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "INT" => EN_RECIPE_DATA_TYPE.Int, "DOUBLE" => EN_RECIPE_DATA_TYPE.Double, "BOOL" => EN_RECIPE_DATA_TYPE.Bool, _ => EN_RECIPE_DATA_TYPE.String }
+L000439 |         return value.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 ReadDataType.
+L000440 |         { ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.File.JHMI.CManualScanFile.ReadDataType(string)
+L000441 |             "INT" => EN_RECIPE_DATA_TYPE.Int, ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.File.JHMI.CManualScanFile.ReadDataType(string)
+L000442 |             "DOUBLE" => EN_RECIPE_DATA_TYPE.Double, ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.File.JHMI.CManualScanFile.ReadDataType(string)
+L000443 |             "BOOL" => EN_RECIPE_DATA_TYPE.Bool, ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.File.JHMI.CManualScanFile.ReadDataType(string)
+L000444 |             _ => EN_RECIPE_DATA_TYPE.String ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 ReadDataType.
+L000445 |         }; ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 ReadDataType.
+L000446 |     } ⟦EOL⟧
+L000447 |  ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.JHMI.CManualScanFile.ReadBool(string, bool)
+L000448 |     private static bool ReadBool(string value, bool defaultValue) ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 ReadBool.
+L000449 |     { ⟦EOL⟧
+// 해설 L450: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000450 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L451: 구문 블록 경계입니다 · 소속 ReadBool.
+L000451 |         { ⟦EOL⟧
+// 해설 L452: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000452 |             return defaultValue; ⟦EOL⟧
+// 해설 L453: 구문 블록 경계입니다 · 소속 ReadBool.
+L000453 |         } ⟦EOL⟧
+L000454 |  ⟦EOL⟧
+// 해설 L455: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("1", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("TRUE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("USE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals("ON", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return value.Equals("1", StringComparison.OrdinalIgnoreCase) || value.Equals("TRUE", StringComparison.OrdinalIgnoreCase) || value.Equals("USE", StringComparison.OrdinalIgnoreCase)
+L000455 |         return value.Equals("1", StringComparison.OrdinalIgnoreCase) || value.Equals("TRUE", StringComparison.OrdinalIgnoreCase) || value.Equals("USE", StringComparison.OrdinalIgnoreCase) || value.Equals("ON", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L456: 구문 블록 경계입니다 · 소속 ReadBool.
+L000456 |     } ⟦EOL⟧
+L000457 |  ⟦EOL⟧
+// 해설 L458: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CManualScanFile.ReadInt(string, int)
+L000458 |     private static int ReadInt(string value, int defaultValue) ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 ReadInt.
+L000459 |     { ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000460 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L461: 구문 블록 경계입니다 · 소속 ReadInt.
+L000461 |     } ⟦EOL⟧
+L000462 |  ⟦EOL⟧
+// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CManualScanFile.GetOrDefault(string, string)
+L000463 |     private static string GetOrDefault(string value, string defaultValue) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 GetOrDefault.
+L000464 |     { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value;
+L000465 |         return string.IsNullOrWhiteSpace(value) ? defaultValue : value; ⟦EOL⟧
+// 해설 L466: 구문 블록 경계입니다 · 소속 GetOrDefault.
+L000466 |     } ⟦EOL⟧
+L000467 |  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM> Drilling.File.JHMI.CManualScanFile.CreateFallbackFormItems()
+L000468 |     private static IReadOnlyList<ST_MANUAL_SCAN_FORM> CreateFallbackFormItems() ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다 · 소속 CreateFallbackFormItems.
+L000469 |     { ⟦EOL⟧
+// 해설 L470: 호출자에게 값 또는 제어를 반환합니다: return [ new("ShapeName", "Shape Type", EN_RECIPE_DATA_TYPE.String, "", true, true, "Circle", 0.0, 0.0, "Manual shape name", 1), new("ShapeSize", "Shape Size", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.350", 0.001, 100.0, "
+L000470 |         return ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM> Drilling.File.JHMI.CManualScanFile.CreateFallbackFormItems()
+L000471 |         [ ⟦EOL⟧
+L000472 |  ⟦EOL⟧
+// 해설 L473: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ShapeName", "Shape Type", EN_RECIPE_DATA_TYPE.String, "", true, true, "Circle", 0.0, 0.0, "Manual shape name", 1)
+L000473 |             new("ShapeName", "Shape Type", EN_RECIPE_DATA_TYPE.String, "", true, true, "Circle", 0.0, 0.0, "Manual shape name", 1), ⟦EOL⟧
+L000474 |  ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ShapeSize", "Shape Size", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.350", 0.001, 100.0, "Manual shape size", 2)
+L000475 |             new("ShapeSize", "Shape Size", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.350", 0.001, 100.0, "Manual shape size", 2), ⟦EOL⟧
+L000476 |  ⟦EOL⟧
+// 해설 L477: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Direction", "Direction", EN_RECIPE_DATA_TYPE.String, "", true, true, "CW", 0.0, 0.0, "Manual shape direction", 3)
+L000477 |             new("Direction", "Direction", EN_RECIPE_DATA_TYPE.String, "", true, true, "CW", 0.0, 0.0, "Manual shape direction", 3), ⟦EOL⟧
+L000478 |  ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OffsetX", "Offset X", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.000", -100.0, 100.0, "Manual shape center offset X", 4)
+L000479 |             new("OffsetX", "Offset X", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.000", -100.0, 100.0, "Manual shape center offset X", 4), ⟦EOL⟧
+L000480 |  ⟦EOL⟧
+// 해설 L481: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OffsetY", "Offset Y", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.000", -100.0, 100.0, "Manual shape center offset Y", 5)
+L000481 |             new("OffsetY", "Offset Y", EN_RECIPE_DATA_TYPE.Double, "mm", true, true, "0.000", -100.0, 100.0, "Manual shape center offset Y", 5), ⟦EOL⟧
+L000482 |  ⟦EOL⟧
+// 해설 L483: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GridRowLines", "Grid Row Count", EN_RECIPE_DATA_TYPE.Int, "ea", true, true, "5", 2.0, 200.0, "Manual grid row line count", 6)
+L000483 |             new("GridRowLines", "Grid Row Count", EN_RECIPE_DATA_TYPE.Int, "ea", true, true, "5", 2.0, 200.0, "Manual grid row line count", 6), ⟦EOL⟧
+L000484 |  ⟦EOL⟧
+// 해설 L485: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GridColLines", "Grid Col Count", EN_RECIPE_DATA_TYPE.Int, "ea", true, true, "5", 2.0, 200.0, "Manual grid column line count", 7)
+L000485 |             new("GridColLines", "Grid Col Count", EN_RECIPE_DATA_TYPE.Int, "ea", true, true, "5", 2.0, 200.0, "Manual grid column line count", 7), ⟦EOL⟧
+L000486 |  ⟦EOL⟧
+// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LaserPower", "Laser Power", EN_RECIPE_DATA_TYPE.Double, "W", true, true, "1.00", 0.0, 100.0, "Manual laser power", 10)
+L000487 |             new("LaserPower", "Laser Power", EN_RECIPE_DATA_TYPE.Double, "W", true, true, "1.00", 0.0, 100.0, "Manual laser power", 10), ⟦EOL⟧
+L000488 |  ⟦EOL⟧
+// 해설 L489: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("JumpSpeed", "Jump Speed", EN_RECIPE_DATA_TYPE.Double, "m/sec", true, true, "1.500", 0.001, 100.0, "Manual jump speed", 20)
+L000489 |             new("JumpSpeed", "Jump Speed", EN_RECIPE_DATA_TYPE.Double, "m/sec", true, true, "1.500", 0.001, 100.0, "Manual jump speed", 20), ⟦EOL⟧
+L000490 |  ⟦EOL⟧
+// 해설 L491: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("MarkSpeed", "Mark Speed", EN_RECIPE_DATA_TYPE.Double, "m/sec", true, true, "0.900", 0.001, 100.0, "Manual mark speed", 30)
+L000491 |             new("MarkSpeed", "Mark Speed", EN_RECIPE_DATA_TYPE.Double, "m/sec", true, true, "0.900", 0.001, 100.0, "Manual mark speed", 30), ⟦EOL⟧
+L000492 |  ⟦EOL⟧
+// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LaserFrequency", "Laser Frequency", EN_RECIPE_DATA_TYPE.Double, "kHz", true, true, "20.0", 0.001, 1000.0, "Manual laser frequency", 40)
+L000493 |             new("LaserFrequency", "Laser Frequency", EN_RECIPE_DATA_TYPE.Double, "kHz", true, true, "20.0", 0.001, 1000.0, "Manual laser frequency", 40), ⟦EOL⟧
+L000494 |  ⟦EOL⟧
+// 해설 L495: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LaserOnDelay", "Laser On Delay", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "8", 0.0, 10000.0, "Manual shape pre-mark delay in msec", 50)
+L000495 |             new("LaserOnDelay", "Laser On Delay", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "8", 0.0, 10000.0, "Manual shape pre-mark delay in msec", 50), ⟦EOL⟧
+L000496 |  ⟦EOL⟧
+// 해설 L497: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LaserOffDelay", "Laser Off Delay", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "12", 0.0, 10000.0, "Manual shape post-mark delay in msec", 60)
+L000497 |             new("LaserOffDelay", "Laser Off Delay", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "12", 0.0, 10000.0, "Manual shape post-mark delay in msec", 60), ⟦EOL⟧
+L000498 |  ⟦EOL⟧
+// 해설 L499: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LaserOnMode", "LaserAction_Mode", EN_RECIPE_DATA_TYPE.String, "", true, true, "TIME", 0.0, 0.0, "Laser on mode: TIME or COUNT", 70)
+L000499 |             new("LaserOnMode", "LaserAction_Mode", EN_RECIPE_DATA_TYPE.String, "", true, true, "TIME", 0.0, 0.0, "Laser on mode: TIME or COUNT", 70), ⟦EOL⟧
+L000500 |  ⟦EOL⟧
+// 해설 L501: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Time", "LaserAction_On Time", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "1000", 0.0, double.MaxValue, "Laser on duration in msec", 80)
+L000501 |             new("Time", "LaserAction_On Time", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "1000", 0.0, double.MaxValue, "Laser on duration in msec", 80), ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Count", "LaserAction_Shot Count", EN_RECIPE_DATA_TYPE.Int, "count", true, true, "1", 1.0, int.MaxValue, "Laser on shot count", 90)
+L000503 |             new("Count", "LaserAction_Shot Count", EN_RECIPE_DATA_TYPE.Int, "count", true, true, "1", 1.0, int.MaxValue, "Laser on shot count", 90), ⟦EOL⟧
+L000504 |  ⟦EOL⟧
+// 해설 L505: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("RepeatCount", "LaserAction_Repeat Count", EN_RECIPE_DATA_TYPE.Int, "count", true, true, "1", 1.0, int.MaxValue, "Laser on repeat count", 100)
+L000505 |             new("RepeatCount", "LaserAction_Repeat Count", EN_RECIPE_DATA_TYPE.Int, "count", true, true, "1", 1.0, int.MaxValue, "Laser on repeat count", 100), ⟦EOL⟧
+L000506 |  ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("RepeatDelayTime", "LaserAction_Repeat Delay Time", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "0", 0.0, double.MaxValue, "Delay between laser on repetitions in msec", 110)
+L000507 |             new("RepeatDelayTime", "LaserAction_Repeat Delay Time", EN_RECIPE_DATA_TYPE.Double, "msec", true, true, "0", 0.0, double.MaxValue, "Delay between laser on repetitions in msec", 110) ⟦EOL⟧
+L000508 |  ⟦EOL⟧
+// 해설 L509: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_MANUAL_SCAN_FORM> Drilling.File.JHMI.CManualScanFile.CreateFallbackFormItems()
+L000509 |         ]; ⟦EOL⟧
+// 해설 L510: 구문 블록 경계입니다 · 소속 CreateFallbackFormItems.
+L000510 |     } ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다.
+L000511 | } ⟦EOL⟧

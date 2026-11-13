@@ -1,0 +1,947 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/CButtonCommand.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/CButtonCommand.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs">Git 원본</a></p><h1>Drilling.UI/Menu/CButtonCommand.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>0670811aea72aaf0eec286af14a298c5308ded85f4c7677e4953c85f46ecc856</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>8,209 bytes / 231 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/f0ad7528e2ef858b7d69.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CButtonCommand</td><td>ClassDeclaration</td><td>9–32</td><td>CButtonCommand: ICommand</td></tr>
+<tr><td>CButtonCommandBehavior</td><td>ClassDeclaration</td><td>34–230</td><td>CButtonCommandBehavior</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>NoOp</td><td>PropertyDeclaration</td><td>L11–11</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.CButtonCommand.NoOp</td></tr>
+<tr><td>get_NoOp</td><td>GetAccessorDeclaration</td><td>L11–11</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.CButtonCommand.NoOp.get</td></tr>
+<tr><td>CanExecuteChanged</td><td>EventFieldDeclaration</td><td>L13–13</td><td>System.EventHandler? Drilling.UI.Menu.CButtonCommand.CanExecuteChanged</td></tr>
+<tr><td>CanExecute</td><td>MethodDeclaration</td><td>L14–17</td><td>bool Drilling.UI.Menu.CButtonCommand.CanExecute(object?)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L19–22</td><td>void Drilling.UI.Menu.CButtonCommand.Execute(object?)</td></tr>
+<tr><td>NotifyCanExecuteChanged</td><td>MethodDeclaration</td><td>L24–27</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>DoNothing</td><td>MethodDeclaration</td><td>L29–31</td><td>void Drilling.UI.Menu.CButtonCommand.DoNothing(object?)</td></tr>
+<tr><td>RegisteredTargets</td><td>FieldDeclaration</td><td>L36–36</td><td>System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt; Drilling.UI.Menu.CButtonCommandBehavior.RegisteredTargets</td></tr>
+<tr><td>CommandParameterDescriptor</td><td>FieldDeclaration</td><td>L37–37</td><td>DependencyPropertyDescriptor Drilling.UI.Menu.CButtonCommandBehavior.CommandParameterDescriptor</td></tr>
+<tr><td>CommandProperty</td><td>FieldDeclaration</td><td>L38–38</td><td>DependencyProperty Drilling.UI.Menu.CButtonCommandBehavior.CommandProperty</td></tr>
+<tr><td>GetCommand</td><td>MethodDeclaration</td><td>L39–42</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Menu.CButtonCommandBehavior.GetCommand(DependencyObject)</td></tr>
+<tr><td>SetCommand</td><td>MethodDeclaration</td><td>L44–47</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.SetCommand(DependencyObject, Drilling.UI.Menu.CButtonCommand?)</td></tr>
+<tr><td>OnCommandChanged</td><td>MethodDeclaration</td><td>L49–73</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.OnCommandChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>Element_Loaded</td><td>MethodDeclaration</td><td>L75–88</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_Loaded(object, RoutedEventArgs)</td></tr>
+<tr><td>Element_Unloaded</td><td>MethodDeclaration</td><td>L90–96</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_Unloaded(object, RoutedEventArgs)</td></tr>
+<tr><td>AttachElement</td><td>MethodDeclaration</td><td>L98–113</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.AttachElement(UIElement, Drilling.UI.Menu.CButtonCommand)</td></tr>
+<tr><td>DetachElement</td><td>MethodDeclaration</td><td>L115–131</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.DetachElement(UIElement, Drilling.UI.Menu.CButtonCommand?)</td></tr>
+<tr><td>RegisterTarget</td><td>MethodDeclaration</td><td>L133–143</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.RegisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)</td></tr>
+<tr><td>UnregisterTarget</td><td>MethodDeclaration</td><td>L145–158</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UnregisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)</td></tr>
+<tr><td>Element_MouseLeftButtonDown</td><td>MethodDeclaration</td><td>L160–180</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_MouseLeftButtonDown(object, RoutedEventArgs)</td></tr>
+<tr><td>Button_Click</td><td>MethodDeclaration</td><td>L182–195</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Button_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>Command_CanExecuteChanged</td><td>MethodDeclaration</td><td>L197–208</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Command_CanExecuteChanged(object?, System.EventArgs)</td></tr>
+<tr><td>ButtonCommandParameterChanged</td><td>MethodDeclaration</td><td>L210–222</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.ButtonCommandParameterChanged(object?, System.EventArgs)</td></tr>
+<tr><td>UpdateTargetState</td><td>MethodDeclaration</td><td>L224–229</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UpdateTargetState(UIElement, Drilling.UI.Menu.CButtonCommand)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L11">PropertyDeclaration <code>NoOp</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L11-L11">Drilling.UI/Menu/CButtonCommand.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.CButtonCommand.NoOp</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>11</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action&lt;object?&gt;, System.Predicate&lt;object?&gt;?) · Drilling.UI/Menu/CButtonCommand.cs:9</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(DoNothing)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">GetAccessorDeclaration <code>get_NoOp</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L11-L11">Drilling.UI/Menu/CButtonCommand.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.CButtonCommand.NoOp.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">EventFieldDeclaration <code>CanExecuteChanged</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L13-L13">Drilling.UI/Menu/CButtonCommand.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.EventHandler? Drilling.UI.Menu.CButtonCommand.CanExecuteChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.EventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">MethodDeclaration <code>CanExecute</code> · L14–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L14-L17">Drilling.UI/Menu/CButtonCommand.cs:14–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.CButtonCommand.CanExecute(object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L176-L176">Drilling.UI/Menu/CButtonCommand.cs:176–176</a></td><td>command.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4856-L4856">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4856–4856</a></td><td>BaseActionCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6149-L6149">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6149–6149</a></td><td>ActionCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7673-L7673">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7673–7673</a></td><td>OffsetActionCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L195-L195">Drilling.UI/Menu/Menus/CMenuManual.cs:195–195</a></td><td>selectHeadCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L196-L196">Drilling.UI/Menu/Menus/CMenuManual.cs:196–196</a></td><td>selectHeadCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6233-L6233">Drilling.UI/Menu/Menus/CMenuManual.cs:6233–6233</a></td><td>_selectFocusedHeadCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6235-L6235">Drilling.UI/Menu/Menus/CMenuManual.cs:6235–6235</a></td><td>_selectFocusedHeadCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6251-L6251">Drilling.UI/Menu/Menus/CMenuManual.cs:6251–6251</a></td><td>_selectFocusedHeadCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2020-L2020">Drilling.UI/Menu/Menus/CMenuReview.cs:2020–2020</a></td><td>OpenCorrectionReviewCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2023-L2023">Drilling.UI/Menu/Menus/CMenuReview.cs:2023–2023</a></td><td>OpenCorrectionReviewCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2031-L2031">Drilling.UI/Menu/Menus/CMenuReview.cs:2031–2031</a></td><td>StartCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2061-L2061">Drilling.UI/Menu/Menus/CMenuReview.cs:2061–2061</a></td><td>StopCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2615-L2615">Drilling.UI/Menu/Menus/CMenuReview.cs:2615–2615</a></td><td>OneShotActionCommand.CanExecute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L16-L16">Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:16–16</a></td><td>panel.SelectCorrectionShotCommand.CanExecute</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Predicate&lt;object?&gt;.Invoke(object?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(parameter)</td></tr>
+<tr><td>16</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return canExecute?.Invoke(parameter) ?? true;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">MethodDeclaration <code>Execute</code> · L19–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L19-L22">Drilling.UI/Menu/CButtonCommand.cs:19–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommand.Execute(object?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2178-L2178">Drilling.UI/CRootView.cs:2178–2178</a></td><td>correctionMenu.SelectTabCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L178-L178">Drilling.UI/Menu/CButtonCommand.cs:178–178</a></td><td>command.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3907-L3907">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3907–3907</a></td><td>Rough.BackToGlassCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6244-L6244">Drilling.UI/Menu/Menus/CMenuManual.cs:6244–6244</a></td><td>_selectFocusedHeadCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6261-L6261">Drilling.UI/Menu/Menus/CMenuManual.cs:6261–6261</a></td><td>_selectFocusedHeadCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6263-L6263">Drilling.UI/Menu/Menus/CMenuManual.cs:6263–6263</a></td><td>_selectFocusedHeadCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L144-L144">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:144–144</a></td><td>monitor.PicoJogStopCommand.Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L17-L17">Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:17–17</a></td><td>panel.SelectCorrectionShotCommand.Execute</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>execute</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;object?&gt;.Invoke(object?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: execute(parameter)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L24">MethodDeclaration <code>NotifyCanExecuteChanged</code> · L24–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L24-L27">Drilling.UI/Menu/CButtonCommand.cs:24–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L326-L326">Drilling.UI/CRootView.cs:326–326</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L327-L327">Drilling.UI/CRootView.cs:327–327</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L328-L328">Drilling.UI/CRootView.cs:328–328</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L631-L631">Drilling.UI/CRootView.cs:631–631</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L731-L731">Drilling.UI/CRootView.cs:731–731</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L732-L732">Drilling.UI/CRootView.cs:732–732</a></td><td>ToggleOperationModeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1707-L1707">Drilling.UI/CRootView.cs:1707–1707</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1857-L1857">Drilling.UI/CRootView.cs:1857–1857</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1858-L1858">Drilling.UI/CRootView.cs:1858–1858</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1859-L1859">Drilling.UI/CRootView.cs:1859–1859</a></td><td>ToggleOperationModeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1936-L1936">Drilling.UI/CRootView.cs:1936–1936</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2732-L2732">Drilling.UI/CRootView.cs:2732–2732</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263</a></td><td>axis.AbsoluteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263</a></td><td>axis.RelativeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L264-L264">Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:264–264</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L380-L380">Drilling.UI/Menu/Menus/CMenuAlarm.cs:380–380</a></td><td>SearchCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L381-L381">Drilling.UI/Menu/Menus/CMenuAlarm.cs:381–381</a></td><td>Last24HoursCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L427-L427">Drilling.UI/Menu/Menus/CMenuAlarm.cs:427–427</a></td><td>SearchCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L428-L428">Drilling.UI/Menu/Menus/CMenuAlarm.cs:428–428</a></td><td>Last24HoursCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L950-L950">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:950–950</a></td><td>LoadDataCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L951-L951">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:951–951</a></td><td>OffsetApplyCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L952-L952">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:952–952</a></td><td>OffsetRollbackCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L953-L953">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:953–953</a></td><td>OffsetInitCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L954-L954">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:954–954</a></td><td>OffsetViewCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L713-L713">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:713–713</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L714-L714">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:714–714</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L715-L715">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:715–715</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L716-L716">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:716–716</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L717-L717">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:717–717</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L718-L718">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:718–718</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L719-L719">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:719–719</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L720-L720">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:720–720</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L721-L721">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:721–721</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L722-L722">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:722–722</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L723-L723">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:723–723</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L88-L88">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:88–88</a></td><td>RefreshCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1429-L1429">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1429–1429</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1484-L1484">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1484–1484</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1669-L1669">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1669–1669</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1718-L1718">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1718–1718</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2648-L2648">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2648–2648</a></td><td>AlignDistortion.BaseActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2898-L2898">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2898–2898</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2980-L2980">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2980–2980</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3013-L3013">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3013–3013</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3091-L3091">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3091–3091</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3290-L3290">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3290–3290</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3871-L3871">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3871–3871</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3997-L3997">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3997–3997</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4026-L4026">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4026–4026</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4086-L4086">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4086–4086</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4116-L4116">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4116–4116</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4182-L4182">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4182–4182</a></td><td>ExecuteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4324-L4324">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4324–4324</a></td><td>ActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4392-L4392">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4392–4392</a></td><td>ActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4455-L4455">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4455–4455</a></td><td>ActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4495-L4495">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4495–4495</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4495-L4495">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4495–4495</a></td><td>ActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4532-L4532">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4532–4532</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4859-L4859">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4859–4859</a></td><td>BaseActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4867-L4867">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4867–4867</a></td><td>BaseActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4999-L4999">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4999–4999</a></td><td>BaseActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5141-L5141">Drilling.UI/Menu/Menus/CMenuCorrection.cs:5141–5141</a></td><td>BaseActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6425-L6425">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6425–6425</a></td><td>SelectLineCountCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6426-L6426">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6426–6426</a></td><td>SelectMethodCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6427-L6427">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6427–6427</a></td><td>ActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7293-L7293">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7293–7293</a></td><td>owner.OffsetActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7708-L7708">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7708–7708</a></td><td>SelectCellCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7709-L7709">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7709–7709</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7710-L7710">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7710–7710</a></td><td>SelectScopeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7711-L7711">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7711–7711</a></td><td>SelectCorrectionShotCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7712-L7712">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7712–7712</a></td><td>OffsetActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7817-L7817">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7817–7817</a></td><td>OffsetActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7822-L7822">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7822–7822</a></td><td>OffsetActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7995-L7995">Drilling.UI/Menu/Menus/CMenuCorrection.cs:7995–7995</a></td><td>OffsetActionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2928-L2928">Drilling.UI/Menu/Menus/CMenuMain.cs:2928–2928</a></td><td>command.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L197-L197">Drilling.UI/Menu/Menus/CMenuManual.cs:197–197</a></td><td>SelectManualHeadsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1005-L1005">Drilling.UI/Menu/Menus/CMenuManual.cs:1005–1005</a></td><td>VisionProtocolSendCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1786-L1786">Drilling.UI/Menu/Menus/CMenuManual.cs:1786–1786</a></td><td>ScannerAxisClearFaultCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1824-L1824">Drilling.UI/Menu/Menus/CMenuManual.cs:1824–1824</a></td><td>ScannerAxisClearFaultCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1855-L1855">Drilling.UI/Menu/Menus/CMenuManual.cs:1855–1855</a></td><td>OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1863-L1863">Drilling.UI/Menu/Menus/CMenuManual.cs:1863–1863</a></td><td>OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1869-L1869">Drilling.UI/Menu/Menus/CMenuManual.cs:1869–1869</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3352-L3352">Drilling.UI/Menu/Menus/CMenuManual.cs:3352–3352</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3353-L3353">Drilling.UI/Menu/Menus/CMenuManual.cs:3353–3353</a></td><td>SelectManualHeadsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3393-L3393">Drilling.UI/Menu/Menus/CMenuManual.cs:3393–3393</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3394-L3394">Drilling.UI/Menu/Menus/CMenuManual.cs:3394–3394</a></td><td>SelectManualHeadsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4986-L4986">Drilling.UI/Menu/Menus/CMenuManual.cs:4986–4986</a></td><td>PreviousSettingPageCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4987-L4987">Drilling.UI/Menu/Menus/CMenuManual.cs:4987–4987</a></td><td>NextSettingPageCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6322-L6322">Drilling.UI/Menu/Menus/CMenuManual.cs:6322–6322</a></td><td>SelectHeadCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6323-L6323">Drilling.UI/Menu/Menus/CMenuManual.cs:6323–6323</a></td><td>SelectManualHeadsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6535-L6535">Drilling.UI/Menu/Menus/CMenuManual.cs:6535–6535</a></td><td>VisionProtocolAddMarkCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6536-L6536">Drilling.UI/Menu/Menus/CMenuManual.cs:6536–6536</a></td><td>VisionProtocolRemoveMarkCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6910-L6910">Drilling.UI/Menu/Menus/CMenuManual.cs:6910–6910</a></td><td>RequestCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7010-L7010">Drilling.UI/Menu/Menus/CMenuManual.cs:7010–7010</a></td><td>RequestCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7011-L7011">Drilling.UI/Menu/Menus/CMenuManual.cs:7011–7011</a></td><td>CancelRequestCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7238-L7238">Drilling.UI/Menu/Menus/CMenuManual.cs:7238–7238</a></td><td>RunCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7239-L7239">Drilling.UI/Menu/Menus/CMenuManual.cs:7239–7239</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7409-L7409">Drilling.UI/Menu/Menus/CMenuManual.cs:7409–7409</a></td><td>MoveCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7410-L7410">Drilling.UI/Menu/Menus/CMenuManual.cs:7410–7410</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7967-L7967">Drilling.UI/Menu/Menus/CMenuManual.cs:7967–7967</a></td><td>ReadDioCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7968-L7968">Drilling.UI/Menu/Menus/CMenuManual.cs:7968–7968</a></td><td>DioOnCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7969-L7969">Drilling.UI/Menu/Menus/CMenuManual.cs:7969–7969</a></td><td>DioOffCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8026-L8026">Drilling.UI/Menu/Menus/CMenuManual.cs:8026–8026</a></td><td>RefreshCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8037-L8037">Drilling.UI/Menu/Menus/CMenuManual.cs:8037–8037</a></td><td>RefreshCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8088-L8088">Drilling.UI/Menu/Menus/CMenuManual.cs:8088–8088</a></td><td>RefreshCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8106-L8106">Drilling.UI/Menu/Menus/CMenuManual.cs:8106–8106</a></td><td>RefreshCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8207-L8207">Drilling.UI/Menu/Menus/CMenuManual.cs:8207–8207</a></td><td>SetCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8730-L8730">Drilling.UI/Menu/Menus/CMenuManual.cs:8730–8730</a></td><td>CenterCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8731-L8731">Drilling.UI/Menu/Menus/CMenuManual.cs:8731–8731</a></td><td>RecipeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8781-L8781">Drilling.UI/Menu/Menus/CMenuManual.cs:8781–8781</a></td><td>AbsoluteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8782-L8782">Drilling.UI/Menu/Menus/CMenuManual.cs:8782–8782</a></td><td>RelativeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L315-L315">Drilling.UI/Menu/Menus/CMenuRecipe.cs:315–315</a></td><td>NavigateShotGroupCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L600-L600">Drilling.UI/Menu/Menus/CMenuRecipe.cs:600–600</a></td><td>PreviousCellCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L601-L601">Drilling.UI/Menu/Menus/CMenuRecipe.cs:601–601</a></td><td>NextCellCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L723-L723">Drilling.UI/Menu/Menus/CMenuRecipe.cs:723–723</a></td><td>PreviousRecipePageCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L724-L724">Drilling.UI/Menu/Menus/CMenuRecipe.cs:724–724</a></td><td>NextRecipePageCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L820-L820">Drilling.UI/Menu/Menus/CMenuRecipe.cs:820–820</a></td><td>PreviousCellCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L821-L821">Drilling.UI/Menu/Menus/CMenuRecipe.cs:821–821</a></td><td>NextCellCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1291-L1291">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1291–1291</a></td><td>SelectCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1292-L1292">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1292–1292</a></td><td>SaveCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1293-L1293">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1293–1293</a></td><td>ModifyCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1294-L1294">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1294–1294</a></td><td>DeleteCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4671-L4671">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4671–4671</a></td><td>command.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L402-L402">Drilling.UI/Menu/Menus/CMenuReview.cs:402–402</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L413-L413">Drilling.UI/Menu/Menus/CMenuReview.cs:413–413</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L865-L865">Drilling.UI/Menu/Menus/CMenuReview.cs:865–865</a></td><td>TogglePointCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L866-L866">Drilling.UI/Menu/Menus/CMenuReview.cs:866–866</a></td><td>SetSampleShotSelectionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2160-L2160">Drilling.UI/Menu/Menus/CMenuReview.cs:2160–2160</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2161-L2161">Drilling.UI/Menu/Menus/CMenuReview.cs:2161–2161</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2162-L2162">Drilling.UI/Menu/Menus/CMenuReview.cs:2162–2162</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2163-L2163">Drilling.UI/Menu/Menus/CMenuReview.cs:2163–2163</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2164-L2164">Drilling.UI/Menu/Menus/CMenuReview.cs:2164–2164</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2165-L2165">Drilling.UI/Menu/Menus/CMenuReview.cs:2165–2165</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2166-L2166">Drilling.UI/Menu/Menus/CMenuReview.cs:2166–2166</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2167-L2167">Drilling.UI/Menu/Menus/CMenuReview.cs:2167–2167</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2168-L2168">Drilling.UI/Menu/Menus/CMenuReview.cs:2168–2168</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2169-L2169">Drilling.UI/Menu/Menus/CMenuReview.cs:2169–2169</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2550-L2550">Drilling.UI/Menu/Menus/CMenuReview.cs:2550–2550</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3122-L3122">Drilling.UI/Menu/Menus/CMenuReview.cs:3122–3122</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3123-L3123">Drilling.UI/Menu/Menus/CMenuReview.cs:3123–3123</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3124-L3124">Drilling.UI/Menu/Menus/CMenuReview.cs:3124–3124</a></td><td>StopCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3125-L3125">Drilling.UI/Menu/Menus/CMenuReview.cs:3125–3125</a></td><td>RetryCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3126-L3126">Drilling.UI/Menu/Menus/CMenuReview.cs:3126–3126</a></td><td>SelectTabCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3127-L3127">Drilling.UI/Menu/Menus/CMenuReview.cs:3127–3127</a></td><td>SelectModeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3128-L3128">Drilling.UI/Menu/Menus/CMenuReview.cs:3128–3128</a></td><td>OpenCorrectionReviewCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3129-L3129">Drilling.UI/Menu/Menus/CMenuReview.cs:3129–3129</a></td><td>SelectRunBeamCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3130-L3130">Drilling.UI/Menu/Menus/CMenuReview.cs:3130–3130</a></td><td>SelectAllInspectionBeamsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3131-L3131">Drilling.UI/Menu/Menus/CMenuReview.cs:3131–3131</a></td><td>ClearInspectionBeamsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3132-L3132">Drilling.UI/Menu/Menus/CMenuReview.cs:3132–3132</a></td><td>ShowSelectedInspectionShotsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3133-L3133">Drilling.UI/Menu/Menus/CMenuReview.cs:3133–3133</a></td><td>ClearInspectionShotsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3134-L3134">Drilling.UI/Menu/Menus/CMenuReview.cs:3134–3134</a></td><td>ShowShotBeamPositionsCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3135-L3135">Drilling.UI/Menu/Menus/CMenuReview.cs:3135–3135</a></td><td>SelectRunShotCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3136-L3136">Drilling.UI/Menu/Menus/CMenuReview.cs:3136–3136</a></td><td>PreviousInspectionShotCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3137-L3137">Drilling.UI/Menu/Menus/CMenuReview.cs:3137–3137</a></td><td>NextInspectionShotCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3141-L3141">Drilling.UI/Menu/Menus/CMenuReview.cs:3141–3141</a></td><td>SelectInspectionMethodCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3143-L3143">Drilling.UI/Menu/Menus/CMenuReview.cs:3143–3143</a></td><td>TogglePointCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3144-L3144">Drilling.UI/Menu/Menus/CMenuReview.cs:3144–3144</a></td><td>SetSampleShotSelectionCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3265-L3265">Drilling.UI/Menu/Menus/CMenuReview.cs:3265–3265</a></td><td>StartCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L622-L622">Drilling.UI/Menu/Menus/CMenuSetting.cs:622–622</a></td><td>ConnectInterfaceCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuSetting.cs#L623-L623">Drilling.UI/Menu/Menus/CMenuSetting.cs:623–623</a></td><td>DisconnectInterfaceCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L101-L101">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:101–101</a></td><td>RefreshTreeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L110-L110">Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:110–110</a></td><td>RefreshTreeCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L39-L39">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:39–39</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:53–53</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L82-L82">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:82–82</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L65-L65">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:65–65</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L86-L86">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:86–86</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L155-L155">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:155–155</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L202-L202">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:202–202</a></td><td>.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L365-L365">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:365–365</a></td><td>SetOnCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L366-L366">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:366–366</a></td><td>SetOffCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L367-L367">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:367–367</a></td><td>SetValueCommand.NotifyCanExecuteChanged</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>26</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.EventHandler.Invoke(object?, System.EventArgs)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, EventArgs.Empty)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">MethodDeclaration <code>DoNothing</code> · L29–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L29-L31">Drilling.UI/Menu/CButtonCommand.cs:29–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommand.DoNothing(object?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommand</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">FieldDeclaration <code>RegisteredTargets</code> · L36–36</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L36-L36">Drilling.UI/Menu/CButtonCommand.cs:36–36</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt; Drilling.UI.Menu.CButtonCommandBehavior.RegisteredTargets</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>36</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: RegisteredTargets = []</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">FieldDeclaration <code>CommandParameterDescriptor</code> · L37–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L37-L37">Drilling.UI/Menu/CButtonCommand.cs:37–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyPropertyDescriptor Drilling.UI.Menu.CButtonCommandBehavior.CommandParameterDescriptor</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyPropertyDescriptor</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>37</td><td>DependencyPropertyDescriptor.FromProperty</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyPropertyDescriptor.FromProperty(ButtonBase.CommandParameterProperty, typeof(ButtonBase))</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: CommandParameterDescriptor = DependencyPropertyDescriptor.FromProperty(ButtonBase.CommandParameterProperty, typeof(ButtonBase))</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">FieldDeclaration <code>CommandProperty</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L38-L38">Drilling.UI/Menu/CButtonCommand.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>DependencyProperty Drilling.UI.Menu.CButtonCommandBehavior.CommandProperty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>DependencyProperty</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>38</td><td>DependencyProperty.RegisterAttached</td><td>unresolved</td><td>None</td></tr>
+<tr><td>38</td><td>new PropertyMetadata</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached(&quot;Command&quot;, typeof(CButtonCommand), typeof(CButtonCommandBehavior), new PropertyMetadata(null, OnCommandChanged))</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(null, OnCommandChanged)</td></tr>
+<tr><td>38</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: CommandProperty = DependencyProperty.RegisterAttached(&quot;Command&quot;, typeof(CButtonCommand), typeof(CButtonCommandBehavior), new PropertyMetadata(null, OnCommandChanged))</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">MethodDeclaration <code>GetCommand</code> · L39–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L39-L42">Drilling.UI/Menu/CButtonCommand.cs:39–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand? Drilling.UI.Menu.CButtonCommandBehavior.GetCommand(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.CButtonCommand?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>41</td><td>target.GetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(CommandProperty)</td></tr>
+<tr><td>41</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (CButtonCommand? )target.GetValue(CommandProperty);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L44">MethodDeclaration <code>SetCommand</code> · L44–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L44-L47">Drilling.UI/Menu/CButtonCommand.cs:44–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.SetCommand(DependencyObject, Drilling.UI.Menu.CButtonCommand?)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>Drilling.UI.Menu.CButtonCommand?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>46</td><td>target.SetValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(CommandProperty, value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">MethodDeclaration <code>OnCommandChanged</code> · L49–73</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L49-L73">Drilling.UI/Menu/CButtonCommand.cs:49–73</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.OnCommandChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>target</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>DependencyPropertyChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>58</td><td>DetachElement</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>66</td><td>AttachElement</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>67</td><td>UpdateTargetState</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>71</td><td>element.SetCurrentValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>51</td><td>if</td><td>조건에 따라 분기합니다: if (target is not FrameworkElement element)</td></tr>
+<tr><td>53</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>56</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded -= Element_Loaded</td></tr>
+<tr><td>57</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded -= Element_Unloaded</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DetachElement(element, eventArgs.OldValue as CButtonCommand)</td></tr>
+<tr><td>59</td><td>if</td><td>조건에 따라 분기합니다: if (eventArgs.NewValue is CButtonCommand newCommand)</td></tr>
+<tr><td>61</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded += Element_Loaded</td></tr>
+<tr><td>62</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded += Element_Unloaded</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AttachElement(element, newCommand)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, newCommand)</td></tr>
+<tr><td>69</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.IsEnabledProperty, true)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OnCommandChanged&quot;]
+ N0[&quot;L51 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L59 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L69 else&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L75">MethodDeclaration <code>Element_Loaded</code> · L75–88</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L75-L88">Drilling.UI/Menu/CButtonCommand.cs:75–88</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_Loaded(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>82</td><td>GetCommand</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>85</td><td>AttachElement</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>86</td><td>UpdateTargetState</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>77</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not FrameworkElement element)</td></tr>
+<tr><td>79</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element)</td></tr>
+<tr><td>82</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = GetCommand(element);</td></tr>
+<tr><td>82</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = GetCommand(element)</td></tr>
+<tr><td>83</td><td>if</td><td>조건에 따라 분기합니다: if (command is not null)</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AttachElement(element, command)</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, command)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Element_Loaded&quot;]
+ N0[&quot;L77 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L83 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L90">MethodDeclaration <code>Element_Unloaded</code> · L90–96</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L90-L96">Drilling.UI/Menu/CButtonCommand.cs:90–96</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_Unloaded(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>94</td><td>DetachElement</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>94</td><td>GetCommand</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>92</td><td>if</td><td>조건에 따라 분기합니다: if (sender is FrameworkElement element)</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DetachElement(element, GetCommand(element))</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Element_Unloaded&quot;]
+ N0[&quot;L92 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L98">MethodDeclaration <code>AttachElement</code> · L98–113</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L98-L113">Drilling.UI/Menu/CButtonCommand.cs:98–113</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.AttachElement(UIElement, Drilling.UI.Menu.CButtonCommand)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>element</td><td>UIElement</td><td>None</td><td>False /</td></tr>
+<tr><td>command</td><td>Drilling.UI.Menu.CButtonCommand</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>100</td><td>RegisterTarget</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.RegisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement) · Drilling.UI/Menu/CButtonCommand.cs:133</td></tr>
+<tr><td>105</td><td>CommandParameterDescriptor.RemoveValueChanged</td><td>unresolved</td><td>None</td></tr>
+<tr><td>106</td><td>CommandParameterDescriptor.AddValueChanged</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterTarget(command, element)</td></tr>
+<tr><td>101</td><td>if</td><td>조건에 따라 분기합니다: if (element is ButtonBase button)</td></tr>
+<tr><td>103</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click -= Button_Click</td></tr>
+<tr><td>104</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click += Button_Click</td></tr>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.AddValueChanged(button, ButtonCommandParameterChanged)</td></tr>
+<tr><td>108</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>110</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown -= Element_MouseLeftButtonDown</td></tr>
+<tr><td>111</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown += Element_MouseLeftButtonDown</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;AttachElement&quot;]
+ N0[&quot;L101 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L108 else&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L115">MethodDeclaration <code>DetachElement</code> · L115–131</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L115-L131">Drilling.UI/Menu/CButtonCommand.cs:115–131</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.DetachElement(UIElement, Drilling.UI.Menu.CButtonCommand?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>element</td><td>UIElement</td><td>None</td><td>False /</td></tr>
+<tr><td>command</td><td>Drilling.UI.Menu.CButtonCommand?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>120</td><td>CommandParameterDescriptor.RemoveValueChanged</td><td>unresolved</td><td>None</td></tr>
+<tr><td>129</td><td>UnregisterTarget</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UnregisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement) · Drilling.UI/Menu/CButtonCommand.cs:145</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (element is ButtonBase button)</td></tr>
+<tr><td>119</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click -= Button_Click</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged)</td></tr>
+<tr><td>122</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>124</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown -= Element_MouseLeftButtonDown</td></tr>
+<tr><td>127</td><td>if</td><td>조건에 따라 분기합니다: if (command is not null)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UnregisterTarget(command, element)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DetachElement&quot;]
+ N0[&quot;L117 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L122 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L127 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L133">MethodDeclaration <code>RegisterTarget</code> · L133–143</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L133-L143">Drilling.UI/Menu/CButtonCommand.cs:133–143</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.RegisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.UI.Menu.CButtonCommand</td><td>None</td><td>False /</td></tr>
+<tr><td>element</td><td>UIElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L100-L100">Drilling.UI/Menu/CButtonCommand.cs:100–100</a></td><td>RegisterTarget</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>135</td><td>RegisteredTargets.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;.TryGetValue(Drilling.UI.Menu.CButtonCommand, out System.Collections.Generic.HashSet&lt;UIElement&gt;)</td></tr>
+<tr><td>138</td><td>RegisteredTargets.Add</td><td>resolved</td><td>void System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;.Add(Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;)</td></tr>
+<tr><td>142</td><td>targets.Add</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;UIElement&gt;.Add(UIElement)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets)</td></tr>
+<tr><td>135</td><td>if</td><td>조건에 따라 분기합니다: if (!RegisteredTargets.TryGetValue(command, out var targets))</td></tr>
+<tr><td>137</td><td>assignment</td><td>값을 대상에 대입합니다: targets = []</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.Add(command, targets)</td></tr>
+<tr><td>139</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: command.CanExecuteChanged += Command_CanExecuteChanged</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(element)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RegisterTarget&quot;]
+ N0[&quot;L135 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L145">MethodDeclaration <code>UnregisterTarget</code> · L145–158</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L145-L158">Drilling.UI/Menu/CButtonCommand.cs:145–158</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UnregisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.UI.Menu.CButtonCommand</td><td>None</td><td>False /</td></tr>
+<tr><td>element</td><td>UIElement</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L129-L129">Drilling.UI/Menu/CButtonCommand.cs:129–129</a></td><td>UnregisterTarget</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>147</td><td>RegisteredTargets.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;.TryGetValue(Drilling.UI.Menu.CButtonCommand, out System.Collections.Generic.HashSet&lt;UIElement&gt;)</td></tr>
+<tr><td>152</td><td>targets.Remove</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;UIElement&gt;.Remove(UIElement)</td></tr>
+<tr><td>156</td><td>RegisteredTargets.Remove</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;.Remove(Drilling.UI.Menu.CButtonCommand)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets)</td></tr>
+<tr><td>147</td><td>if</td><td>조건에 따라 분기합니다: if (!RegisteredTargets.TryGetValue(command, out var targets))</td></tr>
+<tr><td>149</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Remove(element)</td></tr>
+<tr><td>153</td><td>if</td><td>조건에 따라 분기합니다: if (targets.Count == 0)</td></tr>
+<tr><td>155</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: command.CanExecuteChanged -= Command_CanExecuteChanged</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.Remove(command)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;UnregisterTarget&quot;]
+ N0[&quot;L147 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L153 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">MethodDeclaration <code>Element_MouseLeftButtonDown</code> · L160–180</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L160-L180">Drilling.UI/Menu/CButtonCommand.cs:160–180</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Element_MouseLeftButtonDown(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>167</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>167</td><td>VisualTreeHelper.GetParent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>175</td><td>GetCommand</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>176</td><td>command.CanExecute</td><td>resolved</td><td>bool Drilling.UI.Menu.CButtonCommand.CanExecute(object?) · Drilling.UI/Menu/CButtonCommand.cs:14</td></tr>
+<tr><td>178</td><td>command.Execute</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.Execute(object?) · Drilling.UI/Menu/CButtonCommand.cs:19</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not UIElement element)</td></tr>
+<tr><td>164</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: source = VisualTreeHelper.GetParent(source)</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(source, element)</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source)</td></tr>
+<tr><td>167</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: source = eventArgs.OriginalSource as DependencyObject</td></tr>
+<tr><td>167</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var source = eventArgs.OriginalSource as DependencyObject; source is not null &amp;&amp; !ReferenceEquals(source, element); source = VisualTreeHelper.GetParent(source))</td></tr>
+<tr><td>169</td><td>if</td><td>조건에 따라 분기합니다: if (source is ButtonBase)</td></tr>
+<tr><td>171</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element)</td></tr>
+<tr><td>175</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = GetCommand(element);</td></tr>
+<tr><td>175</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = GetCommand(element)</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(null)</td></tr>
+<tr><td>176</td><td>if</td><td>조건에 따라 분기합니다: if (command is not null &amp;&amp; command.CanExecute(null))</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Execute(null)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Element_MouseLeftButtonDown&quot;]
+ N0[&quot;L162 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L167 for&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L169 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L176 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L182">MethodDeclaration <code>Button_Click</code> · L182–195</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L182-L195">Drilling.UI/Menu/CButtonCommand.cs:182–195</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Button_Click(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>189</td><td>GetCommand</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>191</td><td>command.CanExecute</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>193</td><td>command.Execute</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not ButtonBase button)</td></tr>
+<tr><td>186</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(button)</td></tr>
+<tr><td>189</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = GetCommand(button);</td></tr>
+<tr><td>189</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = GetCommand(button)</td></tr>
+<tr><td>190</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameter = button.CommandParameter;</td></tr>
+<tr><td>190</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameter = button.CommandParameter</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(parameter)</td></tr>
+<tr><td>191</td><td>if</td><td>조건에 따라 분기합니다: if (command is not null &amp;&amp; command.CanExecute(parameter))</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Execute(parameter)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Button_Click&quot;]
+ N0[&quot;L184 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L191 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L197">MethodDeclaration <code>Command_CanExecuteChanged</code> · L197–208</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L197-L208">Drilling.UI/Menu/CButtonCommand.cs:197–208</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.Command_CanExecuteChanged(object?, System.EventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object?</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>System.EventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>199</td><td>RegisteredTargets.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;Drilling.UI.Menu.CButtonCommand, System.Collections.Generic.HashSet&lt;UIElement&gt;&gt;.TryGetValue(Drilling.UI.Menu.CButtonCommand, out System.Collections.Generic.HashSet&lt;UIElement&gt;)</td></tr>
+<tr><td>206</td><td>UpdateTargetState</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UpdateTargetState(UIElement, Drilling.UI.Menu.CButtonCommand) · Drilling.UI/Menu/CButtonCommand.cs:224</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets)</td></tr>
+<tr><td>199</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not CButtonCommand command || !RegisteredTargets.TryGetValue(command, out var targets))</td></tr>
+<tr><td>201</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>204</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var element in targets)</td></tr>
+<tr><td>206</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, command)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Command_CanExecuteChanged&quot;]
+ N0[&quot;L199 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L204 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L210">MethodDeclaration <code>ButtonCommandParameterChanged</code> · L210–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L210-L222">Drilling.UI/Menu/CButtonCommand.cs:210–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.ButtonCommandParameterChanged(object?, System.EventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object?</td><td>None</td><td>False /</td></tr>
+<tr><td>eventArgs</td><td>System.EventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>217</td><td>GetCommand</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>220</td><td>UpdateTargetState</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>212</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not ButtonBase button)</td></tr>
+<tr><td>214</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(button)</td></tr>
+<tr><td>217</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = GetCommand(button);</td></tr>
+<tr><td>217</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = GetCommand(button)</td></tr>
+<tr><td>218</td><td>if</td><td>조건에 따라 분기합니다: if (command is not null)</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(button, command)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ButtonCommandParameterChanged&quot;]
+ N0[&quot;L212 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L218 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>UpdateTargetState</code> · L224–229</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L224-L229">Drilling.UI/Menu/CButtonCommand.cs:224–229</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.CButtonCommandBehavior.UpdateTargetState(UIElement, Drilling.UI.Menu.CButtonCommand)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.CButtonCommandBehavior</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>element</td><td>UIElement</td><td>None</td><td>False /</td></tr>
+<tr><td>command</td><td>Drilling.UI.Menu.CButtonCommand</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CButtonCommand.cs#L206-L206">Drilling.UI/Menu/CButtonCommand.cs:206–206</a></td><td>UpdateTargetState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>227</td><td>command.CanExecute</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>228</td><td>element.SetCurrentValue</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: element is ButtonBase button ? button.CommandParameter : null</td></tr>
+<tr><td>226</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameter = element is ButtonBase button ? button.CommandParameter : null;</td></tr>
+<tr><td>226</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameter = element is ButtonBase button ? button.CommandParameter : null</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(parameter)</td></tr>
+<tr><td>227</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canExecute = command.CanExecute(parameter);</td></tr>
+<tr><td>227</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canExecute = command.CanExecute(parameter)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.IsEnabledProperty, canExecute)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Menu/CButtonCommand.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

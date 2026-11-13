@@ -1,0 +1,849 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Managers/CRecipeManager.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Managers
+L000001 | namespace Drilling.Common.Managers ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000003 |     using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000004 |     using Drilling.Common.Recipe; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000005 |     using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 |     using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000007 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000008 |     using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000009 |     using Drilling.Common.Station; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CRecipeManager(CRecipeFileBase recipeFile)
+L000011 |     public sealed class CRecipeManager(CRecipeFileBase recipeFile) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _cacheLock = new()
+L000013 |         private readonly object _cacheLock = new(); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _recipeOperationGate = new(1, 1)
+L000014 |         private readonly SemaphoreSlim _recipeOperationGate = new(1, 1); ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_DEFINITION>? Drilling.Common.Managers.CRecipeManager._recipeCache
+L000015 |         private IReadOnlyList<ST_RECIPE_DEFINITION>? _recipeCache; ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _historyGate = new(1, 1)
+L000016 |         private readonly SemaphoreSlim _historyGate = new(1, 1); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_HISTORY>? Drilling.Common.Managers.CRecipeManager._historyCache
+L000017 |         private IReadOnlyList<ST_RECIPE_HISTORY>? _historyCache; ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(false, cancellationToken)
+L000018 |         public Task<IReadOnlyList<ST_RECIPE_HISTORY>> LoadHistory(CancellationToken cancellationToken = default) => LoadHistoryCore(false, cancellationToken); ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_HISTORY>> Drilling.Common.Managers.CRecipeManager.LoadHistoryCore(bool, System.Threading.CancellationToken
+L000019 |         private async Task<IReadOnlyList<ST_RECIPE_HISTORY>> LoadHistoryCore(bool refresh, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 비동기 완료를 기다립니다: await _historyGate.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyGate.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyGate.WaitAsync(cancellationToken)
+L000021 |             await _historyGate.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L22: 예외 처리 범위입니다: try
+L000022 |             try ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000023 |             { ⟦EOL⟧
+// 해설 L24: 조건에 따라 분기합니다: if (refresh || _historyCache is null)
+L000024 |                 if (refresh || _historyCache is null) ⟦EOL⟧
+// 해설 L25: 값을 대상에 대입합니다: _historyCache = (await recipeFile.LoadHistory(cancellationToken).ConfigureAwait(false)).ToArray() / 비동기 완료를 기다립니다: await recipeFile.LoadHistory(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: (await recipeFile.LoadHistory(cancellationToken).ConfigureAwait(false)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.LoadHistory(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.LoadHistory(cancellationToken)
+L000025 |                     _historyCache = (await recipeFile.LoadHistory(cancellationToken).ConfigureAwait(false)).ToArray(); ⟦EOL⟧
+// 해설 L26: 호출자에게 값 또는 제어를 반환합니다: return _historyCache;
+L000026 |                 return _historyCache; ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000027 |             } ⟦EOL⟧
+// 해설 L28: 종료 정리 구간입니다: finally
+L000028 |             finally ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000029 |             { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyGate.Release()
+L000030 |                 _historyGate.Release(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000031 |             } ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 LoadHistoryCore.
+L000032 |         } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.RecordSelection(string, string, System.Threading.CancellationToken)
+L000034 |         public async Task RecordSelection(string previousRecipeId, string recipeId, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 RecordSelection.
+L000035 |         { ⟦EOL⟧
+// 해설 L36: 비동기 완료를 기다립니다: await recipeFile.RecordSelection(previousRecipeId, recipeId, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.RecordSelection(previousRecipeId, recipeId, cancellationToken)
+L000036 |             await recipeFile.RecordSelection(previousRecipeId, recipeId, cancellationToken); ⟦EOL⟧
+// 해설 L37: 비동기 완료를 기다립니다: await LoadHistoryCore(true, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, cancellationToken)
+L000037 |             await LoadHistoryCore(true, cancellationToken); ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 RecordSelection.
+L000038 |         } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_DEFINITION>> Drilling.Common.Managers.CRecipeManager.LoadRecipes(System.Threading.CancellationToken)
+L000040 |         public async Task<IReadOnlyList<ST_RECIPE_DEFINITION>> LoadRecipes(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000042 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L43: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000043 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000044 |             { ⟦EOL⟧
+// 해설 L45: 조건에 따라 분기합니다: if (_recipeCache is not null)
+L000045 |                 if (_recipeCache is not null) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000046 |                 { ⟦EOL⟧
+// 해설 L47: 호출자에게 값 또는 제어를 반환합니다: return _recipeCache;
+L000047 |                     return _recipeCache; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000048 |                 } ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000049 |             } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 비동기 완료를 기다립니다: await _recipeOperationGate.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(cancellationToken)
+L000051 |             await _recipeOperationGate.WaitAsync(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L52: 예외 처리 범위입니다: try
+L000052 |             try ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000053 |             { ⟦EOL⟧
+// 해설 L54: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000054 |                 lock (_cacheLock) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000055 |                 { ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (_recipeCache is not null)
+L000056 |                     if (_recipeCache is not null) ⟦EOL⟧
+// 해설 L57: 호출자에게 값 또는 제어를 반환합니다: return _recipeCache;
+L000057 |                         return _recipeCache; ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000058 |                 } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 비동기 완료를 기다립니다: await recipeFile.LoadAll(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: (await recipeFile.LoadAll(cancellationToken).ConfigureAwait(false)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.LoadAll(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.LoadAll(cancellationToken) / 지역 변수를 선언합니다: var recipes = (await recipeFile.LoadAll(cancellationToken).ConfigureAwait(false)).ToArray(); / 변수의 초기값을 지정합니다: recipes = (await recipeFile.LoadAll(cancellationToken).ConfigureAwait
+L000060 |                 var recipes = (await recipeFile.LoadAll(cancellationToken).ConfigureAwait(false)).ToArray(); ⟦EOL⟧
+// 해설 L61: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000061 |                 lock (_cacheLock) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000062 |                 { ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: _recipeCache ??= recipes
+L000063 |                     _recipeCache ??= recipes; ⟦EOL⟧
+// 해설 L64: 호출자에게 값 또는 제어를 반환합니다: return _recipeCache;
+L000064 |                     return _recipeCache; ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000065 |                 } ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000066 |             } ⟦EOL⟧
+// 해설 L67: 종료 정리 구간입니다: finally
+L000067 |             finally ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000068 |             { ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.Release()
+L000069 |                 _recipeOperationGate.Release(); ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000070 |             } ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 LoadRecipes.
+L000071 |         } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 비동기 완료를 기다립니다: await WithRecipeOperation(() => SaveRecipeCore(recipe, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => SaveRecipeCore(recipe, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => SaveRecipeCore(recipe, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveRecipeCore(recipe, cancellationToken)
+L000073 |         public async Task SaveRecipe(ST_RECIPE_DEFINITION recipe, CancellationToken cancellationToken = default) => await WithRecipeOperation(() => SaveRecipeCore(recipe, cancellationToken), cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(async () => { var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); var before = expected.Parameters.ToDictionary(p => …
+L000074 |         public Task<ST_RECIPE_DEFINITION> SaveParametersIfUnchanged(ST_RECIPE_DEFINITION expected, IReadOnlyDictionary<string, string> changes, CancellationToken token = default) => WithRecipeOperation(async () => ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 SaveParametersIfUnchanged.
+L000075 |         { ⟦EOL⟧
+// 해설 L76: 비동기 완료를 기다립니다: await recipeFile.Find(expected.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("현재 레시피가 없습니다.") / 지역 변수를 선언합니다: var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("현재 레시피가 없습니다.") / 변수의 초기값을 지정
+L000076 |             var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000077 |             var before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000078 |             var now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L79: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000079 |             // Internal production count may change independently; never overwrite it. ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: before.Remove("CURRENT_PROCESS_COUNT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.Remove("CURRENT_PROCESS_COUNT")
+L000080 |             before.Remove("CURRENT_PROCESS_COUNT"); now.Remove("CURRENT_PROCESS_COUNT"); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.TryGetValue(p.Key, out var value) / 조건에 따라 분기합니다: if (before.Count != now.Count || before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value))
+L000081 |             if (before.Count != now.Count || before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value)) ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("측정 후 레시피가 변경되었습니다. 기준을 다시 설정해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("측정 후 레시피가 변경되었습니다. 기준을 다시 설정해 주세요.");
+L000082 |                 throw new InvalidOperationException("측정 후 레시피가 변경되었습니다. 기준을 다시 설정해 주세요."); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: changes.Keys.Any(key => !now.ContainsKey(key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.ContainsKey(key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("저장할 레시피 파라미터가 없습니다.") / 조건에 따라 분기합니다: if (changes.Keys.Any(key => !now.ContainsKey(key))) / 예외를 발생/전달합니다: throw new InvalidOperationException("저장할 레시피 파라미터가 없습니다.");
+L000083 |             if (changes.Keys.Any(key => !now.ContainsKey(key))) throw new InvalidOperationException("저장할 레시피 파라미터가 없습니다."); ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: Parameters = current.Parameters.Select(p => changes.TryGetValue(p.Key, out var value) ? p with { Value = value } : p).ToArray() / 값을 대상에 대입합니다: Value = value / 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Parameters.Select(p => changes.TryGetValue(p.Key, out var value) ? p with { Value = value } : p).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Parameters.Select(p => changes.TryGetValue(p.Key, out var value) ? p with { Value = value } : p) / 함수·델리게이트 또는 객체 생성자를 호출합니다: changes.TryGetValue(p.Key, out var value) / 조건에 따라 결과식을 선택합니다
+L000084 |             var updated = current with { Parameters = current.Parameters.Select(p => changes.TryGetValue(p.Key, out var value) ? p with { Value = value } : p).ToArray() }; ⟦EOL⟧
+// 해설 L85: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000085 |             // Once the file commit returns, finish readback/cache publication even if ⟦EOL⟧
+// 해설 L86: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000086 |             // the UI cancels. History must not disguise a committed Default as unsaved. ⟦EOL⟧
+// 해설 L87: 비동기 완료를 기다립니다: await recipeFile.Save(updated, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(updated, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(updated, token)
+L000087 |             await recipeFile.Save(updated, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L88: 비동기 완료를 기다립니다: await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, CancellationToken.None) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("레시피 저장 명령은 완료됐지만 저장값을 다시 읽을 수 없습니다.") / 지역 변수를 선언합니다: var saved = await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) ?? throw new IOException("레시피 저장 명령은 완료됐지만 저장값을 다시 읽을 수 없습니다.");
+L000088 |             var saved = await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) ?? throw new IOException("레시피 저장 명령은 완료됐지만 저장값을 다시 읽을 수 없습니다."); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(saved)
+L000089 |             UpdateCachedRecipe(saved); ⟦EOL⟧
+// 해설 L90: 비동기 완료를 기다립니다: await LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, CancellationToken.None) / 예외 처리 범위입니다: try
+L000090 |             try { await LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError("Recipe parameter history refresh failed after commit: " + error) / 지정 예외를 처리합니다: catch (Exception error)
+L000091 |             catch (Exception error) { System.Diagnostics.Trace.TraceError("Recipe parameter history refresh failed after commit: " + error); } ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return saved;
+L000092 |             return saved; ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_RECIPE_DEFINITION> Drilling.Common.Managers.CRecipeManager.SaveParametersIfUnchanged(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Gen
+L000093 |         }, token); ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(async () => { var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); var before = expected.Parameters.ToDictionary(p => …
+L000094 |         public Task<ST_RECIPE_DEFINITION> SaveAlignOffsetsIfUnchanged(ST_RECIPE_DEFINITION expected, IReadOnlyList<ST_ALIGN_SHOT_OFFSET> offsets, CancellationToken token = default) => WithRecipeOperation(async () => ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 SaveAlignOffsetsIfUnchanged.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 비동기 완료를 기다립니다: await recipeFile.Find(expected.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("현재 레시피가 없습니다.") / 지역 변수를 선언합니다: var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("현재 레시피가 없습니다.") / 변수의 초기값을 지정
+L000096 |             var current = await recipeFile.Find(expected.Id, token).ConfigureAwait(false) ?? throw new InvalidOperationException("현재 레시피가 없습니다."); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000097 |             var before = expected.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000098 |             var now = current.Parameters.ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: before.Remove("CURRENT_PROCESS_COUNT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.Remove("CURRENT_PROCESS_COUNT")
+L000099 |             before.Remove("CURRENT_PROCESS_COUNT"); now.Remove("CURRENT_PROCESS_COUNT"); ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.TryGetValue(p.Key, out var value) / 조건에 따라 분기합니다: if (before.Count != now.Count || before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value))
+L000100 |             if (before.Count != now.Count || before.Any(p => !now.TryGetValue(p.Key, out var value) || value != p.Value)) ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Distortion 측정 중 레시피가 변경되었습니다. 기존 보정값을 유지합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Distortion 측정 중 레시피가 변경되었습니다. 기존 보정값을 유지합니다.");
+L000101 |                 throw new InvalidOperationException("Distortion 측정 중 레시피가 변경되었습니다. 기존 보정값을 유지합니다."); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: CAlignShotOffsetData.Apply(current, offsets) / 지역 변수를 선언합니다: var updated = CAlignShotOffsetData.Apply(current, offsets); / 변수의 초기값을 지정합니다: updated = CAlignShotOffsetData.Apply(current, offsets)
+L000102 |             var updated = CAlignShotOffsetData.Apply(current, offsets); ⟦EOL⟧
+// 해설 L103: 비동기 완료를 기다립니다: await recipeFile.Save(updated, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(updated, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(updated, token)
+L000103 |             await recipeFile.Save(updated, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L104: 비동기 완료를 기다립니다: await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(expected.Id, CancellationToken.None) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Align Offset 저장 후 레시피를 다시 읽지 못했습니다.") / 지역 변수를 선언합니다: var saved = await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) ?? throw new IOException("Align Offset 저장 후 레시피를 다시 읽지 못했습니다.");
+L000104 |             var saved = await recipeFile.Find(expected.Id, CancellationToken.None).ConfigureAwait(false) ?? throw new IOException("Align Offset 저장 후 레시피를 다시 읽지 못했습니다."); ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(saved)
+L000105 |             UpdateCachedRecipe(saved); ⟦EOL⟧
+// 해설 L106: 비동기 완료를 기다립니다: await LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, CancellationToken.None) / 예외 처리 범위입니다: try
+L000106 |             try { await LoadHistoryCore(true, CancellationToken.None).ConfigureAwait(false); } ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError("Align Offset history refresh failed after commit: " + error) / 지정 예외를 처리합니다: catch (Exception error)
+L000107 |             catch (Exception error) { System.Diagnostics.Trace.TraceError("Align Offset history refresh failed after commit: " + error); } ⟦EOL⟧
+// 해설 L108: 호출자에게 값 또는 제어를 반환합니다: return saved;
+L000108 |             return saved; ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_RECIPE_DEFINITION> Drilling.Common.Managers.CRecipeManager.SaveAlignOffsetsIfUnchanged(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.G
+L000109 |         }, token); ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000111 |         // Merge only calibration angles into the latest Recipe under the existing operation gate. ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(async () => { if (angles.Count == 0 || angles.Any(pair => pair.Key is < 1 or > 8 || !double.IsFinite(pair.Value) || pair.Value is < 0 or > 360)) throw new ArgumentException("유효한 Head별 ATT 각도가 필요합니다.")…
+L000112 |         public Task SavePowerMeasureAngles(string recipeId, IReadOnlyDictionary<int, double> angles, CancellationToken token = default) => WithRecipeOperation(async () => ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 SavePowerMeasureAngles.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: angles.Any(pair => pair.Key is < 1 or > 8 || !double.IsFinite(pair.Value) || pair.Value is < 0 or > 360) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pair.Value) / 조건에 따라 분기합니다: if (angles.Count == 0 || angles.Any(pair => pair.Key is < 1 or > 8 || !double.IsFinite(pair.Value) || pair.Value is < 0 or > 360))
+L000114 |             if (angles.Count == 0 || angles.Any(pair => pair.Key is < 1 or > 8 || !double.IsFinite(pair.Value) || pair.Value is < 0 or > 360)) ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("유효한 Head별 ATT 각도가 필요합니다.") / 예외를 발생/전달합니다: throw new ArgumentException("유효한 Head별 ATT 각도가 필요합니다.");
+L000115 |                 throw new ArgumentException("유효한 Head별 ATT 각도가 필요합니다."); ⟦EOL⟧
+// 해설 L116: 비동기 완료를 기다립니다: await recipeFile.Find(recipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipeId, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipeId, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("측정 대상 Recipe가 없습니다.") / 지역 변수를 선언합니다: var recipe = await recipeFile.Find(recipeId, token).ConfigureAwait(false) ?? throw new InvalidOperationException("측정 대상 Recipe가 없습니다."); / 예외를 발생/전달합니다: throw new InvalidOperationException("측정 대상 Recipe가 없습니다.") / 변수의 초기
+L000116 |             var recipe = await recipeFile.Find(recipeId, token).ConfigureAwait(false) ?? throw new InvalidOperationException("측정 대상 Recipe가 없습니다."); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.ToList() / 지역 변수를 선언합니다: var values = recipe.Parameters.ToList(); / 변수의 초기값을 지정합니다: values = recipe.Parameters.ToList()
+L000117 |             var values = recipe.Parameters.ToList(); ⟦EOL⟧
+// 해설 L118: 컬렉션 요소를 순회합니다: foreach (var (head, angle) in angles) { var key = $"H{head:00}_ATTENUATOR_POSITION"; var index = values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)); if (index < 0) throw new InvalidOperationException($"Re
+L000118 |             foreach (var (head, angle) in angles) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 SavePowerMeasureAngles.
+L000119 |             { ⟦EOL⟧
+// 해설 L120: 지역 변수를 선언합니다: var key = $"H{head:00}_ATTENUATOR_POSITION"; / 변수의 초기값을 지정합니다: key = $"H{head:00}_ATTENUATOR_POSITION"
+L000120 |                 var key = $"H{head:00}_ATTENUATOR_POSITION"; ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: p.Key.Equals(key, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var index = values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: index = values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase))
+L000121 |                 var index = values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Recipe ATT 항목이 없습니다: {key}") / 조건에 따라 분기합니다: if (index < 0) / 예외를 발생/전달합니다: throw new InvalidOperationException($"Recipe ATT 항목이 없습니다: {key}");
+L000122 |                 if (index < 0) throw new InvalidOperationException($"Recipe ATT 항목이 없습니다: {key}"); ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: values[index] = values[index] with { Value = angle.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) } / 값을 대상에 대입합니다: Value = angle.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: angle.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture)
+L000123 |                 values[index] = values[index] with { Value = angle.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) }; ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 SavePowerMeasureAngles.
+L000124 |             } ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: Parameters = values / 비동기 완료를 기다립니다: await SaveRecipeCore(recipe with { Parameters = values }, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveRecipeCore(recipe with { Parameters = values }, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SaveRecipeCore(recipe with { Parameters = values }, token)
+L000125 |             await SaveRecipeCore(recipe with { Parameters = values }, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.SavePowerMeasureAngles(string, System.Collections.Generic.IReadOnlyDictionary<int, double>, System.Threading.CancellationToken)
+L000126 |         }, token); ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: store.ListCompanionFolders(sourceRecipeId, newRecipeId, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_RECIPE_COMPANION_FOLDER>>([]) / 조건에 따라 결과식을 선택합니다: recipeFile is IRecipeCopyStore store ? store.ListCompanionFolders(sourceRecipeId, newRecipeId, token) : Task.FromResult<IReadOnlyList<ST_RECIPE_COMPANION_FOLDER>>([])
+L000127 |         public Task<IReadOnlyList<ST_RECIPE_COMPANION_FOLDER>> ListCompanionFolders(string sourceRecipeId, string newRecipeId, CancellationToken token = default) => recipeFile is IRecipeCopyStore store ? store.ListCompanionFolders(sourceRecipeId, newRecipeId, token) : Task.FromResult<IReadOnlyList<ST_RECIPE_COMPANION_FOLDER>>([]); ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(async () => { if (recipeFile is IRecipeCopyStore store) await store.CreateCopy(recipe, sourceRecipeId, selectedFolders, token).ConfigureAwait(false); else { if (selectedFolders.Count != 0) throw new I…
+L000128 |         public Task CreateRecipeCopy(ST_RECIPE_DEFINITION recipe, string sourceRecipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default) => WithRecipeOperation(async () => ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 CreateRecipeCopy.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 조건에 따라 분기합니다: if (recipeFile is IRecipeCopyStore store)
+L000130 |             if (recipeFile is IRecipeCopyStore store) ⟦EOL⟧
+// 해설 L131: 비동기 완료를 기다립니다: await store.CreateCopy(recipe, sourceRecipeId, selectedFolders, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: store.CreateCopy(recipe, sourceRecipeId, selectedFolders, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: store.CreateCopy(recipe, sourceRecipeId, selectedFolders, token)
+L000131 |                 await store.CreateCopy(recipe, sourceRecipeId, selectedFolders, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L132: 앞 조건이 거짓인 경로입니다: else
+L000132 |             else ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 CreateRecipeCopy.
+L000133 |             { ⟦EOL⟧
+// 해설 L134: 조건에 따라 분기합니다: if (selectedFolders.Count != 0)
+L000134 |                 if (selectedFolders.Count != 0) ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이 레시피 저장소는 부가 폴더 복사를 지원하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 복사를 지원하지 않습니다.");
+L000135 |                     throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 복사를 지원하지 않습니다."); ⟦EOL⟧
+// 해설 L136: 비동기 완료를 기다립니다: await recipeFile.Find(recipe.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, token) / 조건에 따라 분기합니다: if (await recipeFile.Find(recipe.Id, token).ConfigureAwait(false)is not null)
+L000136 |                 if (await recipeFile.Find(recipe.Id, token).ConfigureAwait(false)is not null) ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException($"Recipe already exists: {recipe.Id}") / 예외를 발생/전달합니다: throw new IOException($"Recipe already exists: {recipe.Id}");
+L000137 |                     throw new IOException($"Recipe already exists: {recipe.Id}"); ⟦EOL⟧
+// 해설 L138: 비동기 완료를 기다립니다: await recipeFile.Save(recipe, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(recipe, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(recipe, token)
+L000138 |                 await recipeFile.Save(recipe, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 CreateRecipeCopy.
+L000139 |             } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 비동기 완료를 기다립니다: await recipeFile.Find(recipe.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, token) / 지역 변수를 선언합니다: var saved = await recipeFile.Find(recipe.Id, token).ConfigureAwait(false) ?? recipe; / 변수의 초기값을 지정합니다: saved = await recipeFile.Find(recipe.Id, token).ConfigureAwait(false) ?? recipe
+L000141 |             var saved = await recipeFile.Find(recipe.Id, token).ConfigureAwait(false) ?? recipe; ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(saved)
+L000142 |             UpdateCachedRecipe(saved); ⟦EOL⟧
+// 해설 L143: 비동기 완료를 기다립니다: await LoadHistoryCore(true, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, token)
+L000143 |             await LoadHistoryCore(true, token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.CreateRecipeCopy(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, System.Collections.Generic.IReadOnlyCollection<string>, System.Threadi
+L000144 |         }, token); ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.SaveRecipeCore(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Threading.CancellationToken)
+L000145 |         private async Task SaveRecipeCore(ST_RECIPE_DEFINITION recipe, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 SaveRecipeCore.
+L000146 |         { ⟦EOL⟧
+// 해설 L147: 지역 변수를 선언합니다: ST_RECIPE_DEFINITION? current;
+L000147 |             ST_RECIPE_DEFINITION? current; ⟦EOL⟧
+// 해설 L148: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000148 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: current = _recipeCache?.FirstOrDefault(item => item.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .FirstOrDefault(item => item.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase)
+L000149 |                 current = _recipeCache?.FirstOrDefault(item => item.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: current ??= await recipeFile.Find(recipe.Id, cancellationToken) / 비동기 완료를 기다립니다: await recipeFile.Find(recipe.Id, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, cancellationToken)
+L000150 |             current ??= await recipeFile.Find(recipe.Id, cancellationToken); ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: recipe = global::Drilling.Common.Recipe.CAlignShotOffsetData.RetainUneditedOffsets(recipe, current) / 함수·델리게이트 또는 객체 생성자를 호출합니다: global::Drilling.Common.Recipe.CAlignShotOffsetData.RetainUneditedOffsets(recipe, current)
+L000151 |             recipe = global::Drilling.Common.Recipe.CAlignShotOffsetData.RetainUneditedOffsets(recipe, current); ⟦EOL⟧
+// 해설 L152: 비동기 완료를 기다립니다: await recipeFile.Save(recipe, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Save(recipe, cancellationToken)
+L000152 |             await recipeFile.Save(recipe, cancellationToken); ⟦EOL⟧
+// 해설 L153: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000153 |             // The editor supplies History = []; retain the persisted, newly logged history instead. ⟦EOL⟧
+// 해설 L154: 비동기 완료를 기다립니다: await recipeFile.Find(recipe.Id, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipe.Id, cancellationToken) / 지역 변수를 선언합니다: var savedRecipe = await recipeFile.Find(recipe.Id, cancellationToken) ?? recipe; / 변수의 초기값을 지정합니다: savedRecipe = await recipeFile.Find(recipe.Id, cancellationToken) ?? recipe
+L000154 |             var savedRecipe = await recipeFile.Find(recipe.Id, cancellationToken) ?? recipe; ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(savedRecipe)
+L000155 |             UpdateCachedRecipe(savedRecipe); ⟦EOL⟧
+// 해설 L156: 비동기 완료를 기다립니다: await LoadHistoryCore(true, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, cancellationToken)
+L000156 |             await LoadHistoryCore(true, cancellationToken); ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 SaveRecipeCore.
+L000157 |         } ⟦EOL⟧
+L000158 |  ⟦EOL⟧
+// 해설 L159: 비동기 완료를 기다립니다: await WithRecipeOperation(() => RefreshRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => RefreshRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => RefreshRecipeCore(recipeId, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshRecipeCore(recipeId, cancellationToken)
+L000159 |         public async Task<ST_RECIPE_DEFINITION?> RefreshRecipe(string recipeId, CancellationToken cancellationToken = default) => await WithRecipeOperation(() => RefreshRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_RECIPE_DEFINITION?> Drilling.Common.Managers.CRecipeManager.RefreshRecipeCore(string, System.Threading.CancellationToken)
+L000160 |         private async Task<ST_RECIPE_DEFINITION?> RefreshRecipeCore(string recipeId, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 RefreshRecipeCore.
+L000161 |         { ⟦EOL⟧
+// 해설 L162: 비동기 완료를 기다립니다: await recipeFile.Find(recipeId, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(recipeId, cancellationToken) / 지역 변수를 선언합니다: var recipe = await recipeFile.Find(recipeId, cancellationToken); / 변수의 초기값을 지정합니다: recipe = await recipeFile.Find(recipeId, cancellationToken)
+L000162 |             var recipe = await recipeFile.Find(recipeId, cancellationToken); ⟦EOL⟧
+// 해설 L163: 조건에 따라 분기합니다: if (recipe is not null)
+L000163 |             if (recipe is not null) ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(recipe)
+L000164 |                 UpdateCachedRecipe(recipe); ⟦EOL⟧
+// 해설 L165: 앞 조건이 거짓인 경로입니다: else
+L000165 |             else ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteCachedRecipe(recipeId)
+L000166 |                 DeleteCachedRecipe(recipeId); ⟦EOL⟧
+// 해설 L167: 호출자에게 값 또는 제어를 반환합니다: return recipe;
+L000167 |             return recipe; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 RefreshRecipeCore.
+L000168 |         } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 비동기 완료를 기다립니다: await WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RenameRecipeCore(oldRecipeId, newRecipeId, cancellationToken)
+L000170 |         public async Task RenameRecipe(string oldRecipeId, string newRecipeId, CancellationToken cancellationToken = default) => await WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, cancellationToken), cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, token, selectedFolders), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RenameRecipeCore(oldRecipeId, newRecipeId, token, selectedFolders)
+L000171 |         public Task RenameRecipe(string oldRecipeId, string newRecipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default) => WithRecipeOperation(() => RenameRecipeCore(oldRecipeId, newRecipeId, token, selectedFolders), token); ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.RenameRecipeCore(string, string, System.Threading.CancellationToken, System.Collections.Generic.IReadOnlyCollection<string>?)
+L000172 |         private async Task RenameRecipeCore(string oldRecipeId, string newRecipeId, CancellationToken cancellationToken, IReadOnlyCollection<string>? folders = null) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 RenameRecipeCore.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 조건에 따라 분기합니다: if (folders is not null && recipeFile is IRecipeCopyStore store)
+L000174 |             if (folders is not null && recipeFile is IRecipeCopyStore store) ⟦EOL⟧
+// 해설 L175: 비동기 완료를 기다립니다: await store.RenameWithCompanions(oldRecipeId, newRecipeId, folders, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: store.RenameWithCompanions(oldRecipeId, newRecipeId, folders, cancellationToken)
+L000175 |                 await store.RenameWithCompanions(oldRecipeId, newRecipeId, folders, cancellationToken); ⟦EOL⟧
+// 해설 L176: 앞 조건이 거짓인 경로입니다: else
+L000176 |             else ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 RenameRecipeCore.
+L000177 |             { ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (folders?.Count > 0)
+L000178 |                 if (folders?.Count > 0) ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이 레시피 저장소는 부가 폴더 이름 변경을 지원하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 이름 변경을 지원하지 않습니다.");
+L000179 |                     throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 이름 변경을 지원하지 않습니다."); ⟦EOL⟧
+// 해설 L180: 비동기 완료를 기다립니다: await recipeFile.Rename(oldRecipeId, newRecipeId, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Rename(oldRecipeId, newRecipeId, cancellationToken)
+L000180 |                 await recipeFile.Rename(oldRecipeId, newRecipeId, cancellationToken); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 RenameRecipeCore.
+L000181 |             } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: RenameCachedRecipe(oldRecipeId, newRecipeId)
+L000183 |             RenameCachedRecipe(oldRecipeId, newRecipeId); ⟦EOL⟧
+// 해설 L184: 비동기 완료를 기다립니다: await recipeFile.Find(newRecipeId, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Find(newRecipeId, cancellationToken) / 지역 변수를 선언합니다: var renamedRecipe = await recipeFile.Find(newRecipeId, cancellationToken); / 변수의 초기값을 지정합니다: renamedRecipe = await recipeFile.Find(newRecipeId, cancellationToken)
+L000184 |             var renamedRecipe = await recipeFile.Find(newRecipeId, cancellationToken); ⟦EOL⟧
+// 해설 L185: 조건에 따라 분기합니다: if (renamedRecipe is not null)
+L000185 |             if (renamedRecipe is not null) ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCachedRecipe(renamedRecipe)
+L000186 |                 UpdateCachedRecipe(renamedRecipe); ⟦EOL⟧
+// 해설 L187: 비동기 완료를 기다립니다: await LoadHistoryCore(true, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, cancellationToken)
+L000187 |             await LoadHistoryCore(true, cancellationToken); ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 RenameRecipeCore.
+L000188 |         } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 비동기 완료를 기다립니다: await WithRecipeOperation(() => DeleteRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => DeleteRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => DeleteRecipeCore(recipeId, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteRecipeCore(recipeId, cancellationToken)
+L000190 |         public async Task DeleteRecipe(string recipeId, CancellationToken cancellationToken = default) => await WithRecipeOperation(() => DeleteRecipeCore(recipeId, cancellationToken), cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(() => DeleteRecipeCore(recipeId, token, selectedFolders), token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteRecipeCore(recipeId, token, selectedFolders)
+L000191 |         public Task DeleteRecipe(string recipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default) => WithRecipeOperation(() => DeleteRecipeCore(recipeId, token, selectedFolders), token); ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.DeleteRecipeCore(string, System.Threading.CancellationToken, System.Collections.Generic.IReadOnlyCollection<string>?)
+L000192 |         private async Task DeleteRecipeCore(string recipeId, CancellationToken cancellationToken, IReadOnlyCollection<string>? folders = null) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 DeleteRecipeCore.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 조건에 따라 분기합니다: if (folders is not null && recipeFile is IRecipeCopyStore store)
+L000194 |             if (folders is not null && recipeFile is IRecipeCopyStore store) ⟦EOL⟧
+// 해설 L195: 비동기 완료를 기다립니다: await store.DeleteWithCompanions(recipeId, folders, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: store.DeleteWithCompanions(recipeId, folders, cancellationToken)
+L000195 |                 await store.DeleteWithCompanions(recipeId, folders, cancellationToken); ⟦EOL⟧
+// 해설 L196: 앞 조건이 거짓인 경로입니다: else
+L000196 |             else ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 DeleteRecipeCore.
+L000197 |             { ⟦EOL⟧
+// 해설 L198: 조건에 따라 분기합니다: if (folders?.Count > 0)
+L000198 |                 if (folders?.Count > 0) ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("이 레시피 저장소는 부가 폴더 삭제를 지원하지 않습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 삭제를 지원하지 않습니다.");
+L000199 |                     throw new InvalidOperationException("이 레시피 저장소는 부가 폴더 삭제를 지원하지 않습니다."); ⟦EOL⟧
+// 해설 L200: 비동기 완료를 기다립니다: await recipeFile.Delete(recipeId, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.Delete(recipeId, cancellationToken)
+L000200 |                 await recipeFile.Delete(recipeId, cancellationToken); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 DeleteRecipeCore.
+L000201 |             } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteCachedRecipe(recipeId)
+L000203 |             DeleteCachedRecipe(recipeId); ⟦EOL⟧
+// 해설 L204: 비동기 완료를 기다립니다: await LoadHistoryCore(true, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadHistoryCore(true, cancellationToken)
+L000204 |             await LoadHistoryCore(true, cancellationToken); ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 DeleteRecipeCore.
+L000205 |         } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: ChangeProtectWindowCount(recipeId, () => recipeFile.IncrementProtectWindowCount(recipeId, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.IncrementProtectWindowCount(recipeId, cancellationToken)
+L000207 |         public Task<int> IncrementProtectWindowCount(string recipeId, CancellationToken cancellationToken = default) => ChangeProtectWindowCount(recipeId, () => recipeFile.IncrementProtectWindowCount(recipeId, cancellationToken), cancellationToken); ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: ChangeProtectWindowCount(recipeId, () => recipeFile.ResetProtectWindowCount(recipeId, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.ResetProtectWindowCount(recipeId, cancellationToken)
+L000208 |         public Task<int> ResetProtectWindowCount(string recipeId, CancellationToken cancellationToken = default) => ChangeProtectWindowCount(recipeId, () => recipeFile.ResetProtectWindowCount(recipeId, cancellationToken), cancellationToken); ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromException<int>(new ArgumentOutOfRangeException(nameof(count))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ChangeProtectWindowCount(recipeId, () => recipeFile.SetProtectWindowCount(recipeId, count, cancellationToken), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeFile.SetProtectWindowCount(recipeId, count, cancellationToken) / 조건에 따라 결과식을 선택합니다: count < 0 ? Task.FromException<int>(new Argu
+L000209 |         public Task<int> SetProtectWindowCount(string recipeId, int count, CancellationToken cancellationToken = default) => count < 0 ? Task.FromException<int>(new ArgumentOutOfRangeException(nameof(count))) : ChangeProtectWindowCount(recipeId, () => recipeFile.SetProtectWindowCount(recipeId, count, cancellationToken), cancellationToken); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithRecipeOperation(async () => { // The file store commits before the new count is visible to any UI snapshot. var count = await commit().ConfigureAwait(false); lock (_cacheLock) { if (_recipeCache is not null) _recipeC…
+L000210 |         private Task<int> ChangeProtectWindowCount(string recipeId, Func<Task<int>> commit, CancellationToken cancellationToken) => WithRecipeOperation(async () => ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 ChangeProtectWindowCount.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000212 |             // The file store commits before the new count is visible to any UI snapshot. ⟦EOL⟧
+// 해설 L213: 비동기 완료를 기다립니다: await commit().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: commit().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: commit() / 지역 변수를 선언합니다: var count = await commit().ConfigureAwait(false); / 변수의 초기값을 지정합니다: count = await commit().ConfigureAwait(false)
+L000213 |             var count = await commit().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L214: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000214 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 ChangeProtectWindowCount.
+L000215 |             { ⟦EOL⟧
+// 해설 L216: 조건에 따라 분기합니다: if (_recipeCache is not null)
+L000216 |                 if (_recipeCache is not null) ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: _recipeCache = _recipeCache.Select(recipe => recipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase) ? recipe with { Parameters = recipe.Parameters.Select(parameter => parameter.Key.Equals(global::Drilling.Common.Recipe.CPr / 값을 대상에 대입합니다: Parameters = recipe.Parameters.Select(parameter => parameter.Key.Equals(global::Drilling.Common.Recipe.CProtectWindowRecipeData.CurrentCountKey, StringComparison.OrdinalIgnoreCase) ? parameter with { Value = count.ToString(System. / 값을 대상에 대입합니다: Value = count.ToString(System.Gl
+L000217 |                     _recipeCache = _recipeCache.Select(recipe => recipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase) ? recipe with { Parameters = recipe.Parameters.Select(parameter => parameter.Key.Equals(global::Drilling.Common.Recipe.CProtectWindowRecipeData.CurrentCountKey, StringComparison.OrdinalIgnoreCase) ? parameter with { Value = count.ToString(System.Globalization.CultureInfo.InvariantCulture) } : parameter).ToArray() } : recipe).ToArray(); ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 ChangeProtectWindowCount.
+L000218 |             } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 호출자에게 값 또는 제어를 반환합니다: return count;
+L000220 |             return count; ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<int> Drilling.Common.Managers.CRecipeManager.ChangeProtectWindowCount(string, System.Func<System.Threading.Tasks.Task<int>>, System.Threading.CancellationToken)
+L000221 |         }, cancellationToken); ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeManager.WithRecipeOperation(System.Func<System.Threading.Tasks.Task>, System.Threading.CancellationToken)
+L000222 |         private async Task WithRecipeOperation(Func<Task> operation, CancellationToken token) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000223 |         { ⟦EOL⟧
+// 해설 L224: 비동기 완료를 기다립니다: await _recipeOperationGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(token)
+L000224 |             await _recipeOperationGate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L225: 예외 처리 범위입니다: try
+L000225 |             try ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000226 |             { ⟦EOL⟧
+// 해설 L227: 비동기 완료를 기다립니다: await operation().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: operation().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: operation()
+L000227 |                 await operation().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000228 |             } ⟦EOL⟧
+// 해설 L229: 종료 정리 구간입니다: finally
+L000229 |             finally ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.Release()
+L000231 |                 _recipeOperationGate.Release(); ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000232 |             } ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000233 |         } ⟦EOL⟧
+L000234 |  ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<T> Drilling.Common.Managers.CRecipeManager.WithRecipeOperation<T>(System.Func<System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
+L000235 |         private async Task<T> WithRecipeOperation<T>(Func<Task<T>> operation, CancellationToken token) ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000236 |         { ⟦EOL⟧
+// 해설 L237: 비동기 완료를 기다립니다: await _recipeOperationGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.WaitAsync(token)
+L000237 |             await _recipeOperationGate.WaitAsync(token).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L238: 예외 처리 범위입니다: try
+L000238 |             try ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000239 |             { ⟦EOL⟧
+// 해설 L240: 비동기 완료를 기다립니다: await operation().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: operation().ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: operation() / 호출자에게 값 또는 제어를 반환합니다: return await operation().ConfigureAwait(false);
+L000240 |                 return await operation().ConfigureAwait(false); ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000241 |             } ⟦EOL⟧
+// 해설 L242: 종료 정리 구간입니다: finally
+L000242 |             finally ⟦EOL⟧
+// 해설 L243: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000243 |             { ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: _recipeOperationGate.Release()
+L000244 |                 _recipeOperationGate.Release(); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000245 |             } ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 WithRecipeOperation.
+L000246 |         } ⟦EOL⟧
+L000247 |  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CRecipeManager.UpdateCachedRecipe(Drilling.Common.Managers.ST_RECIPE_DEFINITION)
+L000248 |         private void UpdateCachedRecipe(ST_RECIPE_DEFINITION recipe) ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000249 |         { ⟦EOL⟧
+// 해설 L250: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000250 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000251 |             { ⟦EOL⟧
+// 해설 L252: 조건에 따라 분기합니다: if (_recipeCache is null)
+L000252 |                 if (_recipeCache is null) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000253 |                 { ⟦EOL⟧
+// 해설 L254: 호출자에게 값 또는 제어를 반환합니다: return;
+L000254 |                     return; ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000255 |                 } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_RECIPE_DEFINITION>(_recipeCache.Count + 1) / 지역 변수를 선언합니다: var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count + 1); / 변수의 초기값을 지정합니다: recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count + 1)
+L000257 |                 var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count + 1); ⟦EOL⟧
+// 해설 L258: 지역 변수를 선언합니다: var updated = false; / 변수의 초기값을 지정합니다: updated = false
+L000258 |                 var updated = false; ⟦EOL⟧
+// 해설 L259: 컬렉션 요소를 순회합니다: foreach (var cachedRecipe in _recipeCache)
+L000259 |                 foreach (var cachedRecipe in _recipeCache) ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000260 |                 { ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: cachedRecipe.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (cachedRecipe.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase))
+L000261 |                     if (cachedRecipe.Id.Equals(recipe.Id, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000262 |                     { ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(CloneRecipe(recipe)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CloneRecipe(recipe)
+L000263 |                         recipes.Add(CloneRecipe(recipe)); ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: updated = true
+L000264 |                         updated = true; ⟦EOL⟧
+// 해설 L265: 다음 반복으로 진행합니다: continue;
+L000265 |                         continue; ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000266 |                     } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(cachedRecipe)
+L000268 |                     recipes.Add(cachedRecipe); ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000269 |                 } ⟦EOL⟧
+L000270 |  ⟦EOL⟧
+// 해설 L271: 조건에 따라 분기합니다: if (!updated)
+L000271 |                 if (!updated) ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000272 |                 { ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(CloneRecipe(recipe)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CloneRecipe(recipe)
+L000273 |                     recipes.Add(CloneRecipe(recipe)); ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000274 |                 } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 값을 대상에 대입합니다: _recipeCache = recipes.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.ToArray()
+L000276 |                 _recipeCache = recipes.ToArray(); ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000277 |             } ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 UpdateCachedRecipe.
+L000278 |         } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CRecipeManager.RenameCachedRecipe(string, string)
+L000280 |         private void RenameCachedRecipe(string oldRecipeId, string newRecipeId) ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000281 |         { ⟦EOL⟧
+// 해설 L282: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000282 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000283 |             { ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (_recipeCache is null)
+L000284 |                 if (_recipeCache is null) ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000285 |                 { ⟦EOL⟧
+// 해설 L286: 호출자에게 값 또는 제어를 반환합니다: return;
+L000286 |                     return; ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000287 |                 } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_RECIPE_DEFINITION>(_recipeCache.Count) / 지역 변수를 선언합니다: var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count); / 변수의 초기값을 지정합니다: recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count)
+L000289 |                 var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count); ⟦EOL⟧
+// 해설 L290: 컬렉션 요소를 순회합니다: foreach (var cachedRecipe in _recipeCache)
+L000290 |                 foreach (var cachedRecipe in _recipeCache) ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000291 |                 { ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: cachedRecipe.Id.Equals(oldRecipeId, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (cachedRecipe.Id.Equals(oldRecipeId, StringComparison.OrdinalIgnoreCase))
+L000292 |                     if (cachedRecipe.Id.Equals(oldRecipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000293 |                     { ⟦EOL⟧
+// 해설 L294: 값을 대상에 대입합니다: Id = newRecipeId / 값을 대상에 대입합니다: Name = newRecipeId / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(CloneRecipe(cachedRecipe with { Id = newRecipeId, Name = newRecipeId })) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CloneRecipe(cachedRecipe with { Id = newRecipeId, Name = newRecipeId })
+L000294 |                         recipes.Add(CloneRecipe(cachedRecipe with { Id = newRecipeId, Name = newRecipeId })); ⟦EOL⟧
+// 해설 L295: 다음 반복으로 진행합니다: continue;
+L000295 |                         continue; ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000296 |                     } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(cachedRecipe)
+L000298 |                     recipes.Add(cachedRecipe); ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000299 |                 } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 값을 대상에 대입합니다: _recipeCache = recipes.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.ToArray()
+L000301 |                 _recipeCache = recipes.ToArray(); ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000302 |             } ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 RenameCachedRecipe.
+L000303 |         } ⟦EOL⟧
+L000304 |  ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CRecipeManager.DeleteCachedRecipe(string)
+L000305 |         private void DeleteCachedRecipe(string recipeId) ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000306 |         { ⟦EOL⟧
+// 해설 L307: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000307 |             lock (_cacheLock) ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000308 |             { ⟦EOL⟧
+// 해설 L309: 조건에 따라 분기합니다: if (_recipeCache is null)
+L000309 |                 if (_recipeCache is null) ⟦EOL⟧
+// 해설 L310: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000310 |                 { ⟦EOL⟧
+// 해설 L311: 호출자에게 값 또는 제어를 반환합니다: return;
+L000311 |                     return; ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000312 |                 } ⟦EOL⟧
+L000313 |  ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_RECIPE_DEFINITION>(_recipeCache.Count) / 지역 변수를 선언합니다: var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count); / 변수의 초기값을 지정합니다: recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count)
+L000314 |                 var recipes = new List<ST_RECIPE_DEFINITION>(_recipeCache.Count); ⟦EOL⟧
+// 해설 L315: 컬렉션 요소를 순회합니다: foreach (var cachedRecipe in _recipeCache)
+L000315 |                 foreach (var cachedRecipe in _recipeCache) ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000316 |                 { ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: cachedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!cachedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase))
+L000317 |                     if (!cachedRecipe.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000318 |                     { ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.Add(cachedRecipe)
+L000319 |                         recipes.Add(cachedRecipe); ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000320 |                     } ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000321 |                 } ⟦EOL⟧
+L000322 |  ⟦EOL⟧
+// 해설 L323: 값을 대상에 대입합니다: _recipeCache = recipes.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.ToArray()
+L000323 |                 _recipeCache = recipes.ToArray(); ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000324 |             } ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 DeleteCachedRecipe.
+L000325 |         } ⟦EOL⟧
+L000326 |  ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Managers.CRecipeManager.CloneRecipe(Drilling.Common.Managers.ST_RECIPE_DEFINITION)
+L000327 |         private static ST_RECIPE_DEFINITION CloneRecipe(ST_RECIPE_DEFINITION recipe) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 CloneRecipe.
+L000328 |         { ⟦EOL⟧
+// 해설 L329: 호출자에게 값 또는 제어를 반환합니다: return recipe with { Parameters = recipe.Parameters.ToArray(), History = recipe.History.ToArray() };
+L000329 |             return recipe with ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 CloneRecipe.
+L000330 |             { ⟦EOL⟧
+// 해설 L331: 값을 대상에 대입합니다: Parameters = recipe.Parameters.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.ToArray()
+L000331 |                 Parameters = recipe.Parameters.ToArray(), ⟦EOL⟧
+// 해설 L332: 값을 대상에 대입합니다: History = recipe.History.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.History.ToArray()
+L000332 |                 History = recipe.History.ToArray() ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 CloneRecipe.
+L000333 |             }; ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 CloneRecipe.
+L000334 |         } ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다.
+L000335 |     } ⟦EOL⟧
+L000336 |  ⟦EOL⟧
+// 해설 L337: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_COMPANION_FOLDER(string SourceName, string TargetName);
+L000337 |     public sealed record ST_RECIPE_COMPANION_FOLDER(string SourceName, string TargetName); ⟦EOL⟧
+// 해설 L338: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000338 |     /// <summary>Optional file-store capability for recipe-owned companion folders.</summary> ⟦EOL⟧
+// 해설 L339: 타입의 구조/상속 선언입니다: public interface IRecipeCopyStore
+L000339 |     public interface IRecipeCopyStore ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다.
+L000340 |     { ⟦EOL⟧
+// 해설 L341: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_COMPANION_FOLDER>> Drilling.Common.Managers.IRecipeCopyStore.ListCompanionFolders(string, string, System.T
+L000341 |         Task<IReadOnlyList<ST_RECIPE_COMPANION_FOLDER>> ListCompanionFolders(string sourceRecipeId, string newRecipeId, CancellationToken token = default); ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.IRecipeCopyStore.CreateCopy(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.C
+L000342 |         Task CreateCopy(ST_RECIPE_DEFINITION recipe, string sourceRecipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default); ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.IRecipeCopyStore.RenameWithCompanions(string, string, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
+L000343 |         Task RenameWithCompanions(string oldRecipeId, string newRecipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default); ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.IRecipeCopyStore.DeleteWithCompanions(string, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
+L000344 |         Task DeleteWithCompanions(string recipeId, IReadOnlyCollection<string> selectedFolders, CancellationToken token = default); ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다.
+L000345 |     } ⟦EOL⟧
+L000346 |  ⟦EOL⟧
+// 해설 L347: 타입의 구조/상속 선언입니다: public enum EN_RECIPE_DATA_TYPE
+L000347 |     public enum EN_RECIPE_DATA_TYPE ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다.
+L000348 |     { ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE.String
+L000349 |         String, ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE.Int
+L000350 |         Int, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE.Double
+L000351 |         Double, ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE.Bool
+L000352 |         Bool ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다.
+L000353 |     } ⟦EOL⟧
+L000354 |  ⟦EOL⟧
+// 해설 L355: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_PARAMETER(
+L000355 |     public sealed record ST_RECIPE_PARAMETER( ⟦EOL⟧
+// 해설 L356: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000356 |         string Name,  ⟦EOL⟧
+// 해설 L357: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000357 |         string Value,  ⟦EOL⟧
+// 해설 L358: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000358 |         string Unit,  ⟦EOL⟧
+// 해설 L359: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000359 |         string Range,  ⟦EOL⟧
+// 해설 L360: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000360 |         string DefaultValue,  ⟦EOL⟧
+// 해설 L361: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000361 |         string Tab = "",  ⟦EOL⟧
+// 해설 L362: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000362 |         string Group = "",  ⟦EOL⟧
+// 해설 L363: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000363 |         string Key = "",  ⟦EOL⟧
+// 해설 L364: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000364 |         string Description = "",  ⟦EOL⟧
+// 해설 L365: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000365 |         bool Show = true,  ⟦EOL⟧
+// 해설 L366: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000366 |         bool Use = true,  ⟦EOL⟧
+// 해설 L367: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000367 |         int DisplayOrder = 0,  ⟦EOL⟧
+// 해설 L368: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000368 |         EN_RECIPE_DATA_TYPE DataType = EN_RECIPE_DATA_TYPE.String,  ⟦EOL⟧
+// 해설 L369: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000369 |         double ChangeLimit = 0.0,  ⟦EOL⟧
+// 해설 L370: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000370 |         double Min = 0.0,  ⟦EOL⟧
+// 해설 L371: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000371 |         double Max = 0.0,  ⟦EOL⟧
+// 해설 L372: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000372 |         IReadOnlyDictionary<string, string>? Extra = null ⟦EOL⟧
+// 해설 L373: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000373 |     ); ⟦EOL⟧
+// 해설 L374: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_HISTORY(
+L000374 |     public sealed record ST_RECIPE_HISTORY( ⟦EOL⟧
+// 해설 L375: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000375 |         DateTimeOffset ChangedAt,  ⟦EOL⟧
+// 해설 L376: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000376 |         string ItemName,  ⟦EOL⟧
+// 해설 L377: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000377 |         string OldValue,  ⟦EOL⟧
+// 해설 L378: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000378 |         string NewValue,  ⟦EOL⟧
+// 해설 L379: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000379 |         string OperatorId,  ⟦EOL⟧
+// 해설 L380: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000380 |         string RecipeName = "",  ⟦EOL⟧
+// 해설 L381: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000381 |         string Action = "",  ⟦EOL⟧
+// 해설 L382: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000382 |         string Tab = "",  ⟦EOL⟧
+// 해설 L383: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000383 |         string Group = "" ⟦EOL⟧
+// 해설 L384: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000384 |     ); ⟦EOL⟧
+// 해설 L385: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_DEFINITION(string Id, string Name, IReadOnlyList<ST_RECIPE_PARAMETER> Parameters, IReadOnlyList<ST_RECIPE_HISTORY> History);
+L000385 |     public sealed record ST_RECIPE_DEFINITION(string Id, string Name, IReadOnlyList<ST_RECIPE_PARAMETER> Parameters, IReadOnlyList<ST_RECIPE_HISTORY> History); ⟦EOL⟧
+// 해설 L386: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_FORM_ITEM(
+L000386 |     public sealed record ST_RECIPE_FORM_ITEM( ⟦EOL⟧
+// 해설 L387: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000387 |         string Tab,  ⟦EOL⟧
+// 해설 L388: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000388 |         string Group,  ⟦EOL⟧
+// 해설 L389: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000389 |         string Name,  ⟦EOL⟧
+// 해설 L390: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000390 |         string DisplayName,  ⟦EOL⟧
+// 해설 L391: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000391 |         string CimName,  ⟦EOL⟧
+// 해설 L392: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000392 |         EN_RECIPE_DATA_TYPE DataType,  ⟦EOL⟧
+// 해설 L393: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000393 |         string Unit,  ⟦EOL⟧
+// 해설 L394: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000394 |         bool Show,  ⟦EOL⟧
+// 해설 L395: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000395 |         bool Use,  ⟦EOL⟧
+// 해설 L396: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000396 |         string DefaultValue,  ⟦EOL⟧
+// 해설 L397: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000397 |         double Scale,  ⟦EOL⟧
+// 해설 L398: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000398 |         double ChangeLimit,  ⟦EOL⟧
+// 해설 L399: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000399 |         double Min,  ⟦EOL⟧
+// 해설 L400: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000400 |         double Max,  ⟦EOL⟧
+// 해설 L401: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000401 |         string Description,  ⟦EOL⟧
+// 해설 L402: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000402 |         int DisplayOrder,  ⟦EOL⟧
+// 해설 L403: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000403 |         IReadOnlyDictionary<string, string>? Extra = null ⟦EOL⟧
+// 해설 L404: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000404 |     ); ⟦EOL⟧
+// 해설 L405: 타입의 구조/상속 선언입니다: public sealed record ST_RECIPE_VALUE(string Tab, string Name, string Value, IReadOnlyList<string>? Extra = null);
+L000405 |     public sealed record ST_RECIPE_VALUE(string Tab, string Name, string Value, IReadOnlyList<string>? Extra = null); ⟦EOL⟧
+// 해설 L406: 타입의 구조/상속 선언입니다: public abstract class CRecipeFileBase
+L000406 |     public abstract class CRecipeFileBase ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다.
+L000407 |     { ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_DEFINITION>> Drilling.Common.Managers.CRecipeFileBase.LoadAll(System.Threading.CancellationToken)
+L000408 |         public abstract Task<IReadOnlyList<ST_RECIPE_DEFINITION>> LoadAll(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Managers.ST_RECIPE_DEFINITION?> Drilling.Common.Managers.CRecipeFileBase.Find(string, System.Threading.CancellationToken)
+L000409 |         public abstract Task<ST_RECIPE_DEFINITION?> Find(string recipeId, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L410: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeFileBase.Save(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Threading.CancellationToken)
+L000410 |         public abstract Task Save(ST_RECIPE_DEFINITION recipe, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeFileBase.Rename(string, string, System.Threading.CancellationToken)
+L000411 |         public abstract Task Rename(string oldRecipeId, string newRecipeId, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeFileBase.Delete(string, System.Threading.CancellationToken)
+L000412 |         public abstract Task Delete(string recipeId, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L413: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_HISTORY>> Drilling.Common.Managers.CRecipeFileBase.LoadHistory(System.Threading.CancellationToken)
+L000413 |         public abstract Task<IReadOnlyList<ST_RECIPE_HISTORY>> LoadHistory(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L414: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CRecipeFileBase.RecordSelection(string, string, System.Threading.CancellationToken)
+L000414 |         public abstract Task RecordSelection(string previousRecipeId, string recipeId, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: new NotSupportedException("This recipe store does not support persistent Protect Window counts.") / 예외를 발생/전달합니다: throw new NotSupportedException("This recipe store does not support persistent Protect Window counts.")
+L000415 |         public virtual Task<int> IncrementProtectWindowCount(string recipeId, CancellationToken cancellationToken = default) => throw new NotSupportedException("This recipe store does not support persistent Protect Window counts."); ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: new NotSupportedException("This recipe store does not support resetting Protect Window counts.") / 예외를 발생/전달합니다: throw new NotSupportedException("This recipe store does not support resetting Protect Window counts.")
+L000416 |         public virtual Task<int> ResetProtectWindowCount(string recipeId, CancellationToken cancellationToken = default) => throw new NotSupportedException("This recipe store does not support resetting Protect Window counts."); ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: new NotSupportedException("This recipe store does not support Protect Window count handover.") / 예외를 발생/전달합니다: throw new NotSupportedException("This recipe store does not support Protect Window count handover.")
+L000417 |         public virtual Task<int> SetProtectWindowCount(string recipeId, int count, CancellationToken cancellationToken = default) => throw new NotSupportedException("This recipe store does not support Protect Window count handover."); ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다.
+L000418 |     } ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다.
+L000419 | } ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Recipe
+L000421 | namespace Drilling.Common.Recipe ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다.
+L000422 | { ⟦EOL⟧
+// 해설 L423: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000423 |     using System.Globalization; ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 타입의 구조/상속 선언입니다: public static class CProtectWindowRecipeData
+L000425 |     public static class CProtectWindowRecipeData ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다.
+L000426 |     { ⟦EOL⟧
+// 해설 L427: 변수의 초기값을 지정합니다: Tab = "PROCESS"
+L000427 |         public const string Tab = "PROCESS"; ⟦EOL⟧
+// 해설 L428: 변수의 초기값을 지정합니다: Group = "ProtectWindow"
+L000428 |         public const string Group = "ProtectWindow"; ⟦EOL⟧
+// 해설 L429: 변수의 초기값을 지정합니다: MaximumCountKey = "MAX_PROCESS_COUNT"
+L000429 |         public const string MaximumCountKey = "MAX_PROCESS_COUNT"; ⟦EOL⟧
+// 해설 L430: 변수의 초기값을 지정합니다: CurrentCountKey = "CURRENT_PROCESS_COUNT"
+L000430 |         public const string CurrentCountKey = "CURRENT_PROCESS_COUNT"; ⟦EOL⟧
+// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string)
+L000431 |         public static int ParseCount(string? text, string key = CurrentCountKey) ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 ParseCount.
+L000432 |         { ⟦EOL⟧
+// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(count) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count))
+L000433 |             if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count)) ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key} must be a nonnegative integer: {text}") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key} must be a nonnegative integer: {text}");
+L000434 |                 throw new InvalidDataException($"{key} must be a nonnegative integer: {text}"); ⟦EOL⟧
+// 해설 L435: 호출자에게 값 또는 제어를 반환합니다: return (int)count;
+L000435 |             return (int)count; ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 ParseCount.
+L000436 |         } ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다.
+L000437 |     } ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다.
+L000438 | } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+L000440 |  ⟦EOL⟧

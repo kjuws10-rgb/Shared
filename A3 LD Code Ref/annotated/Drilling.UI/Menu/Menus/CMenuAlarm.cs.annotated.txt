@@ -1,0 +1,1131 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMenuAlarm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
+L000001 | namespace Drilling.UI.Menu.Menus ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000003 |     using System.ComponentModel; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000004 |     using System.Globalization; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000005 |     using System.IO; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000006 |     using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000007 |     using System.Windows; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000008 |     using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000009 |     using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000010 |     using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L11: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000011 |     using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L12: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000012 |     using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L13: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000013 |     using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L14: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000014 |     using System.Windows.Media; ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 타입의 구조/상속 선언입니다: public sealed class CMenuAlarm(CAlarmManager alarmManager, CStationManager stationManager, Action<string> setStatusMessage, Action refreshShellStatus, Func<Task> refreshCurrentScreen) : CMenuBase
+L000016 |     public sealed class CMenuAlarm(CAlarmManager alarmManager, CStationManager stationManager, Action<string> setStatusMessage, Action refreshShellStatus, Func<Task> refreshCurrentScreen) : CMenuBase ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuAlarm._selectedTabIndex
+L000018 |         private int _selectedTabIndex; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.EventHandler? Drilling.UI.Menu.Menus.CMenuAlarm.SelectedTabIndexChanged
+L000019 |         public event EventHandler? SelectedTabIndexChanged; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuAlarm.SelectedTabIndex
+L000020 |         public int SelectedTabIndex ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 SelectedTabIndex.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuAlarm.SelectedTabIndex.get
+L000022 |             get => _selectedTabIndex; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.SelectedTabIndex.set
+L000023 |             set ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 set_SelectedTabIndex.
+L000024 |             { ⟦EOL⟧
+// 해설 L25: 조건에 따라 분기합니다: if (_selectedTabIndex == value)
+L000025 |                 if (_selectedTabIndex == value) ⟦EOL⟧
+// 해설 L26: 호출자에게 값 또는 제어를 반환합니다: return;
+L000026 |                     return; ⟦EOL⟧
+// 해설 L27: 값을 대상에 대입합니다: _selectedTabIndex = value
+L000027 |                 _selectedTabIndex = value; ⟦EOL⟧
+// 해설 L28: 조건에 따라 분기합니다: if (value == 1)
+L000028 |                 if (value == 1) ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: HistoryPanel.InitializeOnFirstOpen()
+L000029 |                     HistoryPanel.InitializeOnFirstOpen(); ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, EventArgs.Empty)
+L000030 |                 SelectedTabIndexChanged?.Invoke(this, EventArgs.Empty); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 set_SelectedTabIndex.
+L000031 |             } ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 SelectedTabIndex.
+L000032 |         } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(alarmManager)
+L000034 |         public CAlarmListPanel ListPanel { get; } = new(alarmManager); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(alarmManager.ReadHistory)
+L000035 |         public CAlarmHistoryPanel HistoryPanel { get; } = new(alarmManager.ReadHistory); ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.EventHandler? Drilling.UI.Menu.Menus.CMenuAlarm.LogErrorChanged
+L000037 |         public event EventHandler? LogErrorChanged; ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarmManager.GetCurrentSnapshot()
+L000038 |         public string LogError => alarmManager.GetCurrentSnapshot().LogError; ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuAlarm.Menu
+L000040 |         public override EN_MENU Menu ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 Menu.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuAlarm.Menu.get
+L000042 |             get ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 get_Menu.
+L000043 |             { ⟦EOL⟧
+// 해설 L44: 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Alarm;
+L000044 |                 return EN_MENU.Alarm; ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 get_Menu.
+L000045 |             } ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Menu.
+L000046 |         } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuAlarm.AlarmResetCommand
+L000048 |         public CButtonCommand AlarmResetCommand ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 AlarmResetCommand.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuAlarm.AlarmResetCommand.get
+L000050 |             get ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 get_AlarmResetCommand.
+L000051 |             { ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · void ResetAlarmCallback(object?)
+L000052 |                 async void ResetAlarmCallback(object? arg0) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 ResetAlarmCallback.
+L000053 |                 { ⟦EOL⟧
+// 해설 L54: 비동기 완료를 기다립니다: await ResetAlarmAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ResetAlarmAsync()
+L000054 |                     await ResetAlarmAsync(); ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ResetAlarmCallback.
+L000055 |                 } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ResetAlarmCallback) / 호출자에게 값 또는 제어를 반환합니다: return new(ResetAlarmCallback);
+L000057 |                 return new(ResetAlarmCallback); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 get_AlarmResetCommand.
+L000058 |             } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 AlarmResetCommand.
+L000059 |         } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuAlarm.BuzzerOffCommand
+L000061 |         public CButtonCommand BuzzerOffCommand ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 BuzzerOffCommand.
+L000062 |         { ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuAlarm.BuzzerOffCommand.get
+L000063 |             get ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 get_BuzzerOffCommand.
+L000064 |             { ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · void setStatusMessageCallback(object?)
+L000065 |                 void setStatusMessageCallback(object? arg0) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 setStatusMessageCallback.
+L000066 |                 { ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: setStatusMessage("Buzzer off command sent.")
+L000067 |                     setStatusMessage("Buzzer off command sent."); ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 setStatusMessageCallback.
+L000068 |                 } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(setStatusMessageCallback) / 호출자에게 값 또는 제어를 반환합니다: return new(setStatusMessageCallback);
+L000070 |                 return new(setStatusMessageCallback); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 get_BuzzerOffCommand.
+L000071 |             } ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 BuzzerOffCommand.
+L000072 |         } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.CurrentAlarms
+L000074 |         public IReadOnlyList<ST_DISPLAY_ITEM> CurrentAlarms { get; private set; } = []; ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.AlarmDetail
+L000075 |         public IReadOnlyList<ST_DISPLAY_ITEM> AlarmDetail { get; private set; } = []; ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.RecoveryCommands
+L000076 |         public IReadOnlyList<ST_DISPLAY_ITEM> RecoveryCommands { get; private set; } = []; ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.History
+L000077 |         public IReadOnlyList<ST_DISPLAY_ITEM> History { get; private set; } = []; ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.Trend
+L000078 |         public IReadOnlyList<ST_DISPLAY_ITEM> Trend { get; private set; } = []; ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.CurrentAlarmRows
+L000079 |         public IReadOnlyList<ST_ALARM_CURRENT_ROW> CurrentAlarmRows { get; private set; } = []; ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.DetailRows
+L000080 |         public IReadOnlyList<ST_ALARM_DETAIL_ROW> DetailRows { get; private set; } = []; ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.HistoryRows
+L000081 |         public IReadOnlyList<ST_ALARM_HISTORY_ROW> HistoryRows { get; private set; } = []; ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_BAR> Drilling.UI.Menu.Menus.CMenuAlarm.TrendBars
+L000082 |         public IReadOnlyList<ST_ALARM_TREND_BAR> TrendBars { get; private set; } = []; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM> Drilling.UI.Menu.Menus.CMenuAlarm.SummaryItems
+L000083 |         public IReadOnlyList<ST_ALARM_SUMMARY_ITEM> SummaryItems { get; private set; } = []; ⟦EOL⟧
+L000084 |  ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000085 |         public override Task<CScreenViewModel> Build(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Build.
+L000086 |         { ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000087 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ListPanel.RefreshSnapshot()
+L000088 |             ListPanel.RefreshSnapshot(); ⟦EOL⟧
+// 해설 L89: 지역 변수를 선언합니다: var alarms = alarmManager.CurAlarm; / 변수의 초기값을 지정합니다: alarms = alarmManager.CurAlarm
+L000089 |             var alarms = alarmManager.CurAlarm; ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(Drilling.Common.Alarm.ST_ALARM_DATA)
+L000090 |             global::Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(global::Drilling.Common.Alarm.ST_ALARM_DATA item) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 BuildDisplay.
+L000091 |             { ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM(item.Code.ToString(), item.Message, item.Severity.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Code.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Severity.ToString() / 호출자에게 값 또는 제어를 반환합니다: return new ST_DISPLAY_ITEM(item.Code.ToString(), item.Message, item.Severity.ToString());
+L000092 |                 return new ST_DISPLAY_ITEM(item.Code.ToString(), item.Message, item.Severity.ToString()); ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 BuildDisplay.
+L000093 |             } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.Select(BuildDisplay).DefaultIfEmpty(new ST_DISPLAY_ITEM("No Alarm", "Normal")).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.Select(BuildDisplay).DefaultIfEmpty(new ST_DISPLAY_ITEM("No Alarm", "Normal")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.Select(BuildDisplay) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM("No Alarm", "Normal") / 지역 변수를 선언합니다: var currentAlarms = alarms.Select(BuildDisplay).DefaultIfEmpty(new ST_DISPLAY_ITEM("No Alarm", "Normal")).ToArray(); / 변수의 초기값을 지정합니다: currentAlarms = alarms.
+L000095 |             var currentAlarms = alarms.Select(BuildDisplay).DefaultIfEmpty(new ST_DISPLAY_ITEM("No Alarm", "Normal")).ToArray(); ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.FirstOrDefault() / 지역 변수를 선언합니다: var firstAlarm = alarms.FirstOrDefault(); / 변수의 초기값을 지정합니다: firstAlarm = alarms.FirstOrDefault()
+L000096 |             var firstAlarm = alarms.FirstOrDefault(); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply( currentAlarms, [ new("Code", firstAlarm?.Code.ToString() ?? "-"), new("Severity", firstAlarm?.Severity.ToString() ?? "-"), new("Recovery", firstAlarm?.RecoveryAction ?? "No recovery action required") ], [new("Alar…
+L000097 |             Apply( ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000098 |                 currentAlarms,  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000099 |                 [ ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Code", firstAlarm?.Code.ToString() ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Code.ToString()
+L000100 |                 new("Code", firstAlarm?.Code.ToString() ?? "-"),  ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Severity", firstAlarm?.Severity.ToString() ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Severity.ToString()
+L000101 |                 new("Severity", firstAlarm?.Severity.ToString() ?? "-"),  ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Recovery", firstAlarm?.RecoveryAction ?? "No recovery action required")
+L000102 |                 new("Recovery", firstAlarm?.RecoveryAction ?? "No recovery action required") ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000103 |             ],  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Alarm Reset", "Ready") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Buzzer Off", "Ready")
+L000104 |                 [new("Alarm Reset", "Ready"), new("Buzzer Off", "Ready")],  ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000105 |                 [],  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000106 |                 [],  ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildCurrentAlarmRows(alarms)
+L000107 |                 BuildCurrentAlarmRows(alarms),  ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildDetailRows(firstAlarm)
+L000108 |                 BuildDetailRows(firstAlarm),  ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000109 |                 [],  ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000110 |                 [],  ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000111 |                 [] ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuAlarm.Build(System.Threading.CancellationToken)
+L000112 |             ); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(CurrentAlarmRows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CurrentAlarmRows)
+L000113 |             OnPropertyChanged(nameof(CurrentAlarmRows)); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, EventArgs.Empty)
+L000114 |             LogErrorChanged?.Invoke(this, EventArgs.Empty); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(new CScreenViewModel(EN_MENU.Alarm, "ALARM", "Current alarms, history/trend and alarm list.", [new("Current", alarms.Count.ToString())], [new("Current Alarm", currentAlarms)], alarm: this)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel(EN_MENU.Alarm, "ALARM", "Current alarms, history/trend and alarm list.", [new("Current", alarms.Count.ToString())], [new("Current Alarm", currentAlarms)], alarm: this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Current", alarms.Count.ToString()) / 함수·델리게이트 또는 객체 생성자
+L000115 |             return Task.FromResult(new CScreenViewModel(EN_MENU.Alarm, "ALARM", "Current alarms, history/trend and alarm list.", [new("Current", alarms.Count.ToString())], [new("Current Alarm", currentAlarms)], alarm: this)); ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 Build.
+L000116 |         } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuAlarm.ResetAlarmAsync()
+L000118 |         public async Task ResetAlarmAsync() ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ResetAlarmAsync.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 조건에 따라 분기합니다: if (!stationManager.CanReset)
+L000120 |             if (!stationManager.CanReset) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 ResetAlarmAsync.
+L000121 |             { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: setStatusMessage("Alarm reset blocked. 동작 정지 및 신호 정리를 먼저 완료해 주세요.")
+L000122 |                 setStatusMessage("Alarm reset blocked. 동작 정지 및 신호 정리를 먼저 완료해 주세요."); ⟦EOL⟧
+// 해설 L123: 호출자에게 값 또는 제어를 반환합니다: return;
+L000123 |                 return; ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 ResetAlarmAsync.
+L000124 |             } ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: stationManager.Reset()
+L000125 |             stationManager.Reset(); ⟦EOL⟧
+// 해설 L126: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000126 |             // Allow the bounded 5-second W8218 readback and the station's final state publication. ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.UtcNow.AddSeconds(10) / 지역 변수를 선언합니다: var deadline = DateTimeOffset.UtcNow.AddSeconds(10); / 변수의 초기값을 지정합니다: deadline = DateTimeOffset.UtcNow.AddSeconds(10)
+L000127 |             var deadline = DateTimeOffset.UtcNow.AddSeconds(10); ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: stationManager.GetStatus() / 조건을 먼저 확인하며 반복합니다: while ((!stationManager.CanReset || stationManager.GetStatus().ProcessStep != EN_PROCESS_STEP.Idle) && DateTimeOffset.UtcNow < deadline)
+L000128 |             while ((!stationManager.CanReset || stationManager.GetStatus().ProcessStep != EN_PROCESS_STEP.Idle) && DateTimeOffset.UtcNow < deadline) ⟦EOL⟧
+// 해설 L129: 비동기 완료를 기다립니다: await Task.Delay(20) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(20)
+L000129 |                 await Task.Delay(20); ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: stationManager.GetStatus() / 지역 변수를 선언합니다: var station = stationManager.GetStatus(); / 변수의 초기값을 지정합니다: station = stationManager.GetStatus()
+L000130 |             var station = stationManager.GetStatus(); ⟦EOL⟧
+// 해설 L131: 지역 변수를 선언합니다: var isResetBlocked = !stationManager.CanReset || station.ProcessStep != EN_PROCESS_STEP.Idle; / 변수의 초기값을 지정합니다: isResetBlocked = !stationManager.CanReset || station.ProcessStep != EN_PROCESS_STEP.Idle
+L000131 |             var isResetBlocked = !stationManager.CanReset || station.ProcessStep != EN_PROCESS_STEP.Idle; ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarmManager.Reset() / 조건에 따라 분기합니다: if (!isResetBlocked)
+L000132 |             if (!isResetBlocked) alarmManager.Reset(); ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: setStatusMessage(isResetBlocked ? $"Alarm reset blocked. {station.Result?.Message ?? "Check InterLock state."}" : "Alarm reset completed. Station is ready.") / 조건에 따라 결과식을 선택합니다: isResetBlocked ? $"Alarm reset blocked. {station.Result?.Message ?? "Check InterLock state."}" : "Alarm reset completed. Station is ready."
+L000133 |             setStatusMessage(isResetBlocked ? $"Alarm reset blocked. {station.Result?.Message ?? "Check InterLock state."}" : "Alarm reset completed. Station is ready."); ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: refreshShellStatus()
+L000134 |             refreshShellStatus(); ⟦EOL⟧
+// 해설 L135: 비동기 완료를 기다립니다: await refreshCurrentScreen() / 함수·델리게이트 또는 객체 생성자를 호출합니다: refreshCurrentScreen()
+L000135 |             await refreshCurrentScreen(); ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 ResetAlarmAsync.
+L000136 |         } ⟦EOL⟧
+L000137 |  ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000138 |         private void Apply( ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000139 |             IReadOnlyList<ST_DISPLAY_ITEM> currentAlarms,  ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000140 |             IReadOnlyList<ST_DISPLAY_ITEM> alarmDetail,  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000141 |             IReadOnlyList<ST_DISPLAY_ITEM> recoveryCommands,  ⟦EOL⟧
+// 해설 L142: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000142 |             IReadOnlyList<ST_DISPLAY_ITEM> history,  ⟦EOL⟧
+// 해설 L143: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000143 |             IReadOnlyList<ST_DISPLAY_ITEM> trend,  ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000144 |             IReadOnlyList<ST_ALARM_CURRENT_ROW> currentAlarmRows,  ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000145 |             IReadOnlyList<ST_ALARM_DETAIL_ROW> detailRows,  ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000146 |             IReadOnlyList<ST_ALARM_HISTORY_ROW> historyRows,  ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000147 |             IReadOnlyList<ST_ALARM_TREND_BAR> trendBars,  ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000148 |             IReadOnlyList<ST_ALARM_SUMMARY_ITEM> summaryItems ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuAlarm.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, S
+L000149 |         ) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Apply.
+L000150 |         { ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: CurrentAlarms = currentAlarms
+L000151 |             CurrentAlarms = currentAlarms; ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: AlarmDetail = alarmDetail
+L000152 |             AlarmDetail = alarmDetail; ⟦EOL⟧
+// 해설 L153: 값을 대상에 대입합니다: RecoveryCommands = recoveryCommands
+L000153 |             RecoveryCommands = recoveryCommands; ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: History = history
+L000154 |             History = history; ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: Trend = trend
+L000155 |             Trend = trend; ⟦EOL⟧
+// 해설 L156: 값을 대상에 대입합니다: CurrentAlarmRows = currentAlarmRows
+L000156 |             CurrentAlarmRows = currentAlarmRows; ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: DetailRows = detailRows
+L000157 |             DetailRows = detailRows; ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: HistoryRows = historyRows
+L000158 |             HistoryRows = historyRows; ⟦EOL⟧
+// 해설 L159: 값을 대상에 대입합니다: TrendBars = trendBars
+L000159 |             TrendBars = trendBars; ⟦EOL⟧
+// 해설 L160: 값을 대상에 대입합니다: SummaryItems = summaryItems
+L000160 |             SummaryItems = summaryItems; ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 Apply.
+L000161 |         } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.BuildCurrentAlarmRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_AL
+L000163 |         private IReadOnlyList<ST_ALARM_CURRENT_ROW> BuildCurrentAlarmRows(IReadOnlyList<ST_ALARM_DATA> alarms) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 BuildCurrentAlarmRows.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarmManager.GetDefinitionsSnapshot().Rows.ToDictionary(row => row.Code, row => row.Group) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarmManager.GetDefinitionsSnapshot() / 지역 변수를 선언합니다: var groupsByCode = alarmManager.GetDefinitionsSnapshot().Rows.ToDictionary(row => row.Code, row => row.Group); / 변수의 초기값을 지정합니다: groupsByCode = alarmManager.GetDefinitionsSnapshot().Rows.ToDictionary(row => row.Code, row => row.Group)
+L000165 |             var groupsByCode = alarmManager.GetDefinitionsSnapshot().Rows.ToDictionary(row => row.Code, row => row.Group); ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW BuildAlarm(Drilling.Common.Alarm.ST_ALARM_DATA, int)
+L000166 |             global::Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW BuildAlarm(global::Drilling.Common.Alarm.ST_ALARM_DATA alarm, int index) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 BuildAlarm.
+L000167 |             { ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: groupsByCode.TryGetValue(alarm.Code, out var definedGroup) / 조건에 따라 결과식을 선택합니다: groupsByCode.TryGetValue(alarm.Code, out var definedGroup) ? definedGroup : alarm.Group / 지역 변수를 선언합니다: var group = groupsByCode.TryGetValue(alarm.Code, out var definedGroup) ? definedGroup : alarm.Group; / 변수의 초기값을 지정합니다: group = groupsByCode.TryGetValue(alarm.Code, out var definedGroup) ? definedGroup : alarm.Group
+L000168 |                 var group = groupsByCode.TryGetValue(alarm.Code, out var definedGroup) ? definedGroup : alarm.Group; ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALARM_CURRENT_ROW(index + 1, alarm.Code.ToString(), FormatSeverity(alarm.Severity), group, alarm.Message, alarm.Message, alarm.RecoveryAction, alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarm.Code.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatSeverity(alarm.Severity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss") / 호출자에게 값 또는 제어를 반환합니다: return new ST_ALARM_CURRENT_ROW(index + 1, alarm.Code.ToString(), FormatSeverity(alarm.Severity), gr
+L000169 |                 return new ST_ALARM_CURRENT_ROW(index + 1, alarm.Code.ToString(), FormatSeverity(alarm.Severity), group, alarm.Message, alarm.Message, alarm.RecoveryAction, alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss")); ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 BuildAlarm.
+L000170 |             } ⟦EOL⟧
+L000171 |  ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.Select(BuildAlarm).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.Select(BuildAlarm) / 호출자에게 값 또는 제어를 반환합니다: return alarms.Select(BuildAlarm).ToArray();
+L000172 |             return alarms.Select(BuildAlarm).ToArray(); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 BuildCurrentAlarmRows.
+L000173 |         } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.BuildDetailRows(Drilling.Common.Alarm.ST_ALARM_DATA?)
+L000175 |         private static IReadOnlyList<ST_ALARM_DETAIL_ROW> BuildDetailRows(ST_ALARM_DATA? alarm) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 BuildDetailRows.
+L000176 |         { ⟦EOL⟧
+// 해설 L177: 조건에 따라 분기합니다: if (alarm is null)
+L000177 |             if (alarm is null) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 BuildDetailRows.
+L000178 |             { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Selected Code", "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Device", "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Level", "CLEAR", "Ok") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Occurred Time", "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Message", "No active alarm") / 호출자에게 값 또는 제어를 반환합니다: return[new("Selected Code", "-"), new("Device", "-"), new("Level", "CLEAR", "Ok"), new("Occurred Time", "-"), new("Message", "No active alarm")];
+L000179 |                 return[new("Selected Code", "-"), new("Device", "-"), new("Level", "CLEAR", "Ok"), new("Occurred Time", "-"), new("Message", "No active alarm")]; ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 BuildDetailRows.
+L000180 |             } ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatSeverity(alarm.Severity) / 지역 변수를 선언합니다: var severity = FormatSeverity(alarm.Severity); / 변수의 초기값을 지정합니다: severity = FormatSeverity(alarm.Severity)
+L000182 |             var severity = FormatSeverity(alarm.Severity); ⟦EOL⟧
+// 해설 L183: 호출자에게 값 또는 제어를 반환합니다: return[ new("Selected Code", alarm.Code.ToString(), SeverityState(alarm.Severity)), new("Device", alarm.Device), new("Level", severity, SeverityState(alarm.Severity)), new("Occurred Time", alarm.OccurredAt.ToString("yyyy-MM-dd HH:
+L000183 |             return[ ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Selected Code", alarm.Code.ToString(), SeverityState(alarm.Severity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarm.Code.ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SeverityState(alarm.Severity)
+L000184 |                 new("Selected Code", alarm.Code.ToString(), SeverityState(alarm.Severity)),  ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Device", alarm.Device)
+L000185 |                 new("Device", alarm.Device),  ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Level", severity, SeverityState(alarm.Severity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SeverityState(alarm.Severity)
+L000186 |                 new("Level", severity, SeverityState(alarm.Severity)),  ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Occurred Time", alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss")
+L000187 |                 new("Occurred Time", alarm.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss")),  ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Message", alarm.Message)
+L000188 |                 new("Message", alarm.Message) ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.BuildDetailRows(Drilling.Common.Alarm.ST_ALARM_DATA?)
+L000189 |             ]; ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 BuildDetailRows.
+L000190 |         } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.FormatSeverity(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000192 |         private static string FormatSeverity(EN_ALARM_LEVEL severity) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 FormatSeverity.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 호출자에게 값 또는 제어를 반환합니다: return severity switch { EN_ALARM_LEVEL.Warning => "LIGHT", EN_ALARM_LEVEL.Critical => "HEAVY", _ => "INFO" }; / 값별 결과식을 선택합니다: severity switch { EN_ALARM_LEVEL.Warning => "LIGHT", EN_ALARM_LEVEL.Critical => "HEAVY", _ => "INFO" }
+L000194 |             return severity switch ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 FormatSeverity.
+L000195 |             { ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.FormatSeverity(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000196 |                 EN_ALARM_LEVEL.Warning => "LIGHT", ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.FormatSeverity(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000197 |                 EN_ALARM_LEVEL.Critical => "HEAVY", ⟦EOL⟧
+// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.FormatSeverity(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000198 |                 _ => "INFO" ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 FormatSeverity.
+L000199 |             }; ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 FormatSeverity.
+L000200 |         } ⟦EOL⟧
+L000201 |  ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.SeverityState(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000202 |         private static string SeverityState(EN_ALARM_LEVEL severity) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 SeverityState.
+L000203 |         { ⟦EOL⟧
+// 해설 L204: 호출자에게 값 또는 제어를 반환합니다: return severity switch { EN_ALARM_LEVEL.Warning => "Warn", EN_ALARM_LEVEL.Critical => "Critical", _ => "Accent" }; / 값별 결과식을 선택합니다: severity switch { EN_ALARM_LEVEL.Warning => "Warn", EN_ALARM_LEVEL.Critical => "Critical", _ => "Accent" }
+L000204 |             return severity switch ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 SeverityState.
+L000205 |             { ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.SeverityState(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000206 |                 EN_ALARM_LEVEL.Warning => "Warn", ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.SeverityState(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000207 |                 EN_ALARM_LEVEL.Critical => "Critical", ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuAlarm.SeverityState(Drilling.Common.Alarm.EN_ALARM_LEVEL)
+L000208 |                 _ => "Accent" ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 SeverityState.
+L000209 |             }; ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 SeverityState.
+L000210 |         } ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다.
+L000211 |     } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 타입의 구조/상속 선언입니다: public sealed class CAlarmHistoryPanel : INotifyPropertyChanged
+L000213 |     public sealed class CAlarmHistoryPanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다.
+L000214 |     { ⟦EOL⟧
+// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.DateTime, System.DateTime, System.Threading.CancellationToken, Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT> Drilling.UI.Menu.Menus.CAlarmHistoryPanel._read
+L000215 |         private readonly Func<DateTime, DateTime, CancellationToken, ST_ALARM_HISTORY_RESULT> _read; ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · System.Func<System.DateTime> Drilling.UI.Menu.Menus.CAlarmHistoryPanel._now
+L000216 |         private readonly Func<DateTime> _now; ⟦EOL⟧
+// 해설 L217: 변수의 초기값을 지정합니다: _from = DateTime.Today
+L000217 |         private DateTime? _from = DateTime.Today; ⟦EOL⟧
+// 해설 L218: 변수의 초기값을 지정합니다: _through = DateTime.Today
+L000218 |         private DateTime? _through = DateTime.Today; ⟦EOL⟧
+// 해설 L219: 변수의 초기값을 지정합니다: _fromTime = "00:00:00"
+L000219 |         private string _fromTime = "00:00:00"; ⟦EOL⟧
+// 해설 L220: 변수의 초기값을 지정합니다: _throughTime = "00:00:00"
+L000220 |         private string _throughTime = "00:00:00"; ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel._hasOpened
+L000221 |         private bool _hasOpened; ⟦EOL⟧
+// 해설 L222: 변수의 초기값을 지정합니다: _isCodeView = true
+L000222 |         private bool _isCodeView = true; ⟦EOL⟧
+// 해설 L223: 변수의 초기값을 지정합니다: _loadedRows = []
+L000223 |         private IReadOnlyList<ST_ALARM_HISTORY_ENTRY> _loadedRows = []; ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel._searchedFrom
+L000224 |         private DateTime? _searchedFrom; ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel._searchedThrough
+L000225 |         private DateTime? _searchedThrough; ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CAlarmHistoryPanel.CAlarmHistoryPanel(System.Func<System.DateTime, System.DateTime, System.Threading.CancellationToken, Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT>, System.Func<System.
+L000226 |         public CAlarmHistoryPanel(Func<DateTime, DateTime, CancellationToken, ST_ALARM_HISTORY_RESULT> read, Func<DateTime>? now = null) ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 .ctor.
+L000227 |         { ⟦EOL⟧
+// 해설 L228: 값을 대상에 대입합니다: _read = read
+L000228 |             _read = read; ⟦EOL⟧
+// 해설 L229: 값을 대상에 대입합니다: _now = now ?? (() => DateTime.Now)
+L000229 |             _now = now ?? (() => DateTime.Now); ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetDefaultRange()
+L000230 |             SetDefaultRange(); ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: SearchCommand = new(async _ => await SearchAsync(), _ => !IsBusy) / 비동기 완료를 기다립니다: await SearchAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await SearchAsync(), _ => !IsBusy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SearchAsync()
+L000231 |             SearchCommand = new(async _ => await SearchAsync(), _ => !IsBusy); ⟦EOL⟧
+// 해설 L232: 값을 대상에 대입합니다: Last24HoursCommand = new(async _ => await SearchLast24HoursAsync(), _ => !IsBusy) / 비동기 완료를 기다립니다: await SearchLast24HoursAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => await SearchLast24HoursAsync(), _ => !IsBusy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SearchLast24HoursAsync()
+L000232 |             Last24HoursCommand = new(async _ => await SearchLast24HoursAsync(), _ => !IsBusy); ⟦EOL⟧
+// 해설 L233: 값을 대상에 대입합니다: HourViewCommand = new(_ => SelectTrendView(false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => SelectTrendView(false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectTrendView(false)
+L000233 |             HourViewCommand = new(_ => SelectTrendView(false)); ⟦EOL⟧
+// 해설 L234: 값을 대상에 대입합니다: CodeViewCommand = new(_ => SelectTrendView(true)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => SelectTrendView(true)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectTrendView(true)
+L000234 |             CodeViewCommand = new(_ => SelectTrendView(true)); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 .ctor.
+L000235 |         } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CAlarmHistoryPanel.PropertyChanged
+L000237 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel.From
+L000238 |         public DateTime? From ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 From.
+L000239 |         { ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel.From.get
+L000240 |             get => _from; ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.From.set
+L000241 |             set ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 set_From.
+L000242 |             { ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: _from = value
+L000243 |                 _from = value; ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000244 |                 Notify(); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 set_From.
+L000245 |             } ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 From.
+L000246 |         } ⟦EOL⟧
+L000247 |  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Through
+L000248 |         public DateTime? Through ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 Through.
+L000249 |         { ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · System.DateTime? Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Through.get
+L000250 |             get => _through; ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Through.set
+L000251 |             set ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 set_Through.
+L000252 |             { ⟦EOL⟧
+// 해설 L253: 값을 대상에 대입합니다: _through = value
+L000253 |                 _through = value; ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000254 |                 Notify(); ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 set_Through.
+L000255 |             } ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 Through.
+L000256 |         } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.FromTime
+L000258 |         public string FromTime ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 FromTime.
+L000259 |         { ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.FromTime.get
+L000260 |             get => _fromTime; ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.FromTime.set
+L000261 |             set ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 set_FromTime.
+L000262 |             { ⟦EOL⟧
+// 해설 L263: 값을 대상에 대입합니다: _fromTime = value
+L000263 |                 _fromTime = value; ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000264 |                 Notify(); ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 set_FromTime.
+L000265 |             } ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 FromTime.
+L000266 |         } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.ThroughTime
+L000268 |         public string ThroughTime ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ThroughTime.
+L000269 |         { ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.ThroughTime.get
+L000270 |             get => _throughTime; ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.ThroughTime.set
+L000271 |             set ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 set_ThroughTime.
+L000272 |             { ⟦EOL⟧
+// 해설 L273: 값을 대상에 대입합니다: _throughTime = value
+L000273 |                 _throughTime = value; ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify()
+L000274 |                 Notify(); ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 set_ThroughTime.
+L000275 |             } ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ThroughTime.
+L000276 |         } ⟦EOL⟧
+L000277 |  ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel.IsBusy
+L000278 |         public bool IsBusy { get; private set; } ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel.CanEdit
+L000279 |         public bool CanEdit => !IsBusy; ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel.IsCodeView
+L000280 |         public bool IsCodeView => _isCodeView; ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel.IsHourView
+L000281 |         public bool IsHourView => !_isCodeView; ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Status
+L000282 |         public string Status { get; private set; } = "날짜와 시간을 지정하고 SEARCH를 눌러 주세요."; ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.TrendCaption
+L000283 |         public string TrendCaption { get; private set; } = "코드별 발생 횟수 · 많은 순서"; ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmHistoryPanel.EmptyMessage
+L000284 |         public string EmptyMessage { get; private set; } = "조회한 알람 이력이 없습니다."; ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Rows
+L000285 |         public IReadOnlyList<ST_ALARM_HISTORY_ROW> Rows { get; private set; } = []; ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Bars
+L000286 |         public IReadOnlyList<ST_ALARM_TREND_COLUMN> Bars { get; private set; } = []; ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SearchCommand
+L000287 |         public CButtonCommand SearchCommand { get; } ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CAlarmHistoryPanel.Last24HoursCommand
+L000288 |         public CButtonCommand Last24HoursCommand { get; } ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CAlarmHistoryPanel.HourViewCommand
+L000289 |         public CButtonCommand HourViewCommand { get; } ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CAlarmHistoryPanel.CodeViewCommand
+L000290 |         public CButtonCommand CodeViewCommand { get; } ⟦EOL⟧
+L000291 |  ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.InitializeOnFirstOpen()
+L000292 |         public void InitializeOnFirstOpen() ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 InitializeOnFirstOpen.
+L000293 |         { ⟦EOL⟧
+// 해설 L294: 조건에 따라 분기합니다: if (_hasOpened)
+L000294 |             if (_hasOpened) ⟦EOL⟧
+// 해설 L295: 호출자에게 값 또는 제어를 반환합니다: return;
+L000295 |                 return; ⟦EOL⟧
+// 해설 L296: 값을 대상에 대입합니다: _hasOpened = true
+L000296 |             _hasOpened = true; ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetDefaultRange()
+L000297 |             SetDefaultRange(); ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 InitializeOnFirstOpen.
+L000298 |         } ⟦EOL⟧
+L000299 |  ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SetDefaultRange()
+L000300 |         private void SetDefaultRange() ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 SetDefaultRange.
+L000301 |         { ⟦EOL⟧
+// 해설 L302: 함수·델리게이트 또는 객체 생성자를 호출합니다: _now() / 지역 변수를 선언합니다: var now = _now(); / 변수의 초기값을 지정합니다: now = _now()
+L000302 |             var now = _now(); ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: From = Through = now.Date / 값을 대상에 대입합니다: Through = now.Date
+L000303 |             From = Through = now.Date; ⟦EOL⟧
+// 해설 L304: 값을 대상에 대입합니다: FromTime = "00:00:00"
+L000304 |             FromTime = "00:00:00"; ⟦EOL⟧
+// 해설 L305: 값을 대상에 대입합니다: ThroughTime = now.ToString("HH:mm:ss", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: now.ToString("HH:mm:ss", CultureInfo.InvariantCulture)
+L000305 |             ThroughTime = now.ToString("HH:mm:ss", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 SetDefaultRange.
+L000306 |         } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SelectTrendView(bool)
+L000308 |         private void SelectTrendView(bool codeView) ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 SelectTrendView.
+L000309 |         { ⟦EOL⟧
+// 해설 L310: 조건에 따라 분기합니다: if (_isCodeView == codeView || IsBusy)
+L000310 |             if (_isCodeView == codeView || IsBusy) ⟦EOL⟧
+// 해설 L311: 호출자에게 값 또는 제어를 반환합니다: return;
+L000311 |                 return; ⟦EOL⟧
+// 해설 L312: 값을 대상에 대입합니다: _isCodeView = codeView
+L000312 |             _isCodeView = codeView; ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTrend()
+L000313 |             RefreshTrend(); ⟦EOL⟧
+// 해설 L314: 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(IsCodeView), nameof(IsHourView), nameof(Bars), nameof(TrendCaption) })
+L000314 |             foreach (var name in new[] ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 SelectTrendView.
+L000315 |             { ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsCodeView)
+L000316 |                 nameof(IsCodeView), ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsHourView)
+L000317 |                 nameof(IsHourView), ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Bars)
+L000318 |                 nameof(Bars), ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(TrendCaption)
+L000319 |                 nameof(TrendCaption) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 SelectTrendView.
+L000320 |             } ⟦EOL⟧
+L000321 |  ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SelectTrendView(bool)
+L000322 |             ) ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name)
+L000323 |                 Notify(name); ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 SelectTrendView.
+L000324 |         } ⟦EOL⟧
+L000325 |  ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmHistoryPanel.RefreshTrend()
+L000326 |         private void RefreshTrend() ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 RefreshTrend.
+L000327 |         { ⟦EOL⟧
+// 해설 L328: 조건에 따라 분기합니다: if (_searchedFrom is not { } from || _searchedThrough is not { } through)
+L000328 |             if (_searchedFrom is not { } from || _searchedThrough is not { } through) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 RefreshTrend.
+L000329 |             { ⟦EOL⟧
+// 해설 L330: 값을 대상에 대입합니다: Bars = []
+L000330 |                 Bars = []; ⟦EOL⟧
+// 해설 L331: 값을 대상에 대입합니다: TrendCaption = IsCodeView ? "코드별 발생 횟수 · 많은 순서" : "시간별 발생 횟수 · 1시간 기준" / 조건에 따라 결과식을 선택합니다: IsCodeView ? "코드별 발생 횟수 · 많은 순서" : "시간별 발생 횟수 · 1시간 기준"
+L000331 |                 TrendCaption = IsCodeView ? "코드별 발생 횟수 · 많은 순서" : "시간별 발생 횟수 · 1시간 기준"; ⟦EOL⟧
+// 해설 L332: 호출자에게 값 또는 제어를 반환합니다: return;
+L000332 |                 return; ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 RefreshTrend.
+L000333 |             } ⟦EOL⟧
+L000334 |  ⟦EOL⟧
+// 해설 L335: 값을 대상에 대입합니다: Bars = IsCodeView ? BuildCodeBars(_loadedRows) : BuildHourBars(_loadedRows, from, through) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildCodeBars(_loadedRows) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHourBars(_loadedRows, from, through) / 조건에 따라 결과식을 선택합니다: IsCodeView ? BuildCodeBars(_loadedRows) : BuildHourBars(_loadedRows, from, through)
+L000335 |             Bars = IsCodeView ? BuildCodeBars(_loadedRows) : BuildHourBars(_loadedRows, from, through); ⟦EOL⟧
+// 해설 L336: 조건에 따라 결과식을 선택합니다: IsCodeView ? $"{Bars.Count:N0}개 코드 · 발생 횟수 내림차순" : "시간별 · 1시간 기준" / 지역 변수를 선언합니다: var summary = IsCodeView ? $"{Bars.Count:N0}개 코드 · 발생 횟수 내림차순" : "시간별 · 1시간 기준"; / 변수의 초기값을 지정합니다: summary = IsCodeView ? $"{Bars.Count:N0}개 코드 · 발생 횟수 내림차순" : "시간별 · 1시간 기준"
+L000336 |             var summary = IsCodeView ? $"{Bars.Count:N0}개 코드 · 발생 횟수 내림차순" : "시간별 · 1시간 기준"; ⟦EOL⟧
+// 해설 L337: 값을 대상에 대입합니다: TrendCaption = $"{from:yyyy-MM-dd HH:mm:ss.fff} ~ {through:yyyy-MM-dd HH:mm:ss.fff}\n{summary} · 총 {_loadedRows.Count:N0}건"
+L000337 |             TrendCaption = $"{from:yyyy-MM-dd HH:mm:ss.fff} ~ {through:yyyy-MM-dd HH:mm:ss.fff}\n{summary} · 총 {_loadedRows.Count:N0}건"; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 RefreshTrend.
+L000338 |         } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SearchLast24HoursAsync()
+L000340 |         public async Task SearchLast24HoursAsync() ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 SearchLast24HoursAsync.
+L000341 |         { ⟦EOL⟧
+// 해설 L342: 조건에 따라 분기합니다: if (IsBusy)
+L000342 |             if (IsBusy) ⟦EOL⟧
+// 해설 L343: 호출자에게 값 또는 제어를 반환합니다: return;
+L000343 |                 return; ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: _now() / 지역 변수를 선언합니다: var now = _now(); / 변수의 초기값을 지정합니다: now = _now()
+L000344 |             var now = _now(); ⟦EOL⟧
+// 해설 L345: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000345 |             // Display and query the same millisecond precision, including across midnight. ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTime(now.Ticks - now.Ticks % TimeSpan.TicksPerMillisecond, now.Kind) / 지역 변수를 선언합니다: var through = new DateTime(now.Ticks - now.Ticks % TimeSpan.TicksPerMillisecond, now.Kind); / 변수의 초기값을 지정합니다: through = new DateTime(now.Ticks - now.Ticks % TimeSpan.TicksPerMillisecond, now.Kind)
+L000346 |             var through = new DateTime(now.Ticks - now.Ticks % TimeSpan.TicksPerMillisecond, now.Kind); ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: through.AddHours(-24) / 지역 변수를 선언합니다: var from = through.AddHours(-24); / 변수의 초기값을 지정합니다: from = through.AddHours(-24)
+L000347 |             var from = through.AddHours(-24); ⟦EOL⟧
+// 해설 L348: 값을 대상에 대입합니다: From = from.Date
+L000348 |             From = from.Date; ⟦EOL⟧
+// 해설 L349: 값을 대상에 대입합니다: Through = through.Date
+L000349 |             Through = through.Date; ⟦EOL⟧
+// 해설 L350: 값을 대상에 대입합니다: FromTime = from.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: from.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture)
+L000350 |             FromTime = from.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L351: 값을 대상에 대입합니다: ThroughTime = through.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: through.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture)
+L000351 |             ThroughTime = through.ToString("HH:mm:ss.fff", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L352: 비동기 완료를 기다립니다: await SearchAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: SearchAsync()
+L000352 |             await SearchAsync(); ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 SearchLast24HoursAsync.
+L000353 |         } ⟦EOL⟧
+L000354 |  ⟦EOL⟧
+// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SearchAsync()
+L000355 |         public async Task SearchAsync() ⟦EOL⟧
+// 해설 L356: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000356 |         { ⟦EOL⟧
+// 해설 L357: 조건에 따라 분기합니다: if (IsBusy)
+L000357 |             if (IsBusy) ⟦EOL⟧
+// 해설 L358: 호출자에게 값 또는 제어를 반환합니다: return;
+L000358 |                 return; ⟦EOL⟧
+// 해설 L359: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadTime(FromTime, out var fromTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadTime(ThroughTime, out var throughTime) / 조건에 따라 분기합니다: if (From is not { } from || Through is not { } through || !TryReadTime(FromTime, out var fromTime) || !TryReadTime(ThroughTime, out var throughTime))
+L000359 |             if (From is not { } from || Through is not { } through || !TryReadTime(FromTime, out var fromTime) || !TryReadTime(ThroughTime, out var throughTime)) ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000360 |             { ⟦EOL⟧
+// 해설 L361: 값을 대상에 대입합니다: Status = "날짜와 시간을 올바르게 입력해 주세요. 시간 형식: HH:mm 또는 HH:mm:ss (24시간제)."
+L000361 |                 Status = "날짜와 시간을 올바르게 입력해 주세요. 시간 형식: HH:mm 또는 HH:mm:ss (24시간제)."; ⟦EOL⟧
+// 해설 L362: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000362 |                 Notify(nameof(Status)); ⟦EOL⟧
+// 해설 L363: 호출자에게 값 또는 제어를 반환합니다: return;
+L000363 |                 return; ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000364 |             } ⟦EOL⟧
+L000365 |  ⟦EOL⟧
+// 해설 L366: 값을 대상에 대입합니다: from = from.Date.Add(fromTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: from.Date.Add(fromTime)
+L000366 |             from = from.Date.Add(fromTime); ⟦EOL⟧
+// 해설 L367: 값을 대상에 대입합니다: through = through.Date.Add(throughTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: through.Date.Add(throughTime)
+L000367 |             through = through.Date.Add(throughTime); ⟦EOL⟧
+// 해설 L368: 조건에 따라 분기합니다: if (from > through)
+L000368 |             if (from > through) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000369 |             { ⟦EOL⟧
+// 해설 L370: 값을 대상에 대입합니다: Status = "시작 일시는 종료 일시보다 늦을 수 없습니다."
+L000370 |                 Status = "시작 일시는 종료 일시보다 늦을 수 없습니다."; ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000371 |                 Notify(nameof(Status)); ⟦EOL⟧
+// 해설 L372: 호출자에게 값 또는 제어를 반환합니다: return;
+L000372 |                 return; ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000373 |             } ⟦EOL⟧
+L000374 |  ⟦EOL⟧
+// 해설 L375: 값을 대상에 대입합니다: IsBusy = true
+L000375 |             IsBusy = true; ⟦EOL⟧
+// 해설 L376: 값을 대상에 대입합니다: Status = "알람 이력을 조회하고 있습니다."
+L000376 |             Status = "알람 이력을 조회하고 있습니다."; ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsBusy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)
+L000377 |             Notify(nameof(IsBusy)); ⟦EOL⟧
+// 해설 L378: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanEdit)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEdit)
+L000378 |             Notify(nameof(CanEdit)); ⟦EOL⟧
+// 해설 L379: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000379 |             Notify(nameof(Status)); ⟦EOL⟧
+// 해설 L380: 함수·델리게이트 또는 객체 생성자를 호출합니다: SearchCommand.NotifyCanExecuteChanged()
+L000380 |             SearchCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L381: 함수·델리게이트 또는 객체 생성자를 호출합니다: Last24HoursCommand.NotifyCanExecuteChanged()
+L000381 |             Last24HoursCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L382: 예외 처리 범위입니다: try
+L000382 |             try ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000383 |             { ⟦EOL⟧
+// 해설 L384: 비동기 완료를 기다립니다: await Task.Run(() => { // The store opens only the relevant daily files. Apply exact times before both grid and chart. var loaded = _read(from.Date, through.Date, CancellationToken.None); return loaded with { Rows = loaded.Rows.Wh / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { // The store opens only the relevant daily files. Apply exact times before both grid and chart. var loaded = _read(from.Date, through.Date, CancellationToken.None); return loaded with { Rows = loaded.Row… / 지역 변수를 선언합니다: var result = await Task.Run
+L000384 |                 var result = await Task.Run(() => ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000385 |                 { ⟦EOL⟧
+// 해설 L386: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000386 |                     // The store opens only the relevant daily files. Apply exact times before both grid and chart. ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: _read(from.Date, through.Date, CancellationToken.None) / 지역 변수를 선언합니다: var loaded = _read(from.Date, through.Date, CancellationToken.None); / 변수의 초기값을 지정합니다: loaded = _read(from.Date, through.Date, CancellationToken.None)
+L000387 |                     var loaded = _read(from.Date, through.Date, CancellationToken.None); ⟦EOL⟧
+// 해설 L388: 호출자에게 값 또는 제어를 반환합니다: return loaded with { Rows = loaded.Rows.Where(row => row.OccurredAt.LocalDateTime >= from && row.OccurredAt.LocalDateTime <= through).OrderByDescending(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() };
+L000388 |                     return loaded with ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000389 |                     { ⟦EOL⟧
+// 해설 L390: 값을 대상에 대입합니다: Rows = loaded.Rows.Where(row => row.OccurredAt.LocalDateTime >= from && row.OccurredAt.LocalDateTime <= through).OrderByDescending(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: loaded.Rows.Where(row => row.OccurredAt.LocalDateTime >= from && row.OccurredAt.LocalDateTime <= through).OrderByDescending(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: loaded.Rows.Where(row => row.OccurredAt.LocalDateTime >= from && row.OccurredAt.LocalDateTime <= th
+L000390 |                         Rows = loaded.Rows.Where(row => row.OccurredAt.LocalDateTime >= from && row.OccurredAt.LocalDateTime <= through).OrderByDescending(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000391 |                     }; ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SearchAsync()
+L000392 |                 }); ⟦EOL⟧
+// 해설 L393: 값을 대상에 대입합니다: Rows = result.Rows.Select((row, index) => new ST_ALARM_HISTORY_ROW(index + 1, row.OccurredAt.LocalDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff"), row.Code.ToString(), row.Level, row.Group, row.Cause, row.Solution)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Rows.Select((row, index) => new ST_ALARM_HISTORY_ROW(index + 1, row.OccurredAt.LocalDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff"), row.Code.ToString(), row.Level, row.Group, row.Cause, row.Solution)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Rows.Select((row, inde
+L000393 |                 Rows = result.Rows.Select((row, index) => new ST_ALARM_HISTORY_ROW(index + 1, row.OccurredAt.LocalDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff"), row.Code.ToString(), row.Level, row.Group, row.Cause, row.Solution)).ToArray(); ⟦EOL⟧
+// 해설 L394: 값을 대상에 대입합니다: _loadedRows = result.Rows
+L000394 |                 _loadedRows = result.Rows; ⟦EOL⟧
+// 해설 L395: 값을 대상에 대입합니다: _searchedFrom = from
+L000395 |                 _searchedFrom = from; ⟦EOL⟧
+// 해설 L396: 값을 대상에 대입합니다: _searchedThrough = through
+L000396 |                 _searchedThrough = through; ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshTrend()
+L000397 |                 RefreshTrend(); ⟦EOL⟧
+// 해설 L398: 값을 대상에 대입합니다: Status = result.Warning.Length == 0 ? $"{Rows.Count:N0}건 조회 완료" : $"{Rows.Count:N0}건 조회 · {result.Warning}" / 조건에 따라 결과식을 선택합니다: result.Warning.Length == 0 ? $"{Rows.Count:N0}건 조회 완료" : $"{Rows.Count:N0}건 조회 · {result.Warning}"
+L000398 |                 Status = result.Warning.Length == 0 ? $"{Rows.Count:N0}건 조회 완료" : $"{Rows.Count:N0}건 조회 · {result.Warning}"; ⟦EOL⟧
+// 해설 L399: 값을 대상에 대입합니다: EmptyMessage = "해당 기간에 발생한 알람이 없습니다."
+L000399 |                 EmptyMessage = "해당 기간에 발생한 알람이 없습니다."; ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000400 |             } ⟦EOL⟧
+// 해설 L401: 지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException)
+L000401 |             catch (Exception exception)when (exception is IOException or UnauthorizedAccessException or ArgumentException) ⟦EOL⟧
+// 해설 L402: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000402 |             { ⟦EOL⟧
+// 해설 L403: 값을 대상에 대입합니다: Rows = []
+L000403 |                 Rows = []; ⟦EOL⟧
+// 해설 L404: 값을 대상에 대입합니다: Bars = []
+L000404 |                 Bars = []; ⟦EOL⟧
+// 해설 L405: 값을 대상에 대입합니다: _loadedRows = []
+L000405 |                 _loadedRows = []; ⟦EOL⟧
+// 해설 L406: 값을 대상에 대입합니다: _searchedFrom = _searchedThrough = null / 값을 대상에 대입합니다: _searchedThrough = null
+L000406 |                 _searchedFrom = _searchedThrough = null; ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: Status = $"알람 이력 조회 실패: {exception.Message}"
+L000407 |                 Status = $"알람 이력 조회 실패: {exception.Message}"; ⟦EOL⟧
+// 해설 L408: 값을 대상에 대입합니다: EmptyMessage = "알람 이력을 읽지 못했습니다."
+L000408 |                 EmptyMessage = "알람 이력을 읽지 못했습니다."; ⟦EOL⟧
+// 해설 L409: 값을 대상에 대입합니다: TrendCaption = "조회 실패"
+L000409 |                 TrendCaption = "조회 실패"; ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000410 |             } ⟦EOL⟧
+// 해설 L411: 종료 정리 구간입니다: finally
+L000411 |             finally ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000412 |             { ⟦EOL⟧
+// 해설 L413: 값을 대상에 대입합니다: IsBusy = false
+L000413 |                 IsBusy = false; ⟦EOL⟧
+// 해설 L414: 컬렉션 요소를 순회합니다: foreach (var name in new[] { nameof(Rows), nameof(Bars), nameof(Status), nameof(EmptyMessage), nameof(TrendCaption), nameof(IsBusy), nameof(CanEdit) })
+L000414 |                 foreach (var name in new[] ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000415 |                 { ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
+L000416 |                     nameof(Rows), ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Bars)
+L000417 |                     nameof(Bars), ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000418 |                     nameof(Status), ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(EmptyMessage)
+L000419 |                     nameof(EmptyMessage), ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(TrendCaption)
+L000420 |                     nameof(TrendCaption), ⟦EOL⟧
+// 해설 L421: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)
+L000421 |                     nameof(IsBusy), ⟦EOL⟧
+// 해설 L422: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanEdit)
+L000422 |                     nameof(CanEdit) ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000423 |                 } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CAlarmHistoryPanel.SearchAsync()
+L000425 |                 ) ⟦EOL⟧
+// 해설 L426: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(name)
+L000426 |                     Notify(name); ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: SearchCommand.NotifyCanExecuteChanged()
+L000427 |                 SearchCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: Last24HoursCommand.NotifyCanExecuteChanged()
+L000428 |                 Last24HoursCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000429 |             } ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 SearchAsync.
+L000430 |         } ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmHistoryPanel.TryReadTime(string, out System.TimeSpan)
+L000432 |         private static bool TryReadTime(string value, out TimeSpan time) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 TryReadTime.
+L000433 |         { ⟦EOL⟧
+// 해설 L434: 지역 변수를 선언합니다: string[] formats = ["H:mm", "HH:mm", "H:mm:ss", "HH:mm:ss", "H:mm:ss.FFF", "HH:mm:ss.FFF"]; / 변수의 초기값을 지정합니다: formats = ["H:mm", "HH:mm", "H:mm:ss", "HH:mm:ss", "H:mm:ss.FFF", "HH:mm:ss.FFF"]
+L000434 |             string[] formats = ["H:mm", "HH:mm", "H:mm:ss", "HH:mm:ss", "H:mm:ss.FFF", "HH:mm:ss.FFF"]; ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.TryParseExact(value?.Trim(), formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var valid = DateTime.TryParseExact(value?.Trim(), formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed); / 변수의 초기값을 지정합니다: valid = DateTime.TryParseExact(value?.Trim(), formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed)
+L000435 |             var valid = DateTime.TryParseExact(value?.Trim(), formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed); ⟦EOL⟧
+// 해설 L436: 값을 대상에 대입합니다: time = parsed.TimeOfDay
+L000436 |             time = parsed.TimeOfDay; ⟦EOL⟧
+// 해설 L437: 호출자에게 값 또는 제어를 반환합니다: return valid;
+L000437 |             return valid; ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 TryReadTime.
+L000438 |         } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildCodeBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000440 |         private static IReadOnlyList<ST_ALARM_TREND_COLUMN> BuildCodeBars(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> rows) ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 BuildCodeBars.
+L000441 |         { ⟦EOL⟧
+// 해설 L442: 조건에 따라 분기합니다: if (rows.Count == 0)
+L000442 |             if (rows.Count == 0) ⟦EOL⟧
+// 해설 L443: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000443 |                 return[]; ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GroupBy(row => row.Code).Select(group => new { Code = group.Key, Cause = group.First().Cause, Count = group.Count() }).OrderByDescending(group => group.Count).ThenBy(group => group.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GroupBy(row => row.Code).Select(group => new { Code = group.Key, Cause = group.First().Cause, Count = group.Count() }).OrderByDescending(group => group.Count).ThenBy(group => group.Code) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GroupBy(row => row.Code).Select(group => new { Code = gr
+L000444 |             var counts = rows.GroupBy(row => row.Code).Select(group => new { Code = group.Key, Cause = group.First().Cause, Count = group.Count() }).OrderByDescending(group => group.Count).ThenBy(group => group.Code).ToArray(); ⟦EOL⟧
+// 해설 L445: 지역 변수를 선언합니다: var maximum = counts[0].Count; / 변수의 초기값을 지정합니다: maximum = counts[0].Count
+L000445 |             var maximum = counts[0].Count; ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: counts.Select(group => new ST_ALARM_TREND_COLUMN( group.Code.ToString(CultureInfo.InvariantCulture), $"{group.Code} · {group.Cause}\n발생 {group.Count:N0}건", group.Cause, group.Count, new GridLength(group.Count, GridUnitTy… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ALARM_TREND_COLUMN( group.Code.ToString(CultureInfo.InvariantCulture), $"{group.Code} · {group.Cause}\n발생 {group.Count:N0}건", group.Cause, group.Count, new GridLength(group.Count, GridUnitType.Star), new GridLengt… / 호출자에게 값 또는 제어를 반환합니다: return counts.Se
+L000446 |             return counts.Select(group => new ST_ALARM_TREND_COLUMN( ⟦EOL⟧
+// 해설 L447: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Code.ToString(CultureInfo.InvariantCulture)
+L000447 |                 group.Code.ToString(CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildCodeBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000448 |                 $"{group.Code} · {group.Cause}\n발생 {group.Count:N0}건",  ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildCodeBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000449 |                 group.Cause,  ⟦EOL⟧
+// 해설 L450: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildCodeBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000450 |                 group.Count,  ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(group.Count, GridUnitType.Star)
+L000451 |                 new GridLength(group.Count, GridUnitType.Star),  ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(maximum - group.Count, GridUnitType.Star)
+L000452 |                 new GridLength(maximum - group.Count, GridUnitType.Star) ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildCodeBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000453 |             )).ToArray(); ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 BuildCodeBars.
+L000454 |         } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000456 |         private static IReadOnlyList<ST_ALARM_TREND_COLUMN> BuildHourBars(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> rows, DateTime from, DateTime through) ⟦EOL⟧
+// 해설 L457: 구문 블록 경계입니다 · 소속 BuildHourBars.
+L000457 |         { ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Date.AddHours(value.Hour)
+L000458 |             static DateTime Hour(DateTime value) => value.Date.AddHours(value.Hour); ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GroupBy(row => Hour(row.OccurredAt.LocalDateTime)).ToDictionary(group => group.Key, group => group.Count()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.GroupBy(row => Hour(row.OccurredAt.LocalDateTime)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Hour(row.OccurredAt.LocalDateTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Count() / 지역 변수를 선언합니다: var counts = rows.GroupBy(row => Hour(row.OccurredAt.LocalDateTime)).ToDictionary(group => group.Key, group => group.Count()); / 변수의 초기값을 지정합니다: counts = rows.GroupBy(row => Hour(row.OccurredA
+L000459 |             var counts = rows.GroupBy(row => Hour(row.OccurredAt.LocalDateTime)).ToDictionary(group => group.Key, group => group.Count()); ⟦EOL⟧
+// 해설 L460: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, counts.Values.DefaultIfEmpty(0).Max()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: counts.Values.DefaultIfEmpty(0).Max() / 함수·델리게이트 또는 객체 생성자를 호출합니다: counts.Values.DefaultIfEmpty(0) / 지역 변수를 선언합니다: var maximum = Math.Max(1, counts.Values.DefaultIfEmpty(0).Max()); / 변수의 초기값을 지정합니다: maximum = Math.Max(1, counts.Values.DefaultIfEmpty(0).Max())
+L000460 |             var maximum = Math.Max(1, counts.Values.DefaultIfEmpty(0).Max()); ⟦EOL⟧
+// 해설 L461: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_ALARM_TREND_COLUMN>() / 지역 변수를 선언합니다: var bars = new List<ST_ALARM_TREND_COLUMN>(); / 변수의 초기값을 지정합니다: bars = new List<ST_ALARM_TREND_COLUMN>()
+L000461 |             var bars = new List<ST_ALARM_TREND_COLUMN>(); ⟦EOL⟧
+// 해설 L462: 함수·델리게이트 또는 객체 생성자를 호출합니다: Hour(through) / 지역 변수를 선언합니다: var end = Hour(through); / 변수의 초기값을 지정합니다: end = Hour(through)
+L000462 |             var end = Hour(through); ⟦EOL⟧
+// 해설 L463: 값을 대상에 대입합니다: hour = hour.AddHours(1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Hour(from) / 함수·델리게이트 또는 객체 생성자를 호출합니다: hour.AddHours(1) / 초기화·조건·증감이 있는 반복입니다: for (var hour = Hour(from); ; hour = hour.AddHours(1)) / 변수의 초기값을 지정합니다: hour = Hour(from)
+L000463 |             for (var hour = Hour(from);; hour = hour.AddHours(1)) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 BuildHourBars.
+L000464 |             { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: counts.GetValueOrDefault(hour) / 지역 변수를 선언합니다: var count = counts.GetValueOrDefault(hour); / 변수의 초기값을 지정합니다: count = counts.GetValueOrDefault(hour)
+L000465 |                 var count = counts.GetValueOrDefault(hour); ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: bars.Add(new( hour.ToString("MM-dd HH:mm", CultureInfo.InvariantCulture), $"{hour:yyyy-MM-dd HH:mm} · {count:N0}건", "", count, new GridLength(count, GridUnitType.Star), new GridLength(maximum - count, GridUnitType.Star),… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new( hour.ToString("MM-dd HH:mm", CultureInfo.InvariantCulture), $"{hour:yyyy-MM-dd HH:mm} · {count:N0}건", "", count, new GridLength(count, GridUnitType.Star), new GridLength(maximum - count, GridUnitType.Star), IsHourly…
+L000466 |                 bars.Add(new( ⟦EOL⟧
+// 해설 L467: 함수·델리게이트 또는 객체 생성자를 호출합니다: hour.ToString("MM-dd HH:mm", CultureInfo.InvariantCulture)
+L000467 |                     hour.ToString("MM-dd HH:mm", CultureInfo.InvariantCulture),  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000468 |                     $"{hour:yyyy-MM-dd HH:mm} · {count:N0}건",  ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000469 |                     "",  ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000470 |                     count,  ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(count, GridUnitType.Star)
+L000471 |                     new GridLength(count, GridUnitType.Star),  ⟦EOL⟧
+// 해설 L472: 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(maximum - count, GridUnitType.Star)
+L000472 |                     new GridLength(maximum - count, GridUnitType.Star),  ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000473 |                     IsHourly: true ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_TREND_COLUMN> Drilling.UI.Menu.Menus.CAlarmHistoryPanel.BuildHourBars(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_A
+L000474 |                 )); ⟦EOL⟧
+// 해설 L475: 조건에 따라 분기합니다: if (hour == end)
+L000475 |                 if (hour == end) ⟦EOL⟧
+// 해설 L476: 해당 반복/분기 구간을 종료합니다: break;
+L000476 |                     break; ⟦EOL⟧
+// 해설 L477: 구문 블록 경계입니다 · 소속 BuildHourBars.
+L000477 |             } ⟦EOL⟧
+L000478 |  ⟦EOL⟧
+// 해설 L479: 호출자에게 값 또는 제어를 반환합니다: return bars;
+L000479 |             return bars; ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 BuildHourBars.
+L000480 |         } ⟦EOL⟧
+L000481 |  ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000482 |         private void Notify([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L483: 구문 블록 경계입니다.
+L000483 |     } ⟦EOL⟧
+L000484 |  ⟦EOL⟧
+// 해설 L485: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_TREND_COLUMN(string Label, string Detail, string Cause, int Count, GridLength FilledWidth, GridLength EmptyWidth, bool IsHourly = false);
+L000485 |     public sealed record ST_ALARM_TREND_COLUMN(string Label, string Detail, string Cause, int Count, GridLength FilledWidth, GridLength EmptyWidth, bool IsHourly = false); ⟦EOL⟧
+// 해설 L486: 타입의 구조/상속 선언입니다: public sealed class CAlarmListPanel : INotifyPropertyChanged
+L000486 |     public sealed class CAlarmListPanel : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L487: 구문 블록 경계입니다.
+L000487 |     { ⟦EOL⟧
+// 해설 L488: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CAlarmManager Drilling.UI.Menu.Menus.CAlarmListPanel._alarms
+L000488 |         private readonly CAlarmManager _alarms; ⟦EOL⟧
+// 해설 L489: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT? Drilling.UI.Menu.Menus.CAlarmListPanel._displayedSnapshot
+L000489 |         private ST_ALARM_DEFINITION_SNAPSHOT? _displayedSnapshot; ⟦EOL⟧
+// 해설 L490: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CAlarmListPanel.CAlarmListPanel(Drilling.Common.Alarm.CAlarmManager)
+L000490 |         public CAlarmListPanel(CAlarmManager alarms) ⟦EOL⟧
+// 해설 L491: 구문 블록 경계입니다 · 소속 .ctor.
+L000491 |         { ⟦EOL⟧
+// 해설 L492: 값을 대상에 대입합니다: _alarms = alarms
+L000492 |             _alarms = alarms; ⟦EOL⟧
+// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSnapshot()
+L000493 |             RefreshSnapshot(); ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 .ctor.
+L000494 |         } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CAlarmListPanel.PropertyChanged
+L000496 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L497: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_LIST_ROW> Drilling.UI.Menu.Menus.CAlarmListPanel.Rows
+L000497 |         public IReadOnlyList<ST_ALARM_LIST_ROW> Rows { get; private set; } = []; ⟦EOL⟧
+// 해설 L498: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CAlarmListPanel.Status
+L000498 |         public string Status { get; private set; } = ""; ⟦EOL⟧
+// 해설 L499: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CAlarmListPanel.HasError
+L000499 |         public bool HasError { get; private set; } ⟦EOL⟧
+L000500 |  ⟦EOL⟧
+// 해설 L501: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CAlarmListPanel.RefreshSnapshot()
+L000501 |         public void RefreshSnapshot() ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000502 |         { ⟦EOL⟧
+// 해설 L503: 함수·델리게이트 또는 객체 생성자를 호출합니다: _alarms.GetDefinitionsSnapshot() / 지역 변수를 선언합니다: var snapshot = _alarms.GetDefinitionsSnapshot(); / 변수의 초기값을 지정합니다: snapshot = _alarms.GetDefinitionsSnapshot()
+L000503 |             var snapshot = _alarms.GetDefinitionsSnapshot(); ⟦EOL⟧
+// 해설 L504: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(snapshot, _displayedSnapshot) / 조건에 따라 분기합니다: if (ReferenceEquals(snapshot, _displayedSnapshot))
+L000504 |             if (ReferenceEquals(snapshot, _displayedSnapshot)) ⟦EOL⟧
+// 해설 L505: 호출자에게 값 또는 제어를 반환합니다: return;
+L000505 |                 return; ⟦EOL⟧
+// 해설 L506: 값을 대상에 대입합니다: _displayedSnapshot = snapshot
+L000506 |             _displayedSnapshot = snapshot; ⟦EOL⟧
+// 해설 L507: 값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) => new ST_ALARM_LIST_ROW(index + 1, row.Code, row.Group, row.Id, row.Level, row.Cause, row.Solution, row.CimAddress)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new ST_ALARM_LIST_ROW(index + 1, row.Code, row.Group, row.Id, row.Level, row.Cause, row.Solution, row.CimAddress)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new ST_ALARM_LIST_ROW(index + 1, row.Code, row.Group, row.Id, row.Level, row.Cause, row.Solution, ro
+L000507 |             Rows = snapshot.Rows.Select((row, index) => new ST_ALARM_LIST_ROW(index + 1, row.Code, row.Group, row.Id, row.Level, row.Cause, row.Solution, row.CimAddress)).ToArray(); ⟦EOL⟧
+// 해설 L508: 값을 대상에 대입합니다: HasError = !string.IsNullOrEmpty(snapshot.Error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(snapshot.Error)
+L000508 |             HasError = !string.IsNullOrEmpty(snapshot.Error); ⟦EOL⟧
+// 해설 L509: 값을 대상에 대입합니다: Status = HasError ? $"알람 목록을 불러오지 못했습니다. {snapshot.Error} 파일 확인 후 프로그램을 다시 시작해 주세요." : Rows.Count == 0 ? "등록된 알람이 없습니다." : "" / 조건에 따라 결과식을 선택합니다: HasError ? $"알람 목록을 불러오지 못했습니다. {snapshot.Error} 파일 확인 후 프로그램을 다시 시작해 주세요." : Rows.Count == 0 ? "등록된 알람이 없습니다." : "" / 조건에 따라 결과식을 선택합니다: Rows.Count == 0 ? "등록된 알람이 없습니다." : ""
+L000509 |             Status = HasError ? $"알람 목록을 불러오지 못했습니다. {snapshot.Error} 파일 확인 후 프로그램을 다시 시작해 주세요." : Rows.Count == 0 ? "등록된 알람이 없습니다." : ""; ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(Rows))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(Rows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
+L000510 |             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Rows))); ⟦EOL⟧
+// 해설 L511: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(Status))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(Status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Status)
+L000511 |             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Status))); ⟦EOL⟧
+// 해설 L512: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(HasError))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(HasError)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(HasError)
+L000512 |             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(HasError))); ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 RefreshSnapshot.
+L000513 |         } ⟦EOL⟧
+// 해설 L514: 구문 블록 경계입니다.
+L000514 |     } ⟦EOL⟧
+L000515 |  ⟦EOL⟧
+// 해설 L516: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_LIST_ROW(int No, int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress);
+L000516 |     public sealed record ST_ALARM_LIST_ROW(int No, int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress); ⟦EOL⟧
+// 해설 L517: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_CURRENT_ROW(int No, string Code, string Level, string Group, string Message, string Cause, string Action, string Time)
+L000517 |     public sealed record ST_ALARM_CURRENT_ROW(int No, string Code, string Level, string Group, string Message, string Cause, string Action, string Time) ⟦EOL⟧
+// 해설 L518: 구문 블록 경계입니다.
+L000518 |     { ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush
+L000519 |         public Brush LevelBrush ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 LevelBrush.
+L000520 |         { ⟦EOL⟧
+// 해설 L521: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush.get
+L000521 |             get ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000522 |             { ⟦EOL⟧
+// 해설 L523: 호출자에게 값 또는 제어를 반환합니다: return Level switch { "LIGHT" or "WARN" => CStatusBrush.Wait, "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, "INFO" => CStatusBrush.Simul, _ => CStatusBrush.PrimaryText }; / 값별 결과식을 선택합니다: Level switch { "LIGHT" or "WARN" => CStatusBrush.Wait, "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, "INFO" => CStatusBrush.Simul, _ => CStatusBrush.PrimaryText }
+L000523 |                 return Level switch ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000524 |                 { ⟦EOL⟧
+// 해설 L525: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush.get
+L000525 |                     "LIGHT" or "WARN" => CStatusBrush.Wait, ⟦EOL⟧
+// 해설 L526: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush.get
+L000526 |                     "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, ⟦EOL⟧
+// 해설 L527: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush.get
+L000527 |                     "INFO" => CStatusBrush.Simul, ⟦EOL⟧
+// 해설 L528: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW.LevelBrush.get
+L000528 |                     _ => CStatusBrush.PrimaryText ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000529 |                 }; ⟦EOL⟧
+// 해설 L530: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000530 |             } ⟦EOL⟧
+// 해설 L531: 구문 블록 경계입니다 · 소속 LevelBrush.
+L000531 |         } ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다.
+L000532 |     } ⟦EOL⟧
+L000533 |  ⟦EOL⟧
+// 해설 L534: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DETAIL_ROW(string Name, string Value, string State = "Normal")
+L000534 |     public sealed record ST_ALARM_DETAIL_ROW(string Name, string Value, string State = "Normal") ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다.
+L000535 |     { ⟦EOL⟧
+// 해설 L536: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush
+L000536 |         public Brush ValueBrush ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000537 |         { ⟦EOL⟧
+// 해설 L538: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000538 |             get ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000539 |             { ⟦EOL⟧
+// 해설 L540: 호출자에게 값 또는 제어를 반환합니다: return State switch { "Warn" => CStatusBrush.Wait, "Critical" => CStatusBrush.Offline, "Accent" => CStatusBrush.Simul, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }; / 값별 결과식을 선택합니다: State switch { "Warn" => CStatusBrush.Wait, "Critical" => CStatusBrush.Offline, "Accent" => CStatusBrush.Simul, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }
+L000540 |                 return State switch ⟦EOL⟧
+// 해설 L541: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000541 |                 { ⟦EOL⟧
+// 해설 L542: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000542 |                     "Warn" => CStatusBrush.Wait, ⟦EOL⟧
+// 해설 L543: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000543 |                     "Critical" => CStatusBrush.Offline, ⟦EOL⟧
+// 해설 L544: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000544 |                     "Accent" => CStatusBrush.Simul, ⟦EOL⟧
+// 해설 L545: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000545 |                     "Ok" => CStatusBrush.Online, ⟦EOL⟧
+// 해설 L546: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW.ValueBrush.get
+L000546 |                     _ => CStatusBrush.PrimaryText ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000547 |                 }; ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000548 |             } ⟦EOL⟧
+// 해설 L549: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000549 |         } ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다.
+L000550 |     } ⟦EOL⟧
+L000551 |  ⟦EOL⟧
+// 해설 L552: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_HISTORY_ROW(int No, string Time, string Code, string Level, string Group, string Cause, string Solution)
+L000552 |     public sealed record ST_ALARM_HISTORY_ROW(int No, string Time, string Code, string Level, string Group, string Cause, string Solution) ⟦EOL⟧
+// 해설 L553: 구문 블록 경계입니다.
+L000553 |     { ⟦EOL⟧
+// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush
+L000554 |         public Brush LevelBrush ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 LevelBrush.
+L000555 |         { ⟦EOL⟧
+// 해설 L556: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush.get
+L000556 |             get ⟦EOL⟧
+// 해설 L557: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000557 |             { ⟦EOL⟧
+// 해설 L558: 호출자에게 값 또는 제어를 반환합니다: return Level switch { "LIGHT" or "WARN" => CStatusBrush.Wait, "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, "INFO" => CStatusBrush.Simul, _ => CStatusBrush.PrimaryText }; / 값별 결과식을 선택합니다: Level switch { "LIGHT" or "WARN" => CStatusBrush.Wait, "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, "INFO" => CStatusBrush.Simul, _ => CStatusBrush.PrimaryText }
+L000558 |                 return Level switch ⟦EOL⟧
+// 해설 L559: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000559 |                 { ⟦EOL⟧
+// 해설 L560: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush.get
+L000560 |                     "LIGHT" or "WARN" => CStatusBrush.Wait, ⟦EOL⟧
+// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush.get
+L000561 |                     "HEAVY" or "CRITICAL" or "ERROR" => CStatusBrush.Offline, ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush.get
+L000562 |                     "INFO" => CStatusBrush.Simul, ⟦EOL⟧
+// 해설 L563: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW.LevelBrush.get
+L000563 |                     _ => CStatusBrush.PrimaryText ⟦EOL⟧
+// 해설 L564: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000564 |                 }; ⟦EOL⟧
+// 해설 L565: 구문 블록 경계입니다 · 소속 get_LevelBrush.
+L000565 |             } ⟦EOL⟧
+// 해설 L566: 구문 블록 경계입니다 · 소속 LevelBrush.
+L000566 |         } ⟦EOL⟧
+// 해설 L567: 구문 블록 경계입니다.
+L000567 |     } ⟦EOL⟧
+L000568 |  ⟦EOL⟧
+// 해설 L569: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_TREND_BAR(string Time, double Scanner, double Laser, double Motion, double Total, double TotalY);
+L000569 |     public sealed record ST_ALARM_TREND_BAR(string Time, double Scanner, double Laser, double Motion, double Total, double TotalY); ⟦EOL⟧
+// 해설 L570: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_SUMMARY_ITEM(string Name, string Value, string State = "Normal")
+L000570 |     public sealed record ST_ALARM_SUMMARY_ITEM(string Name, string Value, string State = "Normal") ⟦EOL⟧
+// 해설 L571: 구문 블록 경계입니다.
+L000571 |     { ⟦EOL⟧
+// 해설 L572: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush
+L000572 |         public Brush ValueBrush ⟦EOL⟧
+// 해설 L573: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000573 |         { ⟦EOL⟧
+// 해설 L574: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000574 |             get ⟦EOL⟧
+// 해설 L575: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000575 |             { ⟦EOL⟧
+// 해설 L576: 호출자에게 값 또는 제어를 반환합니다: return State switch { "Warn" => CStatusBrush.Wait, "Critical" => CStatusBrush.Offline, "Accent" => CStatusBrush.Simul, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }; / 값별 결과식을 선택합니다: State switch { "Warn" => CStatusBrush.Wait, "Critical" => CStatusBrush.Offline, "Accent" => CStatusBrush.Simul, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }
+L000576 |                 return State switch ⟦EOL⟧
+// 해설 L577: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000577 |                 { ⟦EOL⟧
+// 해설 L578: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000578 |                     "Warn" => CStatusBrush.Wait, ⟦EOL⟧
+// 해설 L579: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000579 |                     "Critical" => CStatusBrush.Offline, ⟦EOL⟧
+// 해설 L580: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000580 |                     "Accent" => CStatusBrush.Simul, ⟦EOL⟧
+// 해설 L581: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000581 |                     "Ok" => CStatusBrush.Online, ⟦EOL⟧
+// 해설 L582: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.ST_ALARM_SUMMARY_ITEM.ValueBrush.get
+L000582 |                     _ => CStatusBrush.PrimaryText ⟦EOL⟧
+// 해설 L583: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000583 |                 }; ⟦EOL⟧
+// 해설 L584: 구문 블록 경계입니다 · 소속 get_ValueBrush.
+L000584 |             } ⟦EOL⟧
+// 해설 L585: 구문 블록 경계입니다 · 소속 ValueBrush.
+L000585 |         } ⟦EOL⟧
+// 해설 L586: 구문 블록 경계입니다.
+L000586 |     } ⟦EOL⟧
+// 해설 L587: 구문 블록 경계입니다.
+L000587 | } ⟦EOL⟧

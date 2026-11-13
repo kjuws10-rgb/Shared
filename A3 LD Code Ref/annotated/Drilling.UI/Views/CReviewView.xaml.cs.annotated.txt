@@ -1,0 +1,283 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CReviewView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Data;
+L000003 | using System.Windows.Data; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000004 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000005 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000006 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000007 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000009 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CReviewView : UserControl
+L000010 | public partial class CReviewView : UserControl ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(ReviewMenu), typeof(CMenuReview), typeof(CReviewView)) / 변수의 초기값을 지정합니다: ReviewMenuProperty = DependencyProperty.Register( nameof(ReviewMenu), typeof(CMenuReview), typeof(CReviewView))
+L000012 |     public static readonly DependencyProperty ReviewMenuProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ReviewMenu)
+L000013 |         nameof(ReviewMenu), typeof(CMenuReview), typeof(CReviewView)); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(ReviewMenuProperty) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(ReviewMenuProperty, value)
+L000014 |     public CMenuReview? ReviewMenu { get => (CMenuReview?)GetValue(ReviewMenuProperty); set => SetValue(ReviewMenuProperty, value); } ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(200) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(200) / 변수의 초기값을 지정합니다: _cameraTimer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) }
+L000015 |     private readonly DispatcherTimer _cameraTimer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(200) }; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewView.CReviewView()
+L000016 |     public CReviewView() ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetBinding(ReviewMenuProperty, new Binding("CurrentScreen.Review")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Binding("CurrentScreen.Review")
+L000019 |         SetBinding(ReviewMenuProperty, new Binding("CurrentScreen.Review")); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCamera() / 복합 대입 또는 이벤트 구독/해지 표현입니다: _cameraTimer.Tick += (_, _) => RefreshCamera()
+L000020 |         _cameraTimer.Tick += (_, _) => RefreshCamera(); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCamera() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _cameraTimer.Start() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => { RefreshCamera(); if (IsVisible) _cameraTimer.Start(); } / 조건에 따라 분기합니다: if (IsVisible)
+L000021 |         Loaded += (_, _) => { RefreshCamera(); if (IsVisible) _cameraTimer.Start(); }; ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cameraTimer.Stop() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Unloaded += (_, _) => _cameraTimer.Stop()
+L000022 |         Unloaded += (_, _) => _cameraTimer.Stop(); ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 .ctor.
+L000023 |     } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCamera()
+L000025 |     private void ReviewPreview_SizeChanged(object sender, SizeChangedEventArgs e) => RefreshCamera(); ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RefreshCamera()
+L000026 |     private void RefreshCamera() ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 RefreshCamera.
+L000027 |     { ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: .RefreshCameraFeedback(RunGlassPreviewViewport.ActualWidth, RunGlassPreviewViewport.ActualHeight)
+L000028 |         ReviewMenu?.RefreshCameraFeedback(RunGlassPreviewViewport.ActualWidth, RunGlassPreviewViewport.ActualHeight); ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 RefreshCamera.
+L000029 |     } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000031 |     private void RunCellPreviewLabel_MouseMove(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 RunCellPreviewLabel_MouseMove.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowCellPreviewHoverTip( sender, e, RunGlassPreviewViewport, RunGlassPreviewHoverTip, RunGlassPreviewHoverTipText, RunGlassPreviewHoverTipTranslateTransform )
+L000033 |         ShowCellPreviewHoverTip( ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000035 |             sender, ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000037 |             e, ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000039 |             RunGlassPreviewViewport, ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000041 |             RunGlassPreviewHoverTip, ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000043 |             RunGlassPreviewHoverTipText, ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000045 |             RunGlassPreviewHoverTipTranslateTransform ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseMove(object, MouseEventArgs)
+L000046 |         ); ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 RunCellPreviewLabel_MouseMove.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.RunCellPreviewLabel_MouseLeave(object, MouseEventArgs)
+L000049 |     private void RunCellPreviewLabel_MouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 RunCellPreviewLabel_MouseLeave.
+L000050 |     { ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellPreviewHoverTip(RunGlassPreviewHoverTip, RunGlassPreviewHoverTipText)
+L000051 |         HideCellPreviewHoverTip(RunGlassPreviewHoverTip, RunGlassPreviewHoverTipText); ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 RunCellPreviewLabel_MouseLeave.
+L000052 |     } ⟦EOL⟧
+L000053 |  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.CellPreviewLabel_PreviewMouseLeftButtonDown(object, MouseButtonEventArgs)
+L000054 |     private void CellPreviewLabel_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 CellPreviewLabel_PreviewMouseLeftButtonDown.
+L000055 |     { ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellPreviewHoverTips()
+L000056 |         HideCellPreviewHoverTips(); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 CellPreviewLabel_PreviewMouseLeftButtonDown.
+L000057 |     } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ReviewView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000059 |     private void ReviewView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 ReviewView_IsVisibleChanged.
+L000060 |     { ⟦EOL⟧
+// 해설 L61: 조건에 따라 분기합니다: if (e.NewValue is false)
+L000061 |         if (e.NewValue is false) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 ReviewView_IsVisibleChanged.
+L000062 |         { ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellPreviewHoverTips()
+L000063 |             HideCellPreviewHoverTips(); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: _cameraTimer.Stop()
+L000064 |             _cameraTimer.Stop(); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 ReviewView_IsVisibleChanged.
+L000065 |         } ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCamera() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _cameraTimer.Start() / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (IsLoaded)
+L000066 |         else if (IsLoaded) { RefreshCamera(); _cameraTimer.Start(); } ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 ReviewView_IsVisibleChanged.
+L000067 |     } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000069 |     private static void ShowCellPreviewHoverTip( ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000071 |         object sender, ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000073 |         MouseEventArgs e, ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000075 |         FrameworkElement viewport, ⟦EOL⟧
+L000076 |  ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000077 |         Border hoverTip, ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000079 |         TextBlock hoverTipText, ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000081 |         TranslateTransform translateTransform ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000082 |     ) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 ShowCellPreviewHoverTip.
+L000083 |     { ⟦EOL⟧
+// 해설 L84: 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label })
+L000084 |         if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 ShowCellPreviewHoverTip.
+L000085 |         { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellPreviewHoverTip(hoverTip, hoverTipText)
+L000086 |             HideCellPreviewHoverTip(hoverTip, hoverTipText); ⟦EOL⟧
+// 해설 L87: 호출자에게 값 또는 제어를 반환합니다: return;
+L000087 |             return; ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 ShowCellPreviewHoverTip.
+L000088 |         } ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: hoverTipText.Text = label.DisplayText
+L000090 |         hoverTipText.Text = label.DisplayText; ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: hoverTip.Visibility = Visibility.Visible
+L000091 |         hoverTip.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionCellPreviewHoverTip( e.GetPosition(viewport), viewport, hoverTip, translateTransform)
+L000092 |         PositionCellPreviewHoverTip( ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(viewport)
+L000093 |             e.GetPosition(viewport), ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000094 |             viewport, ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000095 |             hoverTip, ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ShowCellPreviewHoverTip(object, MouseEventArgs, FrameworkElement, Border, TextBlock, TranslateTransform)
+L000096 |             translateTransform); ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 ShowCellPreviewHoverTip.
+L000097 |     } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.PositionCellPreviewHoverTip(Point, FrameworkElement, FrameworkElement, TranslateTransform)
+L000099 |     private static void PositionCellPreviewHoverTip( ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.PositionCellPreviewHoverTip(Point, FrameworkElement, FrameworkElement, TranslateTransform)
+L000100 |         Point pointer, ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.PositionCellPreviewHoverTip(Point, FrameworkElement, FrameworkElement, TranslateTransform)
+L000101 |         FrameworkElement viewport, ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.PositionCellPreviewHoverTip(Point, FrameworkElement, FrameworkElement, TranslateTransform)
+L000102 |         FrameworkElement hoverTip, ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.PositionCellPreviewHoverTip(Point, FrameworkElement, FrameworkElement, TranslateTransform)
+L000103 |         TranslateTransform translateTransform) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000104 |     { ⟦EOL⟧
+// 해설 L105: 지역 변수를 선언합니다: const double margin = 4.0; / 변수의 초기값을 지정합니다: margin = 4.0
+L000105 |         const double margin = 4.0; ⟦EOL⟧
+// 해설 L106: 지역 변수를 선언합니다: const double offsetX = 12.0; / 변수의 초기값을 지정합니다: offsetX = 12.0
+L000106 |         const double offsetX = 12.0; ⟦EOL⟧
+// 해설 L107: 지역 변수를 선언합니다: const double offsetY = 14.0; / 변수의 초기값을 지정합니다: offsetY = 14.0
+L000107 |         const double offsetY = 14.0; ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: hoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity)
+L000108 |         hoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)); ⟦EOL⟧
+// 해설 L109: 지역 변수를 선언합니다: var tipSize = hoverTip.DesiredSize; / 변수의 초기값을 지정합니다: tipSize = hoverTip.DesiredSize
+L000109 |         var tipSize = hoverTip.DesiredSize; ⟦EOL⟧
+// 해설 L110: 지역 변수를 선언합니다: var x = pointer.X + offsetX; / 변수의 초기값을 지정합니다: x = pointer.X + offsetX
+L000110 |         var x = pointer.X + offsetX; ⟦EOL⟧
+// 해설 L111: 지역 변수를 선언합니다: var y = pointer.Y + offsetY; / 변수의 초기값을 지정합니다: y = pointer.Y + offsetY
+L000111 |         var y = pointer.Y + offsetY; ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (viewport.ActualWidth > 0)
+L000112 |         if (viewport.ActualWidth > 0) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, viewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, viewport.ActualWidth - tipSize.Width - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, viewport.ActualWidth - tipSize.Width - margin)
+L000114 |             x = Math.Clamp(x, margin, Math.Max(margin, viewport.ActualWidth - tipSize.Width - margin)); ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000115 |         } ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 조건에 따라 분기합니다: if (viewport.ActualHeight > 0)
+L000117 |         if (viewport.ActualHeight > 0) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, viewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, viewport.ActualHeight - tipSize.Height - margin)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, viewport.ActualHeight - tipSize.Height - margin)
+L000119 |             y = Math.Clamp(y, margin, Math.Max(margin, viewport.ActualHeight - tipSize.Height - margin)); ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000120 |         } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: translateTransform.X = x
+L000122 |         translateTransform.X = x; ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: translateTransform.Y = y
+L000123 |         translateTransform.Y = y; ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 PositionCellPreviewHoverTip.
+L000124 |     } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.HideCellPreviewHoverTip(Border, TextBlock)
+L000126 |     private static void HideCellPreviewHoverTip(Border hoverTip, TextBlock hoverTipText) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 HideCellPreviewHoverTip.
+L000127 |     { ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: hoverTip.Visibility = Visibility.Collapsed
+L000128 |         hoverTip.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: hoverTipText.Text = ""
+L000129 |         hoverTipText.Text = ""; ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 HideCellPreviewHoverTip.
+L000130 |     } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.HideCellPreviewHoverTips()
+L000132 |     private void HideCellPreviewHoverTips() ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 HideCellPreviewHoverTips.
+L000133 |     { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: HideCellPreviewHoverTip(RunGlassPreviewHoverTip, RunGlassPreviewHoverTipText)
+L000134 |         HideCellPreviewHoverTip(RunGlassPreviewHoverTip, RunGlassPreviewHoverTipText); ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 HideCellPreviewHoverTips.
+L000135 |     } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ReviewResultDataGrid_AutoGeneratingColumn(object?, DataGridAutoGeneratingColumnEventArgs)
+L000137 |     private void ReviewResultDataGrid_AutoGeneratingColumn( ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ReviewResultDataGrid_AutoGeneratingColumn(object?, DataGridAutoGeneratingColumnEventArgs)
+L000138 |         object? sender, ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewView.ReviewResultDataGrid_AutoGeneratingColumn(object?, DataGridAutoGeneratingColumnEventArgs)
+L000139 |         DataGridAutoGeneratingColumnEventArgs e) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000140 |     { ⟦EOL⟧
+// 해설 L141: 조건에 따라 분기합니다: if (e.Column is not DataGridTextColumn textColumn || e.PropertyName.Equals("LINE", StringComparison.OrdinalIgnoreCase))
+L000141 |         if (e.Column is not DataGridTextColumn textColumn || ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.PropertyName.Equals("LINE", StringComparison.OrdinalIgnoreCase)
+L000142 |             e.PropertyName.Equals("LINE", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 호출자에게 값 또는 제어를 반환합니다: return;
+L000144 |             return; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 조건에 따라 분기합니다: if (textColumn.Binding is Binding binding)
+L000147 |         if (textColumn.Binding is Binding binding) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000148 |         { ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: binding.StringFormat = "0.0000"
+L000149 |             binding.StringFormat = "0.0000"; ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000150 |         } ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 ReviewResultDataGrid_AutoGeneratingColumn.
+L000151 |     } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다.
+L000153 | } ⟦EOL⟧

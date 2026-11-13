@@ -1,0 +1,104 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMenuPm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000001 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000002 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000003 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000006 | using Drilling.Common.Station; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000008 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public sealed class CMenuPm(Func<ST_PM_LOCK_STATUS> lockStatusProvider, Action enterLock) : CMenuBase
+L000009 | public sealed class CMenuPm(Func<ST_PM_LOCK_STATUS> lockStatusProvider, Action enterLock) : CMenuBase ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu
+L000011 |     public override EN_MENU Menu ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 Menu.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get
+L000013 |         get ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 get_Menu.
+L000014 |         { ⟦EOL⟧
+// 해설 L15: 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Pm;
+L000015 |             return EN_MENU.Pm; ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 get_Menu.
+L000016 |         } ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 Menu.
+L000017 |     } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.StartTime
+L000019 |     public string StartTime { get; private set; } = ""; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.LockItems
+L000020 |     public IReadOnlyList<ST_DISPLAY_ITEM> LockItems { get; private set; } = []; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.BlockedItems
+L000021 |     public IReadOnlyList<ST_DISPLAY_ITEM> BlockedItems { get; private set; } = []; ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000023 |     public override Task<CScreenViewModel> Build(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Build.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000025 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider() / 지역 변수를 선언합니다: var current = lockStatusProvider(); / 변수의 초기값을 지정합니다: current = lockStatusProvider()
+L000026 |         var current = lockStatusProvider(); ⟦EOL⟧
+// 해설 L27: 조건에 따라 분기합니다: if (!current.IsLocked)
+L000027 |         if (!current.IsLocked) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 Build.
+L000028 |         { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: enterLock()
+L000029 |             enterLock(); ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: current = lockStatusProvider() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider()
+L000030 |             current = lockStatusProvider(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Build.
+L000031 |         } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("HH:mm:ss") / 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.Now.ToString("HH:mm:ss") / 지역 변수를 선언합니다: var startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss"); / 변수의 초기값을 지정합니다: startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss")
+L000033 |         var startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss"); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply(startTime, [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], [new("Equipment Operation", "Blocked"), new("Manual Command", "Blocked"), new… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", startTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit", "Password required") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Operation", "Blocked") / 함수·델리게이트 또는 객체
+L000034 |         Apply(startTime, [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], [new("Equipment Operation", "Blocked"), new("Manual Command", "Blocked"), new("Cycle Start", "Blocked")]); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")],… / 지역 변수를 선언합니다: var screen = new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-" / 변수의 초기값을 지정합니다: screen = new CScreenViewMo
+L000035 |         var screen = new CScreenViewModel( ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000036 |             EN_MENU.Pm,  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000037 |             "PM",  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000038 |             "Operation lock screen. Password is required to exit PM.",  ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("HH:mm:ss") / 조건에 따라 결과식을 선택합니다: current.IsLocked ? "LOCKED" : "UNLOCKED"
+L000039 |             [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")],  ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Control", "Blocked") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit PM", "Password required")
+L000040 |             [new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")])],  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000041 |             pm: this ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000042 |         ); ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(screen) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(screen);
+L000043 |         return Task.FromResult(screen); ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 Build.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITE
+L000046 |     private void Apply(string startTime, IReadOnlyList<ST_DISPLAY_ITEM> lockItems, IReadOnlyList<ST_DISPLAY_ITEM> blockedItems) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 Apply.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: StartTime = startTime
+L000048 |         StartTime = startTime; ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: LockItems = lockItems
+L000049 |         LockItems = lockItems; ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: BlockedItems = blockedItems
+L000050 |         BlockedItems = blockedItems; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Apply.
+L000051 |     } ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다.
+L000052 | } ⟦EOL⟧

@@ -1,0 +1,1777 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Serial/CConex_AGP.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Serial/CConex_AGP.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Serial/CConex_AGP.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>045680b42136d9b770c33450031297751351d54ddbafad8efd8955080cb13c37</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>22,383 bytes / 562 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/a18dfdfc51358156a6a2.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CConex_AGP</td><td>ClassDeclaration</td><td>11–510</td><td>CConex_AGP: CSerialComm(data, option)</td></tr>
+<tr><td>EN_ATTENUATOR_COMMAND</td><td>EnumDeclaration</td><td>512–535</td><td>EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>EN_CONEX_AGP_ERROR</td><td>EnumDeclaration</td><td>537–544</td><td>EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>ST_ATTENUATOR_STATUS</td><td>RecordDeclaration</td><td>549–562</td><td>ST_ATTENUATOR_STATUS</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Build</td><td>MethodDeclaration</td><td>L15–42</td><td>string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)</td></tr>
+<tr><td>IsSuccessResponse</td><td>MethodDeclaration</td><td>L44–47</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSuccessResponse(string)</td></tr>
+<tr><td>Apply</td><td>MethodDeclaration</td><td>L49–159</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L161–172</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CConex_AGP.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>ExecuteConex</td><td>MethodDeclaration</td><td>L174–205</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CConex_AGP.ExecuteConex(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L187–190</td><td>string SelectValue()</td></tr>
+<tr><td>ExecuteConex</td><td>MethodDeclaration</td><td>L207–238</td><td>string Drilling.Common.Interface.CConex_AGP.ExecuteConex(string)</td></tr>
+<tr><td>IsNoValueCommand</td><td>MethodDeclaration</td><td>L240–243</td><td>bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[])</td></tr>
+<tr><td>IsSingleValueCommand</td><td>MethodDeclaration</td><td>L245–248</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[])</td></tr>
+<tr><td>SendSelecting</td><td>MethodDeclaration</td><td>L250–280</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string)</td></tr>
+<tr><td>SendPolling</td><td>MethodDeclaration</td><td>L282–304</td><td>string Drilling.Common.Interface.CConex_AGP.SendPolling(string)</td></tr>
+<tr><td>FormatDeviceCommand</td><td>MethodDeclaration</td><td>L306–310</td><td>string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string)</td></tr>
+<tr><td>IsPollingCommand</td><td>MethodDeclaration</td><td>L312–315</td><td>bool Drilling.Common.Interface.CConex_AGP.IsPollingCommand(string)</td></tr>
+<tr><td>IsParameterQueryCommand</td><td>MethodDeclaration</td><td>L317–320</td><td>bool Drilling.Common.Interface.CConex_AGP.IsParameterQueryCommand(string)</td></tr>
+<tr><td>ReadControllerAddress</td><td>MethodDeclaration</td><td>L322–343</td><td>int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()</td></tr>
+<tr><td>TryParseResponse</td><td>MethodDeclaration</td><td>L345–366</td><td>bool Drilling.Common.Interface.CConex_AGP.TryParseResponse(string, out int, out string, out string)</td></tr>
+<tr><td>CreateSimulationResponse</td><td>MethodDeclaration</td><td>L368–383</td><td>string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS)</td></tr>
+<tr><td>ReadError</td><td>MethodDeclaration</td><td>L385–400</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)</td></tr>
+<tr><td>ReadTaggedDouble</td><td>MethodDeclaration</td><td>L402–405</td><td>double Drilling.Common.Interface.CConex_AGP.ReadTaggedDouble(string, string, double)</td></tr>
+<tr><td>ReadTaggedNullableDouble</td><td>MethodDeclaration</td><td>L407–417</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?)</td></tr>
+<tr><td>ReadTaggedInt</td><td>MethodDeclaration</td><td>L419–424</td><td>int? Drilling.Common.Interface.CConex_AGP.ReadTaggedInt(string, string, int?)</td></tr>
+<tr><td>FormatCommandParameter</td><td>MethodDeclaration</td><td>L426–429</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double)</td></tr>
+<tr><td>NormalizeStoredCommandParameter</td><td>MethodDeclaration</td><td>L431–434</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double)</td></tr>
+<tr><td>FormatPositionParameter</td><td>MethodDeclaration</td><td>L436–439</td><td>string Drilling.Common.Interface.CConex_AGP.FormatPositionParameter(double)</td></tr>
+<tr><td>FormatIntegerCommandParameter</td><td>MethodDeclaration</td><td>L441–444</td><td>string Drilling.Common.Interface.CConex_AGP.FormatIntegerCommandParameter(double)</td></tr>
+<tr><td>ValidateFiniteCommandParameter</td><td>MethodDeclaration</td><td>L446–454</td><td>double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double)</td></tr>
+<tr><td>ValidateInt32CommandParameter</td><td>MethodDeclaration</td><td>L456–465</td><td>int Drilling.Common.Interface.CConex_AGP.ValidateInt32CommandParameter(double)</td></tr>
+<tr><td>ReadControllerState</td><td>MethodDeclaration</td><td>L467–476</td><td>string Drilling.Common.Interface.CConex_AGP.ReadControllerState(string, string)</td></tr>
+<tr><td>NormalizeControllerState</td><td>MethodDeclaration</td><td>L478–494</td><td>string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)</td></tr>
+<tr><td>IsMovingState</td><td>MethodDeclaration</td><td>L496–499</td><td>bool Drilling.Common.Interface.CConex_AGP.IsMovingState(string)</td></tr>
+<tr><td>ReadTsError</td><td>MethodDeclaration</td><td>L501–504</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsError(string)</td></tr>
+<tr><td>ReadTsState</td><td>MethodDeclaration</td><td>L506–509</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsState(string)</td></tr>
+<tr><td>MoveAbs</td><td>EnumMemberDeclaration</td><td>L514–514</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveAbs</td></tr>
+<tr><td>MoveRel</td><td>EnumMemberDeclaration</td><td>L515–515</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveRel</td></tr>
+<tr><td>Home</td><td>EnumMemberDeclaration</td><td>L516–516</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Home</td></tr>
+<tr><td>Stop</td><td>EnumMemberDeclaration</td><td>L517–517</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Stop</td></tr>
+<tr><td>ResetController</td><td>EnumMemberDeclaration</td><td>L518–518</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.ResetController</td></tr>
+<tr><td>Refresh</td><td>EnumMemberDeclaration</td><td>L519–519</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Refresh</td></tr>
+<tr><td>PollCurrentPosition</td><td>EnumMemberDeclaration</td><td>L520–520</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollCurrentPosition</td></tr>
+<tr><td>PollTargetPosition</td><td>EnumMemberDeclaration</td><td>L521–521</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollTargetPosition</td></tr>
+<tr><td>PollState</td><td>EnumMemberDeclaration</td><td>L522–522</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollState</td></tr>
+<tr><td>GetHomeType</td><td>EnumMemberDeclaration</td><td>L523–523</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetHomeType</td></tr>
+<tr><td>SetHomeType</td><td>EnumMemberDeclaration</td><td>L524–524</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetHomeType</td></tr>
+<tr><td>GetNegativeSoftwareLimit</td><td>EnumMemberDeclaration</td><td>L525–525</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit</td></tr>
+<tr><td>SetNegativeSoftwareLimit</td><td>EnumMemberDeclaration</td><td>L526–526</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetNegativeSoftwareLimit</td></tr>
+<tr><td>GetPositiveSoftwareLimit</td><td>EnumMemberDeclaration</td><td>L527–527</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit</td></tr>
+<tr><td>SetPositiveSoftwareLimit</td><td>EnumMemberDeclaration</td><td>L528–528</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPositiveSoftwareLimit</td></tr>
+<tr><td>GetIGain</td><td>EnumMemberDeclaration</td><td>L529–529</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetIGain</td></tr>
+<tr><td>SetIGain</td><td>EnumMemberDeclaration</td><td>L530–530</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetIGain</td></tr>
+<tr><td>GetPGain</td><td>EnumMemberDeclaration</td><td>L531–531</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPGain</td></tr>
+<tr><td>SetPGain</td><td>EnumMemberDeclaration</td><td>L532–532</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPGain</td></tr>
+<tr><td>GetInterpolationFactor</td><td>EnumMemberDeclaration</td><td>L533–533</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetInterpolationFactor</td></tr>
+<tr><td>SetInterpolationFactor</td><td>EnumMemberDeclaration</td><td>L534–534</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetInterpolationFactor</td></tr>
+<tr><td>Ok</td><td>EnumMemberDeclaration</td><td>L539–539</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Ok</td></tr>
+<tr><td>Error</td><td>EnumMemberDeclaration</td><td>L540–540</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Error</td></tr>
+<tr><td>Timeout</td><td>EnumMemberDeclaration</td><td>L541–541</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Timeout</td></tr>
+<tr><td>InvalidResponse</td><td>EnumMemberDeclaration</td><td>L542–542</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.InvalidResponse</td></tr>
+<tr><td>NotSupported</td><td>EnumMemberDeclaration</td><td>L543–543</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.NotSupported</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L15">MethodDeclaration <code>Build</code> · L15–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L15-L42">Drilling.Common/Interface/Serial/CConex_AGP.cs:15–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.Build(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1068-L1068">Drilling.Common/Interface/CInterfaceManager.cs:1068–1068</a></td><td>CConex_AGP.Build</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>19</td><td>FormatPositionParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatPositionParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:436</td></tr>
+<tr><td>20</td><td>FormatPositionParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatPositionParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:436</td></tr>
+<tr><td>29</td><td>FormatIntegerCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatIntegerCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:441</td></tr>
+<tr><td>31</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+<tr><td>33</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+<tr><td>35</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+<tr><td>37</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+<tr><td>39</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.MoveAbs =&gt; $&quot;PA:{FormatPositionParameter(parameter)}&quot;, EN_ATTENUATOR_COMMAND.MoveRel =&gt; $&quot;PR:{FormatPositionParameter(parameter)}&quot;, EN_ATTENUATOR_COMMAND.Home =&gt; &quot;OR&quot;, EN_ATTENUATOR_CO</td></tr>
+<tr><td>17</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.MoveAbs =&gt; $&quot;PA:{FormatPositionParameter(parameter)}&quot;, EN_ATTENUATOR_COMMAND.MoveRel =&gt; $&quot;PR:{FormatPositionParameter(parameter)}&quot;, EN_ATTENUATOR_COMMAND.Home =&gt; &quot;OR&quot;, EN_ATTENUATOR_COMMAND.S</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatPositionParameter(parameter)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatPositionParameter(parameter)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatIntegerCommandParameter(parameter)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)</td></tr>
+<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(parameter)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Build&quot;]
+ N0[&quot;L17 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L44">MethodDeclaration <code>IsSuccessResponse</code> · L44–47</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L44-L47">Drilling.Common/Interface/Serial/CConex_AGP.cs:44–47</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSuccessResponse(string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1128-L1128">Drilling.Common/Interface/CInterfaceManager.cs:1128–1128</a></td><td>CConex_AGP.IsSuccessResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L52-L52">Drilling.Common/Interface/Serial/CConex_AGP.cs:52–52</a></td><td>IsSuccessResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>46</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>46</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>46</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) &amp;&amp; !response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L49">MethodDeclaration <code>Apply</code> · L49–159</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L49-L159">Drilling.Common/Interface/Serial/CConex_AGP.cs:49–159</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS Drilling.Common.Interface.CConex_AGP.Apply(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, string, Drilling.Common.Interface.ST_ATTENUATOR_STATUS, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS</td><td>None</td><td>False /</td></tr>
+<tr><td>simulation</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1088-L1088">Drilling.Common/Interface/CInterfaceManager.cs:1088–1088</a></td><td>CConex_AGP.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1126-L1126">Drilling.Common/Interface/CInterfaceManager.cs:1126–1126</a></td><td>CConex_AGP.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L1953-L1953">Drilling.Common/Interface/CInterfaceManager.cs:1953–1953</a></td><td>CConex_AGP.Apply</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>51</td><td>CreateSimulationResponse</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS) · Drilling.Common/Interface/Serial/CConex_AGP.cs:368</td></tr>
+<tr><td>51</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>52</td><td>IsSuccessResponse</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSuccessResponse(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:44</td></tr>
+<tr><td>57</td><td>ReadError</td><td>resolved</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:385</td></tr>
+<tr><td>98</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:402</td></tr>
+<tr><td>99</td><td>IsMovingState</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsMovingState(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:496</td></tr>
+<tr><td>103</td><td>ReadTaggedDouble</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.ReadTaggedDouble(string, string, double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:402</td></tr>
+<tr><td>107</td><td>ReadControllerState</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ReadControllerState(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:467</td></tr>
+<tr><td>111</td><td>ReadTaggedInt</td><td>resolved</td><td>int? Drilling.Common.Interface.CConex_AGP.ReadTaggedInt(string, string, int?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:419</td></tr>
+<tr><td>115</td><td>ValidateInt32CommandParameter</td><td>resolved</td><td>int Drilling.Common.Interface.CConex_AGP.ValidateInt32CommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:456</td></tr>
+<tr><td>119</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+<tr><td>123</td><td>NormalizeStoredCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:431</td></tr>
+<tr><td>127</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+<tr><td>131</td><td>NormalizeStoredCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:431</td></tr>
+<tr><td>135</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+<tr><td>139</td><td>NormalizeStoredCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:431</td></tr>
+<tr><td>143</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+<tr><td>147</td><td>NormalizeStoredCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:431</td></tr>
+<tr><td>151</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+<tr><td>155</td><td>NormalizeStoredCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:431</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, parameter, current)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>51</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()</td></tr>
+<tr><td>51</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim();</td></tr>
+<tr><td>51</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, parameter, current) : response.Trim()</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSuccessResponse(value)</td></tr>
+<tr><td>52</td><td>if</td><td>조건에 따라 분기합니다: if (!simulation &amp;&amp; !IsSuccessResponse(value))</td></tr>
+<tr><td>54</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return current with { CommOk = false, LastError = ReadError(value), UpdatedAt = DateTimeOffset.Now };</td></tr>
+<tr><td>56</td><td>assignment</td><td>값을 대상에 대입합니다: CommOk = false</td></tr>
+<tr><td>57</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ReadError(value)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadError(value)</td></tr>
+<tr><td>58</td><td>assignment</td><td>값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now</td></tr>
+<tr><td>62</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ok = current with { CommOk = true, LastError = EN_CONEX_AGP_ERROR.Ok, UpdatedAt = DateTimeOffset.Now };</td></tr>
+<tr><td>62</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ok = current with { CommOk = true, LastError = EN_CONEX_AGP_ERROR.Ok, UpdatedAt = DateTimeOffset.Now }</td></tr>
+<tr><td>64</td><td>assignment</td><td>값을 대상에 대입합니다: CommOk = true</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = EN_CONEX_AGP_ERROR.Ok</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: UpdatedAt = DateTimeOffset.Now</td></tr>
+<tr><td>68</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.MoveAbs =&gt; ok with { CurrentPosition = simulation ? parameter : ok.CurrentPosition, TargetPosition = parameter, CommandState = simulation ? &quot;READY&quot; : &quot;MOVING&quot; }, EN_ATTENUATOR_COMMAND.</td></tr>
+<tr><td>68</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.MoveAbs =&gt; ok with { CurrentPosition = simulation ? parameter : ok.CurrentPosition, TargetPosition = parameter, CommandState = simulation ? &quot;READY&quot; : &quot;MOVING&quot; }, EN_ATTENUATOR_COMMAND.MoveRel</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentPosition = simulation ? parameter : ok.CurrentPosition</td></tr>
+<tr><td>72</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? parameter : ok.CurrentPosition</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: TargetPosition = parameter</td></tr>
+<tr><td>74</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = simulation ? &quot;READY&quot; : &quot;MOVING&quot;</td></tr>
+<tr><td>74</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? &quot;READY&quot; : &quot;MOVING&quot;</td></tr>
+<tr><td>78</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentPosition = simulation ? ok.CurrentPosition + parameter : ok.CurrentPosition</td></tr>
+<tr><td>78</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? ok.CurrentPosition + parameter : ok.CurrentPosition</td></tr>
+<tr><td>79</td><td>assignment</td><td>값을 대상에 대입합니다: TargetPosition = simulation ? ok.CurrentPosition + parameter : ok.TargetPosition + parameter</td></tr>
+<tr><td>79</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? ok.CurrentPosition + parameter : ok.TargetPosition + parameter</td></tr>
+<tr><td>80</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = simulation ? &quot;READY&quot; : &quot;MOVING&quot;</td></tr>
+<tr><td>80</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? &quot;READY&quot; : &quot;MOVING&quot;</td></tr>
+<tr><td>84</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentPosition = simulation ? 0.0 : ok.CurrentPosition</td></tr>
+<tr><td>84</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? 0.0 : ok.CurrentPosition</td></tr>
+<tr><td>85</td><td>assignment</td><td>값을 대상에 대입합니다: TargetPosition = simulation ? 0.0 : ok.TargetPosition</td></tr>
+<tr><td>85</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? 0.0 : ok.TargetPosition</td></tr>
+<tr><td>86</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = simulation ? &quot;READY&quot; : &quot;HOMING&quot;</td></tr>
+<tr><td>86</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: simulation ? &quot;READY&quot; : &quot;HOMING&quot;</td></tr>
+<tr><td>90</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = &quot;STOP&quot;</td></tr>
+<tr><td>94</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = &quot;NOT_REFERENCED&quot;</td></tr>
+<tr><td>98</td><td>assignment</td><td>값을 대상에 대입합니다: CurrentPosition = ReadTaggedDouble(value, &quot;TP&quot;, ok.CurrentPosition)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;TP&quot;, ok.CurrentPosition)</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = IsMovingState(ok.CommandState) ? ok.CommandState : &quot;READY&quot;</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsMovingState(ok.CommandState)</td></tr>
+<tr><td>99</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsMovingState(ok.CommandState) ? ok.CommandState : &quot;READY&quot;</td></tr>
+<tr><td>103</td><td>assignment</td><td>값을 대상에 대입합니다: TargetPosition = ReadTaggedDouble(value, &quot;TH&quot;, ok.TargetPosition)</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedDouble(value, &quot;TH&quot;, ok.TargetPosition)</td></tr>
+<tr><td>107</td><td>assignment</td><td>값을 대상에 대입합니다: CommandState = ReadControllerState(value, ok.CommandState)</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadControllerState(value, ok.CommandState)</td></tr>
+<tr><td>111</td><td>assignment</td><td>값을 대상에 대입합니다: HomeType = ReadTaggedInt(value, &quot;HT&quot;, ok.HomeType)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedInt(value, &quot;HT&quot;, ok.HomeType)</td></tr>
+<tr><td>115</td><td>assignment</td><td>값을 대상에 대입합니다: HomeType = ValidateInt32CommandParameter(parameter)</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(parameter)</td></tr>
+<tr><td>119</td><td>assignment</td><td>값을 대상에 대입합니다: NegativeSoftwareLimit = ReadTaggedNullableDouble(value, &quot;SL&quot;, ok.NegativeSoftwareLimit)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, &quot;SL&quot;, ok.NegativeSoftwareLimit)</td></tr>
+<tr><td>123</td><td>assignment</td><td>값을 대상에 대입합니다: NegativeSoftwareLimit = NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>127</td><td>assignment</td><td>값을 대상에 대입합니다: PositiveSoftwareLimit = ReadTaggedNullableDouble(value, &quot;SR&quot;, ok.PositiveSoftwareLimit)</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, &quot;SR&quot;, ok.PositiveSoftwareLimit)</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: PositiveSoftwareLimit = NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: IGain = ReadTaggedNullableDouble(value, &quot;KI&quot;, ok.IGain)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, &quot;KI&quot;, ok.IGain)</td></tr>
+<tr><td>139</td><td>assignment</td><td>값을 대상에 대입합니다: IGain = NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: PGain = ReadTaggedNullableDouble(value, &quot;KP&quot;, ok.PGain)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, &quot;KP&quot;, ok.PGain)</td></tr>
+<tr><td>147</td><td>assignment</td><td>값을 대상에 대입합니다: PGain = NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>151</td><td>assignment</td><td>값을 대상에 대입합니다: InterpolationFactor = ReadTaggedNullableDouble(value, &quot;IF&quot;, ok.InterpolationFactor)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(value, &quot;IF&quot;, ok.InterpolationFactor)</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: InterpolationFactor = NormalizeStoredCommandParameter(parameter)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeStoredCommandParameter(parameter)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Apply&quot;]
+ N0[&quot;L52 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L68 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L161">MethodDeclaration <code>Execute</code> · L161–172</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L161-L172">Drilling.Common/Interface/Serial/CConex_AGP.cs:161–172</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CConex_AGP.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>163</td><td>SerialLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>166</td><td>ExecuteConex</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CConex_AGP.ExecuteConex(string, System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CConex_AGP.cs:174</td></tr>
+<tr><td>170</td><td>SerialLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>163</td><td>await</td><td>비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>164</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>166</td><td>await</td><td>비동기 완료를 기다립니다: await ExecuteConex(function, cancellationToken)</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteConex(function, cancellationToken)</td></tr>
+<tr><td>166</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return await ExecuteConex(function, cancellationToken);</td></tr>
+<tr><td>168</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L164 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L168 finally&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L174">MethodDeclaration <code>ExecuteConex</code> · L174–205</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L174-L205">Drilling.Common/Interface/Serial/CConex_AGP.cs:174–205</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CConex_AGP.ExecuteConex(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L166-L166">Drilling.Common/Interface/Serial/CConex_AGP.cs:166–166</a></td><td>ExecuteConex</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>178</td><td>Connect</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSerialComm.Connect(System.Threading.CancellationToken) · Drilling.Common/Interface/Serial/CSerialComm.cs:32</td></tr>
+<tr><td>194</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Threading.Tasks.Task.Run&lt;string&gt;(System.Func&lt;string&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>195</td><td>LastReceived.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>196</td><td>SetResponseState</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetResponseState(string) · Drilling.Common/Interface/Serial/CSerialComm.cs:206</td></tr>
+<tr><td>201</td><td>CloseSerialPort</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.CloseSerialPort() · Drilling.Common/Interface/Serial/CSerialComm.cs:363</td></tr>
+<tr><td>202</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CSerialComm.SetError(System.Exception) · Drilling.Common/Interface/Serial/CSerialComm.cs:192</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>176</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>178</td><td>await</td><td>비동기 완료를 기다립니다: await Connect(cancellationToken)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)</td></tr>
+<tr><td>181</td><td>if</td><td>조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)</td></tr>
+<tr><td>183</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>186</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = function</td></tr>
+<tr><td>192</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>194</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = await Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>194</td><td>await</td><td>비동기 완료를 기다립니다: await Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, cancellationToken)</td></tr>
+<tr><td>195</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? LastReceived : &quot;&quot;</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>195</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: LastReceived.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? LastReceived : &quot;&quot;</td></tr>
+<tr><td>196</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetResponseState(LastReceived)</td></tr>
+<tr><td>197</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>199</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or InvalidOperationException or TimeoutException or UnauthorizedAccessException or ObjectDisposedException)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>203</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteConex&quot;]
+ N0[&quot;L176 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L181 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L192 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L199 catch&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L187">LocalFunctionStatement <code>SelectValue</code> · L187–190</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L187-L190">Drilling.Common/Interface/Serial/CConex_AGP.cs:187–190</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>189</td><td>ExecuteConex</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ExecuteConex(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:207</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteConex(function)</td></tr>
+<tr><td>189</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ExecuteConex(function);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L207">MethodDeclaration <code>ExecuteConex</code> · L207–238</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L207-L238">Drilling.Common/Interface/Serial/CConex_AGP.cs:207–238</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.ExecuteConex(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L189-L189">Drilling.Common/Interface/Serial/CConex_AGP.cs:189–189</a></td><td>ExecuteConex</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>209</td><td>function.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>210</td><td>function.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>210</td><td>function.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>211</td><td>text.EndsWith</td><td>resolved</td><td>bool string.EndsWith(string, System.StringComparison)</td></tr>
+<tr><td>214</td><td>IsParameterQueryCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsParameterQueryCommand(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:317</td></tr>
+<tr><td>214</td><td>SendPolling</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendPolling(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:282</td></tr>
+<tr><td>217</td><td>IsPollingCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsPollingCommand(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:312</td></tr>
+<tr><td>219</td><td>SendPolling</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendPolling(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:282</td></tr>
+<tr><td>222</td><td>parts[0].ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>225</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>225</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>226</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>226</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>227</td><td>IsNoValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:240</td></tr>
+<tr><td>227</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>228</td><td>IsNoValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:240</td></tr>
+<tr><td>228</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>229</td><td>IsNoValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:240</td></tr>
+<tr><td>229</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>230</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>230</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>231</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>231</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>232</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>232</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>233</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>233</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>234</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>234</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+<tr><td>235</td><td>IsSingleValueCommand</td><td>resolved</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[]) · Drilling.Common/Interface/Serial/CConex_AGP.cs:245</td></tr>
+<tr><td>235</td><td>SendSelecting</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:250</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>209</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parts = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries);</td></tr>
+<tr><td>209</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parts = function.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim().ToUpperInvariant()</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim()</td></tr>
+<tr><td>210</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = function.Trim().ToUpperInvariant();</td></tr>
+<tr><td>210</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = function.Trim().ToUpperInvariant()</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.EndsWith(&quot;?&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>211</td><td>if</td><td>조건에 따라 분기합니다: if (text.EndsWith(&quot;?&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>213</td><td>local-declaration</td><td>지역 변수를 선언합니다: var queryCommand = text[..^1];</td></tr>
+<tr><td>213</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: queryCommand = text[..^1]</td></tr>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsParameterQueryCommand(queryCommand)</td></tr>
+<tr><td>214</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text)</td></tr>
+<tr><td>214</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IsParameterQueryCommand(queryCommand) ? SendPolling(text) : &quot;ERR:-2&quot;</td></tr>
+<tr><td>214</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return IsParameterQueryCommand(queryCommand) ? SendPolling(text) : &quot;ERR:-2&quot;;</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsPollingCommand(text)</td></tr>
+<tr><td>217</td><td>if</td><td>조건에 따라 분기합니다: if (IsPollingCommand(text))</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendPolling(text)</td></tr>
+<tr><td>219</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return SendPolling(text);</td></tr>
+<tr><td>222</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parts[0].ToUpperInvariant()</td></tr>
+<tr><td>222</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parts.Length &gt; 0 ? parts[0].ToUpperInvariant() : text</td></tr>
+<tr><td>222</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = parts.Length &gt; 0 ? parts[0].ToUpperInvariant() : text;</td></tr>
+<tr><td>222</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = parts.Length &gt; 0 ? parts[0].ToUpperInvariant() : text</td></tr>
+<tr><td>223</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { &quot;PA&quot; when IsSingleValueCommand(parts) =&gt; SendSelecting(&quot;PA&quot;, parts[1]), &quot;PR&quot; when IsSingleValueCommand(parts) =&gt; SendSelecting(&quot;PR&quot;, parts[1]), &quot;OR&quot; when IsNoValueCommand(parts) =&gt; SendSelecting(&quot;OR&quot;, &quot;&quot;),</td></tr>
+<tr><td>223</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { &quot;PA&quot; when IsSingleValueCommand(parts) =&gt; SendSelecting(&quot;PA&quot;, parts[1]), &quot;PR&quot; when IsSingleValueCommand(parts) =&gt; SendSelecting(&quot;PR&quot;, parts[1]), &quot;OR&quot; when IsNoValueCommand(parts) =&gt; SendSelecting(&quot;OR&quot;, &quot;&quot;), &quot;ST&quot; wh</td></tr>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>225</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;PA&quot;, parts[1])</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>226</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;PR&quot;, parts[1])</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts)</td></tr>
+<tr><td>227</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;OR&quot;, &quot;&quot;)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts)</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;ST&quot;, &quot;&quot;)</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoValueCommand(parts)</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;RS&quot;, &quot;&quot;)</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;HT&quot;, parts[1])</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;SL&quot;, parts[1])</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;SR&quot;, parts[1])</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;KI&quot;, parts[1])</td></tr>
+<tr><td>234</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>234</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;KP&quot;, parts[1])</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsSingleValueCommand(parts)</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SendSelecting(&quot;IF&quot;, parts[1])</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ExecuteConex&quot;]
+ N0[&quot;L211 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L217 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L223 switch-expression&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L240">MethodDeclaration <code>IsNoValueCommand</code> · L240–243</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L240-L243">Drilling.Common/Interface/Serial/CConex_AGP.cs:240–243</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsNoValueCommand(string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parts</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227">Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227</a></td><td>IsNoValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228">Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228</a></td><td>IsNoValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229">Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229</a></td><td>IsNoValueCommand</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>242</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parts.Length == 1;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L245">MethodDeclaration <code>IsSingleValueCommand</code> · L245–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L245-L248">Drilling.Common/Interface/Serial/CConex_AGP.cs:245–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsSingleValueCommand(string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parts</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225">Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226">Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230">Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231">Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232">Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233">Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234">Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235">Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235</a></td><td>IsSingleValueCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>247</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>247</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parts[1])</td></tr>
+<tr><td>247</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parts.Length == 2 &amp;&amp; !string.IsNullOrWhiteSpace(parts[1]);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L250">MethodDeclaration <code>SendSelecting</code> · L250–280</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L250-L280">Drilling.Common/Interface/Serial/CConex_AGP.cs:250–280</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.SendSelecting(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225">Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226">Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227">Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228">Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229">Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230">Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231">Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232">Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233">Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234">Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234</a></td><td>SendSelecting</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235">Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235</a></td><td>SendSelecting</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>252</td><td>SerialPort!.DiscardInBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>253</td><td>SerialPort.DiscardOutBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>254</td><td>FormatDeviceCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:306</td></tr>
+<tr><td>255</td><td>tx.TrimEnd</td><td>resolved</td><td>string string.TrimEnd(params System.ReadOnlySpan&lt;char&gt;)</td></tr>
+<tr><td>256</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>257</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>262</td><td>Thread.Sleep</td><td>resolved</td><td>void System.Threading.Thread.Sleep(int)</td></tr>
+<tr><td>263</td><td>FormatDeviceCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:306</td></tr>
+<tr><td>264</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>267</td><td>SerialPort.ReadLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>268</td><td>TryParseResponse</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>268</td><td>responseCommand.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>273</td><td>errorCode.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>274</td><td>normalizedError.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>252</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()</td></tr>
+<tr><td>253</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()</td></tr>
+<tr><td>254</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand(command, value)</td></tr>
+<tr><td>254</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tx = FormatDeviceCommand(command, value);</td></tr>
+<tr><td>254</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tx = FormatDeviceCommand(command, value)</td></tr>
+<tr><td>255</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = tx.TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>255</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tx.TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>256</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(tx)</td></tr>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;RS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>257</td><td>if</td><td>조건에 따라 분기합니다: if (command.Equals(&quot;RS&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>259</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;OK&quot;;</td></tr>
+<tr><td>262</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(50)</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand(&quot;TE&quot;, &quot;&quot;)</td></tr>
+<tr><td>263</td><td>local-declaration</td><td>지역 변수를 선언합니다: var errorQuery = FormatDeviceCommand(&quot;TE&quot;, &quot;&quot;);</td></tr>
+<tr><td>263</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: errorQuery = FormatDeviceCommand(&quot;TE&quot;, &quot;&quot;)</td></tr>
+<tr><td>264</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(errorQuery)</td></tr>
+<tr><td>265</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>267</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine()</td></tr>
+<tr><td>267</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = SerialPort.ReadLine();</td></tr>
+<tr><td>267</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = SerialPort.ReadLine()</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var errorCode)</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals(&quot;TE&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>268</td><td>if</td><td>조건에 따라 분기합니다: if (!TryParseResponse(response, out _, out var responseCommand, out var errorCode) || !responseCommand.Equals(&quot;TE&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>270</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-2&quot;;</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: errorCode.Trim()</td></tr>
+<tr><td>273</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalizedError = errorCode.Trim();</td></tr>
+<tr><td>273</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalizedError = errorCode.Trim()</td></tr>
+<tr><td>274</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedError.Equals(&quot;@&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>274</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: normalizedError.Equals(&quot;@&quot;, StringComparison.Ordinal) ? &quot;OK&quot; : $&quot;ERR:TE:{normalizedError}&quot;</td></tr>
+<tr><td>274</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return normalizedError.Equals(&quot;@&quot;, StringComparison.Ordinal) ? &quot;OK&quot; : $&quot;ERR:TE:{normalizedError}&quot;;</td></tr>
+<tr><td>276</td><td>catch</td><td>지정 예외를 처리합니다: catch (TimeoutException)</td></tr>
+<tr><td>278</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-1&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SendSelecting&quot;]
+ N0[&quot;L257 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L265 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L268 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L276 catch&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L282">MethodDeclaration <code>SendPolling</code> · L282–304</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L282-L304">Drilling.Common/Interface/Serial/CConex_AGP.cs:282–304</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.SendPolling(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214">Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214</a></td><td>SendPolling</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L219-L219">Drilling.Common/Interface/Serial/CConex_AGP.cs:219–219</a></td><td>SendPolling</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>284</td><td>SerialPort!.DiscardInBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>285</td><td>SerialPort.DiscardOutBuffer</td><td>unresolved</td><td>None</td></tr>
+<tr><td>286</td><td>FormatDeviceCommand</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:306</td></tr>
+<tr><td>287</td><td>tx.TrimEnd</td><td>resolved</td><td>string string.TrimEnd(params System.ReadOnlySpan&lt;char&gt;)</td></tr>
+<tr><td>288</td><td>SerialPort.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>291</td><td>SerialPort.ReadLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>292</td><td>TryParseResponse</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>292</td><td>responseCommand.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>292</td><td>ReadTsError</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsError(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:501</td></tr>
+<tr><td>292</td><td>ReadTsState</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsState(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:506</td></tr>
+<tr><td>292</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>296</td><td>SerialPort.ReadExisting().Trim</td><td>unresolved</td><td>None</td></tr>
+<tr><td>296</td><td>SerialPort.ReadExisting</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>string.IsNullOrWhiteSpace</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>302</td><td>TryParseResponse</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>302</td><td>responseCommand.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>302</td><td>ReadTsError</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsError(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:501</td></tr>
+<tr><td>302</td><td>ReadTsState</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsState(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:506</td></tr>
+<tr><td>302</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>284</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort!.DiscardInBuffer()</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardOutBuffer()</td></tr>
+<tr><td>286</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDeviceCommand(command, &quot;&quot;)</td></tr>
+<tr><td>286</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tx = FormatDeviceCommand(command, &quot;&quot;);</td></tr>
+<tr><td>286</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tx = FormatDeviceCommand(command, &quot;&quot;)</td></tr>
+<tr><td>287</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = tx.TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>287</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: tx.TrimEnd(&#x27;\r&#x27;, &#x27;\n&#x27;)</td></tr>
+<tr><td>288</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(tx)</td></tr>
+<tr><td>289</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadLine()</td></tr>
+<tr><td>291</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = SerialPort.ReadLine();</td></tr>
+<tr><td>291</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = SerialPort.ReadLine()</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var value)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsError(value)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsState(value)</td></tr>
+<tr><td>292</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>292</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Trim()}&quot; :</td></tr>
+<tr><td>292</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Trim()}&quot;</td></tr>
+<tr><td>292</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Tri</td></tr>
+<tr><td>294</td><td>catch</td><td>지정 예외를 처리합니다: catch (TimeoutException)</td></tr>
+<tr><td>296</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting().Trim()</td></tr>
+<tr><td>296</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.ReadExisting()</td></tr>
+<tr><td>296</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = SerialPort.ReadExisting().Trim();</td></tr>
+<tr><td>296</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = SerialPort.ReadExisting().Trim()</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>297</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response))</td></tr>
+<tr><td>299</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ERR:-1&quot;;</td></tr>
+<tr><td>302</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResponse(response, out _, out var responseCommand, out var value)</td></tr>
+<tr><td>302</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>302</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsError(value)</td></tr>
+<tr><td>302</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTsState(value)</td></tr>
+<tr><td>302</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>302</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Trim()}&quot; :</td></tr>
+<tr><td>302</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Trim()}&quot;</td></tr>
+<tr><td>302</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return TryParseResponse(response, out _, out var responseCommand, out var value) ? responseCommand.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase) ? $&quot;TS:{ReadTsError(value)}:{ReadTsState(value)}&quot; : $&quot;{responseCommand}:{value.Tri</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SendPolling&quot;]
+ N0[&quot;L289 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L294 catch&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L297 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L306">MethodDeclaration <code>FormatDeviceCommand</code> · L306–310</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L306-L310">Drilling.Common/Interface/Serial/CConex_AGP.cs:306–310</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.FormatDeviceCommand(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L254-L254">Drilling.Common/Interface/Serial/CConex_AGP.cs:254–254</a></td><td>FormatDeviceCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L263-L263">Drilling.Common/Interface/Serial/CConex_AGP.cs:263–263</a></td><td>FormatDeviceCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L286-L286">Drilling.Common/Interface/Serial/CConex_AGP.cs:286–286</a></td><td>FormatDeviceCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>308</td><td>ReadControllerAddress</td><td>resolved</td><td>int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress() · Drilling.Common/Interface/Serial/CConex_AGP.cs:322</td></tr>
+<tr><td>309</td><td>address.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadControllerAddress()</td></tr>
+<tr><td>308</td><td>local-declaration</td><td>지역 변수를 선언합니다: var address = ReadControllerAddress();</td></tr>
+<tr><td>308</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: address = ReadControllerAddress()</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: address.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>309</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;{address.ToString(CultureInfo.InvariantCulture)}{command}{value}\r\n&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L312">MethodDeclaration <code>IsPollingCommand</code> · L312–315</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L312-L315">Drilling.Common/Interface/Serial/CConex_AGP.cs:312–315</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsPollingCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L217-L217">Drilling.Common/Interface/Serial/CConex_AGP.cs:217–217</a></td><td>IsPollingCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>314</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>314</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>314</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>314</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;TP&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>314</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;TH&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>314</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>314</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command.Equals(&quot;TP&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;TH&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;TS&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">MethodDeclaration <code>IsParameterQueryCommand</code> · L317–320</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L317-L320">Drilling.Common/Interface/Serial/CConex_AGP.cs:317–320</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsParameterQueryCommand(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214">Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214</a></td><td>IsParameterQueryCommand</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>319</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;HT&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;SL&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;SR&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;KI&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;KP&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;IF&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>319</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command.Equals(&quot;HT&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;SL&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;SR&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;KI&quot;, StringComparison.Ordin</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L322">MethodDeclaration <code>ReadControllerAddress</code> · L322–343</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L322-L343">Drilling.Common/Interface/Serial/CConex_AGP.cs:322–343</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CConex_AGP.ReadControllerAddress()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L308-L308">Drilling.Common/Interface/Serial/CConex_AGP.cs:308–308</a></td><td>ReadControllerAddress</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>335</td><td>Data.Extra.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>335</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>324</td><td>if</td><td>조건에 따라 분기합니다: if (Data.Extra is not null)</td></tr>
+<tr><td>326</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var key in new[] { &quot;ADDRESS&quot;, &quot;DEV_ADDRESS&quot;, &quot;CONTROLLER_ADDRESS&quot; })</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Data.Extra.TryGetValue(key, out var value)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var address)</td></tr>
+<tr><td>335</td><td>if</td><td>조건에 따라 분기합니다: if (Data.Extra.TryGetValue(key, out var value) &amp;&amp; int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var address) &amp;&amp; address is &gt;= 1 and &lt;= 31)</td></tr>
+<tr><td>337</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return address;</td></tr>
+<tr><td>342</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return 1;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadControllerAddress&quot;]
+ N0[&quot;L324 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L326 foreach&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L335 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L345">MethodDeclaration <code>TryParseResponse</code> · L345–366</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L345-L366">Drilling.Common/Interface/Serial/CConex_AGP.cs:345–366</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.TryParseResponse(string, out int, out string, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>address</td><td>int</td><td>Out</td><td>False /</td></tr>
+<tr><td>command</td><td>string</td><td>Out</td><td>False /</td></tr>
+<tr><td>value</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>350</td><td>response.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>351</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+<tr><td>356</td><td>char.IsDigit</td><td>resolved</td><td>bool char.IsDigit(char)</td></tr>
+<tr><td>358</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>363</td><td>text.Substring</td><td>resolved</td><td>string string.Substring(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>347</td><td>assignment</td><td>값을 대상에 대입합니다: address = 0</td></tr>
+<tr><td>348</td><td>assignment</td><td>값을 대상에 대입합니다: command = &quot;&quot;</td></tr>
+<tr><td>349</td><td>assignment</td><td>값을 대상에 대입합니다: value = &quot;&quot;</td></tr>
+<tr><td>350</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim()</td></tr>
+<tr><td>350</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = response.Trim();</td></tr>
+<tr><td>350</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = response.Trim()</td></tr>
+<tr><td>351</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(text[0])</td></tr>
+<tr><td>351</td><td>if</td><td>조건에 따라 분기합니다: if (text.Length &lt; 3 || !char.IsDigit(text[0]))</td></tr>
+<tr><td>353</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>356</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(text[1])</td></tr>
+<tr><td>356</td><td>local-declaration</td><td>지역 변수를 선언합니다: var twoDigitAddress = text.Length &gt;= 4 &amp;&amp; char.IsDigit(text[1]);</td></tr>
+<tr><td>356</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: twoDigitAddress = text.Length &gt;= 4 &amp;&amp; char.IsDigit(text[1])</td></tr>
+<tr><td>357</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: twoDigitAddress ? 2 : 1</td></tr>
+<tr><td>357</td><td>local-declaration</td><td>지역 변수를 선언합니다: var addressLength = twoDigitAddress ? 2 : 1;</td></tr>
+<tr><td>357</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: addressLength = twoDigitAddress ? 2 : 1</td></tr>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text[..addressLength], NumberStyles.Integer, CultureInfo.InvariantCulture, out address)</td></tr>
+<tr><td>358</td><td>if</td><td>조건에 따라 분기합니다: if (text.Length &lt; addressLength + 2 || !int.TryParse(text[..addressLength], NumberStyles.Integer, CultureInfo.InvariantCulture, out address))</td></tr>
+<tr><td>360</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>363</td><td>assignment</td><td>값을 대상에 대입합니다: command = text.Substring(addressLength, 2)</td></tr>
+<tr><td>363</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Substring(addressLength, 2)</td></tr>
+<tr><td>364</td><td>assignment</td><td>값을 대상에 대입합니다: value = text.Length &gt; addressLength + 2 ? text[(addressLength + 2)..] : &quot;&quot;</td></tr>
+<tr><td>364</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: text.Length &gt; addressLength + 2 ? text[(addressLength + 2)..] : &quot;&quot;</td></tr>
+<tr><td>365</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryParseResponse&quot;]
+ N0[&quot;L351 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L358 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L368">MethodDeclaration <code>CreateSimulationResponse</code> · L368–383</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L368-L383">Drilling.Common/Interface/Serial/CConex_AGP.cs:368–383</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.CreateSimulationResponse(Drilling.Common.Interface.EN_ATTENUATOR_COMMAND, double, Drilling.Common.Interface.ST_ATTENUATOR_STATUS)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>command</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td><td>None</td><td>False /</td></tr>
+<tr><td>parameter</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>current</td><td>Drilling.Common.Interface.ST_ATTENUATOR_STATUS</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L51-L51">Drilling.Common/Interface/Serial/CConex_AGP.cs:51–51</a></td><td>CreateSimulationResponse</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>372</td><td>current.CurrentPosition.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>373</td><td>current.TargetPosition.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>375</td><td>(current.HomeType ?? 4).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>376</td><td>(current.NegativeSoftwareLimit ?? 0.0).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>377</td><td>(current.PositiveSoftwareLimit ?? 360.0).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>378</td><td>(current.IGain ?? 800.0).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>379</td><td>(current.PGain ?? 10.0).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>380</td><td>(current.InterpolationFactor ?? 1000.0).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>370</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return command switch { EN_ATTENUATOR_COMMAND.PollCurrentPosition or EN_ATTENUATOR_COMMAND.Refresh =&gt; $&quot;TP:{current.CurrentPosition.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot;, EN_ATTENUATOR_COMMAND.PollTargetPosition =&gt; $&quot;TH:{</td></tr>
+<tr><td>370</td><td>switch-expression</td><td>값별 결과식을 선택합니다: command switch { EN_ATTENUATOR_COMMAND.PollCurrentPosition or EN_ATTENUATOR_COMMAND.Refresh =&gt; $&quot;TP:{current.CurrentPosition.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)}&quot;, EN_ATTENUATOR_COMMAND.PollTargetPosition =&gt; $&quot;TH:{current</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.CurrentPosition.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>373</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: current.TargetPosition.ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>375</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.HomeType ?? 4).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>376</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.NegativeSoftwareLimit ?? 0.0).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>377</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.PositiveSoftwareLimit ?? 360.0).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>378</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.IGain ?? 800.0).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.PGain ?? 10.0).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>380</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: (current.InterpolationFactor ?? 1000.0).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateSimulationResponse&quot;]
+ N0[&quot;L370 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L385">MethodDeclaration <code>ReadError</code> · L385–400</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L385-L400">Drilling.Common/Interface/Serial/CConex_AGP.cs:385–400</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR Drilling.Common.Interface.CConex_AGP.ReadError(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L57-L57">Drilling.Common/Interface/Serial/CConex_AGP.cs:57–57</a></td><td>ReadError</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>387</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>388</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>387</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>387</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;</td></tr>
+<tr><td>387</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;;</td></tr>
+<tr><td>387</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = response.StartsWith(&quot;ERR:&quot;, StringComparison.OrdinalIgnoreCase) ? response[4..] : &quot;&quot;</td></tr>
+<tr><td>388</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code)</td></tr>
+<tr><td>388</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var code))</td></tr>
+<tr><td>390</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EN_CONEX_AGP_ERROR.Error;</td></tr>
+<tr><td>393</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return code switch { -99 =&gt; EN_CONEX_AGP_ERROR.NotSupported, -2 =&gt; EN_CONEX_AGP_ERROR.InvalidResponse, -1 =&gt; EN_CONEX_AGP_ERROR.Timeout, _ =&gt; EN_CONEX_AGP_ERROR.Error };</td></tr>
+<tr><td>393</td><td>switch-expression</td><td>값별 결과식을 선택합니다: code switch { -99 =&gt; EN_CONEX_AGP_ERROR.NotSupported, -2 =&gt; EN_CONEX_AGP_ERROR.InvalidResponse, -1 =&gt; EN_CONEX_AGP_ERROR.Timeout, _ =&gt; EN_CONEX_AGP_ERROR.Error }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadError&quot;]
+ N0[&quot;L388 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L393 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L402">MethodDeclaration <code>ReadTaggedDouble</code> · L402–405</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L402-L405">Drilling.Common/Interface/Serial/CConex_AGP.cs:402–405</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CConex_AGP.ReadTaggedDouble(string, string, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>tag</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L98-L98">Drilling.Common/Interface/Serial/CConex_AGP.cs:98–98</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L103-L103">Drilling.Common/Interface/Serial/CConex_AGP.cs:103–103</a></td><td>ReadTaggedDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>404</td><td>ReadTaggedNullableDouble</td><td>resolved</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?) · Drilling.Common/Interface/Serial/CConex_AGP.cs:407</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>404</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTaggedNullableDouble(response, tag, defaultValue)</td></tr>
+<tr><td>404</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReadTaggedNullableDouble(response, tag, defaultValue) ?? defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L407">MethodDeclaration <code>ReadTaggedNullableDouble</code> · L407–417</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L407-L417">Drilling.Common/Interface/Serial/CConex_AGP.cs:407–417</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.Common.Interface.CConex_AGP.ReadTaggedNullableDouble(string, string, double?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>tag</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>double?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L119-L119">Drilling.Common/Interface/Serial/CConex_AGP.cs:119–119</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L127-L127">Drilling.Common/Interface/Serial/CConex_AGP.cs:127–127</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L135-L135">Drilling.Common/Interface/Serial/CConex_AGP.cs:135–135</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L143-L143">Drilling.Common/Interface/Serial/CConex_AGP.cs:143–143</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L151-L151">Drilling.Common/Interface/Serial/CConex_AGP.cs:151–151</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L404-L404">Drilling.Common/Interface/Serial/CConex_AGP.cs:404–404</a></td><td>ReadTaggedNullableDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>410</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>411</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>411</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>409</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;{tag}:&quot;;</td></tr>
+<tr><td>409</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;{tag}:&quot;</td></tr>
+<tr><td>410</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>410</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>410</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response;</td></tr>
+<tr><td>410</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>411</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>411</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result)</td></tr>
+<tr><td>411</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result))</td></tr>
+<tr><td>413</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+<tr><td>416</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadTaggedNullableDouble&quot;]
+ N0[&quot;L411 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L419">MethodDeclaration <code>ReadTaggedInt</code> · L419–424</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L419-L424">Drilling.Common/Interface/Serial/CConex_AGP.cs:419–424</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int? Drilling.Common.Interface.CConex_AGP.ReadTaggedInt(string, string, int?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>tag</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L111-L111">Drilling.Common/Interface/Serial/CConex_AGP.cs:111–111</a></td><td>ReadTaggedInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>422</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>423</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>421</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;{tag}:&quot;;</td></tr>
+<tr><td>421</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;{tag}:&quot;</td></tr>
+<tr><td>422</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>422</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>422</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response;</td></tr>
+<tr><td>422</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = response.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ? response[prefix.Length..] : response</td></tr>
+<tr><td>423</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result)</td></tr>
+<tr><td>423</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue</td></tr>
+<tr><td>423</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L426">MethodDeclaration <code>FormatCommandParameter</code> · L426–429</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L426-L429">Drilling.Common/Interface/Serial/CConex_AGP.cs:426–429</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L31-L31">Drilling.Common/Interface/Serial/CConex_AGP.cs:31–31</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L33-L33">Drilling.Common/Interface/Serial/CConex_AGP.cs:33–33</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L35-L35">Drilling.Common/Interface/Serial/CConex_AGP.cs:35–35</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L37-L37">Drilling.Common/Interface/Serial/CConex_AGP.cs:37–37</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L39-L39">Drilling.Common/Interface/Serial/CConex_AGP.cs:39–39</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L433-L433">Drilling.Common/Interface/Serial/CConex_AGP.cs:433–433</a></td><td>FormatCommandParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>428</td><td>ValidateFiniteCommandParameter(value).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>428</td><td>ValidateFiniteCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:446</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>428</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value).ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>428</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value)</td></tr>
+<tr><td>428</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValidateFiniteCommandParameter(value).ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L431">MethodDeclaration <code>NormalizeStoredCommandParameter</code> · L431–434</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L431-L434">Drilling.Common/Interface/Serial/CConex_AGP.cs:431–434</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CConex_AGP.NormalizeStoredCommandParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L123-L123">Drilling.Common/Interface/Serial/CConex_AGP.cs:123–123</a></td><td>NormalizeStoredCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L131-L131">Drilling.Common/Interface/Serial/CConex_AGP.cs:131–131</a></td><td>NormalizeStoredCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L139-L139">Drilling.Common/Interface/Serial/CConex_AGP.cs:139–139</a></td><td>NormalizeStoredCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L147-L147">Drilling.Common/Interface/Serial/CConex_AGP.cs:147–147</a></td><td>NormalizeStoredCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L155-L155">Drilling.Common/Interface/Serial/CConex_AGP.cs:155–155</a></td><td>NormalizeStoredCommandParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>433</td><td>double.Parse</td><td>resolved</td><td>double double.Parse(string, System.Globalization.NumberStyles, System.IFormatProvider?)</td></tr>
+<tr><td>433</td><td>FormatCommandParameter</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.FormatCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:426</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>433</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.Parse(FormatCommandParameter(value), NumberStyles.Float, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>433</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommandParameter(value)</td></tr>
+<tr><td>433</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.Parse(FormatCommandParameter(value), NumberStyles.Float, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L436">MethodDeclaration <code>FormatPositionParameter</code> · L436–439</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L436-L439">Drilling.Common/Interface/Serial/CConex_AGP.cs:436–439</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.FormatPositionParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L19-L19">Drilling.Common/Interface/Serial/CConex_AGP.cs:19–19</a></td><td>FormatPositionParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L20-L20">Drilling.Common/Interface/Serial/CConex_AGP.cs:20–20</a></td><td>FormatPositionParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>438</td><td>ValidateFiniteCommandParameter(value).ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>438</td><td>ValidateFiniteCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:446</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>438</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>438</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value)</td></tr>
+<tr><td>438</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValidateFiniteCommandParameter(value).ToString(&quot;F3&quot;, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L441">MethodDeclaration <code>FormatIntegerCommandParameter</code> · L441–444</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L441-L444">Drilling.Common/Interface/Serial/CConex_AGP.cs:441–444</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.FormatIntegerCommandParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L29-L29">Drilling.Common/Interface/Serial/CConex_AGP.cs:29–29</a></td><td>FormatIntegerCommandParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>443</td><td>ValidateInt32CommandParameter(value).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>443</td><td>ValidateInt32CommandParameter</td><td>resolved</td><td>int Drilling.Common.Interface.CConex_AGP.ValidateInt32CommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:456</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>443</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(value).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>443</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateInt32CommandParameter(value)</td></tr>
+<tr><td>443</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ValidateInt32CommandParameter(value).ToString(CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L446">MethodDeclaration <code>ValidateFiniteCommandParameter</code> · L446–454</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L446-L454">Drilling.Common/Interface/Serial/CConex_AGP.cs:446–454</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L428-L428">Drilling.Common/Interface/Serial/CConex_AGP.cs:428–428</a></td><td>ValidateFiniteCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L438-L438">Drilling.Common/Interface/Serial/CConex_AGP.cs:438–438</a></td><td>ValidateFiniteCommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L458-L458">Drilling.Common/Interface/Serial/CConex_AGP.cs:458–458</a></td><td>ValidateFiniteCommandParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>448</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>450</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?)</td></tr>
+<tr><td>450</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>448</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>448</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(value))</td></tr>
+<tr><td>450</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), value, &quot;CONEX-AGP command parameter must be a finite number.&quot;)</td></tr>
+<tr><td>450</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value)</td></tr>
+<tr><td>450</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), value, &quot;CONEX-AGP command parameter must be a finite number.&quot;);</td></tr>
+<tr><td>453</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateFiniteCommandParameter&quot;]
+ N0[&quot;L448 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L456">MethodDeclaration <code>ValidateInt32CommandParameter</code> · L456–465</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L456-L465">Drilling.Common/Interface/Serial/CConex_AGP.cs:456–465</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CConex_AGP.ValidateInt32CommandParameter(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L115-L115">Drilling.Common/Interface/Serial/CConex_AGP.cs:115–115</a></td><td>ValidateInt32CommandParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L443-L443">Drilling.Common/Interface/Serial/CConex_AGP.cs:443–443</a></td><td>ValidateInt32CommandParameter</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>458</td><td>ValidateFiniteCommandParameter</td><td>resolved</td><td>double Drilling.Common.Interface.CConex_AGP.ValidateFiniteCommandParameter(double) · Drilling.Common/Interface/Serial/CConex_AGP.cs:446</td></tr>
+<tr><td>459</td><td>Math.Truncate</td><td>resolved</td><td>double System.Math.Truncate(double)</td></tr>
+<tr><td>461</td><td>new ArgumentOutOfRangeException</td><td>resolved</td><td>System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?)</td></tr>
+<tr><td>461</td><td>nameof</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>458</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateFiniteCommandParameter(value)</td></tr>
+<tr><td>458</td><td>local-declaration</td><td>지역 변수를 선언합니다: var finiteValue = ValidateFiniteCommandParameter(value);</td></tr>
+<tr><td>458</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: finiteValue = ValidateFiniteCommandParameter(value)</td></tr>
+<tr><td>459</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(finiteValue)</td></tr>
+<tr><td>459</td><td>if</td><td>조건에 따라 분기합니다: if (finiteValue &lt; int.MinValue || finiteValue &gt; int.MaxValue || finiteValue != Math.Truncate(finiteValue))</td></tr>
+<tr><td>461</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), value, &quot;CONEX-AGP command parameter must be an Int32 integer.&quot;)</td></tr>
+<tr><td>461</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value)</td></tr>
+<tr><td>461</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), value, &quot;CONEX-AGP command parameter must be an Int32 integer.&quot;);</td></tr>
+<tr><td>464</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (int)finiteValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateInt32CommandParameter&quot;]
+ N0[&quot;L459 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L467">MethodDeclaration <code>ReadControllerState</code> · L467–476</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L467-L476">Drilling.Common/Interface/Serial/CConex_AGP.cs:467–476</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.ReadControllerState(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>response</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultState</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L107-L107">Drilling.Common/Interface/Serial/CConex_AGP.cs:107–107</a></td><td>ReadControllerState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>469</td><td>response.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+<tr><td>474</td><td>response.Split</td><td>resolved</td><td>string[] string.Split(char, System.StringSplitOptions)</td></tr>
+<tr><td>475</td><td>NormalizeControllerState</td><td>resolved</td><td>string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string) · Drilling.Common/Interface/Serial/CConex_AGP.cs:478</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>469</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.StartsWith(&quot;TS:&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>469</td><td>if</td><td>조건에 따라 분기합니다: if (!response.StartsWith(&quot;TS:&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>471</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultState;</td></tr>
+<tr><td>474</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>474</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parts = response.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries);</td></tr>
+<tr><td>474</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parts = response.Split(&#x27;:&#x27;, StringSplitOptions.TrimEntries)</td></tr>
+<tr><td>475</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeControllerState(parts[2])</td></tr>
+<tr><td>475</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: parts.Length &gt;= 3 ? NormalizeControllerState(parts[2]) : defaultState</td></tr>
+<tr><td>475</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parts.Length &gt;= 3 ? NormalizeControllerState(parts[2]) : defaultState;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadControllerState&quot;]
+ N0[&quot;L469 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L478">MethodDeclaration <code>NormalizeControllerState</code> · L478–494</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L478-L494">Drilling.Common/Interface/Serial/CConex_AGP.cs:478–494</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.NormalizeControllerState(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L475-L475">Drilling.Common/Interface/Serial/CConex_AGP.cs:475–475</a></td><td>NormalizeControllerState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>480</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>482</td><td>value.ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>480</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var state)</td></tr>
+<tr><td>480</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var state))</td></tr>
+<tr><td>482</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToUpperInvariant()</td></tr>
+<tr><td>482</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.ToUpperInvariant();</td></tr>
+<tr><td>485</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return state switch { &gt;= 0x0A and &lt;= 0x10 =&gt; &quot;NOT_REFERENCED&quot;, 0x14 =&gt; &quot;CONFIGURATION&quot;, 0x1E =&gt; &quot;HOMING&quot;, 0x28 =&gt; &quot;MOVING&quot;, 0x32 or 0x33 or 0x34 =&gt; &quot;READY&quot;, 0x3C or 0x3D =&gt; &quot;DISABLE&quot;, _ =&gt; $&quot;STATE_{state:X2}&quot;};</td></tr>
+<tr><td>485</td><td>switch-expression</td><td>값별 결과식을 선택합니다: state switch { &gt;= 0x0A and &lt;= 0x10 =&gt; &quot;NOT_REFERENCED&quot;, 0x14 =&gt; &quot;CONFIGURATION&quot;, 0x1E =&gt; &quot;HOMING&quot;, 0x28 =&gt; &quot;MOVING&quot;, 0x32 or 0x33 or 0x34 =&gt; &quot;READY&quot;, 0x3C or 0x3D =&gt; &quot;DISABLE&quot;, _ =&gt; $&quot;STATE_{state:X2}&quot;}</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NormalizeControllerState&quot;]
+ N0[&quot;L480 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L485 switch-expression&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L496">MethodDeclaration <code>IsMovingState</code> · L496–499</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L496-L499">Drilling.Common/Interface/Serial/CConex_AGP.cs:496–499</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CConex_AGP.IsMovingState(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L99-L99">Drilling.Common/Interface/Serial/CConex_AGP.cs:99–99</a></td><td>IsMovingState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>498</td><td>value.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>498</td><td>value.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>498</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals(&quot;MOVING&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>498</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Equals(&quot;HOMING&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>498</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Equals(&quot;MOVING&quot;, StringComparison.OrdinalIgnoreCase) || value.Equals(&quot;HOMING&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L501">MethodDeclaration <code>ReadTsError</code> · L501–504</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L501-L504">Drilling.Common/Interface/Serial/CConex_AGP.cs:501–504</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsError(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292">Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292</a></td><td>ReadTsError</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302">Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302</a></td><td>ReadTsError</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>503</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value.Length &gt;= 4 ? value[..4] : &quot;0&quot;</td></tr>
+<tr><td>503</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Length &gt;= 4 ? value[..4] : &quot;0&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L506">MethodDeclaration <code>ReadTsState</code> · L506–509</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L506-L509">Drilling.Common/Interface/Serial/CConex_AGP.cs:506–509</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CConex_AGP.ReadTsState(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CConex_AGP</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292">Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292</a></td><td>ReadTsState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302">Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302</a></td><td>ReadTsState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>508</td><td>value.Substring</td><td>resolved</td><td>string string.Substring(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>508</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Substring(4, 2)</td></tr>
+<tr><td>508</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: value.Length &gt;= 6 ? value.Substring(4, 2) : &quot;0&quot;</td></tr>
+<tr><td>508</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Length &gt;= 6 ? value.Substring(4, 2) : &quot;0&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L514">EnumMemberDeclaration <code>MoveAbs</code> · L514–514</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L514-L514">Drilling.Common/Interface/Serial/CConex_AGP.cs:514–514</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveAbs</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L515">EnumMemberDeclaration <code>MoveRel</code> · L515–515</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L515-L515">Drilling.Common/Interface/Serial/CConex_AGP.cs:515–515</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.MoveRel</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L516">EnumMemberDeclaration <code>Home</code> · L516–516</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L516-L516">Drilling.Common/Interface/Serial/CConex_AGP.cs:516–516</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Home</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L517">EnumMemberDeclaration <code>Stop</code> · L517–517</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L517-L517">Drilling.Common/Interface/Serial/CConex_AGP.cs:517–517</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Stop</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L518">EnumMemberDeclaration <code>ResetController</code> · L518–518</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L518-L518">Drilling.Common/Interface/Serial/CConex_AGP.cs:518–518</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.ResetController</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L519">EnumMemberDeclaration <code>Refresh</code> · L519–519</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L519-L519">Drilling.Common/Interface/Serial/CConex_AGP.cs:519–519</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.Refresh</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L520">EnumMemberDeclaration <code>PollCurrentPosition</code> · L520–520</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L520-L520">Drilling.Common/Interface/Serial/CConex_AGP.cs:520–520</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollCurrentPosition</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L521">EnumMemberDeclaration <code>PollTargetPosition</code> · L521–521</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L521-L521">Drilling.Common/Interface/Serial/CConex_AGP.cs:521–521</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollTargetPosition</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L522">EnumMemberDeclaration <code>PollState</code> · L522–522</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L522-L522">Drilling.Common/Interface/Serial/CConex_AGP.cs:522–522</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.PollState</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L523">EnumMemberDeclaration <code>GetHomeType</code> · L523–523</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L523-L523">Drilling.Common/Interface/Serial/CConex_AGP.cs:523–523</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetHomeType</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L524">EnumMemberDeclaration <code>SetHomeType</code> · L524–524</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L524-L524">Drilling.Common/Interface/Serial/CConex_AGP.cs:524–524</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetHomeType</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L525">EnumMemberDeclaration <code>GetNegativeSoftwareLimit</code> · L525–525</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L525-L525">Drilling.Common/Interface/Serial/CConex_AGP.cs:525–525</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetNegativeSoftwareLimit</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L526">EnumMemberDeclaration <code>SetNegativeSoftwareLimit</code> · L526–526</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L526-L526">Drilling.Common/Interface/Serial/CConex_AGP.cs:526–526</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetNegativeSoftwareLimit</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L527">EnumMemberDeclaration <code>GetPositiveSoftwareLimit</code> · L527–527</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L527-L527">Drilling.Common/Interface/Serial/CConex_AGP.cs:527–527</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPositiveSoftwareLimit</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L528">EnumMemberDeclaration <code>SetPositiveSoftwareLimit</code> · L528–528</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L528-L528">Drilling.Common/Interface/Serial/CConex_AGP.cs:528–528</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPositiveSoftwareLimit</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L529">EnumMemberDeclaration <code>GetIGain</code> · L529–529</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L529-L529">Drilling.Common/Interface/Serial/CConex_AGP.cs:529–529</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetIGain</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L530">EnumMemberDeclaration <code>SetIGain</code> · L530–530</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L530-L530">Drilling.Common/Interface/Serial/CConex_AGP.cs:530–530</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetIGain</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L531">EnumMemberDeclaration <code>GetPGain</code> · L531–531</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L531-L531">Drilling.Common/Interface/Serial/CConex_AGP.cs:531–531</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetPGain</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L532">EnumMemberDeclaration <code>SetPGain</code> · L532–532</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L532-L532">Drilling.Common/Interface/Serial/CConex_AGP.cs:532–532</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetPGain</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L533">EnumMemberDeclaration <code>GetInterpolationFactor</code> · L533–533</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L533-L533">Drilling.Common/Interface/Serial/CConex_AGP.cs:533–533</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.GetInterpolationFactor</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L534">EnumMemberDeclaration <code>SetInterpolationFactor</code> · L534–534</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L534-L534">Drilling.Common/Interface/Serial/CConex_AGP.cs:534–534</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND.SetInterpolationFactor</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_ATTENUATOR_COMMAND</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L539">EnumMemberDeclaration <code>Ok</code> · L539–539</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L539-L539">Drilling.Common/Interface/Serial/CConex_AGP.cs:539–539</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Ok</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L540">EnumMemberDeclaration <code>Error</code> · L540–540</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L540-L540">Drilling.Common/Interface/Serial/CConex_AGP.cs:540–540</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Error</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L541">EnumMemberDeclaration <code>Timeout</code> · L541–541</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L541-L541">Drilling.Common/Interface/Serial/CConex_AGP.cs:541–541</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.Timeout</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L542">EnumMemberDeclaration <code>InvalidResponse</code> · L542–542</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L542-L542">Drilling.Common/Interface/Serial/CConex_AGP.cs:542–542</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.InvalidResponse</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L543">EnumMemberDeclaration <code>NotSupported</code> · L543–543</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Serial/CConex_AGP.cs#L543-L543">Drilling.Common/Interface/Serial/CConex_AGP.cs:543–543</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR.NotSupported</td></tr>
+<tr><td>접근/수식자</td><td>Public /</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.EN_CONEX_AGP_ERROR</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Serial/CConex_AGP.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

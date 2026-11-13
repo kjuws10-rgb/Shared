@@ -1,0 +1,592 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Automation/CScannerAxisConfiguration.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000002 | using Drilling.Common.Managers; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Automation;
+L000004 | namespace Drilling.Common.Automation; ⟦EOL⟧
+// 해설 L5: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000005 | // One configuration mapping for background alarm checks and all scanner status displays. ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public static class CScannerAxisConfiguration
+L000006 | public static class CScannerAxisConfiguration ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList<Dr
+L000008 |     public static IReadOnlyList<ST_SCANNER_AXIS_SETTING> BuildAxisDefinitions(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo) ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000009 |     { ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo) / 지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo); / 변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)
+L000010 |         var normalizedHeadNo = NormalizeHeadNo(headNo); ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(settings, normalizedHeadNo) / 조건에 따라 분기합니다: if (!IsHeadEnabled(settings, normalizedHeadNo))
+L000011 |         if (!IsHeadEnabled(settings, normalizedHeadNo)) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000012 |         { ⟦EOL⟧
+// 해설 L13: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000013 |             return[]; ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000014 |         } ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(settings, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO") / 조건에 따라 결과식을 선택합니다: normalizedHeadNo <= 4 ? 0 : 1 / 지역 변수를 선언합니다: var automationNo = ReadHeadSettingInt(settings, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO"); / 변수의 초기값을 지정합니다: automationNo = ReadHeadSettingInt(settings, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO")
+L000016 |         var automationNo = ReadHeadSettingInt(settings, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO"); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, "", normalizedHeadNo, "X_AXIS", "GX_AXIS") / 지역 변수를 선언합니다: var xAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "X_AXIS", "GX_AXIS"); / 변수의 초기값을 지정합니다: xAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "X_AXIS", "GX_AXIS")
+L000017 |         var xAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "X_AXIS", "GX_AXIS"); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS") / 지역 변수를 선언합니다: var yAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS"); / 변수의 초기값을 지정합니다: yAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS")
+L000018 |         var yAxis = ReadHeadSettingText(settings, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS"); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(settings, 0, normalizedHeadNo, "SCANNER_AIO_NO") / 지역 변수를 선언합니다: var aioNo = ReadHeadSettingInt(settings, 0, normalizedHeadNo, "SCANNER_AIO_NO"); / 변수의 초기값을 지정합니다: aioNo = ReadHeadSettingInt(settings, 0, normalizedHeadNo, "SCANNER_AIO_NO")
+L000019 |         var aioNo = ReadHeadSettingInt(settings, 0, normalizedHeadNo, "SCANNER_AIO_NO"); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) } / 지역 변수를 선언합니다: var definitions = new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) }; / 변수의 초기값을 지정합니다: definitions = new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHead
+L000020 |         var definitions = new List<ST_SCANNER_AXIS_SETTING>(3) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo)
+L000022 |             CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo)
+L000023 |             CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000024 |         }; ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendScannerZAxisDefinition(settings, normalizedHeadNo, automationNo, aioNo, definitions)
+L000025 |         AppendScannerZAxisDefinition(settings, normalizedHeadNo, automationNo, aioNo, definitions); ⟦EOL⟧
+// 해설 L26: 호출자에게 값 또는 제어를 반환합니다: return definitions;
+L000026 |         return definitions; ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000027 |     } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDiction
+L000029 |     public static IReadOnlyList<ST_SCANNER_AXIS_SETTING> BuildAxisDefinitions(IReadOnlyDictionary<string, string> parameters, int headNo) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000030 |     { ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo) / 지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo); / 변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)
+L000031 |         var normalizedHeadNo = NormalizeHeadNo(headNo); ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(parameters, normalizedHeadNo) / 조건에 따라 분기합니다: if (!IsHeadEnabled(parameters, normalizedHeadNo))
+L000032 |         if (!IsHeadEnabled(parameters, normalizedHeadNo)) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000034 |             return[]; ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000035 |         } ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(parameters, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO") / 조건에 따라 결과식을 선택합니다: normalizedHeadNo <= 4 ? 0 : 1 / 지역 변수를 선언합니다: var automationNo = ReadHeadSettingInt(parameters, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO"); / 변수의 초기값을 지정합니다: automationNo = ReadHeadSettingInt(parameters, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO")
+L000037 |         var automationNo = ReadHeadSettingInt(parameters, normalizedHeadNo <= 4 ? 0 : 1, normalizedHeadNo, "AUTOMATION_NO"); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, "", normalizedHeadNo, "X_AXIS", "GX_AXIS") / 지역 변수를 선언합니다: var xAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "X_AXIS", "GX_AXIS"); / 변수의 초기값을 지정합니다: xAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "X_AXIS", "GX_AXIS")
+L000038 |         var xAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "X_AXIS", "GX_AXIS"); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS") / 지역 변수를 선언합니다: var yAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS"); / 변수의 초기값을 지정합니다: yAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS")
+L000039 |         var yAxis = ReadHeadSettingText(parameters, "", normalizedHeadNo, "Y_AXIS", "GY_AXIS"); ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(parameters, 0, normalizedHeadNo, "SCANNER_AIO_NO") / 지역 변수를 선언합니다: var aioNo = ReadHeadSettingInt(parameters, 0, normalizedHeadNo, "SCANNER_AIO_NO"); / 변수의 초기값을 지정합니다: aioNo = ReadHeadSettingInt(parameters, 0, normalizedHeadNo, "SCANNER_AIO_NO")
+L000040 |         var aioNo = ReadHeadSettingInt(parameters, 0, normalizedHeadNo, "SCANNER_AIO_NO"); ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) } / 지역 변수를 선언합니다: var definitions = new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) }; / 변수의 초기값을 지정합니다: definitions = new List<ST_SCANNER_AXIS_SETTING>(3) { CreateAxisDefinition(normalizedHead
+L000041 |         var definitions = new List<ST_SCANNER_AXIS_SETTING>(3) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo)
+L000043 |             CreateAxisDefinition(normalizedHeadNo, automationNo, "X", xAxis, aioNo), ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo)
+L000044 |             CreateAxisDefinition(normalizedHeadNo, automationNo, "Y", yAxis, aioNo) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000045 |         }; ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendScannerZAxisDefinition(parameters, normalizedHeadNo, automationNo, aioNo, definitions)
+L000046 |         AppendScannerZAxisDefinition(parameters, normalizedHeadNo, automationNo, aioNo, definitions); ⟦EOL⟧
+// 해설 L47: 호출자에게 값 또는 제어를 반환합니다: return definitions;
+L000047 |         return definitions; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 BuildAxisDefinitions.
+L000048 |     } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int, int, int, System.Collections.G
+L000050 |     private static void AppendScannerZAxisDefinition(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo, int automationNo, int aioNo, List<ST_SCANNER_AXIS_SETTING> definitions) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(settings, false, headNo, "SCANNER_Z_USE", "Z_USE") / 조건에 따라 분기합니다: if (!ReadHeadSettingBool(settings, false, headNo, "SCANNER_Z_USE", "Z_USE"))
+L000052 |         if (!ReadHeadSettingBool(settings, false, headNo, "SCANNER_Z_USE", "Z_USE")) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000053 |         { ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)
+L000054 |             definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)); ⟦EOL⟧
+// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return;
+L000055 |             return; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000056 |         } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS") / 지역 변수를 선언합니다: var zAxis = ReadHeadSettingText(settings, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS"); / 변수의 초기값을 지정합니다: zAxis = ReadHeadSettingText(settings, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS")
+L000058 |         var zAxis = ReadHeadSettingText(settings, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS"); ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)
+L000059 |         definitions.Add(CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, int, int, System.Collections.Generic.List<Drilling.Com
+L000062 |     private static void AppendScannerZAxisDefinition(IReadOnlyDictionary<string, string> parameters, int headNo, int automationNo, int aioNo, List<ST_SCANNER_AXIS_SETTING> definitions) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(parameters, false, headNo, "SCANNER_Z_USE", "Z_USE") / 조건에 따라 분기합니다: if (!ReadHeadSettingBool(parameters, false, headNo, "SCANNER_Z_USE", "Z_USE"))
+L000064 |         if (!ReadHeadSettingBool(parameters, false, headNo, "SCANNER_Z_USE", "Z_USE")) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)
+L000066 |             definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, "Z", aioNo)); ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return;
+L000067 |             return; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000068 |         } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS") / 지역 변수를 선언합니다: var zAxis = ReadHeadSettingText(parameters, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS"); / 변수의 초기값을 지정합니다: zAxis = ReadHeadSettingText(parameters, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS")
+L000070 |         var zAxis = ReadHeadSettingText(parameters, "", headNo, "SCANNER_Z_AXIS", "Z_AXIS"); ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)
+L000071 |         definitions.Add(CreateAxisDefinition(headNo, automationNo, "Z", zAxis, aioNo, false)); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 AppendScannerZAxisDefinition.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int)
+L000074 |     private static ST_SCANNER_AXIS_SETTING CreateUnusedAxisDefinition(int headNo, int automationNo, string axisRole, int aioNo) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 CreateUnusedAxisDefinition.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "NOT USE", aioNo, "", false, false) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "NOT USE", aioNo, "", false, false);
+L000076 |         return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "NOT USE", aioNo, "", false, false); ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 CreateUnusedAxisDefinition.
+L000077 |     } ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool)
+L000079 |     private static ST_SCANNER_AXIS_SETTING CreateAxisDefinition(int headNo, int automationNo, string axisRole, string axisReference, int aioNo, bool readExtendedStatus = true) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 CreateAxisDefinition.
+L000080 |     { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: axisReference.Trim() / 지역 변수를 선언합니다: var normalizedAxisReference = axisReference.Trim(); / 변수의 초기값을 지정합니다: normalizedAxisReference = axisReference.Trim()
+L000081 |         var normalizedAxisReference = axisReference.Trim(); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference) / 지역 변수를 선언합니다: var configurationError = ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference); / 변수의 초기값을 지정합니다: configurationError = ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference)
+L000082 |         var configurationError = ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(configurationError) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(configurationError))
+L000083 |         if (!string.IsNullOrWhiteSpace(configurationError)) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 CreateAxisDefinition.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "", aioNo, configurationError, true, readExtendedStatus) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "", aioNo, configurationError, true, readExtendedStatus);
+L000085 |             return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, "", aioNo, configurationError, true, readExtendedStatus); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 CreateAxisDefinition.
+L000086 |         } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, normalizedAxisReference, aioNo, "", true, readExtendedStatus) / 호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, normalizedAxisReference, aioNo, "", true, readExtendedStatus);
+L000088 |         return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, normalizedAxisReference, aioNo, "", true, readExtendedStatus); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 CreateAxisDefinition.
+L000089 |     } ⟦EOL⟧
+L000090 |  ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Automation.CScannerAxisConfiguration.ValidateConfiguredAxisName(int, string, string)
+L000091 |     private static string ValidateConfiguredAxisName(int headNo, string axisRole, string axisReference) ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000092 |     { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axisReference) / 함수·델리게이트 또는 객체 생성자를 호출합니다: axisReference.Equals("-", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(axisReference) || axisReference.Equals("-", StringComparison.Ordinal))
+L000093 |         if (string.IsNullOrWhiteSpace(axisReference) || axisReference.Equals("-", StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 호출자에게 값 또는 제어를 반환합니다: return $"H{headNo:00} {axisRole} axis name is not configured.";
+L000095 |             return $"H{headNo:00} {axisRole} axis name is not configured."; ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000096 |         } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAllAsciiDigits(axisReference) / 조건에 따라 분기합니다: if (IsAllAsciiDigits(axisReference))
+L000098 |         if (IsAllAsciiDigits(axisReference)) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 호출자에게 값 또는 제어를 반환합니다: return $"H{headNo:00} {axisRole} axis must be configured by axis name, not axis number: {axisReference}.";
+L000100 |             return $"H{headNo:00} {axisRole} axis must be configured by axis name, not axis number: {axisReference}."; ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000101 |         } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAutomationAxisName(axisReference) / 조건에 따라 분기합니다: if (!IsAutomationAxisName(axisReference))
+L000103 |         if (!IsAutomationAxisName(axisReference)) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 호출자에게 값 또는 제어를 반환합니다: return $"H{headNo:00} {axisRole} axis name is invalid: {axisReference}.";
+L000105 |             return $"H{headNo:00} {axisRole} axis name is invalid: {axisReference}."; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000106 |         } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000108 |         return ""; ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 ValidateConfiguredAxisName.
+L000109 |     } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAllAsciiDigits(string)
+L000111 |     private static bool IsAllAsciiDigits(string value) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000112 |     { ⟦EOL⟧
+// 해설 L113: 조건에 따라 분기합니다: if (value.Length == 0)
+L000113 |         if (value.Length == 0) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000114 |         { ⟦EOL⟧
+// 해설 L115: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000115 |             return false; ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000116 |         } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 컬렉션 요소를 순회합니다: foreach (var character in value)
+L000118 |         foreach (var character in value) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) / 조건에 따라 분기합니다: if (!char.IsAsciiDigit(character))
+L000120 |             if (!char.IsAsciiDigit(character)) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000121 |             { ⟦EOL⟧
+// 해설 L122: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000122 |                 return false; ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000123 |             } ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000124 |         } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000126 |         return true; ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 IsAllAsciiDigits.
+L000127 |     } ⟦EOL⟧
+L000128 |  ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAutomationAxisName(string)
+L000129 |     private static bool IsAutomationAxisName(string value) ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000130 |     { ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0]) / 조건에 따라 분기합니다: if (value.Length == 0 || !char.IsAsciiLetter(value[0]))
+L000131 |         if (value.Length == 0 || !char.IsAsciiLetter(value[0])) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000132 |         { ⟦EOL⟧
+// 해설 L133: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000133 |             return false; ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000134 |         } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 컬렉션 요소를 순회합니다: foreach (var character in value)
+L000136 |         foreach (var character in value) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000137 |         { ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character) / 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) / 조건에 따라 분기합니다: if (!char.IsAsciiLetter(character) && !char.IsAsciiDigit(character) && character != '_')
+L000138 |             if (!char.IsAsciiLetter(character) && !char.IsAsciiDigit(character) && character != '_') ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000139 |             { ⟦EOL⟧
+// 해설 L140: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000140 |                 return false; ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000141 |             } ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000142 |         } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000144 |         return true; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 IsAutomationAxisName.
+L000145 |     } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<int> Drilling.Common.Automation.CScannerAxisConfiguration.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>,
+L000147 |     public static IReadOnlyList<int> BuildEnabledHeadNumbers(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headCount = 8) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000148 |     { ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<int>(headCount) / 지역 변수를 선언합니다: var heads = new List<int>(headCount); / 변수의 초기값을 지정합니다: heads = new List<int>(headCount)
+L000149 |         var heads = new List<int>(headCount); ⟦EOL⟧
+// 해설 L150: 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= headCount; headNo++) / 변수의 초기값을 지정합니다: headNo = 1
+L000150 |         for (var headNo = 1; headNo <= headCount; headNo++) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000151 |         { ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(settings, headNo) / 조건에 따라 분기합니다: if (IsHeadEnabled(settings, headNo))
+L000152 |             if (IsHeadEnabled(settings, headNo)) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000153 |             { ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: heads.Add(headNo)
+L000154 |                 heads.Add(headNo); ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000155 |             } ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000156 |         } ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 호출자에게 값 또는 제어를 반환합니다: return heads;
+L000158 |         return heads; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int)
+L000161 |     public static bool IsHeadEnabled(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(settings, true, headNo, "USE") / 호출자에게 값 또는 제어를 반환합니다: return ReadHeadSettingBool(settings, true, headNo, "USE");
+L000163 |         return ReadHeadSettingBool(settings, true, headNo, "USE"); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000164 |     } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000166 |     public static bool IsHeadEnabled(IReadOnlyDictionary<string, string> parameters, int headNo) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000167 |     { ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(parameters, true, headNo, "USE") / 호출자에게 값 또는 제어를 반환합니다: return ReadHeadSettingBool(parameters, true, headNo, "USE");
+L000168 |         return ReadHeadSettingBool(parameters, true, headNo, "USE"); ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000169 |     } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, string, int, params string[])
+L000171 |     private static string ReadHeadSettingText(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, string defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000173 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L174: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000174 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000175 |         { ⟦EOL⟧
+// 해설 L176: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000176 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L177: 컬렉션 요소를 순회합니다: foreach (var setting in settings)
+L000177 |             foreach (var setting in settings) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000178 |             { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))
+L000179 |                 if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000180 |                 { ⟦EOL⟧
+// 해설 L181: 다음 반복으로 진행합니다: continue;
+L000181 |                     continue; ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000182 |                 } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(setting.Value) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(setting.Value))
+L000184 |                 if (!string.IsNullOrWhiteSpace(setting.Value)) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000185 |                 { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return setting.Value.Trim();
+L000186 |                     return setting.Value.Trim(); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000187 |                 } ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000188 |             } ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000189 |         } ⟦EOL⟧
+L000190 |  ⟦EOL⟧
+// 해설 L191: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000191 |         return defaultValue; ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000192 |     } ⟦EOL⟧
+L000193 |  ⟦EOL⟧
+// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, bool, int, params string[])
+L000194 |     private static bool ReadHeadSettingBool(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, bool defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000195 |     { ⟦EOL⟧
+// 해설 L196: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000196 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L197: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000197 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000199 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L200: 컬렉션 요소를 순회합니다: foreach (var setting in settings)
+L000200 |             foreach (var setting in settings) ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000201 |             { ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))
+L000202 |                 if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000203 |                 { ⟦EOL⟧
+// 해설 L204: 다음 반복으로 진행합니다: continue;
+L000204 |                     continue; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000205 |                 } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(setting.Value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(setting.Value))
+L000207 |                 if (string.IsNullOrWhiteSpace(setting.Value)) ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000208 |                 { ⟦EOL⟧
+// 해설 L209: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000209 |                     return defaultValue; ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000210 |                 } ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return setting.Value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ => defaultValue }; / 값별 결과식을 선택합니다: setting.Value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ =>
+L000212 |                 return setting.Value.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000213 |                 { ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, bool, int, params string[])
+L000214 |                     "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, ⟦EOL⟧
+// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, bool, int, params string[])
+L000215 |                     "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, bool, int, params string[])
+L000216 |                     _ => defaultValue ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000217 |                 }; ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000218 |             } ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000219 |         } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000221 |         return defaultValue; ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000222 |     } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int, int, params string[])
+L000224 |     private static int ReadHeadSettingInt(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000225 |     { ⟦EOL⟧
+// 해설 L226: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000226 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L227: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000227 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000228 |         { ⟦EOL⟧
+// 해설 L229: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000229 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L230: 컬렉션 요소를 순회합니다: foreach (var setting in settings)
+L000230 |             foreach (var setting in settings) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000231 |             { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))
+L000232 |                 if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) && !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000233 |                 { ⟦EOL⟧
+// 해설 L234: 다음 반복으로 진행합니다: continue;
+L000234 |                     continue; ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000235 |                 } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(setting.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (int.TryParse(setting.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+L000237 |                 if (int.TryParse(setting.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000238 |                 { ⟦EOL⟧
+// 해설 L239: 호출자에게 값 또는 제어를 반환합니다: return parsed;
+L000239 |                     return parsed; ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000240 |                 } ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000241 |             } ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000242 |         } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000244 |         return defaultValue; ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000245 |     } ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, int, params string[])
+L000247 |     private static string ReadHeadSettingText(IReadOnlyDictionary<string, string> parameters, string defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000248 |     { ⟦EOL⟧
+// 해설 L249: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000249 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L250: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000250 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000251 |         { ⟦EOL⟧
+// 해설 L252: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000252 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value))
+L000253 |             if (parameters.TryGetValue(key, out var value) && !string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000254 |             { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim();
+L000255 |                 return value.Trim(); ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000256 |             } ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000257 |         } ⟦EOL⟧
+L000258 |  ⟦EOL⟧
+// 해설 L259: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000259 |         return defaultValue; ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 ReadHeadSettingText.
+L000260 |     } ⟦EOL⟧
+L000261 |  ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary<string, string>, bool, int, params string[])
+L000262 |     private static bool ReadHeadSettingBool(IReadOnlyDictionary<string, string> parameters, bool defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000263 |     { ⟦EOL⟧
+// 해설 L264: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000264 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L265: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000265 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000266 |         { ⟦EOL⟧
+// 해설 L267: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000267 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 조건에 따라 분기합니다: if (!parameters.TryGetValue(key, out var value))
+L000268 |             if (!parameters.TryGetValue(key, out var value)) ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000269 |             { ⟦EOL⟧
+// 해설 L270: 다음 반복으로 진행합니다: continue;
+L000270 |                 continue; ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000271 |             } ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000273 |             if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000274 |             { ⟦EOL⟧
+// 해설 L275: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000275 |                 return defaultValue; ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000276 |             } ⟦EOL⟧
+L000277 |  ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ => defaultValue }; / 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ => defaultValue }
+L000278 |             return value.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000279 |             { ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary<string, string>, bool, int, params string[])
+L000280 |                 "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary<string, string>, bool, int, params string[])
+L000281 |                 "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary<string, string>, bool, int, params string[])
+L000282 |                 _ => defaultValue ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000283 |             }; ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000284 |         } ⟦EOL⟧
+L000285 |  ⟦EOL⟧
+// 해설 L286: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000286 |         return defaultValue; ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 ReadHeadSettingBool.
+L000287 |     } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, int, params string[])
+L000289 |     private static int ReadHeadSettingInt(IReadOnlyDictionary<string, string> parameters, int defaultValue, int headNo, params string[] suffixes) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000290 |     { ⟦EOL⟧
+// 해설 L291: 지역 변수를 선언합니다: var prefix = $"H{headNo:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{headNo:00}_"
+L000291 |         var prefix = $"H{headNo:00}_"; ⟦EOL⟧
+// 해설 L292: 컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)
+L000292 |         foreach (var suffix in suffixes) ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000293 |         { ⟦EOL⟧
+// 해설 L294: 지역 변수를 선언합니다: var key = prefix + suffix; / 변수의 초기값을 지정합니다: key = prefix + suffix
+L000294 |             var key = prefix + suffix; ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+L000295 |             if (parameters.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000296 |             { ⟦EOL⟧
+// 해설 L297: 호출자에게 값 또는 제어를 반환합니다: return parsed;
+L000297 |                 return parsed; ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000298 |             } ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000299 |         } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000301 |         return defaultValue; ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ReadHeadSettingInt.
+L000302 |     } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(headNo, 1, 8)
+L000304 |     private static int NormalizeHeadNo(int headNo) => Math.Clamp(headNo, 1, 8); ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다.
+L000305 | } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 타입의 구조/상속 선언입니다: public readonly record struct ST_SCANNER_AXIS_SETTING(
+L000307 | public readonly record struct ST_SCANNER_AXIS_SETTING( ⟦EOL⟧
+// 해설 L308: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000308 |     int HeadNo,  ⟦EOL⟧
+// 해설 L309: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000309 |     int AutomationNo,  ⟦EOL⟧
+// 해설 L310: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000310 |     string AxisName,  ⟦EOL⟧
+// 해설 L311: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000311 |     string AxisReference,  ⟦EOL⟧
+// 해설 L312: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000312 |     int AioNo = 0,  ⟦EOL⟧
+// 해설 L313: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000313 |     string ConfigurationError = "",  ⟦EOL⟧
+// 해설 L314: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000314 |     bool IsUsed = true,  ⟦EOL⟧
+// 해설 L315: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000315 |     bool ReadExtendedStatus = true ⟦EOL⟧
+// 해설 L316: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000316 | ); ⟦EOL⟧

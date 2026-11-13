@@ -1,0 +1,1592 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Review/CZeroDefenceRecipePlan.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">Git 원본</a></p><h1>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>e889827c9bd37e5d560c6da9fba8374bb4813e486403abc91893fb2bbe115afa</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>19,538 bytes / 326 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>리뷰 계획·측정·결과 해석 계층입니다. 물리 이동 좌표와 Vision 식별 패킷, 측정 저장의 역할을 별도로 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/2e2905babd8492dfdaa8.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CZeroDefenceRecipePlan</td><td>ClassDeclaration</td><td>10–130</td><td>CZeroDefenceRecipePlan</td></tr>
+<tr><td>ST_ZERO_DEFENCE_TIMING_PROFILE</td><td>RecordDeclaration</td><td>132–142</td><td>ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+<tr><td>ST_ZERO_DEFENCE_POINT</td><td>RecordDeclaration</td><td>144–155</td><td>ST_ZERO_DEFENCE_POINT</td></tr>
+<tr><td>ST_ZERO_DEFENCE_TIMING_ISSUE</td><td>RecordDeclaration</td><td>156–156</td><td>ST_ZERO_DEFENCE_TIMING_ISSUE</td></tr>
+<tr><td>ST_ZERO_DEFENCE_TRANSITION</td><td>RecordDeclaration</td><td>157–160</td><td>ST_ZERO_DEFENCE_TRANSITION</td></tr>
+<tr><td>ST_ZERO_DEFENCE_TIMING_RESULT</td><td>RecordDeclaration</td><td>162–166</td><td>ST_ZERO_DEFENCE_TIMING_RESULT</td></tr>
+<tr><td>CZeroDefenceTiming</td><td>ClassDeclaration</td><td>169–233</td><td>CZeroDefenceTiming</td></tr>
+<tr><td>ST_ZERO_LINE_CYCLE_PLAN</td><td>RecordDeclaration</td><td>235–245</td><td>ST_ZERO_LINE_CYCLE_PLAN</td></tr>
+<tr><td>ST_ZERO_LINE_POINT_RESULT</td><td>RecordDeclaration</td><td>246–249</td><td>ST_ZERO_LINE_POINT_RESULT</td></tr>
+<tr><td>ST_ZERO_LINE_CYCLE_STATUS</td><td>RecordDeclaration</td><td>251–258</td><td>ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+<tr><td>ST_ZERO_LINE_RESULT_DATA</td><td>RecordDeclaration</td><td>260–260</td><td>ST_ZERO_LINE_RESULT_DATA</td></tr>
+<tr><td>CZeroLineCyclePlan</td><td>ClassDeclaration</td><td>262–325</td><td>CZeroLineCyclePlan</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>CountKey</td><td>FieldDeclaration</td><td>L12–12</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.CountKey</td></tr>
+<tr><td>Key</td><td>MethodDeclaration</td><td>L13–13</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string)</td></tr>
+<tr><td>_mask</td><td>FieldDeclaration</td><td>L14–14</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Review.CZeroDefenceRecipePlan._mask</td></tr>
+<tr><td>_shots</td><td>FieldDeclaration</td><td>L15–15</td><td>System.Collections.Generic.Dictionary&lt;(int Cell, int Shot), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._shots</td></tr>
+<tr><td>_beamPosition</td><td>FieldDeclaration</td><td>L16–16</td><td>System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._beamPosition</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L17–35</td><td>Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>Recipe</td><td>PropertyDeclaration</td><td>L37–37</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe</td></tr>
+<tr><td>get_Recipe</td><td>GetAccessorDeclaration</td><td>L37–37</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe.get</td></tr>
+<tr><td>Parameters</td><td>PropertyDeclaration</td><td>L38–38</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters</td></tr>
+<tr><td>get_Parameters</td><td>GetAccessorDeclaration</td><td>L38–38</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters.get</td></tr>
+<tr><td>Plan</td><td>PropertyDeclaration</td><td>L39–39</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan</td></tr>
+<tr><td>get_Plan</td><td>GetAccessorDeclaration</td><td>L39–39</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan.get</td></tr>
+<tr><td>Profile</td><td>PropertyDeclaration</td><td>L40–40</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile</td></tr>
+<tr><td>get_Profile</td><td>GetAccessorDeclaration</td><td>L40–40</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile.get</td></tr>
+<tr><td>Count</td><td>PropertyDeclaration</td><td>L41–41</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Count</td></tr>
+<tr><td>HasSelections</td><td>PropertyDeclaration</td><td>L42–42</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.HasSelections</td></tr>
+<tr><td>Int</td><td>MethodDeclaration</td><td>L44–51</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int)</td></tr>
+<tr><td>Read</td><td>MethodDeclaration</td><td>L53–60</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double)</td></tr>
+<tr><td>CanProcess</td><td>MethodDeclaration</td><td>L62–62</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
+<tr><td>Mask</td><td>MethodDeclaration</td><td>L63–63</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT Drilling.Common.Review.CZeroDefenceRecipePlan.Mask(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
+<tr><td>GetPoint</td><td>MethodDeclaration</td><td>L64–95</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Drilling.Common.Review.CZeroDefenceRecipePlan.GetPoint(int, int, int, int)</td></tr>
+<tr><td>ReadSelections</td><td>MethodDeclaration</td><td>L97–113</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.ReadSelections(bool)</td></tr>
+<tr><td>ValidateForSave</td><td>MethodDeclaration</td><td>L115–129</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.ValidateForSave()</td></tr>
+<tr><td>StageStroke</td><td>PropertyDeclaration</td><td>L136–136</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke</td></tr>
+<tr><td>get_StageStroke</td><td>GetAccessorDeclaration</td><td>L136–136</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.get</td></tr>
+<tr><td>set_StageStroke</td><td>InitAccessorDeclaration</td><td>L136–136</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.init</td></tr>
+<tr><td>StageAcceleration</td><td>PropertyDeclaration</td><td>L137–137</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration</td></tr>
+<tr><td>get_StageAcceleration</td><td>GetAccessorDeclaration</td><td>L137–137</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.get</td></tr>
+<tr><td>set_StageAcceleration</td><td>InitAccessorDeclaration</td><td>L137–137</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.init</td></tr>
+<tr><td>SettleSeconds</td><td>PropertyDeclaration</td><td>L138–138</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds</td></tr>
+<tr><td>get_SettleSeconds</td><td>GetAccessorDeclaration</td><td>L138–138</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.get</td></tr>
+<tr><td>set_SettleSeconds</td><td>InitAccessorDeclaration</td><td>L138–138</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.init</td></tr>
+<tr><td>ArrivalMarginSeconds</td><td>PropertyDeclaration</td><td>L139–139</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds</td></tr>
+<tr><td>get_ArrivalMarginSeconds</td><td>GetAccessorDeclaration</td><td>L139–139</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.get</td></tr>
+<tr><td>set_ArrivalMarginSeconds</td><td>InitAccessorDeclaration</td><td>L139–139</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.init</td></tr>
+<tr><td>FramesPerSecond</td><td>PropertyDeclaration</td><td>L140–140</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond</td></tr>
+<tr><td>get_FramesPerSecond</td><td>GetAccessorDeclaration</td><td>L140–140</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.get</td></tr>
+<tr><td>set_FramesPerSecond</td><td>InitAccessorDeclaration</td><td>L140–140</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.init</td></tr>
+<tr><td>ExposureSeconds</td><td>PropertyDeclaration</td><td>L141–141</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds</td></tr>
+<tr><td>get_ExposureSeconds</td><td>GetAccessorDeclaration</td><td>L141–141</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.get</td></tr>
+<tr><td>set_ExposureSeconds</td><td>InitAccessorDeclaration</td><td>L141–141</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.init</td></tr>
+<tr><td>MarginSeconds</td><td>PropertyDeclaration</td><td>L159–159</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION.MarginSeconds</td></tr>
+<tr><td>IsValid</td><td>PropertyDeclaration</td><td>L164–164</td><td>bool Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.IsValid</td></tr>
+<tr><td>Message</td><td>PropertyDeclaration</td><td>L165–165</td><td>string Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.Message</td></tr>
+<tr><td>Validate</td><td>MethodDeclaration</td><td>L171–232</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT Drilling.Common.Review.CZeroDefenceTiming.Validate(int, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE)</td></tr>
+<tr><td>Positive</td><td>LocalFunctionStatement</td><td>L180–180</td><td>bool Positive(double)</td></tr>
+<tr><td>IsNg</td><td>PropertyDeclaration</td><td>L248–248</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT.IsNg</td></tr>
+<tr><td>Plan</td><td>PropertyDeclaration</td><td>L253–253</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan</td></tr>
+<tr><td>get_Plan</td><td>GetAccessorDeclaration</td><td>L253–253</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.get</td></tr>
+<tr><td>set_Plan</td><td>InitAccessorDeclaration</td><td>L253–253</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.init</td></tr>
+<tr><td>ResultSavedAt</td><td>PropertyDeclaration</td><td>L254–254</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt</td></tr>
+<tr><td>get_ResultSavedAt</td><td>GetAccessorDeclaration</td><td>L254–254</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.get</td></tr>
+<tr><td>set_ResultSavedAt</td><td>InitAccessorDeclaration</td><td>L254–254</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.init</td></tr>
+<tr><td>FollowUpRequested</td><td>PropertyDeclaration</td><td>L255–255</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested</td></tr>
+<tr><td>get_FollowUpRequested</td><td>GetAccessorDeclaration</td><td>L255–255</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.get</td></tr>
+<tr><td>set_FollowUpRequested</td><td>InitAccessorDeclaration</td><td>L255–255</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.init</td></tr>
+<tr><td>FollowUpCompleted</td><td>PropertyDeclaration</td><td>L256–256</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted</td></tr>
+<tr><td>get_FollowUpCompleted</td><td>GetAccessorDeclaration</td><td>L256–256</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.get</td></tr>
+<tr><td>set_FollowUpCompleted</td><td>InitAccessorDeclaration</td><td>L256–256</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.init</td></tr>
+<tr><td>Judge</td><td>PropertyDeclaration</td><td>L257–257</td><td>string Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Judge</td></tr>
+<tr><td>Build</td><td>MethodDeclaration</td><td>L264–324</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.CZeroLineCyclePlan.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>Tolerance</td><td>LocalFunctionStatement</td><td>L317–323</td><td>double Tolerance(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L12">FieldDeclaration <code>CountKey</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L12-L12">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.CountKey</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: CountKey = &quot;ZERO_DEFENCE_POINT_COUNT&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">MethodDeclaration <code>Key</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L13-L13">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>field</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6119-L6119">Drilling.Common/Station/CStationProcess.cs:6119–6119</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6119-L6119">Drilling.Common/Station/CStationProcess.cs:6119–6119</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6119-L6119">Drilling.Common/Station/CStationProcess.cs:6119–6119</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4539-L4539">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4539–4539</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_mask</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L14-L14">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Review.CZeroDefenceRecipePlan._mask</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>_shots</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L15">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;(int Cell, int Shot), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._shots</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.Dictionary&lt;(int Cell, int Shot), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>_beamPosition</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L16-L16">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._beamPosition</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">ConstructorDeclaration <code>.ctor</code> · L17–35</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L35">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17–35</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>recipe</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L269-L269">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:269–269</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6107-L6107">Drilling.Common/Station/CStationProcess.cs:6107–6107</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4328-L4328">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4328–4328</a></td><td>new</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>20</td><td>recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy(p =&gt; p.Key, StringComparer.OrdinalIgnoreCase).ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;string, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;&gt;.ToDictionary&lt;System.Linq.IGrouping&lt;string, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;, string, string&gt;(System.Func&lt;System.Linq.IGrouping&lt;string, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;, string&gt;, System.Func&lt;System.Linq.IGrouping&lt;string, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;, string&gt;, System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>20</td><td>recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;string, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.GroupBy&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER, string&gt;(System.Func&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER, string&gt;, System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>20</td><td>recipe.Parameters.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.Where&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER, bool&gt;)</td></tr>
+<tr><td>20</td><td>g.Last</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.Last&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;()</td></tr>
+<tr><td>21</td><td>settings.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.Where&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>25</td><td>CShotCoordinatePlanBuilder.Build</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Recipe.CShotCoordinatePlanBuilder.Build(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:11</td></tr>
+<tr><td>26</td><td>Plan.Shots.ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;.ToDictionary&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;)</td></tr>
+<tr><td>27</td><td>CRecipeShotMaskingPlan.Build</td><td>resolved</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Recipe.CRecipeShotMaskingPlan.Build(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:813</td></tr>
+<tr><td>28</td><td>ST_REVIEW_MOTION_PARAMETERS.Read</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS.Read(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Review/CReviewManager.cs:4264</td></tr>
+<tr><td>29</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ST_ZERO_DEFENCE_TIMING_PROFILE(double, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:132</td></tr>
+<tr><td>29</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>29</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>29</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>32</td><td>parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)).ToArray</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.ToArray&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;()</td></tr>
+<tr><td>32</td><td>parameters.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;.Select&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;(System.Func&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;, Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;)</td></tr>
+<tr><td>32</td><td>new ST_RECIPE_PARAMETER</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER.ST_RECIPE_PARAMETER(string, string, string, string, string, string, string, string, string, bool, bool, int, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double, double, System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?) · Drilling.Common/Managers/CRecipeManager.cs:355</td></tr>
+<tr><td>34</td><td>CReviewManager.CreateShotBeamPositionCalculator</td><td>resolved</td><td>System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt; Drilling.Common.Review.CReviewManager.CreateShotBeamPositionCalculator(Drilling.Common.Managers.ST_RECIPE_DEFINITION, double, double, double) · Drilling.Common/Review/CReviewManager.cs:151</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>19</td><td>assignment</td><td>값을 대상에 대입합니다: Recipe = recipe</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy(p =&gt; p.Key, StringComparer.OrdinalIgnoreCase).ToDictionary(g =&gt; g.Key, g =&gt; g.Last().Value, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy(p =&gt; p.Key, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: g.Last()</td></tr>
+<tr><td>20</td><td>local-declaration</td><td>지역 변수를 선언합니다: var parameters = recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy(p =&gt; p.Key, StringComparer.OrdinalIgnoreCase).ToDictionary(g =&gt; g.Key, g =&gt; g.Last().Value, StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>20</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: parameters = recipe.Parameters.Where(p =&gt; p.Key.Length &gt; 0).GroupBy(p =&gt; p.Key, StringComparer.OrdinalIgnoreCase).ToDictionary(g =&gt; g.Key, g =&gt; g.Last().Value, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settings.Where(s =&gt; s.Key.Length &gt; 0)</td></tr>
+<tr><td>21</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var setting in settings.Where(s =&gt; s.Key.Length &gt; 0))</td></tr>
+<tr><td>22</td><td>assignment</td><td>값을 대상에 대입합니다: parameters[setting.Key] = setting.Value</td></tr>
+<tr><td>23</td><td>assignment</td><td>값을 대상에 대입합니다: parameters[&quot;HEAD_COUNT&quot;] = &quot;8&quot;</td></tr>
+<tr><td>24</td><td>assignment</td><td>값을 대상에 대입합니다: Parameters = parameters</td></tr>
+<tr><td>25</td><td>assignment</td><td>값을 대상에 대입합니다: Plan = CShotCoordinatePlanBuilder.Build(parameters)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CShotCoordinatePlanBuilder.Build(parameters)</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: _shots = Plan.Shots.ToDictionary(p =&gt; (p.CellNo, p.CellShotNo))</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Plan.Shots.ToDictionary(p =&gt; (p.CellNo, p.CellShotNo))</td></tr>
+<tr><td>27</td><td>assignment</td><td>값을 대상에 대입합니다: _mask = CRecipeShotMaskingPlan.Build(parameters)</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeShotMaskingPlan.Build(parameters)</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ST_REVIEW_MOTION_PARAMETERS.Read(settings)</td></tr>
+<tr><td>28</td><td>local-declaration</td><td>지역 변수를 선언합니다: var motion = ST_REVIEW_MOTION_PARAMETERS.Read(settings);</td></tr>
+<tr><td>28</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: motion = ST_REVIEW_MOTION_PARAMETERS.Read(settings)</td></tr>
+<tr><td>29</td><td>assignment</td><td>값을 대상에 대입합니다: Profile = new(Read(&quot;STAGE_START_POS_Y&quot;, 3960), Read(&quot;STAGE_SCAN_DIRECTION_Y&quot;, -1), Read(&quot;STAGE_SPEED&quot;, 80), motion.Speed, motion.Acceleration)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(Read(&quot;STAGE_START_POS_Y&quot;, 3960), Read(&quot;STAGE_SCAN_DIRECTION_Y&quot;, -1), Read(&quot;STAGE_SPEED&quot;, 80), motion.Speed, motion.Acceleration)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;STAGE_START_POS_Y&quot;, 3960)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;STAGE_SCAN_DIRECTION_Y&quot;, -1)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;STAGE_SPEED&quot;, 80)</td></tr>
+<tr><td>30</td><td>local-declaration</td><td>지역 변수를 선언합니다: var geometryRecipe = recipe with { Parameters = parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)).ToArray() };</td></tr>
+<tr><td>30</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: geometryRecipe = recipe with { Parameters = parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)).ToArray() }</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: Parameters = parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)).ToArray()</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)).ToArray()</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Select(p =&gt; new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key))</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_RECIPE_PARAMETER(p.Key, p.Value, &quot;&quot;, &quot;&quot;, &quot;&quot;, Key: p.Key)</td></tr>
+<tr><td>34</td><td>assignment</td><td>값을 대상에 대입합니다: _beamPosition = CReviewManager.CreateShotBeamPositionCalculator(geometryRecipe, Profile.StageDirection)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.CreateShotBeamPositionCalculator(geometryRecipe, Profile.StageDirection)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L21 foreach&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">PropertyDeclaration <code>Recipe</code> · L37–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L37">GetAccessorDeclaration <code>get_Recipe</code> · L37–37</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">PropertyDeclaration <code>Parameters</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">GetAccessorDeclaration <code>get_Parameters</code> · L38–38</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">PropertyDeclaration <code>Plan</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L39">GetAccessorDeclaration <code>get_Plan</code> · L39–39</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">PropertyDeclaration <code>Profile</code> · L40–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L40">GetAccessorDeclaration <code>get_Profile</code> · L40–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L41">PropertyDeclaration <code>Count</code> · L41–41</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Count</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>41</td><td>Int</td><td>resolved</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Int(CountKey, 2)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">PropertyDeclaration <code>HasSelections</code> · L42–42</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.HasSelections</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>42</td><td>Enumerable.Range(1, 8).Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;int&gt;.Any&lt;int&gt;(System.Func&lt;int, bool&gt;)</td></tr>
+<tr><td>42</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>42</td><td>new[] { &quot;CELL&quot;, &quot;SHOT&quot;, &quot;BEAM&quot; }.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;string&gt;.Any&lt;string&gt;(System.Func&lt;string, bool&gt;)</td></tr>
+<tr><td>42</td><td>Int</td><td>resolved</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44</td></tr>
+<tr><td>42</td><td>Key</td><td>resolved</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Any(h =&gt; new[] { &quot;CELL&quot;, &quot;SHOT&quot;, &quot;BEAM&quot; }.Any(f =&gt; Int(Key(h, f)) != 0))</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { &quot;CELL&quot;, &quot;SHOT&quot;, &quot;BEAM&quot; }.Any(f =&gt; Int(Key(h, f)) != 0)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Int(Key(h, f))</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Key(h, f)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L44">MethodDeclaration <code>Int</code> · L44–51</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L44-L51">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44–51</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>int</td><td>None</td><td>True / 0</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>_plan.Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>_plan.Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>_plan.Int</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>46</td><td>Parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>48</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>49</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Parameters.TryGetValue(key, out var value)</td></tr>
+<tr><td>46</td><td>if</td><td>조건에 따라 분기합니다: if (!Parameters.TryGetValue(key, out var value))</td></tr>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return fallback;</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number)</td></tr>
+<tr><td>48</td><td>if</td><td>조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number))</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;{key}: 정수 값이 아닙니다.&quot;)</td></tr>
+<tr><td>49</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;{key}: 정수 값이 아닙니다.&quot;);</td></tr>
+<tr><td>50</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return number;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Int&quot;]
+ N0[&quot;L46 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L48 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L53">MethodDeclaration <code>Read</code> · L53–60</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L53-L60">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53–60</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L78-L78">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:78–78</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L79-L79">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:79–79</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>55</td><td>Parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>57</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>57</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>58</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Parameters.TryGetValue(key, out var text)</td></tr>
+<tr><td>55</td><td>if</td><td>조건에 따라 분기합니다: if (!Parameters.TryGetValue(key, out var text))</td></tr>
+<tr><td>56</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return fallback;</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>57</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;{key}: 유한한 숫자가 아닙니다.&quot;)</td></tr>
+<tr><td>58</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;{key}: 유한한 숫자가 아닙니다.&quot;);</td></tr>
+<tr><td>59</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Read&quot;]
+ N0[&quot;L55 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L57 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L62">MethodDeclaration <code>CanProcess</code> · L62–62</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L62">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62–62</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>point</td><td>Drilling.Common.Recipe.ST_HEAD_SHOT_POINT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L68-L68">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:68–68</a></td><td>CanProcess</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4423-L4423">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4423–4423</a></td><td>_plan!.CanProcess</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>62</td><td>_mask.EvaluateShot</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT Drilling.Common.Recipe.CRecipeShotMaskingPlan.EvaluateShot(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:853</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _mask.EvaluateShot(point)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L63">MethodDeclaration <code>Mask</code> · L63–63</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L63-L63">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:63–63</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT Drilling.Common.Review.CZeroDefenceRecipePlan.Mask(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>point</td><td>Drilling.Common.Recipe.ST_HEAD_SHOT_POINT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4494-L4494">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4494–4494</a></td><td>_plan.Mask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4622-L4622">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4622–4622</a></td><td>_plan.Mask</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>63</td><td>_mask.EvaluateShot</td><td>resolved</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT Drilling.Common.Recipe.CRecipeShotMaskingPlan.EvaluateShot(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:853</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _mask.EvaluateShot(point)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L64">MethodDeclaration <code>GetPoint</code> · L64–95</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L95">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–95</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Drilling.Common.Review.CZeroDefenceRecipePlan.GetPoint(int, int, int, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>head</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>cell</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>shot</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>beam</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L109-L109">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:109–109</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4507-L4507">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4507–4507</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4652-L4652">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4652–4652</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>66</td><td>_shots.TryGetValue</td><td>resolved</td><td>bool System.Collections.Generic.Dictionary&lt;(int Cell, int Shot), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;.TryGetValue((int Cell, int Shot), out Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
+<tr><td>67</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>68</td><td>CanProcess</td><td>resolved</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62</td></tr>
+<tr><td>69</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>70</td><td>_beamPosition</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Review.ST_REVIEW_BEAM_POSITION System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt;.Invoke(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int)</td></tr>
+<tr><td>70</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3862</td></tr>
+<tr><td>71</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>71</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>72</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>72</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>73</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>74</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>75</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>75</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>75</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>77</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>78</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>79</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>81</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>82</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>82</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>82</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>82</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
+<tr><td>83</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT.ST_ZERO_DEFENCE_POINT(int, int, int, int, string, string, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:144</td></tr>
+<tr><td>89</td><td>CReviewShotNameFormatter.ToMatrixName</td><td>resolved</td><td>string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:3897</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _shots.TryGetValue((cell, shot), out var point)</td></tr>
+<tr><td>66</td><td>if</td><td>조건에 따라 분기합니다: if (!_shots.TryGetValue((cell, shot), out var point) || point.HeadNo != head)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: 해당 Head가 담당하는 Shot이 아닙니다.&quot;)</td></tr>
+<tr><td>67</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: 해당 Head가 담당하는 Shot이 아닙니다.&quot;);</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanProcess(point)</td></tr>
+<tr><td>68</td><td>if</td><td>조건에 따라 분기합니다: if (!CanProcess(point))</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: Masking 또는 Chess로 제외된 Shot입니다.&quot;)</td></tr>
+<tr><td>69</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: Masking 또는 Chess로 제외된 Shot입니다.&quot;);</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _beamPosition(new(point.SequenceNo, point.ShotKey, head, cell, shot, 0, 0, true, point.DesignX, point.DesignY, 0, 0, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot;), beam)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(point.SequenceNo, point.ShotKey, head, cell, shot, 0, 0, true, point.DesignX, point.DesignY, 0, 0, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot;)</td></tr>
+<tr><td>70</td><td>local-declaration</td><td>지역 변수를 선언합니다: var target = _beamPosition(new(point.SequenceNo, point.ShotKey, head, cell, shot, 0, 0, true, point.DesignX, point.DesignY, 0, 0, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot;), beam);</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: target = _beamPosition(new(point.SequenceNo, point.ShotKey, head, cell, shot, 0, 0, true, point.DesignX, point.DesignY, 0, 0, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot;), beam)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;, 0)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;AK_MARGIN_X&quot;, 55)</td></tr>
+<tr><td>71</td><td>local-declaration</td><td>지역 변수를 선언합니다: var beamDesignX = target.ReviewX - Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;, 0) + Read(&quot;AK_MARGIN_X&quot;, 55);</td></tr>
+<tr><td>71</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: beamDesignX = target.ReviewX - Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_X&quot;, 0) + Read(&quot;AK_MARGIN_X&quot;, 55)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;, 0)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;AK_MARGIN_Y&quot;, 45)</td></tr>
+<tr><td>72</td><td>local-declaration</td><td>지역 변수를 선언합니다: var beamDesignY = (target.StageY - Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;, 0)) / Profile.StageDirection + Read(&quot;AK_MARGIN_Y&quot;, 45);</td></tr>
+<tr><td>72</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: beamDesignY = (target.StageY - Read(&quot;REVIEW_CAMERA_ALIGN_KEY_POS_Y&quot;, 0)) / Profile.StageDirection + Read(&quot;AK_MARGIN_Y&quot;, 45)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamDesignX)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(beamDesignY)</td></tr>
+<tr><td>73</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(beamDesignX) || !double.IsFinite(beamDesignY) || beamDesignX &lt; -1e-8 || beamDesignX &gt; Plan.GlassSizeX + 1e-8 || beamDesignY &lt; -1e-8 || beamDesignY &gt; Plan.GlassSizeY + 1e-8)</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: 선택한 Beam이 Glass 영역 밖입니다.&quot;)</td></tr>
+<tr><td>74</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: 선택한 Beam이 Glass 영역 밖입니다.&quot;);</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(Read($&quot;H{head:00}_ENCODER_SCALE&quot;, Read(&quot;SCAN_ENCODER_SCALE&quot;, 16000)))</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read($&quot;H{head:00}_ENCODER_SCALE&quot;, Read(&quot;SCAN_ENCODER_SCALE&quot;, 16000))</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read(&quot;SCAN_ENCODER_SCALE&quot;, 16000)</td></tr>
+<tr><td>75</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scale = Math.Abs(Read($&quot;H{head:00}_ENCODER_SCALE&quot;, Read(&quot;SCAN_ENCODER_SCALE&quot;, 16000)));</td></tr>
+<tr><td>75</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scale = Math.Abs(Read($&quot;H{head:00}_ENCODER_SCALE&quot;, Read(&quot;SCAN_ENCODER_SCALE&quot;, 16000)))</td></tr>
+<tr><td>76</td><td>if</td><td>조건에 따라 분기합니다: if (scale &lt;= 0)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: Encoder Scale을 확인해 주세요.&quot;)</td></tr>
+<tr><td>77</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: Encoder Scale을 확인해 주세요.&quot;);</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read($&quot;H{head:00}_LASER_FREQUENCY&quot;, 100)</td></tr>
+<tr><td>78</td><td>local-declaration</td><td>지역 변수를 선언합니다: var frequency = Read($&quot;H{head:00}_LASER_FREQUENCY&quot;, 100) * 1000;</td></tr>
+<tr><td>78</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: frequency = Read($&quot;H{head:00}_LASER_FREQUENCY&quot;, 100) * 1000</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read($&quot;H{head:00}_SHOT_COUNT&quot;, 1)</td></tr>
+<tr><td>79</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shotCount = Read($&quot;H{head:00}_SHOT_COUNT&quot;, 1);</td></tr>
+<tr><td>79</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shotCount = Read($&quot;H{head:00}_SHOT_COUNT&quot;, 1)</td></tr>
+<tr><td>80</td><td>if</td><td>조건에 따라 분기합니다: if (frequency &lt;= 0 || shotCount &lt; 0)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: 주파수·Shot Count를 확인해 주세요.&quot;)</td></tr>
+<tr><td>81</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: 주파수·Shot Count를 확인해 주세요.&quot;);</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, Read($&quot;H{head:00}_LASER_ON_DELAY&quot;, 0))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read($&quot;H{head:00}_LASER_ON_DELAY&quot;, 0)</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, Read($&quot;H{head:00}_LASER_OFF_DELAY&quot;, 0))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Read($&quot;H{head:00}_LASER_OFF_DELAY&quot;, 0)</td></tr>
+<tr><td>82</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningSeconds = shotCount / frequency + (Math.Max(0, Read($&quot;H{head:00}_LASER_ON_DELAY&quot;, 0)) + Math.Max(0, Read($&quot;H{head:00}_LASER_OFF_DELAY&quot;, 0))) / 1000;</td></tr>
+<tr><td>82</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningSeconds = shotCount / frequency + (Math.Max(0, Read($&quot;H{head:00}_LASER_ON_DELAY&quot;, 0)) + Math.Max(0, Read($&quot;H{head:00}_LASER_OFF_DELAY&quot;, 0))) / 1000</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new( head, cell, shot, beam, point.ShotKey, CReviewShotNameFormatter.ToMatrixName(shot, point.GroupCountX), target.ReviewX, target.StageY, point.EncoderWaitPosition / (scale * Profile.StageDirection), machiningSeconds )</td></tr>
+<tr><td>83</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new( head, cell, shot, beam, point.ShotKey, CReviewShotNameFormatter.ToMatrixName(shot, point.GroupCountX), target.ReviewX, target.StageY, point.EncoderWaitPosition / (scale * Profile.StageDirection), machiningSeconds );</td></tr>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewShotNameFormatter.ToMatrixName(shot, point.GroupCountX)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetPoint&quot;]
+ N0[&quot;L66 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L68 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L73 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L76 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L80 if&quot;]
+ M --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L97">MethodDeclaration <code>ReadSelections</code> · L97–113</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L97-L113">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97–113</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.ReadSelections(bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>requireComplete</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>ReadSelections</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L276-L276">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:276–276</a></td><td>source.ReadSelections</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6110-L6110">Drilling.Common/Station/CStationProcess.cs:6110–6110</a></td><td>checkedPlan.ReadSelections</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>99</td><td>new List&lt;ST_ZERO_DEFENCE_POINT&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.List()</td></tr>
+<tr><td>102</td><td>Int</td><td>resolved</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44</td></tr>
+<tr><td>102</td><td>Key</td><td>resolved</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13</td></tr>
+<tr><td>103</td><td>Int</td><td>resolved</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44</td></tr>
+<tr><td>103</td><td>Key</td><td>resolved</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13</td></tr>
+<tr><td>104</td><td>Int</td><td>resolved</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44</td></tr>
+<tr><td>104</td><td>Key</td><td>resolved</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13</td></tr>
+<tr><td>108</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>109</td><td>result.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Add(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT)</td></tr>
+<tr><td>109</td><td>GetPoint</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Drilling.Common.Review.CZeroDefenceRecipePlan.GetPoint(int, int, int, int) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_ZERO_DEFENCE_POINT&gt;()</td></tr>
+<tr><td>99</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = new List&lt;ST_ZERO_DEFENCE_POINT&gt;();</td></tr>
+<tr><td>99</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = new List&lt;ST_ZERO_DEFENCE_POINT&gt;()</td></tr>
+<tr><td>100</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: head = 1</td></tr>
+<tr><td>100</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var head = 1; head &lt;= 8; head++)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Int(Key(head, &quot;CELL&quot;))</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Key(head, &quot;CELL&quot;)</td></tr>
+<tr><td>102</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cell = Int(Key(head, &quot;CELL&quot;));</td></tr>
+<tr><td>102</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cell = Int(Key(head, &quot;CELL&quot;))</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Int(Key(head, &quot;SHOT&quot;))</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Key(head, &quot;SHOT&quot;)</td></tr>
+<tr><td>103</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shot = Int(Key(head, &quot;SHOT&quot;));</td></tr>
+<tr><td>103</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shot = Int(Key(head, &quot;SHOT&quot;))</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Int(Key(head, &quot;BEAM&quot;))</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Key(head, &quot;BEAM&quot;)</td></tr>
+<tr><td>104</td><td>local-declaration</td><td>지역 변수를 선언합니다: var beam = Int(Key(head, &quot;BEAM&quot;));</td></tr>
+<tr><td>104</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: beam = Int(Key(head, &quot;BEAM&quot;))</td></tr>
+<tr><td>105</td><td>if</td><td>조건에 따라 분기합니다: if (cell == 0 &amp;&amp; shot == 0 &amp;&amp; beam == 0 &amp;&amp; !requireComplete)</td></tr>
+<tr><td>106</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>107</td><td>if</td><td>조건에 따라 분기합니다: if (cell &lt;= 0 || shot &lt;= 0 || beam &lt;= 0)</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;H{head:00}: Cell·Shot·Beam을 모두 지정해 주세요.&quot;)</td></tr>
+<tr><td>108</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;H{head:00}: Cell·Shot·Beam을 모두 지정해 주세요.&quot;);</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(GetPoint(head, cell, shot, beam))</td></tr>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPoint(head, cell, shot, beam)</td></tr>
+<tr><td>112</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return result;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadSelections&quot;]
+ N0[&quot;L100 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L105 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L107 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L115">MethodDeclaration <code>ValidateForSave</code> · L115–129</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L115-L129">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:115–129</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.ValidateForSave()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceRecipePlan</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan(new(&quot;DRAFT&quot;, &quot;DRAFT&quot;, parameters, []), settings).ValidateForSave</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>123</td><td>CZeroDefenceTiming.Validate</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT Drilling.Common.Review.CZeroDefenceTiming.Validate(int, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171</td></tr>
+<tr><td>123</td><td>ReadSelections</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.ReadSelections(bool) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>117</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>119</td><td>if</td><td>조건에 따라 분기합니다: if (Count is not (2 or 4))</td></tr>
+<tr><td>120</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;0선방어 검사 개수는 2 또는 4만 가능합니다.&quot;;</td></tr>
+<tr><td>121</td><td>if</td><td>조건에 따라 분기합니다: if (!HasSelections)</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CZeroDefenceTiming.Validate(Count, ReadSelections(requireComplete: true), Profile)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSelections(requireComplete: true)</td></tr>
+<tr><td>123</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CZeroDefenceTiming.Validate(Count, ReadSelections(requireComplete: true), Profile).Message;</td></tr>
+<tr><td>125</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception error) when (error is InvalidOperationException or ArgumentException)</td></tr>
+<tr><td>127</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return error.Message;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateForSave&quot;]
+ N0[&quot;L117 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L119 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L121 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L125 catch&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L136">PropertyDeclaration <code>StageStroke</code> · L136–136</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L136">GetAccessorDeclaration <code>get_StageStroke</code> · L136–136</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L136">InitAccessorDeclaration <code>set_StageStroke</code> · L136–136</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L137">PropertyDeclaration <code>StageAcceleration</code> · L137–137</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L137">GetAccessorDeclaration <code>get_StageAcceleration</code> · L137–137</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L137">InitAccessorDeclaration <code>set_StageAcceleration</code> · L137–137</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L138">PropertyDeclaration <code>SettleSeconds</code> · L138–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L138">GetAccessorDeclaration <code>get_SettleSeconds</code> · L138–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L138">InitAccessorDeclaration <code>set_SettleSeconds</code> · L138–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L139">PropertyDeclaration <code>ArrivalMarginSeconds</code> · L139–139</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L139">GetAccessorDeclaration <code>get_ArrivalMarginSeconds</code> · L139–139</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L139">InitAccessorDeclaration <code>set_ArrivalMarginSeconds</code> · L139–139</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">PropertyDeclaration <code>FramesPerSecond</code> · L140–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">GetAccessorDeclaration <code>get_FramesPerSecond</code> · L140–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">InitAccessorDeclaration <code>set_FramesPerSecond</code> · L140–140</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L141">PropertyDeclaration <code>ExposureSeconds</code> · L141–141</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L141">GetAccessorDeclaration <code>get_ExposureSeconds</code> · L141–141</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L141">InitAccessorDeclaration <code>set_ExposureSeconds</code> · L141–141</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L159">PropertyDeclaration <code>MarginSeconds</code> · L159–159</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L159-L159">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:159–159</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION.MarginSeconds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L164">PropertyDeclaration <code>IsValid</code> · L164–164</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L164-L164">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:164–164</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.IsValid</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L165">PropertyDeclaration <code>Message</code> · L165–165</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L165-L165">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:165–165</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.Message</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>165</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+<tr><td>165</td><td>Issues.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;.Select&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE, string&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE, string&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;\n&quot;, Issues.Select(i =&gt; i.Reason))</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Issues.Select(i =&gt; i.Reason)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">MethodDeclaration <code>Validate</code> · L171–232</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L171-L232">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171–232</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT Drilling.Common.Review.CZeroDefenceTiming.Validate(int, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceTiming</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>count</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>selections</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>profile</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L277-L277">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:277–277</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6111-L6111">Drilling.Common/Station/CStationProcess.cs:6111–6111</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4376-L4376">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4376–4376</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4468-L4468">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4468–4468</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4561-L4561">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4561–4561</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4577-L4577">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4577–4577</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>173</td><td>new List&lt;ST_ZERO_DEFENCE_TIMING_ISSUE&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;.List()</td></tr>
+<tr><td>174</td><td>new List&lt;ST_ZERO_DEFENCE_TRANSITION&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;.List()</td></tr>
+<tr><td>176</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.ST_ZERO_DEFENCE_TIMING_RESULT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:162</td></tr>
+<tr><td>176</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>177</td><td>selections.ToArray</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.ToArray&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;()</td></tr>
+<tr><td>178</td><td>points.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Any&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, bool&gt;)</td></tr>
+<tr><td>178</td><td>points.GroupBy(p =&gt; p.HeadNo).Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;int, Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;&gt;.Any&lt;System.Linq.IGrouping&lt;int, Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;&gt;(System.Func&lt;System.Linq.IGrouping&lt;int, Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, bool&gt;)</td></tr>
+<tr><td>178</td><td>points.GroupBy</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;int, Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.GroupBy&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int&gt;)</td></tr>
+<tr><td>178</td><td>g.Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Count&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;()</td></tr>
+<tr><td>179</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.ST_ZERO_DEFENCE_TIMING_RESULT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:162</td></tr>
+<tr><td>179</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>181</td><td>Positive</td><td>resolved</td><td>bool Positive(double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180</td></tr>
+<tr><td>181</td><td>Positive</td><td>resolved</td><td>bool Positive(double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180</td></tr>
+<tr><td>181</td><td>Positive</td><td>resolved</td><td>bool Positive(double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180</td></tr>
+<tr><td>181</td><td>Positive</td><td>resolved</td><td>bool Positive(double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180</td></tr>
+<tr><td>181</td><td>Positive</td><td>resolved</td><td>bool Positive(double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180</td></tr>
+<tr><td>182</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.ST_ZERO_DEFENCE_TIMING_RESULT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:162</td></tr>
+<tr><td>182</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>183</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>183</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>183</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>183</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>183</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>184</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.ST_ZERO_DEFENCE_TIMING_RESULT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:162</td></tr>
+<tr><td>184</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>185</td><td>new CTrapezoidalMotion</td><td>resolved</td><td>Drilling.Common.Motion.CTrapezoidalMotion.CTrapezoidalMotion(double, double, double, double?) · Drilling.Common/Motion/CMotionManager.cs:1752</td></tr>
+<tr><td>186</td><td>new CTrapezoidalMotion</td><td>resolved</td><td>Drilling.Common.Motion.CTrapezoidalMotion.CTrapezoidalMotion(double, double, double, double?) · Drilling.Common/Motion/CMotionManager.cs:1752</td></tr>
+<tr><td>187</td><td>new List&lt;(ST_ZERO_DEFENCE_POINT Point, double Time)&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.List()</td></tr>
+<tr><td>192</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>192</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>194</td><td>issues.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;.Add(Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE)</td></tr>
+<tr><td>194</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>198</td><td>stage.TimeAt</td><td>resolved</td><td>double Drilling.Common.Motion.CTrapezoidalMotion.TimeAt(double) · Drilling.Common/Motion/CMotionManager.cs:1780</td></tr>
+<tr><td>199</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>199</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>199</td><td>stage.TimeAt</td><td>resolved</td><td>double Drilling.Common.Motion.CTrapezoidalMotion.TimeAt(double) · Drilling.Common/Motion/CMotionManager.cs:1780</td></tr>
+<tr><td>201</td><td>issues.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;.Add(Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE)</td></tr>
+<tr><td>201</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>205</td><td>samples.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.Add((Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time))</td></tr>
+<tr><td>208</td><td>samples.GroupBy</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;int, (Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;&gt; System.Collections.Generic.IEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.GroupBy&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), int&gt;(System.Func&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), int&gt;)</td></tr>
+<tr><td>210</td><td>group.OrderBy(s =&gt; s.Time).ThenBy(s =&gt; s.Point.HeadNo).ToArray</td><td>resolved</td><td>(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)[] System.Collections.Generic.IEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.ToArray&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;()</td></tr>
+<tr><td>210</td><td>group.OrderBy(s =&gt; s.Time).ThenBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt; System.Linq.IOrderedEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.ThenBy&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), int&gt;(System.Func&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), int&gt;)</td></tr>
+<tr><td>210</td><td>group.OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt; System.Collections.Generic.IEnumerable&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time)&gt;.OrderBy&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), double&gt;(System.Func&lt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Point, double Time), double&gt;)</td></tr>
+<tr><td>215</td><td>new CTrapezoidalMotion</td><td>resolved</td><td>Drilling.Common.Motion.CTrapezoidalMotion.CTrapezoidalMotion(double, double, double, double?) · Drilling.Common/Motion/CMotionManager.cs:1752</td></tr>
+<tr><td>215</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>217</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>218</td><td>transitions.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;.Add(Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION)</td></tr>
+<tr><td>218</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION.ST_ZERO_DEFENCE_TRANSITION(int, int, int, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:157</td></tr>
+<tr><td>220</td><td>issues.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;.Add(Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE)</td></tr>
+<tr><td>220</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE.ST_ZERO_DEFENCE_TIMING_ISSUE(int, int, int, string, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:156</td></tr>
+<tr><td>231</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.ST_ZERO_DEFENCE_TIMING_RESULT(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_ISSUE&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:162</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_ZERO_DEFENCE_TIMING_ISSUE&gt;()</td></tr>
+<tr><td>173</td><td>local-declaration</td><td>지역 변수를 선언합니다: var issues = new List&lt;ST_ZERO_DEFENCE_TIMING_ISSUE&gt;();</td></tr>
+<tr><td>173</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: issues = new List&lt;ST_ZERO_DEFENCE_TIMING_ISSUE&gt;()</td></tr>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_ZERO_DEFENCE_TRANSITION&gt;()</td></tr>
+<tr><td>174</td><td>local-declaration</td><td>지역 변수를 선언합니다: var transitions = new List&lt;ST_ZERO_DEFENCE_TRANSITION&gt;();</td></tr>
+<tr><td>174</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: transitions = new List&lt;ST_ZERO_DEFENCE_TRANSITION&gt;()</td></tr>
+<tr><td>175</td><td>if</td><td>조건에 따라 분기합니다: if (count is not (2 or 4))</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new([new(0, 0, 0, &quot;검사 개수는 2 또는 4만 가능합니다.&quot;)], [])</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 0, 0, &quot;검사 개수는 2 또는 4만 가능합니다.&quot;)</td></tr>
+<tr><td>176</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new([new(0, 0, 0, &quot;검사 개수는 2 또는 4만 가능합니다.&quot;)], []);</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selections.ToArray()</td></tr>
+<tr><td>177</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = selections.ToArray();</td></tr>
+<tr><td>177</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = selections.ToArray()</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Any(p =&gt; p.HeadNo is &lt; 1 or &gt; 8)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.GroupBy(p =&gt; p.HeadNo).Any(g =&gt; g.Count() != 1)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.GroupBy(p =&gt; p.HeadNo)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: g.Count()</td></tr>
+<tr><td>178</td><td>if</td><td>조건에 따라 분기합니다: if (points.Any(p =&gt; p.HeadNo is &lt; 1 or &gt; 8) || points.GroupBy(p =&gt; p.HeadNo).Any(g =&gt; g.Count() != 1))</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new([new(0, 0, 0, &quot;Head별로 검사점 하나만 지정할 수 있습니다.&quot;)], [])</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 0, 0, &quot;Head별로 검사점 하나만 지정할 수 있습니다.&quot;)</td></tr>
+<tr><td>179</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new([new(0, 0, 0, &quot;Head별로 검사점 하나만 지정할 수 있습니다.&quot;)], []);</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Positive(profile.StageStroke)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Positive(profile.StageSpeed)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Positive(profile.StageAcceleration)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Positive(profile.ReviewSpeed)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Positive(profile.ReviewAcceleration)</td></tr>
+<tr><td>181</td><td>if</td><td>조건에 따라 분기합니다: if (!Positive(profile.StageStroke) || !Positive(profile.StageSpeed) || !Positive(profile.StageAcceleration) || !Positive(profile.ReviewSpeed) || !Positive(profile.ReviewAcceleration))</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new([new(0, 0, 0, &quot;Stage 스트로크·속도·가속도와 Review 속도·가속도는 0보다 큰 유한한 값이어야 합니다.&quot;)], [])</td></tr>
+<tr><td>182</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 0, 0, &quot;Stage 스트로크·속도·가속도와 Review 속도·가속도는 0보다 큰 유한한 값이어야 합니다.&quot;)</td></tr>
+<tr><td>182</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new([new(0, 0, 0, &quot;Stage 스트로크·속도·가속도와 Review 속도·가속도는 0보다 큰 유한한 값이어야 합니다.&quot;)], []);</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(profile.StageStartY)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(profile.SettleSeconds)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(profile.ArrivalMarginSeconds)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(profile.FramesPerSecond)</td></tr>
+<tr><td>183</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(profile.ExposureSeconds)</td></tr>
+<tr><td>183</td><td>if</td><td>조건에 따라 분기합니다: if (profile.StageDirection is not (-1 or 1) || !double.IsFinite(profile.StageStartY) || !double.IsFinite(profile.SettleSeconds) || profile.SettleSeconds &lt; 0 || !double.IsFinite(profile.ArrivalMarginSeconds) || profile.Arriva…)</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new([new(0, 0, 0, &quot;0선방어 이동·카메라 조건이 올바르지 않습니다.&quot;)], [])</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 0, 0, &quot;0선방어 이동·카메라 조건이 올바르지 않습니다.&quot;)</td></tr>
+<tr><td>184</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new([new(0, 0, 0, &quot;0선방어 이동·카메라 조건이 올바르지 않습니다.&quot;)], []);</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CTrapezoidalMotion(profile.StageStroke, profile.StageSpeed, profile.StageAcceleration)</td></tr>
+<tr><td>185</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stage = new CTrapezoidalMotion(profile.StageStroke, profile.StageSpeed, profile.StageAcceleration);</td></tr>
+<tr><td>185</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stage = new CTrapezoidalMotion(profile.StageStroke, profile.StageSpeed, profile.StageAcceleration)</td></tr>
+<tr><td>186</td><td>assignment</td><td>값을 대상에 대입합니다: _ = new CTrapezoidalMotion(0, profile.ReviewSpeed, profile.ReviewAcceleration)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CTrapezoidalMotion(0, profile.ReviewSpeed, profile.ReviewAcceleration)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;(ST_ZERO_DEFENCE_POINT Point, double Time)&gt;()</td></tr>
+<tr><td>187</td><td>local-declaration</td><td>지역 변수를 선언합니다: var samples = new List&lt;(ST_ZERO_DEFENCE_POINT Point, double Time)&gt;();</td></tr>
+<tr><td>187</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: samples = new List&lt;(ST_ZERO_DEFENCE_POINT Point, double Time)&gt;()</td></tr>
+<tr><td>188</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var p in points)</td></tr>
+<tr><td>190</td><td>local-declaration</td><td>지역 변수를 선언합니다: var group = (p.HeadNo - 1) / count + 1;</td></tr>
+<tr><td>190</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: group = (p.HeadNo - 1) / count + 1</td></tr>
+<tr><td>191</td><td>local-declaration</td><td>지역 변수를 선언합니다: var travel = (p.StageY - profile.StageStartY) * profile.StageDirection;</td></tr>
+<tr><td>191</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: travel = (p.StageY - profile.StageStartY) * profile.StageDirection</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(p.ReviewX)</td></tr>
+<tr><td>192</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(travel)</td></tr>
+<tr><td>192</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(p.ReviewX) || !double.IsFinite(travel) || travel &lt; stage.AccelerationDistance - 1e-8 || travel + profile.StageSpeed * profile.ExposureSeconds &gt; profile.StageStroke - stage.DecelerationDistance + 1e-8)</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: issues.Add(new(group, p.HeadNo, p.HeadNo, $&quot;H{p.HeadNo:00} {p.ShotName}: 촬영 위치가 MCC 등속 가공 구간 밖입니다. 카메라 AK Y 티칭·Stage 시작 위치를 확인해 주세요.&quot;))</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(group, p.HeadNo, p.HeadNo, $&quot;H{p.HeadNo:00} {p.ShotName}: 촬영 위치가 MCC 등속 가공 구간 밖입니다. 카메라 AK Y 티칭·Stage 시작 위치를 확인해 주세요.&quot;)</td></tr>
+<tr><td>195</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stage.TimeAt(travel)</td></tr>
+<tr><td>198</td><td>local-declaration</td><td>지역 변수를 선언합니다: var time = stage.TimeAt(travel);</td></tr>
+<tr><td>198</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: time = stage.TimeAt(travel)</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(p.MachiningDistance)</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(p.MachiningSeconds)</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: stage.TimeAt(p.MachiningDistance)</td></tr>
+<tr><td>199</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(p.MachiningDistance) || p.MachiningDistance &lt; 0 || p.MachiningDistance &gt; profile.StageStroke || !double.IsFinite(p.MachiningSeconds) || p.MachiningSeconds &lt; 0 || time + 1e-8 &lt; stage.TimeAt(p.MachiningDis…)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: issues.Add(new(group, p.HeadNo, p.HeadNo, $&quot;H{p.HeadNo:00} {p.ShotName}: 해당 Shot의 가공이 끝나기 전에 카메라 위치를 통과합니다.&quot;))</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(group, p.HeadNo, p.HeadNo, $&quot;H{p.HeadNo:00} {p.ShotName}: 해당 Shot의 가공이 끝나기 전에 카메라 위치를 통과합니다.&quot;)</td></tr>
+<tr><td>202</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>205</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.Add((p, time))</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.GroupBy(s =&gt; (s.Point.HeadNo - 1) / count + 1)</td></tr>
+<tr><td>208</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var group in samples.GroupBy(s =&gt; (s.Point.HeadNo - 1) / count + 1))</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: group.OrderBy(s =&gt; s.Time).ThenBy(s =&gt; s.Point.HeadNo).ToArray()</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: group.OrderBy(s =&gt; s.Time).ThenBy(s =&gt; s.Point.HeadNo)</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: group.OrderBy(s =&gt; s.Time)</td></tr>
+<tr><td>210</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ordered = group.OrderBy(s =&gt; s.Time).ThenBy(s =&gt; s.Point.HeadNo).ToArray();</td></tr>
+<tr><td>210</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ordered = group.OrderBy(s =&gt; s.Time).ThenBy(s =&gt; s.Point.HeadNo).ToArray()</td></tr>
+<tr><td>211</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: i = 1</td></tr>
+<tr><td>211</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var i = 1; i &lt; ordered.Length; i++)</td></tr>
+<tr><td>213</td><td>local-declaration</td><td>지역 변수를 선언합니다: var previous = ordered[i - 1];</td></tr>
+<tr><td>213</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: previous = ordered[i - 1]</td></tr>
+<tr><td>214</td><td>local-declaration</td><td>지역 변수를 선언합니다: var next = ordered[i];</td></tr>
+<tr><td>214</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: next = ordered[i]</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CTrapezoidalMotion(Math.Abs(next.Point.ReviewX - previous.Point.ReviewX), profile.ReviewSpeed, profile.ReviewAcceleration)</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(next.Point.ReviewX - previous.Point.ReviewX)</td></tr>
+<tr><td>215</td><td>local-declaration</td><td>지역 변수를 선언합니다: var move = new CTrapezoidalMotion(Math.Abs(next.Point.ReviewX - previous.Point.ReviewX), profile.ReviewSpeed, profile.ReviewAcceleration);</td></tr>
+<tr><td>215</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: move = new CTrapezoidalMotion(Math.Abs(next.Point.ReviewX - previous.Point.ReviewX), profile.ReviewSpeed, profile.ReviewAcceleration)</td></tr>
+<tr><td>216</td><td>local-declaration</td><td>지역 변수를 선언합니다: var available = next.Time - previous.Time;</td></tr>
+<tr><td>216</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: available = next.Time - previous.Time</td></tr>
+<tr><td>217</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1 / profile.FramesPerSecond, profile.ExposureSeconds + move.Duration + profile.SettleSeconds + profile.ArrivalMarginSeconds)</td></tr>
+<tr><td>217</td><td>local-declaration</td><td>지역 변수를 선언합니다: var required = Math.Max(1 / profile.FramesPerSecond, profile.ExposureSeconds + move.Duration + profile.SettleSeconds + profile.ArrivalMarginSeconds);</td></tr>
+<tr><td>217</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: required = Math.Max(1 / profile.FramesPerSecond, profile.ExposureSeconds + move.Duration + profile.SettleSeconds + profile.ArrivalMarginSeconds)</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: transitions.Add(new(group.Key, previous.Point.HeadNo, next.Point.HeadNo, available, required))</td></tr>
+<tr><td>218</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(group.Key, previous.Point.HeadNo, next.Point.HeadNo, available, required)</td></tr>
+<tr><td>219</td><td>if</td><td>조건에 따라 분기합니다: if (available + 1e-8 &lt; required)</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: issues.Add(new( group.Key, previous.Point.HeadNo, next.Point.HeadNo, $&quot;그룹 {group.Key} · H{previous.Point.HeadNo:00} → H{next.Point.HeadNo:00}: &quot; + $&quot;검사 간격 {available * 1000:0.0} ms / 필요 {required * 1000:0.0} ms &quot; + $&quot;(X …</td></tr>
+<tr><td>220</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new( group.Key, previous.Point.HeadNo, next.Point.HeadNo, $&quot;그룹 {group.Key} · H{previous.Point.HeadNo:00} → H{next.Point.HeadNo:00}: &quot; + $&quot;검사 간격 {available * 1000:0.0} ms / 필요 {required * 1000:0.0} ms &quot; + $&quot;(X 이동 {move.Du…</td></tr>
+<tr><td>231</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(issues, transitions)</td></tr>
+<tr><td>231</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(issues, transitions);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Validate&quot;]
+ N0[&quot;L175 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L178 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L181 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L183 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L188 foreach&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L192 if&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L199 if&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L208 foreach&quot;]
+ M --&gt;|포함| N7
+ N8[&quot;L211 for&quot;]
+ N7 --&gt;|포함| N8
+ N9[&quot;L219 if&quot;]
+ N8 --&gt;|포함| N9</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L180">LocalFunctionStatement <code>Positive</code> · L180–180</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L180-L180">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180–180</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Positive(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroDefenceTiming</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>180</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L248">PropertyDeclaration <code>IsNg</code> · L248–248</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L248-L248">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:248–248</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT.IsNg</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L253">PropertyDeclaration <code>Plan</code> · L253–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L253">GetAccessorDeclaration <code>get_Plan</code> · L253–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L253">InitAccessorDeclaration <code>set_Plan</code> · L253–253</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L254">PropertyDeclaration <code>ResultSavedAt</code> · L254–254</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.DateTimeOffset?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L254">GetAccessorDeclaration <code>get_ResultSavedAt</code> · L254–254</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.DateTimeOffset?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L254">InitAccessorDeclaration <code>set_ResultSavedAt</code> · L254–254</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.DateTimeOffset?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">PropertyDeclaration <code>FollowUpRequested</code> · L255–255</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">GetAccessorDeclaration <code>get_FollowUpRequested</code> · L255–255</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L255">InitAccessorDeclaration <code>set_FollowUpRequested</code> · L255–255</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L256">PropertyDeclaration <code>FollowUpCompleted</code> · L256–256</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L256">GetAccessorDeclaration <code>get_FollowUpCompleted</code> · L256–256</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L256">InitAccessorDeclaration <code>set_FollowUpCompleted</code> · L256–256</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L257">PropertyDeclaration <code>Judge</code> · L257–257</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L257-L257">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:257–257</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Judge</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>257</td><td>.Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT&gt;.Any&lt;Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT, bool&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Any(result =&gt; result.IsNg)</td></tr>
+<tr><td>257</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: State != &quot;DONE&quot; ? &quot;미완료&quot; : Results?.Any(result =&gt; result.IsNg) == true ? &quot;NG&quot; : &quot;OK&quot;</td></tr>
+<tr><td>257</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Results?.Any(result =&gt; result.IsNg) == true ? &quot;NG&quot; : &quot;OK&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">MethodDeclaration <code>Build</code> · L264–324</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L264-L324">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:264–324</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.CZeroLineCyclePlan.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroLineCyclePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>recipe</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION</td><td>None</td><td>False /</td></tr>
+<tr><td>glassId</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4238-L4238">Drilling.Common/Station/CStationProcess.cs:4238–4238</a></td><td>CZeroLineCyclePlan.Build</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>266</td><td>CRunOptionSettings.Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:198</td></tr>
+<tr><td>269</td><td>new CZeroDefenceRecipePlan</td><td>resolved</td><td>Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17</td></tr>
+<tr><td>270</td><td>CInterLockManager.EvaluateHeadUse(source.Parameters).Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Any&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;(System.Func&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM, bool&gt;)</td></tr>
+<tr><td>270</td><td>CInterLockManager.EvaluateHeadUse</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?) · Drilling.Common/InterLock/CInterLockManager.cs:110</td></tr>
+<tr><td>271</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>273</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>275</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>276</td><td>source.ReadSelections</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.ReadSelections(bool) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97</td></tr>
+<tr><td>277</td><td>CZeroDefenceTiming.Validate</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT Drilling.Common.Review.CZeroDefenceTiming.Validate(int, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171</td></tr>
+<tr><td>279</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>280</td><td>selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy(point =&gt; point.HeadNo).ToArray</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.ToArray&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;()</td></tr>
+<tr><td>280</td><td>selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.ThenBy&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int&gt;)</td></tr>
+<tr><td>280</td><td>selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.OrderBy&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, double&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, double&gt;)</td></tr>
+<tr><td>280</td><td>selected.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Where&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, bool&gt;)</td></tr>
+<tr><td>281</td><td>source.Plan.Shots.ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;.ToDictionary&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;)</td></tr>
+<tr><td>282</td><td>points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, true, shot.DesignX, shot.DesignY, point.ReviewX, point.StageY, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot; ) { BeamNo = point.BeamNo …</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;.ToArray&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;()</td></tr>
+<tr><td>282</td><td>points.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Select&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;)</td></tr>
+<tr><td>285</td><td>new ST_REVIEW_PLAN_POINT</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3862</td></tr>
+<tr><td>307</td><td>new ST_REVIEW_PLAN</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN.ST_REVIEW_PLAN(string, int, double, double, Drilling.Common.Review.EN_VISION_FLIP_TYPE, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;) · Drilling.Common/Review/CReviewManager.cs:3921</td></tr>
+<tr><td>309</td><td>targets.Select(p =&gt; p.CellNo).Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;int&gt;.Count&lt;int&gt;()</td></tr>
+<tr><td>309</td><td>targets.Select(p =&gt; p.CellNo).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
+<tr><td>309</td><td>targets.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;.Select&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int&gt;(System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int&gt;)</td></tr>
+<tr><td>310</td><td>Tolerance</td><td>resolved</td><td>double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317</td></tr>
+<tr><td>311</td><td>Tolerance</td><td>resolved</td><td>double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317</td></tr>
+<tr><td>312</td><td>CReviewManager.ParseVisionFlipType</td><td>resolved</td><td>Drilling.Common.Review.EN_VISION_FLIP_TYPE Drilling.Common.Review.CReviewManager.ParseVisionFlipType(string?, string?, string?) · Drilling.Common/Review/CReviewManager.cs:3543</td></tr>
+<tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
+<tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
+<tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
+<tr><td>314</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt; System.Array.AsReadOnly&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;(Drilling.Common.Review.ST_REVIEW_PLAN_POINT[])</td></tr>
+<tr><td>316</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN.ST_ZERO_LINE_CYCLE_PLAN(System.Guid, string, string, int, int, bool, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:235</td></tr>
+<tr><td>316</td><td>Guid.NewGuid</td><td>resolved</td><td>System.Guid System.Guid.NewGuid()</td></tr>
+<tr><td>316</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; System.Array.AsReadOnly&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;(Drilling.Common.Review.ST_ZERO_DEFENCE_POINT[])</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>266</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(settings)</td></tr>
+<tr><td>266</td><td>local-declaration</td><td>지역 변수를 선언합니다: var options = CRunOptionSettings.Read(settings);</td></tr>
+<tr><td>266</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: options = CRunOptionSettings.Read(settings)</td></tr>
+<tr><td>267</td><td>if</td><td>조건에 따라 분기합니다: if (!options.ZeroDefence)</td></tr>
+<tr><td>268</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return null;</td></tr>
+<tr><td>269</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CZeroDefenceRecipePlan(recipe, settings)</td></tr>
+<tr><td>269</td><td>local-declaration</td><td>지역 변수를 선언합니다: var source = new CZeroDefenceRecipePlan(recipe, settings);</td></tr>
+<tr><td>269</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: source = new CZeroDefenceRecipePlan(recipe, settings)</td></tr>
+<tr><td>270</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CInterLockManager.EvaluateHeadUse(source.Parameters).Any(item =&gt; item.BlocksAutoRun)</td></tr>
+<tr><td>270</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CInterLockManager.EvaluateHeadUse(source.Parameters)</td></tr>
+<tr><td>270</td><td>if</td><td>조건에 따라 분기합니다: if (CInterLockManager.EvaluateHeadUse(source.Parameters).Any(item =&gt; item.BlocksAutoRun))</td></tr>
+<tr><td>271</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;AUTO는 HEAD 1~8이 모두 USE여야 합니다. Interlock/Safety를 확인해 주세요.&quot;)</td></tr>
+<tr><td>271</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;AUTO는 HEAD 1~8이 모두 USE여야 합니다. Interlock/Safety를 확인해 주세요.&quot;);</td></tr>
+<tr><td>272</td><td>if</td><td>조건에 따라 분기합니다: if (source.Count is not (2 or 4))</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;0선방어 검사 개수/현재 그룹을 확인해 주세요.&quot;)</td></tr>
+<tr><td>273</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;0선방어 검사 개수/현재 그룹을 확인해 주세요.&quot;);</td></tr>
+<tr><td>274</td><td>local-declaration</td><td>지역 변수를 선언합니다: var totalGroups = 8 / source.Count;</td></tr>
+<tr><td>274</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: totalGroups = 8 / source.Count</td></tr>
+<tr><td>275</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(options.CurrentGroup, 1, totalGroups)</td></tr>
+<tr><td>275</td><td>local-declaration</td><td>지역 변수를 선언합니다: var group = Math.Clamp(options.CurrentGroup, 1, totalGroups);</td></tr>
+<tr><td>275</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: group = Math.Clamp(options.CurrentGroup, 1, totalGroups)</td></tr>
+<tr><td>276</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.ReadSelections(requireComplete: true)</td></tr>
+<tr><td>276</td><td>local-declaration</td><td>지역 변수를 선언합니다: var selected = source.ReadSelections(requireComplete: true);</td></tr>
+<tr><td>276</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: selected = source.ReadSelections(requireComplete: true)</td></tr>
+<tr><td>277</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CZeroDefenceTiming.Validate(source.Count, selected, source.Profile)</td></tr>
+<tr><td>277</td><td>local-declaration</td><td>지역 변수를 선언합니다: var timing = CZeroDefenceTiming.Validate(source.Count, selected, source.Profile);</td></tr>
+<tr><td>277</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: timing = CZeroDefenceTiming.Validate(source.Count, selected, source.Profile)</td></tr>
+<tr><td>278</td><td>if</td><td>조건에 따라 분기합니다: if (!timing.IsValid)</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(timing.Message)</td></tr>
+<tr><td>279</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(timing.Message);</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy(point =&gt; point.HeadNo).ToArray()</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy(point =&gt; point.HeadNo)</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection)</td></tr>
+<tr><td>280</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group)</td></tr>
+<tr><td>280</td><td>local-declaration</td><td>지역 변수를 선언합니다: var points = selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy(point =&gt; point.HeadNo).ToArray();</td></tr>
+<tr><td>280</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: points = selected.Where(point =&gt; (point.HeadNo - 1) / source.Count + 1 == group).OrderBy(point =&gt; point.StageY * source.Profile.StageDirection).ThenBy(point =&gt; point.HeadNo).ToArray()</td></tr>
+<tr><td>281</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.Plan.Shots.ToDictionary(point =&gt; (point.CellNo, point.CellShotNo))</td></tr>
+<tr><td>281</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shots = source.Plan.Shots.ToDictionary(point =&gt; (point.CellNo, point.CellShotNo));</td></tr>
+<tr><td>281</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shots = source.Plan.Shots.ToDictionary(point =&gt; (point.CellNo, point.CellShotNo))</td></tr>
+<tr><td>282</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, t…</td></tr>
+<tr><td>282</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, t…</td></tr>
+<tr><td>282</td><td>local-declaration</td><td>지역 변수를 선언합니다: var targets = points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCount</td></tr>
+<tr><td>282</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: targets = points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, t</td></tr>
+<tr><td>284</td><td>local-declaration</td><td>지역 변수를 선언합니다: var shot = shots[(point.CellNo, point.ShotNo)];</td></tr>
+<tr><td>284</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: shot = shots[(point.CellNo, point.ShotNo)]</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, true, shot.DesignX, shot.DesignY, point.ReviewX, point.StageY, 0, 0, EN_REVIEW_POINT_STATE…</td></tr>
+<tr><td>285</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, true, shot.DesignX, shot.DesignY, point.ReviewX, point.StageY, 0, 0, EN_REVIEW_POINT_STATE.Re</td></tr>
+<tr><td>304</td><td>assignment</td><td>값을 대상에 대입합니다: BeamNo = point.BeamNo</td></tr>
+<tr><td>307</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_PLAN( recipe.Id, targets.Select(p =&gt; p.CellNo).Distinct().Count(), Tolerance(&quot;REVIEW_TOLERANCE_X&quot;), Tolerance(&quot;REVIEW_TOLERANCE_Y&quot;), CReviewManager.ParseVisionFlipType(source.Parameters.GetValueOrDefault(&quot;V…</td></tr>
+<tr><td>307</td><td>local-declaration</td><td>지역 변수를 선언합니다: var vision = new ST_REVIEW_PLAN( recipe.Id, targets.Select(p =&gt; p.CellNo).Distinct().Count(), Tolerance(&quot;REVIEW_TOLERANCE_X&quot;), Tolerance(&quot;REVIEW_TOLERANCE_Y&quot;), CReviewManager.ParseVisionFlipType(source.Parameters.GetValueOrDefault</td></tr>
+<tr><td>307</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: vision = new ST_REVIEW_PLAN( recipe.Id, targets.Select(p =&gt; p.CellNo).Distinct().Count(), Tolerance(&quot;REVIEW_TOLERANCE_X&quot;), Tolerance(&quot;REVIEW_TOLERANCE_Y&quot;), CReviewManager.ParseVisionFlipType(source.Parameters.GetValueOrDefault(&quot;Vi</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(p =&gt; p.CellNo).Distinct().Count()</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(p =&gt; p.CellNo).Distinct()</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Select(p =&gt; p.CellNo)</td></tr>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Tolerance(&quot;REVIEW_TOLERANCE_X&quot;)</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Tolerance(&quot;REVIEW_TOLERANCE_Y&quot;)</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewManager.ParseVisionFlipType(source.Parameters.GetValueOrDefault(&quot;VisionXFlip&quot;), source.Parameters.GetValueOrDefault(&quot;VisionYFlip&quot;), source.Parameters.GetValueOrDefault(&quot;VisionXyFlip&quot;))</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.Parameters.GetValueOrDefault(&quot;VisionXFlip&quot;)</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.Parameters.GetValueOrDefault(&quot;VisionYFlip&quot;)</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.Parameters.GetValueOrDefault(&quot;VisionXyFlip&quot;)</td></tr>
+<tr><td>314</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(targets)</td></tr>
+<tr><td>316</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(Guid.NewGuid(), recipe.Id, glassId, group, totalGroups, options.FollowUp, Array.AsReadOnly(points), vision, source.Profile)</td></tr>
+<tr><td>316</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid()</td></tr>
+<tr><td>316</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(points)</td></tr>
+<tr><td>316</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(Guid.NewGuid(), recipe.Id, glassId, group, totalGroups, options.FollowUp, Array.AsReadOnly(points), vision, source.Profile);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Build&quot;]
+ N0[&quot;L267 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L270 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L272 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L278 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L317">LocalFunctionStatement <code>Tolerance</code> · L317–323</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L317-L323">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317–323</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Tolerance(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Review.CZeroLineCyclePlan</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L310-L310">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:310–310</a></td><td>Tolerance</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L311-L311">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:311–311</a></td><td>Tolerance</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>319</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+<tr><td>320</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>320</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>321</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>319</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: source.Parameters.GetValueOrDefault(key, &quot;0.03&quot;)</td></tr>
+<tr><td>319</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = source.Parameters.GetValueOrDefault(key, &quot;0.03&quot;);</td></tr>
+<tr><td>319</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = source.Parameters.GetValueOrDefault(key, &quot;0.03&quot;)</td></tr>
+<tr><td>320</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>320</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>320</td><td>if</td><td>조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value) || value &lt; 0)</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($&quot;{key}: 0 이상의 유한한 허용오차가 필요합니다.&quot;)</td></tr>
+<tr><td>321</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException($&quot;{key}: 0 이상의 유한한 허용오차가 필요합니다.&quot;);</td></tr>
+<tr><td>322</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Tolerance&quot;]
+ N0[&quot;L320 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Review/CZeroDefenceRecipePlan.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

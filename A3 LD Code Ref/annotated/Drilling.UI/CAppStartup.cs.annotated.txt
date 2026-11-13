@@ -1,0 +1,297 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CAppStartup.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000001 | using Drilling.Common.Log; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000003 | using System.Text; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.JHMI;
+L000005 | using Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Product;
+L000006 | using Drilling.File.Product; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.ReviewResult;
+L000007 | using Drilling.File.ReviewResult; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.ReviewOffset;
+L000008 | using Drilling.File.ReviewOffset; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Script;
+L000009 | using Drilling.File.Script; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000011 | namespace Drilling.UI; ⟦EOL⟧
+// 해설 L12: 타입의 구조/상속 선언입니다: public static class CAppStartup
+L000012 | public static class CAppStartup ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다.
+L000013 | { ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000014 |     public static CRootView CreateMainViewModel() ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 CreateMainViewModel.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetConfigRoot() / 지역 변수를 선언합니다: var configRoot = GetConfigRoot(); / 변수의 초기값을 지정합니다: configRoot = GetConfigRoot()
+L000016 |         var configRoot = GetConfigRoot(); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CSettingFile(configRoot) / 지역 변수를 선언합니다: var settingFile = new CSettingFile(configRoot); / 변수의 초기값을 지정합니다: settingFile = new CSettingFile(configRoot)
+L000017 |         var settingFile = new CSettingFile(configRoot); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScriptDirectory(configRoot, settingFile) / 지역 변수를 선언합니다: var automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile)); / 변수의 초기값을 지정합니다: automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile))
+L000018 |         var automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile)); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CManager( configRoot, new CJhmiRecipeFile(configRoot), settingFile, new CManualScanFile(configRoot), new CInterfaceFile(configRoot), new CBETFile(configRoot), new CMotorFile(configRoot), new CMelsecMapFile(configRoot… / 지역 변수를 선언합니다: var manager = new CManager( configRoot, new CJhmiRecipeFile(configRoot), settingFile, new CManualScanFile(configRoot), new CInterfaceFile(configRoot), new CBETFile(configRoot), new CMotorFile(configRoot), new CMelsecMapFile(config / 변수의 초기값을 지정합니다: manager = new CManager( co
+L000019 |         var manager = new CManager( ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000020 |             configRoot,  ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CJhmiRecipeFile(configRoot)
+L000021 |             new CJhmiRecipeFile(configRoot),  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000022 |             settingFile,  ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CManualScanFile(configRoot)
+L000023 |             new CManualScanFile(configRoot),  ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CInterfaceFile(configRoot)
+L000024 |             new CInterfaceFile(configRoot),  ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CBETFile(configRoot)
+L000025 |             new CBETFile(configRoot),  ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CMotorFile(configRoot)
+L000026 |             new CMotorFile(configRoot),  ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CMelsecMapFile(configRoot)
+L000027 |             new CMelsecMapFile(configRoot),  ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CProductFile(configRoot)
+L000028 |             new CProductFile(configRoot),  ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewResultFile(configRoot)
+L000029 |             new CReviewResultFile(configRoot),  ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewOffsetFile(configRoot)
+L000030 |             new CReviewOffsetFile(configRoot),  ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogManager(configRoot)
+L000031 |             new CLogManager(configRoot),  ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000032 |             automationScriptFile,  ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CConfigStructureFile(configRoot)
+L000033 |             configStructureFile: new CConfigStructureFile(configRoot),  ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmListFile(configRoot)
+L000034 |             alarmListFile: new CAlarmListFile(configRoot) ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000035 |         ); ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: CUiLogService.Configure(manager.Log()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Log()
+L000036 |         CUiLogService.Configure(manager.Log()); ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, "MANAGER_STARTUP_SEQUENCE", 0) / 지역 변수를 선언합니다: var lastLoggedStartupOrder = WriteManagerStartupStatus(manager, "MANAGER_STARTUP_SEQUENCE", 0); / 변수의 초기값을 지정합니다: lastLoggedStartupOrder = WriteManagerStartupStatus(manager, "MANAGER_STARTUP_SEQUENCE", 0)
+L000037 |         var lastLoggedStartupOrder = WriteManagerStartupStatus(manager, "MANAGER_STARTUP_SEQUENCE", 0); ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task SelectValue()
+L000038 |         async global::System.Threading.Tasks.Task SelectValue() ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 SelectValue.
+L000039 |         { ⟦EOL⟧
+// 해설 L40: 예외 처리 범위입니다: try
+L000040 |             try ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 SelectValue.
+L000041 |             { ⟦EOL⟧
+// 해설 L42: 비동기 완료를 기다립니다: await manager.Initialize() / 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Initialize()
+L000042 |                 await manager.Initialize(); ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder)
+L000043 |                 WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder); ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 SelectValue.
+L000044 |             } ⟦EOL⟧
+// 해설 L45: 지정 예외를 처리합니다: catch (Exception exception)
+L000045 |             catch (Exception exception) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 SelectValue.
+L000046 |             { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write("MANAGER_INITIALIZE_FAILED", exception)
+L000047 |                 CProgramOpenLog.Write("MANAGER_INITIALIZE_FAILED", exception); ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder)
+L000048 |                 WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 SelectValue.
+L000049 |             } ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 SelectValue.
+L000050 |         } ⟦EOL⟧
+L000051 |  ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: _ = Task.Run(SelectValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue)
+L000052 |         _ = Task.Run(SelectValue); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRootView( manager, manager.Station(), manager.Interface(), manager.Motion(), manager.Alarm(), manager.InterLock(), manager.ManualScanFile(), manager.Recipe(), manager.Setting(), manager.Product(), manager.Review(), … / 지역 변수를 선언합니다: var rootView = new CRootView( manager, manager.Station(), manager.Interface(), manager.Motion(), manager.Alarm(), manager.InterLock(), manager.ManualScanFile(), manager.Recipe(), manager.Setting(), manager.Product(), manager.Revie / 변수의 초기값을 지정합니다: rootView = new CRootView(
+L000053 |         var rootView = new CRootView( ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000054 |             manager,  ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Station()
+L000055 |             manager.Station(),  ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Interface()
+L000056 |             manager.Interface(),  ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Motion()
+L000057 |             manager.Motion(),  ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Alarm()
+L000058 |             manager.Alarm(),  ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.InterLock()
+L000059 |             manager.InterLock(),  ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.ManualScanFile()
+L000060 |             manager.ManualScanFile(),  ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Recipe()
+L000061 |             manager.Recipe(),  ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting()
+L000062 |             manager.Setting(),  ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Product()
+L000063 |             manager.Product(),  ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Review()
+L000064 |             manager.Review(),  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000065 |             automationScriptFile ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()
+L000066 |         ); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.StartBackgroundMonitoring()
+L000067 |         manager.StartBackgroundMonitoring(); ⟦EOL⟧
+// 해설 L68: 호출자에게 값 또는 제어를 반환합니다: return rootView;
+L000068 |         return rootView; ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 CreateMainViewModel.
+L000069 |     } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int)
+L000071 |     private static int WriteManagerStartupStatus(CManager manager, string title, int afterOrder) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000072 |     { ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: manager.ConfigStatus() / 지역 변수를 선언합니다: var status = manager.ConfigStatus(); / 변수의 초기값을 지정합니다: status = manager.ConfigStatus()
+L000073 |         var status = manager.ConfigStatus(); ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)
+L000074 |         bool ShouldIncludeItem(global::Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP step) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000075 |         { ⟦EOL⟧
+// 해설 L76: 호출자에게 값 또는 제어를 반환합니다: return step.Order > afterOrder;
+L000076 |             return step.Order > afterOrder; ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000077 |         } ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · int SelectOrder(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)
+L000079 |         int SelectOrder(global::Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP step) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 SelectOrder.
+L000080 |         { ⟦EOL⟧
+// 해설 L81: 호출자에게 값 또는 제어를 반환합니다: return step.Order;
+L000081 |             return step.Order; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 SelectOrder.
+L000082 |         } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder) / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem) / 지역 변수를 선언합니다: var steps = status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray(); / 변수의 초기값을 지정합니다: steps = status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray()
+L000084 |         var steps = status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray(); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var builder = new StringBuilder(); / 변수의 초기값을 지정합니다: builder = new StringBuilder()
+L000085 |         var builder = new StringBuilder(); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"ConfigRoot={status.ConfigRoot}")
+L000086 |         builder.AppendLine($"ConfigRoot={status.ConfigRoot}"); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"InterfaceCount={status.InterfaceCount}")
+L000087 |         builder.AppendLine($"InterfaceCount={status.InterfaceCount}"); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"MotorCount={status.MotorCount}")
+L000088 |         builder.AppendLine($"MotorCount={status.MotorCount}"); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"MelsecMapCount={status.MelsecMapCount}")
+L000089 |         builder.AppendLine($"MelsecMapCount={status.MelsecMapCount}"); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"ActiveProductLoaded={status.ActiveProductLoaded}")
+L000090 |         builder.AppendLine($"ActiveProductLoaded={status.ActiveProductLoaded}"); ⟦EOL⟧
+// 해설 L91: 조건에 따라 분기합니다: if (steps.Length == 0)
+L000091 |         if (steps.Length == 0) ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000092 |         { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine("No additional manager startup step.")
+L000093 |             builder.AppendLine("No additional manager startup step."); ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000094 |         } ⟦EOL⟧
+// 해설 L95: 앞 조건이 거짓인 경로입니다: else
+L000095 |         else ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 컬렉션 요소를 순회합니다: foreach (var step in steps)
+L000097 |             foreach (var step in steps) ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000098 |             { ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"{step.Order:00} | {step.Result} | {step.StepName} | {step.Message}")
+L000099 |                 builder.AppendLine($"{step.Order:00} | {step.Result} | {step.StepName} | {step.Message}"); ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000100 |             } ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000101 |         } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 조건에 따라 분기합니다: if (status.StartupMessages.Count > 0)
+L000103 |         if (status.StartupMessages.Count > 0) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine("StartupMessages:")
+L000105 |             builder.AppendLine("StartupMessages:"); ⟦EOL⟧
+// 해설 L106: 컬렉션 요소를 순회합니다: foreach (var message in status.StartupMessages)
+L000106 |             foreach (var message in status.StartupMessages) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000107 |             { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($"- {message}")
+L000108 |                 builder.AppendLine($"- {message}"); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000109 |             } ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000110 |         } ⟦EOL⟧
+L000111 |  ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(title, builder.ToString().TrimEnd()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString().TrimEnd() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString()
+L000112 |         CProgramOpenLog.Write(title, builder.ToString().TrimEnd()); ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · int SelectOrder2(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)
+L000113 |         int SelectOrder2(global::Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP step) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 SelectOrder2.
+L000114 |         { ⟦EOL⟧
+// 해설 L115: 호출자에게 값 또는 제어를 반환합니다: return step.Order;
+L000115 |             return step.Order; ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 SelectOrder2.
+L000116 |         } ⟦EOL⟧
+L000117 |  ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Max(SelectOrder2) / 조건에 따라 결과식을 선택합니다: status.StartupSteps.Count == 0 ? afterOrder : status.StartupSteps.Max(SelectOrder2) / 호출자에게 값 또는 제어를 반환합니다: return status.StartupSteps.Count == 0 ? afterOrder : status.StartupSteps.Max(SelectOrder2);
+L000118 |         return status.StartupSteps.Count == 0 ? afterOrder : status.StartupSteps.Max(SelectOrder2); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 WriteManagerStartupStatus.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CAppStartup.GetConfigRoot()
+L000121 |     private static string GetConfigRoot() ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(AppContext.BaseDirectory) / 지역 변수를 선언합니다: var directory = new DirectoryInfo(AppContext.BaseDirectory); / 변수의 초기값을 지정합니다: directory = new DirectoryInfo(AppContext.BaseDirectory)
+L000123 |         var directory = new DirectoryInfo(AppContext.BaseDirectory); ⟦EOL⟧
+// 해설 L124: 조건을 먼저 확인하며 반복합니다: while (directory is not null)
+L000124 |         while (directory is not null) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000125 |         { ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(Path.Combine(directory.FullName, "Drilling.sln")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory.FullName, "Drilling.sln") / 조건에 따라 분기합니다: if (System.IO.File.Exists(Path.Combine(directory.FullName, "Drilling.sln")))
+L000126 |             if (System.IO.File.Exists(Path.Combine(directory.FullName, "Drilling.sln"))) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000127 |             { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory.FullName, "Config") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(directory.FullName, "Config");
+L000128 |                 return Path.Combine(directory.FullName, "Config"); ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000129 |             } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: directory = directory.Parent
+L000131 |             directory = directory.Parent; ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000132 |         } ⟦EOL⟧
+L000133 |  ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Environment.CurrentDirectory, "Config") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(Environment.CurrentDirectory, "Config");
+L000134 |         return Path.Combine(Environment.CurrentDirectory, "Config"); ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 GetConfigRoot.
+L000135 |     } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.CAppStartup.GetScriptDirectory(string, Drilling.File.JHMI.CSettingFile)
+L000137 |     private static string GetScriptDirectory(string configRoot, CSettingFile settingFile) ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000138 |     { ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(configRoot) / 지역 변수를 선언합니다: var projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot; / 변수의 초기값을 지정합니다: projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot
+L000139 |         var projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot; ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)
+L000140 |         bool MatchesItem(global::Drilling.Common.Managers.ST_SYSTEM_PARAMETER parameter) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000141 |         { ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase);
+L000142 |             return parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000143 |         } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value; / 변수의 초기값을 지정합니다: scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value
+L000145 |         var scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value; ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(scriptPath) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(scriptPath))
+L000146 |         if (string.IsNullOrWhiteSpace(scriptPath)) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000147 |         { ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: scriptPath = Path.Combine("Data", "Script") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine("Data", "Script")
+L000148 |             scriptPath = Path.Combine("Data", "Script"); ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000149 |         } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(scriptPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(scriptPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(projectRoot, scriptPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(projectRoot, scriptPath) / 조건에 따라 결과식을 선택합니다: Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRoot, scriptPath)) / 호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRo
+L000151 |         return Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRoot, scriptPath)); ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 GetScriptDirectory.
+L000152 |     } ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다.
+L000153 | } ⟦EOL⟧

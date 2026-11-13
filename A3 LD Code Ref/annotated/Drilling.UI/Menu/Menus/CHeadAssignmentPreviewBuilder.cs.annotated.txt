@@ -1,0 +1,1120 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000003 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000005 | using Drilling.Common.Recipe; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000007 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: internal static class CHeadAssignmentPreviewBuilder
+L000009 | internal static class CHeadAssignmentPreviewBuilder ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: MinimumPreviewCellAreaWidth = 18.0
+L000011 |     private const double MinimumPreviewCellAreaWidth = 18.0; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: MinimumPreviewCellAreaHeight = 32.0
+L000012 |     private const double MinimumPreviewCellAreaHeight = 32.0; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<int> Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000013 |     internal static IReadOnlyList<int> BuildEnabledHeadNumbers(IReadOnlyDictionary<string, string> parameters, int headCount = 8) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(headCount, 1, 8) / 지역 변수를 선언합니다: var normalizedHeadCount = Math.Clamp(headCount, 1, 8); / 변수의 초기값을 지정합니다: normalizedHeadCount = Math.Clamp(headCount, 1, 8)
+L000015 |         var normalizedHeadCount = Math.Clamp(headCount, 1, 8); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<int>(normalizedHeadCount) / 지역 변수를 선언합니다: var heads = new List<int>(normalizedHeadCount); / 변수의 초기값을 지정합니다: heads = new List<int>(normalizedHeadCount)
+L000016 |         var heads = new List<int>(normalizedHeadCount); ⟦EOL⟧
+// 해설 L17: 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= normalizedHeadCount; headNo++) / 변수의 초기값을 지정합니다: headNo = 1
+L000017 |         for (var headNo = 1; headNo <= normalizedHeadCount; headNo++) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000018 |         { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(parameters, headNo) / 조건에 따라 분기합니다: if (IsHeadEnabled(parameters, headNo))
+L000019 |             if (IsHeadEnabled(parameters, headNo)) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000020 |             { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: heads.Add(headNo)
+L000021 |                 heads.Add(headNo); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000022 |             } ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000023 |         } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 호출자에게 값 또는 제어를 반환합니다: return heads;
+L000025 |         return heads; ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 BuildEnabledHeadNumbers.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000028 |     private static bool IsHeadEnabled(IReadOnlyDictionary<string, string> parameters, int headNo) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue($"H{headNo:00}_USE", out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBoolOption(value, true) / 조건에 따라 결과식을 선택합니다: parameters.TryGetValue($"H{headNo:00}_USE", out var value) ? ReadBoolOption(value, true) : true / 호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue($"H{headNo:00}_USE", out var value) ? ReadBoolOption(value, true) : true;
+L000030 |         return parameters.TryGetValue($"H{headNo:00}_USE", out var value) ? ReadBoolOption(value, true) : true; ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 IsHeadEnabled.
+L000031 |     } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadBoolOption(string, bool)
+L000033 |     private static bool ReadBoolOption(string value, bool defaultValue) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))
+L000035 |         if (string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000037 |             return defaultValue; ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000038 |         } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ => defaultValue }; / 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, _ => defaultValue }
+L000040 |         return value.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadBoolOption(string, bool)
+L000042 |             "1" or "Y" or "YES" or "TRUE" or "ON" or "USE" => true, ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadBoolOption(string, bool)
+L000043 |             "0" or "N" or "NO" or "FALSE" or "OFF" or "SKIP" or "UNUSE" => false, ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadBoolOption(string, bool)
+L000044 |             _ => defaultValue ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000045 |         }; ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 ReadBoolOption.
+L000046 |     } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadIntAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, params string[])
+L000048 |     private static int ReadIntAny(IReadOnlyDictionary<string, string> parameters, int defaultValue, params string[] keys) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000049 |     { ⟦EOL⟧
+// 해설 L50: 컬렉션 요소를 순회합니다: foreach (var key in keys)
+L000050 |         foreach (var key in keys) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+L000052 |             if (parameters.TryGetValue(key, out var value) && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000053 |             { ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return parsed;
+L000054 |                 return parsed; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000055 |             } ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000056 |         } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000058 |         return defaultValue; ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 ReadIntAny.
+L000059 |     } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadDoubleAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, double, params string[])
+L000061 |     private static double ReadDoubleAny(IReadOnlyDictionary<string, string> parameters, double defaultValue, params string[] keys) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000062 |     { ⟦EOL⟧
+// 해설 L63: 컬렉션 요소를 순회합니다: foreach (var key in keys)
+L000063 |         foreach (var key in keys) ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed))
+L000065 |             if (parameters.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000066 |             { ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return parsed;
+L000067 |                 return parsed; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000068 |             } ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000069 |         } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000071 |         return defaultValue; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 ReadDoubleAny.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000074 |     internal static ST_MAIN_RECIPE_PREVIEW BuildRecipePreview( ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000075 |         IReadOnlyDictionary<string, string> parameters,  ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000076 |         IReadOnlySet<int> selectedHeadNos,  ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000077 |         ST_PREVIEW_HEAD_LAYOUT headLayout,  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000078 |         bool showKeys = true,  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000079 |         IReadOnlySet<int>? visibleCellNos = null ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000080 |     ) ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000081 |     { ⟦EOL⟧
+// 해설 L82: 지역 변수를 선언합니다: const double canvasWidth = 860.0; / 변수의 초기값을 지정합니다: canvasWidth = 860.0
+L000082 |         const double canvasWidth = 860.0; ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: const double canvasHeight = 520.0; / 변수의 초기값을 지정합니다: canvasHeight = 520.0
+L000083 |         const double canvasHeight = 520.0; ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateGlassFrame(parameters) / 지역 변수를 선언합니다: var frame = CreateGlassFrame(parameters); / 변수의 초기값을 지정합니다: frame = CreateGlassFrame(parameters)
+L000084 |         var frame = CreateGlassFrame(parameters); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X")
+L000085 |         var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y")
+L000086 |         var glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X")
+L000087 |         var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y") / 지역 변수를 선언합니다: var akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y"); / 변수의 초기값을 지정합니다: akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y")
+L000088 |         var akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y"); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassHeight) / 조건에 따라 분기합니다: if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0.0 || glassHeight <= 0.0)
+L000089 |         if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0.0 || glassHeight <= 0.0) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000090 |         { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"GLASS_SIZE_X/Y must be finite values greater than 0. " + $"Current value: {glassWidth} x {glassHeight}") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"GLASS_SIZE_X/Y must be finite values greater than 0. " + $"Current value: {glassWidth} x {glassHeight}");
+L000091 |             return CreateRecipePreviewError(frame, $"GLASS_SIZE_X/Y must be finite values greater than 0. " + $"Current value: {glassWidth} x {glassHeight}"); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(akMarginX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(akMarginY) / 조건에 따라 분기합니다: if (!double.IsFinite(akMarginX) || !double.IsFinite(akMarginY))
+L000094 |         if (!double.IsFinite(akMarginX) || !double.IsFinite(akMarginY)) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000095 |         { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"AK_MARGIN_X/Y must be finite values. Current value: {akMarginX} x {akMarginY}") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"AK_MARGIN_X/Y must be finite values. Current value: {akMarginX} x {akMarginY}");
+L000096 |             return CreateRecipePreviewError(frame, $"AK_MARGIN_X/Y must be finite values. Current value: {akMarginX} x {akMarginY}"); ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000097 |         } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue("MAX_CELL_NUMBER", out var configuredCellCount) / 조건에 따라 결과식을 선택합니다: parameters.TryGetValue("MAX_CELL_NUMBER", out var configuredCellCount) ? configuredCellCount : "1" / 지역 변수를 선언합니다: var cellCountText = parameters.TryGetValue("MAX_CELL_NUMBER", out var configuredCellCount) ? configuredCellCount : "1"; / 변수의 초기값을 지정합니다: cellCountText = parameters.TryGetValue("MAX_CELL_NUMBER", out var configuredCellCount) ? configuredCellCount : "1"
+L000099 |         var cellCountText = parameters.TryGetValue("MAX_CELL_NUMBER", out var configuredCellCount) ? configuredCellCount : "1"; ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.TryParseCellCount(cellCountText, out var cellCount, out var cellCountValidationMessage) / 조건에 따라 분기합니다: if (!CCellPatternCalculator.TryParseCellCount(cellCountText, out var cellCount, out var cellCountValidationMessage))
+L000100 |         if (!CCellPatternCalculator.TryParseCellCount(cellCountText, out var cellCount, out var cellCountValidationMessage)) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000101 |         { ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, cellCountValidationMessage) / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, cellCountValidationMessage);
+L000102 |             return CreateRecipePreviewError(frame, cellCountValidationMessage); ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000103 |         } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · double? SelectValue(string)
+L000105 |         double? SelectValue(string key) ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 SelectValue.
+L000106 |         { ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadNullableDoubleAny(parameters, key) / 호출자에게 값 또는 제어를 반환합니다: return ReadNullableDoubleAny(parameters, key);
+L000107 |             return ReadNullableDoubleAny(parameters, key); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 SelectValue.
+L000108 |         } ⟦EOL⟧
+L000109 |  ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.CreateDistortionKeyPreviews(glassWidth, glassHeight, akMarginX, akMarginY, SelectValue) / 지역 변수를 선언합니다: var distortionKeys = CCellPreviewDrawing.CreateDistortionKeyPreviews(glassWidth, glassHeight, akMarginX, akMarginY, SelectValue); / 변수의 초기값을 지정합니다: distortionKeys = CCellPreviewDrawing.CreateDistortionKeyPreviews(glassWidth, glassHeight, akMarginX, akMarginY, SelectValue)
+L000110 |         var distortionKeys = CCellPreviewDrawing.CreateDistortionKeyPreviews(glassWidth, glassHeight, akMarginX, akMarginY, SelectValue); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "PIXEL_SIZE") / 지역 변수를 선언합니다: var pixelSize = ReadDoubleAny(parameters, 0.0, "PIXEL_SIZE"); / 변수의 초기값을 지정합니다: pixelSize = ReadDoubleAny(parameters, 0.0, "PIXEL_SIZE")
+L000111 |         var pixelSize = ReadDoubleAny(parameters, 0.0, "PIXEL_SIZE"); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadIntAny(parameters, 0, "SPLITED_BEAM_COUNT") / 지역 변수를 선언합니다: var splitBeamCount = ReadIntAny(parameters, 0, "SPLITED_BEAM_COUNT"); / 변수의 초기값을 지정합니다: splitBeamCount = ReadIntAny(parameters, 0, "SPLITED_BEAM_COUNT")
+L000112 |         var splitBeamCount = ReadIntAny(parameters, 0, "SPLITED_BEAM_COUNT"); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadModelTypeCount(parameters) / 지역 변수를 선언합니다: var modelTypeCount = CRecipeModelPixelCountReader.ReadModelTypeCount(parameters); / 변수의 초기값을 지정합니다: modelTypeCount = CRecipeModelPixelCountReader.ReadModelTypeCount(parameters)
+L000113 |         var modelTypeCount = CRecipeModelPixelCountReader.ReadModelTypeCount(parameters); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "ESC_EDGE_TO_GLASS_EDGE", "ESC_EDGE_TO_GLASS_EDGE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_CENTER_TO_SCANNER_CENTER", "GLASS_CENTER_TO_SCANNER_CENTER_X") / 지역 변수를 선언합니다: var scannerReferenceOffsetX = ReadDoubleAny(parameters, 0.0, "ESC_EDGE_TO_GLASS_EDGE", "ESC_EDGE_TO_GLASS_EDGE_X") + ReadDoubleAny(parameters, 0.0, "GLASS_CENTER_TO_SCANNER_CENTER", "GLASS_CENTER_TO_SCANNER_CENTER_X"); / 변수의 초기값을 지정합니다: scannerReferenceOffsetX = ReadDoubleAny(param
+L000114 |         var scannerReferenceOffsetX = ReadDoubleAny(parameters, 0.0, "ESC_EDGE_TO_GLASS_EDGE", "ESC_EDGE_TO_GLASS_EDGE_X") + ReadDoubleAny(parameters, 0.0, "GLASS_CENTER_TO_SCANNER_CENTER", "GLASS_CENTER_TO_SCANNER_CENTER_X"); ⟦EOL⟧
+// 해설 L115: 지역 변수를 선언합니다: const int headCount = 8; / 변수의 초기값을 지정합니다: headCount = 8
+L000115 |         const int headCount = 8; ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildEnabledHeadNumbers(parameters, headCount) / 지역 변수를 선언합니다: var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); / 변수의 초기값을 지정합니다: activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount)
+L000116 |         var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: activeHeadNos.ToHashSet() / 지역 변수를 선언합니다: var activeHeadSet = activeHeadNos.ToHashSet(); / 변수의 초기값을 지정합니다: activeHeadSet = activeHeadNos.ToHashSet()
+L000117 |         var activeHeadSet = activeHeadNos.ToHashSet(); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, headCount).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, headCount) / 지역 변수를 선언합니다: var assignmentHeadNos = Enumerable.Range(1, headCount).ToArray(); / 변수의 초기값을 지정합니다: assignmentHeadNos = Enumerable.Range(1, headCount).ToArray()
+L000118 |         var assignmentHeadNos = Enumerable.Range(1, headCount).ToArray(); ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(frame.Width / glassWidth, frame.Height / glassHeight) / 지역 변수를 선언합니다: var scale = Math.Min(frame.Width / glassWidth, frame.Height / glassHeight); / 변수의 초기값을 지정합니다: scale = Math.Min(frame.Width / glassWidth, frame.Height / glassHeight)
+L000119 |         var scale = Math.Min(frame.Width / glassWidth, frame.Height / glassHeight); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(scale) / 조건에 따라 분기합니다: if (!double.IsFinite(scale) || scale <= 0.0)
+L000120 |         if (!double.IsFinite(scale) || scale <= 0.0) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000121 |         { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"Preview scale must be a finite value greater than 0. Current value: {scale}") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"Preview scale must be a finite value greater than 0. Current value: {scale}");
+L000122 |             return CreateRecipePreviewError(frame, $"Preview scale must be a finite value greater than 0. Current value: {scale}"); ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000123 |         } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup() / 지역 변수를 선언합니다: var drawing = new DrawingGroup(); / 변수의 초기값을 지정합니다: drawing = new DrawingGroup()
+L000125 |         var drawing = new DrawingGroup(); ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(frame.CanvasLeft, frame.CanvasTop, frame.Width, frame.Height) / 지역 변수를 선언합니다: var frameBounds = new Rect(frame.CanvasLeft, frame.CanvasTop, frame.Width, frame.Height); / 변수의 초기값을 지정합니다: frameBounds = new Rect(frame.CanvasLeft, frame.CanvasTop, frame.Width, frame.Height)
+L000126 |         var frameBounds = new Rect(frame.CanvasLeft, frame.CanvasTop, frame.Width, frame.Height); ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · int SelectHeadNo(int)
+L000127 |         int SelectHeadNo(int headNo) ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 SelectHeadNo.
+L000128 |         { ⟦EOL⟧
+// 해설 L129: 호출자에게 값 또는 제어를 반환합니다: return headNo;
+L000129 |             return headNo; ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 SelectHeadNo.
+L000130 |         } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · long SelectLong(int)
+L000132 |         long SelectLong(int arg0) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 SelectLong.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 호출자에게 값 또는 제어를 반환합니다: return 0L;
+L000134 |             return 0L; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 SelectLong.
+L000135 |         } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: activeHeadNos.ToDictionary(SelectHeadNo, SelectLong) / 지역 변수를 선언합니다: var headPointCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong); / 변수의 초기값을 지정합니다: headPointCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong)
+L000137 |         var headPointCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_CELL_PREVIEW_LABEL>() / 지역 변수를 선언합니다: var labels = new List<ST_CELL_PREVIEW_LABEL>(); / 변수의 초기값을 지정합니다: labels = new List<ST_CELL_PREVIEW_LABEL>()
+L000138 |         var labels = new List<ST_CELL_PREVIEW_LABEL>(); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<(StreamGeometry Boundary, Pen Pen)>() / 지역 변수를 선언합니다: var drawnCellBoundaries = new List<(StreamGeometry Boundary, Pen Pen)>(); / 변수의 초기값을 지정합니다: drawnCellBoundaries = new List<(StreamGeometry Boundary, Pen Pen)>()
+L000139 |         var drawnCellBoundaries = new List<(StreamGeometry Boundary, Pen Pen)>(); ⟦EOL⟧
+// 해설 L140: 지역 변수를 선언합니다: long unassignedPointCount = 0; / 변수의 초기값을 지정합니다: unassignedPointCount = 0
+L000140 |         long unassignedPointCount = 0; ⟦EOL⟧
+// 해설 L141: 지역 변수를 선언합니다: long totalShotGroups = 0; / 변수의 초기값을 지정합니다: totalShotGroups = 0
+L000141 |         long totalShotGroups = 0; ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open() / 자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open()) / 변수의 초기값을 지정합니다: context = drawing.Open()
+L000142 |         using (var context = drawing.Open()) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)), null, new Rect(0, 0, canvasWidth, canvasHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(1, 0, 0, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0, 0, canvasWidth, canvasHeight)
+L000144 |             context.DrawRectangle(new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)), null, new Rect(0, 0, canvasWidth, canvasHeight)); ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.PushClip(new RectangleGeometry(frameBounds)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new RectangleGeometry(frameBounds)
+L000145 |             context.PushClip(new RectangleGeometry(frameBounds)); ⟦EOL⟧
+// 해설 L146: 초기화·조건·증감이 있는 반복입니다: for (var cellNo = 1; cellNo <= cellCount; cellNo++) / 변수의 초기값을 지정합니다: cellNo = 1
+L000146 |             for (var cellNo = 1; cellNo <= cellCount; cellNo++) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000147 |             { ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: visibleCellNos.Contains(cellNo) / 다음 반복으로 진행합니다: continue; / 조건에 따라 분기합니다: if (visibleCellNos is not null && !visibleCellNos.Contains(cellNo))
+L000148 |                 if (visibleCellNos is not null && !visibleCellNos.Contains(cellNo)) continue; ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X") / 지역 변수를 선언합니다: var firstX = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X"); / 변수의 초기값을 지정합니다: firstX = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X")
+L000149 |                 var firstX = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_X"); ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y") / 지역 변수를 선언합니다: var firstY = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y"); / 변수의 초기값을 지정합니다: firstY = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y")
+L000150 |                 var firstY = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ALIGN_TO_1ST_PIXEL_Y"); ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ROTATION") / 지역 변수를 선언합니다: var rotation = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ROTATION"); / 변수의 초기값을 지정합니다: rotation = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ROTATION")
+L000151 |                 var rotation = ReadDoubleAny(parameters, 0.0, $"CELL{cellNo}_ROTATION"); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadCellModelType(parameters, cellNo, modelTypeCount) / 지역 변수를 선언합니다: var modelType = CRecipeModelPixelCountReader.ReadCellModelType(parameters, cellNo, modelTypeCount); / 변수의 초기값을 지정합니다: modelType = CRecipeModelPixelCountReader.ReadCellModelType(parameters, cellNo, modelTypeCount)
+L000152 |                 var modelType = CRecipeModelPixelCountReader.ReadCellModelType(parameters, cellNo, modelTypeCount); ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadPatternForModel(parameters, modelType) / 지역 변수를 선언합니다: var modelPattern = CRecipeModelPixelCountReader.ReadPatternForModel(parameters, modelType); / 변수의 초기값을 지정합니다: modelPattern = CRecipeModelPixelCountReader.ReadPatternForModel(parameters, modelType)
+L000153 |                 var modelPattern = CRecipeModelPixelCountReader.ReadPatternForModel(parameters, modelType); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPatternCalculator.Calculate(new ST_CELL_PATTERN_DEFINITION(cellNo, firstX, firstY, rotation, pixelSize, modelPattern.PixelCountX, modelPattern.PixelCountY, modelPattern.ProcessPitch, splitBeamCount, akMarginX, akMar… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PATTERN_DEFINITION(cellNo, firstX, firstY, rotation, pixelSize, modelPattern.PixelCountX, modelPattern.PixelCountY, modelPattern.ProcessPitch, splitBeamCount, akMarginX, akMarginY) / 지역 변수를 선언합니다: var result = CCellPatternCalculator.Calculate(new ST_
+L000154 |                 var result = CCellPatternCalculator.Calculate(new ST_CELL_PATTERN_DEFINITION(cellNo, firstX, firstY, rotation, pixelSize, modelPattern.PixelCountX, modelPattern.PixelCountY, modelPattern.ProcessPitch, splitBeamCount, akMarginX, akMarginY)); ⟦EOL⟧
+// 해설 L155: 조건에 따라 분기합니다: if (!result.IsValid)
+L000155 |                 if (!result.IsValid) ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000156 |                 { ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, result.ValidationMessage) / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, result.ValidationMessage);
+L000157 |                     return CreateRecipePreviewError(frame, result.ValidationMessage); ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000158 |                 } ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 지역 변수를 선언합니다: var nextTotalShotGroups = totalShotGroups + result.ShotCenters.Count; / 변수의 초기값을 지정합니다: nextTotalShotGroups = totalShotGroups + result.ShotCenters.Count
+L000160 |                 var nextTotalShotGroups = totalShotGroups + result.ShotCenters.Count; ⟦EOL⟧
+// 해설 L161: 조건에 따라 분기합니다: if (nextTotalShotGroups > CCellPatternCalculator.MaxTotalShotGroupCount)
+L000161 |                 if (nextTotalShotGroups > CCellPatternCalculator.MaxTotalShotGroupCount) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000162 |                 { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"Shot Center count {nextTotalShotGroups:N0} exceeds the total limit " + $"{CCellPatternCalculator.MaxTotalShotGroupCount:N0}.") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"Shot Center count {nextTotalShotGroups:N0} exceeds the total limit " + $"{CCellPatternCalculator.MaxTotalShotGroupCount:N0}.");
+L000163 |                     return CreateRecipePreviewError(frame, $"Shot Center count {nextTotalShotGroups:N0} exceeds the total limit " + $"{CCellPatternCalculator.MaxTotalShotGroupCount:N0}."); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000164 |                 } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 값을 대상에 대입합니다: totalShotGroups = nextTotalShotGroups
+L000166 |                 totalShotGroups = nextTotalShotGroups; ⟦EOL⟧
+// 해설 L167: 지역 변수를 선언합니다: var radius = result.BeamHalfSpanMillimeters + (pixelSize / 2.0); / 변수의 초기값을 지정합니다: radius = result.BeamHalfSpanMillimeters + (pixelSize / 2.0)
+L000167 |                 var radius = result.BeamHalfSpanMillimeters + (pixelSize / 2.0); ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(radius) / 조건에 따라 분기합니다: if (!double.IsFinite(radius) || radius < 0.0)
+L000168 |                 if (!double.IsFinite(radius) || radius < 0.0) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000169 |                 { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"Cell{cellNo} preview radius must be a finite value greater than or equal to 0. " + $"Current value: {radius}") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"Cell{cellNo} preview radius must be a finite value greater than or equal to 0. " + $"Current value: {radius}");
+L000170 |                     return CreateRecipePreviewError(frame, $"Cell{cellNo} preview radius must be a finite value greater than or equal to 0. " + $"Current value: {radius}"); ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000171 |                 } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: activeHeadNos.ToDictionary(SelectHeadNo, SelectLong) / 지역 변수를 선언합니다: var cellHeadCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong); / 변수의 초기값을 지정합니다: cellHeadCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong)
+L000173 |                 var cellHeadCounts = activeHeadNos.ToDictionary(SelectHeadNo, SelectLong); ⟦EOL⟧
+// 해설 L174: 컬렉션 요소를 순회합니다: foreach (var shotCenter in result.ShotCenters)
+L000174 |                 foreach (var shotCenter in result.ShotCenters) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000175 |                 { ⟦EOL⟧
+// 해설 L176: 지역 변수를 선언합니다: var inside = shotCenter.DesignX - radius >= 0 && shotCenter.DesignX + radius <= glassWidth && shotCenter.DesignY - radius >= 0 && shotCenter.DesignY + radius <= glassHeight; / 변수의 초기값을 지정합니다: inside = shotCenter.DesignX - radius >= 0 && shotCenter.DesignX + radius <= glassWidth && shotCenter.DesignY - radius >= 0 && shotCenter.DesignY + radius <= glassHeight
+L000176 |                     var inside = shotCenter.DesignX - radius >= 0 && shotCenter.DesignX + radius <= glassWidth && shotCenter.DesignY - radius >= 0 && shotCenter.DesignY + radius <= glassHeight; ⟦EOL⟧
+// 해설 L177: 조건에 따라 분기합니다: if (!inside)
+L000177 |                     if (!inside) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000178 |                     { ⟦EOL⟧
+// 해설 L179: 다음 반복으로 진행합니다: continue;
+L000179 |                         continue; ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000180 |                     } ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 지역 변수를 선언합니다: var scannerReferenceX = shotCenter.DesignX + scannerReferenceOffsetX; / 변수의 초기값을 지정합니다: scannerReferenceX = shotCenter.DesignX + scannerReferenceOffsetX
+L000182 |                     var scannerReferenceX = shotCenter.DesignX + scannerReferenceOffsetX; ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: AssignPreviewHead(scannerReferenceX, assignmentHeadNos, headLayout, akMarginX, headPointCounts) / 지역 변수를 선언합니다: var headNo = AssignPreviewHead(scannerReferenceX, assignmentHeadNos, headLayout, akMarginX, headPointCounts); / 변수의 초기값을 지정합니다: headNo = AssignPreviewHead(scannerReferenceX, assignmentHeadNos, headLayout, akMarginX, headPointCounts)
+L000183 |                     var headNo = AssignPreviewHead(scannerReferenceX, assignmentHeadNos, headLayout, akMarginX, headPointCounts); ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: activeHeadSet.Contains(headNo) / 조건에 따라 분기합니다: if (headNo <= 0 || !activeHeadSet.Contains(headNo))
+L000184 |                     if (headNo <= 0 || !activeHeadSet.Contains(headNo)) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000185 |                     { ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000186 |                         unassignedPointCount++; ⟦EOL⟧
+// 해설 L187: 다음 반복으로 진행합니다: continue;
+L000187 |                         continue; ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000188 |                     } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000190 |                     headPointCounts[headNo]++; ⟦EOL⟧
+// 해설 L191: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildRecipePreview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.I
+L000191 |                     cellHeadCounts[headNo]++; ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000192 |                 } ⟦EOL⟧
+L000193 |  ⟦EOL⟧
+// 해설 L194: 지역 변수를 선언합니다: var boundaryPadding = pixelSize / 2.0; / 변수의 초기값을 지정합니다: boundaryPadding = pixelSize / 2.0
+L000194 |                 var boundaryPadding = pixelSize / 2.0; ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(boundaryPadding) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryBuildRecipeCellBoundary(akMarginX + firstX, akMarginY + firstY, rotation, modelPattern.PixelCountX, modelPattern.PixelCountY, pixelSize, pixelSize, boundaryPadding, frame, scale, out var boundary) / 조건에 따라 분기합니다: if (!double.IsFinite(boundaryPadding) || boundaryPadding < 0.0 || !TryBuildRecipeCellBoundary(akMarginX + firstX, akMarginY + firstY, rotation, modelPattern.PixelCountX, modelPattern.PixelCountY, pixelSize, pixelSize, bounda…)
+L000195 |                 if (!double.IsFinite(boundaryPadding) || boundaryPadding < 0.0 || !TryBuildRecipeCellBoundary(akMarginX + firstX, akMarginY + firstY, rotation, modelPattern.PixelCountX, modelPattern.PixelCountY, pixelSize, pixelSize, boundaryPadding, frame, scale, out var boundary)) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000196 |                 { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipePreviewError(frame, $"Cell{cellNo} boundary produces an invalid preview coordinate.") / 호출자에게 값 또는 제어를 반환합니다: return CreateRecipePreviewError(frame, $"Cell{cellNo} boundary produces an invalid preview coordinate.");
+L000197 |                     return CreateRecipePreviewError(frame, $"Cell{cellNo} boundary produces an invalid preview coordinate."); ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000198 |                 } ⟦EOL⟧
+L000199 |  ⟦EOL⟧
+// 해설 L200: 지역 변수를 선언합니다: var boundaryBounds = boundary.Bounds; / 변수의 초기값을 지정합니다: boundaryBounds = boundary.Bounds
+L000200 |                 var boundaryBounds = boundary.Bounds; ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandPreviewBounds(boundaryBounds, MinimumPreviewCellAreaWidth, MinimumPreviewCellAreaHeight, frameBounds) / 지역 변수를 선언합니다: var displayBounds = ExpandPreviewBounds(boundaryBounds, MinimumPreviewCellAreaWidth, MinimumPreviewCellAreaHeight, frameBounds); / 변수의 초기값을 지정합니다: displayBounds = ExpandPreviewBounds(boundaryBounds, MinimumPreviewCellAreaWidth, MinimumPreviewCellAreaHeight, frameBounds)
+L000201 |                 var displayBounds = ExpandPreviewBounds(boundaryBounds, MinimumPreviewCellAreaWidth, MinimumPreviewCellAreaHeight, frameBounds); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShouldUseExpandedPreviewBounds(boundaryBounds, displayBounds) / 지역 변수를 선언합니다: var useDisplayBounds = ShouldUseExpandedPreviewBounds(boundaryBounds, displayBounds); / 변수의 초기값을 지정합니다: useDisplayBounds = ShouldUseExpandedPreviewBounds(boundaryBounds, displayBounds)
+L000202 |                 var useDisplayBounds = ShouldUseExpandedPreviewBounds(boundaryBounds, displayBounds); ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveCellPreviewHead(cellHeadCounts, activeHeadNos, cellNo) / 지역 변수를 선언합니다: var cellHeadNo = ResolveCellPreviewHead(cellHeadCounts, activeHeadNos, cellNo); / 변수의 초기값을 지정합니다: cellHeadNo = ResolveCellPreviewHead(cellHeadCounts, activeHeadNos, cellNo)
+L000203 |                 var cellHeadNo = ResolveCellPreviewHead(cellHeadCounts, activeHeadNos, cellNo); ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeadNos.Contains(cellHeadNo) / 지역 변수를 선언합니다: var isSelectedHead = cellHeadNo <= 0 || selectedHeadNos.Count == 0 || selectedHeadNos.Contains(cellHeadNo); / 변수의 초기값을 지정합니다: isSelectedHead = cellHeadNo <= 0 || selectedHeadNos.Count == 0 || selectedHeadNos.Contains(cellHeadNo)
+L000204 |                 var isSelectedHead = cellHeadNo <= 0 || selectedHeadNos.Count == 0 || selectedHeadNos.Contains(cellHeadNo); ⟦EOL⟧
+// 해설 L205: 조건에 따라 결과식을 선택합니다: cellHeadNo <= 0 ? CreateBrush(230, 33, 33, isSelectedHead ? (byte)120 : (byte)55) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)145 : (byte)62) / 지역 변수를 선언합니다: var fillBrush = cellHeadNo <= 0 ? CreateBrush(230, 33, 33, isSelectedHead ? (byte)120 : (byte)55) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)145 : (byte)62); / 변수의 초기값을 지정합니다: fillBrush = cellHeadNo <= 0 ? CreateBrush(230, 33, 33, isSelectedHead ? (byte)120 : (byte)55) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)145 : (byte)62)
+L000205 |                 var fillBrush = cellHeadNo <= 0 ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(230, 33, 33, isSelectedHead ? (byte)120 : (byte)55) / 조건에 따라 결과식을 선택합니다: isSelectedHead ? (byte)120 : (byte)55
+L000206 |                     ? CreateBrush(230, 33, 33, isSelectedHead ? (byte)120 : (byte)55) ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)145 : (byte)62) / 조건에 따라 결과식을 선택합니다: isSelectedHead ? (byte)145 : (byte)62
+L000207 |                     : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)145 : (byte)62); ⟦EOL⟧
+// 해설 L208: 조건에 따라 결과식을 선택합니다: cellHeadNo <= 0 ? CreateBrush(176, 0, 0, isSelectedHead ? (byte)240 : (byte)120) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)250 : (byte)135) / 지역 변수를 선언합니다: var borderBrush = cellHeadNo <= 0 ? CreateBrush(176, 0, 0, isSelectedHead ? (byte)240 : (byte)120) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)250 : (byte)135); / 변수의 초기값을 지정합니다: borderBrush = cellHeadNo <= 0 ? CreateBrush(176, 0, 0, isSelectedHead ? (byte)240 : (byte)120) : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)250 : (byte)135)
+L000208 |                 var borderBrush = cellHeadNo <= 0 ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(176, 0, 0, isSelectedHead ? (byte)240 : (byte)120) / 조건에 따라 결과식을 선택합니다: isSelectedHead ? (byte)240 : (byte)120
+L000209 |                     ? CreateBrush(176, 0, 0, isSelectedHead ? (byte)240 : (byte)120) ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)250 : (byte)135) / 조건에 따라 결과식을 선택합니다: isSelectedHead ? (byte)250 : (byte)135
+L000210 |                     : CreateHeadBrush(cellHeadNo, isSelectedHead ? (byte)250 : (byte)135); ⟦EOL⟧
+// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(borderBrush, isSelectedHead ? 2.0 : 1.25) / 조건에 따라 결과식을 선택합니다: isSelectedHead ? 2.0 : 1.25 / 지역 변수를 선언합니다: var boundaryPen = new Pen(borderBrush, isSelectedHead ? 2.0 : 1.25); / 변수의 초기값을 지정합니다: boundaryPen = new Pen(borderBrush, isSelectedHead ? 2.0 : 1.25)
+L000211 |                 var boundaryPen = new Pen(borderBrush, isSelectedHead ? 2.0 : 1.25); ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: boundaryPen.Freeze()
+L000212 |                 boundaryPen.Freeze(); ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(fillBrush, null, boundary)
+L000213 |                 context.DrawGeometry(fillBrush, null, boundary); ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(null, boundaryPen, boundary)
+L000214 |                 context.DrawGeometry(null, boundaryPen, boundary); ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawnCellBoundaries.Add((boundary, boundaryPen))
+L000215 |                 drawnCellBoundaries.Add((boundary, boundaryPen)); ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000217 |                 // Filtered previews have transparent hit targets centered on the actual Cell. ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.CreateCellLabel(cellNo, visibleCellNos is null && useDisplayBounds ? displayBounds : boundaryBounds, canvasWidth, canvasHeight) / 조건에 따라 결과식을 선택합니다: visibleCellNos is null && useDisplayBounds ? displayBounds : boundaryBounds / 지역 변수를 선언합니다: var label = CCellPreviewDrawing.CreateCellLabel(cellNo, visibleCellNos is null && useDisplayBounds ? displayBounds : boundaryBounds, canvasWidth, canvasHeight); / 변수의 초기값을 지정합니다: label = CCellPreviewDrawing.CreateCellLabel(cellNo, visibleCellNos is nul
+L000218 |                 var label = CCellPreviewDrawing.CreateCellLabel(cellNo, visibleCellNos is null && useDisplayBounds ? displayBounds : boundaryBounds, canvasWidth, canvasHeight); ⟦EOL⟧
+// 해설 L219: 조건에 따라 분기합니다: if (label is not null)
+L000219 |                 if (label is not null) ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000220 |                 { ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: CellBounds = boundaryBounds / 함수·델리게이트 또는 객체 생성자를 호출합니다: labels.Add(label with { CellBounds = boundaryBounds })
+L000221 |                     labels.Add(label with { CellBounds = boundaryBounds }); ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000222 |                 } ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000223 |             } ⟦EOL⟧
+L000224 |  ⟦EOL⟧
+// 해설 L225: 컬렉션 요소를 순회합니다: foreach (var drawnCell in drawnCellBoundaries)
+L000225 |             foreach (var drawnCell in drawnCellBoundaries) ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000226 |             { ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(null, drawnCell.Pen, drawnCell.Boundary)
+L000227 |                 context.DrawGeometry(null, drawnCell.Pen, drawnCell.Boundary); ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000228 |             } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.Pop()
+L000230 |             context.Pop(); ⟦EOL⟧
+// 해설 L231: 조건에 따라 분기합니다: if (showKeys)
+L000231 |             if (showKeys) ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000232 |             { ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.DrawAlignKeys(context, frame, glassWidth, glassHeight, akMarginX, akMarginY)
+L000233 |                 CCellPreviewDrawing.DrawAlignKeys(context, frame, glassWidth, glassHeight, akMarginX, akMarginY); ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.DrawDistortionKeys(context, frame, glassWidth, glassHeight, distortionKeys)
+L000234 |                 CCellPreviewDrawing.DrawDistortionKeys(context, frame, glassWidth, glassHeight, distortionKeys); ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000235 |             } ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000236 |         } ⟦EOL⟧
+L000237 |  ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()
+L000238 |         drawing.Freeze(); ⟦EOL⟧
+// 해설 L239: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing) / 지역 변수를 선언합니다: var image = new DrawingImage(drawing); / 변수의 초기값을 지정합니다: image = new DrawingImage(drawing)
+L000239 |         var image = new DrawingImage(drawing); ⟦EOL⟧
+// 해설 L240: 함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()
+L000240 |         image.Freeze(); ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MAIN_RECIPE_PREVIEW(image, frame, headPointCounts, totalShotGroups, unassignedPointCount, labels) / 호출자에게 값 또는 제어를 반환합니다: return new ST_MAIN_RECIPE_PREVIEW(image, frame, headPointCounts, totalShotGroups, unassignedPointCount, labels);
+L000241 |         return new ST_MAIN_RECIPE_PREVIEW(image, frame, headPointCounts, totalShotGroups, unassignedPointCount, labels); ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
+L000242 |     } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateRecipePreviewError(Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, string)
+L000244 |     private static ST_MAIN_RECIPE_PREVIEW CreateRecipePreviewError(ST_GLASS_PREVIEW_FRAME frame, string message) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 CreateRecipePreviewError.
+L000245 |     { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MAIN_RECIPE_PREVIEW(null, frame, new Dictionary<int, long>(), 0, 0, [], $"PREVIEW ERROR / {message}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<int, long>() / 호출자에게 값 또는 제어를 반환합니다: return new ST_MAIN_RECIPE_PREVIEW(null, frame, new Dictionary<int, long>(), 0, 0, [], $"PREVIEW ERROR / {message}");
+L000246 |         return new ST_MAIN_RECIPE_PREVIEW(null, frame, new Dictionary<int, long>(), 0, 0, [], $"PREVIEW ERROR / {message}"); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 CreateRecipePreviewError.
+L000247 |     } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ResolveCellPreviewHead(System.Collections.Generic.IReadOnlyDictionary<int, long>, System.Collections.Generic.IReadOnlyList<int>, int)
+L000249 |     private static int ResolveCellPreviewHead(IReadOnlyDictionary<int, long> cellHeadCounts, IReadOnlyList<int> activeHeadNos, int cellNo) ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000250 |     { ⟦EOL⟧
+// 해설 L251: 지역 변수를 선언합니다: var selectedHeadNo = 0; / 변수의 초기값을 지정합니다: selectedHeadNo = 0
+L000251 |         var selectedHeadNo = 0; ⟦EOL⟧
+// 해설 L252: 지역 변수를 선언합니다: var selectedCount = 0L; / 변수의 초기값을 지정합니다: selectedCount = 0L
+L000252 |         var selectedCount = 0L; ⟦EOL⟧
+// 해설 L253: 컬렉션 요소를 순회합니다: foreach (var headNo in activeHeadNos)
+L000253 |         foreach (var headNo in activeHeadNos) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000254 |         { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: cellHeadCounts.TryGetValue(headNo, out var value) / 조건에 따라 결과식을 선택합니다: cellHeadCounts.TryGetValue(headNo, out var value) ? value : 0L / 지역 변수를 선언합니다: var count = cellHeadCounts.TryGetValue(headNo, out var value) ? value : 0L; / 변수의 초기값을 지정합니다: count = cellHeadCounts.TryGetValue(headNo, out var value) ? value : 0L
+L000255 |             var count = cellHeadCounts.TryGetValue(headNo, out var value) ? value : 0L; ⟦EOL⟧
+// 해설 L256: 조건에 따라 분기합니다: if (count <= selectedCount)
+L000256 |             if (count <= selectedCount) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000257 |             { ⟦EOL⟧
+// 해설 L258: 다음 반복으로 진행합니다: continue;
+L000258 |                 continue; ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000259 |             } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 값을 대상에 대입합니다: selectedHeadNo = headNo
+L000261 |             selectedHeadNo = headNo; ⟦EOL⟧
+// 해설 L262: 값을 대상에 대입합니다: selectedCount = count
+L000262 |             selectedCount = count; ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000263 |         } ⟦EOL⟧
+L000264 |  ⟦EOL⟧
+// 해설 L265: 조건에 따라 분기합니다: if (selectedHeadNo > 0)
+L000265 |         if (selectedHeadNo > 0) ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000266 |         { ⟦EOL⟧
+// 해설 L267: 호출자에게 값 또는 제어를 반환합니다: return selectedHeadNo;
+L000267 |             return selectedHeadNo; ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000268 |         } ⟦EOL⟧
+L000269 |  ⟦EOL⟧
+// 해설 L270: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000270 |         return 0; ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 ResolveCellPreviewHead.
+L000271 |     } ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ShouldUseExpandedPreviewBounds(Rect, Rect)
+L000273 |     private static bool ShouldUseExpandedPreviewBounds(Rect actualBounds, Rect displayBounds) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ShouldUseExpandedPreviewBounds.
+L000274 |     { ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(actualBounds.Width - displayBounds.Width) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(actualBounds.Height - displayBounds.Height) / 호출자에게 값 또는 제어를 반환합니다: return !actualBounds.IsEmpty && (Math.Abs(actualBounds.Width - displayBounds.Width) > 0.001 || Math.Abs(actualBounds.Height - displayBounds.Height) > 0.001);
+L000275 |         return !actualBounds.IsEmpty && (Math.Abs(actualBounds.Width - displayBounds.Width) > 0.001 || Math.Abs(actualBounds.Height - displayBounds.Height) > 0.001); ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ShouldUseExpandedPreviewBounds.
+L000276 |     } ⟦EOL⟧
+L000277 |  ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · Rect Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ExpandPreviewBounds(Rect, double, double, Rect)
+L000278 |     private static Rect ExpandPreviewBounds(Rect bounds, double minimumWidth, double minimumHeight, Rect limitBounds) ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 ExpandPreviewBounds.
+L000279 |     { ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampPreviewCoordinate(bounds.Left, limitBounds.Left, limitBounds.Right) / 지역 변수를 선언합니다: var left = ClampPreviewCoordinate(bounds.Left, limitBounds.Left, limitBounds.Right); / 변수의 초기값을 지정합니다: left = ClampPreviewCoordinate(bounds.Left, limitBounds.Left, limitBounds.Right)
+L000280 |         var left = ClampPreviewCoordinate(bounds.Left, limitBounds.Left, limitBounds.Right); ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClampPreviewCoordinate(bounds.Top, limitBounds.Top, limitBounds.Bottom) / 지역 변수를 선언합니다: var top = ClampPreviewCoordinate(bounds.Top, limitBounds.Top, limitBounds.Bottom); / 변수의 초기값을 지정합니다: top = ClampPreviewCoordinate(bounds.Top, limitBounds.Top, limitBounds.Bottom)
+L000281 |         var top = ClampPreviewCoordinate(bounds.Top, limitBounds.Top, limitBounds.Bottom); ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, limitBounds.Right - left) / 지역 변수를 선언합니다: var maximumWidth = Math.Max(1.0, limitBounds.Right - left); / 변수의 초기값을 지정합니다: maximumWidth = Math.Max(1.0, limitBounds.Right - left)
+L000282 |         var maximumWidth = Math.Max(1.0, limitBounds.Right - left); ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, limitBounds.Bottom - top) / 지역 변수를 선언합니다: var maximumHeight = Math.Max(1.0, limitBounds.Bottom - top); / 변수의 초기값을 지정합니다: maximumHeight = Math.Max(1.0, limitBounds.Bottom - top)
+L000283 |         var maximumHeight = Math.Max(1.0, limitBounds.Bottom - top); ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Math.Max(bounds.Width, minimumWidth), maximumWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Width, minimumWidth) / 지역 변수를 선언합니다: var width = Math.Min(Math.Max(bounds.Width, minimumWidth), maximumWidth); / 변수의 초기값을 지정합니다: width = Math.Min(Math.Max(bounds.Width, minimumWidth), maximumWidth)
+L000284 |         var width = Math.Min(Math.Max(bounds.Width, minimumWidth), maximumWidth); ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Math.Max(bounds.Height, minimumHeight), maximumHeight) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Height, minimumHeight) / 지역 변수를 선언합니다: var height = Math.Min(Math.Max(bounds.Height, minimumHeight), maximumHeight); / 변수의 초기값을 지정합니다: height = Math.Min(Math.Max(bounds.Height, minimumHeight), maximumHeight)
+L000285 |         var height = Math.Min(Math.Max(bounds.Height, minimumHeight), maximumHeight); ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(left, top, width, height) / 호출자에게 값 또는 제어를 반환합니다: return new Rect(left, top, width, height);
+L000286 |         return new Rect(left, top, width, height); ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 ExpandPreviewBounds.
+L000287 |     } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ClampPreviewCoordinate(double, double, double)
+L000289 |     private static double ClampPreviewCoordinate(double value, double minimum, double maximum) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 ClampPreviewCoordinate.
+L000290 |     { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(minimum, maximum) / 지역 변수를 선언합니다: var safeMaximum = Math.Max(minimum, maximum); / 변수의 초기값을 지정합니다: safeMaximum = Math.Max(minimum, maximum)
+L000291 |         var safeMaximum = Math.Max(minimum, maximum); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(value, minimum, safeMaximum) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp(value, minimum, safeMaximum);
+L000292 |         return Math.Clamp(value, minimum, safeMaximum); ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 ClampPreviewCoordinate.
+L000293 |     } ⟦EOL⟧
+L000294 |  ⟦EOL⟧
+// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.AssignPreviewHead(double, System.Collections.Generic.IReadOnlyList<int>, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT, double, System.Collections.Generi
+L000295 |     private static int AssignPreviewHead(double x, IReadOnlyList<int> assignmentHeadNos, ST_PREVIEW_HEAD_LAYOUT headLayout, double akMarginX, IReadOnlyDictionary<int, long> assignedHeadCounts) ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 AssignPreviewHead.
+L000296 |     { ⟦EOL⟧
+// 해설 L297: 조건에 따라 분기합니다: if (assignmentHeadNos.Count == 0)
+L000297 |         if (assignmentHeadNos.Count == 0) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 AssignPreviewHead.
+L000298 |         { ⟦EOL⟧
+// 해설 L299: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000299 |             return 0; ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 AssignPreviewHead.
+L000300 |         } ⟦EOL⟧
+L000301 |  ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? BuildPreview(int)
+L000302 |         global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? BuildPreview(int headNo) ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000303 |         { ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewHeadRange(headNo, headLayout, akMarginX) / 지역 변수를 선언합니다: var range = GetPreviewHeadRange(headNo, headLayout, akMarginX); / 변수의 초기값을 지정합니다: range = GetPreviewHeadRange(headNo, headLayout, akMarginX)
+L000304 |             var range = GetPreviewHeadRange(headNo, headLayout, akMarginX); ⟦EOL⟧
+// 해설 L305: 조건에 따라 분기합니다: if (x < range.StartX || x > range.EndX)
+L000305 |             if (x < range.StartX || x > range.EndX) ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000306 |             { ⟦EOL⟧
+// 해설 L307: 호출자에게 값 또는 제어를 반환합니다: return (ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? )null;
+L000307 |                 return (ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? )null; ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000308 |             } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE(headNo, Math.Abs(x - range.CenterX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(x - range.CenterX) / 호출자에게 값 또는 제어를 반환합니다: return new ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE(headNo, Math.Abs(x - range.CenterX));
+L000310 |             return new ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE(headNo, Math.Abs(x - range.CenterX)); ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000311 |         } ⟦EOL⟧
+L000312 |  ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · bool IsHasValue(Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE?)
+L000313 |         bool IsHasValue(global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? candidate) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 IsHasValue.
+L000314 |         { ⟦EOL⟧
+// 해설 L315: 호출자에게 값 또는 제어를 반환합니다: return candidate.HasValue;
+L000315 |             return candidate.HasValue; ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 IsHasValue.
+L000316 |         } ⟦EOL⟧
+L000317 |  ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE SelectItem(Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE?)
+L000318 |         global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE SelectItem(global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE? candidate) ⟦EOL⟧
+// 해설 L319: 구문 블록 경계입니다 · 소속 SelectItem.
+L000319 |         { ⟦EOL⟧
+// 해설 L320: 호출자에게 값 또는 제어를 반환합니다: return candidate!.Value;
+L000320 |             return candidate!.Value; ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 SelectItem.
+L000321 |         } ⟦EOL⟧
+L000322 |  ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: assignmentHeadNos.Select(BuildPreview).Where(IsHasValue).Select(SelectItem).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: assignmentHeadNos.Select(BuildPreview).Where(IsHasValue).Select(SelectItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: assignmentHeadNos.Select(BuildPreview).Where(IsHasValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: assignmentHeadNos.Select(BuildPreview) / 지역 변수를 선언합니다: var candidates = assignmentHeadNos.Select(BuildPreview).Where(IsHasValue).Select(SelectItem).ToArray(); / 변수의 초기값을 지정합니다: candidates = assignmentHeadNos
+L000323 |         var candidates = assignmentHeadNos.Select(BuildPreview).Where(IsHasValue).Select(SelectItem).ToArray(); ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · double SelectDistance(Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE)
+L000324 |         double SelectDistance(global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE candidate) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 SelectDistance.
+L000325 |         { ⟦EOL⟧
+// 해설 L326: 호출자에게 값 또는 제어를 반환합니다: return candidate.Distance;
+L000326 |             return candidate.Distance; ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 SelectDistance.
+L000327 |         } ⟦EOL⟧
+L000328 |  ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · long SelectValue(Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE)
+L000329 |         long SelectValue(global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE candidate) ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 SelectValue.
+L000330 |         { ⟦EOL⟧
+// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: assignedHeadCounts.TryGetValue(candidate.HeadNo, out var count) / 조건에 따라 결과식을 선택합니다: assignedHeadCounts.TryGetValue(candidate.HeadNo, out var count) ? count : 0 / 호출자에게 값 또는 제어를 반환합니다: return assignedHeadCounts.TryGetValue(candidate.HeadNo, out var count) ? count : 0;
+L000331 |             return assignedHeadCounts.TryGetValue(candidate.HeadNo, out var count) ? count : 0; ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 SelectValue.
+L000332 |         } ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · int SelectHeadNo(Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE)
+L000334 |         int SelectHeadNo(global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE candidate) ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 SelectHeadNo.
+L000335 |         { ⟦EOL⟧
+// 해설 L336: 호출자에게 값 또는 제어를 반환합니다: return candidate.HeadNo;
+L000336 |             return candidate.HeadNo; ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 SelectHeadNo.
+L000337 |         } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.OrderBy(SelectDistance).ThenBy(SelectValue).ThenBy(SelectHeadNo).First() / 함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.OrderBy(SelectDistance).ThenBy(SelectValue).ThenBy(SelectHeadNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.OrderBy(SelectDistance).ThenBy(SelectValue) / 함수·델리게이트 또는 객체 생성자를 호출합니다: candidates.OrderBy(SelectDistance) / 조건에 따라 결과식을 선택합니다: candidates.Length == 0 ? 0 : candidates.OrderBy(SelectDistance).ThenBy(SelectValue).ThenBy(SelectHeadNo).First().HeadNo / 호출자에게 값 또는 제어를 반환합니다: return cand
+L000339 |         return candidates.Length == 0 ? 0 : candidates.OrderBy(SelectDistance).ThenBy(SelectValue).ThenBy(SelectHeadNo).First().HeadNo; ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 AssignPreviewHead.
+L000340 |     } ⟦EOL⟧
+L000341 |  ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · (double StartX, double EndX, double CenterX) Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.GetPreviewHeadRange(int, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT, double)
+L000342 |     private static (double StartX, double EndX, double CenterX) GetPreviewHeadRange(int headNo, ST_PREVIEW_HEAD_LAYOUT headLayout, double akMarginX) ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 GetPreviewHeadRange.
+L000343 |     { ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: headLayout.GetField(headNo) / 지역 변수를 선언합니다: var field = headLayout.GetField(headNo); / 변수의 초기값을 지정합니다: field = headLayout.GetField(headNo)
+L000344 |         var field = headLayout.GetField(headNo); ⟦EOL⟧
+// 해설 L345: 지역 변수를 선언합니다: var centerX = akMarginX + field.PositionX; / 변수의 초기값을 지정합니다: centerX = akMarginX + field.PositionX
+L000345 |         var centerX = akMarginX + field.PositionX; ⟦EOL⟧
+// 해설 L346: 지역 변수를 선언합니다: var halfWidth = field.ScanFieldWidthX / 2.0; / 변수의 초기값을 지정합니다: halfWidth = field.ScanFieldWidthX / 2.0
+L000346 |         var halfWidth = field.ScanFieldWidthX / 2.0; ⟦EOL⟧
+// 해설 L347: 호출자에게 값 또는 제어를 반환합니다: return (centerX - halfWidth, centerX + halfWidth, centerX);
+L000347 |         return (centerX - halfWidth, centerX + halfWidth, centerX); ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다 · 소속 GetPreviewHeadRange.
+L000348 |     } ⟦EOL⟧
+L000349 |  ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryProjectRecipePreviewPixel(double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out double, out double, out int, out int)
+L000350 |     private static bool TryProjectRecipePreviewPixel(double designX, double designY, ST_GLASS_PREVIEW_FRAME frame, double scale, out double canvasX, out double canvasY, out int pixelX, out int pixelY) ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000351 |     { ⟦EOL⟧
+// 해설 L352: 값을 대상에 대입합니다: canvasX = frame.CanvasLeft + (designX * scale)
+L000352 |         canvasX = frame.CanvasLeft + (designX * scale); ⟦EOL⟧
+// 해설 L353: 값을 대상에 대입합니다: canvasY = frame.CanvasTop + (designY * scale)
+L000353 |         canvasY = frame.CanvasTop + (designY * scale); ⟦EOL⟧
+// 해설 L354: 값을 대상에 대입합니다: pixelX = 0
+L000354 |         pixelX = 0; ⟦EOL⟧
+// 해설 L355: 값을 대상에 대입합니다: pixelY = 0
+L000355 |         pixelY = 0; ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(designX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(designY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(scale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(canvasX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(canvasY) / 조건에 따라 분기합니다: if (!double.IsFinite(designX) || !double.IsFinite(designY) || !double.IsFinite(scale) || scale <= 0.0 || !double.IsFinite(canvasX) || !double.IsFinite(canvasY))
+L000356 |         if (!double.IsFinite(designX) || !double.IsFinite(designY) || !double.IsFinite(scale) || scale <= 0.0 || !double.IsFinite(canvasX) || !double.IsFinite(canvasY)) ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000357 |         { ⟦EOL⟧
+// 해설 L358: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000358 |             return false; ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000359 |         } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(canvasX) / 지역 변수를 선언합니다: var roundedX = Math.Round(canvasX); / 변수의 초기값을 지정합니다: roundedX = Math.Round(canvasX)
+L000361 |         var roundedX = Math.Round(canvasX); ⟦EOL⟧
+// 해설 L362: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(canvasY) / 지역 변수를 선언합니다: var roundedY = Math.Round(canvasY); / 변수의 초기값을 지정합니다: roundedY = Math.Round(canvasY)
+L000362 |         var roundedY = Math.Round(canvasY); ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(roundedX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(roundedY) / 조건에 따라 분기합니다: if (!double.IsFinite(roundedX) || !double.IsFinite(roundedY) || roundedX < int.MinValue || roundedX > int.MaxValue || roundedY < int.MinValue || roundedY > int.MaxValue)
+L000363 |         if (!double.IsFinite(roundedX) || !double.IsFinite(roundedY) || roundedX < int.MinValue || roundedX > int.MaxValue || roundedY < int.MinValue || roundedY > int.MaxValue) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000364 |         { ⟦EOL⟧
+// 해설 L365: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000365 |             return false; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000366 |         } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 값을 대상에 대입합니다: pixelX = (int)roundedX
+L000368 |         pixelX = (int)roundedX; ⟦EOL⟧
+// 해설 L369: 값을 대상에 대입합니다: pixelY = (int)roundedY
+L000369 |         pixelY = (int)roundedY; ⟦EOL⟧
+// 해설 L370: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000370 |         return true; ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 TryProjectRecipePreviewPixel.
+L000371 |     } ⟦EOL⟧
+L000372 |  ⟦EOL⟧
+// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000373 |     private static bool TryBuildRecipeCellBoundary( ⟦EOL⟧
+// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000374 |         double firstX,  ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000375 |         double firstY,  ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000376 |         double rotation,  ⟦EOL⟧
+// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000377 |         int countX,  ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000378 |         int countY,  ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000379 |         double pitchX,  ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000380 |         double pitchY,  ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000381 |         double padding,  ⟦EOL⟧
+// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000382 |         ST_GLASS_PREVIEW_FRAME frame,  ⟦EOL⟧
+// 해설 L383: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000383 |         double scale,  ⟦EOL⟧
+// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000384 |         out StreamGeometry geometry ⟦EOL⟧
+// 해설 L385: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.TryBuildRecipeCellBoundary(double, double, double, int, int, double, double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGe
+L000385 |     ) ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000386 |     { ⟦EOL⟧
+// 해설 L387: 지역 변수를 선언합니다: var radians = rotation * Math.PI / 180.0; / 변수의 초기값을 지정합니다: radians = rotation * Math.PI / 180.0
+L000387 |         var radians = rotation * Math.PI / 180.0; ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 지역 변수를 선언합니다: var cos = Math.Cos(radians); / 변수의 초기값을 지정합니다: cos = Math.Cos(radians)
+L000388 |         var cos = Math.Cos(radians); ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 지역 변수를 선언합니다: var sin = Math.Sin(radians); / 변수의 초기값을 지정합니다: sin = Math.Sin(radians)
+L000389 |         var sin = Math.Sin(radians); ⟦EOL⟧
+// 해설 L390: 지역 변수를 선언합니다: var maxX = ((countX - 1) * pitchX) + padding; / 변수의 초기값을 지정합니다: maxX = ((countX - 1) * pitchX) + padding
+L000390 |         var maxX = ((countX - 1) * pitchX) + padding; ⟦EOL⟧
+// 해설 L391: 지역 변수를 선언합니다: var maxY = ((countY - 1) * pitchY) + padding; / 변수의 초기값을 지정합니다: maxY = ((countY - 1) * pitchY) + padding
+L000391 |         var maxY = ((countY - 1) * pitchY) + padding; ⟦EOL⟧
+// 해설 L392: 지역 변수를 선언합니다: var localCorners = new[] { new Point(-padding, -padding), new Point(maxX, -padding), new Point(maxX, maxY), new Point(-padding, maxY) }; / 변수의 초기값을 지정합니다: localCorners = new[] { new Point(-padding, -padding), new Point(maxX, -padding), new Point(maxX, maxY), new Point(-padding, maxY) }
+L000392 |         var localCorners = new[] ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000393 |         { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(-padding, -padding)
+L000394 |             new Point(-padding, -padding), ⟦EOL⟧
+// 해설 L395: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(maxX, -padding)
+L000395 |             new Point(maxX, -padding), ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(maxX, maxY)
+L000396 |             new Point(maxX, maxY), ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(-padding, maxY)
+L000397 |             new Point(-padding, maxY) ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000398 |         }; ⟦EOL⟧
+// 해설 L399: 지역 변수를 선언합니다: var corners = new Point[localCorners.Length]; / 변수의 초기값을 지정합니다: corners = new Point[localCorners.Length]
+L000399 |         var corners = new Point[localCorners.Length]; ⟦EOL⟧
+// 해설 L400: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < localCorners.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000400 |         for (var index = 0; index < localCorners.Length; index++) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000401 |         { ⟦EOL⟧
+// 해설 L402: 지역 변수를 선언합니다: var local = localCorners[index]; / 변수의 초기값을 지정합니다: local = localCorners[index]
+L000402 |             var local = localCorners[index]; ⟦EOL⟧
+// 해설 L403: 지역 변수를 선언합니다: var x = firstX + (local.X * cos) - (local.Y * sin); / 변수의 초기값을 지정합니다: x = firstX + (local.X * cos) - (local.Y * sin)
+L000403 |             var x = firstX + (local.X * cos) - (local.Y * sin); ⟦EOL⟧
+// 해설 L404: 지역 변수를 선언합니다: var y = firstY + (local.X * sin) + (local.Y * cos); / 변수의 초기값을 지정합니다: y = firstY + (local.X * sin) + (local.Y * cos)
+L000404 |             var y = firstY + (local.X * sin) + (local.Y * cos); ⟦EOL⟧
+// 해설 L405: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryProjectRecipePreviewPixel(x, y, frame, scale, out var canvasX, out var canvasY, out _, out _) / 조건에 따라 분기합니다: if (!TryProjectRecipePreviewPixel(x, y, frame, scale, out var canvasX, out var canvasY, out _, out _))
+L000405 |             if (!TryProjectRecipePreviewPixel(x, y, frame, scale, out var canvasX, out var canvasY, out _, out _)) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000406 |             { ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: geometry = new StreamGeometry() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry()
+L000407 |                 geometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L408: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000408 |                 return false; ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000409 |             } ⟦EOL⟧
+L000410 |  ⟦EOL⟧
+// 해설 L411: 값을 대상에 대입합니다: corners[index] = new Point(canvasX, canvasY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(canvasX, canvasY)
+L000411 |             corners[index] = new Point(canvasX, canvasY); ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000412 |         } ⟦EOL⟧
+L000413 |  ⟦EOL⟧
+// 해설 L414: 값을 대상에 대입합니다: geometry = new StreamGeometry() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry()
+L000414 |         geometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: geometry.Open() / 자원 사용과 정리 범위를 지정합니다: using (var context = geometry.Open()) / 변수의 초기값을 지정합니다: context = geometry.Open()
+L000415 |         using (var context = geometry.Open()) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000416 |         { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.BeginFigure(corners[0], false, true)
+L000417 |             context.BeginFigure(corners[0], false, true); ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.PolyLineTo(corners.Skip(1).ToArray(), true, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Skip(1).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: corners.Skip(1)
+L000418 |             context.PolyLineTo(corners.Skip(1).ToArray(), true, false); ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000419 |         } ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 함수·델리게이트 또는 객체 생성자를 호출합니다: geometry.Freeze()
+L000421 |         geometry.Freeze(); ⟦EOL⟧
+// 해설 L422: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000422 |         return true; ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 TryBuildRecipeCellBoundary.
+L000423 |     } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000425 |     internal static ST_HEAD_ASSIGNMENT_MAP BuildHeadAssignmentMap(IReadOnlyDictionary<string, string> parameters, IReadOnlySet<int> selectedHeadNos, ST_PREVIEW_HEAD_LAYOUT headLayout) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 BuildHeadAssignmentMap.
+L000426 |     { ⟦EOL⟧
+// 해설 L427: 지역 변수를 선언합니다: const int headCount = 8; / 변수의 초기값을 지정합니다: headCount = 8
+L000427 |         const int headCount = 8; ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateGlassFrame(parameters) / 지역 변수를 선언합니다: var frame = CreateGlassFrame(parameters); / 변수의 초기값을 지정합니다: frame = CreateGlassFrame(parameters)
+L000428 |         var frame = CreateGlassFrame(parameters); ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X")
+L000429 |         var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X")
+L000430 |         var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); ⟦EOL⟧
+// 해설 L431: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildEnabledHeadNumbers(parameters, headCount) / 지역 변수를 선언합니다: var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); / 변수의 초기값을 지정합니다: activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount)
+L000431 |         var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); ⟦EOL⟧
+// 해설 L432: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count) / 지역 변수를 선언합니다: var areas = new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count); / 변수의 초기값을 지정합니다: areas = new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count)
+L000432 |         var areas = new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count); ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · (double Left, double Top, double Width, double Height, double LabelLeft, double LabelWidth) GetHeadRect(int)
+L000433 |         (double Left, double Top, double Width, double Height, double LabelLeft, double LabelWidth) GetHeadRect(int headNo) ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000434 |         { ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(akMarginX) / 조건에 따라 분기합니다: if (!double.IsFinite(glassWidth) || !double.IsFinite(akMarginX) || glassWidth <= 0.0)
+L000435 |             if (!double.IsFinite(glassWidth) || !double.IsFinite(akMarginX) || glassWidth <= 0.0) ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000436 |             { ⟦EOL⟧
+// 해설 L437: 호출자에게 값 또는 제어를 반환합니다: return (frame.CanvasLeft, frame.CanvasTop, 0.0, frame.Height, frame.CanvasLeft, 0.0);
+L000437 |                 return (frame.CanvasLeft, frame.CanvasTop, 0.0, frame.Height, frame.CanvasLeft, 0.0); ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000438 |             } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+// 해설 L440: 지역 변수를 선언합니다: var scale = frame.Width / glassWidth; / 변수의 초기값을 지정합니다: scale = frame.Width / glassWidth
+L000440 |             var scale = frame.Width / glassWidth; ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(scale) / 조건에 따라 분기합니다: if (!double.IsFinite(scale) || scale <= 0.0)
+L000441 |             if (!double.IsFinite(scale) || scale <= 0.0) ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000442 |             { ⟦EOL⟧
+// 해설 L443: 호출자에게 값 또는 제어를 반환합니다: return (frame.CanvasLeft, frame.CanvasTop, 0.0, frame.Height, frame.CanvasLeft, 0.0);
+L000443 |                 return (frame.CanvasLeft, frame.CanvasTop, 0.0, frame.Height, frame.CanvasLeft, 0.0); ⟦EOL⟧
+// 해설 L444: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000444 |             } ⟦EOL⟧
+L000445 |  ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPreviewHeadRange(headNo, headLayout, akMarginX) / 지역 변수를 선언합니다: var range = GetPreviewHeadRange(headNo, headLayout, akMarginX); / 변수의 초기값을 지정합니다: range = GetPreviewHeadRange(headNo, headLayout, akMarginX)
+L000446 |             var range = GetPreviewHeadRange(headNo, headLayout, akMarginX); ⟦EOL⟧
+// 해설 L447: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000447 |             // A Scan Field belongs to the fixed Head, not to the Glass. Draw its full ⟦EOL⟧
+// 해설 L448: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000448 |             // physical width even when part of the field lies outside the Glass frame. ⟦EOL⟧
+// 해설 L449: 지역 변수를 선언합니다: var left = frame.CanvasLeft + (range.StartX * scale); / 변수의 초기값을 지정합니다: left = frame.CanvasLeft + (range.StartX * scale)
+L000449 |             var left = frame.CanvasLeft + (range.StartX * scale); ⟦EOL⟧
+// 해설 L450: 지역 변수를 선언합니다: var top = frame.CanvasTop; / 변수의 초기값을 지정합니다: top = frame.CanvasTop
+L000450 |             var top = frame.CanvasTop; ⟦EOL⟧
+// 해설 L451: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, (range.EndX - range.StartX) * scale) / 지역 변수를 선언합니다: var width = Math.Max(0.0, (range.EndX - range.StartX) * scale); / 변수의 초기값을 지정합니다: width = Math.Max(0.0, (range.EndX - range.StartX) * scale)
+L000451 |             var width = Math.Max(0.0, (range.EndX - range.StartX) * scale); ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: headLayout.GetField(headNo) / 지역 변수를 선언합니다: var centerX = akMarginX + headLayout.GetField(headNo).PositionX; / 변수의 초기값을 지정합니다: centerX = akMarginX + headLayout.GetField(headNo).PositionX
+L000452 |             var centerX = akMarginX + headLayout.GetField(headNo).PositionX; ⟦EOL⟧
+// 해설 L453: 지역 변수를 선언합니다: var centerCanvasX = frame.CanvasLeft + (centerX * scale); / 변수의 초기값을 지정합니다: centerCanvasX = frame.CanvasLeft + (centerX * scale)
+L000453 |             var centerCanvasX = frame.CanvasLeft + (centerX * scale); ⟦EOL⟧
+// 해설 L454: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((range.EndX - range.StartX) * scale, 36.0, 96.0) / 지역 변수를 선언합니다: var labelWidth = Math.Clamp((range.EndX - range.StartX) * scale, 36.0, 96.0); / 변수의 초기값을 지정합니다: labelWidth = Math.Clamp((range.EndX - range.StartX) * scale, 36.0, 96.0)
+L000454 |             var labelWidth = Math.Clamp((range.EndX - range.StartX) * scale, 36.0, 96.0); ⟦EOL⟧
+// 해설 L455: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(centerCanvasX - (labelWidth / 2.0), 0.0, 860.0 - labelWidth) / 지역 변수를 선언합니다: var labelLeft = Math.Clamp(centerCanvasX - (labelWidth / 2.0), 0.0, 860.0 - labelWidth); / 변수의 초기값을 지정합니다: labelLeft = Math.Clamp(centerCanvasX - (labelWidth / 2.0), 0.0, 860.0 - labelWidth)
+L000455 |             var labelLeft = Math.Clamp(centerCanvasX - (labelWidth / 2.0), 0.0, 860.0 - labelWidth); ⟦EOL⟧
+// 해설 L456: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(4.0, frame.Height) / 호출자에게 값 또는 제어를 반환합니다: return (left, top, width, Math.Max(4.0, frame.Height), labelLeft, labelWidth);
+L000456 |             return (left, top, width, Math.Max(4.0, frame.Height), labelLeft, labelWidth); ⟦EOL⟧
+// 해설 L457: 구문 블록 경계입니다 · 소속 GetHeadRect.
+L000457 |         } ⟦EOL⟧
+L000458 |  ⟦EOL⟧
+// 해설 L459: 컬렉션 요소를 순회합니다: foreach (var headNo in activeHeadNos)
+L000459 |         foreach (var headNo in activeHeadNos) ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 BuildHeadAssignmentMap.
+L000460 |         { ⟦EOL⟧
+// 해설 L461: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeadNos.Contains(headNo) / 지역 변수를 선언합니다: var isSelected = selectedHeadNos.Contains(headNo); / 변수의 초기값을 지정합니다: isSelected = selectedHeadNos.Contains(headNo)
+L000461 |             var isSelected = selectedHeadNos.Contains(headNo); ⟦EOL⟧
+// 해설 L462: 지역 변수를 선언합니다: var hasSelectedHead = selectedHeadNos.Count > 0; / 변수의 초기값을 지정합니다: hasSelectedHead = selectedHeadNos.Count > 0
+L000462 |             var hasSelectedHead = selectedHeadNos.Count > 0; ⟦EOL⟧
+// 해설 L463: 조건에 따라 결과식을 선택합니다: hasSelectedHead ? isSelected ? (byte)48 : (byte)8 : (byte)18 / 조건에 따라 결과식을 선택합니다: isSelected ? (byte)48 : (byte)8 / 지역 변수를 선언합니다: var fillAlpha = hasSelectedHead ? isSelected ? (byte)48 : (byte)8 : (byte)18; / 변수의 초기값을 지정합니다: fillAlpha = hasSelectedHead ? isSelected ? (byte)48 : (byte)8 : (byte)18
+L000463 |             var fillAlpha = hasSelectedHead ? isSelected ? (byte)48 : (byte)8 : (byte)18; ⟦EOL⟧
+// 해설 L464: 조건에 따라 결과식을 선택합니다: hasSelectedHead ? isSelected ? (byte)255 : (byte)105 : (byte)180 / 조건에 따라 결과식을 선택합니다: isSelected ? (byte)255 : (byte)105 / 지역 변수를 선언합니다: var strokeAlpha = hasSelectedHead ? isSelected ? (byte)255 : (byte)105 : (byte)180; / 변수의 초기값을 지정합니다: strokeAlpha = hasSelectedHead ? isSelected ? (byte)255 : (byte)105 : (byte)180
+L000464 |             var strokeAlpha = hasSelectedHead ? isSelected ? (byte)255 : (byte)105 : (byte)180; ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHeadRect(headNo) / 지역 변수를 선언합니다: var rect = GetHeadRect(headNo); / 변수의 초기값을 지정합니다: rect = GetHeadRect(headNo)
+L000465 |             var rect = GetHeadRect(headNo); ⟦EOL⟧
+// 해설 L466: 함수·델리게이트 또는 객체 생성자를 호출합니다: areas.Add(new ST_HEAD_ASSIGNMENT_AREA( headNo, $"HEAD {headNo:00}", rect.Left, rect.Top, rect.Width, rect.Height, rect.LabelLeft, rect.LabelWidth, isSelected, 0, CreateHeadBrush(headNo, fillAlpha), CreateHeadBrush(headNo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_HEAD_ASSIGNMENT_AREA( headNo, $"HEAD {headNo:00}", rect.Left, rect.Top, rect.Width, rect.Height, rect.LabelLeft, rect.LabelWidth, isSelected, 0, CreateHeadBrush(headNo, fillAlpha), CreateHeadBrush(headNo, strokeAl…
+L000466 |             areas.Add(new ST_HEAD_ASSIGNMENT_AREA( ⟦EOL⟧
+// 해설 L467: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000467 |                 headNo,  ⟦EOL⟧
+// 해설 L468: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000468 |                 $"HEAD {headNo:00}",  ⟦EOL⟧
+// 해설 L469: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000469 |                 rect.Left,  ⟦EOL⟧
+// 해설 L470: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000470 |                 rect.Top,  ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000471 |                 rect.Width,  ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000472 |                 rect.Height,  ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000473 |                 rect.LabelLeft,  ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000474 |                 rect.LabelWidth,  ⟦EOL⟧
+// 해설 L475: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000475 |                 isSelected,  ⟦EOL⟧
+// 해설 L476: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000476 |                 0,  ⟦EOL⟧
+// 해설 L477: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHeadBrush(headNo, fillAlpha)
+L000477 |                 CreateHeadBrush(headNo, fillAlpha),  ⟦EOL⟧
+// 해설 L478: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHeadBrush(headNo, strokeAlpha)
+L000478 |                 CreateHeadBrush(headNo, strokeAlpha),  ⟦EOL⟧
+// 해설 L479: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(isSelected ? 2.3 : 1.1) / 조건에 따라 결과식을 선택합니다: isSelected ? 2.3 : 1.1
+L000479 |                 new Thickness(isSelected ? 2.3 : 1.1),  ⟦EOL⟧
+// 해설 L480: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000480 |                 1.0 ⟦EOL⟧
+// 해설 L481: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Gener
+L000481 |             )); ⟦EOL⟧
+// 해설 L482: 구문 블록 경계입니다 · 소속 BuildHeadAssignmentMap.
+L000482 |         } ⟦EOL⟧
+L000483 |  ⟦EOL⟧
+// 해설 L484: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_HEAD_ASSIGNMENT_MAP(areas) / 호출자에게 값 또는 제어를 반환합니다: return new ST_HEAD_ASSIGNMENT_MAP(areas);
+L000484 |         return new ST_HEAD_ASSIGNMENT_MAP(areas); ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 BuildHeadAssignmentMap.
+L000485 |     } ⟦EOL⟧
+L000486 |  ⟦EOL⟧
+// 해설 L487: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadHeadPositionX(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int)
+L000487 |     private static double ReadHeadPositionX(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, int headNo) ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 ReadHeadPositionX.
+L000488 |     { ⟦EOL⟧
+// 해설 L489: 지역 변수를 선언합니다: const double fallbackHead1PositionX = -5.0; / 변수의 초기값을 지정합니다: fallbackHead1PositionX = -5.0
+L000489 |         const double fallbackHead1PositionX = -5.0; ⟦EOL⟧
+// 해설 L490: 지역 변수를 선언합니다: const double fallbackHeadGapX = 200.0; / 변수의 초기값을 지정합니다: fallbackHeadGapX = 200.0
+L000490 |         const double fallbackHeadGapX = 200.0; ⟦EOL⟧
+// 해설 L491: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSettingDouble(settings, fallbackHead1PositionX, "H01_AK_POSITION_X") / 지역 변수를 선언합니다: var head1PositionX = ReadSettingDouble(settings, fallbackHead1PositionX, "H01_AK_POSITION_X"); / 변수의 초기값을 지정합니다: head1PositionX = ReadSettingDouble(settings, fallbackHead1PositionX, "H01_AK_POSITION_X")
+L000491 |         var head1PositionX = ReadSettingDouble(settings, fallbackHead1PositionX, "H01_AK_POSITION_X"); ⟦EOL⟧
+// 해설 L492: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSettingDouble(settings, fallbackHeadGapX, "HeadGapX") / 지역 변수를 선언합니다: var headGapX = ReadSettingDouble(settings, fallbackHeadGapX, "HeadGapX"); / 변수의 초기값을 지정합니다: headGapX = ReadSettingDouble(settings, fallbackHeadGapX, "HeadGapX")
+L000492 |         var headGapX = ReadSettingDouble(settings, fallbackHeadGapX, "HeadGapX"); ⟦EOL⟧
+// 해설 L493: 호출자에게 값 또는 제어를 반환합니다: return head1PositionX + ((headNo - 1) * headGapX);
+L000493 |         return head1PositionX + ((headNo - 1) * headGapX); ⟦EOL⟧
+// 해설 L494: 구문 블록 경계입니다 · 소속 ReadHeadPositionX.
+L000494 |     } ⟦EOL⟧
+L000495 |  ⟦EOL⟧
+// 해설 L496: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadSettingDouble(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, double, params string[])
+L000496 |     private static double ReadSettingDouble(IReadOnlyList<ST_SYSTEM_PARAMETER> settings, double defaultValue, params string[] keys) ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000497 |     { ⟦EOL⟧
+// 해설 L498: 컬렉션 요소를 순회합니다: foreach (var setting in settings)
+L000498 |         foreach (var setting in settings) ⟦EOL⟧
+// 해설 L499: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000499 |         { ⟦EOL⟧
+// 해설 L500: 선언·서명/매개변수·접근 조건입니다 · bool MatchesItem(string)
+L000500 |             bool MatchesItem(string key) ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000501 |             { ⟦EOL⟧
+// 해설 L502: 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) || key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase);
+L000502 |                 return key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) || key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L503: 구문 블록 경계입니다 · 소속 MatchesItem.
+L000503 |             } ⟦EOL⟧
+L000504 |  ⟦EOL⟧
+// 해설 L505: 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Any(MatchesItem) / 조건에 따라 분기합니다: if (!keys.Any(MatchesItem))
+L000505 |             if (!keys.Any(MatchesItem)) ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000506 |             { ⟦EOL⟧
+// 해설 L507: 다음 반복으로 진행합니다: continue;
+L000507 |                 continue; ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000508 |             } ⟦EOL⟧
+L000509 |  ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(setting.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (double.TryParse(setting.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed))
+L000510 |             if (double.TryParse(setting.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000511 |             { ⟦EOL⟧
+// 해설 L512: 호출자에게 값 또는 제어를 반환합니다: return parsed;
+L000512 |                 return parsed; ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000513 |             } ⟦EOL⟧
+// 해설 L514: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000514 |         } ⟦EOL⟧
+L000515 |  ⟦EOL⟧
+// 해설 L516: 호출자에게 값 또는 제어를 반환합니다: return defaultValue;
+L000516 |         return defaultValue; ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 ReadSettingDouble.
+L000517 |     } ⟦EOL⟧
+L000518 |  ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadNullableDoubleAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, string)
+L000519 |     private static double? ReadNullableDoubleAny(IReadOnlyDictionary<string, string> parameters, string key) ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 ReadNullableDoubleAny.
+L000520 |     { ⟦EOL⟧
+// 해설 L521: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 결과식을 선택합니다: parameters.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null / 호출자에게 값 또는 제어를 반환합니다: return parameters.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : nul
+L000521 |         return parameters.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 ReadNullableDoubleAny.
+L000522 |     } ⟦EOL⟧
+L000523 |  ⟦EOL⟧
+// 해설 L524: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateGlassFrame(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000524 |     private static ST_GLASS_PREVIEW_FRAME CreateGlassFrame(IReadOnlyDictionary<string, string> parameters) ⟦EOL⟧
+// 해설 L525: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000525 |     { ⟦EOL⟧
+// 해설 L526: 지역 변수를 선언합니다: const double maxLeft = 44.0; / 변수의 초기값을 지정합니다: maxLeft = 44.0
+L000526 |         const double maxLeft = 44.0; ⟦EOL⟧
+// 해설 L527: 지역 변수를 선언합니다: const double maxTop = 62.0; / 변수의 초기값을 지정합니다: maxTop = 62.0
+L000527 |         const double maxTop = 62.0; ⟦EOL⟧
+// 해설 L528: 지역 변수를 선언합니다: const double maxWidth = 772.0; / 변수의 초기값을 지정합니다: maxWidth = 772.0
+L000528 |         const double maxWidth = 772.0; ⟦EOL⟧
+// 해설 L529: 지역 변수를 선언합니다: const double maxHeight = 420.0; / 변수의 초기값을 지정합니다: maxHeight = 420.0
+L000529 |         const double maxHeight = 420.0; ⟦EOL⟧
+// 해설 L530: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X")
+L000530 |         var glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
+// 해설 L531: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y")
+L000531 |         var glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); ⟦EOL⟧
+// 해설 L532: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassSizeX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassSizeY) / 조건에 따라 분기합니다: if (!double.IsFinite(glassSizeX) || !double.IsFinite(glassSizeY) || glassSizeX <= 0.0 || glassSizeY <= 0.0)
+L000532 |         if (!double.IsFinite(glassSizeX) || !double.IsFinite(glassSizeY) || glassSizeX <= 0.0 || glassSizeY <= 0.0) ⟦EOL⟧
+// 해설 L533: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000533 |         { ⟦EOL⟧
+// 해설 L534: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight) / 호출자에게 값 또는 제어를 반환합니다: return new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight);
+L000534 |             return new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight); ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000535 |         } ⟦EOL⟧
+L000536 |  ⟦EOL⟧
+// 해설 L537: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(maxWidth / glassSizeX, maxHeight / glassSizeY) / 지역 변수를 선언합니다: var scale = Math.Min(maxWidth / glassSizeX, maxHeight / glassSizeY); / 변수의 초기값을 지정합니다: scale = Math.Min(maxWidth / glassSizeX, maxHeight / glassSizeY)
+L000537 |         var scale = Math.Min(maxWidth / glassSizeX, maxHeight / glassSizeY); ⟦EOL⟧
+// 해설 L538: 지역 변수를 선언합니다: var width = glassSizeX * scale; / 변수의 초기값을 지정합니다: width = glassSizeX * scale
+L000538 |         var width = glassSizeX * scale; ⟦EOL⟧
+// 해설 L539: 지역 변수를 선언합니다: var height = glassSizeY * scale; / 변수의 초기값을 지정합니다: height = glassSizeY * scale
+L000539 |         var height = glassSizeY * scale; ⟦EOL⟧
+// 해설 L540: 지역 변수를 선언합니다: var left = maxLeft + (maxWidth - width) / 2.0; / 변수의 초기값을 지정합니다: left = maxLeft + (maxWidth - width) / 2.0
+L000540 |         var left = maxLeft + (maxWidth - width) / 2.0; ⟦EOL⟧
+// 해설 L541: 지역 변수를 선언합니다: var top = maxTop + (maxHeight - height) / 2.0; / 변수의 초기값을 지정합니다: top = maxTop + (maxHeight - height) / 2.0
+L000541 |         var top = maxTop + (maxHeight - height) / 2.0; ⟦EOL⟧
+// 해설 L542: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(scale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(width) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(height) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(left) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(top) / 조건에 따라 분기합니다: if (!double.IsFinite(scale) || scale <= 0.0 || !double.IsFinite(width) || !double.IsFinite(height) || !double.IsFinite(left) || !double.IsFinite(top) || width <= 0.0 || height <= 0.0)
+L000542 |         if (!double.IsFinite(scale) || scale <= 0.0 || !double.IsFinite(width) || !double.IsFinite(height) || !double.IsFinite(left) || !double.IsFinite(top) || width <= 0.0 || height <= 0.0) ⟦EOL⟧
+// 해설 L543: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000543 |         { ⟦EOL⟧
+// 해설 L544: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight) / 호출자에게 값 또는 제어를 반환합니다: return new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight);
+L000544 |             return new ST_GLASS_PREVIEW_FRAME(maxLeft, maxTop, maxWidth, maxHeight); ⟦EOL⟧
+// 해설 L545: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000545 |         } ⟦EOL⟧
+L000546 |  ⟦EOL⟧
+// 해설 L547: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_GLASS_PREVIEW_FRAME(left, top, width, height) / 호출자에게 값 또는 제어를 반환합니다: return new ST_GLASS_PREVIEW_FRAME(left, top, width, height);
+L000547 |         return new ST_GLASS_PREVIEW_FRAME(left, top, width, height); ⟦EOL⟧
+// 해설 L548: 구문 블록 경계입니다 · 소속 CreateGlassFrame.
+L000548 |     } ⟦EOL⟧
+L000549 |  ⟦EOL⟧
+// 해설 L550: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.FormatGlassSizeText(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000550 |     internal static string FormatGlassSizeText(IReadOnlyDictionary<string, string> parameters) ⟦EOL⟧
+// 해설 L551: 구문 블록 경계입니다 · 소속 FormatGlassSizeText.
+L000551 |     { ⟦EOL⟧
+// 해설 L552: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X")
+L000552 |         var glassSizeX = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
+// 해설 L553: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y")
+L000553 |         var glassSizeY = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); ⟦EOL⟧
+// 해설 L554: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassSizeX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassSizeY) / 조건에 따라 결과식을 선택합니다: double.IsFinite(glassSizeX) && double.IsFinite(glassSizeY) && glassSizeX > 0.0 && glassSizeY > 0.0 ? $"Glass {glassSizeX:0.#} x {glassSizeY:0.#} mm" : "Glass size fallback" / 호출자에게 값 또는 제어를 반환합니다: return double.IsFinite(glassSizeX) && double.IsFinite(glassSizeY) && glassSizeX > 0.0 && glassSizeY > 0.0 ? $"Glass {glassSizeX:0.#} x {glassSizeY:0.#} mm" : "Glass size fallback";
+L000554 |         return double.IsFinite(glassSizeX) && double.IsFinite(glassSizeY) && glassSizeX > 0.0 && glassSizeY > 0.0 ? $"Glass {glassSizeX:0.#} x {glassSizeY:0.#} mm" : "Glass size fallback"; ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 FormatGlassSizeText.
+L000555 |     } ⟦EOL⟧
+L000556 |  ⟦EOL⟧
+// 해설 L557: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateHeadBrush(int, byte)
+L000557 |     public static Brush CreateHeadBrush(int headNo, byte alpha = 255) ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 CreateHeadBrush.
+L000558 |     { ⟦EOL⟧
+// 해설 L559: 지역 변수를 선언합니다: var palette = new[] { Color.FromRgb(96, 132, 164), Color.FromRgb(105, 150, 126), Color.FromRgb(161, 132, 83), Color.FromRgb(151, 105, 123), Color.FromRgb(95, 142, 140), Color.FromRgb(131, 123, 164), Color.FromRgb(151, 116, 86), Co / 변수의 초기값을 지정합니다: palette = new[] { Color.FromRgb(96, 132, 164), Color.FromRgb(105, 150, 126), Color.FromRgb(161, 132, 83), Color.FromRgb(151, 105, 123), Color.FromRgb(95, 142, 140), Color.FromRgb(131, 123, 164), Color.FromRgb(151, 116, 86), Color.
+L000559 |         var palette = new[] ⟦EOL⟧
+// 해설 L560: 구문 블록 경계입니다 · 소속 CreateHeadBrush.
+L000560 |         { ⟦EOL⟧
+// 해설 L561: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(96, 132, 164)
+L000561 |             Color.FromRgb(96, 132, 164), ⟦EOL⟧
+// 해설 L562: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(105, 150, 126)
+L000562 |             Color.FromRgb(105, 150, 126), ⟦EOL⟧
+// 해설 L563: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(161, 132, 83)
+L000563 |             Color.FromRgb(161, 132, 83), ⟦EOL⟧
+// 해설 L564: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(151, 105, 123)
+L000564 |             Color.FromRgb(151, 105, 123), ⟦EOL⟧
+// 해설 L565: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(95, 142, 140)
+L000565 |             Color.FromRgb(95, 142, 140), ⟦EOL⟧
+// 해설 L566: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(131, 123, 164)
+L000566 |             Color.FromRgb(131, 123, 164), ⟦EOL⟧
+// 해설 L567: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(151, 116, 86)
+L000567 |             Color.FromRgb(151, 116, 86), ⟦EOL⟧
+// 해설 L568: 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(92, 119, 156)
+L000568 |             Color.FromRgb(92, 119, 156) ⟦EOL⟧
+// 해설 L569: 구문 블록 경계입니다 · 소속 CreateHeadBrush.
+L000569 |         }; ⟦EOL⟧
+// 해설 L570: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(headNo, 1, palette.Length) / 지역 변수를 선언합니다: var color = palette[Math.Clamp(headNo, 1, palette.Length) - 1]; / 변수의 초기값을 지정합니다: color = palette[Math.Clamp(headNo, 1, palette.Length) - 1]
+L000570 |         var color = palette[Math.Clamp(headNo, 1, palette.Length) - 1]; ⟦EOL⟧
+// 해설 L571: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(color.R, color.G, color.B, alpha) / 호출자에게 값 또는 제어를 반환합니다: return CreateBrush(color.R, color.G, color.B, alpha);
+L000571 |         return CreateBrush(color.R, color.G, color.B, alpha); ⟦EOL⟧
+// 해설 L572: 구문 블록 경계입니다 · 소속 CreateHeadBrush.
+L000572 |     } ⟦EOL⟧
+L000573 |  ⟦EOL⟧
+// 해설 L574: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateBrush(byte, byte, byte, byte)
+L000574 |     private static Brush CreateBrush(byte red, byte green, byte blue, byte alpha = 255) ⟦EOL⟧
+// 해설 L575: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000575 |     { ⟦EOL⟧
+// 해설 L576: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(alpha, red, green, blue) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue))
+L000576 |         var brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)); ⟦EOL⟧
+// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000577 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L578: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000578 |         return brush; ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000579 |     } ⟦EOL⟧
+L000580 |  ⟦EOL⟧
+// 해설 L581: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.BuildHeadLayout(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
+L000581 |     internal static ST_PREVIEW_HEAD_LAYOUT BuildHeadLayout(IReadOnlyList<ST_SYSTEM_PARAMETER> settings) ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 BuildHeadLayout.
+L000582 |     { ⟦EOL⟧
+// 해설 L583: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD BuildPreview(int)
+L000583 |         global::Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD BuildPreview(int headNo) ⟦EOL⟧
+// 해설 L584: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000584 |         { ⟦EOL⟧
+// 해설 L585: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadPositionX(settings, headNo) / 지역 변수를 선언합니다: var position = ReadHeadPositionX(settings, headNo); / 변수의 초기값을 지정합니다: position = ReadHeadPositionX(settings, headNo)
+L000585 |             var position = ReadHeadPositionX(settings, headNo); ⟦EOL⟧
+// 해설 L586: 지역 변수를 선언합니다: const double fallbackWidthX = 110.0; / 변수의 초기값을 지정합니다: fallbackWidthX = 110.0
+L000586 |             const double fallbackWidthX = 110.0; ⟦EOL⟧
+// 해설 L587: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSettingDouble(settings, fallbackWidthX, $"H{headNo:00}_SCAN_FIELD_WIDTH_X", $"H{headNo:00}_HEAD_FIELD_WIDTH_X") / 지역 변수를 선언합니다: var widthX = ReadSettingDouble(settings, fallbackWidthX, $"H{headNo:00}_SCAN_FIELD_WIDTH_X", $"H{headNo:00}_HEAD_FIELD_WIDTH_X"); / 변수의 초기값을 지정합니다: widthX = ReadSettingDouble(settings, fallbackWidthX, $"H{headNo:00}_SCAN_FIELD_WIDTH_X", $"H{headNo:00}_HEAD_FIELD_WIDTH_X")
+L000587 |             var widthX = ReadSettingDouble(settings, fallbackWidthX, $"H{headNo:00}_SCAN_FIELD_WIDTH_X", $"H{headNo:00}_HEAD_FIELD_WIDTH_X"); ⟦EOL⟧
+// 해설 L588: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PREVIEW_HEAD_FIELD(headNo, position, widthX > 0.0 ? widthX : fallbackWidthX) / 조건에 따라 결과식을 선택합니다: widthX > 0.0 ? widthX : fallbackWidthX / 호출자에게 값 또는 제어를 반환합니다: return new ST_PREVIEW_HEAD_FIELD(headNo, position, widthX > 0.0 ? widthX : fallbackWidthX);
+L000588 |             return new ST_PREVIEW_HEAD_FIELD(headNo, position, widthX > 0.0 ? widthX : fallbackWidthX); ⟦EOL⟧
+// 해설 L589: 구문 블록 경계입니다 · 소속 BuildPreview.
+L000589 |         } ⟦EOL⟧
+L000590 |  ⟦EOL⟧
+// 해설 L591: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(BuildPreview).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Select(BuildPreview) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) / 지역 변수를 선언합니다: var fields = Enumerable.Range(1, 8).Select(BuildPreview).ToArray(); / 변수의 초기값을 지정합니다: fields = Enumerable.Range(1, 8).Select(BuildPreview).ToArray()
+L000591 |         var fields = Enumerable.Range(1, 8).Select(BuildPreview).ToArray(); ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PREVIEW_HEAD_LAYOUT(fields) / 호출자에게 값 또는 제어를 반환합니다: return new ST_PREVIEW_HEAD_LAYOUT(fields);
+L000592 |         return new ST_PREVIEW_HEAD_LAYOUT(fields); ⟦EOL⟧
+// 해설 L593: 구문 블록 경계입니다 · 소속 BuildHeadLayout.
+L000593 |     } ⟦EOL⟧
+// 해설 L594: 구문 블록 경계입니다.
+L000594 | } ⟦EOL⟧

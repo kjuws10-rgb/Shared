@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>06-threading-snapshots-and-logs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><h1>06. 스레드·스냅샷·취소·로그를 이용해 멈춤과 오동작 찾기</h1>
+<p>&gt; 기준: <code>A3Drilling/master</code> · <code>5aee8e58439c9b455cae7c9593c9be986c3e682e</code>. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 장비 연결·가공·컴파일을 실행한 결과가 아닙니다.</p>
+<p>현장에서는 “버튼을 눌렀는데 멈췄다”만으로 원인을 알기 어렵습니다. <b>UI 스레드, Station 주기 스레드, 비동기 통신, 캐시된 상태, 파일 저장</b> 중 어디가 기다리는지 나눠야 합니다.</p>
+<p><img alt="동시성과 진단 경계" src="diagrams/06-thread.svg"></p>
+<pre data-language="mermaid"><code>flowchart TD
+ A[UI Dispatcher·버튼] --&gt; B[Manager 요청]
+ B --&gt; C[Station CtrlThread]
+ B --&gt; D[장치 비동기 명령]
+ E[공유 상태 취득 서비스] --&gt; F[메모리 Snapshot]
+ F --&gt; A
+ F --&gt; G[Alarm 평가]
+ C --&gt; H[시퀀스·통신·제품 로그]
+ D --&gt; H
+ A --&gt; H</code></pre>
+<h2>1. CtrlThread는 Task.Run 한 번과 다르다</h2>
+<p><code>CtrlThread</code>는 자체 Thread, pause/stop event, stopRequested, state, LastThreadError를 갖는 반복 실행 기반 클래스입니다. <code>ThreadProcess</code>는 stop까지 Run을 반복하고 delay 동안 stop event를 기다립니다. Run에서 예외가 나면 LastThreadError를 저장하고 OnThreadError를 호출합니다. 소스상 이 catch 자체가 즉시 while을 종료하지는 않습니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L4-L15">스레드 기본 필드</a> <a class="small" href="../../pages/cc89917c153933d31040.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L232-L281">반복 실행과 예외 처리</a> <a class="small" href="../../pages/cc89917c153933d31040.html">[오프라인 파일 해설]</a>.</p>
+<table><thead><tr><th>상태</th><th>뜻</th><th>주의</th></tr></thead><tbody>
+<tr><td>Stopped</td><td>실행 스레드 정지</td><td>장치의 Motion 정지와 별개</td></tr>
+<tr><td>Running</td><td>반복 Run 동작</td><td>내부 시퀀스가 Ready일 수도 있음</td></tr>
+<tr><td>Paused</td><td>반복 스레드 일시정지</td><td>이미 보낸 하드웨어 명령을 자동 취소하는 뜻 아님</td></tr>
+<tr><td>Stopping</td><td>stop 요청 중</td><td>현재 SDK 호출이 끝나지 않으면 기다릴 수 있음</td></tr>
+<tr><td>Error</td><td>stop timeout 등 오류 상태</td><td>LastThreadError와 상위 Station 상태를 같이 봄</td></tr>
+</tbody></table>
+<p>근거: <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L286-L293">CtrlThread 상태 enum</a> <a class="small" href="../../pages/cc89917c153933d31040.html">[오프라인 파일 해설]</a>.</p>
+<p><code>Stop</code>은 stopRequested와 event를 설정하고 외부 스레드에서 호출했다면 최대 3초 Join합니다. 멈추지 못하면 TimeoutException과 Error 상태를 남깁니다. 현재 스레드 자신이 Stop을 호출한 경우 Join하지 않습니다. 따라서 “Stop 버튼은 즉시 모든 장비 작업을 취소한다”는 설명은 이 구현만으로 성립하지 않습니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L128-L186">Stop의 Join과 timeout</a> <a class="small" href="../../pages/cc89917c153933d31040.html">[오프라인 파일 해설]</a>.</p>
+<h2>2. Station의 취소와 Thread의 정지는 다른 층이다</h2>
+<p>Station Start는 요청 token에 linked CancellationTokenSource를 만들고 sequence를 PowerCheck로 바꾼 다음 CtrlThread를 시작합니다. RunSequenceStep은 해당 token을 전달하며 OperationCanceledException은 Station Stop 전이로 이어집니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L295-L319">sequence CTS 생성</a> <a class="small" href="../../pages/910f2fe0aee5bfd74e0b.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L371-L403">취소와 단계 token</a> <a class="small" href="../../pages/910f2fe0aee5bfd74e0b.html">[오프라인 파일 해설]</a>.</p>
+<p>취소를 지원하는 함수라도 이미 시작한 외부 SDK의 동기 호출을 즉시 중단할 수 있는지는 그 래퍼의 구현을 확인해야 합니다. 이 문장은 일반적 한계를 지적하는 검토 지침이며 이 소스의 특정 SDK가 반드시 중단 불가능하다고 단정하는 것은 아닙니다.</p>
+<h2>3. 잠금은 무엇을 보호하는가</h2>
+<table><thead><tr><th>소유자</th><th>동기화 장치</th><th>보호하는 데이터/작업</th><th>변경 시 위험</th></tr></thead><tbody>
+<tr><td>CRecipeManager</td><td>Recipe operation SemaphoreSlim, cache lock, history gate</td><td>파일 기반 작업·캐시·이력 순서</td><td>파일 저장 뒤 오래된 캐시를 다시 덮음</td></tr>
+<tr><td>CSettingManager</td><td>save lock, cache lock</td><td>section 저장과 캐시 publish</td><td>저장 실패인데 UI만 새 값</td></tr>
+<tr><td>CProductManager</td><td>update gate</td><td>한 Product의 전이·영속화</td><td>두 갱신이 이전 상태에서 출발하여 결과 유실</td></tr>
+<tr><td>CStationProcess</td><td>sequence lock</td><td>시작/준비/수동 MOF와 sequence 상태</td><td>같은 모델의 이중 실행</td></tr>
+<tr><td>Automation1Comm</td><td>comm lock → status lock</td><td>Controller 수명·명령과 상태 조회</td><td>반대 순서 잠금으로 deadlock</td></tr>
+<tr><td>Monitor polling</td><td>context/snapshot lock, motor poll gate</td><td>선택 화면과 결과 사본</td><td>화면 전환과 이전 응답 혼합</td></tr>
+</tbody></table>
+<p>근거: <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L11-L32">Recipe gate</a> <a class="small" href="../../pages/f884449d2a8c0ab3313f.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L23-L49">Setting cache/save lock</a> <a class="small" href="../../pages/e30369e026b7725c2147.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L25-L45">Product gate</a> <a class="small" href="../../pages/c3a1c34819151ffec980.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L219-L223">Station prepare lock</a> <a class="small" href="../../pages/910f2fe0aee5bfd74e0b.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L16-L25">Automation1 lock 순서</a> <a class="small" href="../../pages/eeac03ce4c71b2868950.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L17-L31">Monitor 동기화</a> <a class="small" href="../../pages/5d56a3eab67f2b82eab4.html">[오프라인 파일 해설]</a>.</p>
+<p>설명용 주석을 추가할 때는 “스레드 안전”이라는 한 줄보다 <b>어떤 필드/시점/잠금 순서/잠금 밖 I/O</b>를 보호하는지 구체적으로 써야 합니다. lock이 있다는 사실만으로 객체 전체가 thread safe라고 표현하지 않습니다.</p>
+<h2>4. 상태 취득과 화면 표시를 분리하는 구조</h2>
+<p><code>CManager.StartBackgroundMonitoring</code>은 공유 Motor/Laser/BET 상태 스냅샷을 시작하고 알람 평가에 <code>ReadAlarmDeviceSnapshot</code>을 공급합니다. 해당 함수는 “memory-only” 의도로 공유 Snapshot을 읽고 SnapshotError를 모읍니다. 느린 장치 SDK 호출이 알람 워커를 직접 붙잡지 않도록 분리한 구조입니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L259-L268">공유 취득과 알람 감시</a> <a class="small" href="../../pages/3ef93401629996b0203b.html">[오프라인 파일 해설]</a>, <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L280-L303">메모리 Snapshot을 이용한 알람 입력</a> <a class="small" href="../../pages/3ef93401629996b0203b.html">[오프라인 파일 해설]</a>.</p>
+<p>이 구조에서 표시한 값은 <b>현재 메모리에서 마지막으로 확인한 결과</b>일 수 있습니다. 값이 정상 범위여도 오래된 결과라면 안전 판단에 그대로 쓰면 안 되므로, 새 검증에서는 성공시각/오류/갱신 여부를 함께 확인합니다. 소스의 SnapshotError와 실제 서비스의 stale 규칙을 같이 읽어야 합니다.</p>
+<p><code>CMonitorStatusPollingService</code>는 LoopInterval 250 ms, ActiveInterval 0.5초, CommunicationInterval 1초 등의 주기를 정의하고 활성 화면 context에 따라 대상을 달리 선택합니다. <code>UpdateContext</code>는 선택 Tab/장치 번호/MELSEC group을 새 context로 저장하고 <code>GetSnapshot</code>은 lock 아래 결과를 반환합니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L9-L59">Monitor 주기·context·snapshot</a> <a class="small" href="../../pages/5d56a3eab67f2b82eab4.html">[오프라인 파일 해설]</a>.</p>
+<p>주의할 실제 코드가 있습니다. PowerMeter의 두 Poll 호출은 확인한 범위에서 주석 처리되어 있습니다. 따라서 상수명이 <code>ActivePowerMeterMeasureInterval</code>이라고 모든 화면에서 PowerMeter를 그 주기로 실제 측정한다고 설명하면 틀립니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L108-L136">Tab별 실제 polling 분기</a> <a class="small" href="../../pages/5d56a3eab67f2b82eab4.html">[오프라인 파일 해설]</a>.</p>
+<h2>5. UI 변경 통지는 자동으로 모든 스레드를 보정해 주지 않는다</h2>
+<p><code>CBindingBase</code>의 SetProperty는 값이 같으면 알리지 않고, SetSequenceProperty는 ReferenceEquals/SequenceEqual로 같은 목록 갱신을 피합니다. OnPropertyChanged는 속성명별 이벤트를 호출하는 switch입니다. 이 함수 자체가 Dispatcher로 이동하는 것은 아닙니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/CBindingBase.cs#L735-L788">동일값 억제와 Property 이벤트</a> <a class="small" href="../../pages/466a55fc69101a731615.html">[오프라인 파일 해설]</a>.</p>
+<p>새 비동기 작업이 UI 속성이나 ObservableCollection을 바꾸는 경우 해당 경로의 Dispatcher 사용 여부를 확인해야 합니다. 한곳의 Dispatcher를 발견했다고 모든 await 이후 UI 접근이 안전하다고 판단하지 않습니다. RootView는 알람 갱신에 전용 Dispatcher를 보유하고 큐잉하는 경로가 있으므로, 유사 작업도 같은 패턴을 검토할 수 있습니다. (이 장은 전 UI 스레드 접근의 무결성을 검증한 보고서가 아닙니다.)</p>
+<h2>6. 로그는 사용자의 클릭·의도·실제 결과를 따로 연결해야 한다</h2>
+<p><code>CUiLogService.Configure</code>는 WPF ButtonBase.ClickEvent의 class handler를 등록합니다. OnButtonClicked는 화면·Control·CommandParameter·Detail을 얻어 WriteClick에 넘깁니다. <b>클릭 로그가 있다는 것과 명령이 허용·실행·완료됐다는 것은 다릅니다.</b> 실제 명령/시퀀스/통신 결과 로그와 시간·식별자를 연결해야 합니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CUiLogService.cs#L17-L69">UI 클릭 로그 등록과 기록</a> <a class="small" href="../../pages/ba5db4fa89eb1e3153ca.html">[오프라인 파일 해설]</a>.</p>
+<p>키 입력 dialog와 password dialog의 일부 글자 버튼은 ShouldSkipButton에서 제외합니다. 따라서 모든 키 입력이 그대로 텍스트 로그에 남는다고 설명해서는 안 됩니다. 진단용 로그를 확장할 때도 비밀번호·키·민감한 원문을 추가하지 않습니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CUiLogService.cs#L72-L92">입력 버튼 로그 제외</a> <a class="small" href="../../pages/ba5db4fa89eb1e3153ca.html">[오프라인 파일 해설]</a>.</p>
+<table><thead><tr><th>진단 질문</th><th>우선 확인할 근거</th></tr></thead><tbody>
+<tr><td>사용자가 뭘 눌렀는가</td><td>UI click의 화면·Control·parameter·시각</td></tr>
+<tr><td>명령이 수락됐는가</td><td>Station 전이/Interlock 판단/명령 accept</td></tr>
+<tr><td>어떤 파일·조건이었는가</td><td>RecipeId/Product snapshot/Script manifest·RunId</td></tr>
+<tr><td>외부 장비가 뭘 응답했는가</td><td>Interface command/response·MELSEC write/read 상태</td></tr>
+<tr><td>실제 완료됐는가</td><td>Task completion·Review 저장·Product 결과</td></tr>
+<tr><td>완료 뒤 로그만 실패했는가</td><td>commit 이후 History/Log error와 Active 파일</td></tr>
+</tbody></table>
+<p>공통 로그의 의미는 각 호출부와 연결해 읽습니다. 예를 들어 Product는 Active 저장 이후 로그 실패가 상태 전이를 실패로 바꾸지 않도록 처리합니다. 클릭 로그가 없거나 이력이 실패했다고 실제 실행도 없었다고 단정하지 않습니다. <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L789-L819">Product의 상태와 이력 분리</a> <a class="small" href="../../pages/c3a1c34819151ffec980.html">[오프라인 파일 해설]</a>.</p>
+<h2>7. 현장 디버깅을 위한 검증 계획</h2>
+<p>1. <b>연속 클릭/교차 요청</b>: Start 두 번, Prepare 중 다른 Recipe 선택, Stop/Reset 동시 요청을 격리 테스트합니다. 실제 명령 수와 최종 상태를 기록합니다.</p>
+<p>2. <b>응답 지연</b>: 가짜 SDK/파일 어댑터를 지연시켜 UI 응답성·snapshot 오류·Stop timeout을 각각 확인합니다.</p>
+<p>3. <b>취소 시점 분리</b>: 파일 쓰기 전/후, upload 전/후, queue feeding 중의 취소를 나눠 부분 완료와 중복 재시도를 확인합니다.</p>
+<p>4. <b>메모리/파일 불일치</b>: 저장 성공 후 이력 실패를 주입하고 새로고침/재시작이 올바른 현재값을 보여주는지 확인합니다.</p>
+<p>5. <b>실행 식별자 연결</b>: 같은 Recipe를 연속 실행해도 Product/Glass/Script directory/RunId가 섞이지 않는지 확인합니다.</p>
+<p>6. <b>원인 분석용 수집</b>: 알람 앞뒤의 UI/Station/Interface/Product/Script 상태를 같은 시간축으로 묶되 로그 반출 범위는 고객의 승인 조건을 따릅니다.</p>
+<p>다음 읽기: <a href="07-change-impact-and-offline-reference.md.html">07. 변경 영향과 Offline Studio</a>.</p></main></html>

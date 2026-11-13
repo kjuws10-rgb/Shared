@@ -1,0 +1,205 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CBETFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000002 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000004 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000005 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000007 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000008 | using Drilling.File.Parser; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000010 | namespace Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CBETFile(string configRoot) : CBETFileBase
+L000011 | public sealed class CBETFile(string configRoot) : CBETFileBase ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: Headers = ["INDEX", "DESCRIPTION", "DIV", "MAG", "SPOTSIZE"]
+L000013 |     private static readonly IReadOnlyList<string> Headers = ["INDEX", "DESCRIPTION", "DIV", "MAG", "SPOTSIZE"]; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_BET_TABLE_DATA>> Drilling.File.JHMI.CBETFile.Load(System.Threading.CancellationToken)
+L000014 |     public override Task<IReadOnlyList<ST_BET_TABLE_DATA>> Load(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 Load.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000016 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureFiles()
+L000017 |         EnsureFiles(); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_BET_TABLE_DATA>>(ReadTable(GetFormPath())) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadTable(GetFormPath()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath() / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<ST_BET_TABLE_DATA>>(ReadTable(GetFormPath()));
+L000018 |         return Task.FromResult<IReadOnlyList<ST_BET_TABLE_DATA>>(ReadTable(GetFormPath())); ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 Load.
+L000019 |     } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.File.JHMI.CBETFile.Save(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_BET_TABLE_DATA>, System.Threading.CancellationToken)
+L000021 |     public override Task Save(IReadOnlyList<ST_BET_TABLE_DATA> table, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Save.
+L000022 |     { ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000023 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteTable(GetFormPath(), table) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath()
+L000024 |         WriteTable(GetFormPath(), table); ⟦EOL⟧
+// 해설 L25: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000025 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 Save.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CBETFile.EnsureFiles()
+L000028 |     private void EnsureFiles() ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 EnsureFiles.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(GetFormPath()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath() / 조건에 따라 분기합니다: if (!System.IO.File.Exists(GetFormPath()))
+L000030 |         if (!System.IO.File.Exists(GetFormPath())) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 EnsureFiles.
+L000031 |         { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteTable(GetFormPath(), CreateDefaultTable()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetFormPath() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDefaultTable()
+L000032 |             WriteTable(GetFormPath(), CreateDefaultTable()); ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 EnsureFiles.
+L000033 |         } ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 EnsureFiles.
+L000034 |     } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.List<Drilling.Common.Interface.ST_BET_TABLE_DATA> Drilling.File.JHMI.CBETFile.ReadTable(string)
+L000036 |     private List<ST_BET_TABLE_DATA> ReadTable(string path) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ReadTable.
+L000037 |     { ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000038 |         bool ShouldIncludeItem(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000039 |         { ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "INDEX")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "INDEX") / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "INDEX"));
+L000040 |             return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "INDEX")); ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000041 |         } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.ST_BET_TABLE_DATA BuildBet(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000043 |         global::Drilling.Common.Interface.ST_BET_TABLE_DATA BuildBet(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row, int order) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 BuildBet.
+L000044 |         { ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_BET_TABLE_DATA(ReadInt(CCsvParser.Get(row, "INDEX"), order), ReadMotorStep(CCsvParser.Get(row, "MAG")), ReadMotorStep(CCsvParser.Get(row, "DIV")), CCsvParser.Get(row, "DESCRIPTION")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(CCsvParser.Get(row, "INDEX"), order) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "INDEX") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotorStep(CCsvParser.Get(row, "MAG")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "MAG") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotorStep(CCsvParser.Get(row, "
+L000045 |             return new ST_BET_TABLE_DATA(ReadInt(CCsvParser.Get(row, "INDEX"), order), ReadMotorStep(CCsvParser.Get(row, "MAG")), ReadMotorStep(CCsvParser.Get(row, "DIV")), CCsvParser.Get(row, "DESCRIPTION")); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 BuildBet.
+L000046 |         } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)
+L000048 |         int SelectIndex(global::Drilling.Common.Interface.ST_BET_TABLE_DATA row) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 SelectIndex.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 호출자에게 값 또는 제어를 반환합니다: return row.Index;
+L000050 |             return row.Index; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 SelectIndex.
+L000051 |         } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex).ToList() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path).Where(ShouldIncludeItem) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Read(path).Where(ShouldIncludeItem).Select(
+L000053 |         return CCsvParser.Read(path).Where(ShouldIncludeItem).Select(BuildBet).OrderBy(SelectIndex).ToList(); ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 ReadTable.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CBETFile.WriteTable(string, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_BET_TABLE_DATA>)
+L000056 |     private static void WriteTable(string path, IReadOnlyList<ST_BET_TABLE_DATA> table) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 WriteTable.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · int SelectIndex(Drilling.Common.Interface.ST_BET_TABLE_DATA)
+L000058 |         int SelectIndex(global::Drilling.Common.Interface.ST_BET_TABLE_DATA row) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 SelectIndex.
+L000059 |         { ⟦EOL⟧
+// 해설 L60: 호출자에게 값 또는 제어를 반환합니다: return row.Index;
+L000060 |             return row.Index; ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 SelectIndex.
+L000061 |         } ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.Dictionary<string, string> BuildBetTableRow(Drilling.Common.Interface.ST_BET_TABLE_DATA)
+L000063 |         global::System.Collections.Generic.Dictionary<string, string> BuildBetTableRow(global::Drilling.Common.Interface.ST_BET_TABLE_DATA row) ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 BuildBetTableRow.
+L000064 |         { ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string> { ["INDEX"] = row.Index.ToString(CultureInfo.InvariantCulture), ["DESCRIPTION"] = row.Description, ["DIV"] = row.Divergence.ToString(CultureInfo.InvariantCulture), ["MAG"] = row.Magnificati… / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string> { ["INDEX"] = row.Index.ToString(CultureInfo.InvariantCulture), ["DESCRIPTION"] = row.Description, ["DIV"] = row.Divergence.ToString(CultureInfo.InvariantCulture), ["MAG"] = row.Magnification.
+L000065 |             return new Dictionary<string, string> ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 BuildBetTableRow.
+L000066 |             { ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: ["INDEX"] = row.Index.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Index.ToString(CultureInfo.InvariantCulture)
+L000067 |                 ["INDEX"] = row.Index.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L68: 값을 대상에 대입합니다: ["DESCRIPTION"] = row.Description
+L000068 |                 ["DESCRIPTION"] = row.Description, ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: ["DIV"] = row.Divergence.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Divergence.ToString(CultureInfo.InvariantCulture)
+L000069 |                 ["DIV"] = row.Divergence.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: ["MAG"] = row.Magnification.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Magnification.ToString(CultureInfo.InvariantCulture)
+L000070 |                 ["MAG"] = row.Magnification.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: ["SPOTSIZE"] = row.SpotSize.ToString("F6", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.SpotSize.ToString("F6", CultureInfo.InvariantCulture)
+L000071 |                 ["SPOTSIZE"] = row.SpotSize.ToString("F6", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 BuildBetTableRow.
+L000072 |             }; ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 BuildBetTableRow.
+L000073 |         } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: table.OrderBy(SelectIndex).Select(BuildBetTableRow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: table.OrderBy(SelectIndex) / 지역 변수를 선언합니다: var rows = table.OrderBy(SelectIndex).Select(BuildBetTableRow); / 변수의 초기값을 지정합니다: rows = table.OrderBy(SelectIndex).Select(BuildBetTableRow)
+L000075 |         var rows = table.OrderBy(SelectIndex).Select(BuildBetTableRow); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(path, Headers, rows)
+L000076 |         CCsvParser.Write(path, Headers, rows); ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 WriteTable.
+L000077 |     } ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_BET_TABLE_DATA> Drilling.File.JHMI.CBETFile.CreateDefaultTable()
+L000079 |     private static IReadOnlyList<ST_BET_TABLE_DATA> CreateDefaultTable() ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 CreateDefaultTable.
+L000080 |     { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 1020, 1626, "2times") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 2351, 1118, "3times") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(2, 3014, 1278, "4times") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(3, 3410, 1706, "5times") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(4, 3673, 2267, "6times") / 호출자에게 값 또는 제어를 반환합니다: return[new(0, 1020, 1626, "2times"), new(1, 2351, 1118, "3times"), new(2, 3014, 1278, "4times"), new(3, 3410, 1706, "5times"), new(4, 3673, 2267, "6times")];
+L000081 |         return[new(0, 1020, 1626, "2times"), new(1, 2351, 1118, "3times"), new(2, 3014, 1278, "4times"), new(3, 3410, 1706, "5times"), new(4, 3673, 2267, "6times")]; ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 CreateDefaultTable.
+L000082 |     } ⟦EOL⟧
+L000083 |  ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CBETFile.ReadMotorStep(string)
+L000084 |     private static int ReadMotorStep(string value) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 ReadMotorStep.
+L000085 |     { ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed))
+L000086 |         if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 ReadMotorStep.
+L000087 |         { ⟦EOL⟧
+// 해설 L88: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000088 |             return 0; ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 ReadMotorStep.
+L000089 |         } ⟦EOL⟧
+L000090 |  ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)Math.Round(parsed), 0, 4500) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(parsed) / 호출자에게 값 또는 제어를 반환합니다: return Math.Clamp((int)Math.Round(parsed), 0, 4500);
+L000091 |         return Math.Clamp((int)Math.Round(parsed), 0, 4500); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 ReadMotorStep.
+L000092 |     } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CBETFile.GetFormPath()
+L000094 |     private string GetFormPath() ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 GetFormPath.
+L000095 |     { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "JHMI_BET.csv") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(configRoot, "JHMI_BET.csv");
+L000096 |         return Path.Combine(configRoot, "JHMI_BET.csv"); ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 GetFormPath.
+L000097 |     } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CBETFile.ReadInt(string, int)
+L000099 |     private static int ReadInt(string value, int defaultValue) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 ReadInt.
+L000100 |     { ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000101 |         return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 ReadInt.
+L000102 |     } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.JHMI.CBETFile.ReadDouble(string, double)
+L000104 |     private static double ReadDouble(string value, double defaultValue) ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000105 |     { ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue;
+L000106 |         return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : defaultValue; ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000107 |     } ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다.
+L000108 | } ⟦EOL⟧

@@ -1,0 +1,438 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/CButtonCommand.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu
+L000001 | namespace Drilling.UI.Menu ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 |     using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000004 |     using System.ComponentModel; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000005 |     using System.Windows; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls.Primitives;
+L000006 |     using System.Windows.Controls.Primitives; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000007 |     using System.Windows.Media; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public sealed class CButtonCommand(Action<object?> execute, Predicate<object?>? canExecute = null) : ICommand
+L000009 |     public sealed class CButtonCommand(Action<object?> execute, Predicate<object?>? canExecute = null) : ICommand ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DoNothing)
+L000011 |         public static CButtonCommand NoOp { get; } = new(DoNothing); ⟦EOL⟧
+L000012 |  ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.EventHandler? Drilling.UI.Menu.CButtonCommand.CanExecuteChanged
+L000013 |         public event EventHandler? CanExecuteChanged; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.CButtonCommand.CanExecute(object?)
+L000014 |         public bool CanExecute(object? parameter) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 CanExecute.
+L000015 |         { ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(parameter) / 호출자에게 값 또는 제어를 반환합니다: return canExecute?.Invoke(parameter) ?? true;
+L000016 |             return canExecute?.Invoke(parameter) ?? true; ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 CanExecute.
+L000017 |         } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommand.Execute(object?)
+L000019 |         public void Execute(object? parameter) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 Execute.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: execute(parameter)
+L000021 |             execute(parameter); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Execute.
+L000022 |         } ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged()
+L000024 |         public void NotifyCanExecuteChanged() ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 NotifyCanExecuteChanged.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, EventArgs.Empty)
+L000026 |             CanExecuteChanged?.Invoke(this, EventArgs.Empty); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 NotifyCanExecuteChanged.
+L000027 |         } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommand.DoNothing(object?)
+L000029 |         private static void DoNothing(object? parameter) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 DoNothing.
+L000030 |         { ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 DoNothing.
+L000031 |         } ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다.
+L000032 |     } ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 타입의 구조/상속 선언입니다: public static class CButtonCommandBehavior
+L000034 |     public static class CButtonCommandBehavior ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다.
+L000035 |     { ⟦EOL⟧
+// 해설 L36: 변수의 초기값을 지정합니다: RegisteredTargets = []
+L000036 |         private static readonly Dictionary<CButtonCommand, HashSet<UIElement>> RegisteredTargets = []; ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyPropertyDescriptor.FromProperty(ButtonBase.CommandParameterProperty, typeof(ButtonBase)) / 변수의 초기값을 지정합니다: CommandParameterDescriptor = DependencyPropertyDescriptor.FromProperty(ButtonBase.CommandParameterProperty, typeof(ButtonBase))
+L000037 |         private static readonly DependencyPropertyDescriptor CommandParameterDescriptor = DependencyPropertyDescriptor.FromProperty(ButtonBase.CommandParameterProperty, typeof(ButtonBase)); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached("Command", typeof(CButtonCommand), typeof(CButtonCommandBehavior), new PropertyMetadata(null, OnCommandChanged)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(null, OnCommandChanged) / 변수의 초기값을 지정합니다: CommandProperty = DependencyProperty.RegisterAttached("Command", typeof(CButtonCommand), typeof(CButtonCommandBehavior), new PropertyMetadata(null, OnCommandChanged))
+L000038 |         public static readonly DependencyProperty CommandProperty = DependencyProperty.RegisterAttached("Command", typeof(CButtonCommand), typeof(CButtonCommandBehavior), new PropertyMetadata(null, OnCommandChanged)); ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand? Drilling.UI.Menu.CButtonCommandBehavior.GetCommand(DependencyObject)
+L000039 |         public static CButtonCommand? GetCommand(DependencyObject target) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 GetCommand.
+L000040 |         { ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(CommandProperty) / 호출자에게 값 또는 제어를 반환합니다: return (CButtonCommand? )target.GetValue(CommandProperty);
+L000041 |             return (CButtonCommand? )target.GetValue(CommandProperty); ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 GetCommand.
+L000042 |         } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.SetCommand(DependencyObject, Drilling.UI.Menu.CButtonCommand?)
+L000044 |         public static void SetCommand(DependencyObject target, CButtonCommand? value) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 SetCommand.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(CommandProperty, value)
+L000046 |             target.SetValue(CommandProperty, value); ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 SetCommand.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.OnCommandChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+L000049 |         private static void OnCommandChanged(DependencyObject target, DependencyPropertyChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000050 |         { ⟦EOL⟧
+// 해설 L51: 조건에 따라 분기합니다: if (target is not FrameworkElement element)
+L000051 |             if (target is not FrameworkElement element) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000052 |             { ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return;
+L000053 |                 return; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000054 |             } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded -= Element_Loaded
+L000056 |             element.Loaded -= Element_Loaded; ⟦EOL⟧
+// 해설 L57: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded -= Element_Unloaded
+L000057 |             element.Unloaded -= Element_Unloaded; ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: DetachElement(element, eventArgs.OldValue as CButtonCommand)
+L000058 |             DetachElement(element, eventArgs.OldValue as CButtonCommand); ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (eventArgs.NewValue is CButtonCommand newCommand)
+L000059 |             if (eventArgs.NewValue is CButtonCommand newCommand) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000060 |             { ⟦EOL⟧
+// 해설 L61: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded += Element_Loaded
+L000061 |                 element.Loaded += Element_Loaded; ⟦EOL⟧
+// 해설 L62: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded += Element_Unloaded
+L000062 |                 element.Unloaded += Element_Unloaded; ⟦EOL⟧
+// 해설 L63: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000063 |                 // A command can be assigned before the control joins the visual ⟦EOL⟧
+// 해설 L64: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000064 |                 // tree (including Review screen rebuilds). Attach immediately; ⟦EOL⟧
+// 해설 L65: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000065 |                 // AttachElement is idempotent and Loaded will only refresh it. ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: AttachElement(element, newCommand)
+L000066 |                 AttachElement(element, newCommand); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, newCommand)
+L000067 |                 UpdateTargetState(element, newCommand); ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000068 |             } ⟦EOL⟧
+// 해설 L69: 앞 조건이 거짓인 경로입니다: else
+L000069 |             else ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.IsEnabledProperty, true)
+L000071 |                 element.SetCurrentValue(UIElement.IsEnabledProperty, true); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000072 |             } ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 OnCommandChanged.
+L000073 |         } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.Element_Loaded(object, RoutedEventArgs)
+L000075 |         private static void Element_Loaded(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000076 |         { ⟦EOL⟧
+// 해설 L77: 조건에 따라 분기합니다: if (sender is not FrameworkElement element)
+L000077 |             if (sender is not FrameworkElement element) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000078 |             { ⟦EOL⟧
+// 해설 L79: 호출자에게 값 또는 제어를 반환합니다: return;
+L000079 |                 return; ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000080 |             } ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element) / 지역 변수를 선언합니다: var command = GetCommand(element); / 변수의 초기값을 지정합니다: command = GetCommand(element)
+L000082 |             var command = GetCommand(element); ⟦EOL⟧
+// 해설 L83: 조건에 따라 분기합니다: if (command is not null)
+L000083 |             if (command is not null) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000084 |             { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: AttachElement(element, command)
+L000085 |                 AttachElement(element, command); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, command)
+L000086 |                 UpdateTargetState(element, command); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000087 |             } ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 Element_Loaded.
+L000088 |         } ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.Element_Unloaded(object, RoutedEventArgs)
+L000090 |         private static void Element_Unloaded(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Element_Unloaded.
+L000091 |         { ⟦EOL⟧
+// 해설 L92: 조건에 따라 분기합니다: if (sender is FrameworkElement element)
+L000092 |             if (sender is FrameworkElement element) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Element_Unloaded.
+L000093 |             { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: DetachElement(element, GetCommand(element)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element)
+L000094 |                 DetachElement(element, GetCommand(element)); ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Element_Unloaded.
+L000095 |             } ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Element_Unloaded.
+L000096 |         } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.AttachElement(UIElement, Drilling.UI.Menu.CButtonCommand)
+L000098 |         private static void AttachElement(UIElement element, CButtonCommand command) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 AttachElement.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterTarget(command, element)
+L000100 |             RegisterTarget(command, element); ⟦EOL⟧
+// 해설 L101: 조건에 따라 분기합니다: if (element is ButtonBase button)
+L000101 |             if (element is ButtonBase button) ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 AttachElement.
+L000102 |             { ⟦EOL⟧
+// 해설 L103: 복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click -= Button_Click
+L000103 |                 button.Click -= Button_Click; ⟦EOL⟧
+// 해설 L104: 복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click += Button_Click
+L000104 |                 button.Click += Button_Click; ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged)
+L000105 |                 CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.AddValueChanged(button, ButtonCommandParameterChanged)
+L000106 |                 CommandParameterDescriptor.AddValueChanged(button, ButtonCommandParameterChanged); ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 AttachElement.
+L000107 |             } ⟦EOL⟧
+// 해설 L108: 앞 조건이 거짓인 경로입니다: else
+L000108 |             else ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 AttachElement.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown -= Element_MouseLeftButtonDown
+L000110 |                 element.MouseLeftButtonDown -= Element_MouseLeftButtonDown; ⟦EOL⟧
+// 해설 L111: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown += Element_MouseLeftButtonDown
+L000111 |                 element.MouseLeftButtonDown += Element_MouseLeftButtonDown; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 AttachElement.
+L000112 |             } ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 AttachElement.
+L000113 |         } ⟦EOL⟧
+L000114 |  ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.DetachElement(UIElement, Drilling.UI.Menu.CButtonCommand?)
+L000115 |         private static void DetachElement(UIElement element, CButtonCommand? command) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 DetachElement.
+L000116 |         { ⟦EOL⟧
+// 해설 L117: 조건에 따라 분기합니다: if (element is ButtonBase button)
+L000117 |             if (element is ButtonBase button) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 DetachElement.
+L000118 |             { ⟦EOL⟧
+// 해설 L119: 복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click -= Button_Click
+L000119 |                 button.Click -= Button_Click; ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged)
+L000120 |                 CommandParameterDescriptor.RemoveValueChanged(button, ButtonCommandParameterChanged); ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 DetachElement.
+L000121 |             } ⟦EOL⟧
+// 해설 L122: 앞 조건이 거짓인 경로입니다: else
+L000122 |             else ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 DetachElement.
+L000123 |             { ⟦EOL⟧
+// 해설 L124: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.MouseLeftButtonDown -= Element_MouseLeftButtonDown
+L000124 |                 element.MouseLeftButtonDown -= Element_MouseLeftButtonDown; ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 DetachElement.
+L000125 |             } ⟦EOL⟧
+L000126 |  ⟦EOL⟧
+// 해설 L127: 조건에 따라 분기합니다: if (command is not null)
+L000127 |             if (command is not null) ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 DetachElement.
+L000128 |             { ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: UnregisterTarget(command, element)
+L000129 |                 UnregisterTarget(command, element); ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 DetachElement.
+L000130 |             } ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 DetachElement.
+L000131 |         } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.RegisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)
+L000133 |         private static void RegisterTarget(CButtonCommand command, UIElement element) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 RegisterTarget.
+L000134 |         { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets) / 조건에 따라 분기합니다: if (!RegisteredTargets.TryGetValue(command, out var targets))
+L000135 |             if (!RegisteredTargets.TryGetValue(command, out var targets)) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 RegisterTarget.
+L000136 |             { ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: targets = []
+L000137 |                 targets = []; ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.Add(command, targets)
+L000138 |                 RegisteredTargets.Add(command, targets); ⟦EOL⟧
+// 해설 L139: 복합 대입 또는 이벤트 구독/해지 표현입니다: command.CanExecuteChanged += Command_CanExecuteChanged
+L000139 |                 command.CanExecuteChanged += Command_CanExecuteChanged; ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 RegisterTarget.
+L000140 |             } ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(element)
+L000142 |             targets.Add(element); ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 RegisterTarget.
+L000143 |         } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.UnregisterTarget(Drilling.UI.Menu.CButtonCommand, UIElement)
+L000145 |         private static void UnregisterTarget(CButtonCommand command, UIElement element) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000146 |         { ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets) / 조건에 따라 분기합니다: if (!RegisteredTargets.TryGetValue(command, out var targets))
+L000147 |             if (!RegisteredTargets.TryGetValue(command, out var targets)) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000148 |             { ⟦EOL⟧
+// 해설 L149: 호출자에게 값 또는 제어를 반환합니다: return;
+L000149 |                 return; ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000150 |             } ⟦EOL⟧
+L000151 |  ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Remove(element)
+L000152 |             targets.Remove(element); ⟦EOL⟧
+// 해설 L153: 조건에 따라 분기합니다: if (targets.Count == 0)
+L000153 |             if (targets.Count == 0) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000154 |             { ⟦EOL⟧
+// 해설 L155: 복합 대입 또는 이벤트 구독/해지 표현입니다: command.CanExecuteChanged -= Command_CanExecuteChanged
+L000155 |                 command.CanExecuteChanged -= Command_CanExecuteChanged; ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.Remove(command)
+L000156 |                 RegisteredTargets.Remove(command); ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000157 |             } ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 UnregisterTarget.
+L000158 |         } ⟦EOL⟧
+L000159 |  ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.Element_MouseLeftButtonDown(object, RoutedEventArgs)
+L000160 |         private static void Element_MouseLeftButtonDown(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000161 |         { ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (sender is not UIElement element)
+L000162 |             if (sender is not UIElement element) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000163 |             { ⟦EOL⟧
+// 해설 L164: 호출자에게 값 또는 제어를 반환합니다: return;
+L000164 |                 return; ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000165 |             } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: source = VisualTreeHelper.GetParent(source) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(source, element) / 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source) / 초기화·조건·증감이 있는 반복입니다: for (var source = eventArgs.OriginalSource as DependencyObject; source is not null && !ReferenceEquals(source, element); source = VisualTreeHelper.GetParent(source)) / 변수의 초기값을 지정합니다: source = eventArgs.OriginalSource as DependencyObject
+L000167 |             for (var source = eventArgs.OriginalSource as DependencyObject; source is not null && !ReferenceEquals(source, element); source = VisualTreeHelper.GetParent(source)) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000168 |             { ⟦EOL⟧
+// 해설 L169: 조건에 따라 분기합니다: if (source is ButtonBase)
+L000169 |                 if (source is ButtonBase) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000170 |                 { ⟦EOL⟧
+// 해설 L171: 호출자에게 값 또는 제어를 반환합니다: return;
+L000171 |                     return; ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000172 |                 } ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000173 |             } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(element) / 지역 변수를 선언합니다: var command = GetCommand(element); / 변수의 초기값을 지정합니다: command = GetCommand(element)
+L000175 |             var command = GetCommand(element); ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(null) / 조건에 따라 분기합니다: if (command is not null && command.CanExecute(null))
+L000176 |             if (command is not null && command.CanExecute(null)) ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000177 |             { ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Execute(null)
+L000178 |                 command.Execute(null); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000179 |             } ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 Element_MouseLeftButtonDown.
+L000180 |         } ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.Button_Click(object, RoutedEventArgs)
+L000182 |         private static void Button_Click(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 Button_Click.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 조건에 따라 분기합니다: if (sender is not ButtonBase button)
+L000184 |             if (sender is not ButtonBase button) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Button_Click.
+L000185 |             { ⟦EOL⟧
+// 해설 L186: 호출자에게 값 또는 제어를 반환합니다: return;
+L000186 |                 return; ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Button_Click.
+L000187 |             } ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(button) / 지역 변수를 선언합니다: var command = GetCommand(button); / 변수의 초기값을 지정합니다: command = GetCommand(button)
+L000189 |             var command = GetCommand(button); ⟦EOL⟧
+// 해설 L190: 지역 변수를 선언합니다: var parameter = button.CommandParameter; / 변수의 초기값을 지정합니다: parameter = button.CommandParameter
+L000190 |             var parameter = button.CommandParameter; ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(parameter) / 조건에 따라 분기합니다: if (command is not null && command.CanExecute(parameter))
+L000191 |             if (command is not null && command.CanExecute(parameter)) ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 Button_Click.
+L000192 |             { ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Execute(parameter)
+L000193 |                 command.Execute(parameter); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Button_Click.
+L000194 |             } ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 Button_Click.
+L000195 |         } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.Command_CanExecuteChanged(object?, System.EventArgs)
+L000197 |         private static void Command_CanExecuteChanged(object? sender, EventArgs eventArgs) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisteredTargets.TryGetValue(command, out var targets) / 조건에 따라 분기합니다: if (sender is not CButtonCommand command || !RegisteredTargets.TryGetValue(command, out var targets))
+L000199 |             if (sender is not CButtonCommand command || !RegisteredTargets.TryGetValue(command, out var targets)) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000200 |             { ⟦EOL⟧
+// 해설 L201: 호출자에게 값 또는 제어를 반환합니다: return;
+L000201 |                 return; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000202 |             } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 컬렉션 요소를 순회합니다: foreach (var element in targets)
+L000204 |             foreach (var element in targets) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000205 |             { ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(element, command)
+L000206 |                 UpdateTargetState(element, command); ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000207 |             } ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 Command_CanExecuteChanged.
+L000208 |         } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.ButtonCommandParameterChanged(object?, System.EventArgs)
+L000210 |         private static void ButtonCommandParameterChanged(object? sender, EventArgs eventArgs) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 조건에 따라 분기합니다: if (sender is not ButtonBase button)
+L000212 |             if (sender is not ButtonBase button) ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000213 |             { ⟦EOL⟧
+// 해설 L214: 호출자에게 값 또는 제어를 반환합니다: return;
+L000214 |                 return; ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000215 |             } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommand(button) / 지역 변수를 선언합니다: var command = GetCommand(button); / 변수의 초기값을 지정합니다: command = GetCommand(button)
+L000217 |             var command = GetCommand(button); ⟦EOL⟧
+// 해설 L218: 조건에 따라 분기합니다: if (command is not null)
+L000218 |             if (command is not null) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000219 |             { ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateTargetState(button, command)
+L000220 |                 UpdateTargetState(button, command); ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000221 |             } ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 ButtonCommandParameterChanged.
+L000222 |         } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.CButtonCommandBehavior.UpdateTargetState(UIElement, Drilling.UI.Menu.CButtonCommand)
+L000224 |         private static void UpdateTargetState(UIElement element, CButtonCommand command) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 UpdateTargetState.
+L000225 |         { ⟦EOL⟧
+// 해설 L226: 조건에 따라 결과식을 선택합니다: element is ButtonBase button ? button.CommandParameter : null / 지역 변수를 선언합니다: var parameter = element is ButtonBase button ? button.CommandParameter : null; / 변수의 초기값을 지정합니다: parameter = element is ButtonBase button ? button.CommandParameter : null
+L000226 |             var parameter = element is ButtonBase button ? button.CommandParameter : null; ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(parameter) / 지역 변수를 선언합니다: var canExecute = command.CanExecute(parameter); / 변수의 초기값을 지정합니다: canExecute = command.CanExecute(parameter)
+L000227 |             var canExecute = command.CanExecute(parameter); ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.IsEnabledProperty, canExecute)
+L000228 |             element.SetCurrentValue(UIElement.IsEnabledProperty, canExecute); ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 UpdateTargetState.
+L000229 |         } ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다.
+L000230 |     } ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다.
+L000231 | } ⟦EOL⟧

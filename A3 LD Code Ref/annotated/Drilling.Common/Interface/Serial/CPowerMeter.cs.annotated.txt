@@ -1,0 +1,691 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Serial/CPowerMeter.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.IO.Ports;
+L000003 | using System.IO.Ports; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000004 | using System.Text; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000005 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000006 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000007 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000008 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000009 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L10: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000010 | using Drilling.Common.Station; ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000012 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 | [CCommType("Serial", "PowerMeter")] ⟦EOL⟧
+// 해설 L14: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000014 | [CCommType("ModbusSerial", "PowerMeter")] ⟦EOL⟧
+// 해설 L15: 타입의 구조/상속 선언입니다: internal sealed class CPowerMeter(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option)
+L000015 | internal sealed class CPowerMeter(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CSerialComm(data, option) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다.
+L000016 | { ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: ResponseTimeoutThreshold = 3
+L000017 |     private const int ResponseTimeoutThreshold = 3; ⟦EOL⟧
+// 해설 L18: 변수의 초기값을 지정합니다: ResponsePollIntervalMs = 10
+L000018 |     private const int ResponsePollIntervalMs = 10; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CPowerMeter._consecutiveResponseTimeouts
+L000019 |     private int _consecutiveResponseTimeouts; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.CommandNewLine
+L000020 |     protected override string CommandNewLine ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.CommandNewLine.get
+L000022 |         get ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000023 |         { ⟦EOL⟧
+// 해설 L24: 호출자에게 값 또는 제어를 반환합니다: return "\r";
+L000024 |             return "\r"; ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 get_CommandNewLine.
+L000025 |         } ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 CommandNewLine.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.FormatCommand(string)
+L000028 |     protected override string FormatCommand(string function) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000029 |     { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 호출자에게 값 또는 제어를 반환합니다: return function.Trim();
+L000030 |         return function.Trim(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 FormatCommand.
+L000031 |     } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CPowerMeter.ConfigureSerialPort(SerialPort)
+L000033 |     protected override void ConfigureSerialPort(SerialPort serialPort) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 ConfigureSerialPort.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: serialPort.RtsEnable = true
+L000035 |         serialPort.RtsEnable = true; ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 ConfigureSerialPort.
+L000036 |     } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CPowerMeter.Execute(string, System.Threading.CancellationToken)
+L000038 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 Execute.
+L000039 |     { ⟦EOL⟧
+// 해설 L40: 비동기 완료를 기다립니다: await SerialLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.WaitAsync(cancellationToken)
+L000040 |         await SerialLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L41: 예외 처리 범위입니다: try
+L000041 |         try ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Execute.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000043 |             if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 Execute.
+L000044 |             { ⟦EOL⟧
+// 해설 L45: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000045 |                 await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Execute.
+L000046 |             } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 조건에 따라 분기합니다: if (SerialPort is null || !SerialPort.IsOpen)
+L000048 |             if (SerialPort is null || !SerialPort.IsOpen) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Execute.
+L000049 |             { ⟦EOL⟧
+// 해설 L50: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000050 |                 return ""; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Execute.
+L000051 |             } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: LastSent = FormatCommand(function) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatCommand(function)
+L000053 |             LastSent = FormatCommand(function); ⟦EOL⟧
+// 해설 L54: 예외 처리 범위입니다: try
+L000054 |             try ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 Execute.
+L000055 |             { ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.DiscardInBuffer()
+L000056 |                 SerialPort.DiscardInBuffer(); ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialPort.Write(LastSent + CommandNewLine)
+L000057 |                 SerialPort.Write(LastSent + CommandNewLine); ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsNoResponseCommand(LastSent) / 조건에 따라 분기합니다: if (IsNoResponseCommand(LastSent))
+L000058 |                 if (IsNoResponseCommand(LastSent)) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 Execute.
+L000059 |                 { ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: LastReceived = "OK"
+L000060 |                     LastReceived = "OK"; ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: LastError = ""
+L000061 |                     LastError = ""; ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000062 |                     SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L63: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000063 |                     return LastReceived; ⟦EOL⟧
+// 해설 L64: 구문 블록 경계입니다 · 소속 Execute.
+L000064 |                 } ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: LastReceived = await Task.Run(ReadResponse, cancellationToken) / 비동기 완료를 기다립니다: await Task.Run(ReadResponse, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(ReadResponse, cancellationToken)
+L000066 |                 LastReceived = await Task.Run(ReadResponse, cancellationToken); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(LastReceived))
+L000067 |                 if (string.IsNullOrWhiteSpace(LastReceived)) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Execute.
+L000068 |                 { ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CPowerMeter.Execute(string, System.Threading.CancellationToken)
+L000069 |                     _consecutiveResponseTimeouts++; ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: LastError = "PowerMeter response timeout."
+L000070 |                     LastError = "PowerMeter response timeout."; ⟦EOL⟧
+// 해설 L71: 조건에 따라 분기합니다: if (_consecutiveResponseTimeouts >= ResponseTimeoutThreshold)
+L000071 |                     if (_consecutiveResponseTimeouts >= ResponseTimeoutThreshold) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Execute.
+L000072 |                     { ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000073 |                         CloseSerialPort(); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(LastError)
+L000074 |                         SetError(LastError); ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Execute.
+L000075 |                     } ⟦EOL⟧
+L000076 |  ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000077 |                     return ""; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Execute.
+L000078 |                 } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: _consecutiveResponseTimeouts = 0
+L000080 |                 _consecutiveResponseTimeouts = 0; ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: LastError = ""
+L000081 |                 LastError = ""; ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000082 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000083 |                 return LastReceived; ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Execute.
+L000084 |             } ⟦EOL⟧
+// 해설 L85: 지정 예외를 처리합니다: catch (TimeoutException)
+L000085 |             catch (TimeoutException) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Execute.
+L000086 |             { ⟦EOL⟧
+// 해설 L87: 지역 변수를 선언합니다: var remaining = ""; / 변수의 초기값을 지정합니다: remaining = ""
+L000087 |                 var remaining = ""; ⟦EOL⟧
+// 해설 L88: 예외 처리 범위입니다: try
+L000088 |                 try ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 Execute.
+L000089 |                 { ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: remaining = SerialPort?.ReadExisting().Trim() ?? "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ReadExisting().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ReadExisting()
+L000090 |                     remaining = SerialPort?.ReadExisting().Trim() ?? ""; ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Execute.
+L000091 |                 } ⟦EOL⟧
+// 해설 L92: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException)
+L000092 |                 catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Execute.
+L000093 |                 { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000094 |                     CloseSerialPort(); ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000095 |                     SetError(ex); ⟦EOL⟧
+// 해설 L96: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000096 |                     return ""; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Execute.
+L000097 |                 } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(remaining) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(remaining))
+L000099 |                 if (!string.IsNullOrWhiteSpace(remaining)) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 Execute.
+L000100 |                 { ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: _consecutiveResponseTimeouts = 0
+L000101 |                     _consecutiveResponseTimeouts = 0; ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: LastReceived = remaining
+L000102 |                     LastReceived = remaining; ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: LastError = ""
+L000103 |                     LastError = ""; ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000104 |                     SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L105: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000105 |                     return LastReceived; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Execute.
+L000106 |                 } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CPowerMeter.Execute(string, System.Threading.CancellationToken)
+L000108 |                 _consecutiveResponseTimeouts++; ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: LastReceived = ""
+L000109 |                 LastReceived = ""; ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: LastError = "PowerMeter response timeout."
+L000110 |                 LastError = "PowerMeter response timeout."; ⟦EOL⟧
+// 해설 L111: 조건에 따라 분기합니다: if (_consecutiveResponseTimeouts >= ResponseTimeoutThreshold)
+L000111 |                 if (_consecutiveResponseTimeouts >= ResponseTimeoutThreshold) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 Execute.
+L000112 |                 { ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000113 |                     CloseSerialPort(); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(LastError)
+L000114 |                     SetError(LastError); ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 Execute.
+L000115 |                 } ⟦EOL⟧
+L000116 |  ⟦EOL⟧
+// 해설 L117: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000117 |                 return ""; ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 Execute.
+L000118 |             } ⟦EOL⟧
+// 해설 L119: 지정 예외를 처리합니다: catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException or OperationCanceledException)
+L000119 |             catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or ObjectDisposedException or OperationCanceledException) ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 Execute.
+L000120 |             { ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseSerialPort()
+L000121 |                 CloseSerialPort(); ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000122 |                 SetError(ex); ⟦EOL⟧
+// 해설 L123: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000123 |                 return ""; ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 Execute.
+L000124 |             } ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 Execute.
+L000125 |         } ⟦EOL⟧
+// 해설 L126: 종료 정리 구간입니다: finally
+L000126 |         finally ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 Execute.
+L000127 |         { ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: SerialLock.Release()
+L000128 |             SerialLock.Release(); ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 Execute.
+L000129 |         } ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 Execute.
+L000130 |     } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.ReadResponse()
+L000132 |     private string ReadResponse() ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000133 |     { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Serial port is not open.") / 지역 변수를 선언합니다: var port = SerialPort ?? throw new InvalidOperationException("Serial port is not open."); / 예외를 발생/전달합니다: throw new InvalidOperationException("Serial port is not open.") / 변수의 초기값을 지정합니다: port = SerialPort ?? throw new InvalidOperationException("Serial port is not open.")
+L000134 |         var port = SerialPort ?? throw new InvalidOperationException("Serial port is not open."); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var response = new StringBuilder(); / 변수의 초기값을 지정합니다: response = new StringBuilder()
+L000135 |         var response = new StringBuilder(); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(500, port.ReadTimeout) / 지역 변수를 선언합니다: var timeoutMs = Math.Max(500, port.ReadTimeout); / 변수의 초기값을 지정합니다: timeoutMs = Math.Max(500, port.ReadTimeout)
+L000136 |         var timeoutMs = Math.Max(500, port.ReadTimeout); ⟦EOL⟧
+// 해설 L137: 지역 변수를 선언합니다: var deadline = Environment.TickCount64 + timeoutMs; / 변수의 초기값을 지정합니다: deadline = Environment.TickCount64 + timeoutMs
+L000137 |         var deadline = Environment.TickCount64 + timeoutMs; ⟦EOL⟧
+// 해설 L138: 조건을 먼저 확인하며 반복합니다: while (Environment.TickCount64 < deadline)
+L000138 |         while (Environment.TickCount64 < deadline) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 조건에 따라 분기합니다: if (!port.IsOpen)
+L000140 |             if (!port.IsOpen) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000141 |             { ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Serial port is closed.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Serial port is closed.");
+L000142 |                 throw new InvalidOperationException("Serial port is closed."); ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000143 |             } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 조건에 따라 분기합니다: if (port.BytesToRead <= 0)
+L000145 |             if (port.BytesToRead <= 0) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000146 |             { ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.Sleep(ResponsePollIntervalMs)
+L000147 |                 Thread.Sleep(ResponsePollIntervalMs); ⟦EOL⟧
+// 해설 L148: 다음 반복으로 진행합니다: continue;
+L000148 |                 continue; ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000149 |             } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: port.ReadByte() / 지역 변수를 선언합니다: var value = port.ReadByte(); / 변수의 초기값을 지정합니다: value = port.ReadByte()
+L000151 |             var value = port.ReadByte(); ⟦EOL⟧
+// 해설 L152: 조건에 따라 분기합니다: if (value < 0)
+L000152 |             if (value < 0) ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000153 |             { ⟦EOL⟧
+// 해설 L154: 다음 반복으로 진행합니다: continue;
+L000154 |                 continue; ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000155 |             } ⟦EOL⟧
+L000156 |  ⟦EOL⟧
+// 해설 L157: 지역 변수를 선언합니다: var character = (char)value; / 변수의 초기값을 지정합니다: character = (char)value
+L000157 |             var character = (char)value; ⟦EOL⟧
+// 해설 L158: 조건에 따라 분기합니다: if (character is '\r' or '\n')
+L000158 |             if (character is '\r' or '\n') ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000159 |             { ⟦EOL⟧
+// 해설 L160: 조건에 따라 분기합니다: if (response.Length > 0)
+L000160 |                 if (response.Length > 0) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000161 |                 { ⟦EOL⟧
+// 해설 L162: 해당 반복/분기 구간을 종료합니다: break;
+L000162 |                     break; ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000163 |                 } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 다음 반복으로 진행합니다: continue;
+L000165 |                 continue; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000166 |             } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Append(character)
+L000168 |             response.Append(character); ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000169 |         } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: response.ToString().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.ToString() / 호출자에게 값 또는 제어를 반환합니다: return response.ToString().Trim();
+L000171 |         return response.ToString().Trim(); ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000172 |     } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPowerMeter.IsNoResponseCommand(string)
+L000174 |     private static bool IsNoResponseCommand(string command) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 IsNoResponseCommand.
+L000175 |     { ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim().ToLowerInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Trim() / 호출자에게 값 또는 제어를 반환합니다: return command.Trim().ToLowerInvariant()is "*rst" or "dst" or "dsp";
+L000176 |         return command.Trim().ToLowerInvariant()is "*rst" or "dst" or "dsp"; ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 IsNoResponseCommand.
+L000177 |     } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000179 |     public static string Build(EN_POWER_METER_COMMAND command, double parameter = 0.0) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 Build.
+L000180 |     { ⟦EOL⟧
+// 해설 L181: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_POWER_METER_COMMAND.ReadPower => "pw?", EN_POWER_METER_COMMAND.QueryHardwareDescription => "*ind", EN_POWER_METER_COMMAND.QuerySerialNumber => "msn?", EN_POWER_METER_COMMAND.QueryWaveLength => "wv?", EN_ / 값별 결과식을 선택합니다: command switch { EN_POWER_METER_COMMAND.ReadPower => "pw?", EN_POWER_METER_COMMAND.QueryHardwareDescription => "*ind", EN_POWER_METER_COMMAND.QuerySerialNumber => "msn?", EN_POWER_METER_COMMAND.QueryWaveLength => "wv?", EN_POWER_M
+L000181 |         return command switch ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 Build.
+L000182 |         { ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000183 |             EN_POWER_METER_COMMAND.ReadPower => "pw?", ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000184 |             EN_POWER_METER_COMMAND.QueryHardwareDescription => "*ind", ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000185 |             EN_POWER_METER_COMMAND.QuerySerialNumber => "msn?", ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000186 |             EN_POWER_METER_COMMAND.QueryWaveLength => "wv?", ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(parameter).ToString("F8", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(parameter)
+L000187 |             EN_POWER_METER_COMMAND.SetWaveLength => $"wv {ToMeter(parameter).ToString("F8", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000188 |             EN_POWER_METER_COMMAND.QueryBeamPosition => "pos", ⟦EOL⟧
+// 해설 L189: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000189 |             EN_POWER_METER_COMMAND.StartStreaming => "dst", ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000190 |             EN_POWER_METER_COMMAND.StopStreaming => "dsp", ⟦EOL⟧
+// 해설 L191: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000191 |             EN_POWER_METER_COMMAND.Reset => "*rst", ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.Build(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double)
+L000192 |             _ => "" ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 Build.
+L000193 |         }; ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Build.
+L000194 |     } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPowerMeter.IsSuccessResponse(string)
+L000196 |     public static bool IsSuccessResponse(string response) ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000197 |     { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().StartsWith("ERR", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(response) && !response.Trim().StartsWith("ERR", StringComparison.OrdinalIgnoreCase);
+L000198 |         return !string.IsNullOrWhiteSpace(response) && !response.Trim().StartsWith("ERR", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 IsSuccessResponse.
+L000199 |     } ⟦EOL⟧
+L000200 |  ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000201 |     public static ST_POWER_METER_STATUS Apply(EN_POWER_METER_COMMAND command, double parameter, string response, ST_POWER_METER_STATUS current, bool simulation, double? simulationPower = null) ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Apply.
+L000202 |     { ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationResponse(command, parameter, current, simulationPower) / 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() / 조건에 따라 결과식을 선택합니다: simulation ? CreateSimulationResponse(command, parameter, current, simulationPower) : response.Trim() / 지역 변수를 선언합니다: var value = simulation ? CreateSimulationResponse(command, parameter, current, simulationPower) : response.Trim(); / 변수의 초기값을 지정합니다: value = simulation ? CreateSimulationResponse(command, parameter, current, simulationPower) : response.Trim()
+L000203 |         var value = simulation ? CreateSimulationResponse(command, parameter, current, simulationPower) : response.Trim(); ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSuccessResponse(value) / 조건에 따라 분기합니다: if (!simulation && command != EN_POWER_METER_COMMAND.Reset && !IsSuccessResponse(value))
+L000204 |         if (!simulation && command != EN_POWER_METER_COMMAND.Reset && !IsSuccessResponse(value)) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 Apply.
+L000205 |         { ⟦EOL⟧
+// 해설 L206: 호출자에게 값 또는 제어를 반환합니다: return current with { LastError = EN_POWER_METER_ERROR.InvalidResponse, MeasuredAt = DateTimeOffset.Now };
+L000206 |             return current with ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Apply.
+L000207 |             { ⟦EOL⟧
+// 해설 L208: 값을 대상에 대입합니다: LastError = EN_POWER_METER_ERROR.InvalidResponse
+L000208 |                 LastError = EN_POWER_METER_ERROR.InvalidResponse, ⟦EOL⟧
+// 해설 L209: 값을 대상에 대입합니다: MeasuredAt = DateTimeOffset.Now
+L000209 |                 MeasuredAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 Apply.
+L000210 |             }; ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 Apply.
+L000211 |         } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 지역 변수를 선언합니다: var ok = current with { LastCommand = command.ToString().ToUpperInvariant(), LastError = EN_POWER_METER_ERROR.Ok, MeasuredAt = DateTimeOffset.Now }; / 변수의 초기값을 지정합니다: ok = current with { LastCommand = command.ToString().ToUpperInvariant(), LastError = EN_POWER_METER_ERROR.Ok, MeasuredAt = DateTimeOffset.Now }
+L000213 |         var ok = current with ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 Apply.
+L000214 |         { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: LastCommand = command.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: command.ToString()
+L000215 |             LastCommand = command.ToString().ToUpperInvariant(), ⟦EOL⟧
+// 해설 L216: 값을 대상에 대입합니다: LastError = EN_POWER_METER_ERROR.Ok
+L000216 |             LastError = EN_POWER_METER_ERROR.Ok, ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: MeasuredAt = DateTimeOffset.Now
+L000217 |             MeasuredAt = DateTimeOffset.Now ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 Apply.
+L000218 |         }; ⟦EOL⟧
+// 해설 L219: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_POWER_METER_COMMAND.ReadPower => TryReadPower(value, out var power) ? ApplyPowerValue(ok, power) : ok with { LastError = EN_POWER_METER_ERROR.InvalidResponse }, EN_POWER_METER_COMMAND.QueryHardwareDescri / 값별 결과식을 선택합니다: command switch { EN_POWER_METER_COMMAND.ReadPower => TryReadPower(value, out var power) ? ApplyPowerValue(ok, power) : ok with { LastError = EN_POWER_METER_ERROR.InvalidResponse }, EN_POWER_METER_COMMAND.QueryHardwareDescription =
+L000219 |         return command switch ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 Apply.
+L000220 |         { ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: LastError = EN_POWER_METER_ERROR.InvalidResponse / 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPower(value, out var power) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyPowerValue(ok, power) / 조건에 따라 결과식을 선택합니다: TryReadPower(value, out var power) ? ApplyPowerValue(ok, power) : ok with { LastError = EN_POWER_METER_ERROR.InvalidResponse }
+L000221 |             EN_POWER_METER_COMMAND.ReadPower => TryReadPower(value, out var power) ? ApplyPowerValue(ok, power) : ok with { LastError = EN_POWER_METER_ERROR.InvalidResponse }, ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000222 |             EN_POWER_METER_COMMAND.QueryHardwareDescription => ok with ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 Apply.
+L000223 |             { ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: ModelName = value
+L000224 |                 ModelName = value ⟦EOL⟧
+// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000225 |             }, ⟦EOL⟧
+// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000226 |             EN_POWER_METER_COMMAND.QuerySerialNumber => ok with ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 Apply.
+L000227 |             { ⟦EOL⟧
+// 해설 L228: 값을 대상에 대입합니다: SerialNumber = value
+L000228 |                 SerialNumber = value ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000229 |             }, ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000230 |             EN_POWER_METER_COMMAND.QueryWaveLength => ok with ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 Apply.
+L000231 |             { ⟦EOL⟧
+// 해설 L232: 값을 대상에 대입합니다: WaveLengthNm = ReadWaveLengthNm(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadWaveLengthNm(value)
+L000232 |                 WaveLengthNm = ReadWaveLengthNm(value) ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000233 |             }, ⟦EOL⟧
+// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000234 |             EN_POWER_METER_COMMAND.SetWaveLength => ok with ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 Apply.
+L000235 |             { ⟦EOL⟧
+// 해설 L236: 값을 대상에 대입합니다: WaveLengthNm = parameter
+L000236 |                 WaveLengthNm = parameter ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000237 |             }, ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyBeamPosition(ok, value)
+L000238 |             EN_POWER_METER_COMMAND.QueryBeamPosition => ApplyBeamPosition(ok, value), ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000239 |             EN_POWER_METER_COMMAND.StartStreaming => ok with ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 Apply.
+L000240 |             { ⟦EOL⟧
+// 해설 L241: 값을 대상에 대입합니다: IsMeasuring = true
+L000241 |                 IsMeasuring = true ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000242 |             }, ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000243 |             EN_POWER_METER_COMMAND.StopStreaming => ok with ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 Apply.
+L000244 |             { ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: IsMeasuring = false
+L000245 |                 IsMeasuring = false ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000246 |             }, ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000247 |             EN_POWER_METER_COMMAND.Reset => ST_POWER_METER_STATUS.Empty with ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 Apply.
+L000248 |             { ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: Unit = ok.Unit
+L000249 |                 Unit = ok.Unit, ⟦EOL⟧
+// 해설 L250: 값을 대상에 대입합니다: MeasuredAt = DateTimeOffset.Now
+L000250 |                 MeasuredAt = DateTimeOffset.Now, ⟦EOL⟧
+// 해설 L251: 값을 대상에 대입합니다: LastCommand = "RESET"
+L000251 |                 LastCommand = "RESET" ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000252 |             }, ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.Apply(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, string, Drilling.Common.Managers.ST_POWER_METER_STATUS, bool,
+L000253 |             _ => ok ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 Apply.
+L000254 |         }; ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 Apply.
+L000255 |     } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.ApplyPowerValue(Drilling.Common.Managers.ST_POWER_METER_STATUS, double)
+L000257 |     private static ST_POWER_METER_STATUS ApplyPowerValue(ST_POWER_METER_STATUS current, double power) ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ApplyPowerValue.
+L000258 |     { ⟦EOL⟧
+// 해설 L259: 지역 변수를 선언합니다: var sampleCount = current.SampleCount + 1; / 변수의 초기값을 지정합니다: sampleCount = current.SampleCount + 1
+L000259 |         var sampleCount = current.SampleCount + 1; ⟦EOL⟧
+// 해설 L260: 조건에 따라 결과식을 선택합니다: current.SampleCount <= 0 ? power : ((current.AveragePower * current.SampleCount) + power) / sampleCount / 지역 변수를 선언합니다: var average = current.SampleCount <= 0 ? power : ((current.AveragePower * current.SampleCount) + power) / sampleCount; / 변수의 초기값을 지정합니다: average = current.SampleCount <= 0 ? power : ((current.AveragePower * current.SampleCount) + power) / sampleCount
+L000260 |         var average = current.SampleCount <= 0 ? power : ((current.AveragePower * current.SampleCount) + power) / sampleCount; ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(current.MinPower, power) / 조건에 따라 결과식을 선택합니다: current.SampleCount <= 0 ? power : Math.Min(current.MinPower, power) / 지역 변수를 선언합니다: var min = current.SampleCount <= 0 ? power : Math.Min(current.MinPower, power); / 변수의 초기값을 지정합니다: min = current.SampleCount <= 0 ? power : Math.Min(current.MinPower, power)
+L000261 |         var min = current.SampleCount <= 0 ? power : Math.Min(current.MinPower, power); ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(current.MaxPower, power) / 조건에 따라 결과식을 선택합니다: current.SampleCount <= 0 ? power : Math.Max(current.MaxPower, power) / 지역 변수를 선언합니다: var max = current.SampleCount <= 0 ? power : Math.Max(current.MaxPower, power); / 변수의 초기값을 지정합니다: max = current.SampleCount <= 0 ? power : Math.Max(current.MaxPower, power)
+L000262 |         var max = current.SampleCount <= 0 ? power : Math.Max(current.MaxPower, power); ⟦EOL⟧
+// 해설 L263: 호출자에게 값 또는 제어를 반환합니다: return current with { MeasuredPower = power, AveragePower = average, MinPower = min, MaxPower = max, SampleCount = sampleCount, Unit = "W" };
+L000263 |         return current with ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 ApplyPowerValue.
+L000264 |         { ⟦EOL⟧
+// 해설 L265: 값을 대상에 대입합니다: MeasuredPower = power
+L000265 |             MeasuredPower = power, ⟦EOL⟧
+// 해설 L266: 값을 대상에 대입합니다: AveragePower = average
+L000266 |             AveragePower = average, ⟦EOL⟧
+// 해설 L267: 값을 대상에 대입합니다: MinPower = min
+L000267 |             MinPower = min, ⟦EOL⟧
+// 해설 L268: 값을 대상에 대입합니다: MaxPower = max
+L000268 |             MaxPower = max, ⟦EOL⟧
+// 해설 L269: 값을 대상에 대입합니다: SampleCount = sampleCount
+L000269 |             SampleCount = sampleCount, ⟦EOL⟧
+// 해설 L270: 값을 대상에 대입합니다: Unit = "W"
+L000270 |             Unit = "W" ⟦EOL⟧
+// 해설 L271: 구문 블록 경계입니다 · 소속 ApplyPowerValue.
+L000271 |         }; ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 ApplyPowerValue.
+L000272 |     } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_POWER_METER_STATUS Drilling.Common.Interface.CPowerMeter.ApplyBeamPosition(Drilling.Common.Managers.ST_POWER_METER_STATUS, string)
+L000274 |     private static ST_POWER_METER_STATUS ApplyBeamPosition(ST_POWER_METER_STATUS current, string value) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000275 |     { ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Split([',', ';', ' '], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var parts = value.Split([',', ';', ' '], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: parts = value.Split([',', ';', ' '], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+L000276 |         var parts = value.Split([',', ';', ' '], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L277: 조건에 따라 분기합니다: if (parts.Length < 2)
+L000277 |         if (parts.Length < 2) ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000278 |         { ⟦EOL⟧
+// 해설 L279: 호출자에게 값 또는 제어를 반환합니다: return current;
+L000279 |             return current; ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000280 |         } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 호출자에게 값 또는 제어를 반환합니다: return current with { BeamPositionX = ReadDouble(parts[0]), BeamPositionY = ReadDouble(parts[1]) };
+L000282 |         return current with ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 값을 대상에 대입합니다: BeamPositionX = ReadDouble(parts[0]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(parts[0])
+L000284 |             BeamPositionX = ReadDouble(parts[0]), ⟦EOL⟧
+// 해설 L285: 값을 대상에 대입합니다: BeamPositionY = ReadDouble(parts[1]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(parts[1])
+L000285 |             BeamPositionY = ReadDouble(parts[1]) ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000286 |         }; ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 ApplyBeamPosition.
+L000287 |     } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.CreateSimulationResponse(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, Drilling.Common.Managers.ST_POWER_METER_STATUS, double?)
+L000289 |     private static string CreateSimulationResponse(EN_POWER_METER_COMMAND command, double parameter, ST_POWER_METER_STATUS current, double? simulationPower) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000290 |     { ⟦EOL⟧
+// 해설 L291: 조건에 따라 결과식을 선택합니다: current.MeasuredPower <= 0.0 ? 1.204 : current.MeasuredPower + 0.003 / 지역 변수를 선언합니다: var power = simulationPower ?? (current.MeasuredPower <= 0.0 ? 1.204 : current.MeasuredPower + 0.003); / 변수의 초기값을 지정합니다: power = simulationPower ?? (current.MeasuredPower <= 0.0 ? 1.204 : current.MeasuredPower + 0.003)
+L000291 |         var power = simulationPower ?? (current.MeasuredPower <= 0.0 ? 1.204 : current.MeasuredPower + 0.003); ⟦EOL⟧
+// 해설 L292: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_POWER_METER_COMMAND.ReadPower => power.ToString("F4", CultureInfo.InvariantCulture), EN_POWER_METER_COMMAND.QueryHardwareDescription => string.IsNullOrWhiteSpace(current.ModelName) ? "PowerMax" : current / 값별 결과식을 선택합니다: command switch { EN_POWER_METER_COMMAND.ReadPower => power.ToString("F4", CultureInfo.InvariantCulture), EN_POWER_METER_COMMAND.QueryHardwareDescription => string.IsNullOrWhiteSpace(current.ModelName) ? "PowerMax" : current.ModelN
+L000292 |         return command switch ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000293 |         { ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: power.ToString("F4", CultureInfo.InvariantCulture)
+L000294 |             EN_POWER_METER_COMMAND.ReadPower => power.ToString("F4", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(current.ModelName) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(current.ModelName) ? "PowerMax" : current.ModelName
+L000295 |             EN_POWER_METER_COMMAND.QueryHardwareDescription => string.IsNullOrWhiteSpace(current.ModelName) ? "PowerMax" : current.ModelName, ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(current.SerialNumber) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(current.SerialNumber) ? "PM_SIM_0000" : current.SerialNumber
+L000296 |             EN_POWER_METER_COMMAND.QuerySerialNumber => string.IsNullOrWhiteSpace(current.SerialNumber) ? "PM_SIM_0000" : current.SerialNumber, ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(current.WaveLengthNm).ToString("0.########E+0", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(current.WaveLengthNm)
+L000297 |             EN_POWER_METER_COMMAND.QueryWaveLength => ToMeter(current.WaveLengthNm).ToString("0.########E+0", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L298: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(parameter).ToString("0.########E+0", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ToMeter(parameter)
+L000298 |             EN_POWER_METER_COMMAND.SetWaveLength => ToMeter(parameter).ToString("0.########E+0", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: current.BeamPositionX.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: current.BeamPositionY.ToString("F3", CultureInfo.InvariantCulture)
+L000299 |             EN_POWER_METER_COMMAND.QueryBeamPosition => $"{current.BeamPositionX.ToString("F3", CultureInfo.InvariantCulture)},{current.BeamPositionY.ToString("F3", CultureInfo.InvariantCulture)}", ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.CreateSimulationResponse(Drilling.Common.Interface.EN_POWER_METER_COMMAND, double, Drilling.Common.Managers.ST_POWER_METER_STATUS, double?)
+L000300 |             _ => "OK" ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000301 |         }; ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 CreateSimulationResponse.
+L000302 |     } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeter.ReadWaveLengthNm(string)
+L000304 |     private static double ReadWaveLengthNm(string value) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 ReadWaveLengthNm.
+L000305 |     { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(value) / 지역 변수를 선언합니다: var number = ReadDouble(value); / 변수의 초기값을 지정합니다: number = ReadDouble(value)
+L000306 |         var number = ReadDouble(value); ⟦EOL⟧
+// 해설 L307: 조건에 따라 결과식을 선택합니다: number < 0.01 ? number * 1_000_000_000.0 : number / 호출자에게 값 또는 제어를 반환합니다: return number < 0.01 ? number * 1_000_000_000.0 : number;
+L000307 |         return number < 0.01 ? number * 1_000_000_000.0 : number; ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 ReadWaveLengthNm.
+L000308 |     } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeter.ToMeter(double)
+L000310 |     private static double ToMeter(double waveLengthNm) ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 ToMeter.
+L000311 |     { ⟦EOL⟧
+// 해설 L312: 조건에 따라 결과식을 선택합니다: waveLengthNm <= 0.0 ? 355e-9 : waveLengthNm * 1e-9 / 호출자에게 값 또는 제어를 반환합니다: return waveLengthNm <= 0.0 ? 355e-9 : waveLengthNm * 1e-9;
+L000312 |         return waveLengthNm <= 0.0 ? 355e-9 : waveLengthNm * 1e-9; ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 ToMeter.
+L000313 |     } ⟦EOL⟧
+L000314 |  ⟦EOL⟧
+// 해설 L315: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CPowerMeter.TryReadPower(string, out double)
+L000315 |     internal static bool TryReadPower(string value, out double power) ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 TryReadPower.
+L000316 |     { ⟦EOL⟧
+// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var text = value.Trim(); / 변수의 초기값을 지정합니다: text = value.Trim()
+L000317 |         var text = value.Trim(); ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: new string(text.TakeWhile(c => char.IsAsciiDigit(c) || c is '-' or '+' or '.' or 'E' or 'e').ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.TakeWhile(c => char.IsAsciiDigit(c) || c is '-' or '+' or '.' or 'E' or 'e').ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.TakeWhile(c => char.IsAsciiDigit(c) || c is '-' or '+' or '.' or 'E' or 'e') / 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(c) / 지역 변수를 선언합니다: var number = new string(text.TakeWhile(c => char.IsAsciiDigit(c) || c is '-' or '+' or '.' or 'E' or 'e').ToArr
+L000318 |         var number = new string(text.TakeWhile(c => char.IsAsciiDigit(c) || c is '-' or '+' or '.' or 'E' or 'e').ToArray()); ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(number, NumberStyles.Float, CultureInfo.InvariantCulture, out power) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(power) / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(number, NumberStyles.Float, CultureInfo.InvariantCulture, out power) && double.IsFinite(power) && power >= 0;
+L000319 |         return double.TryParse(number, NumberStyles.Float, CultureInfo.InvariantCulture, out power) && double.IsFinite(power) && power >= 0; ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 TryReadPower.
+L000320 |     } ⟦EOL⟧
+L000321 |  ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.CPowerMeter.ReadDouble(string)
+L000322 |     private static double ReadDouble(string value) ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000323 |     { ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadLeadingNumber(value) / 지역 변수를 선언합니다: var normalized = ReadLeadingNumber(value); / 변수의 초기값을 지정합니다: normalized = ReadLeadingNumber(value)
+L000324 |         var normalized = ReadLeadingNumber(value); ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 결과식을 선택합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0 / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0;
+L000325 |         return double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ? result : 0.0; ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000326 |     } ⟦EOL⟧
+L000327 |  ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CPowerMeter.ReadLeadingNumber(string)
+L000328 |     private static string ReadLeadingNumber(string value) ⟦EOL⟧
+// 해설 L329: 구문 블록 경계입니다 · 소속 ReadLeadingNumber.
+L000329 |     { ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · bool MatchesChar(char)
+L000330 |         bool MatchesChar(char character) ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000331 |         { ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 호출자에게 값 또는 제어를 반환합니다: return char.IsDigit(character) || character == '-' || character == '+' || character == '.' || character == 'E' || character == 'e';
+L000332 |             return char.IsDigit(character) || character == '-' || character == '+' || character == '.' || character == 'E' || character == 'e'; ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 MatchesChar.
+L000333 |         } ⟦EOL⟧
+L000334 |  ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().TakeWhile(MatchesChar) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var chars = value.Trim().TakeWhile(MatchesChar).ToArray(); / 변수의 초기값을 지정합니다: chars = value.Trim().TakeWhile(MatchesChar).ToArray()
+L000335 |         var chars = value.Trim().TakeWhile(MatchesChar).ToArray(); ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: new string (chars) / 조건에 따라 결과식을 선택합니다: chars.Length == 0 ? "0" : new string (chars) / 호출자에게 값 또는 제어를 반환합니다: return chars.Length == 0 ? "0" : new string (chars);
+L000336 |         return chars.Length == 0 ? "0" : new string (chars); ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 ReadLeadingNumber.
+L000337 |     } ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다.
+L000338 | } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 타입의 구조/상속 선언입니다: public enum EN_POWER_METER_COMMAND
+L000340 | public enum EN_POWER_METER_COMMAND ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다.
+L000341 | { ⟦EOL⟧
+// 해설 L342: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.ReadPower
+L000342 |     ReadPower, ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.QueryHardwareDescription
+L000343 |     QueryHardwareDescription, ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.QuerySerialNumber
+L000344 |     QuerySerialNumber, ⟦EOL⟧
+// 해설 L345: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.QueryWaveLength
+L000345 |     QueryWaveLength, ⟦EOL⟧
+// 해설 L346: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.SetWaveLength
+L000346 |     SetWaveLength, ⟦EOL⟧
+// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.QueryBeamPosition
+L000347 |     QueryBeamPosition, ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.StartStreaming
+L000348 |     StartStreaming, ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.StopStreaming
+L000349 |     StopStreaming, ⟦EOL⟧
+// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.Reset
+L000350 |     Reset, ⟦EOL⟧
+// 해설 L351: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_COMMAND.Refresh
+L000351 |     Refresh ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다.
+L000352 | } ⟦EOL⟧
+L000353 |  ⟦EOL⟧
+// 해설 L354: 타입의 구조/상속 선언입니다: public enum EN_POWER_METER_ERROR
+L000354 | public enum EN_POWER_METER_ERROR ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다.
+L000355 | { ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_ERROR.Ok
+L000356 |     Ok = 0, ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_ERROR.Error
+L000357 |     Error = 1, ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_ERROR.Timeout
+L000358 |     Timeout = -1, ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_ERROR.InvalidResponse
+L000359 |     InvalidResponse = -2, ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_POWER_METER_ERROR.NotSupported
+L000360 |     NotSupported = -99 ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다.
+L000361 | } ⟦EOL⟧

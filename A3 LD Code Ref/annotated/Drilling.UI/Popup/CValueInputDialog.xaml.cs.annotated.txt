@@ -1,0 +1,428 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CValueInputDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000004 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 | using Drilling.Common.Managers; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000007 | namespace Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public partial class CValueInputDialog : Window
+L000008 | public partial class CValueInputDialog : Window ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Popup.CValueInputDialog._dataType
+L000010 |     private readonly EN_RECIPE_DATA_TYPE _dataType; ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CValueInputDialog._min
+L000011 |     private readonly double _min; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CValueInputDialog._max
+L000012 |     private readonly double _max; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double)
+L000013 |     public CValueInputDialog(string parameter, string value, EN_RECIPE_DATA_TYPE dataType, double min, double max) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 .ctor.
+L000014 |     { ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000015 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L16: 값을 대상에 대입합니다: _dataType = dataType
+L000016 |         _dataType = dataType; ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: _min = min
+L000017 |         _min = min; ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: _max = max
+L000018 |         _max = max; ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: PromptText.Text = parameter
+L000019 |         PromptText.Text = parameter; ⟦EOL⟧
+// 해설 L20: 값을 대상에 대입합니다: ValueTextBox.Text = value
+L000020 |         ValueTextBox.Text = value; ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: RangeText.Text = dataType is EN_RECIPE_DATA_TYPE.Int or EN_RECIPE_DATA_TYPE.Double && max > min ? $"Range: {min.ToString(CultureInfo.InvariantCulture)} ~ {max.ToString(CultureInfo.InvariantCulture)}" : dataType == EN_RECIPE_DATA_T / 함수·델리게이트 또는 객체 생성자를 호출합니다: min.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: max.ToString(CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: dataType is EN_RECIPE_DATA_TYPE.Int or EN_RECIPE_DATA_TYPE.Double && max > min ? $"Range: {min.ToString(CultureInfo.InvariantCultu
+L000021 |         RangeText.Text = dataType is EN_RECIPE_DATA_TYPE.Int or EN_RECIPE_DATA_TYPE.Double && max > min ? $"Range: {min.ToString(CultureInfo.InvariantCulture)} ~ {max.ToString(CultureInfo.InvariantCulture)}" : dataType == EN_RECIPE_DATA_TYPE.String ? "String input" : "Numeric input"; ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: DataObject.AddPastingHandler(ValueTextBox, ValueTextBoxPasting)
+L000022 |         DataObject.AddPastingHandler(ValueTextBox, ValueTextBoxPasting); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildKeys()
+L000023 |         BuildKeys(); ⟦EOL⟧
+// 해설 L24: 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => { ValueTextBox.Focus(); ValueTextBox.CaretIndex = ValueTextBox.Text.Length; }
+L000024 |         Loaded += (_, _) => ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 .ctor.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Focus()
+L000026 |             ValueTextBox.Focus(); ⟦EOL⟧
+// 해설 L27: 값을 대상에 대입합니다: ValueTextBox.CaretIndex = ValueTextBox.Text.Length
+L000027 |             ValueTextBox.CaretIndex = ValueTextBox.Text.Length; ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 .ctor.
+L000028 |         }; ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 .ctor.
+L000029 |     } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CValueInputDialog.ResultValue
+L000031 |     public string ResultValue ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 ResultValue.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CValueInputDialog.ResultValue.get
+L000033 |         get ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 get_ResultValue.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 호출자에게 값 또는 제어를 반환합니다: return ValueTextBox.Text;
+L000035 |             return ValueTextBox.Text; ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 get_ResultValue.
+L000036 |         } ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ResultValue.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.BuildKeys()
+L000039 |     private void BuildKeys() ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 지역 변수를 선언합니다: var keys = _dataType switch { EN_RECIPE_DATA_TYPE.Int => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", "-"], EN_RECIPE_DATA_TYPE.Double => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "-"], _ => "1234567890QWERTYUI / 값별 결과식을 선택합니다: _dataType switch { EN_RECIPE_DATA_TYPE.Int => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", "-"], EN_RECIPE_DATA_TYPE.Double => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "-"], _ => "1234567890QWERTYUIOPASDFGHJKL / 변수의 초기값을 지정합니다: keys = _dataType switch { EN_
+L000041 |         var keys = _dataType switch ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.BuildKeys()
+L000043 |             EN_RECIPE_DATA_TYPE.Int => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", "-"], ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.BuildKeys()
+L000044 |             EN_RECIPE_DATA_TYPE.Double => ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "-"], ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: "1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:".Select(value => value.ToString()).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: "1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:".Select(value => value.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000045 |             _ => "1234567890QWERTYUIOPASDFGHJKLZXCVBNM_-./:".Select(value => value.ToString()).ToArray()}; ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: KeyGrid.Columns = _dataType == EN_RECIPE_DATA_TYPE.String ? 10 : 3 / 조건에 따라 결과식을 선택합니다: _dataType == EN_RECIPE_DATA_TYPE.String ? 10 : 3
+L000046 |         KeyGrid.Columns = _dataType == EN_RECIPE_DATA_TYPE.String ? 10 : 3; ⟦EOL⟧
+// 해설 L47: 컬렉션 요소를 순회합니다: foreach (var key in keys)
+L000047 |         foreach (var key in keys) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = key, Tag = key, Style = (Style)FindResource("KeyButton") } / 지역 변수를 선언합니다: var button = new Button { Content = key, Tag = key, Style = (Style)FindResource("KeyButton") }; / 변수의 초기값을 지정합니다: button = new Button { Content = key, Tag = key, Style = (Style)FindResource("KeyButton") }
+L000049 |             var button = new Button ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000050 |             { ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: Content = key
+L000051 |                 Content = key, ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: Tag = key
+L000052 |                 Tag = key, ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: Style = (Style)FindResource("KeyButton") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("KeyButton")
+L000053 |                 Style = (Style)FindResource("KeyButton") ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000054 |             }; ⟦EOL⟧
+// 해설 L55: 복합 대입 또는 이벤트 구독/해지 표현입니다: button.Click += KeyClick
+L000055 |             button.Click += KeyClick; ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: KeyGrid.Children.Add(button)
+L000056 |             KeyGrid.Children.Add(button); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000057 |         } ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 BuildKeys.
+L000058 |     } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.KeyClick(object, RoutedEventArgs)
+L000060 |     private void KeyClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 KeyClick.
+L000061 |     { ⟦EOL⟧
+// 해설 L62: 조건에 따라 분기합니다: if (sender is not Button { Tag: string key })
+L000062 |         if (sender is not Button { Tag: string key }) ⟦EOL⟧
+// 해설 L63: 호출자에게 값 또는 제어를 반환합니다: return;
+L000063 |             return; ⟦EOL⟧
+// 해설 L64: 조건에 따라 분기합니다: if (key == "-")
+L000064 |         if (key == "-") ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 KeyClick.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: ValueTextBox.Text = ValueTextBox.Text.StartsWith('-') ? ValueTextBox.Text[1..] : $"-{ValueTextBox.Text}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.StartsWith('-') / 조건에 따라 결과식을 선택합니다: ValueTextBox.Text.StartsWith('-') ? ValueTextBox.Text[1..] : $"-{ValueTextBox.Text}"
+L000066 |             ValueTextBox.Text = ValueTextBox.Text.StartsWith('-') ? ValueTextBox.Text[1..] : $"-{ValueTextBox.Text}"; ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: ValueTextBox.CaretIndex = ValueTextBox.Text.Length
+L000067 |             ValueTextBox.CaretIndex = ValueTextBox.Text.Length; ⟦EOL⟧
+// 해설 L68: 호출자에게 값 또는 제어를 반환합니다: return;
+L000068 |             return; ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 KeyClick.
+L000069 |         } ⟦EOL⟧
+L000070 |  ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Contains('.') / 조건에 따라 분기합니다: if (key == "." && ValueTextBox.Text.Contains('.'))
+L000071 |         if (key == "." && ValueTextBox.Text.Contains('.')) ⟦EOL⟧
+// 해설 L72: 호출자에게 값 또는 제어를 반환합니다: return;
+L000072 |             return; ⟦EOL⟧
+// 해설 L73: 지역 변수를 선언합니다: var insertionStart = ValueTextBox.SelectionStart; / 변수의 초기값을 지정합니다: insertionStart = ValueTextBox.SelectionStart
+L000073 |         var insertionStart = ValueTextBox.SelectionStart; ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: ValueTextBox.SelectedText = key
+L000074 |         ValueTextBox.SelectedText = key; ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: ValueTextBox.CaretIndex = insertionStart + key.Length
+L000075 |         ValueTextBox.CaretIndex = insertionStart + key.Length; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: ValueTextBox.SelectionLength = 0
+L000076 |         ValueTextBox.SelectionLength = 0; ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 KeyClick.
+L000077 |     } ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.SpaceClick(object, RoutedEventArgs)
+L000079 |     private void SpaceClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 SpaceClick.
+L000080 |     { ⟦EOL⟧
+// 해설 L81: 조건에 따라 분기합니다: if (_dataType != EN_RECIPE_DATA_TYPE.String)
+L000081 |         if (_dataType != EN_RECIPE_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L82: 호출자에게 값 또는 제어를 반환합니다: return;
+L000082 |             return; ⟦EOL⟧
+// 해설 L83: 지역 변수를 선언합니다: var insertionStart = ValueTextBox.SelectionStart; / 변수의 초기값을 지정합니다: insertionStart = ValueTextBox.SelectionStart
+L000083 |         var insertionStart = ValueTextBox.SelectionStart; ⟦EOL⟧
+// 해설 L84: 값을 대상에 대입합니다: ValueTextBox.SelectedText = " "
+L000084 |         ValueTextBox.SelectedText = " "; ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: ValueTextBox.CaretIndex = insertionStart + 1
+L000085 |         ValueTextBox.CaretIndex = insertionStart + 1; ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: ValueTextBox.SelectionLength = 0
+L000086 |         ValueTextBox.SelectionLength = 0; ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 SpaceClick.
+L000087 |     } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.BackClick(object, RoutedEventArgs)
+L000089 |     private void BackClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 BackClick.
+L000090 |     { ⟦EOL⟧
+// 해설 L91: 조건에 따라 분기합니다: if (ValueTextBox.SelectionLength > 0)
+L000091 |         if (ValueTextBox.SelectionLength > 0) ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 BackClick.
+L000092 |         { ⟦EOL⟧
+// 해설 L93: 값을 대상에 대입합니다: ValueTextBox.SelectedText = ""
+L000093 |             ValueTextBox.SelectedText = ""; ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 BackClick.
+L000094 |         } ⟦EOL⟧
+// 해설 L95: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (ValueTextBox.CaretIndex > 0)
+L000095 |         else if (ValueTextBox.CaretIndex > 0) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 BackClick.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 지역 변수를 선언합니다: var caretIndex = ValueTextBox.CaretIndex; / 변수의 초기값을 지정합니다: caretIndex = ValueTextBox.CaretIndex
+L000097 |             var caretIndex = ValueTextBox.CaretIndex; ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: ValueTextBox.Text = ValueTextBox.Text.Remove(caretIndex - 1, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Remove(caretIndex - 1, 1)
+L000098 |             ValueTextBox.Text = ValueTextBox.Text.Remove(caretIndex - 1, 1); ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: ValueTextBox.CaretIndex = caretIndex - 1
+L000099 |             ValueTextBox.CaretIndex = caretIndex - 1; ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 BackClick.
+L000100 |         } ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 BackClick.
+L000101 |     } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.ClearClick(object, RoutedEventArgs)
+L000103 |     private void ClearClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 ClearClick.
+L000104 |     { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Clear()
+L000105 |         ValueTextBox.Clear(); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 ClearClick.
+L000106 |     } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPreviewTextInput(object, TextCompositionEventArgs)
+L000108 |     private void ValueTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 ValueTextBoxPreviewTextInput.
+L000109 |     { ⟦EOL⟧
+// 해설 L110: 조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)
+L000110 |         if (_dataType == EN_RECIPE_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L111: 호출자에게 값 또는 제어를 반환합니다: return;
+L000111 |             return; ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: e.Handled = !IsValidNumericInput(CreateProspectiveValue(e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(e.Text)
+L000112 |         e.Handled = !IsValidNumericInput(CreateProspectiveValue(e.Text)); ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 ValueTextBoxPreviewTextInput.
+L000113 |     } ⟦EOL⟧
+L000114 |  ⟦EOL⟧
+// 해설 L115: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.ValueTextBoxPasting(object, DataObjectPastingEventArgs)
+L000115 |     private void ValueTextBoxPasting(object sender, DataObjectPastingEventArgs e) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 ValueTextBoxPasting.
+L000116 |     { ⟦EOL⟧
+// 해설 L117: 조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)
+L000117 |         if (_dataType == EN_RECIPE_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L118: 호출자에게 값 또는 제어를 반환합니다: return;
+L000118 |             return; ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetDataPresent(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetData(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(pastedText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(pastedText) / 조건에 따라 분기합니다: if (!e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(pastedText)))
+L000119 |         if (!e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(pastedText))) ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 ValueTextBoxPasting.
+L000120 |         { ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.CancelCommand()
+L000121 |             e.CancelCommand(); ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 ValueTextBoxPasting.
+L000122 |         } ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 ValueTextBoxPasting.
+L000123 |     } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CValueInputDialog.CreateProspectiveValue(string)
+L000125 |     private string CreateProspectiveValue(string input) ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
+L000126 |     { ⟦EOL⟧
+// 해설 L127: 지역 변수를 선언합니다: var text = ValueTextBox.Text ?? ""; / 변수의 초기값을 지정합니다: text = ValueTextBox.Text ?? ""
+L000127 |         var text = ValueTextBox.Text ?? ""; ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length) / 지역 변수를 선언합니다: var start = Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length); / 변수의 초기값을 지정합니다: start = Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length)
+L000128 |         var start = Math.Clamp(ValueTextBox.SelectionStart, 0, text.Length); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start) / 지역 변수를 선언합니다: var length = Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start); / 변수의 초기값을 지정합니다: length = Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start)
+L000129 |         var length = Math.Clamp(ValueTextBox.SelectionLength, 0, text.Length - start); ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length).Insert(start, input) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length) / 호출자에게 값 또는 제어를 반환합니다: return text.Remove(start, length).Insert(start, input);
+L000130 |         return text.Remove(start, length).Insert(start, input); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
+L000131 |     } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CValueInputDialog.IsValidNumericInput(string)
+L000133 |     private bool IsValidNumericInput(string value) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000134 |     { ⟦EOL⟧
+// 해설 L135: 조건에 따라 분기합니다: if (value.Length == 0 || value == "-")
+L000135 |         if (value.Length == 0 || value == "-") ⟦EOL⟧
+// 해설 L136: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000136 |             return true; ⟦EOL⟧
+// 해설 L137: 조건에 따라 결과식을 선택합니다: value[0] == '-' ? value[1..] : value / 지역 변수를 선언합니다: var unsigned = value[0] == '-' ? value[1..] : value; / 변수의 초기값을 지정합니다: unsigned = value[0] == '-' ? value[1..] : value
+L000137 |         var unsigned = value[0] == '-' ? value[1..] : value; ⟦EOL⟧
+// 해설 L138: 조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.Int)
+L000138 |         if (_dataType == EN_RECIPE_DATA_TYPE.Int) ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000139 |         { ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: unsigned.All(char.IsDigit) / 호출자에게 값 또는 제어를 반환합니다: return unsigned.Length > 0 && unsigned.All(char.IsDigit);
+L000140 |             return unsigned.Length > 0 && unsigned.All(char.IsDigit); ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000141 |         } ⟦EOL⟧
+L000142 |  ⟦EOL⟧
+// 해설 L143: 지역 변수를 선언합니다: var decimalPointCount = 0; / 변수의 초기값을 지정합니다: decimalPointCount = 0
+L000143 |         var decimalPointCount = 0; ⟦EOL⟧
+// 해설 L144: 컬렉션 요소를 순회합니다: foreach (var character in unsigned)
+L000144 |         foreach (var character in unsigned) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000145 |         { ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 조건에 따라 분기합니다: if (char.IsDigit(character))
+L000146 |             if (char.IsDigit(character)) ⟦EOL⟧
+// 해설 L147: 다음 반복으로 진행합니다: continue;
+L000147 |                 continue; ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (character == '.' && ++decimalPointCount == 1)
+L000148 |             if (character == '.' && ++decimalPointCount == 1) ⟦EOL⟧
+// 해설 L149: 다음 반복으로 진행합니다: continue;
+L000149 |                 continue; ⟦EOL⟧
+// 해설 L150: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000150 |             return false; ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000151 |         } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000153 |         return true; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000154 |     } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.CancelClick(object, RoutedEventArgs)
+L000156 |     private void CancelClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 CancelClick.
+L000157 |     { ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: DialogResult = false
+L000158 |         DialogResult = false; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 CancelClick.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.WindowKeyDown(object, KeyEventArgs)
+L000161 |     private void WindowKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 조건에 따라 분기합니다: if (e.Key == Key.Enter)
+L000163 |         if (e.Key == Key.Enter) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: e.Handled = true
+L000165 |             e.Handled = true; ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: OkClick(sender, e)
+L000166 |             OkClick(sender, e); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000167 |         } ⟦EOL⟧
+// 해설 L168: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (e.Key == Key.Escape)
+L000168 |         else if (e.Key == Key.Escape) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000169 |         { ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: e.Handled = true
+L000170 |             e.Handled = true; ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: DialogResult = false
+L000171 |             DialogResult = false; ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000172 |         } ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000173 |     } ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CValueInputDialog.OkClick(object, RoutedEventArgs)
+L000175 |     private void OkClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 OkClick.
+L000176 |     { ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueTextBox.Text.Trim() / 지역 변수를 선언합니다: var value = ValueTextBox.Text.Trim(); / 변수의 초기값을 지정합니다: value = ValueTextBox.Text.Trim()
+L000177 |         var value = ValueTextBox.Text.Trim(); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(value, out var error) / 조건에 따라 분기합니다: if (!Validate(value, out var error))
+L000178 |         if (!Validate(value, out var error)) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 OkClick.
+L000179 |         { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning)
+L000180 |             MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
+// 해설 L181: 호출자에게 값 또는 제어를 반환합니다: return;
+L000181 |             return; ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 OkClick.
+L000182 |         } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 값을 대상에 대입합니다: ValueTextBox.Text = value
+L000184 |         ValueTextBox.Text = value; ⟦EOL⟧
+// 해설 L185: 값을 대상에 대입합니다: DialogResult = true
+L000185 |         DialogResult = true; ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 OkClick.
+L000186 |     } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CValueInputDialog.Validate(string, out string)
+L000188 |     private bool Validate(string value, out string error) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 Validate.
+L000189 |     { ⟦EOL⟧
+// 해설 L190: 값을 대상에 대입합니다: error = ""
+L000190 |         error = ""; ⟦EOL⟧
+// 해설 L191: 조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.String)
+L000191 |         if (_dataType == EN_RECIPE_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L192: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000192 |             return true; ⟦EOL⟧
+// 해설 L193: 조건에 따라 분기합니다: if (_dataType == EN_RECIPE_DATA_TYPE.Int)
+L000193 |         if (_dataType == EN_RECIPE_DATA_TYPE.Int) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Validate.
+L000194 |         { ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) / 조건에 따라 분기합니다: if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+L000195 |             if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 Validate.
+L000196 |             { ⟦EOL⟧
+// 해설 L197: 값을 대상에 대입합니다: error = "Enter a valid integer."
+L000197 |                 error = "Enter a valid integer."; ⟦EOL⟧
+// 해설 L198: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000198 |                 return false; ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 Validate.
+L000199 |             } ⟦EOL⟧
+L000200 |  ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRange(parsed, out error) / 호출자에게 값 또는 제어를 반환합니다: return ValidateRange(parsed, out error);
+L000201 |             return ValidateRange(parsed, out error); ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Validate.
+L000202 |         } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(number) / 조건에 따라 분기합니다: if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))
+L000204 |         if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number)) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 Validate.
+L000205 |         { ⟦EOL⟧
+// 해설 L206: 값을 대상에 대입합니다: error = "Enter a valid number."
+L000206 |             error = "Enter a valid number."; ⟦EOL⟧
+// 해설 L207: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000207 |             return false; ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 Validate.
+L000208 |         } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateRange(number, out error) / 호출자에게 값 또는 제어를 반환합니다: return ValidateRange(number, out error);
+L000210 |         return ValidateRange(number, out error); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 Validate.
+L000211 |     } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CValueInputDialog.ValidateRange(double, out string)
+L000213 |     private bool ValidateRange(double value, out string error) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 ValidateRange.
+L000214 |     { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: error = ""
+L000215 |         error = ""; ⟦EOL⟧
+// 해설 L216: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000216 |         // MIN/MAX here are input metadata: equal bounds (including 0/0) mean no input range. ⟦EOL⟧
+// 해설 L217: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000217 |         // ATT motion limits are separate Setting values, where 0/0 permits only a 0-degree target. ⟦EOL⟧
+// 해설 L218: 조건에 따라 분기합니다: if (_max <= _min || value >= _min && value <= _max)
+L000218 |         if (_max <= _min || value >= _min && value <= _max) ⟦EOL⟧
+// 해설 L219: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000219 |             return true; ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: error = $"Value must be between {_min.ToString(CultureInfo.InvariantCulture)} and {_max.ToString(CultureInfo.InvariantCulture)}." / 함수·델리게이트 또는 객체 생성자를 호출합니다: _min.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _max.ToString(CultureInfo.InvariantCulture)
+L000220 |         error = $"Value must be between {_min.ToString(CultureInfo.InvariantCulture)} and {_max.ToString(CultureInfo.InvariantCulture)}."; ⟦EOL⟧
+// 해설 L221: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000221 |         return false; ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 ValidateRange.
+L000222 |     } ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다.
+L000223 | } ⟦EOL⟧

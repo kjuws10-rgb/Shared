@@ -1,0 +1,376 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.ReviewResult
+L000001 | namespace Drilling.File.ReviewResult ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 |     using System.Globalization; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000004 |     using System.Text; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000005 |     using Drilling.Common.Review; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Microsoft.VisualBasic.FileIO;
+L000006 |     using Microsoft.VisualBasic.FileIO; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public sealed partial class CReviewResultFile
+L000008 |     public sealed partial class CReviewResultFile ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 |     { ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE"]
+L000010 |         private static readonly string[] ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE"]; ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>> Drilling.File.ReviewResult.CReviewResultFile.ListCorrectionResults(System.Threading.Ca
+L000012 |         public override Task<IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM>> ListCorrectionResults(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 ListCorrectionResults.
+L000013 |         { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run<IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM>>( () => ReadResultCatalog(cancellationToken), cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return Task.Run<IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM>>( () => ReadResultCatalog(cancellationToken), cancellationToken);
+L000014 |             return Task.Run<IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM>>( ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadResultCatalog(cancellationToken)
+L000015 |                 () => ReadResultCatalog(cancellationToken), ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>> Drilling.File.ReviewResult.CReviewResultFile.ListCorrectionResults(System.Threading.Ca
+L000016 |                 cancellationToken); ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 ListCorrectionResults.
+L000017 |         } ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM> Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)
+L000019 |         private IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM> ReadResultCatalog(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 ReadResultCatalog.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_RESULT_CATALOG_ITEM>() / 지역 변수를 선언합니다: var results = new List<ST_REVIEW_RESULT_CATALOG_ITEM>(); / 변수의 초기값을 지정합니다: results = new List<ST_REVIEW_RESULT_CATALOG_ITEM>()
+L000021 |             var results = new List<ST_REVIEW_RESULT_CATALOG_ITEM>(); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadManualCatalog(results, cancellationToken)
+L000022 |             ReadManualCatalog(results, cancellationToken); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAutoCatalog(results, cancellationToken)
+L000023 |             ReadAutoCatalog(results, cancellationToken); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadZeroDefenceCatalog(results, cancellationToken)
+L000024 |             ReadZeroDefenceCatalog(results, cancellationToken); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item => item.SavedAt) .ThenBy(item => item.FileName, StringComparer.OrdinalIgnoreCase) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item => item.SavedAt) .ThenBy(item => item.FileName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: results .OrderByDescending(item => item.SavedAt) / 호출자에게 값 또는 제어를 반환합니다: return results .OrderByDescending(item => item.SavedAt) .ThenBy(item => item.FileName, StringComparer.OrdinalIgnoreCase) .ToArray();
+L000025 |             return results ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM> Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)
+L000026 |                 .OrderByDescending(item => item.SavedAt) ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM> Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)
+L000027 |                 .ThenBy(item => item.FileName, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM> Drilling.File.ReviewResult.CReviewResultFile.ReadResultCatalog(System.Threading.CancellationToken)
+L000028 |                 .ToArray(); ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 ReadResultCatalog.
+L000029 |         } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.ReadManualCatalog(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, System.Threading.CancellationToken)
+L000031 |         private void ReadManualCatalog(List<ST_REVIEW_RESULT_CATALOG_ITEM> results, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000032 |         { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, "Manual") / 지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, "Manual"); / 변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, "Manual")
+L000033 |             var root = Path.Combine(_reviewRoot, "Manual"); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root) / 조건에 따라 분기합니다: if (!Directory.Exists(root))
+L000034 |             if (!Directory.Exists(root)) ⟦EOL⟧
+// 해설 L35: 호출자에게 값 또는 제어를 반환합니다: return;
+L000035 |                 return; ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root) / 컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))
+L000036 |             foreach (var recipeDirectory in Directory.EnumerateDirectories(root)) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000037 |             { ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000038 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory) / 지역 변수를 선언합니다: var recipeId = Path.GetFileName(recipeDirectory); / 변수의 초기값을 지정합니다: recipeId = Path.GetFileName(recipeDirectory)
+L000039 |                 var recipeId = Path.GetFileName(recipeDirectory); ⟦EOL⟧
+// 해설 L40: 컬렉션 요소를 순회합니다: foreach (var resultType in ManualResultTypes)
+L000040 |                 foreach (var resultType in ManualResultTypes) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000041 |                 { ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(recipeDirectory, resultType) / 지역 변수를 선언합니다: var typeDirectory = Path.Combine(recipeDirectory, resultType); / 변수의 초기값을 지정합니다: typeDirectory = Path.Combine(recipeDirectory, resultType)
+L000042 |                     var typeDirectory = Path.Combine(recipeDirectory, resultType); ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(typeDirectory) / 조건에 따라 분기합니다: if (Directory.Exists(typeDirectory))
+L000043 |                     if (Directory.Exists(typeDirectory)) ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFiles(results, typeDirectory, "MANUAL", resultType, recipeId, "", cancellationToken)
+L000044 |                         AddFiles(results, typeDirectory, "MANUAL", resultType, recipeId, "", cancellationToken); ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000045 |                 } ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000046 |             } ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 ReadManualCatalog.
+L000047 |         } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.ReadAutoCatalog(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, System.Threading.CancellationToken)
+L000049 |         private void ReadAutoCatalog(List<ST_REVIEW_RESULT_CATALOG_ITEM> results, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 ReadAutoCatalog.
+L000050 |         { ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, "Auto") / 지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, "Auto"); / 변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, "Auto")
+L000051 |             var root = Path.Combine(_reviewRoot, "Auto"); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root) / 조건에 따라 분기합니다: if (!Directory.Exists(root))
+L000052 |             if (!Directory.Exists(root)) ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return;
+L000053 |                 return; ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root) / 컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))
+L000054 |             foreach (var recipeDirectory in Directory.EnumerateDirectories(root)) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ReadAutoCatalog.
+L000055 |             { ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000056 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFiles(results, recipeDirectory, "AUTO", "AUTO", Path.GetFileName(recipeDirectory), "", cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory)
+L000057 |                 AddFiles(results, recipeDirectory, "AUTO", "AUTO", Path.GetFileName(recipeDirectory), "", cancellationToken); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 ReadAutoCatalog.
+L000058 |             } ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 ReadAutoCatalog.
+L000059 |         } ⟦EOL⟧
+L000060 |  ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, System.Threading.CancellationToken)
+L000061 |         private void ReadZeroDefenceCatalog(List<ST_REVIEW_RESULT_CATALOG_ITEM> results, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000062 |         { ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_reviewRoot, "ZeroDefence") / 지역 변수를 선언합니다: var root = Path.Combine(_reviewRoot, "ZeroDefence"); / 변수의 초기값을 지정합니다: root = Path.Combine(_reviewRoot, "ZeroDefence")
+L000063 |             var root = Path.Combine(_reviewRoot, "ZeroDefence"); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(root) / 조건에 따라 분기합니다: if (!Directory.Exists(root))
+L000064 |             if (!Directory.Exists(root)) ⟦EOL⟧
+// 해설 L65: 호출자에게 값 또는 제어를 반환합니다: return;
+L000065 |                 return; ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(root) / 컬렉션 요소를 순회합니다: foreach (var recipeDirectory in Directory.EnumerateDirectories(root))
+L000066 |             foreach (var recipeDirectory in Directory.EnumerateDirectories(root)) ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000067 |             { ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000068 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(recipeDirectory) / 지역 변수를 선언합니다: var recipeId = Path.GetFileName(recipeDirectory); / 변수의 초기값을 지정합니다: recipeId = Path.GetFileName(recipeDirectory)
+L000069 |                 var recipeId = Path.GetFileName(recipeDirectory); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateDirectories(recipeDirectory) / 컬렉션 요소를 순회합니다: foreach (var glassDirectory in Directory.EnumerateDirectories(recipeDirectory))
+L000070 |                 foreach (var glassDirectory in Directory.EnumerateDirectories(recipeDirectory)) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000071 |                 { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000072 |                     cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(glassDirectory) / 지역 변수를 선언합니다: var glassId = Path.GetFileName(glassDirectory); / 변수의 초기값을 지정합니다: glassId = Path.GetFileName(glassDirectory)
+L000073 |                     var glassId = Path.GetFileName(glassDirectory); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(glassDirectory, "*.csv", System.IO.SearchOption.TopDirectoryOnly) / 컬렉션 요소를 순회합니다: foreach (var filePath in Directory.EnumerateFiles(glassDirectory, "*.csv", System.IO.SearchOption.TopDirectoryOnly))
+L000074 |                     foreach (var filePath in Directory.EnumerateFiles(glassDirectory, "*.csv", System.IO.SearchOption.TopDirectoryOnly)) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000075 |                     { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000076 |                         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(filePath).Contains("FOLLOWUP", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileNameWithoutExtension(filePath) / 조건에 따라 결과식을 선택합니다: Path.GetFileNameWithoutExtension(filePath).Contains("FOLLOWUP", StringComparison.OrdinalIgnoreCase) ? "FOLLOWUP" : "ZERO_DEFENCE" / 지역 변수를 선언합니다: var resultType = Path.GetFileNameWithoutExtension(filePath).Contains("FOLLOWUP", StringComparison.OrdinalIgnoreCase) ? "FOLLOWUP" : "ZERO_DEFENCE"; / 변수의 초기값을 지정합니다: resultTy
+L000077 |                         var resultType = Path.GetFileNameWithoutExtension(filePath).Contains("FOLLOWUP", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, System.Threading.CancellationToken)
+L000078 |                             ? "FOLLOWUP" ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.ReadZeroDefenceCatalog(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, System.Threading.CancellationToken)
+L000079 |                             : "ZERO_DEFENCE"; ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Add(ReadCatalogItem(filePath, "ZERO_DEFENCE", resultType, recipeId, glassId)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCatalogItem(filePath, "ZERO_DEFENCE", resultType, recipeId, glassId)
+L000080 |                         results.Add(ReadCatalogItem(filePath, "ZERO_DEFENCE", resultType, recipeId, glassId)); ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000081 |                     } ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000082 |                 } ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000083 |             } ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 ReadZeroDefenceCatalog.
+L000084 |         } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000086 |         private static void AddFiles( ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000087 |             List<ST_REVIEW_RESULT_CATALOG_ITEM> results, ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000088 |             string directory, ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000089 |             string source, ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000090 |             string resultType, ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000091 |             string recipeId, ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000092 |             string glassId, ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.ReviewResult.CReviewResultFile.AddFiles(System.Collections.Generic.List<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>, string, string, string, string, string, System.Threading.Cancell
+L000093 |             CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 AddFiles.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, "*.csv", System.IO.SearchOption.TopDirectoryOnly) / 컬렉션 요소를 순회합니다: foreach (var filePath in Directory.EnumerateFiles(directory, "*.csv", System.IO.SearchOption.TopDirectoryOnly))
+L000095 |             foreach (var filePath in Directory.EnumerateFiles(directory, "*.csv", System.IO.SearchOption.TopDirectoryOnly)) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 AddFiles.
+L000096 |             { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000097 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Add(ReadCatalogItem(filePath, source, resultType, recipeId, glassId)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCatalogItem(filePath, source, resultType, recipeId, glassId)
+L000098 |                 results.Add(ReadCatalogItem(filePath, source, resultType, recipeId, glassId)); ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 AddFiles.
+L000099 |             } ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 AddFiles.
+L000100 |         } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000102 |         private static ST_REVIEW_RESULT_CATALOG_ITEM ReadCatalogItem( ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000103 |             string filePath, ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000104 |             string source, ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000105 |             string resultType, ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000106 |             string fallbackRecipeId, ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000107 |             string fallbackGlassId) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000108 |         { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(filePath) / 지역 변수를 선언합니다: var fullPath = Path.GetFullPath(filePath); / 변수의 초기값을 지정합니다: fullPath = Path.GetFullPath(filePath)
+L000109 |             var fullPath = Path.GetFullPath(filePath); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(fullPath) / 지역 변수를 선언합니다: var fileName = Path.GetFileName(fullPath); / 변수의 초기값을 지정합니다: fileName = Path.GetFileName(fullPath)
+L000110 |             var fileName = Path.GetFileName(fullPath); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.GetLastWriteTime(fullPath) / 지역 변수를 선언합니다: var fallbackSavedAt = new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath)); / 변수의 초기값을 지정합니다: fallbackSavedAt = new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath))
+L000111 |             var fallbackSavedAt = new DateTimeOffset(System.IO.File.GetLastWriteTime(fullPath)); ⟦EOL⟧
+// 해설 L112: 예외 처리 범위입니다: try
+L000112 |             try ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000113 |             { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false } / 정리할 자원을 선언합니다: using var parser = new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false }; / 변수의 초기값을 지정합니다: parser = new TextFieldParser(fullPath, Encoding.UTF8, true) { TextFieldType = FieldType.Delimited, HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = false }
+L000114 |                 using var parser = new TextFieldParser(fullPath, Encoding.UTF8, true) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000115 |                 { ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: TextFieldType = FieldType.Delimited
+L000116 |                     TextFieldType = FieldType.Delimited, ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: HasFieldsEnclosedInQuotes = true
+L000117 |                     HasFieldsEnclosedInQuotes = true, ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: TrimWhiteSpace = false
+L000118 |                     TrimWhiteSpace = false ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000119 |                 }; ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: parser.SetDelimiters(",")
+L000120 |                 parser.SetDelimiters(","); ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: parser.ReadFields() / 지역 변수를 선언합니다: var headers = parser.ReadFields() ?? []; / 변수의 초기값을 지정합니다: headers = parser.ReadFields() ?? []
+L000121 |                 var headers = parser.ReadFields() ?? []; ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: parser.ReadFields() / 조건에 따라 결과식을 선택합니다: parser.EndOfData ? [] : parser.ReadFields() ?? [] / 지역 변수를 선언합니다: var values = parser.EndOfData ? [] : parser.ReadFields() ?? []; / 변수의 초기값을 지정합니다: values = parser.EndOfData ? [] : parser.ReadFields() ?? []
+L000122 |                 var values = parser.EndOfData ? [] : parser.ReadFields() ?? []; ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var firstRow = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: firstRow = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+L000123 |                 var firstRow = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L124: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < headers.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000124 |                 for (var index = 0; index < headers.Length; index++) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000125 |                 { ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: headers[index].Trim().TrimStart('\uFEFF') / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers[index].Trim() / 지역 변수를 선언합니다: var name = headers[index].Trim().TrimStart('\uFEFF'); / 변수의 초기값을 지정합니다: name = headers[index].Trim().TrimStart('\uFEFF')
+L000126 |                     var name = headers[index].Trim().TrimStart('\uFEFF'); ⟦EOL⟧
+// 해설 L127: 조건에 따라 분기합니다: if (name.Length > 0)
+L000127 |                     if (name.Length > 0) ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: firstRow[name] = index < values.Length ? values[index].Trim() : "" / 함수·델리게이트 또는 객체 생성자를 호출합니다: values[index].Trim() / 조건에 따라 결과식을 선택합니다: index < values.Length ? values[index].Trim() : ""
+L000128 |                         firstRow[name] = index < values.Length ? values[index].Trim() : ""; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000129 |                 } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseSavedAt(Value(firstRow, "SAVED_AT", "SavedAt"), fallbackSavedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, "SAVED_AT", "SavedAt") / 지역 변수를 선언합니다: var savedAt = ParseSavedAt(Value(firstRow, "SAVED_AT", "SavedAt"), fallbackSavedAt); / 변수의 초기값을 지정합니다: savedAt = ParseSavedAt(Value(firstRow, "SAVED_AT", "SavedAt"), fallbackSavedAt)
+L000131 |                 var savedAt = ParseSavedAt(Value(firstRow, "SAVED_AT", "SavedAt"), fallbackSavedAt); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(Value(firstRow, "TOTAL_COUNT"), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, "TOTAL_COUNT") / 조건에 따라 결과식을 선택합니다: int.TryParse(Value(firstRow, "TOTAL_COUNT"), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ? count : null / 지역 변수를 선언합니다: int? totalCount = int.TryParse(Value(firstRow, "TOTAL_COUNT"), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ? count : null; / 변수의 초기값을 지정합니다: totalCount =
+L000132 |                 int? totalCount = int.TryParse(Value(firstRow, "TOTAL_COUNT"), NumberStyles.Integer, CultureInfo.InvariantCulture, out var count) ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000133 |                     ? count ⟦EOL⟧
+// 해설 L134: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000134 |                     : null; ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, ValueOrFallback(firstRow, fallbackRecipeId, "RECIPE_ID", "Recipe"), savedAt, NormalizeCatalogStatus(Value(firstRow, "RESULT_STATUS", "ResultStatu… / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, ValueOrFallback(firstRow, fallbackRecipeId, "RECIPE_ID", "Recipe"), savedAt, NormalizeCatalogStatus(Value(firstRow, "RESULT_STATUS", "ResultStatus",
+L000135 |                 return new ST_REVIEW_RESULT_CATALOG_ITEM( ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000136 |                     fullPath, ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000137 |                     fileName, ⟦EOL⟧
+// 해설 L138: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000138 |                     source, ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000139 |                     resultType, ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, fallbackRecipeId, "RECIPE_ID", "Recipe")
+L000140 |                     ValueOrFallback(firstRow, fallbackRecipeId, "RECIPE_ID", "Recipe"), ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000141 |                     savedAt, ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeCatalogStatus(Value(firstRow, "RESULT_STATUS", "ResultStatus", "STATE", "State")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, "RESULT_STATUS", "ResultStatus", "STATE", "State")
+L000142 |                     NormalizeCatalogStatus(Value(firstRow, "RESULT_STATUS", "ResultStatus", "STATE", "State")), ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId, "GLASS_ID", "GLASS_NAME", "Glass") / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fallbackGlassId) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId
+L000143 |                     ValueOrFallback(firstRow, string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId, "GLASS_ID", "GLASS_NAME", "Glass"), ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, source, "RUN_TYPE")
+L000144 |                     ValueOrFallback(firstRow, source, "RUN_TYPE"), ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(firstRow, "-", "METHOD", "INSPECTION_METHOD")
+L000145 |                     ValueOrFallback(firstRow, "-", "METHOD", "INSPECTION_METHOD"), ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000146 |                     totalCount, ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value(firstRow, "RESULT_MESSAGE", "DETAIL", "Detail")
+L000147 |                     Value(firstRow, "RESULT_MESSAGE", "DETAIL", "Detail")); ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000148 |             } ⟦EOL⟧
+// 해설 L149: 지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or MalformedLineException or InvalidDataException)
+L000149 |             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or MalformedLineException or InvalidDataException) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000150 |             { ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, fallbackRecipeId, fallbackSavedAt, "INVALID", string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId, source, "-", null, excep… / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_CATALOG_ITEM( fullPath, fileName, source, resultType, fallbackRecipeId, fallbackSavedAt, "INVALID", string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId, source, "-", null, exceptio
+L000151 |                 return new ST_REVIEW_RESULT_CATALOG_ITEM( ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000152 |                     fullPath, ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000153 |                     fileName, ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000154 |                     source, ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000155 |                     resultType, ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000156 |                     fallbackRecipeId, ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000157 |                     fallbackSavedAt, ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000158 |                     "INVALID", ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fallbackGlassId) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId
+L000159 |                     string.IsNullOrWhiteSpace(fallbackGlassId) ? "UNLINKED" : fallbackGlassId, ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000160 |                     source, ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000161 |                     "-", ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000162 |                     null, ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM Drilling.File.ReviewResult.CReviewResultFile.ReadCatalogItem(string, string, string, string, string)
+L000163 |                     exception.Message); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000164 |             } ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 ReadCatalogItem.
+L000165 |         } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValueOrFallback(values, "", names)
+L000167 |         private static string Value(IReadOnlyDictionary<string, string> values, params string[] names) => ValueOrFallback(values, "", names); ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewResult.CReviewResultFile.ValueOrFallback(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, params string[])
+L000169 |         private static string ValueOrFallback(IReadOnlyDictionary<string, string> values, string fallback, params string[] names) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 ValueOrFallback.
+L000170 |         { ⟦EOL⟧
+// 해설 L171: 컬렉션 요소를 순회합니다: foreach (var name in names)
+L000171 |             foreach (var name in names) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ValueOrFallback.
+L000172 |             { ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(name, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (values.TryGetValue(name, out var value) && !string.IsNullOrWhiteSpace(value))
+L000173 |                 if (values.TryGetValue(name, out var value) && !string.IsNullOrWhiteSpace(value)) ⟦EOL⟧
+// 해설 L174: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000174 |                     return value; ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ValueOrFallback.
+L000175 |             } ⟦EOL⟧
+// 해설 L176: 호출자에게 값 또는 제어를 반환합니다: return fallback;
+L000176 |             return fallback; ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 ValueOrFallback.
+L000177 |         } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset)
+L000179 |         private static DateTimeOffset ParseSavedAt(string value, DateTimeOffset fallback) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 ParseSavedAt.
+L000180 |         { ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) / 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : fallback / 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ? savedAt : fallback;
+L000181 |             return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var savedAt) ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset)
+L000182 |                 ? savedAt ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset Drilling.File.ReviewResult.CReviewResultFile.ParseSavedAt(string, System.DateTimeOffset)
+L000183 |                 : fallback; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ParseSavedAt.
+L000184 |         } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.ReviewResult.CReviewResultFile.NormalizeCatalogStatus(string)
+L000186 |         private static string NormalizeCatalogStatus(string value) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 NormalizeCatalogStatus.
+L000187 |         { ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var status = value.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: status = value.Trim().ToUpperInvariant()
+L000188 |             var status = value.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L189: 조건에 따라 결과식을 선택합니다: status.Length == 0 ? "UNKNOWN" : status / 호출자에게 값 또는 제어를 반환합니다: return status.Length == 0 ? "UNKNOWN" : status;
+L000189 |             return status.Length == 0 ? "UNKNOWN" : status; ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 NormalizeCatalogStatus.
+L000190 |         } ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다.
+L000191 |     } ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다.
+L000192 | } ⟦EOL⟧

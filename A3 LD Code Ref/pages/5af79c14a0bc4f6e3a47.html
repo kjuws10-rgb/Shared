@@ -1,0 +1,440 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CAppStartup.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CAppStartup.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs">Git 원본</a></p><h1>Drilling.UI/CAppStartup.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>5,813 bytes / 153 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/5af79c14a0bc4f6e3a47.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CAppStartup</td><td>ClassDeclaration</td><td>12–153</td><td>CAppStartup</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>CreateMainViewModel</td><td>MethodDeclaration</td><td>L14–69</td><td>Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L38–50</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>WriteManagerStartupStatus</td><td>MethodDeclaration</td><td>L71–119</td><td>int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int)</td></tr>
+<tr><td>ShouldIncludeItem</td><td>LocalFunctionStatement</td><td>L74–77</td><td>bool ShouldIncludeItem(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>SelectOrder</td><td>LocalFunctionStatement</td><td>L79–82</td><td>int SelectOrder(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>SelectOrder2</td><td>LocalFunctionStatement</td><td>L113–116</td><td>int SelectOrder2(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>GetConfigRoot</td><td>MethodDeclaration</td><td>L121–135</td><td>string Drilling.UI.CAppStartup.GetConfigRoot()</td></tr>
+<tr><td>GetScriptDirectory</td><td>MethodDeclaration</td><td>L137–152</td><td>string Drilling.UI.CAppStartup.GetScriptDirectory(string, Drilling.File.JHMI.CSettingFile)</td></tr>
+<tr><td>MatchesItem</td><td>LocalFunctionStatement</td><td>L140–143</td><td>bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L14">MethodDeclaration <code>CreateMainViewModel</code> · L14–69</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L14-L69">Drilling.UI/CAppStartup.cs:14–69</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.CRootView Drilling.UI.CAppStartup.CreateMainViewModel()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.CRootView</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L31-L31">Drilling.UI/CApp.xaml.cs:31–31</a></td><td>CAppStartup.CreateMainViewModel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>16</td><td>GetConfigRoot</td><td>resolved</td><td>string Drilling.UI.CAppStartup.GetConfigRoot() · Drilling.UI/CAppStartup.cs:121</td></tr>
+<tr><td>17</td><td>new CSettingFile</td><td>resolved</td><td>Drilling.File.JHMI.CSettingFile.CSettingFile(string) · Drilling.File/JHMI/CSettingFile.cs:13</td></tr>
+<tr><td>18</td><td>new CAutomation1ScriptFile</td><td>resolved</td><td>Drilling.File.Script.CAutomation1ScriptFile.CAutomation1ScriptFile(string?) · Drilling.File/Script/CAutomation1ScriptFile.cs:27</td></tr>
+<tr><td>18</td><td>GetScriptDirectory</td><td>resolved</td><td>string Drilling.UI.CAppStartup.GetScriptDirectory(string, Drilling.File.JHMI.CSettingFile) · Drilling.UI/CAppStartup.cs:137</td></tr>
+<tr><td>19</td><td>new CManager</td><td>resolved</td><td>Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CInterfaceFileBase, Drilling.Common.Interface.CBETFileBase, Drilling.Common.Motion.CMotorFileBase, Drilling.Common.Interface.CMelsecMapFileBase, Drilling.Common.Product.CProductFileBase, Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, CLogManager, Drilling.Common.Station.CAutomationScriptFileBase, bool?, Drilling.Common.Managers.CConfigStructureFileBase?, Drilling.Common.Alarm.CAlarmListFileBase?) · Drilling.Common/Managers/CManager.cs:52</td></tr>
+<tr><td>21</td><td>new CJhmiRecipeFile</td><td>resolved</td><td>Drilling.File.JHMI.CJhmiRecipeFile.CJhmiRecipeFile(string) · Drilling.File/JHMI/CJhmiRecipeFile.cs:16</td></tr>
+<tr><td>23</td><td>new CManualScanFile</td><td>resolved</td><td>Drilling.File.JHMI.CManualScanFile.CManualScanFile(string) · Drilling.File/JHMI/CManualScanFile.cs:11</td></tr>
+<tr><td>24</td><td>new CInterfaceFile</td><td>resolved</td><td>Drilling.File.JHMI.CInterfaceFile.CInterfaceFile(string) · Drilling.File/JHMI/CInterfaceFile.cs:12</td></tr>
+<tr><td>25</td><td>new CBETFile</td><td>resolved</td><td>Drilling.File.JHMI.CBETFile.CBETFile(string) · Drilling.File/JHMI/CBETFile.cs:11</td></tr>
+<tr><td>26</td><td>new CMotorFile</td><td>resolved</td><td>Drilling.File.JHMI.CMotorFile.CMotorFile(string) · Drilling.File/JHMI/CMotorFile.cs:11</td></tr>
+<tr><td>27</td><td>new CMelsecMapFile</td><td>resolved</td><td>Drilling.File.JHMI.CMelsecMapFile.CMelsecMapFile(string) · Drilling.File/JHMI/CMelsecMapFile.cs:7</td></tr>
+<tr><td>28</td><td>new CProductFile</td><td>resolved</td><td>Drilling.File.Product.CProductFile.CProductFile(string) · Drilling.File/Product/CProductFile.cs:6</td></tr>
+<tr><td>29</td><td>new CReviewResultFile</td><td>resolved</td><td>Drilling.File.ReviewResult.CReviewResultFile.CReviewResultFile(string) · Drilling.File/ReviewResult/CReviewResultFile.cs:9</td></tr>
+<tr><td>30</td><td>new CReviewOffsetFile</td><td>resolved</td><td>Drilling.File.ReviewOffset.CReviewOffsetFile.CReviewOffsetFile(string, System.Func&lt;System.DateTimeOffset&gt;?) · Drilling.File/ReviewOffset/CReviewOffsetFile.cs:55</td></tr>
+<tr><td>31</td><td>new CLogManager</td><td>unresolved</td><td>None</td></tr>
+<tr><td>33</td><td>new CConfigStructureFile</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.CConfigStructureFile(string) · Drilling.File/JHMI/CConfigStructureFile.cs:5</td></tr>
+<tr><td>34</td><td>new CAlarmListFile</td><td>resolved</td><td>Drilling.File.JHMI.CAlarmListFile.CAlarmListFile(string) · Drilling.File/JHMI/CAlarmListFile.cs:6</td></tr>
+<tr><td>36</td><td>CUiLogService.Configure</td><td>resolved</td><td>void Drilling.UI.CUiLogService.Configure(CLogManager) · Drilling.UI/CUiLogService.cs:17</td></tr>
+<tr><td>36</td><td>manager.Log</td><td>resolved</td><td>CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:380</td></tr>
+<tr><td>37</td><td>WriteManagerStartupStatus</td><td>resolved</td><td>int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71</td></tr>
+<tr><td>52</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func&lt;System.Threading.Tasks.Task?&gt;)</td></tr>
+<tr><td>53</td><td>new CRootView</td><td>resolved</td><td>Drilling.UI.CRootView.CRootView(Drilling.Common.Managers.CManager, Drilling.Common.Station.CStationManager, Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.Alarm.CAlarmManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Product.CProductManager, Drilling.Common.Review.CReviewManager, Drilling.Common.Station.CAutomationScriptFileBase) · Drilling.UI/CRootView.cs:128</td></tr>
+<tr><td>55</td><td>manager.Station</td><td>resolved</td><td>Drilling.Common.Station.CStationManager Drilling.Common.Managers.CManager.Station() · Drilling.Common/Managers/CManager.cs:322</td></tr>
+<tr><td>56</td><td>manager.Interface</td><td>resolved</td><td>Drilling.Common.Interface.CInterfaceManager Drilling.Common.Managers.CManager.Interface() · Drilling.Common/Managers/CManager.cs:347</td></tr>
+<tr><td>57</td><td>manager.Motion</td><td>resolved</td><td>Drilling.Common.Motion.CMotionManager Drilling.Common.Managers.CManager.Motion() · Drilling.Common/Managers/CManager.cs:365</td></tr>
+<tr><td>58</td><td>manager.Alarm</td><td>resolved</td><td>Drilling.Common.Alarm.CAlarmManager Drilling.Common.Managers.CManager.Alarm() · Drilling.Common/Managers/CManager.cs:370</td></tr>
+<tr><td>59</td><td>manager.InterLock</td><td>resolved</td><td>Drilling.Common.InterLock.CInterLockManager Drilling.Common.Managers.CManager.InterLock() · Drilling.Common/Managers/CManager.cs:375</td></tr>
+<tr><td>60</td><td>manager.ManualScanFile</td><td>resolved</td><td>Drilling.Common.Managers.CManualScanFileBase Drilling.Common.Managers.CManager.ManualScanFile() · Drilling.Common/Managers/CManager.cs:395</td></tr>
+<tr><td>61</td><td>manager.Recipe</td><td>resolved</td><td>Drilling.Common.Managers.CRecipeManager Drilling.Common.Managers.CManager.Recipe() · Drilling.Common/Managers/CManager.cs:327</td></tr>
+<tr><td>62</td><td>manager.Setting</td><td>resolved</td><td>Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager.Setting() · Drilling.Common/Managers/CManager.cs:332</td></tr>
+<tr><td>63</td><td>manager.Product</td><td>resolved</td><td>Drilling.Common.Product.CProductManager Drilling.Common.Managers.CManager.Product() · Drilling.Common/Managers/CManager.cs:337</td></tr>
+<tr><td>64</td><td>manager.Review</td><td>resolved</td><td>Drilling.Common.Review.CReviewManager Drilling.Common.Managers.CManager.Review() · Drilling.Common/Managers/CManager.cs:342</td></tr>
+<tr><td>67</td><td>manager.StartBackgroundMonitoring</td><td>resolved</td><td>void Drilling.Common.Managers.CManager.StartBackgroundMonitoring() · Drilling.Common/Managers/CManager.cs:259</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetConfigRoot()</td></tr>
+<tr><td>16</td><td>local-declaration</td><td>지역 변수를 선언합니다: var configRoot = GetConfigRoot();</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: configRoot = GetConfigRoot()</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CSettingFile(configRoot)</td></tr>
+<tr><td>17</td><td>local-declaration</td><td>지역 변수를 선언합니다: var settingFile = new CSettingFile(configRoot);</td></tr>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: settingFile = new CSettingFile(configRoot)</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile))</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetScriptDirectory(configRoot, settingFile)</td></tr>
+<tr><td>18</td><td>local-declaration</td><td>지역 변수를 선언합니다: var automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile));</td></tr>
+<tr><td>18</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile))</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CManager( configRoot, new CJhmiRecipeFile(configRoot), settingFile, new CManualScanFile(configRoot), new CInterfaceFile(configRoot), new CBETFile(configRoot), new CMotorFile(configRoot), new CMelsecMapFile(configRoot…</td></tr>
+<tr><td>19</td><td>local-declaration</td><td>지역 변수를 선언합니다: var manager = new CManager( configRoot, new CJhmiRecipeFile(configRoot), settingFile, new CManualScanFile(configRoot), new CInterfaceFile(configRoot), new CBETFile(configRoot), new CMotorFile(configRoot), new CMelsecMapFile(config</td></tr>
+<tr><td>19</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: manager = new CManager( configRoot, new CJhmiRecipeFile(configRoot), settingFile, new CManualScanFile(configRoot), new CInterfaceFile(configRoot), new CBETFile(configRoot), new CMotorFile(configRoot), new CMelsecMapFile(configRoot</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CJhmiRecipeFile(configRoot)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CManualScanFile(configRoot)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CInterfaceFile(configRoot)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CBETFile(configRoot)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CMotorFile(configRoot)</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CMelsecMapFile(configRoot)</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CProductFile(configRoot)</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewResultFile(configRoot)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CReviewOffsetFile(configRoot)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CLogManager(configRoot)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CConfigStructureFile(configRoot)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmListFile(configRoot)</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CUiLogService.Configure(manager.Log())</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Log()</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, &quot;MANAGER_STARTUP_SEQUENCE&quot;, 0)</td></tr>
+<tr><td>37</td><td>local-declaration</td><td>지역 변수를 선언합니다: var lastLoggedStartupOrder = WriteManagerStartupStatus(manager, &quot;MANAGER_STARTUP_SEQUENCE&quot;, 0);</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: lastLoggedStartupOrder = WriteManagerStartupStatus(manager, &quot;MANAGER_STARTUP_SEQUENCE&quot;, 0)</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: _ = Task.Run(SelectValue)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CRootView( manager, manager.Station(), manager.Interface(), manager.Motion(), manager.Alarm(), manager.InterLock(), manager.ManualScanFile(), manager.Recipe(), manager.Setting(), manager.Product(), manager.Review(), …</td></tr>
+<tr><td>53</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rootView = new CRootView( manager, manager.Station(), manager.Interface(), manager.Motion(), manager.Alarm(), manager.InterLock(), manager.ManualScanFile(), manager.Recipe(), manager.Setting(), manager.Product(), manager.Revie</td></tr>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rootView = new CRootView( manager, manager.Station(), manager.Interface(), manager.Motion(), manager.Alarm(), manager.InterLock(), manager.ManualScanFile(), manager.Recipe(), manager.Setting(), manager.Product(), manager.Review(),</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Station()</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Interface()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Motion()</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Alarm()</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.InterLock()</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.ManualScanFile()</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Recipe()</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Setting()</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Product()</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Review()</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.StartBackgroundMonitoring()</td></tr>
+<tr><td>68</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return rootView;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L38">LocalFunctionStatement <code>SelectValue</code> · L38–50</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L38-L50">Drilling.UI/CAppStartup.cs:38–50</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private / async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>42</td><td>manager.Initialize</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Managers.CManager.Initialize(System.Threading.CancellationToken) · Drilling.Common/Managers/CManager.cs:204</td></tr>
+<tr><td>43</td><td>WriteManagerStartupStatus</td><td>resolved</td><td>int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71</td></tr>
+<tr><td>47</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>48</td><td>WriteManagerStartupStatus</td><td>resolved</td><td>int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>40</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>42</td><td>await</td><td>비동기 완료를 기다립니다: await manager.Initialize()</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.Initialize()</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, &quot;MANAGER_INITIALIZE_SEQUENCE&quot;, lastLoggedStartupOrder)</td></tr>
+<tr><td>45</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception exception)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(&quot;MANAGER_INITIALIZE_FAILED&quot;, exception)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WriteManagerStartupStatus(manager, &quot;MANAGER_INITIALIZE_SEQUENCE&quot;, lastLoggedStartupOrder)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SelectValue&quot;]
+ N0[&quot;L40 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L45 catch&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L71">MethodDeclaration <code>WriteManagerStartupStatus</code> · L71–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L71-L119">Drilling.UI/CAppStartup.cs:71–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>manager</td><td>Drilling.Common.Managers.CManager</td><td>None</td><td>False /</td></tr>
+<tr><td>title</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>afterOrder</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L37-L37">Drilling.UI/CAppStartup.cs:37–37</a></td><td>WriteManagerStartupStatus</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L43-L43">Drilling.UI/CAppStartup.cs:43–43</a></td><td>WriteManagerStartupStatus</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L48-L48">Drilling.UI/CAppStartup.cs:48–48</a></td><td>WriteManagerStartupStatus</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>73</td><td>manager.ConfigStatus</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_LOAD_STATUS Drilling.Common.Managers.CManager.ConfigStatus() · Drilling.Common/Managers/CManager.cs:175</td></tr>
+<tr><td>84</td><td>status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray</td><td>resolved</td><td>Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;.ToArray&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;()</td></tr>
+<tr><td>84</td><td>status.StartupSteps.Where(ShouldIncludeItem).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;.OrderBy&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, int&gt;(System.Func&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, int&gt;)</td></tr>
+<tr><td>84</td><td>status.StartupSteps.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;.Where&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;(System.Func&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, bool&gt;)</td></tr>
+<tr><td>85</td><td>new StringBuilder</td><td>resolved</td><td>System.Text.StringBuilder.StringBuilder()</td></tr>
+<tr><td>86</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>87</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>88</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>89</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>90</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>93</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(string?)</td></tr>
+<tr><td>99</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>105</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(string?)</td></tr>
+<tr><td>108</td><td>builder.AppendLine</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.AppendLine(ref System.Text.StringBuilder.AppendInterpolatedStringHandler)</td></tr>
+<tr><td>112</td><td>CProgramOpenLog.Write</td><td>unresolved</td><td>None</td></tr>
+<tr><td>112</td><td>builder.ToString().TrimEnd</td><td>resolved</td><td>string string.TrimEnd()</td></tr>
+<tr><td>112</td><td>builder.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>118</td><td>status.StartupSteps.Max</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;.Max&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP&gt;(System.Func&lt;Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, int&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: manager.ConfigStatus()</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var status = manager.ConfigStatus();</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: status = manager.ConfigStatus()</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray()</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Where(ShouldIncludeItem)</td></tr>
+<tr><td>84</td><td>local-declaration</td><td>지역 변수를 선언합니다: var steps = status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray();</td></tr>
+<tr><td>84</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: steps = status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray()</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder()</td></tr>
+<tr><td>85</td><td>local-declaration</td><td>지역 변수를 선언합니다: var builder = new StringBuilder();</td></tr>
+<tr><td>85</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: builder = new StringBuilder()</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;ConfigRoot={status.ConfigRoot}&quot;)</td></tr>
+<tr><td>87</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;InterfaceCount={status.InterfaceCount}&quot;)</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;MotorCount={status.MotorCount}&quot;)</td></tr>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;MelsecMapCount={status.MelsecMapCount}&quot;)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;ActiveProductLoaded={status.ActiveProductLoaded}&quot;)</td></tr>
+<tr><td>91</td><td>if</td><td>조건에 따라 분기합니다: if (steps.Length == 0)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine(&quot;No additional manager startup step.&quot;)</td></tr>
+<tr><td>95</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>97</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var step in steps)</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;{step.Order:00} | {step.Result} | {step.StepName} | {step.Message}&quot;)</td></tr>
+<tr><td>103</td><td>if</td><td>조건에 따라 분기합니다: if (status.StartupMessages.Count &gt; 0)</td></tr>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine(&quot;StartupMessages:&quot;)</td></tr>
+<tr><td>106</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var message in status.StartupMessages)</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine($&quot;- {message}&quot;)</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProgramOpenLog.Write(title, builder.ToString().TrimEnd())</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString().TrimEnd()</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString()</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.StartupSteps.Max(SelectOrder2)</td></tr>
+<tr><td>118</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: status.StartupSteps.Count == 0 ? afterOrder : status.StartupSteps.Max(SelectOrder2)</td></tr>
+<tr><td>118</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return status.StartupSteps.Count == 0 ? afterOrder : status.StartupSteps.Max(SelectOrder2);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WriteManagerStartupStatus&quot;]
+ N0[&quot;L91 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L95 else&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L97 foreach&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L103 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L106 foreach&quot;]
+ N3 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">LocalFunctionStatement <code>ShouldIncludeItem</code> · L74–77</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L74-L77">Drilling.UI/CAppStartup.cs:74–77</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool ShouldIncludeItem(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>step</td><td>Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return step.Order &gt; afterOrder;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">LocalFunctionStatement <code>SelectOrder</code> · L79–82</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L79-L82">Drilling.UI/CAppStartup.cs:79–82</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int SelectOrder(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>step</td><td>Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return step.Order;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L113">LocalFunctionStatement <code>SelectOrder2</code> · L113–116</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L113-L116">Drilling.UI/CAppStartup.cs:113–116</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int SelectOrder2(Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>step</td><td>Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>115</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return step.Order;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L121">MethodDeclaration <code>GetConfigRoot</code> · L121–135</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L121-L135">Drilling.UI/CAppStartup.cs:121–135</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.CAppStartup.GetConfigRoot()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L16-L16">Drilling.UI/CAppStartup.cs:16–16</a></td><td>GetConfigRoot</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>123</td><td>new DirectoryInfo</td><td>resolved</td><td>System.IO.DirectoryInfo.DirectoryInfo(string)</td></tr>
+<tr><td>126</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>126</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>128</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>134</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DirectoryInfo(AppContext.BaseDirectory)</td></tr>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = new DirectoryInfo(AppContext.BaseDirectory);</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = new DirectoryInfo(AppContext.BaseDirectory)</td></tr>
+<tr><td>124</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (directory is not null)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(Path.Combine(directory.FullName, &quot;Drilling.sln&quot;))</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory.FullName, &quot;Drilling.sln&quot;)</td></tr>
+<tr><td>126</td><td>if</td><td>조건에 따라 분기합니다: if (System.IO.File.Exists(Path.Combine(directory.FullName, &quot;Drilling.sln&quot;)))</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(directory.FullName, &quot;Config&quot;)</td></tr>
+<tr><td>128</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.Combine(directory.FullName, &quot;Config&quot;);</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: directory = directory.Parent</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(Environment.CurrentDirectory, &quot;Config&quot;)</td></tr>
+<tr><td>134</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.Combine(Environment.CurrentDirectory, &quot;Config&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetConfigRoot&quot;]
+ N0[&quot;L124 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L126 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L137">MethodDeclaration <code>GetScriptDirectory</code> · L137–152</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L137-L152">Drilling.UI/CAppStartup.cs:137–152</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.CAppStartup.GetScriptDirectory(string, Drilling.File.JHMI.CSettingFile)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>configRoot</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>settingFile</td><td>Drilling.File.JHMI.CSettingFile</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L18-L18">Drilling.UI/CAppStartup.cs:18–18</a></td><td>GetScriptDirectory</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>139</td><td>Directory.GetParent</td><td>resolved</td><td>System.IO.DirectoryInfo? System.IO.Directory.GetParent(string)</td></tr>
+<tr><td>145</td><td>settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool&gt;)</td></tr>
+<tr><td>145</td><td>settingFile.Load</td><td>resolved · 동적 구현 선택 가능</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt; Drilling.File.JHMI.CSettingFile.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.File/JHMI/CSettingFile.cs:19</td></tr>
+<tr><td>146</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>148</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+<tr><td>151</td><td>Path.IsPathRooted</td><td>resolved</td><td>bool System.IO.Path.IsPathRooted(string?)</td></tr>
+<tr><td>151</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>151</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+<tr><td>151</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.GetParent(configRoot)</td></tr>
+<tr><td>139</td><td>local-declaration</td><td>지역 변수를 선언합니다: var projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot;</td></tr>
+<tr><td>139</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Load(EN_SETTING_TAB.Option)</td></tr>
+<tr><td>145</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value;</td></tr>
+<tr><td>145</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(scriptPath)</td></tr>
+<tr><td>146</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(scriptPath))</td></tr>
+<tr><td>148</td><td>assignment</td><td>값을 대상에 대입합니다: scriptPath = Path.Combine(&quot;Data&quot;, &quot;Script&quot;)</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(&quot;Data&quot;, &quot;Script&quot;)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(scriptPath)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(scriptPath)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(projectRoot, scriptPath))</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(projectRoot, scriptPath)</td></tr>
+<tr><td>151</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRoot, scriptPath))</td></tr>
+<tr><td>151</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRoot, scriptPath));</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetScriptDirectory&quot;]
+ N0[&quot;L146 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">LocalFunctionStatement <code>MatchesItem</code> · L140–143</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L140-L143">Drilling.UI/CAppStartup.cs:140–143</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.CAppStartup</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameter</td><td>Drilling.Common.Managers.ST_SYSTEM_PARAMETER</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>142</td><td>parameter.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>142</td><td>parameter.Name.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Key.Equals(&quot;LocalScriptPath&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameter.Name.Equals(&quot;LocalScriptPath&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>142</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parameter.Key.Equals(&quot;LocalScriptPath&quot;, StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals(&quot;LocalScriptPath&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/CAppStartup.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

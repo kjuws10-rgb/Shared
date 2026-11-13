@@ -1,0 +1,1461 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>9bb8fc8be490c371c1a9ac95f52c4de752d58cd48c9f7f903d197b3e0186e595</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>16,349 bytes / 479 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/7370a99da593d583cf16.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CCellPlacementWizardDialog</td><td>ClassDeclaration</td><td>12–381</td><td>CCellPlacementWizardDialog: Window</td></tr>
+<tr><td>ST_CELL_PLACEMENT_WIZARD_CONTEXT</td><td>RecordDeclaration</td><td>383–389</td><td>ST_CELL_PLACEMENT_WIZARD_CONTEXT</td></tr>
+<tr><td>ST_CELL_PLACEMENT_WIZARD_RESULT</td><td>RecordDeclaration</td><td>391–417</td><td>ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+<tr><td>ST_CELL_PLACEMENT_MODEL_OVERRIDE</td><td>RecordDeclaration</td><td>419–419</td><td>ST_CELL_PLACEMENT_MODEL_OVERRIDE</td></tr>
+<tr><td>ST_CELL_PLACEMENT_WIZARD_DIRECTION</td><td>RecordDeclaration</td><td>421–436</td><td>ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+<tr><td>ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td><td>ClassDeclaration</td><td>438–479</td><td>ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW: INotifyPropertyChanged</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>DefaultModelOption</td><td>FieldDeclaration</td><td>L14–14</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.DefaultModelOption</td></tr>
+<tr><td>_lastAppliedResult</td><td>FieldDeclaration</td><td>L15–15</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT? Drilling.UI.Popup.CCellPlacementWizardDialog._lastAppliedResult</td></tr>
+<tr><td>_maxCellCount</td><td>FieldDeclaration</td><td>L16–16</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._maxCellCount</td></tr>
+<tr><td>_modelTypeCount</td><td>FieldDeclaration</td><td>L17–17</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._modelTypeCount</td></tr>
+<tr><td>_glassSizeX</td><td>FieldDeclaration</td><td>L18–18</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeX</td></tr>
+<tr><td>_glassSizeY</td><td>FieldDeclaration</td><td>L19–19</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeY</td></tr>
+<tr><td>_akMarginX</td><td>FieldDeclaration</td><td>L20–20</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginX</td></tr>
+<tr><td>_akMarginY</td><td>FieldDeclaration</td><td>L21–21</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginY</td></tr>
+<tr><td>_defaultModelOptions</td><td>FieldDeclaration</td><td>L22–22</td><td>string[] Drilling.UI.Popup.CCellPlacementWizardDialog._defaultModelOptions</td></tr>
+<tr><td>_overrideModelOptions</td><td>FieldDeclaration</td><td>L23–23</td><td>string[] Drilling.UI.Popup.CCellPlacementWizardDialog._overrideModelOptions</td></tr>
+<tr><td>_isInitialized</td><td>FieldDeclaration</td><td>L24–24</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog._isInitialized</td></tr>
+<tr><td>_modelApplySequence</td><td>FieldDeclaration</td><td>L25–25</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._modelApplySequence</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L27–72</td><td>Drilling.UI.Popup.CCellPlacementWizardDialog.CCellPlacementWizardDialog(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT)</td></tr>
+<tr><td>RowModelRows</td><td>PropertyDeclaration</td><td>L74–74</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.RowModelRows</td></tr>
+<tr><td>get_RowModelRows</td><td>GetAccessorDeclaration</td><td>L74–74</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.RowModelRows.get</td></tr>
+<tr><td>ColumnModelRows</td><td>PropertyDeclaration</td><td>L75–75</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.ColumnModelRows</td></tr>
+<tr><td>get_ColumnModelRows</td><td>GetAccessorDeclaration</td><td>L75–75</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.ColumnModelRows.get</td></tr>
+<tr><td>Result</td><td>PropertyDeclaration</td><td>L76–76</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.CCellPlacementWizardDialog.Result</td></tr>
+<tr><td>get_Result</td><td>GetAccessorDeclaration</td><td>L76–76</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.CCellPlacementWizardDialog.Result.get</td></tr>
+<tr><td>set_Result</td><td>SetAccessorDeclaration</td><td>L76–76</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.Result.set</td></tr>
+<tr><td>GridCountTextChanged</td><td>MethodDeclaration</td><td>L78–86</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.GridCountTextChanged(object, System.Windows.Controls.TextChangedEventArgs)</td></tr>
+<tr><td>RefreshModelRows</td><td>MethodDeclaration</td><td>L88–99</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows()</td></tr>
+<tr><td>SyncModelRows</td><td>MethodDeclaration</td><td>L101–114</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.SyncModelRows(System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;, int, string)</td></tr>
+<tr><td>OnModelRuleChanged</td><td>MethodDeclaration</td><td>L116–121</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.OnModelRuleChanged(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)</td></tr>
+<tr><td>ApplyClick</td><td>MethodDeclaration</td><td>L123–134</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyClick(object, RoutedEventArgs)</td></tr>
+<tr><td>ApplyInitialResult</td><td>MethodDeclaration</td><td>L136–169</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)</td></tr>
+<tr><td>OpenWizardInputKeypad</td><td>MethodDeclaration</td><td>L171–188</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.OpenWizardInputKeypad(object, MouseButtonEventArgs)</td></tr>
+<tr><td>GetInputKeypadInfo</td><td>MethodDeclaration</td><td>L190–219</td><td>(string Parameter, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE DataType, double Min, double Max) Drilling.UI.Popup.CCellPlacementWizardDialog.GetInputKeypadInfo(TextBox)</td></tr>
+<tr><td>TryCreateResult</td><td>MethodDeclaration</td><td>L221–301</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)</td></tr>
+<tr><td>TryReadPositiveInt</td><td>MethodDeclaration</td><td>L303–306</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadPositiveInt(string, out int)</td></tr>
+<tr><td>TryReadDouble</td><td>MethodDeclaration</td><td>L308–311</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadDouble(string, out double)</td></tr>
+<tr><td>ReadModel</td><td>MethodDeclaration</td><td>L313–318</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int)</td></tr>
+<tr><td>TryValidateGlassBounds</td><td>MethodDeclaration</td><td>L320–361</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)</td></tr>
+<tr><td>FormatValidationDouble</td><td>MethodDeclaration</td><td>L363–366</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double)</td></tr>
+<tr><td>CancelClick</td><td>MethodDeclaration</td><td>L368–371</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.CancelClick(object, RoutedEventArgs)</td></tr>
+<tr><td>WindowKeyDown</td><td>MethodDeclaration</td><td>L373–380</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>Empty</td><td>PropertyDeclaration</td><td>L416–416</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT.Empty</td></tr>
+<tr><td>get_Empty</td><td>GetAccessorDeclaration</td><td>L416–416</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT.Empty.get</td></tr>
+<tr><td>HorizontalFirst</td><td>FieldDeclaration</td><td>L423–423</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.HorizontalFirst</td></tr>
+<tr><td>VerticalFirst</td><td>FieldDeclaration</td><td>L424–424</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.VerticalFirst</td></tr>
+<tr><td>Options</td><td>PropertyDeclaration</td><td>L426–430</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options</td></tr>
+<tr><td>get_Options</td><td>GetAccessorDeclaration</td><td>L426–426</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.get</td></tr>
+<tr><td>ToString</td><td>MethodDeclaration</td><td>L432–435</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.ToString()</td></tr>
+<tr><td>_selectedModel</td><td>FieldDeclaration</td><td>L440–440</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW._selectedModel</td></tr>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L442–449</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(string, int, string, System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>PropertyChanged</td><td>EventFieldDeclaration</td><td>L451–451</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.PropertyChanged</td></tr>
+<tr><td>ModelChanged</td><td>EventFieldDeclaration</td><td>L452–452</td><td>System.Action&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelChanged</td></tr>
+<tr><td>Scope</td><td>PropertyDeclaration</td><td>L453–453</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Scope</td></tr>
+<tr><td>get_Scope</td><td>GetAccessorDeclaration</td><td>L453–453</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Scope.get</td></tr>
+<tr><td>Index</td><td>PropertyDeclaration</td><td>L454–454</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Index</td></tr>
+<tr><td>get_Index</td><td>GetAccessorDeclaration</td><td>L454–454</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Index.get</td></tr>
+<tr><td>Label</td><td>PropertyDeclaration</td><td>L455–455</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Label</td></tr>
+<tr><td>get_Label</td><td>GetAccessorDeclaration</td><td>L455–455</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Label.get</td></tr>
+<tr><td>ModelOptions</td><td>PropertyDeclaration</td><td>L456–456</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelOptions</td></tr>
+<tr><td>get_ModelOptions</td><td>GetAccessorDeclaration</td><td>L456–456</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelOptions.get</td></tr>
+<tr><td>ApplyOrder</td><td>PropertyDeclaration</td><td>L457–457</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder</td></tr>
+<tr><td>get_ApplyOrder</td><td>GetAccessorDeclaration</td><td>L457–457</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder.get</td></tr>
+<tr><td>set_ApplyOrder</td><td>SetAccessorDeclaration</td><td>L457–457</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder.set</td></tr>
+<tr><td>SelectedModel</td><td>PropertyDeclaration</td><td>L459–473</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel</td></tr>
+<tr><td>get_SelectedModel</td><td>GetAccessorDeclaration</td><td>L461–461</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.get</td></tr>
+<tr><td>set_SelectedModel</td><td>SetAccessorDeclaration</td><td>L462–472</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.set</td></tr>
+<tr><td>OnPropertyChanged</td><td>MethodDeclaration</td><td>L475–478</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.OnPropertyChanged(string?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L14">FieldDeclaration <code>DefaultModelOption</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L14-L14">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.DefaultModelOption</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultModelOption = &quot;DEFAULT&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>_lastAppliedResult</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L15-L15">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT? Drilling.UI.Popup.CCellPlacementWizardDialog._lastAppliedResult</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>_maxCellCount</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L16-L16">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._maxCellCount</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_modelTypeCount</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L17-L17">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._modelTypeCount</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">FieldDeclaration <code>_glassSizeX</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeX</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">FieldDeclaration <code>_glassSizeY</code> · L19–19</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L19-L19">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:19–19</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeY</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L20">FieldDeclaration <code>_akMarginX</code> · L20–20</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L20-L20">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:20–20</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginX</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">FieldDeclaration <code>_akMarginY</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L21-L21">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginY</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">FieldDeclaration <code>_defaultModelOptions</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L22-L22">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string[] Drilling.UI.Popup.CCellPlacementWizardDialog._defaultModelOptions</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string[]</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">FieldDeclaration <code>_overrideModelOptions</code> · L23–23</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L23-L23">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:23–23</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string[] Drilling.UI.Popup.CCellPlacementWizardDialog._overrideModelOptions</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>string[]</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L24">FieldDeclaration <code>_isInitialized</code> · L24–24</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L24-L24">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:24–24</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog._isInitialized</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L25">FieldDeclaration <code>_modelApplySequence</code> · L25–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L25-L25">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:25–25</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog._modelApplySequence</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">ConstructorDeclaration <code>.ctor</code> · L27–72</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L27-L72">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:27–72</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.CCellPlacementWizardDialog.CCellPlacementWizardDialog(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L318-L321">Drilling.UI/Views/CRecipeView.xaml.cs:318–321</a></td><td>new CCellPlacementWizardDialog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>29</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+<tr><td>30</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>31</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>36</td><td>Enumerable.Range(1, _modelTypeCount).Select(value =&gt; value.ToString(CultureInfo.InvariantCulture)).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>36</td><td>Enumerable.Range(1, _modelTypeCount).Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Select&lt;int, string&gt;(System.Func&lt;int, string&gt;)</td></tr>
+<tr><td>36</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>36</td><td>value.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>47</td><td>Math.Min</td><td>resolved</td><td>int System.Math.Min(int, int)</td></tr>
+<tr><td>48</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>48</td><td>Math.Ceiling</td><td>resolved</td><td>double System.Math.Ceiling(double)</td></tr>
+<tr><td>48</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>49</td><td>_maxCellCount.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>50</td><td>defaultColumnCount.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>51</td><td>defaultRowCount.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>58</td><td>ApplyInitialResult</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:136</td></tr>
+<tr><td>62</td><td>RefreshModelRows</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows() · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88</td></tr>
+<tr><td>69</td><td>ColumnCountTextBox.Focus</td><td>unresolved</td><td>None</td></tr>
+<tr><td>70</td><td>ColumnCountTextBox.SelectAll</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+<tr><td>30</td><td>assignment</td><td>값을 대상에 대입합니다: _maxCellCount = Math.Max(1, context.CellCount)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, context.CellCount)</td></tr>
+<tr><td>31</td><td>assignment</td><td>값을 대상에 대입합니다: _modelTypeCount = Math.Clamp(context.ModelTypeCount, 1, 5)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(context.ModelTypeCount, 1, 5)</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: _glassSizeX = context.GlassSizeX</td></tr>
+<tr><td>33</td><td>assignment</td><td>값을 대상에 대입합니다: _glassSizeY = context.GlassSizeY</td></tr>
+<tr><td>34</td><td>assignment</td><td>값을 대상에 대입합니다: _akMarginX = context.AkMarginX</td></tr>
+<tr><td>35</td><td>assignment</td><td>값을 대상에 대입합니다: _akMarginY = context.AkMarginY</td></tr>
+<tr><td>36</td><td>assignment</td><td>값을 대상에 대입합니다: _defaultModelOptions = Enumerable.Range(1, _modelTypeCount).Select(value =&gt; value.ToString(CultureInfo.InvariantCulture)).ToArray()</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount).Select(value =&gt; value.ToString(CultureInfo.InvariantCulture)).ToArray()</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount).Select(value =&gt; value.ToString(CultureInfo.InvariantCulture))</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount)</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>37</td><td>assignment</td><td>값을 대상에 대입합니다: _overrideModelOptions = [DefaultModelOption, .. _defaultModelOptions]</td></tr>
+<tr><td>38</td><td>assignment</td><td>값을 대상에 대입합니다: Result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty</td></tr>
+<tr><td>40</td><td>assignment</td><td>값을 대상에 대입합니다: DirectionComboBox.ItemsSource = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options</td></tr>
+<tr><td>41</td><td>assignment</td><td>값을 대상에 대입합니다: DirectionComboBox.SelectedIndex = 0</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: DefaultModelComboBox.ItemsSource = _defaultModelOptions</td></tr>
+<tr><td>43</td><td>assignment</td><td>값을 대상에 대입합니다: DefaultModelComboBox.SelectedIndex = 0</td></tr>
+<tr><td>44</td><td>assignment</td><td>값을 대상에 대입합니다: RowModelItemsControl.ItemsSource = RowModelRows</td></tr>
+<tr><td>45</td><td>assignment</td><td>값을 대상에 대입합니다: ColumnModelItemsControl.ItemsSource = ColumnModelRows</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(30, _maxCellCount)</td></tr>
+<tr><td>47</td><td>local-declaration</td><td>지역 변수를 선언합니다: var defaultColumnCount = Math.Min(30, _maxCellCount);</td></tr>
+<tr><td>47</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: defaultColumnCount = Math.Min(30, _maxCellCount)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount)))</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount))</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, defaultColumnCount)</td></tr>
+<tr><td>48</td><td>local-declaration</td><td>지역 변수를 선언합니다: var defaultRowCount = Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount)));</td></tr>
+<tr><td>48</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: defaultRowCount = Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount)))</td></tr>
+<tr><td>49</td><td>assignment</td><td>값을 대상에 대입합니다: CellCountTextBox.Text = _maxCellCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _maxCellCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>50</td><td>assignment</td><td>값을 대상에 대입합니다: ColumnCountTextBox.Text = defaultColumnCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: defaultColumnCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>51</td><td>assignment</td><td>값을 대상에 대입합니다: RowCountTextBox.Text = defaultRowCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: defaultRowCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: StartXTextBox.Text = &quot;0&quot;</td></tr>
+<tr><td>53</td><td>assignment</td><td>값을 대상에 대입합니다: StartYTextBox.Text = &quot;0&quot;</td></tr>
+<tr><td>54</td><td>assignment</td><td>값을 대상에 대입합니다: PitchXTextBox.Text = &quot;0&quot;</td></tr>
+<tr><td>55</td><td>assignment</td><td>값을 대상에 대입합니다: PitchYTextBox.Text = &quot;0&quot;</td></tr>
+<tr><td>56</td><td>if</td><td>조건에 따라 분기합니다: if (_lastAppliedResult is { } lastResult &amp;&amp; lastResult.CellCount == _maxCellCount)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyInitialResult(lastResult)</td></tr>
+<tr><td>60</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: _isInitialized = true</td></tr>
+<tr><td>67</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) =&gt; { ColumnCountTextBox.Focus(); ColumnCountTextBox.SelectAll(); }</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ColumnCountTextBox.Focus()</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ColumnCountTextBox.SelectAll()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;.ctor&quot;]
+ N0[&quot;L56 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L60 else&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">PropertyDeclaration <code>RowModelRows</code> · L74–74</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.RowModelRows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">GetAccessorDeclaration <code>get_RowModelRows</code> · L74–74</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.RowModelRows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L75">PropertyDeclaration <code>ColumnModelRows</code> · L75–75</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.ColumnModelRows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L75">GetAccessorDeclaration <code>get_ColumnModelRows</code> · L75–75</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; Drilling.UI.Popup.CCellPlacementWizardDialog.ColumnModelRows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">PropertyDeclaration <code>Result</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.CCellPlacementWizardDialog.Result</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">GetAccessorDeclaration <code>get_Result</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.CCellPlacementWizardDialog.Result.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">SetAccessorDeclaration <code>set_Result</code> · L76–76</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.Result.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L78">MethodDeclaration <code>GridCountTextChanged</code> · L78–86</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L78-L86">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:78–86</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.GridCountTextChanged(object, System.Windows.Controls.TextChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>System.Windows.Controls.TextChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>85</td><td>RefreshModelRows</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows() · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>80</td><td>if</td><td>조건에 따라 분기합니다: if (!_isInitialized)</td></tr>
+<tr><td>82</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GridCountTextChanged&quot;]
+ N0[&quot;L80 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L88">MethodDeclaration <code>RefreshModelRows</code> · L88–99</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L88-L99">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88–99</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L62-L62">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:62–62</a></td><td>RefreshModelRows</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L85-L85">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:85–85</a></td><td>RefreshModelRows</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L146-L146">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:146–146</a></td><td>RefreshModelRows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>90</td><td>TryReadPositiveInt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>91</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>93</td><td>TryReadPositiveInt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>94</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>97</td><td>SyncModelRows</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.SyncModelRows(System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;, int, string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:101</td></tr>
+<tr><td>98</td><td>SyncModelRows</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.SyncModelRows(System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;, int, string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:101</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount)</td></tr>
+<tr><td>90</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1</td></tr>
+<tr><td>90</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rowCount = TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1;</td></tr>
+<tr><td>90</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rowCount = TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(parsedRowCount, 1, _maxCellCount)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount)</td></tr>
+<tr><td>93</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) : 1</td></tr>
+<tr><td>93</td><td>local-declaration</td><td>지역 변수를 선언합니다: var columnCount = TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) : 1;</td></tr>
+<tr><td>93</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: columnCount = TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) : 1</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(parsedColumnCount, 1, _maxCellCount)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SyncModelRows(RowModelRows, rowCount, &quot;ROW&quot;)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SyncModelRows(ColumnModelRows, columnCount, &quot;COL&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L101">MethodDeclaration <code>SyncModelRows</code> · L101–114</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L101-L114">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:101–114</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.SyncModelRows(System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;, int, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>rows</td><td>System.Collections.ObjectModel.ObservableCollection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>count</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>prefix</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L97-L97">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:97–97</a></td><td>SyncModelRows</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L98-L98">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:98–98</a></td><td>SyncModelRows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>105</td><td>rows.RemoveAt</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.RemoveAt(int)</td></tr>
+<tr><td>110</td><td>new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(string, int, string, System.Collections.Generic.IReadOnlyList&lt;string&gt;) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:442</td></tr>
+<tr><td>112</td><td>rows.Add</td><td>resolved</td><td>void System.Collections.ObjectModel.Collection&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.Add(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>103</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (rows.Count &gt; count)</td></tr>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: rows.RemoveAt(rows.Count - 1)</td></tr>
+<tr><td>108</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (rows.Count &lt; count)</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $&quot;{prefix} {rows.Count + 1}&quot;, _overrideModelOptions)</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var row = new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $&quot;{prefix} {rows.Count + 1}&quot;, _overrideModelOptions);</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: row = new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $&quot;{prefix} {rows.Count + 1}&quot;, _overrideModelOptions)</td></tr>
+<tr><td>111</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: row.ModelChanged += OnModelRuleChanged</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(row)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SyncModelRows&quot;]
+ N0[&quot;L103 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L108 while&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L116">MethodDeclaration <code>OnModelRuleChanged</code> · L116–121</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L116-L121">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:116–121</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.OnModelRuleChanged(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>118</td><td>ReadModel</td><td>resolved</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0)</td></tr>
+<tr><td>118</td><td>assignment</td><td>값을 대상에 대입합니다: row.ApplyOrder = ReadModel(row.SelectedModel, 0) &gt; 0 ? ++_modelApplySequence : 0</td></tr>
+<tr><td>118</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: ReadModel(row.SelectedModel, 0) &gt; 0 ? ++_modelApplySequence : 0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L123">MethodDeclaration <code>ApplyClick</code> · L123–134</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L123-L134">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:123–134</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>125</td><td>TryCreateResult</td><td>resolved</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:221</td></tr>
+<tr><td>127</td><td>MessageBox.Show</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryCreateResult(out var result, out var error)</td></tr>
+<tr><td>125</td><td>if</td><td>조건에 따라 분기합니다: if (!TryCreateResult(out var result, out var error))</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, &quot;입력값 오류&quot;, MessageBoxButton.OK, MessageBoxImage.Warning)</td></tr>
+<tr><td>128</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>131</td><td>assignment</td><td>값을 대상에 대입합니다: Result = result</td></tr>
+<tr><td>132</td><td>assignment</td><td>값을 대상에 대입합니다: _lastAppliedResult = result</td></tr>
+<tr><td>133</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ApplyClick&quot;]
+ N0[&quot;L125 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L136">MethodDeclaration <code>ApplyInitialResult</code> · L136–169</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L136-L169">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:136–169</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>result</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:58–58</a></td><td>ApplyInitialResult</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>138</td><td>result.ColumnCount.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>139</td><td>result.RowCount.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>140</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>140</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>141</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>141</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>142</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>142</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>143</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>143</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>144</td><td>ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION? System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt;.FirstOrDefault&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt;(System.Func&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION, bool&gt;)</td></tr>
+<tr><td>144</td><td>option.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>145</td><td>Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+<tr><td>145</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+<tr><td>146</td><td>RefreshModelRows</td><td>resolved</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows() · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88</td></tr>
+<tr><td>156</td><td>modelOverride.Scope.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>158</td><td>modelOverride.Scope.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>167</td><td>modelOverride.ModelType.ToString</td><td>resolved</td><td>string int.ToString(System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>138</td><td>assignment</td><td>값을 대상에 대입합니다: ColumnCountTextBox.Text = result.ColumnCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.ColumnCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>139</td><td>assignment</td><td>값을 대상에 대입합니다: RowCountTextBox.Text = result.RowCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>139</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.RowCount.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>140</td><td>assignment</td><td>값을 대상에 대입합니다: StartXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartX))</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.StartX))</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.StartX)</td></tr>
+<tr><td>141</td><td>assignment</td><td>값을 대상에 대입합니다: StartYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartY))</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.StartY))</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.StartY)</td></tr>
+<tr><td>142</td><td>assignment</td><td>값을 대상에 대입합니다: PitchXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchX))</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.PitchX))</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.PitchX)</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: PitchYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchY))</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.PitchY))</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.PitchY)</td></tr>
+<tr><td>144</td><td>assignment</td><td>값을 대상에 대입합니다: DirectionComboBox.SelectedItem = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault(option =&gt; option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)) ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault(option =&gt; option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>145</td><td>assignment</td><td>값을 대상에 대입합니다: DefaultModelComboBox.SelectedItem = Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(result.DefaultModelType, 1, _modelTypeCount)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()</td></tr>
+<tr><td>148</td><td>assignment</td><td>값을 대상에 대입합니다: _modelApplySequence = 0</td></tr>
+<tr><td>149</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var modelOverride in result.ModelOverrides)</td></tr>
+<tr><td>151</td><td>if</td><td>조건에 따라 분기합니다: if (modelOverride.ModelType &lt; 1 || modelOverride.ModelType &gt; _modelTypeCount)</td></tr>
+<tr><td>153</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.Scope.Equals(&quot;ROW&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>156</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: modelOverride.Scope.Equals(&quot;ROW&quot;, StringComparison.OrdinalIgnoreCase) ? RowModelRows : modelOverride.Scope.Equals(&quot;COL&quot;, StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null</td></tr>
+<tr><td>156</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = modelOverride.Scope.Equals(&quot;ROW&quot;, StringComparison.OrdinalIgnoreCase) ? RowModelRows : modelOverride.Scope.Equals(&quot;COL&quot;, StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null;</td></tr>
+<tr><td>156</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = modelOverride.Scope.Equals(&quot;ROW&quot;, StringComparison.OrdinalIgnoreCase) ? RowModelRows : modelOverride.Scope.Equals(&quot;COL&quot;, StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.Scope.Equals(&quot;COL&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: modelOverride.Scope.Equals(&quot;COL&quot;, StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null</td></tr>
+<tr><td>161</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rowIndex = modelOverride.Index - 1;</td></tr>
+<tr><td>161</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rowIndex = modelOverride.Index - 1</td></tr>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (rows is null || rowIndex &lt; 0 || rowIndex &gt;= rows.Count)</td></tr>
+<tr><td>164</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>167</td><td>assignment</td><td>값을 대상에 대입합니다: rows[rowIndex].SelectedModel = modelOverride.ModelType.ToString(CultureInfo.InvariantCulture)</td></tr>
+<tr><td>167</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.ModelType.ToString(CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ApplyInitialResult&quot;]
+ N0[&quot;L149 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L151 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L162 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">MethodDeclaration <code>OpenWizardInputKeypad</code> · L171–188</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L171-L188">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:171–188</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.OpenWizardInputKeypad(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>179</td><td>GetInputKeypadInfo</td><td>resolved</td><td>(string Parameter, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE DataType, double Min, double Max) Drilling.UI.Popup.CCellPlacementWizardDialog.GetInputKeypadInfo(TextBox) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:190</td></tr>
+<tr><td>180</td><td>new CValueInputDialog</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>184</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not TextBox textBox)</td></tr>
+<tr><td>175</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>178</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>179</td><td>assignment</td><td>값을 대상에 대입합니다: var (parameter, dataType, min, max) = GetInputKeypadInfo(textBox)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetInputKeypadInfo(textBox)</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this }</td></tr>
+<tr><td>180</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this };</td></tr>
+<tr><td>180</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this }</td></tr>
+<tr><td>182</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = this</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() == true)</td></tr>
+<tr><td>186</td><td>assignment</td><td>값을 대상에 대입합니다: textBox.Text = dialog.ResultValue</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenWizardInputKeypad&quot;]
+ N0[&quot;L173 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L184 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L190">MethodDeclaration <code>GetInputKeypadInfo</code> · L190–219</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L190-L219">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:190–219</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>(string Parameter, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE DataType, double Min, double Max) Drilling.UI.Popup.CCellPlacementWizardDialog.GetInputKeypadInfo(TextBox)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>(string Parameter, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE DataType, double Min, double Max)</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>textBox</td><td>TextBox</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L179-L179">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:179–179</a></td><td>GetInputKeypadInfo</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>193</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>198</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>203</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>208</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>213</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>192</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double nonNegativeMaximum = 1000000.0;</td></tr>
+<tr><td>192</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nonNegativeMaximum = 1000000.0</td></tr>
+<tr><td>193</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, ColumnCountTextBox)</td></tr>
+<tr><td>193</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(textBox, ColumnCountTextBox))</td></tr>
+<tr><td>195</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;COLUMN COUNT&quot;, EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount);</td></tr>
+<tr><td>198</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, RowCountTextBox)</td></tr>
+<tr><td>198</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(textBox, RowCountTextBox))</td></tr>
+<tr><td>200</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;ROW COUNT&quot;, EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount);</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, StartXTextBox)</td></tr>
+<tr><td>203</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(textBox, StartXTextBox))</td></tr>
+<tr><td>205</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;START X&quot;, EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, StartYTextBox)</td></tr>
+<tr><td>208</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(textBox, StartYTextBox))</td></tr>
+<tr><td>210</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;START Y&quot;, EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);</td></tr>
+<tr><td>213</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, PitchXTextBox)</td></tr>
+<tr><td>213</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(textBox, PitchXTextBox))</td></tr>
+<tr><td>215</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;CELL PITCH X&quot;, EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);</td></tr>
+<tr><td>218</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return (&quot;CELL PITCH Y&quot;, EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetInputKeypadInfo&quot;]
+ N0[&quot;L193 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L198 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L203 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L208 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L213 if&quot;]
+ M --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L221">MethodDeclaration <code>TryCreateResult</code> · L221–301</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L221-L301">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:221–301</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>result</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td><td>Out</td><td>False /</td></tr>
+<tr><td>error</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L125-L125">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:125–125</a></td><td>TryCreateResult</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>229</td><td>TryReadPositiveInt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>235</td><td>TryReadPositiveInt</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>241</td><td>TryReadDouble</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>242</td><td>TryReadDouble</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>243</td><td>TryReadDouble</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>244</td><td>TryReadDouble</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>263</td><td>TryValidateGlassBounds</td><td>resolved</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:320</td></tr>
+<tr><td>268</td><td>ReadModel</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>268</td><td>.ToString</td><td>unresolved</td><td>None</td></tr>
+<tr><td>271</td><td>new ST_CELL_PLACEMENT_WIZARD_RESULT</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>293</td><td>RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy(row =&gt; row.ApplyOrder) .Select(row =&gt; new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, ReadModel(row.SelectedModel, 0))) .ToArray</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt;.ToArray&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt;()</td></tr>
+<tr><td>293</td><td>RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy(row =&gt; row.ApplyOrder) .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.Select&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW, Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt;(System.Func&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW, Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt;)</td></tr>
+<tr><td>293</td><td>RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.OrderBy&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW, int&gt;(System.Func&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW, int&gt;)</td></tr>
+<tr><td>293</td><td>RowModelRows .Concat(ColumnModelRows) .Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.Where&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;(System.Func&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW, bool&gt;)</td></tr>
+<tr><td>293</td><td>RowModelRows .Concat</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt; System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.Concat&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;(System.Collections.Generic.IEnumerable&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;)</td></tr>
+<tr><td>295</td><td>ReadModel</td><td>resolved</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313</td></tr>
+<tr><td>297</td><td>new ST_CELL_PLACEMENT_MODEL_OVERRIDE</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE.ST_CELL_PLACEMENT_MODEL_OVERRIDE(string, int, int) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:419</td></tr>
+<tr><td>297</td><td>ReadModel</td><td>resolved</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>223</td><td>assignment</td><td>값을 대상에 대입합니다: result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty</td></tr>
+<tr><td>224</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>226</td><td>local-declaration</td><td>지역 변수를 선언합니다: const int startCell = 1;</td></tr>
+<tr><td>226</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: startCell = 1</td></tr>
+<tr><td>227</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cellCount = _maxCellCount;</td></tr>
+<tr><td>227</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cellCount = _maxCellCount</td></tr>
+<tr><td>229</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var columnCount)</td></tr>
+<tr><td>229</td><td>if</td><td>조건에 따라 분기합니다: if (!TryReadPositiveInt(ColumnCountTextBox.Text, out var columnCount))</td></tr>
+<tr><td>231</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;COLUMN COUNT must be a positive integer.&quot;</td></tr>
+<tr><td>232</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(RowCountTextBox.Text, out var rowCount)</td></tr>
+<tr><td>235</td><td>if</td><td>조건에 따라 분기합니다: if (!TryReadPositiveInt(RowCountTextBox.Text, out var rowCount))</td></tr>
+<tr><td>237</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;ROW COUNT must be a positive integer.&quot;</td></tr>
+<tr><td>238</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>241</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(StartXTextBox.Text, out var startX)</td></tr>
+<tr><td>241</td><td>if</td><td>조건에 따라 분기합니다: if (!TryReadDouble(StartXTextBox.Text, out var startX) || !TryReadDouble(StartYTextBox.Text, out var startY) || !TryReadDouble(PitchXTextBox.Text, out var pitchX) || !TryReadDouble(PitchYTextBox.Text, out var pitchY))</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(StartYTextBox.Text, out var startY)</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(PitchXTextBox.Text, out var pitchX)</td></tr>
+<tr><td>244</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(PitchYTextBox.Text, out var pitchY)</td></tr>
+<tr><td>246</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;START X/Y and PITCH X/Y must be finite numbers.&quot;</td></tr>
+<tr><td>247</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>250</td><td>if</td><td>조건에 따라 분기합니다: if (startX &lt; 0.0 || startY &lt; 0.0 || pitchX &lt; 0.0 || pitchY &lt; 0.0)</td></tr>
+<tr><td>252</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;START X/Y and CELL PITCH X/Y cannot be negative.&quot;</td></tr>
+<tr><td>253</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>256</td><td>local-declaration</td><td>지역 변수를 선언합니다: var layoutCellCount = (long)rowCount * columnCount;</td></tr>
+<tr><td>256</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: layoutCellCount = (long)rowCount * columnCount</td></tr>
+<tr><td>257</td><td>if</td><td>조건에 따라 분기합니다: if (layoutCellCount != cellCount)</td></tr>
+<tr><td>259</td><td>assignment</td><td>값을 대상에 대입합니다: error = $&quot;ROW COUNT x COLUMN COUNT must match CELL COUNT.\nCurrent: {rowCount} x {columnCount} = {layoutCellCount}, CELL COUNT = {cellCount}.&quot;</td></tr>
+<tr><td>260</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TryValidateGlassBounds(rowCount, columnCount, startX, startY, pitchX, pitchY, out error)</td></tr>
+<tr><td>263</td><td>if</td><td>조건에 따라 분기합니다: if (!TryValidateGlassBounds(rowCount, columnCount, startX, startY, pitchX, pitchY, out error))</td></tr>
+<tr><td>265</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1)</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()</td></tr>
+<tr><td>268</td><td>local-declaration</td><td>지역 변수를 선언합니다: var defaultModelType = ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1);</td></tr>
+<tr><td>268</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: defaultModelType = ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1)</td></tr>
+<tr><td>269</td><td>local-declaration</td><td>지역 변수를 선언합니다: var direction = DirectionComboBox.SelectedItem as ST_CELL_PLACEMENT_WIZARD_DIRECTION ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0];</td></tr>
+<tr><td>269</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: direction = DirectionComboBox.SelectedItem as ST_CELL_PLACEMENT_WIZARD_DIRECTION ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]</td></tr>
+<tr><td>271</td><td>assignment</td><td>값을 대상에 대입합니다: result = new ST_CELL_PLACEMENT_WIZARD_RESULT( startCell, cellCount, rowCount, columnCount, startX, startY, pitchX, pitchY, direction.Key, defaultModelType, RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp;</td></tr>
+<tr><td>271</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_WIZARD_RESULT( startCell, cellCount, rowCount, columnCount, startX, startY, pitchX, pitchY, direction.Key, defaultModelType, RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp;…</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy(row =&gt; row.ApplyOrder)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy(row =&gt; row.ApplyOrder) .Select(row =&gt; new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, Rea…</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row =&gt; row.ApplyOrder &gt; 0 &amp;&amp; ReadModel(row.SelectedModel, 0) &gt; 0) .OrderBy(row =&gt; row.ApplyOrder) .Select(row =&gt; new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, Rea…</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, ReadModel(row.SelectedModel, 0))</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0)</td></tr>
+<tr><td>300</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryCreateResult&quot;]
+ N0[&quot;L229 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L235 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L241 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L250 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L257 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L263 if&quot;]
+ M --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L303">MethodDeclaration <code>TryReadPositiveInt</code> · L303–306</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L303-L306">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:303–306</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadPositiveInt(string, out int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>int</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>305</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+<tr><td>305</td><td>text.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out value)</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim()</td></tr>
+<tr><td>305</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return int.TryParse(text.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) &amp;&amp; value &gt; 0;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L308">MethodDeclaration <code>TryReadDouble</code> · L308–311</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L308-L311">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:308–311</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadDouble(string, out double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>value</td><td>double</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>310</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>310</td><td>text.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>310</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value)</td></tr>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim()</td></tr>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+<tr><td>310</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) &amp;&amp; double.IsFinite(value);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L313">MethodDeclaration <code>ReadModel</code> · L313–318</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L313-L318">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313–318</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string?</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L118-L118">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:118–118</a></td><td>ReadModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L295-L295">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:295–295</a></td><td>ReadModel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L297-L297">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:297–297</a></td><td>ReadModel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>315</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>315</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>315</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) ? value : defaultValue</td></tr>
+<tr><td>315</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) ? value : defaultValue;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L320">MethodDeclaration <code>TryValidateGlassBounds</code> · L320–361</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L320-L361">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:320–361</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>rowCount</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>columnCount</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>startX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>startY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>pitchX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>pitchY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>error</td><td>string</td><td>Out</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:263–263</a></td><td>TryValidateGlassBounds</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>347</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>348</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>349</td><td>Math.Min</td><td>resolved</td><td>double System.Math.Min(double, double)</td></tr>
+<tr><td>350</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>358</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>358</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>358</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>359</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>359</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+<tr><td>359</td><td>FormatValidationDouble</td><td>resolved</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>337</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;&quot;</td></tr>
+<tr><td>338</td><td>if</td><td>조건에 따라 분기합니다: if (_glassSizeX &lt;= 0.0 || _glassSizeY &lt;= 0.0)</td></tr>
+<tr><td>340</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>343</td><td>local-declaration</td><td>지역 변수를 선언합니다: var firstX = _akMarginX + startX;</td></tr>
+<tr><td>343</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: firstX = _akMarginX + startX</td></tr>
+<tr><td>344</td><td>local-declaration</td><td>지역 변수를 선언합니다: var lastX = _akMarginX + startX + ((columnCount - 1) * pitchX);</td></tr>
+<tr><td>344</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: lastX = _akMarginX + startX + ((columnCount - 1) * pitchX)</td></tr>
+<tr><td>345</td><td>local-declaration</td><td>지역 변수를 선언합니다: var firstY = _akMarginY + startY;</td></tr>
+<tr><td>345</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: firstY = _akMarginY + startY</td></tr>
+<tr><td>346</td><td>local-declaration</td><td>지역 변수를 선언합니다: var lastY = _akMarginY + startY + ((rowCount - 1) * pitchY);</td></tr>
+<tr><td>346</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: lastY = _akMarginY + startY + ((rowCount - 1) * pitchY)</td></tr>
+<tr><td>347</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(firstX, lastX)</td></tr>
+<tr><td>347</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minX = Math.Min(firstX, lastX);</td></tr>
+<tr><td>347</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minX = Math.Min(firstX, lastX)</td></tr>
+<tr><td>348</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(firstX, lastX)</td></tr>
+<tr><td>348</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxX = Math.Max(firstX, lastX);</td></tr>
+<tr><td>348</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxX = Math.Max(firstX, lastX)</td></tr>
+<tr><td>349</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(firstY, lastY)</td></tr>
+<tr><td>349</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minY = Math.Min(firstY, lastY);</td></tr>
+<tr><td>349</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minY = Math.Min(firstY, lastY)</td></tr>
+<tr><td>350</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(firstY, lastY)</td></tr>
+<tr><td>350</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxY = Math.Max(firstY, lastY);</td></tr>
+<tr><td>350</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxY = Math.Max(firstY, lastY)</td></tr>
+<tr><td>351</td><td>if</td><td>조건에 따라 분기합니다: if (minX &gt;= 0.0 &amp;&amp; maxX &lt;= _glassSizeX &amp;&amp; minY &gt;= 0.0 &amp;&amp; maxY &lt;= _glassSizeY)</td></tr>
+<tr><td>353</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>356</td><td>assignment</td><td>값을 대상에 대입합니다: error = &quot;CELL PITCH placement exceeds GLASS SIZE.\n&quot; + $&quot;X range: {FormatValidationDouble(minX)} ~ {FormatValidationDouble(maxX)} / Glass X: {FormatValidationDouble(_glassSizeX)}\n&quot; + $&quot;Y range: {FormatValidationDouble(minY)} ~ {F</td></tr>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(minX)</td></tr>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(maxX)</td></tr>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(_glassSizeX)</td></tr>
+<tr><td>359</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(minY)</td></tr>
+<tr><td>359</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(maxY)</td></tr>
+<tr><td>359</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(_glassSizeY)</td></tr>
+<tr><td>360</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;TryValidateGlassBounds&quot;]
+ N0[&quot;L338 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L351 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L363">MethodDeclaration <code>FormatValidationDouble</code> · L363–366</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L363-L366">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363–366</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L140-L140">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:140–140</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L141-L141">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:141–141</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L142-L142">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:142–142</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L143-L143">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:143–143</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359</a></td><td>FormatValidationDouble</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>365</td><td>value.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>365</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(&quot;0.######&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>365</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.ToString(&quot;0.######&quot;, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L368">MethodDeclaration <code>CancelClick</code> · L368–371</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L368-L371">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:368–371</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.CancelClick(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>370</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L373">MethodDeclaration <code>WindowKeyDown</code> · L373–380</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L373-L380">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:373–380</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.CCellPlacementWizardDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.CCellPlacementWizardDialog</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>KeyEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>375</td><td>if</td><td>조건에 따라 분기합니다: if (e.Key == Key.Escape)</td></tr>
+<tr><td>377</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>378</td><td>assignment</td><td>값을 대상에 대입합니다: DialogResult = false</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;WindowKeyDown&quot;]
+ N0[&quot;L375 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L416">PropertyDeclaration <code>Empty</code> · L416–416</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT.Empty</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>416</td><td>new</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT.ST_CELL_PLACEMENT_WIZARD_RESULT(int, int, int, int, double, double, double, double, string, int, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_OVERRIDE&gt;) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:391</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>416</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 0, 1, 1, 0.0, 0.0, 0.0, 0.0, ST_CELL_PLACEMENT_WIZARD_DIRECTION.HorizontalFirst, 1, [])</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L416">GetAccessorDeclaration <code>get_Empty</code> · L416–416</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT.Empty.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L423">FieldDeclaration <code>HorizontalFirst</code> · L423–423</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L423-L423">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:423–423</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.HorizontalFirst</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>423</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: HorizontalFirst = &quot;HORIZONTAL_FIRST&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L424">FieldDeclaration <code>VerticalFirst</code> · L424–424</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L424-L424">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:424–424</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.VerticalFirst</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>424</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: VerticalFirst = &quot;VERTICAL_FIRST&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L426">PropertyDeclaration <code>Options</code> · L426–430</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L430">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–430</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>428</td><td>new</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.ST_CELL_PLACEMENT_WIZARD_DIRECTION(string, string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:421</td></tr>
+<tr><td>429</td><td>new</td><td>resolved</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.ST_CELL_PLACEMENT_WIZARD_DIRECTION(string, string) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:421</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>428</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(HorizontalFirst, &quot;HORIZONTAL FIRST&quot;)</td></tr>
+<tr><td>429</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(VerticalFirst, &quot;VERTICAL FIRST&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L426">GetAccessorDeclaration <code>get_Options</code> · L426–426</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L426">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–426</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L432">MethodDeclaration <code>ToString</code> · L432–435</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L432-L435">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:432–435</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.ToString()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>434</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return DisplayName;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L440">FieldDeclaration <code>_selectedModel</code> · L440–440</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L440-L440">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:440–440</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW._selectedModel</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L442">ConstructorDeclaration <code>.ctor</code> · L442–449</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L442-L449">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:442–449</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(string, int, string, System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>scope</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>label</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>modelOptions</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L110-L110">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:110–110</a></td><td>new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>448</td><td>modelOptions.FirstOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IEnumerable&lt;string&gt;.FirstOrDefault&lt;string&gt;()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>444</td><td>assignment</td><td>값을 대상에 대입합니다: Scope = scope</td></tr>
+<tr><td>445</td><td>assignment</td><td>값을 대상에 대입합니다: Index = index</td></tr>
+<tr><td>446</td><td>assignment</td><td>값을 대상에 대입합니다: Label = label</td></tr>
+<tr><td>447</td><td>assignment</td><td>값을 대상에 대입합니다: ModelOptions = modelOptions</td></tr>
+<tr><td>448</td><td>assignment</td><td>값을 대상에 대입합니다: _selectedModel = modelOptions.FirstOrDefault() ?? &quot;DEFAULT&quot;</td></tr>
+<tr><td>448</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: modelOptions.FirstOrDefault()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L451">EventFieldDeclaration <code>PropertyChanged</code> · L451–451</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L451-L451">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:451–451</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.PropertyChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.ComponentModel.PropertyChangedEventHandler?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L452">EventFieldDeclaration <code>ModelChanged</code> · L452–452</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L452-L452">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:452–452</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Action&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelChanged</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.Action&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L453">PropertyDeclaration <code>Scope</code> · L453–453</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Scope</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L453">GetAccessorDeclaration <code>get_Scope</code> · L453–453</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Scope.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L454">PropertyDeclaration <code>Index</code> · L454–454</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Index</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L454">GetAccessorDeclaration <code>get_Index</code> · L454–454</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Index.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L455">PropertyDeclaration <code>Label</code> · L455–455</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Label</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L455">GetAccessorDeclaration <code>get_Label</code> · L455–455</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Label.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L456">PropertyDeclaration <code>ModelOptions</code> · L456–456</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelOptions</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L456">GetAccessorDeclaration <code>get_ModelOptions</code> · L456–456</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelOptions.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L457">PropertyDeclaration <code>ApplyOrder</code> · L457–457</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L457">GetAccessorDeclaration <code>get_ApplyOrder</code> · L457–457</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L457">SetAccessorDeclaration <code>set_ApplyOrder</code> · L457–457</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L459">PropertyDeclaration <code>SelectedModel</code> · L459–473</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L459-L473">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:459–473</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L461">GetAccessorDeclaration <code>get_SelectedModel</code> · L461–461</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L461-L461">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:461–461</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L462">SetAccessorDeclaration <code>set_SelectedModel</code> · L462–472</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L462-L472">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:462–472</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.set</td></tr>
+<tr><td>접근/수식자</td><td>Public / set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>470</td><td>OnPropertyChanged</td><td>resolved</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.OnPropertyChanged(string?) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:475</td></tr>
+<tr><td>471</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW&gt;.Invoke(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>464</td><td>if</td><td>조건에 따라 분기합니다: if (_selectedModel == value)</td></tr>
+<tr><td>466</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>469</td><td>assignment</td><td>값을 대상에 대입합니다: _selectedModel = value</td></tr>
+<tr><td>470</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()</td></tr>
+<tr><td>471</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;set_SelectedModel&quot;]
+ N0[&quot;L464 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L475">MethodDeclaration <code>OnPropertyChanged</code> · L475–478</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L475-L478">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:475–478</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.OnPropertyChanged(string?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>propertyName</td><td>string?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L470-L470">Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:470–470</a></td><td>OnPropertyChanged</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>477</td><td>.Invoke</td><td>resolved · 동적 구현 선택 가능</td><td>void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs)</td></tr>
+<tr><td>477</td><td>new PropertyChangedEventArgs</td><td>resolved</td><td>System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>477</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName))</td></tr>
+<tr><td>477</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

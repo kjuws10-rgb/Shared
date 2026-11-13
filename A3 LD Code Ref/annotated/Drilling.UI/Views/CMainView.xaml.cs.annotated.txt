@@ -1,0 +1,44 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CMainView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000003 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000004 | using Drilling.UI.Popup; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000006 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public partial class CMainView : UserControl
+L000007 | public partial class CMainView : UserControl ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CMainView.CMainView()
+L000009 |     public CMainView() ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 .ctor.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000011 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 .ctor.
+L000012 |     } ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMainView.OpenInterlockDetailsDialog(object, RoutedEventArgs)
+L000014 |     private void OpenInterlockDetailsDialog(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 OpenInterlockDetailsDialog.
+L000015 |     { ⟦EOL⟧
+// 해설 L16: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_INTERLOCK_GROUP group }) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000016 |         if (sender is not Button { DataContext: ST_INTERLOCK_GROUP group }) return; ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CInterlockDetailsDialog(group) { Owner = Window.GetWindow(this) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) / 지역 변수를 선언합니다: var dialog = new CInterlockDetailsDialog(group) { Owner = Window.GetWindow(this) }; / 변수의 초기값을 지정합니다: dialog = new CInterlockDetailsDialog(group) { Owner = Window.GetWindow(this) }
+L000017 |         var dialog = new CInterlockDetailsDialog(group) { Owner = Window.GetWindow(this) }; ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()
+L000018 |         dialog.ShowDialog(); ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 OpenInterlockDetailsDialog.
+L000019 |     } ⟦EOL⟧
+L000020 |  ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다.
+L000021 | } ⟦EOL⟧

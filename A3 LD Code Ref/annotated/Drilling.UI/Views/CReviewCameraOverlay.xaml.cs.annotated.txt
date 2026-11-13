@@ -1,0 +1,121 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CReviewCameraOverlay.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000001 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000003 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media.Animation;
+L000005 | using System.Windows.Media.Animation; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000008 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 | /// <summary>Animate only the camera marker between shared feedback frames. The Glass/Cell transforms remain fixed.</summary> ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public partial class CReviewCameraOverlay : UserControl
+L000011 | public partial class CReviewCameraOverlay : UserControl ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CReviewCameraPreview? Drilling.UI.Views.CReviewCameraOverlay._camera
+L000013 |     private CReviewCameraPreview? _camera; ⟦EOL⟧
+// 해설 L14: 변수의 초기값을 지정합니다: _projectionVersion = -1
+L000014 |     private int _projectionVersion = -1; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CReviewCameraOverlay._wasVisible
+L000015 |     private bool _wasVisible; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewCameraOverlay.CReviewCameraOverlay()
+L000016 |     public CReviewCameraOverlay() ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: Subscribe() / 복합 대입 또는 이벤트 구독/해지 표현입니다: DataContextChanged += (_, _) => Subscribe()
+L000019 |         DataContextChanged += (_, _) => Subscribe(); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: Subscribe() / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMarker(animate: false) / 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => { Subscribe(); UpdateMarker(animate: false); }
+L000020 |         Loaded += (_, _) => { Subscribe(); UpdateMarker(animate: false); }; ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: _wasVisible = false / 함수·델리게이트 또는 객체 생성자를 호출합니다: Unsubscribe() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAnimations() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Unloaded += (_, _) => { Unsubscribe(); StopAnimations(); _wasVisible = false; }
+L000021 |         Unloaded += (_, _) => { Unsubscribe(); StopAnimations(); _wasVisible = false; }; ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 .ctor.
+L000022 |     } ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewCameraOverlay.Subscribe()
+L000024 |     private void Subscribe() ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Subscribe.
+L000025 |     { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_camera, DataContext) / 조건에 따라 분기합니다: if (!ReferenceEquals(_camera, DataContext))
+L000026 |         if (!ReferenceEquals(_camera, DataContext)) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Subscribe.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 값을 대상에 대입합니다: _camera = DataContext as CReviewCameraPreview / 함수·델리게이트 또는 객체 생성자를 호출합니다: Unsubscribe()
+L000028 |             Unsubscribe(); _camera = DataContext as CReviewCameraPreview; ⟦EOL⟧
+// 해설 L29: 복합 대입 또는 이벤트 구독/해지 표현입니다: _camera.PropertyChanged += CameraChanged / 조건에 따라 분기합니다: if (_camera is not null)
+L000029 |             if (_camera is not null) _camera.PropertyChanged += CameraChanged; ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 Subscribe.
+L000030 |         } ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMarker(animate: false)
+L000031 |         UpdateMarker(animate: false); ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Subscribe.
+L000032 |     } ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewCameraOverlay.Unsubscribe()
+L000033 |     private void Unsubscribe() ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Unsubscribe.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 복합 대입 또는 이벤트 구독/해지 표현입니다: _camera.PropertyChanged -= CameraChanged / 조건에 따라 분기합니다: if (_camera is not null)
+L000035 |         if (_camera is not null) _camera.PropertyChanged -= CameraChanged; ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: _camera = null
+L000036 |         _camera = null; ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 Unsubscribe.
+L000037 |     } ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMarker(animate: true)
+L000038 |     private void CameraChanged(object? sender, PropertyChangedEventArgs e) => UpdateMarker(animate: true); ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewCameraOverlay.UpdateMarker(bool)
+L000040 |     private void UpdateMarker(bool animate) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 UpdateMarker.
+L000041 |     { ⟦EOL⟧
+// 해설 L42: 조건에 따라 분기합니다: if (_camera is not { IsVisible: true })
+L000042 |         if (_camera is not { IsVisible: true }) ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: CameraMarker.Visibility = Visibility.Collapsed / 값을 대상에 대입합니다: _wasVisible = false / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAnimations() / 호출자에게 값 또는 제어를 반환합니다: return;
+L000043 |         { CameraMarker.Visibility = Visibility.Collapsed; StopAnimations(); _wasVisible = false; return; } ⟦EOL⟧
+// 해설 L44: 지역 변수를 선언합니다: var smooth = animate && _wasVisible && _projectionVersion == _camera.ProjectionVersion; / 변수의 초기값을 지정합니다: smooth = animate && _wasVisible && _projectionVersion == _camera.ProjectionVersion
+L000044 |         var smooth = animate && _wasVisible && _projectionVersion == _camera.ProjectionVersion; ⟦EOL⟧
+// 해설 L45: 지역 변수를 선언합니다: var x = _camera.Center.X - 18; / 변수의 초기값을 지정합니다: x = _camera.Center.X - 18
+L000045 |         var x = _camera.Center.X - 18; ⟦EOL⟧
+// 해설 L46: 지역 변수를 선언합니다: var y = _camera.Center.Y - 14; / 변수의 초기값을 지정합니다: y = _camera.Center.Y - 14
+L000046 |         var y = _camera.Center.Y - 14; ⟦EOL⟧
+// 해설 L47: 조건에 따라 분기합니다: if (smooth)
+L000047 |         if (smooth) ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 UpdateMarker.
+L000048 |         { ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: CameraTranslation.BeginAnimation(TranslateTransform.XProperty, Animation(CameraTranslation.X, x), HandoffBehavior.SnapshotAndReplace) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Animation(CameraTranslation.X, x)
+L000049 |             CameraTranslation.BeginAnimation(TranslateTransform.XProperty, Animation(CameraTranslation.X, x), HandoffBehavior.SnapshotAndReplace); ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: CameraTranslation.BeginAnimation(TranslateTransform.YProperty, Animation(CameraTranslation.Y, y), HandoffBehavior.SnapshotAndReplace) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Animation(CameraTranslation.Y, y)
+L000050 |             CameraTranslation.BeginAnimation(TranslateTransform.YProperty, Animation(CameraTranslation.Y, y), HandoffBehavior.SnapshotAndReplace); ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 UpdateMarker.
+L000051 |         } ⟦EOL⟧
+// 해설 L52: 앞 조건이 거짓인 경로입니다: else
+L000052 |         else ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: CameraTranslation.X = x / 값을 대상에 대입합니다: CameraTranslation.Y = y / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopAnimations()
+L000053 |         { StopAnimations(); CameraTranslation.X = x; CameraTranslation.Y = y; } ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: CameraMarker.Visibility = Visibility.Visible
+L000054 |         CameraMarker.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: _wasVisible = true / 값을 대상에 대입합니다: _projectionVersion = _camera.ProjectionVersion
+L000055 |         _wasVisible = true; _projectionVersion = _camera.ProjectionVersion; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 UpdateMarker.
+L000056 |     } ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewCameraOverlay.StopAnimations()
+L000057 |     private void StopAnimations() ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: CameraTranslation.BeginAnimation(TranslateTransform.XProperty, null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CameraTranslation.BeginAnimation(TranslateTransform.YProperty, null)
+L000058 |     { CameraTranslation.BeginAnimation(TranslateTransform.XProperty, null); CameraTranslation.BeginAnimation(TranslateTransform.YProperty, null); } ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(from, to, new Duration(TimeSpan.FromMilliseconds(180))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Duration(TimeSpan.FromMilliseconds(180)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(180)
+L000059 |     private static DoubleAnimation Animation(double from, double to) => new(from, to, new Duration(TimeSpan.FromMilliseconds(180))); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다.
+L000060 | } ⟦EOL⟧

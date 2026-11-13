@@ -1,0 +1,389 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000005 | namespace Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L6: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.Cancel
+L000006 | public enum EN_DEFAULT_RESTART_CHOICE { Cancel, AllFromStart, InspectionFromStart } ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public partial class CRecipeConfirmDialog : Window
+L000008 | public partial class CRecipeConfirmDialog : Window ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog._alternateSelected
+L000010 |     private bool _alternateSelected; ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool)
+L000011 |     public static bool ShowConfirmation(string title, string message, string confirmText = "확인", bool useDangerStyle = false) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 ShowConfirmation.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) { Owner = Application.Current?.MainWindow }
+L000013 |         var dialog = new CRecipeConfirmDialog(title, message, confirmText, useDangerStyle) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 ShowConfirmation.
+L000014 |         { ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000015 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 ShowConfirmation.
+L000016 |         }; ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;
+L000017 |         return dialog.ShowDialog() == true; ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 ShowConfirmation.
+L000018 |     } ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowDuplicateOffsetConfirmation(string, string)
+L000020 |     public static bool ShowDuplicateOffsetConfirmation(string title, string message) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 ShowDuplicateOffsetConfirmation.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, "중복 적용", useDangerStyle: true) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, "중복 적용", useDangerStyle: true) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, "중복 적용", useDangerStyle: true) { Owner = Application.Current?.MainWindow }
+L000022 |         var dialog = new CRecipeConfirmDialog(title, message, "중복 적용", useDangerStyle: true) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 ShowDuplicateOffsetConfirmation.
+L000023 |         { ⟦EOL⟧
+// 해설 L24: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000024 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 ShowDuplicateOffsetConfirmation.
+L000025 |         }; ⟦EOL⟧
+// 해설 L26: 값을 대상에 대입합니다: dialog.CancelButton.Content = "아니오"
+L000026 |         dialog.CancelButton.Content = "아니오"; ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;
+L000027 |         return dialog.ShowDialog() == true; ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 ShowDuplicateOffsetConfirmation.
+L000028 |     } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowSavedResultLoadConfirmation(string, string)
+L000030 |     public static bool ShowSavedResultLoadConfirmation(string title, string message) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 ShowSavedResultLoadConfirmation.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, "예, LOAD", useDangerStyle: false) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, "예, LOAD", useDangerStyle: false) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, "예, LOAD", useDangerStyle: false) { Owner = Application.Current?.MainWindow }
+L000032 |         var dialog = new CRecipeConfirmDialog(title, message, "예, LOAD", useDangerStyle: false) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 ShowSavedResultLoadConfirmation.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000034 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 ShowSavedResultLoadConfirmation.
+L000035 |         }; ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: dialog.CancelButton.Content = "아니오"
+L000036 |         dialog.CancelButton.Content = "아니오"; ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;
+L000037 |         return dialog.ShowDialog() == true; ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 ShowSavedResultLoadConfirmation.
+L000038 |     } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderCopy(string, string)
+L000040 |     public static bool ShowRecipeFolderCopy(string title, string message) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 ShowRecipeFolderCopy.
+L000041 |     { ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, "복사", useDangerStyle: false) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, "복사", useDangerStyle: false) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, "복사", useDangerStyle: false) { Owner = Application.Current?.MainWindow }
+L000042 |         var dialog = new CRecipeConfirmDialog(title, message, "복사", useDangerStyle: false) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 ShowRecipeFolderCopy.
+L000043 |         { ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000044 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 ShowRecipeFolderCopy.
+L000045 |         }; ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: dialog.CancelButton.Content = "복사 안 함"
+L000046 |         dialog.CancelButton.Content = "복사 안 함"; ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;
+L000047 |         return dialog.ShowDialog() == true; ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 ShowRecipeFolderCopy.
+L000048 |     } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000050 |     // true: rename this folder, false: keep it, null: cancel the entire recipe rename. ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · bool? Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderRename(string, string)
+L000051 |     public static bool? ShowRecipeFolderRename(string title, string message) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 ShowRecipeFolderRename.
+L000052 |     { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateRecipeFolderRename(title, message) / 지역 변수를 선언합니다: var dialog = CreateRecipeFolderRename(title, message); / 변수의 초기값을 지정합니다: dialog = CreateRecipeFolderRename(title, message)
+L000053 |         var dialog = CreateRecipeFolderRename(title, message); ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 결과식을 선택합니다: dialog.ShowDialog() == true ? true : dialog._alternateSelected ? false : null / 조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? false : null / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true ? true : dialog._alternateSelected ? false : null;
+L000054 |         return dialog.ShowDialog() == true ? true : dialog._alternateSelected ? false : null; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ShowRecipeFolderRename.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateRecipeFolderRename(string, string)
+L000057 |     internal static CRecipeConfirmDialog CreateRecipeFolderRename(string title, string message) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 CreateRecipeFolderRename.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 지역 변수를 선언합니다: var owner = Application.Current?.MainWindow; / 변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow
+L000059 |         var owner = Application.Current?.MainWindow; ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, "함께 변경", useDangerStyle: false) / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, "함께 변경", useDangerStyle: false); / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, "함께 변경", useDangerStyle: false)
+L000060 |         var dialog = new CRecipeConfirmDialog(title, message, "함께 변경", useDangerStyle: false); ⟦EOL⟧
+// 해설 L61: 조건에 따라 분기합니다: if (owner is not null)
+L000061 |         if (owner is not null) ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: dialog.Owner = owner
+L000062 |             dialog.Owner = owner; ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: dialog.CancelButton.Content = "폴더 유지"
+L000063 |         dialog.CancelButton.Content = "폴더 유지"; ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: dialog.AbortGap.Width = new GridLength(12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(12)
+L000064 |         dialog.AbortGap.Width = new GridLength(12); ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)
+L000065 |         dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star); ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: dialog.AbortButton.Visibility = Visibility.Visible
+L000066 |         dialog.AbortButton.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return dialog;
+L000067 |         return dialog; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 CreateRecipeFolderRename.
+L000068 |     } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowRecipeFolderAction(title, message, "함께 삭제", true)
+L000070 |     public static bool ShowRecipeFolderDelete(string title, string message) => ShowRecipeFolderAction(title, message, "함께 삭제", true); ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderAction(string, string, string, bool)
+L000071 |     private static bool ShowRecipeFolderAction(string title, string message, string action, bool danger) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 ShowRecipeFolderAction.
+L000072 |     { ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, action, danger) { Owner = Application.Current?.MainWindow }
+L000073 |         var dialog = new CRecipeConfirmDialog(title, message, action, danger) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 ShowRecipeFolderAction.
+L000074 |         { ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000075 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 ShowRecipeFolderAction.
+L000076 |         }; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: dialog.CancelButton.Content = "폴더 유지"
+L000077 |         dialog.CancelButton.Content = "폴더 유지"; ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true;
+L000078 |         return dialog.ShowDialog() == true; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 ShowRecipeFolderAction.
+L000079 |     } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?)
+L000081 |     public static void ShowCompletion(string title, string message, Window? owner = null) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 ShowCompletion.
+L000082 |     { ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowMessage(title, message, useDangerStyle: false, owner)
+L000083 |         ShowMessage(title, message, useDangerStyle: false, owner); ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 ShowCompletion.
+L000084 |     } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?)
+L000086 |     public static void ShowWarning(string title, string message, Window? owner = null) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 ShowWarning.
+L000087 |     { ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ShowMessage(title, message, useDangerStyle: true, owner)
+L000088 |         ShowMessage(title, message, useDangerStyle: true, owner); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 ShowWarning.
+L000089 |     } ⟦EOL⟧
+L000090 |  ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowReviewResumeChoice(string)
+L000091 |     public static EN_REVIEW_RESUME_CHOICE ShowReviewResumeChoice(string message) ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000092 |     { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog("미완료 Review 확인", message, "이어서 검사", useDangerStyle: false) { Owner = Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog("미완료 Review 확인", message, "이어서 검사", useDangerStyle: false) { Owner = Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog("미완료 Review 확인", message, "이어서 검사", useDangerStyle: false) { Owner = Application.Current?.MainWindow }
+L000093 |         var dialog = new CRecipeConfirmDialog("미완료 Review 확인", message, "이어서 검사", useDangerStyle: false) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: Owner = Application.Current?.MainWindow
+L000095 |             Owner = Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000096 |         }; ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: dialog.CancelButton.Content = "처음부터"
+L000097 |         dialog.CancelButton.Content = "처음부터"; ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 지역 변수를 선언합니다: var result = dialog.ShowDialog(); / 변수의 초기값을 지정합니다: result = dialog.ShowDialog()
+L000098 |         var result = dialog.ShowDialog(); ⟦EOL⟧
+// 해설 L99: 조건에 따라 분기합니다: if (result == true)
+L000099 |         if (result == true) ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000100 |         { ⟦EOL⟧
+// 해설 L101: 호출자에게 값 또는 제어를 반환합니다: return EN_REVIEW_RESUME_CHOICE.Resume;
+L000101 |             return EN_REVIEW_RESUME_CHOICE.Resume; ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000102 |         } ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel / 호출자에게 값 또는 제어를 반환합니다: return dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel;
+L000104 |         return dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel; ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 ShowReviewResumeChoice.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowFineRetryChoice(string)
+L000107 |     public static EN_REVIEW_RESUME_CHOICE ShowFineRetryChoice(string message) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 ShowFineRetryChoice.
+L000108 |     { ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFineRetryChoice(message) / 지역 변수를 선언합니다: var dialog = CreateFineRetryChoice(message); / 변수의 초기값을 지정합니다: dialog = CreateFineRetryChoice(message)
+L000109 |         var dialog = CreateFineRetryChoice(message); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 지역 변수를 선언합니다: var result = dialog.ShowDialog(); / 변수의 초기값을 지정합니다: result = dialog.ShowDialog()
+L000110 |         var result = dialog.ShowDialog(); ⟦EOL⟧
+// 해설 L111: 조건에 따라 결과식을 선택합니다: result == true ? EN_REVIEW_RESUME_CHOICE.Resume : dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel / 조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel / 호출자에게 값 또는 제어를 반환합니다: return result == true ? EN_REVIEW_RESUME_CHOICE.Resume : dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel;
+L000111 |         return result == true ? EN_REVIEW_RESUME_CHOICE.Resume : dialog._alternateSelected ? EN_REVIEW_RESUME_CHOICE.Restart : EN_REVIEW_RESUME_CHOICE.Cancel; ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 ShowFineRetryChoice.
+L000112 |     } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowDefaultRestartChoice(string)
+L000114 |     public static EN_DEFAULT_RESTART_CHOICE ShowDefaultRestartChoice(string message) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 ShowDefaultRestartChoice.
+L000115 |     { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDefaultRestartChoice(message) / 지역 변수를 선언합니다: var dialog = CreateDefaultRestartChoice(message); / 변수의 초기값을 지정합니다: dialog = CreateDefaultRestartChoice(message)
+L000116 |         var dialog = CreateDefaultRestartChoice(message); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 지역 변수를 선언합니다: var result = dialog.ShowDialog(); / 변수의 초기값을 지정합니다: result = dialog.ShowDialog()
+L000117 |         var result = dialog.ShowDialog(); ⟦EOL⟧
+// 해설 L118: 조건에 따라 결과식을 선택합니다: result == true ? EN_DEFAULT_RESTART_CHOICE.InspectionFromStart : dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel / 조건에 따라 결과식을 선택합니다: dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel / 호출자에게 값 또는 제어를 반환합니다: return result == true ? EN_DEFAULT_RESTART_CHOICE.InspectionFromStart : dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel;
+L000118 |         return result == true ? EN_DEFAULT_RESTART_CHOICE.InspectionFromStart : dialog._alternateSelected ? EN_DEFAULT_RESTART_CHOICE.AllFromStart : EN_DEFAULT_RESTART_CHOICE.Cancel; ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ShowDefaultRestartChoice.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateDefaultRestartChoice(string)
+L000121 |     internal static CRecipeConfirmDialog CreateDefaultRestartChoice(string message) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 CreateDefaultRestartChoice.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 지역 변수를 선언합니다: var owner = Application.Current?.MainWindow; / 변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow
+L000123 |         var owner = Application.Current?.MainWindow; ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog("Default 전체 실행 재시작", message, "검사부터 다시", useDangerStyle: false) / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog("Default 전체 실행 재시작", message, "검사부터 다시", useDangerStyle: false); / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog("Default 전체 실행 재시작", message, "검사부터 다시", useDangerStyle: false)
+L000124 |         var dialog = new CRecipeConfirmDialog("Default 전체 실행 재시작", message, "검사부터 다시", useDangerStyle: false); ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: dialog.Owner = owner / 조건에 따라 분기합니다: if (owner is not null)
+L000125 |         if (owner is not null) dialog.Owner = owner; ⟦EOL⟧
+// 해설 L126: 값을 대상에 대입합니다: dialog.CancelButton.Content = "처음부터"
+L000126 |         dialog.CancelButton.Content = "처음부터"; ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: dialog.AbortGap.Width = new GridLength(12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(12)
+L000127 |         dialog.AbortGap.Width = new GridLength(12); ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star)
+L000128 |         dialog.AbortColumn.Width = new GridLength(1, GridUnitType.Star); ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: dialog.AbortButton.Visibility = Visibility.Visible
+L000129 |         dialog.AbortButton.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L130: 호출자에게 값 또는 제어를 반환합니다: return dialog;
+L000130 |         return dialog; ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 CreateDefaultRestartChoice.
+L000131 |     } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateFineRetryChoice(string)
+L000133 |     internal static CRecipeConfirmDialog CreateFineRetryChoice(string message) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 CreateFineRetryChoice.
+L000134 |     { ⟦EOL⟧
+// 해설 L135: 지역 변수를 선언합니다: var owner = Application.Current?.MainWindow; / 변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow
+L000135 |         var owner = Application.Current?.MainWindow; ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog("FINE NG 재검사", message, "NG 라인부터", useDangerStyle: false) / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog("FINE NG 재검사", message, "NG 라인부터", useDangerStyle: false); / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog("FINE NG 재검사", message, "NG 라인부터", useDangerStyle: false)
+L000136 |         var dialog = new CRecipeConfirmDialog("FINE NG 재검사", message, "NG 라인부터", useDangerStyle: false); ⟦EOL⟧
+// 해설 L137: 조건에 따라 분기합니다: if (owner is not null)
+L000137 |         if (owner is not null) ⟦EOL⟧
+// 해설 L138: 값을 대상에 대입합니다: dialog.Owner = owner
+L000138 |             dialog.Owner = owner; ⟦EOL⟧
+// 해설 L139: 값을 대상에 대입합니다: dialog.CancelButton.Content = "처음부터"
+L000139 |         dialog.CancelButton.Content = "처음부터"; ⟦EOL⟧
+// 해설 L140: 호출자에게 값 또는 제어를 반환합니다: return dialog;
+L000140 |         return dialog; ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 CreateFineRetryChoice.
+L000141 |     } ⟦EOL⟧
+L000142 |  ⟦EOL⟧
+// 해설 L143: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?)
+L000143 |     private static void ShowMessage(string title, string message, bool useDangerStyle, Window? owner) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 ShowMessage.
+L000144 |     { ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CRecipeConfirmDialog(title, message, "확인", useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow } / 지역 변수를 선언합니다: var dialog = new CRecipeConfirmDialog(title, message, "확인", useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow }; / 변수의 초기값을 지정합니다: dialog = new CRecipeConfirmDialog(title, message, "확인", useDangerStyle) { Owner = owner ?? Application.Current?.MainWindow }
+L000145 |         var dialog = new CRecipeConfirmDialog(title, message, "확인", useDangerStyle) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 ShowMessage.
+L000146 |         { ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: Owner = owner ?? Application.Current?.MainWindow
+L000147 |             Owner = owner ?? Application.Current?.MainWindow ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 ShowMessage.
+L000148 |         }; ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: dialog.CancelButton.Visibility = Visibility.Collapsed
+L000149 |         dialog.CancelButton.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(dialog.ConfirmButton, 3)
+L000150 |         Grid.SetColumnSpan(dialog.ConfirmButton, 3); ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()
+L000151 |         dialog.ShowDialog(); ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 ShowMessage.
+L000152 |     } ⟦EOL⟧
+L000153 |  ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool)
+L000154 |     public CRecipeConfirmDialog(string title, string message, string confirmText = "확인", bool useDangerStyle = true) ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 .ctor.
+L000155 |     { ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000156 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: MaxHeight = Math.Max(MinHeight, SystemParameters.WorkArea.Height - 40) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(MinHeight, SystemParameters.WorkArea.Height - 40)
+L000157 |         MaxHeight = Math.Max(MinHeight, SystemParameters.WorkArea.Height - 40); ⟦EOL⟧
+// 해설 L158: 값을 대상에 대입합니다: Title = title
+L000158 |         Title = title; ⟦EOL⟧
+// 해설 L159: 값을 대상에 대입합니다: TitleText.Text = title
+L000159 |         TitleText.Text = title; ⟦EOL⟧
+// 해설 L160: 값을 대상에 대입합니다: MessageText.Text = message
+L000160 |         MessageText.Text = message; ⟦EOL⟧
+// 해설 L161: 값을 대상에 대입합니다: ConfirmButton.Content = confirmText
+L000161 |         ConfirmButton.Content = confirmText; ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (!useDangerStyle)
+L000162 |         if (!useDangerStyle) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 .ctor.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.SetResourceReference(Control.BackgroundProperty, "ButtonSuccessBrush")
+L000164 |             ConfirmButton.SetResourceReference(Control.BackgroundProperty, "ButtonSuccessBrush"); ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.SetResourceReference(Control.BorderBrushProperty, "ButtonSuccessBorderBrush")
+L000165 |             ConfirmButton.SetResourceReference(Control.BorderBrushProperty, "ButtonSuccessBorderBrush"); ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 .ctor.
+L000166 |         } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: ConfirmButton.Focus()
+L000168 |         ConfirmButton.Focus(); ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 .ctor.
+L000169 |     } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.OnKeyDown(KeyEventArgs)
+L000171 |     protected override void OnKeyDown(KeyEventArgs e) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnKeyDown(e)
+L000173 |         base.OnKeyDown(e); ⟦EOL⟧
+// 해설 L174: 조건에 따라 분기합니다: if (e.Key == Key.Escape)
+L000174 |         if (e.Key == Key.Escape) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000175 |         { ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: _alternateSelected = false
+L000176 |             _alternateSelected = false; ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: DialogResult = false
+L000177 |             DialogResult = false; ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000178 |         } ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 OnKeyDown.
+L000179 |     } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.OnConfirmClicked(object, RoutedEventArgs)
+L000181 |     private void OnConfirmClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 OnConfirmClicked.
+L000182 |     { ⟦EOL⟧
+// 해설 L183: 값을 대상에 대입합니다: DialogResult = true
+L000183 |         DialogResult = true; ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 OnConfirmClicked.
+L000184 |     } ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.OnCancelClicked(object, RoutedEventArgs)
+L000186 |     private void OnCancelClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 OnCancelClicked.
+L000187 |     { ⟦EOL⟧
+// 해설 L188: 값을 대상에 대입합니다: _alternateSelected = true
+L000188 |         _alternateSelected = true; ⟦EOL⟧
+// 해설 L189: 값을 대상에 대입합니다: DialogResult = false
+L000189 |         DialogResult = false; ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 OnCancelClicked.
+L000190 |     } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeConfirmDialog.OnAbortClicked(object, RoutedEventArgs)
+L000192 |     private void OnAbortClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 OnAbortClicked.
+L000193 |     { ⟦EOL⟧
+// 해설 L194: 값을 대상에 대입합니다: _alternateSelected = false
+L000194 |         _alternateSelected = false; ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: DialogResult = false
+L000195 |         DialogResult = false; ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 OnAbortClicked.
+L000196 |     } ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다.
+L000197 | } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 타입의 구조/상속 선언입니다: public enum EN_REVIEW_RESUME_CHOICE
+L000199 | public enum EN_REVIEW_RESUME_CHOICE ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다.
+L000200 | { ⟦EOL⟧
+// 해설 L201: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Cancel
+L000201 |     Cancel, ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Resume
+L000202 |     Resume, ⟦EOL⟧
+// 해설 L203: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Restart
+L000203 |     Restart ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다.
+L000204 | } ⟦EOL⟧

@@ -1,0 +1,154 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CRecipeNameDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000002 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000003 | using Drilling.Common.Managers; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000005 | namespace Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public partial class CRecipeNameDialog : Window
+L000006 | public partial class CRecipeNameDialog : Window ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · System.Func<string, string>? Drilling.UI.Popup.CRecipeNameDialog._validate
+L000008 |     private readonly Func<string, string>? _validate; ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CRecipeNameDialog.CRecipeNameDialog(string, string, string, System.Func<string, string>?)
+L000009 |     public CRecipeNameDialog(string title, string message, string initialName, Func<string, string>? validate = null) ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다 · 소속 .ctor.
+L000010 |     { ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000011 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L12: 값을 대상에 대입합니다: _validate = validate
+L000012 |         _validate = validate; ⟦EOL⟧
+// 해설 L13: 값을 대상에 대입합니다: Title = title
+L000013 |         Title = title; ⟦EOL⟧
+// 해설 L14: 값을 대상에 대입합니다: TitleText.Text = title
+L000014 |         TitleText.Text = title; ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: MessageText.Text = message
+L000015 |         MessageText.Text = message; ⟦EOL⟧
+// 해설 L16: 값을 대상에 대입합니다: RecipeNameTextBox.Text = initialName
+L000016 |         RecipeNameTextBox.Text = initialName; ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecipeNameTextBox.SelectAll()
+L000017 |         RecipeNameTextBox.SelectAll(); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecipeNameTextBox.Focus()
+L000018 |         RecipeNameTextBox.Focus(); ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateOkState()
+L000019 |         UpdateOkState(); ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 .ctor.
+L000020 |     } ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CRecipeNameDialog.RecipeName
+L000022 |     public string RecipeName ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 RecipeName.
+L000023 |     { ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CRecipeNameDialog.RecipeName.get
+L000024 |         get ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 get_RecipeName.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: RecipeNameTextBox.Text.Trim() / 호출자에게 값 또는 제어를 반환합니다: return RecipeNameTextBox.Text.Trim();
+L000026 |             return RecipeNameTextBox.Text.Trim(); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 get_RecipeName.
+L000027 |         } ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 RecipeName.
+L000028 |     } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.OpenScreenKeyboard(object, MouseButtonEventArgs)
+L000030 |     private void OpenScreenKeyboard(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 OpenScreenKeyboard.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: e.Handled = true
+L000032 |         e.Handled = true; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(TitleText.Text, RecipeNameTextBox.Text, EN_RECIPE_DATA_TYPE.String, 0, 0) { Owner = this } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(TitleText.Text, RecipeNameTextBox.Text, EN_RECIPE_DATA_TYPE.String, 0, 0) { Owner = this }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(TitleText.Text, RecipeNameTextBox.Text, EN_RECIPE_DATA_TYPE.String, 0, 0) { Owner = this }
+L000033 |         var dialog = new CValueInputDialog(TitleText.Text, RecipeNameTextBox.Text, EN_RECIPE_DATA_TYPE.String, 0, 0) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 OpenScreenKeyboard.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: Owner = this
+L000035 |             Owner = this ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 OpenScreenKeyboard.
+L000036 |         }; ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() != true)
+L000037 |         if (dialog.ShowDialog() != true) ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return;
+L000038 |             return; ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: RecipeNameTextBox.Text = dialog.ResultValue
+L000039 |         RecipeNameTextBox.Text = dialog.ResultValue; ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: RecipeNameTextBox.CaretIndex = RecipeNameTextBox.Text.Length
+L000040 |         RecipeNameTextBox.CaretIndex = RecipeNameTextBox.Text.Length; ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 OpenScreenKeyboard.
+L000041 |     } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.OnRecipeNameTextChanged(object, System.Windows.Controls.TextChangedEventArgs)
+L000043 |     private void OnRecipeNameTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 OnRecipeNameTextChanged.
+L000044 |     { ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateOkState()
+L000045 |         UpdateOkState(); ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 OnRecipeNameTextChanged.
+L000046 |     } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.OnRecipeNameKeyDown(object, KeyEventArgs)
+L000048 |     private void OnRecipeNameKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000049 |     { ⟦EOL⟧
+// 해설 L50: 조건에 따라 분기합니다: if (e.Key == Key.Enter && OkButton.IsEnabled)
+L000050 |         if (e.Key == Key.Enter && OkButton.IsEnabled) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000051 |         { ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: DialogResult = true
+L000052 |             DialogResult = true; ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return;
+L000053 |             return; ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000054 |         } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (e.Key == Key.Escape)
+L000056 |         if (e.Key == Key.Escape) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: DialogResult = false
+L000058 |             DialogResult = false; ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000059 |         } ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 OnRecipeNameKeyDown.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.OnOkClicked(object, RoutedEventArgs)
+L000062 |     private void OnOkClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 OnOkClicked.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: DialogResult = true
+L000064 |         DialogResult = true; ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 OnOkClicked.
+L000065 |     } ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.OnCancelClicked(object, RoutedEventArgs)
+L000067 |     private void OnCancelClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 OnCancelClicked.
+L000068 |     { ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: DialogResult = false
+L000069 |         DialogResult = false; ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 OnCancelClicked.
+L000070 |     } ⟦EOL⟧
+L000071 |  ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CRecipeNameDialog.UpdateOkState()
+L000072 |     private void UpdateOkState() ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 UpdateOkState.
+L000073 |     { ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(RecipeNameTextBox.Text.Trim()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RecipeNameTextBox.Text.Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(RecipeNameTextBox.Text) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(RecipeNameTextBox.Text) ? "이름을 입력하세요." : "" / 지역 변수를 선언합니다: var message = _validate?.Invoke(RecipeNameTextBox.Text.Trim()) ?? (string.IsNullOrWhiteSpace(RecipeNameTextBox.Text) ? "이름을 입력하세요." : ""); / 변수의 초기값을 지정합니다: message = _validate?.Invoke(RecipeNameTextBox.Text.Trim()) ?? (string.Is
+L000074 |         var message = _validate?.Invoke(RecipeNameTextBox.Text.Trim()) ?? (string.IsNullOrWhiteSpace(RecipeNameTextBox.Text) ? "이름을 입력하세요." : ""); ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: ErrorText.Text = message
+L000075 |         ErrorText.Text = message; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: ErrorText.Visibility = string.IsNullOrWhiteSpace(message) ? Visibility.Collapsed : Visibility.Visible / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(message) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(message) ? Visibility.Collapsed : Visibility.Visible
+L000076 |         ErrorText.Visibility = string.IsNullOrWhiteSpace(message) ? Visibility.Collapsed : Visibility.Visible; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: OkButton.IsEnabled = string.IsNullOrWhiteSpace(message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(message)
+L000077 |         OkButton.IsEnabled = string.IsNullOrWhiteSpace(message); ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 UpdateOkState.
+L000078 |     } ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다.
+L000079 | } ⟦EOL⟧

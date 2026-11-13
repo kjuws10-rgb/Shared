@@ -1,0 +1,57 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CFineGlassPreviewView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000003 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000005 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000007 | /// <summary>Shared static FINE geometry/camera renderer. No timers, device reads or inspection commands.</summary> ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public partial class CFineGlassPreviewView : UserControl
+L000008 | public partial class CFineGlassPreviewView : UserControl ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CFineGlassPreviewView.CFineGlassPreviewView()
+L000010 |     public CFineGlassPreviewView() ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 .ctor.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000012 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview() / 복합 대입 또는 이벤트 구독/해지 표현입니다: DataContextChanged += (_, _) => ResizePreview()
+L000013 |         DataContextChanged += (_, _) => ResizePreview(); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview() / 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => ResizePreview()
+L000014 |         Loaded += (_, _) => ResizePreview(); ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 .ctor.
+L000015 |     } ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview()
+L000016 |     private void PreviewSizeChanged(object sender, SizeChangedEventArgs e) => ResizePreview(); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CFineGlassPreviewView.PreviewScrollChanged(object, ScrollChangedEventArgs)
+L000017 |     private void PreviewScrollChanged(object sender, ScrollChangedEventArgs e) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 PreviewScrollChanged.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResizePreview() / 조건에 따라 분기합니다: if (e.ViewportHeightChange != 0 || e.ViewportWidthChange != 0)
+L000019 |         if (e.ViewportHeightChange != 0 || e.ViewportWidthChange != 0) ResizePreview(); ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 PreviewScrollChanged.
+L000020 |     } ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CFineGlassPreviewView.ResizePreview()
+L000021 |     private void ResizePreview() ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 ResizePreview.
+L000022 |     { ⟦EOL⟧
+// 해설 L23: 조건에 따라 분기합니다: if (DataContext is CFineCorrectionPanel panel && FinePreviewScroll is not null)
+L000023 |         if (DataContext is CFineCorrectionPanel panel && FinePreviewScroll is not null) ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ResizePreview(FinePreviewScroll.ViewportWidth > 0 ? FinePreviewScroll.ViewportWidth : FinePreviewScroll.ActualWidth, FinePreviewScroll.ViewportHeight > 0 ? FinePreviewScroll.ViewportHeight : FinePreviewScroll.Actua… / 조건에 따라 결과식을 선택합니다: FinePreviewScroll.ViewportWidth > 0 ? FinePreviewScroll.ViewportWidth : FinePreviewScroll.ActualWidth
+L000024 |             panel.ResizePreview(FinePreviewScroll.ViewportWidth > 0 ? FinePreviewScroll.ViewportWidth : FinePreviewScroll.ActualWidth, ⟦EOL⟧
+// 해설 L25: 조건에 따라 결과식을 선택합니다: FinePreviewScroll.ViewportHeight > 0 ? FinePreviewScroll.ViewportHeight : FinePreviewScroll.ActualHeight
+L000025 |                 FinePreviewScroll.ViewportHeight > 0 ? FinePreviewScroll.ViewportHeight : FinePreviewScroll.ActualHeight); ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 ResizePreview.
+L000026 |     } ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다.
+L000027 | } ⟦EOL⟧

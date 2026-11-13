@@ -1,0 +1,920 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000001 | using System.Diagnostics; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000002 | using System.Globalization; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000004 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000005 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Threading;
+L000006 | using Drilling.Common.Threading; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000008 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: internal sealed class CMonitorStatusPollingService(CInterfaceManager interfaceManager, CMotionManager motionManager) : CtrlThread
+L000009 | internal sealed class CMonitorStatusPollingService(CInterfaceManager interfaceManager, CMotionManager motionManager) : CtrlThread ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: HeadCount = 8
+L000011 |     private const int HeadCount = 8; ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(250) / 변수의 초기값을 지정합니다: LoopInterval = TimeSpan.FromMilliseconds(250)
+L000012 |     private static readonly TimeSpan LoopInterval = TimeSpan.FromMilliseconds(250); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(0.5) / 변수의 초기값을 지정합니다: ActiveInterval = TimeSpan.FromSeconds(0.5)
+L000013 |     private static readonly TimeSpan ActiveInterval = TimeSpan.FromSeconds(0.5); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(500) / 변수의 초기값을 지정합니다: ActivePowerMeterMeasureInterval = TimeSpan.FromMilliseconds(500)
+L000014 |     private static readonly TimeSpan ActivePowerMeterMeasureInterval = TimeSpan.FromMilliseconds(500); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(5) / 변수의 초기값을 지정합니다: SlowSafetyInterval = TimeSpan.FromSeconds(5)
+L000015 |     private static readonly TimeSpan SlowSafetyInterval = TimeSpan.FromSeconds(5); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1) / 변수의 초기값을 지정합니다: CommunicationInterval = TimeSpan.FromSeconds(1)
+L000016 |     private static readonly TimeSpan CommunicationInterval = TimeSpan.FromSeconds(1); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _contextLock = new()
+L000017 |     private readonly object _contextLock = new(); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _snapshotLock = new()
+L000018 |     private readonly object _snapshotLock = new(); ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorStatusPollingService._isActive
+L000019 |     private bool _isActive; ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _motorPollLock = new(1, 1)
+L000020 |     private readonly SemaphoreSlim _motorPollLock = new(1, 1); ⟦EOL⟧
+// 해설 L21: 변수의 초기값을 지정합니다: _context = ST_MONITOR_POLLING_CONTEXT.Default
+L000021 |     private ST_MONITOR_POLLING_CONTEXT _context = ST_MONITOR_POLLING_CONTEXT.Default; ⟦EOL⟧
+// 해설 L22: 변수의 초기값을 지정합니다: _snapshot = ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000022 |     private ST_MONITOR_STATUS_SNAPSHOT _snapshot = ST_MONITOR_STATUS_SNAPSHOT.Empty; ⟦EOL⟧
+// 해설 L23: 변수의 초기값을 지정합니다: _lastCommunicationPoll = DateTimeOffset.MinValue
+L000023 |     private DateTimeOffset _lastCommunicationPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · long? Drilling.UI.Menu.Menus.CMonitorStatusPollingService._lastSuccessfulMotorPollTimestamp
+L000024 |     private long? _lastSuccessfulMotorPollTimestamp; ⟦EOL⟧
+// 해설 L25: 변수의 초기값을 지정합니다: _lastLaserPoll = DateTimeOffset.MinValue
+L000025 |     private DateTimeOffset _lastLaserPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L26: 변수의 초기값을 지정합니다: _lastAttenuatorPoll = DateTimeOffset.MinValue
+L000026 |     private DateTimeOffset _lastAttenuatorPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L27: 변수의 초기값을 지정합니다: _lastBetPoll = DateTimeOffset.MinValue
+L000027 |     private DateTimeOffset _lastBetPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L28: 변수의 초기값을 지정합니다: _lastPowerMeterPoll = DateTimeOffset.MinValue
+L000028 |     private DateTimeOffset _lastPowerMeterPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L29: 변수의 초기값을 지정합니다: _lastPicoMotorPoll = DateTimeOffset.MinValue
+L000029 |     private DateTimeOffset _lastPicoMotorPoll = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMonitorStatusPollingService._communicationPollRunning
+L000030 |     private int _communicationPollRunning; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMonitorStatusPollingService._activeDevicePollRunning
+L000031 |     private int _activeDevicePollRunning; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.Start()
+L000032 |     public void Start() ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 Start.
+L000033 |     { ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.Start((int)LoopInterval.TotalMilliseconds, "MonitorStatusPolling")
+L000034 |         base.Start((int)LoopInterval.TotalMilliseconds, "MonitorStatusPolling"); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 Start.
+L000035 |     } ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.UpdateContext(string, int, int, int, string)
+L000037 |     public void UpdateContext(string selectedTab, int laserNumber, int attenuatorNumber, int betNumber, string melsecGroup) ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 UpdateContext.
+L000038 |     { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MONITOR_POLLING_CONTEXT(NormalizeTab(selectedTab), Math.Clamp(laserNumber, 0, HeadCount - 1), Math.Clamp(attenuatorNumber, 0, HeadCount - 1), Math.Clamp(betNumber, 0, HeadCount - 1), NormalizeMelsecGroup(melsecGro… / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeTab(selectedTab) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(laserNumber, 0, HeadCount - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(attenuatorNumber, 0, HeadCount - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(betNumber, 0, HeadCount - 1) / 함수·델리게이트 또는 객체 생성자
+L000039 |         var nextContext = new ST_MONITOR_POLLING_CONTEXT(NormalizeTab(selectedTab), Math.Clamp(laserNumber, 0, HeadCount - 1), Math.Clamp(attenuatorNumber, 0, HeadCount - 1), Math.Clamp(betNumber, 0, HeadCount - 1), NormalizeMelsecGroup(melsecGroup)); ⟦EOL⟧
+// 해설 L40: 공유 상태의 임계 구역에 진입합니다: lock (_contextLock)
+L000040 |         lock (_contextLock) ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 UpdateContext.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _context = nextContext
+L000042 |             _context = nextContext; ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 UpdateContext.
+L000043 |         } ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 UpdateContext.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.SetActive(bool)
+L000046 |     public void SetActive(bool active) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 SetActive.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 공유 상태의 임계 구역에 진입합니다: lock (_contextLock)
+L000048 |         lock (_contextLock) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 SetActive.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: _isActive = active
+L000050 |             _isActive = active; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 SetActive.
+L000051 |         } ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 SetActive.
+L000052 |     } ⟦EOL⟧
+L000053 |  ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.CMonitorStatusPollingService.GetSnapshot()
+L000054 |     public ST_MONITOR_STATUS_SNAPSHOT GetSnapshot() ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000055 |     { ⟦EOL⟧
+// 해설 L56: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000056 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 호출자에게 값 또는 제어를 반환합니다: return _snapshot;
+L000058 |             return _snapshot; ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000059 |         } ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 GetSnapshot.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollMelsec(GetContext().MelsecGroup, CancellationToken.None) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetContext()
+L000062 |     public void RefreshMelsecNow() => PollMelsec(GetContext().MelsecGroup, CancellationToken.None); ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.RefreshMotorNow(System.Threading.CancellationToken)
+L000064 |     public void RefreshMotorNow(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 RefreshMotorNow.
+L000065 |     { ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollMotorSerialized(true, cancellationToken)
+L000066 |         PollMotorSerialized(true, cancellationToken); ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 RefreshMotorNow.
+L000067 |     } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.Run()
+L000069 |     public override void Run() ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 Run.
+L000070 |     { ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollDue(CancellationToken.None)
+L000071 |         PollDue(CancellationToken.None); ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Run.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollDue(System.Threading.CancellationToken)
+L000074 |     private void PollDue(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 PollDue.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsActive() / 조건에 따라 분기합니다: if (!IsActive())
+L000076 |         if (!IsActive()) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 PollDue.
+L000077 |         { ⟦EOL⟧
+// 해설 L78: 호출자에게 값 또는 제어를 반환합니다: return;
+L000078 |             return; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 PollDue.
+L000079 |         } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetContext() / 지역 변수를 선언합니다: var context = GetContext(); / 변수의 초기값을 지정합니다: context = GetContext()
+L000081 |         var context = GetContext(); ⟦EOL⟧
+// 해설 L82: 지역 변수를 선언합니다: var now = DateTimeOffset.Now; / 변수의 초기값을 지정합니다: now = DateTimeOffset.Now
+L000082 |         var now = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · void PollLaserCallback(System.Threading.CancellationToken)
+L000083 |         void PollLaserCallback(global::System.Threading.CancellationToken token) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 PollLaserCallback.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollLaser(context.LaserNumber, token)
+L000085 |             PollLaser(context.LaserNumber, token); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 PollLaserCallback.
+L000086 |         } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void PollAttenuatorCallback(System.Threading.CancellationToken)
+L000088 |         void PollAttenuatorCallback(global::System.Threading.CancellationToken token) ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 PollAttenuatorCallback.
+L000089 |         { ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollAttenuator(context.AttenuatorNumber, token)
+L000090 |             PollAttenuator(context.AttenuatorNumber, token); ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 PollAttenuatorCallback.
+L000091 |         } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · void PollBetCallback(System.Threading.CancellationToken)
+L000093 |         void PollBetCallback(global::System.Threading.CancellationToken token) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 PollBetCallback.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollBet(context.BetNumber, token)
+L000095 |             PollBet(context.BetNumber, token); ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 PollBetCallback.
+L000096 |         } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void PollMelsecCallback(System.Threading.CancellationToken)
+L000098 |         void PollMelsecCallback(global::System.Threading.CancellationToken token) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 PollMelsecCallback.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollMelsec(context.MelsecGroup, token)
+L000100 |             PollMelsec(context.MelsecGroup, token); ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 PollMelsecCallback.
+L000101 |         } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastCommunicationPoll, now, CommunicationInterval) / 조건에 따라 분기합니다: if (IsDue(ref _lastCommunicationPoll, now, CommunicationInterval))
+L000103 |             if (IsDue(ref _lastCommunicationPoll, now, CommunicationInterval)) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 PollDue.
+L000104 |             { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollCommunication, communicationPoll: true)
+L000105 |                 SchedulePoll(PollCommunication, communicationPoll: true); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 PollDue.
+L000106 |             } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 값에 따라 분기합니다: switch (context.SelectedTab)
+L000108 |             switch (context.SelectedTab) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 PollDue.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 분기값/패턴의 구간입니다: case "XPS":
+L000110 |                 case "XPS": ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollMotorWhenDue, communicationPoll: false)
+L000111 |                     SchedulePoll(PollMotorWhenDue, communicationPoll: false); ⟦EOL⟧
+// 해설 L112: 해당 반복/분기 구간을 종료합니다: break;
+L000112 |                     break; ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastLaserPoll, now, ActiveInterval) / 분기값/패턴의 구간입니다: case "LASER" when IsDue(ref _lastLaserPoll, now, ActiveInterval):
+L000113 |                 case "LASER" when IsDue(ref _lastLaserPoll, now, ActiveInterval): ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollLaserCallback, communicationPoll: false)
+L000114 |                     SchedulePoll(PollLaserCallback, communicationPoll: false); ⟦EOL⟧
+// 해설 L115: 해당 반복/분기 구간을 종료합니다: break;
+L000115 |                     break; ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastAttenuatorPoll, now, ActiveInterval) / 분기값/패턴의 구간입니다: case "ATTENUATOR" when IsDue(ref _lastAttenuatorPoll, now, ActiveInterval):
+L000116 |                 case "ATTENUATOR" when IsDue(ref _lastAttenuatorPoll, now, ActiveInterval): ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollAttenuatorCallback, communicationPoll: false)
+L000117 |                     SchedulePoll(PollAttenuatorCallback, communicationPoll: false); ⟦EOL⟧
+// 해설 L118: 해당 반복/분기 구간을 종료합니다: break;
+L000118 |                     break; ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastBetPoll, now, ActiveInterval) / 분기값/패턴의 구간입니다: case "BET" when IsDue(ref _lastBetPoll, now, ActiveInterval):
+L000119 |                 case "BET" when IsDue(ref _lastBetPoll, now, ActiveInterval): ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollBetCallback, communicationPoll: false)
+L000120 |                     SchedulePoll(PollBetCallback, communicationPoll: false); ⟦EOL⟧
+// 해설 L121: 해당 반복/분기 구간을 종료합니다: break;
+L000121 |                     break; ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastPowerMeterPoll, now, GetPowerMeterInterval()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPowerMeterInterval() / 분기값/패턴의 구간입니다: case "POWER METER" when IsDue(ref _lastPowerMeterPoll, now, GetPowerMeterInterval()):
+L000122 |                 case "POWER METER" when IsDue(ref _lastPowerMeterPoll, now, GetPowerMeterInterval()): ⟦EOL⟧
+// 해설 L123: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000123 |                     //TryPoll(PollPowerMeter, cancellationToken); ⟦EOL⟧
+// 해설 L124: 해당 반복/분기 구간을 종료합니다: break;
+L000124 |                     break; ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastPicoMotorPoll, now, ActiveInterval) / 분기값/패턴의 구간입니다: case "PICO MOTOR" when IsDue(ref _lastPicoMotorPoll, now, ActiveInterval):
+L000125 |                 case "PICO MOTOR" when IsDue(ref _lastPicoMotorPoll, now, ActiveInterval): ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollPicoMotor, communicationPoll: false)
+L000126 |                     SchedulePoll(PollPicoMotor, communicationPoll: false); ⟦EOL⟧
+// 해설 L127: 해당 반복/분기 구간을 종료합니다: break;
+L000127 |                     break; ⟦EOL⟧
+// 해설 L128: 분기값/패턴의 구간입니다: case "MELSEC":
+L000128 |                 case "MELSEC": ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: SchedulePoll(PollMelsecCallback, communicationPoll: false)
+L000129 |                     SchedulePoll(PollMelsecCallback, communicationPoll: false); ⟦EOL⟧
+// 해설 L130: 해당 반복/분기 구간을 종료합니다: break;
+L000130 |                     break; ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 PollDue.
+L000131 |             } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDue(ref _lastPowerMeterPoll, now, SlowSafetyInterval) / 조건에 따라 분기합니다: if (context.SelectedTab != "POWER METER" && IsDue(ref _lastPowerMeterPoll, now, SlowSafetyInterval))
+L000133 |             if (context.SelectedTab != "POWER METER" && IsDue(ref _lastPowerMeterPoll, now, SlowSafetyInterval)) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 PollDue.
+L000134 |             { ⟦EOL⟧
+// 해설 L135: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000135 |                 //TryPoll(PollPowerMeter, cancellationToken); ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 PollDue.
+L000136 |             } ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 PollDue.
+L000137 |     } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.TryPoll(System.Action<System.Threading.CancellationToken>, System.Threading.CancellationToken)
+L000139 |     private void TryPoll(Action<CancellationToken> poll, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 TryPoll.
+L000140 |     { ⟦EOL⟧
+// 해설 L141: 예외 처리 범위입니다: try
+L000141 |         try ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 TryPoll.
+L000142 |         { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: poll(cancellationToken)
+L000143 |             poll(cancellationToken); ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 TryPoll.
+L000144 |         } ⟦EOL⟧
+// 해설 L145: 지정 예외를 처리합니다: catch (Exception exception) when (exception is not OperationCanceledException)
+L000145 |         catch (Exception exception)when (exception is not OperationCanceledException) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 TryPoll.
+L000146 |         { ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 TryPoll.
+L000147 |         } ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 TryPoll.
+L000148 |     } ⟦EOL⟧
+L000149 |  ⟦EOL⟧
+// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollCommunication(System.Threading.CancellationToken)
+L000150 |     private void PollCommunication(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 PollCommunication.
+L000151 |     { ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetCommunicationStatus(cancellationToken) / 지역 변수를 선언합니다: var communication = interfaceManager.GetCommunicationStatus(cancellationToken); / 변수의 초기값을 지정합니다: communication = interfaceManager.GetCommunicationStatus(cancellationToken)
+L000152 |         var communication = interfaceManager.GetCommunicationStatus(cancellationToken); ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000153 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SelectValue.
+L000154 |         { ⟦EOL⟧
+// 해설 L155: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { Communication = communication };
+L000155 |             return snapshot with ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 SelectValue.
+L000156 |             { ⟦EOL⟧
+// 해설 L157: 값을 대상에 대입합니다: Communication = communication
+L000157 |                 Communication = communication ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 SelectValue.
+L000158 |             }; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 SelectValue.
+L000159 |         } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000161 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 PollCommunication.
+L000162 |     } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollMotorWhenDue(System.Threading.CancellationToken)
+L000164 |     private void PollMotorWhenDue(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 PollMotorWhenDue.
+L000165 |     { ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollMotorSerialized(false, cancellationToken)
+L000166 |         PollMotorSerialized(false, cancellationToken); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 PollMotorWhenDue.
+L000167 |     } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollMotorSerialized(bool, System.Threading.CancellationToken)
+L000169 |     private void PollMotorSerialized(bool force, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000170 |     { ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motorPollLock.Wait(cancellationToken)
+L000171 |         _motorPollLock.Wait(cancellationToken); ⟦EOL⟧
+// 해설 L172: 예외 처리 범위입니다: try
+L000172 |         try ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetElapsedTime(lastSuccessfulPollTimestamp) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMotorInterval() / 조건에 따라 분기합니다: if (!force && _lastSuccessfulMotorPollTimestamp is long lastSuccessfulPollTimestamp && Stopwatch.GetElapsedTime(lastSuccessfulPollTimestamp) < GetMotorInterval())
+L000174 |             if (!force && _lastSuccessfulMotorPollTimestamp is long lastSuccessfulPollTimestamp && Stopwatch.GetElapsedTime(lastSuccessfulPollTimestamp) < GetMotorInterval()) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000175 |             { ⟦EOL⟧
+// 해설 L176: 호출자에게 값 또는 제어를 반환합니다: return;
+L000176 |                 return; ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000177 |             } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: PollMotorCore(cancellationToken)
+L000179 |             PollMotorCore(cancellationToken); ⟦EOL⟧
+// 해설 L180: 값을 대상에 대입합니다: _lastSuccessfulMotorPollTimestamp = Stopwatch.GetTimestamp() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stopwatch.GetTimestamp()
+L000180 |             _lastSuccessfulMotorPollTimestamp = Stopwatch.GetTimestamp(); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000181 |         } ⟦EOL⟧
+// 해설 L182: 종료 정리 구간입니다: finally
+L000182 |         finally ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: _motorPollLock.Release()
+L000184 |             _motorPollLock.Release(); ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000185 |         } ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 PollMotorSerialized.
+L000186 |     } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollMotorCore(System.Threading.CancellationToken)
+L000188 |     private void PollMotorCore(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 PollMotorCore.
+L000189 |     { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: motionManager.GetAxisStatus(cancellationToken) / 지역 변수를 선언합니다: var motors = motionManager.GetAxisStatus(cancellationToken); / 변수의 초기값을 지정합니다: motors = motionManager.GetAxisStatus(cancellationToken)
+L000190 |         var motors = motionManager.GetAxisStatus(cancellationToken); ⟦EOL⟧
+// 해설 L191: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000191 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 SelectValue.
+L000192 |         { ⟦EOL⟧
+// 해설 L193: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { DeviceStatus = snapshot.DeviceStatus with { Motors = motors } };
+L000193 |             return snapshot with ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 SelectValue.
+L000194 |             { ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: DeviceStatus = snapshot.DeviceStatus with { Motors = motors }
+L000195 |                 DeviceStatus = snapshot.DeviceStatus with ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 SelectValue.
+L000196 |                 { ⟦EOL⟧
+// 해설 L197: 값을 대상에 대입합니다: Motors = motors
+L000197 |                     Motors = motors ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 SelectValue.
+L000198 |                 } ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 SelectValue.
+L000199 |             }; ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 SelectValue.
+L000200 |         } ⟦EOL⟧
+L000201 |  ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000202 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 PollMotorCore.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollLaser(int, System.Threading.CancellationToken)
+L000205 |     private void PollLaser(int laserNumber, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 PollLaser.
+L000206 |     { ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.RefreshTalonLaserStatus(laserNumber, cancellationToken, suppressCommandLog: true) / 지역 변수를 선언합니다: var talonStatus = interfaceManager.RefreshTalonLaserStatus(laserNumber, cancellationToken, suppressCommandLog: true); / 변수의 초기값을 지정합니다: talonStatus = interfaceManager.RefreshTalonLaserStatus(laserNumber, cancellationToken, suppressCommandLog: true)
+L000207 |         var talonStatus = interfaceManager.RefreshTalonLaserStatus(laserNumber, cancellationToken, suppressCommandLog: true); ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_LASER_STATUS(talonStatus.LaserOn, talonStatus.ShutterOpen, talonStatus.GateOpen, talonStatus.OutputPower) / 지역 변수를 선언합니다: var laserStatus = new ST_LASER_STATUS(talonStatus.LaserOn, talonStatus.ShutterOpen, talonStatus.GateOpen, talonStatus.OutputPower); / 변수의 초기값을 지정합니다: laserStatus = new ST_LASER_STATUS(talonStatus.LaserOn, talonStatus.ShutterOpen, talonStatus.GateOpen, talonStatus.OutputPower)
+L000208 |         var laserStatus = new ST_LASER_STATUS(talonStatus.LaserOn, talonStatus.ShutterOpen, talonStatus.GateOpen, talonStatus.OutputPower); ⟦EOL⟧
+// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000209 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 SelectValue.
+L000210 |         { ⟦EOL⟧
+// 해설 L211: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { DeviceStatus = snapshot.DeviceStatus with { Laser = laserStatus }, TalonStatus = talonStatus };
+L000211 |             return snapshot with ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 SelectValue.
+L000212 |             { ⟦EOL⟧
+// 해설 L213: 값을 대상에 대입합니다: DeviceStatus = snapshot.DeviceStatus with { Laser = laserStatus }
+L000213 |                 DeviceStatus = snapshot.DeviceStatus with ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 SelectValue.
+L000214 |                 { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: Laser = laserStatus
+L000215 |                     Laser = laserStatus ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000216 |                 }, ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: TalonStatus = talonStatus
+L000217 |                 TalonStatus = talonStatus ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 SelectValue.
+L000218 |             }; ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 SelectValue.
+L000219 |         } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000221 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 PollLaser.
+L000222 |     } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollAttenuator(int, System.Threading.CancellationToken)
+L000224 |     private void PollAttenuator(int attenuatorNumber, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 PollAttenuator.
+L000225 |     { ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetAttenuatorStatus(attenuatorNumber, cancellationToken) / 지역 변수를 선언합니다: var attenuator = interfaceManager.GetAttenuatorStatus(attenuatorNumber, cancellationToken); / 변수의 초기값을 지정합니다: attenuator = interfaceManager.GetAttenuatorStatus(attenuatorNumber, cancellationToken)
+L000226 |         var attenuator = interfaceManager.GetAttenuatorStatus(attenuatorNumber, cancellationToken); ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000227 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 SelectValue.
+L000228 |         { ⟦EOL⟧
+// 해설 L229: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { DeviceStatus = snapshot.DeviceStatus with { Attenuator = attenuator } };
+L000229 |             return snapshot with ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 SelectValue.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: DeviceStatus = snapshot.DeviceStatus with { Attenuator = attenuator }
+L000231 |                 DeviceStatus = snapshot.DeviceStatus with ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 SelectValue.
+L000232 |                 { ⟦EOL⟧
+// 해설 L233: 값을 대상에 대입합니다: Attenuator = attenuator
+L000233 |                     Attenuator = attenuator ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 SelectValue.
+L000234 |                 } ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 SelectValue.
+L000235 |             }; ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 SelectValue.
+L000236 |         } ⟦EOL⟧
+L000237 |  ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000238 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 PollAttenuator.
+L000239 |     } ⟦EOL⟧
+L000240 |  ⟦EOL⟧
+// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollBet(int, System.Threading.CancellationToken)
+L000241 |     private void PollBet(int betNumber, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 PollBet.
+L000242 |     { ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.RefreshBETStatus(betNumber, cancellationToken, suppressCommandLog: true) / 지역 변수를 선언합니다: var bet = interfaceManager.RefreshBETStatus(betNumber, cancellationToken, suppressCommandLog: true); / 변수의 초기값을 지정합니다: bet = interfaceManager.RefreshBETStatus(betNumber, cancellationToken, suppressCommandLog: true)
+L000243 |         var bet = interfaceManager.RefreshBETStatus(betNumber, cancellationToken, suppressCommandLog: true); ⟦EOL⟧
+// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000244 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 SelectValue.
+L000245 |         { ⟦EOL⟧
+// 해설 L246: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { DeviceStatus = snapshot.DeviceStatus with { Bet = bet } };
+L000246 |             return snapshot with ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 SelectValue.
+L000247 |             { ⟦EOL⟧
+// 해설 L248: 값을 대상에 대입합니다: DeviceStatus = snapshot.DeviceStatus with { Bet = bet }
+L000248 |                 DeviceStatus = snapshot.DeviceStatus with ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 SelectValue.
+L000249 |                 { ⟦EOL⟧
+// 해설 L250: 값을 대상에 대입합니다: Bet = bet
+L000250 |                     Bet = bet ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 SelectValue.
+L000251 |                 } ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 SelectValue.
+L000252 |             }; ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 SelectValue.
+L000253 |         } ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000255 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 PollBet.
+L000256 |     } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollPowerMeter(System.Threading.CancellationToken)
+L000258 |     private void PollPowerMeter(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 PollPowerMeter.
+L000259 |     { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetPowerMeterStatus(cancellationToken) / 지역 변수를 선언합니다: var powerMeter = interfaceManager.GetPowerMeterStatus(cancellationToken); / 변수의 초기값을 지정합니다: powerMeter = interfaceManager.GetPowerMeterStatus(cancellationToken)
+L000260 |         var powerMeter = interfaceManager.GetPowerMeterStatus(cancellationToken); ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000261 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 SelectValue.
+L000262 |         { ⟦EOL⟧
+// 해설 L263: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { DeviceStatus = snapshot.DeviceStatus with { PowerMeter = powerMeter } };
+L000263 |             return snapshot with ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 SelectValue.
+L000264 |             { ⟦EOL⟧
+// 해설 L265: 값을 대상에 대입합니다: DeviceStatus = snapshot.DeviceStatus with { PowerMeter = powerMeter }
+L000265 |                 DeviceStatus = snapshot.DeviceStatus with ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 SelectValue.
+L000266 |                 { ⟦EOL⟧
+// 해설 L267: 값을 대상에 대입합니다: PowerMeter = powerMeter
+L000267 |                     PowerMeter = powerMeter ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 SelectValue.
+L000268 |                 } ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 SelectValue.
+L000269 |             }; ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 SelectValue.
+L000270 |         } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000272 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 PollPowerMeter.
+L000273 |     } ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollPicoMotor(System.Threading.CancellationToken)
+L000275 |     private void PollPicoMotor(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 PollPicoMotor.
+L000276 |     { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetPicoMotorStatus(cancellationToken) / 지역 변수를 선언합니다: var picoMotor = interfaceManager.GetPicoMotorStatus(cancellationToken); / 변수의 초기값을 지정합니다: picoMotor = interfaceManager.GetPicoMotorStatus(cancellationToken)
+L000277 |         var picoMotor = interfaceManager.GetPicoMotorStatus(cancellationToken); ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT)
+L000278 |         global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT SelectValue(global::Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT snapshot) ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 SelectValue.
+L000279 |         { ⟦EOL⟧
+// 해설 L280: 호출자에게 값 또는 제어를 반환합니다: return snapshot with { PicoMotorStatus = picoMotor };
+L000280 |             return snapshot with ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 SelectValue.
+L000281 |             { ⟦EOL⟧
+// 해설 L282: 값을 대상에 대입합니다: PicoMotorStatus = picoMotor
+L000282 |                 PicoMotorStatus = picoMotor ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 SelectValue.
+L000283 |             }; ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 SelectValue.
+L000284 |         } ⟦EOL⟧
+L000285 |  ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(SelectValue)
+L000286 |         UpdateSnapshot(SelectValue); ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 PollPicoMotor.
+L000287 |     } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.PollMelsec(string, System.Threading.CancellationToken)
+L000289 |     private void PollMelsec(string selectedGroup, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000290 |     { ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Melsec.GetCachedSnapshot(out var mapRows) / 지역 변수를 선언합니다: var cachedValues = interfaceManager.Melsec.GetCachedSnapshot(out var mapRows); / 변수의 초기값을 지정합니다: cachedValues = interfaceManager.Melsec.GetCachedSnapshot(out var mapRows)
+L000291 |         var cachedValues = interfaceManager.Melsec.GetCachedSnapshot(out var mapRows); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var values = new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase)
+L000292 |         var values = new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateMelsecPollingRows(mapRows, selectedGroup) / 컬렉션 요소를 순회합니다: foreach (var row in CreateMelsecPollingRows(mapRows, selectedGroup))
+L000293 |         foreach (var row in CreateMelsecPollingRows(mapRows, selectedGroup)) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000294 |         { ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000295 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L296: 조건에 따라 분기합니다: if (row.Access == EN_MELSEC_ACCESS.Write)
+L000296 |             if (row.Access == EN_MELSEC_ACCESS.Write) ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000297 |             { ⟦EOL⟧
+// 해설 L298: 다음 반복으로 진행합니다: continue;
+L000298 |                 continue; ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000299 |             } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: cachedValues.TryGetValue(row.Id, out var cached) / 조건에 따라 분기합니다: if (!row.Use || !cachedValues.TryGetValue(row.Id, out var cached))
+L000301 |             if (!row.Use || !cachedValues.TryGetValue(row.Id, out var cached)) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000302 |             { ⟦EOL⟧
+// 해설 L303: 값을 대상에 대입합니다: values[row.Id] = new ST_MONITOR_MELSEC_VALUE(row.Id, "-", row.Use ? "WAIT" : "DISABLED", row.Description, null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MONITOR_MELSEC_VALUE(row.Id, "-", row.Use ? "WAIT" : "DISABLED", row.Description, null) / 조건에 따라 결과식을 선택합니다: row.Use ? "WAIT" : "DISABLED"
+L000303 |                 values[row.Id] = new ST_MONITOR_MELSEC_VALUE(row.Id, "-", row.Use ? "WAIT" : "DISABLED", row.Description, null); ⟦EOL⟧
+// 해설 L304: 다음 반복으로 진행합니다: continue;
+L000304 |                 continue; ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000305 |             } ⟦EOL⟧
+L000306 |  ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: cached.State.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: cached.State.ToString() / 조건에 따라 결과식을 선택합니다: cached.IsValid ? "OK" : cached.State.ToString().ToUpperInvariant() / 지역 변수를 선언합니다: var state = cached.IsValid ? "OK" : cached.State.ToString().ToUpperInvariant(); / 변수의 초기값을 지정합니다: state = cached.IsValid ? "OK" : cached.State.ToString().ToUpperInvariant()
+L000307 |             var state = cached.IsValid ? "OK" : cached.State.ToString().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatMelsecValue(row, cached.Value) / 조건에 따라 결과식을 선택합니다: cached.IsValid ? FormatMelsecValue(row, cached.Value) : cached.State == EN_MELSEC_CACHE_STATE.Pending ? "-" : "ERR" / 지역 변수를 선언합니다: var value = cached.IsValid ? FormatMelsecValue(row, cached.Value) : cached.State == EN_MELSEC_CACHE_STATE.Pending ? "-" : "ERR"; / 변수의 초기값을 지정합니다: value = cached.IsValid ? FormatMelsecValue(row, cached.Value) : cached.State == EN_MELSEC_CACHE_STATE.Pending ? "-" : "ERR"
+L000308 |             var value = cached.IsValid ? FormatMelsecValue(row, cached.Value) ⟦EOL⟧
+// 해설 L309: 조건에 따라 결과식을 선택합니다: cached.State == EN_MELSEC_CACHE_STATE.Pending ? "-" : "ERR"
+L000309 |                 : cached.State == EN_MELSEC_CACHE_STATE.Pending ? "-" : "ERR"; ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecCachePresentation.Describe(cached) / 지역 변수를 선언합니다: var message = CMelsecCachePresentation.Describe(cached); / 변수의 초기값을 지정합니다: message = CMelsecCachePresentation.Describe(cached)
+L000310 |             var message = CMelsecCachePresentation.Describe(cached); ⟦EOL⟧
+// 해설 L311: 조건에 따라 분기합니다: if (cached.IsValid && value == "ERR" && row.DataType != EN_MELSEC_DATA_TYPE.String)
+L000311 |             if (cached.IsValid && value == "ERR" && row.DataType != EN_MELSEC_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000312 |             { ⟦EOL⟧
+// 해설 L313: 값을 대상에 대입합니다: state = "ERROR"
+L000313 |                 state = "ERROR"; ⟦EOL⟧
+// 해설 L314: 값을 대상에 대입합니다: message = $"{row.Id} has invalid {row.DataType} feedback. {message}"
+L000314 |                 message = $"{row.Id} has invalid {row.DataType} feedback. {message}"; ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000315 |             } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 값을 대상에 대입합니다: values[row.Id] = new ST_MONITOR_MELSEC_VALUE(row.Id, value, state, message, cached.UpdatedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MONITOR_MELSEC_VALUE(row.Id, value, state, message, cached.UpdatedAt)
+L000317 |             values[row.Id] = new ST_MONITOR_MELSEC_VALUE(row.Id, value, state, message, cached.UpdatedAt); ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000318 |         } ⟦EOL⟧
+L000319 |  ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: MelsecValues = values / 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateSnapshot(snapshot => snapshot with { MelsecValues = values })
+L000320 |         UpdateSnapshot(snapshot => snapshot with { MelsecValues = values }); ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 PollMelsec.
+L000321 |     } ⟦EOL⟧
+L000322 |  ⟦EOL⟧
+// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.UI.Menu.Menus.CMonitorStatusPollingService.CreateMelsecPollingRows(System.Collections.Generic.IReadOnlyList<Drilli
+L000323 |     private static IReadOnlyList<ST_MELSEC_MAP_DATA> CreateMelsecPollingRows(IReadOnlyList<ST_MELSEC_MAP_DATA> mapRows, string selectedGroup) ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000324 |     { ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedGroup.Equals("ALL", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (selectedGroup.Equals("ALL", StringComparison.OrdinalIgnoreCase))
+L000325 |         if (selectedGroup.Equals("ALL", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000326 |         { ⟦EOL⟧
+// 해설 L327: 호출자에게 값 또는 제어를 반환합니다: return mapRows;
+L000327 |             return mapRows; ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000328 |         } ⟦EOL⟧
+L000329 |  ⟦EOL⟧
+// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, ST_MELSEC_MAP_DATA>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var rows = new Dictionary<string, ST_MELSEC_MAP_DATA>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: rows = new Dictionary<string, ST_MELSEC_MAP_DATA>(StringComparer.OrdinalIgnoreCase)
+L000330 |         var rows = new Dictionary<string, ST_MELSEC_MAP_DATA>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: mapRows.Where(row => string.IsNullOrWhiteSpace(selectedGroup) || row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedGroup) / 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) / 컬렉션 요소를 순회합니다: foreach (var row in mapRows.Where(row => string.IsNullOrWhiteSpace(selectedGroup) || row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)))
+L000331 |         foreach (var row in mapRows.Where(row => string.IsNullOrWhiteSpace(selectedGroup) || row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase))) ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000332 |         { ⟦EOL⟧
+// 해설 L333: 값을 대상에 대입합니다: rows[row.Id] = row
+L000333 |             rows[row.Id] = row; ⟦EOL⟧
+// 해설 L334: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000334 |         } ⟦EOL⟧
+L000335 |  ⟦EOL⟧
+// 해설 L336: 컬렉션 요소를 순회합니다: foreach (var row in mapRows)
+L000336 |         foreach (var row in mapRows) ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000337 |         { ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Id.StartsWith("IF_", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (row.Id.StartsWith("IF_", StringComparison.OrdinalIgnoreCase) || row.Id.StartsWith("HANDSHAKE_", StringComparison.OrdinalIgnoreCase))
+L000338 |             if (row.Id.StartsWith("IF_", StringComparison.OrdinalIgnoreCase) || ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Id.StartsWith("HANDSHAKE_", StringComparison.OrdinalIgnoreCase)
+L000339 |                 row.Id.StartsWith("HANDSHAKE_", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L340: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000340 |             { ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.TryAdd(row.Id, row)
+L000341 |                 rows.TryAdd(row.Id, row); ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000342 |             } ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000343 |         } ⟦EOL⟧
+L000344 |  ⟦EOL⟧
+// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Values.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return rows.Values.ToArray();
+L000345 |         return rows.Values.ToArray(); ⟦EOL⟧
+// 해설 L346: 구문 블록 경계입니다 · 소속 CreateMelsecPollingRows.
+L000346 |     } ⟦EOL⟧
+L000347 |  ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.FormatMelsecValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, object?)
+L000348 |     private static string FormatMelsecValue(ST_MELSEC_MAP_DATA row, object? value) ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 FormatMelsecValue.
+L000349 |     { ⟦EOL⟧
+// 해설 L350: 호출자에게 값 또는 제어를 반환합니다: return row.DataType switch { EN_MELSEC_DATA_TYPE.Bit when value is bool bit => bit ? "ON" : "OFF", EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord when double.IsFinite(CMelsecCachePresentation.NumericValue(value)) => CMelsec / 값별 결과식을 선택합니다: row.DataType switch { EN_MELSEC_DATA_TYPE.Bit when value is bool bit => bit ? "ON" : "OFF", EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord when double.IsFinite(CMelsecCachePresentation.NumericValue(value)) => CMelsecCachePr
+L000350 |         return row.DataType switch ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 FormatMelsecValue.
+L000351 |         { ⟦EOL⟧
+// 해설 L352: 조건에 따라 결과식을 선택합니다: bit ? "ON" : "OFF"
+L000352 |             EN_MELSEC_DATA_TYPE.Bit when value is bool bit => bit ? "ON" : "OFF", ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(CMelsecCachePresentation.NumericValue(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecCachePresentation.NumericValue(value)
+L000353 |             EN_MELSEC_DATA_TYPE.Word or EN_MELSEC_DATA_TYPE.DWord when double.IsFinite(CMelsecCachePresentation.NumericValue(value)) => ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecCachePresentation.NumericValue(value).ToString("0.########", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecCachePresentation.NumericValue(value)
+L000354 |                 CMelsecCachePresentation.NumericValue(value).ToString("0.########", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: number.ToString("F3", CultureInfo.InvariantCulture)
+L000355 |             EN_MELSEC_DATA_TYPE.Double or EN_MELSEC_DATA_TYPE.Float when value is double number && double.IsFinite(number) => number.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.FormatMelsecValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, object?)
+L000356 |             EN_MELSEC_DATA_TYPE.String when value is string text => text, ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.FormatMelsecValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, object?)
+L000357 |             _ => "ERR" ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 FormatMelsecValue.
+L000358 |         }; ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 FormatMelsecValue.
+L000359 |     } ⟦EOL⟧
+L000360 |  ⟦EOL⟧
+// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_POLLING_CONTEXT Drilling.UI.Menu.Menus.CMonitorStatusPollingService.GetContext()
+L000361 |     private ST_MONITOR_POLLING_CONTEXT GetContext() ⟦EOL⟧
+// 해설 L362: 구문 블록 경계입니다 · 소속 GetContext.
+L000362 |     { ⟦EOL⟧
+// 해설 L363: 공유 상태의 임계 구역에 진입합니다: lock (_contextLock)
+L000363 |         lock (_contextLock) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 GetContext.
+L000364 |         { ⟦EOL⟧
+// 해설 L365: 호출자에게 값 또는 제어를 반환합니다: return _context;
+L000365 |             return _context; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 GetContext.
+L000366 |         } ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 GetContext.
+L000367 |     } ⟦EOL⟧
+L000368 |  ⟦EOL⟧
+// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.SchedulePoll(System.Action<System.Threading.CancellationToken>, bool)
+L000369 |     private void SchedulePoll(Action<CancellationToken> poll, bool communicationPoll) ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000370 |     { ⟦EOL⟧
+// 해설 L371: 조건에 따라 결과식을 선택합니다: communicationPoll ? Interlocked.CompareExchange(ref _communicationPollRunning, 1, 0) != 0 : Interlocked.CompareExchange(ref _activeDevicePollRunning, 1, 0) != 0 / 조건에 따라 분기합니다: if (communicationPoll ? Interlocked.CompareExchange(ref _communicationPollRunning, 1, 0) != 0 : Interlocked.CompareExchange(ref _activeDevicePollRunning, 1, 0) != 0)
+L000371 |         if (communicationPoll ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.CompareExchange(ref _communicationPollRunning, 1, 0)
+L000372 |             ? Interlocked.CompareExchange(ref _communicationPollRunning, 1, 0) != 0 ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.CompareExchange(ref _activeDevicePollRunning, 1, 0)
+L000373 |             : Interlocked.CompareExchange(ref _activeDevicePollRunning, 1, 0) != 0) ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000374 |         { ⟦EOL⟧
+// 해설 L375: 호출자에게 값 또는 제어를 반환합니다: return;
+L000375 |             return; ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000376 |         } ⟦EOL⟧
+L000377 |  ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: _ = Task.Run(() => { try { TryPoll(poll, CancellationToken.None); } finally { if (communicationPoll) { Interlocked.Exchange(ref _communicationPollRunning, 0); } else { Interlocked.Exchange(ref _activeDevicePollRunning, 0); } } }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => { try { TryPoll(poll, CancellationToken.None); } finally { if (communicationPoll) { Interlocked.Exchange(ref _communicationPollRunning, 0); } else { Interlocked.Exchange(ref _activeDevicePollRunning, 0); }…
+L000378 |         _ = Task.Run(() => ⟦EOL⟧
+// 해설 L379: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000379 |         { ⟦EOL⟧
+// 해설 L380: 예외 처리 범위입니다: try
+L000380 |             try ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000381 |             { ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryPoll(poll, CancellationToken.None)
+L000382 |                 TryPoll(poll, CancellationToken.None); ⟦EOL⟧
+// 해설 L383: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000383 |             } ⟦EOL⟧
+// 해설 L384: 종료 정리 구간입니다: finally
+L000384 |             finally ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000385 |             { ⟦EOL⟧
+// 해설 L386: 조건에 따라 분기합니다: if (communicationPoll)
+L000386 |                 if (communicationPoll) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000387 |                 { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _communicationPollRunning, 0)
+L000388 |                     Interlocked.Exchange(ref _communicationPollRunning, 0); ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000389 |                 } ⟦EOL⟧
+// 해설 L390: 앞 조건이 거짓인 경로입니다: else
+L000390 |                 else ⟦EOL⟧
+// 해설 L391: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000391 |                 { ⟦EOL⟧
+// 해설 L392: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _activeDevicePollRunning, 0)
+L000392 |                     Interlocked.Exchange(ref _activeDevicePollRunning, 0); ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000393 |                 } ⟦EOL⟧
+// 해설 L394: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000394 |             } ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.SchedulePoll(System.Action<System.Threading.CancellationToken>, bool)
+L000395 |         }); ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 SchedulePoll.
+L000396 |     } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorStatusPollingService.IsActive()
+L000398 |     private bool IsActive() ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 IsActive.
+L000399 |     { ⟦EOL⟧
+// 해설 L400: 공유 상태의 임계 구역에 진입합니다: lock (_contextLock)
+L000400 |         lock (_contextLock) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 IsActive.
+L000401 |         { ⟦EOL⟧
+// 해설 L402: 호출자에게 값 또는 제어를 반환합니다: return _isActive;
+L000402 |             return _isActive; ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 IsActive.
+L000403 |         } ⟦EOL⟧
+// 해설 L404: 구문 블록 경계입니다 · 소속 IsActive.
+L000404 |     } ⟦EOL⟧
+L000405 |  ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · System.TimeSpan Drilling.UI.Menu.Menus.CMonitorStatusPollingService.GetMotorInterval()
+L000406 |     private TimeSpan GetMotorInterval() ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 GetMotorInterval.
+L000407 |     { ⟦EOL⟧
+// 해설 L408: 조건에 따라 결과식을 선택합니다: motionManager.IsSimulation ? LoopInterval : ActiveInterval / 호출자에게 값 또는 제어를 반환합니다: return motionManager.IsSimulation ? LoopInterval : ActiveInterval;
+L000408 |         return motionManager.IsSimulation ? LoopInterval : ActiveInterval; ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 GetMotorInterval.
+L000409 |     } ⟦EOL⟧
+L000410 |  ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · System.TimeSpan Drilling.UI.Menu.Menus.CMonitorStatusPollingService.GetPowerMeterInterval()
+L000411 |     private TimeSpan GetPowerMeterInterval() ⟦EOL⟧
+// 해설 L412: 구문 블록 경계입니다 · 소속 GetPowerMeterInterval.
+L000412 |     { ⟦EOL⟧
+// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSnapshot() / 지역 변수를 선언합니다: var snapshot = GetSnapshot(); / 변수의 초기값을 지정합니다: snapshot = GetSnapshot()
+L000413 |         var snapshot = GetSnapshot(); ⟦EOL⟧
+// 해설 L414: 조건에 따라 결과식을 선택합니다: snapshot.DeviceStatus.PowerMeter.IsMeasuring ? ActivePowerMeterMeasureInterval : ActiveInterval / 호출자에게 값 또는 제어를 반환합니다: return snapshot.DeviceStatus.PowerMeter.IsMeasuring ? ActivePowerMeterMeasureInterval : ActiveInterval;
+L000414 |         return snapshot.DeviceStatus.PowerMeter.IsMeasuring ? ActivePowerMeterMeasureInterval : ActiveInterval; ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다 · 소속 GetPowerMeterInterval.
+L000415 |     } ⟦EOL⟧
+L000416 |  ⟦EOL⟧
+// 해설 L417: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMonitorStatusPollingService.UpdateSnapshot(System.Func<Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT, Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT>)
+L000417 |     private void UpdateSnapshot(Func<ST_MONITOR_STATUS_SNAPSHOT, ST_MONITOR_STATUS_SNAPSHOT> update) ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 UpdateSnapshot.
+L000418 |     { ⟦EOL⟧
+// 해설 L419: 공유 상태의 임계 구역에 진입합니다: lock (_snapshotLock)
+L000419 |         lock (_snapshotLock) ⟦EOL⟧
+// 해설 L420: 구문 블록 경계입니다 · 소속 UpdateSnapshot.
+L000420 |         { ⟦EOL⟧
+// 해설 L421: 값을 대상에 대입합니다: _snapshot = update(_snapshot) / 함수·델리게이트 또는 객체 생성자를 호출합니다: update(_snapshot)
+L000421 |             _snapshot = update(_snapshot); ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 UpdateSnapshot.
+L000422 |         } ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 UpdateSnapshot.
+L000423 |     } ⟦EOL⟧
+L000424 |  ⟦EOL⟧
+// 해설 L425: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMonitorStatusPollingService.IsDue(ref System.DateTimeOffset, System.DateTimeOffset, System.TimeSpan)
+L000425 |     private static bool IsDue(ref DateTimeOffset lastPoll, DateTimeOffset now, TimeSpan interval) ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 IsDue.
+L000426 |     { ⟦EOL⟧
+// 해설 L427: 조건에 따라 분기합니다: if (now - lastPoll < interval)
+L000427 |         if (now - lastPoll < interval) ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 IsDue.
+L000428 |         { ⟦EOL⟧
+// 해설 L429: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000429 |             return false; ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 IsDue.
+L000430 |         } ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 값을 대상에 대입합니다: lastPoll = now
+L000432 |         lastPoll = now; ⟦EOL⟧
+// 해설 L433: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000433 |         return true; ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 IsDue.
+L000434 |     } ⟦EOL⟧
+L000435 |  ⟦EOL⟧
+// 해설 L436: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000436 |     private static string NormalizeTab(string tab) ⟦EOL⟧
+// 해설 L437: 구문 블록 경계입니다 · 소속 NormalizeTab.
+L000437 |     { ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tab) / 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(tab) ? "PRODUCT" : tab.Trim().ToUpperInvariant() / 지역 변수를 선언합니다: var normalized = string.IsNullOrWhiteSpace(tab) ? "PRODUCT" : tab.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = string.IsNullOrWhiteSpace(tab) ? "PRODUCT" : tab.Trim().ToUpperInvariant()
+L000438 |         var normalized = string.IsNullOrWhiteSpace(tab) ? "PRODUCT" : tab.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L439: 호출자에게 값 또는 제어를 반환합니다: return normalized switch { "ATT" => "ATTENUATOR", "POWER" or "POWERMETER" or "POWER_METER" => "POWER METER", "MOTOR" or "XPS" or "SCANNERTILT" or "SCANNER TILT" or "SCANNER_TILT" => "XPS", "PICO" or "PICOMOTOR" or "PICO_MOTOR" or  / 값별 결과식을 선택합니다: normalized switch { "ATT" => "ATTENUATOR", "POWER" or "POWERMETER" or "POWER_METER" => "POWER METER", "MOTOR" or "XPS" or "SCANNERTILT" or "SCANNER TILT" or "SCANNER_TILT" => "XPS", "PICO" or "PICOMOTOR" or "PICO_MOTOR" or "DOETIL
+L000439 |         return normalized switch ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 NormalizeTab.
+L000440 |         { ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000441 |             "ATT" => "ATTENUATOR", ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000442 |             "POWER" or "POWERMETER" or "POWER_METER" => "POWER METER", ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000443 |             "MOTOR" or "XPS" or "SCANNERTILT" or "SCANNER TILT" or "SCANNER_TILT" => "XPS", ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000444 |             "PICO" or "PICOMOTOR" or "PICO_MOTOR" or "DOETILT" or "DOE TILT" or "DOE_TILT" => "PICO MOTOR", ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000445 |             "COORDINATE" or "COORDINATEVIEWER" or "COORDINATE_VIEWER" => "COORDINATE VIEWER", ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000446 |             "LASER" or "ATTENUATOR" or "BET" or "POWER METER" or "PICO MOTOR" or "PRODUCT" or "MELSEC" or "COORDINATE VIEWER" => normalized, ⟦EOL⟧
+// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeTab(string)
+L000447 |             _ => "PRODUCT" ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 NormalizeTab.
+L000448 |         }; ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 NormalizeTab.
+L000449 |     } ⟦EOL⟧
+L000450 |  ⟦EOL⟧
+// 해설 L451: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMonitorStatusPollingService.NormalizeMelsecGroup(string)
+L000451 |     private static string NormalizeMelsecGroup(string group) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 NormalizeMelsecGroup.
+L000452 |     { ⟦EOL⟧
+// 해설 L453: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(group) ? "ALL" : group.Trim().ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(group) ? "ALL" : group.Trim().ToUpperInvariant();
+L000453 |         return string.IsNullOrWhiteSpace(group) ? "ALL" : group.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 NormalizeMelsecGroup.
+L000454 |     } ⟦EOL⟧
+// 해설 L455: 구문 블록 경계입니다.
+L000455 | } ⟦EOL⟧
+L000456 |  ⟦EOL⟧
+// 해설 L457: 타입의 구조/상속 선언입니다: internal sealed record ST_MONITOR_POLLING_CONTEXT(string SelectedTab, int LaserNumber, int AttenuatorNumber, int BetNumber, string MelsecGroup)
+L000457 | internal sealed record ST_MONITOR_POLLING_CONTEXT(string SelectedTab, int LaserNumber, int AttenuatorNumber, int BetNumber, string MelsecGroup) ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다.
+L000458 | { ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PRODUCT", 0, 0, 0, "ALL")
+L000459 |     public static ST_MONITOR_POLLING_CONTEXT Default { get; } = new("PRODUCT", 0, 0, 0, "ALL"); ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다.
+L000460 | } ⟦EOL⟧
+L000461 |  ⟦EOL⟧
+// 해설 L462: 타입의 구조/상속 선언입니다: internal sealed record ST_MONITOR_STATUS_SNAPSHOT(
+L000462 | internal sealed record ST_MONITOR_STATUS_SNAPSHOT( ⟦EOL⟧
+// 해설 L463: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000463 |     ST_DEVICE_STATUS DeviceStatus,  ⟦EOL⟧
+// 해설 L464: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000464 |     IReadOnlyList<ST_DEVICE_COMM_STATUS> Communication,  ⟦EOL⟧
+// 해설 L465: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000465 |     ST_TALON_STATUS TalonStatus,  ⟦EOL⟧
+// 해설 L466: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000466 |     ST_PICO_MOTOR_STATUS PicoMotorStatus,  ⟦EOL⟧
+// 해설 L467: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000467 |     IReadOnlyDictionary<string, ST_MONITOR_MELSEC_VALUE> MelsecValues ⟦EOL⟧
+// 해설 L468: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000468 | ) ⟦EOL⟧
+// 해설 L469: 구문 블록 경계입니다.
+L000469 | { ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( new ST_DEVICE_STATUS( [], [], new ST_LASER_STATUS(false, false, false, 0.0), new ST_ATTENUATOR_STATUS(0.0, 0.0, "IDLE", false), new ST_BET_STATUS(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, false, false, false, false), ST_…
+L000470 |     public static ST_MONITOR_STATUS_SNAPSHOT Empty { get; } = new( ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DEVICE_STATUS( [], [], new ST_LASER_STATUS(false, false, false, 0.0), new ST_ATTENUATOR_STATUS(0.0, 0.0, "IDLE", false), new ST_BET_STATUS(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, false, false, false, false), ST_POWER…
+L000471 |         new ST_DEVICE_STATUS( ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000472 |         [],  ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000473 |         [],  ⟦EOL⟧
+// 해설 L474: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_LASER_STATUS(false, false, false, 0.0)
+L000474 |         new ST_LASER_STATUS(false, false, false, 0.0),  ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_ATTENUATOR_STATUS(0.0, 0.0, "IDLE", false)
+L000475 |         new ST_ATTENUATOR_STATUS(0.0, 0.0, "IDLE", false),  ⟦EOL⟧
+// 해설 L476: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_BET_STATUS(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, false, false, false, false)
+L000476 |         new ST_BET_STATUS(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, false, false, false, false),  ⟦EOL⟧
+// 해설 L477: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000477 |         ST_POWER_METER_STATUS.Empty ⟦EOL⟧
+// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000478 |     ),  ⟦EOL⟧
+// 해설 L479: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000479 |         [],  ⟦EOL⟧
+// 해설 L480: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000480 |         ST_TALON_STATUS.Empty,  ⟦EOL⟧
+// 해설 L481: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000481 |         ST_PICO_MOTOR_STATUS.Empty,  ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase)
+L000482 |         new Dictionary<string, ST_MONITOR_MELSEC_VALUE>(StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L483: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT Drilling.UI.Menu.Menus.ST_MONITOR_STATUS_SNAPSHOT.Empty
+L000483 |     ); ⟦EOL⟧
+// 해설 L484: 구문 블록 경계입니다.
+L000484 | } ⟦EOL⟧
+L000485 |  ⟦EOL⟧
+// 해설 L486: 타입의 구조/상속 선언입니다: internal sealed record ST_MONITOR_MELSEC_VALUE(string Id, string Value, string State, string Message, DateTimeOffset? UpdatedAt);
+L000486 | internal sealed record ST_MONITOR_MELSEC_VALUE(string Id, string Value, string State, string Message, DateTimeOffset? UpdatedAt); ⟦EOL⟧

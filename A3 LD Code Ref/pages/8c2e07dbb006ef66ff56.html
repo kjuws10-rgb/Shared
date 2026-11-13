@@ -1,0 +1,957 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Automation/CScannerAxisConfiguration.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Automation/CScannerAxisConfiguration.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs">Git 원본</a></p><h1>Drilling.Common/Automation/CScannerAxisConfiguration.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>46241bee261b984aa7c9999db2414c5f0b92c128bfbae34733ac0aceb59b04b4</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>11,959 bytes / 316 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/8c2e07dbb006ef66ff56.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CScannerAxisConfiguration</td><td>ClassDeclaration</td><td>6–305</td><td>CScannerAxisConfiguration</td></tr>
+<tr><td>ST_SCANNER_AXIS_SETTING</td><td>RecordStructDeclaration</td><td>307–316</td><td>ST_SCANNER_AXIS_SETTING</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>BuildAxisDefinitions</td><td>MethodDeclaration</td><td>L8–27</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>BuildAxisDefinitions</td><td>MethodDeclaration</td><td>L29–48</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>AppendScannerZAxisDefinition</td><td>MethodDeclaration</td><td>L50–60</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
+<tr><td>AppendScannerZAxisDefinition</td><td>MethodDeclaration</td><td>L62–72</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
+<tr><td>CreateUnusedAxisDefinition</td><td>MethodDeclaration</td><td>L74–77</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int)</td></tr>
+<tr><td>CreateAxisDefinition</td><td>MethodDeclaration</td><td>L79–89</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool)</td></tr>
+<tr><td>ValidateConfiguredAxisName</td><td>MethodDeclaration</td><td>L91–109</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ValidateConfiguredAxisName(int, string, string)</td></tr>
+<tr><td>IsAllAsciiDigits</td><td>MethodDeclaration</td><td>L111–127</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAllAsciiDigits(string)</td></tr>
+<tr><td>IsAutomationAxisName</td><td>MethodDeclaration</td><td>L129–145</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAutomationAxisName(string)</td></tr>
+<tr><td>BuildEnabledHeadNumbers</td><td>MethodDeclaration</td><td>L147–159</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>IsHeadEnabled</td><td>MethodDeclaration</td><td>L161–164</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>IsHeadEnabled</td><td>MethodDeclaration</td><td>L166–169</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>ReadHeadSettingText</td><td>MethodDeclaration</td><td>L171–192</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[])</td></tr>
+<tr><td>ReadHeadSettingBool</td><td>MethodDeclaration</td><td>L194–222</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, bool, int, params string[])</td></tr>
+<tr><td>ReadHeadSettingInt</td><td>MethodDeclaration</td><td>L224–245</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, params string[])</td></tr>
+<tr><td>ReadHeadSettingText</td><td>MethodDeclaration</td><td>L247–260</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[])</td></tr>
+<tr><td>ReadHeadSettingBool</td><td>MethodDeclaration</td><td>L262–287</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool, int, params string[])</td></tr>
+<tr><td>ReadHeadSettingInt</td><td>MethodDeclaration</td><td>L289–302</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, params string[])</td></tr>
+<tr><td>NormalizeHeadNo</td><td>MethodDeclaration</td><td>L304–304</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.NormalizeHeadNo(int)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L8">MethodDeclaration <code>BuildAxisDefinitions</code> · L8–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L8-L27">Drilling.Common/Automation/CScannerAxisConfiguration.cs:8–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L590-L590">Drilling.Common/Alarm/CAlarmManager.cs:590–590</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L261-L261">Drilling.Common/Interface/CPowerMeasureRun.cs:261–261</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3568-L3568">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3568–3568</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L121-L121">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:121–121</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>10</td><td>NormalizeHeadNo</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.NormalizeHeadNo(int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:304</td></tr>
+<tr><td>11</td><td>IsHeadEnabled</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:161</td></tr>
+<tr><td>16</td><td>ReadHeadSettingInt</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:224</td></tr>
+<tr><td>17</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:171</td></tr>
+<tr><td>18</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:171</td></tr>
+<tr><td>19</td><td>ReadHeadSettingInt</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:224</td></tr>
+<tr><td>20</td><td>new List&lt;ST_SCANNER_AXIS_SETTING&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.List(int)</td></tr>
+<tr><td>22</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+<tr><td>23</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+<tr><td>25</td><td>AppendScannerZAxisDefinition</td><td>resolved</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:50</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo)</td></tr>
+<tr><td>10</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo);</td></tr>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)</td></tr>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(settings, normalizedHeadNo)</td></tr>
+<tr><td>11</td><td>if</td><td>조건에 따라 분기합니다: if (!IsHeadEnabled(settings, normalizedHeadNo))</td></tr>
+<tr><td>13</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return[];</td></tr>
+<tr><td>16</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(settings, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;)</td></tr>
+<tr><td>16</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: normalizedHeadNo &lt;= 4 ? 0 : 1</td></tr>
+<tr><td>16</td><td>local-declaration</td><td>지역 변수를 선언합니다: var automationNo = ReadHeadSettingInt(settings, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;);</td></tr>
+<tr><td>16</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: automationNo = ReadHeadSettingInt(settings, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;)</td></tr>
+<tr><td>17</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;)</td></tr>
+<tr><td>17</td><td>local-declaration</td><td>지역 변수를 선언합니다: var xAxis = ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;);</td></tr>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: xAxis = ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;)</td></tr>
+<tr><td>18</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;)</td></tr>
+<tr><td>18</td><td>local-declaration</td><td>지역 변수를 선언합니다: var yAxis = ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;);</td></tr>
+<tr><td>18</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: yAxis = ReadHeadSettingText(settings, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;)</td></tr>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(settings, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;)</td></tr>
+<tr><td>19</td><td>local-declaration</td><td>지역 변수를 선언합니다: var aioNo = ReadHeadSettingInt(settings, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;);</td></tr>
+<tr><td>19</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: aioNo = ReadHeadSettingInt(settings, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;)</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) }</td></tr>
+<tr><td>20</td><td>local-declaration</td><td>지역 변수를 선언합니다: var definitions = new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) };</td></tr>
+<tr><td>20</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: definitions = new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) }</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo)</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AppendScannerZAxisDefinition(settings, normalizedHeadNo, automationNo, aioNo, definitions)</td></tr>
+<tr><td>26</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return definitions;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BuildAxisDefinitions&quot;]
+ N0[&quot;L11 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">MethodDeclaration <code>BuildAxisDefinitions</code> · L29–48</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L29-L48">Drilling.Common/Automation/CScannerAxisConfiguration.cs:29–48</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L129-L129">Drilling.Common/InterLock/CInterLockManager.cs:129–129</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L124-L124">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:124–124</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>31</td><td>NormalizeHeadNo</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.NormalizeHeadNo(int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:304</td></tr>
+<tr><td>32</td><td>IsHeadEnabled</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:166</td></tr>
+<tr><td>37</td><td>ReadHeadSettingInt</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:289</td></tr>
+<tr><td>38</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:247</td></tr>
+<tr><td>39</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:247</td></tr>
+<tr><td>40</td><td>ReadHeadSettingInt</td><td>resolved</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:289</td></tr>
+<tr><td>41</td><td>new List&lt;ST_SCANNER_AXIS_SETTING&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.List(int)</td></tr>
+<tr><td>43</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+<tr><td>44</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+<tr><td>46</td><td>AppendScannerZAxisDefinition</td><td>resolved</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:62</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadNo(headNo)</td></tr>
+<tr><td>31</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalizedHeadNo = NormalizeHeadNo(headNo);</td></tr>
+<tr><td>31</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalizedHeadNo = NormalizeHeadNo(headNo)</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(parameters, normalizedHeadNo)</td></tr>
+<tr><td>32</td><td>if</td><td>조건에 따라 분기합니다: if (!IsHeadEnabled(parameters, normalizedHeadNo))</td></tr>
+<tr><td>34</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return[];</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(parameters, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;)</td></tr>
+<tr><td>37</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: normalizedHeadNo &lt;= 4 ? 0 : 1</td></tr>
+<tr><td>37</td><td>local-declaration</td><td>지역 변수를 선언합니다: var automationNo = ReadHeadSettingInt(parameters, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;);</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: automationNo = ReadHeadSettingInt(parameters, normalizedHeadNo &lt;= 4 ? 0 : 1, normalizedHeadNo, &quot;AUTOMATION_NO&quot;)</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;)</td></tr>
+<tr><td>38</td><td>local-declaration</td><td>지역 변수를 선언합니다: var xAxis = ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;);</td></tr>
+<tr><td>38</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: xAxis = ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;X_AXIS&quot;, &quot;GX_AXIS&quot;)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var yAxis = ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: yAxis = ReadHeadSettingText(parameters, &quot;&quot;, normalizedHeadNo, &quot;Y_AXIS&quot;, &quot;GY_AXIS&quot;)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingInt(parameters, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;)</td></tr>
+<tr><td>40</td><td>local-declaration</td><td>지역 변수를 선언합니다: var aioNo = ReadHeadSettingInt(parameters, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;);</td></tr>
+<tr><td>40</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: aioNo = ReadHeadSettingInt(parameters, 0, normalizedHeadNo, &quot;SCANNER_AIO_NO&quot;)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) }</td></tr>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var definitions = new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) };</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: definitions = new List&lt;ST_SCANNER_AXIS_SETTING&gt;(3) { CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo), CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo) }</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;X&quot;, xAxis, aioNo)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(normalizedHeadNo, automationNo, &quot;Y&quot;, yAxis, aioNo)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AppendScannerZAxisDefinition(parameters, normalizedHeadNo, automationNo, aioNo, definitions)</td></tr>
+<tr><td>47</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return definitions;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BuildAxisDefinitions&quot;]
+ N0[&quot;L32 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L50">MethodDeclaration <code>AppendScannerZAxisDefinition</code> · L50–60</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L50-L60">Drilling.Common/Automation/CScannerAxisConfiguration.cs:50–60</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>automationNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>aioNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>definitions</td><td>System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L25-L25">Drilling.Common/Automation/CScannerAxisConfiguration.cs:25–25</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>52</td><td>ReadHeadSettingBool</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, bool, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:194</td></tr>
+<tr><td>54</td><td>definitions.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.Add(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING)</td></tr>
+<tr><td>54</td><td>CreateUnusedAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:74</td></tr>
+<tr><td>58</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:171</td></tr>
+<tr><td>59</td><td>definitions.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.Add(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING)</td></tr>
+<tr><td>59</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(settings, false, headNo, &quot;SCANNER_Z_USE&quot;, &quot;Z_USE&quot;)</td></tr>
+<tr><td>52</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadHeadSettingBool(settings, false, headNo, &quot;SCANNER_Z_USE&quot;, &quot;Z_USE&quot;))</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, &quot;Z&quot;, aioNo))</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateUnusedAxisDefinition(headNo, automationNo, &quot;Z&quot;, aioNo)</td></tr>
+<tr><td>55</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(settings, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;)</td></tr>
+<tr><td>58</td><td>local-declaration</td><td>지역 변수를 선언합니다: var zAxis = ReadHeadSettingText(settings, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;);</td></tr>
+<tr><td>58</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: zAxis = ReadHeadSettingText(settings, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;)</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateAxisDefinition(headNo, automationNo, &quot;Z&quot;, zAxis, aioNo, false))</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(headNo, automationNo, &quot;Z&quot;, zAxis, aioNo, false)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;AppendScannerZAxisDefinition&quot;]
+ N0[&quot;L52 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L62">MethodDeclaration <code>AppendScannerZAxisDefinition</code> · L62–72</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L62-L72">Drilling.Common/Automation/CScannerAxisConfiguration.cs:62–72</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>automationNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>aioNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>definitions</td><td>System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L46-L46">Drilling.Common/Automation/CScannerAxisConfiguration.cs:46–46</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>64</td><td>ReadHeadSettingBool</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:262</td></tr>
+<tr><td>66</td><td>definitions.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.Add(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING)</td></tr>
+<tr><td>66</td><td>CreateUnusedAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:74</td></tr>
+<tr><td>70</td><td>ReadHeadSettingText</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:247</td></tr>
+<tr><td>71</td><td>definitions.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;.Add(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING)</td></tr>
+<tr><td>71</td><td>CreateAxisDefinition</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:79</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(parameters, false, headNo, &quot;SCANNER_Z_USE&quot;, &quot;Z_USE&quot;)</td></tr>
+<tr><td>64</td><td>if</td><td>조건에 따라 분기합니다: if (!ReadHeadSettingBool(parameters, false, headNo, &quot;SCANNER_Z_USE&quot;, &quot;Z_USE&quot;))</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateUnusedAxisDefinition(headNo, automationNo, &quot;Z&quot;, aioNo))</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateUnusedAxisDefinition(headNo, automationNo, &quot;Z&quot;, aioNo)</td></tr>
+<tr><td>67</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingText(parameters, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;)</td></tr>
+<tr><td>70</td><td>local-declaration</td><td>지역 변수를 선언합니다: var zAxis = ReadHeadSettingText(parameters, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;);</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: zAxis = ReadHeadSettingText(parameters, &quot;&quot;, headNo, &quot;SCANNER_Z_AXIS&quot;, &quot;Z_AXIS&quot;)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: definitions.Add(CreateAxisDefinition(headNo, automationNo, &quot;Z&quot;, zAxis, aioNo, false))</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAxisDefinition(headNo, automationNo, &quot;Z&quot;, zAxis, aioNo, false)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;AppendScannerZAxisDefinition&quot;]
+ N0[&quot;L64 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">MethodDeclaration <code>CreateUnusedAxisDefinition</code> · L74–77</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L74-L77">Drilling.Common/Automation/CScannerAxisConfiguration.cs:74–77</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>automationNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>axisRole</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>aioNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L54-L54">Drilling.Common/Automation/CScannerAxisConfiguration.cs:54–54</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L66-L66">Drilling.Common/Automation/CScannerAxisConfiguration.cs:66–66</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>76</td><td>new ST_SCANNER_AXIS_SETTING</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING.ST_SCANNER_AXIS_SETTING(int, int, string, string, int, string, bool, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:307</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, &quot;NOT USE&quot;, aioNo, &quot;&quot;, false, false)</td></tr>
+<tr><td>76</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, &quot;NOT USE&quot;, aioNo, &quot;&quot;, false, false);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L79">MethodDeclaration <code>CreateAxisDefinition</code> · L79–89</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L79-L89">Drilling.Common/Automation/CScannerAxisConfiguration.cs:79–89</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>automationNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>axisRole</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>axisReference</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>aioNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>readExtendedStatus</td><td>bool</td><td>None</td><td>True / true</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L22-L22">Drilling.Common/Automation/CScannerAxisConfiguration.cs:22–22</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L23-L23">Drilling.Common/Automation/CScannerAxisConfiguration.cs:23–23</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L43-L43">Drilling.Common/Automation/CScannerAxisConfiguration.cs:43–43</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L44-L44">Drilling.Common/Automation/CScannerAxisConfiguration.cs:44–44</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L59-L59">Drilling.Common/Automation/CScannerAxisConfiguration.cs:59–59</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L71-L71">Drilling.Common/Automation/CScannerAxisConfiguration.cs:71–71</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>axisReference.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>82</td><td>ValidateConfiguredAxisName</td><td>resolved</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ValidateConfiguredAxisName(int, string, string) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:91</td></tr>
+<tr><td>83</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>85</td><td>new ST_SCANNER_AXIS_SETTING</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING.ST_SCANNER_AXIS_SETTING(int, int, string, string, int, string, bool, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:307</td></tr>
+<tr><td>88</td><td>new ST_SCANNER_AXIS_SETTING</td><td>resolved</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING.ST_SCANNER_AXIS_SETTING(int, int, string, string, int, string, bool, bool) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:307</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axisReference.Trim()</td></tr>
+<tr><td>81</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normalizedAxisReference = axisReference.Trim();</td></tr>
+<tr><td>81</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normalizedAxisReference = axisReference.Trim()</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference)</td></tr>
+<tr><td>82</td><td>local-declaration</td><td>지역 변수를 선언합니다: var configurationError = ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference);</td></tr>
+<tr><td>82</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: configurationError = ValidateConfiguredAxisName(headNo, axisRole, normalizedAxisReference)</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(configurationError)</td></tr>
+<tr><td>83</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(configurationError))</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, &quot;&quot;, aioNo, configurationError, true, readExtendedStatus)</td></tr>
+<tr><td>85</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, &quot;&quot;, aioNo, configurationError, true, readExtendedStatus);</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, normalizedAxisReference, aioNo, &quot;&quot;, true, readExtendedStatus)</td></tr>
+<tr><td>88</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_SCANNER_AXIS_SETTING(headNo, automationNo, axisRole, normalizedAxisReference, aioNo, &quot;&quot;, true, readExtendedStatus);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateAxisDefinition&quot;]
+ N0[&quot;L83 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L91">MethodDeclaration <code>ValidateConfiguredAxisName</code> · L91–109</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L91-L109">Drilling.Common/Automation/CScannerAxisConfiguration.cs:91–109</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ValidateConfiguredAxisName(int, string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>axisRole</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>axisReference</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L82-L82">Drilling.Common/Automation/CScannerAxisConfiguration.cs:82–82</a></td><td>ValidateConfiguredAxisName</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>93</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>93</td><td>axisReference.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>98</td><td>IsAllAsciiDigits</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAllAsciiDigits(string) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:111</td></tr>
+<tr><td>103</td><td>IsAutomationAxisName</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAutomationAxisName(string) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:129</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axisReference)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axisReference.Equals(&quot;-&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>93</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(axisReference) || axisReference.Equals(&quot;-&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>95</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;H{headNo:00} {axisRole} axis name is not configured.&quot;;</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsAllAsciiDigits(axisReference)</td></tr>
+<tr><td>98</td><td>if</td><td>조건에 따라 분기합니다: if (IsAllAsciiDigits(axisReference))</td></tr>
+<tr><td>100</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;H{headNo:00} {axisRole} axis must be configured by axis name, not axis number: {axisReference}.&quot;;</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsAutomationAxisName(axisReference)</td></tr>
+<tr><td>103</td><td>if</td><td>조건에 따라 분기합니다: if (!IsAutomationAxisName(axisReference))</td></tr>
+<tr><td>105</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;H{headNo:00} {axisRole} axis name is invalid: {axisReference}.&quot;;</td></tr>
+<tr><td>108</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateConfiguredAxisName&quot;]
+ N0[&quot;L93 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L98 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L103 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L111">MethodDeclaration <code>IsAllAsciiDigits</code> · L111–127</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L111-L127">Drilling.Common/Automation/CScannerAxisConfiguration.cs:111–127</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAllAsciiDigits(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L98-L98">Drilling.Common/Automation/CScannerAxisConfiguration.cs:98–98</a></td><td>IsAllAsciiDigits</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>120</td><td>char.IsAsciiDigit</td><td>resolved</td><td>bool char.IsAsciiDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>113</td><td>if</td><td>조건에 따라 분기합니다: if (value.Length == 0)</td></tr>
+<tr><td>115</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>118</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var character in value)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character)</td></tr>
+<tr><td>120</td><td>if</td><td>조건에 따라 분기합니다: if (!char.IsAsciiDigit(character))</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>126</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsAllAsciiDigits&quot;]
+ N0[&quot;L113 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L118 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L120 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L129">MethodDeclaration <code>IsAutomationAxisName</code> · L129–145</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L129-L145">Drilling.Common/Automation/CScannerAxisConfiguration.cs:129–145</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAutomationAxisName(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L103-L103">Drilling.Common/Automation/CScannerAxisConfiguration.cs:103–103</a></td><td>IsAutomationAxisName</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>131</td><td>char.IsAsciiLetter</td><td>resolved</td><td>bool char.IsAsciiLetter(char)</td></tr>
+<tr><td>138</td><td>char.IsAsciiLetter</td><td>resolved</td><td>bool char.IsAsciiLetter(char)</td></tr>
+<tr><td>138</td><td>char.IsAsciiDigit</td><td>resolved</td><td>bool char.IsAsciiDigit(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0])</td></tr>
+<tr><td>131</td><td>if</td><td>조건에 따라 분기합니다: if (value.Length == 0 || !char.IsAsciiLetter(value[0]))</td></tr>
+<tr><td>133</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>136</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var character in value)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character)</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character)</td></tr>
+<tr><td>138</td><td>if</td><td>조건에 따라 분기합니다: if (!char.IsAsciiLetter(character) &amp;&amp; !char.IsAsciiDigit(character) &amp;&amp; character != &#x27;_&#x27;)</td></tr>
+<tr><td>140</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>144</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsAutomationAxisName&quot;]
+ N0[&quot;L131 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L136 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L138 if&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L147">MethodDeclaration <code>BuildEnabledHeadNumbers</code> · L147–159</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L147-L159">Drilling.Common/Automation/CScannerAxisConfiguration.cs:147–159</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headCount</td><td>int</td><td>None</td><td>True / 8</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L127-L127">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:127–127</a></td><td>CScannerAxisConfiguration.BuildEnabledHeadNumbers</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>149</td><td>new List&lt;int&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;int&gt;.List(int)</td></tr>
+<tr><td>152</td><td>IsHeadEnabled</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:161</td></tr>
+<tr><td>154</td><td>heads.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;int&gt;.Add(int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;int&gt;(headCount)</td></tr>
+<tr><td>149</td><td>local-declaration</td><td>지역 변수를 선언합니다: var heads = new List&lt;int&gt;(headCount);</td></tr>
+<tr><td>149</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: heads = new List&lt;int&gt;(headCount)</td></tr>
+<tr><td>150</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: headNo = 1</td></tr>
+<tr><td>150</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo &lt;= headCount; headNo++)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsHeadEnabled(settings, headNo)</td></tr>
+<tr><td>152</td><td>if</td><td>조건에 따라 분기합니다: if (IsHeadEnabled(settings, headNo))</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: heads.Add(headNo)</td></tr>
+<tr><td>158</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return heads;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;BuildEnabledHeadNumbers&quot;]
+ N0[&quot;L150 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L152 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L161">MethodDeclaration <code>IsHeadEnabled</code> · L161–164</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L161-L164">Drilling.Common/Automation/CScannerAxisConfiguration.cs:161–164</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L11-L11">Drilling.Common/Automation/CScannerAxisConfiguration.cs:11–11</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L152-L152">Drilling.Common/Automation/CScannerAxisConfiguration.cs:152–152</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L259-L259">Drilling.Common/Interface/CPowerMeasureRun.cs:259–259</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L130-L130">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:130–130</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>163</td><td>ReadHeadSettingBool</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, bool, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:194</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>163</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(settings, true, headNo, &quot;USE&quot;)</td></tr>
+<tr><td>163</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReadHeadSettingBool(settings, true, headNo, &quot;USE&quot;);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L166">MethodDeclaration <code>IsHeadEnabled</code> · L166–169</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L166-L169">Drilling.Common/Automation/CScannerAxisConfiguration.cs:166–169</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L32-L32">Drilling.Common/Automation/CScannerAxisConfiguration.cs:32–32</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L204-L204">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:204–204</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L133-L133">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:133–133</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>168</td><td>ReadHeadSettingBool</td><td>resolved</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool, int, params string[]) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:262</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadHeadSettingBool(parameters, true, headNo, &quot;USE&quot;)</td></tr>
+<tr><td>168</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReadHeadSettingBool(parameters, true, headNo, &quot;USE&quot;);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">MethodDeclaration <code>ReadHeadSettingText</code> · L171–192</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L171-L192">Drilling.Common/Automation/CScannerAxisConfiguration.cs:171–192</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L17-L17">Drilling.Common/Automation/CScannerAxisConfiguration.cs:17–17</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L18-L18">Drilling.Common/Automation/CScannerAxisConfiguration.cs:18–18</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L58-L58">Drilling.Common/Automation/CScannerAxisConfiguration.cs:58–58</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>179</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>179</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>184</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>186</td><td>setting.Value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>173</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>174</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>176</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>176</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>177</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var setting in settings)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>179</td><td>if</td><td>조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) &amp;&amp; !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>181</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>184</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(setting.Value)</td></tr>
+<tr><td>184</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(setting.Value))</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim()</td></tr>
+<tr><td>186</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return setting.Value.Trim();</td></tr>
+<tr><td>191</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingText&quot;]
+ N0[&quot;L174 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L177 foreach&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L179 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L184 if&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L194">MethodDeclaration <code>ReadHeadSettingBool</code> · L194–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L194-L222">Drilling.Common/Automation/CScannerAxisConfiguration.cs:194–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, bool, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L52-L52">Drilling.Common/Automation/CScannerAxisConfiguration.cs:52–52</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L163-L163">Drilling.Common/Automation/CScannerAxisConfiguration.cs:163–163</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>202</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>202</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>207</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>212</td><td>setting.Value.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>212</td><td>setting.Value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>196</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>196</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>197</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>199</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>199</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>200</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var setting in settings)</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>202</td><td>if</td><td>조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) &amp;&amp; !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>204</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(setting.Value)</td></tr>
+<tr><td>207</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(setting.Value))</td></tr>
+<tr><td>209</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim().ToUpperInvariant()</td></tr>
+<tr><td>212</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: setting.Value.Trim()</td></tr>
+<tr><td>212</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return setting.Value.Trim().ToUpperInvariant() switch { &quot;1&quot; or &quot;Y&quot; or &quot;YES&quot; or &quot;TRUE&quot; or &quot;ON&quot; or &quot;USE&quot; =&gt; true, &quot;0&quot; or &quot;N&quot; or &quot;NO&quot; or &quot;FALSE&quot; or &quot;OFF&quot; or &quot;SKIP&quot; or &quot;UNUSE&quot; =&gt; false, _ =&gt; defaultValue };</td></tr>
+<tr><td>212</td><td>switch-expression</td><td>값별 결과식을 선택합니다: setting.Value.Trim().ToUpperInvariant() switch { &quot;1&quot; or &quot;Y&quot; or &quot;YES&quot; or &quot;TRUE&quot; or &quot;ON&quot; or &quot;USE&quot; =&gt; true, &quot;0&quot; or &quot;N&quot; or &quot;NO&quot; or &quot;FALSE&quot; or &quot;OFF&quot; or &quot;SKIP&quot; or &quot;UNUSE&quot; =&gt; false, _ =&gt; defaultValue }</td></tr>
+<tr><td>221</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingBool&quot;]
+ N0[&quot;L197 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L200 foreach&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L202 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L207 if&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L212 switch-expression&quot;]
+ N1 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>ReadHeadSettingInt</code> · L224–245</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L224-L245">Drilling.Common/Automation/CScannerAxisConfiguration.cs:224–245</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>settings</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L16-L16">Drilling.Common/Automation/CScannerAxisConfiguration.cs:16–16</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L19-L19">Drilling.Common/Automation/CScannerAxisConfiguration.cs:19–19</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>232</td><td>key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>237</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>226</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>227</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>229</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>229</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>230</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var setting in settings)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>232</td><td>if</td><td>조건에 따라 분기합니다: if (!key.Equals(setting.Key, StringComparison.OrdinalIgnoreCase) &amp;&amp; !key.Equals(setting.Name, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>234</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>237</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(setting.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)</td></tr>
+<tr><td>237</td><td>if</td><td>조건에 따라 분기합니다: if (int.TryParse(setting.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))</td></tr>
+<tr><td>239</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parsed;</td></tr>
+<tr><td>244</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingInt&quot;]
+ N0[&quot;L227 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L230 foreach&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L232 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L237 if&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L247">MethodDeclaration <code>ReadHeadSettingText</code> · L247–260</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L247-L260">Drilling.Common/Automation/CScannerAxisConfiguration.cs:247–260</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L38-L38">Drilling.Common/Automation/CScannerAxisConfiguration.cs:38–38</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L39-L39">Drilling.Common/Automation/CScannerAxisConfiguration.cs:39–39</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L70-L70">Drilling.Common/Automation/CScannerAxisConfiguration.cs:70–70</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>253</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>253</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>255</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>249</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>249</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>250</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>252</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>252</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>253</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value)</td></tr>
+<tr><td>253</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>253</td><td>if</td><td>조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) &amp;&amp; !string.IsNullOrWhiteSpace(value))</td></tr>
+<tr><td>255</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>255</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Trim();</td></tr>
+<tr><td>259</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingText&quot;]
+ N0[&quot;L250 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L253 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L262">MethodDeclaration <code>ReadHeadSettingBool</code> · L262–287</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L262-L287">Drilling.Common/Automation/CScannerAxisConfiguration.cs:262–287</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L64-L64">Drilling.Common/Automation/CScannerAxisConfiguration.cs:64–64</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L168-L168">Drilling.Common/Automation/CScannerAxisConfiguration.cs:168–168</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>268</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>273</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>278</td><td>value.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>278</td><td>value.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>264</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>264</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>265</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>267</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>267</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value)</td></tr>
+<tr><td>268</td><td>if</td><td>조건에 따라 분기합니다: if (!parameters.TryGetValue(key, out var value))</td></tr>
+<tr><td>270</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>273</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value))</td></tr>
+<tr><td>275</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant()</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim()</td></tr>
+<tr><td>278</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { &quot;1&quot; or &quot;Y&quot; or &quot;YES&quot; or &quot;TRUE&quot; or &quot;ON&quot; or &quot;USE&quot; =&gt; true, &quot;0&quot; or &quot;N&quot; or &quot;NO&quot; or &quot;FALSE&quot; or &quot;OFF&quot; or &quot;SKIP&quot; or &quot;UNUSE&quot; =&gt; false, _ =&gt; defaultValue };</td></tr>
+<tr><td>278</td><td>switch-expression</td><td>값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { &quot;1&quot; or &quot;Y&quot; or &quot;YES&quot; or &quot;TRUE&quot; or &quot;ON&quot; or &quot;USE&quot; =&gt; true, &quot;0&quot; or &quot;N&quot; or &quot;NO&quot; or &quot;FALSE&quot; or &quot;OFF&quot; or &quot;SKIP&quot; or &quot;UNUSE&quot; =&gt; false, _ =&gt; defaultValue }</td></tr>
+<tr><td>286</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingBool&quot;]
+ N0[&quot;L265 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L268 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L273 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L278 switch-expression&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L289">MethodDeclaration <code>ReadHeadSettingInt</code> · L289–302</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L289-L302">Drilling.Common/Automation/CScannerAxisConfiguration.cs:289–302</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parameters</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>defaultValue</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>suffixes</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L37-L37">Drilling.Common/Automation/CScannerAxisConfiguration.cs:37–37</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L40-L40">Drilling.Common/Automation/CScannerAxisConfiguration.cs:40–40</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>295</td><td>parameters.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.TryGetValue(string, out string)</td></tr>
+<tr><td>295</td><td>int.TryParse</td><td>resolved</td><td>bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>291</td><td>local-declaration</td><td>지역 변수를 선언합니다: var prefix = $&quot;H{headNo:00}_&quot;;</td></tr>
+<tr><td>291</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: prefix = $&quot;H{headNo:00}_&quot;</td></tr>
+<tr><td>292</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var suffix in suffixes)</td></tr>
+<tr><td>294</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = prefix + suffix;</td></tr>
+<tr><td>294</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = prefix + suffix</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryGetValue(key, out var value)</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed)</td></tr>
+<tr><td>295</td><td>if</td><td>조건에 따라 분기합니다: if (parameters.TryGetValue(key, out var value) &amp;&amp; int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))</td></tr>
+<tr><td>297</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return parsed;</td></tr>
+<tr><td>301</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return defaultValue;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadHeadSettingInt&quot;]
+ N0[&quot;L292 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L295 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L304">MethodDeclaration <code>NormalizeHeadNo</code> · L304–304</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L304-L304">Drilling.Common/Automation/CScannerAxisConfiguration.cs:304–304</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.NormalizeHeadNo(int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Automation.CScannerAxisConfiguration</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L10-L10">Drilling.Common/Automation/CScannerAxisConfiguration.cs:10–10</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L31-L31">Drilling.Common/Automation/CScannerAxisConfiguration.cs:31–31</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>304</td><td>Math.Clamp</td><td>resolved</td><td>int System.Math.Clamp(int, int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>304</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(headNo, 1, 8)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Automation/CScannerAxisConfiguration.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

@@ -1,0 +1,875 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Collections.ObjectModel;
+L000001 | using System.Collections.ObjectModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000002 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000003 | using System.Globalization; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Runtime.CompilerServices;
+L000004 | using System.Runtime.CompilerServices; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000005 | using System.Windows; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000006 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000007 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000008 | using Drilling.Common.Managers; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000010 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000011 |  ⟦EOL⟧
+// 해설 L12: 타입의 구조/상속 선언입니다: public partial class CCellPlacementWizardDialog : Window
+L000012 | public partial class CCellPlacementWizardDialog : Window ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다.
+L000013 | { ⟦EOL⟧
+// 해설 L14: 변수의 초기값을 지정합니다: DefaultModelOption = "DEFAULT"
+L000014 |     private const string DefaultModelOption = "DEFAULT"; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT? Drilling.UI.Popup.CCellPlacementWizardDialog._lastAppliedResult
+L000015 |     private static ST_CELL_PLACEMENT_WIZARD_RESULT? _lastAppliedResult; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog._maxCellCount
+L000016 |     private readonly int _maxCellCount; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog._modelTypeCount
+L000017 |     private readonly int _modelTypeCount; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeX
+L000018 |     private readonly double _glassSizeX; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CCellPlacementWizardDialog._glassSizeY
+L000019 |     private readonly double _glassSizeY; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginX
+L000020 |     private readonly double _akMarginX; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CCellPlacementWizardDialog._akMarginY
+L000021 |     private readonly double _akMarginY; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.UI.Popup.CCellPlacementWizardDialog._defaultModelOptions
+L000022 |     private readonly string[] _defaultModelOptions; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · string[] Drilling.UI.Popup.CCellPlacementWizardDialog._overrideModelOptions
+L000023 |     private readonly string[] _overrideModelOptions; ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog._isInitialized
+L000024 |     private bool _isInitialized; ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog._modelApplySequence
+L000025 |     private int _modelApplySequence; ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CCellPlacementWizardDialog.CCellPlacementWizardDialog(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT)
+L000027 |     public CCellPlacementWizardDialog(ST_CELL_PLACEMENT_WIZARD_CONTEXT context) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 .ctor.
+L000028 |     { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000029 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: _maxCellCount = Math.Max(1, context.CellCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, context.CellCount)
+L000030 |         _maxCellCount = Math.Max(1, context.CellCount); ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: _modelTypeCount = Math.Clamp(context.ModelTypeCount, 1, 5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(context.ModelTypeCount, 1, 5)
+L000031 |         _modelTypeCount = Math.Clamp(context.ModelTypeCount, 1, 5); ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: _glassSizeX = context.GlassSizeX
+L000032 |         _glassSizeX = context.GlassSizeX; ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: _glassSizeY = context.GlassSizeY
+L000033 |         _glassSizeY = context.GlassSizeY; ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: _akMarginX = context.AkMarginX
+L000034 |         _akMarginX = context.AkMarginX; ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: _akMarginY = context.AkMarginY
+L000035 |         _akMarginY = context.AkMarginY; ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: _defaultModelOptions = Enumerable.Range(1, _modelTypeCount).Select(value => value.ToString(CultureInfo.InvariantCulture)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount).Select(value => value.ToString(CultureInfo.InvariantCulture)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount).Select(value => value.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, _modelTypeCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(CultureInfo.Invari
+L000036 |         _defaultModelOptions = Enumerable.Range(1, _modelTypeCount).Select(value => value.ToString(CultureInfo.InvariantCulture)).ToArray(); ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: _overrideModelOptions = [DefaultModelOption, .. _defaultModelOptions]
+L000037 |         _overrideModelOptions = [DefaultModelOption, .. _defaultModelOptions]; ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: Result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty
+L000038 |         Result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty; ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 값을 대상에 대입합니다: DirectionComboBox.ItemsSource = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options
+L000040 |         DirectionComboBox.ItemsSource = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options; ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: DirectionComboBox.SelectedIndex = 0
+L000041 |         DirectionComboBox.SelectedIndex = 0; ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: DefaultModelComboBox.ItemsSource = _defaultModelOptions
+L000042 |         DefaultModelComboBox.ItemsSource = _defaultModelOptions; ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: DefaultModelComboBox.SelectedIndex = 0
+L000043 |         DefaultModelComboBox.SelectedIndex = 0; ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: RowModelItemsControl.ItemsSource = RowModelRows
+L000044 |         RowModelItemsControl.ItemsSource = RowModelRows; ⟦EOL⟧
+// 해설 L45: 값을 대상에 대입합니다: ColumnModelItemsControl.ItemsSource = ColumnModelRows
+L000045 |         ColumnModelItemsControl.ItemsSource = ColumnModelRows; ⟦EOL⟧
+L000046 |  ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(30, _maxCellCount) / 지역 변수를 선언합니다: var defaultColumnCount = Math.Min(30, _maxCellCount); / 변수의 초기값을 지정합니다: defaultColumnCount = Math.Min(30, _maxCellCount)
+L000047 |         var defaultColumnCount = Math.Min(30, _maxCellCount); ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, defaultColumnCount) / 지역 변수를 선언합니다: var defaultRowCount = Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount))); / 변수의 초기값을 지정합니다: defaultRowCount = Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount)))
+L000048 |         var defaultRowCount = Math.Max(1, (int)Math.Ceiling(_maxCellCount / (double)Math.Max(1, defaultColumnCount))); ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: CellCountTextBox.Text = _maxCellCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _maxCellCount.ToString(CultureInfo.InvariantCulture)
+L000049 |         CellCountTextBox.Text = _maxCellCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: ColumnCountTextBox.Text = defaultColumnCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultColumnCount.ToString(CultureInfo.InvariantCulture)
+L000050 |         ColumnCountTextBox.Text = defaultColumnCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: RowCountTextBox.Text = defaultRowCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: defaultRowCount.ToString(CultureInfo.InvariantCulture)
+L000051 |         RowCountTextBox.Text = defaultRowCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: StartXTextBox.Text = "0"
+L000052 |         StartXTextBox.Text = "0"; ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: StartYTextBox.Text = "0"
+L000053 |         StartYTextBox.Text = "0"; ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: PitchXTextBox.Text = "0"
+L000054 |         PitchXTextBox.Text = "0"; ⟦EOL⟧
+// 해설 L55: 값을 대상에 대입합니다: PitchYTextBox.Text = "0"
+L000055 |         PitchYTextBox.Text = "0"; ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (_lastAppliedResult is { } lastResult && lastResult.CellCount == _maxCellCount)
+L000056 |         if (_lastAppliedResult is { } lastResult && lastResult.CellCount == _maxCellCount) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 .ctor.
+L000057 |         { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyInitialResult(lastResult)
+L000058 |             ApplyInitialResult(lastResult); ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 .ctor.
+L000059 |         } ⟦EOL⟧
+// 해설 L60: 앞 조건이 거짓인 경로입니다: else
+L000060 |         else ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 .ctor.
+L000061 |         { ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()
+L000062 |             RefreshModelRows(); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 .ctor.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: _isInitialized = true
+L000065 |         _isInitialized = true; ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => { ColumnCountTextBox.Focus(); ColumnCountTextBox.SelectAll(); }
+L000067 |         Loaded += (_, _) => ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 .ctor.
+L000068 |         { ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: ColumnCountTextBox.Focus()
+L000069 |             ColumnCountTextBox.Focus(); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ColumnCountTextBox.SelectAll()
+L000070 |             ColumnCountTextBox.SelectAll(); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 .ctor.
+L000071 |         }; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 .ctor.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · System.Collections.ObjectModel.ObservableCollection<Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW> Drilling.UI.Popup.CCellPlacementWizardDialog.RowModelRows
+L000074 |     public ObservableCollection<ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW> RowModelRows { get; } = []; ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · System.Collections.ObjectModel.ObservableCollection<Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW> Drilling.UI.Popup.CCellPlacementWizardDialog.ColumnModelRows
+L000075 |     public ObservableCollection<ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW> ColumnModelRows { get; } = []; ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT Drilling.UI.Popup.CCellPlacementWizardDialog.Result
+L000076 |     public ST_CELL_PLACEMENT_WIZARD_RESULT Result { get; private set; } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.GridCountTextChanged(object, System.Windows.Controls.TextChangedEventArgs)
+L000078 |     private void GridCountTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 GridCountTextChanged.
+L000079 |     { ⟦EOL⟧
+// 해설 L80: 조건에 따라 분기합니다: if (!_isInitialized)
+L000080 |         if (!_isInitialized) ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 GridCountTextChanged.
+L000081 |         { ⟦EOL⟧
+// 해설 L82: 호출자에게 값 또는 제어를 반환합니다: return;
+L000082 |             return; ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 GridCountTextChanged.
+L000083 |         } ⟦EOL⟧
+L000084 |  ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()
+L000085 |         RefreshModelRows(); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 GridCountTextChanged.
+L000086 |     } ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows()
+L000088 |     private void RefreshModelRows() ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 RefreshModelRows.
+L000089 |     { ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) / 조건에 따라 결과식을 선택합니다: TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1 / 지역 변수를 선언합니다: var rowCount = TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1; / 변수의 초기값을 지정합니다: rowCount = TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ? Math.Clamp(parsedRowCount, 1, _maxCellCount) : 1
+L000090 |         var rowCount = TryReadPositiveInt(RowCountTextBox.Text, out var parsedRowCount) ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(parsedRowCount, 1, _maxCellCount)
+L000091 |             ? Math.Clamp(parsedRowCount, 1, _maxCellCount) ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows()
+L000092 |             : 1; ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) / 조건에 따라 결과식을 선택합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) : 1 / 지역 변수를 선언합니다: var columnCount = TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) : 1; / 변수의 초기값을 지정합니다: columnCount = TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ? Math.Clamp(parsedColumnCount, 1
+L000093 |         var columnCount = TryReadPositiveInt(ColumnCountTextBox.Text, out var parsedColumnCount) ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(parsedColumnCount, 1, _maxCellCount)
+L000094 |             ? Math.Clamp(parsedColumnCount, 1, _maxCellCount) ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.RefreshModelRows()
+L000095 |             : 1; ⟦EOL⟧
+L000096 |  ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: SyncModelRows(RowModelRows, rowCount, "ROW")
+L000097 |         SyncModelRows(RowModelRows, rowCount, "ROW"); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: SyncModelRows(ColumnModelRows, columnCount, "COL")
+L000098 |         SyncModelRows(ColumnModelRows, columnCount, "COL"); ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 RefreshModelRows.
+L000099 |     } ⟦EOL⟧
+L000100 |  ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.SyncModelRows(System.Collections.ObjectModel.ObservableCollection<Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW>, int, string)
+L000101 |     private void SyncModelRows(ObservableCollection<ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW> rows, int count, string prefix) ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000102 |     { ⟦EOL⟧
+// 해설 L103: 조건을 먼저 확인하며 반복합니다: while (rows.Count > count)
+L000103 |         while (rows.Count > count) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.RemoveAt(rows.Count - 1)
+L000105 |             rows.RemoveAt(rows.Count - 1); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000106 |         } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 조건을 먼저 확인하며 반복합니다: while (rows.Count < count)
+L000108 |         while (rows.Count < count) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000109 |         { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $"{prefix} {rows.Count + 1}", _overrideModelOptions) / 지역 변수를 선언합니다: var row = new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $"{prefix} {rows.Count + 1}", _overrideModelOptions); / 변수의 초기값을 지정합니다: row = new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $"{prefix} {rows.Count + 1}", _overrideModelOptions)
+L000110 |             var row = new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(prefix, rows.Count + 1, $"{prefix} {rows.Count + 1}", _overrideModelOptions); ⟦EOL⟧
+// 해설 L111: 복합 대입 또는 이벤트 구독/해지 표현입니다: row.ModelChanged += OnModelRuleChanged
+L000111 |             row.ModelChanged += OnModelRuleChanged; ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(row)
+L000112 |             rows.Add(row); ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000113 |         } ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 SyncModelRows.
+L000114 |     } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.OnModelRuleChanged(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)
+L000116 |     private void OnModelRuleChanged(ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW row) ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 OnModelRuleChanged.
+L000117 |     { ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: row.ApplyOrder = ReadModel(row.SelectedModel, 0) > 0 ? ++_modelApplySequence : 0 / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0) / 조건에 따라 결과식을 선택합니다: ReadModel(row.SelectedModel, 0) > 0 ? ++_modelApplySequence : 0
+L000118 |         row.ApplyOrder = ReadModel(row.SelectedModel, 0) > 0 ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.OnModelRuleChanged(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)
+L000119 |             ? ++_modelApplySequence ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.OnModelRuleChanged(Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW)
+L000120 |             : 0; ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 OnModelRuleChanged.
+L000121 |     } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyClick(object, RoutedEventArgs)
+L000123 |     private void ApplyClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000124 |     { ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryCreateResult(out var result, out var error) / 조건에 따라 분기합니다: if (!TryCreateResult(out var result, out var error))
+L000125 |         if (!TryCreateResult(out var result, out var error)) ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000126 |         { ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning)
+L000127 |             MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
+// 해설 L128: 호출자에게 값 또는 제어를 반환합니다: return;
+L000128 |             return; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000129 |         } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: Result = result
+L000131 |         Result = result; ⟦EOL⟧
+// 해설 L132: 값을 대상에 대입합니다: _lastAppliedResult = result
+L000132 |         _lastAppliedResult = result; ⟦EOL⟧
+// 해설 L133: 값을 대상에 대입합니다: DialogResult = true
+L000133 |         DialogResult = true; ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000134 |     } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)
+L000136 |     private void ApplyInitialResult(ST_CELL_PLACEMENT_WIZARD_RESULT result) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000137 |     { ⟦EOL⟧
+// 해설 L138: 값을 대상에 대입합니다: ColumnCountTextBox.Text = result.ColumnCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ColumnCount.ToString(CultureInfo.InvariantCulture)
+L000138 |         ColumnCountTextBox.Text = result.ColumnCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L139: 값을 대상에 대입합니다: RowCountTextBox.Text = result.RowCount.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.RowCount.ToString(CultureInfo.InvariantCulture)
+L000139 |         RowCountTextBox.Text = result.RowCount.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L140: 값을 대상에 대입합니다: StartXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.StartX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.StartX)
+L000140 |         StartXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartX)); ⟦EOL⟧
+// 해설 L141: 값을 대상에 대입합니다: StartYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.StartY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.StartY)
+L000141 |         StartYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.StartY)); ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: PitchXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.PitchX)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.PitchX)
+L000142 |         PitchXTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchX)); ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: PitchYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(Math.Max(0.0, result.PitchY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, result.PitchY)
+L000143 |         PitchYTextBox.Text = FormatValidationDouble(Math.Max(0.0, result.PitchY)); ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: DirectionComboBox.SelectedItem = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault(option => option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)) ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0] / 함수·델리게이트 또는 객체 생성자를 호출합니다: ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault(option => option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)
+L000144 |         DirectionComboBox.SelectedItem = ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.FirstOrDefault(option => option.Key.Equals(result.Direction, StringComparison.OrdinalIgnoreCase)) ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]; ⟦EOL⟧
+// 해설 L145: 값을 대상에 대입합니다: DefaultModelComboBox.SelectedItem = Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(result.DefaultModelType, 1, _modelTypeCount)
+L000145 |         DefaultModelComboBox.SelectedItem = Math.Clamp(result.DefaultModelType, 1, _modelTypeCount).ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshModelRows()
+L000146 |         RefreshModelRows(); ⟦EOL⟧
+L000147 |  ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: _modelApplySequence = 0
+L000148 |         _modelApplySequence = 0; ⟦EOL⟧
+// 해설 L149: 컬렉션 요소를 순회합니다: foreach (var modelOverride in result.ModelOverrides)
+L000149 |         foreach (var modelOverride in result.ModelOverrides) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000150 |         { ⟦EOL⟧
+// 해설 L151: 조건에 따라 분기합니다: if (modelOverride.ModelType < 1 || modelOverride.ModelType > _modelTypeCount)
+L000151 |             if (modelOverride.ModelType < 1 || modelOverride.ModelType > _modelTypeCount) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000152 |             { ⟦EOL⟧
+// 해설 L153: 다음 반복으로 진행합니다: continue;
+L000153 |                 continue; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000154 |             } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.Scope.Equals("ROW", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: modelOverride.Scope.Equals("ROW", StringComparison.OrdinalIgnoreCase) ? RowModelRows : modelOverride.Scope.Equals("COL", StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null / 지역 변수를 선언합니다: var rows = modelOverride.Scope.Equals("ROW", StringComparison.OrdinalIgnoreCase) ? RowModelRows : modelOverride.Scope.Equals("COL", StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null; / 변수의 초기값을 지정합니다: rows = model
+L000156 |             var rows = modelOverride.Scope.Equals("ROW", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)
+L000157 |                 ? RowModelRows ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.Scope.Equals("COL", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: modelOverride.Scope.Equals("COL", StringComparison.OrdinalIgnoreCase) ? ColumnModelRows : null
+L000158 |                 : modelOverride.Scope.Equals("COL", StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L159: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)
+L000159 |                     ? ColumnModelRows ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.ApplyInitialResult(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT)
+L000160 |                     : null; ⟦EOL⟧
+// 해설 L161: 지역 변수를 선언합니다: var rowIndex = modelOverride.Index - 1; / 변수의 초기값을 지정합니다: rowIndex = modelOverride.Index - 1
+L000161 |             var rowIndex = modelOverride.Index - 1; ⟦EOL⟧
+// 해설 L162: 조건에 따라 분기합니다: if (rows is null || rowIndex < 0 || rowIndex >= rows.Count)
+L000162 |             if (rows is null || rowIndex < 0 || rowIndex >= rows.Count) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000163 |             { ⟦EOL⟧
+// 해설 L164: 다음 반복으로 진행합니다: continue;
+L000164 |                 continue; ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000165 |             } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 값을 대상에 대입합니다: rows[rowIndex].SelectedModel = modelOverride.ModelType.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: modelOverride.ModelType.ToString(CultureInfo.InvariantCulture)
+L000167 |             rows[rowIndex].SelectedModel = modelOverride.ModelType.ToString(CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000168 |         } ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 ApplyInitialResult.
+L000169 |     } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.OpenWizardInputKeypad(object, MouseButtonEventArgs)
+L000171 |     private void OpenWizardInputKeypad(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 조건에 따라 분기합니다: if (sender is not TextBox textBox)
+L000173 |         if (sender is not TextBox textBox) ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000174 |         { ⟦EOL⟧
+// 해설 L175: 호출자에게 값 또는 제어를 반환합니다: return;
+L000175 |             return; ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000176 |         } ⟦EOL⟧
+L000177 |  ⟦EOL⟧
+// 해설 L178: 값을 대상에 대입합니다: e.Handled = true
+L000178 |         e.Handled = true; ⟦EOL⟧
+// 해설 L179: 값을 대상에 대입합니다: var (parameter, dataType, min, max) = GetInputKeypadInfo(textBox) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInputKeypadInfo(textBox)
+L000179 |         var (parameter, dataType, min, max) = GetInputKeypadInfo(textBox); ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this } / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this }; / 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(parameter, textBox.Text, dataType, min, max) { Owner = this }
+L000180 |         var dialog = new CValueInputDialog(parameter, textBox.Text, dataType, min, max) ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000181 |         { ⟦EOL⟧
+// 해설 L182: 값을 대상에 대입합니다: Owner = this
+L000182 |             Owner = this ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000183 |         }; ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000184 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 값을 대상에 대입합니다: textBox.Text = dialog.ResultValue
+L000186 |             textBox.Text = dialog.ResultValue; ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000187 |         } ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 OpenWizardInputKeypad.
+L000188 |     } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · (string Parameter, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE DataType, double Min, double Max) Drilling.UI.Popup.CCellPlacementWizardDialog.GetInputKeypadInfo(TextBox)
+L000190 |     private (string Parameter, EN_RECIPE_DATA_TYPE DataType, double Min, double Max) GetInputKeypadInfo(TextBox textBox) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000191 |     { ⟦EOL⟧
+// 해설 L192: 지역 변수를 선언합니다: const double nonNegativeMaximum = 1000000.0; / 변수의 초기값을 지정합니다: nonNegativeMaximum = 1000000.0
+L000192 |         const double nonNegativeMaximum = 1000000.0; ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, ColumnCountTextBox) / 조건에 따라 분기합니다: if (ReferenceEquals(textBox, ColumnCountTextBox))
+L000193 |         if (ReferenceEquals(textBox, ColumnCountTextBox)) ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000194 |         { ⟦EOL⟧
+// 해설 L195: 호출자에게 값 또는 제어를 반환합니다: return ("COLUMN COUNT", EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount);
+L000195 |             return ("COLUMN COUNT", EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount); ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000196 |         } ⟦EOL⟧
+L000197 |  ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, RowCountTextBox) / 조건에 따라 분기합니다: if (ReferenceEquals(textBox, RowCountTextBox))
+L000198 |         if (ReferenceEquals(textBox, RowCountTextBox)) ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000199 |         { ⟦EOL⟧
+// 해설 L200: 호출자에게 값 또는 제어를 반환합니다: return ("ROW COUNT", EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount);
+L000200 |             return ("ROW COUNT", EN_RECIPE_DATA_TYPE.Int, 1.0, _maxCellCount); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000201 |         } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, StartXTextBox) / 조건에 따라 분기합니다: if (ReferenceEquals(textBox, StartXTextBox))
+L000203 |         if (ReferenceEquals(textBox, StartXTextBox)) ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000204 |         { ⟦EOL⟧
+// 해설 L205: 호출자에게 값 또는 제어를 반환합니다: return ("START X", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);
+L000205 |             return ("START X", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000206 |         } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, StartYTextBox) / 조건에 따라 분기합니다: if (ReferenceEquals(textBox, StartYTextBox))
+L000208 |         if (ReferenceEquals(textBox, StartYTextBox)) ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000209 |         { ⟦EOL⟧
+// 해설 L210: 호출자에게 값 또는 제어를 반환합니다: return ("START Y", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);
+L000210 |             return ("START Y", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000211 |         } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(textBox, PitchXTextBox) / 조건에 따라 분기합니다: if (ReferenceEquals(textBox, PitchXTextBox))
+L000213 |         if (ReferenceEquals(textBox, PitchXTextBox)) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000214 |         { ⟦EOL⟧
+// 해설 L215: 호출자에게 값 또는 제어를 반환합니다: return ("CELL PITCH X", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);
+L000215 |             return ("CELL PITCH X", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum); ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000216 |         } ⟦EOL⟧
+L000217 |  ⟦EOL⟧
+// 해설 L218: 호출자에게 값 또는 제어를 반환합니다: return ("CELL PITCH Y", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum);
+L000218 |         return ("CELL PITCH Y", EN_RECIPE_DATA_TYPE.Double, 0.0, nonNegativeMaximum); ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 GetInputKeypadInfo.
+L000219 |     } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000221 |     private bool TryCreateResult(out ST_CELL_PLACEMENT_WIZARD_RESULT result, out string error) ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000222 |     { ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty
+L000223 |         result = ST_CELL_PLACEMENT_WIZARD_RESULT.Empty; ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: error = ""
+L000224 |         error = ""; ⟦EOL⟧
+L000225 |  ⟦EOL⟧
+// 해설 L226: 지역 변수를 선언합니다: const int startCell = 1; / 변수의 초기값을 지정합니다: startCell = 1
+L000226 |         const int startCell = 1; ⟦EOL⟧
+// 해설 L227: 지역 변수를 선언합니다: var cellCount = _maxCellCount; / 변수의 초기값을 지정합니다: cellCount = _maxCellCount
+L000227 |         var cellCount = _maxCellCount; ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(ColumnCountTextBox.Text, out var columnCount) / 조건에 따라 분기합니다: if (!TryReadPositiveInt(ColumnCountTextBox.Text, out var columnCount))
+L000229 |         if (!TryReadPositiveInt(ColumnCountTextBox.Text, out var columnCount)) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000230 |         { ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: error = "COLUMN COUNT must be a positive integer."
+L000231 |             error = "COLUMN COUNT must be a positive integer."; ⟦EOL⟧
+// 해설 L232: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000232 |             return false; ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000233 |         } ⟦EOL⟧
+L000234 |  ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadPositiveInt(RowCountTextBox.Text, out var rowCount) / 조건에 따라 분기합니다: if (!TryReadPositiveInt(RowCountTextBox.Text, out var rowCount))
+L000235 |         if (!TryReadPositiveInt(RowCountTextBox.Text, out var rowCount)) ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000236 |         { ⟦EOL⟧
+// 해설 L237: 값을 대상에 대입합니다: error = "ROW COUNT must be a positive integer."
+L000237 |             error = "ROW COUNT must be a positive integer."; ⟦EOL⟧
+// 해설 L238: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000238 |             return false; ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000239 |         } ⟦EOL⟧
+L000240 |  ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(StartXTextBox.Text, out var startX) / 조건에 따라 분기합니다: if (!TryReadDouble(StartXTextBox.Text, out var startX) || !TryReadDouble(StartYTextBox.Text, out var startY) || !TryReadDouble(PitchXTextBox.Text, out var pitchX) || !TryReadDouble(PitchYTextBox.Text, out var pitchY))
+L000241 |         if (!TryReadDouble(StartXTextBox.Text, out var startX) || ⟦EOL⟧
+// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(StartYTextBox.Text, out var startY)
+L000242 |             !TryReadDouble(StartYTextBox.Text, out var startY) || ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(PitchXTextBox.Text, out var pitchX)
+L000243 |             !TryReadDouble(PitchXTextBox.Text, out var pitchX) || ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadDouble(PitchYTextBox.Text, out var pitchY)
+L000244 |             !TryReadDouble(PitchYTextBox.Text, out var pitchY)) ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000245 |         { ⟦EOL⟧
+// 해설 L246: 값을 대상에 대입합니다: error = "START X/Y and PITCH X/Y must be finite numbers."
+L000246 |             error = "START X/Y and PITCH X/Y must be finite numbers."; ⟦EOL⟧
+// 해설 L247: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000247 |             return false; ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000248 |         } ⟦EOL⟧
+L000249 |  ⟦EOL⟧
+// 해설 L250: 조건에 따라 분기합니다: if (startX < 0.0 || startY < 0.0 || pitchX < 0.0 || pitchY < 0.0)
+L000250 |         if (startX < 0.0 || startY < 0.0 || pitchX < 0.0 || pitchY < 0.0) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000251 |         { ⟦EOL⟧
+// 해설 L252: 값을 대상에 대입합니다: error = "START X/Y and CELL PITCH X/Y cannot be negative."
+L000252 |             error = "START X/Y and CELL PITCH X/Y cannot be negative."; ⟦EOL⟧
+// 해설 L253: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000253 |             return false; ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000254 |         } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 지역 변수를 선언합니다: var layoutCellCount = (long)rowCount * columnCount; / 변수의 초기값을 지정합니다: layoutCellCount = (long)rowCount * columnCount
+L000256 |         var layoutCellCount = (long)rowCount * columnCount; ⟦EOL⟧
+// 해설 L257: 조건에 따라 분기합니다: if (layoutCellCount != cellCount)
+L000257 |         if (layoutCellCount != cellCount) ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000258 |         { ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: error = $"ROW COUNT x COLUMN COUNT must match CELL COUNT.\nCurrent: {rowCount} x {columnCount} = {layoutCellCount}, CELL COUNT = {cellCount}."
+L000259 |             error = $"ROW COUNT x COLUMN COUNT must match CELL COUNT.\nCurrent: {rowCount} x {columnCount} = {layoutCellCount}, CELL COUNT = {cellCount}."; ⟦EOL⟧
+// 해설 L260: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000260 |             return false; ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000261 |         } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryValidateGlassBounds(rowCount, columnCount, startX, startY, pitchX, pitchY, out error) / 조건에 따라 분기합니다: if (!TryValidateGlassBounds(rowCount, columnCount, startX, startY, pitchX, pitchY, out error))
+L000263 |         if (!TryValidateGlassBounds(rowCount, columnCount, startX, startY, pitchX, pitchY, out error)) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000264 |         { ⟦EOL⟧
+// 해설 L265: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000265 |             return false; ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000266 |         } ⟦EOL⟧
+L000267 |  ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 지역 변수를 선언합니다: var defaultModelType = ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1); / 변수의 초기값을 지정합니다: defaultModelType = ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1)
+L000268 |         var defaultModelType = ReadModel(DefaultModelComboBox.SelectedItem?.ToString(), 1); ⟦EOL⟧
+// 해설 L269: 지역 변수를 선언합니다: var direction = DirectionComboBox.SelectedItem as ST_CELL_PLACEMENT_WIZARD_DIRECTION ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]; / 변수의 초기값을 지정합니다: direction = DirectionComboBox.SelectedItem as ST_CELL_PLACEMENT_WIZARD_DIRECTION ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]
+L000269 |         var direction = DirectionComboBox.SelectedItem as ST_CELL_PLACEMENT_WIZARD_DIRECTION ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000270 |             ?? ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options[0]; ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: result = new ST_CELL_PLACEMENT_WIZARD_RESULT( startCell, cellCount, rowCount, columnCount, startX, startY, pitchX, pitchY, direction.Key, defaultModelType, RowModelRows .Concat(ColumnModelRows) .Where(row => row.ApplyOrder > 0 &&  / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_WIZARD_RESULT( startCell, cellCount, rowCount, columnCount, startX, startY, pitchX, pitchY, direction.Key, defaultModelType, RowModelRows .Concat(ColumnModelRows) .Where(row => row.ApplyOrder > 0 &&…
+L000271 |         result = new ST_CELL_PLACEMENT_WIZARD_RESULT( ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000273 |             startCell, ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000275 |             cellCount, ⟦EOL⟧
+L000276 |  ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000277 |             rowCount, ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000279 |             columnCount, ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000281 |             startX, ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000283 |             startY, ⟦EOL⟧
+L000284 |  ⟦EOL⟧
+// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000285 |             pitchX, ⟦EOL⟧
+L000286 |  ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000287 |             pitchY, ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000289 |             direction.Key, ⟦EOL⟧
+L000290 |  ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000291 |             defaultModelType, ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row => row.ApplyOrder > 0 && ReadModel(row.SelectedModel, 0) > 0) .OrderBy(row => row.ApplyOrder) .Select(row => new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, Rea… / 함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row => row.ApplyOrder > 0 && ReadModel(row.SelectedModel, 0) > 0) .OrderBy(row => row.ApplyOrder) / 함수·델리게이트 또는 객체 생성자를 호출합니다: RowModelRows .Concat(ColumnModelRows) .Where(row => row.ApplyOrder > 0 && ReadModel(row.Se
+L000293 |             RowModelRows ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000294 |                 .Concat(ColumnModelRows) ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0)
+L000295 |                 .Where(row => row.ApplyOrder > 0 && ReadModel(row.SelectedModel, 0) > 0) ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000296 |                 .OrderBy(row => row.ApplyOrder) ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, ReadModel(row.SelectedModel, 0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadModel(row.SelectedModel, 0)
+L000297 |                 .Select(row => new ST_CELL_PLACEMENT_MODEL_OVERRIDE(row.Scope, row.Index, ReadModel(row.SelectedModel, 0))) ⟦EOL⟧
+// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000298 |                 .ToArray() ⟦EOL⟧
+// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryCreateResult(out Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT, out string)
+L000299 |         ); ⟦EOL⟧
+// 해설 L300: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000300 |         return true; ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 TryCreateResult.
+L000301 |     } ⟦EOL⟧
+L000302 |  ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadPositiveInt(string, out int)
+L000303 |     private static bool TryReadPositiveInt(string text, out int value) ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 TryReadPositiveInt.
+L000304 |     { ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim() / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(text.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) && value > 0;
+L000305 |         return int.TryParse(text.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out value) && value > 0; ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 TryReadPositiveInt.
+L000306 |     } ⟦EOL⟧
+L000307 |  ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryReadDouble(string, out double)
+L000308 |     private static bool TryReadDouble(string text, out double value) ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 TryReadDouble.
+L000309 |     { ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value);
+L000310 |         return double.TryParse(text.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value); ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 TryReadDouble.
+L000311 |     } ⟦EOL⟧
+L000312 |  ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int)
+L000313 |     private static int ReadModel(string? text, int defaultValue) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 ReadModel.
+L000314 |     { ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) / 조건에 따라 결과식을 선택합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) ? value : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) ? value : defaultValue;
+L000315 |         return int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int)
+L000316 |             ? value ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CCellPlacementWizardDialog.ReadModel(string?, int)
+L000317 |             : defaultValue; ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 ReadModel.
+L000318 |     } ⟦EOL⟧
+L000319 |  ⟦EOL⟧
+// 해설 L320: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000320 |     private bool TryValidateGlassBounds( ⟦EOL⟧
+L000321 |  ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000322 |         int rowCount, ⟦EOL⟧
+L000323 |  ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000324 |         int columnCount, ⟦EOL⟧
+L000325 |  ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000326 |         double startX, ⟦EOL⟧
+L000327 |  ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000328 |         double startY, ⟦EOL⟧
+L000329 |  ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000330 |         double pitchX, ⟦EOL⟧
+L000331 |  ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000332 |         double pitchY, ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000334 |         out string error ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000335 |     ) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000336 |     { ⟦EOL⟧
+// 해설 L337: 값을 대상에 대입합니다: error = ""
+L000337 |         error = ""; ⟦EOL⟧
+// 해설 L338: 조건에 따라 분기합니다: if (_glassSizeX <= 0.0 || _glassSizeY <= 0.0)
+L000338 |         if (_glassSizeX <= 0.0 || _glassSizeY <= 0.0) ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000339 |         { ⟦EOL⟧
+// 해설 L340: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000340 |             return true; ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000341 |         } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 지역 변수를 선언합니다: var firstX = _akMarginX + startX; / 변수의 초기값을 지정합니다: firstX = _akMarginX + startX
+L000343 |         var firstX = _akMarginX + startX; ⟦EOL⟧
+// 해설 L344: 지역 변수를 선언합니다: var lastX = _akMarginX + startX + ((columnCount - 1) * pitchX); / 변수의 초기값을 지정합니다: lastX = _akMarginX + startX + ((columnCount - 1) * pitchX)
+L000344 |         var lastX = _akMarginX + startX + ((columnCount - 1) * pitchX); ⟦EOL⟧
+// 해설 L345: 지역 변수를 선언합니다: var firstY = _akMarginY + startY; / 변수의 초기값을 지정합니다: firstY = _akMarginY + startY
+L000345 |         var firstY = _akMarginY + startY; ⟦EOL⟧
+// 해설 L346: 지역 변수를 선언합니다: var lastY = _akMarginY + startY + ((rowCount - 1) * pitchY); / 변수의 초기값을 지정합니다: lastY = _akMarginY + startY + ((rowCount - 1) * pitchY)
+L000346 |         var lastY = _akMarginY + startY + ((rowCount - 1) * pitchY); ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(firstX, lastX) / 지역 변수를 선언합니다: var minX = Math.Min(firstX, lastX); / 변수의 초기값을 지정합니다: minX = Math.Min(firstX, lastX)
+L000347 |         var minX = Math.Min(firstX, lastX); ⟦EOL⟧
+// 해설 L348: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(firstX, lastX) / 지역 변수를 선언합니다: var maxX = Math.Max(firstX, lastX); / 변수의 초기값을 지정합니다: maxX = Math.Max(firstX, lastX)
+L000348 |         var maxX = Math.Max(firstX, lastX); ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(firstY, lastY) / 지역 변수를 선언합니다: var minY = Math.Min(firstY, lastY); / 변수의 초기값을 지정합니다: minY = Math.Min(firstY, lastY)
+L000349 |         var minY = Math.Min(firstY, lastY); ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(firstY, lastY) / 지역 변수를 선언합니다: var maxY = Math.Max(firstY, lastY); / 변수의 초기값을 지정합니다: maxY = Math.Max(firstY, lastY)
+L000350 |         var maxY = Math.Max(firstY, lastY); ⟦EOL⟧
+// 해설 L351: 조건에 따라 분기합니다: if (minX >= 0.0 && maxX <= _glassSizeX && minY >= 0.0 && maxY <= _glassSizeY)
+L000351 |         if (minX >= 0.0 && maxX <= _glassSizeX && minY >= 0.0 && maxY <= _glassSizeY) ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000352 |         { ⟦EOL⟧
+// 해설 L353: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000353 |             return true; ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000354 |         } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 값을 대상에 대입합니다: error = "CELL PITCH placement exceeds GLASS SIZE.\n" + $"X range: {FormatValidationDouble(minX)} ~ {FormatValidationDouble(maxX)} / Glass X: {FormatValidationDouble(_glassSizeX)}\n" + $"Y range: {FormatValidationDouble(minY)} ~ {F
+L000356 |         error = ⟦EOL⟧
+// 해설 L357: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CCellPlacementWizardDialog.TryValidateGlassBounds(int, int, double, double, double, double, out string)
+L000357 |             "CELL PITCH placement exceeds GLASS SIZE.\n" + ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(minX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(maxX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(_glassSizeX)
+L000358 |             $"X range: {FormatValidationDouble(minX)} ~ {FormatValidationDouble(maxX)} / Glass X: {FormatValidationDouble(_glassSizeX)}\n" + ⟦EOL⟧
+// 해설 L359: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(minY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(maxY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValidationDouble(_glassSizeY)
+L000359 |             $"Y range: {FormatValidationDouble(minY)} ~ {FormatValidationDouble(maxY)} / Glass Y: {FormatValidationDouble(_glassSizeY)}"; ⟦EOL⟧
+// 해설 L360: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000360 |         return false; ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 TryValidateGlassBounds.
+L000361 |     } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CCellPlacementWizardDialog.FormatValidationDouble(double)
+L000363 |     private static string FormatValidationDouble(double value) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 FormatValidationDouble.
+L000364 |     { ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.######", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.######", CultureInfo.InvariantCulture);
+L000365 |         return value.ToString("0.######", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 FormatValidationDouble.
+L000366 |     } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.CancelClick(object, RoutedEventArgs)
+L000368 |     private void CancelClick(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 CancelClick.
+L000369 |     { ⟦EOL⟧
+// 해설 L370: 값을 대상에 대입합니다: DialogResult = false
+L000370 |         DialogResult = false; ⟦EOL⟧
+// 해설 L371: 구문 블록 경계입니다 · 소속 CancelClick.
+L000371 |     } ⟦EOL⟧
+L000372 |  ⟦EOL⟧
+// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CCellPlacementWizardDialog.WindowKeyDown(object, KeyEventArgs)
+L000373 |     private void WindowKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000374 |     { ⟦EOL⟧
+// 해설 L375: 조건에 따라 분기합니다: if (e.Key == Key.Escape)
+L000375 |         if (e.Key == Key.Escape) ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000376 |         { ⟦EOL⟧
+// 해설 L377: 값을 대상에 대입합니다: e.Handled = true
+L000377 |             e.Handled = true; ⟦EOL⟧
+// 해설 L378: 값을 대상에 대입합니다: DialogResult = false
+L000378 |             DialogResult = false; ⟦EOL⟧
+// 해설 L379: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000379 |         } ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000380 |     } ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다.
+L000381 | } ⟦EOL⟧
+L000382 |  ⟦EOL⟧
+// 해설 L383: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PLACEMENT_WIZARD_CONTEXT(
+L000383 | public sealed record ST_CELL_PLACEMENT_WIZARD_CONTEXT( ⟦EOL⟧
+// 해설 L384: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000384 |     int CellCount, ⟦EOL⟧
+// 해설 L385: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000385 |     int ModelTypeCount, ⟦EOL⟧
+// 해설 L386: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000386 |     double GlassSizeX, ⟦EOL⟧
+// 해설 L387: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000387 |     double GlassSizeY, ⟦EOL⟧
+// 해설 L388: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000388 |     double AkMarginX, ⟦EOL⟧
+// 해설 L389: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000389 |     double AkMarginY); ⟦EOL⟧
+L000390 |  ⟦EOL⟧
+// 해설 L391: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PLACEMENT_WIZARD_RESULT(
+L000391 | public sealed record ST_CELL_PLACEMENT_WIZARD_RESULT( ⟦EOL⟧
+L000392 |  ⟦EOL⟧
+// 해설 L393: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000393 |     int StartCell, ⟦EOL⟧
+L000394 |  ⟦EOL⟧
+// 해설 L395: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000395 |     int CellCount, ⟦EOL⟧
+L000396 |  ⟦EOL⟧
+// 해설 L397: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000397 |     int RowCount, ⟦EOL⟧
+L000398 |  ⟦EOL⟧
+// 해설 L399: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000399 |     int ColumnCount, ⟦EOL⟧
+L000400 |  ⟦EOL⟧
+// 해설 L401: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000401 |     double StartX, ⟦EOL⟧
+L000402 |  ⟦EOL⟧
+// 해설 L403: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000403 |     double StartY, ⟦EOL⟧
+L000404 |  ⟦EOL⟧
+// 해설 L405: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000405 |     double PitchX, ⟦EOL⟧
+L000406 |  ⟦EOL⟧
+// 해설 L407: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000407 |     double PitchY, ⟦EOL⟧
+L000408 |  ⟦EOL⟧
+// 해설 L409: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000409 |     string Direction, ⟦EOL⟧
+L000410 |  ⟦EOL⟧
+// 해설 L411: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000411 |     int DefaultModelType, ⟦EOL⟧
+L000412 |  ⟦EOL⟧
+// 해설 L413: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000413 |     IReadOnlyList<ST_CELL_PLACEMENT_MODEL_OVERRIDE> ModelOverrides ⟦EOL⟧
+// 해설 L414: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000414 | ) ⟦EOL⟧
+// 해설 L415: 구문 블록 경계입니다.
+L000415 | { ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 0, 1, 1, 0.0, 0.0, 0.0, 0.0, ST_CELL_PLACEMENT_WIZARD_DIRECTION.HorizontalFirst, 1, [])
+L000416 |     public static ST_CELL_PLACEMENT_WIZARD_RESULT Empty { get; } = new(1, 0, 1, 1, 0.0, 0.0, 0.0, 0.0, ST_CELL_PLACEMENT_WIZARD_DIRECTION.HorizontalFirst, 1, []); ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다.
+L000417 | } ⟦EOL⟧
+L000418 |  ⟦EOL⟧
+// 해설 L419: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PLACEMENT_MODEL_OVERRIDE(string Scope, int Index, int ModelType);
+L000419 | public sealed record ST_CELL_PLACEMENT_MODEL_OVERRIDE(string Scope, int Index, int ModelType); ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 타입의 구조/상속 선언입니다: public sealed record ST_CELL_PLACEMENT_WIZARD_DIRECTION(string Key, string DisplayName)
+L000421 | public sealed record ST_CELL_PLACEMENT_WIZARD_DIRECTION(string Key, string DisplayName) ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다.
+L000422 | { ⟦EOL⟧
+// 해설 L423: 변수의 초기값을 지정합니다: HorizontalFirst = "HORIZONTAL_FIRST"
+L000423 |     public const string HorizontalFirst = "HORIZONTAL_FIRST"; ⟦EOL⟧
+// 해설 L424: 변수의 초기값을 지정합니다: VerticalFirst = "VERTICAL_FIRST"
+L000424 |     public const string VerticalFirst = "VERTICAL_FIRST"; ⟦EOL⟧
+L000425 |  ⟦EOL⟧
+// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION> Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options.get
+L000426 |     public static IReadOnlyList<ST_CELL_PLACEMENT_WIZARD_DIRECTION> Options { get; } = ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION> Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options
+L000427 |     [ ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(HorizontalFirst, "HORIZONTAL FIRST")
+L000428 |         new(HorizontalFirst, "HORIZONTAL FIRST"), ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(VerticalFirst, "VERTICAL FIRST")
+L000429 |         new(VerticalFirst, "VERTICAL FIRST") ⟦EOL⟧
+// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION> Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.Options
+L000430 |     ]; ⟦EOL⟧
+L000431 |  ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_DIRECTION.ToString()
+L000432 |     public override string ToString() ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 ToString.
+L000433 |     { ⟦EOL⟧
+// 해설 L434: 호출자에게 값 또는 제어를 반환합니다: return DisplayName;
+L000434 |         return DisplayName; ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 ToString.
+L000435 |     } ⟦EOL⟧
+// 해설 L436: 구문 블록 경계입니다.
+L000436 | } ⟦EOL⟧
+L000437 |  ⟦EOL⟧
+// 해설 L438: 타입의 구조/상속 선언입니다: public sealed class ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW : INotifyPropertyChanged
+L000438 | public sealed class ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다.
+L000439 | { ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW._selectedModel
+L000440 |     private string _selectedModel; ⟦EOL⟧
+L000441 |  ⟦EOL⟧
+// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(string, int, string, System.Collections.Generic.IReadOnlyList<string>)
+L000442 |     public ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW(string scope, int index, string label, IReadOnlyList<string> modelOptions) ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다 · 소속 .ctor.
+L000443 |     { ⟦EOL⟧
+// 해설 L444: 값을 대상에 대입합니다: Scope = scope
+L000444 |         Scope = scope; ⟦EOL⟧
+// 해설 L445: 값을 대상에 대입합니다: Index = index
+L000445 |         Index = index; ⟦EOL⟧
+// 해설 L446: 값을 대상에 대입합니다: Label = label
+L000446 |         Label = label; ⟦EOL⟧
+// 해설 L447: 값을 대상에 대입합니다: ModelOptions = modelOptions
+L000447 |         ModelOptions = modelOptions; ⟦EOL⟧
+// 해설 L448: 값을 대상에 대입합니다: _selectedModel = modelOptions.FirstOrDefault() ?? "DEFAULT" / 함수·델리게이트 또는 객체 생성자를 호출합니다: modelOptions.FirstOrDefault()
+L000448 |         _selectedModel = modelOptions.FirstOrDefault() ?? "DEFAULT"; ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다 · 소속 .ctor.
+L000449 |     } ⟦EOL⟧
+L000450 |  ⟦EOL⟧
+// 해설 L451: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.PropertyChanged
+L000451 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L452: 선언·서명/매개변수·접근 조건입니다 · System.Action<Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW>? Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelChanged
+L000452 |     public event Action<ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW>? ModelChanged; ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Scope
+L000453 |     public string Scope { get; } ⟦EOL⟧
+// 해설 L454: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Index
+L000454 |     public int Index { get; } ⟦EOL⟧
+// 해설 L455: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.Label
+L000455 |     public string Label { get; } ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ModelOptions
+L000456 |     public IReadOnlyList<string> ModelOptions { get; } ⟦EOL⟧
+// 해설 L457: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.ApplyOrder
+L000457 |     public int ApplyOrder { get; set; } ⟦EOL⟧
+L000458 |  ⟦EOL⟧
+// 해설 L459: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel
+L000459 |     public string SelectedModel ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 SelectedModel.
+L000460 |     { ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.get
+L000461 |         get => _selectedModel; ⟦EOL⟧
+// 해설 L462: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.SelectedModel.set
+L000462 |         set ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다 · 소속 set_SelectedModel.
+L000463 |         { ⟦EOL⟧
+// 해설 L464: 조건에 따라 분기합니다: if (_selectedModel == value)
+L000464 |             if (_selectedModel == value) ⟦EOL⟧
+// 해설 L465: 구문 블록 경계입니다 · 소속 set_SelectedModel.
+L000465 |             { ⟦EOL⟧
+// 해설 L466: 호출자에게 값 또는 제어를 반환합니다: return;
+L000466 |                 return; ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 set_SelectedModel.
+L000467 |             } ⟦EOL⟧
+L000468 |  ⟦EOL⟧
+// 해설 L469: 값을 대상에 대입합니다: _selectedModel = value
+L000469 |             _selectedModel = value; ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000470 |             OnPropertyChanged(); ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this)
+L000471 |             ModelChanged?.Invoke(this); ⟦EOL⟧
+// 해설 L472: 구문 블록 경계입니다 · 소속 set_SelectedModel.
+L000472 |         } ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 SelectedModel.
+L000473 |     } ⟦EOL⟧
+L000474 |  ⟦EOL⟧
+// 해설 L475: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW.OnPropertyChanged(string?)
+L000475 |     private void OnPropertyChanged([CallerMemberName] string? propertyName = null) ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000476 |     { ⟦EOL⟧
+// 해설 L477: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
+L000477 |         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000478 |     } ⟦EOL⟧
+// 해설 L479: 구문 블록 경계입니다.
+L000479 | } ⟦EOL⟧

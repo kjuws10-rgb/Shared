@@ -1,0 +1,1885 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Vision/CVisionComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface.Vision
+L000001 | namespace Drilling.Common.Interface.Vision ⟦EOL⟧
+// 해설 L2: 구문 블록 경계입니다.
+L000002 | { ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Collections.Concurrent;
+L000003 |     using System.Collections.Concurrent; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000004 |     using System.Globalization; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Net;
+L000005 |     using System.Net; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Net.Sockets;
+L000006 |     using System.Net.Sockets; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000007 |     using System.Text; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using System.Buffers.Binary;
+L000008 |     using System.Buffers.Binary; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000010 |     [CCommType("SocketServer", "Vision")] ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: internal sealed class CVisionComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000011 |     internal sealed class CVisionComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _pending = new()
+L000013 |         private readonly ConcurrentDictionary<int, TaskCompletionSource<ST_VISION_PACKET>> _pending = new(); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _lifecycleLock = new(1, 1)
+L000014 |         private readonly SemaphoreSlim _lifecycleLock = new(1, 1); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1) / 변수의 초기값을 지정합니다: _writeLock = new(1, 1)
+L000015 |         private readonly SemaphoreSlim _writeLock = new(1, 1); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(0, 1) / 변수의 초기값을 지정합니다: _clientReady = new(0, 1)
+L000016 |         private readonly SemaphoreSlim _clientReady = new(0, 1); ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Net.Sockets.TcpListener? Drilling.Common.Interface.Vision.CVisionComm._listener
+L000017 |         private TcpListener? _listener; ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Net.Sockets.TcpClient? Drilling.Common.Interface.Vision.CVisionComm._client
+L000018 |         private TcpClient? _client; ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Net.Sockets.NetworkStream? Drilling.Common.Interface.Vision.CVisionComm._stream
+L000019 |         private NetworkStream? _stream; ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.Common.Interface.Vision.CVisionComm._serverCancellation
+L000020 |         private CancellationTokenSource? _serverCancellation; ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task? Drilling.Common.Interface.Vision.CVisionComm._acceptTask
+L000021 |         private Task? _acceptTask; ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task? Drilling.Common.Interface.Vision.CVisionComm._receiveTask
+L000022 |         private Task? _receiveTask; ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionComm._uniqueId
+L000023 |         private int _uniqueId; ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionComm._flyingLineCapacity
+L000024 |         private int _flyingLineCapacity; ⟦EOL⟧
+// 해설 L25: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000025 |         // Read the accepted client only; header refresh must not send STATUS or ⟦EOL⟧
+// 해설 L26: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000026 |         // probe the socket. ReceiveLoop clears the client on disconnect. ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _client)
+L000027 |         internal bool HasConnectedClient => Volatile.Read(ref _client)?.Connected == true; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Func<int>? Drilling.Common.Interface.Vision.CVisionComm.LineCapacityProvider
+L000028 |         internal Func<int>? LineCapacityProvider { get; set; } ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.ValidateLineCapacity(LineCapacityProvider?.Invoke() ?? CVisionProtocol.DefaultMaxHoleCountPerLine) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke()
+L000029 |         private int ConfiguredLineCapacity => CVisionProtocol.ValidateLineCapacity(LineCapacityProvider?.Invoke() ?? CVisionProtocol.DefaultMaxHoleCountPerLine); ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _flyingLineCapacity) / 조건에 따라 결과식을 선택합니다: Volatile.Read(ref _flyingLineCapacity) is > 0 and var capacity ? capacity : ConfiguredLineCapacity
+L000030 |         private int ResponseLineCapacity => Volatile.Read(ref _flyingLineCapacity) is > 0 and var capacity ? capacity : ConfiguredLineCapacity; ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Action<Drilling.Common.Interface.ST_COMM_PROTOCOL_TRACE>? Drilling.Common.Interface.Vision.CVisionComm.ProtocolTrace
+L000031 |         internal event Action<ST_COMM_PROTOCOL_TRACE>? ProtocolTrace; ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.Connect(System.Threading.CancellationToken)
+L000032 |         public override async Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 Connect.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 비동기 완료를 기다립니다: await _lifecycleLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _lifecycleLock.WaitAsync(cancellationToken)
+L000034 |             await _lifecycleLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L35: 예외 처리 범위입니다: try
+L000035 |             try ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Connect.
+L000036 |             { ⟦EOL⟧
+// 해설 L37: 조건에 따라 분기합니다: if (_listener is not null && _serverCancellation is not null && !_serverCancellation.IsCancellationRequested)
+L000037 |                 if (_listener is not null && _serverCancellation is not null && !_serverCancellation.IsCancellationRequested) ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 Connect.
+L000038 |                 { ⟦EOL⟧
+// 해설 L39: 값을 대상에 대입합니다: LastError = ""
+L000039 |                     LastError = ""; ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000040 |                     SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L41: 호출자에게 값 또는 제어를 반환합니다: return;
+L000041 |                     return; ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Connect.
+L000042 |                 } ⟦EOL⟧
+L000043 |  ⟦EOL⟧
+// 해설 L44: 비동기 완료를 기다립니다: await StopServer() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()
+L000044 |                 await StopServer(); ⟦EOL⟧
+// 해설 L45: 조건에 따라 분기합니다: if (Option.Port <= 0)
+L000045 |                 if (Option.Port <= 0) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Connect.
+L000046 |                 { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError("Vision server port is invalid.")
+L000047 |                     SetError("Vision server port is invalid."); ⟦EOL⟧
+// 해설 L48: 호출자에게 값 또는 제어를 반환합니다: return;
+L000048 |                     return; ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Connect.
+L000049 |                 } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TcpListener(ResolveBindAddress(Option.LocalAddress), Option.Port) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveBindAddress(Option.LocalAddress) / 지역 변수를 선언합니다: var listener = new TcpListener(ResolveBindAddress(Option.LocalAddress), Option.Port); / 변수의 초기값을 지정합니다: listener = new TcpListener(ResolveBindAddress(Option.LocalAddress), Option.Port)
+L000051 |                 var listener = new TcpListener(ResolveBindAddress(Option.LocalAddress), Option.Port); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: listener.Start(1)
+L000052 |                 listener.Start(1); ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: _listener = listener
+L000053 |                 _listener = listener; ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: _serverCancellation = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
+L000054 |                 _serverCancellation = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task AcceptLoopCallback()
+L000055 |                 Task AcceptLoopCallback() ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 AcceptLoopCallback.
+L000056 |                 { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: AcceptLoop(listener, _serverCancellation.Token) / 호출자에게 값 또는 제어를 반환합니다: return AcceptLoop(listener, _serverCancellation.Token);
+L000057 |                     return AcceptLoop(listener, _serverCancellation.Token); ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 AcceptLoopCallback.
+L000058 |                 } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: _acceptTask = Task.Run(AcceptLoopCallback, CancellationToken.None) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(AcceptLoopCallback, CancellationToken.None)
+L000060 |                 _acceptTask = Task.Run(AcceptLoopCallback, CancellationToken.None); ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: LastSent = ""
+L000061 |                 LastSent = ""; ⟦EOL⟧
+// 해설 L62: 값을 대상에 대입합니다: LastReceived = ""
+L000062 |                 LastReceived = ""; ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: LastError = ""
+L000063 |                 LastError = ""; ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000064 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseProtocolTrace("INFO", $"SERVER_LISTENING:{Option.Endpoint}")
+L000065 |                 RaiseProtocolTrace("INFO", $"SERVER_LISTENING:{Option.Endpoint}"); ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 Connect.
+L000066 |             } ⟦EOL⟧
+// 해설 L67: 지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or ArgumentException or InvalidOperationException)
+L000067 |             catch (Exception ex)when (ex is SocketException or ArgumentException or InvalidOperationException) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Connect.
+L000068 |             { ⟦EOL⟧
+// 해설 L69: 비동기 완료를 기다립니다: await StopServer() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()
+L000069 |                 await StopServer(); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000070 |                 SetError(ex); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Connect.
+L000071 |             } ⟦EOL⟧
+// 해설 L72: 종료 정리 구간입니다: finally
+L000072 |             finally ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 Connect.
+L000073 |             { ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lifecycleLock.Release()
+L000074 |                 _lifecycleLock.Release(); ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 Connect.
+L000075 |             } ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 Connect.
+L000076 |         } ⟦EOL⟧
+L000077 |  ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.Disconnect(System.Threading.CancellationToken)
+L000078 |         public override async Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Disconnect.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000080 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L81: 비동기 완료를 기다립니다: await _lifecycleLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _lifecycleLock.WaitAsync(cancellationToken)
+L000081 |             await _lifecycleLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L82: 예외 처리 범위입니다: try
+L000082 |             try ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Disconnect.
+L000083 |             { ⟦EOL⟧
+// 해설 L84: 비동기 완료를 기다립니다: await StopServer() / 함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()
+L000084 |                 await StopServer(); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000085 |                 SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Disconnect.
+L000086 |             } ⟦EOL⟧
+// 해설 L87: 종료 정리 구간입니다: finally
+L000087 |             finally ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 Disconnect.
+L000088 |             { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: _lifecycleLock.Release()
+L000089 |                 _lifecycleLock.Release(); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Disconnect.
+L000090 |             } ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 Disconnect.
+L000091 |         } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.Vision.CVisionComm.Execute(string, System.Threading.CancellationToken)
+L000093 |         public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Execute.
+L000094 |         { ⟦EOL⟧
+// 해설 L95: 예외 처리 범위입니다: try
+L000095 |             try ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Execute.
+L000096 |             { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim() / 지역 변수를 선언합니다: var commandText = function.Trim(); / 변수의 초기값을 지정합니다: commandText = function.Trim()
+L000097 |                 var commandText = function.Trim(); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: commandText.Equals("STATUS", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (commandText.Equals("STATUS", StringComparison.OrdinalIgnoreCase))
+L000098 |                 if (commandText.Equals("STATUS", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 Execute.
+L000099 |                 { ⟦EOL⟧
+// 해설 L100: 값을 대상에 대입합니다: LastSent = commandText
+L000100 |                     LastSent = commandText; ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: LastReceived = _client is { Connected: true } ? "OK:VISION:CLIENT_CONNECTED" : "OK:VISION:WAITING_CLIENT" / 조건에 따라 결과식을 선택합니다: _client is { Connected: true } ? "OK:VISION:CLIENT_CONNECTED" : "OK:VISION:WAITING_CLIENT"
+L000101 |                     LastReceived = _client is { Connected: true } ? "OK:VISION:CLIENT_CONNECTED" : "OK:VISION:WAITING_CLIENT"; ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: LastError = ""
+L000102 |                     LastError = ""; ⟦EOL⟧
+// 해설 L103: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000103 |                     return LastReceived; ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 Execute.
+L000104 |                 } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 조건에 따라 분기합니다: if (_listener is null)
+L000106 |                 if (_listener is null) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 Execute.
+L000107 |                 { ⟦EOL⟧
+// 해설 L108: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000108 |                     await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 Execute.
+L000109 |                 } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 비동기 완료를 기다립니다: await WaitForClient(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: WaitForClient(cancellationToken) / 지역 변수를 선언합니다: var stream = await WaitForClient(cancellationToken); / 변수의 초기값을 지정합니다: stream = await WaitForClient(cancellationToken)
+L000111 |                 var stream = await WaitForClient(cancellationToken); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeCommand(commandText.Split(':', 2, StringSplitOptions.TrimEntries)[0]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: commandText.Split(':', 2, StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var command = NormalizeCommand(commandText.Split(':', 2, StringSplitOptions.TrimEntries)[0]); / 변수의 초기값을 지정합니다: command = NormalizeCommand(commandText.Split(':', 2, StringSplitOptions.TrimEntries)[0])
+L000112 |                 var command = NormalizeCommand(commandText.Split(':', 2, StringSplitOptions.TrimEntries)[0]); ⟦EOL⟧
+// 해설 L113: 조건에 따라 결과식을 선택합니다: command == EN_VISION_COMMAND.MarkFindLine ? ResponseLineCapacity : ConfiguredLineCapacity / 지역 변수를 선언합니다: var capacity = command == EN_VISION_COMMAND.MarkFindLine ? ResponseLineCapacity : ConfiguredLineCapacity; / 변수의 초기값을 지정합니다: capacity = command == EN_VISION_COMMAND.MarkFindLine ? ResponseLineCapacity : ConfiguredLineCapacity
+L000113 |                 var capacity = command == EN_VISION_COMMAND.MarkFindLine ? ResponseLineCapacity : ConfiguredLineCapacity; ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseRequest(commandText, NextUniqueId(), capacity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NextUniqueId() / 지역 변수를 선언합니다: var request = ParseRequest(commandText, NextUniqueId(), capacity); / 변수의 초기값을 지정합니다: request = ParseRequest(commandText, NextUniqueId(), capacity)
+L000114 |                 var request = ParseRequest(commandText, NextUniqueId(), capacity); ⟦EOL⟧
+// 해설 L115: 조건에 따라 분기합니다: if (command == EN_VISION_COMMAND.FlyingReady)
+L000115 |                 if (command == EN_VISION_COMMAND.FlyingReady) ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _flyingLineCapacity, capacity)
+L000116 |                     Volatile.Write(ref _flyingLineCapacity, capacity); ⟦EOL⟧
+// 해설 L117: 비동기 완료를 기다립니다: await SendRequest(stream, request, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendRequest(stream, request, cancellationToken) / 지역 변수를 선언합니다: var response = await SendRequest(stream, request, cancellationToken); / 변수의 초기값을 지정합니다: response = await SendRequest(stream, request, cancellationToken)
+L000117 |                 var response = await SendRequest(stream, request, cancellationToken); ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: LastReceived = DescribeResponse(response, capacity) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribeResponse(response, capacity)
+L000118 |                 LastReceived = DescribeResponse(response, capacity); ⟦EOL⟧
+// 해설 L119: 조건에 따라 분기합니다: if (command == EN_VISION_COMMAND.MarkFindLine)
+L000119 |                 if (command == EN_VISION_COMMAND.MarkFindLine) ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _flyingLineCapacity, 0)
+L000120 |                     Volatile.Write(ref _flyingLineCapacity, 0); ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: LastError = ""
+L000121 |                 LastError = ""; ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000122 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L123: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000123 |                 return LastReceived; ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 Execute.
+L000124 |             } ⟦EOL⟧
+// 해설 L125: 지정 예외를 처리합니다: catch (CVisionLineCountExceededException ex)
+L000125 |             catch (CVisionLineCountExceededException ex) ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 Execute.
+L000126 |             { ⟦EOL⟧
+// 해설 L127: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000127 |                 // This is a received protocol fault, not a missing reply. Preserve ⟦EOL⟧
+// 해설 L128: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000128 |                 // its type so the interface owner raises the HEAVY alarm and stops inspection. ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetCommandError(ex.Message)
+L000129 |                 SetCommandError(ex.Message); ⟦EOL⟧
+// 해설 L130: 예외를 발생/전달합니다: throw;
+L000130 |                 throw; ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 Execute.
+L000131 |             } ⟦EOL⟧
+// 해설 L132: 지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or IOException or InvalidDataException or InvalidOperationException or FormatException or TimeoutException or OperationCanceledException)
+L000132 |             catch (Exception ex)when (ex is SocketException or IOException or InvalidDataException or InvalidOperationException or FormatException or TimeoutException or OperationCanceledException) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 Execute.
+L000133 |             { ⟦EOL⟧
+// 해설 L134: 조건에 따라 분기합니다: if (ex is OperationCanceledException && cancellationToken.IsCancellationRequested)
+L000134 |                 if (ex is OperationCanceledException && cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 Execute.
+L000135 |                 { ⟦EOL⟧
+// 해설 L136: 예외를 발생/전달합니다: throw;
+L000136 |                     throw; ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 Execute.
+L000137 |                 } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetCommandError(ex.Message)
+L000139 |                 SetCommandError(ex.Message); ⟦EOL⟧
+// 해설 L140: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000140 |                 return ""; ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 Execute.
+L000141 |             } ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Execute.
+L000142 |         } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.AcceptLoop(System.Net.Sockets.TcpListener, System.Threading.CancellationToken)
+L000144 |         private async Task AcceptLoop(TcpListener listener, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000145 |         { ⟦EOL⟧
+// 해설 L146: 조건을 먼저 확인하며 반복합니다: while (!cancellationToken.IsCancellationRequested)
+L000146 |             while (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000147 |             { ⟦EOL⟧
+// 해설 L148: 지역 변수를 선언합니다: TcpClient? client = null; / 변수의 초기값을 지정합니다: client = null
+L000148 |                 TcpClient? client = null; ⟦EOL⟧
+// 해설 L149: 예외 처리 범위입니다: try
+L000149 |                 try ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000150 |                 { ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: client = await listener.AcceptTcpClientAsync(cancellationToken) / 비동기 완료를 기다립니다: await listener.AcceptTcpClientAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: listener.AcceptTcpClientAsync(cancellationToken)
+L000151 |                     client = await listener.AcceptTcpClientAsync(cancellationToken); ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: client.NoDelay = true
+L000152 |                     client.NoDelay = true; ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceClient(client, cancellationToken)
+L000153 |                     ReplaceClient(client, cancellationToken); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000154 |                 } ⟦EOL⟧
+// 해설 L155: 지정 예외를 처리합니다: catch (Exception ex) when (cancellationToken.IsCancellationRequested || ex is ObjectDisposedException or SocketException or OperationCanceledException)
+L000155 |                 catch (Exception ex)when (cancellationToken.IsCancellationRequested || ex is ObjectDisposedException or SocketException or OperationCanceledException) ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000156 |                 { ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000157 |                     client?.Dispose(); ⟦EOL⟧
+// 해설 L158: 조건에 따라 분기합니다: if (!cancellationToken.IsCancellationRequested)
+L000158 |                     if (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000159 |                     { ⟦EOL⟧
+// 해설 L160: 값을 대상에 대입합니다: LastError = ex.Message
+L000160 |                         LastError = ex.Message; ⟦EOL⟧
+// 해설 L161: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000161 |                         LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000162 |                     } ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000163 |                 } ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000164 |             } ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 AcceptLoop.
+L000165 |         } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionComm.ReplaceClient(System.Net.Sockets.TcpClient, System.Threading.CancellationToken)
+L000167 |         private void ReplaceClient(TcpClient client, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 ReplaceClient.
+L000168 |         { ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000169 |             _client?.Dispose(); ⟦EOL⟧
+// 해설 L170: 값을 대상에 대입합니다: _client = client
+L000170 |             _client = client; ⟦EOL⟧
+// 해설 L171: 값을 대상에 대입합니다: _stream = client.GetStream() / 함수·델리게이트 또는 객체 생성자를 호출합니다: client.GetStream()
+L000171 |             _stream = client.GetStream(); ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task ReceiveLoopCallback()
+L000172 |             Task ReceiveLoopCallback() ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 ReceiveLoopCallback.
+L000173 |             { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReceiveLoop(client, _stream, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return ReceiveLoop(client, _stream, cancellationToken);
+L000174 |                 return ReceiveLoop(client, _stream, cancellationToken); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ReceiveLoopCallback.
+L000175 |             } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: _receiveTask = Task.Run(ReceiveLoopCallback, CancellationToken.None) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(ReceiveLoopCallback, CancellationToken.None)
+L000177 |             _receiveTask = Task.Run(ReceiveLoopCallback, CancellationToken.None); ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (_clientReady.CurrentCount == 0)
+L000178 |             if (_clientReady.CurrentCount == 0) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ReplaceClient.
+L000179 |             { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: _clientReady.Release()
+L000180 |                 _clientReady.Release(); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ReplaceClient.
+L000181 |             } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 값을 대상에 대입합니다: LastError = ""
+L000183 |             LastError = ""; ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000184 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseProtocolTrace("INFO", $"CLIENT_CONNECTED:{client.Client.RemoteEndPoint?.ToString() ?? "UNKNOWN"}") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()
+L000185 |             RaiseProtocolTrace("INFO", $"CLIENT_CONNECTED:{client.Client.RemoteEndPoint?.ToString() ?? "UNKNOWN"}"); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 ReplaceClient.
+L000186 |         } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.ReceiveLoop(System.Net.Sockets.TcpClient, System.Net.Sockets.NetworkStream, System.Threading.CancellationToken)
+L000188 |         private async Task ReceiveLoop(TcpClient client, NetworkStream stream, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000189 |         { ⟦EOL⟧
+// 해설 L190: 예외 처리 범위입니다: try
+L000190 |             try ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000191 |             { ⟦EOL⟧
+// 해설 L192: 조건을 먼저 확인하며 반복합니다: while (!cancellationToken.IsCancellationRequested && client.Connected)
+L000192 |                 while (!cancellationToken.IsCancellationRequested && client.Connected) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000193 |                 { ⟦EOL⟧
+// 해설 L194: 비동기 완료를 기다립니다: await ReadPacket(stream, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPacket(stream, cancellationToken) / 지역 변수를 선언합니다: var packet = await ReadPacket(stream, cancellationToken); / 변수의 초기값을 지정합니다: packet = await ReadPacket(stream, cancellationToken)
+L000194 |                     var packet = await ReadPacket(stream, cancellationToken); ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: LastReceived = DescribePacket(packet) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribePacket(packet)
+L000195 |                     LastReceived = DescribePacket(packet); ⟦EOL⟧
+// 해설 L196: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000196 |                     LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L197: 조건에 따라 분기합니다: if (packet.Header.Command == (int)EN_VISION_COMMAND.KeepAlive)
+L000197 |                     if (packet.Header.Command == (int)EN_VISION_COMMAND.KeepAlive) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000198 |                     { ⟦EOL⟧
+// 해설 L199: 값을 대상에 대입합니다: LastError = ""
+L000199 |                         LastError = ""; ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000200 |                         SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000201 |                     } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseProtocolTrace("PACKET", CVisionProtocol.FormatPacketLog("RECV", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.FormatPacketLog("RECV", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)
+L000203 |                     RaiseProtocolTrace("PACKET", CVisionProtocol.FormatPacketLog("RECV", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)); ⟦EOL⟧
+// 해설 L204: 조건에 따라 분기합니다: if (packet.Header.Command == (int)EN_VISION_COMMAND.KeepAlive)
+L000204 |                     if (packet.Header.Command == (int)EN_VISION_COMMAND.KeepAlive) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000205 |                     { ⟦EOL⟧
+// 해설 L206: 비동기 완료를 기다립니다: await SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.KeepAlive, packet.Header.UniqueId, packet.Header.ErrorCode), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.KeepAlive, packet.Header.UniqueId, packet.Header.ErrorCode), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.KeepAlive, packet.Header.UniqueId, packet.Header.ErrorCode)
+L000206 |                         await SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.KeepAlive, packet.Header.UniqueId, packet.Header.ErrorCode), cancellationToken); ⟦EOL⟧
+// 해설 L207: 다음 반복으로 진행합니다: continue;
+L000207 |                         continue; ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000208 |                     } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 조건에 따라 분기합니다: if (packet.Header.Command == (int)EN_VISION_COMMAND.MarkFindManual)
+L000210 |                     if (packet.Header.Command == (int)EN_VISION_COMMAND.MarkFindManual) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000211 |                     { ⟦EOL⟧
+// 해설 L212: 비동기 완료를 기다립니다: await SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.MarkFindManual, packet.Header.UniqueId), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.MarkFindManual, packet.Header.UniqueId), cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.MarkFindManual, packet.Header.UniqueId)
+L000212 |                         await SendPacket(stream, CVisionProtocol.CreateEmpty(EN_VISION_COMMAND.MarkFindManual, packet.Header.UniqueId), cancellationToken); ⟦EOL⟧
+// 해설 L213: 다음 반복으로 진행합니다: continue;
+L000213 |                         continue; ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000214 |                     } ⟦EOL⟧
+L000215 |  ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pending.TryRemove(packet.Header.UniqueId, out var completion) / 조건에 따라 분기합니다: if (_pending.TryRemove(packet.Header.UniqueId, out var completion))
+L000216 |                     if (_pending.TryRemove(packet.Header.UniqueId, out var completion)) ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000217 |                     { ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: completion.TrySetResult(packet)
+L000218 |                         completion.TrySetResult(packet); ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000219 |                     } ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000220 |                 } ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000221 |             } ⟦EOL⟧
+// 해설 L222: 지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or IOException or InvalidDataException or ObjectDisposedException or OperationCanceledException)
+L000222 |             catch (Exception ex)when (ex is SocketException or IOException or InvalidDataException or ObjectDisposedException or OperationCanceledException) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000223 |             { ⟦EOL⟧
+// 해설 L224: 조건에 따라 분기합니다: if (!cancellationToken.IsCancellationRequested)
+L000224 |                 if (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000225 |                 { ⟦EOL⟧
+// 해설 L226: 값을 대상에 대입합니다: LastError = ex.Message
+L000226 |                     LastError = ex.Message; ⟦EOL⟧
+// 해설 L227: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000227 |                     LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000228 |                 } ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000229 |             } ⟦EOL⟧
+// 해설 L230: 종료 정리 구간입니다: finally
+L000230 |             finally ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000231 |             { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_client, client) / 조건에 따라 분기합니다: if (ReferenceEquals(_client, client))
+L000232 |                 if (ReferenceEquals(_client, client)) ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000233 |                 { ⟦EOL⟧
+// 해설 L234: 값을 대상에 대입합니다: _stream = null
+L000234 |                     _stream = null; ⟦EOL⟧
+// 해설 L235: 값을 대상에 대입합니다: _client = null
+L000235 |                     _client = null; ⟦EOL⟧
+// 해설 L236: 조건을 먼저 확인하며 반복합니다: while (_clientReady.CurrentCount > 0)
+L000236 |                     while (_clientReady.CurrentCount > 0) ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000237 |                     { ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: _clientReady.Wait(0)
+L000238 |                         _clientReady.Wait(0); ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000239 |                     } ⟦EOL⟧
+L000240 |  ⟦EOL⟧
+// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: FailPending(new IOException("Vision client disconnected.")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Vision client disconnected.")
+L000241 |                     FailPending(new IOException("Vision client disconnected.")); ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: LastError = "Vision client disconnected."
+L000242 |                     LastError = "Vision client disconnected."; ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(IsServerListening() ? EN_COMM_STATE.Online : EN_COMM_STATE.Offline) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsServerListening() / 조건에 따라 결과식을 선택합니다: IsServerListening() ? EN_COMM_STATE.Online : EN_COMM_STATE.Offline
+L000243 |                     SetState(IsServerListening() ? EN_COMM_STATE.Online : EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseProtocolTrace("INFO", "CLIENT_DISCONNECTED")
+L000244 |                     RaiseProtocolTrace("INFO", "CLIENT_DISCONNECTED"); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000245 |                 } ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: client.Dispose()
+L000247 |                 client.Dispose(); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000248 |             } ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 ReceiveLoop.
+L000249 |         } ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Net.Sockets.NetworkStream> Drilling.Common.Interface.Vision.CVisionComm.WaitForClient(System.Threading.CancellationToken)
+L000251 |         private async Task<NetworkStream> WaitForClient(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000252 |         { ⟦EOL⟧
+// 해설 L253: 조건에 따라 분기합니다: if (_stream is not null && _client is { Connected: true })
+L000253 |             if (_stream is not null && _client is { Connected: true }) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000254 |             { ⟦EOL⟧
+// 해설 L255: 호출자에게 값 또는 제어를 반환합니다: return _stream;
+L000255 |                 return _stream; ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000256 |             } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000258 |             using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(100, Option.TimeoutMs)
+L000259 |             timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)); ⟦EOL⟧
+// 해설 L260: 예외 처리 범위입니다: try
+L000260 |             try ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000261 |             { ⟦EOL⟧
+// 해설 L262: 비동기 완료를 기다립니다: await _clientReady.WaitAsync(timeout.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _clientReady.WaitAsync(timeout.Token)
+L000262 |                 await _clientReady.WaitAsync(timeout.Token); ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000263 |             } ⟦EOL⟧
+// 해설 L264: 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+L000264 |             catch (OperationCanceledException)when (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000265 |             { ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Vision client connection timeout.") / 예외를 발생/전달합니다: throw new TimeoutException("Vision client connection timeout.");
+L000266 |                 throw new TimeoutException("Vision client connection timeout."); ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000267 |             } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Vision client disconnected before command transmission.") / 호출자에게 값 또는 제어를 반환합니다: return _stream ?? throw new IOException("Vision client disconnected before command transmission."); / 예외를 발생/전달합니다: throw new IOException("Vision client disconnected before command transmission.")
+L000269 |             return _stream ?? throw new IOException("Vision client disconnected before command transmission."); ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 WaitForClient.
+L000270 |         } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.Vision.ST_VISION_PACKET> Drilling.Common.Interface.Vision.CVisionComm.SendRequest(System.Net.Sockets.NetworkStream, Drilling.Common.Interface.Vision.ST_VISI
+L000272 |         private async Task<ST_VISION_PACKET> SendRequest(NetworkStream stream, ST_VISION_PACKET request, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 SendRequest.
+L000273 |         { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TaskCompletionSource<ST_VISION_PACKET>(TaskCreationOptions.RunContinuationsAsynchronously) / 지역 변수를 선언합니다: var completion = new TaskCompletionSource<ST_VISION_PACKET>(TaskCreationOptions.RunContinuationsAsynchronously); / 변수의 초기값을 지정합니다: completion = new TaskCompletionSource<ST_VISION_PACKET>(TaskCreationOptions.RunContinuationsAsynchronously)
+L000274 |             var completion = new TaskCompletionSource<ST_VISION_PACKET>(TaskCreationOptions.RunContinuationsAsynchronously); ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pending.TryAdd(request.Header.UniqueId, completion) / 조건에 따라 분기합니다: if (!_pending.TryAdd(request.Header.UniqueId, completion))
+L000275 |             if (!_pending.TryAdd(request.Header.UniqueId, completion)) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 SendRequest.
+L000276 |             { ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Vision Unique ID is already pending: {request.Header.UniqueId}.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Vision Unique ID is already pending: {request.Header.UniqueId}.");
+L000277 |                 throw new InvalidOperationException($"Vision Unique ID is already pending: {request.Header.UniqueId}."); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 SendRequest.
+L000278 |             } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 예외 처리 범위입니다: try
+L000280 |             try ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 SendRequest.
+L000281 |             { ⟦EOL⟧
+// 해설 L282: 비동기 완료를 기다립니다: await SendPacket(stream, request, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SendPacket(stream, request, cancellationToken)
+L000282 |                 await SendPacket(stream, request, cancellationToken); ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000283 |                 using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(100, Option.TimeoutMs)
+L000284 |                 timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)); ⟦EOL⟧
+// 해설 L285: 예외 처리 범위입니다: try
+L000285 |                 try ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 SendRequest.
+L000286 |                 { ⟦EOL⟧
+// 해설 L287: 비동기 완료를 기다립니다: await completion.Task.WaitAsync(timeout.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: completion.Task.WaitAsync(timeout.Token) / 지역 변수를 선언합니다: var response = await completion.Task.WaitAsync(timeout.Token); / 변수의 초기값을 지정합니다: response = await completion.Task.WaitAsync(timeout.Token)
+L000287 |                     var response = await completion.Task.WaitAsync(timeout.Token); ⟦EOL⟧
+// 해설 L288: 조건에 따라 분기합니다: if (response.Header.Command != request.Header.Command)
+L000288 |                     if (response.Header.Command != request.Header.Command) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 SendRequest.
+L000289 |                     { ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision response command mismatch. Request={request.Header.Command}, Response={response.Header.Command}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision response command mismatch. Request={request.Header.Command}, Response={response.Header.Command}.");
+L000290 |                         throw new InvalidDataException($"Vision response command mismatch. Request={request.Header.Command}, Response={response.Header.Command}."); ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 SendRequest.
+L000291 |                     } ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 조건에 따라 분기합니다: if (response.Header.ErrorCode != 0)
+L000293 |                     if (response.Header.ErrorCode != 0) ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 SendRequest.
+L000294 |                     { ⟦EOL⟧
+// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision returned error code {response.Header.ErrorCode} for command {response.Header.Command}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision returned error code {response.Header.ErrorCode} for command {response.Header.Command}.");
+L000295 |                         throw new InvalidDataException($"Vision returned error code {response.Header.ErrorCode} for command {response.Header.Command}."); ⟦EOL⟧
+// 해설 L296: 구문 블록 경계입니다 · 소속 SendRequest.
+L000296 |                     } ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 호출자에게 값 또는 제어를 반환합니다: return response;
+L000298 |                     return response; ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 SendRequest.
+L000299 |                 } ⟦EOL⟧
+// 해설 L300: 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+L000300 |                 catch (OperationCanceledException)when (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L301: 구문 블록 경계입니다 · 소속 SendRequest.
+L000301 |                 { ⟦EOL⟧
+// 해설 L302: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"Vision command {request.Header.Command} response timeout.") / 예외를 발생/전달합니다: throw new TimeoutException($"Vision command {request.Header.Command} response timeout.");
+L000302 |                     throw new TimeoutException($"Vision command {request.Header.Command} response timeout."); ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 SendRequest.
+L000303 |                 } ⟦EOL⟧
+// 해설 L304: 구문 블록 경계입니다 · 소속 SendRequest.
+L000304 |             } ⟦EOL⟧
+// 해설 L305: 종료 정리 구간입니다: finally
+L000305 |             finally ⟦EOL⟧
+// 해설 L306: 구문 블록 경계입니다 · 소속 SendRequest.
+L000306 |             { ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pending.TryRemove(request.Header.UniqueId, out _)
+L000307 |                 _pending.TryRemove(request.Header.UniqueId, out _); ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 SendRequest.
+L000308 |             } ⟦EOL⟧
+// 해설 L309: 구문 블록 경계입니다 · 소속 SendRequest.
+L000309 |         } ⟦EOL⟧
+L000310 |  ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.SendPacket(System.Net.Sockets.NetworkStream, Drilling.Common.Interface.Vision.ST_VISION_PACKET, System.Threading.CancellationToken)
+L000311 |         private async Task SendPacket(NetworkStream stream, ST_VISION_PACKET packet, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 SendPacket.
+L000312 |         { ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.Encode(packet) / 지역 변수를 선언합니다: var bytes = CVisionProtocol.Encode(packet); / 변수의 초기값을 지정합니다: bytes = CVisionProtocol.Encode(packet)
+L000313 |             var bytes = CVisionProtocol.Encode(packet); ⟦EOL⟧
+// 해설 L314: 비동기 완료를 기다립니다: await _writeLock.WaitAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _writeLock.WaitAsync(cancellationToken)
+L000314 |             await _writeLock.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L315: 예외 처리 범위입니다: try
+L000315 |             try ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 SendPacket.
+L000316 |             { ⟦EOL⟧
+// 해설 L317: 비동기 완료를 기다립니다: await stream.WriteAsync(bytes, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.WriteAsync(bytes, cancellationToken)
+L000317 |                 await stream.WriteAsync(bytes, cancellationToken); ⟦EOL⟧
+// 해설 L318: 비동기 완료를 기다립니다: await stream.FlushAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.FlushAsync(cancellationToken)
+L000318 |                 await stream.FlushAsync(cancellationToken); ⟦EOL⟧
+// 해설 L319: 값을 대상에 대입합니다: LastSent = DescribePacket(packet) / 함수·델리게이트 또는 객체 생성자를 호출합니다: DescribePacket(packet)
+L000319 |                 LastSent = DescribePacket(packet); ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now
+L000320 |                 LastChangedAt = DateTimeOffset.Now; ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseProtocolTrace("PACKET", CVisionProtocol.FormatPacketLog("SEND", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.FormatPacketLog("SEND", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)
+L000321 |             RaiseProtocolTrace("PACKET", CVisionProtocol.FormatPacketLog("SEND", packet, $"{Data.NickName}[{Data.Number}]", ResponseLineCapacity)); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 SendPacket.
+L000322 |             } ⟦EOL⟧
+// 해설 L323: 종료 정리 구간입니다: finally
+L000323 |             finally ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다 · 소속 SendPacket.
+L000324 |             { ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: _writeLock.Release()
+L000325 |                 _writeLock.Release(); ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 SendPacket.
+L000326 |             } ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 SendPacket.
+L000327 |         } ⟦EOL⟧
+L000328 |  ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.Vision.ST_VISION_PACKET> Drilling.Common.Interface.Vision.CVisionComm.ReadPacket(System.Net.Sockets.NetworkStream, System.Threading.CancellationToken)
+L000329 |         private static async Task<ST_VISION_PACKET> ReadPacket(NetworkStream stream, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 ReadPacket.
+L000330 |         { ⟦EOL⟧
+// 해설 L331: 지역 변수를 선언합니다: var headerBytes = new byte[CVisionProtocol.HeaderSize]; / 변수의 초기값을 지정합니다: headerBytes = new byte[CVisionProtocol.HeaderSize]
+L000331 |             var headerBytes = new byte[CVisionProtocol.HeaderSize]; ⟦EOL⟧
+// 해설 L332: 비동기 완료를 기다립니다: await stream.ReadExactlyAsync(headerBytes, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.ReadExactlyAsync(headerBytes, cancellationToken)
+L000332 |             await stream.ReadExactlyAsync(headerBytes, cancellationToken); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.DecodeHeader(headerBytes) / 지역 변수를 선언합니다: var header = CVisionProtocol.DecodeHeader(headerBytes); / 변수의 초기값을 지정합니다: header = CVisionProtocol.DecodeHeader(headerBytes)
+L000333 |             var header = CVisionProtocol.DecodeHeader(headerBytes); ⟦EOL⟧
+// 해설 L334: 지역 변수를 선언합니다: var body = new byte[header.DataLength]; / 변수의 초기값을 지정합니다: body = new byte[header.DataLength]
+L000334 |             var body = new byte[header.DataLength]; ⟦EOL⟧
+// 해설 L335: 조건에 따라 분기합니다: if (body.Length > 0)
+L000335 |             if (body.Length > 0) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 ReadPacket.
+L000336 |             { ⟦EOL⟧
+// 해설 L337: 비동기 완료를 기다립니다: await stream.ReadExactlyAsync(body, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.ReadExactlyAsync(body, cancellationToken)
+L000337 |                 await stream.ReadExactlyAsync(body, cancellationToken); ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 ReadPacket.
+L000338 |             } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_PACKET(header, body) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_PACKET(header, body);
+L000340 |             return new ST_VISION_PACKET(header, body); ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 ReadPacket.
+L000341 |         } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionComm.ParseRequest(string, int, int)
+L000343 |         private static ST_VISION_PACKET ParseRequest(string function, int uniqueId, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 ParseRequest.
+L000344 |         { ⟦EOL⟧
+// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: function.Split(':', 2, StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var fields = function.Split(':', 2, StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: fields = function.Split(':', 2, StringSplitOptions.TrimEntries)
+L000345 |             var fields = function.Split(':', 2, StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeCommand(fields[0]) / 지역 변수를 선언합니다: var command = NormalizeCommand(fields[0]); / 변수의 초기값을 지정합니다: command = NormalizeCommand(fields[0])
+L000346 |             var command = NormalizeCommand(fields[0]); ⟦EOL⟧
+// 해설 L347: 조건에 따라 결과식을 선택합니다: fields.Length > 1 ? fields[1] : "" / 지역 변수를 선언합니다: var body = fields.Length > 1 ? fields[1] : ""; / 변수의 초기값을 지정합니다: body = fields.Length > 1 ? fields[1] : ""
+L000347 |             var body = fields.Length > 1 ? fields[1] : ""; ⟦EOL⟧
+// 해설 L348: 호출자에게 값 또는 제어를 반환합니다: return command switch { EN_VISION_COMMAND.MarkFindSingle => CVisionProtocol.CreateMarkFindSingle(uniqueId, ParseMarkSearch(body)), EN_VISION_COMMAND.FlyingReady => ParseFlyingReady(uniqueId, body, maxHoleCountPerLine), EN_VISION_C / 값별 결과식을 선택합니다: command switch { EN_VISION_COMMAND.MarkFindSingle => CVisionProtocol.CreateMarkFindSingle(uniqueId, ParseMarkSearch(body)), EN_VISION_COMMAND.FlyingReady => ParseFlyingReady(uniqueId, body, maxHoleCountPerLine), EN_VISION_COMMAND.
+L000348 |             return command switch ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 ParseRequest.
+L000349 |             { ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateMarkFindSingle(uniqueId, ParseMarkSearch(body)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseMarkSearch(body)
+L000350 |                 EN_VISION_COMMAND.MarkFindSingle => CVisionProtocol.CreateMarkFindSingle(uniqueId, ParseMarkSearch(body)), ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseFlyingReady(uniqueId, body, maxHoleCountPerLine)
+L000351 |                 EN_VISION_COMMAND.FlyingReady => ParseFlyingReady(uniqueId, body, maxHoleCountPerLine), ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(command, uniqueId)
+L000352 |                 EN_VISION_COMMAND.FlyingMoveDone => CVisionProtocol.CreateEmpty(command, uniqueId), ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(command, uniqueId)
+L000353 |                 EN_VISION_COMMAND.MarkFindLine => CVisionProtocol.CreateEmpty(command, uniqueId), ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(command, uniqueId)
+L000354 |                 EN_VISION_COMMAND.MarkFindSettingSingle => CVisionProtocol.CreateEmpty(command, uniqueId), ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateEmpty(command, 0)
+L000355 |                 EN_VISION_COMMAND.KeepAliveRequest => CVisionProtocol.CreateEmpty(command, 0), ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Vision command cannot be sent by Process: {(int)command}.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Vision command cannot be sent by Process: {(int)command}.")
+L000356 |                 _ => throw new InvalidOperationException($"Vision command cannot be sent by Process: {(int)command}.")}; ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 ParseRequest.
+L000357 |         } ⟦EOL⟧
+L000358 |  ⟦EOL⟧
+// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionComm.ParseFlyingReady(int, string, int)
+L000359 |         private static ST_VISION_PACKET ParseFlyingReady(int uniqueId, string body, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L360: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000360 |         { ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: body.Split(':', 2, StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var parts = body.Split(':', 2, StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: parts = body.Split(':', 2, StringSplitOptions.TrimEntries)
+L000361 |             var parts = body.Split(':', 2, StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L362: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(parts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out var inspectionType) / 조건에 따라 분기합니다: if (parts.Length == 0 || !int.TryParse(parts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out var inspectionType))
+L000362 |             if (parts.Length == 0 || !int.TryParse(parts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out var inspectionType)) ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000363 |             { ⟦EOL⟧
+// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormatException("FLYING_READY format: FLYING_READY:type:cell,doe,line,indexX,indexY,head;...") / 예외를 발생/전달합니다: throw new FormatException("FLYING_READY format: FLYING_READY:type:cell,doe,line,indexX,indexY,head;...");
+L000364 |                 throw new FormatException("FLYING_READY format: FLYING_READY:type:cell,doe,line,indexX,indexY,head;..."); ⟦EOL⟧
+// 해설 L365: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000365 |             } ⟦EOL⟧
+L000366 |  ⟦EOL⟧
+// 해설 L367: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_VISION_MARK_SEARCH>() / 지역 변수를 선언합니다: var searches = new List<ST_VISION_MARK_SEARCH>(); / 변수의 초기값을 지정합니다: searches = new List<ST_VISION_MARK_SEARCH>()
+L000367 |             var searches = new List<ST_VISION_MARK_SEARCH>(); ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parts[1]) / 조건에 따라 분기합니다: if (parts.Length > 1 && !string.IsNullOrWhiteSpace(parts[1]))
+L000368 |             if (parts.Length > 1 && !string.IsNullOrWhiteSpace(parts[1])) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000369 |             { ⟦EOL⟧
+// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var values = parts[1].Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: values = parts[1].Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+L000370 |                 var values = parts[1].Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L371: 컬렉션 요소를 순회합니다: foreach (var value in values)
+L000371 |                 foreach (var value in values) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000372 |                 { ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: searches.Add(ParseMarkSearch(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseMarkSearch(value)
+L000373 |                     searches.Add(ParseMarkSearch(value)); ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000374 |                 } ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000375 |             } ⟦EOL⟧
+L000376 |  ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.CreateFlyingReady(uniqueId, inspectionType, searches, maxHoleCountPerLine) / 호출자에게 값 또는 제어를 반환합니다: return CVisionProtocol.CreateFlyingReady(uniqueId, inspectionType, searches, maxHoleCountPerLine);
+L000377 |             return CVisionProtocol.CreateFlyingReady(uniqueId, inspectionType, searches, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 ParseFlyingReady.
+L000378 |         } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH Drilling.Common.Interface.Vision.CVisionComm.ParseMarkSearch(string)
+L000380 |         private static ST_VISION_MARK_SEARCH ParseMarkSearch(string value) ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 ParseMarkSearch.
+L000381 |         { ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Split(',', StringSplitOptions.TrimEntries) / 지역 변수를 선언합니다: var fields = value.Split(',', StringSplitOptions.TrimEntries); / 변수의 초기값을 지정합니다: fields = value.Split(',', StringSplitOptions.TrimEntries)
+L000382 |             var fields = value.Split(',', StringSplitOptions.TrimEntries); ⟦EOL⟧
+// 해설 L383: 조건에 따라 분기합니다: if (fields.Length != 6)
+L000383 |             if (fields.Length != 6) ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 ParseMarkSearch.
+L000384 |             { ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormatException("Mark Search format: cell,doe,line,indexX,indexY,head") / 예외를 발생/전달합니다: throw new FormatException("Mark Search format: cell,doe,line,indexX,indexY,head");
+L000385 |                 throw new FormatException("Mark Search format: cell,doe,line,indexX,indexY,head"); ⟦EOL⟧
+// 해설 L386: 구문 블록 경계입니다 · 소속 ParseMarkSearch.
+L000386 |             } ⟦EOL⟧
+L000387 |  ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_MARK_SEARCH(ParseInt(fields[0], "cell"), ParseInt(fields[1], "doe"), ParseInt(fields[2], "line"), ParseInt(fields[3], "indexX"), ParseInt(fields[4], "indexY"), ParseInt(fields[5], "head")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(fields[0], "cell") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(fields[1], "doe") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(fields[2], "line") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(fields[3], "indexX") / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(fields[4], "indexY") / 함수·델리게이트 또는 객체 생성자를
+L000388 |             return new ST_VISION_MARK_SEARCH(ParseInt(fields[0], "cell"), ParseInt(fields[1], "doe"), ParseInt(fields[2], "line"), ParseInt(fields[3], "indexX"), ParseInt(fields[4], "indexY"), ParseInt(fields[5], "head")); ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 ParseMarkSearch.
+L000389 |         } ⟦EOL⟧
+L000390 |  ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000391 |         private static EN_VISION_COMMAND NormalizeCommand(string value) ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 NormalizeCommand.
+L000392 |         { ⟦EOL⟧
+// 해설 L393: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().Replace("-", "_", StringComparison.Ordinal).ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().Replace("-", "_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 지역 변수를 선언합니다: var normalized = value.Trim().Replace("-", "_", StringComparison.Ordinal).ToUpperInvariant(); / 변수의 초기값을 지정합니다: normalized = value.Trim().Replace("-", "_", StringComparison.Ordinal).ToUpperInvariant()
+L000393 |             var normalized = value.Trim().Replace("-", "_", StringComparison.Ordinal).ToUpperInvariant(); ⟦EOL⟧
+// 해설 L394: 호출자에게 값 또는 제어를 반환합니다: return normalized switch { "1000" or "MARK_FIND_SINGLE" => EN_VISION_COMMAND.MarkFindSingle, "1001" or "FLYING_READY" => EN_VISION_COMMAND.FlyingReady, "1002" or "FLYING_MOVE_DONE" => EN_VISION_COMMAND.FlyingMoveDone, "1003" or "M / 값별 결과식을 선택합니다: normalized switch { "1000" or "MARK_FIND_SINGLE" => EN_VISION_COMMAND.MarkFindSingle, "1001" or "FLYING_READY" => EN_VISION_COMMAND.FlyingReady, "1002" or "FLYING_MOVE_DONE" => EN_VISION_COMMAND.FlyingMoveDone, "1003" or "MARK_FIN
+L000394 |             return normalized switch ⟦EOL⟧
+// 해설 L395: 구문 블록 경계입니다 · 소속 NormalizeCommand.
+L000395 |             { ⟦EOL⟧
+// 해설 L396: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000396 |                 "1000" or "MARK_FIND_SINGLE" => EN_VISION_COMMAND.MarkFindSingle, ⟦EOL⟧
+// 해설 L397: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000397 |                 "1001" or "FLYING_READY" => EN_VISION_COMMAND.FlyingReady, ⟦EOL⟧
+// 해설 L398: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000398 |                 "1002" or "FLYING_MOVE_DONE" => EN_VISION_COMMAND.FlyingMoveDone, ⟦EOL⟧
+// 해설 L399: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000399 |                 "1003" or "MARK_FIND_LINE" => EN_VISION_COMMAND.MarkFindLine, ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000400 |                 "1010" or "MARK_FIND_SETTING_SINGLE" => EN_VISION_COMMAND.MarkFindSettingSingle, ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)
+L000401 |                 "1900" or "KEEP_ALIVE_REQUEST" => EN_VISION_COMMAND.KeepAliveRequest, ⟦EOL⟧
+// 해설 L402: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Unsupported Vision command: {value}.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Unsupported Vision command: {value}.")
+L000402 |                 _ => throw new InvalidOperationException($"Unsupported Vision command: {value}.")}; ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 NormalizeCommand.
+L000403 |         } ⟦EOL⟧
+L000404 |  ⟦EOL⟧
+// 해설 L405: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormatException($"Vision {name} must be an integer. Value={value}.") / 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new FormatException($"Vision {name} must be an integer. Value={value}.") / 예외를 발생/전달합니다: throw new FormatException($"Vision {name} must be an integer. Value={value}.")
+L000405 |         private static int ParseInt(string value, string name) => int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) ? result : throw new FormatException($"Vision {name} must be an integer. Value={value}."); ⟦EOL⟧
+// 해설 L406: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionComm.DescribeResponse(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000406 |         private static string DescribeResponse(ST_VISION_PACKET packet, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000407 |         { ⟦EOL⟧
+// 해설 L408: 조건에 따라 분기합니다: if (packet.Header.Command == (int)EN_VISION_COMMAND.FlyingMoveDone)
+L000408 |             if (packet.Header.Command == (int)EN_VISION_COMMAND.FlyingMoveDone) ⟦EOL⟧
+// 해설 L409: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000409 |             { ⟦EOL⟧
+// 해설 L410: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000410 |                 // Count matching is the response body's Int32, independent of the ⟦EOL⟧
+// 해설 L411: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000411 |                 // header error code. Preserve NG as a reply so the sequence can retry. ⟦EOL⟧
+// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.DecodeFlyingMoveDoneResponse(packet) / 지역 변수를 선언합니다: var countMatch = CVisionProtocol.DecodeFlyingMoveDoneResponse(packet); / 변수의 초기값을 지정합니다: countMatch = CVisionProtocol.DecodeFlyingMoveDoneResponse(packet)
+L000412 |                 var countMatch = CVisionProtocol.DecodeFlyingMoveDoneResponse(packet); ⟦EOL⟧
+// 해설 L413: 조건에 따라 결과식을 선택합니다: countMatch == 0 ? "OK" : "NCK" / 호출자에게 값 또는 제어를 반환합니다: return $"{(countMatch == 0 ? "OK" : "NCK")}:1002:UID={packet.Header.UniqueId}:HOLE_COUNT_MATCH={countMatch}";
+L000413 |                 return $"{(countMatch == 0 ? "OK" : "NCK")}:1002:UID={packet.Header.UniqueId}:HOLE_COUNT_MATCH={countMatch}"; ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000414 |             } ⟦EOL⟧
+// 해설 L415: 조건에 따라 분기합니다: if (packet.Header.Command is (int)EN_VISION_COMMAND.MarkFindSingle or (int)EN_VISION_COMMAND.MarkFindSettingSingle or (int)EN_VISION_COMMAND.MarkFindManual)
+L000415 |             if (packet.Header.Command is (int)EN_VISION_COMMAND.MarkFindSingle or (int)EN_VISION_COMMAND.MarkFindSettingSingle or (int)EN_VISION_COMMAND.MarkFindManual) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000416 |             { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.DecodeSingleResult(packet) / 지역 변수를 선언합니다: var result = CVisionProtocol.DecodeSingleResult(packet); / 변수의 초기값을 지정합니다: result = CVisionProtocol.DecodeSingleResult(packet)
+L000417 |                 var result = CVisionProtocol.DecodeSingleResult(packet); ⟦EOL⟧
+// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Create(CultureInfo.InvariantCulture, $"OK:{packet.Header.Command}:UID={packet.Header.UniqueId}:RESOLUTION={result.Resolution}:RESULT={result.Mark.Result}:TARGET_X={result.Mark.TargetMarkX:R}:TARGET_Y={result.Mark.… / 호출자에게 값 또는 제어를 반환합니다: return string.Create(CultureInfo.InvariantCulture, $"OK:{packet.Header.Command}:UID={packet.Header.UniqueId}:RESOLUTION={result.Resolution}:RESULT={result.Mark.Result}:TARGET_X={result.Mark.TargetMarkX:R}:TARGET_Y={result.Mark.Tar
+L000418 |                 return string.Create(CultureInfo.InvariantCulture, $"OK:{packet.Header.Command}:UID={packet.Header.UniqueId}:RESOLUTION={result.Resolution}:RESULT={result.Mark.Result}:TARGET_X={result.Mark.TargetMarkX:R}:TARGET_Y={result.Mark.TargetMarkY:R}:HOLE_X={result.Mark.HoleX:R}:HOLE_Y={result.Mark.HoleY:R}"); ⟦EOL⟧
+// 해설 L419: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000419 |             } ⟦EOL⟧
+L000420 |  ⟦EOL⟧
+// 해설 L421: 조건에 따라 분기합니다: if (packet.Header.Command == (int)EN_VISION_COMMAND.MarkFindLine)
+L000421 |             if (packet.Header.Command == (int)EN_VISION_COMMAND.MarkFindLine) ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000422 |             { ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: CVisionProtocol.DecodeLineResult(packet, maxHoleCountPerLine) / 지역 변수를 선언합니다: var result = CVisionProtocol.DecodeLineResult(packet, maxHoleCountPerLine); / 변수의 초기값을 지정합니다: result = CVisionProtocol.DecodeLineResult(packet, maxHoleCountPerLine)
+L000423 |                 var result = CVisionProtocol.DecodeLineResult(packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var builder = new StringBuilder(); / 변수의 초기값을 지정합니다: builder = new StringBuilder()
+L000424 |                 var builder = new StringBuilder(); ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("OK:").Append(packet.Header.Command).Append(":UID=").Append(packet.Header.UniqueId).Append(":RESOLUTION=").Append(result.Resolution).Append(":COUNT=").Append(result.FindHoleCount).Append(":MARKS=") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("OK:").Append(packet.Header.Command).Append(":UID=").Append(packet.Header.UniqueId).Append(":RESOLUTION=").Append(result.Resolution).Append(":COUNT=").Append(result.FindHoleCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("OK:").Append(packet.Header.Comm
+L000425 |                 builder.Append("OK:").Append(packet.Header.Command).Append(":UID=").Append(packet.Header.UniqueId).Append(":RESOLUTION=").Append(result.Resolution).Append(":COUNT=").Append(result.FindHoleCount).Append(":MARKS="); ⟦EOL⟧
+// 해설 L426: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < result.Marks.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000426 |                 for (var index = 0; index < result.Marks.Count; index++) ⟦EOL⟧
+// 해설 L427: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000427 |                 { ⟦EOL⟧
+// 해설 L428: 조건에 따라 분기합니다: if (index > 0)
+L000428 |                     if (index > 0) ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000429 |                     { ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(';')
+L000430 |                         builder.Append(';'); ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000431 |                     } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 지역 변수를 선언합니다: var mark = result.Marks[index]; / 변수의 초기값을 지정합니다: mark = result.Marks[index]
+L000433 |                     var mark = result.Marks[index]; ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(mark.Result).Append(',').Append(mark.TargetMarkX.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.TargetMarkY.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.HoleX.… / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(mark.Result).Append(',').Append(mark.TargetMarkX.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.TargetMarkY.ToString("R", CultureInfo.InvariantCulture)).Append(',') / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(mark.Result).App
+L000434 |                     builder.Append(mark.Result).Append(',').Append(mark.TargetMarkX.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.TargetMarkY.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.HoleX.ToString("R", CultureInfo.InvariantCulture)).Append(',').Append(mark.HoleY.ToString("R", CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000435 |                 } ⟦EOL⟧
+L000436 |  ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString() / 호출자에게 값 또는 제어를 반환합니다: return builder.ToString();
+L000437 |                 return builder.ToString(); ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000438 |             } ⟦EOL⟧
+L000439 |  ⟦EOL⟧
+// 해설 L440: 호출자에게 값 또는 제어를 반환합니다: return $"OK:{packet.Header.Command}:UID={packet.Header.UniqueId}";
+L000440 |             return $"OK:{packet.Header.Command}:UID={packet.Header.UniqueId}"; ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 DescribeResponse.
+L000441 |         } ⟦EOL⟧
+L000442 |  ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionComm.DescribePacket(Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000443 |         private static string DescribePacket(ST_VISION_PACKET packet) => $"CMD={packet.Header.Command},LEN={packet.Header.DataLength},UID={packet.Header.UniqueId},ERR={packet.Header.ErrorCode}"; ⟦EOL⟧
+// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionComm.NextUniqueId()
+L000444 |         private int NextUniqueId() ⟦EOL⟧
+// 해설 L445: 구문 블록 경계입니다 · 소속 NextUniqueId.
+L000445 |         { ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _uniqueId) / 지역 변수를 선언합니다: var value = Interlocked.Increment(ref _uniqueId); / 변수의 초기값을 지정합니다: value = Interlocked.Increment(ref _uniqueId)
+L000446 |             var value = Interlocked.Increment(ref _uniqueId); ⟦EOL⟧
+// 해설 L447: 조건에 따라 분기합니다: if (value > 0)
+L000447 |             if (value > 0) ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 NextUniqueId.
+L000448 |             { ⟦EOL⟧
+// 해설 L449: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000449 |                 return value; ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 NextUniqueId.
+L000450 |             } ⟦EOL⟧
+L000451 |  ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _uniqueId, 1)
+L000452 |             Interlocked.Exchange(ref _uniqueId, 1); ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return 1;
+L000453 |             return 1; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 NextUniqueId.
+L000454 |         } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionComm.RaiseProtocolTrace(string, string)
+L000456 |         private void RaiseProtocolTrace(string direction, string message) ⟦EOL⟧
+// 해설 L457: 구문 블록 경계입니다 · 소속 RaiseProtocolTrace.
+L000457 |         { ⟦EOL⟧
+// 해설 L458: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(new ST_COMM_PROTOCOL_TRACE(DateTimeOffset.Now, direction, message)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_COMM_PROTOCOL_TRACE(DateTimeOffset.Now, direction, message)
+L000458 |             ProtocolTrace?.Invoke(new ST_COMM_PROTOCOL_TRACE(DateTimeOffset.Now, direction, message)); ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 RaiseProtocolTrace.
+L000459 |         } ⟦EOL⟧
+L000460 |  ⟦EOL⟧
+// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.Vision.CVisionComm.IsServerListening()
+L000461 |         private bool IsServerListening() ⟦EOL⟧
+// 해설 L462: 구문 블록 경계입니다 · 소속 IsServerListening.
+L000462 |         { ⟦EOL⟧
+// 해설 L463: 호출자에게 값 또는 제어를 반환합니다: return _listener is not null && _serverCancellation is not null && !_serverCancellation.IsCancellationRequested;
+L000463 |             return _listener is not null && _serverCancellation is not null && !_serverCancellation.IsCancellationRequested; ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 IsServerListening.
+L000464 |         } ⟦EOL⟧
+L000465 |  ⟦EOL⟧
+// 해설 L466: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.StopServer()
+L000466 |         private async Task StopServer() ⟦EOL⟧
+// 해설 L467: 구문 블록 경계입니다 · 소속 StopServer.
+L000467 |         { ⟦EOL⟧
+// 해설 L468: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _flyingLineCapacity, 0)
+L000468 |             Volatile.Write(ref _flyingLineCapacity, 0); ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()
+L000469 |             _serverCancellation?.Cancel(); ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop()
+L000470 |             _listener?.Stop(); ⟦EOL⟧
+// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000471 |             _client?.Dispose(); ⟦EOL⟧
+// 해설 L472: 조건에 따라 분기합니다: if (_acceptTask is not null)
+L000472 |             if (_acceptTask is not null) ⟦EOL⟧
+// 해설 L473: 구문 블록 경계입니다 · 소속 StopServer.
+L000473 |             { ⟦EOL⟧
+// 해설 L474: 비동기 완료를 기다립니다: await IgnoreCancellation(_acceptTask) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IgnoreCancellation(_acceptTask)
+L000474 |                 await IgnoreCancellation(_acceptTask); ⟦EOL⟧
+// 해설 L475: 구문 블록 경계입니다 · 소속 StopServer.
+L000475 |             } ⟦EOL⟧
+L000476 |  ⟦EOL⟧
+// 해설 L477: 조건에 따라 분기합니다: if (_receiveTask is not null)
+L000477 |             if (_receiveTask is not null) ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 StopServer.
+L000478 |             { ⟦EOL⟧
+// 해설 L479: 비동기 완료를 기다립니다: await IgnoreCancellation(_receiveTask) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IgnoreCancellation(_receiveTask)
+L000479 |                 await IgnoreCancellation(_receiveTask); ⟦EOL⟧
+// 해설 L480: 구문 블록 경계입니다 · 소속 StopServer.
+L000480 |             } ⟦EOL⟧
+L000481 |  ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000482 |             _serverCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L483: 값을 대상에 대입합니다: _serverCancellation = null
+L000483 |             _serverCancellation = null; ⟦EOL⟧
+// 해설 L484: 값을 대상에 대입합니다: _listener = null
+L000484 |             _listener = null; ⟦EOL⟧
+// 해설 L485: 값을 대상에 대입합니다: _client = null
+L000485 |             _client = null; ⟦EOL⟧
+// 해설 L486: 값을 대상에 대입합니다: _stream = null
+L000486 |             _stream = null; ⟦EOL⟧
+// 해설 L487: 값을 대상에 대입합니다: _acceptTask = null
+L000487 |             _acceptTask = null; ⟦EOL⟧
+// 해설 L488: 값을 대상에 대입합니다: _receiveTask = null
+L000488 |             _receiveTask = null; ⟦EOL⟧
+// 해설 L489: 조건을 먼저 확인하며 반복합니다: while (_clientReady.CurrentCount > 0)
+L000489 |             while (_clientReady.CurrentCount > 0) ⟦EOL⟧
+// 해설 L490: 구문 블록 경계입니다 · 소속 StopServer.
+L000490 |             { ⟦EOL⟧
+// 해설 L491: 함수·델리게이트 또는 객체 생성자를 호출합니다: _clientReady.Wait(0)
+L000491 |                 _clientReady.Wait(0); ⟦EOL⟧
+// 해설 L492: 구문 블록 경계입니다 · 소속 StopServer.
+L000492 |             } ⟦EOL⟧
+L000493 |  ⟦EOL⟧
+// 해설 L494: 함수·델리게이트 또는 객체 생성자를 호출합니다: FailPending(new IOException("Vision server stopped.")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Vision server stopped.")
+L000494 |             FailPending(new IOException("Vision server stopped.")); ⟦EOL⟧
+// 해설 L495: 구문 블록 경계입니다 · 소속 StopServer.
+L000495 |         } ⟦EOL⟧
+L000496 |  ⟦EOL⟧
+// 해설 L497: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionComm.FailPending(System.Exception)
+L000497 |         private void FailPending(Exception exception) ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 FailPending.
+L000498 |         { ⟦EOL⟧
+// 해설 L499: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pending.ToArray() / 컬렉션 요소를 순회합니다: foreach (var item in _pending.ToArray())
+L000499 |             foreach (var item in _pending.ToArray()) ⟦EOL⟧
+// 해설 L500: 구문 블록 경계입니다 · 소속 FailPending.
+L000500 |             { ⟦EOL⟧
+// 해설 L501: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pending.TryRemove(item.Key, out var completion) / 조건에 따라 분기합니다: if (_pending.TryRemove(item.Key, out var completion))
+L000501 |                 if (_pending.TryRemove(item.Key, out var completion)) ⟦EOL⟧
+// 해설 L502: 구문 블록 경계입니다 · 소속 FailPending.
+L000502 |                 { ⟦EOL⟧
+// 해설 L503: 함수·델리게이트 또는 객체 생성자를 호출합니다: completion.TrySetException(exception)
+L000503 |                     completion.TrySetException(exception); ⟦EOL⟧
+// 해설 L504: 구문 블록 경계입니다 · 소속 FailPending.
+L000504 |                 } ⟦EOL⟧
+// 해설 L505: 구문 블록 경계입니다 · 소속 FailPending.
+L000505 |             } ⟦EOL⟧
+// 해설 L506: 구문 블록 경계입니다 · 소속 FailPending.
+L000506 |         } ⟦EOL⟧
+L000507 |  ⟦EOL⟧
+// 해설 L508: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.IgnoreCancellation(System.Threading.Tasks.Task)
+L000508 |         private static async Task IgnoreCancellation(Task task) ⟦EOL⟧
+// 해설 L509: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000509 |         { ⟦EOL⟧
+// 해설 L510: 예외 처리 범위입니다: try
+L000510 |             try ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000511 |             { ⟦EOL⟧
+// 해설 L512: 비동기 완료를 기다립니다: await task
+L000512 |                 await task; ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000513 |             } ⟦EOL⟧
+// 해설 L514: 지정 예외를 처리합니다: catch (Exception ex) when (ex is OperationCanceledException or ObjectDisposedException or SocketException or IOException)
+L000514 |             catch (Exception ex)when (ex is OperationCanceledException or ObjectDisposedException or SocketException or IOException) ⟦EOL⟧
+// 해설 L515: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000515 |             { ⟦EOL⟧
+// 해설 L516: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000516 |             } ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 IgnoreCancellation.
+L000517 |         } ⟦EOL⟧
+L000518 |  ⟦EOL⟧
+// 해설 L519: 선언·서명/매개변수·접근 조건입니다 · System.Net.IPAddress Drilling.Common.Interface.Vision.CVisionComm.ResolveBindAddress(string)
+L000519 |         private static IPAddress ResolveBindAddress(string value) ⟦EOL⟧
+// 해설 L520: 구문 블록 경계입니다 · 소속 ResolveBindAddress.
+L000520 |         { ⟦EOL⟧
+// 해설 L521: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value) || value == "*")
+L000521 |             if (string.IsNullOrWhiteSpace(value) || value == "*") ⟦EOL⟧
+// 해설 L522: 구문 블록 경계입니다 · 소속 ResolveBindAddress.
+L000522 |             { ⟦EOL⟧
+// 해설 L523: 호출자에게 값 또는 제어를 반환합니다: return IPAddress.Any;
+L000523 |                 return IPAddress.Any; ⟦EOL⟧
+// 해설 L524: 구문 블록 경계입니다 · 소속 ResolveBindAddress.
+L000524 |             } ⟦EOL⟧
+L000525 |  ⟦EOL⟧
+// 해설 L526: 함수·델리게이트 또는 객체 생성자를 호출합니다: IPAddress.TryParse(value, out var address) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException($"Vision server local address is invalid: {value}") / 조건에 따라 결과식을 선택합니다: IPAddress.TryParse(value, out var address) ? address : throw new ArgumentException($"Vision server local address is invalid: {value}") / 호출자에게 값 또는 제어를 반환합니다: return IPAddress.TryParse(value, out var address) ? address : throw new ArgumentException($"Vision server local address is invalid: {value}"); / 예외를 발생/전달합니다: throw new ArgumentException(
+L000526 |             return IPAddress.TryParse(value, out var address) ? address : throw new ArgumentException($"Vision server local address is invalid: {value}"); ⟦EOL⟧
+// 해설 L527: 구문 블록 경계입니다 · 소속 ResolveBindAddress.
+L000527 |         } ⟦EOL⟧
+// 해설 L528: 구문 블록 경계입니다.
+L000528 |     } ⟦EOL⟧
+L000529 |  ⟦EOL⟧
+// 해설 L530: 타입의 구조/상속 선언입니다: public enum EN_VISION_COMMAND
+L000530 |     public enum EN_VISION_COMMAND ⟦EOL⟧
+// 해설 L531: 구문 블록 경계입니다.
+L000531 |     { ⟦EOL⟧
+// 해설 L532: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindSingle
+L000532 |         MarkFindSingle = 1000, ⟦EOL⟧
+// 해설 L533: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.FlyingReady
+L000533 |         FlyingReady = 1001, ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.FlyingMoveDone
+L000534 |         FlyingMoveDone = 1002, ⟦EOL⟧
+// 해설 L535: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindLine
+L000535 |         MarkFindLine = 1003, ⟦EOL⟧
+// 해설 L536: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindSettingSingle
+L000536 |         MarkFindSettingSingle = 1010, ⟦EOL⟧
+// 해설 L537: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindManual
+L000537 |         MarkFindManual = 1020, ⟦EOL⟧
+// 해설 L538: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.KeepAliveRequest
+L000538 |         KeepAliveRequest = 1900, ⟦EOL⟧
+// 해설 L539: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.EN_VISION_COMMAND.KeepAlive
+L000539 |         KeepAlive = 1999 ⟦EOL⟧
+// 해설 L540: 구문 블록 경계입니다.
+L000540 |     } ⟦EOL⟧
+L000541 |  ⟦EOL⟧
+// 해설 L542: 타입의 구조/상속 선언입니다: public readonly record struct ST_VISION_PACKET_HEADER(int Command, int DataLength, int UniqueId, int ErrorCode);
+L000542 |     public readonly record struct ST_VISION_PACKET_HEADER(int Command, int DataLength, int UniqueId, int ErrorCode); ⟦EOL⟧
+// 해설 L543: 타입의 구조/상속 선언입니다: public readonly record struct ST_VISION_MARK_SEARCH(int Cell, int Doe, int Line, int IndexX, int IndexY, int Head);
+L000543 |     public readonly record struct ST_VISION_MARK_SEARCH(int Cell, int Doe, int Line, int IndexX, int IndexY, int Head); ⟦EOL⟧
+// 해설 L544: 타입의 구조/상속 선언입니다: public readonly record struct ST_VISION_MARK_FIND(int Result, double TargetMarkX, double TargetMarkY, double HoleX, double HoleY);
+L000544 |     public readonly record struct ST_VISION_MARK_FIND(int Result, double TargetMarkX, double TargetMarkY, double HoleX, double HoleY); ⟦EOL⟧
+// 해설 L545: 타입의 구조/상속 선언입니다: public sealed record ST_VISION_PACKET(ST_VISION_PACKET_HEADER Header, byte[] Body);
+L000545 |     public sealed record ST_VISION_PACKET(ST_VISION_PACKET_HEADER Header, byte[] Body); ⟦EOL⟧
+// 해설 L546: 타입의 구조/상속 선언입니다: public sealed record ST_VISION_SINGLE_RESULT(int Resolution, ST_VISION_MARK_FIND Mark);
+L000546 |     public sealed record ST_VISION_SINGLE_RESULT(int Resolution, ST_VISION_MARK_FIND Mark); ⟦EOL⟧
+// 해설 L547: 타입의 구조/상속 선언입니다: public sealed record ST_VISION_LINE_RESULT(int Resolution, int FindHoleCount, IReadOnlyList<ST_VISION_MARK_FIND> Marks);
+L000547 |     public sealed record ST_VISION_LINE_RESULT(int Resolution, int FindHoleCount, IReadOnlyList<ST_VISION_MARK_FIND> Marks); ⟦EOL⟧
+// 해설 L548: 타입의 구조/상속 선언입니다: public sealed record ST_VISION_FLYING_READY(int InspectionType, IReadOnlyList<ST_VISION_MARK_SEARCH> Searches);
+L000548 |     public sealed record ST_VISION_FLYING_READY(int InspectionType, IReadOnlyList<ST_VISION_MARK_SEARCH> Searches); ⟦EOL⟧
+// 해설 L549: 타입의 구조/상속 선언입니다: public sealed class CVisionLineCountExceededException(int actualCount, int maximumCount) : IOException($"Vision 수신 HoleCount({actualCount})가 Setting-Review MaxHoleCountPerLine({maximumCount})을 초과했습니다.
+L000549 |     public sealed class CVisionLineCountExceededException(int actualCount, int maximumCount) : IOException($"Vision 수신 HoleCount({actualCount})가 Setting-Review MaxHoleCountPerLine({maximumCount})을 초과했습니다.") ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다.
+L000550 |     { ⟦EOL⟧
+// 해설 L551: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.ActualCount
+L000551 |         public int ActualCount { get; } = actualCount; ⟦EOL⟧
+// 해설 L552: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.MaximumCount
+L000552 |         public int MaximumCount { get; } = maximumCount; ⟦EOL⟧
+// 해설 L553: 구문 블록 경계입니다.
+L000553 |     } ⟦EOL⟧
+// 해설 L554: 타입의 구조/상속 선언입니다: public static class CVisionProtocol
+L000554 |     public static class CVisionProtocol ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다.
+L000555 |     { ⟦EOL⟧
+// 해설 L556: 변수의 초기값을 지정합니다: PacketLogSeparator = "----------------------------------------------------------------------"
+L000556 |         private const string PacketLogSeparator = "----------------------------------------------------------------------"; ⟦EOL⟧
+// 해설 L557: 변수의 초기값을 지정합니다: PacketLogBodyIndent = " "
+L000557 |         private const string PacketLogBodyIndent = "       "; ⟦EOL⟧
+// 해설 L558: 변수의 초기값을 지정합니다: HeaderSize = 16
+L000558 |         public const int HeaderSize = 16; ⟦EOL⟧
+// 해설 L559: 변수의 초기값을 지정합니다: MarkSearchSize = 24
+L000559 |         public const int MarkSearchSize = 24; ⟦EOL⟧
+// 해설 L560: 변수의 초기값을 지정합니다: MarkFindPackedSize = 36
+L000560 |         public const int MarkFindPackedSize = 36; ⟦EOL⟧
+// 해설 L561: 변수의 초기값을 지정합니다: SingleResultBodySize = 40
+L000561 |         public const int SingleResultBodySize = 40; ⟦EOL⟧
+// 해설 L562: 변수의 초기값을 지정합니다: MaximumBodySize = 1024 * 1024
+L000562 |         public const int MaximumBodySize = 1024 * 1024; ⟦EOL⟧
+// 해설 L563: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000563 |         // Frames contain a configured fixed number of slots. Count indicates only ⟦EOL⟧
+// 해설 L564: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000564 |         // valid entries; the body byte limit still bounds the configurable capacity. ⟦EOL⟧
+// 해설 L565: 변수의 초기값을 지정합니다: MaximumMarkCount = (MaximumBodySize - 8) / MarkFindPackedSize
+L000565 |         public const int MaximumMarkCount = (MaximumBodySize - 8) / MarkFindPackedSize; ⟦EOL⟧
+// 해설 L566: 변수의 초기값을 지정합니다: DefaultMaxHoleCountPerLine = 300
+L000566 |         public const int DefaultMaxHoleCountPerLine = 300; ⟦EOL⟧
+// 해설 L567: 변수의 초기값을 지정합니다: MaxHoleCountPerLineSettingKey = "MaxHoleCountPerLine"
+L000567 |         public const string MaxHoleCountPerLineSettingKey = "MaxHoleCountPerLine"; ⟦EOL⟧
+// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionProtocol.ValidateLineCapacity(int)
+L000568 |         public static int ValidateLineCapacity(int capacity) ⟦EOL⟧
+// 해설 L569: 구문 블록 경계입니다 · 소속 ValidateLineCapacity.
+L000569 |         { ⟦EOL⟧
+// 해설 L570: 조건에 따라 분기합니다: if (capacity < 1 || capacity > MaximumMarkCount)
+L000570 |             if (capacity < 1 || capacity > MaximumMarkCount) ⟦EOL⟧
+// 해설 L571: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(capacity), $"MaxHoleCountPerLine은 1~{MaximumMarkCount} 범위의 정수여야 합니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(capacity) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(capacity), $"MaxHoleCountPerLine은 1~{MaximumMarkCount} 범위의 정수여야 합니다.");
+L000571 |                 throw new ArgumentOutOfRangeException(nameof(capacity), $"MaxHoleCountPerLine은 1~{MaximumMarkCount} 범위의 정수여야 합니다."); ⟦EOL⟧
+// 해설 L572: 호출자에게 값 또는 제어를 반환합니다: return capacity;
+L000572 |             return capacity; ⟦EOL⟧
+// 해설 L573: 구문 블록 경계입니다 · 소속 ValidateLineCapacity.
+L000573 |         } ⟦EOL⟧
+// 해설 L574: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create(command, uniqueId, [], errorCode)
+L000574 |         public static ST_VISION_PACKET CreateEmpty(EN_VISION_COMMAND command, int uniqueId, int errorCode = 0) => Create(command, uniqueId, [], errorCode); ⟦EOL⟧
+// 해설 L575: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create(EN_VISION_COMMAND.MarkFindSingle, uniqueId, EncodeMarkSearch(search)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EncodeMarkSearch(search)
+L000575 |         public static ST_VISION_PACKET CreateMarkFindSingle(int uniqueId, ST_VISION_MARK_SEARCH search) => Create(EN_VISION_COMMAND.MarkFindSingle, uniqueId, EncodeMarkSearch(search)); ⟦EOL⟧
+// 해설 L576: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateFlyingReady(int, int, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.Vision.ST_VISION
+L000576 |         public static ST_VISION_PACKET CreateFlyingReady(int uniqueId, int inspectionType, IReadOnlyList<ST_VISION_MARK_SEARCH> searches, int maxHoleCountPerLine = DefaultMaxHoleCountPerLine) ⟦EOL⟧
+// 해설 L577: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000577 |         { ⟦EOL⟧
+// 해설 L578: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(searches)
+L000578 |             ArgumentNullException.ThrowIfNull(searches); ⟦EOL⟧
+// 해설 L579: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateLineCapacity(maxHoleCountPerLine)
+L000579 |             ValidateLineCapacity(maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L580: 조건에 따라 분기합니다: if (searches.Count > maxHoleCountPerLine)
+L000580 |             if (searches.Count > maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L581: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000581 |             { ⟦EOL⟧
+// 해설 L582: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(searches), $"Flying Ready의 검사 개수 {searches.Count}가 MaxHoleCountPerLine({maxHoleCountPerLine})을 초과했습니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(searches) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(searches), $"Flying Ready의 검사 개수 {searches.Count}가 MaxHoleCountPerLine({maxHoleCountPerLine})을 초과했습니다.");
+L000582 |                 throw new ArgumentOutOfRangeException(nameof(searches), $"Flying Ready의 검사 개수 {searches.Count}가 MaxHoleCountPerLine({maxHoleCountPerLine})을 초과했습니다."); ⟦EOL⟧
+// 해설 L583: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000583 |             } ⟦EOL⟧
+L000584 |  ⟦EOL⟧
+// 해설 L585: 지역 변수를 선언합니다: var body = new byte[8 + (maxHoleCountPerLine * MarkSearchSize)]; / 변수의 초기값을 지정합니다: body = new byte[8 + (maxHoleCountPerLine * MarkSearchSize)]
+L000585 |             var body = new byte[8 + (maxHoleCountPerLine * MarkSearchSize)]; ⟦EOL⟧
+// 해설 L586: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Fill(body, (byte)0xFF)
+L000586 |             Array.Fill(body, (byte)0xFF); // Every unused Int32 field is -1. ⟦EOL⟧
+// 해설 L587: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(body, 0, inspectionType)
+L000587 |             WriteInt32(body, 0, inspectionType); ⟦EOL⟧
+// 해설 L588: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(body, 4, searches.Count)
+L000588 |             WriteInt32(body, 4, searches.Count); ⟦EOL⟧
+// 해설 L589: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < searches.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000589 |             for (var index = 0; index < searches.Count; index++) ⟦EOL⟧
+// 해설 L590: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000590 |             { ⟦EOL⟧
+// 해설 L591: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMarkSearch(body, 8 + (index * MarkSearchSize), searches[index])
+L000591 |                 WriteMarkSearch(body, 8 + (index * MarkSearchSize), searches[index]); ⟦EOL⟧
+// 해설 L592: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000592 |             } ⟦EOL⟧
+L000593 |  ⟦EOL⟧
+// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create(EN_VISION_COMMAND.FlyingReady, uniqueId, body) / 호출자에게 값 또는 제어를 반환합니다: return Create(EN_VISION_COMMAND.FlyingReady, uniqueId, body);
+L000594 |             return Create(EN_VISION_COMMAND.FlyingReady, uniqueId, body); ⟦EOL⟧
+// 해설 L595: 구문 블록 경계입니다 · 소속 CreateFlyingReady.
+L000595 |         } ⟦EOL⟧
+L000596 |  ⟦EOL⟧
+// 해설 L597: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateSingleResult(Drilling.Common.Interface.Vision.EN_VISION_COMMAND, int, int, Drilling.Common.Interface.Visi
+L000597 |         public static ST_VISION_PACKET CreateSingleResult(EN_VISION_COMMAND command, int uniqueId, int resolution, ST_VISION_MARK_FIND mark, int errorCode = 0) ⟦EOL⟧
+// 해설 L598: 구문 블록 경계입니다 · 소속 CreateSingleResult.
+L000598 |         { ⟦EOL⟧
+// 해설 L599: 조건에 따라 분기합니다: if (command is not EN_VISION_COMMAND.MarkFindSingle and not EN_VISION_COMMAND.MarkFindSettingSingle and not EN_VISION_COMMAND.MarkFindManual)
+L000599 |             if (command is not EN_VISION_COMMAND.MarkFindSingle and not EN_VISION_COMMAND.MarkFindSettingSingle and not EN_VISION_COMMAND.MarkFindManual) ⟦EOL⟧
+// 해설 L600: 구문 블록 경계입니다 · 소속 CreateSingleResult.
+L000600 |             { ⟦EOL⟧
+// 해설 L601: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(command), command, "Vision single result supports commands 1000, 1010 and 1020.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(command) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(command), command, "Vision single result supports commands 1000, 1010 and 1020.");
+L000601 |                 throw new ArgumentOutOfRangeException(nameof(command), command, "Vision single result supports commands 1000, 1010 and 1020."); ⟦EOL⟧
+// 해설 L602: 구문 블록 경계입니다 · 소속 CreateSingleResult.
+L000602 |             } ⟦EOL⟧
+L000603 |  ⟦EOL⟧
+// 해설 L604: 지역 변수를 선언합니다: var body = new byte[SingleResultBodySize]; / 변수의 초기값을 지정합니다: body = new byte[SingleResultBodySize]
+L000604 |             var body = new byte[SingleResultBodySize]; ⟦EOL⟧
+// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(body, 0, resolution)
+L000605 |             WriteInt32(body, 0, resolution); ⟦EOL⟧
+// 해설 L606: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMarkFind(body, 4, mark)
+L000606 |             WriteMarkFind(body, 4, mark); ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create(command, uniqueId, body, errorCode) / 호출자에게 값 또는 제어를 반환합니다: return Create(command, uniqueId, body, errorCode);
+L000607 |             return Create(command, uniqueId, body, errorCode); ⟦EOL⟧
+// 해설 L608: 구문 블록 경계입니다 · 소속 CreateSingleResult.
+L000608 |         } ⟦EOL⟧
+L000609 |  ⟦EOL⟧
+// 해설 L610: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateLineResult(int, int, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.Vision.ST_VISION_
+L000610 |         public static ST_VISION_PACKET CreateLineResult(int uniqueId, int resolution, IReadOnlyList<ST_VISION_MARK_FIND> marks, int errorCode = 0, int maxHoleCountPerLine = DefaultMaxHoleCountPerLine) ⟦EOL⟧
+// 해설 L611: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000611 |         { ⟦EOL⟧
+// 해설 L612: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(marks)
+L000612 |             ArgumentNullException.ThrowIfNull(marks); ⟦EOL⟧
+// 해설 L613: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateLineCapacity(maxHoleCountPerLine)
+L000613 |             ValidateLineCapacity(maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L614: 조건에 따라 분기합니다: if (marks.Count > maxHoleCountPerLine)
+L000614 |             if (marks.Count > maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L615: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000615 |             { ⟦EOL⟧
+// 해설 L616: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(marks), $"Vision line result supports up to {maxHoleCountPerLine} marks.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(marks) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(marks), $"Vision line result supports up to {maxHoleCountPerLine} marks.");
+L000616 |                 throw new ArgumentOutOfRangeException(nameof(marks), $"Vision line result supports up to {maxHoleCountPerLine} marks."); ⟦EOL⟧
+// 해설 L617: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000617 |             } ⟦EOL⟧
+L000618 |  ⟦EOL⟧
+// 해설 L619: 지역 변수를 선언합니다: var body = new byte[8 + (maxHoleCountPerLine * MarkFindPackedSize)]; / 변수의 초기값을 지정합니다: body = new byte[8 + (maxHoleCountPerLine * MarkFindPackedSize)]
+L000619 |             var body = new byte[8 + (maxHoleCountPerLine * MarkFindPackedSize)]; ⟦EOL⟧
+// 해설 L620: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(body, 0, resolution)
+L000620 |             WriteInt32(body, 0, resolution); ⟦EOL⟧
+// 해설 L621: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(body, 4, marks.Count)
+L000621 |             WriteInt32(body, 4, marks.Count); ⟦EOL⟧
+// 해설 L622: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < marks.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000622 |             for (var index = 0; index < marks.Count; index++) ⟦EOL⟧
+// 해설 L623: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000623 |             { ⟦EOL⟧
+// 해설 L624: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMarkFind(body, 8 + (index * MarkFindPackedSize), marks[index])
+L000624 |                 WriteMarkFind(body, 8 + (index * MarkFindPackedSize), marks[index]); ⟦EOL⟧
+// 해설 L625: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000625 |             } ⟦EOL⟧
+// 해설 L626: 초기화·조건·증감이 있는 반복입니다: for (var index = marks.Count; index < maxHoleCountPerLine; index++) / 변수의 초기값을 지정합니다: index = marks.Count
+L000626 |             for (var index = marks.Count; index < maxHoleCountPerLine; index++) ⟦EOL⟧
+// 해설 L627: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMarkFind(body, 8 + (index * MarkFindPackedSize), new(-1, -1, -1, -1, -1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(-1, -1, -1, -1, -1)
+L000627 |                 WriteMarkFind(body, 8 + (index * MarkFindPackedSize), new(-1, -1, -1, -1, -1)); ⟦EOL⟧
+L000628 |  ⟦EOL⟧
+// 해설 L629: 함수·델리게이트 또는 객체 생성자를 호출합니다: Create(EN_VISION_COMMAND.MarkFindLine, uniqueId, body, errorCode) / 호출자에게 값 또는 제어를 반환합니다: return Create(EN_VISION_COMMAND.MarkFindLine, uniqueId, body, errorCode);
+L000629 |             return Create(EN_VISION_COMMAND.MarkFindLine, uniqueId, body, errorCode); ⟦EOL⟧
+// 해설 L630: 구문 블록 경계입니다 · 소속 CreateLineResult.
+L000630 |         } ⟦EOL⟧
+L000631 |  ⟦EOL⟧
+// 해설 L632: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.Create(Drilling.Common.Interface.Vision.EN_VISION_COMMAND, int, byte[], int)
+L000632 |         public static ST_VISION_PACKET Create(EN_VISION_COMMAND command, int uniqueId, byte[] body, int errorCode = 0) ⟦EOL⟧
+// 해설 L633: 구문 블록 경계입니다 · 소속 Create.
+L000633 |         { ⟦EOL⟧
+// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(body)
+L000634 |             ArgumentNullException.ThrowIfNull(body); ⟦EOL⟧
+// 해설 L635: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBodyLength(body.Length)
+L000635 |             ValidateBodyLength(body.Length); ⟦EOL⟧
+// 해설 L636: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_PACKET(new ST_VISION_PACKET_HEADER((int)command, body.Length, uniqueId, errorCode), body) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_PACKET_HEADER((int)command, body.Length, uniqueId, errorCode) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_PACKET(new ST_VISION_PACKET_HEADER((int)command, body.Length, uniqueId, errorCode), body);
+L000636 |             return new ST_VISION_PACKET(new ST_VISION_PACKET_HEADER((int)command, body.Length, uniqueId, errorCode), body); ⟦EOL⟧
+// 해설 L637: 구문 블록 경계입니다 · 소속 Create.
+L000637 |         } ⟦EOL⟧
+L000638 |  ⟦EOL⟧
+// 해설 L639: 선언·서명/매개변수·접근 조건입니다 · byte[] Drilling.Common.Interface.Vision.CVisionProtocol.Encode(Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000639 |         public static byte[] Encode(ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L640: 구문 블록 경계입니다 · 소속 Encode.
+L000640 |         { ⟦EOL⟧
+// 해설 L641: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000641 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L642: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet.Body)
+L000642 |             ArgumentNullException.ThrowIfNull(packet.Body); ⟦EOL⟧
+// 해설 L643: 조건에 따라 분기합니다: if (packet.Header.DataLength != packet.Body.Length)
+L000643 |             if (packet.Header.DataLength != packet.Body.Length) ⟦EOL⟧
+// 해설 L644: 구문 블록 경계입니다 · 소속 Encode.
+L000644 |             { ⟦EOL⟧
+// 해설 L645: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision packet body length mismatch. Header={packet.Header.DataLength}, Body={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision packet body length mismatch. Header={packet.Header.DataLength}, Body={packet.Body.Length}.");
+L000645 |                 throw new InvalidDataException($"Vision packet body length mismatch. Header={packet.Header.DataLength}, Body={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L646: 구문 블록 경계입니다 · 소속 Encode.
+L000646 |             } ⟦EOL⟧
+L000647 |  ⟦EOL⟧
+// 해설 L648: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBodyLength(packet.Body.Length)
+L000648 |             ValidateBodyLength(packet.Body.Length); ⟦EOL⟧
+// 해설 L649: 지역 변수를 선언합니다: var bytes = new byte[HeaderSize + packet.Body.Length]; / 변수의 초기값을 지정합니다: bytes = new byte[HeaderSize + packet.Body.Length]
+L000649 |             var bytes = new byte[HeaderSize + packet.Body.Length]; ⟦EOL⟧
+// 해설 L650: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(bytes, 0, packet.Header.Command)
+L000650 |             WriteInt32(bytes, 0, packet.Header.Command); ⟦EOL⟧
+// 해설 L651: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(bytes, 4, packet.Header.DataLength)
+L000651 |             WriteInt32(bytes, 4, packet.Header.DataLength); ⟦EOL⟧
+// 해설 L652: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(bytes, 8, packet.Header.UniqueId)
+L000652 |             WriteInt32(bytes, 8, packet.Header.UniqueId); ⟦EOL⟧
+// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(bytes, 12, packet.Header.ErrorCode)
+L000653 |             WriteInt32(bytes, 12, packet.Header.ErrorCode); ⟦EOL⟧
+// 해설 L654: 함수·델리게이트 또는 객체 생성자를 호출합니다: packet.Body.CopyTo(bytes, HeaderSize)
+L000654 |             packet.Body.CopyTo(bytes, HeaderSize); ⟦EOL⟧
+// 해설 L655: 호출자에게 값 또는 제어를 반환합니다: return bytes;
+L000655 |             return bytes; ⟦EOL⟧
+// 해설 L656: 구문 블록 경계입니다 · 소속 Encode.
+L000656 |         } ⟦EOL⟧
+L000657 |  ⟦EOL⟧
+// 해설 L658: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET_HEADER Drilling.Common.Interface.Vision.CVisionProtocol.DecodeHeader(System.ReadOnlySpan<byte>)
+L000658 |         public static ST_VISION_PACKET_HEADER DecodeHeader(ReadOnlySpan<byte> bytes) ⟦EOL⟧
+// 해설 L659: 구문 블록 경계입니다 · 소속 DecodeHeader.
+L000659 |         { ⟦EOL⟧
+// 해설 L660: 조건에 따라 분기합니다: if (bytes.Length < HeaderSize)
+L000660 |             if (bytes.Length < HeaderSize) ⟦EOL⟧
+// 해설 L661: 구문 블록 경계입니다 · 소속 DecodeHeader.
+L000661 |             { ⟦EOL⟧
+// 해설 L662: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision header requires {HeaderSize} bytes. Received={bytes.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision header requires {HeaderSize} bytes. Received={bytes.Length}.");
+L000662 |                 throw new InvalidDataException($"Vision header requires {HeaderSize} bytes. Received={bytes.Length}."); ⟦EOL⟧
+// 해설 L663: 구문 블록 경계입니다 · 소속 DecodeHeader.
+L000663 |             } ⟦EOL⟧
+L000664 |  ⟦EOL⟧
+// 해설 L665: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_PACKET_HEADER(ReadInt32(bytes, 0), ReadInt32(bytes, 4), ReadInt32(bytes, 8), ReadInt32(bytes, 12)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(bytes, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(bytes, 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(bytes, 8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(bytes, 12) / 지역 변수를 선언합니다: var header = new ST_VISION_PACKET_HEADER(ReadInt32(bytes, 0), ReadInt32(bytes, 4), ReadInt32(bytes, 8), ReadInt32(bytes, 12)); / 변수의 초기값을 지정합니다: header = new ST_VISION_PACKET_HEADER(ReadI
+L000665 |             var header = new ST_VISION_PACKET_HEADER(ReadInt32(bytes, 0), ReadInt32(bytes, 4), ReadInt32(bytes, 8), ReadInt32(bytes, 12)); ⟦EOL⟧
+// 해설 L666: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBodyLength(header.DataLength)
+L000666 |             ValidateBodyLength(header.DataLength); ⟦EOL⟧
+// 해설 L667: 호출자에게 값 또는 제어를 반환합니다: return header;
+L000667 |             return header; ⟦EOL⟧
+// 해설 L668: 구문 블록 경계입니다 · 소속 DecodeHeader.
+L000668 |         } ⟦EOL⟧
+L000669 |  ⟦EOL⟧
+// 해설 L670: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.Decode(System.ReadOnlySpan<byte>)
+L000670 |         public static ST_VISION_PACKET Decode(ReadOnlySpan<byte> bytes) ⟦EOL⟧
+// 해설 L671: 구문 블록 경계입니다 · 소속 Decode.
+L000671 |         { ⟦EOL⟧
+// 해설 L672: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeHeader(bytes) / 지역 변수를 선언합니다: var header = DecodeHeader(bytes); / 변수의 초기값을 지정합니다: header = DecodeHeader(bytes)
+L000672 |             var header = DecodeHeader(bytes); ⟦EOL⟧
+// 해설 L673: 지역 변수를 선언합니다: var packetLength = HeaderSize + header.DataLength; / 변수의 초기값을 지정합니다: packetLength = HeaderSize + header.DataLength
+L000673 |             var packetLength = HeaderSize + header.DataLength; ⟦EOL⟧
+// 해설 L674: 조건에 따라 분기합니다: if (bytes.Length != packetLength)
+L000674 |             if (bytes.Length != packetLength) ⟦EOL⟧
+// 해설 L675: 구문 블록 경계입니다 · 소속 Decode.
+L000675 |             { ⟦EOL⟧
+// 해설 L676: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision packet length mismatch. Expected={packetLength}, Received={bytes.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision packet length mismatch. Expected={packetLength}, Received={bytes.Length}.");
+L000676 |                 throw new InvalidDataException($"Vision packet length mismatch. Expected={packetLength}, Received={bytes.Length}."); ⟦EOL⟧
+// 해설 L677: 구문 블록 경계입니다 · 소속 Decode.
+L000677 |             } ⟦EOL⟧
+L000678 |  ⟦EOL⟧
+// 해설 L679: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_PACKET(header, bytes.Slice(HeaderSize, header.DataLength).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: bytes.Slice(HeaderSize, header.DataLength).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: bytes.Slice(HeaderSize, header.DataLength) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_PACKET(header, bytes.Slice(HeaderSize, header.DataLength).ToArray());
+L000679 |             return new ST_VISION_PACKET(header, bytes.Slice(HeaderSize, header.DataLength).ToArray()); ⟦EOL⟧
+// 해설 L680: 구문 블록 경계입니다 · 소속 Decode.
+L000680 |         } ⟦EOL⟧
+L000681 |  ⟦EOL⟧
+// 해설 L682: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH Drilling.Common.Interface.Vision.CVisionProtocol.DecodeMarkSearchRequest(Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000682 |         public static ST_VISION_MARK_SEARCH DecodeMarkSearchRequest(ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L683: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000683 |         { ⟦EOL⟧
+// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000684 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L685: 조건에 따라 분기합니다: if (packet.Header.Command != (int)EN_VISION_COMMAND.MarkFindSingle)
+L000685 |             if (packet.Header.Command != (int)EN_VISION_COMMAND.MarkFindSingle) ⟦EOL⟧
+// 해설 L686: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000686 |             { ⟦EOL⟧
+// 해설 L687: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Command {packet.Header.Command} is not a Mark Find Single request.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Command {packet.Header.Command} is not a Mark Find Single request.");
+L000687 |                 throw new InvalidDataException($"Command {packet.Header.Command} is not a Mark Find Single request."); ⟦EOL⟧
+// 해설 L688: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000688 |             } ⟦EOL⟧
+L000689 |  ⟦EOL⟧
+// 해설 L690: 조건에 따라 분기합니다: if (packet.Body.Length != MarkSearchSize)
+L000690 |             if (packet.Body.Length != MarkSearchSize) ⟦EOL⟧
+// 해설 L691: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000691 |             { ⟦EOL⟧
+// 해설 L692: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Mark Find Single request requires {MarkSearchSize} bytes. Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Mark Find Single request requires {MarkSearchSize} bytes. Received={packet.Body.Length}.");
+L000692 |                 throw new InvalidDataException($"Mark Find Single request requires {MarkSearchSize} bytes. Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L693: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000693 |             } ⟦EOL⟧
+L000694 |  ⟦EOL⟧
+// 해설 L695: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMarkSearch(packet.Body, 0) / 호출자에게 값 또는 제어를 반환합니다: return ReadMarkSearch(packet.Body, 0);
+L000695 |             return ReadMarkSearch(packet.Body, 0); ⟦EOL⟧
+// 해설 L696: 구문 블록 경계입니다 · 소속 DecodeMarkSearchRequest.
+L000696 |         } ⟦EOL⟧
+L000697 |  ⟦EOL⟧
+// 해설 L698: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_FLYING_READY Drilling.Common.Interface.Vision.CVisionProtocol.DecodeFlyingReadyRequest(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000698 |         public static ST_VISION_FLYING_READY DecodeFlyingReadyRequest(ST_VISION_PACKET packet, int maxHoleCountPerLine = DefaultMaxHoleCountPerLine) ⟦EOL⟧
+// 해설 L699: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000699 |         { ⟦EOL⟧
+// 해설 L700: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000700 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L701: 조건에 따라 분기합니다: if (packet.Header.Command != (int)EN_VISION_COMMAND.FlyingReady)
+L000701 |             if (packet.Header.Command != (int)EN_VISION_COMMAND.FlyingReady) ⟦EOL⟧
+// 해설 L702: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000702 |             { ⟦EOL⟧
+// 해설 L703: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Command {packet.Header.Command} is not a Flying Ready request.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Command {packet.Header.Command} is not a Flying Ready request.");
+L000703 |                 throw new InvalidDataException($"Command {packet.Header.Command} is not a Flying Ready request."); ⟦EOL⟧
+// 해설 L704: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000704 |             } ⟦EOL⟧
+L000705 |  ⟦EOL⟧
+// 해설 L706: 조건에 따라 분기합니다: if (packet.Body.Length < 8)
+L000706 |             if (packet.Body.Length < 8) ⟦EOL⟧
+// 해설 L707: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000707 |             { ⟦EOL⟧
+// 해설 L708: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Flying Ready request requires at least 8 bytes. Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Flying Ready request requires at least 8 bytes. Received={packet.Body.Length}.");
+L000708 |                 throw new InvalidDataException($"Flying Ready request requires at least 8 bytes. Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L709: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000709 |             } ⟦EOL⟧
+L000710 |  ⟦EOL⟧
+// 해설 L711: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateLineCapacity(maxHoleCountPerLine)
+L000711 |             ValidateLineCapacity(maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L712: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 0) / 지역 변수를 선언합니다: var inspectionType = ReadInt32(packet.Body, 0); / 변수의 초기값을 지정합니다: inspectionType = ReadInt32(packet.Body, 0)
+L000712 |             var inspectionType = ReadInt32(packet.Body, 0); ⟦EOL⟧
+// 해설 L713: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 4) / 지역 변수를 선언합니다: var count = ReadInt32(packet.Body, 4); / 변수의 초기값을 지정합니다: count = ReadInt32(packet.Body, 4)
+L000713 |             var count = ReadInt32(packet.Body, 4); ⟦EOL⟧
+// 해설 L714: 조건에 따라 분기합니다: if (count < 0 || count > maxHoleCountPerLine)
+L000714 |             if (count < 0 || count > maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L715: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000715 |             { ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Flying Ready mark count must be between 0 and {maxHoleCountPerLine}. Received={count}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Flying Ready mark count must be between 0 and {maxHoleCountPerLine}. Received={count}.");
+L000716 |                 throw new InvalidDataException($"Flying Ready mark count must be between 0 and {maxHoleCountPerLine}. Received={count}."); ⟦EOL⟧
+// 해설 L717: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000717 |             } ⟦EOL⟧
+L000718 |  ⟦EOL⟧
+// 해설 L719: 지역 변수를 선언합니다: var requiredLength = 8 + (maxHoleCountPerLine * MarkSearchSize); / 변수의 초기값을 지정합니다: requiredLength = 8 + (maxHoleCountPerLine * MarkSearchSize)
+L000719 |             var requiredLength = 8 + (maxHoleCountPerLine * MarkSearchSize); ⟦EOL⟧
+// 해설 L720: 조건에 따라 분기합니다: if (packet.Body.Length != requiredLength)
+L000720 |             if (packet.Body.Length != requiredLength) ⟦EOL⟧
+// 해설 L721: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000721 |             { ⟦EOL⟧
+// 해설 L722: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Flying Ready request body length does not match its mark count. Expected={requiredLength}, Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Flying Ready request body length does not match its mark count. Expected={requiredLength}, Received={packet.Body.Length}.");
+L000722 |                 throw new InvalidDataException($"Flying Ready request body length does not match its mark count. Expected={requiredLength}, Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L723: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000723 |             } ⟦EOL⟧
+L000724 |  ⟦EOL⟧
+// 해설 L725: 지역 변수를 선언합니다: var searches = new ST_VISION_MARK_SEARCH[count]; / 변수의 초기값을 지정합니다: searches = new ST_VISION_MARK_SEARCH[count]
+L000725 |             var searches = new ST_VISION_MARK_SEARCH[count]; ⟦EOL⟧
+// 해설 L726: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000726 |             for (var index = 0; index < count; index++) ⟦EOL⟧
+// 해설 L727: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000727 |             { ⟦EOL⟧
+// 해설 L728: 값을 대상에 대입합니다: searches[index] = ReadMarkSearch(packet.Body, 8 + (index * MarkSearchSize)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMarkSearch(packet.Body, 8 + (index * MarkSearchSize))
+L000728 |                 searches[index] = ReadMarkSearch(packet.Body, 8 + (index * MarkSearchSize)); ⟦EOL⟧
+// 해설 L729: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000729 |             } ⟦EOL⟧
+L000730 |  ⟦EOL⟧
+// 해설 L731: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_FLYING_READY(inspectionType, searches) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_FLYING_READY(inspectionType, searches);
+L000731 |             return new ST_VISION_FLYING_READY(inspectionType, searches); ⟦EOL⟧
+// 해설 L732: 구문 블록 경계입니다 · 소속 DecodeFlyingReadyRequest.
+L000732 |         } ⟦EOL⟧
+L000733 |  ⟦EOL⟧
+// 해설 L734: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000734 |         /// <summary>1002 response: one Int32, 0 = matching OK, 1 = no matching (NG).</summary> ⟦EOL⟧
+// 해설 L735: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.Vision.CVisionProtocol.DecodeFlyingMoveDoneResponse(Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000735 |         public static int DecodeFlyingMoveDoneResponse(ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L736: 구문 블록 경계입니다 · 소속 DecodeFlyingMoveDoneResponse.
+L000736 |         { ⟦EOL⟧
+// 해설 L737: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000737 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L738: 조건에 따라 분기합니다: if (packet.Header.Command != (int)EN_VISION_COMMAND.FlyingMoveDone)
+L000738 |             if (packet.Header.Command != (int)EN_VISION_COMMAND.FlyingMoveDone) ⟦EOL⟧
+// 해설 L739: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Command {packet.Header.Command} is not a Flying Move Done response.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Command {packet.Header.Command} is not a Flying Move Done response.");
+L000739 |                 throw new InvalidDataException($"Command {packet.Header.Command} is not a Flying Move Done response."); ⟦EOL⟧
+// 해설 L740: 조건에 따라 분기합니다: if (packet.Body.Length != sizeof(int))
+L000740 |             if (packet.Body.Length != sizeof(int)) ⟦EOL⟧
+// 해설 L741: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Flying Move Done response requires 4 bytes for nHoleCountMatch. Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Flying Move Done response requires 4 bytes for nHoleCountMatch. Received={packet.Body.Length}.");
+L000741 |                 throw new InvalidDataException($"Flying Move Done response requires 4 bytes for nHoleCountMatch. Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L742: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 0) / 지역 변수를 선언합니다: var countMatch = ReadInt32(packet.Body, 0); / 변수의 초기값을 지정합니다: countMatch = ReadInt32(packet.Body, 0)
+L000742 |             var countMatch = ReadInt32(packet.Body, 0); ⟦EOL⟧
+// 해설 L743: 조건에 따라 분기합니다: if (countMatch is not (0 or 1))
+L000743 |             if (countMatch is not (0 or 1)) ⟦EOL⟧
+// 해설 L744: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Flying Move Done nHoleCountMatch must be 0 (OK) or 1 (NG). Received={countMatch}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Flying Move Done nHoleCountMatch must be 0 (OK) or 1 (NG). Received={countMatch}.");
+L000744 |                 throw new InvalidDataException($"Flying Move Done nHoleCountMatch must be 0 (OK) or 1 (NG). Received={countMatch}."); ⟦EOL⟧
+// 해설 L745: 호출자에게 값 또는 제어를 반환합니다: return countMatch;
+L000745 |             return countMatch; ⟦EOL⟧
+// 해설 L746: 구문 블록 경계입니다 · 소속 DecodeFlyingMoveDoneResponse.
+L000746 |         } ⟦EOL⟧
+L000747 |  ⟦EOL⟧
+// 해설 L748: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_SINGLE_RESULT Drilling.Common.Interface.Vision.CVisionProtocol.DecodeSingleResult(Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000748 |         public static ST_VISION_SINGLE_RESULT DecodeSingleResult(ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L749: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000749 |         { ⟦EOL⟧
+// 해설 L750: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000750 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L751: 조건에 따라 분기합니다: if (packet.Header.Command is not ((int)EN_VISION_COMMAND.MarkFindSingle) and not ((int)EN_VISION_COMMAND.MarkFindSettingSingle) and not ((int)EN_VISION_COMMAND.MarkFindManual))
+L000751 |             if (packet.Header.Command is not ((int)EN_VISION_COMMAND.MarkFindSingle) and not ((int)EN_VISION_COMMAND.MarkFindSettingSingle) and not ((int)EN_VISION_COMMAND.MarkFindManual)) ⟦EOL⟧
+// 해설 L752: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000752 |             { ⟦EOL⟧
+// 해설 L753: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Command {packet.Header.Command} is not a single mark result.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Command {packet.Header.Command} is not a single mark result.");
+L000753 |                 throw new InvalidDataException($"Command {packet.Header.Command} is not a single mark result."); ⟦EOL⟧
+// 해설 L754: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000754 |             } ⟦EOL⟧
+L000755 |  ⟦EOL⟧
+// 해설 L756: 조건에 따라 분기합니다: if (packet.Body.Length < SingleResultBodySize)
+L000756 |             if (packet.Body.Length < SingleResultBodySize) ⟦EOL⟧
+// 해설 L757: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000757 |             { ⟦EOL⟧
+// 해설 L758: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Single mark response requires {SingleResultBodySize} bytes. Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Single mark response requires {SingleResultBodySize} bytes. Received={packet.Body.Length}.");
+L000758 |                 throw new InvalidDataException($"Single mark response requires {SingleResultBodySize} bytes. Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L759: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000759 |             } ⟦EOL⟧
+L000760 |  ⟦EOL⟧
+// 해설 L761: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_SINGLE_RESULT(ReadInt32(packet.Body, 0), ReadPackedMarkFind(packet.Body, 4)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPackedMarkFind(packet.Body, 4) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_SINGLE_RESULT(ReadInt32(packet.Body, 0), ReadPackedMarkFind(packet.Body, 4));
+L000761 |             return new ST_VISION_SINGLE_RESULT(ReadInt32(packet.Body, 0), ReadPackedMarkFind(packet.Body, 4)); ⟦EOL⟧
+// 해설 L762: 구문 블록 경계입니다 · 소속 DecodeSingleResult.
+L000762 |         } ⟦EOL⟧
+L000763 |  ⟦EOL⟧
+// 해설 L764: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.Vision.ST_VISION_LINE_RESULT Drilling.Common.Interface.Vision.CVisionProtocol.DecodeLineResult(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000764 |         public static ST_VISION_LINE_RESULT DecodeLineResult(ST_VISION_PACKET packet, int maxHoleCountPerLine = DefaultMaxHoleCountPerLine) ⟦EOL⟧
+// 해설 L765: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000765 |         { ⟦EOL⟧
+// 해설 L766: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000766 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+L000767 |  ⟦EOL⟧
+// 해설 L768: 조건에 따라 분기합니다: if (packet.Header.Command != (int)EN_VISION_COMMAND.MarkFindLine)
+L000768 |             if (packet.Header.Command != (int)EN_VISION_COMMAND.MarkFindLine) ⟦EOL⟧
+// 해설 L769: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000769 |             { ⟦EOL⟧
+// 해설 L770: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Command {packet.Header.Command} is not a line mark result.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Command {packet.Header.Command} is not a line mark result.");
+L000770 |                 throw new InvalidDataException($"Command {packet.Header.Command} is not a line mark result."); ⟦EOL⟧
+// 해설 L771: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000771 |             } ⟦EOL⟧
+L000772 |  ⟦EOL⟧
+// 해설 L773: 조건에 따라 분기합니다: if (packet.Body.Length < 8)
+L000773 |             if (packet.Body.Length < 8) ⟦EOL⟧
+// 해설 L774: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000774 |             { ⟦EOL⟧
+// 해설 L775: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Line mark response requires at least 8 bytes.") / 예외를 발생/전달합니다: throw new InvalidDataException("Line mark response requires at least 8 bytes.");
+L000775 |                 throw new InvalidDataException("Line mark response requires at least 8 bytes."); ⟦EOL⟧
+// 해설 L776: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000776 |             } ⟦EOL⟧
+L000777 |  ⟦EOL⟧
+// 해설 L778: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateLineCapacity(maxHoleCountPerLine)
+L000778 |             ValidateLineCapacity(maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L779: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 0) / 지역 변수를 선언합니다: var resolution = ReadInt32(packet.Body, 0); / 변수의 초기값을 지정합니다: resolution = ReadInt32(packet.Body, 0)
+L000779 |             var resolution = ReadInt32(packet.Body, 0); ⟦EOL⟧
+// 해설 L780: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(packet.Body, 4) / 지역 변수를 선언합니다: var count = ReadInt32(packet.Body, 4); / 변수의 초기값을 지정합니다: count = ReadInt32(packet.Body, 4)
+L000780 |             var count = ReadInt32(packet.Body, 4); ⟦EOL⟧
+// 해설 L781: 조건에 따라 분기합니다: if (count > maxHoleCountPerLine)
+L000781 |             if (count > maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L782: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CVisionLineCountExceededException(count, maxHoleCountPerLine) / 예외를 발생/전달합니다: throw new CVisionLineCountExceededException(count, maxHoleCountPerLine);
+L000782 |                 throw new CVisionLineCountExceededException(count, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L783: 조건에 따라 분기합니다: if (count < 0)
+L000783 |             if (count < 0) ⟦EOL⟧
+// 해설 L784: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000784 |             { ⟦EOL⟧
+// 해설 L785: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Line mark response count must be between 0 and {maxHoleCountPerLine}. Received={count}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Line mark response count must be between 0 and {maxHoleCountPerLine}. Received={count}.");
+L000785 |                 throw new InvalidDataException($"Line mark response count must be between 0 and {maxHoleCountPerLine}. Received={count}."); ⟦EOL⟧
+// 해설 L786: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000786 |             } ⟦EOL⟧
+L000787 |  ⟦EOL⟧
+// 해설 L788: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000788 |             // Count describes valid entries; the physical frame always has the ⟦EOL⟧
+// 해설 L789: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000789 |             // configured slot count. Ignore the remaining padded result entries. ⟦EOL⟧
+// 해설 L790: 지역 변수를 선언합니다: var expectedLength = 8 + (maxHoleCountPerLine * MarkFindPackedSize); / 변수의 초기값을 지정합니다: expectedLength = 8 + (maxHoleCountPerLine * MarkFindPackedSize)
+L000790 |             var expectedLength = 8 + (maxHoleCountPerLine * MarkFindPackedSize); ⟦EOL⟧
+// 해설 L791: 조건에 따라 분기합니다: if (packet.Body.Length != expectedLength)
+L000791 |             if (packet.Body.Length != expectedLength) ⟦EOL⟧
+// 해설 L792: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000792 |             { ⟦EOL⟧
+// 해설 L793: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Line mark response body length does not match its result count. Expected={expectedLength}, Received={packet.Body.Length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Line mark response body length does not match its result count. Expected={expectedLength}, Received={packet.Body.Length}.");
+L000793 |                 throw new InvalidDataException($"Line mark response body length does not match its result count. Expected={expectedLength}, Received={packet.Body.Length}."); ⟦EOL⟧
+// 해설 L794: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000794 |             } ⟦EOL⟧
+L000795 |  ⟦EOL⟧
+// 해설 L796: 지역 변수를 선언합니다: var marks = new ST_VISION_MARK_FIND[count]; / 변수의 초기값을 지정합니다: marks = new ST_VISION_MARK_FIND[count]
+L000796 |             var marks = new ST_VISION_MARK_FIND[count]; ⟦EOL⟧
+// 해설 L797: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000797 |             for (var index = 0; index < count; index++) ⟦EOL⟧
+// 해설 L798: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000798 |             { ⟦EOL⟧
+// 해설 L799: 값을 대상에 대입합니다: marks[index] = ReadPackedMarkFind(packet.Body, 8 + (index * MarkFindPackedSize)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadPackedMarkFind(packet.Body, 8 + (index * MarkFindPackedSize))
+L000799 |                 marks[index] = ReadPackedMarkFind(packet.Body, 8 + (index * MarkFindPackedSize)); ⟦EOL⟧
+// 해설 L800: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000800 |             } ⟦EOL⟧
+L000801 |  ⟦EOL⟧
+// 해설 L802: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VISION_LINE_RESULT(resolution, count, marks) / 호출자에게 값 또는 제어를 반환합니다: return new ST_VISION_LINE_RESULT(resolution, count, marks);
+L000802 |             return new ST_VISION_LINE_RESULT(resolution, count, marks); ⟦EOL⟧
+// 해설 L803: 구문 블록 경계입니다 · 소속 DecodeLineResult.
+L000803 |         } ⟦EOL⟧
+L000804 |  ⟦EOL⟧
+// 해설 L805: 선언·서명/매개변수·접근 조건입니다 · byte[] Drilling.Common.Interface.Vision.CVisionProtocol.EncodeMarkSearch(Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH)
+L000805 |         public static byte[] EncodeMarkSearch(ST_VISION_MARK_SEARCH search) ⟦EOL⟧
+// 해설 L806: 구문 블록 경계입니다 · 소속 EncodeMarkSearch.
+L000806 |         { ⟦EOL⟧
+// 해설 L807: 지역 변수를 선언합니다: var bytes = new byte[MarkSearchSize]; / 변수의 초기값을 지정합니다: bytes = new byte[MarkSearchSize]
+L000807 |             var bytes = new byte[MarkSearchSize]; ⟦EOL⟧
+// 해설 L808: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteMarkSearch(bytes, 0, search)
+L000808 |             WriteMarkSearch(bytes, 0, search); ⟦EOL⟧
+// 해설 L809: 호출자에게 값 또는 제어를 반환합니다: return bytes;
+L000809 |             return bytes; ⟦EOL⟧
+// 해설 L810: 구문 블록 경계입니다 · 소속 EncodeMarkSearch.
+L000810 |         } ⟦EOL⟧
+L000811 |  ⟦EOL⟧
+// 해설 L812: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.FormatPacketLog(string, Drilling.Common.Interface.Vision.ST_VISION_PACKET, string, int)
+L000812 |         public static string FormatPacketLog(string direction, ST_VISION_PACKET packet, string source = "", int maxHoleCountPerLine = DefaultMaxHoleCountPerLine) ⟦EOL⟧
+// 해설 L813: 구문 블록 경계입니다 · 소속 FormatPacketLog.
+L000813 |         { ⟦EOL⟧
+// 해설 L814: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(packet)
+L000814 |             ArgumentNullException.ThrowIfNull(packet); ⟦EOL⟧
+// 해설 L815: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder() / 지역 변수를 선언합니다: var builder = new StringBuilder(); / 변수의 초기값을 지정합니다: builder = new StringBuilder()
+L000815 |             var builder = new StringBuilder(); ⟦EOL⟧
+// 해설 L816: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine(PacketLogSeparator)
+L000816 |             builder.AppendLine(PacketLogSeparator); ⟦EOL⟧
+// 해설 L817: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append('[').Append(direction.Trim().ToUpperInvariant()).Append("] ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append('[').Append(direction.Trim().ToUpperInvariant()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append('[') / 함수·델리게이트 또는 객체 생성자를 호출합니다: direction.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: direction.Trim()
+L000817 |             builder.Append('[').Append(direction.Trim().ToUpperInvariant()).Append("] "); ⟦EOL⟧
+// 해설 L818: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(source) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(source))
+L000818 |             if (!string.IsNullOrWhiteSpace(source)) ⟦EOL⟧
+// 해설 L819: 구문 블록 경계입니다 · 소속 FormatPacketLog.
+L000819 |             { ⟦EOL⟧
+// 해설 L820: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(source.Trim()).Append(' ') / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(source.Trim()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: source.Trim()
+L000820 |                 builder.Append(source.Trim()).Append(' '); ⟦EOL⟧
+// 해설 L821: 구문 블록 경계입니다 · 소속 FormatPacketLog.
+L000821 |             } ⟦EOL⟧
+L000822 |  ⟦EOL⟧
+// 해설 L823: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine(GetCommandName(packet.Header.Command)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetCommandName(packet.Header.Command)
+L000823 |             builder.AppendLine(GetCommandName(packet.Header.Command)); ⟦EOL⟧
+// 해설 L824: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[HEAD] Code : ").Append(packet.Header.Command).Append(" / UniqueID : ").Append(packet.Header.UniqueId).Append(" / Length : ").Append(packet.Header.DataLength).Append(" / Error : ").Append(packet.Header.Er… / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[HEAD] Code : ").Append(packet.Header.Command).Append(" / UniqueID : ").Append(packet.Header.UniqueId).Append(" / Length : ").Append(packet.Header.DataLength).Append(" / Error : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[HEAD] Code : ").App
+L000824 |             builder.Append("[HEAD] Code : ").Append(packet.Header.Command).Append(" / UniqueID : ").Append(packet.Header.UniqueId).Append(" / Length : ").Append(packet.Header.DataLength).Append(" / Error : ").Append(packet.Header.ErrorCode); ⟦EOL⟧
+// 해설 L825: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendPacketLogBody(builder, packet, maxHoleCountPerLine)
+L000825 |             AppendPacketLogBody(builder, packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L826: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.ToString() / 호출자에게 값 또는 제어를 반환합니다: return builder.ToString();
+L000826 |             return builder.ToString(); ⟦EOL⟧
+// 해설 L827: 구문 블록 경계입니다 · 소속 FormatPacketLog.
+L000827 |         } ⟦EOL⟧
+L000828 |  ⟦EOL⟧
+// 해설 L829: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000829 |         public static string GetCommandName(int command) ⟦EOL⟧
+// 해설 L830: 구문 블록 경계입니다 · 소속 GetCommandName.
+L000830 |         { ⟦EOL⟧
+// 해설 L831: 호출자에게 값 또는 제어를 반환합니다: return command switch { (int)EN_VISION_COMMAND.MarkFindSingle => "Mark Find Single", (int)EN_VISION_COMMAND.FlyingReady => "Flying Ready", (int)EN_VISION_COMMAND.FlyingMoveDone => "Flying Move Done", (int)EN_VISION_COMMAND.MarkFin / 값별 결과식을 선택합니다: command switch { (int)EN_VISION_COMMAND.MarkFindSingle => "Mark Find Single", (int)EN_VISION_COMMAND.FlyingReady => "Flying Ready", (int)EN_VISION_COMMAND.FlyingMoveDone => "Flying Move Done", (int)EN_VISION_COMMAND.MarkFindLine =
+L000831 |             return command switch ⟦EOL⟧
+// 해설 L832: 구문 블록 경계입니다 · 소속 GetCommandName.
+L000832 |             { ⟦EOL⟧
+// 해설 L833: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000833 |                 (int)EN_VISION_COMMAND.MarkFindSingle => "Mark Find Single", ⟦EOL⟧
+// 해설 L834: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000834 |                 (int)EN_VISION_COMMAND.FlyingReady => "Flying Ready", ⟦EOL⟧
+// 해설 L835: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000835 |                 (int)EN_VISION_COMMAND.FlyingMoveDone => "Flying Move Done", ⟦EOL⟧
+// 해설 L836: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000836 |                 (int)EN_VISION_COMMAND.MarkFindLine => "Mark Find Line", ⟦EOL⟧
+// 해설 L837: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000837 |                 (int)EN_VISION_COMMAND.MarkFindSettingSingle => "Mark Find Setting Single", ⟦EOL⟧
+// 해설 L838: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000838 |                 (int)EN_VISION_COMMAND.MarkFindManual => "Mark Find Manual", ⟦EOL⟧
+// 해설 L839: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000839 |                 (int)EN_VISION_COMMAND.KeepAliveRequest => "Keep-Alive Request", ⟦EOL⟧
+// 해설 L840: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000840 |                 (int)EN_VISION_COMMAND.KeepAlive => "Keep-Alive", ⟦EOL⟧
+// 해설 L841: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)
+L000841 |                 _ => $"Unknown Command ({command})"}; ⟦EOL⟧
+// 해설 L842: 구문 블록 경계입니다 · 소속 GetCommandName.
+L000842 |         } ⟦EOL⟧
+L000843 |  ⟦EOL⟧
+// 해설 L844: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendPacketLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000844 |         private static void AppendPacketLogBody(StringBuilder builder, ST_VISION_PACKET packet, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L845: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000845 |         { ⟦EOL⟧
+// 해설 L846: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine()
+L000846 |             builder.AppendLine(); ⟦EOL⟧
+// 해설 L847: 조건에 따라 분기합니다: if (packet.Body.Length == 0)
+L000847 |             if (packet.Body.Length == 0) ⟦EOL⟧
+// 해설 L848: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000848 |             { ⟦EOL⟧
+// 해설 L849: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Empty")
+L000849 |                 builder.Append("[BODY] Empty"); ⟦EOL⟧
+// 해설 L850: 호출자에게 값 또는 제어를 반환합니다: return;
+L000850 |                 return; ⟦EOL⟧
+// 해설 L851: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000851 |             } ⟦EOL⟧
+L000852 |  ⟦EOL⟧
+// 해설 L853: 예외 처리 범위입니다: try
+L000853 |             try ⟦EOL⟧
+// 해설 L854: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000854 |             { ⟦EOL⟧
+// 해설 L855: 값에 따라 분기합니다: switch (packet.Header.Command)
+L000855 |                 switch (packet.Header.Command) ⟦EOL⟧
+// 해설 L856: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000856 |                 { ⟦EOL⟧
+// 해설 L857: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.MarkFindSingle:
+L000857 |                     case (int)EN_VISION_COMMAND.MarkFindSingle: ⟦EOL⟧
+// 해설 L858: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendMarkFindSingleLogBody(builder, packet)
+L000858 |                         AppendMarkFindSingleLogBody(builder, packet); ⟦EOL⟧
+// 해설 L859: 호출자에게 값 또는 제어를 반환합니다: return;
+L000859 |                         return; ⟦EOL⟧
+// 해설 L860: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.FlyingReady:
+L000860 |                     case (int)EN_VISION_COMMAND.FlyingReady: ⟦EOL⟧
+// 해설 L861: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendFlyingReadyLogBody(builder, packet, maxHoleCountPerLine)
+L000861 |                         AppendFlyingReadyLogBody(builder, packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L862: 호출자에게 값 또는 제어를 반환합니다: return;
+L000862 |                         return; ⟦EOL⟧
+// 해설 L863: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.FlyingMoveDone:
+L000863 |                     case (int)EN_VISION_COMMAND.FlyingMoveDone: ⟦EOL⟧
+// 해설 L864: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeFlyingMoveDoneResponse(packet) / 지역 변수를 선언합니다: var countMatch = DecodeFlyingMoveDoneResponse(packet); / 변수의 초기값을 지정합니다: countMatch = DecodeFlyingMoveDoneResponse(packet)
+L000864 |                         var countMatch = DecodeFlyingMoveDoneResponse(packet); ⟦EOL⟧
+// 해설 L865: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Hole Count Match : ").Append(countMatch) .Append(countMatch == 0 ? " / Matching OK" : " / No Matching (NG)") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Hole Count Match : ").Append(countMatch) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Hole Count Match : ")
+L000865 |                         builder.Append("[BODY] Hole Count Match : ").Append(countMatch) ⟦EOL⟧
+// 해설 L866: 조건에 따라 결과식을 선택합니다: countMatch == 0 ? " / Matching OK" : " / No Matching (NG)"
+L000866 |                             .Append(countMatch == 0 ? " / Matching OK" : " / No Matching (NG)"); ⟦EOL⟧
+// 해설 L867: 호출자에게 값 또는 제어를 반환합니다: return;
+L000867 |                         return; ⟦EOL⟧
+// 해설 L868: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.MarkFindLine:
+L000868 |                     case (int)EN_VISION_COMMAND.MarkFindLine: ⟦EOL⟧
+// 해설 L869: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendLineResultLogBody(builder, packet, maxHoleCountPerLine)
+L000869 |                         AppendLineResultLogBody(builder, packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L870: 호출자에게 값 또는 제어를 반환합니다: return;
+L000870 |                         return; ⟦EOL⟧
+// 해설 L871: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.MarkFindSettingSingle:
+L000871 |                     case (int)EN_VISION_COMMAND.MarkFindSettingSingle: ⟦EOL⟧
+// 해설 L872: 분기값/패턴의 구간입니다: case (int)EN_VISION_COMMAND.MarkFindManual:
+L000872 |                     case (int)EN_VISION_COMMAND.MarkFindManual: ⟦EOL⟧
+// 해설 L873: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendSingleResultLogBody(builder, packet)
+L000873 |                         AppendSingleResultLogBody(builder, packet); ⟦EOL⟧
+// 해설 L874: 호출자에게 값 또는 제어를 반환합니다: return;
+L000874 |                         return; ⟦EOL⟧
+// 해설 L875: 분기값/패턴의 구간입니다: default:
+L000875 |                     default: ⟦EOL⟧
+// 해설 L876: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Binary Data Length : ").Append(packet.Body.Length) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Binary Data Length : ")
+L000876 |                         builder.Append("[BODY] Binary Data Length : ").Append(packet.Body.Length); ⟦EOL⟧
+// 해설 L877: 호출자에게 값 또는 제어를 반환합니다: return;
+L000877 |                         return; ⟦EOL⟧
+// 해설 L878: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000878 |                 } ⟦EOL⟧
+// 해설 L879: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000879 |             } ⟦EOL⟧
+// 해설 L880: 지정 예외를 처리합니다: catch (Exception exception) when (exception is IOException or ArgumentException)
+L000880 |             catch (Exception exception)when (exception is IOException or ArgumentException) ⟦EOL⟧
+// 해설 L881: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000881 |             { ⟦EOL⟧
+// 해설 L882: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Decode Error : ").Append(exception.Message) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Decode Error : ")
+L000882 |                 builder.Append("[BODY] Decode Error : ").Append(exception.Message); ⟦EOL⟧
+// 해설 L883: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000883 |             } ⟦EOL⟧
+// 해설 L884: 구문 블록 경계입니다 · 소속 AppendPacketLogBody.
+L000884 |         } ⟦EOL⟧
+L000885 |  ⟦EOL⟧
+// 해설 L886: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendMarkFindSingleLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000886 |         private static void AppendMarkFindSingleLogBody(StringBuilder builder, ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L887: 구문 블록 경계입니다 · 소속 AppendMarkFindSingleLogBody.
+L000887 |         { ⟦EOL⟧
+// 해설 L888: 조건에 따라 분기합니다: if (packet.Body.Length == MarkSearchSize)
+L000888 |             if (packet.Body.Length == MarkSearchSize) ⟦EOL⟧
+// 해설 L889: 구문 블록 경계입니다 · 소속 AppendMarkFindSingleLogBody.
+L000889 |             { ⟦EOL⟧
+// 해설 L890: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeMarkSearchRequest(packet) / 지역 변수를 선언합니다: var search = DecodeMarkSearchRequest(packet); / 변수의 초기값을 지정합니다: search = DecodeMarkSearchRequest(packet)
+L000890 |                 var search = DecodeMarkSearchRequest(packet); ⟦EOL⟧
+// 해설 L891: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Cell No : ").Append(search.Cell).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Cell No : ").Append(search.Cell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Cell No : ")
+L000891 |                 builder.Append("[BODY] Cell No : ").Append(search.Cell).AppendLine(); ⟦EOL⟧
+// 해설 L892: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("DOE / Beam : ").Append(search.Doe).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("DOE / Beam : ").Append(search.Doe) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("DOE / Beam : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000892 |                 builder.Append(PacketLogBodyIndent).Append("DOE / Beam : ").Append(search.Doe).AppendLine(); ⟦EOL⟧
+// 해설 L893: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Line No : ").Append(search.Line).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Line No : ").Append(search.Line) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Line No : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000893 |                 builder.Append(PacketLogBodyIndent).Append("Line No : ").Append(search.Line).AppendLine(); ⟦EOL⟧
+// 해설 L894: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index X : ").Append(search.IndexX).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index X : ").Append(search.IndexX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index X : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000894 |                 builder.Append(PacketLogBodyIndent).Append("Index X : ").Append(search.IndexX).AppendLine(); ⟦EOL⟧
+// 해설 L895: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index Y : ").Append(search.IndexY).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index Y : ").Append(search.IndexY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Index Y : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000895 |                 builder.Append(PacketLogBodyIndent).Append("Index Y : ").Append(search.IndexY).AppendLine(); ⟦EOL⟧
+// 해설 L896: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Head No : ").Append(search.Head) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Head No : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000896 |                 builder.Append(PacketLogBodyIndent).Append("Head No : ").Append(search.Head); ⟦EOL⟧
+// 해설 L897: 호출자에게 값 또는 제어를 반환합니다: return;
+L000897 |                 return; ⟦EOL⟧
+// 해설 L898: 구문 블록 경계입니다 · 소속 AppendMarkFindSingleLogBody.
+L000898 |             } ⟦EOL⟧
+L000899 |  ⟦EOL⟧
+// 해설 L900: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendSingleResultLogBody(builder, packet)
+L000900 |             AppendSingleResultLogBody(builder, packet); ⟦EOL⟧
+// 해설 L901: 구문 블록 경계입니다 · 소속 AppendMarkFindSingleLogBody.
+L000901 |         } ⟦EOL⟧
+L000902 |  ⟦EOL⟧
+// 해설 L903: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendFlyingReadyLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000903 |         private static void AppendFlyingReadyLogBody(StringBuilder builder, ST_VISION_PACKET packet, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L904: 구문 블록 경계입니다 · 소속 AppendFlyingReadyLogBody.
+L000904 |         { ⟦EOL⟧
+// 해설 L905: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeFlyingReadyRequest(packet, maxHoleCountPerLine) / 지역 변수를 선언합니다: var ready = DecodeFlyingReadyRequest(packet, maxHoleCountPerLine); / 변수의 초기값을 지정합니다: ready = DecodeFlyingReadyRequest(packet, maxHoleCountPerLine)
+L000905 |             var ready = DecodeFlyingReadyRequest(packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L906: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Inspection Type : ").Append(ready.InspectionType).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Inspection Type : ").Append(ready.InspectionType) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Inspection Type : ")
+L000906 |             builder.Append("[BODY] Inspection Type : ").Append(ready.InspectionType).AppendLine(); ⟦EOL⟧
+// 해설 L907: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Mark Count : ").Append(ready.Searches.Count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Mark Count : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000907 |             builder.Append(PacketLogBodyIndent).Append("Mark Count : ").Append(ready.Searches.Count); ⟦EOL⟧
+// 해설 L908: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < ready.Searches.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000908 |             for (var index = 0; index < ready.Searches.Count; index++) ⟦EOL⟧
+// 해설 L909: 구문 블록 경계입니다 · 소속 AppendFlyingReadyLogBody.
+L000909 |             { ⟦EOL⟧
+// 해설 L910: 지역 변수를 선언합니다: var search = ready.Searches[index]; / 변수의 초기값을 지정합니다: search = ready.Searches[index]
+L000910 |                 var search = ready.Searches[index]; ⟦EOL⟧
+// 해설 L911: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine()
+L000911 |                 builder.AppendLine(); ⟦EOL⟧
+// 해설 L912: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Mark[").Append(index).Append("] : Cell=").Append(search.Cell).Append(" / DOE=").Append(search.Doe).Append(" / Line=").Append(search.Line).Append(" / IndexX=").Append(search.Ind… / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Mark[").Append(index).Append("] : Cell=").Append(search.Cell).Append(" / DOE=").Append(search.Doe).Append(" / Line=").Append(search.Line).Append(" / IndexX=") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIn
+L000912 |                 builder.Append(PacketLogBodyIndent).Append("Mark[").Append(index).Append("] : Cell=").Append(search.Cell).Append(" / DOE=").Append(search.Doe).Append(" / Line=").Append(search.Line).Append(" / IndexX=").Append(search.IndexX).Append(" / IndexY=").Append(search.IndexY).Append(" / Head=").Append(search.Head); ⟦EOL⟧
+// 해설 L913: 구문 블록 경계입니다 · 소속 AppendFlyingReadyLogBody.
+L000913 |             } ⟦EOL⟧
+// 해설 L914: 구문 블록 경계입니다 · 소속 AppendFlyingReadyLogBody.
+L000914 |         } ⟦EOL⟧
+L000915 |  ⟦EOL⟧
+// 해설 L916: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendSingleResultLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET)
+L000916 |         private static void AppendSingleResultLogBody(StringBuilder builder, ST_VISION_PACKET packet) ⟦EOL⟧
+// 해설 L917: 구문 블록 경계입니다 · 소속 AppendSingleResultLogBody.
+L000917 |         { ⟦EOL⟧
+// 해설 L918: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeSingleResult(packet) / 지역 변수를 선언합니다: var result = DecodeSingleResult(packet); / 변수의 초기값을 지정합니다: result = DecodeSingleResult(packet)
+L000918 |             var result = DecodeSingleResult(packet); ⟦EOL⟧
+// 해설 L919: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ").Append(result.Resolution).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ").Append(result.Resolution) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ")
+L000919 |             builder.Append("[BODY] Resolution : ").Append(result.Resolution).AppendLine(); ⟦EOL⟧
+// 해설 L920: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendMarkResultLog(builder, result.Mark, null)
+L000920 |             AppendMarkResultLog(builder, result.Mark, null); ⟦EOL⟧
+// 해설 L921: 구문 블록 경계입니다 · 소속 AppendSingleResultLogBody.
+L000921 |         } ⟦EOL⟧
+L000922 |  ⟦EOL⟧
+// 해설 L923: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendLineResultLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)
+L000923 |         private static void AppendLineResultLogBody(StringBuilder builder, ST_VISION_PACKET packet, int maxHoleCountPerLine) ⟦EOL⟧
+// 해설 L924: 구문 블록 경계입니다 · 소속 AppendLineResultLogBody.
+L000924 |         { ⟦EOL⟧
+// 해설 L925: 함수·델리게이트 또는 객체 생성자를 호출합니다: DecodeLineResult(packet, maxHoleCountPerLine) / 지역 변수를 선언합니다: var result = DecodeLineResult(packet, maxHoleCountPerLine); / 변수의 초기값을 지정합니다: result = DecodeLineResult(packet, maxHoleCountPerLine)
+L000925 |             var result = DecodeLineResult(packet, maxHoleCountPerLine); ⟦EOL⟧
+// 해설 L926: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ").Append(result.Resolution).AppendLine() / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ").Append(result.Resolution) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("[BODY] Resolution : ")
+L000926 |             builder.Append("[BODY] Resolution : ").Append(result.Resolution).AppendLine(); ⟦EOL⟧
+// 해설 L927: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Find Hole Count : ").Append(result.FindHoleCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent).Append("Find Hole Count : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000927 |             builder.Append(PacketLogBodyIndent).Append("Find Hole Count : ").Append(result.FindHoleCount); ⟦EOL⟧
+// 해설 L928: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < result.Marks.Count; index++) / 변수의 초기값을 지정합니다: index = 0
+L000928 |             for (var index = 0; index < result.Marks.Count; index++) ⟦EOL⟧
+// 해설 L929: 구문 블록 경계입니다 · 소속 AppendLineResultLogBody.
+L000929 |             { ⟦EOL⟧
+// 해설 L930: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.AppendLine()
+L000930 |                 builder.AppendLine(); ⟦EOL⟧
+// 해설 L931: 함수·델리게이트 또는 객체 생성자를 호출합니다: AppendMarkResultLog(builder, result.Marks[index], index)
+L000931 |                 AppendMarkResultLog(builder, result.Marks[index], index); ⟦EOL⟧
+// 해설 L932: 구문 블록 경계입니다 · 소속 AppendLineResultLogBody.
+L000932 |             } ⟦EOL⟧
+// 해설 L933: 구문 블록 경계입니다 · 소속 AppendLineResultLogBody.
+L000933 |         } ⟦EOL⟧
+L000934 |  ⟦EOL⟧
+// 해설 L935: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.AppendMarkResultLog(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND, int?)
+L000935 |         private static void AppendMarkResultLog(StringBuilder builder, ST_VISION_MARK_FIND mark, int? index) ⟦EOL⟧
+// 해설 L936: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000936 |         { ⟦EOL⟧
+// 해설 L937: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append(PacketLogBodyIndent)
+L000937 |             builder.Append(PacketLogBodyIndent); ⟦EOL⟧
+// 해설 L938: 조건에 따라 분기합니다: if (index.HasValue)
+L000938 |             if (index.HasValue) ⟦EOL⟧
+// 해설 L939: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000939 |             { ⟦EOL⟧
+// 해설 L940: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Mark[").Append(index.Value).Append("] ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Mark[").Append(index.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Mark[")
+L000940 |                 builder.Append("Mark[").Append(index.Value).Append("] "); ⟦EOL⟧
+// 해설 L941: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000941 |             } ⟦EOL⟧
+// 해설 L942: 앞 조건이 거짓인 경로입니다: else
+L000942 |             else ⟦EOL⟧
+// 해설 L943: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000943 |             { ⟦EOL⟧
+// 해설 L944: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Mark ")
+L000944 |                 builder.Append("Mark "); ⟦EOL⟧
+// 해설 L945: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000945 |             } ⟦EOL⟧
+L000946 |  ⟦EOL⟧
+// 해설 L947: 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Result : ").Append(mark.Result).Append(" / Target X : ").Append(FormatLogNumber(mark.TargetMarkX)).Append(" / Target Y : ").Append(FormatLogNumber(mark.TargetMarkY)).Append(" / Hole X : ").Append(FormatLo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Result : ").Append(mark.Result).Append(" / Target X : ").Append(FormatLogNumber(mark.TargetMarkX)).Append(" / Target Y : ").Append(FormatLogNumber(mark.TargetMarkY)).Append(" / Hole X : ") / 함수·델리게이트 또는 객체 생성자를 호출합니다: builder.Append("Result : ").
+L000947 |             builder.Append("Result : ").Append(mark.Result).Append(" / Target X : ").Append(FormatLogNumber(mark.TargetMarkX)).Append(" / Target Y : ").Append(FormatLogNumber(mark.TargetMarkY)).Append(" / Hole X : ").Append(FormatLogNumber(mark.HoleX)).Append(" / Hole Y : ").Append(FormatLogNumber(mark.HoleY)); ⟦EOL⟧
+// 해설 L948: 구문 블록 경계입니다 · 소속 AppendMarkResultLog.
+L000948 |         } ⟦EOL⟧
+L000949 |  ⟦EOL⟧
+// 해설 L950: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.Vision.CVisionProtocol.FormatLogNumber(double)
+L000950 |         private static string FormatLogNumber(double value) ⟦EOL⟧
+// 해설 L951: 구문 블록 경계입니다 · 소속 FormatLogNumber.
+L000951 |         { ⟦EOL⟧
+// 해설 L952: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.################", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.################", CultureInfo.InvariantCulture);
+L000952 |             return value.ToString("0.################", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L953: 구문 블록 경계입니다 · 소속 FormatLogNumber.
+L000953 |         } ⟦EOL⟧
+L000954 |  ⟦EOL⟧
+// 해설 L955: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.WriteMarkSearch(System.Span<byte>, int, Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH)
+L000955 |         private static void WriteMarkSearch(Span<byte> destination, int offset, ST_VISION_MARK_SEARCH search) ⟦EOL⟧
+// 해설 L956: 구문 블록 경계입니다 · 소속 WriteMarkSearch.
+L000956 |         { ⟦EOL⟧
+// 해설 L957: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset, search.Cell)
+L000957 |             WriteInt32(destination, offset, search.Cell); ⟦EOL⟧
+// 해설 L958: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset + 4, search.Doe)
+L000958 |             WriteInt32(destination, offset + 4, search.Doe); ⟦EOL⟧
+// 해설 L959: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset + 8, search.Line)
+L000959 |             WriteInt32(destination, offset + 8, search.Line); ⟦EOL⟧
+// 해설 L960: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset + 12, search.IndexX)
+L000960 |             WriteInt32(destination, offset + 12, search.IndexX); ⟦EOL⟧
+// 해설 L961: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset + 16, search.IndexY)
+L000961 |             WriteInt32(destination, offset + 16, search.IndexY); ⟦EOL⟧
+// 해설 L962: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset + 20, search.Head)
+L000962 |             WriteInt32(destination, offset + 20, search.Head); ⟦EOL⟧
+// 해설 L963: 구문 블록 경계입니다 · 소속 WriteMarkSearch.
+L000963 |         } ⟦EOL⟧
+L000964 |  ⟦EOL⟧
+// 해설 L965: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.WriteMarkFind(System.Span<byte>, int, Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND)
+L000965 |         private static void WriteMarkFind(Span<byte> destination, int offset, ST_VISION_MARK_FIND mark) ⟦EOL⟧
+// 해설 L966: 구문 블록 경계입니다 · 소속 WriteMarkFind.
+L000966 |         { ⟦EOL⟧
+// 해설 L967: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteInt32(destination, offset, mark.Result)
+L000967 |             WriteInt32(destination, offset, mark.Result); ⟦EOL⟧
+// 해설 L968: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteDouble(destination, offset + 4, mark.TargetMarkX)
+L000968 |             WriteDouble(destination, offset + 4, mark.TargetMarkX); ⟦EOL⟧
+// 해설 L969: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteDouble(destination, offset + 12, mark.TargetMarkY)
+L000969 |             WriteDouble(destination, offset + 12, mark.TargetMarkY); ⟦EOL⟧
+// 해설 L970: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteDouble(destination, offset + 20, mark.HoleX)
+L000970 |             WriteDouble(destination, offset + 20, mark.HoleX); ⟦EOL⟧
+// 해설 L971: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteDouble(destination, offset + 28, mark.HoleY)
+L000971 |             WriteDouble(destination, offset + 28, mark.HoleY); ⟦EOL⟧
+// 해설 L972: 구문 블록 경계입니다 · 소속 WriteMarkFind.
+L000972 |         } ⟦EOL⟧
+L000973 |  ⟦EOL⟧
+// 해설 L974: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReadInt32(source, offset), ReadDouble(source, offset + 4), ReadDouble(source, offset + 12), ReadDouble(source, offset + 20), ReadDouble(source, offset + 28)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(source, offset + 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(source, offset + 12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(source, offset + 20) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(source, offset + 28)
+L000974 |         private static ST_VISION_MARK_FIND ReadPackedMarkFind(ReadOnlySpan<byte> source, int offset) => new(ReadInt32(source, offset), ReadDouble(source, offset + 4), ReadDouble(source, offset + 12), ReadDouble(source, offset + 20), ReadDouble(source, offset + 28)); ⟦EOL⟧
+// 해설 L975: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReadInt32(source, offset), ReadInt32(source, offset + 4), ReadInt32(source, offset + 8), ReadInt32(source, offset + 12), ReadInt32(source, offset + 16), ReadInt32(source, offset + 20)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset + 4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset + 8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset + 12) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt32(source, offset + 16) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Re
+L000975 |         private static ST_VISION_MARK_SEARCH ReadMarkSearch(ReadOnlySpan<byte> source, int offset) => new(ReadInt32(source, offset), ReadInt32(source, offset + 4), ReadInt32(source, offset + 8), ReadInt32(source, offset + 12), ReadInt32(source, offset + 16), ReadInt32(source, offset + 20)); ⟦EOL⟧
+// 해설 L976: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.Vision.CVisionProtocol.ValidateBodyLength(int)
+L000976 |         private static void ValidateBodyLength(int length) ⟦EOL⟧
+// 해설 L977: 구문 블록 경계입니다 · 소속 ValidateBodyLength.
+L000977 |         { ⟦EOL⟧
+// 해설 L978: 조건에 따라 분기합니다: if (length is < 0 or > MaximumBodySize)
+L000978 |             if (length is < 0 or > MaximumBodySize) ⟦EOL⟧
+// 해설 L979: 구문 블록 경계입니다 · 소속 ValidateBodyLength.
+L000979 |             { ⟦EOL⟧
+// 해설 L980: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Vision body length must be between 0 and {MaximumBodySize}. Received={length}.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Vision body length must be between 0 and {MaximumBodySize}. Received={length}.");
+L000980 |                 throw new InvalidDataException($"Vision body length must be between 0 and {MaximumBodySize}. Received={length}."); ⟦EOL⟧
+// 해설 L981: 구문 블록 경계입니다 · 소속 ValidateBodyLength.
+L000981 |             } ⟦EOL⟧
+// 해설 L982: 구문 블록 경계입니다 · 소속 ValidateBodyLength.
+L000982 |         } ⟦EOL⟧
+L000983 |  ⟦EOL⟧
+// 해설 L984: 함수·델리게이트 또는 객체 생성자를 호출합니다: BinaryPrimitives.ReadInt32LittleEndian(source.Slice(offset, sizeof(int))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: source.Slice(offset, sizeof(int))
+L000984 |         private static int ReadInt32(ReadOnlySpan<byte> source, int offset) => BinaryPrimitives.ReadInt32LittleEndian(source.Slice(offset, sizeof(int))); ⟦EOL⟧
+// 해설 L985: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Interface.Vision.CVisionProtocol.ReadDouble(System.ReadOnlySpan<byte>, int)
+L000985 |         private static double ReadDouble(ReadOnlySpan<byte> source, int offset) ⟦EOL⟧
+// 해설 L986: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000986 |         { ⟦EOL⟧
+// 해설 L987: 함수·델리게이트 또는 객체 생성자를 호출합니다: BinaryPrimitives.ReadInt64LittleEndian(source.Slice(offset, sizeof(long))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: source.Slice(offset, sizeof(long)) / 지역 변수를 선언합니다: var bits = BinaryPrimitives.ReadInt64LittleEndian(source.Slice(offset, sizeof(long))); / 변수의 초기값을 지정합니다: bits = BinaryPrimitives.ReadInt64LittleEndian(source.Slice(offset, sizeof(long)))
+L000987 |             var bits = BinaryPrimitives.ReadInt64LittleEndian(source.Slice(offset, sizeof(long))); ⟦EOL⟧
+// 해설 L988: 함수·델리게이트 또는 객체 생성자를 호출합니다: BitConverter.Int64BitsToDouble(bits) / 호출자에게 값 또는 제어를 반환합니다: return BitConverter.Int64BitsToDouble(bits);
+L000988 |             return BitConverter.Int64BitsToDouble(bits); ⟦EOL⟧
+// 해설 L989: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000989 |         } ⟦EOL⟧
+L000990 |  ⟦EOL⟧
+// 해설 L991: 함수·델리게이트 또는 객체 생성자를 호출합니다: BinaryPrimitives.WriteInt32LittleEndian(destination.Slice(offset, sizeof(int)), value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: destination.Slice(offset, sizeof(int))
+L000991 |         private static void WriteInt32(Span<byte> destination, int offset, int value) => BinaryPrimitives.WriteInt32LittleEndian(destination.Slice(offset, sizeof(int)), value); ⟦EOL⟧
+// 해설 L992: 함수·델리게이트 또는 객체 생성자를 호출합니다: BinaryPrimitives.WriteInt64LittleEndian(destination.Slice(offset, sizeof(long)), BitConverter.DoubleToInt64Bits(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: destination.Slice(offset, sizeof(long)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BitConverter.DoubleToInt64Bits(value)
+L000992 |         private static void WriteDouble(Span<byte> destination, int offset, double value) => BinaryPrimitives.WriteInt64LittleEndian(destination.Slice(offset, sizeof(long)), BitConverter.DoubleToInt64Bits(value)); ⟦EOL⟧
+// 해설 L993: 구문 블록 경계입니다.
+L000993 |     } ⟦EOL⟧
+// 해설 L994: 구문 블록 경계입니다.
+L000994 | } ⟦EOL⟧

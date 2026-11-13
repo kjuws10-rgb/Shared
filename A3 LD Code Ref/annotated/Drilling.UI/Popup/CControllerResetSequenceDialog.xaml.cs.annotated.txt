@@ -1,0 +1,536 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.ComponentModel;
+L000001 | using System.ComponentModel; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 | using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000004 | using System.Windows.Controls; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000006 | namespace Drilling.UI.Popup; ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public partial class CControllerResetSequenceDialog : Window
+L000007 | public partial class CControllerResetSequenceDialog : Window ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> Drilling.UI.Popup.CControllerResetSequenceDialog._controllerOptions
+L000009 |     private readonly IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> _controllerOptions; ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> Drilling.UI.Popup.CControllerResetSequenceDialog._targetOptions
+L000010 |     private readonly IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> _targetOptions; ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · System.Func<Drilling.UI.Popup.CControllerResetSequenceDialog, System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>, System.Func<bool>, System.Threading.Cancella
+L000011 |     private readonly Func<CControllerResetSequenceDialog, IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>, Func<bool>, CancellationToken, Task> _executeSequence; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: _sequenceBlocks = []
+L000012 |     private IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_BLOCK> _sequenceBlocks = []; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · System.Threading.CancellationTokenSource? Drilling.UI.Popup.CControllerResetSequenceDialog._runCancellation
+L000013 |     private CancellationTokenSource? _runCancellation; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CControllerResetSequenceDialog._isRunning
+L000014 |     private bool _isRunning; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CControllerResetSequenceDialog._stopRequested
+L000015 |     private bool _stopRequested; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CControllerResetSequenceDialog.CControllerResetSequenceDialog(System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>, System.Func<Drilling.UI.Po
+L000016 |     public CControllerResetSequenceDialog(IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> controllerOptions, Func<CControllerResetSequenceDialog, IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>, Func<bool>, CancellationToken, Task> executeSequence) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 .ctor.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000018 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: _executeSequence = executeSequence
+L000019 |         _executeSequence = executeSequence; ⟦EOL⟧
+// 해설 L20: 값을 대상에 대입합니다: _controllerOptions = controllerOptions.Count == 0 ? [new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("CONTROLLER 1", 0, false)] : controllerOptions / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("CONTROLLER 1", 0, false) / 조건에 따라 결과식을 선택합니다: controllerOptions.Count == 0 ? [new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("CONTROLLER 1", 0, false)] : controllerOptions
+L000020 |         _controllerOptions = controllerOptions.Count == 0 ? [new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("CONTROLLER 1", 0, false)] : controllerOptions; ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: _targetOptions = CreateTargetOptions(_controllerOptions) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTargetOptions(_controllerOptions)
+L000021 |         _targetOptions = CreateTargetOptions(_controllerOptions); ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: TargetComboBox.ItemsSource = _targetOptions
+L000022 |         TargetComboBox.ItemsSource = _targetOptions; ⟦EOL⟧
+// 해설 L23: 값을 대상에 대입합니다: TargetComboBox.SelectedIndex = 0
+L000023 |         TargetComboBox.SelectedIndex = 0; ⟦EOL⟧
+// 해설 L24: 값을 대상에 대입합니다: SelectedTarget = _targetOptions[0]
+L000024 |         SelectedTarget = _targetOptions[0]; ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSequenceBlocks()
+L000025 |         RefreshSequenceBlocks(); ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 .ctor.
+L000026 |     } ⟦EOL⟧
+L000027 |  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION Drilling.UI.Popup.CControllerResetSequenceDialog.SelectedTarget
+L000028 |     public ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION SelectedTarget { get; private set; } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CControllerResetSequenceDialog.IsStopRequested
+L000030 |     public bool IsStopRequested ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 IsStopRequested.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CControllerResetSequenceDialog.IsStopRequested.get
+L000032 |         get ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다 · 소속 get_IsStopRequested.
+L000033 |         { ⟦EOL⟧
+// 해설 L34: 호출자에게 값 또는 제어를 반환합니다: return _stopRequested;
+L000034 |             return _stopRequested; ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 get_IsStopRequested.
+L000035 |         } ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 IsStopRequested.
+L000036 |     } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> Drilling.UI.Popup.CControllerResetSequenceDialog.CreateTargetOptions(System.Collections.Generic.IReadOnlyLi
+L000038 |     private static IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> CreateTargetOptions(IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> controllerOptions) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 CreateTargetOptions.
+L000039 |     { ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>(controllerOptions.Count + 1) / 지역 변수를 선언합니다: var targets = new List<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>(controllerOptions.Count + 1); / 변수의 초기값을 지정합니다: targets = new List<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>(controllerOptions.Count + 1)
+L000040 |         var targets = new List<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION>(controllerOptions.Count + 1); ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.AddRange(controllerOptions)
+L000041 |         targets.AddRange(controllerOptions); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("ALL CONTROLLER", -1, true)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("ALL CONTROLLER", -1, true)
+L000042 |         targets.Add(new ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION("ALL CONTROLLER", -1, true)); ⟦EOL⟧
+// 해설 L43: 호출자에게 값 또는 제어를 반환합니다: return targets;
+L000043 |         return targets; ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 CreateTargetOptions.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.OnTargetSelectionChanged(object, SelectionChangedEventArgs)
+L000046 |     private void OnTargetSelectionChanged(object sender, SelectionChangedEventArgs e) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 OnTargetSelectionChanged.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 조건에 따라 분기합니다: if (TargetComboBox.SelectedItem is not ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION target)
+L000048 |         if (TargetComboBox.SelectedItem is not ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION target) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 OnTargetSelectionChanged.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 호출자에게 값 또는 제어를 반환합니다: return;
+L000050 |             return; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 OnTargetSelectionChanged.
+L000051 |         } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: SelectedTarget = target
+L000053 |         SelectedTarget = target; ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSequenceBlocks()
+L000054 |         RefreshSequenceBlocks(); ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 OnTargetSelectionChanged.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.RefreshSequenceBlocks()
+L000057 |     private void RefreshSequenceBlocks() ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 RefreshSequenceBlocks.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (_isRunning)
+L000059 |         if (_isRunning) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 RefreshSequenceBlocks.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return;
+L000061 |             return; ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 RefreshSequenceBlocks.
+L000062 |         } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: _sequenceBlocks = GetSelectedControllers().Select(controller => new ST_CONTROLLER_RESET_SEQUENCE_BLOCK(controller.AutomationNo, controller.DisplayName, CreateSteps())).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSelectedControllers().Select(controller => new ST_CONTROLLER_RESET_SEQUENCE_BLOCK(controller.AutomationNo, controller.DisplayName, CreateSteps())).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSelectedControllers().Select(controller => new ST_CONTROLLER_RESET_SEQUENCE_BLOCK(controller.AutomationNo, controller.DisplayNa
+L000064 |         _sequenceBlocks = GetSelectedControllers().Select(controller => new ST_CONTROLLER_RESET_SEQUENCE_BLOCK(controller.AutomationNo, controller.DisplayName, CreateSteps())).ToArray(); ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: SequenceBlocksControl.ItemsSource = _sequenceBlocks
+L000065 |         SequenceBlocksControl.ItemsSource = _sequenceBlocks; ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: StatusText.Text = "Ready"
+L000066 |         StatusText.Text = "Ready"; ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 RefreshSequenceBlocks.
+L000067 |     } ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP> Drilling.UI.Popup.CControllerResetSequenceDialog.CreateSteps()
+L000069 |     private static IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_STEP> CreateSteps() ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 CreateSteps.
+L000070 |     { ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, "Controller Reset", "WAIT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(2, "All Axis Enable", "WAIT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(3, "All Axis Home", "WAIT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(4, "DIO ON", "WAIT") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(5, "DOE Z Recipe Position Move", "WAIT") / 호출자에게 값 또는 제어를 반환합니다: return[new(1, "Controller Reset", "WAIT"), new(2, "All Axis Enable", "WAIT"), new(3, "All Axis Home", "WAIT"), new(4, "DIO ON", "WAIT"), new(5, "DOE Z Recipe Position Move", "WAIT")];
+L000071 |         return[new(1, "Controller Reset", "WAIT"), new(2, "All Axis Enable", "WAIT"), new(3, "All Axis Home", "WAIT"), new(4, "DIO ON", "WAIT"), new(5, "DOE Z Recipe Position Move", "WAIT")]; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 CreateSteps.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> Drilling.UI.Popup.CControllerResetSequenceDialog.GetSelectedControllers()
+L000074 |     private IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION> GetSelectedControllers() ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 GetSelectedControllers.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 조건에 따라 결과식을 선택합니다: SelectedTarget.IsAll ? _controllerOptions : [SelectedTarget] / 호출자에게 값 또는 제어를 반환합니다: return SelectedTarget.IsAll ? _controllerOptions : [SelectedTarget];
+L000076 |         return SelectedTarget.IsAll ? _controllerOptions : [SelectedTarget]; ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 GetSelectedControllers.
+L000077 |     } ⟦EOL⟧
+L000078 |  ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.SetStatusMessage(string)
+L000079 |     public void SetStatusMessage(string message) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 SetStatusMessage.
+L000080 |     { ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.CheckAccess() / 조건에 따라 분기합니다: if (!Dispatcher.CheckAccess())
+L000081 |         if (!Dispatcher.CheckAccess()) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 SetStatusMessage.
+L000082 |         { ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.Invoke(() => SetStatusMessage(message)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage(message)
+L000083 |             Dispatcher.Invoke(() => SetStatusMessage(message)); ⟦EOL⟧
+// 해설 L84: 호출자에게 값 또는 제어를 반환합니다: return;
+L000084 |             return; ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 SetStatusMessage.
+L000085 |         } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: StatusText.Text = message
+L000087 |         StatusText.Text = message; ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 SetStatusMessage.
+L000088 |     } ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.SetStepState(int, int, string)
+L000090 |     public void SetStepState(int automationNo, int stepNo, string state) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 SetStepState.
+L000091 |     { ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.CheckAccess() / 조건에 따라 분기합니다: if (!Dispatcher.CheckAccess())
+L000092 |         if (!Dispatcher.CheckAccess()) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 SetStepState.
+L000093 |         { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.Invoke(() => SetStepState(automationNo, stepNo, state)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStepState(automationNo, stepNo, state)
+L000094 |             Dispatcher.Invoke(() => SetStepState(automationNo, stepNo, state)); ⟦EOL⟧
+// 해설 L95: 호출자에게 값 또는 제어를 반환합니다: return;
+L000095 |             return; ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 SetStepState.
+L000096 |         } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 컬렉션 요소를 순회합니다: foreach (var block in _sequenceBlocks)
+L000098 |         foreach (var block in _sequenceBlocks) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 SetStepState.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 조건에 따라 분기합니다: if (block.AutomationNo != automationNo)
+L000100 |             if (block.AutomationNo != automationNo) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 SetStepState.
+L000101 |             { ⟦EOL⟧
+// 해설 L102: 다음 반복으로 진행합니다: continue;
+L000102 |                 continue; ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 SetStepState.
+L000103 |             } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 컬렉션 요소를 순회합니다: foreach (var step in block.Steps)
+L000105 |             foreach (var step in block.Steps) ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 SetStepState.
+L000106 |             { ⟦EOL⟧
+// 해설 L107: 조건에 따라 분기합니다: if (step.No == stepNo)
+L000107 |                 if (step.No == stepNo) ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 SetStepState.
+L000108 |                 { ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: step.State = state
+L000109 |                     step.State = state; ⟦EOL⟧
+// 해설 L110: 호출자에게 값 또는 제어를 반환합니다: return;
+L000110 |                     return; ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 SetStepState.
+L000111 |                 } ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 SetStepState.
+L000112 |             } ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 SetStepState.
+L000113 |         } ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 SetStepState.
+L000114 |     } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.SkipWaitingSteps(int)
+L000116 |     public void SkipWaitingSteps(int automationNo) ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000117 |     { ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.CheckAccess() / 조건에 따라 분기합니다: if (!Dispatcher.CheckAccess())
+L000118 |         if (!Dispatcher.CheckAccess()) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.Invoke(() => SkipWaitingSteps(automationNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SkipWaitingSteps(automationNo)
+L000120 |             Dispatcher.Invoke(() => SkipWaitingSteps(automationNo)); ⟦EOL⟧
+// 해설 L121: 호출자에게 값 또는 제어를 반환합니다: return;
+L000121 |             return; ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000122 |         } ⟦EOL⟧
+L000123 |  ⟦EOL⟧
+// 해설 L124: 컬렉션 요소를 순회합니다: foreach (var block in _sequenceBlocks)
+L000124 |         foreach (var block in _sequenceBlocks) ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000125 |         { ⟦EOL⟧
+// 해설 L126: 조건에 따라 분기합니다: if (block.AutomationNo != automationNo)
+L000126 |             if (block.AutomationNo != automationNo) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000127 |             { ⟦EOL⟧
+// 해설 L128: 다음 반복으로 진행합니다: continue;
+L000128 |                 continue; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000129 |             } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 컬렉션 요소를 순회합니다: foreach (var step in block.Steps)
+L000131 |             foreach (var step in block.Steps) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000132 |             { ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase))
+L000133 |                 if (step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000134 |                 { ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: step.State = "SKIP"
+L000135 |                     step.State = "SKIP"; ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000136 |                 } ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000137 |             } ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000138 |         } ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 SkipWaitingSteps.
+L000139 |     } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.SkipAllWaitingSteps()
+L000141 |     public void SkipAllWaitingSteps() ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000142 |     { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.CheckAccess() / 조건에 따라 분기합니다: if (!Dispatcher.CheckAccess())
+L000143 |         if (!Dispatcher.CheckAccess()) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000144 |         { ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.Invoke(SkipAllWaitingSteps)
+L000145 |             Dispatcher.Invoke(SkipAllWaitingSteps); ⟦EOL⟧
+// 해설 L146: 호출자에게 값 또는 제어를 반환합니다: return;
+L000146 |             return; ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000147 |         } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 컬렉션 요소를 순회합니다: foreach (var block in _sequenceBlocks)
+L000149 |         foreach (var block in _sequenceBlocks) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000150 |         { ⟦EOL⟧
+// 해설 L151: 컬렉션 요소를 순회합니다: foreach (var step in block.Steps)
+L000151 |             foreach (var step in block.Steps) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000152 |             { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase))
+L000153 |                 if (step.State.Equals("WAIT", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000154 |                 { ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: step.State = "SKIP"
+L000155 |                     step.State = "SKIP"; ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000156 |                 } ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000157 |             } ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000158 |         } ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 SkipAllWaitingSteps.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.OnStartClicked(object, RoutedEventArgs)
+L000161 |     private async void OnStartClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 OnStartClicked.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 비동기 완료를 기다립니다: await RunSequence() / 함수·델리게이트 또는 객체 생성자를 호출합니다: RunSequence()
+L000163 |         await RunSequence(); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 OnStartClicked.
+L000164 |     } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.OnStopClicked(object, RoutedEventArgs)
+L000166 |     private void OnStopClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 OnStopClicked.
+L000167 |     { ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequestStop()
+L000168 |         RequestStop(); ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 OnStopClicked.
+L000169 |     } ⟦EOL⟧
+L000170 |  ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Popup.CControllerResetSequenceDialog.RunSequence()
+L000171 |     private async Task RunSequence() ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 RunSequence.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshSequenceBlocks()
+L000173 |         RefreshSequenceBlocks(); ⟦EOL⟧
+// 해설 L174: 값을 대상에 대입합니다: _isRunning = true
+L000174 |         _isRunning = true; ⟦EOL⟧
+// 해설 L175: 값을 대상에 대입합니다: _stopRequested = false
+L000175 |         _stopRequested = false; ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: TargetComboBox.IsEnabled = false
+L000176 |         TargetComboBox.IsEnabled = false; ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: StartButton.IsEnabled = false
+L000177 |         StartButton.IsEnabled = false; ⟦EOL⟧
+// 해설 L178: 값을 대상에 대입합니다: StopButton.IsEnabled = true
+L000178 |         StopButton.IsEnabled = true; ⟦EOL⟧
+// 해설 L179: 값을 대상에 대입합니다: CloseButton.IsEnabled = false
+L000179 |         CloseButton.IsEnabled = false; ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage("Running")
+L000180 |         SetStatusMessage("Running"); ⟦EOL⟧
+// 해설 L181: 값을 대상에 대입합니다: _runCancellation = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
+L000181 |         _runCancellation = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSelectedControllers() / 지역 변수를 선언합니다: var controllers = GetSelectedControllers(); / 변수의 초기값을 지정합니다: controllers = GetSelectedControllers()
+L000182 |         var controllers = GetSelectedControllers(); ⟦EOL⟧
+// 해설 L183: 예외 처리 범위입니다: try
+L000183 |         try ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 RunSequence.
+L000184 |         { ⟦EOL⟧
+// 해설 L185: 비동기 완료를 기다립니다: await _executeSequence(this, controllers, () => _stopRequested, _runCancellation.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _executeSequence(this, controllers, () => _stopRequested, _runCancellation.Token)
+L000185 |             await _executeSequence(this, controllers, () => _stopRequested, _runCancellation.Token); ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage(_stopRequested ? "Stopped after current step." : "Completed.") / 조건에 따라 결과식을 선택합니다: _stopRequested ? "Stopped after current step." : "Completed."
+L000186 |             SetStatusMessage(_stopRequested ? "Stopped after current step." : "Completed."); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 RunSequence.
+L000187 |         } ⟦EOL⟧
+// 해설 L188: 지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidOperationException or IOException or TimeoutException or OperationCanceledException)
+L000188 |         catch (Exception exception)when (exception is InvalidOperationException or IOException or TimeoutException or OperationCanceledException) ⟦EOL⟧
+// 해설 L189: 구문 블록 경계입니다 · 소속 RunSequence.
+L000189 |         { ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage($"Failed. {exception.Message}")
+L000190 |             SetStatusMessage($"Failed. {exception.Message}"); ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 RunSequence.
+L000191 |         } ⟦EOL⟧
+// 해설 L192: 종료 정리 구간입니다: finally
+L000192 |         finally ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 RunSequence.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000194 |             _runCancellation?.Dispose(); ⟦EOL⟧
+// 해설 L195: 값을 대상에 대입합니다: _runCancellation = null
+L000195 |             _runCancellation = null; ⟦EOL⟧
+// 해설 L196: 값을 대상에 대입합니다: _isRunning = false
+L000196 |             _isRunning = false; ⟦EOL⟧
+// 해설 L197: 값을 대상에 대입합니다: TargetComboBox.IsEnabled = true
+L000197 |             TargetComboBox.IsEnabled = true; ⟦EOL⟧
+// 해설 L198: 값을 대상에 대입합니다: StartButton.IsEnabled = true
+L000198 |             StartButton.IsEnabled = true; ⟦EOL⟧
+// 해설 L199: 값을 대상에 대입합니다: StopButton.IsEnabled = false
+L000199 |             StopButton.IsEnabled = false; ⟦EOL⟧
+// 해설 L200: 값을 대상에 대입합니다: StopButton.Content = "STOP"
+L000200 |             StopButton.Content = "STOP"; ⟦EOL⟧
+// 해설 L201: 값을 대상에 대입합니다: CloseButton.IsEnabled = true
+L000201 |             CloseButton.IsEnabled = true; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 RunSequence.
+L000202 |         } ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 RunSequence.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.OnCloseClicked(object, RoutedEventArgs)
+L000205 |     private void OnCloseClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000206 |     { ⟦EOL⟧
+// 해설 L207: 값을 대상에 대입합니다: DialogResult = false
+L000207 |         DialogResult = false; ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000208 |     } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.RequestStop()
+L000210 |     private void RequestStop() ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 RequestStop.
+L000211 |     { ⟦EOL⟧
+// 해설 L212: 조건에 따라 분기합니다: if (!_isRunning || _stopRequested)
+L000212 |         if (!_isRunning || _stopRequested) ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 RequestStop.
+L000213 |         { ⟦EOL⟧
+// 해설 L214: 호출자에게 값 또는 제어를 반환합니다: return;
+L000214 |             return; ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 RequestStop.
+L000215 |         } ⟦EOL⟧
+L000216 |  ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: _stopRequested = true
+L000217 |         _stopRequested = true; ⟦EOL⟧
+// 해설 L218: 값을 대상에 대입합니다: StopButton.Content = "STOP REQUESTED"
+L000218 |         StopButton.Content = "STOP REQUESTED"; ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: StopButton.IsEnabled = false
+L000219 |         StopButton.IsEnabled = false; ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage("Stop requested. The current step will finish, then remaining steps will be skipped.")
+L000220 |         SetStatusMessage("Stop requested. The current step will finish, then remaining steps will be skipped."); ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 RequestStop.
+L000221 |     } ⟦EOL⟧
+L000222 |  ⟦EOL⟧
+// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CControllerResetSequenceDialog.OnWindowClosing(object, System.ComponentModel.CancelEventArgs)
+L000223 |     private void OnWindowClosing(object sender, CancelEventArgs e) ⟦EOL⟧
+// 해설 L224: 구문 블록 경계입니다 · 소속 OnWindowClosing.
+L000224 |     { ⟦EOL⟧
+// 해설 L225: 조건에 따라 분기합니다: if (!_isRunning)
+L000225 |         if (!_isRunning) ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 OnWindowClosing.
+L000226 |         { ⟦EOL⟧
+// 해설 L227: 호출자에게 값 또는 제어를 반환합니다: return;
+L000227 |             return; ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 OnWindowClosing.
+L000228 |         } ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 값을 대상에 대입합니다: e.Cancel = true
+L000230 |         e.Cancel = true; ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: RequestStop()
+L000231 |         RequestStop(); ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetStatusMessage("Stop requested. Wait for the current step to finish.")
+L000232 |         SetStatusMessage("Stop requested. Wait for the current step to finish."); ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 OnWindowClosing.
+L000233 |     } ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다.
+L000234 | } ⟦EOL⟧
+L000235 |  ⟦EOL⟧
+// 해설 L236: 타입의 구조/상속 선언입니다: public sealed record ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION(string DisplayName, int AutomationNo, bool IsAll);
+L000236 | public sealed record ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION(string DisplayName, int AutomationNo, bool IsAll); ⟦EOL⟧
+// 해설 L237: 타입의 구조/상속 선언입니다: public sealed class ST_CONTROLLER_RESET_SEQUENCE_BLOCK
+L000237 | public sealed class ST_CONTROLLER_RESET_SEQUENCE_BLOCK ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다.
+L000238 | { ⟦EOL⟧
+// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.ST_CONTROLLER_RESET_SEQUENCE_BLOCK(int, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP>)
+L000239 |     public ST_CONTROLLER_RESET_SEQUENCE_BLOCK(int AutomationNo, string Title, IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_STEP> Steps) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 .ctor.
+L000240 |     { ⟦EOL⟧
+// 해설 L241: 값을 대상에 대입합니다: this.AutomationNo = AutomationNo
+L000241 |         this.AutomationNo = AutomationNo; ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: this.Title = Title
+L000242 |         this.Title = Title; ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: this.Steps = Steps
+L000243 |         this.Steps = Steps; ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 .ctor.
+L000244 |     } ⟦EOL⟧
+L000245 |  ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.AutomationNo
+L000246 |     public int AutomationNo { get; } ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Title
+L000247 |     public string Title { get; } ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP> Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Steps
+L000248 |     public IReadOnlyList<ST_CONTROLLER_RESET_SEQUENCE_STEP> Steps { get; } ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다.
+L000249 | } ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 타입의 구조/상속 선언입니다: public sealed class ST_CONTROLLER_RESET_SEQUENCE_STEP : INotifyPropertyChanged
+L000251 | public sealed class ST_CONTROLLER_RESET_SEQUENCE_STEP : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다.
+L000252 | { ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP._state
+L000253 |     private string _state; ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.ST_CONTROLLER_RESET_SEQUENCE_STEP(int, string, string)
+L000254 |     public ST_CONTROLLER_RESET_SEQUENCE_STEP(int No, string Name, string State) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 .ctor.
+L000255 |     { ⟦EOL⟧
+// 해설 L256: 값을 대상에 대입합니다: this.No = No
+L000256 |         this.No = No; ⟦EOL⟧
+// 해설 L257: 값을 대상에 대입합니다: this.Name = Name
+L000257 |         this.Name = Name; ⟦EOL⟧
+// 해설 L258: 값을 대상에 대입합니다: _state = State
+L000258 |         _state = State; ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 .ctor.
+L000259 |     } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.PropertyChanged
+L000261 |     public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.No
+L000262 |     public int No { get; } ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.Name
+L000263 |     public string Name { get; } ⟦EOL⟧
+L000264 |  ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State
+L000265 |     public string State ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 State.
+L000266 |     { ⟦EOL⟧
+// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State.get
+L000267 |         get ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 get_State.
+L000268 |         { ⟦EOL⟧
+// 해설 L269: 호출자에게 값 또는 제어를 반환합니다: return _state;
+L000269 |             return _state; ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 get_State.
+L000270 |         } ⟦EOL⟧
+L000271 |  ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State.set
+L000272 |         set ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 set_State.
+L000273 |         { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: _state.Equals(value, StringComparison.Ordinal) / 조건에 따라 분기합니다: if (_state.Equals(value, StringComparison.Ordinal))
+L000274 |             if (_state.Equals(value, StringComparison.Ordinal)) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 set_State.
+L000275 |             { ⟦EOL⟧
+// 해설 L276: 호출자에게 값 또는 제어를 반환합니다: return;
+L000276 |                 return; ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 set_State.
+L000277 |             } ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 값을 대상에 대입합니다: _state = value
+L000279 |             _state = value; ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(State))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(State)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(State)
+L000280 |             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(State))); ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 set_State.
+L000281 |         } ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 State.
+L000282 |     } ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다.
+L000283 | } ⟦EOL⟧

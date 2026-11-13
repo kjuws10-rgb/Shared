@@ -1,0 +1,1363 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/JHMI/CConfigStructureFile.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/JHMI/CConfigStructureFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs">Git 원본</a></p><h1>Drilling.File/JHMI/CConfigStructureFile.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>6703e663836345c24527cde64ebec2994fa59443f19285374abff3f62ac379be</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>18,185 bytes / 470 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/ab550086c649b7ac6319.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CConfigStructureFile</td><td>ClassDeclaration</td><td>5–470</td><td>CConfigStructureFile: CConfigStructureFileBase</td></tr>
+<tr><td>ST_REQUIRED_CSV</td><td>RecordDeclaration</td><td>458–463</td><td>ST_REQUIRED_CSV</td></tr>
+<tr><td>ST_VALUE_CSV</td><td>RecordDeclaration</td><td>464–469</td><td>ST_VALUE_CSV</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>RequiredCsvFiles</td><td>FieldDeclaration</td><td>L7–69</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV&gt; Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles</td></tr>
+<tr><td>OptionalValueFiles</td><td>FieldDeclaration</td><td>L70–70</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV&gt; Drilling.File.JHMI.CConfigStructureFile.OptionalValueFiles</td></tr>
+<tr><td>Validate</td><td>MethodDeclaration</td><td>L71–98</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;&gt; Drilling.File.JHMI.CConfigStructureFile.Validate(System.Threading.CancellationToken)</td></tr>
+<tr><td>CheckRoot</td><td>MethodDeclaration</td><td>L100–105</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRoot()</td></tr>
+<tr><td>EnsureDirectory</td><td>MethodDeclaration</td><td>L107–118</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>CheckCsv</td><td>MethodDeclaration</td><td>L120–139</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsv(Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV)</td></tr>
+<tr><td>CheckValueCsv</td><td>MethodDeclaration</td><td>L141–160</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckValueCsv(Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV)</td></tr>
+<tr><td>CheckRecipeValueFiles</td><td>MethodDeclaration</td><td>L162–170</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRecipeValueFiles(System.Threading.CancellationToken)</td></tr>
+<tr><td>MatchesCount</td><td>LocalFunctionStatement</td><td>L164–167</td><td>bool MatchesCount(System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>CheckManualValueFiles</td><td>MethodDeclaration</td><td>L172–175</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckManualValueFiles(System.Threading.CancellationToken)</td></tr>
+<tr><td>CheckCsvValueFiles</td><td>MethodDeclaration</td><td>L177–221</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectPath</td><td>LocalFunctionStatement</td><td>L192–195</td><td>string SelectPath(string)</td></tr>
+<tr><td>CheckLineValueFiles</td><td>MethodDeclaration</td><td>L223–279</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, bool&gt;, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectPath</td><td>LocalFunctionStatement</td><td>L238–241</td><td>string SelectPath(string)</td></tr>
+<tr><td>GetPath</td><td>MethodDeclaration</td><td>L281–284</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string)</td></tr>
+<tr><td>NormalizePath</td><td>MethodDeclaration</td><td>L286–289</td><td>string Drilling.File.JHMI.CConfigStructureFile.NormalizePath(string)</td></tr>
+<tr><td>ValidateTabNameKey</td><td>MethodDeclaration</td><td>L291–299</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateTabNameKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L293–296</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateDeviceNumberKey</td><td>MethodDeclaration</td><td>L301–309</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateDeviceNumberKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L303–306</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateNameKey</td><td>MethodDeclaration</td><td>L311–319</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateNameKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L313–316</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateGroupKey</td><td>MethodDeclaration</td><td>L321–329</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateGroupKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L323–326</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateIdKey</td><td>MethodDeclaration</td><td>L331–339</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateIdKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L333–336</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateIndexKey</td><td>MethodDeclaration</td><td>L341–349</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateIndexKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L343–346</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateStepKey</td><td>MethodDeclaration</td><td>L351–359</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateStepKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L353–356</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>ValidateUniqueKey</td><td>MethodDeclaration</td><td>L361–382</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;)</td></tr>
+<tr><td>GetFirstValue</td><td>MethodDeclaration</td><td>L384–396</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetFirstValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
+<tr><td>SplitCsvLine</td><td>MethodDeclaration</td><td>L398–436</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CConfigStructureFile.SplitCsvLine(string, string, int)</td></tr>
+<tr><td>Csv</td><td>MethodDeclaration</td><td>L438–446</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;)</td></tr>
+<tr><td>ValueCsv</td><td>MethodDeclaration</td><td>L448–456</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L7">FieldDeclaration <code>RequiredCsvFiles</code> · L7–69</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L7-L69">Drilling.File/JHMI/CConfigStructureFile.cs:7–69</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV&gt; Drilling.File.JHMI.CConfigStructureFile.RequiredCsvFiles</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>10</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>34</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>36</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>56</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>63</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>65</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+<tr><td>67</td><td>Csv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:438</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>7</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: RequiredCsvFiles = [ Csv( &quot;JHMI_RCP&quot;, &quot;JHMI_RCP.csv&quot;, [ [&quot;TAB&quot;], [&quot;GROUP&quot;], [&quot;NAME&quot;], [&quot;DISPLAY NAME&quot;], [&quot;CIM NAME&quot;], [&quot;DATA TYPE&quot;], [&quot;UNIT&quot;], [&quot;SHOW&quot;], [&quot;USE&quot;], [&quot;VALUE&quot;], [&quot;SCALE&quot;], [&quot;CHANGE LIMIT&quot;], [&quot;MIN&quot;], [&quot;MAX&quot;], [&quot;DESCRIPT</td></tr>
+<tr><td>10</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( &quot;JHMI_RCP&quot;, &quot;JHMI_RCP.csv&quot;, [ [&quot;TAB&quot;], [&quot;GROUP&quot;], [&quot;NAME&quot;], [&quot;DISPLAY NAME&quot;], [&quot;CIM NAME&quot;], [&quot;DATA TYPE&quot;], [&quot;UNIT&quot;], [&quot;SHOW&quot;], [&quot;USE&quot;], [&quot;VALUE&quot;], [&quot;SCALE&quot;], [&quot;CHANGE LIMIT&quot;], [&quot;MIN&quot;], [&quot;MAX&quot;], [&quot;DESCRIPTION&quot;], [&quot;OR…</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv(&quot;JHMI_SETTING&quot;, &quot;JHMI_SETTING.csv&quot;, [[&quot;TAB&quot;], [&quot;GROUP&quot;], [&quot;NAME&quot;], [&quot;DISPLAY NAME&quot;], [&quot;DATA TYPE&quot;], [&quot;UNIT&quot;], [&quot;SHOW&quot;], [&quot;USE&quot;], [&quot;VALUE&quot;], [&quot;MIN&quot;], [&quot;MAX&quot;], [&quot;DESCRIPTION&quot;]], ValidateTabNameKey)</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( &quot;JHMI_INTERFACE&quot;, &quot;JHMI_INTERFACE.csv&quot;, [ [&quot;TYPE&quot;], [&quot;DEVICE&quot;], [&quot;NUMBER&quot;, &quot;NO&quot;], [&quot;NICKNAME&quot;], [&quot;SYSTEM_SECTION&quot;, &quot;SYSTEM SECTION&quot;, &quot;SECTION&quot;], [&quot;AUTOCONNECTION&quot;, &quot;AUTO_CONNECTION&quot;, &quot;AUTO CONNECTION&quot;], [&quot;SIMUL&quot;, &quot;S…</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv( &quot;JHMI_MOTOR&quot;, &quot;JHMI_MOTOR.csv&quot;, [[&quot;NAME&quot;, &quot;MOTOR NAME&quot;, &quot;AXIS NAME&quot;], [&quot;USE&quot;], [&quot;AXIS&quot;], [&quot;DEV TYPE&quot;, &quot;DEVICE TYPE&quot;], [&quot;DEV NO&quot;, &quot;DEVICE NO&quot;], [&quot;SCALE&quot;], [&quot;MAXVEL&quot;], [&quot;MAXACC&quot;], [&quot;MIN&quot;], [&quot;MAX&quot;]], ValidateNameKey )</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv(&quot;JHMI_MELSEC_MAP&quot;, &quot;JHMI_MELSEC_MAP.csv&quot;, CMelsecMapFile.RequiredHeaderGroups, ValidateIdKey)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv(&quot;JHMI_BET&quot;, &quot;JHMI_BET.csv&quot;, [[&quot;INDEX&quot;], [&quot;DESCRIPTION&quot;], [&quot;DIV&quot;], [&quot;MAG&quot;], [&quot;SPOTSIZE&quot;]], ValidateIndexKey)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Csv(&quot;JHMI_MANUAL_SCAN&quot;, &quot;JHMI_MANUAL_SCAN.csv&quot;, [[&quot;NAME&quot;], [&quot;DISPLAY NAME&quot;], [&quot;DATA TYPE&quot;], [&quot;UNIT&quot;], [&quot;SHOW&quot;], [&quot;USE&quot;], [&quot;VALUE&quot;], [&quot;MIN&quot;], [&quot;MAX&quot;], [&quot;DESCRIPTION&quot;], [&quot;ORDER&quot;]], ValidateNameKey)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L70">FieldDeclaration <code>OptionalValueFiles</code> · L70–70</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70">Drilling.File/JHMI/CConfigStructureFile.cs:70–70</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV&gt; Drilling.File.JHMI.CConfigStructureFile.OptionalValueFiles</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>70</td><td>ValueCsv</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:448</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValueCsv(&quot;Setting Value&quot;, &quot;Setting\\Setting.csv&quot;, [[&quot;TAB&quot;], [&quot;NAME&quot;], [&quot;VALUE&quot;]], ValidateTabNameKey)</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: OptionalValueFiles = [ValueCsv(&quot;Setting Value&quot;, &quot;Setting\\Setting.csv&quot;, [[&quot;TAB&quot;], [&quot;NAME&quot;], [&quot;VALUE&quot;]], ValidateTabNameKey)]</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L71">MethodDeclaration <code>Validate</code> · L71–98</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L71-L98">Drilling.File/JHMI/CConfigStructureFile.cs:71–98</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;&gt; Drilling.File.JHMI.CConfigStructureFile.Validate(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>73</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>74</td><td>new List&lt;ST_CONFIG_FILE_STATUS&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.List()</td></tr>
+<tr><td>76</td><td>CheckRoot</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRoot() · Drilling.File/JHMI/CConfigStructureFile.cs:100</td></tr>
+<tr><td>78</td><td>statuses.AddRange</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.AddRange(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;)</td></tr>
+<tr><td>79</td><td>EnsureDirectory</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:107</td></tr>
+<tr><td>80</td><td>EnsureDirectory</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:107</td></tr>
+<tr><td>81</td><td>EnsureDirectory</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:107</td></tr>
+<tr><td>85</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>86</td><td>statuses.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.Add(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)</td></tr>
+<tr><td>86</td><td>CheckCsv</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsv(Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV) · Drilling.File/JHMI/CConfigStructureFile.cs:120</td></tr>
+<tr><td>91</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>92</td><td>statuses.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.Add(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)</td></tr>
+<tr><td>92</td><td>CheckValueCsv</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckValueCsv(Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV) · Drilling.File/JHMI/CConfigStructureFile.cs:141</td></tr>
+<tr><td>95</td><td>statuses.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.Add(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)</td></tr>
+<tr><td>95</td><td>CheckRecipeValueFiles</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRecipeValueFiles(System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:162</td></tr>
+<tr><td>96</td><td>statuses.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;.Add(Drilling.Common.Managers.ST_CONFIG_FILE_STATUS)</td></tr>
+<tr><td>96</td><td>CheckManualValueFiles</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckManualValueFiles(System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:172</td></tr>
+<tr><td>97</td><td>Task.FromResult&lt;IReadOnlyList&lt;ST_CONFIG_FILE_STATUS&gt;&gt;</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;&gt; System.Threading.Tasks.Task.FromResult&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;&gt;(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_CONFIG_FILE_STATUS&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_CONFIG_FILE_STATUS&gt; { CheckRoot() }</td></tr>
+<tr><td>74</td><td>local-declaration</td><td>지역 변수를 선언합니다: var statuses = new List&lt;ST_CONFIG_FILE_STATUS&gt; { CheckRoot() };</td></tr>
+<tr><td>74</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: statuses = new List&lt;ST_CONFIG_FILE_STATUS&gt; { CheckRoot() }</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckRoot()</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.AddRange([ EnsureDirectory(&quot;RECIPE Directory&quot;, &quot;RECIPE&quot;, cancellationToken), EnsureDirectory(&quot;Setting Directory&quot;, &quot;Setting&quot;, cancellationToken), EnsureDirectory(&quot;Manual Directory&quot;, &quot;Manual&quot;, cancellationToken) ]…</td></tr>
+<tr><td>79</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory(&quot;RECIPE Directory&quot;, &quot;RECIPE&quot;, cancellationToken)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory(&quot;Setting Directory&quot;, &quot;Setting&quot;, cancellationToken)</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDirectory(&quot;Manual Directory&quot;, &quot;Manual&quot;, cancellationToken)</td></tr>
+<tr><td>83</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var csvFile in RequiredCsvFiles)</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckCsv(csvFile))</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckCsv(csvFile)</td></tr>
+<tr><td>89</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var valueFile in OptionalValueFiles)</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckValueCsv(valueFile))</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckValueCsv(valueFile)</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckRecipeValueFiles(cancellationToken))</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckRecipeValueFiles(cancellationToken)</td></tr>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: statuses.Add(CheckManualValueFiles(cancellationToken))</td></tr>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckManualValueFiles(cancellationToken)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult&lt;IReadOnlyList&lt;ST_CONFIG_FILE_STATUS&gt;&gt;(statuses)</td></tr>
+<tr><td>97</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.FromResult&lt;IReadOnlyList&lt;ST_CONFIG_FILE_STATUS&gt;&gt;(statuses);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Validate&quot;]
+ N0[&quot;L83 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L89 foreach&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L100">MethodDeclaration <code>CheckRoot</code> · L100–105</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L100-L105">Drilling.File/JHMI/CConfigStructureFile.cs:100–105</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRoot()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L76-L76">Drilling.File/JHMI/CConfigStructureFile.cs:76–76</a></td><td>CheckRoot</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>102</td><td>NormalizePath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.NormalizePath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:286</td></tr>
+<tr><td>103</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>104</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePath(configRoot)</td></tr>
+<tr><td>102</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = NormalizePath(configRoot);</td></tr>
+<tr><td>102</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = NormalizePath(configRoot)</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path)</td></tr>
+<tr><td>103</td><td>local-declaration</td><td>지역 변수를 선언합니다: var exists = Directory.Exists(path);</td></tr>
+<tr><td>103</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: exists = Directory.Exists(path)</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(&quot;Config Root&quot;, path, true, exists, exists, exists ? &quot;Config root found.&quot; : &quot;Config root is missing.&quot;)</td></tr>
+<tr><td>104</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: exists ? &quot;Config root found.&quot; : &quot;Config root is missing.&quot;</td></tr>
+<tr><td>104</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(&quot;Config Root&quot;, path, true, exists, exists, exists ? &quot;Config root found.&quot; : &quot;Config root is missing.&quot;);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L107">MethodDeclaration <code>EnsureDirectory</code> · L107–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L107-L118">Drilling.File/JHMI/CConfigStructureFile.cs:107–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.EnsureDirectory(string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>itemName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>relativePath</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L79-L79">Drilling.File/JHMI/CConfigStructureFile.cs:79–79</a></td><td>EnsureDirectory</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L80-L80">Drilling.File/JHMI/CConfigStructureFile.cs:80–80</a></td><td>EnsureDirectory</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L81-L81">Drilling.File/JHMI/CConfigStructureFile.cs:81–81</a></td><td>EnsureDirectory</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>109</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>110</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:281</td></tr>
+<tr><td>111</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>114</td><td>Directory.CreateDirectory</td><td>resolved</td><td>System.IO.DirectoryInfo System.IO.Directory.CreateDirectory(string)</td></tr>
+<tr><td>117</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>117</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>117</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>109</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativePath)</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(relativePath);</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(relativePath)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var existed = Directory.Exists(path);</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: existed = Directory.Exists(path)</td></tr>
+<tr><td>112</td><td>if</td><td>조건에 따라 분기합니다: if (!existed)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.CreateDirectory(path)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, path, true, Directory.Exists(path), Directory.Exists(path), existed ? &quot;Directory found.&quot; : &quot;Directory created.&quot;)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path)</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(path)</td></tr>
+<tr><td>117</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: existed ? &quot;Directory found.&quot; : &quot;Directory created.&quot;</td></tr>
+<tr><td>117</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, path, true, Directory.Exists(path), Directory.Exists(path), existed ? &quot;Directory found.&quot; : &quot;Directory created.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EnsureDirectory&quot;]
+ N0[&quot;L112 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L120">MethodDeclaration <code>CheckCsv</code> · L120–139</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L120-L139">Drilling.File/JHMI/CConfigStructureFile.cs:120–139</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsv(Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>csvFile</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L86-L86">Drilling.File/JHMI/CConfigStructureFile.cs:86–86</a></td><td>CheckCsv</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>122</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:281</td></tr>
+<tr><td>123</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>125</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>130</td><td>CCsvParser.ValidateRequiredHeaders</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:280</td></tr>
+<tr><td>131</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+<tr><td>132</td><td>csvFile.RowValidator</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;.Invoke(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>133</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>137</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(csvFile.RelativePath)</td></tr>
+<tr><td>122</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(csvFile.RelativePath);</td></tr>
+<tr><td>122</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(csvFile.RelativePath)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>123</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(path))</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, false, false, &quot;Required JHMI schema file is missing.&quot;)</td></tr>
+<tr><td>125</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, false, false, &quot;Required JHMI schema file is missing.&quot;);</td></tr>
+<tr><td>128</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, csvFile.ItemName, csvFile.RequiredHeaderGroups)</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path)</td></tr>
+<tr><td>131</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = CCsvParser.Read(path);</td></tr>
+<tr><td>131</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: csvFile.RowValidator(csvFile.ItemName, rows)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, true, $&quot;CSV header and key structure OK. Rows={rows.Count}.&quot;)</td></tr>
+<tr><td>133</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, true, $&quot;CSV header and key structure OK. Rows={rows.Count}.&quot;);</td></tr>
+<tr><td>135</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, false, ex.Message)</td></tr>
+<tr><td>137</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(csvFile.ItemName, path, true, true, false, ex.Message);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CheckCsv&quot;]
+ N0[&quot;L123 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L128 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L135 catch&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L141">MethodDeclaration <code>CheckValueCsv</code> · L141–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L141-L160">Drilling.File/JHMI/CConfigStructureFile.cs:141–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckValueCsv(Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>valueFile</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L92-L92">Drilling.File/JHMI/CConfigStructureFile.cs:92–92</a></td><td>CheckValueCsv</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>143</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:281</td></tr>
+<tr><td>144</td><td>System.IO.File.Exists</td><td>resolved</td><td>bool System.IO.File.Exists(string?)</td></tr>
+<tr><td>146</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>151</td><td>CCsvParser.ValidateRequiredHeaders</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:280</td></tr>
+<tr><td>152</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+<tr><td>153</td><td>valueFile.RowValidator</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;.Invoke(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>154</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>158</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(valueFile.RelativePath)</td></tr>
+<tr><td>143</td><td>local-declaration</td><td>지역 변수를 선언합니다: var path = GetPath(valueFile.RelativePath);</td></tr>
+<tr><td>143</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: path = GetPath(valueFile.RelativePath)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path)</td></tr>
+<tr><td>144</td><td>if</td><td>조건에 따라 분기합니다: if (!System.IO.File.Exists(path))</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, false, true, &quot;Optional value file is not created yet.&quot;)</td></tr>
+<tr><td>146</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, false, true, &quot;Optional value file is not created yet.&quot;);</td></tr>
+<tr><td>149</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(path, valueFile.ItemName, valueFile.RequiredHeaderGroups)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path)</td></tr>
+<tr><td>152</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = CCsvParser.Read(path);</td></tr>
+<tr><td>152</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = CCsvParser.Read(path)</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: valueFile.RowValidator(valueFile.ItemName, rows)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, true, $&quot;CSV value structure OK. Rows={rows.Count}.&quot;)</td></tr>
+<tr><td>154</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, true, $&quot;CSV value structure OK. Rows={rows.Count}.&quot;);</td></tr>
+<tr><td>156</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, false, ex.Message)</td></tr>
+<tr><td>158</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(valueFile.ItemName, path, false, true, false, ex.Message);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CheckValueCsv&quot;]
+ N0[&quot;L144 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L149 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L156 catch&quot;]
+ N1 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L162">MethodDeclaration <code>CheckRecipeValueFiles</code> · L162–170</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L162-L170">Drilling.File/JHMI/CConfigStructureFile.cs:162–170</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckRecipeValueFiles(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L95-L95">Drilling.File/JHMI/CConfigStructureFile.cs:95–95</a></td><td>CheckRecipeValueFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>169</td><td>CheckLineValueFiles</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, bool&gt;, string, System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:223</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckLineValueFiles(&quot;Recipe Value Files&quot;, &quot;RECIPE&quot;, &quot;*.csv&quot;, MatchesCount, &quot;Each recipe line must be TAB,NAME,VALUE.&quot;, cancellationToken)</td></tr>
+<tr><td>169</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CheckLineValueFiles(&quot;Recipe Value Files&quot;, &quot;RECIPE&quot;, &quot;*.csv&quot;, MatchesCount, &quot;Each recipe line must be TAB,NAME,VALUE.&quot;, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L164">LocalFunctionStatement <code>MatchesCount</code> · L164–167</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L164-L167">Drilling.File/JHMI/CConfigStructureFile.cs:164–167</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool MatchesCount(System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>lineFields</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>166</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return lineFields.Count &gt;= 3;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L172">MethodDeclaration <code>CheckManualValueFiles</code> · L172–175</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L172-L175">Drilling.File/JHMI/CConfigStructureFile.cs:172–175</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckManualValueFiles(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L96-L96">Drilling.File/JHMI/CConfigStructureFile.cs:96–96</a></td><td>CheckManualValueFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>174</td><td>CheckCsvValueFiles</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;, System.Threading.CancellationToken) · Drilling.File/JHMI/CConfigStructureFile.cs:177</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CheckCsvValueFiles(&quot;Manual Scan Files&quot;, &quot;Manual&quot;, &quot;*.scan&quot;, [[&quot;NAME&quot;], [&quot;VALUE&quot;]], ValidateNameKey, cancellationToken)</td></tr>
+<tr><td>174</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CheckCsvValueFiles(&quot;Manual Scan Files&quot;, &quot;Manual&quot;, &quot;*.scan&quot;, [[&quot;NAME&quot;], [&quot;VALUE&quot;]], ValidateNameKey, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L177">MethodDeclaration <code>CheckCsvValueFiles</code> · L177–221</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L177-L221">Drilling.File/JHMI/CConfigStructureFile.cs:177–221</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckCsvValueFiles(string, string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>itemName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>relativeDirectory</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>pattern</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>requiredHeaderGroups</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>rowValidator</td><td>System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L174-L174">Drilling.File/JHMI/CConfigStructureFile.cs:174–174</a></td><td>CheckCsvValueFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>186</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:281</td></tr>
+<tr><td>187</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>189</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>197</td><td>Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>197</td><td>Directory.EnumerateFiles(directory, pattern).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;string&gt;.OrderBy&lt;string, string&gt;(System.Func&lt;string, string&gt;, System.Collections.Generic.IComparer&lt;string&gt;?)</td></tr>
+<tr><td>197</td><td>Directory.EnumerateFiles</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateFiles(string, string)</td></tr>
+<tr><td>200</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>208</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>209</td><td>CCsvParser.ValidateRequiredHeaders</td><td>resolved</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;) · Drilling.File/Parser/CCsvParser.cs:280</td></tr>
+<tr><td>210</td><td>CCsvParser.Read</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12</td></tr>
+<tr><td>211</td><td>rowValidator</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;.Invoke(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>215</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>219</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativeDirectory)</td></tr>
+<tr><td>186</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = GetPath(relativeDirectory);</td></tr>
+<tr><td>186</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = GetPath(relativeDirectory)</td></tr>
+<tr><td>187</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory)</td></tr>
+<tr><td>187</td><td>if</td><td>조건에 따라 분기합니다: if (!Directory.Exists(directory))</td></tr>
+<tr><td>189</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, &quot;Optional value directory is not created yet.&quot;)</td></tr>
+<tr><td>189</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, &quot;Optional value directory is not created yet.&quot;);</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray()</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern)</td></tr>
+<tr><td>197</td><td>local-declaration</td><td>지역 변수를 선언합니다: var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray();</td></tr>
+<tr><td>197</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray()</td></tr>
+<tr><td>198</td><td>if</td><td>조건에 따라 분기합니다: if (files.Length == 0)</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, &quot;No value file yet.&quot;)</td></tr>
+<tr><td>200</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, &quot;No value file yet.&quot;);</td></tr>
+<tr><td>203</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>205</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rowCount = 0;</td></tr>
+<tr><td>205</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rowCount = 0</td></tr>
+<tr><td>206</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var file in files)</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(file, itemName, requiredHeaderGroups)</td></tr>
+<tr><td>210</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(file)</td></tr>
+<tr><td>210</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rows = CCsvParser.Read(file);</td></tr>
+<tr><td>210</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rows = CCsvParser.Read(file)</td></tr>
+<tr><td>211</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: rowValidator(itemName, rows)</td></tr>
+<tr><td>212</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: rowCount += rows.Count</td></tr>
+<tr><td>215</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $&quot;CSV value files OK. Files={files.Length}, Rows={rowCount}.&quot;)</td></tr>
+<tr><td>215</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $&quot;CSV value files OK. Files={files.Length}, Rows={rowCount}.&quot;);</td></tr>
+<tr><td>217</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>219</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message)</td></tr>
+<tr><td>219</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CheckCsvValueFiles&quot;]
+ N0[&quot;L187 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L198 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L203 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L206 foreach&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L217 catch&quot;]
+ N2 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L192">LocalFunctionStatement <code>SelectPath</code> · L192–195</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L192-L195">Drilling.File/JHMI/CConfigStructureFile.cs:192–195</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectPath(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>194</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return path;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L223">MethodDeclaration <code>CheckLineValueFiles</code> · L223–279</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L223-L279">Drilling.File/JHMI/CConfigStructureFile.cs:223–279</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS Drilling.File.JHMI.CConfigStructureFile.CheckLineValueFiles(string, string, string, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, bool&gt;, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>itemName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>relativeDirectory</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>pattern</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>lineValidator</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, bool&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>invalidMessage</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L169-L169">Drilling.File/JHMI/CConfigStructureFile.cs:169–169</a></td><td>CheckLineValueFiles</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>232</td><td>GetPath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:281</td></tr>
+<tr><td>233</td><td>Directory.Exists</td><td>resolved</td><td>bool System.IO.Directory.Exists(string?)</td></tr>
+<tr><td>235</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>243</td><td>Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>243</td><td>Directory.EnumerateFiles(directory, pattern).OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;string&gt;.OrderBy&lt;string, string&gt;(System.Func&lt;string, string&gt;, System.Collections.Generic.IComparer&lt;string&gt;?)</td></tr>
+<tr><td>243</td><td>Directory.EnumerateFiles</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.IO.Directory.EnumerateFiles(string, string)</td></tr>
+<tr><td>246</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>254</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>256</td><td>CCsvParser.ReadLines</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.Parser.CCsvParser.ReadLines(string) · Drilling.File/Parser/CCsvParser.cs:147</td></tr>
+<tr><td>259</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>265</td><td>SplitCsvLine</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CConfigStructureFile.SplitCsvLine(string, string, int) · Drilling.File/JHMI/CConfigStructureFile.cs:398</td></tr>
+<tr><td>266</td><td>lineValidator</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;, bool&gt;.Invoke(System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
+<tr><td>268</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>268</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+<tr><td>273</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+<tr><td>277</td><td>new ST_CONFIG_FILE_STATUS</td><td>resolved</td><td>Drilling.Common.Managers.ST_CONFIG_FILE_STATUS.ST_CONFIG_FILE_STATUS(string, string, bool, bool, bool, string) · Drilling.Common/Managers/CManager.cs:765</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetPath(relativeDirectory)</td></tr>
+<tr><td>232</td><td>local-declaration</td><td>지역 변수를 선언합니다: var directory = GetPath(relativeDirectory);</td></tr>
+<tr><td>232</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: directory = GetPath(relativeDirectory)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.Exists(directory)</td></tr>
+<tr><td>233</td><td>if</td><td>조건에 따라 분기합니다: if (!Directory.Exists(directory))</td></tr>
+<tr><td>235</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, &quot;Optional value directory is not created yet.&quot;)</td></tr>
+<tr><td>235</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, false, true, &quot;Optional value directory is not created yet.&quot;);</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray()</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>243</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Directory.EnumerateFiles(directory, pattern)</td></tr>
+<tr><td>243</td><td>local-declaration</td><td>지역 변수를 선언합니다: var files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray();</td></tr>
+<tr><td>243</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: files = Directory.EnumerateFiles(directory, pattern).OrderBy(SelectPath, StringComparer.OrdinalIgnoreCase).ToArray()</td></tr>
+<tr><td>244</td><td>if</td><td>조건에 따라 분기합니다: if (files.Length == 0)</td></tr>
+<tr><td>246</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, &quot;No value file yet.&quot;)</td></tr>
+<tr><td>246</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, &quot;No value file yet.&quot;);</td></tr>
+<tr><td>249</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>251</td><td>local-declaration</td><td>지역 변수를 선언합니다: var lineCount = 0;</td></tr>
+<tr><td>251</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: lineCount = 0</td></tr>
+<tr><td>252</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var file in files)</td></tr>
+<tr><td>254</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>255</td><td>local-declaration</td><td>지역 변수를 선언합니다: var lineNo = 0;</td></tr>
+<tr><td>255</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: lineNo = 0</td></tr>
+<tr><td>256</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadLines(file)</td></tr>
+<tr><td>256</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var line in CCsvParser.ReadLines(file))</td></tr>
+<tr><td>259</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(line)</td></tr>
+<tr><td>259</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(line))</td></tr>
+<tr><td>261</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>265</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SplitCsvLine(line, file, lineNo)</td></tr>
+<tr><td>265</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fields = SplitCsvLine(line, file, lineNo);</td></tr>
+<tr><td>265</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fields = SplitCsvLine(line, file, lineNo)</td></tr>
+<tr><td>266</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: lineValidator(fields)</td></tr>
+<tr><td>266</td><td>if</td><td>조건에 따라 분기합니다: if (!lineValidator(fields))</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;{itemName} validation failed. {Path.GetFileName(file)} row {lineNo}: {invalidMessage}&quot;)</td></tr>
+<tr><td>268</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(file)</td></tr>
+<tr><td>268</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;{itemName} validation failed. {Path.GetFileName(file)} row {lineNo}: {invalidMessage}&quot;);</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $&quot;Line value files OK. Files={files.Length}, Lines={lineCount}.&quot;)</td></tr>
+<tr><td>273</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, true, $&quot;Line value files OK. Files={files.Length}, Lines={lineCount}.&quot;);</td></tr>
+<tr><td>275</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is InvalidDataException or IOException or UnauthorizedAccessException)</td></tr>
+<tr><td>277</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message)</td></tr>
+<tr><td>277</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CONFIG_FILE_STATUS(itemName, directory, false, true, false, ex.Message);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CheckLineValueFiles&quot;]
+ N0[&quot;L233 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L244 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L249 try&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L252 foreach&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L256 foreach&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L259 if&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L266 if&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L275 catch&quot;]
+ N2 --&gt;|포함| N7</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L238">LocalFunctionStatement <code>SelectPath</code> · L238–241</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L238-L241">Drilling.File/JHMI/CConfigStructureFile.cs:238–241</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectPath(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>240</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return path;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L281">MethodDeclaration <code>GetPath</code> · L281–284</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L281-L284">Drilling.File/JHMI/CConfigStructureFile.cs:281–284</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetPath(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>relativePath</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L110-L110">Drilling.File/JHMI/CConfigStructureFile.cs:110–110</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L122-L122">Drilling.File/JHMI/CConfigStructureFile.cs:122–122</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L143-L143">Drilling.File/JHMI/CConfigStructureFile.cs:143–143</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L186-L186">Drilling.File/JHMI/CConfigStructureFile.cs:186–186</a></td><td>GetPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L232-L232">Drilling.File/JHMI/CConfigStructureFile.cs:232–232</a></td><td>GetPath</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>283</td><td>NormalizePath</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.NormalizePath(string) · Drilling.File/JHMI/CConfigStructureFile.cs:286</td></tr>
+<tr><td>283</td><td>Path.Combine</td><td>resolved</td><td>string System.IO.Path.Combine(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>283</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizePath(Path.Combine(configRoot, relativePath))</td></tr>
+<tr><td>283</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, relativePath)</td></tr>
+<tr><td>283</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return NormalizePath(Path.Combine(configRoot, relativePath));</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L286">MethodDeclaration <code>NormalizePath</code> · L286–289</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L286-L289">Drilling.File/JHMI/CConfigStructureFile.cs:286–289</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.JHMI.CConfigStructureFile.NormalizePath(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L102-L102">Drilling.File/JHMI/CConfigStructureFile.cs:102–102</a></td><td>NormalizePath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L283-L283">Drilling.File/JHMI/CConfigStructureFile.cs:283–283</a></td><td>NormalizePath</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>288</td><td>Path.GetFullPath</td><td>resolved</td><td>string System.IO.Path.GetFullPath(string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>288</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(path)</td></tr>
+<tr><td>288</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(path);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L291">MethodDeclaration <code>ValidateTabNameKey</code> · L291–299</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L291-L299">Drilling.File/JHMI/CConfigStructureFile.cs:291–299</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateTabNameKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>298</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>298</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;TAB&quot;, &quot;NAME&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L293">LocalFunctionStatement <code>SelectValue</code> · L293–296</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L293-L296">Drilling.File/JHMI/CConfigStructureFile.cs:293–296</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>295</td><td>CCsvParser.Get(row, &quot;TAB&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>295</td><td>CCsvParser.Get(row, &quot;TAB&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>295</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>295</td><td>CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>295</td><td>CCsvParser.Get(row, &quot;NAME&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>295</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;TAB&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;TAB&quot;).Trim()</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;TAB&quot;)</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;).Trim()</td></tr>
+<tr><td>295</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;)</td></tr>
+<tr><td>295</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;{CCsvParser.Get(row, &quot;TAB&quot;).Trim().ToUpperInvariant()}|{CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant()}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L301">MethodDeclaration <code>ValidateDeviceNumberKey</code> · L301–309</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L301-L309">Drilling.File/JHMI/CConfigStructureFile.cs:301–309</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateDeviceNumberKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>308</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;DEVICE&quot;, &quot;NUMBER&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L303">LocalFunctionStatement <code>SelectValue</code> · L303–306</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L303-L306">Drilling.File/JHMI/CConfigStructureFile.cs:303–306</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>305</td><td>CCsvParser.Get(row, &quot;DEVICE&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>305</td><td>CCsvParser.Get(row, &quot;DEVICE&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>305</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>305</td><td>GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>305</td><td>GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>305</td><td>GetFirstValue</td><td>resolved</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetFirstValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[]) · Drilling.File/JHMI/CConfigStructureFile.cs:384</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;DEVICE&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;DEVICE&quot;).Trim()</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;DEVICE&quot;)</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;).Trim()</td></tr>
+<tr><td>305</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;)</td></tr>
+<tr><td>305</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;{CCsvParser.Get(row, &quot;DEVICE&quot;).Trim().ToUpperInvariant()}|{GetFirstValue(row, &quot;NUMBER&quot;, &quot;NO&quot;).Trim().ToUpperInvariant()}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L311">MethodDeclaration <code>ValidateNameKey</code> · L311–319</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L311-L319">Drilling.File/JHMI/CConfigStructureFile.cs:311–319</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateNameKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>318</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>318</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;NAME&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L313">LocalFunctionStatement <code>SelectValue</code> · L313–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L313-L316">Drilling.File/JHMI/CConfigStructureFile.cs:313–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>315</td><td>CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>315</td><td>CCsvParser.Get(row, &quot;NAME&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>315</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>315</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>315</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;).Trim()</td></tr>
+<tr><td>315</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;NAME&quot;)</td></tr>
+<tr><td>315</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, &quot;NAME&quot;).Trim().ToUpperInvariant();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L321">MethodDeclaration <code>ValidateGroupKey</code> · L321–329</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L321-L329">Drilling.File/JHMI/CConfigStructureFile.cs:321–329</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateGroupKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>328</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>328</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;GROUP&quot;, &quot;KEY&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L323">LocalFunctionStatement <code>SelectValue</code> · L323–326</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L323-L326">Drilling.File/JHMI/CConfigStructureFile.cs:323–326</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>325</td><td>CCsvParser.Get(row, &quot;GROUP&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>325</td><td>CCsvParser.Get(row, &quot;GROUP&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>325</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>325</td><td>CCsvParser.Get(row, &quot;KEY&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>325</td><td>CCsvParser.Get(row, &quot;KEY&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>325</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;GROUP&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;GROUP&quot;).Trim()</td></tr>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;GROUP&quot;)</td></tr>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;KEY&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;KEY&quot;).Trim()</td></tr>
+<tr><td>325</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;KEY&quot;)</td></tr>
+<tr><td>325</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;{CCsvParser.Get(row, &quot;GROUP&quot;).Trim().ToUpperInvariant()}|{CCsvParser.Get(row, &quot;KEY&quot;).Trim().ToUpperInvariant()}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L331">MethodDeclaration <code>ValidateIdKey</code> · L331–339</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L331-L339">Drilling.File/JHMI/CConfigStructureFile.cs:331–339</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateIdKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>338</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>338</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;ID&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L333">LocalFunctionStatement <code>SelectValue</code> · L333–336</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L333-L336">Drilling.File/JHMI/CConfigStructureFile.cs:333–336</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>335</td><td>CCsvParser.Get(row, &quot;ID&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>335</td><td>CCsvParser.Get(row, &quot;ID&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>335</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;ID&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;ID&quot;).Trim()</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;ID&quot;)</td></tr>
+<tr><td>335</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, &quot;ID&quot;).Trim().ToUpperInvariant();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L341">MethodDeclaration <code>ValidateIndexKey</code> · L341–349</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L341-L349">Drilling.File/JHMI/CConfigStructureFile.cs:341–349</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateIndexKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>348</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>348</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;INDEX&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L343">LocalFunctionStatement <code>SelectValue</code> · L343–346</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L343-L346">Drilling.File/JHMI/CConfigStructureFile.cs:343–346</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>345</td><td>CCsvParser.Get(row, &quot;INDEX&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>345</td><td>CCsvParser.Get(row, &quot;INDEX&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>345</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>345</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;INDEX&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>345</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;INDEX&quot;).Trim()</td></tr>
+<tr><td>345</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;INDEX&quot;)</td></tr>
+<tr><td>345</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, &quot;INDEX&quot;).Trim().ToUpperInvariant();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L351">MethodDeclaration <code>ValidateStepKey</code> · L351–359</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L351-L359">Drilling.File/JHMI/CConfigStructureFile.cs:351–359</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateStepKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>358</td><td>ValidateUniqueKey</td><td>resolved</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:361</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateUniqueKey(tableName, rows, [&quot;STEP&quot;], SelectValue)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L353">LocalFunctionStatement <code>SelectValue</code> · L353–356</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L353-L356">Drilling.File/JHMI/CConfigStructureFile.cs:353–356</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>355</td><td>CCsvParser.Get(row, &quot;STEP&quot;).Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>355</td><td>CCsvParser.Get(row, &quot;STEP&quot;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>355</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;STEP&quot;).Trim().ToUpperInvariant()</td></tr>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;STEP&quot;).Trim()</td></tr>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, &quot;STEP&quot;)</td></tr>
+<tr><td>355</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, &quot;STEP&quot;).Trim().ToUpperInvariant();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L361">MethodDeclaration <code>ValidateUniqueKey</code> · L361–382</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L361-L382">Drilling.File/JHMI/CConfigStructureFile.cs:361–382</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.File.JHMI.CConfigStructureFile.ValidateUniqueKey(string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>tableName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>rows</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>displayKeyNames</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>createKey</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L298-L298">Drilling.File/JHMI/CConfigStructureFile.cs:298–298</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L308-L308">Drilling.File/JHMI/CConfigStructureFile.cs:308–308</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L318-L318">Drilling.File/JHMI/CConfigStructureFile.cs:318–318</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L328-L328">Drilling.File/JHMI/CConfigStructureFile.cs:328–328</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L338-L338">Drilling.File/JHMI/CConfigStructureFile.cs:338–338</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L348-L348">Drilling.File/JHMI/CConfigStructureFile.cs:348–348</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L358-L358">Drilling.File/JHMI/CConfigStructureFile.cs:358–358</a></td><td>ValidateUniqueKey</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>368</td><td>new HashSet&lt;string&gt;</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;string&gt;.HashSet(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>371</td><td>createKey</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Func&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string&gt;.Invoke(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
+<tr><td>372</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>372</td><td>key.Replace</td><td>resolved</td><td>string string.Replace(string, string?, System.StringComparison)</td></tr>
+<tr><td>377</td><td>keys.Add</td><td>resolved</td><td>bool System.Collections.Generic.HashSet&lt;string&gt;.Add(string)</td></tr>
+<tr><td>379</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>379</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>368</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet&lt;string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>368</td><td>local-declaration</td><td>지역 변수를 선언합니다: var keys = new HashSet&lt;string&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>368</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: keys = new HashSet&lt;string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>369</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var row in rows)</td></tr>
+<tr><td>371</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: createKey(row)</td></tr>
+<tr><td>371</td><td>local-declaration</td><td>지역 변수를 선언합니다: var key = createKey(row);</td></tr>
+<tr><td>371</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: key = createKey(row)</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(key.Replace(&quot;|&quot;, &quot;&quot;, StringComparison.Ordinal))</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: key.Replace(&quot;|&quot;, &quot;&quot;, StringComparison.Ordinal)</td></tr>
+<tr><td>372</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(key.Replace(&quot;|&quot;, &quot;&quot;, StringComparison.Ordinal)))</td></tr>
+<tr><td>374</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>377</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Add(key)</td></tr>
+<tr><td>377</td><td>if</td><td>조건에 따라 분기합니다: if (!keys.Add(key))</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;{tableName} validation failed. Duplicated key: {string.Join(&quot;+&quot;, displayKeyNames)}={key}&quot;)</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;+&quot;, displayKeyNames)</td></tr>
+<tr><td>379</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;{tableName} validation failed. Duplicated key: {string.Join(&quot;+&quot;, displayKeyNames)}={key}&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ValidateUniqueKey&quot;]
+ N0[&quot;L369 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L372 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L377 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L384">MethodDeclaration <code>GetFirstValue</code> · L384–396</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L384-L396">Drilling.File/JHMI/CConfigStructureFile.cs:384–396</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.File.JHMI.CConfigStructureFile.GetFirstValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>names</td><td>string[]</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L305-L305">Drilling.File/JHMI/CConfigStructureFile.cs:305–305</a></td><td>GetFirstValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>388</td><td>CCsvParser.Get</td><td>resolved</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string) · Drilling.File/Parser/CCsvParser.cs:168</td></tr>
+<tr><td>389</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>386</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var name in names)</td></tr>
+<tr><td>388</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, name)</td></tr>
+<tr><td>388</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = CCsvParser.Get(row, name);</td></tr>
+<tr><td>388</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = CCsvParser.Get(row, name)</td></tr>
+<tr><td>389</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value)</td></tr>
+<tr><td>389</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(value))</td></tr>
+<tr><td>391</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value;</td></tr>
+<tr><td>395</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetFirstValue&quot;]
+ N0[&quot;L386 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L389 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L398">MethodDeclaration <code>SplitCsvLine</code> · L398–436</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L398-L436">Drilling.File/JHMI/CConfigStructureFile.cs:398–436</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CConfigStructureFile.SplitCsvLine(string, string, int)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>line</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>path</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>lineNo</td><td>int</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L265-L265">Drilling.File/JHMI/CConfigStructureFile.cs:265–265</a></td><td>SplitCsvLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>400</td><td>new List&lt;string&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;string&gt;.List()</td></tr>
+<tr><td>401</td><td>new System.Text.StringBuilder</td><td>resolved</td><td>System.Text.StringBuilder.StringBuilder()</td></tr>
+<tr><td>410</td><td>value.Append</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.Append(char)</td></tr>
+<tr><td>420</td><td>fields.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;string&gt;.Add(string)</td></tr>
+<tr><td>420</td><td>value.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>421</td><td>value.Clear</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.Clear()</td></tr>
+<tr><td>425</td><td>value.Append</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.Append(char)</td></tr>
+<tr><td>429</td><td>fields.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;string&gt;.Add(string)</td></tr>
+<tr><td>429</td><td>value.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>432</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>432</td><td>Path.GetFileName</td><td>resolved</td><td>string? System.IO.Path.GetFileName(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>400</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;string&gt;()</td></tr>
+<tr><td>400</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fields = new List&lt;string&gt;();</td></tr>
+<tr><td>400</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fields = new List&lt;string&gt;()</td></tr>
+<tr><td>401</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Text.StringBuilder()</td></tr>
+<tr><td>401</td><td>local-declaration</td><td>지역 변수를 선언합니다: var value = new System.Text.StringBuilder();</td></tr>
+<tr><td>401</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: value = new System.Text.StringBuilder()</td></tr>
+<tr><td>402</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inQuotes = false;</td></tr>
+<tr><td>402</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inQuotes = false</td></tr>
+<tr><td>403</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>403</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; line.Length; index++)</td></tr>
+<tr><td>405</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = line[index];</td></tr>
+<tr><td>405</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = line[index]</td></tr>
+<tr><td>406</td><td>if</td><td>조건에 따라 분기합니다: if (current == &#x27;&quot;&#x27;)</td></tr>
+<tr><td>408</td><td>if</td><td>조건에 따라 분기합니다: if (inQuotes &amp;&amp; index + 1 &lt; line.Length &amp;&amp; line[index + 1] == &#x27;&quot;&#x27;)</td></tr>
+<tr><td>410</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append(&#x27;&quot;&#x27;)</td></tr>
+<tr><td>413</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>415</td><td>assignment</td><td>값을 대상에 대입합니다: inQuotes = !inQuotes</td></tr>
+<tr><td>418</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>418</td><td>if</td><td>조건에 따라 분기합니다: if (current == &#x27;,&#x27; &amp;&amp; !inQuotes)</td></tr>
+<tr><td>420</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString())</td></tr>
+<tr><td>420</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()</td></tr>
+<tr><td>421</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Clear()</td></tr>
+<tr><td>423</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>425</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Append(current)</td></tr>
+<tr><td>429</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(value.ToString())</td></tr>
+<tr><td>429</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()</td></tr>
+<tr><td>430</td><td>if</td><td>조건에 따라 분기합니다: if (inQuotes)</td></tr>
+<tr><td>432</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.&quot;)</td></tr>
+<tr><td>432</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(path)</td></tr>
+<tr><td>432</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;CSV validation failed. {Path.GetFileName(path)} row {lineNo} has an unterminated quoted value.&quot;);</td></tr>
+<tr><td>435</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return fields;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SplitCsvLine&quot;]
+ N0[&quot;L403 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L406 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L408 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L413 else&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L418 else&quot;]
+ N1 --&gt;|포함| N4
+ N5[&quot;L418 if&quot;]
+ N1 --&gt;|포함| N5
+ N6[&quot;L423 else&quot;]
+ N4 --&gt;|포함| N6
+ N7[&quot;L430 if&quot;]
+ M --&gt;|포함| N7</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L438">MethodDeclaration <code>Csv</code> · L438–446</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L438-L446">Drilling.File/JHMI/CConfigStructureFile.cs:438–446</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV Drilling.File.JHMI.CConfigStructureFile.Csv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>itemName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>relativePath</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>requiredHeaderGroups</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>rowValidator</td><td>System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L10-L32">Drilling.File/JHMI/CConfigStructureFile.cs:10–32</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L34-L34">Drilling.File/JHMI/CConfigStructureFile.cs:34–34</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L36-L54">Drilling.File/JHMI/CConfigStructureFile.cs:36–54</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L56-L61">Drilling.File/JHMI/CConfigStructureFile.cs:56–61</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L63-L63">Drilling.File/JHMI/CConfigStructureFile.cs:63–63</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L65-L65">Drilling.File/JHMI/CConfigStructureFile.cs:65–65</a></td><td>Csv</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L67-L67">Drilling.File/JHMI/CConfigStructureFile.cs:67–67</a></td><td>Csv</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>445</td><td>new ST_REQUIRED_CSV</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_REQUIRED_CSV.ST_REQUIRED_CSV(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:458</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>445</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REQUIRED_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator)</td></tr>
+<tr><td>445</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_REQUIRED_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L448">MethodDeclaration <code>ValueCsv</code> · L448–456</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L448-L456">Drilling.File/JHMI/CConfigStructureFile.cs:448–456</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV Drilling.File.JHMI.CConfigStructureFile.ValueCsv(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.File.JHMI.CConfigStructureFile</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>itemName</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>relativePath</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>requiredHeaderGroups</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>rowValidator</td><td>System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70">Drilling.File/JHMI/CConfigStructureFile.cs:70–70</a></td><td>ValueCsv</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>455</td><td>new ST_VALUE_CSV</td><td>resolved</td><td>Drilling.File.JHMI.CConfigStructureFile.ST_VALUE_CSV.ST_VALUE_CSV(string, string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;, System.Action&lt;string, System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;&gt;) · Drilling.File/JHMI/CConfigStructureFile.cs:464</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>455</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_VALUE_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator)</td></tr>
+<tr><td>455</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_VALUE_CSV(itemName, relativePath, requiredHeaderGroups, rowValidator);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.File/JHMI/CConfigStructureFile.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

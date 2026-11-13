@@ -1,0 +1,93 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Data/Script/DefaultOffset/H03_DEFAULTOFFSET_20261109_100150_435.ascript
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000001 | // Default SETUP_CENTER · no Cell/Align/Review/Shift offsets ⟦EOL⟧
+// 해설 L2: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000002 | // CreatedAt=2026-11-09 10:01:50.435 +09:00 ⟦EOL⟧
+// 해설 L3: AeroScript 명령/제어식 `program`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000003 | program ⟦EOL⟧
+// 해설 L4: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000004 | // Session=e967c18a098e46b98c3bd52ff8d6004e, TestId=10a560fad7f042ffb71006928e0e5415 ⟦EOL⟧
+// 해설 L5: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000005 | // Machining=Cross, CrossFullSize=0.1 mm, Vision=MarkFindSettingSingle ⟦EOL⟧
+// 해설 L6: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000006 | GalvoLaserOutput(GX3, GalvoLaser.Off) ⟦EOL⟧
+// 해설 L7: AeroScript 명령/제어식 `IfovOff`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000007 | IfovOff() ⟦EOL⟧
+// 해설 L8: AeroScript 명령/제어식 `SetupTaskDistanceUnits`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000008 | SetupTaskDistanceUnits(DistanceUnits.Primary) ⟦EOL⟧
+// 해설 L9: AeroScript 명령/제어식 `SetupTaskTimeUnits`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000009 | SetupTaskTimeUnits(TimeUnits.Seconds) ⟦EOL⟧
+// 해설 L10: AeroScript 명령/제어식 `VelocityBlendingOff`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000010 | VelocityBlendingOff() ⟦EOL⟧
+// 해설 L11: AeroScript 명령/제어식 `SetupTaskWaitMode`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000011 | SetupTaskWaitMode(WaitMode.Auto) ⟦EOL⟧
+// 해설 L12: AeroScript 명령/제어식 `SetupTaskTargetMode`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000012 | SetupTaskTargetMode(TargetMode.Absolute) ⟦EOL⟧
+// 해설 L13: AeroScript 명령/제어식 `GalvoConfigureLaserOutputPeriod`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000013 | GalvoConfigureLaserOutputPeriod(GX3, 0) ⟦EOL⟧
+// 해설 L14: AeroScript 명령/제어식 `GalvoConfigureLaser1PulseWidth`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000014 | GalvoConfigureLaser1PulseWidth(GX3, 0) ⟦EOL⟧
+// 해설 L15: AeroScript 명령/제어식 `GalvoConfigureLaserMode`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000015 | GalvoConfigureLaserMode(GX3, 0) ⟦EOL⟧
+// 해설 L16: AeroScript 명령/제어식 `ParameterSetTaskValue`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000016 | ParameterSetTaskValue(TaskGetIndex(), TaskParameter.MotionUpdateRate, 100) ⟦EOL⟧
+// 해설 L17: AeroScript 명령/제어식 `ParameterSetTaskValue`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000017 | ParameterSetTaskValue(TaskGetIndex(), TaskParameter.ExecuteNumLines, 110) ⟦EOL⟧
+// 해설 L18: AeroScript 명령/제어식 `PsoReset`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000018 | PsoReset (GX3) ⟦EOL⟧
+// 해설 L19: AeroScript 명령/제어식 `GalvoConfigureLaserOutputPeriod`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000019 | GalvoConfigureLaserOutputPeriod(GX3, 5) ⟦EOL⟧
+// 해설 L20: AeroScript 명령/제어식 `MoveDelay`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000020 | MoveDelay([GX3,GY3], 1) ⟦EOL⟧
+// 해설 L21: AeroScript 명령/제어식 `AnalogOutputSet`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000021 | AnalogOutputSet(GX3, 0, 10) ⟦EOL⟧
+// 해설 L22: AeroScript 명령/제어식 `GalvoConfigureLaser1PulseWidth`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000022 | GalvoConfigureLaser1PulseWidth(GX3, 5) ⟦EOL⟧
+// 해설 L23: AeroScript 명령/제어식 `SetupAxisSpeed`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000023 | SetupAxisSpeed(GX3, 1500) ⟦EOL⟧
+// 해설 L24: AeroScript 명령/제어식 `SetupAxisSpeed`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000024 | SetupAxisSpeed(GY3, 1500) ⟦EOL⟧
+// 해설 L25: AeroScript 명령/제어식 `SetupCoordinatedSpeed`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000025 | SetupCoordinatedSpeed(1500) ⟦EOL⟧
+// 해설 L26: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000026 | GalvoLaserOutput(GX3, GalvoLaser.Off) ⟦EOL⟧
+// 해설 L27: AeroScript 명령/제어식 `MoveRapid`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000027 | MoveRapid([GX3, GY3], [0, -0.05]) ⟦EOL⟧
+// 해설 L28: AeroScript 명령/제어식 `WaitForMotionDone`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000028 | WaitForMotionDone([GX3, GY3]) ⟦EOL⟧
+// 해설 L29: AeroScript 명령/제어식 `MoveDelay`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000029 | MoveDelay([GX3,GY3], 0.8) ⟦EOL⟧
+// 해설 L30: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000030 | GalvoLaserOutput(GX3, GalvoLaser.On) ⟦EOL⟧
+// 해설 L31: AeroScript 명령/제어식 `MoveLinear`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000031 | MoveLinear([GX3, GY3], [0, 0.05]) ⟦EOL⟧
+// 해설 L32: AeroScript 명령/제어식 `WaitForMotionDone`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000032 | WaitForMotionDone([GX3, GY3]) ⟦EOL⟧
+// 해설 L33: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000033 | GalvoLaserOutput(GX3, GalvoLaser.Off) ⟦EOL⟧
+// 해설 L34: AeroScript 명령/제어식 `MoveDelay`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000034 | MoveDelay([GX3,GY3], 0.2) ⟦EOL⟧
+// 해설 L35: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000035 | GalvoLaserOutput(GX3, GalvoLaser.Off) ⟦EOL⟧
+// 해설 L36: AeroScript 명령/제어식 `MoveRapid`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000036 | MoveRapid([GX3, GY3], [-0.05, 0]) ⟦EOL⟧
+// 해설 L37: AeroScript 명령/제어식 `WaitForMotionDone`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000037 | WaitForMotionDone([GX3, GY3]) ⟦EOL⟧
+// 해설 L38: AeroScript 명령/제어식 `MoveDelay`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000038 | MoveDelay([GX3,GY3], 0.8) ⟦EOL⟧
+// 해설 L39: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000039 | GalvoLaserOutput(GX3, GalvoLaser.On) ⟦EOL⟧
+// 해설 L40: AeroScript 명령/제어식 `MoveLinear`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000040 | MoveLinear([GX3, GY3], [0.05, 0]) ⟦EOL⟧
+// 해설 L41: AeroScript 명령/제어식 `WaitForMotionDone`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000041 | WaitForMotionDone([GX3, GY3]) ⟦EOL⟧
+// 해설 L42: AeroScript 명령/제어식 `GalvoLaserOutput`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000042 | GalvoLaserOutput(GX3, GalvoLaser.Off) ⟦EOL⟧
+// 해설 L43: AeroScript 명령/제어식 `MoveDelay`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000043 | MoveDelay([GX3,GY3], 0.2) ⟦EOL⟧
+// 해설 L44: AeroScript 명령/제어식 `end`. 단위·축·인코더·레이저 영향은 호출/설정 근거와 함께 확인합니다.
+L000044 | end ⟦EOL⟧

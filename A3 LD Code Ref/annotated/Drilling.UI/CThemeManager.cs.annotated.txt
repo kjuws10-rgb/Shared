@@ -1,0 +1,89 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CThemeManager.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000003 | namespace Drilling.UI; ⟦EOL⟧
+// 해설 L4: 타입의 구조/상속 선언입니다: public static class CThemeManager
+L000004 | public static class CThemeManager ⟦EOL⟧
+// 해설 L5: 구문 블록 경계입니다.
+L000005 | { ⟦EOL⟧
+// 해설 L6: 변수의 초기값을 지정합니다: LightThemeSource = "Themes/ThemeLight.xaml"
+L000006 |     private const string LightThemeSource = "Themes/ThemeLight.xaml"; ⟦EOL⟧
+// 해설 L7: 변수의 초기값을 지정합니다: DarkThemeSource = "Themes/ThemeDark.xaml"
+L000007 |     private const string DarkThemeSource = "Themes/ThemeDark.xaml"; ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.EN_UI_THEME Drilling.UI.CThemeManager.CurrentTheme
+L000008 |     public static EN_UI_THEME CurrentTheme { get; private set; } = EN_UI_THEME.Light; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CThemeManager.Apply(Drilling.UI.EN_UI_THEME)
+L000010 |     public static void Apply(EN_UI_THEME theme) ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 Apply.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 지역 변수를 선언합니다: var resources = Application.Current?.Resources; / 변수의 초기값을 지정합니다: resources = Application.Current?.Resources
+L000012 |         var resources = Application.Current?.Resources; ⟦EOL⟧
+// 해설 L13: 조건에 따라 분기합니다: if (resources is null)
+L000013 |         if (resources is null) ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 Apply.
+L000014 |         { ⟦EOL⟧
+// 해설 L15: 호출자에게 값 또는 제어를 반환합니다: return;
+L000015 |             return; ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 Apply.
+L000016 |         } ⟦EOL⟧
+L000017 |  ⟦EOL⟧
+// 해설 L18: 조건에 따라 결과식을 선택합니다: theme == EN_UI_THEME.Light ? LightThemeSource : DarkThemeSource / 지역 변수를 선언합니다: var source = theme == EN_UI_THEME.Light ? LightThemeSource : DarkThemeSource; / 변수의 초기값을 지정합니다: source = theme == EN_UI_THEME.Light ? LightThemeSource : DarkThemeSource
+L000018 |         var source = theme == EN_UI_THEME.Light ? LightThemeSource : DarkThemeSource; ⟦EOL⟧
+// 해설 L19: 지역 변수를 선언합니다: var dictionaries = resources.MergedDictionaries; / 변수의 초기값을 지정합니다: dictionaries = resources.MergedDictionaries
+L000019 |         var dictionaries = resources.MergedDictionaries; ⟦EOL⟧
+// 해설 L20: 초기화·조건·증감이 있는 반복입니다: for (var index = dictionaries.Count - 1; index >= 0; index--) / 변수의 초기값을 지정합니다: index = dictionaries.Count - 1
+L000020 |         for (var index = dictionaries.Count - 1; index >= 0; index--) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 Apply.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 지역 변수를 선언합니다: var dictionarySource = dictionaries[index].Source?.OriginalString ?? ""; / 변수의 초기값을 지정합니다: dictionarySource = dictionaries[index].Source?.OriginalString ?? ""
+L000022 |             var dictionarySource = dictionaries[index].Source?.OriginalString ?? ""; ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: dictionarySource.Contains("ThemeLight.xaml", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: dictionarySource.Contains("ThemeDark.xaml", StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (dictionarySource.Contains("ThemeLight.xaml", StringComparison.OrdinalIgnoreCase) || dictionarySource.Contains("ThemeDark.xaml", StringComparison.OrdinalIgnoreCase))
+L000023 |             if (dictionarySource.Contains("ThemeLight.xaml", StringComparison.OrdinalIgnoreCase) || dictionarySource.Contains("ThemeDark.xaml", StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Apply.
+L000024 |             { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: dictionaries.RemoveAt(index)
+L000025 |                 dictionaries.RemoveAt(index); ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 Apply.
+L000026 |             } ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Apply.
+L000027 |         } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: Source = new Uri(source, UriKind.Relative) / 함수·델리게이트 또는 객체 생성자를 호출합니다: dictionaries.Insert(0, new ResourceDictionary { Source = new Uri(source, UriKind.Relative) }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ResourceDictionary { Source = new Uri(source, UriKind.Relative) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Uri(source, UriKind.Relative)
+L000029 |         dictionaries.Insert(0, new ResourceDictionary { Source = new Uri(source, UriKind.Relative) }); ⟦EOL⟧
+// 해설 L30: 값을 대상에 대입합니다: CurrentTheme = theme
+L000030 |         CurrentTheme = theme; ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Apply.
+L000031 |     } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.EN_UI_THEME Drilling.UI.CThemeManager.Toggle()
+L000033 |     public static EN_UI_THEME Toggle() ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Toggle.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 조건에 따라 결과식을 선택합니다: CurrentTheme == EN_UI_THEME.Light ? EN_UI_THEME.Dark : EN_UI_THEME.Light / 지역 변수를 선언합니다: var nextTheme = CurrentTheme == EN_UI_THEME.Light ? EN_UI_THEME.Dark : EN_UI_THEME.Light; / 변수의 초기값을 지정합니다: nextTheme = CurrentTheme == EN_UI_THEME.Light ? EN_UI_THEME.Dark : EN_UI_THEME.Light
+L000035 |         var nextTheme = CurrentTheme == EN_UI_THEME.Light ? EN_UI_THEME.Dark : EN_UI_THEME.Light; ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply(nextTheme)
+L000036 |         Apply(nextTheme); ⟦EOL⟧
+// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return nextTheme;
+L000037 |         return nextTheme; ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 Toggle.
+L000038 |     } ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다.
+L000039 | } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 타입의 구조/상속 선언입니다: public enum EN_UI_THEME
+L000041 | public enum EN_UI_THEME ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다.
+L000042 | { ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.EN_UI_THEME.Light
+L000043 |     Light, ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.EN_UI_THEME.Dark
+L000044 |     Dark ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다.
+L000045 | } ⟦EOL⟧

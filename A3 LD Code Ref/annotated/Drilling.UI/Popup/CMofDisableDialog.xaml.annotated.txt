@@ -1,0 +1,99 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CMofDisableDialog.xaml
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <Window x:Class="Drilling.UI.Popup.CMofDisableDialog"
+L000001 | <Window x:Class="Drilling.UI.Popup.CMofDisableDialog" ⟦EOL⟧
+// 해설 L2: XAML UI 구조·속성·리소스 선언입니다: xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+L000002 |         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ⟦EOL⟧
+// 해설 L3: XAML UI 구조·속성·리소스 선언입니다: xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+L000003 |         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ⟦EOL⟧
+// 해설 L4: XAML UI 구조·속성·리소스 선언입니다: Title="MOF Disable" Width="540" Height="500" MinWidth="420" MinHeight="340"
+L000004 |         Title="MOF Disable" Width="540" Height="500" MinWidth="420" MinHeight="340" ⟦EOL⟧
+// 해설 L5: XAML UI 구조·속성·리소스 선언입니다: WindowStartupLocation="CenterOwner" Background="{DynamicResource GridBackgroundBrush}"
+L000005 |         WindowStartupLocation="CenterOwner" Background="{DynamicResource GridBackgroundBrush}" ⟦EOL⟧
+// 해설 L6: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextPrimaryBrush}" FontFamily="Segoe UI">
+L000006 |         Foreground="{DynamicResource TextPrimaryBrush}" FontFamily="Segoe UI"> ⟦EOL⟧
+// 해설 L7: XAML UI 구조·속성·리소스 선언입니다: <Window.Resources>
+L000007 |     <Window.Resources> ⟦EOL⟧
+// 해설 L8: XAML UI 구조·속성·리소스 선언입니다: <Style TargetType="Button">
+L000008 |         <Style TargetType="Button"> ⟦EOL⟧
+// 해설 L9: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Padding" Value="14,8" />
+L000009 |             <Setter Property="Padding" Value="14,8" /> ⟦EOL⟧
+// 해설 L10: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Margin" Value="4" />
+L000010 |             <Setter Property="Margin" Value="4" /> ⟦EOL⟧
+// 해설 L11: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Background" Value="{DynamicResource ButtonSecondaryBrush}" />
+L000011 |             <Setter Property="Background" Value="{DynamicResource ButtonSecondaryBrush}" /> ⟦EOL⟧
+// 해설 L12: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+L000012 |             <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" /> ⟦EOL⟧
+// 해설 L13: XAML UI 구조·속성·리소스 선언입니다: <Setter Property="BorderBrush" Value="{DynamicResource ButtonSecondaryBorderBrush}" />
+L000013 |             <Setter Property="BorderBrush" Value="{DynamicResource ButtonSecondaryBorderBrush}" /> ⟦EOL⟧
+// 해설 L14: XAML 요소 범위를 닫습니다.
+L000014 |         </Style> ⟦EOL⟧
+// 해설 L15: XAML 요소 범위를 닫습니다.
+L000015 |     </Window.Resources> ⟦EOL⟧
+// 해설 L16: XAML UI 구조·속성·리소스 선언입니다: <Border Padding="20" BorderThickness="1" BorderBrush="{DynamicResource PanelBorderBrush}">
+L000016 |     <Border Padding="20" BorderThickness="1" BorderBrush="{DynamicResource PanelBorderBrush}"> ⟦EOL⟧
+// 해설 L17: XAML UI 구조·속성·리소스 선언입니다: <DockPanel>
+L000017 |         <DockPanel> ⟦EOL⟧
+// 해설 L18: XAML UI 구조·속성·리소스 선언입니다: <StackPanel DockPanel.Dock="Top">
+L000018 |             <StackPanel DockPanel.Dock="Top"> ⟦EOL⟧
+// 해설 L19: XAML UI 구조·속성·리소스 선언입니다: <TextBlock x:Name="ControllerTitle" FontSize="22" FontWeight="SemiBold" />
+L000019 |                 <TextBlock x:Name="ControllerTitle" FontSize="22" FontWeight="SemiBold" /> ⟦EOL⟧
+// 해설 L20: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="MOF를 해제할 축을 선택하세요." Margin="0,8,0,12" />
+L000020 |                 <TextBlock Text="MOF를 해제할 축을 선택하세요." Margin="0,8,0,12" /> ⟦EOL⟧
+// 해설 L21: XAML UI 구조·속성·리소스 선언입니다: <StackPanel Orientation="Horizontal">
+L000021 |                 <StackPanel Orientation="Horizontal"> ⟦EOL⟧
+// 해설 L22: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: <Button Content="전체선택" Click="SelectAll" />
+L000022 |                     <Button Content="전체선택" Click="SelectAll" /> ⟦EOL⟧
+// 해설 L23: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: <Button Content="전체선택해제" Click="ClearAll" />
+L000023 |                     <Button Content="전체선택해제" Click="ClearAll" /> ⟦EOL⟧
+// 해설 L24: XAML 요소 범위를 닫습니다.
+L000024 |                 </StackPanel> ⟦EOL⟧
+// 해설 L25: XAML 요소 범위를 닫습니다.
+L000025 |             </StackPanel> ⟦EOL⟧
+// 해설 L26: XAML UI 구조·속성·리소스 선언입니다: <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+L000026 |             <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0"> ⟦EOL⟧
+// 해설 L27: XAML UI 구조·속성·리소스 선언입니다: <Button Content="취소" IsCancel="True" />
+L000027 |                 <Button Content="취소" IsCancel="True" /> ⟦EOL⟧
+// 해설 L28: 이벤트 연결 선언입니다. 동일 화면의 코드 비하인드 핸들러를 확인합니다: <Button Content="MOF 해제" Click="Confirm" IsDefault="True"
+L000028 |                 <Button Content="MOF 해제" Click="Confirm" IsDefault="True" ⟦EOL⟧
+// 해설 L29: XAML UI 구조·속성·리소스 선언입니다: Background="{DynamicResource ButtonPrimaryBrush}"
+L000029 |                         Background="{DynamicResource ButtonPrimaryBrush}" ⟦EOL⟧
+// 해설 L30: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource ButtonPrimaryBorderBrush}" />
+L000030 |                         BorderBrush="{DynamicResource ButtonPrimaryBorderBrush}" /> ⟦EOL⟧
+// 해설 L31: XAML 요소 범위를 닫습니다.
+L000031 |             </StackPanel> ⟦EOL⟧
+// 해설 L32: XAML UI 구조·속성·리소스 선언입니다: <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,8,0,0">
+L000032 |             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,8,0,0"> ⟦EOL⟧
+// 해설 L33: XAML UI 구조·속성·리소스 선언입니다: <ItemsControl x:Name="AxisItems">
+L000033 |                 <ItemsControl x:Name="AxisItems"> ⟦EOL⟧
+// 해설 L34: XAML UI 구조·속성·리소스 선언입니다: <ItemsControl.ItemTemplate>
+L000034 |                     <ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L35: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate>
+L000035 |                         <DataTemplate> ⟦EOL⟧
+// 해설 L36: XAML UI 구조·속성·리소스 선언입니다: <Border Padding="12" Margin="0,3" Background="{DynamicResource PanelBackgroundBrush}"
+L000036 |                             <Border Padding="12" Margin="0,3" Background="{DynamicResource PanelBackgroundBrush}" ⟦EOL⟧
+// 해설 L37: XAML UI 구조·속성·리소스 선언입니다: BorderBrush="{DynamicResource PanelBorderBrush}" BorderThickness="1" CornerRadius="4">
+L000037 |                                     BorderBrush="{DynamicResource PanelBorderBrush}" BorderThickness="1" CornerRadius="4"> ⟦EOL⟧
+// 해설 L38: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}"
+L000038 |                                 <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}" ⟦EOL⟧
+// 해설 L39: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextPrimaryBrush}" FontSize="15" />
+L000039 |                                           Foreground="{DynamicResource TextPrimaryBrush}" FontSize="15" /> ⟦EOL⟧
+// 해설 L40: XAML 요소 범위를 닫습니다.
+L000040 |                             </Border> ⟦EOL⟧
+// 해설 L41: XAML 요소 범위를 닫습니다.
+L000041 |                         </DataTemplate> ⟦EOL⟧
+// 해설 L42: XAML 요소 범위를 닫습니다.
+L000042 |                     </ItemsControl.ItemTemplate> ⟦EOL⟧
+// 해설 L43: XAML 요소 범위를 닫습니다.
+L000043 |                 </ItemsControl> ⟦EOL⟧
+// 해설 L44: XAML 요소 범위를 닫습니다.
+L000044 |             </ScrollViewer> ⟦EOL⟧
+// 해설 L45: XAML 요소 범위를 닫습니다.
+L000045 |         </DockPanel> ⟦EOL⟧
+// 해설 L46: XAML 요소 범위를 닫습니다.
+L000046 |     </Border> ⟦EOL⟧
+// 해설 L47: XAML 요소 범위를 닫습니다.
+L000047 | </Window> ⟦EOL⟧

@@ -1,0 +1,698 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>a77d6f93acf13f045473ef78010db693f9cc768f17769a00b87a0e8041642b27</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>8,453 bytes / 187 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/ff0c62ee0bf9f4779566.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CCellPreviewDrawing</td><td>ClassDeclaration</td><td>7–156</td><td>CCellPreviewDrawing</td></tr>
+<tr><td>ST_CELL_PREVIEW_LABEL</td><td>RecordDeclaration</td><td>158–176</td><td>ST_CELL_PREVIEW_LABEL</td></tr>
+<tr><td>ST_DISTORTION_KEY_PREVIEW</td><td>RecordDeclaration</td><td>178–187</td><td>ST_DISTORTION_KEY_PREVIEW</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>DrawAlignKeys</td><td>MethodDeclaration</td><td>L9–59</td><td>void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawAlignKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, double, double)</td></tr>
+<tr><td>DrawKey</td><td>LocalFunctionStatement</td><td>L36–40</td><td>void DrawKey(string, double, double, bool, bool)</td></tr>
+<tr><td>DrawCross</td><td>LocalFunctionStatement</td><td>L42–46</td><td>void DrawCross(double, double)</td></tr>
+<tr><td>DrawLabel</td><td>LocalFunctionStatement</td><td>L48–58</td><td>void DrawLabel(string, double, double, bool)</td></tr>
+<tr><td>CreateDistortionKeyPreviews</td><td>MethodDeclaration</td><td>L61–72</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt; Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateDistortionKeyPreviews(double, double, double, double, System.Func&lt;string, double?&gt;)</td></tr>
+<tr><td>DrawDistortionKeys</td><td>MethodDeclaration</td><td>L74–118</td><td>void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawDistortionKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;)</td></tr>
+<tr><td>ClampToRange</td><td>MethodDeclaration</td><td>L120–123</td><td>double Drilling.UI.Menu.Menus.CCellPreviewDrawing.ClampToRange(double, double, double)</td></tr>
+<tr><td>CreateCellLabel</td><td>MethodDeclaration</td><td>L125–139</td><td>Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL? Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateCellLabel(int, Rect, double, double, bool)</td></tr>
+<tr><td>CanDrawFormattedText</td><td>MethodDeclaration</td><td>L141–150</td><td>bool Drilling.UI.Menu.Menus.CCellPreviewDrawing.CanDrawFormattedText()</td></tr>
+<tr><td>EstimateTextWidth</td><td>MethodDeclaration</td><td>L152–155</td><td>double Drilling.UI.Menu.Menus.CCellPreviewDrawing.EstimateTextWidth(string)</td></tr>
+<tr><td>CellBounds</td><td>PropertyDeclaration</td><td>L160–160</td><td>Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds</td></tr>
+<tr><td>get_CellBounds</td><td>GetAccessorDeclaration</td><td>L160–160</td><td>Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds.get</td></tr>
+<tr><td>set_CellBounds</td><td>InitAccessorDeclaration</td><td>L160–160</td><td>void Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds.init</td></tr>
+<tr><td>DisplayText</td><td>PropertyDeclaration</td><td>L161–167</td><td>string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText</td></tr>
+<tr><td>get_DisplayText</td><td>GetAccessorDeclaration</td><td>L163–166</td><td>string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText.get</td></tr>
+<tr><td>Height</td><td>PropertyDeclaration</td><td>L169–175</td><td>double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height</td></tr>
+<tr><td>get_Height</td><td>GetAccessorDeclaration</td><td>L171–174</td><td>double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height.get</td></tr>
+<tr><td>DisplayText</td><td>PropertyDeclaration</td><td>L180–186</td><td>string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText</td></tr>
+<tr><td>get_DisplayText</td><td>GetAccessorDeclaration</td><td>L182–185</td><td>string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText.get</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L9">MethodDeclaration <code>DrawAlignKeys</code> · L9–59</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L9-L59">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:9–59</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawAlignKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>frame</td><td>Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME</td><td>None</td><td>False /</td></tr>
+<tr><td>glassWidth</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>glassHeight</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>marginX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>marginY</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>11</td><td>new SolidColorBrush</td><td>unresolved</td><td>None</td></tr>
+<tr><td>11</td><td>Color.FromRgb</td><td>unresolved</td><td>None</td></tr>
+<tr><td>12</td><td>brush.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>13</td><td>CanDrawFormattedText</td><td>resolved</td><td>bool Drilling.UI.Menu.Menus.CCellPreviewDrawing.CanDrawFormattedText() · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:141</td></tr>
+<tr><td>14</td><td>new Typeface</td><td>unresolved</td><td>None</td></tr>
+<tr><td>14</td><td>new FontFamily</td><td>unresolved</td><td>None</td></tr>
+<tr><td>15</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>20</td><td>crossPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>23</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>24</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>25</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>26</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+<tr><td>31</td><td>DrawKey</td><td>resolved</td><td>void DrawKey(string, double, double, bool, bool) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36</td></tr>
+<tr><td>32</td><td>DrawKey</td><td>resolved</td><td>void DrawKey(string, double, double, bool, bool) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36</td></tr>
+<tr><td>33</td><td>DrawKey</td><td>resolved</td><td>void DrawKey(string, double, double, bool, bool) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36</td></tr>
+<tr><td>34</td><td>DrawKey</td><td>resolved</td><td>void DrawKey(string, double, double, bool, bool) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(251, 191, 36))</td></tr>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(251, 191, 36)</td></tr>
+<tr><td>11</td><td>local-declaration</td><td>지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(251, 191, 36));</td></tr>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(251, 191, 36))</td></tr>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()</td></tr>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanDrawFormattedText()</td></tr>
+<tr><td>13</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canDrawText = CanDrawFormattedText();</td></tr>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canDrawText = CanDrawFormattedText()</td></tr>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal)</td></tr>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FontFamily(&quot;Segoe UI&quot;)</td></tr>
+<tr><td>14</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null</td></tr>
+<tr><td>14</td><td>local-declaration</td><td>지역 변수를 선언합니다: var typeface = canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null;</td></tr>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: typeface = canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null</td></tr>
+<tr><td>15</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }</td></tr>
+<tr><td>15</td><td>local-declaration</td><td>지역 변수를 선언합니다: var crossPen = new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square };</td></tr>
+<tr><td>15</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: crossPen = new Pen(brush, 1.6) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }</td></tr>
+<tr><td>17</td><td>assignment</td><td>값을 대상에 대입합니다: StartLineCap = PenLineCap.Square</td></tr>
+<tr><td>18</td><td>assignment</td><td>값을 대상에 대입합니다: EndLineCap = PenLineCap.Square</td></tr>
+<tr><td>20</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: crossPen.Freeze()</td></tr>
+<tr><td>21</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double crossHalfLength = 4.0;</td></tr>
+<tr><td>21</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: crossHalfLength = 4.0</td></tr>
+<tr><td>22</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double labelGap = 6.0;</td></tr>
+<tr><td>22</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: labelGap = 6.0</td></tr>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassWidth)</td></tr>
+<tr><td>23</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeGlassWidth = Math.Max(1.0, glassWidth);</td></tr>
+<tr><td>23</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeGlassWidth = Math.Max(1.0, glassWidth)</td></tr>
+<tr><td>24</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassHeight)</td></tr>
+<tr><td>24</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeGlassHeight = Math.Max(1.0, glassHeight);</td></tr>
+<tr><td>24</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeGlassHeight = Math.Max(1.0, glassHeight)</td></tr>
+<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0)</td></tr>
+<tr><td>25</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeMarginX = Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0);</td></tr>
+<tr><td>25</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeMarginX = Math.Clamp(marginX, 0.0, safeGlassWidth / 2.0)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0)</td></tr>
+<tr><td>26</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeMarginY = Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0);</td></tr>
+<tr><td>26</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeMarginY = Math.Clamp(marginY, 0.0, safeGlassHeight / 2.0)</td></tr>
+<tr><td>27</td><td>local-declaration</td><td>지역 변수를 선언합니다: var leftX = frame.CanvasLeft + (safeMarginX / safeGlassWidth * frame.Width);</td></tr>
+<tr><td>27</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: leftX = frame.CanvasLeft + (safeMarginX / safeGlassWidth * frame.Width)</td></tr>
+<tr><td>28</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rightX = frame.CanvasLeft + frame.Width - (safeMarginX / safeGlassWidth * frame.Width);</td></tr>
+<tr><td>28</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rightX = frame.CanvasLeft + frame.Width - (safeMarginX / safeGlassWidth * frame.Width)</td></tr>
+<tr><td>29</td><td>local-declaration</td><td>지역 변수를 선언합니다: var topY = frame.CanvasTop + (safeMarginY / safeGlassHeight * frame.Height);</td></tr>
+<tr><td>29</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: topY = frame.CanvasTop + (safeMarginY / safeGlassHeight * frame.Height)</td></tr>
+<tr><td>30</td><td>local-declaration</td><td>지역 변수를 선언합니다: var bottomY = frame.CanvasTop + frame.Height - (safeMarginY / safeGlassHeight * frame.Height);</td></tr>
+<tr><td>30</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: bottomY = frame.CanvasTop + frame.Height - (safeMarginY / safeGlassHeight * frame.Height)</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey(&quot;AK1&quot;, leftX, topY, false, false)</td></tr>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey(&quot;AK2&quot;, leftX, bottomY, false, true)</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey(&quot;AK3&quot;, rightX, topY, true, false)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawKey(&quot;AK4&quot;, rightX, bottomY, true, true)</td></tr>
+<tr><td>35</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L36">LocalFunctionStatement <code>DrawKey</code> · L36–40</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L36-L40">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36–40</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void DrawKey(string, double, double, bool, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>centerX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>centerY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>alignRight</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>alignBelow</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L31-L31">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:31–31</a></td><td>DrawKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L32-L32">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:32–32</a></td><td>DrawKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L33-L33">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:33–33</a></td><td>DrawKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L34-L34">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:34–34</a></td><td>DrawKey</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>38</td><td>DrawCross</td><td>resolved</td><td>void DrawCross(double, double) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:42</td></tr>
+<tr><td>39</td><td>DrawLabel</td><td>resolved</td><td>void DrawLabel(string, double, double, bool) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:48</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawCross(centerX, centerY)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawLabel(name, centerX, alignBelow ? centerY + 2.0 : centerY - 15.0, alignRight)</td></tr>
+<tr><td>39</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: alignBelow ? centerY + 2.0 : centerY - 15.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L42">LocalFunctionStatement <code>DrawCross</code> · L42–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L42-L46">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:42–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void DrawCross(double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>centerX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>centerY</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L38-L38">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:38–38</a></td><td>DrawCross</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>44</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>44</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>44</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>45</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>45</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>45</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY))</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - crossHalfLength, centerY)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + crossHalfLength, centerY)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength))</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY - crossHalfLength)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY + crossHalfLength)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L48">LocalFunctionStatement <code>DrawLabel</code> · L48–58</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L48-L58">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:48–58</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void DrawLabel(string, double, double, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>dotX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>top</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>alignRight</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L39-L39">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:39–39</a></td><td>DrawLabel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>55</td><td>new FormattedText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>50</td><td>if</td><td>조건에 따라 분기합니다: if (!canDrawText || typeface is null)</td></tr>
+<tr><td>52</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)</td></tr>
+<tr><td>55</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0);</td></tr>
+<tr><td>55</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = new FormattedText(name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)</td></tr>
+<tr><td>56</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: alignRight ? dotX - labelGap - text.Width : dotX + labelGap</td></tr>
+<tr><td>56</td><td>local-declaration</td><td>지역 변수를 선언합니다: var left = alignRight ? dotX - labelGap - text.Width : dotX + labelGap;</td></tr>
+<tr><td>56</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: left = alignRight ? dotX - labelGap - text.Width : dotX + labelGap</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(text, new Point(left, top))</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(left, top)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawLabel&quot;]
+ N0[&quot;L50 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L61">MethodDeclaration <code>CreateDistortionKeyPreviews</code> · L61–72</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L61-L72">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:61–72</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt; Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateDistortionKeyPreviews(double, double, double, double, System.Func&lt;string, double?&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>glassWidth</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>glassHeight</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>akMarginX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>akMarginY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>readValue</td><td>System.Func&lt;string, double?&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L110-L110">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:110–110</a></td><td>CCellPreviewDrawing.CreateDistortionKeyPreviews</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1001-L1001">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1001–1001</a></td><td>CCellPreviewDrawing.CreateDistortionKeyPreviews</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2142-L2142">Drilling.UI/Menu/Menus/CMenuRecipe.cs:2142–2142</a></td><td>CCellPreviewDrawing.CreateDistortionKeyPreviews</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L130-L139">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:130–139</a></td><td>CCellPreviewDrawing.CreateDistortionKeyPreviews</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>63</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>63</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>65</td><td>Enumerable.Range(0, 3).SelectMany(index =&gt; { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty&lt;ST_DISTORTION_KEY_PREVIEW&gt;(); var y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position); retu…</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;.ToArray&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;()</td></tr>
+<tr><td>65</td><td>Enumerable.Range(0, 3).SelectMany</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.SelectMany&lt;int, Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;(System.Func&lt;int, System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;&gt;)</td></tr>
+<tr><td>65</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>67</td><td>readValue</td><td>resolved · 동적 구현 선택 가능</td><td>double? System.Func&lt;string, double?&gt;.Invoke(string)</td></tr>
+<tr><td>67</td><td>Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey</td><td>resolved</td><td>string Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(int) · Drilling.Common/Correction/CAlignInterpolation.cs:182</td></tr>
+<tr><td>68</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>68</td><td>Array.Empty&lt;ST_DISTORTION_KEY_PREVIEW&gt;</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW[] System.Array.Empty&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;()</td></tr>
+<tr><td>69</td><td>Drilling.Common.Correction.CAlignKeyGeometry.DesignY</td><td>resolved</td><td>double Drilling.Common.Correction.CAlignKeyGeometry.DesignY(double, double, double) · Drilling.Common/Correction/CAlignInterpolation.cs:183</td></tr>
+<tr><td>70</td><td>new ST_DISTORTION_KEY_PREVIEW</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.ST_DISTORTION_KEY_PREVIEW(int, double, double) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:178</td></tr>
+<tr><td>70</td><td>new ST_DISTORTION_KEY_PREVIEW</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.ST_DISTORTION_KEY_PREVIEW(int, double, double) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:178</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassWidth)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassHeight)</td></tr>
+<tr><td>63</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth &lt;= 0 || glassHeight &lt;= 0)</td></tr>
+<tr><td>63</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return [];</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).SelectMany(index =&gt; { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty&lt;…</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).SelectMany(index =&gt; { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty&lt;…</td></tr>
+<tr><td>65</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Enumerable.Range(0, 3).SelectMany(index =&gt; { var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)); if (stageY is not { } position || !double.IsFinite(position)) return Array.Empty&lt;ST_</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index))</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index)</td></tr>
+<tr><td>67</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index));</td></tr>
+<tr><td>67</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stageY = readValue(Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey(index))</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(position)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty&lt;ST_DISTORTION_KEY_PREVIEW&gt;()</td></tr>
+<tr><td>68</td><td>if</td><td>조건에 따라 분기합니다: if (stageY is not { } position || !double.IsFinite(position))</td></tr>
+<tr><td>68</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Array.Empty&lt;ST_DISTORTION_KEY_PREVIEW&gt;();</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position)</td></tr>
+<tr><td>69</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position);</td></tr>
+<tr><td>69</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = Drilling.Common.Correction.CAlignKeyGeometry.DesignY(glassHeight, akMarginY, position)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISTORTION_KEY_PREVIEW(index * 2 + 1, akMarginX, y)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISTORTION_KEY_PREVIEW(index * 2 + 2, glassWidth - akMarginX, y)</td></tr>
+<tr><td>70</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new[] { new ST_DISTORTION_KEY_PREVIEW(index * 2 + 1, akMarginX, y), new ST_DISTORTION_KEY_PREVIEW(index * 2 + 2, glassWidth - akMarginX, y) };</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateDistortionKeyPreviews&quot;]
+ N0[&quot;L63 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L68 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L74">MethodDeclaration <code>DrawDistortionKeys</code> · L74–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L74-L118">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:74–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCellPreviewDrawing.DrawDistortionKeys(DrawingContext, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>frame</td><td>Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME</td><td>None</td><td>False /</td></tr>
+<tr><td>glassWidth</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>glassHeight</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>distortionKeys</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>new SolidColorBrush</td><td>unresolved</td><td>None</td></tr>
+<tr><td>81</td><td>Color.FromRgb</td><td>unresolved</td><td>None</td></tr>
+<tr><td>82</td><td>brush.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>83</td><td>CanDrawFormattedText</td><td>resolved</td><td>bool Drilling.UI.Menu.Menus.CCellPreviewDrawing.CanDrawFormattedText() · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:141</td></tr>
+<tr><td>84</td><td>new Typeface</td><td>unresolved</td><td>None</td></tr>
+<tr><td>84</td><td>new FontFamily</td><td>unresolved</td><td>None</td></tr>
+<tr><td>85</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>90</td><td>crossPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>91</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>92</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>99</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>99</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>106</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>106</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>106</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>107</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>107</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>107</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>113</td><td>new FormattedText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>114</td><td>ClampToRange</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>115</td><td>ClampToRange</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>116</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>116</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>76</td><td>if</td><td>조건에 따라 분기합니다: if (distortionKeys.Count == 0)</td></tr>
+<tr><td>78</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(34, 197, 94))</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(34, 197, 94)</td></tr>
+<tr><td>81</td><td>local-declaration</td><td>지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(34, 197, 94));</td></tr>
+<tr><td>81</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(34, 197, 94))</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CanDrawFormattedText()</td></tr>
+<tr><td>83</td><td>local-declaration</td><td>지역 변수를 선언합니다: var canDrawText = CanDrawFormattedText();</td></tr>
+<tr><td>83</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: canDrawText = CanDrawFormattedText()</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FontFamily(&quot;Segoe UI&quot;)</td></tr>
+<tr><td>84</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null</td></tr>
+<tr><td>84</td><td>local-declaration</td><td>지역 변수를 선언합니다: var typeface = canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null;</td></tr>
+<tr><td>84</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: typeface = canDrawText ? new Typeface(new FontFamily(&quot;Segoe UI&quot;), FontStyles.Normal, FontWeights.SemiBold, FontStretches.Normal) : null</td></tr>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }</td></tr>
+<tr><td>85</td><td>local-declaration</td><td>지역 변수를 선언합니다: var crossPen = new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square };</td></tr>
+<tr><td>85</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: crossPen = new Pen(brush, 2.0) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square }</td></tr>
+<tr><td>87</td><td>assignment</td><td>값을 대상에 대입합니다: StartLineCap = PenLineCap.Square</td></tr>
+<tr><td>88</td><td>assignment</td><td>값을 대상에 대입합니다: EndLineCap = PenLineCap.Square</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: crossPen.Freeze()</td></tr>
+<tr><td>91</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassWidth)</td></tr>
+<tr><td>91</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeGlassWidth = Math.Max(1.0, glassWidth);</td></tr>
+<tr><td>91</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeGlassWidth = Math.Max(1.0, glassWidth)</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, glassHeight)</td></tr>
+<tr><td>92</td><td>local-declaration</td><td>지역 변수를 선언합니다: var safeGlassHeight = Math.Max(1.0, glassHeight);</td></tr>
+<tr><td>92</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: safeGlassHeight = Math.Max(1.0, glassHeight)</td></tr>
+<tr><td>93</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleX = frame.Width / safeGlassWidth;</td></tr>
+<tr><td>93</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleX = frame.Width / safeGlassWidth</td></tr>
+<tr><td>94</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleY = frame.Height / safeGlassHeight;</td></tr>
+<tr><td>94</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleY = frame.Height / safeGlassHeight</td></tr>
+<tr><td>95</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double crossHalfLength = 6.0;</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: crossHalfLength = 6.0</td></tr>
+<tr><td>96</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double labelGap = 7.0;</td></tr>
+<tr><td>96</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: labelGap = 7.0</td></tr>
+<tr><td>97</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var key in distortionKeys)</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(key.GlassX)</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(key.GlassY)</td></tr>
+<tr><td>99</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(key.GlassX) || !double.IsFinite(key.GlassY) || key.GlassX &lt; 0.0 || key.GlassX &gt; safeGlassWidth || key.GlassY &lt; 0.0 || key.GlassY &gt; safeGlassHeight)</td></tr>
+<tr><td>101</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>104</td><td>local-declaration</td><td>지역 변수를 선언합니다: var centerX = frame.CanvasLeft + (key.GlassX * scaleX);</td></tr>
+<tr><td>104</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: centerX = frame.CanvasLeft + (key.GlassX * scaleX)</td></tr>
+<tr><td>105</td><td>local-declaration</td><td>지역 변수를 선언합니다: var centerY = frame.CanvasTop + (key.GlassY * scaleY);</td></tr>
+<tr><td>105</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: centerY = frame.CanvasTop + (key.GlassY * scaleY)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX - crossHalfLength, centerY), new Point(centerX + crossHalfLength, centerY))</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - crossHalfLength, centerY)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + crossHalfLength, centerY)</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(crossPen, new Point(centerX, centerY - crossHalfLength), new Point(centerX, centerY + crossHalfLength))</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY - crossHalfLength)</td></tr>
+<tr><td>107</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX, centerY + crossHalfLength)</td></tr>
+<tr><td>108</td><td>if</td><td>조건에 따라 분기합니다: if (!canDrawText || typeface is null)</td></tr>
+<tr><td>110</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)</td></tr>
+<tr><td>113</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0);</td></tr>
+<tr><td>113</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = new FormattedText(key.DisplayText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, typeface, 10.0, brush, 1.0)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0)</td></tr>
+<tr><td>114</td><td>local-declaration</td><td>지역 변수를 선언합니다: var left = ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0);</td></tr>
+<tr><td>114</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: left = ClampToRange(centerX + labelGap, frame.CanvasLeft + 2.0, frame.CanvasLeft + frame.Width - text.Width - 2.0)</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0)</td></tr>
+<tr><td>115</td><td>local-declaration</td><td>지역 변수를 선언합니다: var top = ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0);</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: top = ClampToRange(centerY - text.Height - 2.0, frame.CanvasTop + 2.0, frame.CanvasTop + frame.Height - text.Height - 2.0)</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(text, new Point(left, top))</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(left, top)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawDistortionKeys&quot;]
+ N0[&quot;L76 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L97 foreach&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L99 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L108 if&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L120">MethodDeclaration <code>ClampToRange</code> · L120–123</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L120-L123">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:120–123</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCellPreviewDrawing.ClampToRange(double, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>min</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>max</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>122</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(value, min, max)</td></tr>
+<tr><td>122</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: max &lt; min ? min : Math.Clamp(value, min, max)</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return max &lt; min ? min : Math.Clamp(value, min, max);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L125">MethodDeclaration <code>CreateCellLabel</code> · L125–139</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L125-L139">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:125–139</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL? Drilling.UI.Menu.Menus.CCellPreviewDrawing.CreateCellLabel(int, Rect, double, double, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cellNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>cellBounds</td><td>Rect</td><td>None</td><td>False /</td></tr>
+<tr><td>designWidth</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>designHeight</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>isSelected</td><td>bool</td><td>None</td><td>True / false</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L218-L218">Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:218–218</a></td><td>CCellPreviewDrawing.CreateCellLabel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L628-L639">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:628–639</a></td><td>CCellPreviewDrawing.CreateCellLabel</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>132</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>132</td><td>EstimateTextWidth</td><td>resolved</td><td>double Drilling.UI.Menu.Menus.CCellPreviewDrawing.EstimateTextWidth(string) · Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:152</td></tr>
+<tr><td>135</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>136</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>137</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>137</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>138</td><td>new ST_CELL_PREVIEW_LABEL</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>127</td><td>if</td><td>조건에 따라 분기합니다: if (cellBounds.IsEmpty)</td></tr>
+<tr><td>129</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return null;</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(34.0, EstimateTextWidth($&quot;Cell{cellNo}&quot;) + 10.0)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EstimateTextWidth($&quot;Cell{cellNo}&quot;)</td></tr>
+<tr><td>132</td><td>local-declaration</td><td>지역 변수를 선언합니다: var badgeWidth = Math.Max(34.0, EstimateTextWidth($&quot;Cell{cellNo}&quot;) + 10.0);</td></tr>
+<tr><td>132</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: badgeWidth = Math.Max(34.0, EstimateTextWidth($&quot;Cell{cellNo}&quot;) + 10.0)</td></tr>
+<tr><td>133</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double labelHalfHeight = 8.0;</td></tr>
+<tr><td>133</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: labelHalfHeight = 8.0</td></tr>
+<tr><td>134</td><td>local-declaration</td><td>지역 변수를 선언합니다: var labelHalfWidth = badgeWidth / 2.0;</td></tr>
+<tr><td>134</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: labelHalfWidth = badgeWidth / 2.0</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(labelHalfWidth, designWidth - labelHalfWidth)</td></tr>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxCenterX = Math.Max(labelHalfWidth, designWidth - labelHalfWidth);</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxCenterX = Math.Max(labelHalfWidth, designWidth - labelHalfWidth)</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX)</td></tr>
+<tr><td>136</td><td>local-declaration</td><td>지역 변수를 선언합니다: var centerX = Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX);</td></tr>
+<tr><td>136</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: centerX = Math.Clamp(cellBounds.Left + (cellBounds.Width / 2.0), labelHalfWidth, maxCenterX)</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight))</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(labelHalfHeight, designHeight - labelHalfHeight)</td></tr>
+<tr><td>137</td><td>local-declaration</td><td>지역 변수를 선언합니다: var centerY = Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight));</td></tr>
+<tr><td>137</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: centerY = Math.Clamp(cellBounds.Top + (cellBounds.Height / 2.0), labelHalfHeight, Math.Max(labelHalfHeight, designHeight - labelHalfHeight))</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_CELL_PREVIEW_LABEL(cellNo, centerX, centerY, badgeWidth, designWidth, designHeight, isSelected)</td></tr>
+<tr><td>138</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new ST_CELL_PREVIEW_LABEL(cellNo, centerX, centerY, badgeWidth, designWidth, designHeight, isSelected);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateCellLabel&quot;]
+ N0[&quot;L127 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L141">MethodDeclaration <code>CanDrawFormattedText</code> · L141–150</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L141-L150">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:141–150</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CCellPreviewDrawing.CanDrawFormattedText()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L13-L13">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:13–13</a></td><td>CanDrawFormattedText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L83-L83">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:83–83</a></td><td>CanDrawFormattedText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>143</td><td>Thread.CurrentThread.GetApartmentState</td><td>resolved</td><td>System.Threading.ApartmentState System.Threading.Thread.GetApartmentState()</td></tr>
+<tr><td>149</td><td>dispatcher.CheckAccess</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Thread.CurrentThread.GetApartmentState()</td></tr>
+<tr><td>143</td><td>if</td><td>조건에 따라 분기합니다: if (Thread.CurrentThread.GetApartmentState() != ApartmentState.STA)</td></tr>
+<tr><td>145</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return false;</td></tr>
+<tr><td>148</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dispatcher = Application.Current?.Dispatcher;</td></tr>
+<tr><td>148</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dispatcher = Application.Current?.Dispatcher</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dispatcher.CheckAccess()</td></tr>
+<tr><td>149</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return dispatcher is null || dispatcher.CheckAccess();</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CanDrawFormattedText&quot;]
+ N0[&quot;L143 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L152">MethodDeclaration <code>EstimateTextWidth</code> · L152–155</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L152-L155">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:152–155</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCellPreviewDrawing.EstimateTextWidth(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCellPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L132-L132">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:132–132</a></td><td>EstimateTextWidth</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>154</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return text.Length * 6.2;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">PropertyDeclaration <code>CellBounds</code> · L160–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>Rect</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">GetAccessorDeclaration <code>get_CellBounds</code> · L160–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>Rect</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L160">InitAccessorDeclaration <code>set_CellBounds</code> · L160–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds.init</td></tr>
+<tr><td>접근/수식자</td><td>Public / init</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>Rect</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L161">PropertyDeclaration <code>DisplayText</code> · L161–167</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L161-L167">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:161–167</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L163">GetAccessorDeclaration <code>get_DisplayText</code> · L163–166</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L163-L166">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:163–166</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>165</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;Cell{CellNo}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L169">PropertyDeclaration <code>Height</code> · L169–175</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L169-L175">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:169–175</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L171">GetAccessorDeclaration <code>get_Height</code> · L171–174</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L171-L174">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:171–174</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>173</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return 16.0;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L180">PropertyDeclaration <code>DisplayText</code> · L180–186</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L180-L186">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:180–186</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L182">GetAccessorDeclaration <code>get_DisplayText</code> · L182–185</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L182-L185">Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:182–185</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>184</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;DK{KeyNo}&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

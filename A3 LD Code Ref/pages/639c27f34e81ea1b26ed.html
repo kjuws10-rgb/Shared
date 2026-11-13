@@ -1,0 +1,1150 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Socket/CSocketServerComm.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Socket/CSocketServerComm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Socket/CSocketServerComm.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>a4fb2aed1e2a9fdcc155d77b0664232b070e40418cbbe896b9e8d03688dc923c</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>14,569 bytes / 404 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/639c27f34e81ea1b26ed.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CSocketServerComm</td><td>ClassDeclaration</td><td>7–404</td><td>CSocketServerComm: CCommBase(data, option)</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>MaxMessageLength</td><td>FieldDeclaration</td><td>L10–10</td><td>int Drilling.Common.Interface.CSocketServerComm.MaxMessageLength</td></tr>
+<tr><td>_clients</td><td>FieldDeclaration</td><td>L11–11</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt; Drilling.Common.Interface.CSocketServerComm._clients</td></tr>
+<tr><td>_clientTasks</td><td>FieldDeclaration</td><td>L12–12</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt; Drilling.Common.Interface.CSocketServerComm._clientTasks</td></tr>
+<tr><td>_serverLock</td><td>FieldDeclaration</td><td>L13–13</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CSocketServerComm._serverLock</td></tr>
+<tr><td>_listener</td><td>FieldDeclaration</td><td>L14–14</td><td>System.Net.Sockets.TcpListener? Drilling.Common.Interface.CSocketServerComm._listener</td></tr>
+<tr><td>_serverCts</td><td>FieldDeclaration</td><td>L15–15</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Interface.CSocketServerComm._serverCts</td></tr>
+<tr><td>_acceptTask</td><td>FieldDeclaration</td><td>L16–16</td><td>System.Threading.Tasks.Task? Drilling.Common.Interface.CSocketServerComm._acceptTask</td></tr>
+<tr><td>_clientSequence</td><td>FieldDeclaration</td><td>L17–17</td><td>int Drilling.Common.Interface.CSocketServerComm._clientSequence</td></tr>
+<tr><td>MessageReceived</td><td>EventFieldDeclaration</td><td>L18–18</td><td>System.Func&lt;Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;string&gt;&gt;? Drilling.Common.Interface.CSocketServerComm.MessageReceived</td></tr>
+<tr><td>Connect</td><td>MethodDeclaration</td><td>L19–63</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L43–46</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>Disconnect</td><td>MethodDeclaration</td><td>L65–78</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>Execute</td><td>MethodDeclaration</td><td>L80–116</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSocketServerComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>AcceptLoop</td><td>MethodDeclaration</td><td>L118–170</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.AcceptLoop(System.Net.Sockets.TcpListener, System.Threading.CancellationToken)</td></tr>
+<tr><td>SelectValue</td><td>LocalFunctionStatement</td><td>L146–149</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>CleanupClientTaskCallback</td><td>LocalFunctionStatement</td><td>L151–154</td><td>void CleanupClientTaskCallback(System.Threading.Tasks.Task)</td></tr>
+<tr><td>ReceiveLoop</td><td>MethodDeclaration</td><td>L172–222</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.ReceiveLoop(int, System.Net.Sockets.TcpClient, System.Threading.CancellationToken)</td></tr>
+<tr><td>CleanupClientTask</td><td>MethodDeclaration</td><td>L224–234</td><td>void Drilling.Common.Interface.CSocketServerComm.CleanupClientTask(int, System.Threading.Tasks.Task)</td></tr>
+<tr><td>RaiseMessageReceived</td><td>MethodDeclaration</td><td>L236–262</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSocketServerComm.RaiseMessageReceived(string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>StopServer</td><td>MethodDeclaration</td><td>L264–305</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.StopServer()</td></tr>
+<tr><td>CloseAllClients</td><td>MethodDeclaration</td><td>L307–316</td><td>void Drilling.Common.Interface.CSocketServerComm.CloseAllClients()</td></tr>
+<tr><td>IsAllowedRemote</td><td>MethodDeclaration</td><td>L318–337</td><td>bool Drilling.Common.Interface.CSocketServerComm.IsAllowedRemote(System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>ResolveBindAddress</td><td>MethodDeclaration</td><td>L339–347</td><td>System.Net.IPAddress Drilling.Common.Interface.CSocketServerComm.ResolveBindAddress(string)</td></tr>
+<tr><td>ReadProtocolLine</td><td>MethodDeclaration</td><td>L349–374</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLine(System.IO.StreamReader, System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadProtocolLineWithTimeout</td><td>MethodDeclaration</td><td>L376–388</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLineWithTimeout(System.IO.StreamReader, System.Threading.CancellationToken)</td></tr>
+<tr><td>GetRemoteEndPoint</td><td>MethodDeclaration</td><td>L390–393</td><td>string Drilling.Common.Interface.CSocketServerComm.GetRemoteEndPoint(System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>NormalizeReceivedMessage</td><td>MethodDeclaration</td><td>L395–398</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeReceivedMessage(string)</td></tr>
+<tr><td>NormalizeProtocolLine</td><td>MethodDeclaration</td><td>L400–403</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeProtocolLine(string)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L10">FieldDeclaration <code>MaxMessageLength</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L10-L10">Drilling.Common/Interface/Socket/CSocketServerComm.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CSocketServerComm.MaxMessageLength</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MaxMessageLength = 8192</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>_clients</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L11-L11">Drilling.Common/Interface/Socket/CSocketServerComm.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt; Drilling.Common.Interface.CSocketServerComm._clients</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>11</td><td>new</td><td>resolved</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt;.ConcurrentDictionary()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _clients = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>_clientTasks</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L12-L12">Drilling.Common/Interface/Socket/CSocketServerComm.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt; Drilling.Common.Interface.CSocketServerComm._clientTasks</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>12</td><td>new</td><td>resolved</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt;.ConcurrentDictionary()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new()</td></tr>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _clientTasks = new()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>_serverLock</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L13-L13">Drilling.Common/Interface/Socket/CSocketServerComm.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CSocketServerComm._serverLock</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.SemaphoreSlim</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>13</td><td>new</td><td>resolved</td><td>System.Threading.SemaphoreSlim.SemaphoreSlim(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(1, 1)</td></tr>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: _serverLock = new(1, 1)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>_listener</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L14-L14">Drilling.Common/Interface/Socket/CSocketServerComm.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Net.Sockets.TcpListener? Drilling.Common.Interface.CSocketServerComm._listener</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Net.Sockets.TcpListener?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L15">FieldDeclaration <code>_serverCts</code> · L15–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L15-L15">Drilling.Common/Interface/Socket/CSocketServerComm.cs:15–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Interface.CSocketServerComm._serverCts</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.CancellationTokenSource?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">FieldDeclaration <code>_acceptTask</code> · L16–16</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L16-L16">Drilling.Common/Interface/Socket/CSocketServerComm.cs:16–16</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Interface.CSocketServerComm._acceptTask</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">FieldDeclaration <code>_clientSequence</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L17-L17">Drilling.Common/Interface/Socket/CSocketServerComm.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CSocketServerComm._clientSequence</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L18">EventFieldDeclaration <code>MessageReceived</code> · L18–18</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L18-L18">Drilling.Common/Interface/Socket/CSocketServerComm.cs:18–18</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Func&lt;Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;string&gt;&gt;? Drilling.Common.Interface.CSocketServerComm.MessageReceived</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, event</td></tr>
+<tr><td>반환/값 타입</td><td>System.Func&lt;Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;string&gt;&gt;?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">MethodDeclaration <code>Connect</code> · L19–63</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L19-L63">Drilling.Common/Interface/Socket/CSocketServerComm.cs:19–63</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.Connect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L84-L84">Drilling.Common/Interface/Socket/CSocketServerComm.cs:84–84</a></td><td>Connect</td><td>True</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>_serverLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>27</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>31</td><td>StopServer</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.StopServer() · Drilling.Common/Interface/Socket/CSocketServerComm.cs:264</td></tr>
+<tr><td>34</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetError(string) · Drilling.Common/Interface/CComm.cs:126</td></tr>
+<tr><td>38</td><td>ResolveBindAddress</td><td>resolved</td><td>System.Net.IPAddress Drilling.Common.Interface.CSocketServerComm.ResolveBindAddress(string) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:339</td></tr>
+<tr><td>39</td><td>new TcpListener</td><td>resolved</td><td>System.Net.Sockets.TcpListener.TcpListener(System.Net.IPAddress, int)</td></tr>
+<tr><td>40</td><td>listener.Start</td><td>resolved</td><td>void System.Net.Sockets.TcpListener.Start()</td></tr>
+<tr><td>42</td><td>new CancellationTokenSource</td><td>resolved</td><td>System.Threading.CancellationTokenSource.CancellationTokenSource()</td></tr>
+<tr><td>48</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func&lt;System.Threading.Tasks.Task?&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>52</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>56</td><td>StopServer</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.StopServer() · Drilling.Common/Interface/Socket/CSocketServerComm.cs:264</td></tr>
+<tr><td>57</td><td>SetError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetError(System.Exception) · Drilling.Common/Interface/CComm.cs:120</td></tr>
+<tr><td>61</td><td>_serverLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>await</td><td>비동기 완료를 기다립니다: await _serverLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _serverLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>22</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>24</td><td>if</td><td>조건에 따라 분기합니다: if (_listener is not null &amp;&amp; _serverCts is not null &amp;&amp; !_serverCts.IsCancellationRequested)</td></tr>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>28</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>31</td><td>await</td><td>비동기 완료를 기다립니다: await StopServer()</td></tr>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()</td></tr>
+<tr><td>32</td><td>if</td><td>조건에 따라 분기합니다: if (Option.Port &lt;= 0)</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(&quot;Socket server port is invalid.&quot;)</td></tr>
+<tr><td>35</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveBindAddress(Option.LocalAddress)</td></tr>
+<tr><td>38</td><td>local-declaration</td><td>지역 변수를 선언합니다: var bindAddress = ResolveBindAddress(Option.LocalAddress);</td></tr>
+<tr><td>38</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: bindAddress = ResolveBindAddress(Option.LocalAddress)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TcpListener(bindAddress, Option.Port)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var listener = new TcpListener(bindAddress, Option.Port);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: listener = new TcpListener(bindAddress, Option.Port)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: listener.Start()</td></tr>
+<tr><td>41</td><td>assignment</td><td>값을 대상에 대입합니다: _listener = listener</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: _serverCts = new CancellationTokenSource()</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()</td></tr>
+<tr><td>48</td><td>assignment</td><td>값을 대상에 대입합니다: _acceptTask = Task.Run(SelectValue, CancellationToken.None)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, CancellationToken.None)</td></tr>
+<tr><td>49</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = &quot;&quot;</td></tr>
+<tr><td>50</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = &quot;&quot;</td></tr>
+<tr><td>51</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>54</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or ArgumentException or InvalidOperationException)</td></tr>
+<tr><td>56</td><td>await</td><td>비동기 완료를 기다립니다: await StopServer()</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)</td></tr>
+<tr><td>59</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _serverLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Connect&quot;]
+ N0[&quot;L22 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L24 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L32 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L54 catch&quot;]
+ N0 --&gt;|포함| N3
+ N4[&quot;L59 finally&quot;]
+ N0 --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L43">LocalFunctionStatement <code>SelectValue</code> · L43–46</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L43-L46">Drilling.Common/Interface/Socket/CSocketServerComm.cs:43–46</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>45</td><td>AcceptLoop</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.AcceptLoop(System.Net.Sockets.TcpListener, System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:118</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: AcceptLoop(listener, _serverCts.Token)</td></tr>
+<tr><td>45</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return AcceptLoop(listener, _serverCts.Token);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L65">MethodDeclaration <code>Disconnect</code> · L65–78</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L65-L78">Drilling.Common/Interface/Socket/CSocketServerComm.cs:65–78</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.Disconnect(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>67</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>68</td><td>_serverLock.WaitAsync</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>71</td><td>StopServer</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.StopServer() · Drilling.Common/Interface/Socket/CSocketServerComm.cs:264</td></tr>
+<tr><td>72</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>76</td><td>_serverLock.Release</td><td>resolved</td><td>int System.Threading.SemaphoreSlim.Release()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>68</td><td>await</td><td>비동기 완료를 기다립니다: await _serverLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _serverLock.WaitAsync(cancellationToken)</td></tr>
+<tr><td>69</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>71</td><td>await</td><td>비동기 완료를 기다립니다: await StopServer()</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopServer()</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)</td></tr>
+<tr><td>74</td><td>finally</td><td>종료 정리 구간입니다: finally</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _serverLock.Release()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Disconnect&quot;]
+ N0[&quot;L69 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L74 finally&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L80">MethodDeclaration <code>Execute</code> · L80–116</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L80-L116">Drilling.Common/Interface/Socket/CSocketServerComm.cs:80–116</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSocketServerComm.Execute(string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>function</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>84</td><td>Connect</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.Connect(System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:19</td></tr>
+<tr><td>92</td><td>function.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>93</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>93</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>98</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>102</td><td>command.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>104</td><td>CloseAllClients</td><td>resolved</td><td>void Drilling.Common.Interface.CSocketServerComm.CloseAllClients() · Drilling.Common/Interface/Socket/CSocketServerComm.cs:307</td></tr>
+<tr><td>108</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>114</td><td>SetCommandError</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetCommandError(string) · Drilling.Common/Interface/CComm.cs:132</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>82</td><td>if</td><td>조건에 따라 분기합니다: if (_listener is null)</td></tr>
+<tr><td>84</td><td>await</td><td>비동기 완료를 기다립니다: await Connect(cancellationToken)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)</td></tr>
+<tr><td>87</td><td>if</td><td>조건에 따라 분기합니다: if (_listener is null)</td></tr>
+<tr><td>89</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+<tr><td>92</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: function.Trim()</td></tr>
+<tr><td>92</td><td>local-declaration</td><td>지역 변수를 선언합니다: var command = function.Trim();</td></tr>
+<tr><td>92</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: command = function.Trim()</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;STATUS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;CLIENTS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>93</td><td>if</td><td>조건에 따라 분기합니다: if (command.Equals(&quot;STATUS&quot;, StringComparison.OrdinalIgnoreCase) || command.Equals(&quot;CLIENTS&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>95</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = command</td></tr>
+<tr><td>96</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = $&quot;OK:SOCKET_SERVER:CLIENTS:{_clients.Count}&quot;</td></tr>
+<tr><td>97</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>99</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: command.Equals(&quot;CLOSE_CLIENTS&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>102</td><td>if</td><td>조건에 따라 분기합니다: if (command.Equals(&quot;CLOSE_CLIENTS&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseAllClients()</td></tr>
+<tr><td>105</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = command</td></tr>
+<tr><td>106</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = &quot;OK:SOCKET_SERVER:CLOSE_CLIENTS&quot;</td></tr>
+<tr><td>107</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>109</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return LastReceived;</td></tr>
+<tr><td>112</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = command</td></tr>
+<tr><td>113</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = &quot;&quot;</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetCommandError($&quot;Socket server command is not supported: {command}&quot;)</td></tr>
+<tr><td>115</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Execute&quot;]
+ N0[&quot;L82 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L87 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L93 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L102 if&quot;]
+ M --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L118">MethodDeclaration <code>AcceptLoop</code> · L118–170</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L118-L170">Drilling.Common/Interface/Socket/CSocketServerComm.cs:118–170</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.AcceptLoop(System.Net.Sockets.TcpListener, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>listener</td><td>System.Net.Sockets.TcpListener</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L45-L45">Drilling.Common/Interface/Socket/CSocketServerComm.cs:45–45</a></td><td>AcceptLoop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>125</td><td>listener.AcceptTcpClientAsync</td><td>resolved</td><td>System.Threading.Tasks.ValueTask&lt;System.Net.Sockets.TcpClient&gt; System.Net.Sockets.TcpListener.AcceptTcpClientAsync(System.Threading.CancellationToken)</td></tr>
+<tr><td>126</td><td>IsAllowedRemote</td><td>resolved</td><td>bool Drilling.Common.Interface.CSocketServerComm.IsAllowedRemote(System.Net.Sockets.TcpClient) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:318</td></tr>
+<tr><td>128</td><td>client.Close</td><td>resolved</td><td>void System.Net.Sockets.TcpClient.Close()</td></tr>
+<tr><td>132</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>137</td><td>client.Close</td><td>resolved</td><td>void System.Net.Sockets.TcpClient.Close()</td></tr>
+<tr><td>142</td><td>Interlocked.Increment</td><td>resolved</td><td>int System.Threading.Interlocked.Increment(ref int)</td></tr>
+<tr><td>145</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>156</td><td>Task.Run</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func&lt;System.Threading.Tasks.Task?&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>158</td><td>receiveTask.ContinueWith</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.ContinueWith(System.Action&lt;System.Threading.Tasks.Task&gt;, System.Threading.CancellationToken, System.Threading.Tasks.TaskContinuationOptions, System.Threading.Tasks.TaskScheduler)</td></tr>
+<tr><td>162</td><td>.Close</td><td>resolved</td><td>void System.Net.Sockets.TcpClient.Close()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>120</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (!cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>122</td><td>local-declaration</td><td>지역 변수를 선언합니다: TcpClient? client = null;</td></tr>
+<tr><td>122</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: client = null</td></tr>
+<tr><td>123</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>125</td><td>assignment</td><td>값을 대상에 대입합니다: client = await listener.AcceptTcpClientAsync(cancellationToken)</td></tr>
+<tr><td>125</td><td>await</td><td>비동기 완료를 기다립니다: await listener.AcceptTcpClientAsync(cancellationToken)</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: listener.AcceptTcpClientAsync(cancellationToken)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IsAllowedRemote(client)</td></tr>
+<tr><td>126</td><td>if</td><td>조건에 따라 분기합니다: if (!IsAllowedRemote(client))</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: client.Close()</td></tr>
+<tr><td>129</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Option.MaxClientCount)</td></tr>
+<tr><td>132</td><td>local-declaration</td><td>지역 변수를 선언합니다: var maxClientCount = Math.Max(1, Option.MaxClientCount);</td></tr>
+<tr><td>132</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: maxClientCount = Math.Max(1, Option.MaxClientCount)</td></tr>
+<tr><td>133</td><td>if</td><td>조건에 따라 분기합니다: if (_clients.Count &gt;= maxClientCount)</td></tr>
+<tr><td>135</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = $&quot;Socket server max client count reached: {maxClientCount}&quot;</td></tr>
+<tr><td>136</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: client.Close()</td></tr>
+<tr><td>138</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>141</td><td>assignment</td><td>값을 대상에 대입합니다: client.NoDelay = true</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _clientSequence)</td></tr>
+<tr><td>142</td><td>local-declaration</td><td>지역 변수를 선언합니다: var clientId = Interlocked.Increment(ref _clientSequence);</td></tr>
+<tr><td>142</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: clientId = Interlocked.Increment(ref _clientSequence)</td></tr>
+<tr><td>143</td><td>assignment</td><td>값을 대상에 대입합니다: _clients[clientId] = client</td></tr>
+<tr><td>144</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>145</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(SelectValue, CancellationToken.None)</td></tr>
+<tr><td>156</td><td>local-declaration</td><td>지역 변수를 선언합니다: var receiveTask = Task.Run(SelectValue, CancellationToken.None);</td></tr>
+<tr><td>156</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: receiveTask = Task.Run(SelectValue, CancellationToken.None)</td></tr>
+<tr><td>157</td><td>assignment</td><td>값을 대상에 대입합니다: _clientTasks[clientId] = receiveTask</td></tr>
+<tr><td>158</td><td>assignment</td><td>값을 대상에 대입합니다: _ = receiveTask.ContinueWith(CleanupClientTaskCallback, CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: receiveTask.ContinueWith(CleanupClientTaskCallback, CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default)</td></tr>
+<tr><td>160</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (cancellationToken.IsCancellationRequested || ex is ObjectDisposedException or SocketException or OperationCanceledException)</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Close()</td></tr>
+<tr><td>163</td><td>if</td><td>조건에 따라 분기합니다: if (!cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ex.Message</td></tr>
+<tr><td>166</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;AcceptLoop&quot;]
+ N0[&quot;L120 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L123 try&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L126 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L133 if&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L160 catch&quot;]
+ N1 --&gt;|포함| N4
+ N5[&quot;L163 if&quot;]
+ N4 --&gt;|포함| N5</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L146">LocalFunctionStatement <code>SelectValue</code> · L146–149</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L146-L149">Drilling.Common/Interface/Socket/CSocketServerComm.cs:146–149</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task SelectValue()</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>148</td><td>ReceiveLoop</td><td>resolved</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.ReceiveLoop(int, System.Net.Sockets.TcpClient, System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:172</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReceiveLoop(clientId, client, cancellationToken)</td></tr>
+<tr><td>148</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return ReceiveLoop(clientId, client, cancellationToken);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L151">LocalFunctionStatement <code>CleanupClientTaskCallback</code> · L151–154</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L151-L154">Drilling.Common/Interface/Socket/CSocketServerComm.cs:151–154</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void CleanupClientTaskCallback(System.Threading.Tasks.Task)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>task</td><td>System.Threading.Tasks.Task</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>153</td><td>CleanupClientTask</td><td>resolved</td><td>void Drilling.Common.Interface.CSocketServerComm.CleanupClientTask(int, System.Threading.Tasks.Task) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:224</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CleanupClientTask(clientId, task)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L172">MethodDeclaration <code>ReceiveLoop</code> · L172–222</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L172-L222">Drilling.Common/Interface/Socket/CSocketServerComm.cs:172–222</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.ReceiveLoop(int, System.Net.Sockets.TcpClient, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>clientId</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>client</td><td>System.Net.Sockets.TcpClient</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L148-L148">Drilling.Common/Interface/Socket/CSocketServerComm.cs:148–148</a></td><td>ReceiveLoop</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>174</td><td>GetRemoteEndPoint</td><td>resolved</td><td>string Drilling.Common.Interface.CSocketServerComm.GetRemoteEndPoint(System.Net.Sockets.TcpClient) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:390</td></tr>
+<tr><td>179</td><td>client.GetStream</td><td>resolved</td><td>System.Net.Sockets.NetworkStream System.Net.Sockets.TcpClient.GetStream()</td></tr>
+<tr><td>180</td><td>new StreamReader</td><td>resolved</td><td>System.IO.StreamReader.StreamReader(System.IO.Stream, System.Text.Encoding?, bool, int, bool)</td></tr>
+<tr><td>181</td><td>new StreamWriter</td><td>resolved</td><td>System.IO.StreamWriter.StreamWriter(System.IO.Stream, System.Text.Encoding?, int, bool)</td></tr>
+<tr><td>181</td><td>new UTF8Encoding</td><td>resolved</td><td>System.Text.UTF8Encoding.UTF8Encoding(bool)</td></tr>
+<tr><td>188</td><td>ReadProtocolLineWithTimeout</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLineWithTimeout(System.IO.StreamReader, System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:376</td></tr>
+<tr><td>194</td><td>NormalizeReceivedMessage</td><td>resolved</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeReceivedMessage(string) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:395</td></tr>
+<tr><td>195</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>200</td><td>RaiseMessageReceived</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSocketServerComm.RaiseMessageReceived(string, string, System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:236</td></tr>
+<tr><td>201</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>203</td><td>NormalizeProtocolLine</td><td>resolved</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeProtocolLine(string) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:400</td></tr>
+<tr><td>204</td><td>writer.WriteLineAsync</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task System.IO.StreamWriter.WriteLineAsync(System.ReadOnlyMemory&lt;char&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>204</td><td>protocolResponse.AsMemory</td><td>resolved</td><td>System.ReadOnlyMemory&lt;char&gt; string?.AsMemory()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>174</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetRemoteEndPoint(client)</td></tr>
+<tr><td>174</td><td>local-declaration</td><td>지역 변수를 선언합니다: var remoteEndPoint = GetRemoteEndPoint(client);</td></tr>
+<tr><td>174</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: remoteEndPoint = GetRemoteEndPoint(client)</td></tr>
+<tr><td>175</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>177</td><td>using</td><td>자원 사용과 정리 범위를 지정합니다: using (client)</td></tr>
+<tr><td>179</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: client.GetStream()</td></tr>
+<tr><td>179</td><td>local-declaration</td><td>지역 변수를 선언합니다: var stream = client.GetStream();</td></tr>
+<tr><td>179</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: stream = client.GetStream()</td></tr>
+<tr><td>180</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamReader(stream, Encoding.UTF8, detectEncodingFromByteOrderMarks: false, bufferSize: 4096, leaveOpen: true)</td></tr>
+<tr><td>180</td><td>using-declaration</td><td>정리할 자원을 선언합니다: using var reader = new StreamReader(stream, Encoding.UTF8, detectEncodingFromByteOrderMarks: false, bufferSize: 4096, leaveOpen: true);</td></tr>
+<tr><td>180</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: reader = new StreamReader(stream, Encoding.UTF8, detectEncodingFromByteOrderMarks: false, bufferSize: 4096, leaveOpen: true)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new UTF8Encoding(encoderShouldEmitUTF8Identifier: false)</td></tr>
+<tr><td>181</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamWriter(stream, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false), bufferSize: 4096, leaveOpen: true) { AutoFlush = true, NewLine = &quot;\n&quot; }</td></tr>
+<tr><td>181</td><td>using-declaration</td><td>정리할 자원을 선언합니다: using var writer = new StreamWriter(stream, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false), bufferSize: 4096, leaveOpen: true) { AutoFlush = true, NewLine = &quot;\n&quot; };</td></tr>
+<tr><td>181</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: writer = new StreamWriter(stream, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false), bufferSize: 4096, leaveOpen: true) { AutoFlush = true, NewLine = &quot;\n&quot; }</td></tr>
+<tr><td>183</td><td>assignment</td><td>값을 대상에 대입합니다: AutoFlush = true</td></tr>
+<tr><td>184</td><td>assignment</td><td>값을 대상에 대입합니다: NewLine = &quot;\n&quot;</td></tr>
+<tr><td>186</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (!cancellationToken.IsCancellationRequested &amp;&amp; client.Connected)</td></tr>
+<tr><td>188</td><td>await</td><td>비동기 완료를 기다립니다: await ReadProtocolLineWithTimeout(reader, cancellationToken)</td></tr>
+<tr><td>188</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadProtocolLineWithTimeout(reader, cancellationToken)</td></tr>
+<tr><td>188</td><td>local-declaration</td><td>지역 변수를 선언합니다: var line = await ReadProtocolLineWithTimeout(reader, cancellationToken);</td></tr>
+<tr><td>188</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: line = await ReadProtocolLineWithTimeout(reader, cancellationToken)</td></tr>
+<tr><td>189</td><td>if</td><td>조건에 따라 분기합니다: if (line is null)</td></tr>
+<tr><td>191</td><td>break</td><td>해당 반복/분기 구간을 종료합니다: break;</td></tr>
+<tr><td>194</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeReceivedMessage(line)</td></tr>
+<tr><td>194</td><td>local-declaration</td><td>지역 변수를 선언합니다: var message = NormalizeReceivedMessage(line);</td></tr>
+<tr><td>194</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: message = NormalizeReceivedMessage(line)</td></tr>
+<tr><td>195</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(message)</td></tr>
+<tr><td>195</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(message))</td></tr>
+<tr><td>197</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>200</td><td>await</td><td>비동기 완료를 기다립니다: await RaiseMessageReceived(remoteEndPoint, message, cancellationToken)</td></tr>
+<tr><td>200</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: RaiseMessageReceived(remoteEndPoint, message, cancellationToken)</td></tr>
+<tr><td>200</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = await RaiseMessageReceived(remoteEndPoint, message, cancellationToken);</td></tr>
+<tr><td>200</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = await RaiseMessageReceived(remoteEndPoint, message, cancellationToken)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>201</td><td>if</td><td>조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(response))</td></tr>
+<tr><td>203</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeProtocolLine(response)</td></tr>
+<tr><td>203</td><td>local-declaration</td><td>지역 변수를 선언합니다: var protocolResponse = NormalizeProtocolLine(response);</td></tr>
+<tr><td>203</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: protocolResponse = NormalizeProtocolLine(response)</td></tr>
+<tr><td>204</td><td>await</td><td>비동기 완료를 기다립니다: await writer.WriteLineAsync(protocolResponse.AsMemory(), cancellationToken)</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: writer.WriteLineAsync(protocolResponse.AsMemory(), cancellationToken)</td></tr>
+<tr><td>204</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: protocolResponse.AsMemory()</td></tr>
+<tr><td>205</td><td>assignment</td><td>값을 대상에 대입합니다: LastSent = protocolResponse</td></tr>
+<tr><td>206</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>211</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>214</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex)</td></tr>
+<tr><td>216</td><td>if</td><td>조건에 따라 분기합니다: if (!cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>218</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ex.Message</td></tr>
+<tr><td>219</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReceiveLoop&quot;]
+ N0[&quot;L175 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L177 using&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L186 while&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L189 if&quot;]
+ N2 --&gt;|포함| N3
+ N4[&quot;L195 if&quot;]
+ N2 --&gt;|포함| N4
+ N5[&quot;L201 if&quot;]
+ N2 --&gt;|포함| N5
+ N6[&quot;L211 catch&quot;]
+ N0 --&gt;|포함| N6
+ N7[&quot;L214 catch&quot;]
+ N0 --&gt;|포함| N7
+ N8[&quot;L216 if&quot;]
+ N7 --&gt;|포함| N8</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L224">MethodDeclaration <code>CleanupClientTask</code> · L224–234</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L224-L234">Drilling.Common/Interface/Socket/CSocketServerComm.cs:224–234</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSocketServerComm.CleanupClientTask(int, System.Threading.Tasks.Task)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>clientId</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>task</td><td>System.Threading.Tasks.Task</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L153-L153">Drilling.Common/Interface/Socket/CSocketServerComm.cs:153–153</a></td><td>CleanupClientTask</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>228</td><td>.GetBaseException</td><td>resolved · 동적 구현 선택 가능</td><td>System.Exception System.AggregateException.GetBaseException()</td></tr>
+<tr><td>232</td><td>_clients.TryRemove</td><td>resolved</td><td>bool System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt;.TryRemove(int, out System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>233</td><td>_clientTasks.TryRemove</td><td>resolved</td><td>bool System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt;.TryRemove(int, out System.Threading.Tasks.Task)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>226</td><td>if</td><td>조건에 따라 분기합니다: if (task.IsFaulted)</td></tr>
+<tr><td>228</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = task.Exception?.GetBaseException().Message ?? &quot;Socket server receive task failed.&quot;</td></tr>
+<tr><td>228</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .GetBaseException()</td></tr>
+<tr><td>229</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>232</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clients.TryRemove(clientId, out _)</td></tr>
+<tr><td>233</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clientTasks.TryRemove(clientId, out _)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CleanupClientTask&quot;]
+ N0[&quot;L226 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L236">MethodDeclaration <code>RaiseMessageReceived</code> · L236–262</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L236-L262">Drilling.Common/Interface/Socket/CSocketServerComm.cs:236–262</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.CSocketServerComm.RaiseMessageReceived(string, string, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>remoteEndPoint</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L200-L200">Drilling.Common/Interface/Socket/CSocketServerComm.cs:200–200</a></td><td>RaiseMessageReceived</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>240</td><td>SetState</td><td>resolved</td><td>void Drilling.Common.Interface.CCommBase.SetState(Drilling.Common.Interface.EN_COMM_STATE) · Drilling.Common/Interface/CComm.cs:114</td></tr>
+<tr><td>249</td><td>handler</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.Task&lt;string&gt; System.Func&lt;Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;string&gt;&gt;.Invoke(Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE, System.Threading.CancellationToken)</td></tr>
+<tr><td>249</td><td>new ST_COMM_RECEIVED_MESSAGE</td><td>resolved</td><td>Drilling.Common.Interface.ST_COMM_RECEIVED_MESSAGE.ST_COMM_RECEIVED_MESSAGE(string, string, System.DateTimeOffset) · Drilling.Common/Interface/CComm.cs:77</td></tr>
+<tr><td>250</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>260</td><td>NormalizeProtocolLine</td><td>resolved</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeProtocolLine(string) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:400</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>238</td><td>assignment</td><td>값을 대상에 대입합니다: LastReceived = message</td></tr>
+<tr><td>239</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = &quot;&quot;</td></tr>
+<tr><td>240</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)</td></tr>
+<tr><td>241</td><td>local-declaration</td><td>지역 변수를 선언합니다: var handler = MessageReceived;</td></tr>
+<tr><td>241</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: handler = MessageReceived</td></tr>
+<tr><td>242</td><td>if</td><td>조건에 따라 분기합니다: if (handler is null)</td></tr>
+<tr><td>244</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;ACK&quot;;</td></tr>
+<tr><td>247</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>249</td><td>await</td><td>비동기 완료를 기다립니다: await handler(new ST_COMM_RECEIVED_MESSAGE(remoteEndPoint, message, DateTimeOffset.Now), cancellationToken)</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: handler(new ST_COMM_RECEIVED_MESSAGE(remoteEndPoint, message, DateTimeOffset.Now), cancellationToken)</td></tr>
+<tr><td>249</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_COMM_RECEIVED_MESSAGE(remoteEndPoint, message, DateTimeOffset.Now)</td></tr>
+<tr><td>249</td><td>local-declaration</td><td>지역 변수를 선언합니다: var response = await handler(new ST_COMM_RECEIVED_MESSAGE(remoteEndPoint, message, DateTimeOffset.Now), cancellationToken);</td></tr>
+<tr><td>249</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: response = await handler(new ST_COMM_RECEIVED_MESSAGE(remoteEndPoint, message, DateTimeOffset.Now), cancellationToken)</td></tr>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response)</td></tr>
+<tr><td>250</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(response) ? &quot;ACK&quot; : response</td></tr>
+<tr><td>250</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(response) ? &quot;ACK&quot; : response;</td></tr>
+<tr><td>252</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>254</td><td>throw</td><td>예외를 발생/전달합니다: throw;</td></tr>
+<tr><td>256</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex)</td></tr>
+<tr><td>258</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ex.Message</td></tr>
+<tr><td>259</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>260</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeProtocolLine(ex.Message)</td></tr>
+<tr><td>260</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return $&quot;NAK|{NormalizeProtocolLine(ex.Message)}&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;RaiseMessageReceived&quot;]
+ N0[&quot;L242 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L247 try&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L252 catch&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L256 catch&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L264">MethodDeclaration <code>StopServer</code> · L264–305</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L264-L305">Drilling.Common/Interface/Socket/CSocketServerComm.cs:264–305</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CSocketServerComm.StopServer()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L31-L31">Drilling.Common/Interface/Socket/CSocketServerComm.cs:31–31</a></td><td>StopServer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L56-L56">Drilling.Common/Interface/Socket/CSocketServerComm.cs:56–56</a></td><td>StopServer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L71-L71">Drilling.Common/Interface/Socket/CSocketServerComm.cs:71–71</a></td><td>StopServer</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>272</td><td>.Cancel</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Cancel()</td></tr>
+<tr><td>273</td><td>.Stop</td><td>resolved</td><td>void System.Net.Sockets.TcpListener.Stop()</td></tr>
+<tr><td>274</td><td>CloseAllClients</td><td>resolved</td><td>void Drilling.Common.Interface.CSocketServerComm.CloseAllClients() · Drilling.Common/Interface/Socket/CSocketServerComm.cs:307</td></tr>
+<tr><td>279</td><td>acceptTask.ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>286</td><td>_clientTasks.Values.ToArray</td><td>resolved</td><td>System.Threading.Tasks.Task[] System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&gt;.ToArray&lt;System.Threading.Tasks.Task&gt;()</td></tr>
+<tr><td>291</td><td>Task.WhenAll(clientTasks).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool)</td></tr>
+<tr><td>291</td><td>Task.WhenAll</td><td>resolved</td><td>System.Threading.Tasks.Task System.Threading.Tasks.Task.WhenAll(params System.Threading.Tasks.Task[])</td></tr>
+<tr><td>303</td><td>_clientTasks.Clear</td><td>resolved</td><td>void System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.Task&gt;.Clear()</td></tr>
+<tr><td>304</td><td>.Dispose</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.Dispose()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>266</td><td>local-declaration</td><td>지역 변수를 선언합니다: var cts = _serverCts;</td></tr>
+<tr><td>266</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: cts = _serverCts</td></tr>
+<tr><td>267</td><td>local-declaration</td><td>지역 변수를 선언합니다: var listener = _listener;</td></tr>
+<tr><td>267</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: listener = _listener</td></tr>
+<tr><td>268</td><td>local-declaration</td><td>지역 변수를 선언합니다: var acceptTask = _acceptTask;</td></tr>
+<tr><td>268</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: acceptTask = _acceptTask</td></tr>
+<tr><td>269</td><td>assignment</td><td>값을 대상에 대입합니다: _serverCts = null</td></tr>
+<tr><td>270</td><td>assignment</td><td>값을 대상에 대입합니다: _listener = null</td></tr>
+<tr><td>271</td><td>assignment</td><td>값을 대상에 대입합니다: _acceptTask = null</td></tr>
+<tr><td>272</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Cancel()</td></tr>
+<tr><td>273</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Stop()</td></tr>
+<tr><td>274</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CloseAllClients()</td></tr>
+<tr><td>275</td><td>if</td><td>조건에 따라 분기합니다: if (acceptTask is not null)</td></tr>
+<tr><td>277</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>279</td><td>await</td><td>비동기 완료를 기다립니다: await acceptTask.ConfigureAwait(false)</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: acceptTask.ConfigureAwait(false)</td></tr>
+<tr><td>281</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is ObjectDisposedException or SocketException or OperationCanceledException)</td></tr>
+<tr><td>286</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clientTasks.Values.ToArray()</td></tr>
+<tr><td>286</td><td>local-declaration</td><td>지역 변수를 선언합니다: var clientTasks = _clientTasks.Values.ToArray();</td></tr>
+<tr><td>286</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: clientTasks = _clientTasks.Values.ToArray()</td></tr>
+<tr><td>287</td><td>if</td><td>조건에 따라 분기합니다: if (clientTasks.Length &gt; 0)</td></tr>
+<tr><td>289</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>291</td><td>await</td><td>비동기 완료를 기다립니다: await Task.WhenAll(clientTasks).ConfigureAwait(false)</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(clientTasks).ConfigureAwait(false)</td></tr>
+<tr><td>291</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(clientTasks)</td></tr>
+<tr><td>293</td><td>catch</td><td>지정 예외를 처리합니다: catch (Exception ex) when (ex is ObjectDisposedException or SocketException or IOException or OperationCanceledException)</td></tr>
+<tr><td>295</td><td>if</td><td>조건에 따라 분기합니다: if (cts is not null &amp;&amp; !cts.IsCancellationRequested)</td></tr>
+<tr><td>297</td><td>assignment</td><td>값을 대상에 대입합니다: LastError = ex.Message</td></tr>
+<tr><td>298</td><td>assignment</td><td>값을 대상에 대입합니다: LastChangedAt = DateTimeOffset.Now</td></tr>
+<tr><td>303</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clientTasks.Clear()</td></tr>
+<tr><td>304</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;StopServer&quot;]
+ N0[&quot;L275 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L277 try&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L281 catch&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L287 if&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L289 try&quot;]
+ N3 --&gt;|포함| N4
+ N5[&quot;L293 catch&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L295 if&quot;]
+ N5 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L307">MethodDeclaration <code>CloseAllClients</code> · L307–316</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L307-L316">Drilling.Common/Interface/Socket/CSocketServerComm.cs:307–316</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.Common.Interface.CSocketServerComm.CloseAllClients()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L104-L104">Drilling.Common/Interface/Socket/CSocketServerComm.cs:104–104</a></td><td>CloseAllClients</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L274-L274">Drilling.Common/Interface/Socket/CSocketServerComm.cs:274–274</a></td><td>CloseAllClients</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>309</td><td>_clients.ToArray</td><td>resolved</td><td>System.Collections.Generic.KeyValuePair&lt;int, System.Net.Sockets.TcpClient&gt;[] System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt;.ToArray()</td></tr>
+<tr><td>311</td><td>_clients.TryRemove</td><td>resolved</td><td>bool System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Net.Sockets.TcpClient&gt;.TryRemove(int, out System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>313</td><td>client.Close</td><td>resolved</td><td>void System.Net.Sockets.TcpClient.Close()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clients.ToArray()</td></tr>
+<tr><td>309</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var pair in _clients.ToArray())</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: _clients.TryRemove(pair.Key, out var client)</td></tr>
+<tr><td>311</td><td>if</td><td>조건에 따라 분기합니다: if (_clients.TryRemove(pair.Key, out var client))</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: client.Close()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CloseAllClients&quot;]
+ N0[&quot;L309 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L311 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L318">MethodDeclaration <code>IsAllowedRemote</code> · L318–337</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L318-L337">Drilling.Common/Interface/Socket/CSocketServerComm.cs:318–337</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CSocketServerComm.IsAllowedRemote(System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>client</td><td>System.Net.Sockets.TcpClient</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L126-L126">Drilling.Common/Interface/Socket/CSocketServerComm.cs:126–126</a></td><td>IsAllowedRemote</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>320</td><td>Option.RemoteAddress.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>321</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>321</td><td>allowedRemote.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>321</td><td>allowedRemote.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>321</td><td>allowedRemote.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>331</td><td>IPAddress.TryParse</td><td>resolved</td><td>bool System.Net.IPAddress.TryParse(string?, out System.Net.IPAddress?)</td></tr>
+<tr><td>333</td><td>remoteEndPoint.Address.Equals</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Net.IPAddress.Equals(object?)</td></tr>
+<tr><td>336</td><td>remoteEndPoint.Address.ToString().Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>336</td><td>remoteEndPoint.Address.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Net.IPAddress.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>320</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Option.RemoteAddress.Trim()</td></tr>
+<tr><td>320</td><td>local-declaration</td><td>지역 변수를 선언합니다: var allowedRemote = Option.RemoteAddress.Trim();</td></tr>
+<tr><td>320</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: allowedRemote = Option.RemoteAddress.Trim()</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(allowedRemote)</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: allowedRemote.Equals(&quot;*&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: allowedRemote.Equals(&quot;ANY&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>321</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: allowedRemote.Equals(&quot;0.0.0.0&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>321</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(allowedRemote) || allowedRemote.Equals(&quot;*&quot;, StringComparison.OrdinalIgnoreCase) || allowedRemote.Equals(&quot;ANY&quot;, StringComparison.OrdinalIgnoreCase) || allowedRemote.Equals(&quot;0.0.0.0&quot;, StringCompar…)</td></tr>
+<tr><td>323</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>326</td><td>if</td><td>조건에 따라 분기합니다: if (client.Client.RemoteEndPoint is not IPEndPoint remoteEndPoint)</td></tr>
+<tr><td>328</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return true;</td></tr>
+<tr><td>331</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IPAddress.TryParse(allowedRemote, out var allowedAddress)</td></tr>
+<tr><td>331</td><td>if</td><td>조건에 따라 분기합니다: if (IPAddress.TryParse(allowedRemote, out var allowedAddress))</td></tr>
+<tr><td>333</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: remoteEndPoint.Address.Equals(allowedAddress)</td></tr>
+<tr><td>333</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return remoteEndPoint.Address.Equals(allowedAddress);</td></tr>
+<tr><td>336</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: remoteEndPoint.Address.ToString().Equals(allowedRemote, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>336</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: remoteEndPoint.Address.ToString()</td></tr>
+<tr><td>336</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return remoteEndPoint.Address.ToString().Equals(allowedRemote, StringComparison.OrdinalIgnoreCase);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;IsAllowedRemote&quot;]
+ N0[&quot;L321 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L326 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L331 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L339">MethodDeclaration <code>ResolveBindAddress</code> · L339–347</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L339-L347">Drilling.Common/Interface/Socket/CSocketServerComm.cs:339–347</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Net.IPAddress Drilling.Common.Interface.CSocketServerComm.ResolveBindAddress(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Net.IPAddress</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>localAddress</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L38-L38">Drilling.Common/Interface/Socket/CSocketServerComm.cs:38–38</a></td><td>ResolveBindAddress</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>341</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>341</td><td>localAddress.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>341</td><td>localAddress.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>346</td><td>IPAddress.TryParse</td><td>resolved</td><td>bool System.Net.IPAddress.TryParse(string?, out System.Net.IPAddress?)</td></tr>
+<tr><td>346</td><td>new ArgumentException</td><td>resolved</td><td>System.ArgumentException.ArgumentException(string?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(localAddress)</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: localAddress.Equals(&quot;*&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: localAddress.Equals(&quot;ANY&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>341</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(localAddress) || localAddress.Equals(&quot;*&quot;, StringComparison.OrdinalIgnoreCase) || localAddress.Equals(&quot;ANY&quot;, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>343</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return IPAddress.Any;</td></tr>
+<tr><td>346</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: IPAddress.TryParse(localAddress, out var address)</td></tr>
+<tr><td>346</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException($&quot;Socket server local address is invalid: {localAddress}&quot;)</td></tr>
+<tr><td>346</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: IPAddress.TryParse(localAddress, out var address) ? address : throw new ArgumentException($&quot;Socket server local address is invalid: {localAddress}&quot;)</td></tr>
+<tr><td>346</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return IPAddress.TryParse(localAddress, out var address) ? address : throw new ArgumentException($&quot;Socket server local address is invalid: {localAddress}&quot;);</td></tr>
+<tr><td>346</td><td>throw</td><td>예외를 발생/전달합니다: throw new ArgumentException($&quot;Socket server local address is invalid: {localAddress}&quot;)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ResolveBindAddress&quot;]
+ N0[&quot;L341 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L349">MethodDeclaration <code>ReadProtocolLine</code> · L349–374</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L349-L374">Drilling.Common/Interface/Socket/CSocketServerComm.cs:349–374</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLine(System.IO.StreamReader, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string?&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>reader</td><td>System.IO.StreamReader</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L382-L382">Drilling.Common/Interface/Socket/CSocketServerComm.cs:382–382</a></td><td>ReadProtocolLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>352</td><td>new StringBuilder</td><td>resolved</td><td>System.Text.StringBuilder.StringBuilder()</td></tr>
+<tr><td>355</td><td>reader.ReadAsync</td><td>resolved · 동적 구현 선택 가능</td><td>System.Threading.Tasks.ValueTask&lt;int&gt; System.IO.StreamReader.ReadAsync(System.Memory&lt;char&gt;, System.Threading.CancellationToken)</td></tr>
+<tr><td>355</td><td>buffer.AsMemory</td><td>resolved</td><td>System.Memory&lt;char&gt; char[].AsMemory&lt;char&gt;(int, int)</td></tr>
+<tr><td>358</td><td>message.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>364</td><td>message.ToString().TrimEnd</td><td>resolved</td><td>string string.TrimEnd(char)</td></tr>
+<tr><td>364</td><td>message.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Text.StringBuilder.ToString()</td></tr>
+<tr><td>369</td><td>new InvalidDataException</td><td>resolved</td><td>System.IO.InvalidDataException.InvalidDataException(string?)</td></tr>
+<tr><td>372</td><td>message.Append</td><td>resolved</td><td>System.Text.StringBuilder System.Text.StringBuilder.Append(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>351</td><td>local-declaration</td><td>지역 변수를 선언합니다: var buffer = new char[1];</td></tr>
+<tr><td>351</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: buffer = new char[1]</td></tr>
+<tr><td>352</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new StringBuilder()</td></tr>
+<tr><td>352</td><td>local-declaration</td><td>지역 변수를 선언합니다: var message = new StringBuilder();</td></tr>
+<tr><td>352</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: message = new StringBuilder()</td></tr>
+<tr><td>353</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (true)</td></tr>
+<tr><td>355</td><td>await</td><td>비동기 완료를 기다립니다: await reader.ReadAsync(buffer.AsMemory(0, 1), cancellationToken)</td></tr>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: reader.ReadAsync(buffer.AsMemory(0, 1), cancellationToken)</td></tr>
+<tr><td>355</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: buffer.AsMemory(0, 1)</td></tr>
+<tr><td>355</td><td>local-declaration</td><td>지역 변수를 선언합니다: var readCount = await reader.ReadAsync(buffer.AsMemory(0, 1), cancellationToken);</td></tr>
+<tr><td>355</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: readCount = await reader.ReadAsync(buffer.AsMemory(0, 1), cancellationToken)</td></tr>
+<tr><td>356</td><td>if</td><td>조건에 따라 분기합니다: if (readCount == 0)</td></tr>
+<tr><td>358</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.ToString()</td></tr>
+<tr><td>358</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: message.Length == 0 ? null : message.ToString()</td></tr>
+<tr><td>358</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return message.Length == 0 ? null : message.ToString();</td></tr>
+<tr><td>361</td><td>local-declaration</td><td>지역 변수를 선언합니다: var ch = buffer[0];</td></tr>
+<tr><td>361</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: ch = buffer[0]</td></tr>
+<tr><td>362</td><td>if</td><td>조건에 따라 분기합니다: if (ch == &#x27;\n&#x27;)</td></tr>
+<tr><td>364</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.ToString().TrimEnd(&#x27;\r&#x27;)</td></tr>
+<tr><td>364</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.ToString()</td></tr>
+<tr><td>364</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return message.ToString().TrimEnd(&#x27;\r&#x27;);</td></tr>
+<tr><td>367</td><td>if</td><td>조건에 따라 분기합니다: if (message.Length &gt;= MaxMessageLength)</td></tr>
+<tr><td>369</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($&quot;Socket server message exceeded {MaxMessageLength} characters.&quot;)</td></tr>
+<tr><td>369</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidDataException($&quot;Socket server message exceeded {MaxMessageLength} characters.&quot;);</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.Append(ch)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadProtocolLine&quot;]
+ N0[&quot;L353 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L356 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L362 if&quot;]
+ N0 --&gt;|포함| N2
+ N3[&quot;L367 if&quot;]
+ N0 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L376">MethodDeclaration <code>ReadProtocolLineWithTimeout</code> · L376–388</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L376-L388">Drilling.Common/Interface/Socket/CSocketServerComm.cs:376–388</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLineWithTimeout(System.IO.StreamReader, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;string?&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>reader</td><td>System.IO.StreamReader</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L188-L188">Drilling.Common/Interface/Socket/CSocketServerComm.cs:188–188</a></td><td>ReadProtocolLineWithTimeout</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>378</td><td>CancellationTokenSource.CreateLinkedTokenSource</td><td>resolved</td><td>System.Threading.CancellationTokenSource System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken)</td></tr>
+<tr><td>379</td><td>timeoutCts.CancelAfter</td><td>resolved</td><td>void System.Threading.CancellationTokenSource.CancelAfter(System.TimeSpan)</td></tr>
+<tr><td>379</td><td>TimeSpan.FromMilliseconds</td><td>resolved</td><td>System.TimeSpan System.TimeSpan.FromMilliseconds(long)</td></tr>
+<tr><td>379</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+<tr><td>382</td><td>ReadProtocolLine</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;string?&gt; Drilling.Common.Interface.CSocketServerComm.ReadProtocolLine(System.IO.StreamReader, System.Threading.CancellationToken) · Drilling.Common/Interface/Socket/CSocketServerComm.cs:349</td></tr>
+<tr><td>386</td><td>new TimeoutException</td><td>resolved</td><td>System.TimeoutException.TimeoutException(string?)</td></tr>
+<tr><td>386</td><td>Math.Max</td><td>resolved</td><td>int System.Math.Max(int, int)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>378</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)</td></tr>
+<tr><td>378</td><td>using-declaration</td><td>정리할 자원을 선언합니다: using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);</td></tr>
+<tr><td>378</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: timeoutCts.CancelAfter(TimeSpan.FromMilliseconds(Math.Max(1, Option.TimeoutMs)))</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(Math.Max(1, Option.TimeoutMs))</td></tr>
+<tr><td>379</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Option.TimeoutMs)</td></tr>
+<tr><td>380</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>382</td><td>await</td><td>비동기 완료를 기다립니다: await ReadProtocolLine(reader, timeoutCts.Token)</td></tr>
+<tr><td>382</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadProtocolLine(reader, timeoutCts.Token)</td></tr>
+<tr><td>382</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return await ReadProtocolLine(reader, timeoutCts.Token);</td></tr>
+<tr><td>384</td><td>catch</td><td>지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)</td></tr>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($&quot;Socket server receive timeout after {Math.Max(1, Option.TimeoutMs)} ms.&quot;)</td></tr>
+<tr><td>386</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Option.TimeoutMs)</td></tr>
+<tr><td>386</td><td>throw</td><td>예외를 발생/전달합니다: throw new TimeoutException($&quot;Socket server receive timeout after {Math.Max(1, Option.TimeoutMs)} ms.&quot;);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadProtocolLineWithTimeout&quot;]
+ N0[&quot;L380 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L384 catch&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L390">MethodDeclaration <code>GetRemoteEndPoint</code> · L390–393</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L390-L393">Drilling.Common/Interface/Socket/CSocketServerComm.cs:390–393</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSocketServerComm.GetRemoteEndPoint(System.Net.Sockets.TcpClient)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>client</td><td>System.Net.Sockets.TcpClient</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L174-L174">Drilling.Common/Interface/Socket/CSocketServerComm.cs:174–174</a></td><td>GetRemoteEndPoint</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>392</td><td>.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string? object.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>392</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString()</td></tr>
+<tr><td>392</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return client.Client.RemoteEndPoint?.ToString() ?? &quot;UNKNOWN&quot;;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L395">MethodDeclaration <code>NormalizeReceivedMessage</code> · L395–398</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L395-L398">Drilling.Common/Interface/Socket/CSocketServerComm.cs:395–398</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeReceivedMessage(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>message</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L194-L194">Drilling.Common/Interface/Socket/CSocketServerComm.cs:194–194</a></td><td>NormalizeReceivedMessage</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>397</td><td>message.TrimEnd(&#x27;\0&#x27;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>397</td><td>message.TrimEnd</td><td>resolved</td><td>string string.TrimEnd(char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>397</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.TrimEnd(&#x27;\0&#x27;).Trim()</td></tr>
+<tr><td>397</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: message.TrimEnd(&#x27;\0&#x27;)</td></tr>
+<tr><td>397</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return message.TrimEnd(&#x27;\0&#x27;).Trim();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L400">MethodDeclaration <code>NormalizeProtocolLine</code> · L400–403</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L400-L403">Drilling.Common/Interface/Socket/CSocketServerComm.cs:400–403</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CSocketServerComm.NormalizeProtocolLine(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CSocketServerComm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L203-L203">Drilling.Common/Interface/Socket/CSocketServerComm.cs:203–203</a></td><td>NormalizeProtocolLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L260-L260">Drilling.Common/Interface/Socket/CSocketServerComm.cs:260–260</a></td><td>NormalizeProtocolLine</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>402</td><td>value.Replace(&#x27;\r&#x27;, &#x27; &#x27;).Replace(&#x27;\n&#x27;, &#x27; &#x27;).Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>402</td><td>value.Replace(&#x27;\r&#x27;, &#x27; &#x27;).Replace</td><td>resolved</td><td>string string.Replace(char, char)</td></tr>
+<tr><td>402</td><td>value.Replace</td><td>resolved</td><td>string string.Replace(char, char)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>402</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&#x27;\r&#x27;, &#x27; &#x27;).Replace(&#x27;\n&#x27;, &#x27; &#x27;).Trim()</td></tr>
+<tr><td>402</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&#x27;\r&#x27;, &#x27; &#x27;).Replace(&#x27;\n&#x27;, &#x27; &#x27;)</td></tr>
+<tr><td>402</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.Replace(&#x27;\r&#x27;, &#x27; &#x27;)</td></tr>
+<tr><td>402</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.Replace(&#x27;\r&#x27;, &#x27; &#x27;).Replace(&#x27;\n&#x27;, &#x27; &#x27;).Trim();</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Socket/CSocketServerComm.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

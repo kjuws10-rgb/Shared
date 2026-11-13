@@ -1,0 +1,261 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Socket/CSocketComm.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000001 | using System.IO; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Net.Sockets;
+L000002 | using System.Net.Sockets; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Text;
+L000003 | using System.Text; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000005 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000007 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000008 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000009 | using Drilling.Common.Station; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000011 | namespace Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 | [CCommType("SocketClient")] ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 | [CCommType("ModbusTcp")] ⟦EOL⟧
+// 해설 L14: 타입의 구조/상속 선언입니다: internal sealed class CSocketComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option)
+L000014 | internal sealed class CSocketComm(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option) : CCommBase(data, option) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다.
+L000015 | { ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Net.Sockets.TcpClient? Drilling.Common.Interface.CSocketComm._client
+L000016 |     private TcpClient? _client; ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CSocketComm.Connect(System.Threading.CancellationToken)
+L000017 |     public override async Task Connect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 Connect.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 비동기 완료를 기다립니다: await DisconnectSocket() / 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectSocket()
+L000019 |         await DisconnectSocket(); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(Option.RemoteAddress) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0)
+L000020 |         if (string.IsNullOrWhiteSpace(Option.RemoteAddress) || Option.Port <= 0) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 Connect.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError("Socket endpoint is invalid.")
+L000022 |             SetError("Socket endpoint is invalid."); ⟦EOL⟧
+// 해설 L23: 호출자에게 값 또는 제어를 반환합니다: return;
+L000023 |             return; ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Connect.
+L000024 |         } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, Option.RetryCount) / 지역 변수를 선언합니다: var retryCount = Math.Max(1, Option.RetryCount); / 변수의 초기값을 지정합니다: retryCount = Math.Max(1, Option.RetryCount)
+L000026 |         var retryCount = Math.Max(1, Option.RetryCount); ⟦EOL⟧
+// 해설 L27: 초기화·조건·증감이 있는 반복입니다: for (var tryNo = 0; tryNo < retryCount; tryNo++) / 변수의 초기값을 지정합니다: tryNo = 0
+L000027 |         for (var tryNo = 0; tryNo < retryCount; tryNo++) ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 Connect.
+L000028 |         { ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000029 |             cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L30: 예외 처리 범위입니다: try
+L000030 |             try ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Connect.
+L000031 |             { ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TcpClient() / 지역 변수를 선언합니다: var client = new TcpClient(); / 변수의 초기값을 지정합니다: client = new TcpClient()
+L000032 |                 var client = new TcpClient(); ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000033 |                 using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(100, Option.TimeoutMs)
+L000034 |                 timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)); ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · void RunBackgroundTask()
+L000035 |                 void RunBackgroundTask() ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 RunBackgroundTask.
+L000036 |                 { ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: client.Connect(Option.RemoteAddress, Option.Port)
+L000037 |                     client.Connect(Option.RemoteAddress, Option.Port); ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 RunBackgroundTask.
+L000038 |                 } ⟦EOL⟧
+L000039 |  ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(RunBackgroundTask, cancellationToken) / 지역 변수를 선언합니다: var connectTask = Task.Run(RunBackgroundTask, cancellationToken); / 변수의 초기값을 지정합니다: connectTask = Task.Run(RunBackgroundTask, cancellationToken)
+L000040 |                 var connectTask = Task.Run(RunBackgroundTask, cancellationToken); ⟦EOL⟧
+// 해설 L41: 비동기 완료를 기다립니다: await Task.WhenAny(connectTask, Task.Delay(Math.Max(100, Option.TimeoutMs), timeout.Token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAny(connectTask, Task.Delay(Math.Max(100, Option.TimeoutMs), timeout.Token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Delay(Math.Max(100, Option.TimeoutMs), timeout.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(100, Option.TimeoutMs) / 조건에 따라 분기합니다: if (await Task.WhenAny(connectTask, Task.Delay(Math.Max(100, Option.TimeoutMs), timeout.Token)) != connectTask)
+L000041 |                 if (await Task.WhenAny(connectTask, Task.Delay(Math.Max(100, Option.TimeoutMs), timeout.Token)) != connectTask) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Connect.
+L000042 |                 { ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: client.Dispose()
+L000043 |                     client.Dispose(); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Socket connection timeout.") / 예외를 발생/전달합니다: throw new TimeoutException("Socket connection timeout.");
+L000044 |                     throw new TimeoutException("Socket connection timeout."); ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 Connect.
+L000045 |                 } ⟦EOL⟧
+L000046 |  ⟦EOL⟧
+// 해설 L47: 비동기 완료를 기다립니다: await connectTask
+L000047 |                 await connectTask; ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: _client = client
+L000048 |                 _client = client; ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: LastError = ""
+L000049 |                 LastError = ""; ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000050 |                 SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L51: 호출자에게 값 또는 제어를 반환합니다: return;
+L000051 |                 return; ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 Connect.
+L000052 |             } ⟦EOL⟧
+// 해설 L53: 지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or OperationCanceledException or TimeoutException or ArgumentException)
+L000053 |             catch (Exception ex)when (ex is SocketException or OperationCanceledException or TimeoutException or ArgumentException) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 Connect.
+L000054 |             { ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000055 |                 SetError(ex); ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 Connect.
+L000056 |             } ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 Connect.
+L000057 |         } ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 Connect.
+L000058 |     } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CSocketComm.Disconnect(System.Threading.CancellationToken)
+L000060 |     public override async Task Disconnect(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Disconnect.
+L000061 |     { ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000062 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L63: 비동기 완료를 기다립니다: await DisconnectSocket() / 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectSocket()
+L000063 |         await DisconnectSocket(); ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Offline)
+L000064 |         SetState(EN_COMM_STATE.Offline); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 Disconnect.
+L000065 |     } ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CSocketComm.Execute(string, System.Threading.CancellationToken)
+L000067 |     public override async Task<string> Execute(string function, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Execute.
+L000068 |     { ⟦EOL⟧
+// 해설 L69: 예외 처리 범위입니다: try
+L000069 |         try ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 Execute.
+L000070 |         { ⟦EOL⟧
+// 해설 L71: 조건에 따라 분기합니다: if (_client is null || !_client.Connected)
+L000071 |             if (_client is null || !_client.Connected) ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Execute.
+L000072 |             { ⟦EOL⟧
+// 해설 L73: 비동기 완료를 기다립니다: await Connect(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Connect(cancellationToken)
+L000073 |                 await Connect(cancellationToken); ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 Execute.
+L000074 |             } ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 조건에 따라 분기합니다: if (_client is null || !_client.Connected)
+L000076 |             if (_client is null || !_client.Connected) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Execute.
+L000077 |             { ⟦EOL⟧
+// 해설 L78: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000078 |                 return ""; ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Execute.
+L000079 |             } ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: _client.GetStream() / 지역 변수를 선언합니다: var stream = _client.GetStream(); / 변수의 초기값을 지정합니다: stream = _client.GetStream()
+L000081 |             var stream = _client.GetStream(); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.UTF8.GetBytes(function) / 지역 변수를 선언합니다: var sendBytes = Encoding.UTF8.GetBytes(function); / 변수의 초기값을 지정합니다: sendBytes = Encoding.UTF8.GetBytes(function)
+L000082 |             var sendBytes = Encoding.UTF8.GetBytes(function); ⟦EOL⟧
+// 해설 L83: 비동기 완료를 기다립니다: await stream.WriteAsync(sendBytes, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.WriteAsync(sendBytes, cancellationToken)
+L000083 |             await stream.WriteAsync(sendBytes, cancellationToken); ⟦EOL⟧
+// 해설 L84: 비동기 완료를 기다립니다: await stream.FlushAsync(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.FlushAsync(cancellationToken)
+L000084 |             await stream.FlushAsync(cancellationToken); ⟦EOL⟧
+// 해설 L85: 값을 대상에 대입합니다: LastSent = function
+L000085 |             LastSent = function; ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: LastReceived = ""
+L000086 |             LastReceived = ""; ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: LastError = ""
+L000087 |             LastError = ""; ⟦EOL⟧
+// 해설 L88: 값을 대상에 대입합니다: LastReceived = await ReadResponse(stream, cancellationToken) / 비동기 완료를 기다립니다: await ReadResponse(stream, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadResponse(stream, cancellationToken)
+L000088 |             LastReceived = await ReadResponse(stream, cancellationToken); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastReceived) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(LastReceived))
+L000089 |             if (string.IsNullOrWhiteSpace(LastReceived)) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Execute.
+L000090 |             { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(string.IsNullOrWhiteSpace(LastError) ? "Socket response timeout." : LastError) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(LastError) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(LastError) ? "Socket response timeout." : LastError
+L000091 |                 SetError(string.IsNullOrWhiteSpace(LastError) ? "Socket response timeout." : LastError); ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000092 |                 return ""; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 Execute.
+L000093 |             } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetState(EN_COMM_STATE.Online)
+L000095 |             SetState(EN_COMM_STATE.Online); ⟦EOL⟧
+// 해설 L96: 호출자에게 값 또는 제어를 반환합니다: return LastReceived;
+L000096 |             return LastReceived; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Execute.
+L000097 |         } ⟦EOL⟧
+// 해설 L98: 지정 예외를 처리합니다: catch (Exception ex) when (ex is SocketException or IOException or ObjectDisposedException or OperationCanceledException)
+L000098 |         catch (Exception ex)when (ex is SocketException or IOException or ObjectDisposedException or OperationCanceledException) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 Execute.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 비동기 완료를 기다립니다: await DisconnectSocket() / 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectSocket()
+L000100 |             await DisconnectSocket(); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetError(ex)
+L000101 |             SetError(ex); ⟦EOL⟧
+// 해설 L102: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000102 |             return ""; ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 Execute.
+L000103 |         } ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 Execute.
+L000104 |     } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Interface.CSocketComm.DisconnectSocket()
+L000106 |     private Task DisconnectSocket() ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 DisconnectSocket.
+L000107 |     { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Dispose()
+L000108 |         _client?.Dispose(); ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: _client = null
+L000109 |         _client = null; ⟦EOL⟧
+// 해설 L110: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000110 |         return Task.CompletedTask; ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 DisconnectSocket.
+L000111 |     } ⟦EOL⟧
+L000112 |  ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<string> Drilling.Common.Interface.CSocketComm.ReadResponse(System.Net.Sockets.NetworkStream, System.Threading.CancellationToken)
+L000113 |     private async Task<string> ReadResponse(NetworkStream stream, CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000114 |     { ⟦EOL⟧
+// 해설 L115: 지역 변수를 선언합니다: var buffer = new byte[4096]; / 변수의 초기값을 지정합니다: buffer = new byte[4096]
+L000115 |         var buffer = new byte[4096]; ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) / 정리할 자원을 선언합니다: using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); / 변수의 초기값을 지정합니다: timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken)
+L000116 |         using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(100, Option.TimeoutMs)
+L000117 |         timeout.CancelAfter(Math.Max(100, Option.TimeoutMs)); ⟦EOL⟧
+// 해설 L118: 예외 처리 범위입니다: try
+L000118 |         try ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000119 |         { ⟦EOL⟧
+// 해설 L120: 비동기 완료를 기다립니다: await stream.ReadAsync(buffer, timeout.Token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stream.ReadAsync(buffer, timeout.Token) / 지역 변수를 선언합니다: var readCount = await stream.ReadAsync(buffer, timeout.Token); / 변수의 초기값을 지정합니다: readCount = await stream.ReadAsync(buffer, timeout.Token)
+L000120 |             var readCount = await stream.ReadAsync(buffer, timeout.Token); ⟦EOL⟧
+// 해설 L121: 조건에 따라 분기합니다: if (readCount == 0)
+L000121 |             if (readCount == 0) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000122 |             { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException("Socket closed by remote.") / 예외를 발생/전달합니다: throw new IOException("Socket closed by remote.");
+L000123 |                 throw new IOException("Socket closed by remote."); ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000124 |             } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.UTF8.GetString(buffer, 0, readCount) / 호출자에게 값 또는 제어를 반환합니다: return Encoding.UTF8.GetString(buffer, 0, readCount);
+L000126 |             return Encoding.UTF8.GetString(buffer, 0, readCount); ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000127 |         } ⟦EOL⟧
+// 해설 L128: 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+L000128 |         catch (OperationCanceledException)when (!cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000129 |         { ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: LastError = "Socket response timeout."
+L000130 |             LastError = "Socket response timeout."; ⟦EOL⟧
+// 해설 L131: 호출자에게 값 또는 제어를 반환합니다: return "";
+L000131 |             return ""; ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000132 |         } ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 ReadResponse.
+L000133 |     } ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다.
+L000134 | } ⟦EOL⟧

@@ -1,0 +1,410 @@
+{
+  "schema": "a3-diagram-spec-v1",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "diagrams": [
+    {
+      "id": "01-startup",
+      "title": "프로그램 시작과 객체 소유",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "CApp.OnStartup"
+        },
+        {
+          "id": "n1",
+          "label": "CAppStartup 조립"
+        },
+        {
+          "id": "n2",
+          "label": "파일 어댑터·CManager"
+        },
+        {
+          "id": "n3",
+          "label": "비동기 Interface/Motion 초기화"
+        },
+        {
+          "id": "n4",
+          "label": "CRootView·Menu 생성"
+        },
+        {
+          "id": "n5",
+          "label": "창 표시·백그라운드 감시"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "진입"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "구성 로드"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "Task.Run"
+        },
+        {
+          "source": "n2",
+          "target": "n4",
+          "label": "Manager 주입"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "DataContext"
+        }
+      ]
+    },
+    {
+      "id": "02-recipe",
+      "title": "정의·값·실행 스냅샷",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "JHMI 항목 정의"
+        },
+        {
+          "id": "n1",
+          "label": "Recipe/Setting 값 CSV"
+        },
+        {
+          "id": "n2",
+          "label": "File 어댑터·검증"
+        },
+        {
+          "id": "n3",
+          "label": "Manager 캐시"
+        },
+        {
+          "id": "n4",
+          "label": "Setting·최신 Offset 합성"
+        },
+        {
+          "id": "n5",
+          "label": "ProcessModel 입력 사본"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n2",
+          "label": "항목 메타데이터"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "값"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "로드/저장"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "선택 Recipe"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "실행값"
+        }
+      ]
+    },
+    {
+      "id": "03-coordinate",
+      "title": "좌표 계산에서 Controller 입력까지",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "실행 Parameter 사본"
+        },
+        {
+          "id": "n1",
+          "label": "설계 Shot·Head 배정"
+        },
+        {
+          "id": "n2",
+          "label": "축변환·Offset·Encoder"
+        },
+        {
+          "id": "n3",
+          "label": "Head별 ProcessModel"
+        },
+        {
+          "id": "n4",
+          "label": "ascript·CSV·manifest"
+        },
+        {
+          "id": "n5",
+          "label": "업로드·Task 실행·완료"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "계획"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "중간값"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "ST_HEAD_SHOT_POINT"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "빌드"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "정확한 FilePath"
+        }
+      ]
+    },
+    {
+      "id": "04-product",
+      "title": "기판 조건과 실행 결과",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "Recipe·현재 Product"
+        },
+        {
+          "id": "n1",
+          "label": "Prepare: 모델 스냅샷"
+        },
+        {
+          "id": "n2",
+          "label": "Start: Offset·인터락"
+        },
+        {
+          "id": "n3",
+          "label": "Station 단계 실행"
+        },
+        {
+          "id": "n4",
+          "label": "Product 상태·결과"
+        },
+        {
+          "id": "n5",
+          "label": "Active 저장·History·복구"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "선택"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "준비 완료"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "한 실행 소유"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "완료/중단/오류"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "영속화"
+        }
+      ]
+    },
+    {
+      "id": "05-device",
+      "title": "장치별 명령 경계",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "Station·UI 요청"
+        },
+        {
+          "id": "n1",
+          "label": "AutomationManager"
+        },
+        {
+          "id": "n2",
+          "label": "InterfaceManager·Device"
+        },
+        {
+          "id": "n3",
+          "label": "장치 Comm·SDK 래퍼"
+        },
+        {
+          "id": "n4",
+          "label": "MotionManager·Controller"
+        },
+        {
+          "id": "n5",
+          "label": "CMelsec typed I/O"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "Script/Scanner"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "명령"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "등록된 Comm"
+        },
+        {
+          "source": "n0",
+          "target": "n4",
+          "label": "축 명령"
+        },
+        {
+          "source": "n0",
+          "target": "n5",
+          "label": "Stage I/F"
+        }
+      ]
+    },
+    {
+      "id": "06-thread",
+      "title": "동작·상태 취득·진단",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "UI Dispatcher·버튼"
+        },
+        {
+          "id": "n1",
+          "label": "Manager·gate"
+        },
+        {
+          "id": "n2",
+          "label": "Station CtrlThread·통신"
+        },
+        {
+          "id": "n3",
+          "label": "공유 Snapshot 취득"
+        },
+        {
+          "id": "n4",
+          "label": "UI 표시·Alarm 평가"
+        },
+        {
+          "id": "n5",
+          "label": "UI/시퀀스/통신/Product 로그"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "요청"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "소유권"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "상태 취득 분리"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "메모리 읽기"
+        },
+        {
+          "source": "n2",
+          "target": "n5",
+          "label": "실제 진행 근거"
+        },
+        {
+          "source": "n0",
+          "target": "n5",
+          "label": "사용자 조작"
+        }
+      ]
+    },
+    {
+      "id": "07-change",
+      "title": "변경 근거에서 Offline 답변까지",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "새 Source Commit·diff"
+        },
+        {
+          "id": "n1",
+          "label": "호출자·소비자 영향"
+        },
+        {
+          "id": "n2",
+          "label": "상세 장·파일 레퍼런스"
+        },
+        {
+          "id": "n3",
+          "label": "링크·범위·상태 검증"
+        },
+        {
+          "id": "n4",
+          "label": "Offline Studio 색인"
+        },
+        {
+          "id": "n5",
+          "label": "소스 근거로 답변"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "분석"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "갱신"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "확인"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "지식자료"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "검색 context"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CMotorFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000002 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
+L000004 | using Drilling.Common.Motion; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000005 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
+L000006 | using Drilling.Common.InterLock; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
+L000007 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000008 | using Drilling.File.Parser; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000010 | namespace Drilling.File.JHMI; ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: public sealed class CMotorFile(string configRoot) : CMotorFileBase
+L000011 | public sealed class CMotorFile(string configRoot) : CMotorFileBase ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | { ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: Headers = [ "NAME", "USE", "AXIS", "VIRTURE AXIS", "DEV TYPE", "DEV NO", "COORDINATE NO", "MOTOR TYPE", "SCALE", "SYSTEM", "STATION NAME", "SUBORDINATE", "DISPLAYNAME", "AXIS_DIR", "ALIGN_REVERSE", "PROCESS_REVERSE", "DIR", "PRODU
+L000013 |     private static readonly IReadOnlyList<string> Headers = [ ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000014 |         "NAME",  ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000015 |         "USE",  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000016 |         "AXIS",  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000017 |         "VIRTURE AXIS",  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000018 |         "DEV TYPE",  ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000019 |         "DEV NO",  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000020 |         "COORDINATE NO",  ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000021 |         "MOTOR TYPE",  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000022 |         "SCALE",  ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000023 |         "SYSTEM",  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000024 |         "STATION NAME",  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000025 |         "SUBORDINATE",  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000026 |         "DISPLAYNAME",  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000027 |         "AXIS_DIR",  ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000028 |         "ALIGN_REVERSE",  ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000029 |         "PROCESS_REVERSE",  ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000030 |         "DIR",  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000031 |         "PRODUCT INDEX",  ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000032 |         "AXIS_COLOR",  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000033 |         "REVERSE_DIR",  ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000034 |         "COR_ANGLE",  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000035 |         "OFFSET_X",  ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000036 |         "OFFSET_Y",  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000037 |         "OFFSET_Z",  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000038 |         "OFFSET_XT",  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000039 |         "OFFSET_YT",  ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000040 |         "OFFSET_ZT",  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000041 |         "UNIT",  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000042 |         "MAXVEL",  ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000043 |         "INTERLOCK MAXVEL",  ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000044 |         "MAXACC",  ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000045 |         "MIN",  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000046 |         "MAX",  ⟦EOL⟧
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000047 |         "HOMEPLC",  ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000048 |         "HOMETIMEOUT",  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000049 |         "HOMEPLC FLAG",  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000050 |         "DES",  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000051 |         "LOAD_ALARM_VAL",  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000052 |         "PRE_CHECK_IO" ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<string> Drilling.File.JHMI.CMotorFile.Headers
+L000053 |     ]; ⟦EOL⟧
+// 해설 L54: 변수의 초기값을 지정합니다: RequiredHeaderGroups = [["NAME", "MOTOR NAME", "AXIS NAME"], ["USE"], ["AXIS"], ["DEV TYPE", "DEVICE TYPE"], ["DEV NO", "DEVICE NO"], ["SCALE"], ["MAXVEL"], ["MAXACC"], ["MIN"], ["MAX"]]
+L000054 |     private static readonly IReadOnlyList<IReadOnlyList<string>> RequiredHeaderGroups = [["NAME", "MOTOR NAME", "AXIS NAME"], ["USE"], ["AXIS"], ["DEV TYPE", "DEVICE TYPE"], ["DEV NO", "DEVICE NO"], ["SCALE"], ["MAXVEL"], ["MAXACC"], ["MIN"], ["MAX"]]; ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Motion.ST_MOTOR_DATA> Drilling.File.JHMI.CMotorFile.LoadAll(System.Threading.CancellationToken)
+L000055 |     public override IReadOnlyList<ST_MOTOR_DATA> LoadAll(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 LoadAll.
+L000056 |     { ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000057 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureFile()
+L000058 |         EnsureFile(); ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(GetMotorPath(), "JHMI_MOTOR", RequiredHeaderGroups) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMotorPath()
+L000059 |         CCsvParser.ValidateRequiredHeaders(GetMotorPath(), "JHMI_MOTOR", RequiredHeaderGroups); ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.ST_MOTOR_DATA SelectValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000060 |         global::Drilling.Common.Motion.ST_MOTOR_DATA SelectValue(global::System.Collections.Generic.IReadOnlyDictionary<string, string> row, int index) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 SelectValue.
+L000061 |         { ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: Parse(row, index + 2) / 호출자에게 값 또는 제어를 반환합니다: return Parse(row, index + 2);
+L000062 |             return Parse(row, index + 2); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 SelectValue.
+L000063 |         } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · bool ShouldIncludeItem(Drilling.Common.Motion.ST_MOTOR_DATA)
+L000065 |         bool ShouldIncludeItem(global::Drilling.Common.Motion.ST_MOTOR_DATA axis) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000066 |         { ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.Name) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(axis.Name);
+L000067 |             return !string.IsNullOrWhiteSpace(axis.Name); ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 ShouldIncludeItem.
+L000068 |         } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · int SelectAxis(Drilling.Common.Motion.ST_MOTOR_DATA)
+L000070 |         int SelectAxis(global::Drilling.Common.Motion.ST_MOTOR_DATA axis) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 SelectAxis.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 호출자에게 값 또는 제어를 반환합니다: return axis.Axis;
+L000072 |             return axis.Axis; ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 SelectAxis.
+L000073 |         } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · string SelectName(Drilling.Common.Motion.ST_MOTOR_DATA)
+L000075 |         string SelectName(global::Drilling.Common.Motion.ST_MOTOR_DATA axis) ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 SelectName.
+L000076 |         { ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return axis.Name;
+L000077 |             return axis.Name; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 SelectName.
+L000078 |         } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetMotorPath()).Select(SelectValue).Where(ShouldIncludeItem).OrderBy(SelectAxis).ThenBy(SelectName, StringComparer.OrdinalIgnoreCase).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetMotorPath()).Select(SelectValue).Where(ShouldIncludeItem).OrderBy(SelectAxis).ThenBy(SelectName, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(GetMotorPath()).Select(SelectValue).Where(ShouldIncludeItem).OrderBy(SelectAxis) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(Get
+L000080 |         var rows = CCsvParser.Read(GetMotorPath()).Select(SelectValue).Where(ShouldIncludeItem).OrderBy(SelectAxis).ThenBy(SelectName, StringComparer.OrdinalIgnoreCase).ToArray(); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Validate(rows)
+L000081 |         Validate(rows); ⟦EOL⟧
+// 해설 L82: 호출자에게 값 또는 제어를 반환합니다: return rows;
+L000082 |         return rows; ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 LoadAll.
+L000083 |     } ⟦EOL⟧
+L000084 |  ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.ST_MOTOR_DATA Drilling.File.JHMI.CMotorFile.Parse(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000085 |     private ST_MOTOR_DATA Parse(IReadOnlyDictionary<string, string> row, int rowNo) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 Parse.
+L000086 |     { ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "NAME") / 지역 변수를 선언합니다: var name = ReadFirst(row, "NAME"); / 변수의 초기값을 지정합니다: name = ReadFirst(row, "NAME")
+L000087 |         var name = ReadFirst(row, "NAME"); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "DISPLAYNAME") / 지역 변수를 선언합니다: var displayName = ReadFirst(row, "DISPLAYNAME"); / 변수의 초기값을 지정합니다: displayName = ReadFirst(row, "DISPLAYNAME")
+L000088 |         var displayName = ReadFirst(row, "DISPLAYNAME"); ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(displayName) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(displayName))
+L000089 |         if (string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(displayName)) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 Parse.
+L000090 |         { ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: name = displayName
+L000091 |             name = displayName; ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Parse.
+L000092 |         } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_MOTOR_DATA( name.Trim(), ReadBool(ReadFirst(row, "USE"), true), ReadInt(ReadFirst(row, "AXIS"), rowNo, "AXIS", rowNo - 2), ReadInt(ReadFirst(row, "VIRTURE AXIS"), rowNo, "VIRTURE AXIS", -1), ReadController(ReadFir… / 호출자에게 값 또는 제어를 반환합니다: return new ST_MOTOR_DATA( name.Trim(), ReadBool(ReadFirst(row, "USE"), true), ReadInt(ReadFirst(row, "AXIS"), rowNo, "AXIS", rowNo - 2), ReadInt(ReadFirst(row, "VIRTURE AXIS"), rowNo, "VIRTURE AXIS", -1), ReadController(ReadFirst(
+L000094 |         return new ST_MOTOR_DATA( ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim()
+L000095 |             name.Trim(),  ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(ReadFirst(row, "USE"), true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "USE")
+L000096 |             ReadBool(ReadFirst(row, "USE"), true),  ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "AXIS"), rowNo, "AXIS", rowNo - 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "AXIS")
+L000097 |             ReadInt(ReadFirst(row, "AXIS"), rowNo, "AXIS", rowNo - 2),  ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "VIRTURE AXIS"), rowNo, "VIRTURE AXIS", -1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "VIRTURE AXIS")
+L000098 |             ReadInt(ReadFirst(row, "VIRTURE AXIS"), rowNo, "VIRTURE AXIS", -1),  ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadController(ReadFirst(row, "DEV TYPE")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "DEV TYPE")
+L000099 |             ReadController(ReadFirst(row, "DEV TYPE")),  ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "DEV NO"), rowNo, "DEV NO", 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "DEV NO")
+L000100 |             ReadInt(ReadFirst(row, "DEV NO"), rowNo, "DEV NO", 0),  ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "COORDINATE NO"), rowNo, "COORDINATE NO", 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "COORDINATE NO")
+L000101 |             ReadInt(ReadFirst(row, "COORDINATE NO"), rowNo, "COORDINATE NO", 0),  ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "MOTOR TYPE"), rowNo, "MOTOR TYPE", 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "MOTOR TYPE")
+L000102 |             ReadInt(ReadFirst(row, "MOTOR TYPE"), rowNo, "MOTOR TYPE", 0),  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "SCALE"), rowNo, "SCALE", 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "SCALE")
+L000103 |             ReadDouble(ReadFirst(row, "SCALE"), rowNo, "SCALE", 1.0),  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "SYSTEM")
+L000104 |             ReadFirst(row, "SYSTEM"),  ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "STATION NAME")
+L000105 |             ReadFirst(row, "STATION NAME"),  ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "SUBORDINATE")
+L000106 |             ReadFirst(row, "SUBORDINATE"),  ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(displayName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: displayName.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(displayName) ? name.Trim() : displayName.Trim()
+L000107 |             string.IsNullOrWhiteSpace(displayName) ? name.Trim() : displayName.Trim(),  ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "AXIS_DIR")
+L000108 |             ReadFirst(row, "AXIS_DIR"),  ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(ReadFirst(row, "ALIGN_REVERSE"), false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "ALIGN_REVERSE")
+L000109 |             ReadBool(ReadFirst(row, "ALIGN_REVERSE"), false),  ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(ReadFirst(row, "PROCESS_REVERSE"), false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "PROCESS_REVERSE")
+L000110 |             ReadBool(ReadFirst(row, "PROCESS_REVERSE"), false),  ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "DIR")
+L000111 |             ReadFirst(row, "DIR"),  ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "PRODUCT INDEX")
+L000112 |             ReadFirst(row, "PRODUCT INDEX"),  ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "AXIS_COLOR")
+L000113 |             ReadFirst(row, "AXIS_COLOR"),  ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(ReadFirst(row, "REVERSE_DIR"), false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "REVERSE_DIR")
+L000114 |             ReadBool(ReadFirst(row, "REVERSE_DIR"), false),  ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "COR_ANGLE"), rowNo, "COR_ANGLE", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "COR_ANGLE")
+L000115 |             ReadDouble(ReadFirst(row, "COR_ANGLE"), rowNo, "COR_ANGLE", 0.0),  ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_X"), rowNo, "OFFSET_X", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_X")
+L000116 |             ReadDouble(ReadFirst(row, "OFFSET_X"), rowNo, "OFFSET_X", 0.0),  ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_Y"), rowNo, "OFFSET_Y", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_Y")
+L000117 |             ReadDouble(ReadFirst(row, "OFFSET_Y"), rowNo, "OFFSET_Y", 0.0),  ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_Z"), rowNo, "OFFSET_Z", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_Z")
+L000118 |             ReadDouble(ReadFirst(row, "OFFSET_Z"), rowNo, "OFFSET_Z", 0.0),  ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_XT"), rowNo, "OFFSET_XT", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_XT")
+L000119 |             ReadDouble(ReadFirst(row, "OFFSET_XT"), rowNo, "OFFSET_XT", 0.0),  ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_YT"), rowNo, "OFFSET_YT", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_YT")
+L000120 |             ReadDouble(ReadFirst(row, "OFFSET_YT"), rowNo, "OFFSET_YT", 0.0),  ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "OFFSET_ZT"), rowNo, "OFFSET_ZT", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "OFFSET_ZT")
+L000121 |             ReadDouble(ReadFirst(row, "OFFSET_ZT"), rowNo, "OFFSET_ZT", 0.0),  ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "UNIT")
+L000122 |             ReadFirst(row, "UNIT"),  ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "MAXVEL"), rowNo, "MAXVEL", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "MAXVEL")
+L000123 |             ReadDouble(ReadFirst(row, "MAXVEL"), rowNo, "MAXVEL", 0.0),  ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "INTERLOCK MAXVEL"), rowNo, "INTERLOCK MAXVEL", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "INTERLOCK MAXVEL")
+L000124 |             ReadDouble(ReadFirst(row, "INTERLOCK MAXVEL"), rowNo, "INTERLOCK MAXVEL", 0.0),  ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "MAXACC"), rowNo, "MAXACC", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "MAXACC")
+L000125 |             ReadDouble(ReadFirst(row, "MAXACC"), rowNo, "MAXACC", 0.0),  ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "MIN"), rowNo, "MIN", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "MIN")
+L000126 |             ReadDouble(ReadFirst(row, "MIN"), rowNo, "MIN", 0.0),  ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "MAX"), rowNo, "MAX", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "MAX")
+L000127 |             ReadDouble(ReadFirst(row, "MAX"), rowNo, "MAX", 0.0),  ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "HOMEPLC"), rowNo, "HOMEPLC", 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "HOMEPLC")
+L000128 |             ReadInt(ReadFirst(row, "HOMEPLC"), rowNo, "HOMEPLC", 0),  ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(ReadFirst(row, "HOMETIMEOUT"), rowNo, "HOMETIMEOUT", 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "HOMETIMEOUT")
+L000129 |             ReadInt(ReadFirst(row, "HOMETIMEOUT"), rowNo, "HOMETIMEOUT", 0),  ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "HOMEPLC FLAG")
+L000130 |             ReadFirst(row, "HOMEPLC FLAG"),  ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "DES")
+L000131 |             ReadFirst(row, "DES"),  ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(ReadFirst(row, "LOAD_ALARM_VAL"), rowNo, "LOAD_ALARM_VAL", 0.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "LOAD_ALARM_VAL")
+L000132 |             ReadDouble(ReadFirst(row, "LOAD_ALARM_VAL"), rowNo, "LOAD_ALARM_VAL", 0.0),  ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadFirst(row, "PRE_CHECK_IO")
+L000133 |             ReadFirst(row, "PRE_CHECK_IO") ⟦EOL⟧
+// 해설 L134: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Motion.ST_MOTOR_DATA Drilling.File.JHMI.CMotorFile.Parse(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000134 |         ); ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 Parse.
+L000135 |     } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CMotorFile.EnsureFile()
+L000137 |     private void EnsureFile() ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 EnsureFile.
+L000138 |     { ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMotorPath() / 지역 변수를 선언합니다: var path = GetMotorPath(); / 변수의 초기값을 지정합니다: path = GetMotorPath()
+L000139 |         var path = GetMotorPath(); ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) / 조건에 따라 분기합니다: if (System.IO.File.Exists(path))
+L000140 |         if (System.IO.File.Exists(path)) ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 EnsureFile.
+L000141 |         { ⟦EOL⟧
+// 해설 L142: 호출자에게 값 또는 제어를 반환합니다: return;
+L000142 |             return; ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 EnsureFile.
+L000143 |         } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(path, Headers, CreateDefaultRows()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDefaultRows()
+L000145 |         CCsvParser.Write(path, Headers, CreateDefaultRows()); ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 EnsureFile.
+L000146 |     } ⟦EOL⟧
+L000147 |  ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CMotorFile.GetMotorPath()
+L000148 |     private string GetMotorPath() ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 GetMotorPath.
+L000149 |     { ⟦EOL⟧
+// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "JHMI_MOTOR.csv") / 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(configRoot, "JHMI_MOTOR.csv");
+L000150 |         return Path.Combine(configRoot, "JHMI_MOTOR.csv"); ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 GetMotorPath.
+L000151 |     } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · void Drilling.File.JHMI.CMotorFile.Validate(System.Collections.Generic.IReadOnlyList<Drilling.Common.Motion.ST_MOTOR_DATA>)
+L000153 |     private static void Validate(IReadOnlyList<ST_MOTOR_DATA> motors) ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Validate.
+L000154 |     { ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var usedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: usedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+L000155 |         var usedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var usedControllerAxes = new HashSet<string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: usedControllerAxes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+L000156 |         var usedControllerAxes = new HashSet<string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L157: 선언·서명/매개변수·접근 조건입니다 · bool IsUse(Drilling.Common.Motion.ST_MOTOR_DATA)
+L000157 |         bool IsUse(global::Drilling.Common.Motion.ST_MOTOR_DATA axis) ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 IsUse.
+L000158 |         { ⟦EOL⟧
+// 해설 L159: 호출자에게 값 또는 제어를 반환합니다: return axis.Use;
+L000159 |             return axis.Use; ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 IsUse.
+L000160 |         } ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: motors.Where(IsUse) / 컬렉션 요소를 순회합니다: foreach (var axis in motors.Where(IsUse))
+L000162 |         foreach (var axis in motors.Where(IsUse)) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 Validate.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.Name) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(axis.Name))
+L000164 |             if (string.IsNullOrWhiteSpace(axis.Name)) ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Validate.
+L000165 |             { ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("JHMI_MOTOR validation failed. NAME cannot be empty.") / 예외를 발생/전달합니다: throw new InvalidDataException("JHMI_MOTOR validation failed. NAME cannot be empty.");
+L000166 |                 throw new InvalidDataException("JHMI_MOTOR validation failed. NAME cannot be empty."); ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 Validate.
+L000167 |             } ⟦EOL⟧
+L000168 |  ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: usedNames.Add(axis.Name) / 조건에 따라 분기합니다: if (!usedNames.Add(axis.Name))
+L000169 |             if (!usedNames.Add(axis.Name)) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 Validate.
+L000170 |             { ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated NAME: {axis.Name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated NAME: {axis.Name}");
+L000171 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated NAME: {axis.Name}"); ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 Validate.
+L000172 |             } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 조건에 따라 분기합니다: if (axis.Axis < 0)
+L000174 |             if (axis.Axis < 0) ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 Validate.
+L000175 |             { ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. AXIS cannot be negative: {axis.Name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. AXIS cannot be negative: {axis.Name}");
+L000176 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. AXIS cannot be negative: {axis.Name}"); ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 Validate.
+L000177 |             } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 조건에 따라 분기합니다: if (axis.DevNo < 0)
+L000179 |             if (axis.DevNo < 0) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 Validate.
+L000180 |             { ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. DEV NO cannot be negative: {axis.Name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. DEV NO cannot be negative: {axis.Name}");
+L000181 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. DEV NO cannot be negative: {axis.Name}"); ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 Validate.
+L000182 |             } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(axis.DevType) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(axis.DevType))
+L000184 |             if (string.IsNullOrWhiteSpace(axis.DevType)) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Validate.
+L000185 |             { ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. DEV TYPE cannot be empty: {axis.Name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. DEV TYPE cannot be empty: {axis.Name}");
+L000186 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. DEV TYPE cannot be empty: {axis.Name}"); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Validate.
+L000187 |             } ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 지역 변수를 선언합니다: var controllerAxisKey = $"{axis.DevType}:{axis.DevNo}:{axis.Axis}"; / 변수의 초기값을 지정합니다: controllerAxisKey = $"{axis.DevType}:{axis.DevNo}:{axis.Axis}"
+L000189 |             var controllerAxisKey = $"{axis.DevType}:{axis.DevNo}:{axis.Axis}"; ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: usedControllerAxes.Add(controllerAxisKey) / 조건에 따라 분기합니다: if (!usedControllerAxes.Add(controllerAxisKey))
+L000190 |             if (!usedControllerAxes.Add(controllerAxisKey)) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 Validate.
+L000191 |             { ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated controller axis: {axis.DevType}[{axis.DevNo}] AXIS {axis.Axis}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated controller axis: {axis.DevType}[{axis.DevNo}] AXIS {axis.Axis}");
+L000192 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. Duplicated controller axis: {axis.DevType}[{axis.DevNo}] AXIS {axis.Axis}"); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 Validate.
+L000193 |             } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 조건에 따라 분기합니다: if (axis.Scale <= 0.0)
+L000195 |             if (axis.Scale <= 0.0) ⟦EOL⟧
+// 해설 L196: 구문 블록 경계입니다 · 소속 Validate.
+L000196 |             { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_MOTOR validation failed. SCALE must be positive: {axis.Name}") / 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_MOTOR validation failed. SCALE must be positive: {axis.Name}");
+L000197 |                 throw new InvalidDataException($"JHMI_MOTOR validation failed. SCALE must be positive: {axis.Name}"); ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Validate.
+L000198 |             } ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 Validate.
+L000199 |         } ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Validate.
+L000200 |     } ⟦EOL⟧
+L000201 |  ⟦EOL⟧
+// 해설 L202: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMotorFile.CreateDefaultRows()
+L000202 |     private static IReadOnlyList<IReadOnlyDictionary<string, string>> CreateDefaultRows() ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 CreateDefaultRows.
+L000203 |     { ⟦EOL⟧
+// 해설 L204: 호출자에게 값 또는 제어를 반환합니다: return[];
+L000204 |         return[]; ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 CreateDefaultRows.
+L000205 |     } ⟦EOL⟧
+L000206 |  ⟦EOL⟧
+// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMotorFile.Row(string, int, string, string, double, double, double, double)
+L000207 |     private static IReadOnlyDictionary<string, string> Row(string name, int axis, string displayName, string unit, double min, double max, double maxVel, double maxAcc) ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 Row.
+L000208 |     { ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string> { ["NAME"] = name, ["USE"] = "1", ["AXIS"] = axis.ToString(CultureInfo.InvariantCulture), ["VIRTURE AXIS"] = "-1", ["DEV TYPE"] = "XPS", ["DEV NO"] = "0", ["COORDINATE NO"] = "0", ["MOTOR T… / 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string> { ["NAME"] = name, ["USE"] = "1", ["AXIS"] = axis.ToString(CultureInfo.InvariantCulture), ["VIRTURE AXIS"] = "-1", ["DEV TYPE"] = "XPS", ["DEV NO"] = "0", ["COORDINATE NO"] = "0", ["MOTOR TYPE
+L000209 |         return new Dictionary<string, string> ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 Row.
+L000210 |         { ⟦EOL⟧
+// 해설 L211: 값을 대상에 대입합니다: ["NAME"] = name
+L000211 |             ["NAME"] = name, ⟦EOL⟧
+// 해설 L212: 값을 대상에 대입합니다: ["USE"] = "1"
+L000212 |             ["USE"] = "1", ⟦EOL⟧
+// 해설 L213: 값을 대상에 대입합니다: ["AXIS"] = axis.ToString(CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: axis.ToString(CultureInfo.InvariantCulture)
+L000213 |             ["AXIS"] = axis.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L214: 값을 대상에 대입합니다: ["VIRTURE AXIS"] = "-1"
+L000214 |             ["VIRTURE AXIS"] = "-1", ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: ["DEV TYPE"] = "XPS"
+L000215 |             ["DEV TYPE"] = "XPS", ⟦EOL⟧
+// 해설 L216: 값을 대상에 대입합니다: ["DEV NO"] = "0"
+L000216 |             ["DEV NO"] = "0", ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: ["COORDINATE NO"] = "0"
+L000217 |             ["COORDINATE NO"] = "0", ⟦EOL⟧
+// 해설 L218: 값을 대상에 대입합니다: ["MOTOR TYPE"] = "0"
+L000218 |             ["MOTOR TYPE"] = "0", ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: ["SCALE"] = "1000"
+L000219 |             ["SCALE"] = "1000", ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: ["SYSTEM"] = "MOTION"
+L000220 |             ["SYSTEM"] = "MOTION", ⟦EOL⟧
+// 해설 L221: 값을 대상에 대입합니다: ["STATION NAME"] = "DRILLING"
+L000221 |             ["STATION NAME"] = "DRILLING", ⟦EOL⟧
+// 해설 L222: 값을 대상에 대입합니다: ["SUBORDINATE"] = ""
+L000222 |             ["SUBORDINATE"] = "", ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: ["DISPLAYNAME"] = displayName
+L000223 |             ["DISPLAYNAME"] = displayName, ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: ["AXIS_DIR"] = ""
+L000224 |             ["AXIS_DIR"] = "", ⟦EOL⟧
+// 해설 L225: 값을 대상에 대입합니다: ["ALIGN_REVERSE"] = "0"
+L000225 |             ["ALIGN_REVERSE"] = "0", ⟦EOL⟧
+// 해설 L226: 값을 대상에 대입합니다: ["PROCESS_REVERSE"] = "0"
+L000226 |             ["PROCESS_REVERSE"] = "0", ⟦EOL⟧
+// 해설 L227: 값을 대상에 대입합니다: ["DIR"] = ""
+L000227 |             ["DIR"] = "", ⟦EOL⟧
+// 해설 L228: 값을 대상에 대입합니다: ["PRODUCT INDEX"] = ""
+L000228 |             ["PRODUCT INDEX"] = "", ⟦EOL⟧
+// 해설 L229: 값을 대상에 대입합니다: ["AXIS_COLOR"] = "CYAN"
+L000229 |             ["AXIS_COLOR"] = "CYAN", ⟦EOL⟧
+// 해설 L230: 값을 대상에 대입합니다: ["REVERSE_DIR"] = "0"
+L000230 |             ["REVERSE_DIR"] = "0", ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: ["COR_ANGLE"] = "0"
+L000231 |             ["COR_ANGLE"] = "0", ⟦EOL⟧
+// 해설 L232: 값을 대상에 대입합니다: ["OFFSET_X"] = "0"
+L000232 |             ["OFFSET_X"] = "0", ⟦EOL⟧
+// 해설 L233: 값을 대상에 대입합니다: ["OFFSET_Y"] = "0"
+L000233 |             ["OFFSET_Y"] = "0", ⟦EOL⟧
+// 해설 L234: 값을 대상에 대입합니다: ["OFFSET_Z"] = "0"
+L000234 |             ["OFFSET_Z"] = "0", ⟦EOL⟧
+// 해설 L235: 값을 대상에 대입합니다: ["OFFSET_XT"] = "0"
+L000235 |             ["OFFSET_XT"] = "0", ⟦EOL⟧
+// 해설 L236: 값을 대상에 대입합니다: ["OFFSET_YT"] = "0"
+L000236 |             ["OFFSET_YT"] = "0", ⟦EOL⟧
+// 해설 L237: 값을 대상에 대입합니다: ["OFFSET_ZT"] = "0"
+L000237 |             ["OFFSET_ZT"] = "0", ⟦EOL⟧
+// 해설 L238: 값을 대상에 대입합니다: ["UNIT"] = unit
+L000238 |             ["UNIT"] = unit, ⟦EOL⟧
+// 해설 L239: 값을 대상에 대입합니다: ["MAXVEL"] = maxVel.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: maxVel.ToString("F3", CultureInfo.InvariantCulture)
+L000239 |             ["MAXVEL"] = maxVel.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L240: 값을 대상에 대입합니다: ["INTERLOCK MAXVEL"] = maxVel.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: maxVel.ToString("F3", CultureInfo.InvariantCulture)
+L000240 |             ["INTERLOCK MAXVEL"] = maxVel.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L241: 값을 대상에 대입합니다: ["MAXACC"] = maxAcc.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: maxAcc.ToString("F3", CultureInfo.InvariantCulture)
+L000241 |             ["MAXACC"] = maxAcc.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: ["MIN"] = min.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: min.ToString("F3", CultureInfo.InvariantCulture)
+L000242 |             ["MIN"] = min.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L243: 값을 대상에 대입합니다: ["MAX"] = max.ToString("F3", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: max.ToString("F3", CultureInfo.InvariantCulture)
+L000243 |             ["MAX"] = max.ToString("F3", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: ["HOMEPLC"] = "0"
+L000244 |             ["HOMEPLC"] = "0", ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: ["HOMETIMEOUT"] = "30000"
+L000245 |             ["HOMETIMEOUT"] = "30000", ⟦EOL⟧
+// 해설 L246: 값을 대상에 대입합니다: ["HOMEPLC FLAG"] = ""
+L000246 |             ["HOMEPLC FLAG"] = "", ⟦EOL⟧
+// 해설 L247: 값을 대상에 대입합니다: ["DES"] = displayName
+L000247 |             ["DES"] = displayName, ⟦EOL⟧
+// 해설 L248: 값을 대상에 대입합니다: ["LOAD_ALARM_VAL"] = "0"
+L000248 |             ["LOAD_ALARM_VAL"] = "0", ⟦EOL⟧
+// 해설 L249: 값을 대상에 대입합니다: ["PRE_CHECK_IO"] = ""
+L000249 |             ["PRE_CHECK_IO"] = "" ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 Row.
+L000250 |         }; ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 Row.
+L000251 |     } ⟦EOL⟧
+L000252 |  ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CMotorFile.ReadFirst(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[])
+L000253 |     private static string ReadFirst(IReadOnlyDictionary<string, string> row, params string[] names) ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다 · 소속 ReadFirst.
+L000254 |     { ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.GetFirst(row, names) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.GetFirst(row, names);
+L000255 |         return CCsvParser.GetFirst(row, names); ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ReadFirst.
+L000256 |     } ⟦EOL⟧
+L000257 |  ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CMotorFile.ReadController(string)
+L000258 |     private static string ReadController(string value) ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 ReadController.
+L000259 |     { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(value) / 지역 변수를 선언합니다: var controller = Normalize(value); / 변수의 초기값을 지정합니다: controller = Normalize(value)
+L000260 |         var controller = Normalize(value); ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(controller) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(controller) ? "XPS" : controller / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(controller) ? "XPS" : controller;
+L000261 |         return string.IsNullOrWhiteSpace(controller) ? "XPS" : controller; ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 ReadController.
+L000262 |     } ⟦EOL⟧
+L000263 |  ⟦EOL⟧
+// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.File.JHMI.CMotorFile.ReadBool(string, bool)
+L000264 |     private static bool ReadBool(string value, bool defaultValue) ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 ReadBool.
+L000265 |     { ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadBool(value, defaultValue) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.ReadBool(value, defaultValue);
+L000266 |         return CCsvParser.ReadBool(value, defaultValue); ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 ReadBool.
+L000267 |     } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · int Drilling.File.JHMI.CMotorFile.ReadInt(string, int, string, int)
+L000269 |     private static int ReadInt(string value, int rowNo, string fieldName, int defaultValue) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 ReadInt.
+L000270 |     { ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadInt(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.ReadInt(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue);
+L000271 |         return CCsvParser.ReadInt(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue); ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 ReadInt.
+L000272 |     } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · double Drilling.File.JHMI.CMotorFile.ReadDouble(string, int, string, double)
+L000274 |     private static double ReadDouble(string value, int rowNo, string fieldName, double defaultValue) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000275 |     { ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadDouble(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue) / 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.ReadDouble(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue);
+L000276 |         return CCsvParser.ReadDouble(value, "JHMI_MOTOR", rowNo, fieldName, defaultValue); ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 ReadDouble.
+L000277 |     } ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · string Drilling.File.JHMI.CMotorFile.Normalize(string)
+L000279 |     private static string Normalize(string value) ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 Normalize.
+L000280 |     { ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant().Replace(" ", "_", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() / 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant().Replace(" ", "_", StringComparison.OrdinalIgnoreCase);
+L000281 |         return value.Trim().ToUpperInvariant().Replace(" ", "_", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 Normalize.
+L000282 |     } ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다.
+L000283 | } ⟦EOL⟧

@@ -1,0 +1,72 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CMonitorLogViewerView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000001 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000003 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000005 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public partial class CMonitorLogViewerView : UserControl
+L000007 | public partial class CMonitorLogViewerView : UserControl ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000009 |     public CMonitorLogViewerView() => InitializeComponent(); ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Views.CMonitorLogViewerView.InitializeIfVisible()
+L000011 |     private async Task InitializeIfVisible() ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 InitializeIfVisible.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 비동기 완료를 기다립니다: await panel.InitializeAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.InitializeAsync() / 조건에 따라 분기합니다: if (IsVisible && DataContext is CMonitorLogViewerPanel panel)
+L000013 |         if (IsVisible && DataContext is CMonitorLogViewerPanel panel) await panel.InitializeAsync(); ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다 · 소속 InitializeIfVisible.
+L000014 |     } ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 비동기 완료를 기다립니다: await InitializeIfVisible() / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeIfVisible()
+L000016 |     private async void ViewLoaded(object sender, RoutedEventArgs e) => await InitializeIfVisible(); ⟦EOL⟧
+// 해설 L17: 비동기 완료를 기다립니다: await InitializeIfVisible() / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeIfVisible()
+L000017 |     private async void ViewVisibilityChanged(object sender, DependencyPropertyChangedEventArgs e) => await InitializeIfVisible(); ⟦EOL⟧
+// 해설 L18: 비동기 완료를 기다립니다: await InitializeIfVisible() / 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeIfVisible()
+L000018 |     private async void ViewDataContextChanged(object sender, DependencyPropertyChangedEventArgs e) => await InitializeIfVisible(); ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorLogViewerView.FolderExpanded(object, RoutedEventArgs)
+L000020 |     private async void FolderExpanded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 FolderExpanded.
+L000021 |     { ⟦EOL⟧
+// 해설 L22: 조건에 따라 분기합니다: if (DataContext is CMonitorLogViewerPanel panel && e.OriginalSource is TreeViewItem { DataContext: CLogTreeNode node })
+L000022 |         if (DataContext is CMonitorLogViewerPanel panel && e.OriginalSource is TreeViewItem { DataContext: CLogTreeNode node }) ⟦EOL⟧
+// 해설 L23: 비동기 완료를 기다립니다: await panel.ExpandDirectoryAsync(node) / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ExpandDirectoryAsync(node)
+L000023 |             await panel.ExpandDirectoryAsync(node); ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 FolderExpanded.
+L000024 |     } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorLogViewerView.LogSelectionChanged(object, RoutedPropertyChangedEventArgs<object>)
+L000026 |     private async void LogSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 LogSelectionChanged.
+L000027 |     { ⟦EOL⟧
+// 해설 L28: 비동기 완료를 기다립니다: await panel.SelectNodeAsync(e.NewValue as CLogTreeNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectNodeAsync(e.NewValue as CLogTreeNode) / 조건에 따라 분기합니다: if (DataContext is CMonitorLogViewerPanel panel)
+L000028 |         if (DataContext is CMonitorLogViewerPanel panel) await panel.SelectNodeAsync(e.NewValue as CLogTreeNode); ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 LogSelectionChanged.
+L000029 |     } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CMonitorLogViewerView.LogTextChanged(object, TextChangedEventArgs)
+L000031 |     private void LogTextChanged(object sender, TextChangedEventArgs e) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 LogTextChanged.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 조건에 따라 분기합니다: if (sender is not TextBox text) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000033 |         if (sender is not TextBox text) return; ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.ScrollToHome()
+L000034 |         text.ScrollToHome(); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.ScrollToHorizontalOffset(0)
+L000035 |         text.ScrollToHorizontalOffset(0); ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 LogTextChanged.
+L000036 |     } ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다.
+L000037 | } ⟦EOL⟧

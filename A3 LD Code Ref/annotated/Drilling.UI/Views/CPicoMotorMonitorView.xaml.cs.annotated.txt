@@ -1,0 +1,321 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000006 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Popup;
+L000007 | using Drilling.UI.Popup; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000009 | namespace Drilling.UI.Views; ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CPicoMotorMonitorView : UserControl
+L000010 | public partial class CPicoMotorMonitorView : UserControl ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 | { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CPicoMotorMonitorView.CPicoMotorMonitorView()
+L000012 |     public CPicoMotorMonitorView() ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 .ctor.
+L000013 |     { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000014 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 .ctor.
+L000015 |     } ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.PicoMonitorPreviewMouseLeftButtonDown(object, MouseButtonEventArgs)
+L000017 |     private void PicoMonitorPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000018 |     { ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindAncestor<TextBox>(e.OriginalSource as DependencyObject) / 지역 변수를 선언합니다: var editor = FindAncestor<TextBox>(e.OriginalSource as DependencyObject); / 변수의 초기값을 지정합니다: editor = FindAncestor<TextBox>(e.OriginalSource as DependencyObject)
+L000019 |         var editor = FindAncestor<TextBox>(e.OriginalSource as DependencyObject); ⟦EOL⟧
+// 해설 L20: 조건에 따라 분기합니다: if (editor is null)
+L000020 |         if (editor is null) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000021 |         { ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndAllValueEdits()
+L000022 |             EndAllValueEdits(); ⟦EOL⟧
+// 해설 L23: 호출자에게 값 또는 제어를 반환합니다: return;
+L000023 |             return; ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000024 |         } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 조건에 따라 분기합니다: if (editor.IsReadOnly)
+L000026 |         if (editor.IsReadOnly) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 조건에 따라 분기합니다: if (e.ClickCount >= 2)
+L000028 |             if (e.ClickCount >= 2) ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000029 |             { ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: EndAllValueEdits(editor)
+L000030 |                 EndAllValueEdits(editor); ⟦EOL⟧
+// 해설 L31: 값을 대상에 대입합니다: editor.IsReadOnly = false
+L000031 |                 editor.IsReadOnly = false; ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: editor.Cursor = Cursors.IBeam
+L000032 |                 editor.Cursor = Cursors.IBeam; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: editor.Focus()
+L000033 |                 editor.Focus(); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: editor.SelectAll()
+L000034 |                 editor.SelectAll(); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000035 |             } ⟦EOL⟧
+// 해설 L36: 앞 조건이 거짓인 경로입니다: else
+L000036 |             else ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000037 |             { ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: editor.SelectionLength = 0
+L000038 |                 editor.SelectionLength = 0; ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keyboard.ClearFocus()
+L000039 |                 Keyboard.ClearFocus(); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000040 |             } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: e.Handled = true
+L000042 |             e.Handled = true; ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000043 |         } ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 PicoMonitorPreviewMouseLeftButtonDown.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.PicoValueEditorLostKeyboardFocus(object, KeyboardFocusChangedEventArgs)
+L000046 |     private void PicoValueEditorLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 PicoValueEditorLostKeyboardFocus.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 조건에 따라 분기합니다: if (sender is TextBox editor)
+L000048 |         if (sender is TextBox editor) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 PicoValueEditorLostKeyboardFocus.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: editor.IsReadOnly = true
+L000050 |             editor.IsReadOnly = true; ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: editor.Cursor = Cursors.Arrow
+L000051 |             editor.Cursor = Cursors.Arrow; ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: editor.SelectionLength = 0
+L000052 |             editor.SelectionLength = 0; ⟦EOL⟧
+// 해설 L53: 구문 블록 경계입니다 · 소속 PicoValueEditorLostKeyboardFocus.
+L000053 |         } ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 PicoValueEditorLostKeyboardFocus.
+L000054 |     } ⟦EOL⟧
+L000055 |  ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.EndAllValueEdits(TextBox?)
+L000056 |     private void EndAllValueEdits(TextBox? except = null) ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000057 |     { ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChildren<TextBox>(this) / 컬렉션 요소를 순회합니다: foreach (var editor in FindVisualChildren<TextBox>(this))
+L000058 |         foreach (var editor in FindVisualChildren<TextBox>(this)) ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000059 |         { ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(editor, except) / 조건에 따라 분기합니다: if (ReferenceEquals(editor, except))
+L000060 |             if (ReferenceEquals(editor, except)) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000061 |             { ⟦EOL⟧
+// 해설 L62: 다음 반복으로 진행합니다: continue;
+L000062 |                 continue; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000063 |             } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: editor.IsReadOnly = true
+L000065 |             editor.IsReadOnly = true; ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: editor.Cursor = Cursors.Arrow
+L000066 |             editor.Cursor = Cursors.Arrow; ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: editor.SelectionLength = 0
+L000067 |             editor.SelectionLength = 0; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000068 |         } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 조건에 따라 분기합니다: if (except is null)
+L000070 |         if (except is null) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000071 |         { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keyboard.ClearFocus()
+L000072 |             Keyboard.ClearFocus(); ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000073 |         } ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 EndAllValueEdits.
+L000074 |     } ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CPicoMotorMonitorView.FindAncestor<T>(DependencyObject?)
+L000076 |     private static T? FindAncestor<T>(DependencyObject? source) ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CPicoMotorMonitorView.FindAncestor<T>(DependencyObject?)
+L000077 |         where T : DependencyObject ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000078 |     { ⟦EOL⟧
+// 해설 L79: 조건을 먼저 확인하며 반복합니다: while (source is not null)
+L000079 |         while (source is not null) ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000080 |         { ⟦EOL⟧
+// 해설 L81: 조건에 따라 분기합니다: if (source is T match)
+L000081 |             if (source is T match) ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000082 |             { ⟦EOL⟧
+// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return match;
+L000083 |                 return match; ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000084 |             } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: source = VisualTreeHelper.GetParent(source) / 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source)
+L000086 |             source = VisualTreeHelper.GetParent(source); ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000087 |         } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000089 |         return null; ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 FindAncestor.
+L000090 |     } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<T> Drilling.UI.Views.CPicoMotorMonitorView.FindVisualChildren<T>(DependencyObject)
+L000092 |     private static IEnumerable<T> FindVisualChildren<T>(DependencyObject parent) ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<T> Drilling.UI.Views.CPicoMotorMonitorView.FindVisualChildren<T>(DependencyObject)
+L000093 |         where T : DependencyObject ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000094 |     { ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent) / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) / 변수의 초기값을 지정합니다: index = 0
+L000095 |         for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000096 |         { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index) / 지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index); / 변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index)
+L000097 |             var child = VisualTreeHelper.GetChild(parent, index); ⟦EOL⟧
+// 해설 L98: 조건에 따라 분기합니다: if (child is T match)
+L000098 |             if (child is T match) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000099 |             { ⟦EOL⟧
+// 해설 L100: 열거값/종료를 전달합니다: yield return match;
+L000100 |                 yield return match; ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000101 |             } ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChildren<T>(child) / 컬렉션 요소를 순회합니다: foreach (var descendant in FindVisualChildren<T>(child))
+L000103 |             foreach (var descendant in FindVisualChildren<T>(child)) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000104 |             { ⟦EOL⟧
+// 해설 L105: 열거값/종료를 전달합니다: yield return descendant;
+L000105 |                 yield return descendant; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000106 |             } ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000107 |         } ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 FindVisualChildren.
+L000108 |     } ⟦EOL⟧
+L000109 |  ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseDown(object, MouseButtonEventArgs)
+L000110 |     private void PicoJogButtonPreviewMouseDown(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseDown.
+L000111 |     { ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (sender is Button { DataContext: { } parameter } button && DataContext is CRootView rootView && rootView.CurrentScreen.Monitor is { } monitor)
+L000112 |         if (sender is Button { DataContext: { } parameter } button && DataContext is CRootView rootView && rootView.CurrentScreen.Monitor is { } monitor) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseDown.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: Mouse.Capture(button)
+L000114 |             Mouse.Capture(button); ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.PicoJogStartCommand.Execute(parameter)
+L000115 |             monitor.PicoJogStartCommand.Execute(parameter); ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: e.Handled = true
+L000116 |             e.Handled = true; ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseDown.
+L000117 |         } ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseDown.
+L000118 |     } ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseUp(object, MouseButtonEventArgs)
+L000120 |     private void PicoJogButtonPreviewMouseUp(object sender, MouseButtonEventArgs e) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseUp.
+L000121 |     { ⟦EOL⟧
+// 해설 L122: 조건에 따라 분기합니다: if (sender is Button button)
+L000122 |         if (sender is Button button) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseUp.
+L000123 |         { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.ReleaseMouseCapture()
+L000124 |             button.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseUp.
+L000125 |         } ⟦EOL⟧
+L000126 |  ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopPicoJog()
+L000127 |         StopPicoJog(); ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: e.Handled = true
+L000128 |         e.Handled = true; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 PicoJogButtonPreviewMouseUp.
+L000129 |     } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonMouseLeave(object, MouseEventArgs)
+L000131 |     private void PicoJogButtonMouseLeave(object sender, MouseEventArgs e) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 PicoJogButtonMouseLeave.
+L000132 |     { ⟦EOL⟧
+// 해설 L133: 조건에 따라 분기합니다: if (sender is Button button && button.IsMouseCaptured)
+L000133 |         if (sender is Button button && button.IsMouseCaptured) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 PicoJogButtonMouseLeave.
+L000134 |         { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: button.ReleaseMouseCapture()
+L000135 |             button.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: StopPicoJog()
+L000136 |             StopPicoJog(); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 PicoJogButtonMouseLeave.
+L000137 |         } ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 PicoJogButtonMouseLeave.
+L000138 |     } ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.StopPicoJog()
+L000140 |     private void StopPicoJog() ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 StopPicoJog.
+L000141 |     { ⟦EOL⟧
+// 해설 L142: 조건에 따라 분기합니다: if (DataContext is CRootView rootView && rootView.CurrentScreen.Monitor is { } monitor)
+L000142 |         if (DataContext is CRootView rootView && rootView.CurrentScreen.Monitor is { } monitor) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 StopPicoJog.
+L000143 |         { ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.PicoJogStopCommand.Execute(null)
+L000144 |             monitor.PicoJogStopCommand.Execute(null); ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 StopPicoJog.
+L000145 |         } ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 StopPicoJog.
+L000146 |     } ⟦EOL⟧
+L000147 |  ⟦EOL⟧
+// 해설 L148: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CPicoMotorMonitorView.OpenPicoValueInput(object, RoutedEventArgs)
+L000148 |     private void OpenPicoValueInput(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000149 |     { ⟦EOL⟧
+// 해설 L150: 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button)
+L000150 |         if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000151 |         { ⟦EOL⟧
+// 해설 L152: 호출자에게 값 또는 제어를 반환합니다: return;
+L000152 |             return; ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000153 |         } ⟦EOL⟧
+L000154 |  ⟦EOL⟧
+// 해설 L155: 값을 대상에 대입합니다: e.Handled = true
+L000155 |         e.Handled = true; ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Parameter.Equals("Set Count", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var isCount = row.Parameter.Equals("Set Count", StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: isCount = row.Parameter.Equals("Set Count", StringComparison.OrdinalIgnoreCase)
+L000156 |         var isCount = row.Parameter.Equals("Set Count", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L157: 지역 변수를 선언합니다: var nonNegative = row.Parameter is "Set Velocity" or "Set Acceleration" or "Relative Move" || isCount; / 변수의 초기값을 지정합니다: nonNegative = row.Parameter is "Set Velocity" or "Set Acceleration" or "Relative Move" || isCount
+L000157 |         var nonNegative = row.Parameter is "Set Velocity" or "Set Acceleration" or "Relative Move" || isCount; ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double, nonNegative ? (isCount ? 1 : 0) : 0, nonNegative ? int.MaxValue : 0) { Owner = Window.GetWindow(this) } / 조건에 따라 결과식을 선택합니다: isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double / 조건에 따라 결과식을 선택합니다: nonNegative ? (isCount ? 1 : 0) : 0 / 조건에 따라 결과식을 선택합니다: isCount ? 1 : 0 / 조건에 따라 결과식을 선택합니다: nonNegative ? int.MaxValue : 0 / 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, r
+L000158 |         var dialog = new CValueInputDialog(row.Parameter, row.Value, isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double, nonNegative ? (isCount ? 1 : 0) : 0, nonNegative ? int.MaxValue : 0) ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000159 |         { ⟦EOL⟧
+// 해설 L160: 값을 대상에 대입합니다: Owner = Window.GetWindow(this) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)
+L000160 |             Owner = Window.GetWindow(this) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000161 |         }; ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() / 조건에 따라 분기합니다: if (dialog.ShowDialog() == true)
+L000162 |         if (dialog.ShowDialog() == true) ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000163 |         { ⟦EOL⟧
+// 해설 L164: 값을 대상에 대입합니다: row.Value = dialog.ResultValue
+L000164 |             row.Value = dialog.ResultValue; ⟦EOL⟧
+// 해설 L165: 값을 대상에 대입합니다: button.Content = dialog.ResultValue
+L000165 |             button.Content = dialog.ResultValue; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000166 |         } ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 OpenPicoValueInput.
+L000167 |     } ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다.
+L000168 | } ⟦EOL⟧

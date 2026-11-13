@@ -1,0 +1,88 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/CSignalBlink.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media.Animation;
+L000002 | using System.Windows.Media.Animation; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI;
+L000004 | namespace Drilling.UI; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000006 | /// <summary>Runs a pulse only on its overlay; stops old clocks when data, visibility or lifetime changes.</summary> ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: public static class CSignalBlink
+L000007 | public static class CSignalBlink ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached( "IsActive", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false, ActiveChanged)) / 변수의 초기값을 지정합니다: IsActiveProperty = DependencyProperty.RegisterAttached( "IsActive", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false, ActiveChanged))
+L000009 |     public static readonly DependencyProperty IsActiveProperty = DependencyProperty.RegisterAttached( ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false, ActiveChanged)
+L000010 |         "IsActive", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false, ActiveChanged)); ⟦EOL⟧
+// 해설 L11: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.RegisterAttached( "IsHooked", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false)) / 변수의 초기값을 지정합니다: IsHookedProperty = DependencyProperty.RegisterAttached( "IsHooked", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false))
+L000011 |     private static readonly DependencyProperty IsHookedProperty = DependencyProperty.RegisterAttached( ⟦EOL⟧
+// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false)
+L000012 |         "IsHooked", typeof(bool), typeof(CSignalBlink), new PropertyMetadata(false)); ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.GetValue(IsActiveProperty)
+L000013 |     public static bool GetIsActive(DependencyObject target) => (bool)target.GetValue(IsActiveProperty); ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.SetValue(IsActiveProperty, value)
+L000014 |     public static void SetIsActive(DependencyObject target, bool value) => target.SetValue(IsActiveProperty, value); ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CSignalBlink.ActiveChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+L000016 |     private static void ActiveChanged(DependencyObject target, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 ActiveChanged.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 조건에 따라 분기합니다: if (target is not FrameworkElement element) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000018 |         if (target is not FrameworkElement element) return; ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.GetValue(IsHookedProperty) / 조건에 따라 분기합니다: if (!(bool)element.GetValue(IsHookedProperty))
+L000019 |         if (!(bool)element.GetValue(IsHookedProperty)) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 ActiveChanged.
+L000020 |         { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetValue(IsHookedProperty, true)
+L000021 |             element.SetValue(IsHookedProperty, true); ⟦EOL⟧
+// 해설 L22: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Loaded += Loaded
+L000022 |             element.Loaded += Loaded; ⟦EOL⟧
+// 해설 L23: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.Unloaded += Unloaded
+L000023 |             element.Unloaded += Unloaded; ⟦EOL⟧
+// 해설 L24: 복합 대입 또는 이벤트 구독/해지 표현입니다: element.IsVisibleChanged += VisibilityChanged
+L000024 |             element.IsVisibleChanged += VisibilityChanged; ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 ActiveChanged.
+L000025 |         } ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: Start(element) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(element) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if ((bool)e.NewValue)
+L000026 |         if ((bool)e.NewValue) Start(element); else Stop(element); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 ActiveChanged.
+L000027 |     } ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CSignalBlink.Loaded(object, RoutedEventArgs)
+L000028 |     private static void Loaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetIsActive((FrameworkElement)sender) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Start((FrameworkElement)sender) / 조건에 따라 분기합니다: if (GetIsActive((FrameworkElement)sender))
+L000029 |     { if (GetIsActive((FrameworkElement)sender)) Start((FrameworkElement)sender); } ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop((FrameworkElement)sender)
+L000030 |     private static void Unloaded(object sender, RoutedEventArgs e) => Stop((FrameworkElement)sender); ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CSignalBlink.VisibilityChanged(object, DependencyPropertyChangedEventArgs)
+L000031 |     private static void VisibilityChanged(object sender, DependencyPropertyChangedEventArgs e) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 VisibilityChanged.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 지역 변수를 선언합니다: var element = (FrameworkElement)sender; / 변수의 초기값을 지정합니다: element = (FrameworkElement)sender
+L000033 |         var element = (FrameworkElement)sender; ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetIsActive(element) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Start(element) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Stop(element) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if ((bool)e.NewValue && GetIsActive(element))
+L000034 |         if ((bool)e.NewValue && GetIsActive(element)) Start(element); else Stop(element); ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 VisibilityChanged.
+L000035 |     } ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.BeginAnimation(UIElement.OpacityProperty, new DoubleAnimation(0, 0.6, TimeSpan.FromSeconds(0.5)) { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever })
+L000036 |     private static void Start(FrameworkElement element) => element.BeginAnimation(UIElement.OpacityProperty, ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: AutoReverse = true / 값을 대상에 대입합니다: RepeatBehavior = RepeatBehavior.Forever / 함수·델리게이트 또는 객체 생성자를 호출합니다: new DoubleAnimation(0, 0.6, TimeSpan.FromSeconds(0.5)) { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever } / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(0.5)
+L000037 |         new DoubleAnimation(0, 0.6, TimeSpan.FromSeconds(0.5)) { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever }); ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.CSignalBlink.Stop(FrameworkElement)
+L000038 |     private static void Stop(FrameworkElement element) ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 Stop.
+L000039 |     { ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.BeginAnimation(UIElement.OpacityProperty, null)
+L000040 |         element.BeginAnimation(UIElement.OpacityProperty, null); ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: element.SetCurrentValue(UIElement.OpacityProperty, 0d)
+L000041 |         element.SetCurrentValue(UIElement.OpacityProperty, 0d); ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Stop.
+L000042 |     } ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다.
+L000043 | } ⟦EOL⟧

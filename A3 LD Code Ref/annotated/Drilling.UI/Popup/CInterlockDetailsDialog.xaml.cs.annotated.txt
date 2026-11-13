@@ -1,0 +1,34 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000002 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000004 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public partial class CInterlockDetailsDialog : Window
+L000006 | public partial class CInterlockDetailsDialog : Window ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CInterlockDetailsDialog.CInterlockDetailsDialog(Drilling.UI.Menu.Menus.ST_INTERLOCK_GROUP)
+L000008 |     public CInterlockDetailsDialog(ST_INTERLOCK_GROUP group) ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다 · 소속 .ctor.
+L000009 |     { ⟦EOL⟧
+// 해설 L10: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000010 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L11: 값을 대상에 대입합니다: Title = $"Interlock / Safety - {group.Item}"
+L000011 |         Title = $"Interlock / Safety - {group.Item}"; ⟦EOL⟧
+// 해설 L12: 값을 대상에 대입합니다: DataContext = group
+L000012 |         DataContext = group; ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다 · 소속 .ctor.
+L000013 |     } ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000015 |     private void OnCloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다.
+L000016 | } ⟦EOL⟧

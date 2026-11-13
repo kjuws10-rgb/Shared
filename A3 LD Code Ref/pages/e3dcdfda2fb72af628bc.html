@@ -1,0 +1,231 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Views/CRecipeView.xaml</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Views/CRecipeView.xaml.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml">Git 원본</a></p><h1>Drilling.UI/Views/CRecipeView.xaml</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>47f66a370bf4d019fe62a7f4fc9dcff79ac44d05447785c0893c569771d7d7a0</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>140,599 bytes / 1,779 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/e3dcdfda2fb72af628bc.svg"></p>
+<h2>화면 구성과 코드 비하인드 연결</h2>
+<table><thead><tr><th>항목</th><th>추출 값</th></tr></thead><tbody>
+<tr><td>코드 비하인드 후보</td><td>Drilling.UI/Views/CRecipeView.xaml.cs</td></tr>
+<tr><td>이름 있는 요소</td><td>ItemBorder, ToggleButton, Shell, PART_Popup, RecipeFilesPanel, RecipeEditorPanel, CellParameterPanel, CellShotMapViewport, CellShotMapZoomContent, CellShotMapScaleTransform, CellShotMapTranslateTransform, CellShotMapSurface, CellShotMapHoverTip, CellShotMapHoverTipTranslateTransform, CellShotMapHoverTipText, RecipePreviewViewport, RecipePreviewZoomContent, RecipePreviewScaleTransform, RecipePreviewTranslateTransform, RecipePreviewHoverTip, RecipePreviewHoverTipTranslateTransform, RecipePreviewHoverTipText, HistoryPanel, HistoryExpandButton, ChangeHistoryGrid</td></tr>
+<tr><td>이벤트 개수</td><td>22</td></tr>
+<tr><td>Binding 표현 개수</td><td>176</td></tr>
+</tbody></table>
+<table><thead><tr><th>이벤트</th><th>핸들러 이름</th><th>해석</th></tr></thead><tbody>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>ToggleCellPlacement_Click</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenCellPlacementWizard_Click</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenCellOverviewInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenCellOverviewInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenCellOverviewInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>CellShotMapResize_Click</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>MouseMove</td><td>CellShotMapSurface_MouseMove</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenShotGroupOffsetInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenShotGroupOffsetInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>RecipePreviewResize_Click</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>MouseMove</td><td>CellPreviewLabel_MouseMove</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>OpenManagedItemInput</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+<tr><td>Click</td><td>ToggleHistory_Click</td><td>코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요</td></tr>
+</tbody></table>
+<table><thead><tr><th>Binding 표현</th></tr></thead><tbody>
+<tr><td>DataContext.CurrentScreen.Recipe.IsViewRecipeSelected, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.IsViewRecipeSelected, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent</td></tr>
+<tr><td>SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox</td></tr>
+<tr><td>ActualWidth, ElementName=ToggleButton</td></tr>
+<tr><td>CurrentScreen.IsRecipeLayout, Converter={StaticResource BooleanToVisibilityConverter</td></tr>
+<tr><td>CurrentScreen.Recipe.IsZeroDefenceCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.RecipeFiles</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.ViewCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>FileName</td></tr>
+<tr><td>IsView</td></tr>
+<tr><td>IsSelect</td></tr>
+<tr><td>No</td></tr>
+<tr><td>IsView</td></tr>
+<tr><td>IsSelect</td></tr>
+<tr><td>FileName</td></tr>
+<tr><td>IsView</td></tr>
+<tr><td>IsSelect</td></tr>
+<tr><td>CurrentScreen.Recipe.PreviousRecipePageCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.RecipeFilesPageText</td></tr>
+<tr><td>CurrentScreen.Recipe.NextRecipePageCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.CreateCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.ModifyCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.SaveCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.DeleteCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.ItemTabs</td></tr>
+<tr><td>DisplayName</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.SelectCategoryCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>Category</td></tr>
+<tr><td>IsSelected</td></tr>
+<tr><td>CurrentScreen.Recipe.GroupTabs</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.IsHeadCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.IsZeroDefenceCategory</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>IsSelected</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.IsHeadCategory, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellCategory, Converter={StaticResource BooleanToVisibilityConverter</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.IsCellPlacementExpanded, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassSizeXItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassSizeXItem</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassSizeYItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassSizeYItem</td></tr>
+<tr><td>CurrentScreen.Recipe.MaxCellNumberItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.MaxCellNumberItem</td></tr>
+<tr><td>CurrentScreen.Recipe.AkMarginXItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.AkMarginXItem</td></tr>
+<tr><td>CurrentScreen.Recipe.AkMarginYItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.AkMarginYItem</td></tr>
+<tr><td>CurrentScreen.Recipe.CellModelTypeCountItem.ValueOptions</td></tr>
+<tr><td>CurrentScreen.Recipe.CellModelTypeCountItem.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged</td></tr>
+<tr><td>CurrentScreen.Recipe.EscEdgeToGlassEdgeItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.EscEdgeToGlassEdgeItem</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassCenterToScannerCenterItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.GlassCenterToScannerCenterItem</td></tr>
+<tr><td>CurrentScreen.Recipe.PixelSizeItem.Value</td></tr>
+<tr><td>CurrentScreen.Recipe.PixelSizeItem</td></tr>
+<tr><td>CurrentScreen.Recipe.SplitBeamCountItem.ValueOptions</td></tr>
+<tr><td>CurrentScreen.Recipe.SplitBeamCountItem.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged</td></tr>
+<tr><td>CurrentScreen.Recipe.ShotGroupPatternSummary</td></tr>
+<tr><td>CurrentScreen.Recipe.DistortionKeyItems</td></tr>
+<tr><td>DisplayText</td></tr>
+<tr><td>StageY</td></tr>
+<tr><td>YLabel</td></tr>
+<tr><td>CurrentScreen.Recipe.CurrentCellIndicatorText</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.CellPlacementExpandButtonText, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>CurrentScreen.Recipe.CellOverviewRows</td></tr>
+<tr><td>IsCurrent</td></tr>
+<tr><td>CellNo</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.SelectCellCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>CellNo</td></tr>
+<tr><td>FirstX</td></tr>
+<tr><td>FirstY</td></tr>
+<tr><td>Rotation</td></tr>
+<tr><td>ModelOptions</td></tr>
+<tr><td>ModelType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellDetailVisible, Converter={StaticResource BooleanToVisibilityConverter</td></tr>
+<tr><td>CurrentScreen.Recipe.PreviousCellCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedCellNavigationText</td></tr>
+<tr><td>CurrentScreen.Recipe.NextCellCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.BackToCellPreviewCommand</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedCellShotGroupTitle</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapPanelHeight</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapGridRow</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapGridRowSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapGridColumn</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapGridColumnSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapSurfaceWidth</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapSurfaceHeight</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotMapImage</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotDetailGridRow</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotDetailGridRowSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotDetailGridColumn</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotDetailGridColumnSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.CellShotDetailVerticalGap</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotDetailGridRow</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotDetailGridColumn</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotDetailGridColumnSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotDetailImage</td></tr>
+<tr><td>CurrentScreen.Recipe.ShotInformationGridRow</td></tr>
+<tr><td>CurrentScreen.Recipe.ShotInformationGridColumn</td></tr>
+<tr><td>CurrentScreen.Recipe.ShotInformationGridColumnSpan</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroupGridText</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroupCenterText</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroupStateText</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.IsChessSkipped</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.IsInsideGlass</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.IsMasked</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.MaskingStateText</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.IsMasked</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.OffsetX</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup.OffsetY</td></tr>
+<tr><td>CurrentScreen.Recipe.SelectedShotGroup</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellPreviewVisible, Converter={StaticResource BooleanToVisibilityConverter</td></tr>
+<tr><td>CurrentScreen.Recipe.CellPreviewSummaryText</td></tr>
+<tr><td>CurrentScreen.Recipe.CellPreviewImage</td></tr>
+<tr><td>CurrentScreen.Recipe.CellPreviewLabels</td></tr>
+<tr><td>Width</td></tr>
+<tr><td>Height</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.SelectPreviewCellCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>CellNo</td></tr>
+<tr><td>CurrentScreen.Recipe.IsHeadCategory, Converter={StaticResource BooleanToVisibilityConverter</td></tr>
+<tr><td>CurrentScreen.Recipe.GroupTabs</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>IsSelected</td></tr>
+<tr><td>CurrentScreen.Recipe.ManagedItems</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>Item</td></tr>
+<tr><td>Value</td></tr>
+<tr><td>UsesSelectionEditor</td></tr>
+<tr><td>ValueOptions</td></tr>
+<tr><td>Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged</td></tr>
+<tr><td>UsesSelectionEditor</td></tr>
+<tr><td>Unit</td></tr>
+<tr><td>CurrentScreen.Recipe.HeadPreviewSummaryText</td></tr>
+<tr><td>CurrentScreen.Recipe.HeadPreviewImage</td></tr>
+<tr><td>CurrentScreen.Recipe.HeadPreviewLabels</td></tr>
+<tr><td>Width</td></tr>
+<tr><td>Height</td></tr>
+<tr><td>BackgroundBrush</td></tr>
+<tr><td>BorderBrush</td></tr>
+<tr><td>DisplayText</td></tr>
+<tr><td>TextBrush</td></tr>
+<tr><td>CurrentScreen.Recipe.ZeroDefence</td></tr>
+<tr><td>DataContext.CurrentScreen.Recipe.IsZeroDefenceCategory, RelativeSource={RelativeSource AncestorType=views:CRecipeView</td></tr>
+<tr><td>CurrentScreen.Recipe.ManagedItems</td></tr>
+<tr><td>CurrentScreen.Recipe.IsCellCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.IsHeadCategory</td></tr>
+<tr><td>CurrentScreen.Recipe.IsZeroDefenceCategory</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>Item</td></tr>
+<tr><td>Value</td></tr>
+<tr><td>UsesSelectionEditor</td></tr>
+<tr><td>ValueOptions</td></tr>
+<tr><td>Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged</td></tr>
+<tr><td>UsesSelectionEditor</td></tr>
+<tr><td>Unit</td></tr>
+<tr><td>Description</td></tr>
+<tr><td>CurrentScreen.Recipe.ChangeHistory</td></tr>
+<tr><td>Time</td></tr>
+<tr><td>Action</td></tr>
+<tr><td>Recipe</td></tr>
+<tr><td>Tab</td></tr>
+<tr><td>Group</td></tr>
+<tr><td>Item</td></tr>
+<tr><td>Before</td></tr>
+<tr><td>After</td></tr>
+<tr><td>AfterBrush</td></tr>
+</tbody></table>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Views/CRecipeView.xaml.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

@@ -1,0 +1,68 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.File/JHMI/CAlarmListFile.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
+L000001 | using Drilling.Common.Alarm; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.File.Parser;
+L000002 | using Drilling.File.Parser; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI;
+L000004 | namespace Drilling.File.JHMI; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public sealed class CAlarmListFile(string configRoot) : CAlarmListFileBase
+L000006 | public sealed class CAlarmListFile(string configRoot) : CAlarmListFileBase ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(configRoot, "JHMI_ALARMLIST.csv")
+L000008 |     public string FilePath { get; } = Path.Combine(configRoot, "JHMI_ALARMLIST.csv"); ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.File.JHMI.CAlarmListFile.Load()
+L000010 |     public override IReadOnlyList<ST_ALARM_DEFINITION> Load() ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다 · 소속 Load.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 지역 변수를 선언합니다: const string table = "JHMI_ALARMLIST"; / 변수의 초기값을 지정합니다: table = "JHMI_ALARMLIST"
+L000012 |         const string table = "JHMI_ALARMLIST"; ⟦EOL⟧
+// 해설 L13: 지역 변수를 선언합니다: string[] headers = ["CODE", "GROUP", "ID", "LEVEL", "CAUSE", "SOLUTION", "CIM_ADRESS"]; / 변수의 초기값을 지정합니다: headers = ["CODE", "GROUP", "ID", "LEVEL", "CAUSE", "SOLUTION", "CIM_ADRESS"]
+L000013 |         string[] headers = ["CODE", "GROUP", "ID", "LEVEL", "CAUSE", "SOLUTION", "CIM_ADRESS"]; ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ValidateRequiredHeaders(FilePath, table, headers.Select(header => new[] { header })) / 함수·델리게이트 또는 객체 생성자를 호출합니다: headers.Select(header => new[] { header })
+L000014 |         CCsvParser.ValidateRequiredHeaders(FilePath, table, headers.Select(header => new[] { header })); ⟦EOL⟧
+// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<int>() / 지역 변수를 선언합니다: var codes = new HashSet<int>(); / 변수의 초기값을 지정합니다: codes = new HashSet<int>()
+L000015 |         var codes = new HashSet<int>(); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var ids = new HashSet<string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: ids = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+L000016 |         var ids = new HashSet<string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_ALARM_DEFINITION>() / 지역 변수를 선언합니다: var result = new List<ST_ALARM_DEFINITION>(); / 변수의 초기값을 지정합니다: result = new List<ST_ALARM_DEFINITION>()
+L000017 |         var result = new List<ST_ALARM_DEFINITION>(); ⟦EOL⟧
+// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(FilePath).Select((row, index) => (row, index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(FilePath) / 컬렉션 요소를 순회합니다: foreach (var (row, index) in CCsvParser.Read(FilePath).Select((row, index) => (row, index))) { var line = index + 2; var code = CCsvParser.ReadRequiredInt(CCsvParser.Get(row, "CODE"), table, line, "CODE"); var id = CCsvParser.Requ
+L000018 |         foreach (var (row, index) in CCsvParser.Read(FilePath).Select((row, index) => (row, index))) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 Load.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 지역 변수를 선언합니다: var line = index + 2; / 변수의 초기값을 지정합니다: line = index + 2
+L000020 |             var line = index + 2; ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.ReadRequiredInt(CCsvParser.Get(row, "CODE"), table, line, "CODE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "CODE") / 지역 변수를 선언합니다: var code = CCsvParser.ReadRequiredInt(CCsvParser.Get(row, "CODE"), table, line, "CODE"); / 변수의 초기값을 지정합니다: code = CCsvParser.ReadRequiredInt(CCsvParser.Get(row, "CODE"), table, line, "CODE")
+L000021 |             var code = CCsvParser.ReadRequiredInt(CCsvParser.Get(row, "CODE"), table, line, "CODE"); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText(row, table, line, "ID") / 지역 변수를 선언합니다: var id = CCsvParser.RequireText(row, table, line, "ID"); / 변수의 초기값을 지정합니다: id = CCsvParser.RequireText(row, table, line, "ID")
+L000022 |             var id = CCsvParser.RequireText(row, table, line, "ID"); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText(row, table, line, "LEVEL").ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.RequireText(row, table, line, "LEVEL") / 지역 변수를 선언합니다: var level = CCsvParser.RequireText(row, table, line, "LEVEL").ToUpperInvariant(); / 변수의 초기값을 지정합니다: level = CCsvParser.RequireText(row, table, line, "LEVEL").ToUpperInvariant()
+L000023 |             var level = CCsvParser.RequireText(row, table, line, "LEVEL").ToUpperInvariant(); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: codes.Add(code) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{table}: {line}행 CODE {code}가 중복되었습니다.") / 조건에 따라 분기합니다: if (!codes.Add(code)) / 예외를 발생/전달합니다: throw new InvalidDataException($"{table}: {line}행 CODE {code}가 중복되었습니다.");
+L000024 |             if (!codes.Add(code)) throw new InvalidDataException($"{table}: {line}행 CODE {code}가 중복되었습니다."); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: ids.Add(id) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{table}: {line}행 ID {id}가 중복되었습니다.") / 조건에 따라 분기합니다: if (!ids.Add(id)) / 예외를 발생/전달합니다: throw new InvalidDataException($"{table}: {line}행 ID {id}가 중복되었습니다.");
+L000025 |             if (!ids.Add(id)) throw new InvalidDataException($"{table}: {line}행 ID {id}가 중복되었습니다."); ⟦EOL⟧
+// 해설 L26: 조건에 따라 분기합니다: if (level is not ("HEAVY" or "LIGHT"))
+L000026 |             if (level is not ("HEAVY" or "LIGHT")) ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{table}: {line}행 LEVEL은 HEAVY 또는 LIGHT여야 합니다.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{table}: {line}행 LEVEL은 HEAVY 또는 LIGHT여야 합니다.");
+L000027 |                 throw new InvalidDataException($"{table}: {line}행 LEVEL은 HEAVY 또는 LIGHT여야 합니다."); ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(new(code, CCsvParser.Get(row, "GROUP"), id, level, CCsvParser.Get(row, "CAUSE"), CCsvParser.Get(row, "SOLUTION"), CCsvParser.Get(row, "CIM_ADRESS"))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(code, CCsvParser.Get(row, "GROUP"), id, level, CCsvParser.Get(row, "CAUSE"), CCsvParser.Get(row, "SOLUTION"), CCsvParser.Get(row, "CIM_ADRESS")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GROUP")
+L000028 |             result.Add(new(code, CCsvParser.Get(row, "GROUP"), id, level, ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "CAUSE") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "SOLUTION") / 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "CIM_ADRESS")
+L000029 |                 CCsvParser.Get(row, "CAUSE"), CCsvParser.Get(row, "SOLUTION"), CCsvParser.Get(row, "CIM_ADRESS"))); ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 Load.
+L000030 |         } ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.OrderBy(row => row.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.OrderBy(row => row.Code) / 호출자에게 값 또는 제어를 반환합니다: return result.OrderBy(row => row.Code).ToArray();
+L000031 |         return result.OrderBy(row => row.Code).ToArray(); ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Load.
+L000032 |     } ⟦EOL⟧
+// 해설 L33: 구문 블록 경계입니다.
+L000033 | } ⟦EOL⟧

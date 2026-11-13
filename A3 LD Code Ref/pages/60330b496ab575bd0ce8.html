@@ -1,0 +1,441 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 SHA256</td><td>71b53c57cc61b41bc390045668d7c3d12d15ea7db282c75749b741836d516ca0</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>4,880 bytes / 168 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/60330b496ab575bd0ce8.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CPicoMotorMonitorView</td><td>ClassDeclaration</td><td>10–168</td><td>CPicoMotorMonitorView: UserControl</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>.ctor</td><td>ConstructorDeclaration</td><td>L12–15</td><td>Drilling.UI.Views.CPicoMotorMonitorView.CPicoMotorMonitorView()</td></tr>
+<tr><td>PicoMonitorPreviewMouseLeftButtonDown</td><td>MethodDeclaration</td><td>L17–44</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoMonitorPreviewMouseLeftButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>PicoValueEditorLostKeyboardFocus</td><td>MethodDeclaration</td><td>L46–54</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoValueEditorLostKeyboardFocus(object, KeyboardFocusChangedEventArgs)</td></tr>
+<tr><td>EndAllValueEdits</td><td>MethodDeclaration</td><td>L56–74</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.EndAllValueEdits(TextBox?)</td></tr>
+<tr><td>FindAncestor</td><td>MethodDeclaration</td><td>L76–90</td><td>T? Drilling.UI.Views.CPicoMotorMonitorView.FindAncestor&lt;T&gt;(DependencyObject?)</td></tr>
+<tr><td>FindVisualChildren</td><td>MethodDeclaration</td><td>L92–108</td><td>System.Collections.Generic.IEnumerable&lt;T&gt; Drilling.UI.Views.CPicoMotorMonitorView.FindVisualChildren&lt;T&gt;(DependencyObject)</td></tr>
+<tr><td>PicoJogButtonPreviewMouseDown</td><td>MethodDeclaration</td><td>L110–118</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>PicoJogButtonPreviewMouseUp</td><td>MethodDeclaration</td><td>L120–129</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseUp(object, MouseButtonEventArgs)</td></tr>
+<tr><td>PicoJogButtonMouseLeave</td><td>MethodDeclaration</td><td>L131–138</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonMouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>StopPicoJog</td><td>MethodDeclaration</td><td>L140–146</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.StopPicoJog()</td></tr>
+<tr><td>OpenPicoValueInput</td><td>MethodDeclaration</td><td>L148–167</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.OpenPicoValueInput(object, RoutedEventArgs)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L12">ConstructorDeclaration <code>.ctor</code> · L12–15</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L12-L15">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:12–15</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Views.CPicoMotorMonitorView.CPicoMotorMonitorView()</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>InitializeComponent</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L17">MethodDeclaration <code>PicoMonitorPreviewMouseLeftButtonDown</code> · L17–44</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L17-L44">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:17–44</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoMonitorPreviewMouseLeftButtonDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>19</td><td>FindAncestor&lt;TextBox&gt;</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>22</td><td>EndAllValueEdits</td><td>resolved</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.EndAllValueEdits(TextBox?) · Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:56</td></tr>
+<tr><td>30</td><td>EndAllValueEdits</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>33</td><td>editor.Focus</td><td>unresolved</td><td>None</td></tr>
+<tr><td>34</td><td>editor.SelectAll</td><td>unresolved</td><td>None</td></tr>
+<tr><td>39</td><td>Keyboard.ClearFocus</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>19</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindAncestor&lt;TextBox&gt;(e.OriginalSource as DependencyObject)</td></tr>
+<tr><td>19</td><td>local-declaration</td><td>지역 변수를 선언합니다: var editor = FindAncestor&lt;TextBox&gt;(e.OriginalSource as DependencyObject);</td></tr>
+<tr><td>19</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: editor = FindAncestor&lt;TextBox&gt;(e.OriginalSource as DependencyObject)</td></tr>
+<tr><td>20</td><td>if</td><td>조건에 따라 분기합니다: if (editor is null)</td></tr>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndAllValueEdits()</td></tr>
+<tr><td>23</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>26</td><td>if</td><td>조건에 따라 분기합니다: if (editor.IsReadOnly)</td></tr>
+<tr><td>28</td><td>if</td><td>조건에 따라 분기합니다: if (e.ClickCount &gt;= 2)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: EndAllValueEdits(editor)</td></tr>
+<tr><td>31</td><td>assignment</td><td>값을 대상에 대입합니다: editor.IsReadOnly = false</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: editor.Cursor = Cursors.IBeam</td></tr>
+<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: editor.Focus()</td></tr>
+<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: editor.SelectAll()</td></tr>
+<tr><td>36</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>38</td><td>assignment</td><td>값을 대상에 대입합니다: editor.SelectionLength = 0</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Keyboard.ClearFocus()</td></tr>
+<tr><td>42</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PicoMonitorPreviewMouseLeftButtonDown&quot;]
+ N0[&quot;L20 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L26 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L28 if&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L36 else&quot;]
+ N2 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L46">MethodDeclaration <code>PicoValueEditorLostKeyboardFocus</code> · L46–54</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L46-L54">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:46–54</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoValueEditorLostKeyboardFocus(object, KeyboardFocusChangedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>KeyboardFocusChangedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>48</td><td>if</td><td>조건에 따라 분기합니다: if (sender is TextBox editor)</td></tr>
+<tr><td>50</td><td>assignment</td><td>값을 대상에 대입합니다: editor.IsReadOnly = true</td></tr>
+<tr><td>51</td><td>assignment</td><td>값을 대상에 대입합니다: editor.Cursor = Cursors.Arrow</td></tr>
+<tr><td>52</td><td>assignment</td><td>값을 대상에 대입합니다: editor.SelectionLength = 0</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PicoValueEditorLostKeyboardFocus&quot;]
+ N0[&quot;L48 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L56">MethodDeclaration <code>EndAllValueEdits</code> · L56–74</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L56-L74">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:56–74</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.EndAllValueEdits(TextBox?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>except</td><td>TextBox?</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L22-L22">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:22–22</a></td><td>EndAllValueEdits</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>58</td><td>FindVisualChildren&lt;TextBox&gt;</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>60</td><td>ReferenceEquals</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>72</td><td>Keyboard.ClearFocus</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChildren&lt;TextBox&gt;(this)</td></tr>
+<tr><td>58</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var editor in FindVisualChildren&lt;TextBox&gt;(this))</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(editor, except)</td></tr>
+<tr><td>60</td><td>if</td><td>조건에 따라 분기합니다: if (ReferenceEquals(editor, except))</td></tr>
+<tr><td>62</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>65</td><td>assignment</td><td>값을 대상에 대입합니다: editor.IsReadOnly = true</td></tr>
+<tr><td>66</td><td>assignment</td><td>값을 대상에 대입합니다: editor.Cursor = Cursors.Arrow</td></tr>
+<tr><td>67</td><td>assignment</td><td>값을 대상에 대입합니다: editor.SelectionLength = 0</td></tr>
+<tr><td>70</td><td>if</td><td>조건에 따라 분기합니다: if (except is null)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Keyboard.ClearFocus()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;EndAllValueEdits&quot;]
+ N0[&quot;L58 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L60 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L70 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L76">MethodDeclaration <code>FindAncestor</code> · L76–90</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L76-L90">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:76–90</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>T? Drilling.UI.Views.CPicoMotorMonitorView.FindAncestor&lt;T&gt;(DependencyObject?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>T?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>source</td><td>DependencyObject?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>86</td><td>VisualTreeHelper.GetParent</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>79</td><td>while</td><td>조건을 먼저 확인하며 반복합니다: while (source is not null)</td></tr>
+<tr><td>81</td><td>if</td><td>조건에 따라 분기합니다: if (source is T match)</td></tr>
+<tr><td>83</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return match;</td></tr>
+<tr><td>86</td><td>assignment</td><td>값을 대상에 대입합니다: source = VisualTreeHelper.GetParent(source)</td></tr>
+<tr><td>86</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetParent(source)</td></tr>
+<tr><td>89</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return null;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FindAncestor&quot;]
+ N0[&quot;L79 while&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L81 if&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L92">MethodDeclaration <code>FindVisualChildren</code> · L92–108</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L92-L108">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:92–108</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IEnumerable&lt;T&gt; Drilling.UI.Views.CPicoMotorMonitorView.FindVisualChildren&lt;T&gt;(DependencyObject)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IEnumerable&lt;T&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>parent</td><td>DependencyObject</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>95</td><td>VisualTreeHelper.GetChildrenCount</td><td>unresolved</td><td>None</td></tr>
+<tr><td>97</td><td>VisualTreeHelper.GetChild</td><td>unresolved</td><td>None</td></tr>
+<tr><td>103</td><td>FindVisualChildren&lt;T&gt;</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent)</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>95</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; VisualTreeHelper.GetChildrenCount(parent); index++)</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index)</td></tr>
+<tr><td>97</td><td>local-declaration</td><td>지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index);</td></tr>
+<tr><td>97</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index)</td></tr>
+<tr><td>98</td><td>if</td><td>조건에 따라 분기합니다: if (child is T match)</td></tr>
+<tr><td>100</td><td>yield</td><td>열거값/종료를 전달합니다: yield return match;</td></tr>
+<tr><td>103</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChildren&lt;T&gt;(child)</td></tr>
+<tr><td>103</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var descendant in FindVisualChildren&lt;T&gt;(child))</td></tr>
+<tr><td>105</td><td>yield</td><td>열거값/종료를 전달합니다: yield return descendant;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FindVisualChildren&quot;]
+ N0[&quot;L95 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L98 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L103 foreach&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L110">MethodDeclaration <code>PicoJogButtonPreviewMouseDown</code> · L110–118</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L110-L118">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:110–118</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseDown(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>114</td><td>Mouse.Capture</td><td>unresolved</td><td>None</td></tr>
+<tr><td>115</td><td>monitor.PicoJogStartCommand.Execute</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>112</td><td>if</td><td>조건에 따라 분기합니다: if (sender is Button { DataContext: { } parameter } button &amp;&amp; DataContext is CRootView rootView &amp;&amp; rootView.CurrentScreen.Monitor is { } monitor)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Mouse.Capture(button)</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.PicoJogStartCommand.Execute(parameter)</td></tr>
+<tr><td>116</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PicoJogButtonPreviewMouseDown&quot;]
+ N0[&quot;L112 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L120">MethodDeclaration <code>PicoJogButtonPreviewMouseUp</code> · L120–129</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L120-L129">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:120–129</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonPreviewMouseUp(object, MouseButtonEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseButtonEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>124</td><td>button.ReleaseMouseCapture</td><td>unresolved</td><td>None</td></tr>
+<tr><td>127</td><td>StopPicoJog</td><td>resolved</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.StopPicoJog() · Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:140</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>122</td><td>if</td><td>조건에 따라 분기합니다: if (sender is Button button)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: button.ReleaseMouseCapture()</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopPicoJog()</td></tr>
+<tr><td>128</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PicoJogButtonPreviewMouseUp&quot;]
+ N0[&quot;L122 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L131">MethodDeclaration <code>PicoJogButtonMouseLeave</code> · L131–138</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L131-L138">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:131–138</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.PicoJogButtonMouseLeave(object, MouseEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>MouseEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>135</td><td>button.ReleaseMouseCapture</td><td>unresolved</td><td>None</td></tr>
+<tr><td>136</td><td>StopPicoJog</td><td>resolved</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.StopPicoJog() · Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:140</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>133</td><td>if</td><td>조건에 따라 분기합니다: if (sender is Button button &amp;&amp; button.IsMouseCaptured)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: button.ReleaseMouseCapture()</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: StopPicoJog()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;PicoJogButtonMouseLeave&quot;]
+ N0[&quot;L133 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L140">MethodDeclaration <code>StopPicoJog</code> · L140–146</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L140-L146">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:140–146</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.StopPicoJog()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L127-L127">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:127–127</a></td><td>StopPicoJog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L136-L136">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:136–136</a></td><td>StopPicoJog</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>144</td><td>monitor.PicoJogStopCommand.Execute</td><td>resolved</td><td>void Drilling.UI.Menu.CButtonCommand.Execute(object?) · Drilling.UI/Menu/CButtonCommand.cs:19</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>142</td><td>if</td><td>조건에 따라 분기합니다: if (DataContext is CRootView rootView &amp;&amp; rootView.CurrentScreen.Monitor is { } monitor)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.PicoJogStopCommand.Execute(null)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;StopPicoJog&quot;]
+ N0[&quot;L142 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L148">MethodDeclaration <code>OpenPicoValueInput</code> · L148–167</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L148-L167">Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:148–167</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Views.CPicoMotorMonitorView.OpenPicoValueInput(object, RoutedEventArgs)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Views.CPicoMotorMonitorView</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>sender</td><td>object</td><td>None</td><td>False /</td></tr>
+<tr><td>e</td><td>RoutedEventArgs</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>156</td><td>row.Parameter.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>158</td><td>new CValueInputDialog</td><td>resolved</td><td>Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13</td></tr>
+<tr><td>160</td><td>Window.GetWindow</td><td>unresolved</td><td>None</td></tr>
+<tr><td>162</td><td>dialog.ShowDialog</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>150</td><td>if</td><td>조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button)</td></tr>
+<tr><td>152</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>155</td><td>assignment</td><td>값을 대상에 대입합니다: e.Handled = true</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Parameter.Equals(&quot;Set Count&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>156</td><td>local-declaration</td><td>지역 변수를 선언합니다: var isCount = row.Parameter.Equals(&quot;Set Count&quot;, StringComparison.OrdinalIgnoreCase);</td></tr>
+<tr><td>156</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: isCount = row.Parameter.Equals(&quot;Set Count&quot;, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>157</td><td>local-declaration</td><td>지역 변수를 선언합니다: var nonNegative = row.Parameter is &quot;Set Velocity&quot; or &quot;Set Acceleration&quot; or &quot;Relative Move&quot; || isCount;</td></tr>
+<tr><td>157</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: nonNegative = row.Parameter is &quot;Set Velocity&quot; or &quot;Set Acceleration&quot; or &quot;Relative Move&quot; || isCount</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: nonNegative ? (isCount ? 1 : 0) : 0</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: isCount ? 1 : 0</td></tr>
+<tr><td>158</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: nonNegative ? int.MaxValue : 0</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double, nonNegative ? (isCount ? 1 : 0) : 0, nonNegative ? int.MaxValue : 0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>158</td><td>local-declaration</td><td>지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double, nonNegative ? (isCount ? 1 : 0) : 0, nonNegative ? int.MaxValue : 0) { Owner = Window.GetWindow(this) };</td></tr>
+<tr><td>158</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, isCount ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double, nonNegative ? (isCount ? 1 : 0) : 0, nonNegative ? int.MaxValue : 0) { Owner = Window.GetWindow(this) }</td></tr>
+<tr><td>160</td><td>assignment</td><td>값을 대상에 대입합니다: Owner = Window.GetWindow(this)</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this)</td></tr>
+<tr><td>162</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog()</td></tr>
+<tr><td>162</td><td>if</td><td>조건에 따라 분기합니다: if (dialog.ShowDialog() == true)</td></tr>
+<tr><td>164</td><td>assignment</td><td>값을 대상에 대입합니다: row.Value = dialog.ResultValue</td></tr>
+<tr><td>165</td><td>assignment</td><td>값을 대상에 대입합니다: button.Content = dialog.ResultValue</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;OpenPicoValueInput&quot;]
+ N0[&quot;L150 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L162 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

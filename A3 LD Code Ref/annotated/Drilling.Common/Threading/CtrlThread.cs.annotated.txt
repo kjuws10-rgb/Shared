@@ -1,0 +1,561 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Threading/CtrlThread.cs
+Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Diagnostics;
+L000001 | using System.Diagnostics; ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Threading;
+L000003 | namespace Drilling.Common.Threading; ⟦EOL⟧
+// 해설 L4: 타입의 구조/상속 선언입니다: public class CtrlThread
+L000004 | public class CtrlThread ⟦EOL⟧
+// 해설 L5: 구문 블록 경계입니다.
+L000005 | { ⟦EOL⟧
+// 해설 L6: 함수·델리게이트 또는 객체 생성자를 호출합니다: new() / 변수의 초기값을 지정합니다: _sync = new()
+L000006 |     private readonly object _sync = new(); ⟦EOL⟧
+// 해설 L7: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(true) / 변수의 초기값을 지정합니다: _pauseEvent = new(true)
+L000007 |     private readonly ManualResetEventSlim _pauseEvent = new(true); ⟦EOL⟧
+// 해설 L8: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(false) / 변수의 초기값을 지정합니다: _stopEvent = new(false)
+L000008 |     private readonly ManualResetEventSlim _stopEvent = new(false); ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Thread? Drilling.Common.Threading.CtrlThread._thread
+L000009 |     private Thread? _thread; ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread._stopRequested
+L000010 |     private volatile bool _stopRequested; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: _delayMs = 1
+L000011 |     private int _delayMs = 1; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: _threadName = ""
+L000012 |     private string _threadName = ""; ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: _state = EN_CTRL_THREAD_STATE.Stopped
+L000013 |     private EN_CTRL_THREAD_STATE _state = EN_CTRL_THREAD_STATE.Stopped; ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · System.Exception? Drilling.Common.Threading.CtrlThread._lastError
+L000014 |     private Exception? _lastError; ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread._disposed
+L000015 |     private bool _disposed; ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread.IsRunning
+L000016 |     public bool IsRunning ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 IsRunning.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread.IsRunning.get
+L000018 |         get ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 get_IsRunning.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000020 |             lock (_sync) ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 get_IsRunning.
+L000021 |             { ⟦EOL⟧
+// 해설 L22: 호출자에게 값 또는 제어를 반환합니다: return _thread is { IsAlive: true };
+L000022 |                 return _thread is { IsAlive: true }; ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 get_IsRunning.
+L000023 |             } ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 get_IsRunning.
+L000024 |         } ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 IsRunning.
+L000025 |     } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread.IsPaused
+L000027 |     public bool IsPaused ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 IsPaused.
+L000028 |     { ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread.IsPaused.get
+L000029 |         get ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 get_IsPaused.
+L000030 |         { ⟦EOL⟧
+// 해설 L31: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000031 |             lock (_sync) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 get_IsPaused.
+L000032 |             { ⟦EOL⟧
+// 해설 L33: 호출자에게 값 또는 제어를 반환합니다: return _state == EN_CTRL_THREAD_STATE.Paused;
+L000033 |                 return _state == EN_CTRL_THREAD_STATE.Paused; ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 get_IsPaused.
+L000034 |             } ⟦EOL⟧
+// 해설 L35: 구문 블록 경계입니다 · 소속 get_IsPaused.
+L000035 |         } ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 IsPaused.
+L000036 |     } ⟦EOL⟧
+L000037 |  ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState
+L000038 |     public EN_CTRL_THREAD_STATE ThreadState ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 ThreadState.
+L000039 |     { ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE Drilling.Common.Threading.CtrlThread.ThreadState.get
+L000040 |         get ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 get_ThreadState.
+L000041 |         { ⟦EOL⟧
+// 해설 L42: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000042 |             lock (_sync) ⟦EOL⟧
+// 해설 L43: 구문 블록 경계입니다 · 소속 get_ThreadState.
+L000043 |             { ⟦EOL⟧
+// 해설 L44: 호출자에게 값 또는 제어를 반환합니다: return _state;
+L000044 |                 return _state; ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 get_ThreadState.
+L000045 |             } ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 get_ThreadState.
+L000046 |         } ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 ThreadState.
+L000047 |     } ⟦EOL⟧
+L000048 |  ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError
+L000049 |     public Exception? LastThreadError ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 LastThreadError.
+L000050 |     { ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · System.Exception? Drilling.Common.Threading.CtrlThread.LastThreadError.get
+L000051 |         get ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 get_LastThreadError.
+L000052 |         { ⟦EOL⟧
+// 해설 L53: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000053 |             lock (_sync) ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 get_LastThreadError.
+L000054 |             { ⟦EOL⟧
+// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return _lastError;
+L000055 |                 return _lastError; ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다 · 소속 get_LastThreadError.
+L000056 |             } ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 get_LastThreadError.
+L000057 |         } ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 LastThreadError.
+L000058 |     } ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Start(int, string)
+L000060 |     public void Start(int delayMs, string name) ⟦EOL⟧
+// 해설 L61: 구문 블록 경계입니다 · 소속 Start.
+L000061 |     { ⟦EOL⟧
+// 해설 L62: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000062 |         lock (_sync) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Start.
+L000063 |         { ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()
+L000064 |             ThrowIfDisposed(); ⟦EOL⟧
+// 해설 L65: 조건에 따라 분기합니다: if (_thread is { IsAlive: true })
+L000065 |             if (_thread is { IsAlive: true }) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 Start.
+L000066 |             { ⟦EOL⟧
+// 해설 L67: 호출자에게 값 또는 제어를 반환합니다: return;
+L000067 |                 return; ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 Start.
+L000068 |             } ⟦EOL⟧
+L000069 |  ⟦EOL⟧
+// 해설 L70: 값을 대상에 대입합니다: _delayMs = Math.Max(1, delayMs) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, delayMs)
+L000070 |             _delayMs = Math.Max(1, delayMs); ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: _threadName = string.IsNullOrWhiteSpace(name) ? GetType().Name : name / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetType() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(name) ? GetType().Name : name
+L000071 |             _threadName = string.IsNullOrWhiteSpace(name) ? GetType().Name : name; ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: _stopRequested = false
+L000072 |             _stopRequested = false; ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: _lastError = null
+L000073 |             _lastError = null; ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Reset()
+L000074 |             _stopEvent.Reset(); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()
+L000075 |             _pauseEvent.Set(); ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Running
+L000076 |             _state = EN_CTRL_THREAD_STATE.Running; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: _thread = new Thread(ThreadProcess) { IsBackground = true, Name = _threadName } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thread(ThreadProcess) { IsBackground = true, Name = _threadName }
+L000077 |             _thread = new Thread(ThreadProcess) ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Start.
+L000078 |             { ⟦EOL⟧
+// 해설 L79: 값을 대상에 대입합니다: IsBackground = true
+L000079 |                 IsBackground = true, ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: Name = _threadName
+L000080 |                 Name = _threadName ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 Start.
+L000081 |             }; ⟦EOL⟧
+// 해설 L82: 예외 처리 범위입니다: try
+L000082 |             try ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 Start.
+L000083 |             { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: _thread.Start()
+L000084 |                 _thread.Start(); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 Start.
+L000085 |             } ⟦EOL⟧
+// 해설 L86: 지정 예외를 처리합니다: catch (Exception exception)
+L000086 |             catch (Exception exception) ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 Start.
+L000087 |             { ⟦EOL⟧
+// 해설 L88: 값을 대상에 대입합니다: _thread = null
+L000088 |                 _thread = null; ⟦EOL⟧
+// 해설 L89: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Error
+L000089 |                 _state = EN_CTRL_THREAD_STATE.Error; ⟦EOL⟧
+// 해설 L90: 값을 대상에 대입합니다: _lastError = exception
+L000090 |                 _lastError = exception; ⟦EOL⟧
+// 해설 L91: 값을 대상에 대입합니다: _stopRequested = true
+L000091 |                 _stopRequested = true; ⟦EOL⟧
+// 해설 L92: 함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine("Thread start failed : " + _threadName + " / " + exception)
+L000092 |                 Debug.WriteLine("Thread start failed : " + _threadName + " / " + exception); ⟦EOL⟧
+// 해설 L93: 예외를 발생/전달합니다: throw;
+L000093 |                 throw; ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Start.
+L000094 |             } ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Start.
+L000095 |         } ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 Start.
+L000096 |     } ⟦EOL⟧
+L000097 |  ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Pause()
+L000098 |     public void Pause() ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 Pause.
+L000099 |     { ⟦EOL⟧
+// 해설 L100: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000100 |         lock (_sync) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 Pause.
+L000101 |         { ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()
+L000102 |             ThrowIfDisposed(); ⟦EOL⟧
+// 해설 L103: 조건에 따라 분기합니다: if (_thread is not { IsAlive: true } || _stopRequested)
+L000103 |             if (_thread is not { IsAlive: true } || _stopRequested) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 Pause.
+L000104 |             { ⟦EOL⟧
+// 해설 L105: 호출자에게 값 또는 제어를 반환합니다: return;
+L000105 |                 return; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Pause.
+L000106 |             } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Reset()
+L000108 |             _pauseEvent.Reset(); ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Paused
+L000109 |             _state = EN_CTRL_THREAD_STATE.Paused; ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 Pause.
+L000110 |         } ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 Pause.
+L000111 |     } ⟦EOL⟧
+L000112 |  ⟦EOL⟧
+// 해설 L113: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Resume()
+L000113 |     public void Resume() ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 Resume.
+L000114 |     { ⟦EOL⟧
+// 해설 L115: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000115 |         lock (_sync) ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 Resume.
+L000116 |         { ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()
+L000117 |             ThrowIfDisposed(); ⟦EOL⟧
+// 해설 L118: 조건에 따라 분기합니다: if (_thread is not { IsAlive: true } || _stopRequested)
+L000118 |             if (_thread is not { IsAlive: true } || _stopRequested) ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 Resume.
+L000119 |             { ⟦EOL⟧
+// 해설 L120: 호출자에게 값 또는 제어를 반환합니다: return;
+L000120 |                 return; ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 Resume.
+L000121 |             } ⟦EOL⟧
+L000122 |  ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Running
+L000123 |             _state = EN_CTRL_THREAD_STATE.Running; ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()
+L000124 |             _pauseEvent.Set(); ⟦EOL⟧
+// 해설 L125: 구문 블록 경계입니다 · 소속 Resume.
+L000125 |         } ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 Resume.
+L000126 |     } ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Stop()
+L000128 |     public void Stop() ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 Stop.
+L000129 |     { ⟦EOL⟧
+// 해설 L130: 지역 변수를 선언합니다: Thread? target;
+L000130 |         Thread? target; ⟦EOL⟧
+// 해설 L131: 지역 변수를 선언합니다: bool isCurrentThread;
+L000131 |         bool isCurrentThread; ⟦EOL⟧
+// 해설 L132: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000132 |         lock (_sync) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 Stop.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: ThrowIfDisposed()
+L000134 |             ThrowIfDisposed(); ⟦EOL⟧
+// 해설 L135: 값을 대상에 대입합니다: _stopRequested = true
+L000135 |             _stopRequested = true; ⟦EOL⟧
+// 해설 L136: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopping
+L000136 |             _state = EN_CTRL_THREAD_STATE.Stopping; ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Set()
+L000137 |             _pauseEvent.Set(); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Set()
+L000138 |             _stopEvent.Set(); ⟦EOL⟧
+// 해설 L139: 값을 대상에 대입합니다: target = _thread
+L000139 |             target = _thread; ⟦EOL⟧
+// 해설 L140: 값을 대상에 대입합니다: isCurrentThread = target == Thread.CurrentThread
+L000140 |             isCurrentThread = target == Thread.CurrentThread; ⟦EOL⟧
+// 해설 L141: 구문 블록 경계입니다 · 소속 Stop.
+L000141 |         } ⟦EOL⟧
+L000142 |  ⟦EOL⟧
+// 해설 L143: 조건에 따라 분기합니다: if (target is null)
+L000143 |         if (target is null) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 Stop.
+L000144 |         { ⟦EOL⟧
+// 해설 L145: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000145 |             lock (_sync) ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 Stop.
+L000146 |             { ⟦EOL⟧
+// 해설 L147: 조건에 따라 분기합니다: if (_thread is null)
+L000147 |                 if (_thread is null) ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 Stop.
+L000148 |                 { ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped
+L000149 |                     _state = EN_CTRL_THREAD_STATE.Stopped; ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 Stop.
+L000150 |                 } ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 Stop.
+L000151 |             } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 호출자에게 값 또는 제어를 반환합니다: return;
+L000153 |             return; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 Stop.
+L000154 |         } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 조건에 따라 분기합니다: if (isCurrentThread)
+L000156 |         if (isCurrentThread) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 Stop.
+L000157 |         { ⟦EOL⟧
+// 해설 L158: 호출자에게 값 또는 제어를 반환합니다: return;
+L000158 |             return; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 Stop.
+L000159 |         } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: target.Join(3000) / 지역 변수를 선언합니다: var stopped = target.Join(3000); / 변수의 초기값을 지정합니다: stopped = target.Join(3000)
+L000161 |         var stopped = target.Join(3000); ⟦EOL⟧
+// 해설 L162: 지역 변수를 선언합니다: Exception? stopError = null; / 변수의 초기값을 지정합니다: stopError = null
+L000162 |         Exception? stopError = null; ⟦EOL⟧
+// 해설 L163: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000163 |         lock (_sync) ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 Stop.
+L000164 |         { ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_thread, target) / 조건에 따라 분기합니다: if (!ReferenceEquals(_thread, target))
+L000165 |             if (!ReferenceEquals(_thread, target)) ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 Stop.
+L000166 |             { ⟦EOL⟧
+// 해설 L167: 호출자에게 값 또는 제어를 반환합니다: return;
+L000167 |                 return; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 Stop.
+L000168 |             } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 조건에 따라 분기합니다: if (stopped || !target.IsAlive)
+L000170 |             if (stopped || !target.IsAlive) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Stop.
+L000171 |             { ⟦EOL⟧
+// 해설 L172: 값을 대상에 대입합니다: _thread = null
+L000172 |                 _thread = null; ⟦EOL⟧
+// 해설 L173: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped
+L000173 |                 _state = EN_CTRL_THREAD_STATE.Stopped; ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 Stop.
+L000174 |             } ⟦EOL⟧
+// 해설 L175: 앞 조건이 거짓인 경로입니다: else
+L000175 |             else ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 Stop.
+L000176 |             { ⟦EOL⟧
+// 해설 L177: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Error
+L000177 |                 _state = EN_CTRL_THREAD_STATE.Error; ⟦EOL⟧
+// 해설 L178: 값을 대상에 대입합니다: stopError = new TimeoutException("Thread stop timeout: " + _threadName) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException("Thread stop timeout: " + _threadName)
+L000178 |                 stopError = new TimeoutException("Thread stop timeout: " + _threadName); ⟦EOL⟧
+// 해설 L179: 값을 대상에 대입합니다: _lastError = stopError
+L000179 |                 _lastError = stopError; ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine(stopError.ToString()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: stopError.ToString()
+L000180 |                 Debug.WriteLine(stopError.ToString()); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 Stop.
+L000181 |             } ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 Stop.
+L000182 |         } ⟦EOL⟧
+L000183 |  ⟦EOL⟧
+// 해설 L184: 조건에 따라 분기합니다: if (stopError is not null)
+L000184 |         if (stopError is not null) ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 Stop.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 예외를 발생/전달합니다: throw stopError;
+L000186 |             throw stopError; ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 Stop.
+L000187 |         } ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 Stop.
+L000188 |     } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Dispose()
+L000190 |     public void Dispose() ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 Dispose.
+L000191 |     { ⟦EOL⟧
+// 해설 L192: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000192 |         lock (_sync) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 Dispose.
+L000193 |         { ⟦EOL⟧
+// 해설 L194: 조건에 따라 분기합니다: if (_disposed)
+L000194 |             if (_disposed) ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 Dispose.
+L000195 |             { ⟦EOL⟧
+// 해설 L196: 호출자에게 값 또는 제어를 반환합니다: return;
+L000196 |                 return; ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 Dispose.
+L000197 |             } ⟦EOL⟧
+L000198 |  ⟦EOL⟧
+// 해설 L199: 조건에 따라 분기합니다: if (_thread is { IsAlive: true })
+L000199 |             if (_thread is { IsAlive: true }) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Dispose.
+L000200 |             { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("CtrlThread cannot be disposed while the worker thread is running.") / 예외를 발생/전달합니다: throw new InvalidOperationException("CtrlThread cannot be disposed while the worker thread is running.");
+L000201 |                 throw new InvalidOperationException("CtrlThread cannot be disposed while the worker thread is running."); ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Dispose.
+L000202 |             } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Dispose()
+L000204 |             _pauseEvent.Dispose(); ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Dispose()
+L000205 |             _stopEvent.Dispose(); ⟦EOL⟧
+// 해설 L206: 값을 대상에 대입합니다: _disposed = true
+L000206 |             _disposed = true; ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 Dispose.
+L000207 |         } ⟦EOL⟧
+// 해설 L208: 구문 블록 경계입니다 · 소속 Dispose.
+L000208 |     } ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.Run()
+L000210 |     public virtual void Run() ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 Run.
+L000211 |     { ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 Run.
+L000212 |     } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Threading.CtrlThread.IsStopRequested()
+L000214 |     protected bool IsStopRequested() ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 IsStopRequested.
+L000215 |     { ⟦EOL⟧
+// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return _stopRequested;
+L000216 |         return _stopRequested; ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 IsStopRequested.
+L000217 |     } ⟦EOL⟧
+L000218 |  ⟦EOL⟧
+// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.OnThreadError(System.Exception)
+L000219 |     protected virtual void OnThreadError(Exception exception) ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 OnThreadError.
+L000220 |     { ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine("Thread Error : " + _threadName + " / " + exception)
+L000221 |         Debug.WriteLine("Thread Error : " + _threadName + " / " + exception); ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 OnThreadError.
+L000222 |     } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.ThrowIfDisposed()
+L000224 |     private void ThrowIfDisposed() ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 ThrowIfDisposed.
+L000225 |     { ⟦EOL⟧
+// 해설 L226: 조건에 따라 분기합니다: if (_disposed)
+L000226 |         if (_disposed) ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 ThrowIfDisposed.
+L000227 |         { ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ObjectDisposedException(GetType().Name) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetType() / 예외를 발생/전달합니다: throw new ObjectDisposedException(GetType().Name);
+L000228 |             throw new ObjectDisposedException(GetType().Name); ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 ThrowIfDisposed.
+L000229 |         } ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 ThrowIfDisposed.
+L000230 |     } ⟦EOL⟧
+L000231 |  ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Threading.CtrlThread.ThreadProcess()
+L000232 |     private void ThreadProcess() ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000233 |     { ⟦EOL⟧
+// 해설 L234: 예외 처리 범위입니다: try
+L000234 |         try ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000235 |         { ⟦EOL⟧
+// 해설 L236: 조건을 먼저 확인하며 반복합니다: while (!_stopRequested)
+L000236 |             while (!_stopRequested) ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000237 |             { ⟦EOL⟧
+// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pauseEvent.Wait()
+L000238 |                 _pauseEvent.Wait(); ⟦EOL⟧
+// 해설 L239: 조건에 따라 분기합니다: if (_stopRequested)
+L000239 |                 if (_stopRequested) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000240 |                 { ⟦EOL⟧
+// 해설 L241: 해당 반복/분기 구간을 종료합니다: break;
+L000241 |                     break; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000242 |                 } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 예외 처리 범위입니다: try
+L000244 |                 try ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000245 |                 { ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: Run()
+L000246 |                     Run(); ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000247 |                 } ⟦EOL⟧
+// 해설 L248: 지정 예외를 처리합니다: catch (Exception exception)
+L000248 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000249 |                 { ⟦EOL⟧
+// 해설 L250: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000250 |                     lock (_sync) ⟦EOL⟧
+// 해설 L251: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000251 |                     { ⟦EOL⟧
+// 해설 L252: 값을 대상에 대입합니다: _lastError = exception
+L000252 |                         _lastError = exception; ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000253 |                     } ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 예외 처리 범위입니다: try
+L000255 |                     try ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000256 |                     { ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnThreadError(exception)
+L000257 |                         OnThreadError(exception); ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000258 |                     } ⟦EOL⟧
+// 해설 L259: 지정 예외를 처리합니다: catch (Exception callbackException)
+L000259 |                     catch (Exception callbackException) ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000260 |                     { ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: Debug.WriteLine("Thread error callback failed : " + _threadName + " / " + callbackException)
+L000261 |                         Debug.WriteLine("Thread error callback failed : " + _threadName + " / " + callbackException); ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000262 |                     } ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000263 |                 } ⟦EOL⟧
+L000264 |  ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopEvent.Wait(_delayMs) / 조건에 따라 분기합니다: if (_delayMs > 0 && _stopEvent.Wait(_delayMs))
+L000265 |                 if (_delayMs > 0 && _stopEvent.Wait(_delayMs)) ⟦EOL⟧
+// 해설 L266: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000266 |                 { ⟦EOL⟧
+// 해설 L267: 해당 반복/분기 구간을 종료합니다: break;
+L000267 |                     break; ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000268 |                 } ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000269 |             } ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000270 |         } ⟦EOL⟧
+// 해설 L271: 종료 정리 구간입니다: finally
+L000271 |         finally ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000272 |         { ⟦EOL⟧
+// 해설 L273: 공유 상태의 임계 구역에 진입합니다: lock (_sync)
+L000273 |             lock (_sync) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000274 |             { ⟦EOL⟧
+// 해설 L275: 조건에 따라 분기합니다: if (_thread == Thread.CurrentThread)
+L000275 |                 if (_thread == Thread.CurrentThread) ⟦EOL⟧
+// 해설 L276: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000276 |                 { ⟦EOL⟧
+// 해설 L277: 값을 대상에 대입합니다: _thread = null
+L000277 |                     _thread = null; ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000278 |                 } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 값을 대상에 대입합니다: _state = EN_CTRL_THREAD_STATE.Stopped
+L000280 |                 _state = EN_CTRL_THREAD_STATE.Stopped; ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000281 |             } ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000282 |         } ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 ThreadProcess.
+L000283 |     } ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다.
+L000284 | } ⟦EOL⟧
+L000285 |  ⟦EOL⟧
+// 해설 L286: 타입의 구조/상속 선언입니다: public enum EN_CTRL_THREAD_STATE
+L000286 | public enum EN_CTRL_THREAD_STATE ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다.
+L000287 | { ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopped
+L000288 |     Stopped, ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Running
+L000289 |     Running, ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Paused
+L000290 |     Paused, ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Stopping
+L000291 |     Stopping, ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Threading.EN_CTRL_THREAD_STATE.Error
+L000292 |     Error ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다.
+L000293 | } ⟦EOL⟧
