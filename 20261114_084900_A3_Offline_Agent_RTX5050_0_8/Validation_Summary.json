@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "a3-offline-agent-public-validation/1",
+  "version": "0.8.0-preview",
+  "releaseStatus": "development-quality-unverified",
+  "validationMeaning": {
+    "packagingAndHostChecksPassed": true,
+    "targetGpuOrModelDevelopmentQualified": false,
+    "note": "파일 무결성·호스트 모의 검사 통과 결과입니다. RTX5050 실기 추론, 생성 코드 품질 또는 현장 개발 합격을 뜻하지 않습니다."
+  },
+  "source": {
+    "sourceCommit": "afe8bb449c1ae58f0d68e003b3672994e107c142",
+    "codeAnalysisTargetCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "sourceCommitVerified": true,
+    "sourceWorkingTreeCleanAtAudit": true,
+    "analysisTargetCleanAtAudit": true,
+    "analysisClonePushDisabledAtAudit": true
+  },
+  "artifacts": [
+    {
+      "file": "A3_Offline_Agent_RTX5050_0.8.0-preview.zip",
+      "kind": "offline-runtime-preview",
+      "bytes": 1112678057,
+      "sha256": "43ddd744abe1528d3a23f6fed3ae139f9fa739acdccf3d7148b3dc2c0c4e04f0",
+      "fileCount": 7217,
+      "zipCrcVerified": true,
+      "allPayloadSha256Verified": true,
+      "sourceRuntimeFilesMatched": 17
+    },
+    {
+      "file": "A3_Offline_Agent_Source_0.8.0-preview.zip",
+      "kind": "tool-source",
+      "bytes": 724369,
+      "sha256": "f147bac90fdb58d39adb697e729451e57047a6118053c75f8357d33f19dae20d",
+      "fileCount": 233,
+      "zipCrcVerified": true,
+      "profileBytesMatchSource": true,
+      "binariesOrModelWeightsIncluded": false
+    },
+    {
+      "file": "Installation_Guide.html",
+      "kind": "usage-guide",
+      "sha256": "f991ba487130c4e39f2dfffa9b603f6cf6695da05a1c43d600c89cf783c4b250"
+    }
+  ],
+  "targetProfile": {
+    "id": "rtx5050-8g-32g",
+    "sha256": "3ccdfa55ae0a89717a60a28c21148d9cd2984f0767e752e6f8de2a40a613ff70",
+    "gpuFamily": "NVIDIA GeForce RTX5050",
+    "dedicatedVramGiB": 8,
+    "systemRamGiB": 32,
+    "hardwareStatus": "user-reported-not-measured-on-target",
+    "modelName": "Qwen3-Coder-30B-A3B-Instruct Q4_K_M",
+    "expectedModelSha256": "fadc3e5f8d42bf7e894a785b05082e47daee4df26680389817e2093056f088ad",
+    "contextTokens": 16384,
+    "maximumInputTokens": 10240,
+    "maximumOutputTokens": 4096
+  },
+  "includedContent": {
+    "modelWeightsIncluded": false,
+    "equipmentSourceIncluded": false,
+    "privateStateIncluded": false,
+    "microsoftEditorIncluded": false,
+    "prerequisiteInstallerIncluded": false,
+    "fullProjectAutoRestoreIncluded": false,
+    "note": "모델·Editor·공식 필수 설치 파일은 명시적 온라인 준비에서 별도로 준비합니다."
+  },
+  "hostValidation": {
+    "nodeRegression": {
+      "tests": 164,
+      "passed": 164,
+      "failed": 0,
+      "skipped": 0,
+      "exitCode": 0,
+      "scope": "호스트 계획·런처·GPU 조건 모의·다운로드 재개 검사",
+      "suiteCounts": {
+        "hardwarePlanner": 40,
+        "legacyLauncher": 21,
+        "targetRuntimeMocks": 48,
+        "targetRunner": 14,
+        "largeModelDownloadMocks": 41
+      }
+    },
+    "powerShellPrerequisites": {
+      "tests": 39,
+      "passed": 39,
+      "failed": 0,
+      "exitCode": 0,
+      "scope": "Windows PowerShell5.1 합성 PE·버전·필수 구성요소·wrapper 검사. Installer는 mock 사용."
+    },
+    "postProgressMessageRegression": {
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "exitCode": 0,
+      "subsetOfNodeRegression": true,
+      "note": "전체164개 후 진행 메시지2줄을 추가한 최종 runner를 재검사했습니다. 고유 검사 총수에 중복 합산하지 않습니다."
+    },
+    "genericHostFixtureAssertions": {
+      "assertions": 39,
+      "separateFromNodeAndPowerShellTestCounts": true,
+      "handwrittenFixture": true,
+      "modelGeneratedCode": false,
+      "modelQualityQualification": false,
+      "connectedToCurrentClineAutomaticPassGate": false
+    },
+    "independentFlowReview": {
+      "status": "pass",
+      "unresolvedP1": 0,
+      "selectedSeedTests": 3,
+      "selectedSeedPassed": 3,
+      "legacy9BActivatedBySupportedTargetEntry": false
+    },
+    "independentGuideReview": {
+      "status": "pass",
+      "releaseBlockingP1": 0,
+      "openRecommendations": 0,
+      "activeExternalResources": 0,
+      "internalFragmentsValid": true,
+      "utf8ReplacementCharacters": 0
+    }
+  },
+  "preparationOnlyIntegration": {
+    "exitCode": 0,
+    "checkOnlyExitCode": 0,
+    "unsupported16GiBRamLaunchExitCode": 1,
+    "runtimeCandidatesVerified": 2,
+    "modelIntegrity": "whole-file-sha256",
+    "modelServerStarted": false,
+    "editorStarted": false,
+    "nativeGpuProbePerformed": false,
+    "installerStarted": false,
+    "note": "실제 준비 파일의 SHA 검증입니다. CheckOnly 종료0은 조회 완료이며 GPU 사용 가능·품질 합격을 의미하지 않습니다."
+  },
+  "qualificationLimits": {
+    "actualTargetGpuTested": false,
+    "actual30BInferencePerformed": false,
+    "modelDevelopmentQualityQualified": false,
+    "weightTrainingVerified": false,
+    "weightTrainingClaimed": false,
+    "wholeA3BuildQualified": false,
+    "actualTargetClineUiQualified": false,
+    "actualTargetRollbackQualified": false,
+    "codexEquivalentAccuracyClaimed": false,
+    "requiredNextChecks": [
+      "실제 RTX5050 노트북의 driver·native runtime·메모리 여유 검증",
+      "30B 모델의 실제 추론 속도와 생성 코드 품질 평가",
+      "A3 여러 파일 수정·전체 빌드·경계값 검사·원복 검증"
+    ]
+  },
+  "sanitization": {
+    "localAbsolutePathsIncluded": false,
+    "networkAddressesIncluded": false,
+    "credentialsIncluded": false,
+    "conversationOrPrivateQaIncluded": false,
+    "method": "공개 가능한 카운트·불리언·아티팩트 basename·고정 SHA·Commit만 명시적으로 선별했습니다."
+  },
+  "summaryGeneratedAtUtc": "2026-11-13T23:51:24.483763+00:00"
+}

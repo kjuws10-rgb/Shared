@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "a3-public-release-manifest/1",
+  "version": "0.8.0-preview",
+  "releaseStatus": "development-quality-unverified",
+  "releaseUrl": "https://github.com/kjuws10-rgb/Shared/releases/tag/a3-offline-agent-rtx5050-v0.8.0-preview-20261114",
+  "sourceCommit": "afe8bb449c1ae58f0d68e003b3672994e107c142",
+  "analysisInputCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "modelWeightsIncluded": false,
+  "equipmentSourceIncluded": false,
+  "privateStateIncluded": false,
+  "actualTargetGpuTested": false,
+  "modelQualityQualified": false,
+  "assets": [
+    {
+      "name": "A3_Offline_Agent_RTX5050_0.8.0-preview.zip",
+      "bytes": 1112678057,
+      "sha256": "43ddd744abe1528d3a23f6fed3ae139f9fa739acdccf3d7148b3dc2c0c4e04f0",
+      "downloadUrl": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-offline-agent-rtx5050-v0.8.0-preview-20261114/A3_Offline_Agent_RTX5050_0.8.0-preview.zip"
+    },
+    {
+      "name": "A3_Offline_Agent_Source_0.8.0-preview.zip",
+      "bytes": 724369,
+      "sha256": "f147bac90fdb58d39adb697e729451e57047a6118053c75f8357d33f19dae20d",
+      "downloadUrl": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-offline-agent-rtx5050-v0.8.0-preview-20261114/A3_Offline_Agent_Source_0.8.0-preview.zip"
+    },
+    {
+      "name": "Installation_Guide.html",
+      "bytes": 23364,
+      "sha256": "f991ba487130c4e39f2dfffa9b603f6cf6695da05a1c43d600c89cf783c4b250",
+      "downloadUrl": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-offline-agent-rtx5050-v0.8.0-preview-20261114/Installation_Guide.html"
+    },
+    {
+      "name": "Validation_Summary.json",
+      "bytes": 6034,
+      "sha256": "df04ed0a1eb8743f98966544a303d41c28b105eb7202fcb0ba55813108ff5680",
+      "downloadUrl": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-offline-agent-rtx5050-v0.8.0-preview-20261114/Validation_Summary.json"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4514,
+      "sha256": "05e7e7c16a6a9a1449f67c80443d029b4ba951eb3962c4f3efdd441a3d0bc866",
+      "downloadUrl": "https://github.com/kjuws10-rgb/Shared/releases/download/a3-offline-agent-rtx5050-v0.8.0-preview-20261114/README.md"
+    }
+  ],
+  "additionalAssets": [
+    "Release_Manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "checksumsNote": "SHA256SUMS verifies these assets and this manifest; excludes itself to avoid a circular hash."
+}
